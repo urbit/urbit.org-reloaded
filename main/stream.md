@@ -1,8 +1,10 @@
 ---
 title: Stream
 sort: 1
-navm: navbar
-dpad: false
+navdpad: false
+navmode: navbar
+navclass: urbit
+navhome: /main
 ---
 
 <div class="h-arrow">
