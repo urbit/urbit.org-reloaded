@@ -1,10 +1,12 @@
 ---
-title: Docs
-sort: 4
+title: Blog
+sort: 3
 navdpad: false
 navmode: navbar
 navclass: urbit
 navhome: /main/stream
 ---
 
-# Docs
+# Blog
+
+<list dataPreview="true"></list>

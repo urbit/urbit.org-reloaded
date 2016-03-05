@@ -4,7 +4,7 @@ sort: 1
 navdpad: false
 navmode: navbar
 navclass: urbit
-navhome: /main
+navhome: /main/stream
 ---
 
 <div class="h-arrow">
