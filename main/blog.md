@@ -8,6 +8,4 @@ navclass: urbit
 navhome: /main/stream
 ---
 
-# Blog
-
-<list dataPreview="true"></list>
+<list dataPreview="true" dataType="post" className="blog"></list>
