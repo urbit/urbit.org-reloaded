@@ -8,7 +8,7 @@ navhome: /main/stream
 ---
 
 <div class="h-arrow">
-<h1>Here are the most recent updates from discussions on <code>urbit.org</code>:</h1>
+<h1>Here are the most recent updates from discussion on <code>urbit.org</code>:</h1>
 <img src="http://15-swap.s3.amazonaws.com/16-2-29%20Design/ex/arrow.png" />
 </div>
 
