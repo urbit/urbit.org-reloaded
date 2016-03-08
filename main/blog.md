@@ -5,7 +5,7 @@ layout: urbit
 navdpad: false
 navmode: navbar
 navclass: urbit
-navhome: /main/stream
+navhome: /main
 ---
 
 <list dataPreview="true" dataType="post" className="blog"></list>

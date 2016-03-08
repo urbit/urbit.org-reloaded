@@ -6,7 +6,7 @@ layout: urbit
 navdpad: false
 navmode: navbar
 navclass: urbit
-navhome: /main/stream
+navhome: /main
 ---
 
 <div class="slide">

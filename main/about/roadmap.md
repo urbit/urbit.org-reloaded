@@ -5,7 +5,7 @@ layout: urbit
 navclass: urbit
 navdpad: false
 navmode: navbar
-navhome: /main/stream
+navhome: /main
 navsub: /main/about
 navselect: about
 navpath: /main

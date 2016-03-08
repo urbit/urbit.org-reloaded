@@ -5,24 +5,11 @@ layout: urbit
 navclass: urbit
 navdpad: false
 navmode: navbar
-navhome: /main/stream
+navhome: /main
 navsub: /main/about
 navselect: about
 navpath: /main
 ---
-
-
-<div class="slide">
-    <h1>The internet is broken.</h1>
-    <div class="pair">
-        <div class="text">
-            <p>Your files live on someone else’s server, your identity is owned by giant companies, privacy is a joke and your data has all been either hacked or sold to advertisers.  We live in 1995’s nightmare.</p>
-        </div>
-        <div class="image right">
-            <img src="http://15-swap.s3.amazonaws.com/16-2-29%20Design/ex/about_0.png" />
-        </div>
-    </div>
-</div>
 
 <div class="slide">
     <h1>Urbit is a simple cloud server.</h1>
@@ -32,6 +19,18 @@ navpath: /main
         </div>
         <div class="text">
             <p>Your Urbit is designed to store your data, run your apps and be your digital identity.   Each Urbit is a general-purpose computer on a global decentralized network.  Yes, really.</p>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <h1>The internet is broken.</h1>
+    <div class="pair">
+        <div class="text">
+            <p>Your files live on someone else’s server, your identity is owned by giant companies, privacy is a joke and your data has all been either hacked or sold to advertisers.  We live in 1995’s nightmare.</p>
+        </div>
+        <div class="image right">
+            <img src="http://15-swap.s3.amazonaws.com/16-2-29%20Design/ex/about_0.png" />
         </div>
     </div>
 </div>

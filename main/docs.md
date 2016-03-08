@@ -4,7 +4,7 @@ sort: 4
 navdpad: false
 navmode: navbar
 navclass: urbit
-navhome: /main/stream
+navhome: /main
 ---
 
 # Docs

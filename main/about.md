@@ -6,6 +6,6 @@ redirect: /main/about/overview
 navdpad: false
 navmode: navbar
 navclass: urbit
-navhome: /main/stream
+navhome: /main
 navsub: /main/about
 ---
