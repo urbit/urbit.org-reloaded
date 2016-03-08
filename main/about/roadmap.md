@@ -1,6 +1,6 @@
 ---
 title: Roadmap
-sort: 1
+sort: 2
 layout: urbit
 navclass: urbit
 navdpad: false

@@ -1,6 +1,6 @@
 ---
 title: Company
-sort: 2
+sort: 3
 layout: urbit
 navclass: urbit
 navdpad: false
@@ -13,7 +13,7 @@ navpath: /main
 
 # We like to think freely and design from first-principles.
 
-Urbit started out as an independent research project in 2002.  It wasn’t called Urbit back then, it was just a desire to reimagine how computers could be built.  Today we’re six people full-time in San Francisco.
+Urbit started out as an independent research project in 2002.  It wasn’t called Urbit back then, it was just a desire to reimagine how computers could be built.  Today we’re six people full-time in San Francisco. So
 
 # In 2013 we started Tlon with the goal of delivering the first Urbit proof of concept.
 
