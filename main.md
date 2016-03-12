@@ -1,17 +1,20 @@
 ---
-layout: urbit
+layout: urbit,home
 footer: true
+container: false
 navdpad: false
 navmode: navbar
-navclass: urbit
 navpath: /main
 navhome: /main
 ---
 
-<div class="front">
+<div class="image-fs first">
+    <h1>The last platform.</h1>
+    <img src="http://urbit.s3.amazonaws.com/16-3-10/DSCF8643.jpg" />
+</div>
 
-# Let's build a real network.
-<h1><a href="/main/about/overview" class="green">Tell me more</a></h1>
-<h1><a href="/main/get" class="green">Get me in</a></h1>
-
+<div class="container">
+    <div class="col-md-offset-1 col-md-9">
+        <h1>This is some contained text</h1>
+    </div>
 </div>
