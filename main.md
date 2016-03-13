@@ -11,16 +11,16 @@ navhome: /main
 <div class="image-fs first">
     <div class="text-container">
         <div class="text">
-            <h1>Urbit</h1>
+            <h1><div class="logo"></div>Urbit</h1>
         </div>
     </div>
     <div class="image-container">
-        <img src="http://urbit.s3.amazonaws.com/16-3-10/DSCF8643.jpg" />
+        <img src="http://urbit.s3.amazonaws.com/16-3-10/DSCF8655.jpg" />
     </div>
 </div>
 <!-- -->
 <div class="container stack">
-    <div class="col-md-offset-2 col-md-8">
+    <div class="col-md-offset-1 col-md-10">
         <p>Urbit is a computing platform, a network and a digital identity system all rolled in to one.  Urbit is built for each individual to own their own data, their own network of devices and their own identity.  Each Urbit is owned cryptographically, like Bitcoin.</p>
         <a class="btn black">Learn more</a>
         <a class="btn black">Get started</a>

@@ -8,10 +8,7 @@ navclass: urbit
 navhome: /main
 ---
 
-<div class="h-arrow">
-<h1>The latest</h1>
-<img src="http://15-swap.s3.amazonaws.com/16-2-29%20Design/ex/arrow.png" />
-</div>
+# The latest:
 
 <div class="mini-module">
 <script src="/~/at/lib/js/urb.js" />
