@@ -21,7 +21,7 @@ navhome: /main
 <!-- -->
 <div class="container stack">
     <div class="col-md-offset-1 col-md-10">
-        <p>Urbit is a computing platform, a network and a digital identity system all rolled in to one.  Urbit is built for each individual to own their own data, their own network of devices and their own identity.  Each Urbit is owned cryptographically, like Bitcoin.</p>
+        <p>Urbit is a computing platform, secure network and digital identity system all rolled into one.  Urbit is built for each person to own their data, their own network of devices and their identity.</p>
         <a class="btn black">Learn more</a>
         <a class="btn black">Get started</a>
         <email submit="Subscribe to updates"></email>
