@@ -1,6 +1,5 @@
 ---
 layout: urbit,home
-footer: true
 container: false
 navdpad: false
 navmode: navbar
@@ -18,10 +17,10 @@ navhome: /main
 </div>
 <!-- -->
 <div class="container stack">
-    <div class="col-md-offset-1 col-md-10">
+    <div class="col-md-offset-1 col-md-10 slide-1">
         <p>Urbit is a computing platform, secure network and digital identity system all rolled into one.  Urbit is built for each person to own their data, their own network of devices and their identity.</p>
         <a class="btn black">Learn more</a>
-        <a class="btn black">Get started</a>
+        <a class="btn black">Read code</a>
         <email submit="Subscribe to updates"></email>
     </div>
 </div>
@@ -104,4 +103,8 @@ navhome: /main
         <a href="docs">Read the docs</a>
         <a href="https://github.com/urbit/urbit">Get the code</a>
     </div>
+</div>
+<!-- -->
+<div class="footer container">
+  <div class="col-md-offset-1 col-md-11">This page was served by an Urbit.  <a href="mailto:urbit@urbit.org">urbit@urbit.org</a></div>
 </div>
