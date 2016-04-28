@@ -7,13 +7,15 @@ navpath: /main
 navhome: /main
 ---
 
+<script src="js/image-container.js"/>
+
 <div class="image-fs first">
     <div class="text-container">
         <div class="text">
             <h1><div class="logo"></div>Urbit</h1>
         </div>
     </div>
-    <div class="image-container" style="{backgroundImage:'url(\'http://urbit.s3.amazonaws.com/16-3-10/DSCF8655.jpg\')'}"></div>
+    <image-container src="http://urbit.s3.amazonaws.com/16-3-10/DSCF8655.jpg" />
 </div>
 <!-- -->
 <div class="container stack">
@@ -34,8 +36,7 @@ navhome: /main
             </div>
         </div>
     </div>
-    <div class="image-container" style="{backgroundImage:'url(\'http://urbit.s3.amazonaws.com/16-3-10/DSCF8653.jpg\')'}">
-    </div>
+    <image-container src="http://urbit.s3.amazonaws.com/16-3-10/DSCF8653.jpg" />
 </div>
 <!-- -->
 <div class="container stack six">
