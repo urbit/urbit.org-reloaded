@@ -18,9 +18,10 @@ navhome: /main
 <!-- -->
 <div class="container stack">
     <div class="col-md-offset-1 col-md-10 slide-1">
-        <p>Urbit is a computing platform, secure network and digital identity system all rolled into one.  Urbit is built for each person to own their data, their own network of devices and their identity.</p>
-        <a class="btn black">Learn more</a>
-        <a class="btn black">Read code</a>
+        <p>Urbit is an open source personal cloud computing platform built from the ground up.  Install Urbit on any Unix-based machine and turn it into a self-hosted node on new decentralized network.</p>
+        <p>Urbit is built for a future where you own your own identity, run your own apps and operate your own general-purpose computer across your network of devices.</p>
+        <a class="btn black" href="#learn">Learn more</a>
+        <a class="btn black" href="/docs">Read code</a>
         <email submit="Subscribe to updates"></email>
     </div>
 </div>
@@ -29,8 +30,7 @@ navhome: /main
     <div class="text-container">
         <div class="text">
             <div class="rect no-header">
-            <p>Your files live on someone else’s server, your identity is owned by giant companies, privacy is a joke and your data has all been either hacked or sold to advertisers.</p>
-            <p>We live in 1995’s nightmare.</p>
+            <p>Urbit is the platform for developers to imagine a new world from scratch.</p>
             </div>
         </div>
     </div>
@@ -38,39 +38,40 @@ navhome: /main
     </div>
 </div>
 <!-- -->
-<div class="container stack six">
+<div class="container stack six" id="learn">
     <div class="col-md-10 col-md-offset-1">
         <!-- -->
         <div class="slide">
-            <h1>Urbit is a new layer on top</h1>
-            <p>Urbit treats the cloud like the internet treated the phone system.  When she began thinking of images and films that portray women of color, Steven Spielberg's 1985 adaptation of Alice Walker's novel The Color Purple immediately came to mind. For Thomas, the complicated and liberating portrayal of a forged sisterhood, found in both the film and book, between Ms. Celie.
-            </p>
+            <h1>Urbit is a new layer</h1>
+            <p>Your Urbit is your digital identity, permanent personal archive, general-purpose computing platform and secure network of devices.  The convenience of cloud computing is fantastic, but it need not come at the cost of our security, control and creativity.</p>
+            <p>Read more in our <a>overview post</a> and <a>mission statement</a>.</p>
         </div>
         <!-- -->
         <div class="slide">
-            <h1>The stack</h1>
+            <h1>Address space</h1>
             <div class="pair">
-                <div class="text">
-                    Urbit has three primary layers: the Nock virtual machine, the Hoon programming language and the Arvo operating environment.
+                <div>
+                  <p>Each Urbit is a piece of cryptographic property.  If Bitcoin is money and Ether is law, Urbit is land.  The Urbit network is designed to grow into a digital republic: a network where each node is individually owned and no single actor is in control.</p>
+                  <p>Read more in our <a>address space post</a>.</p>
                 </div>
-                <div class="image right"><img src="http://urbit.s3.amazonaws.com/16-3-10/atom.png"/></div>
+                <div class="image right"><img src="http://urbit.s3.amazonaws.com/16-3-10/grid.png"/></div>
             </div>
         </div>
         <!-- -->
         <div class="slide">
-            <h1>Namespace</h1>
+            <h1>Personal computing all over again</h1>
             <div class="pair">
-                <div class="image left"><img src="http://urbit.s3.amazonaws.com/16-3-10/grid.png"/></div>
-                <div class="text">
-                    If Bitcoin is money and Ether is law, Urbit is land.  Each Urbit address is a domain name, a user name and a network address all rolled into one.  Each address is owned individually.
+                <div class="image left"><img src="http://urbit.s3.amazonaws.com/16-3-10/atom.png"/></div>
+                <div>
+                    <p>Imagine that you could simply install a new interface for Facebook, or fork the business logic of Reddit.  We want to build a world where you run whatever software you want, never lose data and can switch with no cost.</p>
+                    <p>Read more in our <a>product post</a>.</p>
                 </div>
             </div>
         </div>
         <!-- -->
         <div class="slide">
-            <h1>The future</h1>
-            <p>Good for you for posting that thinkpiece on decentralization on Medium.  But what we really need is a solution.
-            </p>
+            <h1>Today Urbit is young</h1>
+            <p>Urbit is fun to play and program  with, but we're just getting started.  We've been working quietly for the past few years to bring the system to a level of stability we're happy with.  We think it's ready for others to experiment with as we pave the road forward.</p>
         </div>     
     </div>   
 </div>
@@ -79,8 +80,8 @@ navhome: /main
 <div class="text-container">
     <div class="text">
         <div class="rect no-header">
-        <p>This summer we’re going to pre-sell the first block of Urbit namespace.</p>
-        <p>Be the first to know:</p>
+        <p>This summer we’re going to pre-sell the first blocks of Urbit namespace.</p>
+        <p>If you'd like to homestead this new territory:</p>
         <email></email>
         </div>
     </div>
@@ -95,7 +96,7 @@ navhome: /main
         <a href="blog/~2016.3.2">Overview</a>
         <a href="blog/~2016.3.2">Mission statement</a>
         <a href="blog/~2016.3.2">Namespace</a>
-        <a href="blog/~2016.3.2">The stack</a>
+        <a href="blog/~2016.3.2">Product</a>
         <a href="blog/~2016.3.2">Roadmap</a>
     </div>
     <div class="col-md-4">
