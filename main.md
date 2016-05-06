@@ -7,15 +7,13 @@ navpath: /main
 navhome: /main
 ---
 
-<script src="js/image-container.js"/>
-
 <div class="image-fs first">
     <div class="text-container">
         <div class="text">
             <h1><div class="logo"></div>Urbit</h1>
         </div>
     </div>
-    <image-container src="http://urbit.s3.amazonaws.com/16-3-10/DSCF8655.jpg" />
+    <imagepanel src="http://urbit.s3.amazonaws.com/16-3-10/DSCF8655.jpg" />
 </div>
 <!-- -->
 <div class="container stack">
@@ -36,7 +34,7 @@ navhome: /main
             </div>
         </div>
     </div>
-    <image-container src="http://urbit.s3.amazonaws.com/16-3-10/DSCF8653.jpg" />
+    <imagepanel src="http://urbit.s3.amazonaws.com/16-3-10/DSCF8653.jpg" />
 </div>
 <!-- -->
 <div class="container stack six" id="learn">
@@ -45,7 +43,7 @@ navhome: /main
         <div class="slide">
             <h1>Urbit is a new layer</h1>
             <p>Your Urbit is your digital identity, permanent personal archive, general-purpose computing platform and secure network of devices.  The convenience of cloud computing is fantastic, but it need not come at the cost of our security, control and creativity.</p>
-            <p>Read more in our <a>overview post</a> and <a>mission statement</a>.</p>
+            <p>Read more in our <a>overview post</a>&#32; and <a>mission statement</a>.</p>
         </div>
         <!-- -->
         <div class="slide">
@@ -87,8 +85,7 @@ navhome: /main
         </div>
     </div>
 </div>
-<div class="image-container" style="{backgroundImage:'url(\'http://urbit.s3.amazonaws.com/16-3-10/DSCF8654.jpg\')'}">
-</div>
+<imagepanel src="http://urbit.s3.amazonaws.com/16-3-10/DSCF8654.jpg" />
 </div>
 <!-- -->
 <div class="container stack last">
