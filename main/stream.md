@@ -5,7 +5,7 @@ layout: urbit
 navdpad: false
 navmode: navbar
 navclass: urbit
-navhome: /main
+navhome: /
 ---
 
 # The latest from `:talk` on `~doznec/urbit-meta`:
