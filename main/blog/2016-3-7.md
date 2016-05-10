@@ -9,8 +9,8 @@ layout: urbit,post
 navmode: navbar
 navdpad: false
 navselect: blog
-navpath: /main
-navhome: /main
+navpath: /
+navhome: /
 navclass: urbit
 ---
 
