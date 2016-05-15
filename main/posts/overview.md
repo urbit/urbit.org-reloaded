@@ -1,6 +1,6 @@
 ---
+sort: 1
 type: post
-date: ~2016.3.6
 title: Urbit overview
 author: Galen Wolfe-Pauly
 image: http://urbit.s3.amazonaws.com/16-3-10/blog-0.jpg

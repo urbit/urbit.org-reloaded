@@ -1,6 +1,6 @@
 ---
+sort: 4
 type: post
-date: ~2016.3.7
 title: What is Urbit for?
 author: Galen Wolfe-Pauly
 image: http://urbit.s3.amazonaws.com/16-3-10/blog-1.jpg
@@ -14,7 +14,7 @@ navhome: /
 navclass: urbit
 ---
 
-Open platforms don’t beat closed systems just because they’re open.  They win because you can do more exciting things with them.  We believe we’re overdue for new infrastructure not purely on principle: but because we think you can build better products on top.  Urbit will always be a platform for other to invent on top of.  We hope to drive much of that momentum ourselves.
+Open platforms don’t beat closed systems just because they’re open.  They win because you can do more exciting things with them.  We believe we’re overdue for new infrastructure not purely on principle: but because we think you can build better products on top.  Urbit will always be a platform for others to invent on top of.  We hope to drive much of that momentum ourselves.
 
 We look forward to a future where your fleet of Urbits run throughout your house, keep your biometric data in sync with the data center and keep your medical and financial data secure.  Today Urbit is just a proof of concept — but we see a road from here to there.  
 

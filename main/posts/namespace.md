@@ -1,6 +1,6 @@
 ---
+sort: 3
 type: post
-date: ~2016.3.9
 title: Address space
 author: Galen Wolfe-Pauly
 image: http://urbit.s3.amazonaws.com/16-3-10/blog-3.jpg
