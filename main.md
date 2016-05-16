@@ -3,8 +3,6 @@ layout: urbit,home
 container: false
 navdpad: false
 navmode: navbar
-navpath: /main
-navhome: /main
 ---
 
 <div class="image-fs first">
