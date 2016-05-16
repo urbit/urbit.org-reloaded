@@ -11,16 +11,17 @@ navmode: navbar
             <h1><div class="logo"></div>Urbit</h1>
         </div>
     </div>
-    <imagepanel src="http://urbit.s3.amazonaws.com/16-3-10/DSCF8655.jpg" />
+    <imagepanel src="http://urbit.s3.amazonaws.com/16-3-10/DSCF8664.jpg" />
 </div>
 <!-- -->
 <div class="container stack">
     <div class="col-md-offset-1 col-md-10 slide-1">
         <p>Urbit is an open source, decentralized, personal cloud computing platform.</p>
-        <p>Your Urbit is a personal server: a general-purpose computer in the cloud which stores all your data, runs all your apps, and manages your connected devices.  Each Urbit is part of a global, decentralized, peer-to-peer network that runs on top of the internet.</p>
+        <p>Your Urbit is a personal server: a general-purpose computer in the cloud which stores all your data, runs all your apps, and manages your connected devices.  </p>
+        <p class="last">Each Urbit is part of a global, decentralized, peer-to-peer network that runs on top of the internet.</p>
         <a class="btn black" href="#learn">Learn more</a>
-        <a class="btn black" href="/docs">Read code</a>
-        <email submit="Subscribe to updates"></email>
+        <a class="btn black" href="/docs">Tech docs</a>
+        <email submit="Get updates"></email>
     </div>
 </div>
 <!-- -->
@@ -28,7 +29,7 @@ navmode: navbar
     <div class="text-container">
         <div class="text">
             <div class="rect no-header">
-            <p>Our mission is to found a virtual city in the cloud.</p>
+            <p>Our mission is to create a virtual city or personal servers in the cloud.</p>
             </div>
         </div>
     </div>
@@ -43,7 +44,7 @@ navmode: navbar
             <h1>Digital freedom for everyone</h1>
             <p>We believe controlling your own data, code and identity is the definition of digital freedom.  We believe the only path to this freedom is a general-purpose computer designed for human beings.</p>
             <p>Your Urbit is your cryptographic identity, permanent personal archive, general-purpose computing platform and secure network of devices. The convenience of cloud computing is fantastic, but it need not come at the cost of our security, control and creativity.</p>
-            <p>Read more in our <a href="./blog/2016-2-29">overview post</a>&#32; and <a href="./blog/2016-3-8">core principles</a>.</p>
+            <p>Read more in our <a href="./posts/overview">overview post</a>&#32; and <a href="./posts/principles">core principles</a>.</p>
         </div>
         <!-- -->
         <div class="slide">
@@ -53,7 +54,7 @@ navmode: navbar
                 <div>
                   <p>In Urbit, network address space is cryptographic property, like Bitcoin.  If Bitcoin is money and Ether is law, Urbit is land.</p>
                   <p>The Urbit network is designed to grow into a digital republic: a network where each node is individually owned with no central point of control.  We think of the Urbit network as a city: decentralized but connected, safe but free.</p>
-                  <p>Read more in our <a href="blog/2016-3-9">address space post</a>.</p>
+                  <p>Read more in our <a href="posts/address-space">address space post</a>.</p>
                 </div>
             </div>
         </div>
@@ -64,7 +65,7 @@ navmode: navbar
                 <div class="image left"><img src="http://urbit.s3.amazonaws.com/16-3-10/atom.png"/></div>
                 <div>
                     <p>Imagine that you could simply install a new interface for Facebook, or fork the business logic of Reddit.  We're working to build a world where you run whatever software you want, never lose data and can switch with no cost.</p>
-                    <p>Read more in our <a href="blog/2016-3-7">product post</a>.</p>
+                    <p>Read more in our <a href="posts/vision">product post</a>.</p>
                 </div>
             </div>
         </div>
@@ -94,12 +95,12 @@ navmode: navbar
 <div class="container stack last">
     <div class="col-md-4 col-md-offset-1">
         <h2>Keep reading</h2>
-        <a href="blog/~2016.3.2">Overview</a>
-        <a href="blog/~2016.3.2">Mission statement</a>
-        <a href="blog/~2016.3.2">Namespace</a>
-        <a href="blog/~2016.3.2">Product</a>
-        <a href="blog/~2016.3.2">Roadmap</a>
-        <a href="blog/~2016.3.2">Company</a>
+        <a href="posts/overview">Overview</a>
+        <a href="posts/principles">Beliefs and principles</a>
+        <a href="posts/address-space">Address space</a>
+        <a href="posts/vision">Product</a>
+        <a href="posts/roadmap">Roadmap</a>
+        <a href="posts/company">Company + Team</a>
     </div>
     <div class="col-md-4">
         <h2>Start an Urbit</h2>

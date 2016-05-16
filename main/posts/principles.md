@@ -2,7 +2,7 @@
 sort: 2
 type: post
 title: Mission statement
-author: Galen Wolfe-Pauly
+author: Galen Wolfe-Pauly + Curtis Yarvin
 image: http://urbit.s3.amazonaws.com/16-3-10/blog-2.jpg
 preview: To build human-centered, general-purpose tools for making, thinking and communicating.
 layout: urbit,post
@@ -16,19 +16,56 @@ navclass: urbit
 
 # Beliefs
 
-We believe strongly in the value of individual creativity.  To maximize our individual creative potential we believe that general-purpose tools are an essential resource.  Cloud computing has become an inexorable part of human life, and yet the individual toolset for putting it to work is in decline.  We believe that general-purpose computing ought to be a human right, and that it is sorely underserved by the web today.
+We believe strongly in the value of individual creativity.  To
+maximize our individual creative potential we believe that
+general-purpose tools are an essential resource.  Cloud computing has
+become an inexorable part of human life, and yet the individual
+toolset for putting it to work is in decline.  We believe that
+general-purpose computing ought to be a human right, and that it is
+sorely underserved by the web today.
 
-Urbit is built to reconcile this dilemma: to provide a general-purpose computing platform for individuals to use in the cloud.  We believe that individuals shouldn’t need to pay any cost in terms of usability, accessibility or reliability in exchange for ownership, privacy or control.  
+Urbit is built to reconcile this dilemma: to provide a general-purpose
+computing platform for individuals to use in the cloud.  We believe
+that individuals shouldn’t need to pay any cost in terms of usability,
+accessibility or reliability in exchange for ownership, privacy or
+control.  
 
-We believe that Code is Law, that the technical constraints of the systems we use to communicate and coordinate act as the governing framework of our digital lives.  We believe that the discussion of how our software should work needs to be inclusive and expansive.  We welcome debate and criticism in our development process.  Urbit is open source and always will be.
+We believe that Code is Law, that the technical constraints of the
+systems we use to communicate and coordinate act as the governing
+framework of our digital lives.  We believe that the discussion of how
+our software should work needs to be inclusive and expansive.  We
+welcome debate and criticism in our development process.  Urbit is
+open source and always will be.
 
-We believe in free speech and we believe in personal accountability.  Today we live on a network where harassment pays no cost and censorship can be unilateral.  The Urbit network is designed to combat both these problems.  Urbit addresses are finite, have a cost, and more importantly are designed to be permanent.  Harassment, abuse or spam are all easily combated at the network layer.  The Urbit network is para-decentralized, meaning you have to get an address from someone already on the network and you rely on someone for p2p discovery.  You’re not tied to any single parent, but you’re accountable to someone for maintaining your network services.  While others can’t censor you, someone must support you.
+We believe in free speech and we believe in personal accountability.
+Today we live on a network where harassment pays no cost and
+censorship can be unilateral.  The Urbit network is designed to combat
+both these problems.  Urbit addresses are finite, have a cost, and
+more importantly are designed to be permanent.  Harassment, abuse or
+spam are all easily combated at the network layer.  The Urbit network
+is para-decentralized, meaning you have to get an address from someone
+already on the network and you rely on someone for p2p discovery.
+You’re not tied to any single parent, but you’re accountable to
+someone for maintaining your network services.  While others can’t
+censor you, someone must support you.
 
-We believe that a healthy network is one with diverse well-defined communities and clear, user-controlled, boundaries between public and private.  We believe that to achieve this state the network must be designed to become inescapably more decentralized over time.  That if a distribution of power enforced at the systems level is absolutely necessary.  
+We believe that a healthy network is one with diverse well-defined
+communities and clear, user-controlled, boundaries between public and
+private.  We believe that to achieve this state the network must be
+designed to become inescapably more decentralized over time.  That if
+a distribution of power enforced at the systems level is absolutely
+necessary.  
 
-Lastly we believe that no software system can replace human trust and communication.  Urbit has been carefully designed with this in mind.  Discourse and dialogue are an important part of communities of all scales.  Code and law can successfully reduce conflict only to a point, when too far reaching they become oppressive.  
+Lastly we believe that no software system can replace human trust and
+communication.  Urbit has been carefully designed with this in mind.
+Discourse and dialogue are an important part of communities of all
+scales.  Code and law can successfully reduce conflict only to a
+point, when too far reaching they become oppressive.  
 
-We hope you can join us in building a new platform to satisfy these goals.  Critique is as valuable as commits.  Our hope is simply that we can preserve the promise of general-purpose computing since its positive effect on humankind is so deeply significant.
+We hope you can join us in building a new platform to satisfy these
+goals.  Critique is as valuable as commits.  Our hope is simply that
+we can preserve the promise of general-purpose computing since its
+positive effect on humankind is so deeply significant.
 
 # Principles
 
