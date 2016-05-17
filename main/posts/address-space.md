@@ -4,17 +4,17 @@ type: post
 title: Address space
 author: Galen Wolfe-Pauly + Curtis Yarvin
 image: http://urbit.s3.amazonaws.com/16-3-10/blog-3.jpg
-preview: Urbit address space is like digital land.
+preview: An overview of the Urbit address-space.  Urbit address space is a new kind of cryptographic property, sort of like digital land.  
 layout: urbit,post
 navmode: navbar
 navdpad: false
-navselect: blog
+navselect: posts
 navpath: /
 navhome: /
 navclass: urbit
 ---
 
-# The Urbit identity model
+# The Urbit address space and identity model
 
 ## Basics
 

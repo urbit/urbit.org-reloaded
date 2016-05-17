@@ -1,20 +1,18 @@
 ---
-sort: 6
+sort: 8
 type: post
 title: Company + Team
 author: Tlon
-image: http://urbit.s3.amazonaws.com/16-3-10/blog-5.jpg
-preview: A bit about the company behind Urbit.
+image: http://urbit.s3.amazonaws.com/16-3-10/blog-6.jpg
+preview: A bit about who we are and how our company, Tlon, relates to Urbit the open-source project.
 layout: urbit,post
 navmode: navbar
 navdpad: false
-navselect: blog
+navselect: posts
 navpath: /
 navhome: /
 navclass: urbit
 ---
-
-# Company + Team
 
 ## History
 
@@ -41,33 +39,33 @@ environment where thoughtful criticism can quickly turn into better
 design and better code.  If you think you could be a good fit [send us
 an email](urbit@urbit.org).
 
-Galen Wolfe-Pauly
-Founder, CEO
+**Galen Wolfe-Pauly** <br />
+Founder, CEO<br />
 Recommended reading: Samuel Beckett, Christopher Alexander
 
-Curtis Yarvin
-Founder, CTO
+**Curtis Yarvin** <br />
+Founder, CTO<br />
 Recommended reading: James C Scott, Ernst Junger
 
-Anton Dyudin
-Engineer
+**Anton Dyudin** <br />
+Engineer<br />
 Recommended reading: Asmiov
 
-Philip Monk
-Engineer
+**Philip Monk** <br />
+Engineer<br />
 Recommended reading: G.K. Chesterton
 
-Henry Ault
-Business / Engineer
+**Henry Ault** <br />
+Business / Engineer<br />
 Recommended reading: Joseph Heller
 
 ## Investors
 
 We’re glad to have the support of some fantastic investors:
 
-Andreessen Horowitz
-FF Angel
-Tim Draper
-Jan Talinn
-Ben Davenport
-Zhen Fund
+**Andreessen Horowitz** <br />
+**FF Angel** <br />
+**Tim Draper** <br />
+**Jan Talinn** <br />
+**Ben Davenport** <br />
+**Zhen Fund**

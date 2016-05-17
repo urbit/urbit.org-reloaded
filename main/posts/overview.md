@@ -4,17 +4,17 @@ type: post
 title: Urbit overview
 author: Galen Wolfe-Pauly
 image: http://urbit.s3.amazonaws.com/16-3-10/blog-0.jpg
-preview: A simple system is easier to maintain, easier to develop for, and easier to understand.
+preview: A high-level overview of Urbit.  How the pieces fit together and what we think the future will look like as Urbit grows up.
 layout: urbit,post
 navmode: navbar
 navdpad: false
-navselect: blog
+navselect: posts
 navpath: /
 navhome: /
 navclass: urbit
 ---
 
-# What Urbit is
+## What Urbit is
 
 Urbit is a virtual city of general-purpose personal servers.
 
@@ -200,12 +200,13 @@ Addionally, we're creating an open political and economic process,
 with a small, fixed-price public presale of Urbit address space.  Join
 us and help make this future actually happen.
 
-To keep reading, go directly to the [presale page](); learn more about
-[Urbit's address space](); share our vision of the Urbit user
-experience, from the [top down]() or the [bottom up](); check out the
-[history]() of Urbit or the [development roadmap](); evaluate Urbit's
-[beliefs and principles]() or its [interim constitution](); or learn
-[who we are]().
+To keep reading, learn more about [Urbit's address
+space](../address-space); share our vision of the Urbit user
+experience, from the [top down](../vision) or the [bottom
+up](../magic); check out the [development roadmap](../roadmap);
+evaluate Urbit's [beliefs and principles](../principles) or its
+[interim constitution](../constitution); or learn [who we
+are](../company).
 
-(For technical readers, check out our [developer documentation]() or
-the [CS paper]()).
+(For technical readers, check out our [developer documentation](/docs) or
+the [CS paper](#)).
