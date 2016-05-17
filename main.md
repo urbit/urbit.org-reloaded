@@ -29,7 +29,7 @@ navmode: navbar
     <div class="text-container">
         <div class="text">
             <div class="rect no-header">
-            <p>Our mission is to create a virtual city or personal servers in the cloud.</p>
+            <p>Our mission is to create a virtual city of personal servers in the cloud.</p>
             </div>
         </div>
     </div>
