@@ -4,66 +4,209 @@ type: post
 title: Urbit overview
 author: Galen Wolfe-Pauly
 image: http://urbit.s3.amazonaws.com/16-3-10/blog-0.jpg
-preview: A simple system is easier to maintain, easier to develop for, and easier to understand.
+preview: A high-level overview of Urbit.  How the pieces fit together and what we think the future will look like as Urbit grows up.
 layout: urbit,post
 navmode: navbar
 navdpad: false
-navselect: blog
+navselect: posts
 navpath: /
 navhome: /
 navclass: urbit
 ---
 
-Urbit is a personal cloud computing platform.  You can install Urbit on any Unix-based system to turn it into a self-hosted node on a new decentralized network.  
+## What Urbit is
 
-We have a computer on our desks or our laps, and a smaller one in our pockets, but our computing is actually spread across the cloud services we depend on.  These services all look pretty similar.  They each keep track of your identity, store your data and provide some interface to compute with.  Your Urbit is designed to provide these same features — but on a single server that you own and control, running on a secure decentralized network.
+Urbit is a virtual city of general-purpose personal servers.
 
-When centered around the individual a computer can be a vehicle for invention and exploration;  a tool for one to discover what’s possible.  A computer should be an open-ended device for the advancement of our thought, our relationships and in turn, our society.
+## Your old personal server
 
-Urbit is designed to be such a computer, intended to restore the possibility of general-purpose computing for our cloud-permanent future.  We look forward to a world where each person has a single place where they store their data and decide what software to run, on a platform they cryptographically own, and can both program and control.  
+What's a personal server?  In a sense, you already have one.  Your
+personal server is the combination of all the cloud services you use
+now.
 
-Your Urbit is your digital identity, permanent personal archive, general-purpose computing platform and secure network of devices.  The convenience of cloud computing is fantastic, but it need not come at the cost of our privacy, control and, most importantly, creativity.  
+This "server" is a mess.  It's broken into 17 different fragments
+which are scattered all over the planet.  You have no control at all
+over any of the pieces.  The more we depend on Web services, the more
+we realize how unsustainable this situation is.
 
-## Platform as product
+Can you remember all the services you have accounts for?  How about
+the username and password for each?  Some of them will let you pull
+your data out somehow, some won’t.  Sometimes you can move your data
+between them, sometimes you can’t.  But they're all good at
+showing you ads.
 
-At its core Urbit is a system for others to invent on top of — to reimagine what a computer should be.  Urbit is a general-purpose personal computing platform for the cloud designed to make computing on the network simple enough for an ordinary user.
+## Your new personal server
 
-The first thing Urbit is good for is taking control of your existing cloud services.  Your Urbit allows you to program and control your cloud services as if they were all part of a single system.  Sort of like IFTTT if it were a piece of systems software.  A simple stateful tool that can `ls` your GMail, or send a tweet when a GitHub issue gets closed.  We're working to make the Urbit programming environment treat web APIs like I/O.
+Your urbit is your own general-purpose server.  It holds your
+data; runs your apps; wrangles your connected devices; and
+defines your secure identity.  If you still need your old
+services, it drives them with APIs.
 
-Urbit is also currently a simple self-hosted publishing and communication tool.  Your Urbit hosts your static content in a way that’s flexible.  It's quick to create a blog o website just by creating a tree of markdown files.  Today we all create a variety of different kinds of content, but find it permanently tethered to the service we created it with.  As a publishing tool Urbit is designed to bring our content together into a single customizable system.
+Your urbit presents your whole digital life as a single web
+service.  And since it's yours, open source and patent-free, it
+never shows you ads.  Or loses your data.  Or updates without
+your consent.
 
-These first steps are just the beginning.  At first, your Urbit is a transparent layer to the things you already have.  Next it’s a reliable archive all your data.  Over time your Urbit grows into a world all its own.  One in which you have a single digital identity, never lose data, can run any software you like — without any cost of switching — and don’t have to worry about privacy or security.  We go into more detail about this in a longer post on [product futures](../2016-3-7).
+Technically, Urbit is a new kind of OS that has a precise formal
+definition.  (Urbit is actually a [single mathematical function](CS
+paper).)  One advantage of a math-based OS is that Urbit is perfectly
+portable.  It can't tell whether it's in a cloud data center or on
+your home PC.
 
-## Approach
+Concerned about mass surveillance?  Download your urbit and restart it
+on your laptop, or move to a new host in Iceland.  Urbit's formal
+simplicity makes managing it as easy as managing an iPhone: all you
+have to decide is what apps to add.
 
-The foundation of the cloud is a Unix box with an internet connection — a pair dating back to the 1970s.  In the 70s there was no universally available broadband, no global layer of 99.99999% uptime data centers, nor any concept of social networking.  We have outgrown the original architecture of the internet as we have discovered and invented what the web is useful for.  The tools for building apps and services are quite mature, but they’re designed for a centralized model.  Anyone who wants to run their own computer in the cloud has to learn to use a bare unix server, which is full-time job.
+Each urbit is a node on an global, encrypted P2P network.  Your Urbit
+name, a generated pseudonym like `~talsur-todres`, is also your network
+address.  Like Bitcoin, Urbit address space is a cryptographic asset
+with a limited supply.
 
-Our approach is to provide the same suite of services that we have come to expect from the server side, but for an individual to own and control independently.  Urbit bridges the gap between Unix and the application layer with a single simple system instead of a toolbox of interlocking parts (aka 'the stack').  Each Urbit is a self-contained system that's independently controlled, but seamlessly a part of a global network.  
+By keeping addresses scarce, we make spam and abuse expensive.  Urbit
+is a "friendly network," like the Internet in 1986, where a stranger
+is nice until proven nasty.  As it matures, Urbit will grow into a
+decentralized, self-governing virtual city both safe and free.
 
-Urbit treats the cloud like the internet treated the phone system.  Our system runs on any Unix box with an internet connection, providing a clean and simple platform for individuals to independently compute in the cloud on top.  
+## The Urbit future
 
-## The system
+In an Urbit world, your data is no longer trapped in a jumble of
+proprietary servers.  Your urbit is a permanent, versioned, typed
+archive the size of your digital life.  Even before you move your data
+from a Web service to a local Urbit app, your urbit can drive your
+account with an API or scraper.
 
-Urbit’s design is a bit like a mechanical device: simple, pared down and optimized for flexibility and durability.  
+And within Urbit, data is never locked inside apps.  Imagine if you
+could painlessly switch between Facebook and Google+, Asana and
+Trello, Tumblr and WordPress.  Not only does your urbit upgrade itself
+and its apps automatically, you can "sidegrade" a running app to
+another vendor without losing data.
 
-Practically Urbit has three layers: Arvo, our operating environment; Hoon, our programming language and Nock, our virtual machine.  Arvo is composed of kernel modules familiar from the web stack: a global, immutable revision-controlled filesystem, a build system, a web server, a typed networking protocol and an application model.  Hoon is a strict, typed functional language similar to Haskell but without the math.  Nock is a simple combinator that’s the Urbit equivalent of the lambda calculus.  The entire system fits in about 20K lines of code and can be understood in its entirety by a determined engineer.
+Your urbit is also your digital identity.  Along with your data
+lifestream of media, messages and documents, it has the keys and
+tokens to manage all your legacy Web services.  It holds the keys
+for your cryptocurrency wallets, so it can buy and sell for you.
+(With one personal server to secure, not 17 different accounts,
+you actually have the bandwidth to take security seriously.)
 
-Just a few of our techncial wins:
-- Deterministic computing.  Your Urbit's state is a fixed function of its event history.  Need to replay a few million events?  No problem.  We arrive at the same byte-for-byte state every time.
-- Single-level store.  Urbit makes no distinction between memory and disk.  Your program state lives forever since the entire system acts like a database.
-- Typed, exactly-once networking.  Urbit networking is designed to make calling remote functions the same as doing local computation.
-- Typed, global, immutable revision-control.  The entire Urbit network shares a single filesystem.  
+You still use network services.  But instead of interacting with
+the service provider's HTML UI, which phones home using
+proprietary HTTP APIs, you interact with a third-party app on
+your urbit, which talks to multiple service providers using
+public, typed Urbit protocols.  For example, your urbit runs a
+single shopping app, which downloads catalogs and uploads orders.
+This app is one store which sells everything in the world, with a
+salesman who's 100% on your side and always has the best price.
+Every computing experience is different when the UI is working
+exclusively for the user.
 
-Urbit today is a proof of concept.  It runs, works pretty well, and will happily entertain any interested developer.  There’s lots to work on and lots to explore.  To learn more and get set up head over to [the docs](/docs).
+Finally, your urbit is the hub for your network of connected
+devices.  Your smart thermostat, your wristband, your phone and
+tablet, all run satellite urbits which talk securely to your main
+urbit in the cloud.
 
-## Address space
+## A chance for digital freedom
 
-The foundation of Urbit is the address space.  The Urbit network / PKI is a decentralized, finite, global address space where each address is a piece of cryptographic property.  If bitcoin is money and ether is law, Urbit is land.  An Urbit address is a short, memorable name that you can route packets to.  It's kind of like a username, IP address and domain name all rolled into one name that you keep forever.  Since there's a finite number of them, all of which can only be transferred a limited number of times, addresses cost money.  How much?  More than you’d make spamming and abusing the network.
+The promise of the personal server isn't just convenience.
+General-purpose computing is magic.  This magic must be in the
+hands of all, not just those who can master Unix.   The computer
+is a bicycle for the mind.  It's an open vehicle for exploration
+and discovery.  It’s not a way to optimize ad delivery.
 
-At first that cost is nearly zero.  The network is young and unpopulated.  Urbit solves this problem by dividing address space into blocks.  The first 2^8 can invite the following 2^16 who can invite the remaining 2^32.  Early blocks are designed to be nodes of trust.  They perform routing tasks (p2p discovery) for their children, and also sign the keys for new nodes.  Child nodes are free to change parents, but will always need to find a parent who will take them on.
+Urbit, as virtual city, is a platform that brings together all our
+datastreams -- from emails to heartbeats -- in a way that we ourselves
+control.  Can we work together to match faces in photos, without
+submitting to some panopticon in Mountain View?  While the first step
+in freedom is the right to be left alone, the second is the power to
+form new intentional communities, to create and evolve a voluntary
+definition of public space.  We have no idea at all what people will
+do with this power.
 
-For us, this is a feature.  To build a sane network we think the right approach is to create multiple decentralized bottlenecks for entrance.  In this design authority never resides in one place, and accountability between nodes is preserved.  The network is inescapably driven towards decentralization since individual nodes are incentivized to give away their invitations.
+General-purpose computing is digital freedom.  And today, a cloud data
+center is the technically optimal locus of computation.  The cloud is
+always on, always available, never loses data.  Hosts are sometimes
+attacked; but they never intentionally tamper with their virtual
+computers.  The cloud can never be secure against a global adversary;
+but most people don't have a global adversary.  A single portable
+platform provides "herd immunity" for the few who do need direct
+physical control over their main computers.
 
-The address space is intended to become what a network ought to be: reputation infrastructure. A network where addresses represent actual humans would be a fantastic achievement.  Identity is a basic primitive completely unsolved by the web today.  We have centralized systems of identity authority (Facebook, Twitter, Google) — but they’re hardly digital passports.  An Urbit is a secure, verifiable digital identity system with no central point of control.
+Though even laptops are atrophying into mere browsers, mass-market,
+general-purpose computing on the client side remains an endangered
+species that must be protected.  But on the server side, this species
+has never even *existed*.  There has never been anything like a
+mass-market personal server.  Why not?
 
-Learn more about the address space in [the network architecture doc](2016-3-9).
+## Freedom is an engineering problem
+
+Urbit is not a difficult idea.  Urbit is like a flying car: the idea
+is not the hard part.  Almost everyone we talk to about Urbit turns
+out to have had pretty much the same idea themselves.  The problem is
+building it.
+
+A server is a computer.  It's running some operating system.  This OS
+is a flavor of Unix.  There are no alternatives.  It's connected to
+some network.  This network is the Internet.  It has no competitors.
+You can have a personal server, if it's a Unix server on the Internet.
+
+Almost no one thinks being a Unix system administrator is fun.  Not
+even Unix system administrators think running an Internet server is
+fun.  So the personal Unix/Internet server is like the personal
+bulldozer.  This is not a consumer product.  Any number of engineers
+can't turn a bulldozer into a bicycle.
+
+How did we build the personal bulldozer?  We didn't.  We started
+from scratch.  (The people who built the first PCs didn't start
+with a mainframe OS, either.)  We created a new platform: Urbit.
+
+Urbit doesn't compete with Unix and the Internet.  It's a new,
+opaque layer on top of them.  Your browser runs on a native OS,
+but it doesn't give Web apps any way to talk to the native OS.
+Urbit is like a browser for the server side: code within Urbit is
+formally isolated from the platform it runs on top of.
+
+Your urbit is a Unix process, in a data center or your PC.  It sends
+UDP packets over the Internet.  It can both load and serve web pages
+over HTTP.  Except for character sets and crypto, nothing in Urbit
+reuses or depends on any 20th-century code.
+
+Urbit is a complete, clean-slate system software stack: a
+non-lambda interpreter (Nock), a functional language (Hoon), and
+an event-driven OS (Arvo), with its own encrypted protocol
+(Ames), typed revision control (Clay), reactive web server (Eyre)
+and functional build system (Ford).  The full system, including
+basic apps, is only 30,000 lines of Hoon.
+
+The first end-to-end prototype of Urbit took one engineer eleven
+years.  The current beta took three more years, with about three
+engineers on average.  We think we've solved all the real CS
+problems.  But it will take more than our small team to deliver a
+polished, user-friendly Urbit that can actually challenge the
+modern web.
+
+## Where we are, what we're doing
+
+Urbit is in feature freeze.  It's a minimum viable product in
+early beta.  It still needs quite a bit of fit-and-finish work.
+We certainly don't recommend it for end users or consider it in
+any way secure.  But it's fun to play with, if you're a nerd.
+
+This summer, we're making the switch to an open and transparent
+development and specification process.  A system as unusual as
+Urbit can't be invented in public.  But it has to be finished and
+maintained in public.
+
+Addionally, we're creating an open political and economic process,
+with a small, fixed-price public presale of Urbit address space.  Join
+us and help make this future actually happen.
+
+To keep reading, learn more about [Urbit's address
+space](../address-space); share our vision of the Urbit user
+experience, from the [top down](../vision) or the [bottom
+up](../magic); check out the [development roadmap](../roadmap);
+evaluate Urbit's [beliefs and principles](../principles) or its
+[interim constitution](../constitution); or learn [who we
+are](../company).
+
+(For technical readers, check out our [developer documentation](/docs) or
+the [CS paper](#)).
