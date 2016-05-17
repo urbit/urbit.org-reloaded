@@ -1,7 +1,7 @@
 ---
 sort: 3
 type: post
-title: Address space
+title: The Urbit address space and identity model
 author: Galen Wolfe-Pauly + Curtis Yarvin
 image: http://urbit.s3.amazonaws.com/16-3-10/blog-3.jpg
 preview: An overview of Urbit's cryptographic address space.
@@ -13,8 +13,6 @@ navpath: /
 navhome: /
 navclass: urbit
 ---
-
-# The Urbit address space and identity model
 
 ## Basics
 
@@ -130,7 +128,7 @@ bulky certificate isn't free, since it slows down new connections.
 
 This isn't a serious problem if urbits are treated like land.  But it
 prevents Urbit from being a competent currency.  This is a feature,
-not a bug.  Urbit has no need to compete with Bitcoin or Ethereum, 
+not a bug.  Urbit has no need to compete with Bitcoin or Ethereum,
 and every reason not to.
 
 ## Moons and comets
