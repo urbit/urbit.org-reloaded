@@ -4,11 +4,11 @@ type: post
 title: What is Urbit for?
 author: Galen Wolfe-Pauly
 image: http://urbit.s3.amazonaws.com/16-3-10/blog-1.jpg
-preview: Urbit is a general-purpose platform, but we know where to start.
+preview: We didn't build Urbit just because it's fun to work on.  We built Urbit because we think it can unlock new potential products.  Here we take a tour through some of these possibilities.
 layout: urbit,post
 navmode: navbar
 navdpad: false
-navselect: blog
+navselect: posts
 navpath: /
 navhome: /
 navclass: urbit
@@ -196,4 +196,4 @@ great exploration of what this future may look like.  For the
 industrial enterprise there’s a whole other set of parallel problems:
 tracking inventory, controlling a vast array of machines, and managing
 logistics.  In both cases we need a decentralized network and
-computing platform.  Urbit is up to the task. 
+computing platform.  Urbit is up to the task.

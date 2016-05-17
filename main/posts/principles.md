@@ -1,14 +1,14 @@
 ---
 sort: 2
 type: post
-title: Mission statement
+title: Beliefs + Principles
 author: Galen Wolfe-Pauly + Curtis Yarvin
 image: http://urbit.s3.amazonaws.com/16-3-10/blog-2.jpg
-preview: To build human-centered, general-purpose tools for making, thinking and communicating.
+preview: Where the motivation for building Urbit comes from and what guides its forward progress.  
 layout: urbit,post
 navmode: navbar
 navdpad: false
-navselect: blog
+navselect: posts
 navpath: /
 navhome: /
 navclass: urbit
