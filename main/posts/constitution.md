@@ -14,139 +14,136 @@ navhome: /
 navclass: urbit
 ---
 
-## Motivation
+## Declaration of purpose
 
-Our governance roadmap is this simple interim constitution.  
+Urbit is a new network created by the Tlon Corporation.  Tlon's
+broad intention is to surrender governance of Urbit to its users,
+as soon as the community is collectively ready to receive it.
 
-Urbit must eventually write its own constitution.  But to write a
-real, durable constitution, a legitimate convention is required.
-Some proto-constitution is required to confirm that legitimacy.
+This constitution (which is not a legal contract, just a public
+declaration of our intent) describes our governance process
+during this interim period.  Its design borrows from validated
+historical structures, mainly Roman and Anglo-American.
 
-Like most new constitutions, this structure is a mix of Roman and
-Anglo-American traditions.  It is as simple as possible and not
-optimized for scale or durability.
+The last and most important task of the interim government is to
+write the next version of the constitution.  This document may or
+may not incorporate any or all of the interim structures.
 
-## Urbit and this document
+## Beliefs and principles
 
-Urbit is a new network created and owned by the Tlon Corporation.
-Tlon's goal is to surrender governance of Urbit to its users, as
-soon as this community is collectively ready to receive it.  
-
-This constitution (which is not a legal contract, just a
-description of our intent) describes our governance process
-during this interim period.
-
-## Structure
-
-This governance structure is designed for maximum efficiency in a
-young network.  Its most important task is to replace itself when
-it is ready to grow.  It must also name itself.
-
-## Validity
-
-This constitution takes effect as soon as the initial public
-presale of Urbit address space is complete.
-
-## Assets
-
-The 50 galaxies marked "urbit.org" in the galaxy table belong to
-the republic, and will be used only in the interests of the
-republic and Urbit as a whole.
-
-Once this republic acquires a legal identity, Tlon will also
-grant this entity control over: the `urbit.org` domain; the
-Github `urbit` account; and the first galaxy `~zod`.
-
-## Galaxy table
-
-Of the 256 galaxies, 95 are assigned to Tlon Corporation; 50 are
-assigned to urbit.org; 40 are assigned to Tlon employees and
-their family members; 34 are assigned directly to unrelated
-investors in Tlon; and 37 are assigned to random individuals for
-random reasons.  Some of these "randos" donated money or
-services; others were just in the right place at the right time.
+See our document of [beliefs and principles]().
 
 ## Governance structures
 
-The interim republic has three branches: an executive consulate,
-a passive senate, and an advisory assembly.  
+The interim republic has four branches: an executive consulate, a
+galactic senate, a stellar congress and a planetary assembly.
 
-The consulate has full authority, but must consult with the
-assembly and keep it informed.  The assembly is a legislative
-branch which is learning its trade.  The senate is a reserved
-power with no role in governance.
+For the interim, full authority is held by the (Roman style)
+consulate.  The legislature (senate, congress, assembly) is
+advisory.  The senate is never consulted and the congress is
+almost never consulted.
 
-### Consuls
+In the future, the assembly of planets specializes in technical
+governance.  The congress of stars specializes in internal, but
+nontechnical, governance.  The senate of galaxies selects the
+consuls and holds them accountable, and specializes in compliance
+with external powers.  All votes, elections and other public
+actions are logged in the Urbit global namespace.
 
-A consulate is a two-person executive.  If the consuls disagree
-on a decision, and cannot agree on how to agree, they must flip a
-coin.
+As in most parliamentary systems, each of these structures sets
+and enforces its own internal rules of operation.
 
-Consuls serve in pairs for a year.  The first consuls are Galen
-Wolfe-Pauly (a Tlon employee) and Raymond Pasco (a Tlon
-contractor).  A consul must be a senator; see below.  
+### Consulate
+
+A consulate is a two-person executive.  The consuls must work out
+their own organization and division of labor.  Disagreements
+between consuls are resolved by the senate.
+
+A consul must be a senator.  The senate, voting per galaxy,
+replaces the consulate whenever either a vacancy exists, or a
+vote of no confidence gains a majority.  When electing consuls,
+first a plurality selects one consul; then the plurality of those
+who voted for anyone but the winner selects the second.
 
 ### Senate
 
-The senate is the set of all galaxy holders, voting by galaxy.
-The senate does not (at present) perform any real function,
-except for one: it must ratify Urbit's next constitution.
-
-A role for the senate would be superfluous because, initially,
-the will of the senate is the will of Tlon, and the consluls
-
-This is because, in practice, the will of the Senate is the will
-of Tlon.
-
-<<<discussion of galaxy table here; need galaxy table!>>>
+The *senate* is the set of all galaxy holders, voting per galaxy.
+It does not convene except to replace the consuls.  Its
+proceedings are in private.
 
 To avoid growing the network too quickly, galaxies are activated
 gradually.  Initially, only one galaxy is active, the root `~zod`
 (galaxy 0).
 
-Galactic certificates start with a hardcoded fingerprint in the
-Ames source.  If you have a keypair whose public key matches this
-hash, you are a senator for all cryptographic purposes.  If the
-fingerprint is zero, a real-world identity is shown; if this is
-your identity, we'll check in a fingerprint for you at any time.
+Further activation is at the discretion of the consuls, who
+control `urbit.org` and will only bind activated galaxies to
+`galaxy.urbit.org`.  Routing at the galaxy layer is by DNS, so
+unbound galaxies, and any stars or planets they launch, hear no
+packets.
 
-But `~zod` has the routing power to choose whether its network,
-which is the whole network, routes to other galaxies.  So the
-consuls, who control `~zod`, have the power to decide whether
-and/or when other galaxies can launch usable stars.  There are
-many reasons to keep the live network from containing vast
-deserts of usable, but unused, address space.
+When any galaxy, activated or not, creates its initial
+certificate, the consuls add its fingerprint to the galaxy table.
+Non-activated galaxies can still be rekeyed.
 
-Except for Tlon galaxies, galaxy activation is at random.  Tlon
-can activate its galaxies whenever (because it needs to be able
-to keep its lights on).
+### Congress
+
+The *congress* is the set of all active independent stars.
+voting per star.  An *independent star* is any star *not* owned
+by anyone who is either a senator, or has some connection to one
+that would pose a conflict of interest.
+
+The congress of stars is designed to exercise project and
+community governance.  Its proceedings are in private.  The
+consuls convene it at their pleasure, and keep it informed.
 
 ### Assembly
 
-The *assembly* is the *set of all independent stars*.  An
-independent star is any star *not* owned by anyone who is also a
-senator, or has a family or employment connection with a senator.
+The *assembly* is the set of all active primary planets, voting
+per planet.  A *primary planet* is the main planet of a unique
+human (no sockpuppets).
 
-In the long run, the mission of the assembly is to govern Urbit
-with the consent of the senate.  The vague idea of the
-proto-constitution is that the assembly's power should increase
-over time; at first, the consulate polls it; later, it gets a
-veto; still later, it can propose its own measures; finally, it
-elects the consuls.  
-
-Since the consuls must still be senators, there is always a
-balance of authority between consulate, assembly and senate.
-This whole design is ripped off from ancient Rome, which after
-all did pretty well with it.  But again, it's just an idea;
-Urbit will write its own constitution.
+The assembly is responsible for technical governance.  Its
+proceedings are in public.
 
 ### The next constitution
 
-Urbit's next constitution will be written by the assembly, under
-the moderation of the consuls, for the approval of the senate.
-This will happen when the consuls think it's ready to happen.
+The congress proposes, and the senate approves, the next version
+of this constitution.  Future constitutions should be defined in
+a smart contract platform, such as Ethereum.
 
-Ideally, Urbit's constitution will be written in two languages:
-English, and a smart-contract language such as Ethereum.  Of
-course, Ethereum can't enforce decisions; but it can count the
-votes.  And there's no excuse for not using it this way.
+## Galaxy table
+
+The galaxy table is included [by reference]().  
+
+95 galaxies are held by the [Tlon Corporation](company).  50,
+reserved for urbit.org, the future community foundation.  40, by
+Tlon employees and their family members (24 by Curtis, who
+started in 2002; 16 by everyone else, who started in 2014).  34,
+by outside investors in Tlon.  37, by 33 other individuals, who
+donated to the project, contributed code or services, won a
+contest, or were just in the right place at the right time.
+
+Note that while Tlon and its employees still control a majority
+of galaxies, the senate is a ceremonial body; the consulate is
+effectively equivalent to Tlon.
+
+## Inception
+
+This constitution takes effect as soon as the initial public
+presale of Urbit address space is complete.
+
+## Endowment
+
+The 50 galaxies marked "urbit.org" in the galaxy table are
+intended as property of the republic, and will be used only in
+the interests of the republic and Urbit as a whole.
+
+Externally, these galaxies are held by Tlon; internally, they are
+managed and voted by Tlon.  Once the republic acquires a legal
+identity and an independent human organization, Tlon pledges to
+donate the `urbit.org` galaxies, the DNS domain, and the Github
+`urbit` account to it.
+
+## First consuls
+
+The first consuls are Galen Wolfe-Pauly and Raymond Pasco.
