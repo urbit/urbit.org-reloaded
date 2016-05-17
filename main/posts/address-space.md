@@ -45,7 +45,7 @@ Stars and galaxies are network infrastructure.
 
 Each planet or star is launched by its "parent," the star or galaxy
 whose number is its bottom half.  So the planet `~firbyr-napbes`,
-`0xdeadbeef` or `3.735.928.559`, is the child of `~pollev`, `0xbeef`
+`0xdead.beef` or `3.735.928.559`, is the child of `~pollev`, `0xbeef`
 or `48.879`, whose parent is `~mun`, `0xef`, `239`.  The parent of
 `~mun` and all galaxies is `~zod`, `0`.
 
@@ -65,8 +65,8 @@ your name.  In the packet layer, your ship is your network address.
 In the PKI, your ship is your cryptographic identity.  Perhaps more
 intuitively, a ship is a sort of pronounceable phone number.
 
-And once Urbit is built, no one owns it.  No one can control it.  It
-does need governance; it governs itself, as a digital republic.
+And once Urbit is built, no one owns the city.  No one can control it.
+It does need governance; but it governs itself as a digital republic.
 
 ## Details
 
