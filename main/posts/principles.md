@@ -18,31 +18,18 @@ navclass: urbit
 
 We believe strongly in the value of individual creativity.  To
 maximize our individual creative potential we believe that
-general-purpose tools are an essential resource.  Cloud computing has
-become an inexorable part of human life, and yet the individual
-toolset for putting it to work is in decline.  We believe that
-general-purpose computing ought to be a human right, and that it is
-sorely underserved by the web today.
+general-purpose tools are an essential resource.
 
-Urbit is built to reconcile this dilemma: to provide a general-purpose
-computing platform for individuals to use in the cloud.  We believe
-that individuals shouldn’t need to pay any cost in terms of usability,
-accessibility or reliability in exchange for ownership, privacy or
+We believe that individuals shouldn’t need to pay any cost in terms of
+usability, accessibility or reliability in exchange for ownership, privacy or
 control.  
 
-We believe that that the technical constraints of the
-systems we use to communicate and coordinate act as the governing
-framework of our digital lives.  We believe that the discussion of how
-our software should work needs to be inclusive and expansive.  We
-welcome debate and criticism in our development process.  Urbit is
-open source and always will be.
+We believe that the discussion of how our software should work needs to be inclusive and expansive.  We welcome debate and criticism in our development process.
 
 We believe in free speech and we believe in individual accountability.  
-We believe that a healthy network is one with diverse well-defined
+We believe that a healthy network is one with diverse, well-defined
 communities and clear, user-controlled, boundaries between public and
-private.  We believe that to achieve this state the network must be
-designed to become inescapably more decentralized over time.  That
-a distribution of power ought to be coded into our systems software.
+private.  
 
 Lastly we believe that no software system can replace human trust and
 communication.  Discourse and dialogue are an important part of communities
