@@ -17,9 +17,7 @@ navhome: /
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.1/moment-timezone.js" />
 <script src="/=home=/web/talk/main.js" />
 <link href="/=home=/web/talk/main.css" rel="stylesheet" />
-<talk readonly="true" chrono="reverse" station="home"></talk>
+<talk chrono="reverse" station="home" audience-lock></talk>
 </div>
-
-<div class="fade-out"></div>
 
 # To get on the test network [get the code](https://github.com/urbit/urbit).
