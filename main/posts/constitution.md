@@ -31,7 +31,7 @@ may not incorporate any or all of the interim structures.
 
 ## Beliefs and principles
 
-See our document of [beliefs and principles]().
+See our document of [beliefs and principles](../principles).
 
 ## Governance structures
 
@@ -115,7 +115,7 @@ a smart contract platform, such as Ethereum.
 
 The galaxy table is included [by reference]().  
 
-95 galaxies are held by the [Tlon Corporation](company).  50,
+95 galaxies are held by the [Tlon Corporation](../company).  50,
 reserved for urbit.org, the future community foundation.  40, by
 Tlon employees and their family members (24 by Curtis, who
 started in 2002; 16 by everyone else, who started in 2014).  34,
