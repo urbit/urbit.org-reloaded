@@ -16,9 +16,7 @@ navmode: navbar
 <!-- -->
 <div class="container stack">
     <div class="col-md-offset-1 col-md-10 slide-1">
-        <p>Urbit is an open source, decentralized, personal cloud computing platform.</p>
-        <p>Your Urbit is a personal server: a general-purpose computer in the cloud which stores all your data, runs all your apps, and manages your connected devices.  </p>
-        <p class="last">Each Urbit is part of a global, decentralized, peer-to-peer network that runs on top of the internet.</p>
+        <p class="last">Urbit is a secure, friendly, decentralized peer-to-peer network of personal servers.  Your urbit is a private cloud computer which stores your data, runs your apps, and manages your connected devices.</p>
         <a class="btn black" href="#learn">Learn more</a>
         <a class="btn black" href="/docs">Tech docs</a>
         <email submit="Get updates"></email>
@@ -29,7 +27,7 @@ navmode: navbar
     <div class="text-container">
         <div class="text">
             <div class="rect no-header">
-            <p>Our mission is to create a virtual city of personal servers in the cloud.</p>
+            <p>A virtual city in the cloud</p>
             </div>
         </div>
     </div>
@@ -41,10 +39,10 @@ navmode: navbar
     <div class="col-md-10 col-md-offset-1">
         <!-- -->
         <div class="slide">
-            <h1>Digital freedom for everyone</h1>
-            <p>We believe controlling your own data, code and identity is the definition of digital freedom.  We believe the only path to this freedom is a general-purpose computer designed for human beings.</p>
-            <p>Your Urbit is your cryptographic identity, permanent personal archive, general-purpose computing platform and secure network of devices. The convenience of cloud computing is fantastic, but it need not come at the cost of our security, control and creativity.</p>
-            <p>Read more in our <a href="./posts/overview">overview post</a>&#32; and <a href="./posts/principles">core principles</a>.</p>
+            <h1>A path to digital freedom</h1>
+            <p>We believe controlling your own data, code and identity is the definition of digital freedom.  We believe the only path to this freedom is a general-purpose server made for human beings.</p>
+            <p>Your urbit is your cryptographic identity, personal archive, application platform, and device hub.  It's as easy to manage as an iPhone.</p>
+            <p>Read a longer <a href="./posts/overview">overview</a>, or check out our <a href="./posts/principles">beliefs and principles</a>.</p>
         </div>
         <!-- -->
         <div class="slide">
@@ -52,29 +50,30 @@ navmode: navbar
             <div class="pair">
                 <div class="image left"><img src="http://urbit.s3.amazonaws.com/16-3-10/grid.png"/></div>
                 <div>
-                  <p>In Urbit, network address space is cryptographic property, like Bitcoin.  If Bitcoin is money and Ether is law, Urbit is land.</p>
-                  <p>The Urbit network is designed to grow into a digital republic: a network where each node is individually owned with no central point of control.  We think of the Urbit network as a city: decentralized but connected, safe but free.</p>
-                  <p>Read more in our <a href="posts/address-space">address space post</a>.</p>
+                  <p>In Urbit, network addresses are cryptographic property, like Bitcoin.  If Bitcoin is money and Ethereum is law, Urbit is land.</p>
+                  <p>Urbit is built to grow into a digital republic: a network of individually owned nodes with no central point of control.  Like a city, the network is decentralized but connected, safe but free.</p>
+                  <p>Read more about the <a href="posts/address-space">network architecture</a>.</p>
                 </div>
             </div>
         </div>
         <!-- -->
         <div class="slide">
-            <h1>Personal computing all over again</h1>
+            <h1>Applications that work for you</h1>
             <div class="pair">
                 <div class="image left"><img src="http://urbit.s3.amazonaws.com/16-3-10/atom.png"/></div>
                 <div>
-                    <p>Imagine that you could simply install a new interface for Facebook, or fork the business logic of Reddit.  We're working to build a world where you run whatever software you want, never lose data and can switch with no cost.</p>
-                    <p>Read more in our <a href="posts/vision">product post</a>.</p>
+                    <p>Your computer isn't yours unless you can switch apps without losing data.  Imagine if you could change the Facebook interface, or move your Evernotes to Google Docs.</p>
+                    <p>Read more about our vision of the Urbit <a href="posts/vision">user experience</a>.</p>
                 </div>
             </div>
         </div>
         <!-- -->
         <div class="slide">
-            <h1>On a completely new stack</h1>
-            <p>Ordinary people can't manage a Unix server on the Internet. A bare server just wasn't designed for the demands of 2016.  Urbit is a clean-slate design, from interpreter axioms to packet protocol, that runs on top of Unix and the Internet.</p>
-            <p>Urbit is fun to play and program with, but is still in its early phases.  We've been working quietly so far, but the system is now ready for developers to explore and experiment on top of.</p>
-            <p>Read more in our <a href="#">CS paper</a>, <a href="/docs">developer docs</a>&#32;and <a href="#">roadmap</a>.</p>
+            <h1>A clean-slate stack</h1>
+            <p>We'd have personal servers already if Unix and the Internet weren't almost 50 years old.  An ordinary person can't manage a Unix server on the Internet.</p>
+            <p>Urbit is a whole new platform built on top of the old one.  It's a complete clean-slate stack, from interpreter axioms to packet protocol.</p>
+            <p>Urbit is still young and unstable.  It's not yet ready for end users.  But it's feature-complete and ready for public development.</p>
+            <p>Read more in our <a href="#">CS paper</a>, <a href="/docs">developer docs</a>, <a href="posts/roadmap">development roadmap</a>.</p>
         </div>     
     </div>   
 </div>
@@ -83,7 +82,7 @@ navmode: navbar
 <div class="text-container">
     <div class="text">
         <div class="rect no-header">
-        <p>Soon we’re going to pre-sell the first blocks of Urbit address space.</p>
+        <p>Soon we’re going to sell Urbit address space to the public for the first time.</p>
         <p>If you'd like to homestead this new territory:</p>
         <email></email>
         </div>

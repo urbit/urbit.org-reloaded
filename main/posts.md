@@ -1,5 +1,5 @@
 ---
-title: Posts
+title: Learn
 sort: 3
 layout: urbit
 navdpad: false

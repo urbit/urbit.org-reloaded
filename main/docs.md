@@ -1,5 +1,5 @@
 ---
-title: Docs
+title: Develop
 sort: 4
 navdpad: false
 navmode: navbar

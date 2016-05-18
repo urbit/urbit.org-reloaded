@@ -1,5 +1,5 @@
 ---
-title: Stream
+title: Chat
 sort: 0
 layout: urbit
 navdpad: false
