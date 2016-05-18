@@ -18,7 +18,8 @@ navmode: navbar
     <div class="col-md-offset-1 col-md-10 slide-1">
         <p>A personal server is a virtual computer which stores your data, runs your apps, and manages your connected devices.</p>
         <p>Urbit is a secure, friendly peer-to-peer network of personal servers, built on a clean-slate system software stack.</p>
-        <p><a href="#learn">Learn more</a>, or <a href="/docs">jump to the technical docs</a>.  Subscribe to our newsletter:</p>
+        <p><a href="#learn">Learn more</a>, or <a href="/docs">jump to the technical docs</a>.  </p>
+        <p>Subscribe to our newsletter:</p>
         <email submit="Get updates"></email>
     </div>
 </div>
@@ -39,8 +40,8 @@ navmode: navbar
     <div class="col-md-10 col-md-offset-1">
         <!-- -->
         <div class="slide">
-            <h1>A path to digital freedom</h1>
-            <p>We believe controlling your own data, code and identity is the definition of digital freedom.  We believe everyone needs digital freedom, not just a few nerds.  We believe the only tool needed to solve this problem is a general-purpose server made for human beings.</p>
+            <h1>The path to digital freedom</h1>
+            <p>We believe controlling your own data, code and identity is the definition of digital freedom.  We believe everyone needs digital freedom, not just the tech savvy.  We believe the only tool needed to solve this problem is a general-purpose server made for human beings.</p>
             <p>Your urbit is your cryptographic identity, personal archive, application platform, and device hub.  It's as easy to manage as an iPhone.</p>
             <p>Read a longer <a href="./posts/overview">overview</a>, or check out our <a href="./posts/principles">beliefs and principles</a>.</p>
         </div>
@@ -58,7 +59,7 @@ navmode: navbar
         </div>
         <!-- -->
         <div class="slide">
-            <h1>A computer that works exclusively for you</h1>
+            <h1>A computer that works just for you</h1>
             <div class="pair">
                 <div class="image left"><img src="http://urbit.s3.amazonaws.com/16-3-10/atom.png"/></div>
                 <div>
