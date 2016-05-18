@@ -62,7 +62,7 @@ navmode: navbar
             <div class="pair">
                 <div class="image left"><img src="http://urbit.s3.amazonaws.com/16-3-10/atom.png"/></div>
                 <div>
-                    <p>Your computer isn't yours unless you can switch software without losing data.  Imagine if you could replace the Facebook UI, or move your Evernotes to Google Docs.</p>
+                    <p>Your computer isn't yours unless you can run whatever software you want and switch without losing data.  Imagine if you could replace the Facebook UI, or move your Evernotes to Google Docs.</p>
                     <p>Read more about the Urbit <a href="posts/vision">user experience</a>.</p>
                 </div>
             </div>
