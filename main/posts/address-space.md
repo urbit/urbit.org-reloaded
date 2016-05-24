@@ -70,7 +70,7 @@ It does need governance; but it governs itself as a digital republic.
 
 As an Urbit user, these basics are all you need to know.  As a
 developer, a few more details might interest you.  (An even more
-comprehensive treatment is in the [CS paper]()).
+comprehensive treatment is in the [whitepaper](https://storage.googleapis.com/urbit-extra/paper.pdf)).
 
 ### Design goals
 
