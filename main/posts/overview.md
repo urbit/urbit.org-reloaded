@@ -12,6 +12,7 @@ navselect: posts
 navpath: /
 navhome: /
 navclass: urbit
+comments: true
 ---
 
 ## What Urbit is
