@@ -3,7 +3,7 @@ sort: 8
 type: post
 title: Company + Team
 author: Tlon
-image: http://urbit.s3.amazonaws.com/16-3-10/blog-6.jpg
+image: http://media.urbit.org/site/blog-6.jpg
 preview: A bit about who we are and how our company, Tlon, relates to Urbit the open-source project.
 layout: urbit,post
 navmode: navbar

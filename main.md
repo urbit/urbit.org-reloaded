@@ -11,7 +11,7 @@ navmode: navbar
             <h1><div class="logo"></div>Urbit</h1>
         </div>
     </div>
-    <imagepanel src="http://urbit.s3.amazonaws.com/16-3-10/DSCF8664.jpg" />
+    <imagepanel src="http://media.urbit.org/site/DSCF8664.jpg" />
 </div>
 <!-- -->
 <div class="container stack">
@@ -31,7 +31,7 @@ navmode: navbar
             </div>
         </div>
     </div>
-    <imagepanel src="http://urbit.s3.amazonaws.com/16-3-10/DSCF8653.jpg" />
+    <imagepanel src="http://media.urbit.org/site/DSCF8653.jpg" />
 </div>
 <!-- -->
 <div id="learn"></div>
@@ -48,7 +48,7 @@ navmode: navbar
         <div class="slide">
             <h1>A frontier to homestead</h1>
             <div class="pair">
-                <div class="image left"><img src="http://urbit.s3.amazonaws.com/16-3-10/grid.png"/></div>
+                <div class="image left"><img src="http://media.urbit.org/site/grid.png"/></div>
                 <div>
                   <p>In Urbit, network identities are cryptographic property, like Bitcoin.  If Bitcoin is money and Ethereum is law, Urbit is land.</p>
                   <p>Urbit is designed to become a digital republic: a network of individually owned nodes with no central point of control.  Like a well-planned city, the friendly network is decentralized but connected, safe but free.</p>
@@ -60,7 +60,7 @@ navmode: navbar
         <div class="slide">
             <h1>A computer that works just for you</h1>
             <div class="pair">
-                <div class="image left"><img src="http://urbit.s3.amazonaws.com/16-3-10/atom.png"/></div>
+                <div class="image left"><img src="http://media.urbit.org/site/atom.png"/></div>
                 <div>
                     <p>Your computer isn't yours unless you can run whatever software you want and switch without losing data.  Imagine if you could replace the Facebook UI, or move your Evernotes to Google Docs.</p>
                     <p>Read more about the Urbit <a href="posts/vision">user experience</a>.</p>
@@ -88,7 +88,7 @@ navmode: navbar
         </div>
     </div>
 </div>
-<imagepanel src="http://urbit.s3.amazonaws.com/16-3-10/DSCF8654.jpg" />
+<imagepanel src="http://media.urbit.org/site/DSCF8654.jpg" />
 </div>
 <!-- -->
 <div class="container stack last">

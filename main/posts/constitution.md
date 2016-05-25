@@ -3,7 +3,7 @@ sort: 7
 type: post
 title: Interim Constution
 author: Tlon
-image: http://urbit.s3.amazonaws.com/16-3-10/blog-7.jpg
+image: http://media.urbit.org/site/blog-7.jpg
 preview: The governing rules for the early days of the Urbit network.
 layout: urbit,post
 navmode: navbar

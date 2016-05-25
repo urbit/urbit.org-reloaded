@@ -3,7 +3,7 @@ sort: 5
 type: post
 title: Magic
 author: Curtis Yarvin
-image: http://urbit.s3.amazonaws.com/16-3-10/blog-8.jpg
+image: http://media.urbit.org/site/blog-8.jpg
 preview: A thought-experiment for understanding what the world with Urbit could look like.
 layout: urbit,post
 navmode: navbar

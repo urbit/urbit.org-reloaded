@@ -3,7 +3,7 @@ sort: 6
 type: post
 title: Roadmap
 author: Curtis Yarvin
-image: http://urbit.s3.amazonaws.com/16-3-10/blog-5.jpg
+image: http://media.urbit.org/site/blog-5.jpg
 preview: Our near-term goals for the Urbit community, documentation, maturity, utility and governance.
 layout: urbit,post
 navmode: navbar
