@@ -210,4 +210,4 @@ evaluate Urbit's [beliefs and principles](../principles) or its
 are](../company).
 
 (For technical readers, check out our [developer documentation](/docs) or
-the [whitepaper](https://storage.googleapis.com/urbit-extra/paper.pdf)).
+the [whitepaper](http://media.urbit.org/whitepaper.pdf)).

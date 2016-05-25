@@ -73,7 +73,7 @@ navmode: navbar
             <p>An ordinary person can't manage a Unix server on the Internet.  The Unix-Internet platform was a brilliant system, but it's almost 50 years old.</p>
             <p>Urbit is a new clean-slate, full-stack server.  It's implemented on top of the old platform, but it's a sealed sandbox like the browser. </p>
             <p>Urbit remains young and unstable.  Alas, it's not yet ready for end users.  But it's feature-complete and ready for public development.</p>
-            <p>Read more in our <a href="https://storage.googleapis.com/urbit-extra/paper.pdf">whitepaper</a>, <a href="/docs">developer docs</a>, or <a href="posts/roadmap">development roadmap</a>.</p>
+            <p>Read more in our <a href="http://media.urbit.org/whitepaper.pdf">whitepaper</a>, <a href="/docs">developer docs</a>, or <a href="posts/roadmap">development roadmap</a>.</p>
         </div>     
     </div>   
 </div>
