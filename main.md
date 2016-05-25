@@ -19,7 +19,7 @@ navmode: navbar
         <p>A personal server is a virtual computer which stores your data, runs your apps, and manages your connected devices.</p>
         <p>Urbit is a secure, friendly peer-to-peer network of personal servers, built on a clean-slate system software stack.</p>
         <p><a href="#learn">Learn more</a>, or <a href="/docs">jump to the technical docs</a>.  And subscribe to our newsletter:</p>
-        <email submit="Get updates"></email>
+        <email dataPath="/submit" submit="Get updates"></email>
     </div>
 </div>
 <!-- -->
@@ -84,7 +84,7 @@ navmode: navbar
         <div class="rect no-header">
         <p>We’re about to sell Urbit address space to the public for the first time.</p>
         <p>If you want to be a pioneer, stay in touch:</p>
-        <email></email>
+        <email dataPath="/submit" submit="Subscribe"></email>
         </div>
     </div>
 </div>
