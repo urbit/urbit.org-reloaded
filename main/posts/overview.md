@@ -3,7 +3,7 @@ sort: 1
 type: post
 title: Urbit overview
 author: Galen Wolfe-Pauly
-image: http://urbit.s3.amazonaws.com/16-3-10/blog-0.jpg
+image: http://media.urbit.org/site/blog-0.jpg
 preview: A high-level overview of Urbit.  How the pieces fit together and what we think the future will look like as Urbit grows up.
 layout: urbit,post
 navmode: navbar
@@ -12,6 +12,7 @@ navselect: posts
 navpath: /
 navhome: /
 navclass: urbit
+comments: true
 ---
 
 ## What Urbit is
@@ -213,4 +214,4 @@ evaluate Urbit's [beliefs and principles](../principles) or its
 are](../company).
 
 (For technical readers, check out our [developer documentation](/docs) or
-the [CS paper](#)).
+the [whitepaper](http://media.urbit.org/whitepaper.pdf)).

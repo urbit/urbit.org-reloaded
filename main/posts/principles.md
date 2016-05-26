@@ -3,7 +3,7 @@ sort: 2
 type: post
 title: Beliefs + Principles
 author: Galen Wolfe-Pauly + Curtis Yarvin
-image: http://urbit.s3.amazonaws.com/16-3-10/blog-2.jpg
+image: http://media.urbit.org/site/blog-2.jpg
 preview: Where the motivation for building Urbit comes from and what guides its forward progress.  
 layout: urbit,post
 navmode: navbar

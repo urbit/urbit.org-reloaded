@@ -8,7 +8,11 @@ navclass: urbit
 navhome: /
 ---
 
-# The latest from `:talk` on `~doznec/urbit-meta`:
+# Talk to us.
+
+This is a live feed from `/urbit-meta`, running on `~doznec`, one of `2^16` Urbit stars.  
+
+Feel free to join in.  Ask a question or just tell us what's on your mind.
 
 <div class="mini-module">
 <script src="/~/at/=home=/web/lib/js/urb.js" />
@@ -17,7 +21,7 @@ navhome: /
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.1/moment-timezone.js" />
 <script src="/=home=/web/talk/main.js" />
 <link href="/=home=/web/talk/main.css" rel="stylesheet" />
-<talk chrono="reverse" station="home" audience-lock></talk>
+<talk chrono="reverse" station="home" audience-lock>
+  <load />
+</talk>
 </div>
-
-# To get on the test network [get the code](https://github.com/urbit/urbit).

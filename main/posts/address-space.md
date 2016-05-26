@@ -3,7 +3,7 @@ sort: 3
 type: post
 title: The Urbit address space and identity model
 author: Galen Wolfe-Pauly + Curtis Yarvin
-image: http://urbit.s3.amazonaws.com/16-3-10/blog-3.jpg
+image: http://media.urbit.org/site/blog-3.jpg
 preview: An overview of Urbit's cryptographic address space.
 layout: urbit,post
 navmode: navbar
@@ -70,7 +70,7 @@ It does need governance; but it governs itself as a digital republic.
 
 As an Urbit user, these basics are all you need to know.  As a
 developer, a few more details might interest you.  (An even more
-comprehensive treatment is in the [CS paper]()).
+comprehensive treatment is in the [whitepaper](http://media.urbit.org/whitepaper.pdf)).
 
 ### Design goals
 

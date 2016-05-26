@@ -11,15 +11,15 @@ navmode: navbar
             <h1><div class="logo"></div>Urbit</h1>
         </div>
     </div>
-    <imagepanel src="http://urbit.s3.amazonaws.com/16-3-10/DSCF8664.jpg" />
+    <imagepanel src="http://media.urbit.org/site/DSCF8664.jpg" />
 </div>
 <!-- -->
 <div class="container stack">
     <div class="col-md-offset-1 col-md-10 slide-1">
         <p>A personal server is a virtual computer which stores your data, runs your apps, and manages your connected devices.</p>
         <p>Urbit is a secure, friendly peer-to-peer network of personal servers, built on a clean-slate system software stack.</p>
-        <p><a href="#learn">Learn more</a>, or <a href="/docs">jump to the technical docs</a>.  Subscribe to our newsletter:</p>
-        <email submit="Get updates"></email>
+        <p><a href="#learn">Learn more</a>, or <a href="/docs">jump to the technical docs</a>.  And subscribe to our newsletter:</p>
+        <email dataPath="/submit" submit="Get updates"></email>
     </div>
 </div>
 <!-- -->
@@ -31,7 +31,7 @@ navmode: navbar
             </div>
         </div>
     </div>
-    <imagepanel src="http://urbit.s3.amazonaws.com/16-3-10/DSCF8653.jpg" />
+    <imagepanel src="http://media.urbit.org/site/DSCF8653.jpg" />
 </div>
 <!-- -->
 <div id="learn"></div>
@@ -48,7 +48,7 @@ navmode: navbar
         <div class="slide">
             <h1>A frontier to homestead</h1>
             <div class="pair">
-                <div class="image left"><img src="http://urbit.s3.amazonaws.com/16-3-10/grid.png"/></div>
+                <div class="image left"><img src="http://media.urbit.org/site/grid.png"/></div>
                 <div>
                   <p>In Urbit, network identities are cryptographic property, like Bitcoin.  If Bitcoin is money and Ethereum is law, Urbit is land.</p>
                   <p>Urbit is designed to become a digital republic: a network of individually owned nodes with no central point of control.  Like a well-planned city, the friendly network is decentralized but connected, safe but free.</p>
@@ -60,7 +60,7 @@ navmode: navbar
         <div class="slide">
             <h1>A computer that works just for you</h1>
             <div class="pair">
-                <div class="image left"><img src="http://urbit.s3.amazonaws.com/16-3-10/atom.png"/></div>
+                <div class="image left"><img src="http://media.urbit.org/site/atom.png"/></div>
                 <div>
                     <p>Your computer isn't yours unless you can run whatever software you want and switch without losing data.  Imagine if you could replace the Facebook UI, or move your Evernotes to Google Docs.</p>
                     <p>Read more about the Urbit <a href="posts/vision">user experience</a>.</p>
@@ -73,7 +73,7 @@ navmode: navbar
             <p>An ordinary person can't manage a Unix server on the Internet.  The Unix-Internet platform was a brilliant system, but it's almost 50 years old.</p>
             <p>Urbit is a new clean-slate, full-stack server.  It's implemented on top of the old platform, but it's a sealed sandbox like the browser. </p>
             <p>Urbit remains young and unstable.  Alas, it's not yet ready for end users.  But it's feature-complete and ready for public development.</p>
-            <p>Read more in our <a href="#">CS paper</a>, <a href="/docs">developer docs</a>, or <a href="posts/roadmap">development roadmap</a>.</p>
+            <p>Read more in our <a href="http://media.urbit.org/whitepaper.pdf">whitepaper</a>, <a href="/docs">developer docs</a>, or <a href="posts/roadmap">development roadmap</a>.</p>
         </div>     
     </div>   
 </div>
@@ -84,11 +84,11 @@ navmode: navbar
         <div class="rect no-header">
         <p>We’re about to sell Urbit address space to the public for the first time.</p>
         <p>If you want to be a pioneer, stay in touch:</p>
-        <email></email>
+        <email dataPath="/submit" submit="Subscribe"></email>
         </div>
     </div>
 </div>
-<imagepanel src="http://urbit.s3.amazonaws.com/16-3-10/DSCF8654.jpg" />
+<imagepanel src="http://media.urbit.org/site/DSCF8654.jpg" />
 </div>
 <!-- -->
 <div class="container stack last">
