@@ -22,9 +22,8 @@ just read these simplified basics.
 
 An Urbit identity, or "ship," is a string like `~firbyr-napbes`.  It
 means nothing, but it's easy to remember and say out loud.
-`~firbyr-napbes` is actually just a 32-bit number, like an IP address.
-We turn this number into a string that sounds like a name from some
-imaginary foreign country.
+`~firbyr-napbes` is actually just a 32-bit number, like an IP address,
+that we turn into a human-memorable string.
 
 Technically, a ship is a secure digital identity that you own and
 control with a cryptographic key, like a Bitcoin wallet.  As in
@@ -68,7 +67,7 @@ It does need governance; but it governs itself as a digital republic.
 
 ## Details
 
-As an Urbit user, these basics are all you need to know.  As a
+As an Urbit user, thesie basics are all you need to know.  As a
 developer, a few more details might interest you.  (An even more
 comprehensive treatment is in the [whitepaper](http://media.urbit.org/whitepaper.pdf)).
 
@@ -92,7 +91,7 @@ The Internet doesn't have anything like Urbit ships, so you may need
 to stretch your brain a little here.
 
 There are three levels of naming on the Internet: raw, numeric IP
-addresses IP addresses (like `126.78.92.112`), domain names (like
+addresses (like `126.78.92.112`), domain names (like
 `foobar.com`), and user identities (like `galen@tlon.io` or
 `@galenwp`).
 
