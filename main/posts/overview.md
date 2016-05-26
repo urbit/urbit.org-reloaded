@@ -179,17 +179,21 @@ basic apps, is only 30,000 lines of Hoon.
 
 The first end-to-end prototype of Urbit took one engineer eleven
 years.  The current beta took three more years, with about three
-engineers on average.  We think we've solved all the real CS
-problems.  But it will take more than our small team to deliver a
-polished, user-friendly Urbit that can actually challenge the
-modern web.
+engineers on average.
+
+How does it take 14 years to write 30,000 lines of code?  The code
+wasn't the hard part.  The hard part was rewriting it until it was
+right.  We think we've solved all the real CS problems, and we're
+certainly done changing major interfaces.  But it will take more than
+our small team to deliver a polished Urbit user experience that can
+actually challenge modern web apps.
 
 ## Where we are, what we're doing
 
 Urbit is in feature freeze.  It's a minimum viable product in
 early beta.  It still needs quite a bit of fit-and-finish work.
 We certainly don't recommend it for end users or consider it in
-any way secure.  But it's fun to play with, if you're a nerd.
+any way secure.  But it's fun to play with, if you're a hacker.
 
 This summer, we're making the switch to an open and transparent
 development and specification process.  A system as unusual as

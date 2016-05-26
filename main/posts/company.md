@@ -16,6 +16,8 @@ navclass: urbit
 
 ## History
 
+Curtis started working on Urbit in 2002.  By 2011 he h
+
 In 2002 Curtis went down to his garage with a question in mind: can
 you build a computer whose state is just a number, and whose updates
 are a single simple function?  In 2008 Nock worked pretty well, in
@@ -29,7 +31,7 @@ a company, Tlon, to support the development of the platform.  Tlon
 owns roughly half of the Urbit address space, and operates with a
 simple business model: use the value of Urbit address space to
 bootstrap the development of the Urbit platform.  The name Tlon is a
-reference to a Borges story.   
+reference to a Borges story.
 
 ## Team
 
@@ -61,11 +63,11 @@ Recommended reading: Joseph Heller
 
 ## Investors
 
-We’re glad to have the support of some fantastic investors:
+We’re glad to have the support of some fantastic investors, including:
 
 **Andreessen Horowitz** <br />
 **FF Angel** <br />
 **Tim Draper** <br />
-**Jan Talinn** <br />
+**Jaan Tallinn** <br />
 **Ben Davenport** <br />
-**Zhen Fund**
+**ZhenFund**
