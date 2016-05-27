@@ -1,7 +1,7 @@
 ---
 sort: 7
 type: post
-title: Interim Constution
+title: Interim constitution
 author: Tlon
 image: http://media.urbit.org/site/blog-7.jpg
 preview: The governing rules for the early days of the Urbit network.

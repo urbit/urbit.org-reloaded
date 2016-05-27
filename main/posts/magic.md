@@ -4,7 +4,7 @@ type: post
 title: Magic
 author: Curtis Yarvin
 image: http://media.urbit.org/site/blog-8.jpg
-preview: A thought-experiment for understanding what the world with Urbit could look like.
+preview: A thought-experiment to explain the Urbit user experience.
 layout: urbit,post
 navmode: navbar
 navdpad: false

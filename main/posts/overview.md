@@ -4,7 +4,7 @@ type: post
 title: Urbit overview
 author: Galen Wolfe-Pauly
 image: http://media.urbit.org/site/blog-0.jpg
-preview: A high-level overview of Urbit.  How the pieces fit together and what we think the future will look like as Urbit grows up.
+preview: A high-level overview of Urbit.
 layout: urbit,post
 navmode: navbar
 navdpad: false

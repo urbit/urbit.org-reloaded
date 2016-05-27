@@ -4,7 +4,7 @@ type: post
 title: What is Urbit for?
 author: Galen Wolfe-Pauly
 image: http://media.urbit.org/site/blog-1.jpg
-preview: We didn't build Urbit just because it's fun to work on.  We built Urbit because we think it can unlock new potential products.  Here we take a tour through some of these possibilities.
+preview: A vision of the Urbit-powered future.
 layout: urbit,post
 navmode: navbar
 navdpad: false

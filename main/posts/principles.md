@@ -1,10 +1,10 @@
 ---
 sort: 2
 type: post
-title: Beliefs + Principles
+title: Beliefs and principles
 author: Galen Wolfe-Pauly + Curtis Yarvin
 image: http://media.urbit.org/site/blog-2.jpg
-preview: Where the motivation for building Urbit comes from and what guides its forward progress.  
+preview: 
 layout: urbit,post
 navmode: navbar
 navdpad: false
@@ -16,28 +16,26 @@ navclass: urbit
 
 ## Beliefs
 
-We believe strongly in the value of individual creativity.  To
-maximize our individual creative potential we believe that
-general-purpose tools are an essential resource.
+We believe that general-purpose computing is an essential tool to
+unlock the power of individual creativity.
 
-We believe that individuals shouldn’t need to pay any cost in terms of
-usability, accessibility or reliability in exchange for ownership, privacy or
-control.  
+We believe that ownership, privacy and control don't need to be
+sacrificed in exchange for usability, accessibility and reliability.
 
-We believe that the discussion of how our software should work needs to be inclusive and expansive.  We welcome debate and criticism in our development process.
+We believe in the power of the informed crowd to develop and maintain
+software, through the IETF principles of sincerity and rough consensus.
+The ability of the engineering community to govern itself through
+republican forms is not an abstract theory; it's a proven fact.
 
-We believe in free speech and we believe in individual accountability.  
-We believe that a healthy network is one with diverse, well-defined
-communities and clear, user-controlled, boundaries between public and
-private.  
+We believe in both free speech and individual accountability.  We
+believe that a healthy network is one with diverse and well-defined
+communities, and clear, user-controlled, boundaries between public and
+private space.
 
-Lastly we believe that no software system can replace human trust and
-communication.  Discourse and dialogue are an important part of communities
-of all scales.  Code and law can successfully reduce conflict only to a
-point, when too far reaching they become oppressive.  
-
-We aim to preserve the promise of general-purpose computing since its
-positive effect on humankind is so deeply significant.
+We believe that no software system can replace human trust and
+communication.  Dialogue, judgment and governance are essential to
+communities of all scales.  Code and law can reduce conflict in the
+common case; they can never handle all exceptions.
 
 ## Principles
 
