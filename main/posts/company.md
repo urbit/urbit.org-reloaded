@@ -55,25 +55,50 @@ Anton is a rationalist Bolshevik and trained baritone.  Philip is
 a homeschooled Christian and baseball fan.  Henry is a
 prep-school soccer player and expert in horizontal marketing.
 
+<div class="person">
+<img src="https://storage.googleapis.com/media.urbit.org/site/company-galen.jpg" />
+
 **Galen Wolfe-Pauly** <br />
 Founder, CEO<br />
-Recommended reading: Samuel Beckett, Christopher Alexander
+Recommended reading: <br />
+Samuel Beckett, Christopher Alexander
+</div>
+
+<div class="person">
+<img src="https://storage.googleapis.com/media.urbit.org/site/company-curtis.jpg" />
 
 **Curtis Yarvin** <br />
 Founder, CTO<br />
-Recommended reading: James Burnham, Ernst Juenger
+Recommended reading: <br />
+James Burnham, Ernst Juenger
+</div>
+
+<div class="person">
+<img src="https://storage.googleapis.com/media.urbit.org/site/company-anton.jpg" />
 
 **Anton Dyudin** <br />
 Engineer<br />
-Recommended reading: Isaac Asimov
+Recommended reading: <br />
+Isaac Asimov
+</div>
+
+<div class="person">
+<img src="https://storage.googleapis.com/media.urbit.org/site/company-philip.jpg" />
 
 **Philip Monk** <br />
 Engineer<br />
-Recommended reading: G.K. Chesterton
+Recommended reading: <br />
+G.K. Chesterton
+</div>
+
+<div class="person">
+<img  src="https://storage.googleapis.com/media.urbit.org/site/company-henry.jpg" />
 
 **Henry Ault** <br />
 Business / Engineer<br />
-Recommended reading: Joseph Heller
+Recommended reading: <br />
+Joseph Heller
+</div>
 
 ## Investors
 
