@@ -6,6 +6,8 @@ author: Galen Wolfe-Pauly
 image: http://media.urbit.org/site/blog-1.jpg
 preview: A vision of the Urbit-powered future.
 layout: urbit,post
+footer: true
+comments: true
 navmode: navbar
 navdpad: false
 navselect: posts

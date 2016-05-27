@@ -6,6 +6,8 @@ author: Tlon
 image: http://media.urbit.org/site/blog-7.jpg
 preview: The governing rules for the early days of the Urbit network.
 layout: urbit,post
+footer: true
+comments: true
 navmode: navbar
 navdpad: false
 navselect: blog

@@ -6,6 +6,8 @@ author: Curtis Yarvin
 image: http://media.urbit.org/site/blog-8.jpg
 preview: A thought-experiment to explain the Urbit user experience.
 layout: urbit,post
+footer: true
+comments: true
 navmode: navbar
 navdpad: false
 navselect: posts

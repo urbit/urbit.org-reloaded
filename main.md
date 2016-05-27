@@ -109,5 +109,5 @@ navmode: navbar
 </div>
 <!-- -->
 <div class="footer container">
-  <div class="col-md-offset-1 col-md-11">This page was made by Urbit.  Feedback:<a href="mailto:urbit@urbit.org">urbit@urbit.org</a></div>
+  <div class="col-md-offset-1 col-md-11">This page was made by Urbit.  Feedback:<a href="mailto:urbit@urbit.org">urbit@urbit.org</a>  <a href="https://twitter.com/urbit_">@urbit_</a></div>
 </div>

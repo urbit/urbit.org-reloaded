@@ -6,13 +6,14 @@ author: Galen Wolfe-Pauly
 image: http://media.urbit.org/site/blog-0.jpg
 preview: A high-level overview of Urbit.
 layout: urbit,post
+footer: true
+comments: true
 navmode: navbar
 navdpad: false
 navselect: posts
 navpath: /
 navhome: /
 navclass: urbit
-comments: true
 ---
 
 ## What Urbit is

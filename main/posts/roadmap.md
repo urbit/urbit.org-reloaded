@@ -6,6 +6,8 @@ author: Curtis Yarvin
 image: http://media.urbit.org/site/blog-5.jpg
 preview: Our near-term goals for the Urbit community, documentation, maturity, utility and governance.
 layout: urbit,post
+footer: true
+comments: true
 navmode: navbar
 navdpad: false
 navselect: posts

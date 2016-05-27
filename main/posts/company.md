@@ -6,6 +6,7 @@ author: Tlon
 image: http://media.urbit.org/site/blog-6.jpg
 preview:  
 layout: urbit,post
+footer: true
 navmode: navbar
 navdpad: false
 navselect: posts
@@ -18,8 +19,8 @@ navclass: urbit
 
 Curtis started working on Urbit in his garage in 2002.  By 2008 he'd
 finished Nock, a productivity level of approximately 1 bit per day.
-By 2012 Hoon was essentially in its present form.  By 2014, he had a 
-prototype of Arvo, and used it to raise a little seed funding so we 
+By 2012 Hoon was essentially in its present form.  By 2014, he had a
+prototype of Arvo, and used it to raise a little seed funding so we
 all could join him.
 
 Urbit in early 2014 did most of the things it does today, but
@@ -46,12 +47,12 @@ foundation / community.  This will not happen any time soon.
 Some companies are all about cultural uniformity.  We couldn't
 differ more.  No two people at Tlon see the world eye-to-eye.
 
-Galen (CEO) is a surfer from Santa Cruz with an [architecture
-degree](http://cooper.edu). Curtis (CTO) is a former CS grad student
-who loves [old
-books](https://books.google.com/books/about/The_True_History_of_the_American_Revolut.html?id=SZccAAAAMAAJ).
+Galen (CEO) is a surfer from Santa Cruz with an architecture
+degree. Curtis (CTO) is a former CS grad student
+who loves old
+books.
 Anton is a rationalist Bolshevik and trained baritone.  Philip is
-a home-schooled Christian and baseball fan.  Henry is a
+a homeschooled Christian and baseball fan.  Henry is a
 prep-school soccer player and expert in horizontal marketing.
 
 **Galen Wolfe-Pauly** <br />

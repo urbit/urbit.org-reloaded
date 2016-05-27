@@ -4,8 +4,10 @@ type: post
 title: Beliefs and principles
 author: Galen Wolfe-Pauly + Curtis Yarvin
 image: http://media.urbit.org/site/blog-2.jpg
-preview: 
+preview:
 layout: urbit,post
+footer: true
+comments: true
 navmode: navbar
 navdpad: false
 navselect: posts

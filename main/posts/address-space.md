@@ -6,6 +6,8 @@ author: Galen Wolfe-Pauly + Curtis Yarvin
 image: http://media.urbit.org/site/blog-3.jpg
 preview: An overview of Urbit's cryptographic address space.
 layout: urbit,post
+footer: true
+comments: true
 navmode: navbar
 navdpad: false
 navselect: posts
