@@ -61,9 +61,9 @@ Urbit is very far from being a mere esoteric curiosity.
 The first challenge we face is making sure Urbit is properly
 documented.  (See below.)  We'll also be:
 
-- holding weekly public meetings / office hours maintaining public
-- developer blogs (probably) running open contests with address-space
-- prizes
+- holding weekly public meetings / office hours
+- maintaining public developer blogs
+- (probably) running open contests with address-space prizes
 
 ## Maturity
 

@@ -50,8 +50,7 @@ never shows you ads.  Or loses your data.  Or updates without
 your consent.
 
 Technically, Urbit is a new kind of OS that has a precise formal
-definition.  (Urbit is actually a [single mathematical function](CS
-paper).)  One advantage of a math-based OS is that Urbit is perfectly
+definition.  (Urbit is actually a [single mathematical function](http://media.urbit.org/whitepaper.pdf).)  One advantage of a math-based OS is that Urbit is perfectly
 portable.  It can't tell whether it's in a cloud data center or on
 your home PC.
 
