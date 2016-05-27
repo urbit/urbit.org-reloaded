@@ -52,8 +52,7 @@ degree. Curtis (CTO) is a former CS grad student
 who loves old
 books.
 Anton is a rationalist Bolshevik and trained baritone.  Philip is
-a homeschooled Christian and baseball fan.  Henry is a
-prep-school soccer player and expert in horizontal marketing.
+a homeschooled Christian and baseball fan.  Henry is an amateur soccer player who speaks four languages.
 
 **Galen Wolfe-Pauly** <br />
 Founder, CEO<br />
