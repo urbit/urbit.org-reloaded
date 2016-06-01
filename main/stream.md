@@ -8,11 +8,11 @@ navclass: urbit
 navhome: /
 ---
 
-# Talk to us.
+# Live from `~doznec`
 
-This is a live feed from `/urbit-meta`, running on `~doznec`, one of `2^16` Urbit stars.  
+This is a live feed from `/urbit-meta`, running on `~doznec`, one of `2^16` Urbit stars.  We use `/urbit-meta` to chat, coordinate and build Urbit.
 
-Feel free to join in.  Ask a question or just tell us what's on your mind.
+If you'd like to join in, head to [the GitHub repo](https://github.com/urbit/urbit) to get set up.
 
 *Be warned: this chat gateway can be pretty slow when traffic spikes.*
 
