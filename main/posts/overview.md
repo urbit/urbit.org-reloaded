@@ -59,10 +59,10 @@ on your laptop, or move to a new host in Iceland.  Urbit's formal
 simplicity makes managing it as easy as managing an iPhone: all you
 have to decide is what apps to add.
 
-Each urbit is a node on an global, encrypted P2P network.  Your Urbit
-name, a generated pseudonym like `~talsur-todres`, is also your network
-address.  Like Bitcoin, Urbit address space is a cryptographic asset
-with a limited supply.
+Each urbit is a node on a global, encrypted P2P network.  Your Urbit
+name, a generated pseudonym like `~talsur-todres`, is also your
+network address.  Like Bitcoin, Urbit address space is a cryptographic
+asset with a limited supply.
 
 By keeping addresses scarce, we make spam and abuse expensive.  Urbit
 is a "friendly network," like the Internet in 1986, where a stranger
