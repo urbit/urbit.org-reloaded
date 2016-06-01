@@ -69,7 +69,7 @@ It does need governance; but it governs itself as a digital republic.
 
 ## Details
 
-As an Urbit user, thesie basics are all you need to know.  As a
+As an Urbit user, these basics are all you need to know.  As a
 developer, a few more details might interest you.  (An even more
 comprehensive treatment is in the [whitepaper](http://media.urbit.org/whitepaper.pdf)).
 
