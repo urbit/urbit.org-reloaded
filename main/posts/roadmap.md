@@ -251,4 +251,4 @@ ball and run with it.
 
 ## Governance
 
-See the [interim constitution](./constitution).
+See the [interim constitution](../constitution).
