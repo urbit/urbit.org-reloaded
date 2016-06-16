@@ -69,7 +69,7 @@ Samuel Beckett, Christopher Alexander
 **Curtis Yarvin** <br />
 Founder, CTO<br />
 Recommended reading: <br />
-James Burnham, Ernst Juenger
+James Burnham, Ernst Jünger
 </div>
 
 <div class="person">
