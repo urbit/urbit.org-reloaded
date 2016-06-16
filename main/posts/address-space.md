@@ -7,7 +7,6 @@ image: http://media.urbit.org/site/blog-3.jpg
 preview: An overview of Urbit's cryptographic address space.
 layout: urbit,post
 footer: true
-comments: true
 navmode: navbar
 navdpad: false
 navselect: posts
@@ -298,3 +297,7 @@ legislature balanced against itself.
 
 For more on Urbit's governance design, see our [beliefs and
 principles]() and our [interim constitution]().
+
+<div>
+  Subscribe to our newsletter: <email dataPath="/submit" submit="Get updates" />
+</div>

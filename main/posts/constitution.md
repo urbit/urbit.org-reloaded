@@ -7,7 +7,6 @@ image: http://media.urbit.org/site/blog-7.jpg
 preview: The governing rules for the early days of the Urbit network.
 layout: urbit,post
 footer: true
-comments: true
 navmode: navbar
 navdpad: false
 navselect: blog
@@ -149,3 +148,7 @@ donate the `urbit.org` galaxies, the DNS domain, and the Github
 ## First consuls
 
 The first consuls are Galen Wolfe-Pauly and Raymond Pasco.
+
+<div>
+  Subscribe to our newsletter: <email dataPath="/submit" submit="Get updates" />
+</div>

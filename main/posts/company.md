@@ -109,3 +109,7 @@ We’re glad to have the support of some fantastic investors, including:
 **Jaan Tallinn** <br />
 **Ben Davenport** <br />
 **ZhenFund**
+
+<div>
+  Subscribe to our newsletter: <email dataPath="/submit" submit="Get updates" />
+</div>

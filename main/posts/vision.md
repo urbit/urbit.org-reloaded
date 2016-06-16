@@ -7,7 +7,6 @@ image: http://media.urbit.org/site/blog-1.jpg
 preview: A vision of the Urbit-powered future.
 layout: urbit,post
 footer: true
-comments: true
 navmode: navbar
 navdpad: false
 navselect: posts
@@ -199,3 +198,7 @@ industrial enterprise there’s a whole other set of parallel problems:
 tracking inventory, controlling a vast array of machines, and managing
 logistics.  In both cases we need a decentralized network and
 computing platform.  Urbit is up to the task.
+
+<div>
+  Subscribe to our newsletter: <email dataPath="/submit" submit="Get updates" />
+</div>

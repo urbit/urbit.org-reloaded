@@ -7,7 +7,6 @@ image: http://media.urbit.org/site/blog-2.jpg
 preview:  
 layout: urbit,post
 footer: true
-comments: true
 navmode: navbar
 navdpad: false
 navselect: posts
@@ -131,3 +130,7 @@ principles, or laws in their own jurisdictions, stars and
 galaxies are responsible for routing their children.  They are
 also collectively responsible for escape-routing the children of
 stars and galaxies which fail in their responsibility.
+
+<div>
+  Subscribe to our newsletter: <email dataPath="/submit" submit="Get updates" />
+</div>

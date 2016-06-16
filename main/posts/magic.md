@@ -7,7 +7,6 @@ image: http://media.urbit.org/site/blog-8.jpg
 preview: A thought-experiment to explain the Urbit user experience.
 layout: urbit,post
 footer: true
-comments: true
 navmode: navbar
 navdpad: false
 navselect: posts
@@ -207,3 +206,7 @@ And, with magic, we've succeeded in turning Facebook into Urbit.
 Technically, Urbit is pretty close to magic, but there is no way
 it's going to happen this way.  See the [roadmap] for how it
 actually happens.
+
+<div>
+  Subscribe to our newsletter: <email dataPath="/submit" submit="Get updates" />
+</div>
