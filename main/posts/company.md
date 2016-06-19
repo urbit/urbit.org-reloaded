@@ -110,6 +110,8 @@ We’re glad to have the support of some fantastic investors, including:
 **Ben Davenport** <br />
 **ZhenFund**
 
+<br /><br />
+
 <div>
   Subscribe to our newsletter: <email dataPath="/submit" submit="Get updates" />
 </div>

@@ -149,6 +149,8 @@ donate the `urbit.org` galaxies, the DNS domain, and the Github
 
 The first consuls are Galen Wolfe-Pauly and Raymond Pasco.
 
+<br /><br />
+
 <div>
   Subscribe to our newsletter: <email dataPath="/submit" submit="Get updates" />
 </div>

@@ -298,6 +298,8 @@ legislature balanced against itself.
 For more on Urbit's governance design, see our [beliefs and
 principles]() and our [interim constitution]().
 
+<br /><br />
+
 <div>
   Subscribe to our newsletter: <email dataPath="/submit" submit="Get updates" />
 </div>

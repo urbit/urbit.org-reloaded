@@ -207,6 +207,8 @@ Technically, Urbit is pretty close to magic, but there is no way
 it's going to happen this way.  See the [roadmap] for how it
 actually happens.
 
+<br /><br />
+
 <div>
   Subscribe to our newsletter: <email dataPath="/submit" submit="Get updates" />
 </div>

@@ -131,6 +131,8 @@ galaxies are responsible for routing their children.  They are
 also collectively responsible for escape-routing the children of
 stars and galaxies which fail in their responsibility.
 
+<br /><br />
+
 <div>
   Subscribe to our newsletter: <email dataPath="/submit" submit="Get updates" />
 </div>

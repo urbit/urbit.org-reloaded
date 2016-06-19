@@ -215,6 +215,8 @@ are](../company).
 (For technical readers, check out our [developer documentation](/docs) or
 the [whitepaper](http://media.urbit.org/whitepaper.pdf)).
 
+<br /><br />
+
 <div>
   Subscribe to our newsletter: <email dataPath="/submit" submit="Get updates" />
 </div>

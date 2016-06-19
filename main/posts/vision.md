@@ -199,6 +199,8 @@ tracking inventory, controlling a vast array of machines, and managing
 logistics.  In both cases we need a decentralized network and
 computing platform.  Urbit is up to the task.
 
+<br /><br />
+
 <div>
   Subscribe to our newsletter: <email dataPath="/submit" submit="Get updates" />
 </div>

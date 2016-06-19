@@ -252,6 +252,8 @@ ball and run with it.
 
 See the [interim constitution](../constitution).
 
+<br /><br />
+
 <div>
   Subscribe to our newsletter: <email dataPath="/submit" submit="Get updates" />
 </div>
