@@ -1,6 +1,6 @@
 ---
-title: About
-sort: 2
+title: Blog
+sort: 3
 layout: urbit
 navdpad: false
 navmode: navbar

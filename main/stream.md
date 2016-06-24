@@ -1,6 +1,6 @@
 ---
 title: Chat
-sort: 0
+sort: 1
 layout: urbit
 navdpad: false
 navmode: navbar

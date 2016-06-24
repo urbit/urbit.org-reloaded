@@ -1,5 +1,5 @@
 ---
-sort: 7
+date: ~2016.6.24
 type: post
 title: The DAO as a lesson in decentralized governance
 author: Curtis Yarvin
@@ -12,14 +12,12 @@ navpath: /
 navhome: /
 navclass: urbit
 ---
-
-# The DAO as a lesson in decentralized governance
-
+<br /><br />
 What's the right lesson for the decentralization community to
 learn from the collapse of the DAO?
 
 Perhaps the simplest lesson is that even decentralized networks
-need governments, and have governments.  Every network is a 
+need governments, and have governments.  Every network is a
 state.  Every state has a government.
 
 ## Decentralization theater considered harmful
@@ -63,7 +61,7 @@ clue is that before the DAO hack, everyone swore great oaths to
 "the steadfast iron will of immutable code."  Methinks the lady
 did protest too much.  But these oaths make rolling back the DAO
 blatantly illegitimate.
- 
+
 From a governance perspective, the line of lawlessness isn't the
 line between soft and hard forks.  It's any fork which makes an
 exception for a specific address.  Ethereum has already done this
@@ -217,7 +215,7 @@ understanding of its capabilities and limits.
 A rollback acknowledges this.  It acknowledges that Ethereum
 wasn't ready for complete self-government, and *someone* needed
 to have stopped the DAO from trading.  It's not quite clear what
-the principle behind the rollback was 
+the principle behind the rollback was
 
 Perhaps the best kind of DAO rollback would be a rollback which
 understood this error fully, and acknowledged that -- for the
@@ -302,7 +300,7 @@ well-engineered, high-quality smart contracts like Augur and
 Maker, but just its own equivalent of 1789.  If Ethereum needs a
 government, it must govern itself.  It certainly has all the
 technical tools it needs!
- 
+
 Or, of course, it could just let the hackers win.  This is the
 easiest path.  And in the end, it may still be the best.  War,
 who needs it?
@@ -322,9 +320,15 @@ from the network.
 Whatever institution signs these updates is, by any standard, an
 absolute government.  It's as if the Ethereum Foundation could
 push a hardfork of all clients by signing the new code on the
-blockchain.  Getting out of this situation is a long-term goal -- 
+blockchain.  Getting out of this situation is a long-term goal --
 where "long term" means years.  Decentralization is hard.
 
 Read our [interim
 constitution](http://urbit.org/posts/constitution) and our
 [beliefs and principles](http://urbit.org/posts/principles).
+
+<br /><br />
+
+<div>
+  Subscribe to our newsletter: <email dataPath="/submit" submit="Get updates" />
+</div>
