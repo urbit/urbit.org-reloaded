@@ -180,7 +180,7 @@ network -- though another party, such as a real government, might
 have an incentive to coerce the miner.
 
 The important success of Bitcoin is the collective acceptance --
-mathematically false, but politically true -- that rollbacks are
+mathematically false, but politically true -- that rollbacks in
 Bitcoin are inconceivable.  Bitcoin has governance problems, but
 they're confined to relatively unimportant questions, like the
 blocksize debate.  "Decentralization" may not be quite the word,
@@ -216,7 +216,7 @@ understanding of its capabilities and limits.
 A rollback acknowledges this.  It acknowledges that Ethereum
 wasn't ready for complete self-government, and *someone* needed
 to have stopped the DAO from trading.  It's not quite clear what
-the principle behind the rollback was
+the principle behind the rollback was.
 
 Perhaps the best kind of DAO rollback would be a rollback which
 understood this error fully, and acknowledged that -- for the
