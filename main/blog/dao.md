@@ -5,6 +5,7 @@ title: The DAO as a lesson in decentralized governance
 author: Curtis Yarvin
 preview: The DAO as a lesson in decentralized governance
 layout: urbit,post
+comments: true
 navmode: navbar
 navdpad: false
 navselect: blog
