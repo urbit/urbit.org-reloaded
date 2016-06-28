@@ -3,7 +3,7 @@ sort: 8
 type: post
 title: Common objections to Urbit
 author: Curtis Yarvin
-preview: Some common objections to Urbit, refuted.
+preview: Some common objections to Urbit, discussed.
 layout: urbit,post
 footer: true
 navmode: navbar
@@ -14,9 +14,10 @@ navhome: /
 navclass: urbit
 ---
 
-We're strong believers in crowdsourced criticism.  We've heard a
-lot of great criticisms of Urbit.  Surely there's more out there!
-Comments are open at the bottom of the page.
+We love crowdsourced criticism.  We've heard a lot of great
+objections to  Urbit.  Surely there's more out there!  If so,
+comments are open at the bottom of the page.  We'll revise this
+document to include anything new and interesting.
 
 Here's our list right now:
 
@@ -36,7 +37,7 @@ Here's our list right now:
 - [Urbit is sniffed at by Houyhnhyms.](#horse)
 
 *"We choose to go to the moon, not because it is easy, but because it is hard."*  
-— John F. Kennedy
+— [John F. Kennedy](https://www.youtube.com/watch?v=g25G1M4EXrQ)
 
 <h2 id="prime">Urbit is not ready for prime time.</h2> 
 
