@@ -26,6 +26,7 @@ Here's our list right now:
 - [Urbit needs an infinitely extending packet/event log.](#log)
 - [Urbit is a total scamcoin.  It's 100% premined.](#scam)
 - [Urbit isn't even really decentralized!  It has a government!](#gov)
+- [{Sandstorm, IPFS, Ethereum, ...} is way ahead of Urbit.](#sand)
 - [Urbit doesn't have enough planets for every human being.](#planet)
 - [Cloud computing is inherently non-private.](#pwned)
 - [Urbit will never be able to call any existing code.](#code)
@@ -319,7 +320,6 @@ at best, and a hoax at worst.  And of course, no one can DAO us
 Among other things, we check it into Github.  Github is not a
 blockchain -- but still, good luck with that.
 
-[{Sandstorm, IPFS, Ethereum, ...} is way ahead of Urbit.](#sand)
 <h2 id="sand">{Sandstorm, IPFS, Ethereum, ...} is way ahead of
 Urbit.</h2>
 
@@ -329,7 +329,7 @@ all part of each others' network effect.
 
 IPFS, Sandstorm, Ethereum, and Urbit can all take over the world
 at the same time.  None of them competes with the others.  They
-enable each other.  
+enable each other.
 
 For instance, IPFS and Urbit are both global immutable
 namespaces.  IPFS is a chord-routed, content-addressed namespace.
