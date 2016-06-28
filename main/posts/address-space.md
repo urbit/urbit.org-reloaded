@@ -1,7 +1,7 @@
 ---
 sort: 3
 type: post
-title: The Urbit address space and identity model
+title: The Urbit address space
 author: Galen Wolfe-Pauly + Curtis Yarvin
 image: http://media.urbit.org/site/blog-3.jpg
 preview: An overview of Urbit's cryptographic address space.
