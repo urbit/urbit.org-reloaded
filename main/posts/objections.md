@@ -452,8 +452,7 @@ When in doubt, remember that Urbit is "the browser for the server
 side."  It plays by the same general rules.  Isolation means
 isolation.
 
-[There's no way Urbit will ever be adopted.  It's too
-weird.](#weird) <h2 id="weird">There's no way Urbit will ever be
+<h2 id="weird">There's no way Urbit will ever be
 adopted.  It's too weird.</h2>
 
 **TLDR**: Urbit adoption is designed to be driven by ordinary end
