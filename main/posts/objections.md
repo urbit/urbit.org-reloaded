@@ -141,7 +141,7 @@ complex ones, are tested into equivalence by brute force.
 
 Urbit has some jet abuses.  The equivalence between our markdown
 parser in Hoon and the CommonMark C library is super dubious.  It
-should be taken out and shot.
+should be revisited.
 
 But the miscomputation resulting from a minor jet discrepancy is
 not a security hole or even fatal.  It effectively means the
