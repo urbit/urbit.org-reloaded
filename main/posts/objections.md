@@ -33,7 +33,6 @@ Here's our list right now:
 - [Urbit programmers are stuck with Hoon.](#stuck)
 - [Ordinary users will never be able to manage an Urbit server.](#user)
 - [Urbit has no killer app.](#killer)
-- [Urbit is a reactionary digital dictatorship.](#dictator)
 - [Urbit is sniffed at by Houyhnhyms.](#horse)
 
 *"We choose to go to the moon, not because it is easy, but because it is hard."*  
@@ -657,31 +656,6 @@ is the best one.  API libraries for `npm` et al abound.
 Stateful, self-updating, generic API aggregators with FUSE
 integration, also integrated with a reactive web server, are
 rarer.
-
-<h2 id="dictator">Urbit is a reactionary digital
-dictatorship.</h2> 
-
-**TLDR**: Facebook is a digital dictatorship.
-Urbit is a decentralized network with a republican constitution.
-
-It's especially important to combat the impression that Tlon is a
-reactionary conspiracy.  Tlon is a Delaware corporation.  It
-exists to make its investors as rich as possible.  We are not
-aware of our investors' ideologies.  We are pretty confident that
-they don't take precedence, ever, over turning a profit.
-
-As in any corporation, Tlon's employees work for its investors.
-Those employees would have trouble conspiring in any political
-sense, though.  In 2016 election terms, two of us are for
-Sanders, one for Clinton, and two for Trump.
-
-Now, in the long run, it's quite wrong for Urbit to be run by any
-profit-oriented corporation, Delaware or otherwise.  This is why
-we've partitioned off 50 galaxies for a future Urbit Foundation.
-Furthermore, the power of *any* central body in Urbit is designed
-to wane over time.  But we can't get ahead of ourselves in this.
-Urbit, to create an effective and competent digital republic,
-needs to move slowly and carefully in establishing it.
 
 <h2 id="horse">Urbit is sniffed at by Houyhnhyms.</h2>
 
