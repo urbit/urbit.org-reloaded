@@ -68,10 +68,11 @@ there will certainly be others.
 
 ### Purpose of collective authority
 
-Urbit is a republic.  Its government has one task: promoting,
-preserving and protecting Urbit.  It may take any legal action
-which advances this goal.  Any other actions are *ultra vires*,
-out of scope.  Urbit is not a general-purpose charity.
+Urbit, as opposed to the Tlon corporation, is a republic.  Its
+government has one task: promoting, preserving and protecting Urbit.
+It may take any legal action which advances this goal.  Any other
+actions are *ultra vires*, out of scope.  Urbit is not a
+general-purpose charity.
 
 ### Decentralized control
 

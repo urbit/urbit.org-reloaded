@@ -21,9 +21,9 @@ Urbit is a new network created by the Tlon Corporation.  Tlon's
 broad intention is to surrender governance of Urbit to its users,
 as soon as the community is collectively ready to receive it.
 
-This constitution (which is not a legal contract, just a public
-declaration of our intent) describes our governance process
-during this interim period.  Its design borrows from validated
+This constitution (which is not a legal contract, just our present
+intent, which may be updated arbitrarily) describes our governance
+process during this interim period.  Its design borrows from validated
 historical structures, mainly Roman and Anglo-American.
 
 The last and most important task of the interim government is to
