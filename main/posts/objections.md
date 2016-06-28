@@ -1,11 +1,13 @@
 ---
-sort: 8
+sort: 9
 type: post
 title: Common objections to Urbit
 author: Curtis Yarvin
-preview: Some common objections to Urbit, refuted.
+preview: Some common objections to Urbit, discussed.
+image: http://media.urbit.org/site/blog-9.jpg
 layout: urbit,post
 footer: true
+comments: true
 navmode: navbar
 navdpad: false
 navselect: posts
@@ -38,7 +40,7 @@ Here's our list right now:
 *"We choose to go to the moon, not because it is easy, but because it is hard."*  
 — John F. Kennedy
 
-<h2 id="prime">Urbit is not ready for prime time.</h2> 
+<h2 id="prime">Urbit is not ready for prime time.</h2>
 
 **TLDR**: we agree.
 
@@ -104,7 +106,7 @@ Two implementations are incompatible, but each swears it has the
 right interpretation of the natural-language spec.  This simply
 cannot happen in the Nock world.  If two implementations
 disagree, at least one of them is incorrect.  This puts us firmly
-in "with enough eyeballs, all bugs are shallow" territory. 
+in "with enough eyeballs, all bugs are shallow" territory.
 
 The fact remains, however, that a Nock interpreter without jets
 is completely useless.  And there is not even an informal
@@ -125,7 +127,7 @@ against the efficient implementation?
 
 Compared to intrinsics, jets give you true separation between
 mechanism and policy; only the interpreter, not the programmer
-and not the compiler, needs to know what's accelerated. 
+and not the compiler, needs to know what's accelerated.
 
 Compared to an FFI, jets preclude I/O, so can be trivially
 sandboxed.  Except that the programmer needs to mark routines
@@ -159,7 +161,7 @@ state and the current event.
 Urbit defines the semantics of a complete event log.  It doesn't
 and can't require an implementation to maintain the whole log.
 It can maintain a checkpoint and the log since that checkpoint.
-The current implementation of Urbit maintains 
+The current implementation of Urbit maintains
 
 However, any practical urbit maintains a periodically updated
 checkpoint.  Our present implementation doesn't provide a way to
@@ -658,7 +660,7 @@ integration, also integrated with a reactive web server, are
 rarer.
 
 <h2 id="dictator">Urbit is a reactionary digital
-dictatorship.</h2> 
+dictatorship.</h2>
 
 **TLDR**: Facebook is a digital dictatorship.
 Urbit is a decentralized network with a republican constitution.
