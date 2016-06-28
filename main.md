@@ -20,6 +20,10 @@ navmode: navbar
         <p>Urbit is a secure peer-to-peer network of personal servers, built on a clean-slate system software stack.</p>
         <p><a href="#learn">Learn more</a>, or <a href="/docs">jump to the technical docs</a>.  And subscribe to our newsletter:</p>
         <email dataPath="/submit" submit="Get updates"></email>
+        <p class="social">
+        You can also find us on:
+        <a href="https://github.com/urbit/urbit">GitHub</a>,&#32;&#32; <a href="https://reddit.com/r/urbit">Reddit</a>, and <a href="https://twitter.com/urbit_">Twitter</a>.
+        </p>
     </div>
 </div>
 <!-- -->
