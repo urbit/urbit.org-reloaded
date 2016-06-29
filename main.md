@@ -16,6 +16,7 @@ navmode: navbar
 <!-- -->
 <div class="container stack">
     <div class="col-md-offset-1 col-md-10 slide-1">
+        <p><b class="mono">~2016.6.29</b>&#32;— The <a href="https://sale.urbit.org">first public crowdsale</a>&#32;of Urbit address space is now complete.</p>
         <p>A personal server is a virtual computer which stores your data, runs your apps, and manages your connected devices.</p>
         <p>Urbit is a secure peer-to-peer network of personal servers, built on a clean-slate system software stack.</p>
         <p><a href="#learn">Learn more</a>, or <a href="/docs">jump to the technical docs</a>.  And subscribe to our newsletter:</p>
@@ -23,7 +24,7 @@ navmode: navbar
         <p class="social">
         You can also find us on:
         <a href="https://github.com/urbit/urbit">GitHub</a>,&#32;&#32; <a href="https://reddit.com/r/urbit">Reddit</a>, and <a href="https://twitter.com/urbit_">Twitter</a>.
-        </p>
+        </p>        
     </div>
 </div>
 <!-- -->
@@ -86,8 +87,8 @@ navmode: navbar
 <div class="text-container">
     <div class="text">
         <div class="rect no-header">
-        <p>We’re about to sell Urbit address space to the public for the first time.</p>
-        <p>If you want to be a pioneer, stay in touch:</p>
+        <p>Our first public crowdsale was on <a href="https://sale.urbit.org">June 28th 2016</a>.</p>
+        <p>To hear about the next one, stay in touch:</p>
         <email dataPath="/submit" submit="Subscribe"></email>
         </div>
     </div>
