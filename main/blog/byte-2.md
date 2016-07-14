@@ -1,5 +1,19 @@
-
-## The dojo and you
+---
+date: ~2016.7.14
+type: post
+title: Urbyte 2: subject-oriented programming
+author: Curtis Yarvin
+layout: urbit,post
+comments: true
+hide: true
+navmode: navbar
+navdpad: false
+navselect: blog
+navpath: /
+navhome: /
+navclass: urbit
+---
+<br /><br />
 
 You're playing in the Urbit REPL/shell (`:dojo`).  (If you
 accidentally press `^X`, it will put you into the other default
@@ -41,7 +55,7 @@ So you can write:
 To unbind `a`, just omit the value:
 
 ```
-> =a 
+> =a
 ```
 
 You removed `a` from the subject.  (We can bind it again later, or
@@ -54,4 +68,3 @@ bind over it without removing it.)
 
 Now it's 
 
-## The sub
