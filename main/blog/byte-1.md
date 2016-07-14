@@ -1,5 +1,19 @@
-# Urbyte 1: atoms, auras, types
-
+---
+date: ~2016.7.14
+type: post
+title: Urbyte 1: atoms, auras, types
+author: The Urbit Team
+layout: urbit,post
+comments: true
+hide: true
+navmode: navbar
+navdpad: false
+navselect: blog
+navpath: /
+navhome: /
+navclass: urbit
+---
+<br /><br />
 Thanks for reading Urbyte 0!  In Urbyte 1, we'll look a little
 more deeply at atoms and other simple noun types.
 
@@ -88,7 +102,7 @@ can't enforce any constraints the aura puts on the atom's value.
 is not URL-safe.
 
 With unlimited atom width, traditional sign extension makes no
-sense.  The sign bit is the low bit.  Even atoms are positive, 
+sense.  The sign bit is the low bit.  Even atoms are positive,
 odd atoms are negative.
 
 Hoon needs `--` to distinguish positive signed numbers because
@@ -102,8 +116,8 @@ slightly clunkier syntax in exchange for much simpler semantics.
 ### Symbols
 
 ```
-> ? 
-  @t 
+> ?
+  @t
 'Ürbit'
 
 > ? `@ux`'Ürbit'
@@ -182,7 +196,7 @@ the right.  For example, `@u` is any unsigned integer; `@ux` is
 an unsigned integer that likes to be printed as hex.
 
 Hoon's typechecker lets you go up or down the specialization
-ladder, but complains if you try to go across.  For example, 
+ladder, but complains if you try to go across.  For example,
 `@u` can silently convert into `@ux` or `@ux` into `@u`, but
 turning `@ud` into `@ux`, `@ux` into `@da`, etc, requires an
 explicit cast.

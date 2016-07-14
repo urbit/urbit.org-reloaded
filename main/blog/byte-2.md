@@ -1,6 +1,19 @@
-
-## The dojo
-
+---
+date: ~2016.7.14
+type: post
+title: Urbyte 2: The dojo
+author: The Urbit Team
+layout: urbit,post
+comments: true
+hide: true
+navmode: navbar
+navdpad: false
+navselect: blog
+navpath: /
+navhome: /
+navclass: urbit
+---
+<br /><br />
 You're playing in the Urbit REPL/shell (`:dojo`).  (If you
 accidentally press `^X`, it will put you into the other default
 app, `:talk`; press `^X` again to switch back.)
@@ -33,6 +46,5 @@ puts this binding in the Hoon subject for expressions to use.
 To unbind `a`, just omit the value:
 
 ```
-> =a 
+> =a
 ```
-

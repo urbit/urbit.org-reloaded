@@ -1,14 +1,28 @@
-# Urbyte 0: setup, nouns
-
+---
+date: ~2016.7.16
+type: post
+title: Urbyte 0: setup, nouns
+author: The Urbit Team
+layout: urbit,post
+comments: true
+hide: true
+navmode: navbar
+navdpad: false
+navselect: blog
+navpath: /
+navhome: /
+navclass: urbit
+---
+<br /><br />
 This is the first post in our new Urbyte series.
 
 The Urbyte concept is that you, an ordinary programmer, not a
-kernel hacker or a Haskell magician (not that there's anything 
+kernel hacker or a Haskell magician (not that there's anything
 wrong with kernel hackers or Haskell magicians) can learn Hoon,
 Urbit's programming language.
 
 We're going to test this daring idea by teaching you Hoon, in
-easily digestible, byte-size chunks.  Each post in the "Urbytes" 
+easily digestible, byte-size chunks.  Each post in the "Urbytes"
 series is designed to take about 15 minutes to consume.  (Maybe
 10, if you're a kernel hacker or a Haskell magician.)
 
@@ -21,7 +35,7 @@ Urbyte.  Urbytes are short, but not meant to be skimmed.
 
 ## Install
 
-First, [install Urbit](https://urbit.org/posts/install) on any
+First, [install Urbit](http://urbit.org/docs/using/install/) on any
 Mac or Unix machine.  On Windows, make a virtual Linux machine
 using VirtualBox or a similar tool.
 
@@ -61,7 +75,7 @@ ames: on localhost, UDP 31337.
 http: live (insecure, public) on 8080
 http: live ("secure", public) on 8443
 http: live (insecure, loopback) on 12321
-~zod:dojo> 
+~zod:dojo>
 ```
 
 To make sure everything is working, type `(add 2 2)` at the
@@ -74,7 +88,7 @@ http: live ("secure", public) on 8443
 http: live (insecure, loopback) on 12321
 > (add 2 2)
 4
-~zod:dojo> 
+~zod:dojo>
 ```
 
 That's super awesome!  You made your first noun!  We'll make a
@@ -83,7 +97,7 @@ few more in a second.  First, quit Urbit with `^D`:
 ```
 > (add 2 2)
 4
-~zod:dojo> 
+~zod:dojo>
 $
 ```
 
@@ -105,9 +119,9 @@ ames: on localhost, UDP 31337.
 http: live (insecure, public) on 8080
 http: live ("secure", public) on 8443
 http: live (insecure, loopback) on 12321
-~zod:dojo> 
+~zod:dojo>
 ```
- 
+
 Note also that Urbit is an ACID database.  You can stop it
 politely with `^D`, abruptly with `^Z`, even violently with `kill
 -9`.  None of these should cause Urbit to lose data.  If you do
@@ -127,7 +141,7 @@ You'll see:
 ```
 > 42
 42
-~zod:dojo> 
+~zod:dojo>
 ```
 
 ## Understanding nouns
