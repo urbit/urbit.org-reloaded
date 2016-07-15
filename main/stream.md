@@ -16,14 +16,14 @@ If you'd like to join in, head to [the GitHub repo](https://github.com/urbit/urb
 
 *Be warned: this chat gateway can be pretty slow when traffic spikes.*
 
-<div class="mini-module">
+<div class="mini-module talk-stream">
 <script src="/~/at/=home=/web/lib/js/urb.js" />
 <script src="https://cdn.rawgit.com/seatgeek/react-infinite/0.8.0/dist/react-infinite.js" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment-with-locales.js" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.1/moment-timezone.js" />
 <script src="/=home=/web/talk/main.js" />
 <link href="/=home=/web/talk/main.css" rel="stylesheet" />
-<talk chrono="reverse" station="home" audience-lock>
+<talk chrono="reverse" station="home" audience-lock default-glyph="=">
   <load />
 </talk>
 </div>
