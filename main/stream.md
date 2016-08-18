@@ -8,9 +8,9 @@ navclass: urbit
 navhome: /
 ---
 
-# Live from `~dozbud`
+# Live from `~marzod`
 
-This is a live feed from `/urbit-meta`, running on `~dozbud`, one of `2^16` Urbit stars.  We use `/urbit-meta` to chat, coordinate and build Urbit.
+This is a live feed from `/urbit-meta`, running on `~marzod`, one of `2^16` Urbit stars.  We use `/urbit-meta` to chat, coordinate and build Urbit.
 
 If you'd like to join in, head to [the GitHub repo](https://github.com/urbit/urbit) to get set up.
 
