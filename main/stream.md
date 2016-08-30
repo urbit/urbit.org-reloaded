@@ -12,7 +12,7 @@ navhome: /
 
 This is a live feed from `/urbit-meta`, running on `~marzod`, one of `2^16` Urbit stars.  We use `/urbit-meta` to chat, coordinate and build Urbit.
 
-If you'd like to join in, head to [the GitHub repo](https://github.com/urbit/urbit) to get set up.
+To try running an Urbit, head to [the GitHub repo](https://github.com/urbit/urbit) to get set up.
 
 *Be warned: this chat gateway can be pretty slow when traffic spikes.*
 
