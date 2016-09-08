@@ -204,7 +204,7 @@ should not interact in the same place.)
 
 And, with magic, we've succeeded in turning Facebook into Urbit.
 Technically, Urbit is pretty close to magic, but there is no way
-it's going to happen this way.  See the [roadmap] for how it
+it's going to happen this way.  See the [roadmap](../roadmap) for how it
 actually happens.
 
 <br /><br />
