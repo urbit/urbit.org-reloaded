@@ -81,23 +81,6 @@ Recommended reading: <br />
 Isaac Asimov
 </div>
 
-<div class="person">
-<img src="https://storage.googleapis.com/media.urbit.org/site/company-philip.jpg" />
-
-**Philip Monk** <br />
-Engineer<br />
-Recommended reading: <br />
-G.K. Chesterton
-</div>
-
-<div class="person">
-<img  src="https://storage.googleapis.com/media.urbit.org/site/company-henry.jpg" />
-
-**Henry Ault** <br />
-Business / Engineer<br />
-Recommended reading: <br />
-Joseph Heller
-</div>
 
 ## Investors
 
