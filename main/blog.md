@@ -9,4 +9,4 @@ navhome: /
 footer: true
 ---
 
-<list dataPreview="true" dataType="post" className="blog"></list>
+<list dataPreview="true" dataType="post" className="blog" sortBy="date"></list>
