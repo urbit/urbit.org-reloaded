@@ -13,7 +13,7 @@ navpath: /
 navhome: /
 navclass: urbit
 ---
-
+<br /> <br />
 TLDR: (a) Urbit's revision-control system, `%clay`, is itself due
 for a (medium-sized) revision!  (b) this time, you yourself can
 really help!  (c) please don't give away the buried spoiler!
