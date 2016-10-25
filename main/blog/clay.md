@@ -140,7 +140,7 @@ this arch is a typed document.
 
 A logical document type is called a `++mark`.  A mark is a
 symbolic pointer to a Hoon source file, in the same dome, for an
-engine for an engine that can validate, compare, and/or convert
+engine that can validate, compare, and/or convert
 documents of that mark.
 
 Let's go over arches and marks a little more closely...
@@ -998,7 +998,8 @@ from Unix.
 There's obviously a lot of fun here!  There are two things you
 can do right now.
 
-One, talk about `%clay` on the [forum](http://urbit.org/fora) or
+One, talk about `%clay` on [this forum
+thread](http://urbit.org/~~/fora/posts/~2016.10.25..17.37.47..6937~/) or
 on [:talk](http://urbit.org/stream).  Both hosted on Urbit
 itself!
 
