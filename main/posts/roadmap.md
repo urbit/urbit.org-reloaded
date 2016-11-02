@@ -91,7 +91,7 @@ something that doesn't exist exist, by describing it -- is the trap of
 all vaporware projects.
 
 On the other hand, Urbit does exist.  It doesn't need to be documented
-into existence.  It does needs to be documented into completion.  This
+into existence.  It does need to be documented into completion.  This
 doesn't mean simply describing the codebase.
 
 Documenting to completion is a two-way process.  It always produces a
