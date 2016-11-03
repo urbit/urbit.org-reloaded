@@ -5,7 +5,6 @@ title: Toward a new %clay
 author: Curtis Yarvin
 preview: Toward a new %clay
 layout: urbit,post
-comments: false
 navmode: navbar
 navdpad: false
 navselect: blog
@@ -78,7 +77,7 @@ There are six big questions in the design of a DVCS:
 ## Anatomy of %clay
 
 A good way to summarize `%clay` (at present) is that its answers
-to the first four questions are interesting, and its answers to 
+to the first four questions are interesting, and its answers to
 the last two are boring.  We'll talk about all six, though.
 
 ### Global namespace: [ship desk case]
@@ -295,7 +294,7 @@ data, `%y` for a list of children, `%z` for the whole arch
 subtree, `%w` for the version number.  (Each vane has its own
 modes.)
 
-For example, the full path to my cat picture is 
+For example, the full path to my cat picture is
 
 ```
 /cx/~sorreg-namtyv/home/[now]/my/cat/picture
@@ -349,10 +348,10 @@ all the data the server has available right now; updates will
 follow when they become available; the subscription will be
 closed when the request range is complete.
 
-#### Userspace synchronization 
+#### Userspace synchronization
 
 Synchronization per se is done in userspace.  In `%clay`, sync just
-means an application (typically the `%kiln` module in the system 
+means an application (typically the `%kiln` module in the system
 app `:hood`) subscribes to a remote desk, and saves its change
 stream locally.  So sync is really an emergent feature of `%clay`.
 
@@ -546,13 +545,13 @@ is the hash that this reference refers to.
 
 ### Change #2: unconfuse merge and rebase
 
-The dispute between merge and rebase has all the bad smells of 
+The dispute between merge and rebase has all the bad smells of
 a historical wart.  But here I'm just not sure what's right.
 
 The user has one *intent* whether merging or rebasing, which is
 to combine changes on one desk into another.  The *algorithm*
 used to construct this change, whether operational transformation
-(rebasing) or a 3-way diff (merging) has one goal: use all 
+(rebasing) or a 3-way diff (merging) has one goal: use all
 available information to model the authors' editing intent as
 realistically as possible.  If we save edges, we should use
 edges.
@@ -648,7 +647,7 @@ or a dependency of the mark source (slightly less unlikely).
 And if so, do we have to update all the leaves in the dome?
 This is also very unlikely.  And yet, it happens.
 
-Instead, we could simply designate, by beak (ship, desk, and 
+Instead, we could simply designate, by beak (ship, desk, and
 case) a dome which contains the canonical mark source.  This
 would rarely change -- you could upgrade a desk to a new mark
 dome, but it would be a manual operation and probably a rare one.
@@ -671,7 +670,7 @@ So we added an app hierarchy within the mark namespace, using hep
 `talk-message`, whose sources is in `/===/mar/talk/message`.
 
 This helps, but it doesn't solve another two problems: trivial
-nouns and containers. 
+nouns and containers.
 
 It's retarded to have to add a source file to send a `@ud` or a
 `*`.  An aura (see above under `coin`) should be a trivial mark.
@@ -687,7 +686,7 @@ difference, and invalid marks.
 
 Conflict data and difference data are two types of noun that are
 generated in normal RCS operation.  If we have the concept of an
-`%html` noun, we also need the concept of an invertible change 
+`%html` noun, we also need the concept of an invertible change
 from one `%html` file to another; a merge conflict between two
 `%html` files; and even a conflict between two marks.
 
@@ -706,7 +705,7 @@ is a merge that produces conflicts, the next is an edit that
 resolves them.
 
 Similarly, all sorts of errors can produce invalid leaves.  One
-particularly rare case which is nonetheless important is schema 
+particularly rare case which is nonetheless important is schema
 evolution: what happens to files in a mark, when the mark source
 code changes.  They all need to be re-normalized.  And this
 operation can fail, producing an invalid value.  (We don't do any
@@ -928,8 +927,8 @@ contents into Urbit, you should be able to control a mounted
 `%clay` desk through Unix filesystem operations alone.
 
 No Urbit command-line access, not even any `urb/` HTTP control
-channels, should be required for the user to generate `%clay` data 
-through filesystem mount, or to set up the mount. 
+channels, should be required for the user to generate `%clay` data
+through filesystem mount, or to set up the mount.
 
 An RCS experience that works entirely through Unix tools, in
 which the only connection between content creation tools and
