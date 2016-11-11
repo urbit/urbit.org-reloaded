@@ -3,7 +3,7 @@ date: ~2016.6.24
 type: post
 title: The DAO as a lesson in decentralized governance
 author: Curtis Yarvin
-preview: The DAO as a lesson in decentralized governance
+preview: What's the right lesson for the decentralization community to learn from the collapse of the DAO?
 layout: urbit,post
 comments: true
 navmode: navbar

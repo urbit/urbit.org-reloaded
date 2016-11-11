@@ -3,7 +3,7 @@ date: ~2016.10.25
 type: post
 title: Toward a new %clay
 author: Curtis Yarvin
-preview: Toward a new %clay
+preview: Urbit's revision-control system, `%clay`, is itself due for a (medium-sized) revision!
 layout: urbit,post
 navmode: navbar
 navdpad: false

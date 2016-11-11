@@ -2,6 +2,7 @@
 date: ~2016.7.14
 type: post
 title: Why Urbit (probably) doesn't need a blockchain
+preview: Urbit (probably) doesn't need a blockchain, because the Urbit address-space PKI is a special case of a consensus ledger 
 author: Curtis Yarvin
 layout: urbit,post
 comments: true
