@@ -1,5 +1,5 @@
 ---
-title: Urbit Blog
+title: Blog
 sort: 3
 layout: urbit
 navdpad: false

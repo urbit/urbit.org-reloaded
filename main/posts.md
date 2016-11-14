@@ -1,5 +1,5 @@
 ---
-title: About Urbit
+title: About
 sort: 2
 layout: urbit
 navdpad: false

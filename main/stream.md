@@ -1,5 +1,5 @@
 ---
-title: Urbit Chat
+title: Chat
 sort: 1
 layout: urbit
 navdpad: false
