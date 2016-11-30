@@ -51,8 +51,7 @@ Galen (CEO) is a surfer from Santa Cruz with an architecture
 degree. Curtis (CTO) is a former CS grad student
 who loves old
 books.
-Anton is a rationalist Bolshevik and trained baritone.  Philip is
-a homeschooled Christian and baseball fan.  Henry is an amateur soccer player who speaks four languages.
+Anton is a rationalist Bolshevik and trained baritone.
 
 <div class="person">
 <img src="https://storage.googleapis.com/media.urbit.org/site/company-galen.jpg" />
