@@ -662,7 +662,7 @@ rarer.
 
 It's difficult to categorize [this awesome
 essay](http://ngnghm.github.io/blog/2016/06/11/chapter-10-houyhnhnms-vs-martians/)
-a single bullet point.  So I've saved it for last.
+in a single bullet point.  So I've saved it for last.
 
 When reading this essay, it's important not to forget the amazing
 absence of genuine, mutually critical discourse in computer
