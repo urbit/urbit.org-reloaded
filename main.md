@@ -91,7 +91,7 @@ navmode: navbar
 <div class="text-container">
     <div class="text">
         <div class="rect no-header">
-        <p>Our first public crowdsale was on <a href="https://sale.urbit.org">June 28th 2016</a>.</p>
+        <p>Our first public crowdsale was on June 28th 2016.</p>
         <p>To hear about the next one, stay in touch:</p>
         <email dataPath="/submit" submit="Subscribe"></email>
         </div>
