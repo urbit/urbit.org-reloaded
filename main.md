@@ -16,7 +16,6 @@ navmode: navbar
 <!-- -->
 <div class="container stack">
     <div class="col-md-offset-1 col-md-10 slide-1">
-        <p><b class="mono">~2016.6.29</b>&#32;— The <a href="https://sale.urbit.org">first public crowdsale</a>&#32;of Urbit address space is now complete.</p>
         <p>A personal server is a virtual computer which stores your data, runs your apps, and manages your connected devices.</p>
         <p>Urbit is a secure peer-to-peer network of personal servers, built on a clean-slate system software stack.</p>
         <p><a href="#learn">Learn more</a>, or <a href="/docs">jump to the technical docs</a>.  And subscribe to our newsletter:</p>
@@ -42,6 +41,11 @@ navmode: navbar
 <div id="learn"></div>
 <div class="container stack six">
     <div class="col-md-10 col-md-offset-1">
+        <div class="slide">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://www.youtube.com/embed/g1qroWiZF90" allowFullScreen="y"/>
+          </div>
+        </div>
         <!-- -->
         <div class="slide">
             <h1>The path to digital freedom</h1>
