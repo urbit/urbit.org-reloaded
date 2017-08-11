@@ -22,7 +22,7 @@ navmode: navbar
         <email dataPath="/submit" submit="Get updates"></email>
         <p class="social">
         You can also find us on
-        <a href="https://github.com/urbit/urbit">GitHub</a>&#32;&#32; and <a href="https://twitter.com/urbit_">Twitter</a>.
+        <a href="https://github.com/urbit/urbit">GitHub</a>&#32;&#32; and <a href="https://twitter.com/urbit">Twitter</a>.
         </p>        
     </div>
 </div>
@@ -118,5 +118,5 @@ navmode: navbar
 </div>
 <!-- -->
 <div class="footer container">
-  <div class="col-md-offset-1 col-md-11">This page was made by Urbit.  Feedback:<a href="mailto:urbit@urbit.org">urbit@urbit.org</a>  <a href="https://twitter.com/urbit_">@urbit_</a></div>
+  <div class="col-md-offset-1 col-md-11">This page was made by Urbit.  Feedback:<a href="mailto:urbit@urbit.org">urbit@urbit.org</a>  <a href="https://twitter.com/urbit">@urbit_</a></div>
 </div>
