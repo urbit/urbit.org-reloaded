@@ -200,7 +200,7 @@ development and specification process.  A system as unusual as
 Urbit can't be invented in public.  But it has to be finished and
 maintained in public.
 
-Addionally, we're creating an open political and economic process,
+Additionally, we're creating an open political and economic process,
 with a small, fixed-price public presale of Urbit address space.  Join
 us and help make this future actually happen.
 
