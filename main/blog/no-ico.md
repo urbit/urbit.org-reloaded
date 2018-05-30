@@ -1,5 +1,5 @@
 ---
-date: ~2018.5.30
+date: ~2018.5.29
 type: post
 title: No ICO
 preview: It's a dangerous internet out there, don't get scammed
