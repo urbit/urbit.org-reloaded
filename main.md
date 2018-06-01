@@ -114,6 +114,7 @@ navmode: navbar
         <h2>Content</h2>
         <a href="docs">Documentation</a>
         <a href="https://github.com/urbit/urbit">Source</a>
+        <a href="privacy">Privacy Policy</a>
     </div>
 </div>
 <!-- -->
