@@ -1,7 +1,7 @@
 ---
 date: ~2018.5.29
 type: post
-title: No ICO
+title: There is no Urbit ICO
 preview: It's a dangerous internet out there, don't get scammed
 author: Erik Newton
 layout: urbit,post

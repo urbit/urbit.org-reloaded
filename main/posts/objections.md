@@ -214,8 +214,7 @@ Curtis invented Urbit.  So by the [homestead
 principle](https://en.wikipedia.org/wiki/Homestead_principle), he
 started out owning all of it.  But by now, Urbit's 8-bit galaxies
 have already been distributed among [57 separate individuals](https://github.com/urbit/arvo/blob/master/sys/vane/ames.hoon#L118-L373).
-Curtis owns 4 -- or 24, counting his whole family.  (Some of whom
-he still owes money.)
+Curtis owns 20, or about 8%.
 
 Tlon, the corporation which still runs Urbit development, has 95.
 (Without Tlon, there is basically no Arvo.)  50 are reserved for

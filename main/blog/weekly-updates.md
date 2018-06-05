@@ -14,7 +14,7 @@ navclass: urbit
 ---
 <br /><br />
 
-Friends,
+TL;DR — We post regular updates to [Fora](https://fora.urbit.org/updates/) instead of here on the blog.
 
 Tlon is not so much a fortified ice castle as your cool uncle’s garage where he’s always got a car half taken apart and a lot of power tools that he lets you use and doesn’t tell your parents.
 
