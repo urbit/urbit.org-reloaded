@@ -51,7 +51,6 @@ Galen (CEO) is a surfer from Santa Cruz with an architecture
 degree. Curtis (CTO) is a former CS grad student
 who loves old
 books.
-Anton is a rationalist Bolshevik and trained baritone.
 
 <div class="person">
 <img src="https://storage.googleapis.com/media.urbit.org/site/company-galen.jpg" />
@@ -69,15 +68,6 @@ Samuel Beckett, Christopher Alexander
 Founder, CTO<br />
 Recommended reading: <br />
 James Burnham, Ernst Jünger
-</div>
-
-<div class="person">
-<img src="https://storage.googleapis.com/media.urbit.org/site/company-anton.jpg" />
-
-**Anton Dyudin** <br />
-Engineer<br />
-Recommended reading: <br />
-Isaac Asimov
 </div>
 
 
