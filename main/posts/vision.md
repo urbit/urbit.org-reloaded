@@ -99,7 +99,7 @@ their secrets.  What’s more, the blockchain isn’t designed for
 computation.  It’s great for contracts and currency, but too slow for
 practical computing.
 
-Urbit is a great compliment to the blockchain.  Your Urbit can safely
+Urbit is a great complement to the blockchain.  Your Urbit can safely
 store your keys, providing an always-available keychain on the
 network.  Even better, your Urbit can hold your blockchain assets and
 provide an off-chain computation layer.  Urbit’s computation doesn’t
