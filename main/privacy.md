@@ -4,11 +4,10 @@ title: Privacy Policy
 sort: 2
 layout: urbit,post
 navdpad: false
-navmode: navbar
 navclass: urbit
 navselect: blog
-navhome: /
-navpath: /
+navhome: /docs
+navpath: /docs
 ---
 
 Effective date: June 01, 2018
@@ -121,8 +120,3 @@ Tlon is responsible for processing your information. If you have any questions, 
 <b>Last Updated:</b> September 12, 2018
 </p>
 
-Tlon Corporation ("us", "we", or "our") operates the website and the Urbit mobile application (the "Service").
-
-This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.
-
-We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions.
