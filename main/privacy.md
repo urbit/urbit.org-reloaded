@@ -1,6 +1,6 @@
 ---
 type: post
-title: Tlon Corporation
+title: Privacy Policy
 sort: 2
 layout: urbit,post
 navdpad: false
@@ -11,200 +11,118 @@ navhome: /
 navpath: /
 ---
 
-# Privacy Policy
-
 Effective date: June 01, 2018
+
+<h2>Scope of this Privacy Policy</h2>
+
+<p>
+Tlon Corporation (“Tlon,” “we,” “our,” and/or “us”) values the privacy of individuals who use Urbit software, our websites, and related services (collectively, our “Services”). This privacy policy (the “Privacy Policy”) explains how we collect, use, and share information from users of our Services (“Users”). By using our Services, you agree to the collection, use, disclosure, and procedures this Privacy Policy describes. Beyond the Privacy Policy, your use of our Services is also subject to our Terms of Service.
+</p>
+
+<h2>Information We Collect</h2>
+
+<p>We may collect a variety of information from or about you or your devices from various sources, as described below.</p>
+
+<h2>Information You Provide to Us</h2>
+
+<p>
+<b>Address Space Information.</b> When you acquire Urbit address space from Tlon, you provide us with certain information, such as your name and email. You may also provide us with your Ethereum wallet address and public key.
+</p>
+<p>
+<b>Communications.</b> If you contact us directly, we may receive additional information about you. For example, when you chat with us in Urbit or contact support, we may receive your email address, the contents of a message or attachments that you may send to us, and other information you choose to provide.
+</p>
+
+<h2>Information We Collect When You Use Our Services</h2>
+
+<p>
+<b>Device Information.</b> We receive information about the device and software you use to access our websites, including IP address, device identifier, web browser type, device model, and operating system version.
+</p>
+<p>
+<b>Usage Information.</b> To help us understand how you use our Services and to help us improve them, we automatically receive information about your interactions with the Services, like the pages or other content you view, and the dates and times of your visits.
+</p>
+<p>
+<b>Information from Cookies and Similar Technologies.</b> On our websites, we and third party partners collect information using cookies, pixel tags, or similar technologies. Our third party partners, such as analytics and advertising partners, may use these technologies to collect information about your online activities over time and across different online services. Cookies are small text files containing a string of alphanumeric characters. We may use both session cookies and persistent cookies. A session cookie disappears after you close your browser. A persistent cookie remains after you close your browser and may be used by your browser on subsequent visits to our website.
+</p>
+
+<p>
+Please review your web browser “Help” file to learn the proper way to modify your cookie settings. Please note that if you delete, or choose not to accept, cookies from the Services, you may not be able to utilize the features of the Services to their fullest potential.
+</p>
+
+<h2>How We Use the Information We Collect</h2>
+
+<p>
+We use the information we collect:
+</p>
+
+<ul>
+    <li>To provide and maintain our Services;</li>
+    <li>To understand and analyze how you use the Services, and to improve and enhance our Services and develop new products, services, features, and functionality;</li>
+    <li>To communicate with you, to provide you with updates and other information relating to the Services, to provide information that you request, to respond to comments and questions, and otherwise provide customer support;</li>
+    <li>To find and prevent fraud;</li>
+    <li>To respond to trust and safety issues that may arise;</li>
+    <li>For compliance purposes, including enforcing our Terms of Service or other legal rights, or as may be required by applicable laws and regulations or requested by any judicial process or governmental agency; and</li>
+    <li>For other purposes for which we provide specific notice at the time of the collection of the information.</li>
+</ul>
+
+<h2>How we Share the Information We Collect:</h2>
+<p>
+We do not share or otherwise disclose information we collect from or about you except as described below or otherwise disclosed to you at the time of the collection. 
+</p>
+<p>
+<b>On the Blockchain.</b> If you purchase address space, we may publish information about that purchase to the Ethereum blockchain, including your public key and Urbit address. We will never publish your name or email address to the blockchain.
+</p>
+<p>
+<b>Vendors and Service Providers.</b> We may share any information we receive with vendors and service providers retained in connection with the provision of the Service. 
+</p>
+<p>
+<b>Analytics Partners.</b> We use analytics services such as Google Analytics to collect and process certain analytics data. These services may also collect information regarding your use of other websites, apps, and online resources. You can learn about Google’s practices by going to <a href="https://www.google.com/policies/privacy/partners/">https://www.google.com/policies/privacy/partners/</a>, and opt out of them by downloading the Google Analytics opt-out browser add-on, available at <a href="https://tools.google.com/dlpage/gaoptout">https://tools.google.com/dlpage/gaoptout</a>.
+</p>
+<p>
+<b>As Required By Law and Similar Disclosures.</b> We may access, preserve, and disclose your information if we believe doing so is required or appropriate to (a) comply with law enforcement requests and legal process, such as a court order or subpoena; (b) respond to your requests; or (c) protect your, our or others’ rights, property, or safety. For the avoidance of doubt, the disclosure of your information may occur if you post any objectionable content on or through the Service.
+</p>
+<p>
+<b>Merger, Sale, or Other Asset Transfers.</b> We may transfer your information to service providers, advisors, potential transactional partners, or other third parties in connection with the consideration, negotiation, or completion of a corporate transaction in which we are acquired by or merged with another company or we sell, liquidate, or transfer all or a portion of our assets. The use of your information following any of these events will be governed by the provisions of this Privacy Policy in effect at the time the applicable information was collected.
+</p>
+<p>
+<b>Consent.</b> We may also disclose your information with your permission.
+</p>
+<h2>Your Choices</h2>
+<p>
+<b>Marketing Communications.</b> You can unsubscribe from our promotional emails via the link provided in the emails. Even if you opt-out of receiving promotional messages from us, you will continue to receive administrative messages from us.
+</p>
+<p>
+<b>Do Not Track.</b> There is no accepted standard on how to respond to Do Not Track signals, and we do not respond to such signals. 
+</p>
+<h2>Third Parties</h2>
+<p>
+The Services may contain links to other websites, products, or services that Tlon does not own or operate. We are not responsible for the privacy practices of these third parties. Please be aware that this Privacy Policy will not apply to your activities or any information you disclose to these third parties. We encourage you to read their privacy policies before providing any information to them.
+</p>
+<h2>Security</h2>
+<p>
+We make reasonable efforts to protect your information by using physical and electronic safeguards designed to improve the security of the information we maintain. However, as our Services are hosted electronically, we can make no guarantees as to the security or privacy of your information.
+</p>
+<h2>Children’s Privacy</h2>
+<p>
+We do not knowingly collect, maintain, or use personal information from children under 13 years of age, and no part of the Service is directed to children. If you learn that a child has provided us with personal information in violation of this Privacy Policy, then you may alert us at accounts@tlon.io.
+</p>
+<h2>International Visitors</h2>
+<p>
+The Services are hosted in the United States and are intended for visitors located within the United States. If you choose to use the Services from the European Union or other regions of the world with laws governing data collection and use that may differ from U.S. law, then please note that you are transferring your personal information outside of those regions to the United States for storage and processing. Also, we may transfer your data from the U.S. to other countries or regions in connection with storage and processing of data, fulfilling your requests, and operating the Services. By providing any information, including personal information, on or to the Services, you consent to such transfer, storage, and processing.
+</p>
+<h2>Changes to this Privacy Policy</h2>
+<p>
+We will post any adjustments to the Privacy Policy on this page, and the revised version will be effective when it is posted. If we materially change the ways in which we use or share personal information previously collected from you through the Services, we will notify you through the Services, by email, or other communication.
+</p>
+<h2>Contact Information</h2>
+<p>
+Tlon is responsible for processing your information. If you have any questions, comments, or concerns about our processing activities, please email us at accounts@tlon.io.
+</p>
+<p>
+<b>Last Updated:</b> September 12, 2018
+</p>
 
 Tlon Corporation ("us", "we", or "our") operates the website and the Urbit mobile application (the "Service").
 
 This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.
 
 We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions.
-
-## Definitions
-
-- **Service**
-
-  Service means the website and the Urbit mobile application operated by Tlon Corporation
-
-- **Personal Data**
-
-  Personal Data means data about a living individual who can be identified from those data (or from those and other information either in our possession or likely to come into our possession).
-
-- **Usage Data**
-
-  Usage Data is data collected automatically either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).
-
-- **Cookies**
-
-  Cookies are small pieces of data stored on your device (computer or mobile device).
-
-- **Data Controller**
-
-  Data Controller means the natural or legal person who (either alone or jointly or in common with other persons) determines the purposes for which and the manner in which any personal information are, or are to be, processed.
-
-  For the purpose of this Privacy Policy, we are a Data Controller of your Personal Data.
-
-- **Data Processors (or Service Providers)**
-
-  Data Processor (or Service Provider) means any natural or legal person who processes the data on behalf of the Data Controller.
-
-  We may use the services of various Service Providers in order to process your data more effectively.
-
-- **Data Subject (or User)**
-
-  Data Subject is any living individual who is using our Service and is the subject of Personal Data.
-
-## Information Collection and Use
-
-We collect several different types of information for various purposes to provide and improve our Service to you.
-
-### Types of Data Collected
-
-#### Personal Data
-
-While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). Personally identifiable information may include, but is not limited to:
-
-- First name and last name
-- Cookies and Usage Data
-
-#### Usage Data
-
-We may also collect information that your browser sends whenever you visit our Service or when you access the Service by or through a mobile device ("Usage Data").
-
-This Usage Data may include information such as your computer's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data.
-
-When you access the Service by or through a mobile device, this Usage Data may include information such as the type of mobile device you use, your mobile device unique ID, the IP address of your mobile device, your mobile operating system, the type of mobile Internet browser you use, unique device identifiers and other diagnostic data.
-
-#### Tracking & Cookies Data
-
-We use cookies and similar tracking technologies to track the activity on our Service and hold certain information.
-
-Cookies are files with small amount of data which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your device. Tracking technologies also used are beacons, tags, and scripts to collect and track information and to improve and analyze our Service.
-
-You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.
-
-Examples of Cookies we use:
-
-- **Session Cookies.** We use Session Cookies to operate our Service.
-- **Preference Cookies.** We use Preference Cookies to remember your preferences and various settings.
-- **Security Cookies.** We use Security Cookies for security purposes.
-
-## Use of Data
-
-Tlon Corporation uses the collected data for various purposes:
-
-- To provide and maintain our Service
-- To notify you about changes to our Service
-- To allow you to participate in interactive features of our Service when you choose to do so
-- To provide customer support
-- To gather analysis or valuable information so that we can improve our Service
-- To monitor the usage of our Service
-- To detect, prevent and address technical issues
-
-## Legal Basis for Processing Personal Data Under General Data Protection Regulation (GDPR)
-
-If you are from the European Economic Area (EEA), Tlon Corporation legal basis for collecting and using the personal information described in this Privacy Policy depends on the Personal Data we collect and the specific context in which we collect it.
-
-Tlon Corporation may process your Personal Data because:
-
-- We need to perform a contract with you
-- You have given us permission to do so
-- The processing is in our legitimate interests and it's not overridden by your rights
-- To comply with the law
-
-## Retention of Data
-
-Tlon Corporation will retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.
-
-Tlon Corporation will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of our Service, or we are legally obligated to retain this data for longer time periods.
-
-## Transfer of Data
-
-Your information, including Personal Data, may be transferred to — and maintained on — computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from your jurisdiction.
-
-If you are located outside United States and choose to provide information to us, please note that we transfer the data, including Personal Data, to United States and process it there.
-
-Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.
-
-Tlon Corporation will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of your data and other personal information.
-
-## Disclosure of Data
-
-### Legal Requirements
-
-Tlon Corporation may disclose your Personal Data in the good faith belief that such action is necessary to:
-
-- To comply with a legal obligation
-- To protect and defend the rights or property of Tlon Corporation
-- To prevent or investigate possible wrongdoing in connection with the Service
-- To protect the personal safety of users of the Service or the public
-- To protect against legal liability
-
-## Security of Data
-
-The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.
-
-## "Do Not Track" Signals
-
-We do not support Do Not Track ("DNT"). Do Not Track is a preference you can set in your web browser to inform websites that you do not want to be tracked.
-
-You can enable or disable Do Not Track by visiting the Preferences or Settings page of your web browser.
-
-## Your Data Protection Rights Under General Data Protection Regulation (GDPR)
-
-If you are a resident of the European Economic Area (EEA), you have certain data protection rights. Tlon Corporation aims to take reasonable steps to allow you to correct, amend, delete, or limit the use of your Personal Data.
-
-If you wish to be informed what Personal Data we hold about you and if you want it to be removed from our systems, please contact us.
-
-In certain circumstances, you have the following data protection rights:
-
-- **The right to access, update or to delete the information we have on you.** Whenever made possible, you can access, update or request deletion of your Personal Data directly within your account settings section. If you are unable to perform these actions yourself, please contact us to assist you.
-
-- **The right of rectification.** You have the right to have your information rectified if that information is inaccurate or incomplete.
-
-- **The right to object.** You have the right to object to our processing of your Personal Data.
-
-- **The right of restriction.** You have the right to request that we restrict the processing of your personal information.
-
-- **The right to data portability.** You have the right to be provided with a copy of the information we have on you in a structured, machine-readable and commonly used format.
-
-- **The right to withdraw consent.** You also have the right to withdraw your consent at any time where Tlon Corporation relied on your consent to process your personal information.
-
-Please note that we may ask you to verify your identity before responding to such requests.
-
-You have the right to complain to a Data Protection Authority about our collection and use of your Personal Data. For more information, please contact your local data protection authority in the European Economic Area (EEA).
-
-## Service Providers
-
-We may employ third party companies and individuals to facilitate our Service ("Service Providers"), to provide the Service on our behalf, to perform Service-related services or to assist us in analyzing how our Service is used.
-
-These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.
-
-## Links to Other Sites
-
-Our Service may contain links to other sites that are not operated by us. If you click on a third party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit.
-
-We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.
-
-## Children's Privacy
-
-Our Service does not address anyone under the age of 18 ("Children").
-
-We do not knowingly collect personally identifiable information from anyone under the age of 18. If you are a parent or guardian and you are aware that your child has provided us with Personal Data, please contact us. If we become aware that we have collected Personal Data from children without verification of parental consent, we take steps to remove that information from our servers.
-
-## Changes to This Privacy Policy
-
-We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
-
-We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the "effective date" at the top of this Privacy Policy.
-
-You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
-
-## Contact Us
-
-If you have any questions about this Privacy Policy, please contact us:
-
-- By email: [urbit@urbit.org](mailto:urbit@urbit.org)
-
-
