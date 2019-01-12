@@ -1,9 +1,9 @@
 ---
 date: ~2019.1.11
 type: post
-title: Public Announcement, Governance
-preview: On the future stewardship of urbit.org
-author: Galen Wolfe-Pauly
+title: Governance of urbit.org
+preview: On stewardship
+author: Erik Newton
 layout: urbit,post
 navmode: navbar
 navdpad: false
