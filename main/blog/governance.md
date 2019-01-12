@@ -1,5 +1,5 @@
 ---
-date: ~2018.12.11
+date: ~2019.1.11
 type: post
 title: Public Announcement, Governance
 preview: On the future stewardship of urbit.org
