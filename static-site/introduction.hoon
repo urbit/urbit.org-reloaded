@@ -8,7 +8,7 @@
 
 ## Understanding Aliases
 
-Aliases enables you to create custom Unix commands to use in your terminal. There are no best aliases, only what works best for you. This task involves using basic Unix commands. Don’t worry you’ll do fine.
+Aliases enables you to create custom Unix commands to use in your terminal. There are no best aliases, only what works best for you. This task involves using basic Unix commands. Don't worry you'll do fine.
 
 ### .bash_profile
 

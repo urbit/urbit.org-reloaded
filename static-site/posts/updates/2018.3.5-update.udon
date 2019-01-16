@@ -17,7 +17,7 @@
 and are now converting it to a UP to be reviewed by the community.
 
 *Mark* `~palfun-foslup` submitted a [pull request](https://github.com/urbit/arvo/pull/651) that implements the _Keccak_
-family of cryptographic hashing functions in Hoon, including `SHA-3`, `shake`, and `rawshake`. We’ll need `keccak` to
+family of cryptographic hashing functions in Hoon, including `SHA-3`, `shake`, and `rawshake`. We'll need `keccak` to
 integrate Urbit with Ethereum.
 
 Also, [moons](https://urbit.org/docs/using/admin/#-moons) are back! You can run the `+moon` generator from your galaxy,
@@ -25,7 +25,7 @@ star or planet to create a ticket for a new moon. If you run your ship in the cl
 moon on your laptop and using that for Talk instead. Messages you send from your moon will appear to have been sent from
 your usual (parent) identity.
 
-*Iceman* `~littel-ponnys` wrote some deep thoughts on Clay, Urbit’s filesystem, in this [meaty Fora
+*Iceman* `~littel-ponnys` wrote some deep thoughts on Clay, Urbit's filesystem, in this [meaty Fora
 post](https://fora.urbit.org/posts/~2018.2.25..02.28.04..bd6d~/).
 
-P.S. We’re hiring! If you’re interested, email `galen@tlon.io`.
+P.S. We're hiring! If you're interested, email `galen@tlon.io`.

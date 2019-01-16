@@ -28,7 +28,7 @@ There are two sides to this effort: design/usability and stability.
 `:tree`, the Urbit publishing framework, can be painfully slow.  In part, this
 is because we do too much work client-side to put pages together.  It would make
 a lot more sense for a page to be a single fixed function of a URL -- the
-original “functional publishing” design.
+original "functional publishing" design.
 
 So, we've gone and made that actually work.  Server-side includes will now be
 possible, since we're adding a Markdown subset to Hoon itself.  We're also going
@@ -63,7 +63,7 @@ can be had in connection with the code itself.
 We already use Urbit to chat and write, but the edges are pretty rough.  Better,
 faster publishing and a look and feel refresh will allow us to update and clean
 up our existing tools for chatting and writing.  Hopefully to the point that
-they clear the ‘Facebook 2004' bar.  But, of course, in a pretty different way.
+they clear the 'Facebook 2004' bar.  But, of course, in a pretty different way.
 
 ## Examples
 

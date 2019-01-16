@@ -441,15 +441,15 @@ computers hears a packet, and sends an acknowledgment, that only
 means the temporary brain heard it. Acks are not end-to-end
 transactions.
 
-This means you can’t write a command protocol where your commands
-get executed exactly once. You can only choose “at least once”
-or “at most once.”  This problem is as ridiculous and frustrating
+This means you can't write a command protocol where your commands
+get executed exactly once. You can only choose "at least once"
+or "at most once."  This problem is as ridiculous and frustrating
 as it sounds.
 
 You can address it in three ways: (a) make all your commands
 formally idempotent, so that repeating them has no additional
 effect; (b) insert a layer of stateful middleware — a message
-queue; (c) be fine with “almost always once.”  Guess which
+queue; (c) be fine with "almost always once."  Guess which
 approach is most popular?
 
 Your Urbit ship has one permanent brain. Its acks are end-to-end
@@ -460,16 +460,16 @@ queue. And every message is executed once.
 #### Dependencies
 
 20th-century languages are all at least vaguely based on a
-formalism from the ‘30s called the “lambda calculus.”  The
+formalism from the '30s called the "lambda calculus."  The
 fundamental operation in lambda calculus is variable reduction
 from name to value. So lambda languages all have a symbol table
 or environment which binds names to values.
 
 Modern build systems assemble large programs out of small files
 by reusing this symbol table for global function names, a process
-called “linking.”  Unfortunately, linking causes a problem known
-as “dependency hell,” involving baffling, unpredictable upgrade
-failures. The fundamental problem is the “diamond dependency” —
+called "linking."  Unfortunately, linking causes a problem known
+as "dependency hell," involving baffling, unpredictable upgrade
+failures. The fundamental problem is the "diamond dependency" —
 when a build requires two different versions of one symbol.
 
 Urbit does not use the lambda calculus, an environment or symbol
