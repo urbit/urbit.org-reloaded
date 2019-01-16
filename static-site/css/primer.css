@@ -158,21 +158,6 @@
 /* Style the panini
 must add span in markup to display icon
  */
-.full-menu {
-  position: fixed;
-  top: 0%;
-  bottom: 0%;
-  width: 100%;
-  visibility: hidden;
-  opacity: 0;
-  z-index: 2;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out; }
-
-.full-menu--open {
-  visibility: visible;
-  opacity: 1;
-  background-color: #000; }
 
 .menu-overflow {
   overflow-y: scroll;
@@ -216,51 +201,6 @@ must add span in markup to display icon
   -o-transform-origin: left center;
   transform-origin: left center; }
 
-/*rotate down*/
-.open .panini-icon span:nth-child(1) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  transition: background-color .25s ease-out;
-  top: 0px;
-  left: 0px;
-  background-color: #fff; }
-
-/*rotate up*/
-.open .panini-icon span:nth-child(2) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  transition: background-color .25s ease-out;
-  top: 17px;
-  left: 0px;
-  background-color: #fff; }
-
-/*Menu container */
-/*This is the parent of the whole container*/
-.menu-fullscreen {
-  padding-top: 40px;
-  height: 100%;
-  width: 100%;
-  background: tomato;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  transition: 0.25s; }
-
-.menu-fullscreen.open {
-  opacity: 1;
-  position: fixed;
-  z-index: 1; }
-
-.menu {
-  list-style: none;
-  padding-left: 0; }
-
-.menu li {
-  padding-left: 2rem; }
 
 /******/
 /*Color */
@@ -3511,8 +3451,13 @@ must add span in markup to display icon
   .container {
     padding-left: 4rem;
     padding-right: 4rem; }
+  .container-img{
+    margin: 0;
+    padding:0;
+  }
   /*Network Diagram Crop*/
   .overflow-hidden > img {
+    padding:0;
     margin-left: -50rem; }
   /*Team images*/
   .team img {

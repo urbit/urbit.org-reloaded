@@ -304,9 +304,11 @@
         ==
       ==
     ==
-      ;div.row
-        ;div.col-md-12.overflow-hidden
-          ;img(src "/images/network-diagram.gif");
+      ;div.container.container-img
+        ;div.row
+          ;div.col-md-12.overflow-hidden
+            ;img(src "/images/network-diagram.gif");
+          ==
         ==
       ==
     ;div.container.sm-mb-0.mb-40
