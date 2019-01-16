@@ -21,7 +21,7 @@ auction stars, and stars to distribute planets.
 
 ## A bit of background
 
-One thing we realized after the last sale was, ‘oh hey, the network has been up
+One thing we realized after the last sale was, 'oh hey, the network has been up
 for about a year.'  Not bad!  It wasn't that long ago that we were rebooting the
 universe every few weeks.  We still have plenty of work to do — but Urbit has
 matured to the point where public ownership of the network really should be
@@ -59,7 +59,7 @@ mechanism.  So we're really living in 2017.
 Sounds good, right?
 
 It does sound good.  Although, as usual, we care about making things that *work*
-above all else.  So, rather than a ‘announcing the Urbit token sale' post, this
+above all else.  So, rather than a 'announcing the Urbit token sale' post, this
 is going to get fairly technical.  We want to start the discussion about how
 this change is going to work, and how it's going to get implemented.  We'll save
 the hype for later.

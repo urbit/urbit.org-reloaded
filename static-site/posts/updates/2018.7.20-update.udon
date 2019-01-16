@@ -8,7 +8,7 @@
 
 # ~2018.7.20 Update
 
-Here’s a short update from the team at Tlon for the week of `~2018.7.19`:
+Here's a short update from the team at Tlon for the week of `~2018.7.19`:
 
 ;img@"https://media.urbit.org/fora/updates/~2018.7.19-Update-1.jpg"(width "100%");
 
@@ -29,7 +29,7 @@ and *Elliot* `~littel-ponnys` cleaned up new Ford (code
 trimming off several hundred lines
 of code and making it easier to reason about while staying within our desired
 performance goals. *Curtis* `~sorreg-namtyv` finished the new implementation of
-the `?=` (“wut-tis”) rune and designed the type analysis infrastructure for the
+the `?=` ("wut-tis") rune and designed the type analysis infrastructure for the
 new noun printer. *Mark* `~palfun-foslup` produced an Urbit-specific variant of
 the Argon2 password-hashing function (code [here](https://github.com/urbit/argon2)).
 *Travis* `~rigdyn-sondur`, an old friend of Tlon, has also been writing crypto
@@ -47,7 +47,7 @@ app and made sure that Collections is using all of the permissioning that Clay n
 And the Documentation team continued their quest to teach the world Hoon. *Josh*
 `~taglux-nidsep` worked more on his new Hoon tutorials (drafts [here](https://github.com/joshuareagan/doc-drafts)).
 *Robert* `~lodleb-ritrul` successfully documented the Hoon standard library cores
-for date/time and hashing (PR’s [here](https://github.com/urbit/docs/pulls)).
+for date/time and hashing (PR's [here](https://github.com/urbit/docs/pulls)).
 
 Keep on Hooning, Martians. See you in `/urbit-meta`.
 

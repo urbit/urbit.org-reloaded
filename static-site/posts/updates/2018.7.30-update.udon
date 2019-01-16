@@ -8,7 +8,7 @@
 
 # ~2018.7.30 Update
 
-Here’s a short update from the team at Tlon for the week of `~2018.7.30`:
+Here's a short update from the team at Tlon for the week of `~2018.7.30`:
 
 ;img@"https://media.urbit.org/fora/updates/~2018.7.30-Update-1.jpg"(width "100%");
 
@@ -26,7 +26,7 @@ on an `argon2` WebAssembly library  (code:
 which will help us generate private keys during onboarding. *Robert*
 `~lodleb-ritrul` is now working with us to write user documentation for all of
 the processes that will be part of our key generation and management
-applications. We can’t wait for Urbit ownership to be cryptographically real.
+applications. We can't wait for Urbit ownership to be cryptographically real.
 
 ;img@"https://media.urbit.org/fora/updates/~2018.7.30-Update-2.png"(width "100%");
 
@@ -47,13 +47,13 @@ communication and collaboration.  *Galen* `~ravmel-ropdyl`, *Gavin*
 revision feedback process, and Landscape is looking good. *Chris* `~sigtus-hossyn`
 and *Logan* `~tacryt-socryp` continued implementing the latest desktop/mobile
 features to get the product ready to ship, as well as extending support for the
-latest backend Landscape API’s that *Isaac* `~davtyr-nimren` has been improving.
+latest backend Landscape API's that *Isaac* `~davtyr-nimren` has been improving.
 Urbit is becoming more usable by the day.
 
-Last but not least, the Documentation team continued doing `~zod`’s work helping
-teach Urbit to the world. *Josh* `~taglux-nidsep` extended his new Hoon docs to cover Hoon cores, an introduction to the Hoon standard library, and a couple of Hoon examples with very detailed walkthrough commentary (drafts [here](https://github.com/joshuareagan/doc-drafts)). And *Robert* `~lodleb-ritrul` extended the current Hoon-standard-library documentation on random atom generation and atom scrambling, as well as the Hoon cores for computing modular and signed-integer arithmetic (`urbit/docs` pull requests [here](https://github.com/urbit/docs/pulls)). Very soon you’ll actually be able to understand how Urbit works.
+Last but not least, the Documentation team continued doing `~zod`'s work helping
+teach Urbit to the world. *Josh* `~taglux-nidsep` extended his new Hoon docs to cover Hoon cores, an introduction to the Hoon standard library, and a couple of Hoon examples with very detailed walkthrough commentary (drafts [here](https://github.com/joshuareagan/doc-drafts)). And *Robert* `~lodleb-ritrul` extended the current Hoon-standard-library documentation on random atom generation and atom scrambling, as well as the Hoon cores for computing modular and signed-integer arithmetic (`urbit/docs` pull requests [here](https://github.com/urbit/docs/pulls)). Very soon you'll actually be able to understand how Urbit works.
 
-Also: we’ll be hosting another party this month on Friday, August 17th. Save the date! Link: [meetup.com: Urbit IRL ~2018.8](https://www.meetup.com/urbit-sf/events/253292678/)
+Also: we'll be hosting another party this month on Friday, August 17th. Save the date! Link: [meetup.com: Urbit IRL ~2018.8](https://www.meetup.com/urbit-sf/events/253292678/)
 
 Okay! Have a great week.
 
