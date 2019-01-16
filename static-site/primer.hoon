@@ -1044,27 +1044,27 @@
         ==
         ;div.flex.mb-6
           ;div.col-md-2;
-          ;div.col-sm-2
+          ;div.flex.flex-column.items-center.col-sm-2
             ;p.text-mono: 2019
             ;div.bl-1.h-4.border-gray-dark;
           ==
-          ;div.col-sm-2
+          ;div.flex.flex-column.items-center.col-sm-2
             ;p.text-mono: 2020
             ;div.bl-1.h-4.border-gray-dark;
           ==
-          ;div.col-sm-2
+          ;div.flex.flex-column.items-center.col-sm-2
             ;p.text-mono: 2021
             ;div.bl-1.h-4.border-gray-dark;
           ==
-          ;div.col-sm-2
+          ;div.flex.flex-column.items-center.col-sm-2
             ;p.text-mono: 2022
             ;div.bl-1.h-4.border-gray-dark;
           ==
-          ;div.col-sm-2
+          ;div.flex.flex-column.items-center.col-sm-2.col-md-1
             ;p.text-mono: 2023
             ;div.bl-1.h-4.border-gray-dark;
           ==
-          ;div.col-sm-2
+          ;div.flex.flex-column.items-end.col-sm-2.col-md-1
             ;p.text-mono.right: 2024
             ;div.br-1.h-4.border-gray-dark;
           ==
@@ -1073,15 +1073,15 @@
           ;div.col-md-2
             ;div.mb-0.text-sm.text-600: 2017 / 2018 Star Sales, Private Buyers 2015 - 2017
           ==
-          ;div.col-md-1
-            ;div.w-1.h-32.bg-blue;
+          ;div.col-sm-1
+            ;div.h-32.bg-blue;
           ==
         ==
         ;div.flex.mb-6.items-center
           ;div.col-md-2
             ;div.mb-0.text-sm.text-600: urbit.org + urbit.org Prize Winners
           ==
-          ;div.col-sm-6.col-md-4
+          ;div.col-sm-5
             ;div.h-32.bg-blue;
           ==
         ==
@@ -1089,7 +1089,7 @@
           ;div.col-md-2
             ;div.mb-0.text-sm.text-600: 2018 Galaxy Buyers
           ==
-          ;div.col-sm-8.col-md-6
+          ;div.col-sm-7
             ;div.h-32.bg-blue;
           ==
         ==
@@ -1097,10 +1097,10 @@
           ;div.col-md-2
             ;div.mb-0.text-sm.text-600: Founders + Early Employees, Contributors + Supporters, Tlon + Tlon Investors
           ==
-          ;div.col-sm-2
+          ;div.col-sm-2.col-md-3
             ;div.h-32.bg-blue-light;
           ==
-          ;div.col-sm-10.col-md-8
+          ;div.col-sm-10.col-md-7
             ;div.ml-2.h-32.bg-blue;
           ==
         ==
