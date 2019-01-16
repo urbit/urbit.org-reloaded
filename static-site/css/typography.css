@@ -35,8 +35,9 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 500;
+  line-height: 4rem;
   color: inherit;
 }
 body ,p , .p{
@@ -79,7 +80,6 @@ a {
 
 .post h4, .docs h4{
   margin-bottom: 4rem;
-  line-height: 8rem
 }
 .post p, .docs p{
   font-family: 'Inter UI',-apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
