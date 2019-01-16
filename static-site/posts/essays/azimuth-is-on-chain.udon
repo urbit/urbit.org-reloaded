@@ -40,7 +40,7 @@ We aren’t calling this a launch. There’s no keynote. There’s no dancing on
 
 We’ve started to talk about Urbit as a stack of three parts: Azimuth, the address space and identity layer on Ethereum; Arvo, the OS and overlay network; and Aegean, a pattern for building decentralized communities on the Arvo network.
 
-We tried to capture this separation in [the primer](/primer), a new overview of Urbit. Explaining Urbit has always been challenging. A monolithic project that is OS, network, langauge, VM and UI barely makes sense. Separating the layers helps, we think.
+We tried to capture this separation in [the primer](/primer), a new overview of Urbit. Explaining Urbit has always been challenging. A monolithic project that is OS, network, language, VM and UI barely makes sense. Separating the layers helps, we think.
 
 Let's step through them to see what's new.
 
