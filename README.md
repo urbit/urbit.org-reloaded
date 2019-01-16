@@ -16,11 +16,3 @@
 
 1. Run `|static` in dojo
 2. You will find the outputted site at `<pier>/.urb/put/web`
-
-## Known issues
-
-- Side bar in docs has broken links
-- Some docs "overview" pages have no content yet
-- Links in docs sidebar menu are broke broken
-- The link to the most recent update on homepage is broken (unclear functionality)
-- All content in posts/{updates,essays,media} is dummy for now
