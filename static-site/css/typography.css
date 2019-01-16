@@ -37,8 +37,8 @@ h3, .h3 {
 h4, .h4 {
   font-size: 3.5rem;
   font-weight: 500;
+  line-height: 4rem;
   color: inherit;
-  /* line-height: 6rem; */
 }
 body ,p , .p{
   font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -75,6 +75,10 @@ a {
   font-weight: 500;
   line-height: 5rem;
   margin-top: 8rem;
+  margin-bottom: 4rem;
+}
+
+.post h4, .docs h4{
   margin-bottom: 4rem;
 }
 .post p, .docs p{
