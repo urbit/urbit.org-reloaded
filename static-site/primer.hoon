@@ -702,7 +702,7 @@
                 ==
               ==
             ==
-            Stars and galaxies can emancipate themselves by changing sponsors, so you’re never trapped. Moons are meant for devices, so they can't escape from their planets. (We don't want a bunch of connected lightbulbs wandering around forming botnets, do we?)
+            Stars and planets can emancipate themselves by changing sponsors, so you’re never trapped. Moons are meant for devices, so they can't escape from their planets. (We don't want a bunch of connected lightbulbs wandering around forming botnets, do we?)
 
             The basic idea is, you need _someone_ to sponsor your membership on the network. An address that can't find a sponsor is probably a bot or a spammer. In the Arvo network parents provide P2P routing and distribute software updates. Azimuth sponsorship is a very simple reputation system. Just enough to decide who to route packets to, and easy to build on top of.
 
