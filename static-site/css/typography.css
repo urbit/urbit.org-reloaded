@@ -35,10 +35,10 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 500;
-  color: inherit;
-  /* line-height: 6rem; */
+  color: inherit;margin-bottom:4rem;
+  line-height: 8rem
 }
 body ,p , .p{
   font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
