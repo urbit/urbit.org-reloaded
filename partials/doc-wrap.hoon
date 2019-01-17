@@ -17,10 +17,10 @@
         ;div.col-sm-3.col-md-12.menu-toggle
           ;img.w-8.h-8@"/assets/menu-open.svg";
         ==
-        ;+  sidebar
-        :: ;div.overflow-y.col-sm-8.col-lg-12.w-48.sm-hide(style "height:100%")
-        ::
-        :: ==
+
+        ;div.overflow-y.col-sm-8.col-lg-12.w-48.sm-hide(style "height:100%")
+          ;+  sidebar
+        ==
       ==
       ;div.row.pb-80
         ;div.col-sm-9.col-md-8.col-sm-offset-3.col-md-offset-3.docs
