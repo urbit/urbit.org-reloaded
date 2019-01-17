@@ -8,7 +8,7 @@
 
 # ~2018.12.18 Update
 
-Here’s a short update from the team at Tlon for the week of `~2018.12.18`:
+Here's a short update from the team at Tlon for the week of `~2018.12.18`:
 
 ;img@"https://media.urbit.org/fora/updates/2018.12.18-update.png"(width "100%");
 
@@ -20,7 +20,7 @@ The Urbit network has, indeed, been renewed. *Logan* `~tacryt-socryp`
 performed a breach on the network, wiping the slate clean. All urbits must be
 booted again with their original tickets, which means that your crashed ships
 now have a second chance at life. If your ship is now experiencing connectivity
-troubles, don’t worry: deleting your old pier should fix everything.
+troubles, don't worry: deleting your old pier should fix everything.
 
 On the infrastructure side, *Elliot* the Wonderworker `~littel-ponnys` brought
 us a gift-sack of miraculous performance improvements. He started by fixing
@@ -36,21 +36,21 @@ imperceptible.
 
 *Morgan* `~hidrel-fabtel` and *Jimmy* `~haptyl-wanwes` are hard at work
 overhauling the site for the New Year, both in terms of web design and the
-presentation of content. The new website will also include Jimmy’s primer,
-which neatly explains Urbit in layman’s terms.
+presentation of content. The new website will also include Jimmy's primer,
+which neatly explains Urbit in layman's terms.
 
 The docs boys -- *Rob* `~lodleb-ritrul`, *Josh* `~taglux-nidsep`, and *David*
 `~rapfyr-diglyt` -- are helping out on this front. The documentation is being
-completely reorganized so that it’s more accessible and less overwhelming. A
-great deal of new tutorial content will be included, and it’s good enough that
-it might put a dent in Urbit’s arcane reputation.
+completely reorganized so that it's more accessible and less overwhelming. A
+great deal of new tutorial content will be included, and it's good enough that
+it might put a dent in Urbit's arcane reputation.
 
 And finally, rejoice! The great Ethereum address-space migration has begun!
 
 If you own address space, you should have received an email with instructions
 about how to register an Ethereum address with us so that we can grant you
-cryptographic ownership of your address space. If you haven’t received an email
-a) check your spam folder and, if that doesn’t work, b) send an email to
+cryptographic ownership of your address space. If you haven't received an email
+a) check your spam folder and, if that doesn't work, b) send an email to
 [registration@urbit.org](mailto:registration@urbit.org).
 
 See you next week.
