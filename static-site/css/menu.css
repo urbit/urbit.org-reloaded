@@ -16,3 +16,10 @@
 .menu-toggle,.sidebar-toggle {
   cursor: pointer;
 }
+
+.dropdown-left {
+  transform: rotate(-45deg);
+}
+.dropdown-right {
+  transform: rotate(45deg);
+}

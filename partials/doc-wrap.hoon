@@ -18,7 +18,7 @@
             ;+  sidebar
           ==
           ;div.col-sm-1.sidebar-toggle.fixed(style "top: 20px; right: 1em")
-            ;img.w-8.h-8@"/assets/dropdown.svg";
+            ;img.w-8.h-8.dropdown-right@"/assets/dropdown.svg";
           ==
         ==
       ==
@@ -28,7 +28,7 @@
           ;img.w-8.h-8@"/assets/menu-open.svg";
         ==
         ;div.col-sm-12.sidebar-toggle.md-hide
-          ;img.w-8.h-8@"/assets/dropdown.svg";
+          ;img.w-8.h-8.dropdown-left@"/assets/dropdown.svg";
         ==
         ;div.overflow-y.col-sm-8.col-lg-12.w-48.sm-hide(style "height:100%")
           ;+  sidebar
