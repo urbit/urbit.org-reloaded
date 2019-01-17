@@ -12,20 +12,33 @@
   ;+  (head "Urbit / Docs")
   ;body
     ;+  menu
+      ;div#sidebar-mobile.bg-gray-light.sidebar-hide.overflow-y
+        ;div.container
+          ;div.col-sm-10
+            ;+  sidebar
+          ==
+          ;div.col-sm-1.sidebar-toggle.fixed(style "top: 20px; right: 1em")
+            ;img.w-8.h-8@"/assets/dropdown.svg";
+          ==
+        ==
+      ==
     ;div.container.mt-10
       ;div.row.fixed.pb-30(style "height:100%")
         ;div.col-sm-3.col-md-12.menu-toggle
           ;img.w-8.h-8@"/assets/menu-open.svg";
         ==
-
+        ;div.col-sm-12.sidebar-toggle.md-hide
+          ;img.w-8.h-8@"/assets/dropdown.svg";
+        ==
         ;div.overflow-y.col-sm-8.col-lg-12.w-48.sm-hide(style "height:100%")
           ;+  sidebar
         ==
       ==
       ;div.row.pb-80
-        ;div.col-sm-9.col-md-8.col-sm-offset-3.col-md-offset-3.docs
+        ;div.col-sm-9.col-md-8.col-sm-offset-2.col-md-offset-3.docs
           ;+  content
         ==
+
       ==
     ==
     ;footer.mb-36
