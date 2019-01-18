@@ -18,8 +18,8 @@
 }
 
 .dropdown-left {
-  transform: rotate(-45deg);
+  transform: rotate(90deg);
 }
 .dropdown-right {
-  transform: rotate(45deg);
+  transform: rotate(-90deg);
 }

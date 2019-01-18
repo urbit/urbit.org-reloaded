@@ -23,11 +23,11 @@
         ==
       ==
     ;div.container.mt-10
-      ;div.row.fixed.pb-30(style "height:100%")
+      ;div.row.fixed.pb-30(style "max-height:100%")
         ;div.col-sm-3.col-md-12.menu-toggle
           ;img.w-8.h-8@"/assets/menu-open.svg";
         ==
-        ;div.col-sm-12.sidebar-toggle.md-hide
+        ;div.col-sm-12.mt-7.sidebar-toggle.md-hide
           ;img.w-8.h-8.dropdown-left@"/assets/dropdown.svg";
         ==
         ;div.overflow-y.col-sm-8.col-lg-12.w-48.sm-hide(style "height:100%")
