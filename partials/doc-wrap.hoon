@@ -23,14 +23,14 @@
         ==
       ==
     ;div.container.mt-10
-      ;div.row.col-sm-2.fixed.pb-30.h-100-md
-        ;div.col-sm-3.col-md-12.menu-toggle
+      ;div.row.col-sm-2.col-md-3.fixed.pb-30.h-100-md
+        ;div.col-sm-3.col-lg-6.menu-toggle
           ;img.w-8.h-8@"/assets/menu-open.svg";
         ==
         ;div.col-sm-12.mt-7.sidebar-toggle.md-hide
           ;img.w-8.h-8.dropdown-left@"/assets/dropdown.svg";
         ==
-        ;div.overflow-y.col-sm-8.col-lg-12.w-48.sm-hide(style "height:100%")
+        ;div.overflow-y.col-sm-8.col-md-11.col-lg-7.w-48.sm-hide(style "height:100%")
           ;+  sidebar
         ==
       ==
