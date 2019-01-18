@@ -1,4 +1,4 @@
-.menu-show {
+.menu-show, .sidebar-show {
   position: fixed;
   top:0%;
   bottom: 0%;
@@ -8,11 +8,23 @@
   opacity: 1;
 }
 
-.menu-hide {
+.menu-hide, .sidebar-hide {
   visibility: hidden;
   display: none;
 }
 
-.menu-toggle {
+.menu-toggle,.sidebar-toggle {
   cursor: pointer;
+}
+
+.dropdown-left {
+  transform: rotate(90deg);
+}
+.dropdown-right {
+  transform: rotate(-90deg);
+}
+@media only screen and (min-width: 480px) {
+  .h-100-md{
+    height: 100%;
+  }
 }
