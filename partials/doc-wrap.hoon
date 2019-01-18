@@ -23,7 +23,7 @@
         ==
       ==
     ;div.container.mt-10
-      ;div.row.fixed.pb-30(style "max-height:100%")
+      ;div.row.col-sm-2.fixed.pb-30.h-100-md
         ;div.col-sm-3.col-md-12.menu-toggle
           ;img.w-8.h-8@"/assets/menu-open.svg";
         ==
