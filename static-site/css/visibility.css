@@ -4,17 +4,7 @@
 .overflow-y {
   overflow-y: scroll;
 }
-@media only screen and (max-width: 480px) {
-.sm-hide {
-  display: none;
-  }
-}
 
-@media only screen and (min-width: 480px) {
-.md-hide {
-  display: none;
-  }
-}
 
 .zn1{
   z-index: -1;
