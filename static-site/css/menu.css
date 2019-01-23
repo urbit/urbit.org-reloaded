@@ -1,4 +1,4 @@
-.menu-show {
+.menu-show, .sidebar-show {
   position: fixed;
   top:0%;
   bottom: 0%;
@@ -7,12 +7,44 @@
   visibility: visible;
   opacity: 1;
 }
-
-.menu-hide {
+.menu-hide, .sidebar-hide {
   visibility: hidden;
   display: none;
 }
 
-.menu-toggle {
+.menu-toggle,.sidebar-toggle {
   cursor: pointer;
+}
+
+/*****************
+SIDEBAR CUSTOM CSS
+******************/
+.dropdown-left {
+  transform: rotate(90deg);
+}
+.dropdown-right {
+  transform: rotate(-90deg);
+}
+.sidebar-container {
+  max-width: 232px;
+}
+
+.h-100 {
+  height: 100%;
+}
+@media only screen and (max-width: 750px) {
+.sm-hide {
+  display: none;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+.md-hide {
+  display: none;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .h-100-md{
+    height: 100%;
+  }
 }

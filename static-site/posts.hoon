@@ -28,7 +28,7 @@
           %+  turn
             ~(tap by update-list)
           |=  [fil=@ta fro=(map knot cord)]
-          [tag='media' file=fil front=fro]
+          [tag='update' file=fil front=fro]
     ==
 ^-  manx
 ;div.posts.col-sm-10

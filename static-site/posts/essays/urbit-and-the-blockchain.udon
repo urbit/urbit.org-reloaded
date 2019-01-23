@@ -70,7 +70,7 @@ or just logs raw data that anyone can interpret.
 
 The simplest procedure, with the strongest blockchain, would be just to encode
 each Urbit event as raw (OP_RETURN) data on the Bitcoin blockchain.  Or we could
-use another simple layer on top of Bitcoin; classic “colored coins,” for
+use another simple layer on top of Bitcoin; classic "colored coins," for
 instance.
 
 The resemblance between Urbit land-registry titles and colored coins is one we
@@ -200,13 +200,13 @@ Moreover, the ability to vote formally in an Ethereum constitution will allow us
 to migrate in a cohesive way to *any other formalization of the Urbit PKI*.
 This could be another Ethereum contract.  Or another blockchain.
 
-This “clean escape” implies that Ethereum is still operating normally, or at
+This "clean escape" implies that Ethereum is still operating normally, or at
 least normally enough to conduct a galaxy vote.  What could happen to Ethereum?
 The blockchain could stop generating new blocks; it could fork; it could be
 filtered by some kind of collective attacker; it could even start accepting invalid transactions.  What seems implausible is destruction of all copies of the whole chain.
 
-When Ethereum ceases to be functional or trustworthy for any reason, a “dirty
-escape” becomes necessary.  The galaxy operators need to identify the last point
+When Ethereum ceases to be functional or trustworthy for any reason, a "dirty
+escape" becomes necessary.  The galaxy operators need to identify the last point
 in the Ethereum chain at which the Urbit constitution remains valid, copy that
 data to the new primary record, and resume from there.
 
@@ -240,7 +240,7 @@ ExxonMobil has no business motivation to ruin its customers' engines.  If it
 did, it would just destroy its business, and gain… what?  If you don't have an
 attack motivation, you don't have a threat model.  If you don't have a threat
 model, you don't have a threat.  This is why we don't tend to worry about
-“parent attacks” in Urbit.
+"parent attacks" in Urbit.
 
 But that said: there's no reason not to make Urbit's cryptographic structure as
 strong as possible.  If you don't want to trust your gas station -- you

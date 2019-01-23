@@ -43,7 +43,7 @@
               "/primer"
         ;+  %^  article
               "Posts"
-              "Regular updates, ocassional essays and media"
+              "Regular updates, occasional essays and media"
               "/posts"
         ;+  %^  article
               "Docs"

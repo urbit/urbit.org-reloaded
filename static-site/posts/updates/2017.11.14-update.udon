@@ -43,7 +43,7 @@ everything to help.
 
 *Curtis, Iceman, Ted, Anton, Mark*
 
-Curtis has spent most of 2017 quasi-surreptitiously in “auteur mode,” trying to
+Curtis has spent most of 2017 quasi-surreptitiously in "auteur mode," trying to
 complete his initial authorship of Hoon.  After this release he promises to work
 only on Arvo and above.
 
@@ -64,8 +64,8 @@ Ted, Anton and Mark on Udon.
 
 Big changes in Hoon 143:
 
-- Hoon 151's “electroplating,” which replaced Hoon 164's “vulcanization,”
-  has been replaced by 143's “repainting.” This means wet gate namespacing
+- Hoon 151's "electroplating," which replaced Hoon 164's "vulcanization,"
+  has been replaced by 143's "repainting." This means wet gate namespacing
   works, so you can write `(weld ~[1 2] ~[3 4])` and get `~[1 2 3 4]` instead of
   `error: %mull-bonk-b`.
 - There's now only one wide syntax `{a/term b/term}` becomes `[a=term b=term]`.
@@ -93,7 +93,7 @@ Anything all they agree on is probably good.
 makes many system-software problems trivial, it is not so awesome that a team
 this small can advance two branches at once.  This fall 2017 release is a
 classic, Microsoft-style stick save, cutting off about half of the research
-(“master” or “cc-release”) branch and merging it back with splints and bandaids.
+("master" or "cc-release") branch and merging it back with splints and bandaids.
 
 What got cut (this work is mostly coded, but not fully tested / integrated):
 
@@ -127,7 +127,7 @@ The Ford cache is cleared every time something in Clay changes.
 On the client side, pages are built through multiple requests.
 
 To fix (2) we want to move to a system where each page is a single static build.
-This means doing ‘server side rendering' with Ford — rather than having the
+This means doing 'server side rendering' with Ford — rather than having the
 client make multiple requests for every page component.
 
 The basic parts of this are done. We implemented a subset of markdown in Hoon
@@ -198,7 +198,7 @@ About a month ago we were discussing how we'd really like to be more transparent
 about the projects we undertake. And, we'd really like to have a way of
 cataloging projects we discuss but can't take on.
 
-Enter the UP or ‘Urbit Proposal'. UP0 gives an outline for what a UP should
+Enter the UP or 'Urbit Proposal'. UP0 gives an outline for what a UP should
 contain:
 [fora/posts/~2017.10.19..03.45.26..dbec~/](https://urbit.org/fora/posts/~2017.10.19..03.45.26..dbec~/).
 

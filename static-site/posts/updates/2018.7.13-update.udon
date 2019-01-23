@@ -8,7 +8,7 @@
 
 # ~2018.7.13 Update
 
-Here’s a short update from the team at Tlon for the week of `~2018.7.13`:
+Here's a short update from the team at Tlon for the week of `~2018.7.13`:
 
 > "A complex system that works is invariably found to have evolved from a simple
   system that worked. A complex system designed from scratch never works and
@@ -42,7 +42,7 @@ The Interface team -- *Galen* `~ravmel-ropdyl`, *Anthony* `~poldec-tonteg`, *Jim
 `~ridlur-figbud`, *Chris* `~sigtus-hossyn`, *Isaac V* `~davtyr-nimren`, *Logan* `~tacryt-socryp`, and *Keaton*
 `~tonlur-sarret` -- worked on Landscape (formerly MVE):
 
-- Galen, Jimmy, and Gavin have continued work on Landscape’s visual design
+- Galen, Jimmy, and Gavin have continued work on Landscape's visual design
 - Keaton worked on Landscape cloud onboarding on DigitalOcean
 - Chris improved the desktop client, still in private alpha
 - Logan improved networking in the iOS TestFlight app, still in private alpha
@@ -58,7 +58,7 @@ The Constitution/Keys team -- *Mark* `~palfun-foslup`, *Curtis* `~sorreg-namtyv`
   Constitution](https://github.com/urbit/constitution) [`research-constitution`
   Arvo](https://github.com/Fang-/arvo/tree/research-constitution)
 
-We’re alive and growing.
+We're alive and growing.
 
 `~tonlur-sarret` and `~poldec-tonteg`
 

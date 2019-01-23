@@ -93,7 +93,7 @@
           ;div.p--intro
             ;p.mb-4: Urbit is still young. It's not quite ready for everyone. Great system software takes a long time to grow.
             ;p.mb-4: But Urbit isn't a dream. It's real. It's a running, stable network. And once you find your way in, there's a lot to explore.
-            ;p.mb-4: Urbit is the last platform. The personal-computing revolution hasn’t even happened yet.
+            ;p.mb-4: Urbit is the last platform. The personal-computing revolution hasn't even happened yet.
           ==
         ==
       == ::/container
@@ -281,15 +281,15 @@
 
             In the real world, different cultures and societies coexist on top of neutral physical infrastructure. Different people, communities and cultures share the same roads and electrical grid.
 
-            In the cloud, it’s as if we spend our lives in hotels.
+            In the cloud, it's as if we spend our lives in hotels.
 
             Aegean is a pattern for building _cities_. A city is a group of people running the same _agent_, a kind of program, on their Arvo servers.
 
-            A city is not an ‘app’ designed for one thing. A city is a combination of tools for a community. Each city is independent and self-governing. Cities control their own interfaces and update their own code over the air.
+            A city is not an 'app' designed for one thing. A city is a combination of tools for a community. Each city is independent and self-governing. Cities control their own interfaces and update their own code over the air.
 
             We've started a few cities already, and we'll talk a bit about what we see on the horizon. What we can imagine is only the beginning.
 
-            One thing we know for sure: the future isn’t a single monoculture. All of humanity doesn't want to live in the same city. Most people live in many and move comfortably between them.
+            One thing we know for sure: the future isn't a single monoculture. All of humanity doesn't want to live in the same city. Most people live in many and move comfortably between them.
 
             We see a vast archipelago of hypercultures. A centerless network of networks on top of the neutral Arvo and Azimuth infrastructure.
           ==
@@ -336,11 +336,11 @@
             ;div.md-hide.mb-4
               ;img@"/images/offchain.svg";
             ==
-            The blockchain was supposed to make the financial system open to anyone. But we’re still stuck on MEGACORP exchanges or using flimsy ‘dapps’ in our browser.
+            The blockchain was supposed to make the financial system open to anyone. But we're still stuck on MEGACORP exchanges or using flimsy 'dapps' in our browser.
 
-            A city of traders on Urbit could easily relay orders to one another and send signed transactions directly to the chain from a single agent. That’s what you get for free with a fast, deterministic computer on a secure authenticated network.
+            A city of traders on Urbit could easily relay orders to one another and send signed transactions directly to the chain from a single agent. That's what you get for free with a fast, deterministic computer on a secure authenticated network.
 
-            And why not go a step further? Let your Arvo server run your trading algorithms or participate in prediction markets. Today’s ‘dapps’ don’t have access to persistent state and their UI is limited. Worse, they can’t communicate with one another.
+            And why not go a step further? Let your Arvo server run your trading algorithms or participate in prediction markets. Today's 'dapps' don't have access to persistent state and their UI is limited. Worse, they can't communicate with one another.
 
             Blockchains are so much more useful when connected to a secure personal server. Consensus computation can be much more than just trading coins.
           ==
@@ -362,7 +362,7 @@
         ==
         ;div.col-md-8.col-md-offset-2
           ;>
-            The ‘internet of things’ is a mess. Some of the ‘things’ are pretty nice pieces of hardware. But they all require that I use some MEGACORP service. Why can’t I just talk directly to my own thermostat?
+            The 'internet of things' is a mess. Some of the 'things' are pretty nice pieces of hardware. But they all require that I use some MEGACORP service. Why can't I just talk directly to my own thermostat?
         ==
         ;div.col-md-8.col-md-offset-2
             ;p
@@ -492,7 +492,7 @@
           ;>
             Arvo is a general-purpose computer that runs as a virtual machine. You can think of it as an overlay OS; it treats Unix the way Unix treats the BIOS.
 
-            Its behavior is completely defined by a frozen transition function called Nock that goes from `[event, current-state]` to `[actions, next-state]`. An event might be a keypress, an HTTP request, or a UDP message from another Arvo. An effect might be a command to the Unix terminal, an HTTP response, or another UDP message to another Arvo.
+            Its behavior is completely defined by a frozen transition function called Nock that goes from `[event, current-state]` to `[effects, next-state]`. An event might be a keypress, an HTTP request, or a UDP message from another Arvo. An effect might be a command to the Unix terminal, an HTTP response, or another UDP message to another Arvo.
 
             Arvo consists of the following stack of components, from the bottom up.
 
@@ -704,7 +704,7 @@
                 ==
               ==
             ==
-            Stars and planets can emancipate themselves by changing sponsors, so you’re never trapped. Moons are meant for devices, so they can't escape from their planets. (We don't want a bunch of connected lightbulbs wandering around forming botnets, do we?)
+            Stars and planets can emancipate themselves by changing sponsors, so you're never trapped. Moons are meant for devices, so they can't escape from their planets. (We don't want a bunch of connected lightbulbs wandering around forming botnets, do we?)
 
             The basic idea is, you need _someone_ to sponsor your membership on the network. An address that can't find a sponsor is probably a bot or a spammer. In the Arvo network parents provide P2P routing and distribute software updates. Azimuth sponsorship is a very simple reputation system. Just enough to decide who to route packets to, and easy to build on top of.
 
@@ -787,7 +787,7 @@
             ;div.circle.circle-sm.mt-1.shape-red;
           ==
           ;div.col-sm-8.col-md-3
-            Nock works. Coming in at 32 lines of code, that’s about 1 line of code every two months.
+            Nock works. Coming in at 32 lines of code, that's about 1 line of code every two months.
           ==
           ;div.col-sm-2.col-sm-offset-2.col-md-1.col-md-offset-0.center
             ;div.circle.circle-sm.mt-1.square-green;
@@ -802,7 +802,7 @@
             ;div.circle.circle-sm.mt-1.square-green;
           ==
           ;div.col-sm-8.col-md-3
-              Hoon works pretty well. It’s much easier to write Hoon than Nock.
+              Hoon works pretty well. It's much easier to write Hoon than Nock.
           ==
           ;div.col-sm-2.col-sm-offset-2.col-md-1.col-md-offset-0.center
             ;div.circle.circle-sm.mt-1.square-orange;
@@ -940,7 +940,7 @@
 
             At first, most of it was just given away. Like bitcoins, galaxies used to be easy to get. In 2010, you could earn a galaxy by writing decrement in Nock.
 
-            In 2013 we started Tlon as the vehicle for Urbit development. Tlon bought half the address space for what is now just a few BTC. Soon after, we created ‘urbit.org’ — a pool of 64 galaxies meant to fund development of Urbit infrastructure. Tlon remains the guardian of the urbit.org galaxies.
+            In 2013 we started Tlon as the vehicle for Urbit development. Tlon bought half the address space for what is now just a few BTC. Soon after, we created 'urbit.org' — a pool of 64 galaxies meant to fund development of Urbit infrastructure. Tlon remains the guardian of the urbit.org galaxies.
 
             We have always wanted the address space to be widely distributed. As urbit becomes more useful, this happens on its own.
 
