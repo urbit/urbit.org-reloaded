@@ -1,6 +1,6 @@
 :-  :~  date/'~2019.1.14'
         title/'Azimuth is On-Chain'
-        preview/'The Urbit address space, now called Azimuth is on the blockchain. And too many other things to fit into a single post.'
+        preview/'The Urbit address space, now called Azimuth, is on the blockchain. And too many other things to fit into a single post.'
         author/'Galen Wolfe-Pauly'
         type/'post'
     ==
@@ -19,7 +19,8 @@
 ;h4: — Galen Wolfe-Pauly
 ;br;
 
-The Urbit address space is now live on the Ethereum blockchain. We're calling it 'Azimuth' and you can find it at [`0x223c067f8cf28ae173ee5cafea60ca44c335fecb`](https://etherscan.io/address/0x223c067f8cf28ae173ee5cafea60ca44c335fecb) or [`azimuth.eth`](https://etherscan.io/address/azimuth.eth). Owners of Azimuth 'points' (galaxies, stars or planets) can use [Bridge](https://github.com/urbit/bridge/releases) to manage them and view their balance now.
+The Urbit address space is now live on the Ethereum blockchain. We’re calling the PKI ‘Azimuth’ and you can find it at [`0x223c067f8cf28ae173ee5cafea60ca44c335fecb`](https://etherscan.io/address/0x223c067f8cf28ae173ee5cafea60ca44c335fecb) or [`azimuth.eth`](https://etherscan.io/address/azimuth.eth). Owners of Azimuth ‘points’ (galaxies, stars or planets) can use [Bridge](https://github.com/urbit/bridge/releases) to manage them and view their balance now.
+
 
 Sometime in the next few days, owners of Azimuth points will be able to boot Arvo, the Urbit OS, from their Azimuth point and request access to one of our 'cities': private communities for chat and discussion. These new cities use Landscape, a brand new UI for using Urbit in the browser.
 
