@@ -169,7 +169,6 @@ state and the current event.
 Urbit defines the semantics of a complete event log.  It doesn't
 and can't require an implementation to maintain the whole log.
 It can maintain a checkpoint and the log since that checkpoint.
-The current implementation of Urbit maintains
 
 However, any practical urbit maintains a periodically updated
 checkpoint.  Our present implementation doesn't provide a way to
