@@ -96,6 +96,7 @@ a {
 
 .post li p, .docs li p{
   margin-bottom: 2rem;
+  dispay: inline;
 }
 
 .post img, .docs img {
