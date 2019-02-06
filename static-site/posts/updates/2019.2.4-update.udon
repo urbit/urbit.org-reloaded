@@ -1,15 +1,15 @@
 :-  :~  date/'~2019.2.5'
-    	title/'~2019.2.5 Update'
-    	preview/'A short update from the Tlon team for the week of ~2019.2.5.'
-    	author/'~lodleb-ritrul'
-    	type/'post'
-==
-
+        title/'~2019.2.5 Update'
+        preview/'A short update from the Tlon team for the week of ~2019.2.5.'
+        author/'~lodleb-ritrul'
+        type/'post'
+    ==
 ;>
+
 
 Here's a short update from the team at Tlon for the week of `~2019.2.5`:
 
-![elysium](https://storage.googleapis.com/media.urbit.org/fora/updates/2019.2.4-update.jpg)
+;img@"https://storage.googleapis.com/media.urbit.org/fora/updates/2019.2.4-update.jpg"(Width "100%");
 
 Welcome to the other side. The Urbit PKI, Azimuth, now fully [migrated to the Ethereum blockchain](https://urbit.org/posts/essays/azimuth-is-on-chain/). This migration means that all address-space-holders have cryptographic ownership of their assets. The guide to getting on the network can be found [here](https://urbit.org/docs/getting-started/).
 
@@ -26,4 +26,3 @@ BONUS: *Mark* `~palfun-foslup` aka The Dutch Destroyer decided that full bitcoin
 See you next week.
 
 *Rob* `~lodleb-ritrul`
-
