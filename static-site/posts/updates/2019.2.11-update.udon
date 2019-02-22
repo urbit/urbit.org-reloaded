@@ -16,7 +16,7 @@ Here’s a short update from the team for the week of `~2019.2.11`:
 
 The network has been frothy since [the transition](https://urbit.org/posts/essays/azimuth-is-on-chain/), with *Isaac* `~novlud-padtyv`, *Joe* `~master-morzod`, *Philip* `~wicdev-wisryt`, *Ben* `~pitmug-roptic`, and *Ted* `~rovnys-ricfer` working non-stop to fix first memory and then `%ames` connectivity issues. Their efforts have paid off and we now appear to be sailing calm seas.
 
-If you haven’t booted into the new era, follow [Getting Started](https://urbit.org/docs/getting-started/) and `;join ~dopzod/urbit-help` when you’re in. See [Messaging](https://urbit.org/docs/learn/arvo/arvo-internals/messaging/) if you don’t know what that means.
+If you haven’t booted into the new era, follow [Getting Started](https://urbit.org/docs/getting-started/) and feel free to `;join ~dopzod/urbit-help` if you need help or want to learn more about the system. See [Messaging](https://urbit.org/docs/learn/arvo/arvo-internals/messaging/) if you don’t know what that means.
 
 If you’re having connectivity issues, make sure you're running urbit 0.7.3, try updating again, [try this fix](https://twitter.com/zodisok/status/1096982801373491202), or if you're stumped, [let us know](mailto:support@urbit.org).
 
