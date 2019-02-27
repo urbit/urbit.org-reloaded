@@ -14,7 +14,7 @@
 
 We conduct significant network upgrades to Arvo’s network protocol by “breaching” into discontinuous “eras.” Eventually, the network will reach a final era, after which no more major upgrades will be made. In the meantime, the network should be considered under test.
 
-We are currently in the third era since [launching Azimuth](/posts/essays/azimuth) and much work lies ahead. We expect network instability and regular breaching throughout the next few months. If you’re using the network today: hang in there!
+We are currently in the third era since [launching Azimuth](/posts/essays/azimuth-is-on-chain) and much work lies ahead. We expect network instability and regular breaching throughout the next few months. If you’re using the network today: hang in there!
 
 ## Recent Progress
 
@@ -30,7 +30,7 @@ We’re working on making the process smoother, but right now you can get an Aiz
 
 ### Try Arvo
 
-Arvo isn’t ready for prime time, but you can definitely experiment with it. Follow the [Getting Started](/getting-started) guide to boot a ship and access Landscape, our experimental messaging app.
+Arvo isn’t ready for prime time, but you can definitely experiment with it. Follow the [Getting Started](/docs/getting-started) guide to boot a ship and access Landscape, our experimental messaging app.
 
 ### Join Hoon School
 
