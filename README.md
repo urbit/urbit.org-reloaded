@@ -10,7 +10,7 @@ This guide assumes [Arvo has been installed](https://urbit.org/docs/getting-star
 
 2. Clone the [Arvo repo](https://github.com/urbit/arvo) `git clone git@github.com:urbit/arvo.git` and use [this branch](https://github.com/urbit/arvo/tree/static-site-dev) `cd arvo && git co -b static-site-dev origin/static-site-dev`. It has a few different renderers and marks for svgs, images, etc
 
-3. Make a [fakezod](https://urbit.org/docs/getting-started/#using-a-fake-ship-) using the Arvo branch. Use the command `urbit -F zod -A <path/to/arvo/repo> -s -c zod -S`
+3. Make a [fakezod](https://urbit.org/docs/getting-started/#using-a-fake-ship-) using the Arvo branch. Use the command `urbit -F zod -A <path/to/arvo/repo> -sc zod -S`
 
 4. If you've successfully booted your Urbit you should see the Dojo prompt: `~zod:dojo>`, if instead you see: `~zod:talk[]` type `ctrl-x` to switch to the Dojo prompt
 
@@ -18,7 +18,7 @@ This guide assumes [Arvo has been installed](https://urbit.org/docs/getting-star
 
 6. On a different terminal run `./scripts/topier <path/to/pier>` from this directory to copy the pertinent files to your pier (the pier is the `zod` directory created in step 3)
 
-7. Go to your pier directory `cd <path/to/pier` and view the contents of `.http.ports`. Navigate to localhost at the port labeled `insecure public`. Eg. visit `localhost:8080` to see the rendered urbit.org if you see `8080 insecure public`
+7. Go to your pier directory `cd <path/to/pier` and view the contents of `.http.ports`. Navigate to localhost at the port labeled `insecure public` e.g. visit `localhost:8080` to see the rendered urbit.org if you see `8080 insecure public`
 
 ## To render/export
 
