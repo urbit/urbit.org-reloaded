@@ -37,7 +37,7 @@ Stay tuned for a post with a full report.
 
 *Jared* `~nidsut-tomdun` spent the week on the @p debacle and more than once generated all four billion planet names to check for collisions. *Ted* `~rovnys-ricfer` spent much of the week thinking about redesigning the PKI only to realize that the existing design is quite good. *Logan* `~tacryt-socryp` and *Isaac* `~novlud-padtyv` started working on the next major revision to Landscape. *Ben* `~pitmug-roptic` quietly [started working on](https://github.com/urbit/urbit/pull/1221) 64-bit Vere. `~pilfer-pandex` [brought the hammer down](https://github.com/urbit/docs/pull/399#issuecomment-472667240) on the pronunciation debate.
 
-Tlon is at the beginning a new batch of work for 2019, so new proposals are popping up almost daily. *I* `~hidrel-fabtel` am working on revamping our proposal (“UP”) system so that the outside world can more easily participate in all of the work that’s going on. *Anthony* `~poldec-tonteg` and *Jared* `~nidsut-tomdun` are also working on standards for our repository documentation and open source development process.
+Tlon is at the beginning a new batch of work for 2019, so new proposals are popping up almost daily. *Morgan* `~hidrel-fabtel` is working on revamping our proposal (“UP”) system so that the outside world can more easily participate in all of the work that’s going on. *Anthony* `~poldec-tonteg` and *Jared* `~nidsut-tomdun` are also working on standards for our repository documentation and open source development process.
 
 ## Community
 
