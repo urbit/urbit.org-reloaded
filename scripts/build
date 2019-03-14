@@ -15,7 +15,7 @@ ship=${2%/}
 
 copy_static_site ()
 {
-  echo -e "Copying source files from $site to $ship"
+  echo -e "- Copying source files from $site to $ship"
   rm -rf $ship/home/web
   cp -r $site/static-site $ship/home/web
   cp $site/static-site/index.hoon $ship/home/web.hoon
@@ -27,13 +27,13 @@ copy_static_site ()
 # Print instructions if both parameters aren't provided
 
 if [[ $# -lt 2 ]] ; then
-  printf 'This command needs two arguments:\n(1) the path to your urbit.org repository\n(2) the path to your pier\n'
+  printf '- This command needs two arguments:\n(1) the path to your urbit.org repository\n(2) the path to your pier\n'
   exit 0
 fi
 
 # Print instructions
 
-read -n1 -s -r -p $'Boot your fake ~zod and run |mount %, then press any key to continue\n'
+read -n1 -s -r -p $'- Boot your fakezod and run |mount %, then press any key to continue\n'
 
 # Create dist folder
 
@@ -44,22 +44,22 @@ mkdir $dist
 
 copy_static_site $site $ship
 rm -rf $ship/home/web/docs
-read -n1 -s -r -p $'Wait for sync, then run |static in your urbit, wait for it to finish, then press any key to continue\n'
+read -n1 -s -r -p $'- Wait for sync, then run |static in your urbit, wait for it to finish, then press any key to continue\n'
 
 # Copy results of first render (posts) to dist folder
 
-echo -e "Copying posts from $site to $ship"
+echo -e "- Copying posts from $site to $ship"
 cp -r $ship/.urb/put/web/* $dist
 
 # First render with |static in urbit (docs)
 
 copy_static_site $site $ship
 rm -rf $ship/home/web/posts
-read -n1 -s -r -p $'Wait for sync, then run |static in your urbit again, wait for it to finish, then press any key to continue\n'
+read -n1 -s -r -p $'- Wait for sync, then run |static in your urbit again, wait for it to finish, then press any key to continue\n'
 
 # Copy results of second render (docs) to dist folder
 
-cp -rn $ship/.urb/put/web/* $dist # cp -n prevents overwriting exist folders
+cp -rn $ship/.urb/put/web/* $dist # cp -n prevents overwriting existing folders
 
 # Remove unecessary files
 
@@ -71,4 +71,4 @@ rm -rf $dist/js/*
 
 cp -r $site/static-site/js $dist
 
-echo -e "Find your website in $dist"
+echo -e "- Find your website in $dist"
