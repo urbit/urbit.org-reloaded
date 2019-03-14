@@ -21,9 +21,9 @@ We breached successfully. You can read about [what we fixed](https://github.com/
 The nice folks behind [@urbitlive](https://twitter.com/urbitlive) discovered a bug in @p leading to planet name-collisions. Due to a subtly incorrect implementation of the cryptographic algorithm we use to scramble planet names – used to dissociate them from their parent stars – a small percentage of people with different Azimuth points could end up with the same planet name. For example: 
 
 ```
-> `````@p```````3.108.299.008
+> `@p`3.108.299.008
 ~morlyd-mogmev
-> `````@p`````479.733.505
+> `@p`479.733.505
 ~morlyd-mogmev
 ```
 
