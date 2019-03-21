@@ -59,16 +59,15 @@ read -n1 -s -r -p $'- Wait for sync, then run |static in your urbit again, wait 
 
 # Copy results of second render (docs) to dist folder
 
-cp -rn $ship/.urb/put/web/* $dist # cp -n prevents overwriting existing folders
+rsync -av --ignore-existing $ship/.urb/put/web/* $dist
 
 # Remove unecessary files
 
-rm -rf $dist/posts/update
 rm -rf $dist/index
-rm -rf $dist/js/*
 
 # Copy js directory 
 
+rm -rf $dist/js/*
 cp -r $site/static-site/js $dist
 
 echo -e "- Find your website in $dist"
