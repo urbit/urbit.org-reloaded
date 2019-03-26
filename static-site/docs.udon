@@ -1,10 +1,10 @@
-1 :-  :~  navhome/'/docs/'
-2         navuptwo/'true'
-3         next/'true'
-4         sort/'1'
-5         title/'Introduction'
-6     ==
-7 ;>
+:-  :~  navhome/'/docs/'
+        navuptwo/'true'
+        next/'true'
+        sort/'1'
+        title/'Introduction'
+    ==
+;>
 
 # Docs
 
