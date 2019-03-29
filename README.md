@@ -20,14 +20,16 @@ This guide assumes [Arvo has been installed](https://urbit.org/docs/getting-star
 
 7. Go to your pier directory `cd <path/to/pier` and view the contents of `.http.ports`. Navigate to localhost at the port labeled `insecure public` e.g. visit `localhost:8080` to see the rendered urbit.org if you see `8080 insecure public`
 
-## To render/export
+## Build
+
+A [build script](https://github.com/urbit/urbit.org/blob/master/scripts/build) is provided in the `scripts` directory, or you can follow these instructions:
 
 1. Copy all content into your ship `./scripts/topier <path/to/pier>`
-2. Nuke docs `rm -rf </path/to/pier>/home/web/docs`
+2. Delete docs `rm -rf </path/to/pier>/home/web/docs`
 3. Run `|static` in dojo to render full site - docs
 4. Copy rendered content into `dist` directory in this repo `cp -r </path/to/pier>/.urb/put/web dist && cp -r static-site/js dist`
 5. Copy all content into your ship `./scripts/topier <path/to/pier>`
-6. Nuke posts `rm -rf </path/to/pier>/home/web/posts`
+6. Delete posts `rm -rf </path/to/pier>/home/web/posts`
 7. Run `|static` in dojo to render docs
 8. Copy rendered docs into `dist` directory in this repo `cp -r </path/to/pier>/.urb/put/web/docs dist`
 9. Test by running `cd dist && python -m SimpleHTTPServer`
