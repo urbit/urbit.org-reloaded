@@ -1,0 +1,364 @@
+<html><head></head><meta charset="utf-8" /><body><html><head><meta charset="UTF-8" /><title>Urbit / Docs</title><meta name="viewport" content="width=device-width , initial-scale=1" /><link href="/tilde.ico" rel="icon" /><link href="/css/base.css" rel="stylesheet" /><link href="/css/lists.css" rel="stylesheet" /><link href="/css/visibility.css" rel="stylesheet" /><link href="/css/borders.css" rel="stylesheet" /><link href="/css/colors.css" rel="stylesheet" /><link href="/css/inputs.css" rel="stylesheet" /><link href="/css/typography.css" rel="stylesheet" /><link href="/css/menu.css" rel="stylesheet" /><link href="/css/images.css" rel="stylesheet" /><link href="/css/flex.css" rel="stylesheet" /><script src="https://www.googletagmanager.com/gtag/js?id=UA-47054188-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-47054188-1');</script></head><body><nav class="bg-black pb-36 menu-hide overflow-y"><div class="container"><div class="row pt-10 mb-3"><div class="col-sm-1 menu-toggle"><img class="w-8 h-8" src="/assets/menu-close.svg" /></div><div class="col-sm-9 col-md-8 col-lg-4 col-sm-offset-2 col-md-offset-1 white"><div class="mb-6"><a href="/primer"><h1>Primer</h1></a><p> </p></div><div class="mb-6"><a href="/posts"><h1>Posts</h1></a><p> </p></div><div class="mb-6"><a href="/docs"><h1>Docs</h1></a><p> </p></div></div></div></div><footer class="container mb-36 white"><div class="row"><div class="col-sm-6 col-sm-offset-3 col-md-offset-2"><div><div class="mb-6"><h4 class="mb-1">Follow</h4><div><a class="text-mono" href="https://twitter.com/@urbit" target="_blank">twitter.com/@urbit</a></div><div><a class="text-mono" href="https://github.com/urbit" target="_blank">github.com/@urbit</a></div></div><div class="mb-6"><h4 class="mb-1">Contact</h4><div class="text-mono text-400">~zod</div><div><a class="text-mono" href="mailto:support@urbit.org">support@urbit.org</a></div></div><div class="mb-6"><h4 class="mb-1">Company</h4><div><a href="/privacy">Privacy Policy</a></div><div><a href="/tos">Terms of Service</a></div><div class="text-400"><a href="/bounty">Bug Bounty + Security</a></div></div></div></div></div></footer></nav><div id="sidebar-mobile" class="bg-gray-light sidebar-hide overflow-y"><div class="container"><div class="col-sm-10"><ol class="list-reset h-font mt-6"><li class="mb-4"><a class="h-font text-600" href="/docs/introduction">Introduction</a><ol><li><a class="h-font" href="/docs/introduction/technical-overview">Technical overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/source-code-overview">Source Code Overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/contributing">Contributing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/arvo-vs-azimuth">Arvo vs. Azimuth</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/community-tutorials">Community Tutorials</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/galaxies-stars-and-planets">Galaxies, Stars, and Planets</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/getting-started">Getting Started</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/getting-started/azimuth">Using Bridge</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/installing-urbit">Installing Urbit</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/booting-a-ship">Booting a Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/creating-a-development-ship">Creating a Development Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/operating-a-star">Operating a Star</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/learn">Learn</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo">Arvo</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals">Arvo Internals</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ames">Ames</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/behn">Behn</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/admin">Admin and Operations</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/clay">Clay</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/dill">Dill</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/layout">Source layout</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/sail">Sail</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/messaging">Messaging</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/udon">Udon</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/eyre">Eyre</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/gall">Gall Apps</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/shell">Shell (Dojo)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ford">Ford</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/hall">Hall</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/filesystem">Introduction to the Filesystem</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/publishing">Web (Eyre)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/generators">Generators</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/hoon">Hoon</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/hoon/getting-started">Getting Started</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/nouns">Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/the-subject-and-its-legs">The Subject and Its Legs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/arms-and-cores">Arms and Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/gates">Gates (Hoon Functions)</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/multi-gate-cores-and-doors">Multi-gate Cores and Doors</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-programs">Hoon Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-syntax">Hoon Syntax</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/simple-one-gate-programs">Simple One-Gate Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/atoms-auras-and-simple-cell-types">Atoms, Auras, and Simple Cell Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-checking-and-type-inference">Type Checking and Type Inference</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/structures-and-complex-types">Structures and Complex Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores">Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores-again">Cores Again</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/lists">Standard Library: Lists</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/trees-sets-and-maps">Standard Library: Trees, Sets, and Maps</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-polymorphism">Type Polymorphism</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/examples">Examples</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/nock">Nock</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/nock/definition">Nock Definition</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/explanation">Explanation</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/example">Example</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/implementations">Implementations</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/vere">Vere</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/vere/runtime">C Runtime System</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/c">C in Urbit</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/nouns">Land of Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/api">API overview by prefix</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/jetting">Writing Jets</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/style">Hoon Style Guide</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/arvo/workbook">Hoon Workbook</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/workbook/list">List of Numbers</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/caesar">Caesar Cipher</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/recursion">Recursion</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/digits">Digits</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/eightball">Magic 8-Ball</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/traffic-light">Traffic Light</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/bomb">Bomb Defusing</a></li></ol></li></ol></li><li><a class="h-font" href="/docs/learn/azimuth">Azimuth</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/azimuth/blockchain">Why Urbit Uses a Blockchain</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/azimuth/wallet">The Urbit HD Wallet</a><ol class="list-reset h-font"></ol></li></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/reference">Reference</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions">Hoon Expressions</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune">Runes</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/constants">Atoms and strings</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/dot">Nock . (&quot;dot&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/zap">Wild ! (&quot;zap&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/tis">Change Subject = (&quot;tis&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/wut">Conditionals ? (&quot;wut&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bar">Cores | (&quot;bar&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/lus">Arms + (&quot;lus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/col">Cells : (&quot;col&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/cen">Calls % (&quot;cen&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/ket">Casts ^ (&quot;ket&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bus">Structures $ (&quot;bus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/mic">Make ; (&quot;mic&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/sig">Hints ~ (&quot;sig&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/terminators">Terminators -- and ==</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb">Limbs and Wings</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/limb">Limbs</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/wing">Wings</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/basic">Basic Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/advanced">Advanced Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/irregular">Irregular forms</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/library">Standard library</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/library/1a">1a: Basic Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1b">1b: Tree Addressing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1c">1c: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2a">2a: Unit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2b">2b: List Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2c">2c: Bit Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2d">2d: Bit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2e">2e: Insecure Hashing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2f">2f: Noun Ordering</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2g">2g: Unsigned Powers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2h">2h: Set Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2i">2i: Map Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2j">2j: Jar and Jug Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2k">2k: Queue Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2l">2l: Container from Container</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2m">2m: Container from Noun</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2n">2n: Functional Hacks</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2o">2o: Normalizing Containers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2p">2p: Serialization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2q">2q: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3a">3a: Modular and Signed Ints</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3b">3b: Floating Point</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3c">3c: Urbit Time</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3d">3d: SHA Hash Family</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3e">3e: (Removed)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3f">3f: Scrambling</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3g">3g: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4a">4a: Exotic Bases</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4b">4b: Text Processing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4c">4c: Tank Printer</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4d">4d: Parsing (Tracing)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4e">4e: Parsing (Combinators)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4f">4f: Parsing (Rule-Builders)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4g">4g: Parsing (Outside Caller)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4h">4h: Parsing (ASCII Glyphs)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4i">4i: Parsing (Useful Idioms)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4j">4j: Parsing (Bases and Base Digits)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4k">4k: Atom Printing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4l">4l: Atom Parsing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4m">4m: Formatting Functions</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4n">4n: Virtualization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4o">4o: Molds</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5a">5a: Compiler Utilities</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5b">5b: Macro Expansion</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5c">5c: Compiler Backend &amp; Prettyprinter</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5d">5d: Parser</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5e">5e: Caching Compiler</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5f">5f: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5g">5g: profiling support</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/zuse">Zuse</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/glossary">Glossary</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/cheat-sheet">Cheat sheet</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/troubleshooting">Hoon Errors</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/alphabetical-arms">Alphabetical Arms</a><ol class="list-reset h-font"></ol></li></ol></li></ol></div><div class="col-sm-1 sidebar-toggle fixed" style="top: 20px; right: 1em"><img class="w-8 h-8 dropdown-right" src="/assets/dropdown.svg" /></div></div></div><div class="container mt-10"><div class="sidebar-container row col-sm-3 fixed pb-30 h-100-md"><div class="col-sm-3 col-lg-6 menu-toggle"><img class="w-8 h-8" src="/assets/menu-open.svg" /></div><div class="col-sm-12 mt-7 sidebar-toggle md-hide"><img class="w-8 h-8 dropdown-left" src="/assets/dropdown.svg" /></div><div class="h-100 col-sm-8 col-md-11 overflow-y sm-hide"><ol class="list-reset h-font mt-6"><li class="mb-4"><a class="h-font text-600" href="/docs/introduction">Introduction</a><ol><li><a class="h-font" href="/docs/introduction/technical-overview">Technical overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/source-code-overview">Source Code Overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/contributing">Contributing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/arvo-vs-azimuth">Arvo vs. Azimuth</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/community-tutorials">Community Tutorials</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/galaxies-stars-and-planets">Galaxies, Stars, and Planets</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/getting-started">Getting Started</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/getting-started/azimuth">Using Bridge</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/installing-urbit">Installing Urbit</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/booting-a-ship">Booting a Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/creating-a-development-ship">Creating a Development Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/operating-a-star">Operating a Star</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/learn">Learn</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo">Arvo</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals">Arvo Internals</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ames">Ames</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/behn">Behn</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/admin">Admin and Operations</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/clay">Clay</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/dill">Dill</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/layout">Source layout</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/sail">Sail</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/messaging">Messaging</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/udon">Udon</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/eyre">Eyre</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/gall">Gall Apps</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/shell">Shell (Dojo)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ford">Ford</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/hall">Hall</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/filesystem">Introduction to the Filesystem</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/publishing">Web (Eyre)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/generators">Generators</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/hoon">Hoon</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/hoon/getting-started">Getting Started</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/nouns">Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/the-subject-and-its-legs">The Subject and Its Legs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/arms-and-cores">Arms and Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/gates">Gates (Hoon Functions)</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/multi-gate-cores-and-doors">Multi-gate Cores and Doors</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-programs">Hoon Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-syntax">Hoon Syntax</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/simple-one-gate-programs">Simple One-Gate Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/atoms-auras-and-simple-cell-types">Atoms, Auras, and Simple Cell Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-checking-and-type-inference">Type Checking and Type Inference</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/structures-and-complex-types">Structures and Complex Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores">Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores-again">Cores Again</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/lists">Standard Library: Lists</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/trees-sets-and-maps">Standard Library: Trees, Sets, and Maps</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-polymorphism">Type Polymorphism</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/examples">Examples</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/nock">Nock</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/nock/definition">Nock Definition</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/explanation">Explanation</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/example">Example</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/implementations">Implementations</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/vere">Vere</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/vere/runtime">C Runtime System</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/c">C in Urbit</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/nouns">Land of Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/api">API overview by prefix</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/jetting">Writing Jets</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/style">Hoon Style Guide</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/arvo/workbook">Hoon Workbook</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/workbook/list">List of Numbers</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/caesar">Caesar Cipher</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/recursion">Recursion</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/digits">Digits</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/eightball">Magic 8-Ball</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/traffic-light">Traffic Light</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/bomb">Bomb Defusing</a></li></ol></li></ol></li><li><a class="h-font" href="/docs/learn/azimuth">Azimuth</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/azimuth/blockchain">Why Urbit Uses a Blockchain</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/azimuth/wallet">The Urbit HD Wallet</a><ol class="list-reset h-font"></ol></li></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/reference">Reference</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions">Hoon Expressions</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune">Runes</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/constants">Atoms and strings</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/dot">Nock . (&quot;dot&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/zap">Wild ! (&quot;zap&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/tis">Change Subject = (&quot;tis&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/wut">Conditionals ? (&quot;wut&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bar">Cores | (&quot;bar&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/lus">Arms + (&quot;lus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/col">Cells : (&quot;col&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/cen">Calls % (&quot;cen&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/ket">Casts ^ (&quot;ket&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bus">Structures $ (&quot;bus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/mic">Make ; (&quot;mic&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/sig">Hints ~ (&quot;sig&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/terminators">Terminators -- and ==</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb">Limbs and Wings</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/limb">Limbs</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/wing">Wings</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/basic">Basic Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/advanced">Advanced Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/irregular">Irregular forms</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/library">Standard library</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/library/1a">1a: Basic Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1b">1b: Tree Addressing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1c">1c: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2a">2a: Unit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2b">2b: List Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2c">2c: Bit Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2d">2d: Bit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2e">2e: Insecure Hashing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2f">2f: Noun Ordering</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2g">2g: Unsigned Powers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2h">2h: Set Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2i">2i: Map Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2j">2j: Jar and Jug Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2k">2k: Queue Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2l">2l: Container from Container</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2m">2m: Container from Noun</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2n">2n: Functional Hacks</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2o">2o: Normalizing Containers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2p">2p: Serialization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2q">2q: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3a">3a: Modular and Signed Ints</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3b">3b: Floating Point</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3c">3c: Urbit Time</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3d">3d: SHA Hash Family</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3e">3e: (Removed)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3f">3f: Scrambling</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3g">3g: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4a">4a: Exotic Bases</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4b">4b: Text Processing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4c">4c: Tank Printer</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4d">4d: Parsing (Tracing)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4e">4e: Parsing (Combinators)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4f">4f: Parsing (Rule-Builders)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4g">4g: Parsing (Outside Caller)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4h">4h: Parsing (ASCII Glyphs)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4i">4i: Parsing (Useful Idioms)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4j">4j: Parsing (Bases and Base Digits)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4k">4k: Atom Printing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4l">4l: Atom Parsing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4m">4m: Formatting Functions</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4n">4n: Virtualization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4o">4o: Molds</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5a">5a: Compiler Utilities</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5b">5b: Macro Expansion</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5c">5c: Compiler Backend &amp; Prettyprinter</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5d">5d: Parser</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5e">5e: Caching Compiler</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5f">5f: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5g">5g: profiling support</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/zuse">Zuse</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/glossary">Glossary</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/cheat-sheet">Cheat sheet</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/troubleshooting">Hoon Errors</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/alphabetical-arms">Alphabetical Arms</a><ol class="list-reset h-font"></ol></li></ol></li></ol></div></div><div class="row pb-80"><div class="col-sm-9 col-md-8 col-sm-offset-2 col-md-offset-3 docs"><div><div><h1 id="4l--atom-parsing-">4l: atom parsing </h1><h3 id="--so-"><code>++so</code> </h3><p>Coin parser engine </p><p>Core containing arms that parse <code>++coin</code>. </p><h4 id="accepts-">Accepts </h4><h4 id="produces-">Produces </h4><h4 id="source-">Source </h4><pre>    ++  so
+      |%
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; so
+    &lt;10.mkn 414.hhh 100.xkc 1.ypj %164&gt;
+</pre><hr /><h3 id="--bisk-"><code>++bisk</code> </h3><p>Parse odor-atom pair </p><p>Parsing rule. Parses an unsigned integer of any permitted base, producing a <code>++dime</code>. </p><h4 id="accepts-">Accepts </h4><h4 id="produces-">Produces </h4><h4 id="source-">Source </h4><pre>      ++  bisk
+        ;~  pose
+          ;~  pfix  (just &#39;0&#39;)
+            ;~  pose
+              (stag %ub ;~(pfix (just &#39;b&#39;) bay:ag))
+              (stag %ui ;~(pfix (just &#39;i&#39;) dim:ag))
+              (stag %ux ;~(pfix (just &#39;x&#39;) hex:ag))
+              (stag %uv ;~(pfix (just &#39;v&#39;) viz:ag))
+              (stag %uw ;~(pfix (just &#39;w&#39;) wiz:ag))
+            ==
+          ==
+          (stag %ud dem:ag)
+        ==
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; (scan &quot;25&quot; bisk:so)
+    [%ud q=25]
+    &gt; (scan &quot;0x12.6401&quot; bisk:so)
+    [%ux q=1.205.249]
+</pre><hr /><h3 id="--crub-"><code>++crub</code> </h3><p>Parse <code>@da</code>, <code>@dr</code>, <code>@p</code>, <code>@t</code> </p><p>Parsing rule. Parses any atom of any of the following odors after a leading sig, <code>~</code> into a <code>++dime</code>: <code>@da</code>, <code>@dr</code>, <code>@p</code>, and <code>@t</code>, producing a <code>++dime</code>. </p><h4 id="accepts-">Accepts </h4><h4 id="produces-">Produces </h4><h4 id="source-">Source </h4><pre>      ++  crub
+        ~+
+        ;~  pose
+          %+  cook
+            |=(det/date `dime`[%da (year det)])
+          ;~  plug
+            %+  cook
+              |=({a/@ b/?} [b a])
+            ;~(plug dim:ag ;~(pose (cold | hep) (easy &amp;)))
+            ;~(pfix dot dim:ag)   ::  month
+            ;~(pfix dot dim:ag)   ::  day
+            ;~  pose
+              ;~  pfix
+                ;~(plug dot dot)
+                ;~  plug
+                  dum:ag
+                  ;~(pfix dot dum:ag)
+                  ;~(pfix dot dum:ag)
+                  ;~(pose ;~(pfix ;~(plug dot dot) (most dot qix:ab)) (easy ~))
+                ==
+              ==
+              (easy [0 0 0 ~])
+            ==
+          ==
+        ::
+          %+  cook
+            |=  {a/(list {p/?($d $h $m $s) q/@}) b/(list @)}
+            =+  rop=`tarp`[0 0 0 0 b]
+            |-  ^-  dime
+            ?~  a
+              [%dr (yule rop)]
+            ?-  p.i.a
+              $d  $(a t.a, d.rop (add q.i.a d.rop))
+              $h  $(a t.a, h.rop (add q.i.a h.rop))
+              $m  $(a t.a, m.rop (add q.i.a m.rop))
+              $s  $(a t.a, s.rop (add q.i.a s.rop))
+            ==
+          ;~  plug
+            %+  most
+              dot
+            ;~  pose
+              ;~(pfix (just &#39;d&#39;) (stag %d dim:ag))
+              ;~(pfix (just &#39;h&#39;) (stag %h dim:ag))
+              ;~(pfix (just &#39;m&#39;) (stag %m dim:ag))
+              ;~(pfix (just &#39;s&#39;) (stag %s dim:ag))
+            ==
+            ;~(pose ;~(pfix ;~(plug dot dot) (most dot qix:ab)) (easy ~))
+          ==
+        ::
+          (stag %p fed:ag)
+          ;~(pfix dot (stag %ta urs:ab))
+          ;~(pfix sig (stag %t urx:ab))
+          ;~(pfix hep (stag %c (cook turf urx:ab)))
+        ==
+      ++  nuck
+        ~/  %nuck  |=  a/nail  %.  a
+        %+  knee  *coin  |.  ~+
+        %-  stew
+        ^.  stet  ^.  limo
+        :~  :-  [&#39;a&#39; &#39;z&#39;]  (cook |=(a/@ta [%$ %tas a]) sym)
+            :-  [&#39;0&#39; &#39;9&#39;]  (stag %$ bisk)
+            :-  &#39;-&#39;        (stag %$ tash)
+            :-  &#39;.&#39;        ;~(pfix dot perd)
+            :-  &#39;~&#39;        ;~(pfix sig ;~(pose twid (easy [%$ %n 0])))
+        ==
+      ++  nusk
+        ~+
+        :(sear |=(a/@ta (rush a nuck)) wick urt:ab)
+      ++  perd
+        ~+
+        ;~  pose
+          (stag %$ zust)
+          (stag %many (ifix [cab ;~(plug cab cab)] (more cab nusk)))
+        ==
+      ++  royl
+        ~+
+        =+  ^=  moo
+          |=  a/tape
+          :-  (lent a)
+          (scan a (bass 10 (plus sid:ab)))
+        =+  ^=  voy
+          %+  cook  royl-cell
+          ;~  pose
+            ;~  plug
+              (easy %d)
+              ;~  pose  (cold | hep)  (easy &amp;)  ==
+              ;~  plug  dim:ag
+                ;~  pose
+                  ;~(pfix dot (cook moo (plus (shim &#39;0&#39; &#39;9&#39;))))
+                  (easy [0 0])
+                ==
+                ;~  pose
+                  ;~  pfix
+                    (just &#39;e&#39;)
+                    ;~(plug ;~(pose (cold | hep) (easy &amp;)) dim:ag)
+                  ==
+                  (easy [&amp; 0])
+                ==
+              ==
+            ==
+            ;~  plug
+              (easy %i)
+              ;~  sfix
+                ;~  pose  (cold | hep)  (easy &amp;)  ==
+                (jest &#39;inf&#39;)
+              ==
+            ==
+            ;~  plug
+              (easy %n)
+              (cold ~ (jest &#39;nan&#39;))
+            ==
+          ==
+        ;~  pose
+          (stag %rh (cook rylh ;~(pfix ;~(plug sig sig) voy)))
+          (stag %rq (cook rylq ;~(pfix ;~(plug sig sig sig) voy)))
+          (stag %rd (cook ryld ;~(pfix sig voy)))
+          (stag %rs (cook ryls voy))
+        ==
+      ::
+      ++  royl-cell
+        |=  rn
+        ^-  dn
+        ?.  ?=({$d *} +&lt;)  +&lt;
+        =+  ^=  h
+          (dif:si (new:si f.b i.b) (sun:si d.b))
+        [%d a h (add (mul c.b (pow 10 d.b)) e.b)]
+      ::
+      ++  tash
+        ~+
+        =+  ^=  neg
+            |=  {syn/? mol/dime}  ^-  dime
+            ?&gt;  =(&#39;u&#39; (end 3 1 p.mol))
+            [(cat 3 &#39;s&#39; (rsh 3 1 p.mol)) (new:si syn q.mol)]
+        ;~  pfix  hep
+          ;~  pose
+            (cook |=(a/dime (neg | a)) bisk)
+            ;~(pfix hep (cook |=(a/dime (neg &amp; a)) bisk))
+          ==
+        ==
+      ::
+      ++  twid
+        ~+
+        ;~  pose
+          (cook |=(a/@ [%blob (cue a)]) ;~(pfix (just &#39;0&#39;) vum:ag))
+          (stag %$ crub)
+        ==
+      ::
+      ++  zust
+        ~+
+        ;~  pose
+          (stag %is bip:ag)
+          (stag %if lip:ag)
+          (stag %f ;~(pose (cold &amp; (just &#39;y&#39;)) (cold | (just &#39;n&#39;))))
+          royl
+        ==
+      --
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; (scan &quot;1926.5.12&quot; crub:so)
+    [p=~.da q=170.141.184.449.747.016.871.285.095.307.149.312.000]
+    &gt; ([%da @da] (scan &quot;1926.5.12&quot; crub:so))
+    [%da ~1926.5.12]
+    &gt; (scan &quot;s10&quot; crub:so)
+    [p=~.dr q=184.467.440.737.095.516.160]
+    &gt; ([%dr @dr] (scan &quot;s10&quot; crub:so))
+    [%dr ~s10]
+    &gt; (scan &quot;doznec&quot; crub:so)
+    [%p 256]
+    &gt; (scan &quot;.mas&quot; crub:so)
+    [%ta 7.561.581]
+</pre><hr /><h3 id="--nuck-"><code>++nuck</code> </h3><p>Top-level coin parser </p><p>Parsing rule. Switches on the first character and applies the corresponding <code>++coin</code> parser. </p><h4 id="accepts-">Accepts </h4><h4 id="produces-">Produces </h4><h4 id="source-">Source </h4><pre>        ++  nuck
+          ~/  %nuck  |=  a/nail  %.  a
+          %+  knee  *coin  |.  ~+
+          %-  stew
+          ^.  stet  ^.  limo
+          :~  :-  [&#39;a&#39; &#39;z&#39;]  (cook |=(a/@ta [%$ %tas a]) sym)
+              :-  [&#39;0&#39; &#39;9&#39;]  (stag %$ bisk)
+              :-  &#39;-&#39;        (stag %$ tash)
+              :-  &#39;.&#39;        ;~(pfix dot perd)
+              :-  &#39;~&#39;        ;~(pfix sig ;~(pose twid (easy [%$ %n 0])))
+          ==
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; (scan &quot;~pillyt&quot; nuck:so)
+    [% p=[p=~.p q=32.819]]
+    &gt; (scan &quot;0x12&quot; nuck:so)
+    [% p=[p=~.ux q=18]]
+    &gt; (scan &quot;.127.0.0.1&quot; nuck:so)
+    [% p=[p=~.if q=2.130.706.433]]
+    &gt; `@ud`.127.0.0.1
+    2.130.706.433
+    &gt; (scan &quot;._20_0w25_sam__&quot; nuck:so)
+    [ %many
+        p
+      ~[[% p=[p=~.ud q=20]] [% p=[p=~.uw q=133]] [% p=[p=~.tas q=7.168.371]]]
+    ]
+    &gt; `@`%sam
+    7.168.371
+    &gt; (scan &quot;~0ph&quot; nuck:so)
+    [%blob p=[1 1]]
+    &gt; ~0ph
+    [1 1]
+    &gt; `@uv`(jam [1 1])
+    0vph
+</pre><hr /><h3 id="--nusk-"><code>++nusk</code> </h3><p>Parse coin literal with escapes </p><p>Parsing rule. Parses a coin literal with escapes. (See also: xx tuple formatting). </p><h4 id="accepts-">Accepts </h4><h4 id="produces-">Produces </h4><h4 id="source-">Source </h4><pre>      ++  nusk
+        (sear |=(a/@ta (rush (wick a) nuck)) urt:ab)
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; ~.asd_a
+    ~.asd_a
+    &gt; ._1_~~.asd~-a__
+    [1 ~.asd_a]
+    &gt; (scan &quot;~~.asd~-a&quot; nusk:so)
+    [% p=[p=~.ta q=418.212.246.369]]
+    &gt; ([~ %ta @ta] (scan &quot;~~.asd~-a&quot; nusk:so))
+    [~ %ta ~.asd_a]
+</pre><hr /><h3 id="--perd-"><code>++perd</code> </h3><p>Parsing rule. </p><p>Parsing rule. Parses a dime or tuple without their respective standard prefixes. </p><h4 id="accepts-">Accepts </h4><h4 id="produces-">Produces </h4><h4 id="source-">Source </h4><pre>      ++  perd
+        ;~  pose
+          (stag ~ zust)
+          (stag %many (ifix [cab ;~(plug cab cab)] (more cab nusk)))
+        ==
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; (scan &quot;y&quot; perd:so)
+    [~ [%f %.y]]
+    &gt; (scan &quot;n&quot; perd:so)
+    [~ [%f %.n]]
+    &gt; |
+    %.n
+    &gt; (scan &quot;_20_x__&quot; perd:so)
+    [%many [[% p=[p=~.ud q=20]] ~[[% p=[p=~.tas q=120]]]]]
+</pre><hr /><h3 id="--royl-"><code>++royl</code> </h3><p>Parse dime float </p><p>Parsing rule. Parses a number into a <code>++dime</code> float. </p><h4 id="accepts-">Accepts </h4><h4 id="produces-">Produces </h4><h4 id="source-">Source </h4><pre>  ++  royl
+    ~+
+    =+  ^=  moo
+      |=  a/tape
+      :-  (lent a)
+      (scan a (bass 10 (plus sid:ab)))
+    =+  ^=  voy
+      %+  cook  royl-cell
+      ;~  pose
+        ;~  plug
+          (easy %d)
+          ;~  pose  (cold | hep)  (easy &amp;)  ==
+          ;~  plug  dim:ag
+            ;~  pose
+              ;~(pfix dot (cook moo (plus (shim &#39;0&#39; &#39;9&#39;))))
+              (easy [0 0])
+            ==
+            ;~  pose
+              ;~  pfix
+                (just &#39;e&#39;)
+                ;~(plug ;~(pose (cold | hep) (easy &amp;)) dim:ag)
+              ==
+              (easy [&amp; 0])
+            ==
+          ==
+        ==
+        ;~  plug
+          (easy %i)
+          ;~  sfix
+            ;~  pose  (cold | hep)  (easy &amp;)  ==
+            (jest &#39;inf&#39;)
+          ==
+        ==
+        ;~  plug
+          (easy %n)
+          (cold ~ (jest &#39;nan&#39;))
+        ==
+      ==
+    ;~  pose
+      (stag %rh (cook rylh ;~(pfix ;~(plug sig sig) voy)))
+      (stag %rq (cook rylq ;~(pfix ;~(plug sig sig sig) voy)))
+      (stag %rd (cook ryld ;~(pfix sig voy)))
+      (stag %rs (cook ryls voy))
+    ==
+  ::
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; (scan &quot;~3.14&quot; royl:so)
+    [%rd .~3.13999999999999]
+    &gt; .~3.14
+    .~3.13999999999999
+</pre><hr /><h3 id="--royl-cell-"><code>++royl-cell</code> </h3><p>XX still not fully functional </p><p>Intermediate parsed float convereter </p><pre>      ++  royl-cell
+        |=  rn
+        ^-  dn
+        ?.  ?=({$d *} +&lt;)  +&lt;
+        =+  ^=  h
+          (dif:si (new:si f.b i.b) (sun:si d.b))
+        [%d a h (add (mul c.b (pow 10 d.b)) e.b)]
+      ::
+</pre><hr /><h3 id="--tash-"><code>++tash</code> </h3><p>Parse signed dime </p><h4 id="accepts-">Accepts </h4><h4 id="produces-">Produces </h4><p>Parsing rule. Parses a signed number into a <code>++dime</code>. </p><h4 id="source-">Source </h4><pre>      ++  tash
+        ~+
+        =+  ^=  neg
+            |=  {syn/? mol/dime}  ^-  dime
+            ?&gt;  =(&#39;u&#39; (end 3 1 p.mol))
+            [(cat 3 &#39;s&#39; (rsh 3 1 p.mol)) (new:si syn q.mol)]
+        ;~  pfix  hep
+          ;~  pose
+            (cook |=(a/dime (neg | a)) bisk)
+            ;~(pfix hep (cook |=(a/dime (neg &amp; a)) bisk))
+          ==
+        ==
+      ::
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; (scan &quot;-20&quot; tash:so)
+    [p=~.sd q=39]
+    &gt; (,[%sd @sd] (scan &quot;-20&quot; tash:so))
+    [%sd -20]
+    &gt; (,[%sd @sd] (scan &quot;--20&quot; tash:so))
+    [%sd --20]
+    &gt; (,[%sx @sx] (scan &quot;--0x2e&quot; tash:so))
+    [%sx --0x2e]
+</pre><hr /><h3 id="--twid-"><code>++twid</code> </h3><p>Parse coins without <code>~</code> prefix </p><p>Parsing rule. Parses coins after a leading sig, <code>~</code>. </p><h4 id="accepts-">Accepts </h4><h4 id="produces-">Produces </h4><h4 id="source-">Source </h4><pre>      ++  twid
+        ;~  pose
+          (cook |=(a/@ [%blob (cue a)]) ;~(pfix (just &#39;0&#39;) vum:ag))
+          (stag ~ crub)
+        ==
+      ::
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; (scan &quot;zod&quot; twid:so)
+    [~ [%p 0]]
+    &gt; (scan &quot;.sam&quot; twid:so)
+    [~ [%ta 7.168.371]]
+    &gt; `@ud`~.sam
+    7.168.371
+    &gt; `@t`~.sam
+    &#39;sam&#39;
+    &gt; (scan &quot;0ph&quot; twid:so)
+    [%blob [1 1]]
+</pre><hr /><h3 id="--zust-"><code>++zust</code> </h3><p>Parse prefixed dimes from <code>@if</code>, <code>@f</code>, <code>@rd</code> </p><p>Parsing rule. Parses an atom of either <code>@if</code> (IP address), <code>@f</code> (loobean), or <code>rf</code>(floating point) into a <code>++dime</code>. </p><h4 id="accepts-">Accepts </h4><h4 id="produces-">Produces </h4><h4 id="source-">Source </h4><pre>      ++  zust
+        ;~  pose
+          (stag %is bip:ag)
+          (stag %if lip:ag)
+          (stag %f ;~(pose (cold &amp; (just &#39;y&#39;)) (cold | (just &#39;n&#39;))))
+          royl
+        ==
+      --
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; (scan &quot;127.0.0.1&quot; zust:so)
+    [%if q=2.130.706.433]
+
+    &gt; (scan &quot;af.0.0.0.0.e7a5.30d2.7&quot; zust:so)
+    [%is q=908.651.950.243.594.834.993.091.554.288.205.831]
+
+    &gt; (,[%is @is] (scan &quot;af.0.0.0.0.e7a5.30d2.7&quot; zust:so))
+    [%is .af.0.0.0.0.e7a5.30d2.7]
+
+    &gt; (,[%is @ux] (scan &quot;af.0.0.0.0.e7a5.30d2.7&quot; zust:so))
+    [%is 0xaf.0000.0000.0000.0000.e7a5.30d2.0007]
+
+    &gt; (scan &quot;y&quot; zust:so)
+    [%f %.y]
+
+    &gt; (scan &quot;12.09&quot; zust:so)
+    [%rd .~12.00999999999999]
+</pre><hr /></div></div></div></div></div><footer class="mb-36"><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script><script src="/js/main.js"></script></footer></body></html></body></html>

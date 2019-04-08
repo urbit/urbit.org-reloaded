@@ -1,0 +1,23 @@
+<svg id="diagrams" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 316 316">
+  <title>2-face</title>
+  <g>
+    <g>
+      <path d="M219.4,154h0a4,4,0,0,1,4-4h27.3a30,30,0,1,0,0,8H223.4A4,4,0,0,1,219.4,154Z" fill="#ee3124"/>
+      <path d="M250.7,150H223.4a4,4,0,0,0-4,4h0a4,4,0,0,0,4,4h27.3a26.8,26.8,0,0,0,0-8Z" fill="#5e6367"/>
+      <circle cx="223.4" cy="154" r="4" fill="#1e1b1d"/>
+    </g>
+    <path d="M90.8,139a15,15,0,1,1-15.1,15,15,15,0,0,1,15.1-15m0-15a30,30,0,1,0,30,30,30,30,0,0,0-30-30Z" fill="#6fdc74"/>
+    <g>
+      <path d="M68.8,56.6a137.7,137.7,0,0,0-38.7,58.2" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" stroke-width="16.53"/>
+      <path d="M30.1,114.8a153.6,153.6,0,0,0-4.4,16.1,134.4,134.4,0,0,0,0,53.6h0" fill="none" stroke="#333" stroke-miterlimit="10" stroke-width="16.53"/>
+      <path d="M247.2,259.4a136.8,136.8,0,0,0,23.1-26.6,133.5,133.5,0,0,0,20-101.3" fill="none" stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="16.53"/>
+      <path d="M114.8,285.9a153.6,153.6,0,0,0,16.1,4.4A136.3,136.3,0,0,0,234,269.6a165.4,165.4,0,0,0,13.2-10.2" fill="none" stroke="#ccc" stroke-miterlimit="10" stroke-width="16.53"/>
+      <path d="M25.7,184.5a133.8,133.8,0,0,0,57.5,85.8,136.7,136.7,0,0,0,31.6,15.6" fill="none" stroke="#666" stroke-miterlimit="10" stroke-width="16.53"/>
+      <g>
+        <path d="M290.3,131.5a133.8,133.8,0,0,0-57.5-85.8,136.7,136.7,0,0,0-31.6-15.6" fill="none" stroke="gray" stroke-miterlimit="10" stroke-width="16.53"/>
+        <path d="M201.2,30.1a153.6,153.6,0,0,0-16.1-4.4A136.3,136.3,0,0,0,82,46.4,165.4,165.4,0,0,0,68.8,56.6" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" stroke-width="16.53"/>
+      </g>
+    </g>
+    <path d="M195.1,224.9A149.2,149.2,0,0,1,120,245" fill="none" stroke="#4339fc" stroke-miterlimit="10" stroke-width="12.78"/>
+  </g>
+</svg>

@@ -1,0 +1,424 @@
+<html><head></head><meta charset="utf-8" /><body><html><head><meta charset="UTF-8" /><title>Urbit / Docs</title><meta name="viewport" content="width=device-width , initial-scale=1" /><link href="/tilde.ico" rel="icon" /><link href="/css/base.css" rel="stylesheet" /><link href="/css/lists.css" rel="stylesheet" /><link href="/css/visibility.css" rel="stylesheet" /><link href="/css/borders.css" rel="stylesheet" /><link href="/css/colors.css" rel="stylesheet" /><link href="/css/inputs.css" rel="stylesheet" /><link href="/css/typography.css" rel="stylesheet" /><link href="/css/menu.css" rel="stylesheet" /><link href="/css/images.css" rel="stylesheet" /><link href="/css/flex.css" rel="stylesheet" /><script src="https://www.googletagmanager.com/gtag/js?id=UA-47054188-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-47054188-1');</script></head><body><nav class="bg-black pb-36 menu-hide overflow-y"><div class="container"><div class="row pt-10 mb-3"><div class="col-sm-1 menu-toggle"><img class="w-8 h-8" src="/assets/menu-close.svg" /></div><div class="col-sm-9 col-md-8 col-lg-4 col-sm-offset-2 col-md-offset-1 white"><div class="mb-6"><a href="/primer"><h1>Primer</h1></a><p> </p></div><div class="mb-6"><a href="/posts"><h1>Posts</h1></a><p> </p></div><div class="mb-6"><a href="/docs"><h1>Docs</h1></a><p> </p></div></div></div></div><footer class="container mb-36 white"><div class="row"><div class="col-sm-6 col-sm-offset-3 col-md-offset-2"><div><div class="mb-6"><h4 class="mb-1">Follow</h4><div><a class="text-mono" href="https://twitter.com/@urbit" target="_blank">twitter.com/@urbit</a></div><div><a class="text-mono" href="https://github.com/urbit" target="_blank">github.com/@urbit</a></div></div><div class="mb-6"><h4 class="mb-1">Contact</h4><div class="text-mono text-400">~zod</div><div><a class="text-mono" href="mailto:support@urbit.org">support@urbit.org</a></div></div><div class="mb-6"><h4 class="mb-1">Company</h4><div><a href="/privacy">Privacy Policy</a></div><div><a href="/tos">Terms of Service</a></div><div class="text-400"><a href="/bounty">Bug Bounty + Security</a></div></div></div></div></div></footer></nav><div id="sidebar-mobile" class="bg-gray-light sidebar-hide overflow-y"><div class="container"><div class="col-sm-10"><ol class="list-reset h-font mt-6"><li class="mb-4"><a class="h-font text-600" href="/docs/introduction">Introduction</a><ol><li><a class="h-font" href="/docs/introduction/technical-overview">Technical overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/source-code-overview">Source Code Overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/contributing">Contributing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/arvo-vs-azimuth">Arvo vs. Azimuth</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/community-tutorials">Community Tutorials</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/galaxies-stars-and-planets">Galaxies, Stars, and Planets</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/getting-started">Getting Started</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/getting-started/azimuth">Using Bridge</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/installing-urbit">Installing Urbit</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/booting-a-ship">Booting a Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/creating-a-development-ship">Creating a Development Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/operating-a-star">Operating a Star</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/learn">Learn</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo">Arvo</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals">Arvo Internals</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ames">Ames</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/behn">Behn</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/admin">Admin and Operations</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/clay">Clay</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/dill">Dill</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/layout">Source layout</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/sail">Sail</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/messaging">Messaging</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/udon">Udon</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/eyre">Eyre</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/gall">Gall Apps</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/shell">Shell (Dojo)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ford">Ford</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/hall">Hall</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/filesystem">Introduction to the Filesystem</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/publishing">Web (Eyre)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/generators">Generators</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/hoon">Hoon</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/hoon/getting-started">Getting Started</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/nouns">Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/the-subject-and-its-legs">The Subject and Its Legs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/arms-and-cores">Arms and Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/gates">Gates (Hoon Functions)</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/multi-gate-cores-and-doors">Multi-gate Cores and Doors</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-programs">Hoon Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-syntax">Hoon Syntax</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/simple-one-gate-programs">Simple One-Gate Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/atoms-auras-and-simple-cell-types">Atoms, Auras, and Simple Cell Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-checking-and-type-inference">Type Checking and Type Inference</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/structures-and-complex-types">Structures and Complex Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores">Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores-again">Cores Again</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/lists">Standard Library: Lists</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/trees-sets-and-maps">Standard Library: Trees, Sets, and Maps</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-polymorphism">Type Polymorphism</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/examples">Examples</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/nock">Nock</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/nock/definition">Nock Definition</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/explanation">Explanation</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/example">Example</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/implementations">Implementations</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/vere">Vere</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/vere/runtime">C Runtime System</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/c">C in Urbit</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/nouns">Land of Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/api">API overview by prefix</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/jetting">Writing Jets</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/style">Hoon Style Guide</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/arvo/workbook">Hoon Workbook</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/workbook/list">List of Numbers</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/caesar">Caesar Cipher</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/recursion">Recursion</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/digits">Digits</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/eightball">Magic 8-Ball</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/traffic-light">Traffic Light</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/bomb">Bomb Defusing</a></li></ol></li></ol></li><li><a class="h-font" href="/docs/learn/azimuth">Azimuth</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/azimuth/blockchain">Why Urbit Uses a Blockchain</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/azimuth/wallet">The Urbit HD Wallet</a><ol class="list-reset h-font"></ol></li></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/reference">Reference</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions">Hoon Expressions</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune">Runes</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/constants">Atoms and strings</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/dot">Nock . (&quot;dot&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/zap">Wild ! (&quot;zap&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/tis">Change Subject = (&quot;tis&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/wut">Conditionals ? (&quot;wut&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bar">Cores | (&quot;bar&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/lus">Arms + (&quot;lus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/col">Cells : (&quot;col&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/cen">Calls % (&quot;cen&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/ket">Casts ^ (&quot;ket&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bus">Structures $ (&quot;bus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/mic">Make ; (&quot;mic&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/sig">Hints ~ (&quot;sig&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/terminators">Terminators -- and ==</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb">Limbs and Wings</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/limb">Limbs</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/wing">Wings</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/basic">Basic Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/advanced">Advanced Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/irregular">Irregular forms</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/library">Standard library</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/library/1a">1a: Basic Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1b">1b: Tree Addressing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1c">1c: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2a">2a: Unit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2b">2b: List Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2c">2c: Bit Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2d">2d: Bit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2e">2e: Insecure Hashing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2f">2f: Noun Ordering</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2g">2g: Unsigned Powers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2h">2h: Set Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2i">2i: Map Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2j">2j: Jar and Jug Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2k">2k: Queue Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2l">2l: Container from Container</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2m">2m: Container from Noun</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2n">2n: Functional Hacks</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2o">2o: Normalizing Containers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2p">2p: Serialization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2q">2q: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3a">3a: Modular and Signed Ints</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3b">3b: Floating Point</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3c">3c: Urbit Time</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3d">3d: SHA Hash Family</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3e">3e: (Removed)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3f">3f: Scrambling</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3g">3g: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4a">4a: Exotic Bases</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4b">4b: Text Processing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4c">4c: Tank Printer</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4d">4d: Parsing (Tracing)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4e">4e: Parsing (Combinators)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4f">4f: Parsing (Rule-Builders)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4g">4g: Parsing (Outside Caller)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4h">4h: Parsing (ASCII Glyphs)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4i">4i: Parsing (Useful Idioms)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4j">4j: Parsing (Bases and Base Digits)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4k">4k: Atom Printing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4l">4l: Atom Parsing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4m">4m: Formatting Functions</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4n">4n: Virtualization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4o">4o: Molds</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5a">5a: Compiler Utilities</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5b">5b: Macro Expansion</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5c">5c: Compiler Backend &amp; Prettyprinter</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5d">5d: Parser</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5e">5e: Caching Compiler</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5f">5f: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5g">5g: profiling support</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/zuse">Zuse</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/glossary">Glossary</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/cheat-sheet">Cheat sheet</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/troubleshooting">Hoon Errors</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/alphabetical-arms">Alphabetical Arms</a><ol class="list-reset h-font"></ol></li></ol></li></ol></div><div class="col-sm-1 sidebar-toggle fixed" style="top: 20px; right: 1em"><img class="w-8 h-8 dropdown-right" src="/assets/dropdown.svg" /></div></div></div><div class="container mt-10"><div class="sidebar-container row col-sm-3 fixed pb-30 h-100-md"><div class="col-sm-3 col-lg-6 menu-toggle"><img class="w-8 h-8" src="/assets/menu-open.svg" /></div><div class="col-sm-12 mt-7 sidebar-toggle md-hide"><img class="w-8 h-8 dropdown-left" src="/assets/dropdown.svg" /></div><div class="h-100 col-sm-8 col-md-11 overflow-y sm-hide"><ol class="list-reset h-font mt-6"><li class="mb-4"><a class="h-font text-600" href="/docs/introduction">Introduction</a><ol><li><a class="h-font" href="/docs/introduction/technical-overview">Technical overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/source-code-overview">Source Code Overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/contributing">Contributing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/arvo-vs-azimuth">Arvo vs. Azimuth</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/community-tutorials">Community Tutorials</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/galaxies-stars-and-planets">Galaxies, Stars, and Planets</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/getting-started">Getting Started</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/getting-started/azimuth">Using Bridge</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/installing-urbit">Installing Urbit</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/booting-a-ship">Booting a Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/creating-a-development-ship">Creating a Development Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/operating-a-star">Operating a Star</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/learn">Learn</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo">Arvo</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals">Arvo Internals</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ames">Ames</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/behn">Behn</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/admin">Admin and Operations</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/clay">Clay</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/dill">Dill</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/layout">Source layout</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/sail">Sail</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/messaging">Messaging</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/udon">Udon</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/eyre">Eyre</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/gall">Gall Apps</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/shell">Shell (Dojo)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ford">Ford</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/hall">Hall</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/filesystem">Introduction to the Filesystem</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/publishing">Web (Eyre)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/generators">Generators</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/hoon">Hoon</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/hoon/getting-started">Getting Started</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/nouns">Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/the-subject-and-its-legs">The Subject and Its Legs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/arms-and-cores">Arms and Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/gates">Gates (Hoon Functions)</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/multi-gate-cores-and-doors">Multi-gate Cores and Doors</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-programs">Hoon Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-syntax">Hoon Syntax</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/simple-one-gate-programs">Simple One-Gate Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/atoms-auras-and-simple-cell-types">Atoms, Auras, and Simple Cell Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-checking-and-type-inference">Type Checking and Type Inference</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/structures-and-complex-types">Structures and Complex Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores">Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores-again">Cores Again</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/lists">Standard Library: Lists</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/trees-sets-and-maps">Standard Library: Trees, Sets, and Maps</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-polymorphism">Type Polymorphism</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/examples">Examples</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/nock">Nock</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/nock/definition">Nock Definition</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/explanation">Explanation</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/example">Example</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/implementations">Implementations</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/vere">Vere</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/vere/runtime">C Runtime System</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/c">C in Urbit</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/nouns">Land of Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/api">API overview by prefix</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/jetting">Writing Jets</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/style">Hoon Style Guide</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/arvo/workbook">Hoon Workbook</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/workbook/list">List of Numbers</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/caesar">Caesar Cipher</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/recursion">Recursion</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/digits">Digits</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/eightball">Magic 8-Ball</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/traffic-light">Traffic Light</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/bomb">Bomb Defusing</a></li></ol></li></ol></li><li><a class="h-font" href="/docs/learn/azimuth">Azimuth</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/azimuth/blockchain">Why Urbit Uses a Blockchain</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/azimuth/wallet">The Urbit HD Wallet</a><ol class="list-reset h-font"></ol></li></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/reference">Reference</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions">Hoon Expressions</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune">Runes</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/constants">Atoms and strings</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/dot">Nock . (&quot;dot&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/zap">Wild ! (&quot;zap&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/tis">Change Subject = (&quot;tis&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/wut">Conditionals ? (&quot;wut&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bar">Cores | (&quot;bar&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/lus">Arms + (&quot;lus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/col">Cells : (&quot;col&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/cen">Calls % (&quot;cen&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/ket">Casts ^ (&quot;ket&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bus">Structures $ (&quot;bus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/mic">Make ; (&quot;mic&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/sig">Hints ~ (&quot;sig&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/terminators">Terminators -- and ==</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb">Limbs and Wings</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/limb">Limbs</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/wing">Wings</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/basic">Basic Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/advanced">Advanced Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/irregular">Irregular forms</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/library">Standard library</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/library/1a">1a: Basic Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1b">1b: Tree Addressing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1c">1c: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2a">2a: Unit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2b">2b: List Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2c">2c: Bit Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2d">2d: Bit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2e">2e: Insecure Hashing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2f">2f: Noun Ordering</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2g">2g: Unsigned Powers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2h">2h: Set Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2i">2i: Map Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2j">2j: Jar and Jug Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2k">2k: Queue Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2l">2l: Container from Container</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2m">2m: Container from Noun</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2n">2n: Functional Hacks</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2o">2o: Normalizing Containers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2p">2p: Serialization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2q">2q: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3a">3a: Modular and Signed Ints</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3b">3b: Floating Point</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3c">3c: Urbit Time</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3d">3d: SHA Hash Family</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3e">3e: (Removed)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3f">3f: Scrambling</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3g">3g: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4a">4a: Exotic Bases</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4b">4b: Text Processing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4c">4c: Tank Printer</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4d">4d: Parsing (Tracing)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4e">4e: Parsing (Combinators)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4f">4f: Parsing (Rule-Builders)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4g">4g: Parsing (Outside Caller)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4h">4h: Parsing (ASCII Glyphs)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4i">4i: Parsing (Useful Idioms)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4j">4j: Parsing (Bases and Base Digits)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4k">4k: Atom Printing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4l">4l: Atom Parsing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4m">4m: Formatting Functions</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4n">4n: Virtualization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4o">4o: Molds</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5a">5a: Compiler Utilities</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5b">5b: Macro Expansion</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5c">5c: Compiler Backend &amp; Prettyprinter</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5d">5d: Parser</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5e">5e: Caching Compiler</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5f">5f: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5g">5g: profiling support</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/zuse">Zuse</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/glossary">Glossary</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/cheat-sheet">Cheat sheet</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/troubleshooting">Hoon Errors</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/alphabetical-arms">Alphabetical Arms</a><ol class="list-reset h-font"></ol></li></ol></li></ol></div></div><div class="row pb-80"><div class="col-sm-9 col-md-8 col-sm-offset-2 col-md-offset-3 docs"><div><div><h1 id="2-4--atoms--auras--and-simple-cell-types-">2.4: Atoms, Auras, and Simple Cell Types </h1><p>Like most modern high-level programming languages, Hoon has a type system. Because Hoon is a functional programming language, its type system differs somewhat from those of non-functional languages. In the next few lessons we&#39;ll go over Hoon&#39;s type system and point out some of its distinctive features. Certain advanced topics (e.g. type <a href="https://en.wikipedia.org/wiki/Polymorphism_(computer_science%29">polymorphism</a>) won&#39;t be addressed until a later chapter. </p><p>A type is ordinarily understood to be a set of values. Examples: the set of all atoms is a type, the set of all cells is a type, and so on. </p><p>Type systems provide type safety, in part by making sure functions produce values of the correct type. When you write a function whose product is intended to be an atom, it would be nice to know that the function is guaranteed to produce an atom. Hoon&#39;s type system provides such guarantees with <b>type checking</b> and <b>type inference</b>. </p><h2 id="brief-overview-of-the-next-few-lessons-">Brief Overview of the Next Few Lessons </h2><p>In order to have a solid foundational knowledge of Hoon&#39;s type system, you must understand: (1) precisely what kind of information is tracked by Hoon&#39;s type system, (2) what a type check is and where they occur, (3) what type inference is and how it works, and (4) how to build your own custom types. </p><p>In this lesson we&#39;ll cover (1)-(4) as they pertain to atoms and simple cell types. In the next lesson (2) and (3) will be addressed as they pertain to complex expressions of Hoon. In the lesson after that you&#39;ll learn more about (4), for building more complex types. </p><h2 id="atoms-and-auras-">Atoms and Auras </h2><p>In <a href="../nouns">lesson 1.2</a> we defined what an atom is: any unsigned integer. In this lesson we&#39;ll expand on that discussion, going over how Hoon&#39;s type system implements auras. </p><p>In the most straightforward sense, atoms simply are unsigned integers. But they can also be interpreted as representing signed integers, ASCII symbols, floating-point values, dates, binary numbers, hexadecimal numbers, and more. Every atom is, in and of itself, just an unsigned integer; but Hoon keeps track of type information about each atom, and this info tells Hoon how to interpret the atom in question. </p><p>The piece of type information that determines how Hoon interprets an atom is called an <b>aura</b>. The set of all atoms is indicated with the symbol <code>@</code>. An aura is indicated with <code>@</code> followed by some letters, e.g., <code>@ud</code> for unsigned decimal. Accordingly, the Hoon type system does more than track sets of values. It also tracks certain other relevant metadata about how those values are to be interpreted. </p><p>How is aura information generated so that it can be tracked? One way involves <b>type inference</b>. In certain cases Hoon&#39;s type system can infer the type of an expression using syntactic clues. In the most straightforward case of type inference, the expression is simply data as a <a href="https://en.wikipedia.org/wiki/Literal_(computer_programming%29">literal</a>. Hoon recognizes the aura literal syntax and infers that the data in question is an atom with the aura associated with that syntax. </p><p>To see the inferred type of a literal expression in the dojo, use the <code>?</code> operator. (Note: this operator isn&#39;t part of the Hoon programming language; it&#39;s a dojo-only tool. It&#39;s a very useful tool for learning about types in Hoon, however.) </p><p>The <code>?</code> dojo operator shows both the product and the inferred type of an expression. Let&#39;s try <code>?</code> on <code>15</code>: </p><pre>&gt; 15
+15
+
+&gt; ? 15
+  @ud
+15
+</pre><p>The <code>@ud</code> is the inferred type of <code>15</code> (and of course <code>15</code> is the product). The <code>@</code> is for &#39;atom&#39; and the <code>ud</code> is for &#39;unsigned decimal&#39;. The letters after the <code>@</code> indicate the &#39;aura&#39; of the atom. </p><p>One important role played by the type system is to make sure that the output of an expression is of the intended data type. If the output is of the wrong type then the programmer did something wrong. But how does Hoon know what the intended data type is? The programmer must specify this explicitly by using a &#39;cast&#39;. To cast for an unsigned decimal atom, you can use the <code>^-</code> rune along with the <code>@ud</code> from above. </p><p>What exactly does the <code>^-</code> rune do? It compares the inferred type of some expression with the desired cast type. If the expression&#39;s inferred type &#39;nests&#39; under the desired type, then the product of the expression is returned. </p><p>Let&#39;s try one in the dojo. For the expression to be assessed we&#39;ll use <code>15</code> again: </p><pre>&gt; ^-(@ud 15)
+15
+</pre><p>Because <code>@ud</code> is the inferred type of <code>15</code>, the cast succeeds. Notice that the <code>^-</code> expression never does anything to modify the underlying noun of the second subexpression. It&#39;s used simply to mandate a type-check on that expression. This check occurs at compile-time (i.e., when the expression is compiled to Nock). </p><p>What about when the inferred type doesn&#39;t fit under the cast type? You get a <code>nest-fail</code> crash at compile-time: </p><pre>&gt; ^-(@ud [13 14])
+nest-fail
+[crash message]
+</pre><p>Why &#39;nest-fail&#39;? The inferred type of <code>[13 14]</code> doesn&#39;t &#39;nest&#39; under the cast type <code>@ud</code>. It&#39;s a cell, not an atom. But if we use the symbol for nouns, <code>*</code>, then the cast succeeds: </p><pre>&gt; ^-(* [13 14])
+[13 14]
+</pre><p>A cell of atoms is a noun, so the inferred type of <code>[13 14]</code> nests under <code>*</code>. Every product of a Hoon expression nests under <code>*</code> because every product is a noun. </p><h2 id="what-auras-are-there--">What Auras are There? </h2><p>Hoon has a wide (but not extensible) variety of atom literal syntaxes. Each literal syntax indicates to the Hoon type checker which predefined aura is intended. Hoon can also pretty-print any aura literal it can parse. Because atoms make great path nodes and paths make great URLs, all regular atom literal syntaxes use only URL-safe characters. </p><p>Here&#39;s a non-exhaustive list of auras, along with examples of corresponding literal syntax: </p><pre>Aura         Meaning                        Example Literal Syntax
+-------------------------------------------------------------------------
+@d           date
+  @da        absolute date                  ~2018.5.14..22.31.46..1435
+  @dr        relative date (ie, timespan)   ~h5.m30.s12
+@n           nil                            ~
+@p           phonemic base (ship name)      ~sorreg-namtyv
+@r           IEEE floating-point
+  @rd        double precision  (64 bits)    .~6.02214085774e23
+  @rh        half precision (16 bits)       .~~3.14
+  @rq        quad precision (128 bits)      .~~~6.02214085774e23
+  @rs        single precision (32 bits)     .6.022141e23
+@s           signed integer, sign bit low
+  @sb        signed binary                  --0b11.1000
+  @sd        signed decimal                 --1.000.056
+  @sv        signed base32                  -0v1df64.49beg
+  @sw        signed base64                  --0wbnC.8haTg
+  @sx        signed hexadecimal             -0x5f5.e138
+@t           UTF-8 text (cord)              &#39;howdy&#39;
+  @ta        ASCII text (knot)              ~.howdy
+    @tas     ASCII text symbol (term)       %howdy
+@u              unsigned integer
+  @ub           unsigned binary             0b11.1000
+  @ud           unsigned decimal            1.000.056
+  @uv           unsigned base32             0v1df64.49beg
+  @uw           unsigned base64             0wbnC.8haTg
+  @ux           unsigned hexadecimal        0x5f5.e138
+</pre><p>Some of these auras nest under others. For example, <code>@u</code> is for all unsigned auras. But there are other, more specific auras; <code>@ub</code> for unsigned binary numbers, <code>@ux</code> for unsigned hexadecimal numbers, etc. </p><h2 id="aura-inference-in-hoon-">Aura Inference in Hoon </h2><p>Let&#39;s do more examples in the Dojo using the <code>?</code> operator. We&#39;ll focus on just the unsigned auras for now: </p><pre>&gt; 15
+15
+
+&gt; ? 15
+  @ud
+15
+
+&gt; 0x15
+0x15
+
+&gt; ? 0x15
+  @ux
+0x15
+</pre><p>When you enter just <code>15</code>, the Hoon type checker infers from the syntax that its aura is <code>@ud</code> because you typed an unsigned integer in decimal notation. Hence, when you use <code>?</code> to check the aura, you get <code>@ud</code>. </p><p>And when you enter <code>0x15</code> the type checker infers that its aura is <code>@ux</code>, because you used <code>0x</code> before the number to indicate the unsigned hexadecimal literal syntax. In both cases, Hoon pretty-prints the appropriate literal syntax by using inferred type information from the input expression; the Dojo isn&#39;t (just) echoing what you enter. </p><p>More generally: for each atom expression in Hoon, you can use the literal syntax of an aura to force Hoon to interpret the atom as having that aura type. For example, when you type <code>~sorreg-namtyv</code> Hoon will interpret it as an atom with aura <code>@p</code> and treat it accordingly. </p><p>Here&#39;s another example of type inference at work: </p><pre>&gt; (add 15 15)
+30
+
+&gt; ? (add 15 15)
+  @
+30
+
+&gt; (add 0x15 15)
+36
+
+&gt; ? (add 0x15 15)
+  @
+36
+</pre><p>The <code>add</code> function in the Hoon standard library operates on all atoms, regardless of aura, and returns atoms with no aura specified. Hoon isn&#39;t able to infer anything more specific than <code>@</code> for the product of <code>add</code>. This is by design, however. Notice that when you <code>add</code> a decimal and a hexadecimal above, the correct answer is returned (pretty-printed as a decimal). This works for all of the unsigned auras: </p><pre>&gt; (add 100 0b101)
+105
+
+&gt; (add 100 0xf)
+115
+
+&gt; (add 0b1101 0x11)
+30
+</pre><p>The reason these add up correctly is that unsigned auras all map directly to the &#39;correct&#39; atom underneath. For example, <code>16</code>, <code>0b1.0000</code>, and <code>0x10</code> are all the exact same atom, just with different literal syntax. (This doesn&#39;t hold for signed versions of the auras!) </p><h2 id="auras-as--soft--types-">Auras as &#39;Soft&#39; Types </h2><p>It&#39;s important to understand that Hoon&#39;s type system doesn&#39;t enforce auras as strictly as it does other types. Auras are &#39;soft&#39; type information. To see how this works, we&#39;ll take you through the process of converting the aura of an atom to another aura. </p><p>Hoon makes <b>some</b> effort to enforce that the correct aura is produced by an expression: </p><pre>&gt; ^-(@ud 0x10)
+nest-fail
+
+&gt; ^-(@ud 0b10)
+nest-fail
+
+&gt; ^-(@ux 100)
+nest-fail
+</pre><p>But there are ways around this. First, you can cast to a more general aura, as long as the current aura nests under the cast aura. E.g., <code>@ub</code> to <code>@u</code>, <code>@ux</code> to <code>@u</code>, <code>@u</code> to <code>@</code>, etc. By doing this you&#39;re essentially telling Hoon to throw away some aura information: </p><pre>&gt; ^-(@u 0x10)
+16
+
+&gt; ? ^-(@u 0x10)
+  @u
+16
+
+&gt; ^-(@u 0b10)
+2
+
+&gt; ? ^-(@u 0b10)
+  @u
+2
+</pre><p>In fact, you can cast any atom all the way to the most general case <code>@</code>: </p><pre>&gt; ^-(@ 0x10)
+16
+
+&gt; ? ^-(@ 0x10)
+  @
+16
+
+&gt; ^-(@ 0b10)
+2
+
+&gt; ? ^-(@ 0b10)
+  @
+2
+</pre><p>Anything of the general aura <code>@</code> can, in turn, be cast to more specific auras. We can show this by embedding a cast expression inside another cast: </p><pre>&gt; ^-(@ud ^-(@ 0x10))
+16
+
+&gt; ^-(@ub ^-(@ 0x10))
+0b1.0000
+
+&gt; ^-(@ux ^-(@ 10))
+0xa
+</pre><p>Hoon uses the outermost cast to infer the type: </p><pre>&gt; ? ^-(@ub ^-(@ 0x10))
+  @ub
+0b1.0000
+</pre><p>As you can see, an atom with one aura can be converted to another aura. For a convenient shorthand, you can do this conversion with irregular cast syntax, e.g. <code>`@ud`</code>, rather than using the <code>^-</code> rune twice: </p><pre>&gt; `@ud`0x10
+16
+
+&gt; `@ub`0x10
+0b1.0000
+
+&gt; `@ux`10
+0xa
+</pre><p>This is what we mean when we call auras &#39;soft&#39; types. The above examples show that the programmer can get around the type system for auras by casting up to <code>@</code> and then back down to the specific aura, say <code>@ub</code>; or by casting with <code>`@ub`</code> for short. </p><h2 id="examples-">Examples </h2><p>So far you&#39;ve only used the auras for unsigned integers. Let&#39;s try some others. </p><h3 id="signed-integers-">Signed integers </h3><pre>&gt; -7
+-7
+
+&gt; ? -7
+  @sd
+
+&gt; --7
+--7
+
+&gt; ? --7
+  @sd
+--7
+</pre><p><code>--7</code> means “positive 7”. <code>+7</code> might have been better but <code>+</code> is not URL-safe. </p><p>Hoon needs <code>--</code> to distinguish positive signed numbers such as <code>--7</code> from the unsigned <code>7</code>. The latter is always understood by Hoon as an unsigned literal. If you want Hoon to infer that a literal is signed you must explicitly include the <code>--</code>. </p><p>Whereas we could use the <code>add</code> function on different unsigned auras and still get the correct answer, this doesn&#39;t work for signed auras: </p><pre>&gt; (add -7 --7)
+27
+</pre><p>Why not? <code>add</code> is happy to operate on any atom, regardless of aura, but it&#39;s intended for auras whose literals map directly to numerically equivalent general atoms <code>@</code>. For example, the <code>@ud</code> <code>7</code>, the <code>@ub</code> <code>0b111</code>, and the <code>@ux</code> <code>0x7</code> all map to the same <code>@</code> <code>7</code>. Signed literals such as <code>--7</code> are different, because some underlying atoms are used for representing negative numbers. We can see how this works by forcibly converting <code>@sd</code> atoms to <code>@ud</code>: </p><pre>&gt; `@ud`-1
+1
+
+&gt; `@ud`--1
+2
+
+&gt; `@ud`-7
+13
+
+&gt; `@ud`--7
+14
+</pre><p>If you want to add signed atoms use the function <code>sum:si</code> instead of <code>add</code>: </p><pre>&gt; (sum:si -7 --7)
+--0
+
+&gt; ? (sum:si -7 --7)
+  @s
+--0
+
+&gt; (sum:si --7 --0b10)
+--9
+
+&gt; (sum:si --7 --0x10)
+--23
+</pre><h3 id="exercise-2-4-1-">Exercise 2.4.1 </h3><p>Does Hoon&#39;s <code>@s</code> aura make a distinction between positive and negative zero, e.g., <code>-0</code> and <code>--0</code>? Use what you&#39;ve learned in this lesson so far to come up with a principled answer. (As always, exercise solutions are at the bottom of the lesson.) </p><h3 id="text-and-symbols-">Text and Symbols </h3><p>Atoms can also represent text. The <code>@t</code> aura is for UTF-8 text. We call <code>@t</code> strings &#39;cords&#39; (to distinguish them from tapes, e.g., <code>&quot;hello!&quot;</code>): </p><pre>&gt; ? &#39;Ürbit&#39;
+  @t
+&#39;Ürbit&#39;
+
+&gt; `@ud`&#39;Ürbit&#39;
+127.995.972.066.499
+
+&gt; `@ux`&#39;Ürbit&#39;
+0x7469.6272.9cc3
+
+&gt; `@ux`&#39;Ürbitt&#39;
+0x74.7469.6272.9cc3
+
+&gt; `@t`0x74
+&#39;t&#39;
+</pre><p>As you can see by casting a cord to <code>@ux</code>, the first byte (here the <code>74</code> of <code>0x74</code>) represents the last character of the cord. The next byte is the next to last character, and so on. </p><p>Hoon also has <code>@ta</code>, which is intended for ASCII text. In practice, the Hoon parser rejects <code>@ta</code> literals that aren&#39;t in so-called &#39;kebab case&#39;. That is, lower-case letters, numerals, and hyphens. Each <code>@ta</code> atom is called a &#39;knot&#39;. </p><pre>&gt; ? ~.urbit
+  @ta
+~.urbit
+
+&gt; `@ux`~.this-is-kebab-case-123
+0x3332.312d.6573.6163.2d62.6162.656b.2d73.692d.7369.6874
+</pre><p>You can get around Hoon&#39;s parser restrictions for <code>@ta</code> atoms by casting to <code>@ta</code> from a cord: </p><pre>&gt; `@ta`&#39;The quick brown fox jumped over the lazy dog.&#39;
+~.The quick brown fox jumped over the lazy dog.
+</pre><p>The Hoon <b>parser</b> prevents you from typing the literal <code>~.The quick brown fox jumped over the lazy dog.</code> into the dojo. Try it! </p><p>The <code>@tas</code> aura is intended for &#39;symbols&#39;, i.e., kebab case strings following a <code>%</code>: </p><pre>&gt; %hello
+%hello
+
+&gt; ^-(@tas %hello)
+%hello
+
+&gt; ^-(@ %hello)
+478.560.413.032
+
+&gt; ^-(@ &#39;hello&#39;)
+478.560.413.032
+</pre><h3 id="dates-">Dates </h3><p>You can think of <code>now</code> as being a dojo environment variable that tells you what time it is: </p><pre>&gt; now
+~2018.5.16..23.42.06..5da3
+
+&gt; ? now
+  @da
+~2018.5.16..23.42.08..3455
+</pre><p>The <code>@da</code> aura is for &#39;absolute dates&#39; represented with 128-bit atoms; 64 bits for the year, month, day, hour, minute, and second, 64 bits for fractions of a second. There is also <code>@dr</code> for relative date: </p><pre>&gt; ~h6
+~h6
+
+&gt; ? ~h6
+  @dr
+~h6
+
+&gt; ~h6.m32.s11
+~h6.m32.s11
+
+&gt; `@ux`~h6
+  @ux
+0x5460.0000.0000.0000.0000
+</pre><p>The literal <code>~h6.m32.s11</code> is for 6 hours, 32 minutes, and 11 seconds. You can add <code>@dr</code> atoms together, or add a <code>@dr</code> atom to a <code>@da</code> atom. Remember that the <code>add</code> function produces atoms with no aura, so you&#39;ll have to cast the the aura you want the dojo to pretty-print to: </p><pre>&gt; (add ~h2 ~h3)
+332.041.393.326.771.929.088.000
+
+&gt; `@dr`(add ~h2 ~h3)
+~h5
+
+&gt; `@dr`(add ~d1.m33 ~h7.m15.s12)
+~d1.h7.m48.s12
+
+&gt; now
+~2018.5.17..00.15.06..a0d0
+
+&gt; `@da`(add ~d1 now)
+~2018.5.18..00.15.31..2df6
+</pre><h3 id="floats-">Floats </h3><p>Here are the float auras from the aura chart above: </p><pre>Aura         Meaning                        Example Literal
+-------------------------------------------------------------------------
+@r           IEEE floating-point
+  @rd        double precision  (64 bits)    .~6.02214085774e23
+  @rh        half precision (16 bits)       .~~3.14
+  @rq        quad precision (128 bits)      .~~~6.02214085774e23
+  @rs        single precision (32 bits)     .6.022141e23
+</pre><p>One thing needs to be pointed out for float auras. Atoms are fundamentally integers, and only when interpreted differently can they be understood as floats. Floats obviously can&#39;t all map to numerically equivalent atoms: </p><pre>&gt; .6.022
+.6.022
+
+&gt; ? .6.022
+  @rs
+.6.022
+
+&gt; `@`.6.022
+1.086.370.873
+</pre><p>As a result, the standard mathematical functions for atoms won&#39;t work correctly for floats: </p><pre>&gt; (add .6.022 .1.000)
+2.151.724.089
+
+&gt; `@rs`(add .6.022 .1.000)
+.-5.942123e-39
+</pre><p>Instead, you&#39;ll have to call the variant function for that type of float: <code>add:rs</code> for adding <code>@rs</code> floats, <code>add:rd</code> for <code>@rd</code> floats, <code>add:rq</code> for <code>@rq</code> floats, and <code>add:rh</code> for <code>@rh</code> floats. </p><pre>&gt; (add:rs .6.022 .1.000)
+.7.022
+
+&gt; (add:rd .~6.022 .~1.000)
+.~7.022
+</pre><h2 id="custom-auras-">Custom Auras </h2><p>Programmers can use their own auras if desired, keeping in mind however that Hoon won&#39;t support custom aura literals or pretty-printing. The set of literals Hoon knows how to parse and/or print is fixed. But there are plenty of good reasons to use your own user-defined auras. </p><p>If your program uses both fortnights and furlongs, Hoon will not parse a user-defined fortnight syntax. It will not print furlongs in the dojo. But the type system can prevent you from accidentally passing a furlong to a function that expects a fortnight. </p><p>Remember also that auras specialize to the right. For example, <code>@u</code> atoms are interpreted as unsigned integers; <code>@ux</code> atoms are interpreted as unsigned <b>hexadecimal</b> integers. </p><pre>&gt; `@madeupaura`123
+0x7b
+
+&gt; ^-(@abc `@abc`123)
+0x7b
+
+&gt; ^-(@ab `@abc`123)
+0x7b
+
+&gt; ^-(@abcd `@abc`123)
+0x7b
+
+&gt; ^-(@abd `@abc`123)
+nest-fail
+</pre><h2 id="general-and-constant-atoms-">General and Constant Atoms </h2><p>There&#39;s more to the type information of an atom than its aura. Another distinction is necessary. Some atoms are <b>general</b> in type, meaning that the type in question includes all atoms. For example, the type of the literal <code>17</code> is <code>@ud</code>; every atom can be of that type. Up to this point of this lesson every atom has been general. </p><p>There are also atoms that are <b>constant</b> in type. Constant atom types contain just one atom. But that&#39;s not all. Constant atom types contain just one atom <b>with just one aura</b>. </p><p>For atomic constant literal syntax simply put <code>%</code> in front of the atom literal: </p><pre>&gt; ? 15
+  @ud
+15
+
+&gt; ? %15
+  $15
+%15
+
+&gt; ? %~h6
+  $~h6
+%~h6
+
+&gt; ? %hello
+  $hello
+%hello
+</pre><p>The <code>$</code> on the type indicates the constant. You can use the same literal syntax to cast: </p><pre>&gt; ^-(%15 %15)
+%15
+</pre><p>Keep in mind that, underneath, <code>15</code> and <code>%15</code> are the same atom: </p><pre>&gt; ^-(@ 15)
+15
+
+&gt; ^-(@ %15)
+15
+</pre><p>But because they have different auras, <code>15</code> doesn&#39;t nest under the type for <code>%15</code>: </p><pre>&gt; ^-(%15 15)
+nest-fail
+</pre><p>When you cast using a constant as your type, you&#39;re asking for something very specific: one particular atom with one particular aura. If both conditions aren&#39;t met, the result of the cast will be a <code>nest-fail</code>. </p><pre>&gt; `@`%0xf
+15
+
+&gt; `@`%15
+15
+
+&gt; ^-(%15 %0xf)
+nest-fail
+
+&gt; ^-(%0xf %15)
+nest-fail
+
+&gt; ^-(%0xf %0xf)
+%0xf
+</pre><h2 id="common-irregulars-">Common irregulars </h2><p>There are a few special forms worth learning early. Null <code>@n</code>, a special constant type for <code>0</code>: </p><pre>&gt; ~
+~
+
+&gt; `@`~
+0
+
+&gt; ^-(@n ~)
+~
+</pre><p>Flag <code>?</code>, which is for boolean values: </p><pre>&gt; |
+%.n
+
+&gt; &amp;
+%.y
+
+&gt; ^-(? |)
+%.n
+
+&gt; ^-(? &amp;)
+%.y
+</pre><p>And ship names use <code>@p</code>: </p><pre>&gt; ~zod
+~zod
+
+&gt; ~sorreg-namtyv
+~sorreg-namtyv
+
+&gt; `@`~zod
+0
+
+&gt; `@`~taglux-nidsep
+6.095.360
+
+&gt; ^-(@p ~taglux-nidsep)
+~taglux-nidsep
+</pre><h2 id="simple-cell-types-">Simple Cell Types </h2><p>Let&#39;s move on to cells. For now we&#39;ll limit ourselves to simple cell types made up of various atom types. </p><h2 id="generic-cells-">Generic Cells </h2><p>The <code>^</code> symbol is used to indicate the type for cells (i.e., the set of all cells). We can use it for casting as we did with, e.g., <code>@ux</code> and <code>@t</code>: </p><pre>&gt; ^-(^ [12 13])
+[12 13]
+
+&gt; ^-(^ [[12 13] 14])
+[[12 13] 14]
+
+&gt; ^-(^ [[12 13] [14 15 16]])
+[[12 13] [14 15 16]]
+
+&gt; ^-(^ 123)
+nest-fail
+
+&gt; ^-(^ 0x10)
+nest-fail
+</pre><p>If the expression to be evaluated produces a cell, the cast succeeds; if the expression evaluates produces an atom, the cast fails with a <code>nest-fail</code> crash. </p><p>The downside of using <code>^</code> for casts is that Hoon will infer only that the product of the expression is a cell; it won&#39;t be known what <i>kind</i> of cell is produced. </p><pre>&gt; ? ^-(^ [12 13])
+  {* *}
+[12 13]
+
+&gt; ? ^-(^ [[12 13] 14])
+  {* *}
+[[12 13] 14]
+
+&gt; ? ^-(^ [[12 13] [14 15 16]])
+  {* *}
+[[12 13] [14 15 16]]
+</pre><p>When we use the <code>?</code> operator to see the type inferred by Hoon for the expression, in all three of the above cases the same thing is returned: <code>{* *}</code>. The <code>*</code> symbol indicates the type for any noun, and the curly braces <code>{ }</code> indicate a cell. Every cell in Hoon is a cell of nouns; remember that cells are defined as pairs of nouns. </p><p>Yet the cell <code>[[12 13] [14 15 16]]</code> is a bit more complex than the cell <code>[12 13]</code>. Can we use the type system to distinguish them? Yes. </p><h2 id="getting-more-specific-">Getting More Specific </h2><p>What if you want to cast for a particular kind of cell? You can use square brackets when casting for a specific cell type. For example, if you want to cast for a cell in which the head and the tail must each be an atom, then simply cast using <code>[@ @]</code>: </p><pre>&gt; ^-([@ @] [12 13])
+[12 13]
+
+&gt; ? ^-([@ @] [12 13])
+  {@ @}
+[12 13]
+
+&gt; ^-([@ @] 12)
+nest-fail
+
+&gt; ^-([@ @] [[12 13] 14])
+nest-fail
+</pre><p>The <code>[@ @]</code> cast accepts any expression that evaluates to a cell with exactly two atoms, and crashes with a <code>nest-fail</code> for any expression that evaluates to something different. The expression <code>12</code> doesn&#39;t evaluate to a cell; and while the expression <code>[[12 13] 14]</code> <b>does</b> evaluate to a cell, the left-hand side isn&#39;t an atom, but is instead another cell. </p><p>You can get even more specific about the kind of cell you want by using atom auras: </p><pre>&gt; ^-([@ud @ux] [12 0x10])
+[12 0x10]
+
+&gt; ^-([@ub @ux] [0b11 0x10])
+[0b11 0x10]
+
+&gt; ? ^-([@ub @ux] [0b11 0x10])
+  {@ub @ux}
+[0b11 0x10]
+
+&gt; ^-([@ub @ux] [12 13])
+nest-fail
+</pre><p>You are also free to embed more square brackets <code>[ ]</code> to indicate cells within cells: </p><pre>&gt; ^-([[@ud @sb] @ux] [[12 --0b1101] 0xdead.beef])
+[[12 --0b1101] 0xdead.beef]
+
+&gt; ? ^-([[@ud @sb] @ux] [[12 --0b1101] 0xdead.beef])
+  {{@ud @sb} @ux}
+[[12 --0b1101] 0xdead.beef]
+
+&gt; ^-([[@ @] @] [12 13])
+nest-fail
+</pre><p>You can also be highly specific with certain parts of the type structure, leaving other parts more general. Keep in mind that when you do this, Hoon&#39;s type system will infer a general type from the general part of the cast. Type information may be thrown away: </p><pre>&gt; ^-([^ @ux] [[12 --0b1101] 0xdead.beef])
+[[12 26] 0xdead.beef]
+
+&gt; ? ^-([^ @ux] [[12 --0b1101] 0xdead.beef])
+  {{* *} @ux}
+[[12 26] 0xdead.beef]
+
+&gt; ^-(* [[12 --0b1101] 0xdead.beef])
+[[12 26] 3.735.928.559]
+
+&gt; ? ^-(* [[12 --0b1101] 0xdead.beef])
+  *
+[[12 26] 3.735.928.559]
+</pre><p>Because every piece of Hoon data is a noun, everything nests under <code>*</code>. When you cast to <code>*</code> you can see the raw noun with cells as brackets and atoms as unsigned integers. </p><p>That&#39;s it for this lesson. Move on to the next one to learn more about when a type check occurs, and how type inference works for non-literal Hoon expressions. </p><h2 id="exercise-answer-">Exercise Answer </h2><h3 id="2-4-1-">2.4.1 </h3><p>There is no distinction between positive and negative zero for <code>@s</code>. To see this, let&#39;s cast each of <code>--0</code> and <code>-0</code> to <code>@s</code>: </p><pre>&gt; ^-(@s --0)
+--0
+
+&gt; ^-(@s -0)
+--0
+</pre><p>Hoon pretty-prints them the same way, but can we be sure that they are the same thing? Let&#39;s check the atom underneath: </p><pre>&gt; `@`--0
+0
+
+&gt; `@`-0
+0
+</pre><p>They are indeed the same. </p><h3 id="next-lesson--type-checking-and-type-inference-"><a href="../type-checking-and-type-inference">Next Lesson: Type Checking and Type Inference</a> </h3></div></div></div></div></div><footer class="mb-36"><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script><script src="/js/main.js"></script></footer></body></html></body></html>

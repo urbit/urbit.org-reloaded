@@ -1,0 +1,410 @@
+<html><head></head><meta charset="utf-8" /><body><html><head><meta charset="UTF-8" /><title>Urbit / Docs</title><meta name="viewport" content="width=device-width , initial-scale=1" /><link href="/tilde.ico" rel="icon" /><link href="/css/base.css" rel="stylesheet" /><link href="/css/lists.css" rel="stylesheet" /><link href="/css/visibility.css" rel="stylesheet" /><link href="/css/borders.css" rel="stylesheet" /><link href="/css/colors.css" rel="stylesheet" /><link href="/css/inputs.css" rel="stylesheet" /><link href="/css/typography.css" rel="stylesheet" /><link href="/css/menu.css" rel="stylesheet" /><link href="/css/images.css" rel="stylesheet" /><link href="/css/flex.css" rel="stylesheet" /><script src="https://www.googletagmanager.com/gtag/js?id=UA-47054188-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-47054188-1');</script></head><body><nav class="bg-black pb-36 menu-hide overflow-y"><div class="container"><div class="row pt-10 mb-3"><div class="col-sm-1 menu-toggle"><img class="w-8 h-8" src="/assets/menu-close.svg" /></div><div class="col-sm-9 col-md-8 col-lg-4 col-sm-offset-2 col-md-offset-1 white"><div class="mb-6"><a href="/primer"><h1>Primer</h1></a><p> </p></div><div class="mb-6"><a href="/posts"><h1>Posts</h1></a><p> </p></div><div class="mb-6"><a href="/docs"><h1>Docs</h1></a><p> </p></div></div></div></div><footer class="container mb-36 white"><div class="row"><div class="col-sm-6 col-sm-offset-3 col-md-offset-2"><div><div class="mb-6"><h4 class="mb-1">Follow</h4><div><a class="text-mono" href="https://twitter.com/@urbit" target="_blank">twitter.com/@urbit</a></div><div><a class="text-mono" href="https://github.com/urbit" target="_blank">github.com/@urbit</a></div></div><div class="mb-6"><h4 class="mb-1">Contact</h4><div class="text-mono text-400">~zod</div><div><a class="text-mono" href="mailto:support@urbit.org">support@urbit.org</a></div></div><div class="mb-6"><h4 class="mb-1">Company</h4><div><a href="/privacy">Privacy Policy</a></div><div><a href="/tos">Terms of Service</a></div><div class="text-400"><a href="/bounty">Bug Bounty + Security</a></div></div></div></div></div></footer></nav><div id="sidebar-mobile" class="bg-gray-light sidebar-hide overflow-y"><div class="container"><div class="col-sm-10"><ol class="list-reset h-font mt-6"><li class="mb-4"><a class="h-font text-600" href="/docs/introduction">Introduction</a><ol><li><a class="h-font" href="/docs/introduction/technical-overview">Technical overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/source-code-overview">Source Code Overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/contributing">Contributing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/arvo-vs-azimuth">Arvo vs. Azimuth</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/community-tutorials">Community Tutorials</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/galaxies-stars-and-planets">Galaxies, Stars, and Planets</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/getting-started">Getting Started</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/getting-started/azimuth">Using Bridge</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/installing-urbit">Installing Urbit</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/booting-a-ship">Booting a Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/creating-a-development-ship">Creating a Development Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/operating-a-star">Operating a Star</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/learn">Learn</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo">Arvo</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals">Arvo Internals</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ames">Ames</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/behn">Behn</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/admin">Admin and Operations</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/clay">Clay</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/dill">Dill</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/layout">Source layout</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/sail">Sail</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/messaging">Messaging</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/udon">Udon</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/eyre">Eyre</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/gall">Gall Apps</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/shell">Shell (Dojo)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ford">Ford</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/hall">Hall</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/filesystem">Introduction to the Filesystem</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/publishing">Web (Eyre)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/generators">Generators</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/hoon">Hoon</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/hoon/getting-started">Getting Started</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/nouns">Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/the-subject-and-its-legs">The Subject and Its Legs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/arms-and-cores">Arms and Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/gates">Gates (Hoon Functions)</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/multi-gate-cores-and-doors">Multi-gate Cores and Doors</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-programs">Hoon Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-syntax">Hoon Syntax</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/simple-one-gate-programs">Simple One-Gate Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/atoms-auras-and-simple-cell-types">Atoms, Auras, and Simple Cell Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-checking-and-type-inference">Type Checking and Type Inference</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/structures-and-complex-types">Structures and Complex Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores">Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores-again">Cores Again</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/lists">Standard Library: Lists</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/trees-sets-and-maps">Standard Library: Trees, Sets, and Maps</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-polymorphism">Type Polymorphism</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/examples">Examples</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/nock">Nock</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/nock/definition">Nock Definition</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/explanation">Explanation</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/example">Example</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/implementations">Implementations</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/vere">Vere</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/vere/runtime">C Runtime System</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/c">C in Urbit</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/nouns">Land of Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/api">API overview by prefix</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/jetting">Writing Jets</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/style">Hoon Style Guide</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/arvo/workbook">Hoon Workbook</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/workbook/list">List of Numbers</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/caesar">Caesar Cipher</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/recursion">Recursion</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/digits">Digits</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/eightball">Magic 8-Ball</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/traffic-light">Traffic Light</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/bomb">Bomb Defusing</a></li></ol></li></ol></li><li><a class="h-font" href="/docs/learn/azimuth">Azimuth</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/azimuth/blockchain">Why Urbit Uses a Blockchain</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/azimuth/wallet">The Urbit HD Wallet</a><ol class="list-reset h-font"></ol></li></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/reference">Reference</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions">Hoon Expressions</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune">Runes</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/constants">Atoms and strings</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/dot">Nock . (&quot;dot&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/zap">Wild ! (&quot;zap&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/tis">Change Subject = (&quot;tis&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/wut">Conditionals ? (&quot;wut&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bar">Cores | (&quot;bar&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/lus">Arms + (&quot;lus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/col">Cells : (&quot;col&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/cen">Calls % (&quot;cen&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/ket">Casts ^ (&quot;ket&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bus">Structures $ (&quot;bus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/mic">Make ; (&quot;mic&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/sig">Hints ~ (&quot;sig&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/terminators">Terminators -- and ==</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb">Limbs and Wings</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/limb">Limbs</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/wing">Wings</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/basic">Basic Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/advanced">Advanced Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/irregular">Irregular forms</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/library">Standard library</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/library/1a">1a: Basic Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1b">1b: Tree Addressing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1c">1c: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2a">2a: Unit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2b">2b: List Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2c">2c: Bit Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2d">2d: Bit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2e">2e: Insecure Hashing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2f">2f: Noun Ordering</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2g">2g: Unsigned Powers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2h">2h: Set Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2i">2i: Map Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2j">2j: Jar and Jug Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2k">2k: Queue Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2l">2l: Container from Container</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2m">2m: Container from Noun</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2n">2n: Functional Hacks</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2o">2o: Normalizing Containers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2p">2p: Serialization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2q">2q: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3a">3a: Modular and Signed Ints</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3b">3b: Floating Point</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3c">3c: Urbit Time</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3d">3d: SHA Hash Family</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3e">3e: (Removed)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3f">3f: Scrambling</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3g">3g: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4a">4a: Exotic Bases</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4b">4b: Text Processing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4c">4c: Tank Printer</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4d">4d: Parsing (Tracing)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4e">4e: Parsing (Combinators)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4f">4f: Parsing (Rule-Builders)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4g">4g: Parsing (Outside Caller)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4h">4h: Parsing (ASCII Glyphs)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4i">4i: Parsing (Useful Idioms)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4j">4j: Parsing (Bases and Base Digits)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4k">4k: Atom Printing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4l">4l: Atom Parsing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4m">4m: Formatting Functions</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4n">4n: Virtualization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4o">4o: Molds</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5a">5a: Compiler Utilities</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5b">5b: Macro Expansion</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5c">5c: Compiler Backend &amp; Prettyprinter</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5d">5d: Parser</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5e">5e: Caching Compiler</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5f">5f: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5g">5g: profiling support</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/zuse">Zuse</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/glossary">Glossary</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/cheat-sheet">Cheat sheet</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/troubleshooting">Hoon Errors</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/alphabetical-arms">Alphabetical Arms</a><ol class="list-reset h-font"></ol></li></ol></li></ol></div><div class="col-sm-1 sidebar-toggle fixed" style="top: 20px; right: 1em"><img class="w-8 h-8 dropdown-right" src="/assets/dropdown.svg" /></div></div></div><div class="container mt-10"><div class="sidebar-container row col-sm-3 fixed pb-30 h-100-md"><div class="col-sm-3 col-lg-6 menu-toggle"><img class="w-8 h-8" src="/assets/menu-open.svg" /></div><div class="col-sm-12 mt-7 sidebar-toggle md-hide"><img class="w-8 h-8 dropdown-left" src="/assets/dropdown.svg" /></div><div class="h-100 col-sm-8 col-md-11 overflow-y sm-hide"><ol class="list-reset h-font mt-6"><li class="mb-4"><a class="h-font text-600" href="/docs/introduction">Introduction</a><ol><li><a class="h-font" href="/docs/introduction/technical-overview">Technical overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/source-code-overview">Source Code Overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/contributing">Contributing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/arvo-vs-azimuth">Arvo vs. Azimuth</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/community-tutorials">Community Tutorials</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/galaxies-stars-and-planets">Galaxies, Stars, and Planets</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/getting-started">Getting Started</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/getting-started/azimuth">Using Bridge</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/installing-urbit">Installing Urbit</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/booting-a-ship">Booting a Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/creating-a-development-ship">Creating a Development Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/operating-a-star">Operating a Star</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/learn">Learn</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo">Arvo</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals">Arvo Internals</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ames">Ames</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/behn">Behn</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/admin">Admin and Operations</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/clay">Clay</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/dill">Dill</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/layout">Source layout</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/sail">Sail</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/messaging">Messaging</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/udon">Udon</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/eyre">Eyre</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/gall">Gall Apps</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/shell">Shell (Dojo)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ford">Ford</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/hall">Hall</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/filesystem">Introduction to the Filesystem</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/publishing">Web (Eyre)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/generators">Generators</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/hoon">Hoon</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/hoon/getting-started">Getting Started</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/nouns">Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/the-subject-and-its-legs">The Subject and Its Legs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/arms-and-cores">Arms and Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/gates">Gates (Hoon Functions)</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/multi-gate-cores-and-doors">Multi-gate Cores and Doors</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-programs">Hoon Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-syntax">Hoon Syntax</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/simple-one-gate-programs">Simple One-Gate Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/atoms-auras-and-simple-cell-types">Atoms, Auras, and Simple Cell Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-checking-and-type-inference">Type Checking and Type Inference</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/structures-and-complex-types">Structures and Complex Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores">Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores-again">Cores Again</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/lists">Standard Library: Lists</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/trees-sets-and-maps">Standard Library: Trees, Sets, and Maps</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-polymorphism">Type Polymorphism</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/examples">Examples</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/nock">Nock</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/nock/definition">Nock Definition</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/explanation">Explanation</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/example">Example</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/implementations">Implementations</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/vere">Vere</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/vere/runtime">C Runtime System</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/c">C in Urbit</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/nouns">Land of Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/api">API overview by prefix</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/jetting">Writing Jets</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/style">Hoon Style Guide</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/arvo/workbook">Hoon Workbook</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/workbook/list">List of Numbers</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/caesar">Caesar Cipher</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/recursion">Recursion</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/digits">Digits</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/eightball">Magic 8-Ball</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/traffic-light">Traffic Light</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/bomb">Bomb Defusing</a></li></ol></li></ol></li><li><a class="h-font" href="/docs/learn/azimuth">Azimuth</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/azimuth/blockchain">Why Urbit Uses a Blockchain</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/azimuth/wallet">The Urbit HD Wallet</a><ol class="list-reset h-font"></ol></li></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/reference">Reference</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions">Hoon Expressions</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune">Runes</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/constants">Atoms and strings</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/dot">Nock . (&quot;dot&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/zap">Wild ! (&quot;zap&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/tis">Change Subject = (&quot;tis&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/wut">Conditionals ? (&quot;wut&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bar">Cores | (&quot;bar&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/lus">Arms + (&quot;lus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/col">Cells : (&quot;col&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/cen">Calls % (&quot;cen&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/ket">Casts ^ (&quot;ket&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bus">Structures $ (&quot;bus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/mic">Make ; (&quot;mic&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/sig">Hints ~ (&quot;sig&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/terminators">Terminators -- and ==</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb">Limbs and Wings</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/limb">Limbs</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/wing">Wings</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/basic">Basic Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/advanced">Advanced Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/irregular">Irregular forms</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/library">Standard library</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/library/1a">1a: Basic Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1b">1b: Tree Addressing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1c">1c: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2a">2a: Unit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2b">2b: List Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2c">2c: Bit Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2d">2d: Bit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2e">2e: Insecure Hashing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2f">2f: Noun Ordering</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2g">2g: Unsigned Powers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2h">2h: Set Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2i">2i: Map Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2j">2j: Jar and Jug Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2k">2k: Queue Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2l">2l: Container from Container</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2m">2m: Container from Noun</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2n">2n: Functional Hacks</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2o">2o: Normalizing Containers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2p">2p: Serialization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2q">2q: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3a">3a: Modular and Signed Ints</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3b">3b: Floating Point</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3c">3c: Urbit Time</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3d">3d: SHA Hash Family</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3e">3e: (Removed)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3f">3f: Scrambling</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3g">3g: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4a">4a: Exotic Bases</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4b">4b: Text Processing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4c">4c: Tank Printer</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4d">4d: Parsing (Tracing)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4e">4e: Parsing (Combinators)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4f">4f: Parsing (Rule-Builders)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4g">4g: Parsing (Outside Caller)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4h">4h: Parsing (ASCII Glyphs)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4i">4i: Parsing (Useful Idioms)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4j">4j: Parsing (Bases and Base Digits)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4k">4k: Atom Printing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4l">4l: Atom Parsing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4m">4m: Formatting Functions</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4n">4n: Virtualization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4o">4o: Molds</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5a">5a: Compiler Utilities</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5b">5b: Macro Expansion</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5c">5c: Compiler Backend &amp; Prettyprinter</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5d">5d: Parser</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5e">5e: Caching Compiler</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5f">5f: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5g">5g: profiling support</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/zuse">Zuse</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/glossary">Glossary</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/cheat-sheet">Cheat sheet</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/troubleshooting">Hoon Errors</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/alphabetical-arms">Alphabetical Arms</a><ol class="list-reset h-font"></ol></li></ol></li></ol></div></div><div class="row pb-80"><div class="col-sm-9 col-md-8 col-sm-offset-2 col-md-offset-3 docs"><div><div><h1 id="3d--sha-hash-family-">3d: SHA hash family </h1><h3 id="--shad-"><code>++shad</code> </h3><p>Double SHA-256 </p><p>Produces an atom that is twice-hashed with <code>shax</code>, the SHA-256 cryptographic hash algorithm. </p><h4 id="accepts-">Accepts </h4><p><code>ruz</code> is an atom. </p><h4 id="produces-">Produces </h4><p>An atom. </p><h4 id="source-">Source </h4><pre>    ++  shad  |=(ruz=@ (shax (shax ruz)))
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; (shad 11)
+    \/20.519.637.820.582.103.109.435.907.615.585.653.479.776.629.591.855.451.248.\/
+      718.295.626.625.655.417.234
+</pre><hr /><h3 id="--shaf-"><code>++shaf</code> </h3><p>Half SHA-256 </p><p>Produces a 128-bit atom by performing the <a href="2d/..">bitwise XOR</a> on the first and last halves of the 256-bit salted hash <code>shas</code>. </p><h4 id="accepts-">Accepts </h4><p><code>sal</code> is an atom. </p><p><code>ruz</code> is an atom. </p><h4 id="source-">Source </h4><pre>    ++  shaf                                                ::  half sha-256
+      |=  [sal=@ ruz=@]
+      =+  haz=(shas sal ruz)
+      (mix (end 7 1 haz) (rsh 7 1 haz))
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; (shaf 17 8)
+    52.667.672.807.485.289.251.324.336.639.183.409.041
+
+    &gt; `@ub`(shaf 17 8)
+    \/0b1011.1111.1101.0110.1110.1000.0100.1110.1100.1000.0010.0100.1111.0001.0010.0010\/
+      .0100.1110.1110.0011.1100.1111.0001.1101.1101.1100.1110.1111.0100.0101.0001.0100
+    \/
+</pre><hr /><h3 id="--shal-"><code>++shal</code> </h3><p>SHA-512 with length </p><p>Produces an atom by hashing an atom <code>ruz</code> with SHA-512. Another atom, <code>len</code>, is the byte-length of the theoretical buffer represented by the atom. </p><h4 id="accepts-">Accepts </h4><p><code>len</code> is an atom. </p><p><code>ruz</code> is an atom. </p><h4 id="produces-">Produces </h4><p>An atom. </p><h4 id="source-">Source </h4><pre>    ++  shal
+      ~/  %shal
+      |=  [len=@ ruz=@]  ^-  @
+      =&gt;  .(ruz (cut 3 [0 len] ruz))
+      =+  [few==&gt;(fe .(a 6)) wac=|=([a=@ b/@] (cut 6 [a 1] b))]
+      =+  [sum=sum.few ror=ror.few net=net.few inv=inv.few]
+      =+  ral=(lsh 0 3 len)
+      =+  ^=  ful
+          %+  can  0
+          :~  [ral ruz]
+              [8 128]
+              [(mod (sub 1.920 (mod (add 8 ral) 1.024)) 1.024) 0]
+              [128 (~(net fe 7) ral)]
+          ==
+      =+  lex=(met 10 ful)
+      =+  ^=  kbx  0x6c44.198c.4a47.5817.5fcb.6fab.3ad6.faec.
+                     597f.299c.fc65.7e2a.4cc5.d4be.cb3e.42b6.
+                     431d.67c4.9c10.0d4c.3c9e.be0a.15c9.bebc.
+                     32ca.ab7b.40c7.2493.28db.77f5.2304.7d84.
+                     1b71.0b35.131c.471b.113f.9804.bef9.0dae.
+                     0a63.7dc5.a2c8.98a6.06f0.67aa.7217.6fba.
+                     f57d.4f7f.ee6e.d178.eada.7dd6.cde0.eb1e.
+                     d186.b8c7.21c0.c207.ca27.3ece.ea26.619c.
+                     c671.78f2.e372.532b.bef9.a3f7.b2c6.7915.
+                     a450.6ceb.de82.bde9.90be.fffa.2363.1e28.
+                     8cc7.0208.1a64.39ec.84c8.7814.a1f0.ab72.
+                     78a5.636f.4317.2f60.748f.82ee.5def.b2fc.
+                     682e.6ff3.d6b2.b8a3.5b9c.ca4f.7763.e373.
+                     4ed8.aa4a.e341.8acb.391c.0cb3.c5c9.5a63.
+                     34b0.bcb5.e19b.48a8.2748.774c.df8e.eb99.
+                     1e37.6c08.5141.ab53.19a4.c116.b8d2.d0c8.
+                     106a.a070.32bb.d1b8.f40e.3585.5771.202a.
+                     d699.0624.5565.a910.d192.e819.d6ef.5218.
+                     c76c.51a3.0654.be30.c24b.8b70.d0f8.9791.
+                     a81a.664b.bc42.3001.a2bf.e8a1.4cf1.0364.
+                     9272.2c85.1482.353b.81c2.c92e.47ed.aee6.
+                     766a.0abb.3c77.b2a8.650a.7354.8baf.63de.
+                     5338.0d13.9d95.b3df.4d2c.6dfc.5ac4.2aed.
+                     2e1b.2138.5c26.c926.27b7.0a85.46d2.2ffc.
+                     1429.2967.0a0e.6e70.06ca.6351.e003.826f.
+                     d5a7.9147.930a.a725.c6e0.0bf3.3da8.8fc2.
+                     bf59.7fc7.beef.0ee4.b003.27c8.98fb.213f.
+                     a831.c66d.2db4.3210.983e.5152.ee66.dfab.
+                     76f9.88da.8311.53b5.5cb0.a9dc.bd41.fbd4.
+                     4a74.84aa.6ea6.e483.2de9.2c6f.592b.0275.
+                     240c.a1cc.77ac.9c65.0fc1.9dc6.8b8c.d5b5.
+                     efbe.4786.384f.25e3.e49b.69c1.9ef1.4ad2.
+                     c19b.f174.cf69.2694.9bdc.06a7.25c7.1235.
+                     80de.b1fe.3b16.96b1.72be.5d74.f27b.896f.
+                     550c.7dc3.d5ff.b4e2.2431.85be.4ee4.b28c.
+                     1283.5b01.4570.6fbe.d807.aa98.a303.0242.
+                     ab1c.5ed5.da6d.8118.923f.82a4.af19.4f9b.
+                     59f1.11f1.b605.d019.3956.c25b.f348.b538.
+                     e9b5.dba5.8189.dbbc.b5c0.fbcf.ec4d.3b2f.
+                     7137.4491.23ef.65cd.428a.2f98.d728.ae22
+      =+  ^=  hax  0x5be0.cd19.137e.2179.1f83.d9ab.fb41.bd6b.
+                     9b05.688c.2b3e.6c1f.510e.527f.ade6.82d1.
+                     a54f.f53a.5f1d.36f1.3c6e.f372.fe94.f82b.
+                     bb67.ae85.84ca.a73b.6a09.e667.f3bc.c908
+      =+  i=0
+      |-  ^-  @
+      ?:  =(i lex)
+        (rep 6 (turn (rip 6 hax) net))
+      =+  ^=  wox
+          =+  dux=(cut 10 [i 1] ful)
+          =+  wox=(rep 6 (turn (rip 6 dux) net))
+          =+  j=16
+          |-  ^-  @
+          ?:  =(80 j)
+            wox
+          =+  :*  l=(wac (sub j 15) wox)
+                  m=(wac (sub j 2) wox)
+                  n=(wac (sub j 16) wox)
+                  o=(wac (sub j 7) wox)
+              ==
+          =+  x=:(mix (ror 0 1 l) (ror 0 8 l) (rsh 0 7 l))
+          =+  y=:(mix (ror 0 19 m) (ror 0 61 m) (rsh 0 6 m))
+          =+  z=:(sum n x o y)
+          $(wox (con (lsh 6 j z) wox), j +(j))
+      =+  j=0
+      =+  :*  a=(wac 0 hax)
+              b=(wac 1 hax)
+              c=(wac 2 hax)
+              d=(wac 3 hax)
+              e=(wac 4 hax)
+              f=(wac 5 hax)
+              g=(wac 6 hax)
+              h=(wac 7 hax)
+          ==
+      |-  ^-  @
+      ?:  =(80 j)
+        %=  ^$
+          i  +(i)
+          hax  %+  rep  6
+               :~  (sum a (wac 0 hax))
+                   (sum b (wac 1 hax))
+                   (sum c (wac 2 hax))
+                   (sum d (wac 3 hax))
+                   (sum e (wac 4 hax))
+                   (sum f (wac 5 hax))
+                   (sum g (wac 6 hax))
+                   (sum h (wac 7 hax))
+               ==
+        ==
+      =+  l=:(mix (ror 0 28 a) (ror 0 34 a) (ror 0 39 a))   ::  S0
+      =+  m=:(mix (dis a b) (dis a c) (dis b c))            ::  maj
+      =+  n=(sum l m)                                       ::  t2
+      =+  o=:(mix (ror 0 14 e) (ror 0 18 e) (ror 0 41 e))   ::  S1
+      =+  p=(mix (dis e f) (dis (inv e) g))                 ::  ch
+      =+  q=:(sum h o p (wac j kbx) (wac j wox))            ::  t1
+      $(j +(j), a (sum q n), b a, c b, d c, e (sum d q), f e, g f, h g)
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; (shal 1 &#39;hello&#39;)
+    \/7.956.615.373.791.575.273.027.009.123.631.914.645.972.441.264.528.176.292.399.908\/
+      .424.469.676.078.106.561.839.264.176.650.109.335.825.608.088.511.266.620.100.157.
+      847.055.280.028.606.252.747.432.021.213.474
+    \/
+
+    &gt; (shal 1 &#39;hello&#39;)
+    \/7.956.615.373.791.575.273.027.009.123.631.914.645.972.441.264.528.176.292.399.908\/
+      .424.469.676.078.106.561.839.264.176.650.109.335.825.608.088.511.266.620.100.157.
+      847.055.280.028.606.252.747.432.021.213.474
+    \/
+</pre><h4 id="discussion-">Discussion </h4><p>Because byte-strings can have leading zeros, but atoms cannot, we use <code>len</code> as a way of saying that the atom <code>ruz</code> is shorter than its representative byte-string. </p><hr /><h3 id="--sham-"><code>++sham</code> </h3><p>128-bit noun hash </p><p>Produces a 128-bit atom by hashing a noun <code>yux</code> with the <code>shah</code> function. If that noun is a cell, then it is passed to the <a href="../2p"><code>jam</code></a> function to produce an atom to be hashed. </p><h4 id="accepts-">Accepts </h4><p><code>yux</code> is a noun. </p><h4 id="produces-">Produces </h4><p>An atom. </p><h4 id="source-">Source </h4><pre>    ++  sham
+      |=  yux=*  ^-  @uvH  ^-  @
+      ?@  yux
+        (shaf %mash yux)
+      (shaf %sham (jam yux))
+    ::
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; (sham [2 4])
+    0v3.71s52.4bqnp.ki2b8.9hhsp.2ufgg
+
+    &gt; (sham &quot;hello&quot;)
+    0v1.hg8mv.t7s3f.u4f8a.q5noe.dvqvh
+</pre><hr /><h3 id="--shan-"><code>++shan</code> </h3><p>SHA-1 </p><p>Produces an atom by hashing an atom <code>ruz</code> with SHA-1. </p><h4 id="accepts-">Accepts </h4><p><code>ruz</code> is an atom. </p><h4 id="produces-">Produces </h4><p>An atom. </p><h4 id="source-">Source </h4><pre>    ++  shan
+      |=  ruz=@
+      =+  [few==&gt;(fe .(a 5)) wac=|=([a=@ b=@] (cut 5 [a 1] b))]
+      =+  [sum=sum.few ror=ror.few rol=rol.few net=net.few inv=inv.few]
+      =+  ral=(lsh 0 3 (met 3 ruz))
+      =+  ^=  ful
+          %+  can  0
+          :~  [ral ruz]
+              [8 128]
+              [(mod (sub 960 (mod (add 8 ral) 512)) 512) 0]
+              [64 (~(net fe 6) ral)]
+          ==
+      =+  lex=(met 9 ful)
+      =+  kbx=0xca62.c1d6.8f1b.bcdc.6ed9.eba1.5a82.7999
+      =+  hax=0xc3d2.e1f0.1032.5476.98ba.dcfe.efcd.ab89.6745.2301
+      =+  i=0
+      |-
+      ?:  =(i lex)
+        (rep 5 (flop (rip 5 hax)))
+      =+  ^=  wox
+          =+  dux=(cut 9 [i 1] ful)
+          =+  wox=(rep 5 (turn (rip 5 dux) net))
+          =+  j=16
+          |-  ^-  @
+          ?:  =(80 j)
+            wox
+          =+  :*  l=(wac (sub j 3) wox)
+                  m=(wac (sub j 8) wox)
+                  n=(wac (sub j 14) wox)
+                  o=(wac (sub j 16) wox)
+              ==
+          =+  z=(rol 0 1 :(mix l m n o))
+          $(wox (con (lsh 5 j z) wox), j +(j))
+      =+  j=0
+      =+  :*  a=(wac 0 hax)
+              b=(wac 1 hax)
+              c=(wac 2 hax)
+              d=(wac 3 hax)
+              e=(wac 4 hax)
+          ==
+      |-  ^-  @
+      ?:  =(80 j)
+        %=  ^$
+          i  +(i)
+          hax  %+  rep  5
+               :~
+                   (sum a (wac 0 hax))
+                   (sum b (wac 1 hax))
+                   (sum c (wac 2 hax))
+                   (sum d (wac 3 hax))
+                   (sum e (wac 4 hax))
+               ==
+        ==
+      =+  fx=(con (dis b c) (dis (not 5 1 b) d))
+      =+  fy=:(mix b c d)
+      =+  fz=:(con (dis b c) (dis b d) (dis c d))
+      =+  ^=  tem
+          ?:  &amp;((gte j 0) (lte j 19))
+            :(sum (rol 0 5 a) fx e (wac 0 kbx) (wac j wox))
+          ?:  &amp;((gte j 20) (lte j 39))
+            :(sum (rol 0 5 a) fy e (wac 1 kbx) (wac j wox))
+          ?:  &amp;((gte j 40) (lte j 59))
+            :(sum (rol 0 5 a) fz e (wac 2 kbx) (wac j wox))
+          :(sum (rol 0 5 a) fy e (wac 3 kbx) (wac j wox))
+      $(j +(j), a tem, b a, c (rol 0 30 b), d c, e d)
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; (shan &#39;hello&#39;)
+    975.987.071.262.755.080.377.722.350.727.279.193.143.145.743.181
+</pre><h4 id="discussion-">Discussion </h4><p>SHA-1 is a deprecated function; it is not considered secure. </p><hr /><h3 id="--shas-"><code>++shas</code> </h3><p>Salted hash </p><p>Produces an atom by using SHA-256 plus a salt input. The <a href="../2d">bitwise XOR</a> is performed on <code>sal</code> and the product of <code>ruz</code> hashed with SHA-256. The product of that logical operation is then itself hashed with SHA-256. </p><h4 id="accepts-">Accepts </h4><p><code>sal</code> is an atom. </p><p><code>ruz</code> is an atom. </p><h4 id="source-">Source </h4><pre>    ++  shas
+      |=  [sal=@ ruz=@]
+      (shax (mix sal (shax ruz)))
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; (shas 12.845 6)
+    \/111.115.941.493.032.291.043.932.789.632.248.509.108.945.255.494.251.860.287\/
+      .707.279.709.200.349.471.936
+    \/
+</pre><hr /><h3 id="--shaw-"><code>++shaw</code> </h3><p>Hash to nbits </p><p>Produces an atom of <code>len</code> random bits by hashing <code>ruz</code> with the salted SHA-256 hash algorithm, where <code>sal</code> is the cryptographic salt. </p><h4 id="accepts-">Accepts </h4><p><code>sal</code> is an atom. </p><p><code>len</code> is an atom. </p><p><code>ruz</code> is an atom. </p><h4 id="produces-">Produces </h4><p>An atom. </p><h4 id="source-">Source </h4><pre>    ++  shaw
+      |=  [sal=@ len=@ ruz=@]
+      (~(raw og (shas sal (mix len ruz))) len)
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; `@ub`(shaw 3 6 98)
+    0b11.0111
+
+    &gt; `@ub`(shaw 2 6 98)
+    0b11
+</pre><hr /><h3 id="--shax-"><code>++shax</code> </h3><p>SHA-256 </p><p>Produces an atom by hashing an atom <code>ruz</code> with SHA-256. </p><h4 id="sources-">Sources </h4><pre>    ++  shax
+          ~/  %shax
+          |=  ruz=@  ^-  @
+          (shay [(met 3 ruz) ruz])
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; (shax &#39;hello&#39;)
+    \/16.552.786.619.039.860.277.601.417.878.457.384.195.409.020.923.835.016.617.984.82\/
+      0.774.431.701.725.740
+    \/
+</pre><hr /><h3 id="--shay-"><code>++shay</code> </h3><p>SHA-256 with length </p><p>Produces an atom by hashing an atom <code>ruz</code> with SHA-512. Another atom, <code>len</code>, is the byte-length of the theoretical buffer represented by the atom. </p><h4 id="accepts-">Accepts </h4><p><code>len</code> is an atom. </p><p><code>ruz</code> is an atom. </p><h4 id="source-">Source </h4><pre>    ++  shay
+      ~/  %shay
+      |=  [len=@u ruz=@]  ^-  @
+      =&gt;  .(ruz (cut 3 [0 len] ruz))
+      =+  [few==&gt;(fe .(a 5)) wac=|=([a=@ b=@] (cut 5 [a 1] b))]
+      =+  [sum=sum.few ror=ror.few net=net.few inv=inv.few]
+      =+  ral=(lsh 0 3 len)
+      =+  ^=  ful
+          %+  can  0
+          :~  [ral ruz]
+              [8 128]
+              [(mod (sub 960 (mod (add 8 ral) 512)) 512) 0]
+              [64 (~(net fe 6) ral)]
+          ==
+      =+  lex=(met 9 ful)
+      =+  ^=  kbx  0xc671.78f2.bef9.a3f7.a450.6ceb.90be.fffa.
+                     8cc7.0208.84c8.7814.78a5.636f.748f.82ee.
+                     682e.6ff3.5b9c.ca4f.4ed8.aa4a.391c.0cb3.
+                     34b0.bcb5.2748.774c.1e37.6c08.19a4.c116.
+                     106a.a070.f40e.3585.d699.0624.d192.e819.
+                     c76c.51a3.c24b.8b70.a81a.664b.a2bf.e8a1.
+                     9272.2c85.81c2.c92e.766a.0abb.650a.7354.
+                     5338.0d13.4d2c.6dfc.2e1b.2138.27b7.0a85.
+                     1429.2967.06ca.6351.d5a7.9147.c6e0.0bf3.
+                     bf59.7fc7.b003.27c8.a831.c66d.983e.5152.
+                     76f9.88da.5cb0.a9dc.4a74.84aa.2de9.2c6f.
+                     240c.a1cc.0fc1.9dc6.efbe.4786.e49b.69c1.
+                     c19b.f174.9bdc.06a7.80de.b1fe.72be.5d74.
+                     550c.7dc3.2431.85be.1283.5b01.d807.aa98.
+                     ab1c.5ed5.923f.82a4.59f1.11f1.3956.c25b.
+                     e9b5.dba5.b5c0.fbcf.7137.4491.428a.2f98
+      =+  ^=  hax  0x5be0.cd19.1f83.d9ab.9b05.688c.510e.527f.
+                     a54f.f53a.3c6e.f372.bb67.ae85.6a09.e667
+      =+  i=0
+      |-  ^-  @
+      ?:  =(i lex)
+        (rep 5 (turn (rip 5 hax) net))
+      =+  ^=  wox
+          =+  dux=(cut 9 [i 1] ful)
+          =+  wox=(rep 5 (turn (rip 5 dux) net))
+          =+  j=16
+          |-  ^-  @
+          ?:  =(64 j)
+            wox
+          =+  :*  l=(wac (sub j 15) wox)
+                  m=(wac (sub j 2) wox)
+                  n=(wac (sub j 16) wox)
+                  o=(wac (sub j 7) wox)
+              ==
+          =+  x=:(mix (ror 0 7 l) (ror 0 18 l) (rsh 0 3 l))
+          =+  y=:(mix (ror 0 17 m) (ror 0 19 m) (rsh 0 10 m))
+          =+  z=:(sum n x o y)
+          $(wox (con (lsh 5 j z) wox), j +(j))
+      =+  j=0
+      =+  :*  a=(wac 0 hax)
+              b=(wac 1 hax)
+              c=(wac 2 hax)
+              d=(wac 3 hax)
+              e=(wac 4 hax)
+              f=(wac 5 hax)
+              g=(wac 6 hax)
+              h=(wac 7 hax)
+          ==
+      |-  ^-  @
+      ?:  =(64 j)
+        %=  ^$
+          i  +(i)
+          hax  %+  rep  5
+               :~  (sum a (wac 0 hax))
+                   (sum b (wac 1 hax))
+                   (sum c (wac 2 hax))
+                   (sum d (wac 3 hax))
+                   (sum e (wac 4 hax))
+                   (sum f (wac 5 hax))
+                   (sum g (wac 6 hax))
+                   (sum h (wac 7 hax))
+               ==
+        ==
+      =+  l=:(mix (ror 0 2 a) (ror 0 13 a) (ror 0 22 a))    ::  s0
+      =+  m=:(mix (dis a b) (dis a c) (dis b c))            ::  maj
+      =+  n=(sum l m)                                       ::  t2
+      =+  o=:(mix (ror 0 6 e) (ror 0 11 e) (ror 0 25 e))    ::  s1
+      =+  p=(mix (dis e f) (dis (inv e) g))                 ::  ch
+      =+  q=:(sum h o p (wac j kbx) (wac j wox))            ::  t1
+      $(j +(j), a (sum q n), b a, c b, d c, e (sum d q), f e, g f, h g)
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; (shay 1 &#39;hello&#39;)
+    \/16.144.219.278.061.159.438.339.586.294.967.166.038.336.988.797.862.808.055.174.98\/
+    7.398.597.302.069.674
+    \/
+
+    &gt; (shay 2 &#39;hello&#39;)
+    \/100.467.333.538.737.303.691.714.735.404.408.035.555.613.179.595.938.688.113.300.8\/
+      01.974.878.934.544.183
+    \/
+</pre><h4 id="discussion-">Discussion </h4><p>Because byte-strings can have leading zeros, but atoms cannot, we use <code>len</code> as a way of saying that the atom <code>ruz</code> is shorter than its representative byte-string. </p><hr /><h3 id="--shaz-"><code>++shaz</code> </h3><p>SHA-512 </p><p>Produces an atom by hashing an atom <code>ruz</code> with SHA-512. </p><h4 id="accepts-">Accepts </h4><p><code>ruz</code> is an atom. </p><h4 id="produces-">Produces </h4><p>An atom. </p><h4 id="source-">Source </h4><pre>    ++  shaz
+      |=  ruz=@  ^-  @
+      (shal [(met 3 ruz) ruz])
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; (shaz &#39;hello&#39;)
+    \/3.548.533.422.469.437.734.729.094.584.175.910.682.076.656.883.559.953.324.378.007\/
+      .735.849.386.038.666.450.748.109.671.344.747.196.048.200.348.948.408.339.256.384.
+      360.070.359.656.053.016.948.640.159.265.179
+    \/
+</pre><hr /><h3 id="--og-"><code>++og</code> </h3><p>Container arm for SHA-256-powered random-number generation. Its sample <code>a</code> is an atom that is used as a seed for the hash. </p><h4 id="accepts-">Accepts </h4><p><code>a</code> is an atom. </p><h4 id="produces-">Produces </h4><p>A core. </p><h4 id="source-">Source </h4><pre>    ++  og
+      ~/  %og
+      |_  a=@
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; ~(. og 919)
+    &lt;4.wmp {a/@ud &lt;54.tyv 119.olq 31.ohr 1.jmk $143&gt;}&gt;
+</pre><h4 id="discussion-">Discussion </h4><p>Note that the product is deterministic; the seed will produce the same result every time it is run. Use <code>eny</code>, 256 bits of entropy, for a non-deterministic product. </p><hr /><h3 id="--rad-"><code>++rad</code> </h3><p>Random in range </p><p>Produces a random number that is within the range of first <code>b</code> whole numbers, starting at <code>0</code>. </p><h4 id="accepts-">Accepts </h4><p><code>b</code> is an atom. </p><h4 id="produces-">Produces </h4><p>An atom. </p><h4 id="source-">Source </h4><pre>      ++  rad
+        |=  b=@  ^-  @
+        =+  c=(raw (met 0 b))
+        ?:((lth c b) c $(a +(a)))
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; (~(rad og 5) 11)
+    4
+
+    &gt; (~(rad og 758.716.593) 11)
+    2
+
+    &gt; (~(rad og 1) 100.000)
+    71.499
+
+    &gt; (~(rad og eny) 11)                         ::  `eny` acts as a random sample
+    7
+</pre><hr /><h3 id="--rads-"><code>++rads</code> </h3><p>Random continuation </p><p>Produces a cell. The head of the cell is a random number that is within the range of first <code>b</code> whole numbers, starting at <code>0</code>. The tail is a new core produced from hashing the parent core with <code>(rad b)</code>. </p><h4 id="accepts-">Accepts </h4><p><code>b</code> is an atom. </p><h4 id="produces-">Produces </h4><p>A cell. </p><h4 id="source-">Source </h4><pre>      ++  rads
+        |=  b=@
+        =+  r=(rad b)
+        [r +&gt;.$(a (shas %og-s (mix a r)))]
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; (~(rads og 4) 10)
+    [2 &lt;4.wmp {a/@ &lt;54.tyv 119.olq 31.ohr 1.jmk $143&gt;}&gt;]
+
+    &gt; =/  rng  ~(. og 7)
+        =^  a  rng  (rads:rng 10)
+        =^  b  rng  (rads:rng 10)
+        [a b]
+    [2 8]
+</pre><h4 id="discussion-">Discussion </h4><p>Since everything in Hoon is a pure function, we need to use tricks like this to generate separate random values from the same seed. Notice how we jump from one <code>rads</code> function call to another in the above example. </p><hr /><h3 id="--raw-"><code>++raw</code> </h3><p>Random bits </p><p>Produces an atom with a bitwidth <code>b</code> that is composed of random bits. </p><h4 id="accepts-">Accepts </h4><p><code>b</code> is an atom. </p><h4 id="produces-">Produces </h4><p>An atom. </p><h4 id="source-">Source </h4><pre>      ++ raw
+        ~/  %raw
+        |=  b=@  ^-  @
+        %+  can
+          0
+        =+  c=(shas %og-a (mix b a))
+        |-  ^-  (list [@ @])
+        ?:  =(0 b)
+          ~
+        =+  d=(shas %og-b (mix b (mix a c)))
+        ?:  (lth b 256)
+          [[b (end 0 b d)] ~]
+        [[256 d] $(c d, b (sub b 256))]
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; `@ud`(~(raw og 27) 4)
+    0b1001
+
+    &gt; `@ub`(~(raw og 27) 3)
+    0b0
+
+    &gt; `@ub`(~(raw og 11) 4)
+    0b1111
+
+    &gt; `@ub`(~(raw og 11) 3)
+    0b100
+</pre><hr /><h3 id="--raws-"><code>++raws</code> </h3><p>Random bits continuation </p><p>Produces a cell. The head of the cell is an atom with a bitwidth <code>b</code> that is composed of random bits. The tail is a new core produced from hashing the parent core with <code>(raw b)</code>. </p><h4 id="source-">Source </h4><pre>      ++  raws
+        |=  b=@
+        =+  r=(raw b)
+        [r +&gt;.$(a (shas %og-s r))]
+      --
+</pre><h4 id="examples-">Examples </h4><pre>    &gt; `[@ub _og]`(~(raws og 7) 4)
+    [0b1100 &lt;4.wmp {a/@ &lt;54.tyv 119.olq 31.ohr 1.jmk $143&gt;}&gt;]
+
+    &gt; =/  rng  ~(. og 7)
+              =^  a  rng  (rads:rng 4)
+              =^  b  rng  (rads:rng 4)
+              [`@ub`a `@ub`b]
+    [0b10 0b1]
+</pre><h4 id="discussion-">Discussion </h4><p>Since everything in Hoon is a pure function, we need to use tricks like this to generate separate random values from the same seed. Notice how we jump from one <code>raws</code> function call to another in the above example. </p><hr /></div></div></div></div></div><footer class="mb-36"><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script><script src="/js/main.js"></script></footer></body></html></body></html>

@@ -1,0 +1,2211 @@
+<html><head></head><meta charset="utf-8" /><body><html><head><meta charset="UTF-8" /><title>Urbit / Docs</title><meta name="viewport" content="width=device-width , initial-scale=1" /><link href="/tilde.ico" rel="icon" /><link href="/css/base.css" rel="stylesheet" /><link href="/css/lists.css" rel="stylesheet" /><link href="/css/visibility.css" rel="stylesheet" /><link href="/css/borders.css" rel="stylesheet" /><link href="/css/colors.css" rel="stylesheet" /><link href="/css/inputs.css" rel="stylesheet" /><link href="/css/typography.css" rel="stylesheet" /><link href="/css/menu.css" rel="stylesheet" /><link href="/css/images.css" rel="stylesheet" /><link href="/css/flex.css" rel="stylesheet" /><script src="https://www.googletagmanager.com/gtag/js?id=UA-47054188-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-47054188-1');</script></head><body><nav class="bg-black pb-36 menu-hide overflow-y"><div class="container"><div class="row pt-10 mb-3"><div class="col-sm-1 menu-toggle"><img class="w-8 h-8" src="/assets/menu-close.svg" /></div><div class="col-sm-9 col-md-8 col-lg-4 col-sm-offset-2 col-md-offset-1 white"><div class="mb-6"><a href="/primer"><h1>Primer</h1></a><p> </p></div><div class="mb-6"><a href="/posts"><h1>Posts</h1></a><p> </p></div><div class="mb-6"><a href="/docs"><h1>Docs</h1></a><p> </p></div></div></div></div><footer class="container mb-36 white"><div class="row"><div class="col-sm-6 col-sm-offset-3 col-md-offset-2"><div><div class="mb-6"><h4 class="mb-1">Follow</h4><div><a class="text-mono" href="https://twitter.com/@urbit" target="_blank">twitter.com/@urbit</a></div><div><a class="text-mono" href="https://github.com/urbit" target="_blank">github.com/@urbit</a></div></div><div class="mb-6"><h4 class="mb-1">Contact</h4><div class="text-mono text-400">~zod</div><div><a class="text-mono" href="mailto:support@urbit.org">support@urbit.org</a></div></div><div class="mb-6"><h4 class="mb-1">Company</h4><div><a href="/privacy">Privacy Policy</a></div><div><a href="/tos">Terms of Service</a></div><div class="text-400"><a href="/bounty">Bug Bounty + Security</a></div></div></div></div></div></footer></nav><div id="sidebar-mobile" class="bg-gray-light sidebar-hide overflow-y"><div class="container"><div class="col-sm-10"><ol class="list-reset h-font mt-6"><li class="mb-4"><a class="h-font text-600" href="/docs/introduction">Introduction</a><ol><li><a class="h-font" href="/docs/introduction/technical-overview">Technical overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/source-code-overview">Source Code Overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/contributing">Contributing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/arvo-vs-azimuth">Arvo vs. Azimuth</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/community-tutorials">Community Tutorials</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/galaxies-stars-and-planets">Galaxies, Stars, and Planets</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/getting-started">Getting Started</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/getting-started/azimuth">Using Bridge</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/installing-urbit">Installing Urbit</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/booting-a-ship">Booting a Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/creating-a-development-ship">Creating a Development Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/operating-a-star">Operating a Star</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/learn">Learn</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo">Arvo</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals">Arvo Internals</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ames">Ames</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/behn">Behn</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/admin">Admin and Operations</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/clay">Clay</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/dill">Dill</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/layout">Source layout</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/sail">Sail</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/messaging">Messaging</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/udon">Udon</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/eyre">Eyre</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/gall">Gall Apps</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/shell">Shell (Dojo)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ford">Ford</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/hall">Hall</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/filesystem">Introduction to the Filesystem</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/publishing">Web (Eyre)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/generators">Generators</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/hoon">Hoon</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/hoon/getting-started">Getting Started</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/nouns">Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/the-subject-and-its-legs">The Subject and Its Legs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/arms-and-cores">Arms and Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/gates">Gates (Hoon Functions)</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/multi-gate-cores-and-doors">Multi-gate Cores and Doors</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-programs">Hoon Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-syntax">Hoon Syntax</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/simple-one-gate-programs">Simple One-Gate Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/atoms-auras-and-simple-cell-types">Atoms, Auras, and Simple Cell Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-checking-and-type-inference">Type Checking and Type Inference</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/structures-and-complex-types">Structures and Complex Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores">Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores-again">Cores Again</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/lists">Standard Library: Lists</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/trees-sets-and-maps">Standard Library: Trees, Sets, and Maps</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-polymorphism">Type Polymorphism</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/examples">Examples</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/nock">Nock</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/nock/definition">Nock Definition</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/explanation">Explanation</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/example">Example</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/implementations">Implementations</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/vere">Vere</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/vere/runtime">C Runtime System</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/c">C in Urbit</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/nouns">Land of Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/api">API overview by prefix</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/jetting">Writing Jets</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/style">Hoon Style Guide</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/arvo/workbook">Hoon Workbook</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/workbook/list">List of Numbers</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/caesar">Caesar Cipher</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/recursion">Recursion</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/digits">Digits</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/eightball">Magic 8-Ball</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/traffic-light">Traffic Light</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/bomb">Bomb Defusing</a></li></ol></li></ol></li><li><a class="h-font" href="/docs/learn/azimuth">Azimuth</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/azimuth/blockchain">Why Urbit Uses a Blockchain</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/azimuth/wallet">The Urbit HD Wallet</a><ol class="list-reset h-font"></ol></li></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/reference">Reference</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions">Hoon Expressions</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune">Runes</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/constants">Atoms and strings</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/dot">Nock . (&quot;dot&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/zap">Wild ! (&quot;zap&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/tis">Change Subject = (&quot;tis&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/wut">Conditionals ? (&quot;wut&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bar">Cores | (&quot;bar&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/lus">Arms + (&quot;lus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/col">Cells : (&quot;col&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/cen">Calls % (&quot;cen&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/ket">Casts ^ (&quot;ket&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bus">Structures $ (&quot;bus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/mic">Make ; (&quot;mic&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/sig">Hints ~ (&quot;sig&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/terminators">Terminators -- and ==</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb">Limbs and Wings</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/limb">Limbs</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/wing">Wings</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/basic">Basic Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/advanced">Advanced Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/irregular">Irregular forms</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/library">Standard library</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/library/1a">1a: Basic Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1b">1b: Tree Addressing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1c">1c: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2a">2a: Unit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2b">2b: List Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2c">2c: Bit Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2d">2d: Bit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2e">2e: Insecure Hashing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2f">2f: Noun Ordering</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2g">2g: Unsigned Powers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2h">2h: Set Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2i">2i: Map Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2j">2j: Jar and Jug Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2k">2k: Queue Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2l">2l: Container from Container</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2m">2m: Container from Noun</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2n">2n: Functional Hacks</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2o">2o: Normalizing Containers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2p">2p: Serialization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2q">2q: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3a">3a: Modular and Signed Ints</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3b">3b: Floating Point</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3c">3c: Urbit Time</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3d">3d: SHA Hash Family</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3e">3e: (Removed)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3f">3f: Scrambling</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3g">3g: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4a">4a: Exotic Bases</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4b">4b: Text Processing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4c">4c: Tank Printer</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4d">4d: Parsing (Tracing)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4e">4e: Parsing (Combinators)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4f">4f: Parsing (Rule-Builders)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4g">4g: Parsing (Outside Caller)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4h">4h: Parsing (ASCII Glyphs)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4i">4i: Parsing (Useful Idioms)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4j">4j: Parsing (Bases and Base Digits)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4k">4k: Atom Printing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4l">4l: Atom Parsing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4m">4m: Formatting Functions</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4n">4n: Virtualization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4o">4o: Molds</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5a">5a: Compiler Utilities</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5b">5b: Macro Expansion</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5c">5c: Compiler Backend &amp; Prettyprinter</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5d">5d: Parser</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5e">5e: Caching Compiler</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5f">5f: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5g">5g: profiling support</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/zuse">Zuse</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/glossary">Glossary</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/cheat-sheet">Cheat sheet</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/troubleshooting">Hoon Errors</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/alphabetical-arms">Alphabetical Arms</a><ol class="list-reset h-font"></ol></li></ol></li></ol></div><div class="col-sm-1 sidebar-toggle fixed" style="top: 20px; right: 1em"><img class="w-8 h-8 dropdown-right" src="/assets/dropdown.svg" /></div></div></div><div class="container mt-10"><div class="sidebar-container row col-sm-3 fixed pb-30 h-100-md"><div class="col-sm-3 col-lg-6 menu-toggle"><img class="w-8 h-8" src="/assets/menu-open.svg" /></div><div class="col-sm-12 mt-7 sidebar-toggle md-hide"><img class="w-8 h-8 dropdown-left" src="/assets/dropdown.svg" /></div><div class="h-100 col-sm-8 col-md-11 overflow-y sm-hide"><ol class="list-reset h-font mt-6"><li class="mb-4"><a class="h-font text-600" href="/docs/introduction">Introduction</a><ol><li><a class="h-font" href="/docs/introduction/technical-overview">Technical overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/source-code-overview">Source Code Overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/contributing">Contributing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/arvo-vs-azimuth">Arvo vs. Azimuth</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/community-tutorials">Community Tutorials</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/galaxies-stars-and-planets">Galaxies, Stars, and Planets</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/getting-started">Getting Started</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/getting-started/azimuth">Using Bridge</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/installing-urbit">Installing Urbit</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/booting-a-ship">Booting a Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/creating-a-development-ship">Creating a Development Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/operating-a-star">Operating a Star</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/learn">Learn</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo">Arvo</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals">Arvo Internals</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ames">Ames</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/behn">Behn</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/admin">Admin and Operations</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/clay">Clay</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/dill">Dill</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/layout">Source layout</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/sail">Sail</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/messaging">Messaging</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/udon">Udon</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/eyre">Eyre</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/gall">Gall Apps</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/shell">Shell (Dojo)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ford">Ford</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/hall">Hall</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/filesystem">Introduction to the Filesystem</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/publishing">Web (Eyre)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/generators">Generators</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/hoon">Hoon</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/hoon/getting-started">Getting Started</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/nouns">Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/the-subject-and-its-legs">The Subject and Its Legs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/arms-and-cores">Arms and Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/gates">Gates (Hoon Functions)</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/multi-gate-cores-and-doors">Multi-gate Cores and Doors</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-programs">Hoon Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-syntax">Hoon Syntax</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/simple-one-gate-programs">Simple One-Gate Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/atoms-auras-and-simple-cell-types">Atoms, Auras, and Simple Cell Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-checking-and-type-inference">Type Checking and Type Inference</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/structures-and-complex-types">Structures and Complex Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores">Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores-again">Cores Again</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/lists">Standard Library: Lists</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/trees-sets-and-maps">Standard Library: Trees, Sets, and Maps</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-polymorphism">Type Polymorphism</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/examples">Examples</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/nock">Nock</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/nock/definition">Nock Definition</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/explanation">Explanation</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/example">Example</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/implementations">Implementations</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/vere">Vere</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/vere/runtime">C Runtime System</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/c">C in Urbit</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/nouns">Land of Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/api">API overview by prefix</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/jetting">Writing Jets</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/style">Hoon Style Guide</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/arvo/workbook">Hoon Workbook</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/workbook/list">List of Numbers</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/caesar">Caesar Cipher</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/recursion">Recursion</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/digits">Digits</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/eightball">Magic 8-Ball</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/traffic-light">Traffic Light</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/bomb">Bomb Defusing</a></li></ol></li></ol></li><li><a class="h-font" href="/docs/learn/azimuth">Azimuth</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/azimuth/blockchain">Why Urbit Uses a Blockchain</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/azimuth/wallet">The Urbit HD Wallet</a><ol class="list-reset h-font"></ol></li></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/reference">Reference</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions">Hoon Expressions</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune">Runes</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/constants">Atoms and strings</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/dot">Nock . (&quot;dot&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/zap">Wild ! (&quot;zap&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/tis">Change Subject = (&quot;tis&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/wut">Conditionals ? (&quot;wut&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bar">Cores | (&quot;bar&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/lus">Arms + (&quot;lus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/col">Cells : (&quot;col&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/cen">Calls % (&quot;cen&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/ket">Casts ^ (&quot;ket&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bus">Structures $ (&quot;bus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/mic">Make ; (&quot;mic&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/sig">Hints ~ (&quot;sig&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/terminators">Terminators -- and ==</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb">Limbs and Wings</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/limb">Limbs</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/wing">Wings</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/basic">Basic Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/advanced">Advanced Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/irregular">Irregular forms</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/library">Standard library</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/library/1a">1a: Basic Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1b">1b: Tree Addressing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1c">1c: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2a">2a: Unit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2b">2b: List Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2c">2c: Bit Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2d">2d: Bit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2e">2e: Insecure Hashing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2f">2f: Noun Ordering</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2g">2g: Unsigned Powers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2h">2h: Set Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2i">2i: Map Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2j">2j: Jar and Jug Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2k">2k: Queue Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2l">2l: Container from Container</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2m">2m: Container from Noun</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2n">2n: Functional Hacks</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2o">2o: Normalizing Containers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2p">2p: Serialization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2q">2q: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3a">3a: Modular and Signed Ints</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3b">3b: Floating Point</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3c">3c: Urbit Time</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3d">3d: SHA Hash Family</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3e">3e: (Removed)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3f">3f: Scrambling</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3g">3g: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4a">4a: Exotic Bases</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4b">4b: Text Processing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4c">4c: Tank Printer</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4d">4d: Parsing (Tracing)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4e">4e: Parsing (Combinators)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4f">4f: Parsing (Rule-Builders)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4g">4g: Parsing (Outside Caller)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4h">4h: Parsing (ASCII Glyphs)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4i">4i: Parsing (Useful Idioms)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4j">4j: Parsing (Bases and Base Digits)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4k">4k: Atom Printing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4l">4l: Atom Parsing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4m">4m: Formatting Functions</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4n">4n: Virtualization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4o">4o: Molds</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5a">5a: Compiler Utilities</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5b">5b: Macro Expansion</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5c">5c: Compiler Backend &amp; Prettyprinter</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5d">5d: Parser</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5e">5e: Caching Compiler</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5f">5f: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5g">5g: profiling support</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/zuse">Zuse</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/glossary">Glossary</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/cheat-sheet">Cheat sheet</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/troubleshooting">Hoon Errors</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/alphabetical-arms">Alphabetical Arms</a><ol class="list-reset h-font"></ol></li></ol></li></ol></div></div><div class="row pb-80"><div class="col-sm-9 col-md-8 col-sm-offset-2 col-md-offset-3 docs"><div><div><h1 id="nock-implementations-">Nock Implementations </h1><p>We use a C implementation for our Nock interpreter. But building a Nock interpreter in another language is a fun exercise. Check out our community Nock implementations, shown below our official C implementation. (Note: the community implementations were written for a slightly older version of Nock, Nock 5K. The current version is Nock 4K.): </p><h2 id="table-of-contents-">Table of Contents </h2><ul><li><h4 id="c-"><a href="#C">C</a> </h4></li><li><h4 id="clojure-"><a href="#clojure">Clojure</a> </h4></li><li><h4 id="c--"><a href="#c-sharp">C#</a> </h4></li><li><h4 id="groovy-"><a href="#groovy">Groovy</a> </h4></li><li><h4 id="haskell-"><a href="#haskell">Haskell</a> </h4></li><li><h4 id="javascript-"><a href="#javascript">JavaScript</a> </h4></li><li><h4 id="python-"><a href="#python">Python</a> </h4></li><li><h4 id="ruby-"><a href="#ruby">Ruby</a> </h4></li><li><h4 id="scala-"><a href="#scala">Scala</a> </h4></li><li><h4 id="scheme-"><a href="#scheme">Scheme</a> </h4></li><li><h4 id="swift-"><a href="#swift">Swift</a> </h4></li></ul><h2><div id="C">C Implementation</div></h2><p>The actual production Nock interpreter. Note gotos for tail-call elimination, and manual reference counting. More about the C environment can be found in the <a href="/docs/arvo/vere/runtime">runtime system documentation</a>. </p><pre>/* _n_nock_on(): produce .*(bus fol).  Do not virtualize.
+*/
+static u3_noun
+_n_nock_on(u3_noun bus, u3_noun fol)
+{
+  u3_noun hib, gal;
+
+  while ( 1 ) {
+    hib = u3h(fol);
+    gal = u3t(fol);
+
+#ifdef U3_CPU_DEBUG
+    u3R-&gt;pro.nox_d += 1;
+#endif
+
+    if ( c3y == u3r_du(hib) ) {
+      u3_noun poz, riv;
+
+      poz = _n_nock_on(u3k(bus), u3k(hib));
+      riv = _n_nock_on(bus, u3k(gal));
+
+      u3a_lose(fol);
+      return u3i_cell(poz, riv);
+    }
+    else switch ( hib ) {
+      default: return u3m_bail(c3__exit);
+
+      case 0: {
+        if ( c3n == u3r_ud(gal) ) {
+          return u3m_bail(c3__exit);
+        }
+        else {
+          u3_noun pro = u3k(u3at(gal, bus));
+
+          u3a_lose(bus); u3a_lose(fol);
+          return pro;
+        }
+      }
+      c3_assert(!&quot;not reached&quot;);
+
+      case 1: {
+        u3_noun pro = u3k(gal);
+
+        u3a_lose(bus); u3a_lose(fol);
+        return pro;
+      }
+      c3_assert(!&quot;not reached&quot;);
+
+      case 2: {
+        u3_noun nex = _n_nock_on(u3k(bus), u3k(u3t(gal)));
+        u3_noun seb = _n_nock_on(bus, u3k(u3h(gal)));
+
+        u3a_lose(fol);
+        bus = seb;
+        fol = nex;
+        continue;
+      }
+      c3_assert(!&quot;not reached&quot;);
+
+      case 3: {
+        u3_noun gof, pro;
+
+        gof = _n_nock_on(bus, u3k(gal));
+        pro = u3r_du(gof);
+
+        u3a_lose(gof); u3a_lose(fol);
+        return pro;
+      }
+      c3_assert(!&quot;not reached&quot;);
+
+      case 4: {
+        u3_noun gof, pro;
+
+        gof = _n_nock_on(bus, u3k(gal));
+        pro = u3i_vint(gof);
+
+        u3a_lose(fol);
+        return pro;
+      }
+      c3_assert(!&quot;not reached&quot;);
+
+      case 5: {
+        u3_noun wim = _n_nock_on(bus, u3k(gal));
+        u3_noun pro = u3r_sing(u3h(wim), u3t(wim));
+
+        u3a_lose(wim); u3a_lose(fol);
+        return pro;
+      }
+      c3_assert(!&quot;not reached&quot;);
+
+      case 6: {
+        u3_noun b_gal, c_gal, d_gal;
+
+        u3x_trel(gal, &amp;b_gal, &amp;c_gal, &amp;d_gal);
+        {
+          u3_noun tys = _n_nock_on(u3k(bus), u3k(b_gal));
+          u3_noun nex;
+
+          if ( 0 == tys ) {
+            nex = u3k(c_gal);
+          } else if ( 1 == tys ) {
+            nex = u3k(d_gal);
+          } else return u3m_bail(c3__exit);
+
+          u3a_lose(fol);
+          fol = nex;
+          continue;
+        }
+      }
+      c3_assert(!&quot;not reached&quot;);
+
+      case 7: {
+        u3_noun b_gal, c_gal;
+
+        u3x_cell(gal, &amp;b_gal, &amp;c_gal);
+        {
+          u3_noun bod = _n_nock_on(bus, u3k(b_gal));
+          u3_noun nex = u3k(c_gal);
+
+          u3a_lose(fol);
+          bus = bod;
+          fol = nex;
+          continue;
+        }
+      }
+      c3_assert(!&quot;not reached&quot;);
+
+      case 8: {
+        u3_noun b_gal, c_gal;
+
+        u3x_cell(gal, &amp;b_gal, &amp;c_gal);
+        {
+          u3_noun heb = _n_nock_on(u3k(bus), u3k(b_gal));
+          u3_noun bod = u3nc(heb, bus);
+          u3_noun nex = u3k(c_gal);
+
+          u3a_lose(fol);
+          bus = bod;
+          fol = nex;
+          continue;
+        }
+      }
+      c3_assert(!&quot;not reached&quot;);
+
+      case 9: {
+        u3_noun b_gal, c_gal;
+
+        u3x_cell(gal, &amp;b_gal, &amp;c_gal);
+        {
+          u3_noun seb = _n_nock_on(bus, u3k(c_gal));
+          u3_noun pro;
+
+          u3t_off(noc_o);
+          pro = u3j_kick(seb, b_gal);
+          u3t_on(noc_o);
+
+          if ( u3_none != pro ) {
+            u3a_lose(fol);
+            return pro;
+          }
+          else {
+            if ( c3n == u3r_ud(b_gal) ) {
+              return u3m_bail(c3__exit);
+            }
+            else {
+              u3_noun nex = u3k(u3at(b_gal, seb));
+
+              u3a_lose(fol);
+              bus = seb;
+              fol = nex;
+              continue;
+            }
+          }
+        }
+      }
+      c3_assert(!&quot;not reached&quot;);
+
+      case 10: {
+        u3_noun p_gal, q_gal;
+
+        u3x_cell(gal, &amp;p_gal, &amp;q_gal);
+        {
+          u3_noun zep, hod, nex;
+
+          if ( c3y == u3r_du(p_gal) ) {
+            u3_noun b_gal = u3h(p_gal);
+            u3_noun c_gal = u3t(p_gal);
+            u3_noun d_gal = q_gal;
+
+            zep = u3k(b_gal);
+            hod = _n_nock_on(u3k(bus), u3k(c_gal));
+            nex = u3k(d_gal);
+          }
+          else {
+            u3_noun b_gal = p_gal;
+            u3_noun c_gal = q_gal;
+
+            zep = u3k(b_gal);
+            hod = u3_nul;
+            nex = u3k(c_gal);
+          }
+
+          u3a_lose(fol);
+          return _n_hint(zep, hod, bus, nex);
+        }
+      }
+
+      case 11: {
+        u3_noun ref = _n_nock_on(u3k(bus), u3k(u3h(gal)));
+        u3_noun gof = _n_nock_on(bus, u3k(u3t(gal)));
+        u3_noun val;
+
+        u3t_off(noc_o);
+        val = u3m_soft_esc(ref, u3k(gof));
+        u3t_on(noc_o);
+
+        if ( !_(u3du(val)) ) {
+          u3m_bail(u3nt(1, gof, 0));
+        }
+        if ( !_(u3du(u3t(val))) ) {
+          //
+          //  replace with proper error stack push
+          //
+          u3t_push(u3nc(c3__hunk, _n_mush(gof)));
+          return u3m_bail(c3__exit);
+        }
+        else {
+          u3_noun pro;
+
+          u3z(gof);
+          u3z(fol);
+          pro = u3k(u3t(u3t(val)));
+          u3z(val);
+
+          return pro;
+        }
+      }
+      c3_assert(!&quot;not reached&quot;);
+    }
+  }
+}
+</pre><h2><div id="clojure">Clojure</div></h2><p>From <a href="https://github.com/mattearnshaw/anock/blob/master/src/anock/core.clj">Matt Earnshaw</a>: </p><pre>(ns anock.core
+  (:import anock.NockException))
+
+(declare atom? cell? cell)
+
+(defn noun?
+  &quot;A noun is an atom or a cell.&quot;
+  [noun &amp; ns]
+  (if ns false
+      (or (atom? noun) (cell? noun))))
+
+(defn atom?
+  &quot;An atom is a natural number.&quot;
+  [noun &amp; ns]
+  (if ns false
+   (and (integer? noun) (&gt;= noun 0))))
+
+(defn cell?
+  &quot;A cell is an ordered pair of nouns.&quot;
+  [noun]
+  (cond
+   (atom? noun) false
+   (nil? noun) false
+   (not= 2 (count noun)) false
+   :else (and (noun? (first noun))
+              (noun? (second noun)))))
+
+(defn tis
+  &quot;= (pronounced &#39;tis&#39;) tests a cell for equality.&quot;
+  [noun]
+  (if (atom? noun) (throw (anock.NockException. &quot;Cannot tis an atom.&quot;))
+      (let [[a b] noun]
+        (if (= a b) 0 1))))
+
+(defn wut
+  &quot;? (pronounced &#39;wut&#39;) tests whether a noun is a cell.&quot;
+  [noun]
+  (cond
+   (atom? noun) 1
+   (cell? noun) 0
+   :else (throw (anock.NockException. &quot;Invalid noun.&quot;))))
+
+(defn lus
+  &quot;+ (pronounced &#39;lus&#39;) adds 1 to an atom.&quot;
+  [noun]
+  (if (atom? noun) (inc noun)
+      (throw (anock.NockException. &quot;Can only lus atoms.&quot;))))
+
+(defn fas
+  &quot;/ (pronounced &#39;fas&#39;) is a tree address function.&quot;
+  [noun]
+  (if (atom? noun) (throw (anock.NockException. &quot;Cannot fas an atom.&quot;))
+      (let [[a b] (cell noun)]
+        (assert (and (pos? a) (atom? a)) &quot;Subject of fas must be a positive atom.&quot;)
+        (if (and (not (coll? b)) (or (= 2 a) (= 3 a)))
+          (throw (anock.NockException. (str &quot;Cannot fas noun: &quot; noun))))
+        (cond
+          (= 1 a) b
+          (= 2 a) (first b)
+          (= 3 a) (second b)
+          (even? a) (fas [2 (fas [(/ a 2) b])])
+          (odd? a) (fas [3 (fas [(/ (dec a) 2) b])])))))
+
+(defn tar
+  &quot;* (pronounced &#39;tar&#39;) means Nock&quot;
+  [noun]
+  (if (atom? noun) (throw (anock.NockException. &quot;Cannot tar an atom.&quot;))
+      (try
+        (let [noun (cell noun) [x [y z]] noun]
+          (cond
+            (cell? y) (cell (tar [x y]) (tar [x z]))
+            (zero? y) (fas [z x])
+            (= 1 y) z
+            (= 3 y) (wut (tar [x z]))
+            (= 4 y) (lus (tar [x z]))
+            (= 5 y) (tis (tar [x z]))
+            :else (let [[p q] z]
+                    (cond
+                      (= 2 y) (tar [(tar [x p]) (tar [x q])])
+                      (= 6 y) (tar [x 2 [0 1] 2 [1 (first q) (second q)]
+                                    [1 0] 2 [1 2 3] [1 0] 4 4 p])
+                      (= 7 y) (tar [x 2 p 1 q])
+                      (= 8 y) (tar [x 7 [[7 [0 1] p] 0 1] q])
+                      (= 9 y) (tar [x 7 q 2 [0 1] 0 p])
+                      (= 10 y) (if (cell? p)
+                                 (tar [x 8 (second p) 7 [0 3] q])
+                                 (tar [x q]))))))
+        (catch RuntimeException e
+          (throw (anock.NockException. (str &quot;Cannot tar the noun &quot; noun)))))))
+
+(def nock tar)
+
+; Some convenience functions
+(defn apply* [f x]
+  (if (and (= 1 (count x)) (coll? (first x)))
+    (apply f x)
+    (f x)))
+
+(defn bracket
+  &quot;[a b c] -&gt; [a [b c]]&quot;
+  [[a &amp; b :as c]]
+  (let [b (vec b)]
+    (cond
+      (and (noun? a) (apply noun? b)) (vec c)
+      (apply noun? b) (apply vector (bracket a) b)
+      (noun? a) [a (apply* bracket b)]
+      :else [(bracket a) (apply* bracket b)])))
+
+(defn cell [&amp; nouns]
+  (if (apply atom? nouns)
+    (throw (anock.NockException. &quot;Cannot convert atom to cell.&quot;))
+    (apply* bracket nouns)))
+</pre><h2><div id="c-sharp">C#</div></h2><p>From <a href="https://github.com/zass30/Nock5KCSharp">Julien Beasley</a>: </p><pre>using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+
+namespace NockInterpreter
+{
+    class Interpreter
+    {
+        static Dictionary&lt;string, Noun&gt; memocache = new Dictionary&lt;string, Noun&gt;();
+
+        public static Noun Nock(Noun noun)
+        {
+        Start:
+            Noun cache_noun;
+            if (memocache.TryGetValue(noun.ToString(), out cache_noun))
+            {
+                return cache_noun;
+            }
+
+            if (Atom.IsAtom(noun))
+                throw new Exception(&quot;Infinite loop nocking an atom: &quot; + noun.ToString());
+            else
+            {
+                Noun subject = noun.n1;
+                if (Noun.IsCell(noun.n2))
+                {
+                    Cell formula = (Cell)noun.n2;
+                    if (Noun.IsAtom(formula.n1)) // we have lines 25-37 of spec
+                    {
+                        Atom op = (Atom)formula.n1;
+                        Noun operands = formula.n2;
+
+                        switch (op.value)
+                        {
+                            case 0: // 25 ::    *[a 0 b]         /[b a]
+                                memocache[noun.ToString()] = fas(operands, subject);
+                                return memocache[noun.ToString()];
+                            case 1: // 26 ::    *[a 1 b]         b
+                                memocache[noun.ToString()] = operands;
+                                return memocache[noun.ToString()];
+                            case 2: // 27 ::    *[a 2 b c]       *[*[a b] *[a c]]
+                                if (Noun.IsCell(operands))
+                                {
+                                    Noun a = Nock(subject, operands.n1);
+                                    Noun b = Nock(subject, operands.n2);
+                                    noun = Noun.CreateNoun(a, b);
+                                    goto Start;
+                                    //                                    return Nock(Nock(subject, operands.n1), Nock(subject, operands.n2));
+                                }
+                                throw new Exception(&quot;Atom after operand 2: &quot; + operands.ToString());
+                            case 3: // 28 ::    *[a 3 b]         ?*[a b]
+                                memocache[noun.ToString()] = wut(Nock(subject, operands));
+                                return memocache[noun.ToString()];
+                            case 4: // 29 ::    *[a 4 b]         +*[a b]
+                                memocache[noun.ToString()] = lus(Nock(subject, operands));
+                                return memocache[noun.ToString()];
+                            case 5: // 30 ::    *[a 5 b]         =*[a b]
+                                memocache[noun.ToString()] = tis(Nock(subject, operands));
+                                return memocache[noun.ToString()];
+                            case 6: // 32 ::    *[a 6 b c d]     *[a 2 [0 1] 2 [1 c d] [1 0] 2 [1 2 3] [1 0] 4 4 b]
+                                if (Noun.IsCell(operands) &amp;&amp; Noun.IsCell(operands.n2))
+                                {
+                                    Noun b = operands.n1;
+                                    Noun c = operands.n2.n1;
+                                    Noun d = operands.n2.n2;
+                                    noun = Noun.CreateNoun(&quot;[&quot; + subject + &quot; 2 [0 1] 2 [1 &quot; + c + &quot; &quot; + d + &quot;] [1 0] 2 [1 2 3] [1 0] 4 4 &quot; + b + &quot;]&quot;);
+                                    goto Start;
+                                    //                                    return Nock(Noun.CreateNoun(&quot;[&quot; + subject + &quot; 2 [0 1] 2 [1 &quot; + c + &quot; &quot; + d + &quot;] [1 0] 2 [1 2 3] [1 0] 4 4 &quot; + b + &quot;]&quot;));
+                                }
+                                throw new Exception(&quot;Unhandled pattern for operand 6&quot;);
+                            case 7: // 33 ::    *[a 7 b c]       *[a 2 b 1 c]
+                                if (Noun.IsCell(operands))
+                                {
+                                    Noun b = operands.n1;
+                                    Noun c = operands.n2;
+                                    noun = Noun.CreateNoun(&quot;[&quot; + subject + &quot; 2 &quot; + b + &quot; 1 &quot; + c + &quot;]&quot;);
+                                    goto Start;
+                                    //                                    return Nock(Noun.CreateNoun(&quot;[&quot; + subject + &quot; 2 &quot; + b + &quot; 1 &quot; + c + &quot;]&quot;));
+                                }
+                                throw new Exception(&quot;Atom after operand 7: &quot; + operands.ToString());
+                            case 8: // 34 ::    *[a 8 b c]       *[a 7 [[7 [0 1] b] 0 1] c]
+                                if (Noun.IsCell(operands))
+                                {
+                                    Noun b = operands.n1;
+                                    Noun c = operands.n2;
+                                    noun = Noun.CreateNoun(&quot;[&quot; + subject + &quot; 7 [[7 [0 1] &quot; + b + &quot;] 0 1] &quot; + c + &quot;]&quot;);
+                                    goto Start;
+                                    //                                    return Nock(Noun.CreateNoun(&quot;[&quot; + subject + &quot; 7 [[7 [0 1] &quot; + b + &quot;] 0 1] &quot; + c + &quot;]&quot;));
+                                }
+                                throw new Exception(&quot;Atom after operand 8: &quot; + operands.ToString());
+                            case 9: // 35 ::    *[a 9 b c]       *[a 7 c 2 [0 1] 0 b]
+                                if (Noun.IsCell(operands))
+                                {
+                                    Noun b = operands.n1;
+                                    Noun c = operands.n2;
+                                    noun = Noun.CreateNoun(&quot;[&quot; + subject + &quot; 7 &quot; + c + &quot; 2 [0 1] 0 &quot; + b + &quot;]&quot;);
+                                    goto Start;
+                                    //                                    return Nock(Noun.CreateNoun(&quot;[&quot; + subject + &quot; 7 &quot; + c + &quot; 2 [0 1] 0 &quot; + b + &quot;]&quot;));
+                                }
+                                throw new Exception(&quot;Atom after operand 9: &quot; + operands.ToString());
+                            case 10:
+                                if (Noun.IsCell(operands))
+                                {
+                                    if (Noun.IsCell(operands.n1)) // 36 ::    *[a 10 [b c] d]  *[a 8 c 7 [0 3] d]
+                                    {
+                                        Noun b = operands.n1.n1;
+                                        Noun c = operands.n1.n2;
+                                        Noun d = operands.n2;
+                                        noun = Noun.CreateNoun(&quot;[&quot; + subject + &quot; 8 &quot; + c + &quot; 7 [0 3] &quot; + d + &quot;]&quot;);
+                                        goto Start;
+                                        //                                        return Nock(Noun.CreateNoun(&quot;[&quot; + subject + &quot; 8 &quot; + c + &quot; 7 [0 3] &quot; + d + &quot;]&quot;));
+                                    }
+                                    else // 37 ::    *[a 10 b c]      *[a c]
+                                    {
+                                        Noun c = operands.n2;
+                                        noun = Noun.CreateNoun(subject, c);
+                                        goto Start;
+                                        //                                        return Nock(subject, c);
+                                    }
+                                }
+                                throw new Exception(&quot;Atom after operand 10: &quot; + operands.ToString());
+                            default:
+                                throw new Exception(&quot;Unknown operand: &quot; + op.value);
+                        }
+                    }
+                    else // 23 ::    *[a [b c] d]     [*[a b c] *[a d]]
+                    {
+                        memocache[noun.ToString()] = Noun.CreateNoun(Nock(subject, formula.n1), Nock(subject, formula.n2));
+                        return memocache[noun.ToString()];
+                    }
+                }
+            }
+            throw new Exception(&quot;Unhandled pattern&quot;);
+        }
+
+        public static Noun Nock(string program)
+        {
+            Noun noun = Noun.CreateNoun(program);
+            return Nock(noun);
+        }
+
+        public static Noun Nock(Noun n1, Noun n2)
+        {
+            Noun noun = Noun.CreateNoun(n1, n2);
+            return Nock(noun);
+        }
+
+        private static Noun tis(Noun noun)
+        {
+            if (Noun.IsAtom(noun.ToString()))
+                throw new Exception(&quot;Infinite loop tising an atom: &quot; + noun.ToString());
+            else
+            {
+                Cell cell = (Cell)noun;
+
+                if (cell.n1.ToString() == cell.n2.ToString())
+                    return Noun.CreateNoun(&quot;0&quot;);
+                else
+                    return Noun.CreateNoun(&quot;1&quot;);
+            }
+        }
+
+        private static Noun lus(Noun noun)
+        {
+            if (Noun.IsAtom(noun.ToString()))
+            {
+                Atom a = (Atom)noun;
+                int v = a.value + 1;
+                return Noun.CreateNoun(v.ToString());
+            }
+            else
+                throw new Exception(&quot;Infinite loop lusing a cell: &quot; + noun.ToString());
+        }
+
+        private static Noun wut(Noun noun)
+        {
+            if (Noun.IsAtom(noun.ToString()))
+                return Noun.CreateNoun(&quot;1&quot;);
+            else
+                return Noun.CreateNoun(&quot;0&quot;);
+        }
+
+        private static Noun fas(Noun n1, Noun n2)
+        {
+            Noun noun = Noun.CreateNoun(n1, n2);
+            return fas(noun);
+        }
+
+        private static Noun fas(Noun noun)
+        {
+            if (Noun.IsAtom(noun.ToString()))
+                throw new Exception(&quot;Infinite loop fasing an atom: &quot; + noun.ToString());
+            else
+            {
+                Cell c = (Cell)noun;
+                // If n1 isn&#39;t an atom, I assume we throw? This isn&#39;t defined in the spec. Confirmed by John B by email. This spins forever.
+                if (Noun.IsCell(c.n1.ToString()))
+                    throw new Exception(&quot;Axis must be an atom: &quot; + c.ToString());
+                else
+                {
+                    Atom a = (Atom)c.n1;
+                    if (a.value == 1)
+                        return c.n2;
+                    else if (a.value &gt;= 2)
+                    {
+                        if (!Noun.IsCell(c.n2.ToString()))
+                        {
+                            throw new Exception(&quot;Only a cell can have an axis of 2 or 3: &quot; + c.n2.ToString());
+                        }
+                        else
+                        {
+                            Cell c2 = (Cell)c.n2;
+                            if (a.value == 2)
+                                return c2.n1;
+                            else if (a.value == 3)
+                                return c2.n2;
+                            else if (a.value % 2 == 0)
+                            {
+                                int half = a.value / 2;
+                                return fas(Noun.CreateNoun(&quot;2&quot;, fas(Noun.CreateNoun(half.ToString(), c2))));
+                            }
+                            else if (a.value % 2 == 1)
+                            {
+                                int half = a.value / 2;
+                                return fas(Noun.CreateNoun(&quot;3&quot;, fas(Noun.CreateNoun(half.ToString(), c2))));
+                            }
+                            else
+                            {
+                                throw new Exception(&quot;Infinite loop somewhere in fasing: &quot; + c.n2.ToString());
+                            }
+                        }
+                    }
+                }
+                throw new Exception(&quot;Infinite loop somewhere in fasing: &quot; + c.n2.ToString());
+            }
+        }
+    }
+
+    class Noun
+    {
+        public Noun n1;
+        public Noun n2;
+
+        // takes a program, returns a pair of nouns, stringified.
+        public static Tuple&lt;string, string&gt; SplitCell(string program)
+        {
+
+            int stackCount = 0;
+            int i = 0;
+            // split the string right after the first space
+            foreach (char c in program)
+            {
+                if (IsValidChar(c))
+                {
+                    if (c == &#39;[&#39;)
+                        stackCount++;
+                    else if (c == &#39;]&#39;)
+                        stackCount--;
+                    else if (c == &#39; &#39;)
+                    {
+                        // if we see a space, and our stack count is at 1, then we&#39;ve found our split point
+                        if (stackCount == 1)
+                        {
+                            string a = program.Substring(1, i - 1);
+                            string b = program.Substring(i + 1, program.Length - (i + 2));
+
+                            // to implement proper bracket closing, surround b with brackets if it isn&#39;t a cell and isn&#39;t an atom
+                            if (!IsCell(b) &amp;&amp; !IsAtom(b))
+                                b = &quot;[&quot; + b + &quot;]&quot;;
+                            Tuple&lt;string, string&gt; tuple = new Tuple&lt;string, string&gt;(a, b);
+                            return tuple;
+                        }
+                    }
+                }
+                else
+                    throw new Exception(&quot;Invalid char in cell: &quot; + c);
+                i++;
+            }
+            throw new Exception(&quot;Invalid cell: &quot; + program);
+        }
+
+        public static bool IsCell(string program)
+        {
+            // check if cell is valid, as above but make sure no space after bracket
+            // valid tokens are: space, int, [, ]
+            // from [ =&gt; [, int
+            // from int =&gt; space, ], int
+            // from ] =&gt; space, ]
+            // from space =&gt; int, [
+
+            // stack count must always be nonzero
+            // first and last elements must be [ and ]
+
+            int i = 0; // i is the stack count for brackets.
+            int counter = 0;
+            char s = &#39;\0&#39;; // s is the last seen character
+            // split the string right after the first space
+            foreach (char c in program)
+            {
+                if (s == &#39;\0&#39;)
+                {
+                    if (c != &#39;[&#39;)
+                        return false;
+                }
+                else if (s == &#39;[&#39;)
+                {
+                    if (!(c == &#39;[&#39; || IsInt(c)))
+                        return false;
+                }
+                else if (IsInt(s))
+                {
+                    if (!(IsInt(c) || c == &#39; &#39; || c == &#39;]&#39;))
+                        return false;
+                }
+                else if (s == &#39;]&#39;)
+                {
+                    if (!(c == &#39;]&#39; || c == &#39; &#39;))
+                        return false;
+                }
+                else if (s == &#39; &#39;)
+                {
+                    if (!(c == &#39;[&#39; || IsInt(c)))
+                        return false;
+                }
+                s = c;
+                counter++;
+                if (c == &#39;[&#39;)
+                    i++;
+                else if (c == &#39;]&#39;)
+                    i--;
+                if (i &lt;= 0 &amp;&amp; counter != program.Length) // stack count can&#39;t be zero unless it&#39;s the last character
+                    return false;
+            }
+
+            // We should end with stack count of zero
+            if (i == 0)
+                return true;
+            else
+                return false;
+        }
+
+        public static bool IsInt(char c)
+        {
+            if (c == &#39;0&#39; ||
+                c == &#39;1&#39; ||
+                c == &#39;2&#39; ||
+                c == &#39;3&#39; ||
+                c == &#39;4&#39; ||
+                c == &#39;5&#39; ||
+                c == &#39;6&#39; ||
+                c == &#39;7&#39; ||
+                c == &#39;8&#39; ||
+                c == &#39;9&#39;)
+                return true;
+            else
+                return false;
+        }
+
+        public static bool IsValidChar(char c)
+        {
+            if (c == &#39; &#39; ||
+                c == &#39;[&#39; ||
+                c == &#39;]&#39; ||
+                IsInt(c))
+                return true;
+            else
+                return false;
+        }
+
+        public static bool IsAtom(string program)
+        {
+            int i = 0;
+            if (int.TryParse(program, out i))
+            {
+                if (i &gt;= 0)
+                    return true;
+            }
+            return false;
+        }
+
+        public static bool IsAtom(Noun noun)
+        {
+            return IsAtom(noun.ToString());
+        }
+
+        public static bool IsCell(Noun noun)
+        {
+            return IsCell(noun.ToString());
+        }
+
+        public static Noun CreateNoun(string program)
+        {
+            if (IsAtom(program))
+                return new Atom(program);
+            else
+                return new Cell(program);
+        }
+
+        public static Noun CreateNoun(Noun n1, Noun n2)
+        {
+            return CreateNoun(&quot;[&quot; + n1.ToString() + &quot; &quot; + n2.ToString() + &quot;]&quot;);
+        }
+
+        public static Noun CreateNoun(string p1, Noun n2)
+        {
+            return CreateNoun(&quot;[&quot; + p1 + &quot; &quot; + n2.ToString() + &quot;]&quot;);
+        }
+
+        public static Noun CreateNoun(Noun n1, string p2)
+        {
+            return CreateNoun(&quot;[&quot; + n1.ToString() + &quot; &quot; + p2 + &quot;]&quot;);
+        }
+
+        public static Noun CreateNoun(string p1, string p2)
+        {
+            return CreateNoun(&quot;[&quot; + p1 + &quot; &quot; + p2 + &quot;]&quot;);
+        }
+    }
+
+    class Atom : Noun
+    {
+        public int value;
+
+        public override string ToString()
+        {
+            return value.ToString();
+        }
+
+        public Atom(string program)
+        {
+            if (IsAtom(program))
+            {
+                int i = 0;
+                bool result = int.TryParse(program, out i);
+                value = i;
+            }
+            else
+                throw new ArgumentException(&quot;Invalid Atom: &quot; + program);
+            n1 = null;
+            n2 = null;
+        }
+    }
+
+    class Cell : Noun
+    {
+        public override string ToString()
+        {
+            return &quot;[&quot; + n1.ToString() + &quot; &quot; + n2.ToString() + &quot;]&quot;;
+        }
+
+        public Cell(string program)
+        {
+            if (IsCell(program))
+            {
+                Tuple&lt;string, string&gt; split = SplitCell(program);
+                n1 = CreateNoun(split.Item1);
+                n2 = CreateNoun(split.Item2);
+            }
+            else
+                throw new ArgumentException(&quot;Invalid Cell: &quot; + program);
+        }
+    }
+}
+</pre><h2><div id="groovy">Groovy</div></h2><p>From <a href="https://github.com/kohanyirobert/gnock/blob/master/gnock.groovy">Kohányi Róbert</a>: </p><pre>@Memoized
+def i(def a) {
+  a.class in [
+    byte, Byte,
+    char, Character,
+    short, Short,
+    int, Integer,
+    long, Long,
+    BigInteger
+  ] &amp;&amp; a &gt;= 0
+}
+
+@Memoized
+def n(def a) {
+  def r
+  n(a, { r = it })
+  r
+}
+
+@TailRecursive
+def n(def a, def r) {
+  if (a in List) {
+    if (a.size() == 1) {
+      r(a[0])
+    } else if (a.size() &gt;= 2) {
+      n(a[0], { t -&gt;
+        n(a.size() == 2 ? a[1] : a.tail(), { h -&gt;
+          r([t, h])
+        })
+      })
+    } else {
+      throw new IllegalStateException()
+    }
+  } else if (i(a)) {
+    r((BigInteger) a)
+  } else {
+    throw new IllegalStateException()
+  }
+}
+
+@Memoized
+def wut(def a) {
+  i(a) ? 1 : 0
+}
+
+@Memoized
+def lus(def a) {
+  if (wut(a) == 0) {
+    throw new IllegalStateException()
+  }
+  1 + a
+}
+
+@Memoized
+def tis(def a) {
+  if (wut(a) == 1) {
+    throw new IllegalStateException()
+  }
+  a[0] == a[1] ? 0 : 1
+}
+
+@Memoized
+def fas(def a) {
+  def r
+  fas(a, { r = it })
+  r
+}
+
+@TailRecursive
+def fas(def a, def r) {
+  if (wut(a) == 1) {
+    throw new IllegalStateException()
+  }
+  def h = a[0]
+  if (!i(h)) {
+    throw new IllegalStateException()
+  }
+  def t = a[1]
+  if (h == 0) {
+    throw new IllegalStateException()
+  } else if (h == 1) {
+    r(t)
+  } else {
+    if (i(t)) {
+      throw new IllegalStateException()
+    }
+    if (h == 2) {
+      r(t[0])
+    } else if (h == 3) {
+      r(t[1])
+    } else {
+      fas([h.intdiv(2), t], { p -&gt;
+        fas([2 + h.mod(2), p], { q -&gt;
+          r(q)
+        })
+      })
+    }
+  }
+}
+
+@Memoized
+def tar(def a) {
+  def r
+  tar(a, { r = it})
+  r
+}
+
+@TailRecursive
+def tar(def a, def r) {
+  if (wut(a) == 1) {
+    throw new IllegalStateException()
+  }
+  def s = a[0]
+  def f = a[1]
+  if (wut(f) == 1) {
+    throw new IllegalStateException()
+  }
+  def o = f[0]
+  def v = f[1]
+  if (wut(o) == 0) {
+    tar([s, o], { p -&gt;
+      tar([s, v], { q -&gt;
+        r([p, q])
+      })
+    })
+  } else {
+    if (o == 0) {
+      r(fas([v, s]))
+    } else if (o == 1) {
+      r(v)
+    } else if (o == 3) {
+      tar([s, v], {
+        r(wut(it))
+      })
+    } else if (o == 4) {
+      tar([s, v], {
+        r(lus(it))
+      })
+    } else if (o == 5) {
+      tar([s, v], {
+        r(tis(it))
+      })
+    } else {
+      if (wut(v) == 1) {
+        throw new IllegalStateException()
+      }
+      def x = v[0]
+      def y = v[1]
+      if (o == 2) {
+        tar([s, x], { p -&gt;
+          tar([s, y], { q -&gt;
+            tar([p, q], {
+              r(it)
+            })
+          })
+        })
+      } else if (o == 7) {
+        tar(n([s, 2, x, 1, y]), {
+          r(it)
+        })
+      } else if (o == 8) {
+        tar(n([s, 7, [[7, [0, 1], x], 0, 1], y]), {
+          r(it)
+        })
+      } else if (o == 9) {
+        tar(n([s, 7, y, 2, [0, 1], 0, x]), {
+          r(it)
+        })
+      } else if (o == 10) {
+        if (wut(x) == 1) {
+          tar([s, y], {
+            r(it)
+          })
+        } else {
+          tar(n([s, 8, x[1], 7, [0, 3], y]), {
+            r(it)
+          })
+        }
+      } else {
+        if (wut(y) == 1) {
+          throw new IllegalStateException()
+        }
+        if (o == 6) {
+          tar(n([s, 2, [0, 1], 2, [1, y[0], y[1]], [1, 0], 2, [1, 2, 3], [1, 0], 4, 4, x]), {
+            r(it)
+          })
+        } else {
+          throw new IllegalStateException()
+        }
+      }
+    }
+  }
+}
+</pre><h2><div id="haskell">Haskell</div></h2><p>From <a href="https://github.com/mrdomino/hsnock/blob/master/Language/Nock5K/Spec.hs">Steve Dee</a>: </p><pre>module Language.Nock5K.Spec where
+import Control.Monad.Instances
+
+wut (a :- b)                         = return $ Atom 0
+wut a                                = return $ Atom 1
+
+lus (a :- b)                         = Left &quot;+[a b]&quot;
+lus (Atom a)                         = return $ Atom (1 + a)
+
+tis (a :- a&#39;) | a == a&#39;              = return $ Atom 0
+tis (a :- b)                         = return $ Atom 1
+tis a                                = Left &quot;=a&quot;
+
+fas (Atom 1 :- a)                    = return a
+fas (Atom 2 :- a :- b)               = return a
+fas (Atom 3 :- a :- b)               = return b
+fas (Atom a :- b) | a &gt; 3            = do  x &lt;- fas $ Atom (a `div` 2) :- b
+                                           fas $ Atom (2 + (a `mod` 2)) :- x
+fas a                                = Left &quot;/a&quot;
+
+tar (a :- (b :- c) :- d)             = do x &lt;- tar (a :- b :- c)
+                                          y &lt;- tar (a :- d)
+                                          return $ x :- y
+
+tar (a :- Atom 0 :- b)               = fas $ b :- a
+tar (a :- Atom 1 :- b)               = return b
+tar (a :- Atom 2 :- b :- c)          = do  x &lt;- tar (a :- b)
+                                           y &lt;- tar (a :- c)
+                                           tar $ x :- y
+tar (a :- Atom 3 :- b)               = tar (a :- b) &gt;&gt;= wut
+tar (a :- Atom 4 :- b)               = tar (a :- b) &gt;&gt;= lus
+tar (a :- Atom 5 :- b)               = tar (a :- b) &gt;&gt;= tis
+
+tar (a :- Atom 6 :- b :- c :- d)     = tar (a :- Atom 2 :- (Atom 0 :- Atom 1) :-
+                                            Atom 2 :- (Atom 1 :- c :- d) :-
+                                            (Atom 1 :- Atom 0) :- Atom 2 :-
+                                            (Atom 1 :- Atom 2 :- Atom 3) :-
+                                            (Atom 1 :- Atom 0) :- Atom 4 :-
+                                            Atom 4 :- b)
+tar (a :- Atom 7 :- b :- c)          = tar (a :- Atom 2 :- b :- Atom 1 :- c)
+tar (a :- Atom 8 :- b :- c)          = tar (a :- Atom 7 :-
+                                            ((Atom 7 :- (Atom 0 :- Atom 1) :- b) :-
+                                             Atom 0 :- Atom 1) :- c)
+tar (a :- Atom 9 :- b :- c)          = tar (a :- Atom 7 :- c :- Atom 2 :-
+                                            (Atom 0 :- Atom 1) :- Atom 0 :- b)
+tar (a :- Atom 10 :- (b :- c) :- d)  = tar (a :- Atom 8 :- c :- Atom 7 :-
+                                            (Atom 0 :- Atom 3) :- d)
+tar (a :- Atom 10 :- b :- c)         = tar (a :- c)
+
+tar a                                = Left &quot;*a&quot;
+</pre><h2 id="hoon-">Hoon </h2><pre>|=  {sub/* fol/*}
+^-  *
+?&lt;  ?=(@ fol)
+?:  ?=(^ -.fol)
+  [$(fol -.fol) $(fol +.fol)]
+?+    fol
+  !!
+    {$0 b/@}
+  ?&lt;  =(0 b.fol)
+  ?:  =(1 b.fol)  sub
+  ?&lt;  ?=(@ sub)
+  =+  [now=(cap b.fol) lat=(mas b.fol)]
+  $(b.fol lat, sub ?:(=(2 now) -.sub +.sub))
+::
+    {$1 b/*}
+  b.fol
+::
+    {$2 b/{^ *}}
+  =+  ben=$(fol b.fol)
+  $(sub -.ben, fol +.ben)
+::
+    {$3 b/*}
+  =+  ben=$(fol b.fol)
+  .?(ben)
+::
+    {$4 b/*}
+  =+  ben=$(fol b.fol)
+  ?&gt;  ?=(@ ben)
+  +(ben)
+::
+    {$5 b/*}
+  =+  ben=$(fol b.fol)
+  ?&gt;  ?=(^ ben)
+  =(-.ben +.ben)
+::
+    {$6 b/* c/* d/*}
+  $(fol =&gt;(fol [2 [0 1] 2 [1 c d] [1 0] 2 [1 2 3] [1 0] 4 4 b]))
+::
+    {$7 b/* c/*}         $(fol =&gt;(fol [2 b 1 c]))
+    {$8 b/* c/*}         $(fol =&gt;(fol [7 [[7 [0 1] b] 0 1] c]))
+    {$9 b/* c/*}         $(fol =&gt;(fol [7 c 2 [0 1] 0 b]))
+    {$10 @ c/*}          $(fol c.fol)
+    {$10 {b/* c/*} d/*}  =+($(fol c.fol) $(fol d.fol))
+==
+</pre><h2><div id="javascript">JavaScript</div></h2><p>From <a href="https://github.com/joemfb/nock.js/blob/master/nock.js">Joe Bryan</a>: </p><pre>(function (self, factory) {
+  &#39;use strict&#39;
+
+  if (typeof define === &#39;function&#39; &amp;&amp; define.amd) {
+    define([], factory)
+  } else if (typeof module === &#39;object&#39; &amp;&amp; typeof module.exports === &#39;object&#39;) {
+    module.exports = factory()
+  } else {
+    self.nock = factory()
+  }
+}(this, function () {
+  &#39;use strict&#39;
+
+  /**
+   * Nock is a combinator interpreter on nouns. A noun is an atom or a cell.
+   * An atom is an unsigned integer of any size; a cell is an ordered pair of nouns.
+   *
+   * @see http://urbit.org/docs/nock/definition/
+   * @see http://media.urbit.org/whitepaper.pdf
+   */
+
+  var useMacros = false
+
+  /*
+   *  code conventions:
+   *
+   *    `n` is a noun,
+   *    `s` is a subject noun,
+   *    `f` is a formula (or cell of formulas)
+   */
+
+  /*  operators  */
+
+  /**
+   * wut (?): test for atom (1) or cell (0)
+   *
+   *   ?[a b]           0
+   *   ?a               1
+   */
+  function wut (n) {
+    return typeof n === &#39;number&#39; ? 1 : 0
+  }
+
+  /**
+   * lus (+): increment an atom
+   *
+   *   +[a b]           +[a b]
+   *   +a               1 + a
+   */
+  function lus (n) {
+    if (wut(n) === 0) throw new Error(&#39;lus cell&#39;)
+    return 1 + n
+  }
+
+  /**
+   * tis (=): test equality
+   *
+   *   =[a a]           0
+   *   =[a b]           1
+   *   =a               =a
+   */
+  function tis (n) {
+    if (wut(n) === 1) throw new Error(&#39;tis atom&#39;)
+    return deepEqual(n[0], n[1]) ? 0 : 1
+  }
+
+  /**
+   * fas (/): resolve a tree address
+   *
+   *   /[1 a]           a
+   *   /[2 a b]         a
+   *   /[3 a b]         b
+   *   /[(a + a) b]     /[2 /[a b]]
+   *   /[(a + a + 1) b] /[3 /[a b]]
+   *   /a               /a
+   */
+  function fas (addr, n) {
+    if (n === undefined) throw new Error(&#39;invalid fas noun&#39;)
+    if (addr === 0) throw new Error(&#39;invalid fas addr: 0&#39;)
+
+    if (addr === 1) return n
+    if (addr === 2) return n[0]
+    if (addr === 3) return n[1]
+
+    return fas(2 + (addr % 2), fas((addr / 2) | 0, n))
+  }
+
+  /*  formulas  */
+
+  /**
+   * slot (0): resolve a tree address
+   *
+   *   *[a 0 b]         /[b a]
+   */
+  function slot (s, f) {
+    var p = fas(f, s)
+
+    if (p === undefined) throw new Error(&#39;invalid fas addr: &#39; + f)
+
+    return p
+  }
+
+  /**
+   * constant (1): return the formula regardless of subject
+   *
+   *   *[a 1 b]  b
+   */
+  function constant (s, f) {
+    return f
+  }
+
+  /**
+   * evaluate (2): evaluate the product of second formula against the product of the first
+   *
+   *   *[a 2 b c]  *[*[a b] *[a c]]
+   */
+  function evaluate (s, f) {
+    return nock(nock(s, f[0]), nock(s, f[1]))
+  }
+
+  /**
+   * cell (3): test if the product is a cell
+   *
+   *   *[a 3 b]         ?*[a b]
+   */
+  function cell (s, f) {
+    return wut(nock(s, f))
+  }
+
+  /**
+   *  incr (4): increment the product
+   *
+   *   *[a 4 b]         +*[a b]
+   */
+  function incr (s, f) {
+    return lus(nock(s, f))
+  }
+
+  /**
+   * eq (5): test for equality between nouns in the product
+   *
+   *   *[a 5 b]         =*[a b]
+   */
+  function eq (s, f) {
+    return tis(nock(s, f))
+  }
+
+  /*  macro-formulas  */
+
+  /**
+   * ife (6): if/then/else
+   *
+   *   *[a 6 b c d]      *[a 2 [0 1] 2 [1 c d] [1 0] 2 [1 2 3] [1 0] 4 4 b]
+   */
+  function macroIfe (s, f) {
+    return nock(s, [2, [[0, 1], [2, [[1, [f[1][0], f[1][1]]], [[1, 0], [2, [[1, [2, 3]], [[1, 0], [4, [4, f[0]]]]]]]]]]])
+  }
+
+  function ife (s, f) {
+    var cond = nock(s, f[0])
+
+    if (cond === 0) return nock(s, f[1][0])
+    if (cond === 1) return nock(s, f[1][1])
+
+    throw new Error(&#39;invalid ife conditional&#39;)
+  }
+
+  /**
+   * compose (7): evaluate formulas composed left-to-right
+   *
+   *   *[a 7 b c]  *[a 2 b 1 c]
+   */
+  function macroCompose (s, f) {
+    return nock(s, [2, [f[0], [1, f[1]]]])
+  }
+
+  function compose (s, f) {
+    // alternate form:
+    // return nock(nock(s, f[0]), constant(s, f[1]))
+    return nock(nock(s, f[0]), f[1])
+  }
+
+  /**
+   * extend (8): evaluate the second formula against [product of first, subject]
+   *
+   *   *[a 8 b c]  *[a 7 [[7 [0 1] b] 0 1] c]
+   */
+  function macroExtend (s, f) {
+    return nock(s, [7, [[[7, [[0, 1], f[0]]], [0, 1]], f[1]]])
+  }
+
+  function extend (s, f) {
+    // alternate form:
+    // return nock([compose(s, [[0, 1], f[0]]), s], f[1])
+    return nock([nock(s, f[0]), s], f[1])
+  }
+
+  /**
+   * invoke (9): construct a core and evaluate one of it&#39;s arms against it
+   *
+   *   *[a 9 b c]  *[a 7 c 2 [0 1] 0 b]
+   */
+  function macroInvoke (s, f) {
+    return nock(s, [7, [f[1], [2, [[0, 1], [0, f[0]]]]]])
+  }
+
+  function invoke (s, f) {
+    var prod = nock(s, f[1])
+    return nock(prod, slot(prod, f[0]))
+  }
+
+  /**
+   * hint (10): skip first formula, evaluate second
+   *
+   *   *[a 10 [b c] d]  *[a 8 c 7 [0 3] d]
+   *   *[a 10 b c]      *[a c]
+   */
+  function macroHint (s, f) {
+    if (wut(f[0]) === 0) return nock(s, [8, [f[0][1], [7, [[0, 3], f[1]]]]])
+    return nock(s, f[1])
+  }
+
+  function hint (s, f) {
+    if (wut(f[0]) === 0) {
+      if (wut(f[0][1]) === 1) throw new Error(&#39;invalid hint&#39;)
+      nock(s, f[0][1])
+    }
+    return nock(s, f[1])
+  }
+
+  /*  indexed formula functions  */
+  var macroFormulas = [slot, constant, evaluate, cell, incr, eq, macroIfe, macroCompose, macroExtend, macroInvoke, macroHint]
+  var formulas = [slot, constant, evaluate, cell, incr, eq, ife, compose, extend, invoke, hint]
+
+  /**
+   * nock (*)
+   *
+   * the nock function
+   *
+   *   *[a [b c] d]     [*[a b c] *[a d]]
+   *   *a               *a
+   */
+  function nock (s, f) {
+    if (wut(f[0]) === 0) return [nock(s, f[0]), nock(s, f[1])]
+
+    var idx = f[0]
+
+    if (idx &gt; 10) throw new Error(&#39;invalid formula: &#39; + idx)
+
+    if (useMacros) return macroFormulas[idx](s, f[1])
+
+    return formulas[idx](s, f[1])
+  }
+
+  /* construct a JS noun (group an array into pairs, associating right) */
+  function assoc (x) {
+    if (!x.length) return x
+
+    if (x.length === 1) return assoc(x[0])
+
+    return [assoc(x[0]), assoc(x.slice(1))]
+  }
+
+  /* deep equality for arrays or primitives */
+  function deepEqual (a, b) {
+    if (a === b) return true
+
+    if (!(Array.isArray(a) &amp;&amp; Array.isArray(b))) return false
+    if (a.length !== b.length) return false
+
+    for (var i = 0; i &lt; a.length; i++) {
+      if (!deepEqual(a[i], b[i])) return false
+    }
+
+    return true
+  }
+
+  /* parse a hoon-serialized nock formula and construct a JS noun */
+  function parseNoun (x) {
+    if (Array.isArray(x)) return assoc(x)
+
+    if (typeof x === &#39;string&#39;) {
+      var str = x.replace(/[\.&quot;&#39;]/g, &#39;&#39;).split(&#39; &#39;).join(&#39;,&#39;)
+      return assoc(JSON.parse(str))
+    }
+
+    return x
+  }
+
+  function nockInterface () {
+    var args = [].slice.call(arguments)
+    var subject, formula, noun
+
+    if (args.length === 1) {
+      formula = parseNoun(args[0])
+    } else if (args.length === 2) {
+      subject = parseNoun(args[0])
+      formula = parseNoun(args[1])
+    } else {
+      noun = assoc(args)
+      subject = noun[0]
+      formula = noun[1]
+    }
+
+    if (!formula) throw new Error(&#39;formula required&#39;)
+
+    if (!subject) {
+      // !=(~)
+      subject = [1, 0]
+    }
+
+    return nock(subject, formula)
+  }
+
+  return {
+    nock: nockInterface,
+    _nock: nock,
+    useMacros: function (arg) {
+      useMacros = arg === undefined || arg
+      return this
+    },
+    util: {
+      assoc: assoc,
+      parseNoun: parseNoun,
+      deepEqual: deepEqual
+    },
+    operators: {
+      wut: wut,
+      lus: lus,
+      tis: tis,
+      fas: fas
+    },
+    formulas: {
+      slot: slot,
+      constant: constant,
+      evaluate: evaluate,
+      cell: cell,
+      incr: incr,
+      eq: eq,
+      macroIfe: macroIfe,
+      ife: ife,
+      macroCompose: macroCompose,
+      compose: compose,
+      macroExtend: macroExtend,
+      extend: extend,
+      macroInvoke: macroInvoke,
+      invoke: invoke,
+      macroHint: macroHint,
+      hint: hint
+    }
+  }
+}))
+</pre><h2><div id="python">Python</div></h2><p>From <a href="https://github.com/jtauber/pynock/blob/master/nock.py">James Tauber</a>: </p><pre>#!/usr/bin/env python3
+
+# []
+def l(*lst):
+    if len(lst) == 1:
+        return(lst[0], 0)
+    if len(lst) == 2:
+        return lst
+    else:
+        return (lst[0], l(*lst[1:]))
+
+# *
+def nock(noun):
+    return tar(noun)
+
+# ?
+def wut(noun):
+    if isinstance(noun, int):
+        return 1
+    else:
+        return 0
+
+
+# +
+def lus(noun):
+    if isinstance(noun, int):
+        return 1 + noun
+    else:
+        return noun
+
+
+# =
+def tis(noun):
+    if noun[0] == noun[1]:
+        return 0
+    else:
+        return 1
+
+
+# /
+def slot(noun):
+    if noun[0] == 1:
+        return noun[1]
+    elif noun[0] == 2:
+        return noun[1][0]
+    elif noun[0] == 3:
+        return noun[1][1]
+    elif noun[0] % 2 == 0:
+        return slot((2, slot((noun[0] // 2, noun[1]))))
+    elif noun[0] % 2 == 1:
+        return slot((3, slot(((noun[0] - 1) // 2, noun[1]))))
+
+
+def tar(noun):
+    if isinstance(noun[1][0], int):
+        if noun[1][0] == 0:
+            return slot((noun[1][1], noun[0]))
+        elif noun[1][0] == 1:
+            return noun[1][1]
+        elif noun[1][0] == 2:
+            return nock((nock((noun[0], noun[1][1][0])), nock((noun[0], noun[1][1][1]))))
+        elif noun[1][0] == 3:
+            return wut(nock((noun[0], noun[1][1])))
+        elif noun[1][0] == 4:
+            return lus(nock((noun[0], noun[1][1])))
+        elif noun[1][0] == 5:
+            return tis(nock((noun[0], noun[1][1])))
+        elif noun[1][0] == 6:
+            return nock(l(noun[0], 2, (0, 1), 2, l(1, noun[1][1][1][0], noun[1][1][1][1]), (1, 0), 2, l(1, 2, 3), (1, 0), 4, 4, noun[1][1][0]))
+        elif noun[1][0] == 7:
+            return nock(l(noun[0], 2, noun[1][1][0], 1, noun[1][1][1]))
+        elif noun[1][0] == 8:
+            return nock(l(noun[0], 7, l(l(7, (0, 1), noun[1][1][0]), 0, 1), noun[1][1][1]))
+        elif noun[1][0] == 9:
+            return nock(l(noun[0], 7, noun[1][1][1], l(2, (0, 1), (0, noun[1][1][0]))))
+        elif noun[1][0] == 10:
+            if isinstance(noun[1][1][0], int):
+                return nock((noun[0], noun[1][1][1]))
+            else:
+                return nock(l(noun[0], 8, noun[1][1][0][1], 7, (0, 3), noun[1][1][1][0]))
+    else:
+        return (nock((noun[0], noun[1][0])), nock((noun[0], noun[1][1])))
+</pre><h2><div id="ruby">Ruby</div></h2><p>From <a href="https://github.com/TJamesCorcoran/nock/blob/master/nock.rb">T.J. Corcoran</a>: </p><pre>def str_to_tree(str)
+  arr = []
+  str.scan(/\+|\=|\?|\/|\*|\[|\]|\d+/).each do |token|
+  end
+end
+
+def max_depth(arr)
+  ret = arr.is_a?(Array) ?  [max_depth(arr[0]), max_depth(arr[1])].max + 1 : 1
+  ret
+end
+
+def pp(arr)
+  depth = max_depth(arr)
+  space = 128
+  1.up_to(8) do |depth|
+    space = space / 2
+    min = 2 ** (depth - 1)
+    max = (2 ** depth) - 1
+    min.upto(max) { |axis|
+  end
+
+end
+
+def norm(arr)
+  return arr unless arr.is_a?(Array)
+  while arr.size &gt; 2
+    size = arr.size
+    arr[size - 2] = [ arr[size - 2], arr.pop ]
+  end
+  arr = arr.map { |x| norm(x)   }
+end
+
+def wut(arr)
+  arr.is_a?(Array) ? YES : NO
+end
+
+def lus(atom)
+  raise &quot;not an atom&quot; unless atom.is_a?(Fixnum)
+  atom + 1
+end
+
+def tis(arr)
+  raise &quot;not pair&quot; unless arr.is_a?(Array) &amp;&amp; arr.size == 2
+  ( arr[0] == arr[1] ) ? YES : NO
+end
+
+def slot(axis, arr, allow_error = true)
+  raise &quot;axis on atom&quot; unless arr.is_a?(Array)
+  return arr if axis == 1
+  return arr[0] if axis == 2
+  return arr[1] if axis == 3
+  return slot(2, slot(axis/2, arr))   if (axis %2) == 0
+  return slot(3, slot(axis/2, arr))
+end
+
+
+def nock(arr)
+  raise &quot;error: nocking an atom&quot; unless arr.is_a?(Array)
+
+  oper = slot(4, arr)
+  a    = slot(2, arr)
+  b    = slot(5, arr)
+
+  if oper.is_a?(Array)
+    return  [ nock( [ a, [b, c]]), nock( [a, d]) ]
+  end
+
+
+  case oper
+    when 0 then
+    slot(b,a )
+
+    when 1 then
+    b
+
+    when 2 then
+    b_prime = slot(2, b)
+    c       = slot(3,b)
+    nock( [ nock([a, b_primce]), nock([a, c]) ])
+
+    when 3 then
+    wut(nock([a, b]))
+
+    when 4 then
+    lus(nock([a, b]))
+
+    when 5 then
+    tis(nock([a, b]))
+
+    when 6 then
+    b_prime = slot(2, b)
+    c = slot(6,b)
+    d = slot(7,b)
+    nock( norm([a, 2, [0, 1], 2, [1, c, d], [1, 0], 2, [1, 2, 3], [1, 0], 4, 4, b]) )
+
+    when 7 then
+    b_prime = slot(2, b)
+    c = slot(3,b)
+    nock( norm ([a, 2, b_prime, 1, c]))
+
+    when 8 then
+    b_prime = slot(2, b)
+    c = slot(3,b)
+    nock( norm ([a, 7, [[7, [0, 1], b_prime], 0, 1], c]))
+
+    when 9 then
+    b_prime = slot(2, b)
+    c = slot(3,b)
+    nock( norm ([a, 7, c, 2, [0, 1], 0, b_prime]))
+
+    when 10 then
+    if wut(slot(2,b)) == TRUE
+      b_prime = slot(4, b)
+      c       = slot(5, b)
+      d       = slot(3, b)
+      c = slot(3,b)
+      nock( norm ([a, 8, c, 7, [0, 3], d]))
+    else
+      b_prime = slot(2, b)
+      c       = slot(3, b)
+      nock( norm ([a, 10, [b, c]]))
+    end
+    else
+      raise &quot;error: unknown opcode #{oper.inspect}&quot;
+    end
+end
+</pre><h2><div id="scala">Scala</div></h2><p>From <a href="https://github.com/swaldman/nnnock/blob/master/src/main/scala/com/mchange/sc/v1/nnnock/package.scala">Steve Randy Waldman</a>: </p><pre>package object nnnock {
+
+  sealed trait Noun;
+  case class Atom( value : Int ) extends Noun;
+  case class Cell( head : Noun, tail : Noun ) extends Noun;
+  implicit def toAtom( value : Int ) : Atom = Atom( value );
+  implicit def toInt( atom : Atom ) : Int = atom.value;
+
+  def nock( a : Noun ) : Noun = *(a)
+
+
+  object Cell {
+    private def apply( nl : List[Noun] ) : Cell = {
+      nl match {
+  case a :: b :: Nil =&gt; Cell(a, b);
+  case a :: b :: c :: Nil =&gt; Cell(a, Cell(b, c));
+  case a :: b :: c :: tail =&gt; Cell(a, this.apply( b :: c :: tail ) );
+      }
+    }
+    def apply(a : Noun, b : Noun, tail : Noun*) : Cell = apply( a :: b :: tail.toList );
+  }
+
+  def ?( noun : Noun ) : Noun = noun match {
+    case _ : Cell =&gt; 0;
+    case _ : Atom =&gt; 1;
+  }
+
+  @tailrec def plus( noun : Noun ) : Noun = noun match {
+    case a : Atom =&gt; 1 + a;
+    case c : Cell =&gt; plus( c ); //intentional endless spin
+  }
+
+  def heq( noun : Noun ) : Atom = noun match {
+    case Cell( a : Atom, b : Atom ) =&gt; if ( a == b ) 0 else 1;
+    case Cell( a : Cell, b : Atom ) =&gt; 1;
+    case Cell( a : Atom, b : Cell ) =&gt; 1;
+    case Cell( a : Cell, b : Cell ) =&gt; if ((heq( Cell( a.head, b.head ) ) | heq( Cell( a.tail, b.tail ) )) == 0) 0 else 1;
+    case a : Atom =&gt; heq( a ); //intentional endless spin
+  }
+
+  def /( noun : Noun ) : Noun = noun match {
+    case Cell(Atom(1), a) =&gt; a;
+    case Cell(Atom(2), Cell(a, b)) =&gt; a;
+    case Cell(Atom(3), Cell(a, b)) =&gt; b;
+    case Cell(Atom(value), b ) =&gt; {
+      val a = value / 2;
+      val num = if ( value % a == 0 ) 2 else 3;
+      /(Cell(num, /(Cell(a, b))));
+    }
+    case a =&gt; /( a ); //intentional endless spin
+  }
+
+
+    def *( noun : Noun ) : Noun = noun match {
+      case Cell( a, Cell(Cell(b, c), d) ) =&gt; Cell( *(Cell(a,b,c)), *(Cell(a,d)) );
+      case Cell( a, Cell(Atom(value), tail) ) =&gt; {
+        (value, tail) match {
+    case (0, b) =&gt; /( Cell(b, a) );
+    case (1, b) =&gt; b;
+    case (2, Cell(b, c)) =&gt; *( Cell( *( Cell(a,b) ), *( Cell(a,c) ) ) );
+    case (3, b) =&gt; ?( *( Cell(a,b) ) );
+    case (4, b) =&gt; plus( *( Cell(a,b) ) );
+    case (5, b) =&gt; heq( *( Cell(a,b) ) );
+    case (6, Cell(b, Cell(c, d))) =&gt; *( Cell(a,2,Cell(0,1),2,Cell(1,c,d),Cell(1,0),2,Cell(1,2,3),Cell(1,0),4,4,b) ); //wtf?
+    case (7, Cell(b, c)) =&gt; *( Cell(a,2,b,1,c) );
+    case (8, Cell(b, c)) =&gt; *( Cell(a,7,Cell(Cell(7,Cell(0,1),b),0,1),c) ); //wtf2
+    case (9, Cell(b, c)) =&gt; *( Cell(a,7,c,2,Cell(0,1),0,b) );
+    case (10, Cell(Cell(b,c),d)) =&gt; *( Cell(a,8,c,7,Cell(0,3),d) );
+    case (10, Cell(b, c)) =&gt; *( Cell(a,c) );
+    case _ =&gt; *( noun ); //intentional endless spin
+        }
+      }
+      case a =&gt; *( a ); //intentional endless spin
+    }
+  }
+</pre><h2><div id="scheme">Scheme</div></h2><p>From <a href="https://github.com/kohanyirobert/snock/blob/master/snock.ss">Kohányi Róbert</a>: </p><pre>(import (rnrs (6)))
+
+(define (i a) a)
+
+(define (n a r)
+  (cond
+    ((list? a)
+     (let ((l (length a)))
+       (cond
+         ((equal? l 0) (raise 1))
+         ((equal? l 1) (r (car a)))
+         (else
+           (let ((t (cond
+                      ((equal? l 2) (cadr a))
+                      (else (cdr a)))))
+             (n (car a)
+                (lambda (p) (n t
+                               (lambda (q) (r (cons p q)))))))))))
+    ((fixnum? a) (r a))
+    (else (raise 2))))
+
+(define (wut a)
+  (cond
+    ((fixnum? a) 1)
+    (else 0)))
+
+(define (lus a)
+  (cond
+    ((equal? (wut a) 0) (raise 3))
+    (else (+ 1 a))))
+
+(define (tis a)
+  (cond
+    ((equal? (wut a) 1) (raise 4))
+    ((equal? (car a) (cdr a)) 0)
+    (else 1)))
+
+(define (fas a r)
+  (cond
+    ((equal? (wut a) 1) (raise 5))
+    (else
+      (let ((h (car a))
+          (t (cdr a)))
+      (cond
+        ((not (fixnum? h)) (raise 6))
+        ((equal? h 0) (raise 7))
+        ((equal? h 1) (r t))
+        ((fixnum? t) (raise 8))
+        ((equal? h 2) (r (car t)))
+        ((equal? h 3) (r (cdr t)))
+        (else
+            (fas (cons (div h 2) t)
+                 (lambda (p) (fas (cons (+ 2 (mod h 2)) p)
+                                  (lambda (q) (r q)))))))))))
+
+(define (tar a r)
+  (cond
+    ((equal? (wut a) 1) (raise 9))
+    (else
+      (let ((s (car a))
+            (f (cdr a)))
+        (cond
+          ((equal? (wut f) 1) (raise 10))
+          (else
+            (let ((o (car f))
+                  (v (cdr f)))
+              (cond
+                ((equal? (wut o) 0) (tar (cons s o)
+                                         (lambda (p) (tar (cons s v)
+                                                          (lambda (q) (r (cons p q)))))))
+                ((equal? o 0) (r (fas (cons v s) i)))
+                ((equal? o 1) (r v))
+                ((equal? o 3) (tar (cons s v)
+                                   (lambda (p) (r (wut p)))))
+                ((equal? o 4) (tar (cons s v)
+                                   (lambda (p) (r (lus p)))))
+                ((equal? o 5) (tar (cons s v)
+                                   (lambda (p) (r (tis p)))))
+                ((equal? (wut v) 1) (raise 11))
+                (else
+                  (let ((x (car v))
+                        (y (cdr v)))
+                    (cond
+                      ((equal? o 2) (tar (cons s x)
+                                         (lambda (p) (tar (cons s y)
+                                                          (lambda (q) (tar (cons p q)
+                                                                           (lambda (u) (r u))))))))
+                      ((equal? o 7) (tar (n (list (list s) 2 (list x) 1 (list y)) i)
+                                         (lambda (p) (r p))))
+                      ((equal? o 8) (tar (n (list (list s) 7 (list (list 7 (list 0 1) (list x)) 0 1) (list y)) i)
+                                         (lambda (p) (r p))))
+                      ((equal? o 9) (tar (n (list (list s) 7 (list y) 2 (list 0 1) 0 (list x)) i)
+                                         (lambda (p) (r p))))
+                      ((equal? o 10) (cond
+                                       ((equal? (wut x) 1) (tar (cons s y)
+                                                                (lambda (p) (r p))))
+                                       (else (tar (n (list (list s) 8 (list (cdr x)) 7 (list 0 3) (list y)) i)
+                                                  (lambda (p) (r p))))))
+                      ((equal? (wut y) 1) (raise 12))
+                      ((equal? o 6) (tar (n (list
+                                              (list s)
+                                              2
+                                              (list 0 1)
+                                              2
+                                              (list 1 (list (car y)) (list (cdr y)))
+                                              (list 1 0)
+                                              2
+                                              (list 1 2 3)
+                                              (list 1 0)
+                                              4
+                                              4
+                                              (list x))
+                                            i)
+                                         (lambda (p) (r p))))
+                      (else (raise 13)))))))))))))
+</pre><h2><div id="swift">Swift</div></h2><pre>import Foundation
+//  1   ::  A noun is an atom or a cell.
+//  2   ::  An atom is a natural number.
+//  3   ::  A cell is an ordered pair of nouns.
+//  4
+//  5   ::  nock(a)             *a
+//  6   ::  [a b c]             [a [b c]]
+//  7
+//  8   ::  ?[a b]              0
+//  9   ::  ?a                  1
+// 10   ::  +[a b]              +[a b]
+// 11   ::  +a                  1 + a
+// 12   ::  =[a a]              0
+// 13   ::  =[a b]              1
+// 14   ::  =a                  =a
+// 15
+// 16   ::  /[1 a]              a
+// 17   ::  /[2 a b]            a
+// 18   ::  /[3 a b]            b
+// 19   ::  /[(a + a) b]        /[2 /[a b]]
+// 20   ::  /[(a + a + 1) b]    /[3 /[a b]]
+// 21   ::  /a                  /a
+// 22
+// 23   ::  *[a [b c] d]        [*[a b c] *[a d]]
+// 24
+// 25   ::  *[a 0 b]            /[b a]
+// 26   ::  *[a 1 b]            b
+// 27   ::  *[a 2 b c]          *[*[a b] *[a c]]
+// 28   ::  *[a 3 b]            ?*[a b]
+// 29   ::  *[a 4 b]            +*[a b]
+// 30   ::  *[a 5 b]            =*[a b]
+// 31
+// 32   ::  *[a 6 b c d]        *[a 2 [0 1] 2 [1 c d] [1 0] 2 [1 2 3] [1 0] 4 4 b]
+// 33   ::  *[a 7 b c]          *[a 2 b 1 c]
+// 34   ::  *[a 8 b c]          *[a 7 [[7 [0 1] b] 0 1] c]
+// 35   ::  *[a 9 b c]          *[a 7 c 2 [0 1] 0 b]
+// 36   ::  *[a 10 [b c] d]     *[a 8 c 7 [0 3] d]
+// 37   ::  *[a 10 b c]         *[a c]
+// 38
+// 39   ::  *a                  *a
+
+//  1   ::  A noun is an atom or a cell.
+public indirect enum Noun: IntegerLiteralConvertible, ArrayLiteralConvertible, Equatable, Hashable, CustomStringConvertible
+{
+    //  2   ::  An atom is a natural number.
+    public typealias ATOM = UIntMax
+
+    case Atom(ATOM)
+    //  3   ::  A cell is an ordered pair of nouns.
+    case Cell(Noun, Noun)
+    case Invalid
+
+    public static var YES: Noun { return .Atom(0) }
+    public static var NO: Noun  { return .Atom(1) }
+
+    public init(_ noun: Noun) { self = noun }
+
+    //  6   ::  [a b c]          [a [b c]]
+    public init(_ nouns: [Noun]) {
+        self = .Invalid
+        if nouns.count &gt; 0 {
+            var reverse = nouns.reverse().generate()
+            self = reverse.next()!
+            while let n = reverse.next() {
+                self = .Cell(n, self)
+            }
+        }
+    }
+
+    // protocol IntegerLiteralConvertible
+    public typealias IntegerLiteralType = ATOM
+    public init(integerLiteral value: IntegerLiteralType) {
+        self = .Atom(value)
+    }
+
+    // protocol ArrayLiteralConvertible
+    public typealias Element = Noun
+    public init(arrayLiteral elements: Element...) {
+        self = Noun(elements)
+    }
+
+    // Array subscript
+    public subscript(axis: ATOM) -&gt; Noun {
+        return fas(.Cell(.Atom(axis), self))
+    }
+
+    // protocol Hashable
+    public var hashValue: Int {
+        //return self.description.hashValue
+        switch self {
+        case let .Atom(a):
+            return a.hashValue
+        case let .Cell(a, b):
+            return (5381 + 31 &amp;* a.hashValue) &amp;+ b.hashValue
+        default:
+            abort()
+        }
+    }
+
+    // protocol CustomStringConvertible
+    public var description: String {
+        return describe()
+    }
+
+    private func describe(depth: Int = 0) -&gt; String {
+        var sub = &quot;&quot;
+        let next = depth+1
+        switch self {
+        case .Invalid:
+            return &quot;[%INVALID%]&quot;
+        case let .Atom(atom):
+            return &quot;\(atom)&quot;
+        case let .Cell(.Cell(a, b), c):
+            sub =  &quot;[\(a.describe(next)) \(b.describe(next))] \(c.describe(next))&quot;
+        case let .Cell(a, b):
+            sub = &quot;\(a.describe(next)) \(b.describe(next))&quot;
+        }
+        return depth == 0 ? &quot;[\(sub)]&quot; : sub
+    }
+}
+
+// protocol Equatable
+public func == (left: Noun, right: Noun) -&gt; Bool
+{
+    switch (left, right) {
+    case let (.Atom(lhs), .Atom(rhs)):          return lhs == rhs
+    case let (.Cell(lp, lq), .Cell(rp, rq)):    return lp == rp &amp;&amp; lq == rq
+    case (.Invalid, .Invalid):                  return true
+    default:                                    return false
+    }
+}
+
+public func wut(noun: Noun) -&gt; Noun
+{
+    switch noun {
+        //  8   ::  ?[a b]           0
+    case .Cell:
+        return Noun.YES
+    case .Atom:
+        //  9   ::  ?a               1
+        return Noun.NO
+    default:
+        //return wut(noun)
+        abort()
+    }
+}
+
+public func lus(noun: Noun) -&gt; Noun
+{
+    if case let .Atom(a) = noun {
+        // 11   ::  +a               1 + a
+        return .Atom(1+a)
+    }
+    // 10   ::  +[a b]           +[a b]
+    //return lus(noun)
+    abort()
+}
+
+public func tis(noun: Noun) -&gt; Noun
+{
+    if case let .Cell(a, b) = noun {
+        // 12   ::  =[a a]           0
+        // 13   ::  =[a b]           1
+        return (a == b) ? Noun.YES : Noun.NO
+    }
+    // 14   ::  =a               =a
+    //return tis(noun)
+    abort()
+}
+
+public func fas(noun: Noun) -&gt; Noun
+{
+    switch noun {
+        // 16   ::  /[1 a]           a
+    case let .Cell(1, a):
+        return a
+        // 17   ::  /[2 a b]         a
+    case let .Cell(2, .Cell(a, _)):
+        return a
+        // 18   ::  /[3 a b]         b
+    case let .Cell(3, .Cell(_, b)):
+        return b
+        // 19   ::  /[(a + a) b]        /[2 /[a b]]
+        // 20   ::  /[(a + a + 1) b]    /[3 /[a b]]
+    case let .Cell(.Atom(axis), tree):
+        let inner = Noun.Atom(axis / 2)
+        let outer = Noun.Atom(2 + (axis % 2))
+        return fas(.Cell(outer, fas(.Cell(inner, tree))))
+    default:
+        // 21   ::  /a                  /a
+        //return fas(noun)
+        abort()
+    }
+}
+
+public func tar(noun: Noun) -&gt; Noun
+{
+    switch noun {
+    case let .Cell(a, formula):
+        switch formula {
+            // 23   ::  *[a [b c] d]     [*[a b c] *[a d]]
+        case let .Cell(.Cell(b, c), d):
+            return .Cell(tar([a, b, c]), tar([a, d]))
+
+            // 25   ::  *[a 0 b]         /[b a]
+        case let .Cell(0, b):
+            return fas([b, a])
+
+            // 26   ::  *[a 1 b]         b
+        case let .Cell(1, b):
+            return b
+
+            // 27   ::  *[a 2 b c]       *[*[a b] *[a c]]
+        case let .Cell(2, .Cell(b, c)):
+            return tar([tar([a, b]), tar([a, c])])
+
+            // 28   ::  *[a 3 b]         ?*[a b]
+        case let .Cell(3, b):
+            return wut(tar([a, b]))
+
+            // 29   ::  *[a 4 b]         +*[a b]
+        case let .Cell(4, b):
+            return lus(tar([a, b]))
+
+            // 30   ::  *[a 5 b]         =*[a b]
+        case let .Cell(5, b):
+            return tis(tar([a, b]))
+
+            // 32   ::  *[a 6 b c d]     *[a 2 [0 1] 2 [1 c d] [1 0] 2 [1 2 3] [1 0] 4 4 b]
+        case let .Cell(6, .Cell(b, .Cell(c, d))):
+            return tar([a, 2, [0, 1], 2, [1, c, d], [1, 0], 2, [1, 2, 3], [1, 0], 4, 4, b])
+
+            // 33   ::  *[a 7 b c]       *[a 2 b 1 c]
+        case let .Cell(7, .Cell(b, c)):
+            return tar([a, 2, b, 1, c])
+
+            // 34   ::  *[a 8 b c]       *[a 7 [[7 [0 1] b] 0 1] c]
+        case let .Cell(8, .Cell(b, c)):
+            return tar([a, 7, [[7, [0, 1], b], 0, 1], c])
+
+            // 35   ::  *[a 9 b c]       *[a 7 c 2 [0 1] 0 b]
+        case let .Cell(9, .Cell(b, c)):
+            return tar([a, 7, c, 2, [0, 1], 0, b])
+
+            // 36   ::  *[a 10 [b c] d]  *[a 8 c 7 [0 3] d]
+        case let .Cell(10, .Cell(.Cell(_, c), d)):
+            return tar([a, 8, c, 7, [0, 3], d])
+
+            // 37   ::  *[a 10 b c]      *[a c]
+        case let .Cell(10, .Cell(_, c)):
+            return tar([a, c]);
+
+        default:
+            //return tar(noun)
+            abort()
+        }
+    default:
+        //return tar(noun)
+        abort()
+    }
+}
+
+
+public var nock_functions = Dictionary&lt;Noun, Noun -&gt; Noun&gt;()
+
+public func dao(formula: Noun) -&gt; Noun-&gt;Noun
+{
+    if let cached = nock_functions[formula] {
+        return cached
+    }
+
+    let compiler = { () -&gt; Noun -&gt; Noun in
+        switch formula {
+        case let .Cell(.Cell(b, c), d):     // Distribution
+            let (p, q) = (dao(.Cell(b, c)), dao(d))
+            return { a in .Cell(p(a), q(a)) }
+
+        case let .Cell(0, b):               // Axis
+            return { a in fas(.Cell(b, a)) }
+
+        case let .Cell(1, b):               // Just
+            return { _ in b }
+
+        case let .Cell(2, .Cell(b, c)):     // Fire
+            let (f, g) = (dao(b), dao(c))
+            return { a in dao(g(a))(f(a)) }
+
+        case let .Cell(3, b):               // Depth
+            let f = dao(b)
+            return { a in wut(f(a)) }
+
+        case let .Cell(4, b):               // Bump
+            let f = dao(b)
+            return { a in lus(f(a)) }
+
+        case let .Cell(5, b):               // Same
+            let f = dao(b)
+            return { a in tis(f(a)) }
+
+        case let .Cell(6, .Cell(b, .Cell(c, d))): // If
+            let (p, q, r) = (dao(b), dao(c), dao(d))
+            return { a in
+                switch p(a) {
+                case Noun.self.YES:
+                    return q(a)
+                case Noun.self.NO:
+                    return r(a)
+                default:
+                    return tar(.Cell(a, formula))
+                }
+            }
+
+        case let .Cell(7, .Cell(b, c)):     // Compose
+            let (f, g) = (dao(b), dao(c))
+            return { a in g(f(a)) }
+
+        case let .Cell(8, .Cell(b, c)):     // Push
+            let (f, g) = (dao(b), dao(c))
+            return { a in g(.Cell(f(a), a)) }
+
+        case let .Cell(9, .Cell(b, c)):     // Call
+            let f = dao(c)
+            return { a in
+                let core = f(a)
+                let arm = dao(fas(.Cell(b, core)))
+                return arm(core)
+            }
+
+        case let .Cell(10, .Cell(.Cell(_, c), d)): // Hint
+            let ignore = dao(c)
+            let f = dao(d)
+            return { a in ignore(a); return f(a) }
+
+        case let .Cell(10, .Cell(_, c)):    // Hint
+            let f = dao(c)
+            return { a in f(a) }
+
+        default:
+            return { a in tar(.Cell(a, formula)) }
+        }
+    }
+
+    let r = compiler()
+    nock_functions[formula] = r
+    return r
+}
+
+public func nock(n: Noun) -&gt; Noun
+{
+    if case let .Cell(a, b) = n {
+        let f = dao(b)
+        return f(a)
+    }
+    return nock(n)
+}
+</pre></div></div></div></div></div><footer class="mb-36"><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script><script src="/js/main.js"></script></footer></body></html></body></html>

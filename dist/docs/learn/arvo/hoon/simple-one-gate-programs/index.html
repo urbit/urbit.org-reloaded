@@ -1,0 +1,416 @@
+<html><head></head><meta charset="utf-8" /><body><html><head><meta charset="UTF-8" /><title>Urbit / Docs</title><meta name="viewport" content="width=device-width , initial-scale=1" /><link href="/tilde.ico" rel="icon" /><link href="/css/base.css" rel="stylesheet" /><link href="/css/lists.css" rel="stylesheet" /><link href="/css/visibility.css" rel="stylesheet" /><link href="/css/borders.css" rel="stylesheet" /><link href="/css/colors.css" rel="stylesheet" /><link href="/css/inputs.css" rel="stylesheet" /><link href="/css/typography.css" rel="stylesheet" /><link href="/css/menu.css" rel="stylesheet" /><link href="/css/images.css" rel="stylesheet" /><link href="/css/flex.css" rel="stylesheet" /><script src="https://www.googletagmanager.com/gtag/js?id=UA-47054188-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-47054188-1');</script></head><body><nav class="bg-black pb-36 menu-hide overflow-y"><div class="container"><div class="row pt-10 mb-3"><div class="col-sm-1 menu-toggle"><img class="w-8 h-8" src="/assets/menu-close.svg" /></div><div class="col-sm-9 col-md-8 col-lg-4 col-sm-offset-2 col-md-offset-1 white"><div class="mb-6"><a href="/primer"><h1>Primer</h1></a><p> </p></div><div class="mb-6"><a href="/posts"><h1>Posts</h1></a><p> </p></div><div class="mb-6"><a href="/docs"><h1>Docs</h1></a><p> </p></div></div></div></div><footer class="container mb-36 white"><div class="row"><div class="col-sm-6 col-sm-offset-3 col-md-offset-2"><div><div class="mb-6"><h4 class="mb-1">Follow</h4><div><a class="text-mono" href="https://twitter.com/@urbit" target="_blank">twitter.com/@urbit</a></div><div><a class="text-mono" href="https://github.com/urbit" target="_blank">github.com/@urbit</a></div></div><div class="mb-6"><h4 class="mb-1">Contact</h4><div class="text-mono text-400">~zod</div><div><a class="text-mono" href="mailto:support@urbit.org">support@urbit.org</a></div></div><div class="mb-6"><h4 class="mb-1">Company</h4><div><a href="/privacy">Privacy Policy</a></div><div><a href="/tos">Terms of Service</a></div><div class="text-400"><a href="/bounty">Bug Bounty + Security</a></div></div></div></div></div></footer></nav><div id="sidebar-mobile" class="bg-gray-light sidebar-hide overflow-y"><div class="container"><div class="col-sm-10"><ol class="list-reset h-font mt-6"><li class="mb-4"><a class="h-font text-600" href="/docs/introduction">Introduction</a><ol><li><a class="h-font" href="/docs/introduction/technical-overview">Technical overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/source-code-overview">Source Code Overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/contributing">Contributing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/arvo-vs-azimuth">Arvo vs. Azimuth</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/community-tutorials">Community Tutorials</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/galaxies-stars-and-planets">Galaxies, Stars, and Planets</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/getting-started">Getting Started</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/getting-started/azimuth">Using Bridge</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/installing-urbit">Installing Urbit</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/booting-a-ship">Booting a Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/creating-a-development-ship">Creating a Development Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/operating-a-star">Operating a Star</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/learn">Learn</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo">Arvo</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals">Arvo Internals</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ames">Ames</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/behn">Behn</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/admin">Admin and Operations</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/clay">Clay</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/dill">Dill</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/layout">Source layout</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/sail">Sail</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/messaging">Messaging</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/udon">Udon</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/eyre">Eyre</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/gall">Gall Apps</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/shell">Shell (Dojo)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ford">Ford</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/hall">Hall</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/filesystem">Introduction to the Filesystem</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/publishing">Web (Eyre)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/generators">Generators</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/hoon">Hoon</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/hoon/getting-started">Getting Started</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/nouns">Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/the-subject-and-its-legs">The Subject and Its Legs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/arms-and-cores">Arms and Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/gates">Gates (Hoon Functions)</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/multi-gate-cores-and-doors">Multi-gate Cores and Doors</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-programs">Hoon Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-syntax">Hoon Syntax</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/simple-one-gate-programs">Simple One-Gate Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/atoms-auras-and-simple-cell-types">Atoms, Auras, and Simple Cell Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-checking-and-type-inference">Type Checking and Type Inference</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/structures-and-complex-types">Structures and Complex Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores">Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores-again">Cores Again</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/lists">Standard Library: Lists</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/trees-sets-and-maps">Standard Library: Trees, Sets, and Maps</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-polymorphism">Type Polymorphism</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/examples">Examples</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/nock">Nock</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/nock/definition">Nock Definition</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/explanation">Explanation</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/example">Example</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/implementations">Implementations</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/vere">Vere</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/vere/runtime">C Runtime System</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/c">C in Urbit</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/nouns">Land of Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/api">API overview by prefix</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/jetting">Writing Jets</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/style">Hoon Style Guide</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/arvo/workbook">Hoon Workbook</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/workbook/list">List of Numbers</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/caesar">Caesar Cipher</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/recursion">Recursion</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/digits">Digits</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/eightball">Magic 8-Ball</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/traffic-light">Traffic Light</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/bomb">Bomb Defusing</a></li></ol></li></ol></li><li><a class="h-font" href="/docs/learn/azimuth">Azimuth</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/azimuth/blockchain">Why Urbit Uses a Blockchain</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/azimuth/wallet">The Urbit HD Wallet</a><ol class="list-reset h-font"></ol></li></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/reference">Reference</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions">Hoon Expressions</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune">Runes</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/constants">Atoms and strings</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/dot">Nock . (&quot;dot&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/zap">Wild ! (&quot;zap&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/tis">Change Subject = (&quot;tis&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/wut">Conditionals ? (&quot;wut&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bar">Cores | (&quot;bar&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/lus">Arms + (&quot;lus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/col">Cells : (&quot;col&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/cen">Calls % (&quot;cen&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/ket">Casts ^ (&quot;ket&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bus">Structures $ (&quot;bus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/mic">Make ; (&quot;mic&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/sig">Hints ~ (&quot;sig&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/terminators">Terminators -- and ==</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb">Limbs and Wings</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/limb">Limbs</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/wing">Wings</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/basic">Basic Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/advanced">Advanced Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/irregular">Irregular forms</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/library">Standard library</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/library/1a">1a: Basic Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1b">1b: Tree Addressing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1c">1c: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2a">2a: Unit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2b">2b: List Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2c">2c: Bit Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2d">2d: Bit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2e">2e: Insecure Hashing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2f">2f: Noun Ordering</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2g">2g: Unsigned Powers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2h">2h: Set Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2i">2i: Map Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2j">2j: Jar and Jug Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2k">2k: Queue Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2l">2l: Container from Container</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2m">2m: Container from Noun</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2n">2n: Functional Hacks</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2o">2o: Normalizing Containers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2p">2p: Serialization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2q">2q: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3a">3a: Modular and Signed Ints</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3b">3b: Floating Point</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3c">3c: Urbit Time</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3d">3d: SHA Hash Family</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3e">3e: (Removed)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3f">3f: Scrambling</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3g">3g: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4a">4a: Exotic Bases</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4b">4b: Text Processing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4c">4c: Tank Printer</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4d">4d: Parsing (Tracing)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4e">4e: Parsing (Combinators)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4f">4f: Parsing (Rule-Builders)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4g">4g: Parsing (Outside Caller)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4h">4h: Parsing (ASCII Glyphs)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4i">4i: Parsing (Useful Idioms)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4j">4j: Parsing (Bases and Base Digits)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4k">4k: Atom Printing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4l">4l: Atom Parsing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4m">4m: Formatting Functions</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4n">4n: Virtualization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4o">4o: Molds</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5a">5a: Compiler Utilities</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5b">5b: Macro Expansion</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5c">5c: Compiler Backend &amp; Prettyprinter</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5d">5d: Parser</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5e">5e: Caching Compiler</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5f">5f: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5g">5g: profiling support</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/zuse">Zuse</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/glossary">Glossary</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/cheat-sheet">Cheat sheet</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/troubleshooting">Hoon Errors</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/alphabetical-arms">Alphabetical Arms</a><ol class="list-reset h-font"></ol></li></ol></li></ol></div><div class="col-sm-1 sidebar-toggle fixed" style="top: 20px; right: 1em"><img class="w-8 h-8 dropdown-right" src="/assets/dropdown.svg" /></div></div></div><div class="container mt-10"><div class="sidebar-container row col-sm-3 fixed pb-30 h-100-md"><div class="col-sm-3 col-lg-6 menu-toggle"><img class="w-8 h-8" src="/assets/menu-open.svg" /></div><div class="col-sm-12 mt-7 sidebar-toggle md-hide"><img class="w-8 h-8 dropdown-left" src="/assets/dropdown.svg" /></div><div class="h-100 col-sm-8 col-md-11 overflow-y sm-hide"><ol class="list-reset h-font mt-6"><li class="mb-4"><a class="h-font text-600" href="/docs/introduction">Introduction</a><ol><li><a class="h-font" href="/docs/introduction/technical-overview">Technical overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/source-code-overview">Source Code Overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/contributing">Contributing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/arvo-vs-azimuth">Arvo vs. Azimuth</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/community-tutorials">Community Tutorials</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/galaxies-stars-and-planets">Galaxies, Stars, and Planets</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/getting-started">Getting Started</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/getting-started/azimuth">Using Bridge</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/installing-urbit">Installing Urbit</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/booting-a-ship">Booting a Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/creating-a-development-ship">Creating a Development Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/operating-a-star">Operating a Star</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/learn">Learn</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo">Arvo</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals">Arvo Internals</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ames">Ames</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/behn">Behn</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/admin">Admin and Operations</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/clay">Clay</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/dill">Dill</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/layout">Source layout</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/sail">Sail</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/messaging">Messaging</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/udon">Udon</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/eyre">Eyre</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/gall">Gall Apps</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/shell">Shell (Dojo)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ford">Ford</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/hall">Hall</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/filesystem">Introduction to the Filesystem</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/publishing">Web (Eyre)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/generators">Generators</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/hoon">Hoon</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/hoon/getting-started">Getting Started</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/nouns">Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/the-subject-and-its-legs">The Subject and Its Legs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/arms-and-cores">Arms and Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/gates">Gates (Hoon Functions)</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/multi-gate-cores-and-doors">Multi-gate Cores and Doors</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-programs">Hoon Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-syntax">Hoon Syntax</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/simple-one-gate-programs">Simple One-Gate Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/atoms-auras-and-simple-cell-types">Atoms, Auras, and Simple Cell Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-checking-and-type-inference">Type Checking and Type Inference</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/structures-and-complex-types">Structures and Complex Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores">Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores-again">Cores Again</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/lists">Standard Library: Lists</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/trees-sets-and-maps">Standard Library: Trees, Sets, and Maps</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-polymorphism">Type Polymorphism</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/examples">Examples</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/nock">Nock</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/nock/definition">Nock Definition</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/explanation">Explanation</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/example">Example</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/implementations">Implementations</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/vere">Vere</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/vere/runtime">C Runtime System</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/c">C in Urbit</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/nouns">Land of Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/api">API overview by prefix</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/jetting">Writing Jets</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/style">Hoon Style Guide</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/arvo/workbook">Hoon Workbook</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/workbook/list">List of Numbers</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/caesar">Caesar Cipher</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/recursion">Recursion</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/digits">Digits</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/eightball">Magic 8-Ball</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/traffic-light">Traffic Light</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/bomb">Bomb Defusing</a></li></ol></li></ol></li><li><a class="h-font" href="/docs/learn/azimuth">Azimuth</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/azimuth/blockchain">Why Urbit Uses a Blockchain</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/azimuth/wallet">The Urbit HD Wallet</a><ol class="list-reset h-font"></ol></li></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/reference">Reference</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions">Hoon Expressions</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune">Runes</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/constants">Atoms and strings</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/dot">Nock . (&quot;dot&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/zap">Wild ! (&quot;zap&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/tis">Change Subject = (&quot;tis&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/wut">Conditionals ? (&quot;wut&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bar">Cores | (&quot;bar&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/lus">Arms + (&quot;lus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/col">Cells : (&quot;col&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/cen">Calls % (&quot;cen&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/ket">Casts ^ (&quot;ket&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bus">Structures $ (&quot;bus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/mic">Make ; (&quot;mic&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/sig">Hints ~ (&quot;sig&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/terminators">Terminators -- and ==</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb">Limbs and Wings</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/limb">Limbs</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/wing">Wings</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/basic">Basic Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/advanced">Advanced Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/irregular">Irregular forms</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/library">Standard library</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/library/1a">1a: Basic Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1b">1b: Tree Addressing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1c">1c: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2a">2a: Unit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2b">2b: List Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2c">2c: Bit Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2d">2d: Bit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2e">2e: Insecure Hashing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2f">2f: Noun Ordering</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2g">2g: Unsigned Powers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2h">2h: Set Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2i">2i: Map Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2j">2j: Jar and Jug Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2k">2k: Queue Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2l">2l: Container from Container</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2m">2m: Container from Noun</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2n">2n: Functional Hacks</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2o">2o: Normalizing Containers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2p">2p: Serialization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2q">2q: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3a">3a: Modular and Signed Ints</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3b">3b: Floating Point</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3c">3c: Urbit Time</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3d">3d: SHA Hash Family</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3e">3e: (Removed)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3f">3f: Scrambling</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3g">3g: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4a">4a: Exotic Bases</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4b">4b: Text Processing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4c">4c: Tank Printer</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4d">4d: Parsing (Tracing)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4e">4e: Parsing (Combinators)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4f">4f: Parsing (Rule-Builders)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4g">4g: Parsing (Outside Caller)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4h">4h: Parsing (ASCII Glyphs)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4i">4i: Parsing (Useful Idioms)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4j">4j: Parsing (Bases and Base Digits)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4k">4k: Atom Printing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4l">4l: Atom Parsing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4m">4m: Formatting Functions</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4n">4n: Virtualization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4o">4o: Molds</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5a">5a: Compiler Utilities</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5b">5b: Macro Expansion</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5c">5c: Compiler Backend &amp; Prettyprinter</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5d">5d: Parser</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5e">5e: Caching Compiler</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5f">5f: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5g">5g: profiling support</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/zuse">Zuse</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/glossary">Glossary</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/cheat-sheet">Cheat sheet</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/troubleshooting">Hoon Errors</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/alphabetical-arms">Alphabetical Arms</a><ol class="list-reset h-font"></ol></li></ol></li></ol></div></div><div class="row pb-80"><div class="col-sm-9 col-md-8 col-sm-offset-2 col-md-offset-3 docs"><div><div><h1 id="2-3-simple-one-gate-programs-">2.3 Simple One-Gate Programs </h1><p>In this lesson we&#39;ll try to cover enough basic Hoon so that you can write (and understand) your own simple programs. Each of the programs given in this lesson produces a gate. (Gates are one-armed cores of Hoon that can be used as functions -- this is covered in <a href="../gates">lesson 1.5</a>.) </p><p>For each program we encourage you to: (1) write out the program yourself, (2) save it to the <code>/home/gen</code> directory of your urbit&#39;s pier, and (3) run it from the dojo. The best way to learn to program in Hoon is by getting your hands dirty. </p><p>We will also continue to run one-line snippets of code in the dojo. We encourage you to enter these for yourself as well. </p><h2 id="writing-gates--a-review-">Writing Gates: A Review </h2><p>Let&#39;s look at a really simple gate: <code>|=(a=@ 15)</code>. This gate takes any atom as input and returns the value <code>15</code>. </p><p>The <code>|=</code> rune takes two subexpressions. The first must indicate a type, and the second may evaluate to any value. The first defines the gate&#39;s sample type and possibly binds a face to it, and the second defines the output of the gate. In the example <code>|=(a=@ 15)</code> the <code>|=</code> subexpressions are <code>a=@</code> and <code>15</code>. </p><p>The following characters represent basic Hoon types: <code>@</code> for atoms, <code>^</code> for cells, <code>?</code> for flags, and <code>*</code> for nouns. You should already know what atoms, cells, and nouns are. (See <a href="../nouns">lesson 1.2</a> if you need a reminder.) There are two values for the <code>?</code> type: <code>%.y</code> for yes, and <code>%.n</code> for no. In other words, <code>?</code> is for the <a href="https://en.wikipedia.org/wiki/Boolean_data_type">Boolean values</a> of Hoon. </p><p>You could have picked a different type for the first subexpression of <code>|=(a=@ 15)</code> and left off the face. To illustrate this let&#39;s call different versions of the gate with the <code>(gate arg)</code> function call syntax: </p><pre>&gt; (|=(@ 15) 11)
+15
+
+&gt; (|=(@ 15) 22)
+15
+
+&gt; (|=(* 15) 22)
+15
+
+&gt; (|=(^ 15) 11)
+nest-fail [crash message]
+</pre><p>The argument for each of these function calls is either <code>11</code> or <code>22</code>. These are atoms, <code>@</code>, and hence also nouns, <code>*</code>. So when you define the sample to be either <code>@</code> or <code>*</code> the evaluation works as desired. </p><p>In the last function call, however, the gate&#39;s sample is defined to be a cell, <code>^</code>, and <code>11</code> isn&#39;t a cell. This is why, when that gate is called with <code>11</code>, the result is a <code>nest-fail</code> crash message. For all function calls, Hoon&#39;s type system checks whether the type of the argument matches the type of the sample. If not, the the function will not be evaluated and you get the <code>nest-fail</code>. (What counts as “nesting” will be covered more carefully in the next few lessons.) </p><p>Ordinarily a face is included in the first subexpression after the <code>|=</code> rune. This makes it easier to refer to the sample in the second <code>|=</code> subexpression. Usually you&#39;ll want the gate product to depend on the arguments passed. </p><pre>&gt; (|=(a=@ (add 2 a)) 12)
+14
+
+&gt; (|=(a=@ (add 2 a)) 14)
+16
+</pre><h3 id="checking-the-gate-s-output-">Checking the Gate&#39;s Output </h3><p>You are probably fallible. A fallible person will, at least occasionally, write code that produces output of the wrong type. Hoon&#39;s type system is designed to help you avoid this problem, but to take full advantage of this help you have to ask. You can do this with a &#39;cast&#39; expression. It is good practice to include a cast in every gate expression you write in Hoon. </p><p>A cast is a test that the value produced by an expression is provably of the desired type. When the code is compiled, the compiler does type inference on the expression in question. (We&#39;ll talk in more detail about how Hoon&#39;s type inference works later in the chapter.) If the inferred type &#39;nests&#39; under the desired type then the cast succeeds and the program is compiled. Otherwise, the compile halts with a <code>nest-fail</code> crash. In the latter case the program -- at least potentially -- produces the wrong kind of value and needs to be debugged. </p><p>There are different ways to cast, but for now we&#39;ll just use the <code>^-</code> rune. Consider the even number checker given in the last lesson: </p><pre>|=  a=@                                                 ::  even number checker
+^-  ?                                                   ::  output is a flag
+=(0 (mod a 2))                                          ::  if remainder=0 &#39;yes&#39;
+</pre><p>The first subexpression after <code>|=</code> is <code>a=@</code>, and the second is the rather more complex: </p><pre>^-  ?
+=(0 (mod a 2))
+</pre><p>This latter subexpression begins with the <code>^-</code> rune, which itself takes two subexpressions. The first <code>^-</code> subexpression must indicate a type, <code>?</code>, and the second is to be evaluated, <code>=(0 (mod a 2))</code>. The value of the second subexpression is the value produced by the whole <code>^-</code> expression. </p><p>The inferred type of <code>=(0 (mod a 2))</code> is compared against <code>?</code>. If the former type fits under the latter, the type-check passes. Otherwise the program will fail to compile, <code>nest-fail</code>. </p><p>Save the even number checker to the <code>/home/gen</code> directory of your pier as <code>even.hoon</code> and run it from the dojo: </p><pre>&gt; +even 11
+%.n
+
+&gt; +even 22
+%.y
+</pre><p>Now replace the <code>=(0 (mod a 2))</code> in the third line with just <code>15</code>. The result: </p><pre>|=  a=@                                                 ::  even number checker
+^-  ?                                                   ::  output is a flag
+15                                                      ::  return 15
+</pre><p>Save this and try to run it from the dojo again: </p><pre>&gt; +even 22
+nest-fail
+</pre><p>You changed the gate so that the output is <code>15</code>, which is an atom, <code>@</code>. But you&#39;re casting for a flag, <code>?</code> -- either <code>%.y</code> or <code>%.n</code>. Because <code>@</code> doesn&#39;t nest under <code>?</code> the program fails to compile. </p><h3 id="multiple-inputs-and-outputs-">Multiple Inputs and Outputs </h3><p>A gate is a one-armed core with a sample: </p><pre>         [gate]
+        /      \
+    [$ arm]  [payload]
+             /       \
+        [sample]   [context]
+</pre><p>When a function call to a gate occurs, the <code>$</code> arm is evaluated with the gate itself as the subject. But the gate&#39;s payload is usually modified. The modification in question is to the sample: the default gate sample is replaced with the argument(s) of the function call. This is how the <code>$</code> arm &#39;knows&#39; what the argument(s) of the function are. </p><p>The sample is just the noun in that slot of the gate, <code>+6</code>. The product of the arm evaluation is just another noun. Thus, gates always have a single noun for input and a single noun for output. </p><p>But we would like to use functions that take multiple inputs as well as functions with multiple outputs. How? The obvious solution is to use cells. </p><p>Let&#39;s write a program that checks two numbers at a time and tells us if each is even: </p><pre>::
+::  even2.hoon
+::
+::  this gate takes a pair of atoms, tests whether each is even, and then
+::  returns two flags.
+::
+|=  [a=@ b=@]                                           ::  check two numbers
+^-  [? ?]                                               ::  output is two flags
+:-  =(0 (mod a 2))                                      ::  :-(x y) makes [x y]
+=(0 (mod b 2))                                          ::
+</pre><p>The first <code>|=</code> subexpression is now <code>[a=@ b=@]</code>. This indicates a complex type for the gate&#39;s sample. The gate takes a pair of atoms, labeling the first <code>a</code> and the second <code>b</code>. </p><p>The second <code>|=</code> subexpression is: </p><pre>^-  [? ?]
+:-  =(0 (mod a 2))
+=(0 (mod b 2))
+</pre><p>The first of two <code>^-</code> subexpressions is <code>[? ?]</code>, indicating another complex type. The inferred type of the second <code>^-</code> subexpression must be a cell of two flags, or else the program will fail to compile. The second <code>^-</code> subexpression: </p><pre>:-  =(0 (mod a 2))
+=(0 (mod b 2))
+</pre><p>The <code>:-</code> rune takes two subexpressions and makes them into a cell. Each of these, <code>=(0 (mod a 2))</code> and <code>=(0 (mod b 2))</code>, evaluates to a flag value, <code>?</code>. </p><p>Save the whole program in your pier as <code>even2.hoon</code> (or as something else if you like) and test it in the dojo. Remembering to pass the two arguments as a cell: </p><pre>&gt; +even2 [2 2]
+[%.y %.y]
+
+&gt; +even2 [2 3]
+[%.y %.n]
+
+&gt; +even2 [3 3]
+[%.n %.n]
+
+&gt; +even2 [22 33]
+[%.y %.n]
+</pre><p>A gate may take as input or produce as output arbitrarily complex cells. For example, one could write a gate that takes a cell of five different things: </p><pre>|=  [a=* b=@ud c=^ d=? e=@sb]
+...
+</pre><h2 id="basic-tools-">Basic Tools </h2><h3 id="---and----"><code>.+</code> and <code>.=</code> </h3><p>The <code>.+</code> rune is for &#39;incrementing&#39;; it takes an atom and adds <code>1</code> to it. That&#39;s it! Here it is in action: </p><pre>&gt; .+  22
+23
+
+&gt; .+(22)
+23
+
+&gt; .+(101)
+102
+</pre><p>But it&#39;s nearly always used in its irregular form, which lacks the <code>.</code>: </p><pre>&gt; +(22)
+23
+
+&gt; +(101)
+102
+</pre><p>You&#39;ve already used the <code>.=</code> rune in its irregular form, <code>=( )</code>. This rune takes two subexpressions, evaluates them, and then does a simple test of equality on the resulting values. </p><pre>&gt; =(22 11)
+%.n
+
+&gt; =(22 (add 11 11))
+%.y
+</pre><p>But there&#39;s one more quirk that you should know about: <code>.=(a b)</code> includes a type check. Of the inferred types of <code>a</code> and <code>b</code>, one must nest in the other or else the code won&#39;t compile: </p><pre>&gt; =(12 [12 14])
+nest-fail
+</pre><p>The inferred type of <code>12</code> is <code>@ud</code>, and the inferred type of <code>[12 14]</code> is <code>[@ud @ud]</code>. Neither type nests under the other, so the code fails to compile. There is a way to get around this type check, which we&#39;ll explain later in this chapter. The best policy is to avoid wiggling out of type safety checks, however. </p><h3 id="introduction-to-conditionals--the---rune-family-">Introduction to Conditionals: The <code>?</code> Rune Family </h3><p>We won&#39;t cover all the <code>?</code> runes here -- we&#39;ll save some for the upcoming lesson on types. But we&#39;ll cover enough to get you writing simple Hoon programs. </p><h4 id="---if-then-else-"><code>?:</code> if-then-else </h4><p>The <code>?:</code> rune indicates an &#39;if-then-else&#39; expression and takes three subexpressions: (1) the condition, which must evaluate to a flag, (2) an expression to be evaluated if the condition evaluates to <code>%.y</code>, and (3) an expression to be evaluated if the condition evaluates to <code>%.n</code>. </p><pre>&gt; ?:(%.y 11 22)
+11
+
+&gt; ?:  %.y
+    11
+  22
+11
+
+&gt; ?:(%.n 11 22)
+22
+</pre><h4 id="---ifnot-then-else-"><code>?.</code> ifnot-then-else </h4><p>The <code>?.</code> rune does precisely the same thing as <code>?:</code>, except reversed: if the condition evaluates to <code>%.n</code> then the second subexpression is evaluated, otherwise the third is evaluated. </p><pre>&gt; ?.(%.y 11 22)
+22
+
+&gt; ?.  %.y
+    11
+  22
+22
+
+&gt; ?.(%.n 11 22)
+11
+</pre><p>The reasons for Hoon&#39;s having both <code>?:</code> and <code>?.</code> involve code neatness and clarity. Use whichever makes your code better. </p><h4 id="---logical--and--"><code>?&amp;</code> logical &#39;AND&#39; </h4><p>The <code>?&amp;</code> rune is for logical &#39;AND&#39;. It takes two or more subexpressions, each of which must evaluate to a flag, <code>?</code>; and if all of them evaluate to <code>%.y</code> then the result of the <code>?&amp;</code> expression is <code>%.y</code>. Otherwise it&#39;s <code>%.n</code>. In tall form the expression is terminated with <code>==</code>. </p><pre>&gt; ?&amp;  %.y  %.y  %.y  ==
+%.y
+
+&gt; ?&amp;  &amp;  |  &amp;  ==
+%.n
+
+&gt; ?&amp;(%.y %.y %.y)
+%.y
+
+&gt; ?&amp;(&amp; =(1 2) &amp;)
+%.n
+</pre><p>You may be confused about the lone <code>&amp;</code> and <code>|</code> characters in the second and fourth examples above. The <code>&amp;</code> character (used by itself) is another alias for &#39;yes&#39;, and <code>|</code> (used by itself) is another alias for &#39;no&#39;: </p><pre>&gt; &amp;
+%.y
+
+&gt; |
+%.n
+</pre><p>The irregular form of <code>?&amp;</code> allows you to drop the <code>?</code> symbol: </p><pre>&gt; &amp;(&amp; &amp; &amp;)
+%.y
+
+&gt; &amp;(| &amp; &amp;)
+%.n
+
+&gt; &amp;(&amp; | &amp;)
+%.n
+
+&gt; &amp;(&amp; &amp; |)
+%.n
+</pre><p>To be clear, in <code>&amp;(blah-1 blah-2)</code> the <code>&amp;()</code> is the irregular <code>?&amp;</code> rune; and anywhere else in the code <code>&amp;</code> by itself means &#39;yes&#39;, <code>%.y</code>. </p><h4 id="---logical--or--"><code>?|</code> logical &#39;OR&#39; </h4><p>The <code>?|</code> rune is for logical &#39;OR&#39;. It takes two or more subexpressions, each of which must evaluate to a flag, <code>?</code>. If at least one evaluates to <code>%.y</code> then the whole <code>?|</code> expression evals to <code>%.y</code>; otherwise it&#39;s <code>%.n</code>: </p><pre>&gt; ?|  %.n  %.n  %.n  ==
+%.n
+
+&gt; ?|  |  |  &amp;  ==
+%.y
+
+&gt; ?|(=(12 12) | |)
+%.y
+</pre><p>The irregular form drops the <code>?</code> symbol: </p><pre>&gt; |(=(12 12) | |)
+%.y
+
+&gt; |(=(12 13) | |)
+%.n
+</pre><h4 id="---logical--not--"><code>?!</code> logical &#39;NOT&#39; </h4><p>The <code>?!</code> rune is for logical &#39;NOT&#39;. It takes one subexpression that evaluates to a flag and returns the opposite value. </p><pre>&gt; ?!  &amp;
+%.n
+
+&gt; ?!(|)
+%.y
+</pre><p>The irregular form drops the <code>?</code> symbol and uses no parentheses: </p><pre>&gt; !|
+%.y
+
+&gt; =(22 33)
+%.n
+
+&gt; !=(22 33)
+%.y
+</pre><h4 id="are-all-three-even--">Are All Three Even? </h4><p>Let&#39;s write a program that takes three atoms, <code>@</code>, and returns <code>%.y</code> if they&#39;re all even, otherwise <code>%.n</code>. </p><pre>|=  [a=@ b=@ c=@]                                       ::  check three @
+^-  ?                                                   ::  output is a flag
+?&amp;  =(0 (mod a 2))                                      ::  `a` is even AND
+    =(0 (mod b 2))                                      ::  `b` is even AND
+    =(0 (mod c 2))                                      ::  `c` is even
+==
+</pre><p>Save this in your urbit&#39;s pier as <code>even3.hoon</code> and run it from the dojo: </p><pre>&gt; +even3 [12 13 14]
+%.n
+
+&gt; +even3 [12 16 14]
+%.y
+</pre><h4 id="if-so--multiply----otherwise-add-">If So, Multiply -- Otherwise Add </h4><p>Let&#39;s write a slightly more complicated program. The gate takes three atoms, <code>@</code>, and if all three are even it multiplies all of them together. Otherwise, it adds them all together. </p><pre>|=  [a=@ b=@ c=@]                                       ::  take three @
+^-  @                                                   ::  output is an @
+?:  ?&amp;  =(0 (mod a 2))                                  ::  if `a` is even AND
+        =(0 (mod b 2))                                  ::  `b` is even AND
+        =(0 (mod c 2))                                  ::  `c` is even
+    ==
+  (mul a (mul b c))                                     ::  then multiply
+(add a (add b c))                                       ::  otherwise add
+</pre><p>Save this as <code>addmul.hoon</code> and try it from the dojo: </p><pre>&gt; +addmul [2 2 2]
+8
+
+&gt; +addmul [2 2 3]
+7
+
+&gt; +addmul [4 4 4]
+64
+
+&gt; +addmul [4 4 5]
+13
+</pre><h3 id="subject-modification--the---rune-family-">Subject Modification: The <code>=</code> Rune Family </h3><p>As with the <code>?</code> family, we won&#39;t explain all the runes of the <code>=</code> family -- just a few to get you started. </p><h4 id="---evaluate-a-hoon-against-a-subject-"><code>=&gt;</code> Evaluate a Hoon Against a Subject </h4><p>The <code>=&gt;</code> rune takes two subexpressions. The first is evaluated, with the result becoming the new subject; the second subexpression is evaluated against that subject. </p><p>A few examples: </p><pre>&gt; =&gt;  [[a=12 b=14] [c=16 d=18]]  +
+[c=16 d=18]
+
+&gt; =&gt;  [[a=12 b=14] [c=16 d=18]]  -
+[a=12 b=14]
+
+&gt; =&gt;  [[a=12 b=14] [c=16 d=18]]  +&gt;
+d=18
+
+&gt; =&gt;  [[a=12 b=14] [c=16 d=18]]  a
+12
+
+&gt; =&gt;  [[a=12 b=14] [c=16 d=18]]  d
+18
+</pre><h4 id="---evaluate-a-hoon-against-a-subject--reversed-"><code>=&lt;</code> Evaluate a Hoon Against a Subject, Reversed </h4><p>The <code>=&lt;</code> rune is just like <code>=&gt;</code> but reversed. The second subexpression is evaluated, with the result becoming the new subject; the first subexpression is evaluated against that subject. </p><p>A few examples: </p><pre>&gt; =&lt;  +  [[a=12 b=14] [c=16 d=18]]
+[c=16 d=18]
+
+&gt; =&lt;  -  [[a=12 b=14] [c=16 d=18]]
+[a=12 b=14]
+
+&gt; =&lt;  +&gt;  [[a=12 b=14] [c=16 d=18]]
+d=18
+
+&gt; =&lt;  a.-  [[a=12 b=14] [c=16 d=18]]
+12
+
+&gt; =&lt;  d.+  [[a=12 b=14] [c=16 d=18]]
+18
+</pre><p>The <code>=&gt;</code> and <code>=&lt;</code> runes should seem vaguely familiar, in spirit if not otherwise. You&#39;ve already used the irregular version of <code>=&lt;</code>, with the <code>:</code> character: </p><pre>&gt; +:[[a=12 b=14] [c=16 d=18]]
+[c=16 d=18]
+
+&gt; -:[[a=12 b=14] [c=16 d=18]]
+[a=12 b=14]
+
+&gt; +&gt;:[[a=12 b=14] [c=16 d=18]]
+d=18
+
+&gt; a:[[a=12 b=14] [c=16 d=18]]
+12
+
+&gt; d:[[a=12 b=14] [c=16 d=18]]
+18
+</pre><h4 id="----pin--a-noun-to-the-subject-"><code>=+</code> &#39;Pin&#39; a Noun to the Subject </h4><p>The <code>=+</code> rune takes two subexpressions. The first is evaluated and then the resulting value is &#39;pinned&#39; to the head of the subject -- that is, the old subject becomes the tail of the new subject, and the value produced by the first <code>=+</code> subexpression becomes the head of the new subject. The second <code>=+</code> subexpression is evaluated against the new subject. Examples: </p><pre>&gt; =&gt;  [22 33 44]  =+(101 -)
+101
+
+&gt; =&gt;  [22 33 44]  =+(101 +)
+[22 33 44]
+
+&gt; =&gt;  [22 33 44]  =+(101 +1)
+[101 22 33 44]
+
+&gt; =&gt;  [b=22 c=33 d=44]  a
+-find.a
+
+&gt; =&gt;  [b=22 c=33 d=44]  =+(a=101 a)
+101
+</pre><h4 id="---pin-a-faced--and-possibly-typed--noun-to-the-subject-"><code>=/</code> Pin a Faced (and Possibly Typed) Noun To the Subject </h4><p>The <code>=/</code> rune is a more powerful variation of <code>=+</code>. <code>=/</code> takes three subexpressions: (1) the first is the face for the noun to be pinned (e.g., <code>a</code>), and possibly includes a type (e.g., <code>a=@</code>); (2) the second is the noun to be pinned; and (3) the third is the expression to be evaluated on the modified subject. </p><p>Some examples: </p><pre>&gt; =/(b=@ 22 [b b b])
+[22 22 22]
+
+&gt; =/(b=@ 22 (add b b))
+44
+</pre><p>The <code>=/</code> rune is the closest thing Hoon has to an instruction for &#39;initializing a variable&#39; while giving it an initial value. What actually occurs in Hoon is that the value is pinned to the head of the subject, and the indicated face is bound to that value. </p><h4 id="---pin-a-faced--typed-default-noun-to-the-subject-"><code>=|</code> Pin a Faced, Typed Default Noun to the Subject </h4><p>The <code>=|</code> is a lot like the <code>=/</code> rune except that (1) you must include type information when you use it, and (2) the programmer doesn&#39;t set the initial value of the face -- it&#39;s a default value for the type in question, sometimes called a &#39;bunt&#39; value. The <code>=|</code> rune takes two subexpressions. The first is a face names (e.g., <code>a</code>), followed by <code>=</code>, followed by a type (e.g., <code>@</code>). The second is to be evaluated against the modified subject. </p><pre>&gt; =|  a=@  a
+0
+
+&gt; =|  a=^  a
+[0 0]
+
+&gt; =|  a=?  a
+%.y
+</pre><p>The <code>=|</code> rune is a lot like &#39;initializing a variable&#39; but for faces, without giving the face an interesting initial value (a default value for the type is used instead, i.e., the &#39;bunt&#39; value). </p><h4 id="---change-a-leg-of-the-subject-"><code>=.</code> Change a Leg of the Subject </h4><p>The <code>=.</code> rune takes three subexpression. The first is a wing expression, indicating the leg of the subject whose value is to be changed. The second is the new value for the indicated leg. The third is the expression to be evaluated against the modified subject. </p><pre>&gt; =/  a=@  22  =.(a 99 a)
+99
+
+&gt; =/  a=@  22  [a =.(a 99 a)]
+[22 99]
+
+&gt; =&gt;  [12 14]  =.(+2 22 .)
+[22 14]
+</pre><p>This rune is often used for modifying the value of a face whose value was set beforehand. </p><h2 id="recursion-">Recursion </h2><p>How do we do loops in Hoon? Like other functional programming languages Hoon uses <a href="https://en.wikipedia.org/wiki/Recursion_(computer_science%29">recursion</a>. In rough terms, a recursive function solves a problem in part by calling on itself to solve a slightly easier or smaller case of the same problem. The self-calling loop continues until the simplified problem is so simple that it has a trivial solution. </p><p>Seeing an example will make this process easier to understand. </p><h3 id="addition-">Addition </h3><p>Let&#39;s write a gate that takes a pair of atoms, <code>@</code>, and which returns the sum of these atoms. There is a cheap solution to this problem, of course. The Hoon standard library has <code>add</code> in it: </p><pre>&gt; (add 22 33)
+55
+</pre><p>But let&#39;s solve the problem without using <code>add</code> from the Hoon standard library. We have the <code>.+</code> rune for adding <code>1</code> and the <code>.=</code> rune for testing equality. We&#39;ll also use <code>dec</code> from the standard library and some recursion. That&#39;s it! </p><p>What&#39;s <code>dec</code>? It takes some atom, <code>@</code>, and returns the decrement -- i.e., it takes some number <code>a</code> and returns <code>a - 1</code>: </p><pre>&gt; (dec 101)
+100
+
+&gt; (dec 51)
+50
+
+&gt; (dec 11)
+10
+</pre><p>For adding two atoms together, the algorithm we&#39;ll use is very simple. We start with two numbers, <code>a</code> and <code>b</code>. If <code>b</code> is <code>0</code>, then the answer is <code>a</code>. (This is the trivial case of addition for our algorithm, sometimes also called the &#39;base&#39; case.) Otherwise, the answer is the sum of <code>a + 1</code> and <code>b - 1</code> -- now do <b>that</b> addition. (This is the <b>recursive</b> case.) </p><p>Do you see how this process calls for a loop of sorts? If you want to sum <code>7</code> and <code>2</code>, check to see whether the second number is <code>0</code>. It isn&#39;t, so now figure out the sum of <code>8</code> and <code>1</code>. Is the second number <code>0</code>? No, so do the sum of <code>9</code> and <code>0</code>. Now the second number is <code>0</code> -- the answer is <code>9</code>. </p><p>Here&#39;s the program: </p><pre>|=  [a=@ b=@]                                           ::  take two @
+^-  @                                                   ::  output is one @
+?:  =(b 0)                                              ::  if b is 0
+  a                                                     ::    return a, else
+$(a +(a), b (dec b))                                    ::  add a+1 and b-1
+</pre><p>Save it as <code>add.hoon</code> in your urbit&#39;s pier and run it from the dojo: </p><pre>&gt; +add [22 33]
+55
+
+&gt; +add [122 33]
+155
+</pre><p>It works! </p><p>Every line of <code>add.hoon</code> should be clear up to the last one. What&#39;s going on there? The <code>$( )</code> is used for recursive function calls. That is, it&#39;s a way for a function to call itself, but with certain values modified according to the instructions inside the parentheses. Two values are being modified for the call: <code>a</code> is modified to <code>+(a)</code>, and <code>b</code> is modified to <code>(dec b)</code>. A comma is used to separate the two modification instructions. (Of course, in programs that call for it, more than two modifications may be made here.) </p><h3 id="---resolve-to-a-wing-with-changes-"><code>%=</code> Resolve to a Wing with Changes </h3><p>The <code>$( )</code> syntax is an irregular form of the the <code>%=</code> rune. We can rewrite that part of <code>add.hoon</code> in regular form: </p><pre>|=  [a=@ b=@]                                           ::  take two @
+^-  @                                                   ::  output is one @
+?:  =(b 0)                                              ::  if b is 0
+  a                                                     ::    return a, else
+%=  $                                                   ::  resolve to $
+  a  +(a)                                               ::  but change a to +(a)
+  b  (dec b)                                            ::  and b to (dec b)
+==
+</pre><p>This version is precisely equivalent to the old one. The first <code>%=</code> subexpression is for a wing. In the program above, this is just <code>$</code>. The other subexpressions of <code>%=</code> indicate the changes to be made upon resolution to the wing. You can make as many of these changes as desired when using <code>%=</code>, so the expression is ended with <code>==</code>. </p><p>Remember from lessons <a href="../arms-and-cores">1.4</a> and <a href="../gates">1.5</a> that wing resolution works in two different ways. If the wing resolves to a leg, that fragment of the subject is returned. If the wing resolves to an arm, the arm is evaluated with its parent core as the subject. In <a href="../gates">lesson 1.5</a> you learned that <code>$</code> is the special name of the arm of a gate. (Remember, a gate is a one-armed core with a sample.) Because we wrote <code>add.hoon</code> with <code>|=</code> it produces a gate. The <code>%=</code> expression above thus evaluates the <code>$</code> arm of the gate, but only after having made changes to the parent core: <code>a</code> is incremented, and <code>b</code> is decremented. </p><h3 id="decrement-">Decrement </h3><p>We&#39;ve used <code>dec</code>, but now let&#39;s write our own version. That is, let&#39;s write a gate that takes some atom, <code>@</code>, and returns the &#39;decrement&#39; of that value. There is a cheap solution to this problem too. The Hoon standard library has the <code>sub</code> function in it for subtraction: </p><pre>&gt; (sub 100 50)
+50
+
+&gt; (sub 100 1)
+99
+</pre><p>But let&#39;s solve the problem without using the Hoon standard library. We have the <code>.+</code> rune for adding <code>1</code>, the <code>.=</code> rune for testing equality, and various runes of the <code>=</code> family for manipulating the subject. And we&#39;ll again use recursion. </p><p>How do we decrement using only those tools? The algorithm is pretty simple. We&#39;ll start by defining a counter value, <code>0</code>, and binding it to <code>c</code>. </p><p>If <code>c + 1</code> equals the value to be decremented, then <code>c</code> is the answer. (This is the trivial case.) Otherwise, we increment <code>c</code> by <code>1</code> and try again. (This is the recursive case.) </p><p>There&#39;s one quirk about this algorithm that makes it different from the addition algorithm. We didn&#39;t set any initial values in the addition program, and so calling the whole function at the end was an acceptable option. If we do the same thing with decrement -- call the whole function at the end -- we&#39;ll end up setting the same face, <code>c</code>, to the same initial value again, <code>0</code>. We don&#39;t want that. We want the counter to increase in value for each loop! There should be a recursion start point that comes after <code>c</code> is set initially. For that you can use the <code>|-</code> rune. </p><p>Here&#39;s the program: </p><pre>|=  a=@                                                 ::  take one @
+=/  c=@  0                                              ::  set c to 0
+|-                                                      ::  recursion start
+^-  @                                                   ::  output is @
+?:  =(a +(c))                                           ::  if a = c+1
+  c                                                     ::    return c, else
+$(c +(c))                                               ::  add 1 to c, recurse
+                                                        ::    back to the |-
+</pre><p>Save it as <code>dec.hoon</code> and try it from the dojo: </p><pre>&gt; +dec 101
+100
+
+&gt; +dec 97
+96
+
+&gt; +dec 11
+10
+</pre><p>At an intuitive level this code should make sense. The <code>$( )</code> at the end effectively serves as a loop going back to the <code>|-</code> rune, with a modification to the value of <code>c</code>. But isn&#39;t <code>$</code> the name of the gate&#39;s single arm? What&#39;s going on? Let&#39;s take a moment to understand how <code>|-</code> works at a deeper level. </p><h3 id="---make-and-call-a-one-armed-core-"><code>|-</code> Make and Call a One-armed Core </h3><p>The <code>|-</code> rune makes a one-armed core whose arm has the name <code>$</code>, and then it calls <code>$</code>. The <code>|-</code> rune takes one subexpression, which determines what <code>$</code> does: </p><pre>&gt; |-  2
+2
+
+&gt; |-  (add 22 33)
+55
+</pre><p>Let&#39;s look at the decrement program again, this time using the regular version of the <code>%=</code> rune. </p><pre>|=  a=@                                                 ::  take one @
+=/  c=@  0                                              ::  set c to 0
+|-                                                      ::  recursion start
+^-  @                                                   ::  output is @
+?:  =(a +(c))                                           ::  if a = c+1
+  c                                                     ::    return c, else
+%=  $                                                   ::  resolve to $
+  c  +(c)                                               ::  add 1 to c
+==
+</pre><p>Strictly speaking, when you use <code>$( )</code> or <code>%= $</code> you&#39;re asking for a resolution to <code>$</code> (with changes indicated in parentheses). And because <code>$</code> is an arm, that means evaluating it with its parent core as the subject. </p><p>When you use <code>|-</code> in the decrement program, you&#39;re defining a <i>new</i> core whose arm name is <code>$</code>, in addition to the one created by <code>|=</code>. So the subject ends up having two arms named <code>$</code> in it: one for the gate defined by <code>|=</code>, and one for the core defined by <code>|-</code>. </p><p>When <code>$( )</code> or <code>%= $</code> is executed, the subject is searched for the <code>$</code> arm. The <code>|-</code> <code>$</code> arm is found first because it was defined later than the <code>|=</code> arm. You can skip the first name match for <code>$</code> by using <code>^</code>, if you like. That is, if you like, you can recurse all the way to the beginning of the function using <code>^$( )</code> or <code>%= ^$</code>. </p><h3 id="exercises-">Exercises </h3><p>You should know enough at this point to write some basic Hoon programs. Practice with some of these exercises. Solutions are provided at the bottom of the page. </p><h4 id="exercise-2-3-1--subtraction-">Exercise 2.3.1: Subtraction </h4><p>Write a program that takes two numbers and returns the difference. You may use <code>dec</code>, but don&#39;t use anything else from the Hoon standard library. </p><h4 id="exercise-2-3-2--factorial-">Exercise 2.3.2: Factorial </h4><p>Write a program that takes a number <code>n</code> and returns the factorial of <code>n</code>, <code>n!</code>. <code>1!</code> is <code>1</code>, <code>2!</code> is <code>2 x 1</code>, <code>3!</code> is <code>3 x 2 x 1</code>, <code>4!</code> is <code>4 x 3 x 2 x 1</code>, and so on. You may use the Hoon standard library. </p><h4 id="exercise-2-3-3--prime-number-checker-">Exercise 2.3.3: Prime Number Checker </h4><p>Write a program that takes a number <code>n</code> and returns <code>%.y</code> if it&#39;s prime, and <code>%.n</code> if it isn&#39;t. You may use the Hoon standard library. </p><h2 id="fizzbuzz-">Fizzbuzz </h2><p>Let&#39;s write a Hoon implementation of <a href="https://en.wikipedia.org/wiki/Fizz_buzz">FizzBuzz</a>. Fizzbuzz takes some number <code>n</code> and then makes a list of numbers from <code>1</code> to <code>n</code>, except that numbers evenly divisible by <code>3</code> are replaced with &#39;Fizz&#39;, numbers evenly divisible by <code>5</code> are replaced with &#39;Buzz&#39;, and numbers evenly divisible by both are replaced with &#39;FizzBuzz&#39;. </p><p>You already saw a program that produces a list of atoms from <code>1</code> to <code>n</code> in <a href="../hoon-programs">lesson 2.1</a>, <code>listnum.hoon</code>: </p><pre>|=  end=@                                               ::  1
+=/  count=@  1                                          ::  2
+|-                                                      ::  3
+^-  (list @)                                            ::  4
+?:  =(end count)                                        ::  5
+  ~                                                     ::  6
+:-  count                                               ::  7
+$(count (add 1 count))                                  ::  8
+</pre><p>The difference for FizzBuzz is that certain items of the product list must be replaced with strings: <code>&quot;Fizz&quot;</code>, <code>&quot;Buzz&quot;</code>, and <code>&quot;FizzBuzz&quot;</code>. </p><p>Below is our implementation of FizzBuzz. Each line is commented with a number for convenient line reference: </p><pre>|=  end=@                                               ::  1
+=/  count=@  1                                          ::  2
+|-                                                      ::  3
+^-  (list tape)                                         ::  4
+?:  =(end count)                                        ::  5
+  ~                                                     ::  6
+:-                                                      ::  7
+  ?:  =(0 (mod count 15))                               ::  8
+    &quot;FizzBuzz&quot;                                          ::  9
+  ?:  =(0 (mod count 3))                                ::  10
+    &quot;Fizz&quot;                                              ::  11
+  ?:  =(0 (mod count 5))                                ::  12
+    &quot;Buzz&quot;                                              ::  13
+  &lt;count&gt;                                               ::  14
+$(count (add 1 count))                                  ::  15
+</pre><p>Save this as &#39;fizzbuzz.hoon&#39; in <code>/home/gen</code> of your urbit&#39;s pier. To run it enter <code>+fizzbuzz 25</code> in the dojo: </p><pre>&gt; +fizzbuzz 25
+&lt;&lt;
+  &quot;1&quot;
+  &quot;2&quot;
+  &quot;Fizz&quot;
+  &quot;4&quot;
+  &quot;Buzz&quot;
+  &quot;Fizz&quot;
+  &quot;7&quot;
+  &quot;8&quot;
+  &quot;Fizz&quot;
+  &quot;Buzz&quot;
+  &quot;11&quot;
+  &quot;Fizz&quot;
+  &quot;13&quot;
+  &quot;14&quot;
+  &quot;FizzBuzz&quot;
+  &quot;16&quot;
+  &quot;17&quot;
+  &quot;Fizz&quot;
+  &quot;19&quot;
+  &quot;Buzz&quot;
+  &quot;Fizz&quot;
+  &quot;22&quot;
+  &quot;23&quot;
+  &quot;Fizz&quot;
+&gt;&gt;
+</pre><h3 id="explaining-fizzbuzz-">Explaining Fizzbuzz </h3><pre>|=  end=@                                               ::  1
+=/  count=@  1                                          ::  2
+|-                                                      ::  3
+^-  (list tape)                                         ::  4
+</pre><p>This gate takes an atom, <code>end</code>, for its sample. The initial value of <code>count</code>, an atom, is <code>1</code>. Line <code>3</code> uses <code>|-</code> for a recursion (or loop) starting point, so that <code>count</code> is only set to <code>1</code> once. </p><p>The gate output is cast to <code>(list tape)</code>, i.e., to a list of <code>tape</code>s. A <code>tape</code> is one of Hoon&#39;s two string types and is pretty-printed as a string in double quotes. </p><pre>&gt; &quot;This is a tape.&quot;
+&quot;This is a tape.&quot;
+
+&gt; &quot;So is this!&quot;
+&quot;So is this!&quot;
+</pre><p>Moving on: </p><pre>?:  =(end count)                                        ::  5
+  ~                                                     ::  6
+</pre><p>If <code>end</code> and <code>count</code> are the same value, then the list is finished. The null character, <code>~</code>, is returned. (Reminder: Hoon lists are null-terminated.) </p><p>Otherwise... </p><pre>:-                                                      ::  7
+  ?:  =(0 (mod count 15))                               ::  8
+    &quot;FizzBuzz&quot;                                          ::  9
+  ?:  =(0 (mod count 3))                                ::  10
+    &quot;Fizz&quot;                                              ::  11
+  ?:  =(0 (mod count 5))                                ::  12
+    &quot;Buzz&quot;                                              ::  13
+  &lt;count&gt;                                               ::  14
+$(count (add 1 count))                                  ::  15
+</pre><p>If not, line 7 uses the rune <code>:-</code> to produce a cell. This cell is the FizzBuzz list, in which the head is the first list item and the tail is the rest of the list, itself another list. </p><p>The head of this cell is produced by lines 8-14, and the tail by line 15. </p><p>For value of the head there are two possibilities . First, the value is “FizzBuzz”, or “Fizz”, or “Buzz”, if any of the respective conditional tests hit. For example, if <code>=(0 (mod count 15))</code> is true -- i.e., if <code>count</code> is evenly divisible by 15 -- then the value returned is “FizzBuzz”. Second, if none of the three test conditions is true, then the value is the number in question, <code>count</code>. In the latter case, line 14 uses the <code>&lt; &gt;</code> syntax to convert <code>count</code> from an <code>@</code> to a <code>tape</code>. Remember that the cast is for a list of <code>tape</code>s, so each list item must be a <code>tape</code>. </p><p>For the value of the cell&#39;s tail: the rest of the output list is produced by line 15. This line uses <code>$( )</code> to loop back to the <code>|-</code> in line 3, but only after modifying the value of <code>count</code>: <code>count</code> is increased in value by <code>1</code>. </p><p>The product of the <code>$( )</code> call on line 15 is another list. Either the modified <code>count</code> equals <code>end</code>, in which case the null list, <code>~</code>, is returned on line 6; or a new cell is produced in which case the head is an item determined by lines 7-14 and the tail is determined by line 15. The process repeats until <code>count</code> equals <code>end</code>. </p><h2 id="exercise-answers-">Exercise Answers </h2><p>There are many possible solutions so yours may look a bit different from the ones we have below. These solutions aren&#39;t optimized for performance. Instead, clarity and simplicity have been prioritized. </p><h4 id="exercise-2-3-1-solution--subtraction-">Exercise 2.3.1 Solution: Subtraction </h4><pre>|=  [x=@ y=@]
+^-  @
+?:  =(y 0)
+  x
+$(x (dec x), y (dec y))
+</pre><h4 id="exercise-2-3-2-solution--factorial-">Exercise 2.3.2 Solution: Factorial </h4><pre>|=  n=@
+^-  @
+?:  (lte n 1)
+  1
+(mul n $(n (dec n)))
+</pre><h4 id="exercise-2-3-3-solution--prime-">Exercise 2.3.3 Solution: Prime </h4><pre>|=  a=@
+?:  (lth a 2)  |
+?:  =(a 2)  &amp;
+=/  c  2
+|-  ^-  ?
+?:  =(0 (mod a c))  |
+?:  (gth (mul c 2) a)  &amp;
+$(c +(c))
+</pre><h3 id="next-lesson--atoms--auras--and-simple-cell-types-"><a href="../atoms-auras-and-simple-cell-types">Next Lesson: Atoms, Auras, and Simple Cell Types</a> </h3></div></div></div></div></div><footer class="mb-36"><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script><script src="/js/main.js"></script></footer></body></html></body></html>

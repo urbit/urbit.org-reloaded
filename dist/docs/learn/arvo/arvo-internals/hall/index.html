@@ -1,0 +1,708 @@
+<html><head></head><meta charset="utf-8" /><body><html><head><meta charset="UTF-8" /><title>Urbit / Docs</title><meta name="viewport" content="width=device-width , initial-scale=1" /><link href="/tilde.ico" rel="icon" /><link href="/css/base.css" rel="stylesheet" /><link href="/css/lists.css" rel="stylesheet" /><link href="/css/visibility.css" rel="stylesheet" /><link href="/css/borders.css" rel="stylesheet" /><link href="/css/colors.css" rel="stylesheet" /><link href="/css/inputs.css" rel="stylesheet" /><link href="/css/typography.css" rel="stylesheet" /><link href="/css/menu.css" rel="stylesheet" /><link href="/css/images.css" rel="stylesheet" /><link href="/css/flex.css" rel="stylesheet" /><script src="https://www.googletagmanager.com/gtag/js?id=UA-47054188-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-47054188-1');</script></head><body><nav class="bg-black pb-36 menu-hide overflow-y"><div class="container"><div class="row pt-10 mb-3"><div class="col-sm-1 menu-toggle"><img class="w-8 h-8" src="/assets/menu-close.svg" /></div><div class="col-sm-9 col-md-8 col-lg-4 col-sm-offset-2 col-md-offset-1 white"><div class="mb-6"><a href="/primer"><h1>Primer</h1></a><p> </p></div><div class="mb-6"><a href="/posts"><h1>Posts</h1></a><p> </p></div><div class="mb-6"><a href="/docs"><h1>Docs</h1></a><p> </p></div></div></div></div><footer class="container mb-36 white"><div class="row"><div class="col-sm-6 col-sm-offset-3 col-md-offset-2"><div><div class="mb-6"><h4 class="mb-1">Follow</h4><div><a class="text-mono" href="https://twitter.com/@urbit" target="_blank">twitter.com/@urbit</a></div><div><a class="text-mono" href="https://github.com/urbit" target="_blank">github.com/@urbit</a></div></div><div class="mb-6"><h4 class="mb-1">Contact</h4><div class="text-mono text-400">~zod</div><div><a class="text-mono" href="mailto:support@urbit.org">support@urbit.org</a></div></div><div class="mb-6"><h4 class="mb-1">Company</h4><div><a href="/privacy">Privacy Policy</a></div><div><a href="/tos">Terms of Service</a></div><div class="text-400"><a href="/bounty">Bug Bounty + Security</a></div></div></div></div></div></footer></nav><div id="sidebar-mobile" class="bg-gray-light sidebar-hide overflow-y"><div class="container"><div class="col-sm-10"><ol class="list-reset h-font mt-6"><li class="mb-4"><a class="h-font text-600" href="/docs/introduction">Introduction</a><ol><li><a class="h-font" href="/docs/introduction/technical-overview">Technical overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/source-code-overview">Source Code Overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/contributing">Contributing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/arvo-vs-azimuth">Arvo vs. Azimuth</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/community-tutorials">Community Tutorials</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/galaxies-stars-and-planets">Galaxies, Stars, and Planets</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/getting-started">Getting Started</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/getting-started/azimuth">Using Bridge</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/installing-urbit">Installing Urbit</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/booting-a-ship">Booting a Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/creating-a-development-ship">Creating a Development Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/operating-a-star">Operating a Star</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/learn">Learn</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo">Arvo</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals">Arvo Internals</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ames">Ames</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/behn">Behn</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/admin">Admin and Operations</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/clay">Clay</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/dill">Dill</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/layout">Source layout</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/sail">Sail</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/messaging">Messaging</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/udon">Udon</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/eyre">Eyre</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/gall">Gall Apps</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/shell">Shell (Dojo)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ford">Ford</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/hall">Hall</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/filesystem">Introduction to the Filesystem</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/publishing">Web (Eyre)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/generators">Generators</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/hoon">Hoon</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/hoon/getting-started">Getting Started</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/nouns">Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/the-subject-and-its-legs">The Subject and Its Legs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/arms-and-cores">Arms and Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/gates">Gates (Hoon Functions)</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/multi-gate-cores-and-doors">Multi-gate Cores and Doors</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-programs">Hoon Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-syntax">Hoon Syntax</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/simple-one-gate-programs">Simple One-Gate Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/atoms-auras-and-simple-cell-types">Atoms, Auras, and Simple Cell Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-checking-and-type-inference">Type Checking and Type Inference</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/structures-and-complex-types">Structures and Complex Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores">Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores-again">Cores Again</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/lists">Standard Library: Lists</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/trees-sets-and-maps">Standard Library: Trees, Sets, and Maps</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-polymorphism">Type Polymorphism</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/examples">Examples</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/nock">Nock</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/nock/definition">Nock Definition</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/explanation">Explanation</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/example">Example</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/implementations">Implementations</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/vere">Vere</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/vere/runtime">C Runtime System</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/c">C in Urbit</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/nouns">Land of Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/api">API overview by prefix</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/jetting">Writing Jets</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/style">Hoon Style Guide</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/arvo/workbook">Hoon Workbook</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/workbook/list">List of Numbers</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/caesar">Caesar Cipher</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/recursion">Recursion</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/digits">Digits</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/eightball">Magic 8-Ball</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/traffic-light">Traffic Light</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/bomb">Bomb Defusing</a></li></ol></li></ol></li><li><a class="h-font" href="/docs/learn/azimuth">Azimuth</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/azimuth/blockchain">Why Urbit Uses a Blockchain</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/azimuth/wallet">The Urbit HD Wallet</a><ol class="list-reset h-font"></ol></li></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/reference">Reference</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions">Hoon Expressions</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune">Runes</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/constants">Atoms and strings</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/dot">Nock . (&quot;dot&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/zap">Wild ! (&quot;zap&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/tis">Change Subject = (&quot;tis&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/wut">Conditionals ? (&quot;wut&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bar">Cores | (&quot;bar&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/lus">Arms + (&quot;lus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/col">Cells : (&quot;col&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/cen">Calls % (&quot;cen&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/ket">Casts ^ (&quot;ket&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bus">Structures $ (&quot;bus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/mic">Make ; (&quot;mic&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/sig">Hints ~ (&quot;sig&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/terminators">Terminators -- and ==</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb">Limbs and Wings</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/limb">Limbs</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/wing">Wings</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/basic">Basic Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/advanced">Advanced Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/irregular">Irregular forms</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/library">Standard library</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/library/1a">1a: Basic Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1b">1b: Tree Addressing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1c">1c: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2a">2a: Unit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2b">2b: List Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2c">2c: Bit Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2d">2d: Bit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2e">2e: Insecure Hashing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2f">2f: Noun Ordering</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2g">2g: Unsigned Powers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2h">2h: Set Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2i">2i: Map Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2j">2j: Jar and Jug Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2k">2k: Queue Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2l">2l: Container from Container</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2m">2m: Container from Noun</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2n">2n: Functional Hacks</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2o">2o: Normalizing Containers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2p">2p: Serialization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2q">2q: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3a">3a: Modular and Signed Ints</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3b">3b: Floating Point</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3c">3c: Urbit Time</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3d">3d: SHA Hash Family</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3e">3e: (Removed)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3f">3f: Scrambling</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3g">3g: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4a">4a: Exotic Bases</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4b">4b: Text Processing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4c">4c: Tank Printer</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4d">4d: Parsing (Tracing)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4e">4e: Parsing (Combinators)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4f">4f: Parsing (Rule-Builders)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4g">4g: Parsing (Outside Caller)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4h">4h: Parsing (ASCII Glyphs)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4i">4i: Parsing (Useful Idioms)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4j">4j: Parsing (Bases and Base Digits)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4k">4k: Atom Printing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4l">4l: Atom Parsing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4m">4m: Formatting Functions</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4n">4n: Virtualization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4o">4o: Molds</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5a">5a: Compiler Utilities</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5b">5b: Macro Expansion</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5c">5c: Compiler Backend &amp; Prettyprinter</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5d">5d: Parser</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5e">5e: Caching Compiler</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5f">5f: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5g">5g: profiling support</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/zuse">Zuse</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/glossary">Glossary</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/cheat-sheet">Cheat sheet</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/troubleshooting">Hoon Errors</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/alphabetical-arms">Alphabetical Arms</a><ol class="list-reset h-font"></ol></li></ol></li></ol></div><div class="col-sm-1 sidebar-toggle fixed" style="top: 20px; right: 1em"><img class="w-8 h-8 dropdown-right" src="/assets/dropdown.svg" /></div></div></div><div class="container mt-10"><div class="sidebar-container row col-sm-3 fixed pb-30 h-100-md"><div class="col-sm-3 col-lg-6 menu-toggle"><img class="w-8 h-8" src="/assets/menu-open.svg" /></div><div class="col-sm-12 mt-7 sidebar-toggle md-hide"><img class="w-8 h-8 dropdown-left" src="/assets/dropdown.svg" /></div><div class="h-100 col-sm-8 col-md-11 overflow-y sm-hide"><ol class="list-reset h-font mt-6"><li class="mb-4"><a class="h-font text-600" href="/docs/introduction">Introduction</a><ol><li><a class="h-font" href="/docs/introduction/technical-overview">Technical overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/source-code-overview">Source Code Overview</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/contributing">Contributing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/arvo-vs-azimuth">Arvo vs. Azimuth</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/community-tutorials">Community Tutorials</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/introduction/galaxies-stars-and-planets">Galaxies, Stars, and Planets</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/getting-started">Getting Started</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/getting-started/azimuth">Using Bridge</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/installing-urbit">Installing Urbit</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/booting-a-ship">Booting a Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/creating-a-development-ship">Creating a Development Ship</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/getting-started/operating-a-star">Operating a Star</a><ol class="list-reset h-font"></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/learn">Learn</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo">Arvo</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals">Arvo Internals</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ames">Ames</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/behn">Behn</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/admin">Admin and Operations</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/clay">Clay</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/dill">Dill</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/layout">Source layout</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/sail">Sail</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/messaging">Messaging</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/udon">Udon</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/eyre">Eyre</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/gall">Gall Apps</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/shell">Shell (Dojo)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/ford">Ford</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/hall">Hall</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/filesystem">Introduction to the Filesystem</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/publishing">Web (Eyre)</a></li><li><a class="h-font" href="/docs/learn/arvo/arvo-internals/generators">Generators</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/hoon">Hoon</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/hoon/getting-started">Getting Started</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/nouns">Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/the-subject-and-its-legs">The Subject and Its Legs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/arms-and-cores">Arms and Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/gates">Gates (Hoon Functions)</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/multi-gate-cores-and-doors">Multi-gate Cores and Doors</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-programs">Hoon Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/hoon-syntax">Hoon Syntax</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/simple-one-gate-programs">Simple One-Gate Programs</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/atoms-auras-and-simple-cell-types">Atoms, Auras, and Simple Cell Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-checking-and-type-inference">Type Checking and Type Inference</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/structures-and-complex-types">Structures and Complex Types</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores">Cores</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/cores-again">Cores Again</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/lists">Standard Library: Lists</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/trees-sets-and-maps">Standard Library: Trees, Sets, and Maps</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/type-polymorphism">Type Polymorphism</a></li><li><a class="h-font" href="/docs/learn/arvo/hoon/examples">Examples</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/nock">Nock</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/nock/definition">Nock Definition</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/explanation">Explanation</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/example">Example</a></li><li><a class="h-font" href="/docs/learn/arvo/nock/implementations">Implementations</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/vere">Vere</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/vere/runtime">C Runtime System</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/c">C in Urbit</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/nouns">Land of Nouns</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/api">API overview by prefix</a></li><li><a class="h-font" href="/docs/learn/arvo/vere/jetting">Writing Jets</a></li></ol></li><li><a class="h-font" href="/docs/learn/arvo/style">Hoon Style Guide</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/arvo/workbook">Hoon Workbook</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/arvo/workbook/list">List of Numbers</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/caesar">Caesar Cipher</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/recursion">Recursion</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/digits">Digits</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/eightball">Magic 8-Ball</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/traffic-light">Traffic Light</a></li><li><a class="h-font" href="/docs/learn/arvo/workbook/bomb">Bomb Defusing</a></li></ol></li></ol></li><li><a class="h-font" href="/docs/learn/azimuth">Azimuth</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/learn/azimuth/blockchain">Why Urbit Uses a Blockchain</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/learn/azimuth/wallet">The Urbit HD Wallet</a><ol class="list-reset h-font"></ol></li></ol></li></ol></li><li class="mb-4"><a class="h-font text-600" href="/docs/reference">Reference</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions">Hoon Expressions</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune">Runes</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/constants">Atoms and strings</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/dot">Nock . (&quot;dot&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/zap">Wild ! (&quot;zap&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/tis">Change Subject = (&quot;tis&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/wut">Conditionals ? (&quot;wut&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bar">Cores | (&quot;bar&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/lus">Arms + (&quot;lus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/col">Cells : (&quot;col&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/cen">Calls % (&quot;cen&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/ket">Casts ^ (&quot;ket&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/bus">Structures $ (&quot;bus&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/mic">Make ; (&quot;mic&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/sig">Hints ~ (&quot;sig&quot;)</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/rune/terminators">Terminators -- and ==</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb">Limbs and Wings</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/limb">Limbs</a></li><li><a class="h-font" href="/docs/reference/hoon-expressions/limb/wing">Wings</a></li></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/basic">Basic Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/advanced">Advanced Types</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/hoon-expressions/irregular">Irregular forms</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/library">Standard library</a><ol class="list-reset h-font"><li><a class="h-font" href="/docs/reference/library/1a">1a: Basic Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1b">1b: Tree Addressing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/1c">1c: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2a">2a: Unit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2b">2b: List Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2c">2c: Bit Arithmetic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2d">2d: Bit Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2e">2e: Insecure Hashing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2f">2f: Noun Ordering</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2g">2g: Unsigned Powers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2h">2h: Set Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2i">2i: Map Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2j">2j: Jar and Jug Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2k">2k: Queue Logic</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2l">2l: Container from Container</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2m">2m: Container from Noun</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2n">2n: Functional Hacks</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2o">2o: Normalizing Containers</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2p">2p: Serialization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/2q">2q: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3a">3a: Modular and Signed Ints</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3b">3b: Floating Point</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3c">3c: Urbit Time</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3d">3d: SHA Hash Family</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3e">3e: (Removed)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3f">3f: Scrambling</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/3g">3g: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4a">4a: Exotic Bases</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4b">4b: Text Processing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4c">4c: Tank Printer</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4d">4d: Parsing (Tracing)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4e">4e: Parsing (Combinators)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4f">4f: Parsing (Rule-Builders)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4g">4g: Parsing (Outside Caller)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4h">4h: Parsing (ASCII Glyphs)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4i">4i: Parsing (Useful Idioms)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4j">4j: Parsing (Bases and Base Digits)</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4k">4k: Atom Printing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4l">4l: Atom Parsing</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4m">4m: Formatting Functions</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4n">4n: Virtualization</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/4o">4o: Molds</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5a">5a: Compiler Utilities</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5b">5b: Macro Expansion</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5c">5c: Compiler Backend &amp; Prettyprinter</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5d">5d: Parser</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5e">5e: Caching Compiler</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5f">5f: Molds and Mold-Builders</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/5g">5g: profiling support</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/library/zuse">Zuse</a><ol class="list-reset h-font"></ol></li></ol></li><li><a class="h-font" href="/docs/reference/glossary">Glossary</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/cheat-sheet">Cheat sheet</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/troubleshooting">Hoon Errors</a><ol class="list-reset h-font"></ol></li><li><a class="h-font" href="/docs/reference/alphabetical-arms">Alphabetical Arms</a><ol class="list-reset h-font"></ol></li></ol></li></ol></div></div><div class="row pb-80"><div class="col-sm-9 col-md-8 col-sm-offset-2 col-md-offset-3 docs"><div><div><h1 id="hall-">Hall </h1><blockquote><p>Last major revision of this tutorial: 2017. Some of the information and Hoon syntax here may be outdated. </p></blockquote><p>Hall is the Urbit messaging and notifications protocol. This document details Hall&#39;s architecture, its interfaces, and the new Gall model it&#39;s built to target. </p><h2 id="table-of-contents-">Table of contents </h2><ul><li><h4 id="hall-architecture-"><a href="#architecture">Hall Architecture</a> </h4></li><li><h4 id="the-hall-interface-"><a href="#interface">The Hall Interface</a> </h4></li><li><h4 id="the-new-gall-model-"><a href="#new-gall">The New Gall Model</a> </h4></li></ul><h1><div id="architecture">Hall Architecture</div></h1><p>This document is complemented by Hall&#39;s source code, but doesn&#39;t require it. Definitions of data structures, code snippets and diagrams will be provided where useful. </p><p>Hall&#39;s implementation is structured according to the new Gall model. Familiarity with its concepts is assumed. See <a href="#new-gall">the new Gall model</a>. </p><h2 id="talk-">Talk </h2><p>Talk was Urbit&#39;s first big user-facing application. It continues to enjoy a prominent role in the Urbit landscape, but now does so as two separate applications. </p><p>The messaging parts of Talk have been separated from its user-interface parts. What we ended up with is a shiny new generic messaging bus, and the chat interface we all know and love. The messaging bus, which should now prove useful to many different applications, will be named <code>Hall</code>. Applications that use it are referred to as <b>clients</b>. One such application, as you might have guessed, is <code>:talk</code>. </p><h2 id="structures---functionality-">Structures &amp; functionality </h2><h3 id="circles-">Circles </h3><pre>++  circle     {hos/ship nom/term}                      ::  native target
+</pre><p>A <code>circle</code> is essentially a named collection of messages created by and hosted on a ship&#39;s Hall, usually represented as <code>~ship-name/circle-name</code>. Most of Hall revolves around doing things with circles. </p><h3 id="messages-">Messages </h3><p>When we subscribe to a circle, the primary thing we&#39;re interested in is its messages. Message data itself isn&#39;t that complicated, but a fair amount of metadata comes into play when actually sending a message. Let&#39;s work our way up, starting at the contents. </p><pre>++  speech                                              :&gt;  content body
+  $%  {$lin pat/? msg/cord}                             :&lt;  no/@ text line
+      {$url url/purf:eyre}                              :&lt;  parsed url
+      {$exp exp/cord res/(list tank)}                   :&lt;  hoon line
+      {$ire top/serial sep/speech}                      :&lt;  in reply to
+      {$fat tac/attache sep/speech}                     :&lt;  attachment
+      {$app app/term sep/speech}                        :&lt;  app message
+      {$inv inv/? cir/circle}                           :&lt;  inv/ban for circle
+  ==                                                    ::
+</pre><p>At the heart of every message lies a <code>speech</code> that describes the message body. There&#39;s a large number of different speech types, from simple text messages to parsed URLs, Hoon expressions and more. </p><pre>++  audience   (set circle)                             :&lt;  destinations
+++  serial     @uvH                                     :&lt;  unique identifier
+++  thought                                             :&gt;  inner message
+  $:  uid/serial                                        :&lt;  unique identifier
+      aud/audience                                      :&lt;  destinations
+      wen/@da                                           :&lt;  timestamp
+      sep/speech                                        :&lt;  content
+  ==                                                    ::
+</pre><p>A <code>speech</code> is always accompanied by various bits of metadata. We include a unique identifier, a message timestamp and an <code>audience</code>, the set of all intended recipients of the message. </p><pre>++  telegram   {aut/ship thought}                       :&lt;  whose message
+++  envelope   {num/@ud gam/telegram}                   :&lt;  outward message
+</pre><p>Finally, before sending the message over the wire, we add on the message&#39;s original author. In most cases, we also include a sequence number, the index of the message in the originating circle&#39;s list of messages. This can be a useful point of reference for clients. </p><h3 id="participant-metadata-">Participant metadata </h3><p>Messages aren&#39;t the only thing a subscription gets us. We&#39;re also kept up to date with relevant metadata. </p><pre>++  crowd      {loc/group rem/(map partner group)}      :&lt;  our &amp; srcs presences
+++  group      (map ship status)                        :&lt;  presence map
+++  status     {pec/presence man/human}                 :&lt;  participant
+++  presence                                            :&gt;  status type
+  $?  $gone                                             :&lt;  absent
+      $idle                                             :&lt;  idle
+      $hear                                             :&lt;  present
+      $talk                                             :&lt;  typing
+  ==                                                    ::
+++  human                                               :&gt;  human identifier
+  $:  han/(unit cord)                                   :&lt;  handle
+      tru/(unit truename)                               :&lt;  true name
+  ==                                                    ::
+++  truename   {fir/cord mid/(unit cord) las/cord}      :&lt;  real-life name
+</pre><p><code>status</code> is user-set metadata that describes, well, the status of users in a circle. This encompasses their <code>presence</code>, which shows their activity, and their <code>human</code> identity, which includes their display handle. </p><p>For reasons we&#39;ll discover shortly, circles keep track of both their own <code>group</code> and those of the circles they&#39;re subscribed to. <code>crowd</code> encapsulates this. </p><h3 id="configurations-">Configurations </h3><pre>++  lobby      {loc/config rem/(map circle config)}     :&lt;  our &amp; srcs configs
+++  config                                              :&gt;  circle config
+  $:  src/(set circle)                                  :&lt;  active sources
+      cap/cord                                          :&lt;  description
+      fit/filter                                        :&lt;  message rules
+      con/control                                       :&lt;  restrictions
+  ==                                                    ::
+++  filter                                              :&gt;  content filters
+  $:  cas/?                                             :&lt;  dis/allow capitals
+      utf/?                                             :&lt;  dis/allow non-ascii
+  ==                                                    ::
+++  control    {sec/security ses/(set ship)}            :&lt;  access control
+</pre><p>Another part of metadata we get from circle subscriptions is configurations. Again, circles want to remember their own configuration, as well as those of their subscriptions. But why, precisely? </p><p>The <code>config</code> structure contains <code>src</code>, a set of partners. These indicate the different sources a circle is currently pulling content from. This allows circles to aggregate messages from multiple places. In doing so, it also receives metadata from those places, hence why we have structures for storing “remote” presences and configurations alongside local ones. </p><p>Aside from that, <code>config</code> contains a description for the circle, which is exactly what it sounds like. It also specifies a <code>filter</code>, which are content formatting rules all messages passing through this circle are made to adhere to. </p><p>Lastly, there&#39;s a <code>control</code> structure that contains both a security mode and a list of ships, which is either a white- or blacklist depending on the aforementioned mode. There are four such modes available. </p><pre>++  security                                            :&gt;  security mode
+  $?  $channel                                          :&lt;  blacklist
+      $village                                          :&lt;  whitelist
+      $journal                                          :&lt;  pub r, whitelist w
+      $mailbox                                          :&lt;  our r, blacklist w
+  ==                                                    ::
+</pre><p>A <code>channel</code> is publicly readable and writable, with a blacklist for blocking. A <code>village</code> is privately readable and writable, with a whitelist for inviting. A <code>journal</code> is publicly readable and privately writable, with a whitelist for authors. A <code>mailbox</code> is readable by its owner and publicly writable, with a blacklist for blocking. </p><h3 id="stories-">Stories </h3><p>To see how that all ties together, we&#39;re going to take a look at Hall&#39;s state. </p><pre>++  state                                               :&gt;  hall state
+  $:  stories/(map term story)                          :&lt;  conversations
+      ::  ...                                           ::
+  ==                                                    ::
+++  story                                               :&gt;  wire content
+  $:  grams/(list telegram)                             :&lt;  all messages
+      locals/group                                      :&lt;  local presence
+      remotes/(map circle group)                        :&lt;  remote presence
+      shape/config                                      :&lt;  configuration
+      mirrors/(map circle config)                       :&lt;  remote config
+      ::  ...                                           ::
+  ==                                                    ::
+</pre><p>Stories are the primary driver behind Hall. They are the structures that are used to power circles, which we can now say are named stories hosted on ships. </p><p>With the configuration described above in mind, we can try and imagine the things we can do with stories. Knowing that we can subscribe them to any number of sources, they can function as central hubs for our messaging, aggregate specific kinds of data feeds, or simply accept whatever messages get sent to it like a regular old chatroom. </p><h3 id="general-use-">General use </h3><p>Upon initial startup, Hall creates a default story, a mailbox named <code>inbox</code>. This mailbox is the primary target for anyone and anything that wants to reach its owner. Applications can use it to send notifications and other information to the user (Hall itself does this as well), and users can use it to send direct messages to each other. </p><p>Applications that use Hall, especially clients, are encouraged to use the default mailbox as the primary messaging hub. This way, users can easily switch between different applications without “losing” their subscriptions, message backlog, etc. </p><p>As an example, Talk operates like this, serving as an interface for reading from and managing the user&#39;s mailbox. Local stories are subscribed to through the <code>inbox</code>, which ends up containing all messages the user receives. </p><h3 id="federation-">Federation </h3><p>Some places, like <code>urbit-help</code>, will want to be easily accessible to everyone on the network, and actually support the load that comes with that. Both of these desires can be achieved through federation. </p><p>With federation, stories and any changes to them trickle down from ~zod, to other galaxies, to their stars. Only changes to messages and presence can also move upstream, from stars, to galaxies, to <code>~zod</code> (and then back down again). </p><p>This way, all planets and comets will be able to subscribe to <code>/urbit-help</code> (that is, the <code>urbit-help</code> circle on their parent ship) and get all updates on the story, regardless of where on the network they originated. </p><h3 id="public-membership-">Public membership </h3><p>To aid in discoverability of circles, it is possible for users to make their participation in any given circle public. This data can then be used by things like profile widgets, or read out directly by other users. </p><h2 id="interfaces-for-applications-">Interfaces for applications </h2><p>Applications can interact with Hall in two complementary ways: they can tell it what actions to perform, and they can subscribe to its state and the changes made to it. </p><h3 id="interactions-">Interactions </h3><p>Hall can be commanded by poking it with <code>action</code>s. </p><pre>++  action                                              :&gt;  user action
+  $%  ::  circle configuration                          ::
+      {$create nom/term des/cord sec/security}          :&lt;  create circle
+      {$delete nom/term why/(unit cord)}                :&lt;  delete + announce
+      {$depict nom/term des/cord}                       :&lt;  change description
+      {$filter nom/term fit/filter}                     :&lt;  change message rules
+      {$permit nom/term inv/? sis/(set ship)}           :&lt;  invite/banish
+      {$source nom/term sub/? srs/(set source)}         :&lt;  un/sub to/from src
+      ::  messaging                                     ::
+      {$convey tos/(list thought)}                      :&lt;  post exact
+      {$phrase aud/audience ses/(list speech)}          :&lt;  post easy
+      ::  personal metadata                             ::
+      {$notify aud/audience pes/(unit presence)}        :&lt;  our presence update
+      {$naming aud/audience man/human}                  :&lt;  our name update
+      ::  changing shared ui                            ::
+      {$glyph gyf/char aud/audience bin/?}              :&lt;  un/bind a glyph
+      {$nick who/ship nic/cord}                         :&lt;  new identity
+      ::  misc changes                                  ::
+      {$public add/? cir/circle}                        :&lt;  show/hide membership
+  ==                                                    ::
+</pre><p>The largest part of these actions concern themselves with managing local circles. <code>nom</code> is always the name used to identify the relevant story. To disambiguate between “add” and “delete” type actions (for permissions and subscriptions), a loob <code>?</code> is used. </p><p>To send messages, two interfaces are available. <code>%convey</code> lets you specify all details of the messages, including its timestamp, serial, and fully assembled audience. <code>%phrase</code>, on the other hand, takes care of that for you, allowing you to specify just the target partners and message contents. </p><p><code>%notify</code> and <code>%naming</code> are useful for setting your own presence and nickname in a circle respectively, so others can see if you&#39;re active and what to call you by. </p><p>“Shared UI” encompasses UI data that should be consistent across applications. For example, if the user sets a local nickname for an identity, they expect to see that nickname regardless of the application they&#39;re currently using. The same goes for glyph bindings, for easy audience targeting. </p><h3 id="queries--prizes-and-rumors-">Queries, prizes and rumors </h3><p>To receive data from Hall, applications will have to query it. There are two paths that are useful for clients to query. Let&#39;s look at them and their results. </p><pre>++  query                                               :&gt;  query paths
+  $%  {$client $~}                                      :&lt;  shared ui state
+      $:  $circle                                       :&gt;  story query
+          nom/naem                                      :&lt;  circle name
+          wat/(set circle-data)                         :&lt;  data to get
+          ran/range                                     :&lt;  query duration
+      ==                                                ::
+      ::  ...                                           ::
+  ==                                                    ::
+++  circle-data                                         :&gt;  kinds of circle data
+  $?  $grams                                            :&lt;  messages
+      $group-l                                          :&lt;  local presence
+      $group-r                                          :&lt;  remote presences
+      $config-l                                         :&lt;  local config
+      $config-r                                         :&lt;  remote configs
+  ==                                                    ::
+++  range                                               :&gt;  inclusive msg range
+  %-  unit                                              :&lt;  ~ means everything
+  $:  hed/place                                         :&lt;  start of range
+      tal/(unit place)                                  :&lt;  opt end of range
+  ==                                                    ::
+++  place                                               :&gt;  range indicators
+  $%  {$da @da}                                         :&lt;  date
+      {$ud @ud}                                         :&lt;  message number
+  ==                                                    ::
+++  prize                                               :&gt;  query result
+  $%  $:  $client                                       :&lt;  /client
+          gys/(jug char (set partner))                  :&lt;  glyph bindings
+          nis/(map ship cord)                           :&lt;  nicknames
+      ==                                                ::
+      {$circle burden}                                  :&lt;  /circle
+      ::  ...                                           ::
+  ==                                                    ::
+++  burden                                              :&lt;  full story state
+  $:  gaz/(list telegram)                               :&lt;  all messages
+      cos/lobby                                         :&lt;  loc &amp; rem configs
+      pes/crowd                                         :&lt;  loc &amp; rem presences
+  ==                                                    ::
+</pre><p>To be clear, the paths for those queries are <code>/client</code> and <code>/circle/[name]/[data]/[start]/[end]</code>, where data is at least one <code>circle-data</code>, and <code>start</code> and <code>end</code> are optional and can be either a date or a message number. </p><p><code>/client</code> queries produce shared UI state. That is, glyph bindings and nicknames. <code>/circle</code> queries produce the entire public state of the requested story, including remotes. </p><p>Any changes to the results of these queries are communicated via the following <code>rumor</code>s. It&#39;s a fairly long list of potential changes, </p><pre>++  rumor                                               :&lt;  query result change
+  $%  {$client rum/rumor-client}                        :&lt;  /client
+      {$circle rum/rumor-story}                         :&lt;  /circle
+      ::  ...                                           ::
+  ==                                                    ::
+++  rumor-client                                        :&lt;  changed ui state
+  $%  {$glyph diff-glyph}                               :&lt;  un/bound glyph
+      {$nick diff-nick}                                 :&lt;  changed nickname
+  ==                                                    ::
+++  diff-glyph  {bin/? gyf/char aud/audience}           :&lt;  un/bound glyph
+++  diff-nick   {who/ship nic/cord}                     :&lt;  changed nickname
+++  diff-story                                          :&gt;  story change
+  $%  {$new cof/config}                                 :&lt;  new story
+      {$config cir/circle dif/diff-config}              :&lt;  new/changed config
+      {$status cir/circle who/ship dif/diff-status}     :&lt;  new/changed status
+      {$remove $~}                                      :&lt;  removed story
+      ::  ...                                           ::
+  ==                                                    ::
+++  rumor-story                                         ::&gt;  story rumor
+  $?  diff-story                                        ::&lt;  both in &amp; outward
+  $%  {$gram nev/envelope}                              ::&lt;  new/changed msgs
+  ==  ==                                                ::
+++  diff-config                                         :&gt;  config change
+  $%  {$full cof/config}                                :&lt;  set w/o side-effects
+      {$source add/? src/source}                        :&lt;  add/rem sources
+      {$caption cap/cord}                               :&lt;  changed description
+      {$filter fit/filter}                              :&lt;  changed filter
+      {$secure sec/security}                            :&lt;  changed security
+      {$permit add/? sis/(set ship)}                    :&lt;  add/rem to b/w-list
+      {$remove $~}                                      :&lt;  removed config
+  ==                                                    ::
+++  diff-status                                         :&gt;  status change
+  $%  {$full sat/status}                                :&lt;  fully changed status
+      {$presence pec/presence}                          :&lt;  changed presence
+      {$human dif/diff-human}                           :&lt;  changed name
+      {$remove $~}                                      :&lt;  removed status
+  ==                                                    ::
+++  diff-human                                          :&gt;  name change
+  $%  {$full man/human}                                 :&lt;  fully changed name
+      {$handle han/(unit cord)}                         :&lt;  changed handle
+      {$true tru/(unit truename)}                       :&lt;  changed true name
+  ==                                                    ::
+</pre><p>These are, as enforced by Gall, the changes as they happen. This makes it possible for very minimal Hall clients to be implemented that only display a stream of changes, rather than keeping state themselves. </p><h2 id="communication-between-halls-">Communication between Halls </h2><p>Halls can communicate with other Halls by sending commands and subscription updates. </p><h3 id="commands-">Commands </h3><p>To request changes to a story, Halls can send <code>command</code>s. </p><pre>++  command                                             :&gt;  effect on story
+  $%  {$publish tos/(list thought)}                     :&lt;  deliver
+      {$present nos/(set term) dif/diff-status}         :&lt;  status update
+      ::  ...                                           ::
+  ==                                                    ::
+</pre><p>A <code>%publish</code> command contains messages. These are sent to foreign Halls to be published to their stories. </p><p>The <code>%present</code> command is used for sending status updates about our ship. </p><h3 id="querying-">Querying </h3><p>Halls can query other halls. Here&#39;s the peer move we send when we open a query on a foreign circle: </p><pre>:*  ost.bol                                             :&lt;  bone
+    %peer                                               :&lt;  move type
+    /[our-circle]/[host]/[query-path]                   :&lt;  rumor path
+    [host %hall]                                        :&lt;  query target
+    /circle/[their-circle]/[data]/[start]/[end]         :&lt;  query path
+==                                                      ::
+</pre><p>Again, the rumor path is what our Hall uses to identify what query a received message originates from. Our circle is specified so that we know what story is interested in the changes we get. </p><p>The query path is slightly more interesting. Of course it specifies the name of their story we want to subscribe our story to, but also a “start” and “end”. These can (optionally) be used to specify the range of messages we want to get from our query. Once that range has passed, we stop receiving updates. </p><h3 id="federation-implementation-">Federation implementation </h3><p>Along the way so far, we&#39;ve skipped some parts of structures. Most of those relate to federation. Let&#39;s see what we missed. </p><pre>++  query                                               :&gt;  query paths
+  $%  {$burden who/ship}                                :&lt;  duties to share
+      {$report $~}                                      :&lt;  duty reports
+      ::  ...                                           ::
+  ==                                                    ::
+++  prize                                               :&gt;  query result
+  $%  {$burden sos/(map term burden)}                   :&lt;  /burden
+      ::  ...                                           ::
+  ==                                                    ::
+++  rumor                                               :&lt;  query result change
+  $%  {$burden nom/term rum/rumor-story}                :&lt;  /burden
+      ::  ...                                           ::
+  ==                                                    ::
+++  diff-story                                          ::
+  $%  {$bear bur/burden}                                :&lt;  new inherited story
+      ::  ...                                           ::
+  ==                                                    ::
+++  burden                                              :&gt;  full story state
+  $:  gaz/(list telegram)                               :&lt;  all messages
+      cos/lobby                                         :&lt;  loc &amp; rem configs
+      pes/crowd                                         :&lt;  loc &amp; rem presences
+  ==                                                    ::
+</pre><p>We briefly touched upon how federation works on the higher level. On the lower, this is how things go down. </p><p>1. When Hall boots on a star or galaxy, it starts querying its parent&#39;s <code>/burden</code> path. (Galaxies query ~zod.) 2. Upon receiving that query, the parent sends a <code>%burden</code> prize containing all state of its channels (fully public circles) to the child. It also subscribes to <code>/report</code> on that child. 3. When a new story gets created on the parent, its children get a <code>%burden</code> rumor with a <code>%bear</code> story diff, and they create a local copy of that channel. 4. When something about a parent&#39;s story changes, a <code>%burden</code> rumor is sent to all its children (because they&#39;re querying <code>/burden</code>). The children apply this change to their local version of the story. 5. When a child&#39;s story has a <code>%grams</code> or <code>%status</code> change, a <code>%burden</code> rumor is sent to the parent (because they&#39;re querying <code>/report</code>). The parent applies this change to their local version of the story, and <code>4</code> happens. </p><h2 id="hall-implementation-">Hall implementation </h2><p>Now that we know what gets sent over the wire and why, let&#39;s see what happens whenever such events happen. We won&#39;t be covering everything, but enough to illustrate the general flow. </p><p>First though, it&#39;s useful to understand how Hall&#39;s code is structured. It consists of primary cores, designed to work optimally with Gall. </p><ul><li><p><code>++ta</code> is the transaction core. For every event that happens, be it a poke, peer or diff, the transaction core gets put to work to process it. Once it&#39;s done, it produces a list of deltas that describe how our state needs to be modified. </p></li><li><p><code>++da</code> is the delta application core. It is used to apply <code>++ta</code>&#39;s deltas to our application state, and produce a list of side-effects. </p></li></ul><p>Both those cores also have a core within themselves dedicated solely to dealing with stories, <code>++so</code> and <code>++sa</code> respectively. </p><p>Once all work in an engine core has finished, its <code>-done</code> arm is called to produce the result of all the core&#39;s computation. </p><p>In the diagrams that follow, regular lines indicate flows that always happen. Dashed lines indicate flows that are traversed if the described condition is met. Below the diagrams you will find brief explanations of the involved arms. In a particularly bright future, these might be available on-hover instead. For brevity, utility arms that aren&#39;t a direct and important part of the flow have been omitted. </p><p>(You will find that the origins still use old Gall arms, with some glue code in between. At the time of writing, new Gall has not yet been implemented, so this will have to do.) </p><p>We will only display the delta generation parts of the flow. Delta application is usually implemented simply enough to deduce what it does from looking at the label. </p><h3 id="subscriptions-">Subscriptions </h3><p>Hall-to-Hall subscriptions happen when a source gets added to a story. This is done with a <code>%source</code> action, and results in a <code>%peer</code> move being sent (prompted by a <code>%story %follow</code> delta). Upon receiving a valid peer on a <code>/circle</code> path, the subscribing ship is added to that circle&#39;s presence map. </p><p>!<a href="https://media.urbit.org/docs/hall/diagrams/flow-subscriptions.png">subscriptions implementation flow</a> </p><pre>++  poke-talk-action      :&lt;  we got poked with an action.
+  ++  ta-action           :&lt;  applies an action.
+  ++  ta-config           :&lt;  (re)configures a story.
+::                        ::
+++  peer                  :&lt;  we got peered.
+  ++  g-query             :&lt;  resolves query to prize.
+  ++  ta-subscribe        :&lt;  act upon subscription.
+  ++  so-attend           :&lt;  adds a ship&#39;s status to the story.
+</pre><h3 id="rumors-">Rumors </h3><p>Once a query has opened, Hall will receive updates on it, rumors. The changes describes in these rumors are applied via the following flow. </p><p>!<a href="https://media.urbit.org/docs/hall/diagrams/flow-rumors.png">rumor implementation flow</a> </p><pre>++  diff-talk-rumor       :&lt;  we got a query update.
+  ++  ta-hear             :&lt;  applies a rumor to the story it&#39;s intended for.
+  ++  so-hear             :&lt;  applies a %circle rumor to the story.
+    ++  so-config-full    :&lt;  splits a %full diff-config into separate changes.
+    ++  so-bear           :&lt;  accept burden, assimilate into the story&#39;s state.
+    ++  so-lesson         :&lt;  sends a report with presences.
+</pre><h3 id="messaging-">Messaging </h3><p>To send messages, the user sends a <code>%convey</code> or <code>%phrase</code> action, resulting in a <code>%publish</code> command being sent to the involved partners. Receiving a <code>%publish</code> command causes its messages to be added to the story through the creation of a <code>%story %grams</code> delta. </p><p>!<a href="https://media.urbit.org/docs/hall/diagrams/flow-messaging.png">messaging implementation flow</a> </p><pre>++  poke-talk-action      :&lt;  we got poked with an action.
+  ++  ta-action           :&lt;  applies an action.
+::                        ::
+++  poke-talk-command     :&lt;  we get poked with a command.
+  ++  ta-apply            :&lt;  applies a command.
+  ++  ta-think            :&lt;  consumes each message in the given list.
+  ++  ta-consume          :&lt;  conducts a message to each partner in audience.
+  ++  ta-conduct          :&lt;  records or sends a message.
+    ++  ta-transmit       :&lt;  sends a message to a partner.
+    ++  ta-record         :&lt;  stores a message in a story.
+    ++  so-learn          :&lt;  either adds or modifies a message.
+</pre><h2 id="the-future-">The future </h2><p>Hall is neither complete nor perfect. There are features that need to be implemented, varying from small quality of life changes to broad-reaching functionality. </p><h3 id="features-and-functionality-">Features and functionality </h3><p>To turn Talk into a <a href="https://urbit.org/fora/posts/~2017.4.26..18.00.25..b93c~/">sustainable social platform</a>, it needs a number of things. </p><p>We want to have some kind of discoverability for circles. This could be realized by making it possible for users to add friends, who would have their Hall subscribe to a list of circles the added friends are in. The existing public membership functionality can be leveraged for this. </p><p>Eventually, content self-moderation might need to be implemented. Users would flag their content if it is potentially offensive. Others would easily be able to filter out content that might offend them. This functionality brings its own large sets of challenges that need to be tackled. </p><p>Additionally, federation might be put to broader use. Knowing that a circle is federated could help fall back to alternative hosts in case the one Hall originally subscribed to is unavailable. Implementation-wise, care would need to be taken for this to not get ugly. Not to mention, when/how would availability of a host be verified? </p><p>Other changes that might have a fair impact on the functioning of Hall are un/read states for messages, and being able to use moons to allow your friends to chat with you in a local channel. </p><p>More minor functionalities that need to be implemented include: </p><ul><li><p>Extended permissions management. Being able to black-/whitelist entire ship classes. </p></li><li><p>Improved presence functionality. Actually using the presence system, and sending “typing”, “idle”, etc. statuses. </p></li><li><p>Polls. </p></li></ul><p>And, of course, there&#39;s a lot that the Talk client can improve on as well. </p><h2 id="further-reading-">Further reading </h2><p>To gain a more thorough understanding of Hall&#39;s inner workings, take a look at its source code. It comes with inline documentation. <a href="https://github.com/urbit/arvo/blob/master/app/hall.hoon">On Github.</a> </p><p>To see an expansive example of a Hall client, take a look at the code of Talk. It, too, comes with inline documentation. <a href="https://github.com/urbit/arvo/blob/master/app/talk.hoon">On Github.</a> </p><h1><div id="interface">The Hall Interface</div></h1><p>This document describes the different interfaces Hall provides and the data that is accessible and modifiable through them. Knowledge of the Urbit application model (including <a href="#new-gall">new gall</a>) and <a href="#architecture">Hall&#39;s architecture</a> is assumed. </p><p>While the structures here are given in Hoon, they match fairly closely to their JSON equivalent. Most important to note is that <code>$%({$x y/z})</code> becomes accessible as <code>json.x.y</code>. </p><h2 id="queries-">Queries </h2><p>Queries are the paths you pass into <code>%peer</code> moves. Internally, they get translated to a <code>++query</code> structure for easier handling. We&#39;ll be giving examples of valid query paths alongside the structures themselves. </p><h3 id="-client-">/client </h3><p>To be able to keep certain UI elements like glyphs and local nicknames consistent across different Hall clients, they can query Hall for the current UI state. </p><pre>++  query                                               ::
+  $%  {$client $~}                                      :&lt;  shared ui state
+      ::  ....                                          ::
+  ==                                                    ::
+</pre><p>Valid paths include: </p><pre>:&gt;  all shared ui state
+/client
+</pre><h4 id="-client-prize-">/client prize </h4><p>Contains a map of glyphs and the audiences that they map to, as well as a map of ships and their locally set nicknames. </p><pre>++  prize                                               :&gt;  query result
+  $%  {$client prize-client}                            :&lt;  /client
+      ::  ...                                           ::
+  ==                                                    ::
+++  prize-client                                        :&gt; shared ui state
+  $:  gys/(jug char audience)                           :&lt;  glyph bindings
+      nis/(map ship nick)                               :&lt;  local nicknames
+  ==                                                    ::
+</pre><h4 id="-client-rumor-">/client rumor </h4><p>Contains either a bound or unbound glyph and its target, or a ship with its new nickname. A nickname of <code>&#39;&#39;</code> means the associated ship no longer has a nickname set for it. </p><pre>++  rumor                                               :&gt;  query result change
+  $%  {$client rum/rumor-client}                        :&lt;  /client
+      ::  ...                                           ::
+  ==                                                    ::
+++  rumor-client                                        :&lt;  changed ui state
+  $%  {$glyph diff-glyph}                               :&lt;  un/bound glyph
+      {$nick diff-nick}                                 :&lt;  changed nickname
+  ==                                                    ::
+++  diff-glyph  {bin/? gyf/char aud/audience}           :&lt;  un/bound glyph
+++  diff-nick   {who/ship nic/nick}                     :&lt;  changed nickname
+</pre><h3 id="-public-">/public </h3><p>To aid in circle discoverability, users can add circles to their “public membership” list. This can then be queried for by, for example, a profile page. </p><pre>++  query                                               ::
+  $%  {$public $~}                                      :&lt;  public memberships
+      ::  ....                                          ::
+  ==                                                    ::
+</pre><p>Valid paths include: </p><pre>:&gt;  all public memberships
+/public
+</pre><h4 id="-public-prize-">/public prize </h4><p>Contains the set of circles the user has on their public list. </p><pre>++  prize                                               :&gt;  query result
+  $%  {$public cis/(set circle)}                        :&lt;  /public
+      ::  ...                                           ::
+  ==                                                    ::
+</pre><h4 id="-public-rumor-">/public rumor </h4><p>Contains a circle that was either added or removed from the public list. </p><pre>++  rumor                                               :&gt;  query result change
+  $%  {$public add/? cir/circle}                        :&lt;  /public
+      ::  ...                                           ::
+  ==                                                    ::
+</pre><h3 id="-peers-">/peers </h3><p>To allow a circle owner to inspect who is currently subscribed to their stories, they can issue a query to retrieve subscription data. </p><pre>++  query                                               ::
+  $%  {$peers nom/naem}                                 :&lt;  readers of story
+      ::  ....                                          ::
+  ==                                                    ::
+</pre><p>Query paths are structured as follows: </p><pre>/peers/[circle-name]
+</pre><p>Valid paths include: </p><pre>:&gt;  peers for circle %urbit-help
+/peers/urbit-help
+</pre><h4 id="-peers-prize-">/peers prize </h4><p>Contains a map of ships and the different queries they currently have active for the selected story. </p><pre>++  prize                                               :&gt;  query result
+  $%  {$peers pes/(jar ship query)}                     :&lt;  /peers
+      ::  ...                                           ::
+  ==                                                    ::
+</pre><h4 id="-peers-rumor-">/peers rumor </h4><p>Contains a ship and a query, and a flag to indicate whether that subscription has started or ended. </p><pre>++  rumor                                               :&gt;  query result change
+  $%  {$peers add/? who/ship qer/query}                 :&lt;  /peers
+      ::  ...                                           ::
+  ==                                                    ::
+</pre><h3 id="-circle-">/circle </h3><p>Circle queries allow for the retrieving of data from stories. Their messages, configuration, and presences can all be accessed. Since this is a lot of data, there are lots of possibilities for filtering it built in to the query itself. </p><p>A quick refresher on the difference between “local” and “remote” presence and configuration: “local” means it pertains to the circle itself; “remote” means it pertains to one of its configured sources. The latter is primarily useful to clients when using a circle for aggregation, like the <code>%inbox</code>. </p><pre>++  query                                               ::
+  $%  $:  $circle                                       :&gt;  story query
+          nom/naem                                      :&lt;  circle name
+          wer/(unit circle)                             :&lt;  from source
+          wat/(set circle-data)                         :&lt;  data to get
+          ran/range                                     :&lt;  query duration
+      ==                                                ::
+      ::  ....                                          ::
+  ==                                                    ::
+++  circle-data                                         :&gt;  kinds of circle data
+  $?  $grams                                            :&lt;  messages
+      $group-l                                          :&lt;  local presence
+      $group-r                                          :&lt;  remote presences
+      $config-l                                         :&lt;  local config
+      $config-r                                         :&lt;  remote configs
+  ==                                                    ::
+++  range                                               :&gt;  inclusive msg range
+  %-  unit                                              :&lt;  ~ means everything
+  $:  hed/place                                         :&lt;  start of range
+      tal/(unit place)                                  :&lt;  opt end of range
+  ==                                                    ::
+++  place                                               :&gt;  range indicators
+  $%  {$da @da}                                         :&lt;  date
+      {$ud @ud}                                         :&lt;  message number
+  ==                                                    ::
+</pre><p>Query paths are structured as follows: </p><pre>/circle/[circle-name]/(from-circle)/[what/data]/(range-start(/range-end))
+(from-circle)  :  optional message source, ~ship/circle
+[what/data]    :  one or more of grams, group, group-l, group-r,
+               :  config, config-l, config-r, combined using /
+(range)        :  an optional range with an optional end, its points denoted
+               :  in either message number (@ud) or date (@da)
+</pre><p>Valid paths include: </p><pre>:&gt;  get all messages from circle %urbit-help
+/circle/urbit-help/grams
+:&gt;  get all messages, all presences and local configs from %urbit-help
+/circle/urbit-help/grams/group/config-l
+:&gt;  get all messages %urbit-help has heard from its source ~zod/fora
+/circle/urbit-help/~zod/fora/grams
+:&gt;  get the first 100 messages from %urbit-help
+/circle/urbit-help/grams/0/99
+:&gt;  get the first 100 messages %urbit-help has heard from its source ~zod/fora
+/circle/urbit-help/~zod/fora/grams/0/99
+:&gt;  get all messages from %urbit-help, starting now
+/circle/urbit-help/grams/group/(scow %da now)
+:&gt;  get all messages from %urbit-help, starting now, ending at the 100th message
+/circle/urbit-help/grams/(scow %da now)/99
+:&gt;  get local presences from %urbit-help for a week
+/circle/urbit-help/group-l/(scow %da now)/(scow %da (add now ~d7))
+</pre><h4 id="-circle-prize-">/circle prize </h4><p>Contains (where applicable) messages in envelopes (with message numbers), as well as local and remote configurations and presences. </p><pre>++  prize                                               :&gt;  query result
+  $%  {$circle package}                                 :&lt;  /circle
+      ::  ...                                           ::
+  ==                                                    ::
+++  package                                             :&gt;  story state
+  $:  nes/(list envelope)                               :&lt;  messages
+      cos/lobby                                         :&lt;  loc &amp; rem configs
+      pes/crowd                                         :&lt;  loc &amp; rem presences
+  ==                                                    ::
+</pre><h4 id="-circle-rumor-">/circle rumor </h4><p>Contains a detailed change description of the data relevant to the query that changed. </p><p>Messages are wrapped in envelopes to include their sequence number, and note the source they were heard from. Configuration and status changes specify the circle they apply to. </p><pre>++  rumor                                               :&gt;  query result change
+  $%  {$circle rum/rumor-story}                         :&lt;  /circle
+      ::  ...                                           ::
+  ==                                                    ::
+++  rumor-story                                         :&gt;  story rumor
+  $%  {$new cof/config}                                 :&lt;  new story
+      {$gram src/circle nev/envelope}                   :&lt;  new/changed message
+      {$config cir/circle dif/diff-config}              :&lt;  new/changed config
+      {$status cir/circle who/ship dif/diff-status}     :&lt;  new/changed status
+      {$remove $~}                                      :&lt;  removed story
+  ==                                                    ::
+++  diff-config                                         :&gt;  config change
+  $%  {$full cof/config}                                :&lt;  set w/o side-effects
+      {$source add/? src/source}                        :&lt;  add/rem sources
+      {$caption cap/cord}                               :&lt;  changed description
+      {$filter fit/filter}                              :&lt;  changed filter
+      {$secure sec/security}                            :&lt;  changed security
+      {$permit add/? sis/(set ship)}                    :&lt;  add/rem to b/w-list
+      {$remove $~}                                      :&lt;  removed config
+  ==                                                    ::
+++  diff-status                                         :&gt;  status change
+  $%  {$full sat/status}                                :&lt;  fully changed status
+      {$presence pec/presence}                          :&lt;  changed presence
+      {$human dif/diff-human}                           :&lt;  changed name
+      {$remove $~}                                      :&lt;  removed status
+  ==                                                    ::
+++  diff-human                                          :&gt;  name change
+  $%  {$full man/human}                                 :&lt;  fully changed name
+      {$handle han/(unit cord)}                         :&lt;  changed handle
+      {$true tru/(unit truename)}                       :&lt;  changed true name
+  ==                                                    ::
+</pre><h2 id="actions-">Actions </h2><p>Actions can be sent by poking Hall with data marked as <code>%hall-action</code>. Actions are used for all user operations. If an error or other unexpected behavior occurs while executing an action, Hall notifies the user by sending an <code>%app</code> message to their <code>%inbox</code>. </p><h3 id="circle-configuration-">Circle configuration </h3><p>Since all of these apply to a specific circle, they all specify a name <code>nom</code> of the circle to operate on. </p><pre>++  action                                              :&gt;  user action
+  $%  {$create nom/naem des/cord sec/security}          :&lt;  create circle
+      {$delete nom/naem why/(unit cord)}                :&lt;  delete + announce
+      {$depict nom/naem des/cord}                       :&lt;  change description
+      {$filter nom/naem fit/filter}                     :&lt;  change message rules
+      {$permit nom/naem inv/? sis/(set ship)}           :&lt;  invite/banish
+      {$source nom/naem sub/? srs/(set source)}         :&lt;  un/sub to/from src
+      ::  ...                                           ::
+  ==
+</pre><p><code>%create</code>: Creates a circle with description <code>des</code> and security mode <code>sec</code>. If this mode is a whitelist, the user is automatically added to it. </p><p><code>%delete</code>: Deletes the circle. If a reason <code>why</code> is provided, posts that as the last message to the circle before deleting it. </p><p><code>%depict</code>: Set the description of the circle to <code>des</code>. </p><p><code>%filter</code>: Set the filter (message sanitation rules) for the circle to <code>fit</code>. </p><p><code>%permit</code>: Either invite or banish ships to/from the circle, modifying the access control list accordingly. Regardless of whether this actually makes any changes, sends an <code>%inv</code> message to the involved ships&#39; <code>%inbox</code>es. </p><p><code>%source</code>: Add or remove sources to/from the circle, un/subscribing it to/from the <code>grams</code>, <code>group-l</code> and <code>config-l</code> each one. </p><h3 id="messaging-">Messaging </h3><p>There are two interfaces for telling Hall to send a message. The first takes entire <code>thought</code>s, the second only <code>speech</code>es and the audience to send them to. </p><pre>++  action                                              :&gt;  user action
+  $%  {$convey tos/(list thought)}                      :&lt;  post exact
+      {$phrase aud/audience ses/(list speech)}          :&lt;  post easy
+      ::  ...
+  ==
+</pre><p><code>%convey</code>: Sends the thoughts to their audiences. </p><p><code>%phrase</code>: Turns the speeches into thoughts by applying sane defaults for metadata (auto-generated <code>uid</code>, <code>now</code> for <code>wen</code>), and then sends those thoughts. </p><h3 id="personal-metadata-">Personal metadata </h3><p>These concern the presence users have in circles they are participating in. </p><pre>++  action                                              :&gt;  user action
+  $%  {$notify aud/audience pes/(unit presence)}        :&lt;  our presence update
+      {$naming aud/audience man/human}                  :&lt;  our name update
+      ::  ...                                           ::
+  ==
+</pre><p><code>%notify</code>: Sets the user&#39;s presence in the audience circles to <code>pes</code>. A good client will automatically set these based on the user&#39;s activity. (<code>%talk</code> on typing, <code>%idle</code> on idle, <code>%gone</code> on sign-off.) </p><p><code>%naming</code>: Sets the user&#39;s name (handle and real name) for the given audience. Good clients can display these in place of ship names. </p><h3 id="changing-shared-ui-">Changing shared UI </h3><p>When the user makes any changes to shared UI elements (elements that should persist between clients), this has to be communicated to Hall. </p><pre>++  action                                              :&gt;  user action
+  $%  {$glyph gyf/char aud/audience bin/?}              :&lt;  un/bind a glyph
+      {$nick who/ship nic/nick}                         :&lt;  new identity
+      ::  ...                                           ::
+  ==
+</pre><p><code>%glyph</code>: Adds or removes a binding of a glyph to an audience. </p><p><code>%nick</code>: Sets a local nickname for a ship. An empty nickname <code>&#39;&#39;</code> means the ship has no nickname. </p><h3 id="miscellaneous-changes-">Miscellaneous changes </h3><pre>++  action                                              :&gt;  user action
+  $%  {$public add/? cir/circle}                        :&lt;  show/hide membership
+      ::  ...                                           ::
+  ==
+</pre><p><code>%public</code>: Adds or removes a circle to/from the user&#39;s public membership list. </p><h1><div id="new-gall">The New Gall Model</div></h1><p>This document is complemented by the source code of applications that use the new Gall model (like <a href="https://github.com/urbit/arvo/blob/master/app/hall.hoon">Hall</a>), but doesn&#39;t require it. Code snippets will be provided where useful. Some knowledge of Hoon and the functioning of Hoon apps is assumed. </p><p>New <code>%gall</code> has not yet fully solidified. As such, its structure and naming are tentative. </p><h2 id="renewing-a-pillar-of-arvo-">Renewing a pillar of Arvo </h2><p>When you write an app, Gall is responsible for making sure its event arms like <code>++poke</code> get called when they need to. In essence, it provides developers with a consistent interface for hooking their app up to the operating system. </p><p>It&#39;s not doing a lot to make sure this is done in a structured way, though, which results in apps (especially larger ones) feeling like big, tangled messes. Something needs to be done about this. </p><h3 id="problems-">Problems </h3><p>Imagine a <code>++poke</code>, <code>++diff</code>, or even a <code>++peer</code> arm. In current implementations, you&#39;ll often see their product defined through cast as the following: <code>^- (quip move +&gt;)</code> Or (sadly) more commonly: <code>^- {(list move) _+&gt;.$}</code> </p><p>These arms are producing both side-effects and new state. To do this, their code has to simultaneously figure out “how does this poke/diff/whatever change our state?” and “what side-effects does this change have?” </p><p>You&#39;ll find that the logic relating to these two often becomes tangled, making the flow of the whole more difficult to understand. And the side-effects more often than not relate to subscriptions, for which the developer may be writing a lot of boilerplate code. Gall currently does not help in either of these places. </p><blockquote><p>The main significant cost of software development is the cost of untangling what the computer is doing, and or is supposed to be doing, over and over again in your head. Any way of lowering this untangling cost is extremely welcome. </p></blockquote><p><b>~sorreg-namtyv</b> </p><h3 id="solutions-">Solutions </h3><p>Let&#39;s imagine a world in which Gall <b>does</b> help, in both of those places. </p><p>It would be wonderful if Gall could take care of all standard subscription management logic for you, and direct the flow of code as it concludes is appropriate. Applications, then, would have to help Gall by providing the different parts of this flow, and providing the checks that allow Gall to make the right decisions. This takes some work out of the developer&#39;s hands and results in more structured application code. </p><p>If we expand on that a bit, then we can even have Gall help us in untangling state changes from side effects. We do so by separating state changes into two phases: <b>analyzing</b> what changes need to be made, and <b>applying</b> those changes. </p><p>But where do the side-effects go, then? We need to realize there&#39;s two kinds: side-effects that are subscription updates, and side-effects that aren&#39;t. The latter get produces by applying state changes, while the former get integrated into the Gall flow we described above. </p><p>Since subscriptions are essentially queries to an app, requesting a specific part of its data/state, we can deduce subscription updates from state changes. We merely provide the logic, and Gall chains it all together. Having Gall support all this allows us to cleanly and structurally untangle state change analysis, application, and subscription logic into their own arms. </p><p>For trivial apps, this might result in some arms with trivial code. Though it may feel like writing cruft, it makes understanding the app just as simple as it actually as. For more complex apps, all logic is no longer a big chunk of “what do we do when x happens?” Rather, it&#39;s a few smaller chunks, like “x happened, how does that change our state?” and “if our state changes like y, what does that mean for subscription z?” These are precisely the kinds of questions that application developers should be asked. </p><h2 id="as-seen-in-new-gall-">As seen in new Gall </h2><p>Of course, for the above to be made into reality, Gall will need to see some changes. Let&#39;s outline the new structures and the arms they get passed between. </p><h3 id="structures-">Structures </h3><p>This wouldn&#39;t be Urbit if we didn&#39;t have cool terminology for people to learn. These ones are (for the most part) semantically sensible, and you might already see how they relate to the story above. </p><p><code>brain</code>: application state. <code>delta</code>: change to application state. <code>opera</code>: side-effect, operation, move. <code>query</code>: request (to an app) for data on a specific path. <code>prize</code>: query result. <code>rumor</code>: change to a query result. </p><p>These should be fairly straightforward. Like packets are to Urbits, <code>delta</code>s are to <code>brain</code>s and <code>rumor</code>s are to <code>prize</code>s. If one diligently updates the <code>prize</code> they received using all the <code>rumor</code>s that are relevant to it, they will always have the same <code>prize</code> as if they queried for it all over again. </p><h3 id="arms-">Arms </h3><p>This also wouldn&#39;t be Urbit if we couldn&#39;t boil that down to a few simple pseudocode functions. Let&#39;s try, shall we? </p><pre>++  bake  |=  {brain delta}  ^-  {brain opera}
+++  peek  |=  {brain query}  ^-  (unit (unit prize))
+++  feel  |=  {query delta}  ^-  (unit rumor)
+++  gain  |=  {prize rumor}  ^-  prize
+
+::  for any given brain, delta and query:
+.=  (peek brain:(bake brain delta) query)
+    (gain rumor:(feel query delta) prize:(peek brain query))
+</pre><p>There. In the first three arms we already have the bulk of new Gall! <code>++gain</code> won&#39;t be part of it, since most applications don&#39;t need to keep track of <code>prize</code>s directly. Those that do may still implement and hook it up themselves though. </p><p>Of course, these aren&#39;t all of the new Gall arms. Most important to still mention is <code>++leak</code>, which takes a <code>ship</code> and <code>query</code> and checks if the former has permission to ask for the latter. </p><p>There&#39;s also <code>++look</code> for asynchronous reads, <code>++hear</code> for subscription updates (rumors), <code>++fail</code> for dealing with process errors, <code>++cope</code> for dealing with transaction results, and <code>++pour</code> for dealing with responses from Arvo. <code>++prep</code>, <code>++poke</code> and <code>++pull</code> continue to function as they do right now. </p><p>For a more verbose specification of all of these, see the new Gall spec. </p><h2 id="by-example-">By example </h2><p>To help solidify this and see what this would looks like in the wild, let&#39;s make a very simple example app. It&#39;s a counter that can go up and down, and can be queried for its value, or whether or not its value is a multiple of x. First we write all the structures that will support our app, and then we implement the arms that operate on them. (The app code in its entirety can be found <a href="example">here</a>.) </p><h3 id="state---deltas-">State &amp; deltas </h3><p>Below is the application state, and the deltas we&#39;ll be using to modify it. </p><pre>|%
+++  brain  {num/@ud $~}                                 :&lt;  application state
+++  delta                                               :&gt;  state change
+  $%  {$increment $~}                                   :&lt;  +1
+      {$decrement $~}                                   :&lt;  -1
+  ==                                                    ::
+</pre><p>Fairly simple, right? We store a number, and every change either in- or decrements it. </p><h3 id="queries---rumors-">Queries &amp; rumors </h3><p>Let&#39;s also define the queries we&#39;ll be supporting, their results, and the changes to their results. Instead of only allowing people to query the current number, let&#39;s make it a tad more interesting by allowing them to query whether or not the current number is a multiple of something. </p><pre>++  query                                               :&gt;  valid queries
+  $%  {$number $~}                                      :&lt;  current number
+      {$mul-of val/@ud}                                 :&lt;  is num multiple of?
+  ==                                                    ::
+++  prize                                               :&gt;  query results
+  $%  {$number num/@ud}                                 :&lt;  /number
+      {$mul-of mul/?}                                   :&lt;  /mul-of
+  ==                                                    ::
+++  rumor                                               :&gt;  query result changes
+  $%  {$number delta}                                   :&lt;  /number
+      {$mul-of mul/?}                                   :&lt;  /mul-of
+  ==                                                    ::
+--
+</pre><p>You&#39;ll see the <code>rumor</code> for a <code>/number</code> query just contains a delta. In this specific case, a change in state maps directly to a change to <code>prize</code>. For <code>/mul-of</code> queries, things aren&#39;t that simple. </p><h3 id="responding-to-queries-">Responding to queries </h3><p>Now, let&#39;s implement all the arms that will be called as things start happening. First, we want to implement <code>++leak</code>, which checks if a given <code>ship</code> is allowed to make a certain <code>query</code>. In this case, we&#39;re fine with everyone checking out our application&#39;s data. </p><pre>|_  {bol/bowl brain}
+::
+++  leak                                                :&gt;  read permission
+  |=  {who/ship qer/query}
+  ^-  ?
+  &amp;  ::  everyone&#39;s allowed
+</pre><p>Next, let&#39;s create the <code>prize</code>s for the folks that make it through <code>++leak</code>. We&#39;ll be producing a <code>(unit (unit prize))</code> so we can potentially say <code>~</code> for “unavailable” and <code>[~ ~]</code> for “invalid query.” </p><pre>++  peek                                                :&gt;  synchronous read
+  |=  qer/query
+  ^-  (unit (unit prize))
+  ?-  -.qer
+    $number   ``[%number num]
+    $mul-of   ?:  =(0 mul.qer)  [~ ~]
+              ``[%mul-of =(0 (mod num mul.qer))]
+  ==
+</pre><h3 id="updating-state---query-results-">Updating state &amp; query results </h3><p>Our app can be queried! If they&#39;re interested enough, they&#39;ll want to receive updates on that whenever relevant state changes. First, let&#39;s see how state changes happen. We still have regular old <code>++poke</code> arms, let&#39;s use that to prompt our application to change its state. </p><pre>++  poke-loob                                           :&gt;  regular old poke
+  |=  inc/?
+  ^-  (list delta)
+  :_  ~
+  ?:  inc  [%increment ~]
+  [%decrement ~]
+::
+++  bake                                                :&gt;  apply delta to state
+  |=  del/delta
+  ^-  (quip opera +&gt;)
+  :-  ~
+  ?-  -.del
+    $increment  +&gt;(num +(num))
+    $decrement  +&gt;(num (dec num))
+  ==
+</pre><p><code>delta</code>s get redirected into <code>++bake</code> so that our state can get changed as described. After this happens the same <code>delta</code>s get, for each active query, routed into <code>++feel</code>. That then figures out what the <code>rumor</code> relevant to the query is, if applicable. </p><pre>++  feel                                                :&gt;  delta to rumor
+  |=  {qer/query del/delta}
+  ^-  (unit rumor)
+  ?-  -.qer
+      $number
+    `[%number del]
+    ::
+      $mul-of
+    ::  since we only want to send a rumor if result
+    ::  changed, we need to deduce the old state from
+    ::  the current state and the delta. depends on the
+    ::  fact that state changes before ++feel. funky!
+    ::  we could, of course, store mul/? in state, and
+    ::  make a delta for it, but should we need to?
+    =/  old
+      .=  0
+      %+  mod
+        ?-  -.del
+          $increment  (dec num)
+          $decrement  +(num)
+        ==
+      mul.qer
+    =/  new  =(0 (mod num mul.qer))
+    ?:  =(old new)  ~
+    `[%mul-of new]
+  ==
+</pre><p>As we saw earlier, for <code>/number</code> queries the <code>delta</code>s match one-on-one with the relevant <code>rumor</code>s. For <code>/mul-of</code> queries we do a little bit of work to see if anything actually changed. No need to send a <code>rumor</code> if it hasn&#39;t. </p><h2 id="criticism-">Criticism </h2><ul><li><p>Where event arms currently get passed a <code>wire</code>, and the new Gall described above passes them a custom <code>query</code> structure, the original new Gall spec gave them <code>(list coin)</code>, a “pre-parsed wire”. These structures (eg <code>[%$ p=[p=~.ud q=123]]</code>) are uncomfortable to work with. Even with a “coin list parsing library” it still doesn&#39;t feel ideal. Because of custom structures being easier to work with than lists of <code>++knot</code>s or <code>++coin</code>s, writing a <code>++path-to-query</code> arm by hand is a small cost for huge gains. </p></li><li><p>Why do <code>prize</code> units mean what they do? One would expect <code>~</code> to mean “invalid” and <code>[~ ~]</code> to mean “unavailable” as opposed to the other way around. </p></li><li><p>The original new Gall spec mentions output lists (like <code>(list delta)</code> etc.) to be in reverse order. This was done because adding to the head of a list (<code>[item list]</code>) is easier than appending to the tail of a list (<code>(weld list [item ~])</code> or other). While it&#39;s technically easier to produce a list in reverse order, semantically it&#39;s yet another thing to keep in mind. Luckily, most of the “add to x, produce all of it later” code is set-and-forget, so probably not a huge deal. But do we really fear a few stray <code>++flop</code>s that much? </p></li><li><p>There&#39;s some weirdness with relation to relying on old state in <code>++feel</code> to determine whether a query result actually changed. Just relying on state in general for delta-to-rumor conversion may or may not violate the new Gall spec. </p></li><li><p>The original new Gall spec specifies <code>++leak</code> as taking a <code>(unit (set ship))</code>, where <code>~</code> means public. Is there a use case for checking more than just a single ship? </p></li><li><p>Gall should probably cache <code>++feel</code> results during a single pass, to avoid the cycles of generating what it can be certain of is the same <code>(unit rumor)</code>. (But then for eg <code>/circle/nom/13</code> and <code>/circle/nom/14</code> it would still recalculate. Better than nothing.) </p></li></ul><h2><div id="spec">The original new-Gall spec</div></h2><p><code>~sorreg-namtyv</code> </p><pre>=&gt;  |%
+    --
+|*  $:  :&gt;  vinyl: historical state (including version)
+        :&gt;  brain: working state of the application (not including version)
+        :&gt;  delta: grain of change across all state
+        :&gt;  prize: (pair mark noun) for namespace value
+        :&gt;  rumor: (pair mark noun) for namespace diff
+        :&gt;  opera: (pair bone card) for operation (old ++move)
+        :&gt;
+        vinyl/mold
+        brain/mold
+        delta/mold
+        prize/mold
+        rumor/mold
+        opera/mold
+    ==
+|_  $:  :&gt;  ops: pending operations, in reverse order
+        :&gt;  ego: current state
+        :&gt;
+        ops/(list opera)
+        ego/brain
+    ==
+::                                                      ::  ++bake
+++  bake                                                :&lt;  apply delta
+  |=  $:  :&gt;  del: change
+          :&gt;
+          del/delta
+      ==
+  :&gt;  core after change (including operations)
+  ^-  _+&gt;
+  !!
+::                                                      ::  ++cope
+++  cope                                                :&lt;  transaction result
+  |=  $:  :&gt;  weg: forward identity
+          :&gt;  het: success or error report
+          :&gt;
+          weg/(list coin)
+          het/(unit tang)
+      ==
+  :&gt;  actions in reverse order
+  :&gt;
+  ^-  (list delta)
+  !!
+::                                                      ::  ++fail
+++  fail                                                :&lt;  process error
+  |=  $:  :&gt;  why: error dump
+          :&gt;
+          why/tang
+      ==
+  :&gt;  actions in reverse order
+  :&gt;
+  ^-  (list delta)
+  !!
+::                                                      ::  ++feel
+++  feel                                                :&lt;  update
+  |=  $:  :&gt;  del: change
+          :&gt;  pex: preparsed path, inside-first
+          :&gt;
+          del/delta
+          pex/(list coin)
+      ==
+  :&gt;  query updates in reverse order
+  :&gt;
+  ^-  (list rumor)
+  !!
+::                                                      ::  ++hear
+++  hear                                                :&lt;  subscription update
+  |=  $:  :&gt;  weg: forward identity
+          :&gt;
+          weg/(list coin)
+      ==
+  :&gt;  actions in reverse order
+  :&gt;
+  ^-  (list delta)
+  !!
+::                                                      ::  ++pull
+++  pull                                                :&lt;  subscription cancel
+  |=  $:  :&gt;  weg: forward identity
+          :&gt;  het: error report, if any
+          :&gt;
+          weg/(list coin)
+          het/(unit tang)
+      ==
+  :&gt;  actions in reverse order
+  :&gt;
+  ^-  (list delta)
+  !!
+::                                                      ::  ++leak
+++  leak                                                :&lt;  check access
+  |=  $:  :&gt;  lec: leakset (~ means public)
+          :&gt;  pex: preparsed path, inside-first
+          :&gt;
+          lec/(unit (set ship))
+          pex/(list coin)
+      ==
+  :&gt;  if path `pex` is visible to ships in `lec`
+  ^-  ?
+  !!
+::                                                      ::  ++load
+++  look                                                :&lt;  asynchronous read
+  |=  $:  :&gt;  pex: preparsed path, inside-first
+          :&gt;
+          pex/(list coin)
+      ==
+  :&gt;  actions in reverse order
+  ^-  _+&gt;
+  !!
+::                                                      ::  ++prep
+++  prep                                                :&lt;  load system
+  |=  $:  old/vinyl
+      ==
+  :&gt;  core after boot
+  ^-  _+&gt;
+  !!
+::                                                      ::  ++peek
+++  peek                                                :&lt;  synchronous read
+  |=  $:  :&gt;  pex: preparsed path, inside-first
+          :&gt;
+          pex/(list coin)
+      ==
+  :&gt;  value at `pec`; ~ for unavailable, [~ ~] for invalid
+  :&gt;
+  ^-  (unit (unit prize))
+  !!
+::                                                      ::  ++poke
+++  poke                                                :&lt;  generic poke
+  |=  $:  :&gt;  ost: opaque cause
+          :&gt;  msg: message with mark and vase
+          :&gt;
+          ost/bone
+          msg/cage
+      ==
+  :&gt;  actions in reverse order
+  :&gt;
+  ^-  (list delta)
+  !!
+::                                                      ::  ++pour
+++  pour                                                :&lt;  arvo response
+  |=  $:  :&gt;  weg: forward identity
+          :&gt;  sin: response card
+          :&gt;
+          weg/(list coin)
+          sin/sign
+      ==
+  :&gt;  actions in reverse order
+  :&gt;
+  ^-  (list delta)
+  !!
+--
+</pre><h2><div id="example">A new-Gall example app</div></h2><pre>::  counter app
+::  new gall example, may or may not compile.
+::
+|%
+++  query                                               :&gt;  valid queries
+  $%  {$number $~}                                      :&lt;  current number
+      {$mul-of val/@ud}                                 :&lt;  is num multiple of?
+  ==                                                    ::
+++  prize                                               :&gt;  query results
+  $%  {$number num/@ud}                                 :&lt;  /number
+      {$mul-of mul/?}                                   :&lt;  /mul-of
+  ==                                                    ::
+++  rumor                                               :&gt;  query result changes
+  $%  {$number delta}                                   :&lt;  /number
+      {$mul-of mul/?}  ::TODO  or just flip?            :&lt;  /mul-of
+  ==                                                    ::
+::  the above would ordinarily be placed in sur/,       ::
+::  since other apps might want to use it.              ::
+++  brain  {num/@ud $~}                                 :&lt;  application state
+++  delta                                               :&gt;  state change
+  $%  {$increment $~}                                   :&lt;  +1
+      {$decrement $~}                                   :&lt;  -1
+  ==                                                    ::
+--
+::
+|_  {bol/bowl brain}
+::
+++  leak                                                :&gt;  read permission
+  |=  {who/ship qer/query}
+  ^-  ?
+  &amp;  ::  everyone&#39;s allowed
+::
+++  peek                                                :&gt;  synchronous read
+  |=  qer/query
+  ^-  (unit (unit prize))
+  ?-  -.qer
+    $number   ``[%number num]
+    $mul-of   ?:  =(0 mul.qer)  [~ ~]
+              ``[%mul-of =(0 (mod num mul.qer))]
+  ==
+::
+++  poke-loob                                           :&gt;  regular old poke
+  |=  inc/?
+  ^-  (list delta)
+  :_  ~
+  ?:  inc  [%increment ~]
+  [%decrement ~]
+::
+++  bake                                                :&gt;  apply delta to state
+  |=  del/delta
+  ^-  (quip opera +&gt;)
+  :-  ~
+  ?-  -.del
+    $increment  +&gt;(num +(num))
+    $decrement  +&gt;(num (dec num))
+  ==
+::
+++  feel                                                :&gt;  delta to rumor
+  |=  {qer/query del/delta}
+  ^-  (unit rumor)
+  ?-  -.qer
+      $number
+    `[%number del]
+    ::
+      $mul-of
+    ::  since we only want to send a rumor if result
+    ::  changed, we need to deduce the old state from
+    ::  the current state and the delta. depends on the
+    ::  fact that state changes before ++feel. funky!
+    ::  we could, of course, store mul/? in state, and
+    ::  make a delta for it, but should we need to?
+    =/  old
+      .=  0
+      %+  mod
+        ?-  -.del
+          $increment  (dec num)
+          $decrement  +(num)
+        ==
+      mul.qer
+    =/  new  =(0 (mod num mul.qer))
+    ?:  =(old new)  ~
+    `[%mul-of new]
+  ==
+::
+::  not pictured: ++path-to-query
+--
+</pre></div></div></div></div></div><footer class="mb-36"><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script><script src="/js/main.js"></script></footer></body></html></body></html>
