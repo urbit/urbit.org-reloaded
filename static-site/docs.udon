@@ -31,14 +31,14 @@ In addition to those primary pages, the documents below are helpful but optional
 
 Here live guides that are helpful for everyday users.
 
-- [Admin and Operation](/using/admin) is a guide to the basic commands used to interact with your ship.
-- [Messaging](/using/messaging) tells you how to use Talk, our chat system.
-- [Shell](/using/shell) is a guide to using Dojo, our command-line interface.
-- [Introduction to the Filesystem](/using/filesystem) explains the basics of using use Clay, our revision-control filesystem.
-- [Source Layout](/using/layout) walks you through the various directories of the Arvo operating system.
-- [Sail](/using/sail) is a guide to Sail: Hoon markup that's used to build web pages with XML.
-- [Udon](/using/udon) is a guide to Udon, which is our take on Markdown.
-- [Generators](/using/generators) will explain how to use the "generator," a kind of file that's the easiest way to run Hoon programs.
+- [Admin and Operation](/docs/using/admin) is a guide to the basic commands used to interact with your ship.
+- [Messaging](/docs/using/messaging) tells you how to use Talk, our chat system.
+- [Shell](/docs/using/shell) is a guide to using Dojo, our command-line interface.
+- [Introduction to the Filesystem](/docs/using/filesystem) explains the basics of using use Clay, our revision-control filesystem.
+- [Source Layout](/docs/using/layout) walks you through the various directories of the Arvo operating system.
+- [Sail](/docs/using/sail) is a guide to Sail: Hoon markup that's used to build web pages with XML.
+- [Udon](/docs/using/udon) is a guide to Udon, which is our take on Markdown.
+- [Generators](/docs/using/generators) will explain how to use the "generator," a kind of file that's the easiest way to run Hoon programs.
 
 ## [Concepts](/docs/concepts)
 
@@ -68,3 +68,4 @@ If you're a developer looking for Arvo reference documentation, this section is 
 - The [Cheat Sheet](/docs/reference/cheat-sheet) is a compact document for looking up Hoon expressions.
 - The [Hoon Expressions](/docs/reference/hoon-expressions) section contains more comprehensive reference material for Hoon expressions.
 - The [Standard Library](/docs/reference/library) section documents the Hoon standard library.
+
