@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- header -->
+{% include "partials/navigation.html" %}
+<!-- content -->
+<div class="main-wrapper">
+  <div class="wrapper">
+    <div class="container container--fixed content-nav-container">
+      <div id="js-content-nav-toggle" class="content-nav-icon"></div>
+      <nav class="content-nav">
+        <ul class="list">
+          <li class="list__item content-nav__item">
+            <a href="{{ config.base_url }}/posts/">
+              All
+            </a>
+          </li>
+          {% for post in terms %}
+            <li class="list__item content-nav__item">
+              <a href="{{ post.permalink }}">
+                {{ post.name }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <div class="content-spacer"></div>
+    </div>
+    <div class="container">
+      <div class="content-nav-spacer"></div>
+      <div class="content ml8">
+        <h1 class="mb8">Posts</h1>
+        <ul class="list">
+          {% set posts = get_section(path="posts/_index.md") %}
+          {% for page in posts.pages %}
+            <li class="list__item mb8">
+              <span class="h4 mt0 mb0 text-mono text-500 gray-light">&#126;{{ page.date | date(format="%Y.%m.%d") }}</span>
+              <span class="h4 mt0 mb0 h-font text-500 gray-light lowercase">{% if page.taxonomies.posts %}
+                {% for post in page.taxonomies.posts %}<a href="{{ get_taxonomy_url(kind="posts", name=post) }}">{{ post }}</a> {% endfor %}
+              {% endif %}</span>
+              <a href="{{ page.permalink }}"><h2 class="mt1">{{ page.title }}</h2></a>
+              <p class="mt3">{{ page.description }}</p>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

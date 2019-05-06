@@ -1,0 +1,50 @@
+# Used in RSS by default
+title = "Urbit"
+description = "Official website Urbit"
+
+# The default language, used in RSS
+default_language = "en"
+
+# The URL the site will be built for
+base_url = "https://hardcodepunk.be/_private/urbit"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+# The taxonomies to be rendered for that site and their configuration
+# Example:
+#     taxonomies = [
+#       {name = "tags", rss = true}, # each tag will have its own RSS feed
+#       {name = "categories", paginate_by = 5},  # 5 items per page for a term
+#       {name = "authors"}, # Basic definition: no RSS or pagination
+#     ]
+#
+taxonomies = [
+    {name = "posts", rss = true},
+]
+
+[extra]
+urbit_menu = [
+  {url = "$BASE_URL", name = "Urbit"},
+  {url = "$BASE_URL/primer", name = "Primer"},
+  {url = "$BASE_URL/posts", name = "Posts"},
+  {url = "$BASE_URL/docs", name = "Docs"},
+]
+
+urbit_footer = [
+  {url = "$BASE_URL/privacy", name = "Privacy Policy"},
+  {url = "$BASE_URL/tos", name = "Terms of Service"},
+  {url = "$BASE_URL/bounty", name = "Bug Bounty + Security"},
+]
+
+docs_number_chapters = true
+
+[extra.author]
+name = "Tlon Corp"

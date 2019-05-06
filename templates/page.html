@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- header -->
+{% include "partials/navigation.html" %}
+<!-- content -->
+<div class="main-wrapper">
+  <div class="wrapper">
+    <div class="container container--fixed content-nav-container">
+      <div id="js-content-nav-toggle" class="content-nav-icon"></div>
+      <nav class="content-nav">
+        <ul class="list">
+          <li class="list__item content-nav__item">
+            <a href="{{ config.base_url }}/posts/">
+              All
+            </a>
+          </li>
+          <li class="list__item content-nav__item">
+            <a href="{{ config.base_url }}/posts/essays/">
+              Essays
+            </a>
+          </li>
+          <li class="list__item content-nav__item">
+            <a href="{{ config.base_url }}/posts/media/">
+              Media
+            </a>
+          </li>
+          <li class="list__item content-nav__item">
+            <a href="{{ config.base_url }}/posts/updates/">
+              Updates
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="content-spacer"></div>
+    </div>
+    <div class="container">
+      <div class="content-nav-spacer"></div>
+      <div class="content ml8 pb40">
+        <div class="article">
+          <!-- header -->
+          <h4 class="mt2 mb16"><code>&#126;{% if page.date %}{{ page.date | date(format="%Y.%m.%d") }}{% endif %}</code></h4>
+          <h1 class="mt8 mb8">{{ page.title }}</h1>
+          <!-- body -->
+          {{ page.content | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

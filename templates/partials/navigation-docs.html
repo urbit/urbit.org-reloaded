@@ -1,0 +1,77 @@
+{% block content %}
+<div id="js-content-nav-toggle" class="content-nav-icon"></div>
+<nav class="content-nav">
+  <ul class="list">
+    {% block menu %}
+      {% set index = get_section(path="docs/_index.md") %}
+      {% for s in index.subsections %}
+        {% set subsection = get_section(path=s) %}
+        <li class="list__item">
+          <a class="text-600" href="{{ subsection.permalink }}">
+            {{ subsection.title }}
+          </a>
+          {% if subsection.pages %}
+          <!-- level 1 -->
+          <ul class="sub-list">
+            {% for page in subsection.pages %}
+            <li class="list__item">
+              <a href="{{ page.permalink }}">
+                {{ page.title }}
+              </a>
+            </li>
+            {% endfor %}
+
+            {% for y in subsection.subsections %}
+            {% set subsubsection = get_section(path=y) %}
+            <ul class="sub-list">
+              <li class="list__item">
+                <a href="{{ subsubsection.permalink }}">
+                  {{ subsubsection.title }}
+                </a>
+                <!-- level 2 -->
+                {% if subsubsection.pages %}
+                <ul class="sub-list subsub-list">
+                  {% for page in subsubsection.pages %}
+                    <li class="list__item">
+                      <a href="{{ page.permalink }}">
+                        {{ page.title }}
+                      </a>
+                    </li>
+                  {% endfor %}
+
+                  {% for x in subsubsection.subsections %}
+                  {% set subsubsubsection = get_section(path=x) %}
+                  <ul class="sub-list">
+                    <li class="list__item">
+                      <a href="{{ subsubsubsection.permalink }}">
+                        {{ subsubsubsection.title }}
+                      </a>
+                      {% if subsubsubsection.pages %}
+                      <!-- level 3 -->
+                      <ul class="sub-list subsub-list">
+                        {% for page in subsubsubsection.pages %}
+                          <li class="list__item">
+                            <a href="{{ page.permalink }}">
+                              {{ page.title }}
+                            </a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                      {% endif %}
+                    </li>
+                  </ul>
+                  {% endfor %}
+
+                </ul>
+                {% endif %}
+              </li>
+            </ul>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    {% endblock menu %}
+  </ul>
+</nav>
+{% endblock content %}
