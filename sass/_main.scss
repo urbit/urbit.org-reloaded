@@ -117,6 +117,12 @@ iframe {
   display: none;
 }
 
+.no-side-nav-column {
+  flex-basis: 33.33333333%;
+  max-width: 33.33333333%;
+  margin-left: 16.66666667%;
+}
+
 .list, .sub-list {
   list-style: none;
   margin: 0;
@@ -331,7 +337,7 @@ h1, .h1 {
 h2, .h2 {
   margin: 0;
   font-size: 5rem;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 6rem;
 }
 

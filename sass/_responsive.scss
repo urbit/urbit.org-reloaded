@@ -16,6 +16,10 @@
     flex-basis: 90%;
     max-width: 90%;
   }
+  .no-side-nav-column {
+    flex-basis: 66.66666667%;
+    max-width: 66.66666667%;
+  }
   .form {
     max-width: 270px;
   }
@@ -64,5 +68,13 @@
         border-right: 10px solid transparent;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .no-side-nav-column {
+    margin-left: 8.33333333%;
+    flex-basis: 83.33333333%;
+    max-width: 83.33333333%;
   }
 }
