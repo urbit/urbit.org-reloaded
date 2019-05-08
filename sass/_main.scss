@@ -168,6 +168,13 @@ iframe {
   width: 100%;
   z-index: 2;
   top: 0;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                        supported by Chrome and Opera */
   &__navigation {
     display: none;
     padding-top: 9rem;
@@ -204,6 +211,7 @@ iframe {
 
 .has-active-main-nav {
   .header {
+    z-index: 4;
     &__navigation {
       position: fixed;
       height: 100%;
@@ -226,8 +234,11 @@ iframe {
   }
 }
 
-.posts__content {
-  margin-left: -8rem;
+.posts {
+  &__content {
+    z-index: 3;
+    margin-left: -8rem;
+  }
 }
 
 .footer {
