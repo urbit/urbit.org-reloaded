@@ -34,6 +34,6 @@ Arvo isn’t ready for prime time, but you can definitely experiment with it. Fo
 
 If you’re interested in learning how to write software for Urbit, we’ll be running online classes to teach the language, Hoon, and more in coming months. If you’re interested to join, [shoot us an email](mailto:support@urbit.org) and we’ll add you to the waitlist.
 
-;br;
+<br>
 
 *Anthony* `~poldec-tonteg`
