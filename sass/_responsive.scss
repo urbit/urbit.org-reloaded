@@ -16,6 +16,9 @@
     flex-basis: 90%;
     max-width: 90%;
   }
+  .posts__content {
+    margin-left: 8rem;
+  }
   .no-side-nav-column {
     flex-basis: 66.66666667%;
     max-width: 66.66666667%;
@@ -76,5 +79,10 @@
     margin-left: 8.33333333%;
     flex-basis: 83.33333333%;
     max-width: 83.33333333%;
+  }
+  .nav-column {
+    flex-basis: 75%;
+    max-width: 75%;
+    margin-left: 24%;
   }
 }

@@ -111,13 +111,14 @@ iframe {
 .content {
   position: relative;
   z-index: 1;
+  margin-top: -16rem;
 }
 
 .content-nav-icon {
   display: none;
 }
 
-.no-side-nav-column {
+.no-side-nav-column, .nav-column {
   flex-basis: 33.33333333%;
   max-width: 33.33333333%;
   margin-left: 16.66666667%;
@@ -169,7 +170,7 @@ iframe {
   top: 0;
   &__navigation {
     display: none;
-    padding-top: 24rem;
+    padding-top: 9rem;
   }
   &__nav-icon {
     position: absolute;
@@ -223,6 +224,10 @@ iframe {
       }
     }
   }
+}
+
+.posts__content {
+  margin-left: -8rem;
 }
 
 .footer {
@@ -378,6 +383,10 @@ pre, code, .code-block, .text-code, .text-mono {
 }
 
 pre, code {
-  background-color: #F2F2F2;
+  background-color: #000 !important;
+  color: #fff !important;
+  span {
+    color: #fff !important;
+  }
   padding: 1rem;
 }
