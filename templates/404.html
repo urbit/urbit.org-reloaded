@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="wrapper">
+  <div class="container">
+    <div class="no-side-nav-column">
+      <h1 class="mt10">Error 404</h1>
+      <p class="mb14">Sorry, but the page you requested doesn't exist.</p>
+      <ul class="list">
+        {% for item in config.extra.urbit_menu %}
+          <li class="list__item">
+            <h2 class="mb6">
+              <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
+                {{ item.name }}
+              </a>
+            </h2>
+          </li>
+        {% endfor %}
+      </ul>
+      <!-- footer -->
+      {% include "partials/footer.html" %}
+    </div>
+  </div>
+</div>
+{% endblock content %}

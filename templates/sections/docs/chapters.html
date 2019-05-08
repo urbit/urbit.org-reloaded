@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- header -->
+{% include "partials/navigation.html" %}
+<!-- content -->
+<div class="main-wrapper">
+  <div class="wrapper">
+    <div class="container container--fixed container--overflowed content-nav-container">
+      {% include "partials/navigation-docs.html" %}
+      <div class="content-spacer"></div>
+    </div>
+    <div class="container ml8">
+      <div class="content-nav-spacer"></div>
+      <div class="content mb16 docs">
+        <!-- header -->
+        <h1 class="8mb">{{ section.title }}</h1>
+        <!-- body -->
+        <div class="pb80">
+          {{ section.content | safe }}
+          {% for page in section.pages %}
+            <a href="{{ page.permalink }}"><h2 class="mt16 mb4">{{ page.title }}</h2></a>
+            <p class="mt3">{{ page.description }}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

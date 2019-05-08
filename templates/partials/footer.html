@@ -1,0 +1,57 @@
+{% block content %}
+<footer class="footer">
+  <section class ="form mv20">
+    <div id="mc_embed_signup">
+      <h2 class="mb2">Updates</h2>
+      <p>Every month we send an email with community events and what we're up to.</p>
+      <iframe name="nothing" style="display:none;"></iframe>
+      <form id="mc-embedded-subscribe-form" class="validate" action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;amp;id=be143888d2" method="post" name="mc-embedded-subscribe-form" target="nothing">
+        <div class="input-group text-mono" id="mc_embed_signup_scroll">
+          <div class="mc-field-group">
+            <input class="required mb2" type="email" name="EMAIL" id="mce-EMAIL" placeholder="your@email.com">
+          </div>
+          <div id="mce-responses" class="clear">
+            <div id="mce-error-response" class="response" style="display:none"></div>
+            <div id="mce-success-response" class="response" style="display:none"></div>
+          </div>
+          <div style="position: absolute; left: -5000px;">
+            <input type="text" name="b_972a03db9e0c6c25bb58de8c8_be143888d2">
+          </div>
+          <div class="clear">
+          <button id="mc-embedded-subscribe" class="btn bg-black white h-font" type="submit" name="subscribe">
+            <span class="text-500">Subscribe</span>
+          </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  <section class="mb6">
+    <h4 class="mb1">Follow</h4>
+    <ul class="list">
+      <li class="list__item">
+        <a class="text-mono" href="#">twitter.com/urbit</a>
+      </li>
+      <li class="list__item">
+        <a class="text-mono" href="#">github.com/urbit</a>
+      </li>
+    </ul>
+  </section>
+  <section class="mb6">
+    <h4 class="mb1">Contact</h4>
+    <a class="text-mono" href="mailto:support@urbit.org">support@urbit.org</a>
+  </section>
+  <section class="mb6">
+    <h4 class="mb1">Company</h4>
+    <ul class="list">
+      {% for item in config.extra.urbit_footer %}
+        <li class="list__item">
+          <a class="text-mono" href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
+            {{ item.name }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+</footer>
+{% endblock content %}
