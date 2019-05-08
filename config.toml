@@ -6,7 +6,7 @@ description = "Urbit is a personal server built from scratch."
 default_language = "en"
 
 # The URL the site will be built for
-base_url = "https://hardcodepunk.be/_private/urbit"
+base_url = "https://urbit.org"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
