@@ -358,6 +358,12 @@ h4, .h4 {
   line-height: 4rem;
 }
 
+h5, .h5 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 4rem;
+}
+
 .h1-large {
   font-size: 8rem;
   line-height: 12rem;
@@ -374,7 +380,7 @@ p, .p {
     margin-bottom: 4rem;
   }
   h1 {
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
   }
 }
 
@@ -383,10 +389,11 @@ pre, code, .code-block, .text-code, .text-mono {
 }
 
 pre, code {
-  background-color: #000 !important;
-  color: #fff !important;
+  background-color: #eee !important;
+  color: #000 !important;
   span {
-    color: #fff !important;
+    color: #000 !important;
   }
   padding: 1rem;
+  font-size: 4rem;
 }
