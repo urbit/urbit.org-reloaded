@@ -216,13 +216,14 @@ iframe {
       position: fixed;
       height: 100%;
       width: 100%;
-      background: #fff;
+      background: #000;
       overflow-y: hidden;
       display: block;
     }
     &__nav-icon {
       &:before, &:after {
         bottom: 0;
+        background: #fff;
       }
       &:before {
         transform: rotate(45deg);
@@ -230,6 +231,9 @@ iframe {
       &:after {
         transform: rotate(-45deg);
       }
+    }
+    a, h2, .h2, h4, .h4 {
+      color: #fff;
     }
   }
 }
