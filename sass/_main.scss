@@ -343,7 +343,7 @@ button, .btn {
   text-transform: lowercase;
 }
 
-h1, h2, h3, h4, h5, .text-heading {
+h1, h2, h3, h4, h5, h6, .text-heading {
   margin: 0;
   font-family: 'Inter UI',-apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
@@ -374,6 +374,12 @@ h4, .h4 {
 }
 
 h5, .h5 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 4rem;
+}
+
+h6, .h6 {
   font-size: 3.5rem;
   font-weight: 500;
   line-height: 4rem;
