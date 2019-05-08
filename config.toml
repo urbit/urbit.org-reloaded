@@ -1,12 +1,12 @@
 # Used in RSS by default
 title = "Urbit"
-description = "Official website Urbit"
+description = "Urbit is a personal server built from scratch."
 
 # The default language, used in RSS
 default_language = "en"
 
 # The URL the site will be built for
-base_url = "https://hardcodepunk.be/_private/urbit"
+base_url = "https://urbit.org"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
