@@ -353,7 +353,7 @@ h1, .h1 {
 h2, .h2 {
   margin: 0;
   font-size: 5rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 6rem;
 }
 
@@ -364,6 +364,12 @@ h3, .h3 {
 }
 
 h4, .h4 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 4rem;
+}
+
+h5, .h5 {
   font-size: 3.5rem;
   font-weight: 500;
   line-height: 4rem;
@@ -385,7 +391,7 @@ p, .p {
     margin-bottom: 4rem;
   }
   h1 {
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
   }
 }
 
@@ -394,10 +400,11 @@ pre, code, .code-block, .text-code, .text-mono {
 }
 
 pre, code {
-  background-color: #000 !important;
-  color: #fff !important;
+  background-color: #eee !important;
+  color: #000 !important;
   span {
-    color: #fff !important;
+    color: #000 !important;
   }
   padding: 1rem;
+  font-size: 4rem;
 }
