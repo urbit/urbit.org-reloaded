@@ -353,26 +353,26 @@ h1, h2, h3, h4, h5, h6, .text-heading {
   font-family: 'Inter UI',-apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.text-600 {
-  font-weight: 600;
+p, article li {
+  font-size: 4rem;
+  line-height: 8rem;
+  font-weight: 400;
+}
+
+article {
+  h1 {
+    margin-bottom: 6rem;
+  }
 }
 
 p, .p {
   margin: 0 0 4rem;
 }
 
-.docs {
-  p {
-    margin-bottom: 4rem;
-  }
-  h1 {
-    margin-bottom: 6rem;
-  }
-}
-
 pre, code {
   background-color: #eee !important;
   color: #000 !important;
+  overflow-y: scroll;
   span {
     color: #000 !important;
   }
