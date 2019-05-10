@@ -37,13 +37,13 @@
     <div class="container">
       <div class="content-nav-spacer"></div>
       <div class="content posts__content pb40">
-        <div class="article">
+        <article class="article">
           <!-- header -->
           <h4 class="mt2 mb16"><code>&#126;{% if page.date %}{{ page.date | date(format="%Y.%m.%d") }}{% endif %}</code></h4>
           <h1 class="mt8 mb8">{{ page.title }}</h1>
           <!-- body -->
           {{ page.content | safe }}
-        </div>
+        </article>
       </div>
     </div>
   </div>
