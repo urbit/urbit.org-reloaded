@@ -13,11 +13,6 @@ a {
   color: #000;
 }
 
-* {
-  font-smoothing: antialiased;
-  -webkit-font-smoothing: antialiased;
-}
-
 p img {
   margin: 4rem 0;
   width: 100%;
@@ -156,6 +151,21 @@ iframe {
 
 .body-regular {
   margin-bottom: 7rem;
+}
+
+.video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+}
+
+.video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  border: none;
 }
 
 /*
@@ -334,12 +344,7 @@ button, .btn {
   font-weight: 700;
 }
 
-.text-mono {
-  font-family: "Source Code Pro", "Roboto mono", "Courier New", monospace;
-}
-
 .h-font {
-  font-family: 'Inter UI',-apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-transform: lowercase;
 }
 
@@ -348,48 +353,8 @@ h1, h2, h3, h4, h5, h6, .text-heading {
   font-family: 'Inter UI',-apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-h1, .h1 {
-  font-size: 6rem;
-  line-height: 8rem;
-  margin-top: 0;
-}
-
-h2, .h2 {
-  margin: 0;
-  font-size: 5rem;
+.text-600 {
   font-weight: 600;
-  line-height: 6rem;
-}
-
-h3, .h3 {
-  font-size: 4rem;
-  font-weight: 500;
-  line-height: 5rem;
-}
-
-h4, .h4 {
-  font-size: 3.5rem;
-  font-weight: 500;
-  line-height: 4rem;
-}
-
-h5, .h5 {
-  font-size: 3.5rem;
-  font-weight: 500;
-  line-height: 4rem;
-}
-
-h6, .h6 {
-  font-size: 3.5rem;
-  font-weight: 500;
-  line-height: 4rem;
-}
-
-.h1-large {
-  font-size: 8rem;
-  line-height: 12rem;
-  text-transform: none;
-  height: auto;
 }
 
 p, .p {
@@ -403,10 +368,6 @@ p, .p {
   h1 {
     margin-bottom: 6rem;
   }
-}
-
-pre, code, .code-block, .text-code, .text-mono {
-  font-family: "Source Code Pro", "Roboto mono", "Courier New", monospace;
 }
 
 pre, code {

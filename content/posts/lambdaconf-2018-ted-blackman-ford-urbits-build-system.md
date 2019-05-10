@@ -6,6 +6,6 @@ description = "Ted presents a technical overview of Ford, Urbit's build system, 
 [taxonomies]
 posts = ["Media"]
 +++
-{{ youtube(id="5ZAFEylHdiU") }}
+{{ youtube(id="5ZAFEylHdiU") }} 
 
 [Ted Blackman Ford - Urbit's Build System - λC 2018](https://www.youtube.com/watch?v=5ZAFEylHdiU)
