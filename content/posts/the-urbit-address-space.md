@@ -6,7 +6,7 @@ description = "An overview of Urbit's cryptographic address space."
 [taxonomies]
 posts = ["Essays"]
 +++
-![](http://media.urbit.org/site/blog-3.jpg)
+![](https://media.urbit.org/site/blog-3.jpg)
 
 ## Basics
 
@@ -63,7 +63,7 @@ It does need governance; but it governs itself as a digital republic.
 
 As an Urbit user, these basics are all you need to know.  As a
 developer, a few more details might interest you.  (An even more
-comprehensive treatment is in the [whitepaper](http://media.urbit.org/whitepaper.pdf)).
+comprehensive treatment is in the [whitepaper](https://media.urbit.org/whitepaper.pdf)).
 
 ### Design goals
 

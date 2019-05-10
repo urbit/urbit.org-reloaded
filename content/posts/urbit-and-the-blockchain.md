@@ -6,7 +6,7 @@ description = "A bit about the 'idea maze' of choosing to bootstrap from Ethereu
 [taxonomies]
 posts = ["Essays"]
 +++
-![](http://media.urbit.org/site/blog-1.jpg)
+![](https://media.urbit.org/site/blog-1.jpg)
 
 One core principle of the Urbit network is that *Urbit doesn't take sides*.
 This is true in all kinds of conflicts -- and especially blockchain wars.

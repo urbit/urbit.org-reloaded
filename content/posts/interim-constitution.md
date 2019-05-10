@@ -6,7 +6,7 @@ description = "The governing rules for the early days of the Urbit network."
 [taxonomies]
 posts = ["Essays"]
 +++
-![](http://media.urbit.org/site/blog-7.jpg)
+![](https://media.urbit.org/site/blog-7.jpg)
 
 ## Declaration of purpose
 

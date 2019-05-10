@@ -6,7 +6,7 @@ description = "A vision of the Urbit-powered future."
 [taxonomies]
 posts = ["Essays"]
 +++
-![](http://media.urbit.org/site/blog-1.jpg)
+![](https://media.urbit.org/site/blog-1.jpg)
 
 Open platforms don't beat closed systems just because they're open.
 They win because you can do more exciting things with them.  We

@@ -6,7 +6,7 @@ description = "A thought-experiment to explain the Urbit user experience."
 [taxonomies]
 posts = ["Essays"]
 +++
-![](http://media.urbit.org/site/blog-7.jpg)
+![](https://media.urbit.org/site/blog-7.jpg)
 
 It's easy to get too obsessed with Urbit's alien technology.  We
 didn't build Urbit for its tech.  We built it for people to use.

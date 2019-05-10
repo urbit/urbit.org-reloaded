@@ -6,7 +6,7 @@ description = "Urbit (probably) doesn't need a blockchain, because the Urbit add
 [taxonomies]
 posts = ["Essays"]
 +++
-![](http://media.urbit.org/site/blog-1.jpg)
+![](https://media.urbit.org/site/blog-1.jpg)
 
 TLDR: Urbit (probably) doesn't need a blockchain, because the Urbit
 address-space PKI is a special case of a consensus ledger (itself a
