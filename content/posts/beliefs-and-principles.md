@@ -6,7 +6,7 @@ description = "We believe."
 [taxonomies]
 posts = ["Essays"]
 +++
-![](http://media.urbit.org/site/blog-2.jpg)
+![](https://media.urbit.org/site/blog-2.jpg)
 
 ## Beliefs
 

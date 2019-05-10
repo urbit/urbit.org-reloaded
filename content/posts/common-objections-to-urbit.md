@@ -6,7 +6,7 @@ description = "Some common objections to Urbit, discussed."
 [taxonomies]
 posts = ["Essays"]
 +++
-![](http://media.urbit.org/site/blog-9.jpg)
+![](https://media.urbit.org/site/blog-9.jpg)
 
 We love crowdsourced criticism.  We've heard a lot of great
 objections to  Urbit.  Surely there's more out there!  If so,

@@ -6,7 +6,7 @@ description = "A high-level overview of Urbit."
 [taxonomies]
 posts = ["Essays"]
 +++
-![](http://media.urbit.org/site/blog-0.jpg)
+![](https://media.urbit.org/site/blog-0.jpg)
 
 ## What Urbit is
 
@@ -42,7 +42,7 @@ never shows you ads.  Or loses your data.  Or updates without
 your consent.
 
 Technically, Urbit is a new kind of OS that has a precise formal
-definition.  (Urbit is actually a [single mathematical function](http://media.urbit.org/whitepaper.pdf).)  One advantage of a math-based OS is that Urbit is perfectly
+definition.  (Urbit is actually a [single mathematical function](https://media.urbit.org/whitepaper.pdf).)  One advantage of a math-based OS is that Urbit is perfectly
 portable.  It can't tell whether it's in a cloud data center or on
 your home PC.
 
@@ -205,4 +205,4 @@ evaluate Urbit's [beliefs and principles](../beliefs-and-principles) or its
 [interim constitution](../interim-constitution).
 
 (For technical readers, check out our [documentation](https://urbit.org/docs/) or
-the [whitepaper](http://media.urbit.org/whitepaper.pdf)).
+the [whitepaper](https://media.urbit.org/whitepaper.pdf)).
