@@ -291,7 +291,7 @@ textarea, input[type="text"], input[type="email"], input[type="number"] {
 }
 
 button, .btn {
-  font-family: 'Inter UI',-apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 500;
   font-size: 4rem;
   line-height: 4rem;
@@ -350,7 +350,7 @@ button, .btn {
 
 h1, h2, h3, h4, h5, h6, .text-heading {
   margin: 0;
-  font-family: 'Inter UI',-apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 p, article li {
@@ -370,6 +370,7 @@ p, .p {
 }
 
 pre, code {
+  font-family: "Source Code Pro", monospace;
   background-color: #eee !important;
   color: #000 !important;
   overflow-y: scroll;
