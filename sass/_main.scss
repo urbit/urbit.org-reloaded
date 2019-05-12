@@ -55,6 +55,10 @@ iframe {
     line-height: 8rem;
     margin-bottom: 1rem;
   }
+  li {
+    font-size: inherit;
+    line-height: inherit;
+  }
 }
 
 .content-nav-icon {
@@ -259,20 +263,6 @@ iframe {
   width: 100%;
 }
 
-.article {
-  h2 {
-    margin-top: 16rem;
-    margin-bottom: 4rem;
-  }
-  h3 {
-    margin-top: 8rem;
-    margin-bottom: 4rem;
-  }
-  h4 {
-    margin-bottom: 4rem;
-  }
-}
-
 .form {
   width: 100%;
   max-width: 320px;
@@ -353,16 +343,29 @@ h1, h2, h3, h4, h5, h6, .text-heading {
   font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-p, article li {
-  font-size: 4rem;
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+h1 {
+  font-size: 12rem;
+  line-height: 16rem;
+}
+h2 {
+  font-size: 8rem;
+  line-height: 12rem;
+}
+h3 {
+  font-size: 6rem;
+  line-height: 8rem;
+}
+h4 {
+  font-size: 5rem;
+  line-height: 6rem;
+}
+h5, p, li {
+  font-size: 5rem;
   line-height: 8rem;
   font-weight: 400;
-}
-
-article {
-  h1 {
-    margin-bottom: 6rem;
-  }
 }
 
 p, .p {
@@ -374,9 +377,45 @@ pre, code {
   background-color: #eee !important;
   color: #000 !important;
   overflow-y: scroll;
+  font-weight: 500;
   span {
     color: #000 !important;
   }
   padding: 1rem;
   font-size: 4rem;
+}
+
+textarea, input[type="text"], input[type="email"], input[type="number"] {
+  border: 1px solid #B1B2B3;
+  font-size: 4rem;
+  line-height: 6rem;
+  transition: all 0.1s linear;
+  padding-right: 40px;
+  position: relative;
+  &:active, &:focus {
+    border: 1px solid #000000;
+  }
+  &:required, &:invalid {
+    box-shadow: none !important;
+    border: 1px solid #EE892B;
+    color: #EE892B;
+  }
+}
+
+.has-valid-input {
+  position: relative;
+  &:after {
+    content: '✓';
+    color: #2AA779;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 15px;
+    height: 24px;
+    margin-top: -4px;
+  }
+  input[type="text"], input[type="email"], input[type="number"] {
+    border: 1px solid #2AA779;
+  }
 }
