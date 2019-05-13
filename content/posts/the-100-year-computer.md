@@ -2,12 +2,12 @@
 title = "The 100 Year Computer"
 date = 2019-05-13
 author = "Galen Wolfe-Pauly"
-description = "."
+description = "One way to think about Urbit: as a \"100 year computer.\""
 [taxonomies]
 posts = ["Essays"]
 +++
 
-![](https://media.urbit.org/site/posts/100-year-computer-1.md)
+![](https://media.urbit.org/site/posts/essays/100-year-computer-1.png)
 
 Around the Tlon office, we’re always looking for more concise ways to describe what we do. We kicked around ‘personal server’ for a long time. It’s pretty close. ‘Personal cloud computer’ did okay for a while, but it’s a little confusing. 
 
@@ -22,3 +22,5 @@ In theory we could all be using Apple I’s today, but they’re a bit cumbersom
 Imagine that a computer was something you kept forever. It would comfortably store your entire life: your writing, photos, blood tests, even your genome. Your computer would never show you ads, interrupt or distract you against your wishes, or send your data to someone else without your permission. 
 
 Imagine a computer that was extremely valuable to you, that you’d pay thousands of dollars to recover, but you used *less* than the one you do today. 
+
+**Galen Wolfe-Pauly** ~ravmel-ropdyl
