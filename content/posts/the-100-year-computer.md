@@ -11,7 +11,7 @@ posts = ["Essays"]
 
 Around the Tlon office, we’re always looking for more concise ways to describe what we do. We kicked around ‘personal server’ for a long time. It’s pretty close. ‘Personal cloud computer’ did okay for a while, but it’s a little confusing. 
 
-But another way to think about Urbit is as a 100-year computer. 
+One way to think about Urbit is as a 100-year computer. 
 
 A 100-year computer has to be durable, reliable and permanent. It has to never lose data or fail in unpredictable ways. It has to be continuous, meaning it should never need to be updated by the user. If I put it in a closet for 10 years and take it out, it should work again without any intervention. 
 
