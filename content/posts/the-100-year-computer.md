@@ -1,8 +1,8 @@
 +++
-title = "The 100 Year Computer"
+title = "The 100-Year Computer"
 date = 2019-05-13
 author = "Galen Wolfe-Pauly"
-description = "One way to think about Urbit: as a \"100 year computer.\""
+description = "One way to think about Urbit: as a \"100-year computer.\""
 [taxonomies]
 posts = ["Essays"]
 +++
@@ -11,9 +11,9 @@ posts = ["Essays"]
 
 Around the Tlon office, we’re always looking for more concise ways to describe what we do. We kicked around ‘personal server’ for a long time. It’s pretty close. ‘Personal cloud computer’ did okay for a while, but it’s a little confusing. 
 
-One way to think about Urbit is as a 100 year computer. 
+One way to think about Urbit is as a 100-year computer. 
 
-A 100 year computer has to be durable, reliable and permanent. It has to never lose data or fail in unpredictable ways. It has to be continuous, meaning it should never need to be updated by the user. If I put it in a closet for 10 years and take it out, it should work again without any intervention. 
+A 100-year computer has to be durable, reliable and permanent. It has to never lose data or fail in unpredictable ways. It has to be continuous, meaning it should never need to be updated by the user. If I put it in a closet for 10 years and take it out, it should work again without any intervention. 
 
 And, perhaps most importantly, it should be easy and enjoyable to use. Both for a casual user and for a technical person. If it’s not enjoyable to use, and doesn’t actually *get used*, it’s never going to survive for 100 years. 
 
