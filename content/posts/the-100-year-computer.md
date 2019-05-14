@@ -1,6 +1,6 @@
 +++
 title = "The 100-Year Computer"
-date = 2019-05-13
+date = 2019-05-14
 author = "Galen Wolfe-Pauly"
 description = "One way to think about Urbit: as a \"100-year computer.\""
 [taxonomies]
