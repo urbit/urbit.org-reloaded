@@ -1,13 +1,14 @@
 +++
-title = "The Current State of Landscape"
+title = "The State of Landscape"
 date = 2019-05-16
 author = "Galen Wolfe-Pauly"
 description = "An update on the state of Landscape and the Urbit network."
+aliases = ["/posts/essays/the-state-of-landscape"]
 [taxonomies]
 posts = ["Essays"]
 +++
 
-![](https://media.urbit.org/site/posts/essays/the-current-state-of-landscape-1.png)
+![](https://media.urbit.org/site/posts/essays/the-state-of-landscape-1.png)
 
 The TL;DR is: if you’re really excited about living on Mars, Landscape is fun to try out. Come join `~dopzod/urbit-help`, experiment with creating your own chats and collections (did anyone find that easter egg, yet?), and see what you can do with the thing. 
 
@@ -49,7 +50,7 @@ The second is that Ames (our network protocol) has occasional connectivity probl
 
 Relatedly, we have occasionally been seeing errors caused by the Arvo network being slow to register keys from the blockchain. If you’re a newly registered Azimuth point, and your keys were just put on-chain, it can take some time for that change to propagate. This can result in a confusing situation for new ships.
 
-### 2 - There’s no ‘Individual Continuity Breach’
+### 2 - There’s no ‘individual continuity breach’
 
 One great thing about the Arvo network is that it’s more like a giant single computer than a network. When you talk to another ship, use remote files or sync data it’s almost the same as working with local data.
 
@@ -59,7 +60,7 @@ We’d like individual resets to work, and we’re [working on it](https://githu
 
 This is another unacceptable bug for anything we truly rely on.
 
-### 3 - There are no Push Notifications, Yet
+### 3 - There are no push notifications, yet
 
 What’s one thing that a chat application needs to do? Notify you of new messages. What does Landscape notify you about? Well, at the moment, basically nothing. 
 

@@ -3,6 +3,7 @@ title = "~2019.5 Roadmap"
 date = 2019-05-16
 author = "Galen Wolfe-Pauly"
 description = "Where we are and where we're going as of mid-2019."
+aliases = ["/posts/essays/2019-5-roadmap"]
 [taxonomies]
 posts = ["Essays"]
 +++
@@ -13,9 +14,9 @@ We often get so busy that we forget to tell you what we’ve been up to. Here’
 
 At a very high level we have two goals for 2019: make Azimuth easier to use, and get Arvo to a 1.0. 
 
-Next year we’ll begin to move away from some of the MEGACORP software we use in the office, and replace it with our own tooling. There’s some exciting work happening in that department, but we’ll cover that in a future post. 
+Next year we’ll begin to move away from some of the MEGACORP software we use in the office and replace it with our own tooling. There’s some exciting work happening in that department, but we’ll cover that in a future post. 
 
-For some related recent thinking on all of this that’s outside the scope of this update, see [The 100 Year Computer](/posts/essays/the-100-year-computer/), [The Current State of Landscape](/posts/essays/the-current-state-of-landscape/) and Azimuth as MultiPass (coming soon).
+For some related recent thinking on all of this, see [The 100 Year Computer](./posts/essays/the-100-year-computer/), [The Current State of Landscape](./posts/essays/the-current-state-of-landscape/) and [Azimuth as MultiPass](./posts/essays/azimuth-as-multipass/).
 
 For now, let’s just look at what’s on the immediate horizon:
 
@@ -23,17 +24,15 @@ For now, let’s just look at what’s on the immediate horizon:
 
 At lunch the other day someone on our team said something like, ‘We built a complete and working public key infrastructure, but we haven’t told anyone about it.’ 
 
-It’s true. Azimuth is operational, secure, and well tested. It’s a pretty cool piece of technology and it’s out there in the world for anyone to use. It also doesn’t require that you use Arvo — Arvo happens to make use of Azimuth, but Azimuth itself is a completely separate systemit’s a completely separate system. (Though Arvo does require Azimuth). 
+It’s true. Azimuth is operational, secure, and well tested. It’s a pretty cool piece of technology, and it’s out there in the world for anyone to use. It also doesn’t require that you use Arvo — Arvo happens to make use of Azimuth, but it’s a completely separate system.
 
-So the question is why haven’t we told the world about it?
+So, the question is, why haven’t we told the world about it?
 
-I tend to think that in order for a technology to succeed it has to not onlynot only has to be an important technical  innovation:, but it also has to be easy to understand as a product. And that’s our answer: we’ve undersold Azimuth because we want it to be easier to understand by *using*, not just by reading the code. Azimuth is quite an elegant as a piece of technology — but that it doesn’t matter until it has a great user experience to match.
+I tend to think that in order for a technology to succeed, it not only has to be an important technical innovation, it also has to be easy to understand as a product. And that’s our answer: we’ve undersold Azimuth because we want it to be easier to understand by *using*, not just by reading the code. Azimuth is quite elegant as a piece of technology, but that it doesn’t matter until it has a great user experience to match.
 
 That’s why, in the near term, we’re focused on building on top of Azimuth ourselves. We can’t ask others to go down roads if we haven’t already been down them ourselves. 
 
 So, here’s what we’re building first:
-
-Items bulleted with a ‘-’ are in process and we expect to deliver. Items bulleted with a ‘*’ are still under consideration.
 
 ### Q2 2019
 
@@ -43,14 +42,16 @@ Items bulleted with a ‘-’ are in process and we expect to deliver. Items bul
 
 ### Q3 2019
 
-- Expanded Azimuth-centric example modules, documentation and developer tooling. 
-- An OAuth server for Azimuth — allowing any service to log users in with Azimuth
-- A mobile app for point to point payments using Azimuth
+- Expanded Azimuth-centric example modules, documentation and developer tooling.
+
+Still under consideration:
+
+- An OAuth server for Azimuth, allowing any service to log users in with Azimuth.
+- A mobile app for point to point payments using Azimuth.
 
 ### 2020
 
-Azimuth is beginning to feel like multipass (coming soon), with a variety of ways to use Azimuth points without ever booting Arvo
-
+Azimuth is beginning to feel like [multipass](./posts/essays/azimuth-as-multipass/) (coming soon), with a variety of ways to use Azimuth points without ever booting Arvo
 
 ## Arvo
 
