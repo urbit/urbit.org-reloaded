@@ -18,10 +18,6 @@
         <!-- body -->
         <div class="pb80">
           {{ section.content | safe }}
-          {% for page in section.pages %}
-            <a href="{{ page.permalink }}"><h2 class="mt16 mb4">{{ page.title }}</h2></a>
-            <p class="mt3">{{ page.description }}</p>
-          {% endfor %}
         </div>
       </div>
     </div>
