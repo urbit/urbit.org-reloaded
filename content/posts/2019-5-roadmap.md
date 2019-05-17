@@ -16,7 +16,7 @@ At a very high level we have two goals for 2019: make Azimuth easier to use, and
 
 Next year we’ll begin to move away from some of the MEGACORP software we use in the office and replace it with our own tooling. There’s some exciting work happening in that department, but we’ll cover that in a future post. 
 
-For some related recent thinking on all of this, see [The 100 Year Computer](/posts/essays/the-100-year-computer/), [The Current State of Landscape](/posts/essays/the-current-state-of-landscape/) and [Azimuth as MultiPass](/posts/essays/azimuth-as-multipass/).
+For some related recent thinking on all of this, see [The 100 Year Computer](/posts/essays/the-100-year-computer/), [The State of Landscape](/posts/essays/the-state-of-landscape/) and [Azimuth as MultiPass](/posts/essays/azimuth-as-multipass/).
 
 For now, let’s just look at what’s on the immediate horizon:
 
