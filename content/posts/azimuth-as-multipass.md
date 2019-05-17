@@ -10,7 +10,7 @@ posts = ["Essays"]
 
 ![](https://media.urbit.org/site/posts/essays/azimuth-as-multipass-1.png)
 
-Why can’t I just walk up to a door and have it open for me? Why can’t I simply arrive at a restaurant and have them know I’m there? Shouldn’t I be able to buy a ticket to a show with my Multipass, then scan it at the entrance and use it to buy drinks?
+Why can’t I just walk up to a door and have it open for me? Why can’t I simply arrive at a restaurant and have them know I’m there? Shouldn’t I be able to buy a ticket to a show with my Multipass then scan it at the entrance and use it to buy drinks?
 
 Why should I have to log in with MEGACORP? Today, in most cases, it’s a different MEGACORP for every single context. It’s a MEGAMESS.
 

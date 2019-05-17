@@ -32,21 +32,21 @@ Anyway, let’s show off some of the specifics, and give an update on this exper
 
 Landscape is pretty simple. It lets you subscribe to chats, in the spirit of IRC, and ‘collections’, which are effectively forums or blogs with comments. You can also direct message with other running ‘ships’ or Arvo nodes. 
 
-For the most part, this happens through a web interface that you can access at `https://ship.arvo.network` or via `localhost:8080`.
+For the most part, this happens through a web interface that you can access at `https://ship.arvo.network` or via `localhost:80`.
 
-There’s also an iOS app, available in the app store, that you link to your ship the same way you log in through a browser.
+There’s also an iOS app, [available in the app store](https://itunes.apple.com/us/app/landscape-urbit/id1393148862), that you link to your ship the same way you log in through a browser.
 
 ## Landscape: The Bad Parts
 
-What’s keeping us from asking others to use this thing more aggressively? Let’s walk through them (while keeping in mind, they’re all [things we’re working on](/posts/essays/2019-5-roadmap/)):
+What’s keeping us from asking others to use this thing more aggressively? Let’s walk through the reasons (while keeping in mind, they’re all [things we’re working on](/posts/essays/2019-5-roadmap/)):
 
 ### 1 - Arvo has rough spots
 
-They have gotten a lot better, and we’re working on them, but there are still a few things that can crash your Arvo ship. This, of course, has nothing to do with your Azimuth point. That’sIt’s completely separate and, as far as we know, secure.
+They have gotten a lot better, but there are still a few things that can crash your Arvo ship. This, of course, has nothing to do with your Azimuth point, which is completely separate and, as far as we know, secure.
 
 The first (and most severe) is a bug in our event persistence that occurs very rarely. Basically, there are conditions under which you can cause events not to be properly written to disk and corrupt your event log. It’s pretty unlikely, but it’s unacceptable for a real product since it basically causes you to have to wait out the current network era. 
 
-The second is that Ames (our network protocol) has occasional connectivity problems. Originally, we thought we had found this issue as being related to [a timer bug](https://github.com/urbit/arvo/pull/1072). It may be, but the networking is in the process of a major overhaul — so we’ve implemented a few bandaids to make the situation workable. `|bonk` sometimes needs to be used to reset connections between peers. It’s an ugly fix.
+The second is that Ames (our network protocol) has occasional connectivity problems. Originally, we thought we had found this issue as being related to [a timer bug](https://github.com/urbit/arvo/pull/1072). It may be, but the networking is in the process of a major overhaul — so we’ve implemented a few bandaids to make the situation workable. `|bonk` sometimes needs to be used to reset connections between peers, and `:ethmanage` sometimes need to be used to re-synchronize with the blockchain. It’s an ugly fix, but it usually works.
 
 Relatedly, we have occasionally been seeing errors caused by the Arvo network being slow to register keys from the blockchain. If you’re a newly registered Azimuth point, and your keys were just put on-chain, it can take some time for that change to propagate. This can result in a confusing situation for new ships.
 
