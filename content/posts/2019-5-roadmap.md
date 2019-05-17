@@ -16,21 +16,21 @@ At a very high level we have two goals for 2019: make Azimuth easier to use, and
 
 Next year we’ll begin to move away from some of the MEGACORP software we use in the office and replace it with our own tooling. There’s some exciting work happening in that department, but we’ll cover that in a future post. 
 
-For some related recent thinking on all of this, see [The 100 Year Computer](./posts/essays/the-100-year-computer/), [The Current State of Landscape](./posts/essays/the-current-state-of-landscape/) and [Azimuth as MultiPass](./posts/essays/azimuth-as-multipass/).
+For some related recent thinking on all of this, see [The 100 Year Computer](/posts/essays/the-100-year-computer/), [The Current State of Landscape](/posts/essays/the-current-state-of-landscape/) and [Azimuth as MultiPass](/posts/essays/azimuth-as-multipass/).
 
 For now, let’s just look at what’s on the immediate horizon:
 
 ## Azimuth
 
-At lunch the other day someone on our team said something like, ‘We built a complete and working public key infrastructure, but we haven’t told anyone about it.’ 
+At lunch the other day someone on our team said something like, ‘We built a complete and working public key infrastructure, but we haven’t told anyone.’ 
 
 It’s true. Azimuth is operational, secure, and well tested. It’s a pretty cool piece of technology, and it’s out there in the world for anyone to use. It also doesn’t require that you use Arvo — Arvo happens to make use of Azimuth, but it’s a completely separate system.
 
 So, the question is, why haven’t we told the world about it?
 
-I tend to think that in order for a technology to succeed, it not only has to be an important technical innovation, it also has to be easy to understand as a product. And that’s our answer: we’ve undersold Azimuth because we want it to be easier to understand by *using*, not just by reading the code. Azimuth is quite elegant as a piece of technology, but that it doesn’t matter until it has a great user experience to match.
+I tend to think that in order for a technology to succeed, it has to not only be an important technical innovation, but also easy to understand as a product. And that’s our answer: we’ve undersold Azimuth because we want it to be easier to understand by *using*, not just by reading the code. Azimuth is quite elegant as a piece of technology, but that doesn’t matter until it has a great user experience to match.
 
-That’s why, in the near term, we’re focused on building on top of Azimuth ourselves. We can’t ask others to go down roads if we haven’t already been down them ourselves. 
+That’s why, in the near term, we’re focused on building on top of Azimuth ourselves. We can’t ask others to go down roads if we haven’t already been down ourselves. 
 
 So, here’s what we’re building first:
 
@@ -38,7 +38,7 @@ So, here’s what we’re building first:
 
 - A simplified onboarding flow for getting an Azimuth point that’s simple to share with friends over email, text or as a URL.
 - A redesigned and improved Bridge for managing your points. 
-- An interface that allows you to  easily send money between Azimuth points – without running Arvo.
+- An interface that allows you to  easily send money between Azimuth points without running Arvo.
 
 ### Q3 2019
 
@@ -51,15 +51,15 @@ Still under consideration:
 
 ### 2020
 
-Azimuth is beginning to feel like [multipass](./posts/essays/azimuth-as-multipass/) (coming soon), with a variety of ways to use Azimuth points without ever booting Arvo
+Azimuth is beginning to feel like [multipass](/posts/essays/azimuth-as-multipass/), with a variety of ways to use Azimuth points without ever booting Arvo
 
 ## Arvo
 
 The Arvo interface has always been held back by Arvo’s technical immaturity. This is still true to some degree. The system has not stabilized completely. 
 
-But! We’ve been using Landscape quite a lot lately. I use it daily, in fact — even on my phone. An encrypted (although not audited — so let’s not call it ‘secure’), authenticated chat where I own the keys and can read the source code is pretty cool, really. The interface isn’t perfect, but it’s nice. Landscape is a great preview of where we’re going: a simple, permanent, self-sovereign computer.
+But! We’ve been using Landscape quite a lot lately. I use it daily, in fact — even [on my phone](https://itunes.apple.com/us/app/landscape-urbit/id1393148862). An encrypted (although not audited — so let’s not call it ‘secure’) authenticated chat where I own the keys and can read the source code is pretty cool, really. The interface isn’t perfect, but it’s nice. Landscape is a great preview of where we’re going: a simple, permanent, self-sovereign computer.
 
-There are still rough edges, and Landscape is not nearly general purpose enough. But we have plans:
+There are still rough edges, and Landscape is not nearly general purpose enough, but we have plans:
 
 ### Q2 2019
 
@@ -70,9 +70,9 @@ There are still rough edges, and Landscape is not nearly general purpose enough.
 ### Q3 2019
 
 - A significant overhaul to Gall, our application model, making it much simpler for users to write apps or ‘agents’ in Arvo.
-- A new version of the compiler that makes us less reliant on jets. This will eliminate a major obstacle to achieving network continuity -- i.e., the ability for ships to upgrade themselves totally over-the-air, forever.This will clear the way to continuity (a key to being totally upgradeable over the air).
-- A significant overhaul and stability update to Clay, our filesystem, making it possible for us to trust it for self hosting, search it easily, and depend on it for long-term data storage.
-Tooling for hosting and hopefully a beta program for hosted Arvo instances run by Tlon.
+- A new version of the compiler that makes us less reliant on jets. This will eliminate a major obstacle to achieving network continuity, or the ability for ships to upgrade themselves totally over-the-air, forever.
+- A significant overhaul and stability update to Clay, our filesystem, making it possible for us to trust it for self-hosting, search it easily, and depend on it for long-term data storage.
+- Tooling for hosting and hopefully a beta program for hosted Arvo instances run by Tlon.
 
 ### 2020
 
@@ -83,7 +83,7 @@ Tooling for hosting and hopefully a beta program for hosted Arvo instances run b
 
 Historically, we’ve been shy about even acknowledging we have a community at all. We’ve often felt like it was far too early to invite others in to the system.
 
-But, now that enough people clawed their way in I have been convinced that it’s time to evolve our approach. As long as we’re up front about the state of this 100 year computer -- that it’s live, but incomplete -- I think it’s a good thing to welcome people on board.So long as we’re upfront about the state of this 100-year computer (that it’s live but incomplete), it’s a good thing to welcome people on board. There are more areas for contribution that we readily admit, and there’s plenty to play with.
+As long as we’re up front about the state of this 100 year computer – that it’s live, but incomplete – I think it’s a good thing to welcome people on board. There are many opportunities for contribution and there’s plenty to play with.
 
 Hoon school was the first effort in this direction. We intend to do a lot more:
 
@@ -97,7 +97,7 @@ Scaling Hoon school up to include both a track for experts and for beginners, an
 
 ### Q3 2019
 
-- Hoon School participants understand clearly how to contribute a Modulo agent, and invite others into it.
+- Hoon School participants understand clearly how to build a Modulo agent, and invite others into it.
 - The road toward building an Azimuth module is well understood, paved, and clear.
 - We have clear instructions and tutorials for building Azimuth modules and using Azimuth as a login or reputation primitive.
 
