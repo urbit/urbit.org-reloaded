@@ -3,6 +3,7 @@ title = "What is Urbit For?"
 date = 2016-05-11
 author = "Galen Wolfe-Pauly"
 description = "A vision of the Urbit-powered future."
+aliases = ["/posts/essays/what-urbit-is-for"]
 [taxonomies]
 posts = ["Essays"]
 +++
