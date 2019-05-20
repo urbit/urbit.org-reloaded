@@ -2,7 +2,7 @@
 title = "Azimuth as Multipass"
 date = 2019-05-16
 author = "Galen Wolfe-Pauly"
-description = "An update on the state of Landscape and the Urbit network."
+description = "What if everyone had a single 'civilizational key'?"
 aliases = ["/posts/essays/azimuth-as-multipass/"]
 [taxonomies]
 posts = ["Essays"]
