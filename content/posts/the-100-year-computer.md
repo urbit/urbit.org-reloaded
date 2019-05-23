@@ -24,4 +24,4 @@ Imagine that a computer was something you kept forever. It would comfortably sto
 
 Imagine a computer that was extremely valuable to you, that you’d pay thousands of dollars to recover, but you used *less* than the one you do today. 
 
-**Galen Wolfe-Pauly** ~ravmel-ropdyl
+**Galen Wolfe-Pauly** `~ravmel-ropdyl`

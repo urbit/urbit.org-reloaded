@@ -101,4 +101,4 @@ Scaling Hoon school up to include both a track for experts and for beginners, an
 - The road toward building an Azimuth module is well understood, paved, and clear.
 - We have clear instructions and tutorials for building Azimuth modules and using Azimuth as a login or reputation primitive.
 
-**Galen Wolfe-Pauly** ~ravmel-ropdyl
+**Galen Wolfe-Pauly** `~ravmel-ropdyl`

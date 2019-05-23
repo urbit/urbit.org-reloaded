@@ -28,4 +28,4 @@ Perhaps part of how we ended up in the world we’re in is that we didn’t have
 
 We think everyone needs an identity that can hold money and have packets routed to it. Start there, and it’s quite fun to imagine where you end up. A civilized digital society might even be possible after all.
 
-**Galen Wolfe-Pauly** ~ravmel-ropdyl
+**Galen Wolfe-Pauly** `~ravmel-ropdyl`
