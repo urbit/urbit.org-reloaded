@@ -3,6 +3,7 @@ title = "An Urbit Overview"
 date = 2016-05-11
 author = "Galen Wolfe-Pauly"
 description = "A high-level overview of Urbit."
+aliases = ["/posts/essays/an-urbit-overview"]
 [taxonomies]
 posts = ["Essays"]
 +++

@@ -3,6 +3,7 @@ title = "Toward a Frozen Operating System"
 date = 2017-05-10
 author = "Curtis Yarvin + Galen Wolfe-Pauly"
 description = "Is it possible to freeze an entire OS?"
+aliases = ["/posts/essays/toward-a-frozen-operating-system"]
 [taxonomies]
 posts = ["Essays"]
 +++

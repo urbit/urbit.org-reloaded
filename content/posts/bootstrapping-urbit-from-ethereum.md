@@ -3,6 +3,7 @@ title = "Bootstrapping Urbit from Ethereum"
 date = 2017-09-20
 author = "Curtis Yarvin + Galen Wolfe-Pauly"
 description = "We've decided to launch Urbit's constitution as a system of Ethereum contracts."
+aliases = ["/posts/essays/bootstrapping-urbit-from-ethereum"]
 [taxonomies]
 posts = ["Essays"]
 +++
