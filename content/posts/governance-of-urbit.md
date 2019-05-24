@@ -3,6 +3,7 @@ title = "Governance of urbit.org"
 date = 2019-01-11
 author = "Erik Newton"
 description = "On Stewardship of the Urbit project"
+aliases = ["/posts/essays/governance-of-urbit"]
 [taxonomies]
 posts = ["Essays"]
 +++

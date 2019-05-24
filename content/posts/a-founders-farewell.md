@@ -3,6 +3,7 @@ title = "A Founder's Farewell"
 date = 2019-01-14
 author = "Curtis Yarvin"
 description = "My goal was always to fire myself at the first possible opportunity. I'm super happy to reach it."
+aliases = ["/posts/essays/a-founders-farewell"]
 [taxonomies]
 posts = ["Essays"]
 +++
