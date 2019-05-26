@@ -49,7 +49,7 @@ iframe {
 .content-nav {
   width: 20%;
   min-width: 200px;
-  padding-right: 1rem;
+  //padding-right: 1rem;
   margin-top: 24rem;
   &__item {
     line-height: 8rem;
@@ -82,7 +82,18 @@ iframe {
   height: 100%;
   z-index: 0;
   .content-nav {
-    overflow-y: scroll;
+    &__search-btn {
+      width: 100%;
+    }
+    &__index {
+      height: calc(100% - 48px);
+      overflow-y: scroll;
+      &__item {
+        &:last-child{
+          padding-bottom: 8rem;
+        }
+      }
+    }
     .list:first-child {
       padding-bottom: 14rem;
     }
@@ -422,6 +433,7 @@ textarea, input[type="text"], input[type="email"], input[type="number"] {
   transition: all 0.1s linear;
   padding-right: 40px;
   position: relative;
+  border-radius: 0 !important;
   &:active, &:focus {
     border: 1px solid #000000;
   }
@@ -430,6 +442,45 @@ textarea, input[type="text"], input[type="email"], input[type="number"] {
     border: 1px solid #EE892B;
     color: #EE892B;
   }
+}
+
+.search-btn {
+  border: 1px solid #B1B2B3;
+  background: #fff;
+  font-size: 4rem;
+  line-height: 6rem;
+  transition: all 0.1s linear;
+  padding: 12px 12px 12px 40px;
+  position: relative;
+  font-weight: normal;
+  text-align: left;
+  box-shadow: none !important;
+  color: #B1B2B3;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    margin-top: -4px;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    left: 23px;
+    top: 25px;
+    transform: rotate(-45deg);
+    background: #000;
+    width: 2px;
+    height: 9px;
+  }
+  &:hover {
+    border: 1px solid #000000;
+  }
+
 }
 
 .has-valid-input {

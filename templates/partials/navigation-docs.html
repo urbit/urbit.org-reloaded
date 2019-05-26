@@ -1,12 +1,13 @@
 {% block content %}
 <div id="js-content-nav-toggle" class="content-nav-icon"></div>
 <nav class="content-nav">
-  <ul class="list">
+  <button type="button" class="search-btn content-nav__search-btn mb2">Search</button>
+  <ul class="list content-nav__index">
     {% block menu %}
       {% set index = get_section(path="docs/_index.md") %}
       {% for s in index.subsections %}
         {% set subsection = get_section(path=s) %}
-        <li class="list__item">
+        <li class="list__item content-nav__index__item">
           <a class="text-600" href="{{ subsection.permalink }}">
             {{ subsection.title }}
           </a>
