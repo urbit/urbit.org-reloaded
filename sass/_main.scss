@@ -41,6 +41,15 @@ iframe {
   display: flex;
 }
 
+.pop-up {
+  width: 100%;
+  max-width: 500px;
+  margin: 14rem auto;
+  background: #fff;
+  padding: 7rem 14rem;
+  height: 400px; //temporary
+}
+
 .container--fixed {
   position: fixed;
   margin-top: -24rem;
@@ -82,7 +91,7 @@ iframe {
   height: 100%;
   z-index: 0;
   .content-nav {
-    &__search-btn {
+    &__search-bar {
       width: 100%;
     }
     &__index {
@@ -279,16 +288,57 @@ iframe {
   max-width: 320px;
 }
 
+.search-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+  top: 0;
+  left: 0;
+  z-index: 10;
+  .search-bar {
+    width: 100%;
+    padding: 0;
+    border: none;
+    &:after {
+      content: none;
+    }
+    &:before {
+      content: none;
+    }
+    &:hover {
+      border: none;
+    }
+    &__input {
+      line-height: 6rem;
+    }
+  }
+}
+
 /*
  * styling
  */
 
-textarea, input[type="text"], input[type="email"], input[type="number"] {
-  border: 2px solid #000;
+textarea, input[type="text"], input[type="email"], input[type="number"], input[type="search"] {
+  border: 1px solid #B1B2B3;
+  font-size: 4rem;
+  line-height: 6rem;
+  transition: all 0.1s linear;
+  padding-right: 40px;
+  position: relative;
+  border-radius: 0 !important;
   padding: 12px;
   width: 100%;
   outline: none;
   box-sizing: border-box;
+  &:active, &:focus {
+    border: 1px solid #000000;
+  }
+  &:required, &:invalid {
+    box-shadow: none !important;
+    border: 1px solid #EE892B;
+    color: #EE892B;
+  }
 }
 
 button, .btn {
@@ -302,6 +352,63 @@ button, .btn {
   border: none;
   cursor: pointer;
 }
+
+.search-bar {
+  border: 1px solid #B1B2B3;
+  background: #fff;
+  font-size: 4rem;
+  line-height: 6rem;
+  transition: all 0.1s linear;
+  padding: 12px 12px 12px 40px;
+  position: relative;
+  font-weight: normal;
+  text-align: left;
+  box-shadow: none !important;
+  color: #B1B2B3;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    margin-top: -4px;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    left: 23px;
+    top: 25px;
+    transform: rotate(-45deg);
+    background: #000;
+    width: 2px;
+    height: 9px;
+  }
+  &:hover {
+    border: 1px solid #000000;
+  }
+}
+
+.has-valid-input {
+  position: relative;
+  &:after {
+    content: '✓';
+    color: #2AA779;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 15px;
+    height: 24px;
+    margin-top: -4px;
+  }
+  input[type="text"], input[type="email"], input[type="number"] {
+    border: 1px solid #2AA779;
+  }
+}
+
 
 /*
  * typography
@@ -424,79 +531,4 @@ pre, code {
   }
   padding: 1rem;
   font-size: 4rem;
-}
-
-textarea, input[type="text"], input[type="email"], input[type="number"] {
-  border: 1px solid #B1B2B3;
-  font-size: 4rem;
-  line-height: 6rem;
-  transition: all 0.1s linear;
-  padding-right: 40px;
-  position: relative;
-  border-radius: 0 !important;
-  &:active, &:focus {
-    border: 1px solid #000000;
-  }
-  &:required, &:invalid {
-    box-shadow: none !important;
-    border: 1px solid #EE892B;
-    color: #EE892B;
-  }
-}
-
-.search-btn {
-  border: 1px solid #B1B2B3;
-  background: #fff;
-  font-size: 4rem;
-  line-height: 6rem;
-  transition: all 0.1s linear;
-  padding: 12px 12px 12px 40px;
-  position: relative;
-  font-weight: normal;
-  text-align: left;
-  box-shadow: none !important;
-  color: #B1B2B3;
-  &:after {
-    content: '';
-    position: absolute;
-    left: 10px;
-    top: 20px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 2px solid #000;
-    margin-top: -4px;
-  }
-  &:before {
-    content: '';
-    position: absolute;
-    left: 23px;
-    top: 25px;
-    transform: rotate(-45deg);
-    background: #000;
-    width: 2px;
-    height: 9px;
-  }
-  &:hover {
-    border: 1px solid #000000;
-  }
-
-}
-
-.has-valid-input {
-  position: relative;
-  &:after {
-    content: '✓';
-    color: #2AA779;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translate(0,-50%);
-    width: 15px;
-    height: 24px;
-    margin-top: -4px;
-  }
-  input[type="text"], input[type="email"], input[type="number"] {
-    border: 1px solid #2AA779;
-  }
 }
