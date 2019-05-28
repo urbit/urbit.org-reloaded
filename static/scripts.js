@@ -67,6 +67,13 @@ function initToggleMenu() {
   }
 }
 
+var toggleContentNav = document.getElementById('js-search-window-toggle');
+if (toggleContentNav !== null) {
+  toggleContentNav.onclick = function() {
+    document.body.classList.toggle('has-active-search-window');
+  }
+}
+
 //
   // search functionality
 //
@@ -100,7 +107,7 @@ function makeTeaser(body, terms) {
   var TERM_WEIGHT = 40;
   var NORMAL_WORD_WEIGHT = 2;
   var FIRST_WORD_WEIGHT = 8;
-  var TEASER_MAX_WORDS = 30;
+  var TEASER_MAX_WORDS = 17;
 
   var stemmedTerms = terms.map(function (w) {
     return elasticlunr.stemmer(w.toLowerCase());
@@ -202,29 +209,11 @@ function formatSearchResultItem(item, terms) {
   return li;
 }
 
-// Go from the book view to the search view
-function toggleSearchMode() {
-  var bookContent = document.querySelector(".book-content");
-  var searchContainer = document.querySelector(".search-container");
-  if (searchContainer.classList.contains("search-container--is-visible")) {
-    searchContainer.classList.remove("search-container--is-visible");
-    document.body.classList.remove("search-mode");
-    bookContent.style.display = "block";
-  } else {
-    searchContainer.classList.add("search-container--is-visible");
-    document.body.classList.add("search-mode");
-    $bookContent.style.display = "none";
-    document.getElementById("search").focus();
-  }
-}
-
 function initSearch() {
   var searchInput = document.getElementById("search");
   if (!searchInput) {
     return;
   }
-  var searchIcon = document.getElementById("js-search-window-toggle");
-  searchIcon.addEventListener("click", toggleSearchMode);
 
   var searchResults = document.querySelector(".search-results");
   var searchResultsHeader = document.querySelector(".search-results__header");

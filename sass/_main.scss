@@ -46,7 +46,7 @@ iframe {
   max-width: 500px;
   margin: 14rem auto;
   background: #fff;
-  padding: 7rem 14rem;
+  padding: 7rem 0;
 }
 
 .container--fixed {
@@ -297,8 +297,7 @@ iframe {
   z-index: 10;
   display: none;
   .search-bar {
-    width: 100%;
-    padding: 0;
+    padding: 0 14rem;
     border: none;
     &:after {
       content: none;
@@ -313,6 +312,12 @@ iframe {
       line-height: 6rem;
     }
   }
+}
+
+.search-results {
+  overflow-y: scroll;
+  padding: 0 14rem;
+  max-height: 400px;
 }
 
 .has-active-search-window {
