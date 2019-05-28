@@ -47,7 +47,6 @@ iframe {
   margin: 14rem auto;
   background: #fff;
   padding: 7rem 14rem;
-  height: 400px; //temporary
 }
 
 .container--fixed {
@@ -296,6 +295,7 @@ iframe {
   top: 0;
   left: 0;
   z-index: 10;
+  display: none;
   .search-bar {
     width: 100%;
     padding: 0;
@@ -312,6 +312,12 @@ iframe {
     &__input {
       line-height: 6rem;
     }
+  }
+}
+
+.has-active-search-window {
+  .search-overlay {
+    display: block;
   }
 }
 
