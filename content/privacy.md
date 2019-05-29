@@ -70,7 +70,7 @@ We make reasonable efforts to protect your information by using physical and ele
 
 ## Children's Privacy
 
-We do not knowingly collect, maintain, or use personal information from children under 13 years of age, and no part of the Service is directed to children. If you learn that a child has provided us with personal information in violation of this Privacy Policy, then you may alert us at accounts@tlon.io.
+We do not knowingly collect, maintain, or use personal information from children under 13 years of age, and no part of the Service is directed to children. If you learn that a child has provided us with personal information in violation of this Privacy Policy, then you may alert us at privacy@tlon.io.
 
 ## International Visitors
 
@@ -82,6 +82,6 @@ We will post any adjustments to the Privacy Policy on this page, and the revised
 
 ## Contact Information
 
-Tlon is responsible for processing your information. If you have any questions, comments, or concerns about our processing activities, please email us at accounts@tlon.io.
+Tlon is responsible for processing your information. If you have any questions, comments, or concerns about our processing activities, please email us at privacy@tlon.io.
 
 *Last Updated:* September 12, 2018
