@@ -58,21 +58,25 @@ if (toggleContentNav !== null) {
   });
 }*/
 
-function initToggleMenu() {
-  var toggleContentNav = document.getElementById('js-search-window-toggle');
-  if (toggleContentNav !== null) {
-    toggleContentNav.onclick = function() {
-      document.body.classList.toggle('has-active-search-window');
+function initToggleSearchWindow() {
+  var toggleSearchWindow = document.getElementById('js-search-window-toggle');
+  var bodyEl = document.body;
+  var searchOverlay = document.getElementById('search-overlay');
+  var searchWindow = document.getElementById('search-window');
+  var searchActive = bodyEl.classList.contains('has-active-search-window');
+  if (toggleSearchWindow !== null) {
+    toggleSearchWindow.onclick = function() {
+      bodyEl.classList.toggle('has-active-search-window');
     }
+    searchOverlay.addEventListener('click', function(e){
+    	if (!searchWindow.contains(e.target)){
+        bodyEl.classList.toggle('has-active-search-window');
+      }
+    })
   }
 }
 
-var toggleContentNav = document.getElementById('js-search-window-toggle');
-if (toggleContentNav !== null) {
-  toggleContentNav.onclick = function() {
-    document.body.classList.toggle('has-active-search-window');
-  }
-}
+
 
 //
   // search functionality
@@ -218,7 +222,7 @@ function initSearch() {
   var searchResults = document.querySelector(".search-results");
   var searchResultsHeader = document.querySelector(".search-results__header");
   var searchResultsItems = document.querySelector(".search-results__items");
-  var MAX_ITEMS = 10;
+  var MAX_ITEMS = 200;
 
   var options = {
     bool: "AND",
@@ -255,9 +259,6 @@ function initSearch() {
       if (!results[i].doc.body) {
         continue;
       }
-      // var item = document.createElement("li");
-      // item.innerHTML = formatSearchResultItem(results[i], term.split(" "));
-      console.log(results[i]);
       searchResultsItems.appendChild(formatSearchResultItem(results[i], term.split(" ")));
     }
   }, 150));
@@ -266,10 +267,10 @@ function initSearch() {
 if (document.readyState === "complete" ||
     (document.readyState !== "loading" && !document.documentElement.doScroll)
 ) {
-  initToggleMenu();
+  initToggleSearchWindow();
 } else {
   document.addEventListener("DOMContentLoaded", function () {
-    initToggleMenu();
+    initToggleSearchWindow();
     initSearch();
   });
 }
