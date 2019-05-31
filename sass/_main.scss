@@ -334,7 +334,7 @@ button, .btn {
   font-weight: 700;
 }
 
-.h-font {
+.lowercase {
   text-transform: lowercase;
 }
 
@@ -417,6 +417,7 @@ pre, code {
 
 textarea, input[type="text"], input[type="email"], input[type="number"] {
   border: 1px solid #B1B2B3;
+  font-family: "Source Code Pro", mono;
   font-size: 4rem;
   line-height: 6rem;
   transition: all 0.1s linear;
