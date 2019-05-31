@@ -35,7 +35,7 @@
           {% for page in posts.pages %}
             <li class="list__item mb8">
               <span class="h4 mt0 mb0 mono">&#126;{{ page.date | date(format="%Y.%m.%d") }}</span>
-              <span class="h4 mt0 mb0 h-font">{% if page.taxonomies.posts %}
+              <span class="h4 mt0 mb0 lowercase">{% if page.taxonomies.posts %}
                 {% for post in page.taxonomies.posts %}<a href="{{ get_taxonomy_url(kind="posts", name=post) }}">{{ post }}</a> {% endfor %}
               {% endif %}</span>
               <a href="{{ page.permalink }}"><h2 class="mt1">{{ page.title }}</h2></a>
