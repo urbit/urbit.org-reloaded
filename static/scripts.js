@@ -112,6 +112,7 @@ function makeTeaser(body, terms) {
   var NORMAL_WORD_WEIGHT = 2;
   var FIRST_WORD_WEIGHT = 8;
   var TEASER_MAX_WORDS = 17;
+  var TEASER_MAX_CHARS = 63;
 
   var stemmedTerms = terms.map(function (w) {
     return elasticlunr.stemmer(w.toLowerCase());
@@ -153,7 +154,16 @@ function makeTeaser(body, terms) {
   }
 
   var windowWeights = [];
-  var windowSize = Math.min(weighted.length, TEASER_MAX_WORDS);
+  var windowSize = 0;
+  
+  var sumChars = 0;
+  for (var i = 0; i < weighted.length; i++) {
+    sumChars += weighted[i][0].length;
+    if (sumChars <= TEASER_MAX_CHARS) {
+      windowSize++;
+    }
+  }
+
   // We add a window with all the weights first
   var curSum = 0;
   for (var i = 0; i < windowSize; i++) {
@@ -205,10 +215,21 @@ function makeTeaser(body, terms) {
   return teaser.join("");
 }
 
+/*function trimTeaser(teaser) {
+  var maxLength = 63; // maximum number of characters to extract
+  var string = teaser;
+  var trimmedString = teaser.substr(0, maxLength); //trim the string to the maximum length
+  trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" "))) //re-trim if we are in the middle of a word
+}*/
+
+function trimTeaserTitle() {
+  //
+}
+
 function formatSearchResultItem(item, terms) {
   var li = document.createElement("li");
   li.classList.add("search-results__item");
-  li.innerHTML = `<a href="${item.ref}">${item.doc.title}</a>`;
+  li.innerHTML = `<a href="${item.ref}">${item.ref}</a>`;
   li.innerHTML += `<div class="search-results__teaser">${makeTeaser(item.doc.body, terms)}</div>`;
   return li;
 }
