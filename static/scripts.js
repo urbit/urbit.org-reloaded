@@ -223,20 +223,21 @@ function formatSearchResultTitle(path) {
   var lastPartTitle = slugArray.splice(slugArray.length - 2, slugArray.length).join('');
   var firstPartTitle = slugArray.join(' / ');
 
-  console.log(lastPartTitle + " lastPartTitle");
-
   var fullTitle = firstPartTitle + ' / ' + '<span class="search-results__item__title__slug-end">' + lastPartTitle + '</span>';
-  console.log(fullTitle + " fullPartTitle");
 
   return fullTitle;
 }
 
 function formatSearchResultItem(item, terms) {
   var li = document.createElement("li");
+  var createA = document.createElement("a");
+  li.appendChild(createA);
   var teaserTitle = formatSearchResultTitle(item.ref);
   li.classList.add("search-results__item");
-  li.innerHTML = `<a class="search-results__item__title" href="${item.ref}">${teaserTitle}</a>`;
-  li.innerHTML += `<div class="search-results__teaser">${makeTeaser(item.doc.body, terms)}</div>`;
+  var hrefA = item.ref;
+  createA.setAttribute('href', hrefA);
+  createA.innerHTML = `<span class="search-results__item__title">${teaserTitle}</span>`;
+  createA.innerHTML += `<div class="search-results__teaser">${makeTeaser(item.doc.body, terms)}</div>`;
   return li;
 }
 

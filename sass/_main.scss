@@ -325,10 +325,14 @@ iframe {
 
 .search-results {
   max-height: 400px;
-  &__item, &__header {
+  &__item, &__item a, &__header {
     color: #B1B2B3;
   }
   &__item {
+    a {
+      text-decoration: none;
+      display: block;
+    }
     position: relative;
     transition: all 0.1s linear;
     padding: 2rem 7rem;
@@ -367,7 +371,6 @@ iframe {
       color: #B1B2B3;
       font-size: 6rem;
       text-transform: capitalize;
-      text-decoration: none;
       &__slug-end {
         color: #000;
       }
