@@ -111,7 +111,7 @@ function makeTeaser(body, terms) {
   var TERM_WEIGHT = 40;
   var NORMAL_WORD_WEIGHT = 2;
   var FIRST_WORD_WEIGHT = 8;
-  var TEASER_MAX_WORDS = 17;
+  //var TEASER_MAX_WORDS = 17;
   var TEASER_MAX_CHARS = 63;
 
   var stemmedTerms = terms.map(function (w) {
@@ -155,7 +155,8 @@ function makeTeaser(body, terms) {
 
   var windowWeights = [];
   var windowSize = 0;
-  
+
+  // loop over words (weighted) till max chars is reached adding a counter to windowSize every time a new word has passed
   var sumChars = 0;
   for (var i = 0; i < weighted.length; i++) {
     sumChars += weighted[i][0].length;
@@ -215,21 +216,26 @@ function makeTeaser(body, terms) {
   return teaser.join("");
 }
 
-/*function trimTeaser(teaser) {
-  var maxLength = 63; // maximum number of characters to extract
-  var string = teaser;
-  var trimmedString = teaser.substr(0, maxLength); //trim the string to the maximum length
-  trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" "))) //re-trim if we are in the middle of a word
-}*/
+function formatSearchResultTitle(path) {
+  var pathArray = path.split( 'docs/' );
+  var slug = pathArray[1];
+  var slugArray = slug.split( '/' );
+  var lastPartTitle = slugArray.splice(slugArray.length - 2, slugArray.length).join('');
+  var firstPartTitle = slugArray.join(' / ');
 
-function trimTeaserTitle() {
-  //
+  console.log(lastPartTitle + " lastPartTitle");
+
+  var fullTitle = firstPartTitle + ' / ' + '<span class="search-results__item__title__slug-end">' + lastPartTitle + '</span>';
+  console.log(fullTitle + " fullPartTitle");
+
+  return fullTitle;
 }
 
 function formatSearchResultItem(item, terms) {
   var li = document.createElement("li");
+  var teaserTitle = formatSearchResultTitle(item.ref);
   li.classList.add("search-results__item");
-  li.innerHTML = `<a href="${item.ref}">${item.ref}</a>`;
+  li.innerHTML = `<a class="search-results__item__title" href="${item.ref}">${teaserTitle}</a>`;
   li.innerHTML += `<div class="search-results__teaser">${makeTeaser(item.doc.body, terms)}</div>`;
   return li;
 }
@@ -261,6 +267,7 @@ function initSearch() {
       return;
     }
     searchResults.style.display = term === "" ? "none" : "block";
+    searchResults.style.overflowY = term === "" ? "hidden" : "scroll";
     searchResultsItems.innerHTML = "";
     if (term === "") {
       return;

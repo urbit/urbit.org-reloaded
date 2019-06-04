@@ -43,10 +43,9 @@ iframe {
 
 .pop-up {
   width: 100%;
-  max-width: 500px;
-  margin: 14rem auto;
+  max-width: 600px;
+  margin: 28rem auto;
   background: #fff;
-  padding: 7rem 0;
 }
 
 .container--fixed {
@@ -297,16 +296,26 @@ iframe {
   z-index: 10;
   display: none;
   .search-bar {
-    padding: 0 14rem;
+    padding: 0;
     border: none;
-    &:after {
-      content: none;
+    &__input {
+      padding-left: 40px;
+      border-left: none;
+      border-top: none;
+      border-right: none;
     }
     &:before {
-      content: none;
+      z-index: 1;
     }
-    &:hover {
+    &:hover, &:active, &:focus {
       border: none;
+    }
+    input[type="search"] {
+      &:hover, &:active, &:focus {
+        border-left: none;
+        border-top: none;
+        border-right: none;
+      }
     }
     &__input {
       line-height: 6rem;
@@ -315,9 +324,35 @@ iframe {
 }
 
 .search-results {
-  overflow-y: scroll;
-  padding: 0 14rem;
   max-height: 400px;
+  &__item, &__header {
+    color: #B1B2B3;
+  }
+  &__item {
+    transition: all 0.1s linear;
+    padding: 2rem 7rem;
+    &:hover {
+      background: #F9F9F9;
+    }
+    &:last-child {
+      margin-bottom: 2rem;
+    }
+    b {
+      color: #000;
+    }
+    &__title {
+      color: #B1B2B3;
+      font-size: 6rem;
+      text-transform: capitalize;
+      text-decoration: none;
+      &__slug-end {
+        color: #000;
+      }
+    }
+  }
+  &__header {
+    padding: 0 7rem;
+  }
 }
 
 .has-active-search-window {
