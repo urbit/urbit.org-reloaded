@@ -1,4 +1,7 @@
 @media only screen and (max-width: 800px) {
+  .has-active-search-window .search-overlay, .search-bar {
+    display: none;
+  }
   .container--fixed, .content-nav {
     margin: 0;
   }
@@ -60,8 +63,14 @@
     }
     .content-nav {
       display: block;
-      margin: 7rem;
       overflow: initial;
+      width: 100%;
+      margin: 0;
+      margin-top: -7rem;
+      &__index {
+        margin: 7rem 0 0 7rem;
+        padding-top: 7rem;
+      }
     }
     .content-nav-icon {
       &:before {
@@ -70,6 +79,10 @@
         border-left: 10px solid #000;
         border-right: 10px solid transparent;
       }
+    }
+    .content, .content-spacer {
+      flex-basis: auto;
+      max-width: none;
     }
   }
 }
