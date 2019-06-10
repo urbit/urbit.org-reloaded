@@ -1,14 +1,14 @@
 +++
-title = "Urbit Grants and Mid-2019 Awards"
+title = "Urbit Grants and mid-2019 Gifts"
 date = 2019-06-10
 author = "Galen Wolfe-Pauly & Alex Matzner"
-description = "Announcing an upcoming Urbit grants program and star awards for Mid-2019."
-aliases = ["/posts/essays/urbit-grants-and-mid-2019-awards"]
+description = "Announcing an upcoming Urbit grants program and star gifts for Mid-2019."
+aliases = ["/posts/essays/urbit-grants-and-mid-2019-gifts"]
 [taxonomies]
 posts = ["Essays"]
 +++
 
-![](https://media.urbit.org/site/posts/essays/urbit-grants-and-mid-2019-awards-1.jpg)
+![](https://media.urbit.org/site/posts/essays/urbit-grants-and-mid-2019-gifts-1.jpg)
 
 We are excited to announce the first developer star gifts of 2019. It’s been far too long since we last awarded our contributors. We got so busy working on things ourselves that we let this program languish — but we’ve got plans to make it much more organized going forward. More on that after the important part.
 
