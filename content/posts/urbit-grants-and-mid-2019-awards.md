@@ -41,4 +41,4 @@ As always, we prefer to talk about working code instead of future potential — 
 
 Please [subscribe to our newsletter](http://eepurl.com/b7x7hj) to make sure you receive future announcements.
 
-– *Galen* `~ravmel-ropdyl` & *Alex* `~mignyt-mogseb`
+– **Galen** `~ravmel-ropdyl` & **Alex** `~mignyt-mogseb`
