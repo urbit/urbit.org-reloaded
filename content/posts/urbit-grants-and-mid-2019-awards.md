@@ -8,6 +8,8 @@ aliases = ["/posts/essays/urbit-grants-and-mid-2019-awards"]
 posts = ["Essays"]
 +++
 
+![](https://media.urbit.org/site/posts/essays/urbit-grants-and-mid-2019-awards-1.jpg)
+
 We are excited to announce the first developer star gifts of 2019. It’s been far too long since we last awarded our contributors. We got so busy working on things ourselves that we let this program languish — but we’ve got plans to make it much more organized going forward. More on that after the important part.
 
 That is, our winners from the past nine months:
@@ -38,3 +40,5 @@ Making the process of rewarding contributors is something we’ve thought a lot 
 As always, we prefer to talk about working code instead of future potential — so there’s not much more to say. We’ll say much more later this summer and look forward to hearing your feedback. 
 
 Please [subscribe to our newsletter](http://eepurl.com/b7x7hj) to make sure you receive future announcements.
+
+– *Galen* `~ravmel-ropdyl` & *Alex* `~mignyt-mogseb`
