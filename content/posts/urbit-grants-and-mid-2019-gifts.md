@@ -16,10 +16,10 @@ That is, our winners from the past nine months:
 
 **Gold: 8 stars**
 
-- Ben `~mirfet-hocbyt` [@bencalder](https://github.com/bencalder)
+- `~mirfet-hocbyt`
 - Max `~ladres-forfex` [@max19](https://github.com/max19)
 
-**Ben** discovered the bug in our @p rendering algorithm, nicknamed “the @pocalypse” around the office, and led to a few nights of lost sleep. It was a fantastic find, which was then resolved by **Max** with one of the greatest GitHub comments of all time: “[curious if this works](https://github.com/urbit/arvo/issues/1105#issuecomment-472585937).”
+**~mirfet-hocbyt** discovered the bug in our @p rendering algorithm, nicknamed “the @pocalypse” around the office, and led to a few nights of lost sleep. It was a fantastic find, which was then resolved by **Max** with one of the greatest GitHub comments of all time: “[curious if this works](https://github.com/urbit/arvo/issues/1105#issuecomment-472585937).”
 
 **Bronze: 1 star**
 
