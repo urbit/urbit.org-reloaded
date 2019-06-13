@@ -27,7 +27,7 @@ That is, our winners from the past nine months:
 - John `~dirwex-dosrev` [@jfranklin9000](https://github.com/jfranklin9000)
 - Assaf `~rophex-hashes` [@asssaf](https://github.com/asssaf)
 
-**Pyry** has been a [regular contributor](https://github.com/urbit/bridge/graphs/contributors) to Bridge over the past few months, **John** has been consistently picking up [changes all over the place](https://github.com/jfranklin9000), and **Assaf** found a [security issue](https://github.com/urbit/urbit-key-generation/issues/55) with our hierarchical wallet. 
+**Pyry** has been a [regular contributor](https://github.com/urbit/bridge/pulls?utf8=%E2%9C%93&q=author%3Apkova) to Bridge over the past few months, **John** has been consistently picking up changes [all](https://github.com/urbit/urbit/pulls?utf8=%E2%9C%93&q=author%3Ajfranklin9000) [over](https://github.com/urbit/arvo/pulls?utf8=%E2%9C%93&q=author%3Ajfranklin9000) [the place](https://github.com/urbit/docs/pulls?utf8=%E2%9C%93&q=author%3Ajfranklin9000), and **Assaf** found a [security issue](https://github.com/urbit/urbit-key-generation/issues/55) with our hierarchical wallet. 
 
 Thanks to all of you for helping bring Urbit to life. We don’t make it nearly easy enough to contribute, but all of you clawed your way in and made the system better. Thank you!
 
