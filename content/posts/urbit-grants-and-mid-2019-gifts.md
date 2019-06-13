@@ -37,8 +37,6 @@ As always, we much prefer to talk about working code as opposed to unfinished wo
 
 Making the process of rewarding contributors is something we’ve thought a lot about over the past few months. We’ve come up with a system that we like, and are hoping to put it up later this summer. It’s probably not perfect, but it’s a step in the right direction. We’ll be able to properly engage in a grant proposal process, post bounties as well as reward people directly with prizes.
 
-Again, we prefer to talk about working code instead of future potential — so there’s not much more to say. We’ll say much more later this summer and look forward to hearing your feedback. 
-
 Please [subscribe to our newsletter](http://eepurl.com/b7x7hj) to make sure you receive future announcements.
 
 – **Galen** `~ravmel-ropdyl` & **Alex** `~mignyt-mogseb`
