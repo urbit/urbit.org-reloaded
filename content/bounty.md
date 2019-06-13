@@ -1,7 +1,6 @@
 +++
-title = "Bug Bounty + Security"
+title = "Bug Bounties"
 +++
-## Upcoming Bug Bounty Program
 
 We are in the process of designing our Bug Bounty Program. In the meantime, if you believe you have discovered a bug or vulnerability in our code, please report it to [security@tlon.io](mailto:security@tlon.io).
 
