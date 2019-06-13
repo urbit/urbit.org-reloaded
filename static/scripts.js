@@ -76,7 +76,18 @@ function initToggleSearchWindow() {
   }
 }
 
-
+//
+  // hotkeys
+//
+function initHotKeys() {
+  document.onkeydown = function(evt) {
+      evt = evt || window.event;
+      // ESC to close search window
+      if (evt.keyCode == 27) {
+        document.body.classList.remove('has-active-search-window');
+      }
+  };
+};
 
 //
   // search functionality
@@ -301,5 +312,6 @@ if (document.readyState === "complete" ||
   document.addEventListener("DOMContentLoaded", function () {
     initToggleSearchWindow();
     initSearch();
+    initHotKeys();
   });
 }
