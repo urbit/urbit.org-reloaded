@@ -67,7 +67,7 @@ function initHotKeys() {
   var bodyEl = document.body;
   var searchInput = document.getElementById('search');
 
-  document.addEventListener('keyup', function (event) {
+  document.addEventListener('keydown', function (event) {
       if (event.defaultPrevented) {
           return;
       }
@@ -77,6 +77,16 @@ function initHotKeys() {
       // ESC to close search window
       if (key === 'Escape' || key === 'Esc' || key === 27) {
         document.body.classList.remove('has-active-search-window');
+        console.log('esc');
+      }
+
+      // / to close toggle window
+      if (key === '/' || key === 'Period' || key === 58) {
+        event.preventDefault();
+        document.body.classList.toggle('has-active-search-window');
+        if (bodyEl.classList.contains('has-active-search-window')) {
+          searchInput.focus();
+        }
       }
 
       //when search is active TAB puts search input into focus
@@ -87,8 +97,6 @@ function initHotKeys() {
       }
   });
 };
-
-
 
 //
   // search functionality
@@ -303,7 +311,7 @@ function initSearch() {
     searchResultsHeader.value = "";
 
     var term = searchInput.value.trim();
-    
+
     /*
     //removed to fix: a state where there’s a valid search term, but no results
 
