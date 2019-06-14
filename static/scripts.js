@@ -58,42 +58,11 @@ if (toggleContentNav !== null) {
   });
 }*/
 
-function initToggleSearchWindow() {
-  var toggleSearchWindow = document.getElementById('js-search-window-toggle');
-  var bodyEl = document.body;
-  var searchOverlay = document.getElementById('search-overlay');
-  var searchWindow = document.getElementById('search-window');
-  var searchActive = bodyEl.classList.contains('has-active-search-window');
-  var searchInput = document.getElementById('search');
-  if (toggleSearchWindow !== null) {
-    toggleSearchWindow.onclick = function() {
-      //activate search
-      bodyEl.classList.toggle('has-active-search-window');
-      //put input in focus when activating search
-      searchInput.focus();
-    }
-    searchOverlay.addEventListener('click', function(e){
-    	if (!searchWindow.contains(e.target)){
-        bodyEl.classList.toggle('has-active-search-window');
-      }
-    })
-  }
-}
-
 //
   // hotkeys
 //
-function initHotKeys() {
-  /*document.onkeydown = function(evt) {
-      evt = evt || window.event;
-      if (evt.keyCode == 27) {
-      }
 
-      //when search is active TAB puts search input into focus
-      if (evt.keyCode == 27) {
-        document.body.classList.remove('has-active-search-window');
-      }
-  };*/
+function initHotKeys() {
 
   var bodyEl = document.body;
   var searchInput = document.getElementById('search');
@@ -114,9 +83,7 @@ function initHotKeys() {
       if (bodyEl.classList.contains('has-active-search-window')) {
         if (key === 'Tab' || key === 'Tab' || key === 9) {
           searchInput.focus();
-          console.log('focus');
         }
-        console.log('got here');
       }
   });
 };
@@ -288,6 +255,7 @@ function formatSearchResultItem(item, terms) {
 
 function initSearch() {
   var searchInput = document.getElementById("search");
+
   if (!searchInput) {
     return;
   }
@@ -296,8 +264,6 @@ function initSearch() {
   var searchResultsHeader = document.querySelector(".search-results__header");
   var searchResultsItems = document.querySelector(".search-results__items");
   var MAX_ITEMS = 200;
-
-  searchResultsHeader.value='';
 
   var options = {
     bool: "AND",
@@ -309,7 +275,34 @@ function initSearch() {
   var currentTerm = "";
   var index = elasticlunr.Index.load(window.searchIndex);
 
+  // toggle search window
+  var toggleSearchWindow = document.getElementById('js-search-window-toggle');
+  var bodyEl = document.body;
+  var searchOverlay = document.getElementById('search-overlay');
+  var searchWindow = document.getElementById('search-window');
+  var searchActive = bodyEl.classList.contains('has-active-search-window');
+  if (toggleSearchWindow !== null) {
+    toggleSearchWindow.onclick = function() {
+      //activate search
+      bodyEl.classList.toggle('has-active-search-window');
+      //put input in focus when activating search
+      searchInput.focus();
+      searchInput.value = "";
+      searchResultsHeader.value = "";
+      searchResults.style.display = searchInput.value.trim() === "" ? "none" : "block";
+    }
+    searchOverlay.addEventListener('click', function(e){
+    	if (!searchWindow.contains(e.target)){
+        bodyEl.classList.toggle('has-active-search-window');
+      }
+    })
+  }
+
+  // when typing
   searchInput.addEventListener("keyup", debounce(function() {
+
+    searchResultsHeader.value = "";
+
     var term = searchInput.value.trim();
 
     if (term === currentTerm || !index) {
@@ -347,7 +340,6 @@ if (document.readyState === "complete" ||
   initToggleSearchWindow();
 } else {
   document.addEventListener("DOMContentLoaded", function () {
-    initToggleSearchWindow();
     initSearch();
     initHotKeys();
   });
