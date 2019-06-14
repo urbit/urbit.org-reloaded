@@ -64,9 +64,13 @@ function initToggleSearchWindow() {
   var searchOverlay = document.getElementById('search-overlay');
   var searchWindow = document.getElementById('search-window');
   var searchActive = bodyEl.classList.contains('has-active-search-window');
+  var searchInput = document.getElementById('search');
   if (toggleSearchWindow !== null) {
     toggleSearchWindow.onclick = function() {
+      //activate search
       bodyEl.classList.toggle('has-active-search-window');
+      //put input in focus when activating search
+      searchInput.focus();
     }
     searchOverlay.addEventListener('click', function(e){
     	if (!searchWindow.contains(e.target)){
@@ -80,14 +84,44 @@ function initToggleSearchWindow() {
   // hotkeys
 //
 function initHotKeys() {
-  document.onkeydown = function(evt) {
+  /*document.onkeydown = function(evt) {
       evt = evt || window.event;
-      // ESC to close search window
+      if (evt.keyCode == 27) {
+      }
+
+      //when search is active TAB puts search input into focus
       if (evt.keyCode == 27) {
         document.body.classList.remove('has-active-search-window');
       }
-  };
+  };*/
+
+  var bodyEl = document.body;
+  var searchInput = document.getElementById('search');
+
+  document.addEventListener('keyup', function (event) {
+      if (event.defaultPrevented) {
+          return;
+      }
+
+      var key = event.key || event.keyCode;
+
+      // ESC to close search window
+      if (key === 'Escape' || key === 'Esc' || key === 27) {
+        document.body.classList.remove('has-active-search-window');
+      }
+
+      //when search is active TAB puts search input into focus
+      if (bodyEl.classList.contains('has-active-search-window')) {
+        if (key === 'Tab' || key === 'Tab' || key === 9) {
+          searchInput.focus();
+          console.log('focus');
+        }
+        console.log('got here');
+      }
+  });
 };
+
+
 
 //
   // search functionality
