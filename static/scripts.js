@@ -300,14 +300,17 @@ function initSearch() {
 
   // when typing
   searchInput.addEventListener("keyup", debounce(function() {
-
     searchResultsHeader.value = "";
 
     var term = searchInput.value.trim();
+    
+    /*
+    //removed to fix: a state where there’s a valid search term, but no results
 
     if (term === currentTerm || !index) {
       return;
-    }
+    }*/
+
     searchResults.style.display = term === "" ? "none" : "block";
     searchResults.style.overflowY = term === "" ? "hidden" : "scroll";
     searchResultsItems.innerHTML = "";
