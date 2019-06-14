@@ -297,6 +297,8 @@ function initSearch() {
   var searchResultsItems = document.querySelector(".search-results__items");
   var MAX_ITEMS = 200;
 
+  searchResultsHeader.value='';
+
   var options = {
     bool: "AND",
     fields: {
@@ -309,6 +311,7 @@ function initSearch() {
 
   searchInput.addEventListener("keyup", debounce(function() {
     var term = searchInput.value.trim();
+
     if (term === currentTerm || !index) {
       return;
     }
