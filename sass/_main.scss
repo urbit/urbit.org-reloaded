@@ -325,14 +325,15 @@ iframe {
 
 .search-results {
   max-height: 400px;
-  &__item, &__item a, &__header {
+  //&__item, &__item a,
+  &__header {
     color: #B1B2B3;
   }
   &__item {
     a {
       text-decoration: none;
       display: block;
-      padding: 2rem 7rem;
+      padding: 3rem 4rem;
       &:hover {
         background: #F9F9F9;
         &:before, &:after {
@@ -368,11 +369,12 @@ iframe {
       color: #000;
     }
     &__title {
-      color: #B1B2B3;
       font-size: 6rem;
       text-transform: capitalize;
       &__slug-end {
         color: #000;
+        font-weight: 700;
+        padding-right: 8rem;
       }
     }
   }
