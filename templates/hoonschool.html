@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- header -->
+{% include "partials/navigation-special.html" %}
+<!-- content -->
+<div class="main-wrapper">
+  <div class="wrapper">
+    <div class="container container--fixed container--overflowed content-nav-container">
+      <nav class="content-nav"></nav>
+      <div class="content-spacer"></div>
+    </div>
+    <div class="container ml8">
+      <div class="content-nav-spacer"></div>
+      <article class="article content">
+        <!-- header -->
+        <h1>{{ page.title }}</h1>
+        <!-- body -->
+        <div class="pb80">
+          {{ page.content | safe }}
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+{% endblock content %}
