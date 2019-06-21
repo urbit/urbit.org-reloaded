@@ -269,12 +269,19 @@ iframe {
   max-width: 320px;
 }
 
+.form--big {
+  max-width: 390px;
+  .btn {
+    width: 100%;
+  }
+}
+
 /*
  * styling
  */
 
-textarea, input[type="text"], input[type="email"], input[type="number"] {
-  border: 2px solid #000;
+textarea, input[type="text"], input[type="email"], input[type="number"], select {
+  border: 1px solid #000;
   padding: 12px;
   width: 100%;
   outline: none;
