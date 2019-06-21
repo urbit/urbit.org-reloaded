@@ -276,6 +276,12 @@ iframe {
   }
 }
 
+.hoonschool-application {
+ &__experience {
+   resize: vertical;
+ }
+}
+
 /*
  * styling
  */
@@ -286,6 +292,10 @@ textarea, input[type="text"], input[type="email"], input[type="number"], select 
   width: 100%;
   outline: none;
   box-sizing: border-box;
+}
+
+textarea {
+  resize: horizontal;
 }
 
 button, .btn {
@@ -423,7 +433,7 @@ pre, code {
   font-size: (4rem / 4);
 }
 
-textarea, input[type="text"], input[type="email"], input[type="number"] {
+textarea, input[type="text"], input[type="email"], input[type="number"], select {
   border: 1px solid #B1B2B3;
   font-family: "Source Code Pro", mono;
   font-size: (4rem / 4);
