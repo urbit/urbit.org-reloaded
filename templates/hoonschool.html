@@ -2,12 +2,23 @@
 
 {% block content %}
 <!-- header -->
-{% include "partials/navigation-special.html" %}
+{% include "partials/navigation.html" %}
 <!-- content -->
 <div class="main-wrapper">
   <div class="wrapper">
     <div class="container container--fixed container--overflowed content-nav-container">
-      <nav class="content-nav"></nav>
+      <nav class="content-nav">
+	<a href = "{{ config.base_url }}">
+	<ul class="list">
+		<li class = "list__item content-nav__item">
+			<img src="../assets/back-arrow.svg"/>
+		</li>
+		<li class = "list__item content-nav__item">
+		  <a href = "{{ config.base_url }}">Home</a>
+		</li>
+	 </ul>
+      	</a>
+	</nav>
       <div class="content-spacer"></div>
     </div>
     <div class="container ml8">
@@ -19,8 +30,10 @@
         <div class="pb8">
           {{ page.content | safe }}
         </div>
-        <h1>Apply</h1>
-        <form action="" method="post" id="hoonschool-application" name="hoonschool-application" class="validate form form--big" target="_blank" novalidate>
+       <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script><iframe id="apply" class="airtable-embed airtable-dynamic-height" src="https://airtable.com/embed/shr8bb15QPR3hfQpG?backgroundColor=teal" frameborder="0" onmousewheel="" width="100%" height="1228" style="background: transparent; border: 0px solid #ccc;"></iframe>
+
+	<!--
+	 <form action="" method="post" id="hoonschool-application" name="hoonschool-application" class="validate form form--big" target="_blank" novalidate>
           <div class="input-group">
             <div>
               <label class="form__label" for="first-name">First Name</label>
@@ -52,15 +65,9 @@
             <button id="hoonschool-application__submit" class="btn bg-black white" type="submit" name="submit">
               <span class="text-500">Submit</span>
             </button>
+	   -->
           </div>
         </form>
-
-        <!--<form action="{{ config.base_url }}/php/airtable/hoonschool.php" method="POST">
-          Name: <input type="text" name="name" />
-          Age: <input type="text" name="age" />
-          <input type="submit" />
-        </form>-->
-
       </article>
     </div>
   </div>

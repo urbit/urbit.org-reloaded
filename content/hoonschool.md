@@ -3,7 +3,7 @@ title = "Hoon School"
 template = "hoonschool.html"
 +++
 
-Interested in developing on Urbit? You’ll want to learn Hoon, a functional programming language that’s custom-designed for use with Arvo, the Urbit operating system. We want you to learn Hoon, too. That’s why we’re offering Hoon School: a free, asynchronous program that’s fully supported by an instructor. Hoon School is offered in the form of two courses: Hoon 101 and Hoon 201. Classes are offered four times a year, on a quarterly basis. Apply here.
+Interested in developing on Urbit? You’ll want to learn Hoon, a functional programming language that’s custom-designed for use with Arvo, the Urbit operating system. We want you to learn Hoon, too. That’s why we’re offering Hoon School: a free, asynchronous program that’s fully supported by an instructor. Hoon School is offered in the form of two courses: Hoon 101 and Hoon 201. Classes are offered four times a year, on a quarterly basis. [<span style="color:#4330FC">Apply here.</span>](#apply)
 
 Hoon 101 is a six-week, introductory-level course. It’s appropriate for motivated learners with no programming experience, and for those familiar with other programming languages. You’ll leave Hoon 101 with a strong understanding of the language’s fundamentals. Expect to devote four hours a week to this course. The next 101 class begins on Month Day.
 
