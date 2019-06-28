@@ -2,12 +2,23 @@
 
 {% block content %}
 <!-- header -->
-{% include "partials/navigation-special.html" %}
+{% include "partials/navigation.html" %}
 <!-- content -->
 <div class="main-wrapper">
   <div class="wrapper">
     <div class="container container--fixed container--overflowed content-nav-container">
-      <nav class="content-nav"></nav>
+      <nav class="content-nav">
+	<a href = "{{ config.base_url }}">
+	<ul class="list">
+		<li>
+			<img src="../assets/back-arrow.svg"/>
+		</li>
+		<li class = "pt2">
+			<a href = "{{ config.base_url }}">Home</a>
+		</li>
+	 </ul>
+      	</a>
+	</nav>
       <div class="content-spacer"></div>
     </div>
     <div class="container ml8">
@@ -19,48 +30,9 @@
         <div class="pb8">
           {{ page.content | safe }}
         </div>
-        <h1>Apply</h1>
-        <form action="" method="post" id="hoonschool-application" name="hoonschool-application" class="validate form form--big" target="_blank" novalidate>
-          <div class="input-group">
-            <div>
-              <label class="form__label" for="first-name">First Name</label>
-              <input class="required tlon-input mb4" type="text" name="first-name" id="hoonschool-application__first-name">
-            </div>
-            <div>
-              <label class="form__label" for="last-name">Last Name</label>
-              <input class="required tlon-input mb4" type="text" name="last-name" id="hoonschool-application__last-name">
-            </div>
-            <div>
-              <label class="form__label" for="email">Email Address</label>
-              <input class="required tlon-input mb4" type="email" name="email" id="hoonschool-application__email">
-            </div>
-            <div>
-              <label class="form__label" for="ship">Ship name (leave blank if you don't have an Urbit ship)</label>
-              <input class="tlon-input mb4" type="text" name="ship" id="hoonschool-application__ship">
-            </div>
-            <div>
-              <label class="form__label" for="class">What class are you applying for?</label>
-              <select class="tlon-input mb4" id="hoonschool-application__class" name="class" selected="101">
-                <option value="101">Hoon 101</option>
-                <option value="201">Hoon 201</option>
-              </select>
-            </div>
-            <div>
-              <label class="form__label" for="class">Tell us about your experience with programming languages:</label>
-              <textarea class="tlon-input mb4" name="experience" id="hoonschool-application__experience"></textarea>
-            </div>
-            <button id="hoonschool-application__submit" class="btn bg-black white" type="submit" name="submit">
-              <span class="text-500">Submit</span>
-            </button>
-          </div>
+       <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script><iframe id="apply" class="airtable-embed airtable-dynamic-height w-full" src="https://airtable.com/embed/shr8bb15QPR3hfQpG?backgroundColor=teal" frameborder="0" height="1228"></iframe>
+         </div>
         </form>
-
-        <!--<form action="{{ config.base_url }}/php/airtable/hoonschool.php" method="POST">
-          Name: <input type="text" name="name" />
-          Age: <input type="text" name="age" />
-          <input type="submit" />
-        </form>-->
-
       </article>
     </div>
   </div>
