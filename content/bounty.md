@@ -1,9 +1,8 @@
 +++
-title = "Bug Bounty + Security"
+title = "Bug Bounties"
 +++
-## Upcoming Bug Bounty Program
 
-We are in the process of designing our Bug Bounty Program, and it should be live in several days. In the meantime, if you believe you have discovered a bug or vulnerability in our code, please report it at security@tlon.io.
+We are in the process of designing our Bug Bounty Program. In the meantime, if you believe you have discovered a bug or vulnerability in our code, please report it to [security@tlon.io](mailto:security@tlon.io).
 
 We'll review the issue, and a member of our dev team will get back to you ASAP. If your bug has merit, we'll work with you to fix it, and award a bounty based on the severity of the bug. We determine severity using the [CVSS](https://www.first.org/cvss/calculator/3.0) model.
 
