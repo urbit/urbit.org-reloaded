@@ -74,10 +74,10 @@
       overflow: initial;
       width: 100%;
       margin: 0;
-      margin-top: -7rem;
+      margin-top: (-7rem / 4);
       &__index {
-        margin: 7rem 0 0 7rem;
-        padding: 7rem 7rem 0 0;
+        margin: (7rem /4) 0 0 (7rem / 4);
+        padding: (7rem /4) (7rem / 4) 0 0;
       }
     }
     .content-nav-icon {

@@ -45,7 +45,7 @@ iframe {
 .pop-up {
   width: 100%;
   max-width: 600px;
-  margin: 28rem auto;
+  margin: (28rem / 4) auto;
   background: #fff;
 }
 
@@ -319,7 +319,7 @@ iframe {
       }
     }
     &__input {
-      line-height: 6rem;
+      line-height: (6rem / 4);
     }
   }
 }
@@ -334,7 +334,7 @@ iframe {
     a {
       text-decoration: none;
       display: block;
-      padding: 3rem 4rem;
+      padding: (3rem /4) (4rem / 4);
       &:hover {
         background: #F9F9F9;
         &:before, &:after {
@@ -364,23 +364,23 @@ iframe {
     position: relative;
     transition: all 0.1s linear;
     &:last-child {
-      margin-bottom: 2rem;
+      margin-bottom: (2rem / 4);
     }
     b {
       color: #000;
     }
     &__title {
-      font-size: 6rem;
+      font-size: (6rem / 4);
       text-transform: capitalize;
       &__slug-end {
         color: #000;
         font-weight: 700;
-        padding-right: 8rem;
+        padding-right: (8rem / 4);
       }
     }
   }
   &__header {
-    padding: 0 7rem;
+    padding: 0 (7rem / 4);
   }
 }
 
@@ -396,8 +396,8 @@ iframe {
 
 textarea, input[type="text"], input[type="email"], input[type="number"], input[type="search"] {
   border: 1px solid #B1B2B3;
-  font-size: 4rem;
-  line-height: 6rem;
+  font-size: (4rem / 4);
+  line-height: (6rem / 4);
   transition: all 0.1s linear;
   padding-right: 40px;
   position: relative;
@@ -431,8 +431,8 @@ button, .btn {
 .search-bar {
   border: 1px solid #B1B2B3;
   background: #fff;
-  font-size: 4rem;
-  line-height: 6rem;
+  font-size: (4rem / 4);
+  line-height: (6rem / 4);
   transition: all 0.1s linear;
   padding: 12px 12px 12px 40px;
   position: relative;
