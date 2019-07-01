@@ -1,3 +1,8 @@
+@media only screen and (max-width: 1080px) {
+ .header, .main-wrapper {
+   padding-left: 2%;
+ }
+}
 @media only screen and (max-width: 800px) {
   .container--fixed, .content-nav {
     margin: 0;
