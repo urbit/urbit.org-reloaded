@@ -130,7 +130,7 @@ function debounce(func, wait) {
 function makeTeaser(body, terms) {
   var TERM_WEIGHT = 40;
   var NORMAL_WORD_WEIGHT = 2;
-  var FIRST_WORD_WEIGHT = 1;
+  var FIRST_WORD_WEIGHT = 8;
   //var TEASER_MAX_WORDS = 17;
   var TEASER_MAX_CHARS = 63;
 
@@ -274,7 +274,7 @@ function initSearch() {
   var MAX_ITEMS = 200;
 
   var options = {
-    bool: "OR",
+    bool: "AND",
     fields: {
       title: {boost: 2},
       body: {boost: 1},
@@ -322,7 +322,6 @@ function initSearch() {
     searchResults.style.display = term === "" ? "none" : "block";
     searchResults.style.overflowY = term === "" ? "hidden" : "scroll";
     searchResultsItems.innerHTML = "";
-
     if (term === "") {
       return;
     }
