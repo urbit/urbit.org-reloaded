@@ -192,7 +192,6 @@ iframe {
                         supported by Chrome and Opera */
   &__navigation {
     display: none;
-    padding-top: (9rem / 4);
   }
   &__nav-icon {
     position: absolute;
@@ -225,6 +224,7 @@ iframe {
 }
 
 .has-active-main-nav {
+  overflow: hidden;
   .header {
     z-index: 4;
     &__navigation {
@@ -232,7 +232,8 @@ iframe {
       height: 100%;
       width: 100%;
       background: #000;
-      overflow-y: hidden;
+
+      overflow-y: scroll;
       display: block;
     }
     &__nav-icon {
