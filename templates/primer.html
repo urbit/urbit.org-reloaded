@@ -6,10 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="{{ config.description }}">
   <meta name="author" content="{{ config.extra.author.name }}">
-  <title>{{ config.title }}</title>
+  <title>Primer - {{ config.title }}</title>
   <!-- stylesheets -->
   <link rel="stylesheet" href="{{ config.base_url }}/styles.css" >
   <link rel="stylesheet" href="{{ config.base_url }}/primer.css" >
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-47054188-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-47054188-1');
+  </script>
 </head>
 <body>
     <div class="bg-black pt-30 mb-30">
@@ -139,17 +146,16 @@
         </div>
         <nav class="bg-black pb-36 menu-hide overflow-y">
             <div class="primer-container">
-                <div class="row pt-10 mb-3">
-                    <div class="col-sm-1 menu-toggle fixed" style="top:10rem;left:4rem"><img class="w-8 h-8" src="../assets/menu-close.svg" /></div>
+                <div class="row pt-10">
+                    <div class="col-sm-1 menu-toggle fixed" style="top:2.5rem;left:1rem"><img class="w-8 h-8" src="../assets/menu-close.svg" /></div>
                     <div class="col-sm-8 col-md-8 col-lg-4 col-sm-offset-2 white">
-                        <div class="mb-6"><a href="{{ config.base_url }}/primer" class="white"><h1>Primer</h1></a>
-                            <p> </p>
-                        </div>
+                        <div class="mb-6"><a href="{{ config.base_url }}/" class="white"><h1>Urbit</h1></a></div>
+                        <div class="mb-6"><a href="{{ config.base_url }}/primer" class="white"><h1>Primer</h1></a></div>
                     </div>
                 </div>
                 <div class="row menu-toggle">
                     <div class="col-sm-9 col-md-8 col-lg-12 col-sm-offset-2 col-md-offset-1 col-lg-offset-0 white">
-                        <div class="row mb-8">
+                        <div class="row mb-4">
                             <div class="col-md-10 col-md-offset-1">
                                 <a class="row h2 h-font white text-decoration-none" href="#what-urbit-is-for">
                                     <div class="col-sm-1 col-md-1 col-md-offset-1 center dlig">1.</div>
@@ -157,7 +163,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="row mb-8">
+                        <div class="row mb-4">
                             <div class="col-md-10 col-md-offset-1">
                                 <a class="row h2 h-font white text-decoration-none" href="#what-arvo-is">
                                     <div class="col-sm-1 col-md-1 col-md-offset-1 center dlig">2.</div>
@@ -165,7 +171,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="row mb-8">
+                        <div class="row mb-4">
                             <div class="col-md-10 col-md-offset-1">
                                 <a class="row h2 h-font white text-decoration-none" href="#what-azimuth-is">
                                     <div class="col-sm-1 col-md-1 col-md-offset-1 center dlig">3.</div>
@@ -173,7 +179,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="row mb-8">
+                        <div class="row mb-4">
                             <div class="col-md-10 col-md-offset-1">
                                 <a class="row h2 h-font white text-decoration-none" href="#history">
                                     <div class="col-sm-1 col-md-1 col-md-offset-1 center dlig">4.</div>
@@ -181,7 +187,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="row mb-8">
+                        <div class="row mb-4">
                             <div class="col-md-10 col-md-offset-1">
                                 <a class="row h2 h-font white text-decoration-none" href="#azimuth-distribution">
                                     <div class="col-sm-1 col-md-1 col-md-offset-1 center dlig">5.</div>
@@ -230,17 +236,16 @@
                     <div class="col-sm-6 col-sm-offset-2">
                         <div>
                             <div class="mb-6">
-                                <h4 class="mb-1">Follow</h4>
+                                <h2 class="mb-1">Follow</h2>
                                 <div><a class="text-mono white" href="https://twitter.com/@urbit" target="_blank">twitter.com/@urbit</a></div>
                                 <div><a class="text-mono white" href="https://github.com/urbit" target="_blank">github.com/@urbit</a></div>
                             </div>
                             <div class="mb-6">
-                                <h4 class="mb-1">Contact</h4>
-                                <div class="text-mono text-400">~zod</div>
-                                <div><a class="text-mono white" href="/cdn-cgi/l/email-protection#b2c1c7c2c2ddc0c6f2c7c0d0dbc69cddc0d5"><span class="__cf_email__" data-cfemail="5f2c2a2f2f302d2b1f2a2d3d362b71302d38">[email&#160;protected]</span></a></div>
+                                <h2 class="mb-1">Contact</h2>
+                                <div><a class="text-mono white" href="mailto:support@urbit.org">support@urbit.org</a></div>
                             </div>
                             <div class="mb-6">
-                                <h4 class="mb-1">Company</h4>
+                                <h2 class="mb-1">Company</h2>
                                 <div><a href="{{ config.base_url }}/privacy" class="white">Privacy Policy</a></div>
                                 <div><a href="{{ config.base_url }}/tos" class="white">Terms of Service</a></div>
                                 <div class="text-400"><a href="{{ config.base_url }}/bounty" class="white">Bug Bounty + Security</a></div>
@@ -252,7 +257,7 @@
         </nav>
         <div class="primer-container mb-5">
             <div id="what-urbit-is-for" class="row sm-pt-20 sm-pb-20 pt-40 pb-40">
-                <div class="fixed" style="top:10rem;left:4rem">
+                <div class="fixed" style="top:2.5rem;left:1rem">
                     <div class="col-sm-1 menu-toggle"><img class="w-8 h-8" src="../assets/menu-open.svg" /></div>
                 </div>
                 <div class="col-sm-12">
@@ -403,7 +408,7 @@
                             <h3>=</h3></div>
                         <div class="col-sm-12 col-md-3">
                             <div class="row">
-                                <div class="col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-0" style="margin-top: -8rem"><img src="../images/urbit-complete.svg" /></div>
+                                <div class="col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-0" style="margin-top: -2rem"><img src="../images/urbit-complete.svg" /></div>
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 +++
-title = "Magic"
+title = "The DAO as a Lesson in Decentralized Governance"
 date = 2016-06-24
 author = "Curtis Yarvin"
 description = "What's the right lesson for the decentralization community to learn from the collapse of the DAO?"

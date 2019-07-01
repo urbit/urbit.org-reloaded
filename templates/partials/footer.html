@@ -1,11 +1,11 @@
 {% block content %}
 <footer class="footer">
-  <section class ="form mv20">
+  <section class="form mv20">
     <div id="mc_embed_signup">
       <h2 class="mb2">Updates</h2>
       <p>Every month we send an email with community events and what we're up to.</p>
       <iframe name="nothing" style="display:none;"></iframe>
-      <form id="mc-embedded-subscribe-form" class="validate" action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;amp;id=be143888d2" method="post" name="mc-embedded-subscribe-form" target="nothing">
+      <form action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;amp;id=be143888d2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form" target="_blank" novalidate>
         <div class="input-group text-mono" id="mc_embed_signup_scroll">
           <div class="mc-field-group">
             <input class="required tlon-input mb2" type="email" name="EMAIL" id="mce-EMAIL" placeholder="your@email.com">
@@ -14,14 +14,10 @@
             <div id="mce-error-response" class="response" style="display:none"></div>
             <div id="mce-success-response" class="response" style="display:none"></div>
           </div>
-          <div style="position: absolute; left: -5000px;">
-            <input type="text" name="b_972a03db9e0c6c25bb58de8c8_be143888d2">
-          </div>
-          <div class="clear">
-          <button id="mc-embedded-subscribe" class="btn bg-black white h-font" type="submit" name="subscribe">
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_972a03db9e0c6c25bb58de8c8_be143888d2" tabindex="-1" value=""></div>
+          <button id="mc-embedded-subscribe" class="btn bg-black white" type="submit" name="subscribe">
             <span class="text-500">Subscribe</span>
           </button>
-          </div>
         </div>
       </form>
     </div>

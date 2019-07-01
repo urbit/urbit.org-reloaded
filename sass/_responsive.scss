@@ -20,7 +20,7 @@
     max-width: 90%;
   }
   .posts__content {
-    margin-left: 8rem;
+    margin-left: (8rem / 4);
   }
   .no-side-nav-column {
     flex-basis: 66.66666667%;
@@ -45,6 +45,7 @@
     .header {
       &__navigation {
         overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
       }
     }
   }
@@ -57,12 +58,14 @@
       width: 100%;
       top: 0;
       left: 0;
-      padding: 0 4rem;
+      padding: 0 (4rem / 4);
       background: white;
       overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
     }
     .content-nav {
       display: block;
+      margin: (7rem) / 4;
       overflow: initial;
       width: 100%;
       margin: 0;
