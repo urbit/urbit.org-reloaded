@@ -42,6 +42,7 @@
     .header {
       &__navigation {
         overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
       }
     }
   }
@@ -57,6 +58,7 @@
       padding: 0 (4rem / 4);
       background: white;
       overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
     }
     .content-nav {
       display: block;
