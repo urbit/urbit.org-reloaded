@@ -47,6 +47,15 @@ iframe {
   margin-top: -(24rem / 4);
 }
 
+// Hack to left-align top-bar text with content
+.top-bar-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  p {
+    margin-left: (100% / 6);
+  }
+}
+
 .content-nav {
   width: 20%;
   min-width: 200px;
@@ -64,7 +73,7 @@ iframe {
 
 .content-nav-icon {
   position: fixed;
-  left: (2rem / 4);
+  left: (4rem / 4);
   top: (24rem / 4);
   width: 10px;
   height: 10px;
