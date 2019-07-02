@@ -20,4 +20,4 @@ Hoon 201 is an eight-week, advanced-level course with a heavier workload. It’s
 
 If Hoon would be your first language, or you have some experience with non-functional languages, apply to Hoon 101. If you’ve already played around with Hoon extensively, or you’re a seasoned professional programmer, apply to Hoon 201. If you’re on the fence, go with 101; the two courses scheduled back-to-back, so you can enroll in the advanced course upon graduating from the introductory one.
 
-<script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script><iframe id="apply" class="airtable-embed airtable-dynamic-height w-full" src="https://airtable.com/embed/shr8bb15QPR3hfQpG?backgroundColor=teal" frameborder="0" height="1228"></iframe>
+<script class="src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script><iframe id="apply" class="airtable-embed airtable-dynamic-height w-full" src="https://airtable.com/embed/shr8bb15QPR3hfQpG?backgroundColor=teal" frameborder="0" height="1300"></iframe>
