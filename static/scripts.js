@@ -128,16 +128,26 @@ function debounce(func, wait) {
 // maximum sum. If there are multiple maximas, then get the last one.
 // Enclose the terms in <b>.
 function makeTeaser(body, terms) {
+  console.log("make teaser");
   var TERM_WEIGHT = 40;
   var NORMAL_WORD_WEIGHT = 2;
   var FIRST_WORD_WEIGHT = 8;
   //var TEASER_MAX_WORDS = 17;
   var TEASER_MAX_CHARS = 63;
 
+
   var stemmedTerms = terms.map(function (w) {
     return elasticlunr.stemmer(w.toLowerCase());
   });
 
+    console.log(stemmedTerms);
+  // create array with full word + partial Words (smallest fragment is 2 characters)
+  // first iteration is full word, then next is subset of the original word
+  /*var stemmedTerms = [];
+  for (var i = terms[0].length; i>=2; i--) {
+      stemmedTerms.push(terms[0].substring(0,i));
+  }
+  console.log(stemmedTerms);*/
   var termFound = false;
   var index = 0;
   var weighted = []; // contains elements of ["word", weight, index_in_document]
@@ -238,35 +248,17 @@ function makeTeaser(body, terms) {
 }
 
 function formatSearchResultTitle(path) {
-//  console.log(path);
   var pathArray = path.split( '/' );
-  //console.log(pathArray);
-  /*var slug = pathArray[1];
-//  console.log(slug);
-  var slugArray = slug.split( '/' );
-  var lastPartTitle = slugArray.splice(slugArray.length - 2, slugArray.length).join('');
-  var firstPartTitle = slugArray.join(' / ');
-//console.log(lastPartTitle);
-//console.log(firstPartTitle);
-*/
-  var firstPartTitle = pathArray[3]; // first directory is in 4th element of path array
-  var lastPartTitle = pathArray[pathArray.length-2]; // last directory is in 2nd to last element of array
-  var fullTitle = firstPartTitle + '<span class="gray90">' + ' / ' + lastPartTitle + '</span>';
-  console.log(fullTitle);
-  return fullTitle;
-/*
-  var pathArray = path.split( 'docs/' );
-//  console.log(pathArray);
-  var slug = pathArray[1];
-//  console.log(slug);
-  var slugArray = slug.split( '/' );
-  var lastPartTitle = slugArray.splice(slugArray.length - 2, slugArray.length).join('');
-  var firstPartTitle = slugArray.join(' / ');
+
+  // first directory is in 4th element of split path array
+  var firstPartTitle = pathArray[3];
+
+  // last directory is in 2nd to last element of array
+  var lastPartTitle = pathArray[pathArray.length-2].replace(/-/g,' ');
 
   var fullTitle = firstPartTitle + '<span class="gray90">' + ' / ' + lastPartTitle + '</span>';
 
   return fullTitle;
-  */
 }
 
 function formatSearchResultItem(item, terms) {
@@ -284,6 +276,7 @@ function formatSearchResultItem(item, terms) {
 }
 
 function initSearch() {
+  console.log("init search");
   var searchInput = document.getElementById("search");
 
   if (!searchInput) {
@@ -297,6 +290,7 @@ function initSearch() {
 
   var options = {
     bool: "AND",
+    expand: true,
     fields: {
       title: {boost: 2},
       body: {boost: 1},
@@ -347,6 +341,8 @@ function initSearch() {
     if (term === "") {
       return;
     }
+
+    // change query in order to make partial words work
 
     var results = index.search(term, options).filter(function (r) {
       return r.doc.body !== "";
