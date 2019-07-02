@@ -1,7 +1,4 @@
-//
-  // styling of input fields
-//
-
+// styling of input fields
 var inputElements = document.querySelectorAll('input.tlon-input');
 for (var i = 0; i < inputElements.length; i++) {
   //listen for changes in input
@@ -30,10 +27,7 @@ for (var i = 0; i < inputElements.length; i++) {
   });
 }
 
-//
-  // toggling of navigation menus
-//
-
+// toggling of navigation menus
 var toggleMainNav = document.getElementById('js-main-nav-toggle');
 if (toggleMainNav !== null) {
   toggleMainNav.onclick = function() {
@@ -47,20 +41,6 @@ if (toggleContentNav !== null) {
     document.body.classList.toggle('has-active-content-nav');
   }
 }
-
-/*function initToggleMenu() {
-  var menu = document.querySelector(".menu");
-  var menuIcon = document.querySelector(".menu-icon");
-  var page = document.querySelector(".page");
-  menuIcon.addEventListener("click", function() {
-    menu.classList.toggle("menu-hidden");
-    page.classList.toggle("page-without-menu");
-  });
-}*/
-
-//
-  // hotkeys
-//
 
 function initHotKeys() {
 
@@ -98,10 +78,8 @@ function initHotKeys() {
   });
 };
 
-//
-  // search functionality
-//
 
+// search functionality
 function debounce(func, wait) {
   var timeout;
 
@@ -135,19 +113,10 @@ function makeTeaser(body, terms) {
   //var TEASER_MAX_WORDS = 17;
   var TEASER_MAX_CHARS = 63;
 
-
   var stemmedTerms = terms.map(function (w) {
     return elasticlunr.stemmer(w.toLowerCase());
   });
 
-    console.log(stemmedTerms);
-  // create array with full word + partial Words (smallest fragment is 2 characters)
-  // first iteration is full word, then next is subset of the original word
-  /*var stemmedTerms = [];
-  for (var i = terms[0].length; i>=2; i--) {
-      stemmedTerms.push(terms[0].substring(0,i));
-  }
-  console.log(stemmedTerms);*/
   var termFound = false;
   var index = 0;
   var weighted = []; // contains elements of ["word", weight, index_in_document]
@@ -290,7 +259,7 @@ function initSearch() {
 
   var options = {
     bool: "AND",
-    expand: true,
+    expand: true, // turn on partial word search
     fields: {
       title: {boost: 2},
       body: {boost: 1},
@@ -341,8 +310,6 @@ function initSearch() {
     if (term === "") {
       return;
     }
-
-    // change query in order to make partial words work
 
     var results = index.search(term, options).filter(function (r) {
       return r.doc.body !== "";
