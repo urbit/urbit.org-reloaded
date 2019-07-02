@@ -137,6 +137,7 @@ function makeTeaser(body, terms) {
   var stemmedTerms = terms.map(function (w) {
     return elasticlunr.stemmer(w.toLowerCase());
   });
+
   var termFound = false;
   var index = 0;
   var weighted = []; // contains elements of ["word", weight, index_in_document]
@@ -221,15 +222,15 @@ function makeTeaser(body, terms) {
       startIndex = word[2];
     }
 
-    // add <em/> around search terms
+    // add dark color around search terms
     if (word[1] === TERM_WEIGHT) {
-      teaser.push("<b>");
+      teaser.push("<span class='gray70'>");
     }
     startIndex = word[2] + word[0].length;
     teaser.push(body.substring(word[2], startIndex));
 
     if (word[1] === TERM_WEIGHT) {
-      teaser.push("</b>");
+      teaser.push("</span>");
     }
   }
   teaser.push("…");
@@ -237,15 +238,35 @@ function makeTeaser(body, terms) {
 }
 
 function formatSearchResultTitle(path) {
+//  console.log(path);
+  var pathArray = path.split( '/' );
+  //console.log(pathArray);
+  /*var slug = pathArray[1];
+//  console.log(slug);
+  var slugArray = slug.split( '/' );
+  var lastPartTitle = slugArray.splice(slugArray.length - 2, slugArray.length).join('');
+  var firstPartTitle = slugArray.join(' / ');
+//console.log(lastPartTitle);
+//console.log(firstPartTitle);
+*/
+  var firstPartTitle = pathArray[3]; // first directory is in 4th element of path array
+  var lastPartTitle = pathArray[pathArray.length-2]; // last directory is in 2nd to last element of array
+  var fullTitle = firstPartTitle + '<span class="gray90">' + ' / ' + lastPartTitle + '</span>';
+  console.log(fullTitle);
+  return fullTitle;
+/*
   var pathArray = path.split( 'docs/' );
+//  console.log(pathArray);
   var slug = pathArray[1];
+//  console.log(slug);
   var slugArray = slug.split( '/' );
   var lastPartTitle = slugArray.splice(slugArray.length - 2, slugArray.length).join('');
   var firstPartTitle = slugArray.join(' / ');
 
-  var fullTitle = firstPartTitle + ' / ' + '<span class="search-results__item__title__slug-end">' + lastPartTitle + '</span>';
+  var fullTitle = firstPartTitle + '<span class="gray90">' + ' / ' + lastPartTitle + '</span>';
 
   return fullTitle;
+  */
 }
 
 function formatSearchResultItem(item, terms) {
@@ -256,8 +277,9 @@ function formatSearchResultItem(item, terms) {
   li.classList.add("search-results__item");
   var hrefA = item.ref;
   createA.setAttribute('href', hrefA);
-  createA.innerHTML = `<span class="search-results__item__title">${teaserTitle}</span>`;
-  createA.innerHTML += `<div class="search-results__teaser">${makeTeaser(item.doc.body, terms)}</div>`;
+  createA.setAttribute('class','no-underline block pl6 pv2');
+  createA.innerHTML = `<span class="fs45 capitalize gray30">${teaserTitle}</span>`;
+  createA.innerHTML += `<div class="fs35 gray30">${makeTeaser(item.doc.body, terms)}</div>`;
   return li;
 }
 
