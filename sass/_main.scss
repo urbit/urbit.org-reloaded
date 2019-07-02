@@ -47,6 +47,15 @@ iframe {
   margin-top: -(24rem / 4);
 }
 
+// Hack to left-align top-bar text with content
+.top-bar-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  p {
+    margin-left: (100% / 6);
+  }
+}
+
 .content-nav {
   width: 20%;
   min-width: 200px;
@@ -269,16 +278,33 @@ iframe {
   max-width: 320px;
 }
 
+.form--big {
+  max-width: 390px;
+  .btn {
+    width: 100%;
+  }
+}
+
+.hoonschool-application {
+ &__experience {
+   resize: vertical;
+ }
+}
+
 /*
  * styling
  */
 
-textarea, input[type="text"], input[type="email"], input[type="number"] {
-  border: 2px solid #000;
+textarea, input[type="text"], input[type="email"], input[type="number"], select {
+  border: 1px solid #000;
   padding: 12px;
   width: 100%;
   outline: none;
   box-sizing: border-box;
+}
+
+textarea {
+  resize: horizontal;
 }
 
 button, .btn {
@@ -416,7 +442,7 @@ pre, code {
   font-size: (4rem / 4);
 }
 
-textarea, input[type="text"], input[type="email"], input[type="number"] {
+textarea, input[type="text"], input[type="email"], input[type="number"], select {
   border: 1px solid #B1B2B3;
   font-family: "Source Code Pro", mono;
   font-size: (4rem / 4);
