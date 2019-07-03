@@ -2,7 +2,7 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>{{ config.title }}</title>
-        <link>{{ config.base_url | urlencode | safe }}</link>
+        <link>{{ config.base_url | safe }}</link>
         <description>{{ config.description }}</description>
         <generator>Zola</generator>
         <language>{{ config.default_language }}</language>
