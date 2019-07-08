@@ -48,20 +48,6 @@ if (toggleContentNav !== null) {
   }
 }
 
-/*function initToggleMenu() {
-  var menu = document.querySelector(".menu");
-  var menuIcon = document.querySelector(".menu-icon");
-  var page = document.querySelector(".page");
-  menuIcon.addEventListener("click", function() {
-    menu.classList.toggle("menu-hidden");
-    page.classList.toggle("page-without-menu");
-  });
-}*/
-
-//
-  // hotkeys
-//
-
 function initHotKeys() {
 
   var bodyEl = document.body;
@@ -117,7 +103,6 @@ function debounce(func, wait) {
   };
 }
 
-// Taken from mdbook
 // The strategy is as follows:
 // First, assign a value to each word in the document:
 //  Words that correspond to search terms (stemmer aware): 40
@@ -245,7 +230,7 @@ function formatSearchResultTitle(path) {
 
   var fullTitle = firstPartTitle + ' / ' + '<span class="search-results__item__title__slug-end">' + lastPartTitle + '</span>';
 
-  return fullTitle;
+  return fullTitle; 
 }
 
 function formatSearchResultItem(item, terms) {
