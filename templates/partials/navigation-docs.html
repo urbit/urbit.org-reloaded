@@ -1,10 +1,10 @@
 {% block content %}
 <div id="js-content-nav-toggle" class="content-nav-icon"></div>
 <nav class="content-nav">
+  <button id="js-search-window-toggle" type="button" class="search-bar content-nav__search-bar" style="outline:none">
+    <span class="header__search-icon mh3 inline-block fs6">⚲</span>Search
+  </button>
   <ul class="list content-nav__index">
-      <li class="list__item content-nav__index__item">
-          <button id="js-search-window-toggle" type="button" class="search-bar content-nav__search-bar mb2">Search</button>
-      </li>
     {% block menu %}
       {% set index = get_section(path="docs/_index.md") %}
       {% for s in index.subsections %}

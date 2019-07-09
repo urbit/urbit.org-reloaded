@@ -106,7 +106,6 @@ function debounce(func, wait) {
 // maximum sum. If there are multiple maximas, then get the last one.
 // Enclose the terms in <b>.
 function makeTeaser(body, terms) {
-  console.log("make teaser");
   var TERM_WEIGHT = 40;
   var NORMAL_WORD_WEIGHT = 2;
   var FIRST_WORD_WEIGHT = 8;
@@ -225,7 +224,7 @@ function formatSearchResultTitle(path) {
   // last directory is in 2nd to last element of array
   var lastPartTitle = pathArray[pathArray.length-2].replace(/-/g,' ');
 
-  var fullTitle = firstPartTitle + '<span class="gray90">' + ' / ' + lastPartTitle + '</span>';
+  var fullTitle = firstPartTitle + '<span class="gray90 inline-block pl2">' + ' / ' + lastPartTitle + '</span>';
 
   return fullTitle;
 }
@@ -236,18 +235,18 @@ function formatSearchResultItem(item, terms) {
   li.appendChild(createA);
   var teaserTitle = formatSearchResultTitle(item.ref);
   li.classList.add("search-results__item");
+  li.classList.add("ph3");
   var hrefA = item.ref;
   createA.setAttribute('href', hrefA);
-  createA.setAttribute('class','no-underline block pl6 pv2');
+  createA.setAttribute('class','no-underline block pl6 pv3');
   createA.innerHTML = `<span class="fs45 capitalize gray30">${teaserTitle}</span>`;
-  createA.innerHTML += `<div class="fs35 gray30">${makeTeaser(item.doc.body, terms)}</div>`;
+  createA.innerHTML += `<span class='pr7 fs5 none float-right'>→</span>`;
+  createA.innerHTML += `<div class="fs35 gray30 truncate mr10">${makeTeaser(item.doc.body, terms)}</div>`;
   return li;
 }
 
 function initSearch() {
-  console.log("init search");
   var searchInput = document.getElementById("search");
-
   if (!searchInput) {
     return;
   }
@@ -256,7 +255,6 @@ function initSearch() {
   var searchResultsHeader = document.querySelector(".search-results__header");
   var searchResultsItems = document.querySelector(".search-results__items");
   var MAX_ITEMS = 200;
-
   var options = {
     bool: "AND",
     expand: true, // turn on partial word search
@@ -267,7 +265,6 @@ function initSearch() {
   };
   var currentTerm = "";
   var index = elasticlunr.Index.load(window.searchIndex);
-
   // toggle search window
   var toggleSearchWindow = document.getElementById('js-search-window-toggle');
   var bodyEl = document.body;
@@ -290,11 +287,9 @@ function initSearch() {
       }
     })
   }
-
   // when typing
   searchInput.addEventListener("keyup", debounce(function() {
     searchResultsHeader.value = "";
-
     var term = searchInput.value.trim();
 
     /*
