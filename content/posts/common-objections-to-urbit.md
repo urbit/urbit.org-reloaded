@@ -356,11 +356,7 @@ expressive power; but identity is optimal for the UI of the
 common case.  We'd need to see the Powerbox, Sandstorm's UI, more
 fully fleshed out to understand its UI approach better.
 
-;=
-  ;h2
-    ;div(id "planet"): Urbit doesn't have enough planets for every human
-  ==
-==
+## <a name="planet"></a>Urbit doesn't have enough planets for every human
 
 A 32-bit planet is a tool, not a toy.  Like a car, it's a device
 for a responsible and independent adult.  There aren't 4 billion
