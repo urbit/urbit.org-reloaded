@@ -10,9 +10,8 @@ posts = ["Essays"]
 ![](https://media.urbit.org/site/blog-9.jpg)
 
 We love crowdsourced criticism.  We've heard a lot of great
-objections to  Urbit.  Surely there's more out there!  If so,
-comments are open at the bottom of the page.  We'll revise this
-document to include anything new and interesting.
+objections to  Urbit.  Surely there's more out there!  We'll
+revise this document to include anything new and interesting.
 
 Here's our list right now:
 
