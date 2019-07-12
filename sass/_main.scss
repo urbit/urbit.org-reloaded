@@ -1,7 +1,7 @@
 /*
  * core
  */
-
+@import "indigo.scss";
 body {
   font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: (3.5rem / 4);
@@ -481,4 +481,16 @@ textarea, input[type="text"], input[type="email"], input[type="number"], select 
 #mc_embed_signup form {
   padding: 0;
   text-align: inherit;
+}
+
+// Markdown
+summary {
+  font-size: (5rem / 4);
+  font-weight: 500;
+  padding-bottom: (2rem / 4);
+  padding-top: (2rem / 4);
+}
+details {
+  padding-bottom: (1rem / 4);
+  padding-top: (1rem / 4);
 }
