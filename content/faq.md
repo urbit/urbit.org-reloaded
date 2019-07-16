@@ -207,7 +207,7 @@ Yes. Check out our [proposals page.](grant.urbit.org/proposals)
 
 ### How do I safely store my stars? {#grants-13}
 
-We recommend storing each star in its own in its own Ethereum wallet. The private keys to these wallets should be stored on physical media that is not connected to a networked computer. Redundancies don’t hurt!
+We recommend storing each star in its own Ethereum wallet. The private keys to these wallets should be stored on physical media that is not connected to a networked computer. Redundancies don’t hurt!
 
 ### Can I delegate a bounty or proposal to someone else? {#grants-14}
 
@@ -391,7 +391,7 @@ Your sponsor, a star or galaxy that your ship “lives” under, may send you ne
 ### What is Landscape? {#arvo-8}
 
 Landscape is an experimental Arvo web interface that includes social functions such as chat and message boards. You can access Landscape by navigating to <your-planet>.arvo.network, where <your-planet> is your running ship, connected to the Arvo network.
-  
+
 Landscape will be removed from the Urbit distribution and no longer supported in July 2019.
 
 ### I have a point, now what? {#arvo-9}
