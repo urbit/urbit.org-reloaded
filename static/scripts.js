@@ -202,7 +202,7 @@ function makeTeaser(body, terms) {
 
     // add dark color around search terms
     if (word[1] === TERM_WEIGHT) {
-      teaser.push("<span class='gray70'>");
+      teaser.push("<span>");
     }
     startIndex = word[2] + word[0].length;
     teaser.push(body.substring(word[2], startIndex));
@@ -239,9 +239,9 @@ function formatSearchResultItem(item, terms) {
   var hrefA = item.ref;
   createA.setAttribute('href', hrefA);
   createA.setAttribute('class','no-underline block pl6 pv3');
-  createA.innerHTML = `<span class="fs45 capitalize gray30">${teaserTitle}</span>`;
+  createA.innerHTML = `<span class="fs45 capitalize">${teaserTitle}</span>`;
   createA.innerHTML += `<span class='pr7 fs5 none float-right'>→</span>`;
-  createA.innerHTML += `<div class="fs35 gray30 truncate mr10">${makeTeaser(item.doc.body, terms)}</div>`;
+  createA.innerHTML += `<div class="fs35 truncate mr10">${makeTeaser(item.doc.body, terms)}</div>`;
   return li;
 }
 
