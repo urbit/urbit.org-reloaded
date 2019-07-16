@@ -1,32 +1,3 @@
-// styling of input fields
-var inputElements = document.querySelectorAll('input.tlon-input');
-for (var i = 0; i < inputElements.length; i++) {
-  //listen for changes in input
-  inputElements[i].addEventListener('input', function() {
-    // if input has a value do this
-    if (this.value) {
-      var inputContainer = this.parentNode;
-      var validInputs = inputContainer.querySelectorAll('input.tlon-input:valid');
-      var inputs = inputContainer.querySelectorAll('input.tlon-input');
-      if (validInputs.length !== 0) {
-        // has valid input
-        for (var i = 0; i < validInputs.length; i++) {
-          if (this.classList.contains('is-valid') == false ) {
-            validInputs[i].parentNode.classList.add('has-valid-input');
-          }
-        }
-      } else {
-        // doesn't have valid input
-        for (var i = 0; i < inputs.length; i++) {
-          inputs[i].parentNode.classList.remove('has-valid-input');
-        }
-      }
-    } else {
-      this.parentNode.classList.remove('has-valid-input');
-    }
-  });
-}
-
 // toggling of navigation menus
 var toggleMainNav = document.getElementById('js-main-nav-toggle');
 if (toggleMainNav !== null) {
@@ -247,6 +218,9 @@ function formatSearchResultItem(item, terms) {
 
 function initSearch() {
   var searchInput = document.getElementById("search");
+  var searchForm = document.getElementById("search-form");
+  var inputReset = searchForm.nextElementSibling;
+
   if (!searchInput) {
     return;
   }
@@ -271,12 +245,16 @@ function initSearch() {
   var searchOverlay = document.getElementById('search-overlay');
   var searchWindow = document.getElementById('search-window');
   var searchActive = bodyEl.classList.contains('has-active-search-window');
+
   if (toggleSearchWindow !== null) {
     toggleSearchWindow.onclick = function() {
+      inputReset.style.display="none";
+
       //activate search
       bodyEl.classList.toggle('has-active-search-window');
       //put input in focus when activating search
       searchInput.focus();
+
       searchInput.value = "";
       searchResultsHeader.value = "";
       searchResults.style.display = searchInput.value.trim() === "" ? "none" : "block";
@@ -287,11 +265,13 @@ function initSearch() {
       }
     })
   }
-  // when typing
+
+
   searchInput.addEventListener("keyup", debounce(function() {
+    inputReset.style.display="block";
+
     searchResultsHeader.value = "";
     var term = searchInput.value.trim();
-
     /*
     //removed to fix: a state where there’s a valid search term, but no results
 
@@ -303,12 +283,14 @@ function initSearch() {
     searchResults.style.overflowY = term === "" ? "hidden" : "scroll";
     searchResultsItems.innerHTML = "";
     if (term === "") {
+      inputReset.style.display="none";
       return;
     }
 
     var results = index.search(term, options).filter(function (r) {
       return r.doc.body !== "";
     });
+
     if (results.length === 0) {
       searchResultsHeader.innerText = `No search results for '${term}'.`;
       return;
@@ -323,6 +305,17 @@ function initSearch() {
       searchResultsItems.appendChild(formatSearchResultItem(results[i], term.split(" ")));
     }
   }, 150));
+
+  // reset input button
+  inputReset.onclick=function(){
+    document.getElementById('search-form').reset();
+  }
+  searchForm.addEventListener("reset", function(event){
+    var e = document.createEvent('KeyboardEvent');
+    e.initEvent("keyup", false, true);
+    searchInput.dispatchEvent(e);
+  });
+
 }
 
 if (document.readyState === "complete" ||

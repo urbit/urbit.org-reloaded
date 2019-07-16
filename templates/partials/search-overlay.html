@@ -2,11 +2,12 @@
 <div id="search-overlay" class="search-overlay fix vh100 w-full b-transparent z10 none top0">
   <div class="wrapper">
     <div id="search-window" class="pop-up">
-      <div class="search-bar padding-none border-none z1">
-        <span class="header__search-icon abs z1 fs6 pl3 pt4 pb2">⚲</span>
-        <input id="search" autocomplete="off" type="search" class="search-bar__input border-none" placeholder="Go to...">
+      <div class="search-bar padding-none border-none z1 inline align-center w-full">
+        <span class="header__search-icon ml3 abs z1 fs6 gray50">⚲</span>
+        <form id="search-form" class="w-full"><input id="search" autocomplete="off" type="search" class="search-bar__input border-none" placeholder="Go to..."></form>
+        <a id="search-reset" class="fs6 pr3 gray50 no-underline pointer:hover">&#57503;</a>
       </div>
-      <div class="search-results bt1 b-gray40">
+      <div id="search-results" class="search-results bt1 b-gray40">
         <div class="search-results__header ml9 mv2 gray60 fs3"></div>
         <ul class="list search-results__items"></ul>
       </div>

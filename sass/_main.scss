@@ -339,6 +339,14 @@ iframe {
  * styling
  */
 
+ // remove default x icon
+ input[type="search"]::-webkit-search-decoration,
+ input[type="search"]::-webkit-search-cancel-button,
+ input[type="search"]::-webkit-search-results-button,
+ input[type="search"]::-webkit-search-results-decoration {
+   display: none;
+ }
+
 textarea, input[type="text"], input[type="email"], input[type="number"], input[type="search"] {
   border: 1px solid #B1B2B3;
   font-size: (4rem / 4);
@@ -377,7 +385,6 @@ button, .btn {
   border: 1px solid #B1B2B3;
   background: #fff;
   font-size: (4rem / 4);
-  line-height: (6rem / 4);
   transition: all 0.1s linear;
   padding: 12px 12px 12px 40px;
   position: relative;
