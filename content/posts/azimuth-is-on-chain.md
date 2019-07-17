@@ -7,10 +7,10 @@ aliases = ["/posts/essays/azimuth-is-on-chain"]
 [taxonomies]
 posts = ["Essays"]
 +++
+
 ![](https://storage.googleapis.com/media.urbit.org/site/arvo-4.svg)
 
 The Urbit address space is now live on the Ethereum blockchain. We’re calling the PKI ‘Azimuth’ and you can find it at [`0x223c067f8cf28ae173ee5cafea60ca44c335fecb`](https://etherscan.io/address/0x223c067f8cf28ae173ee5cafea60ca44c335fecb) or [`azimuth.eth`](https://etherscan.io/address/azimuth.eth). Owners of Azimuth ‘points’ (galaxies, stars or planets) can use [Bridge](https://github.com/urbit/bridge/releases) to manage them and view their balance now.
-
 
 Sometime in the next few days, owners of Azimuth points will be able to boot Arvo, the Urbit OS, from their Azimuth point and request access to one of our 'cities': private communities for chat and discussion. These new cities use Landscape, a brand new UI for using Urbit in the browser.
 
@@ -26,7 +26,6 @@ We aren't calling this a launch. There's no keynote. There's no dancing on stage
 
 > Note: As of `~2019.1.14` we're in the process of rebooting the Arvo network. We expect it to be back online before the end of the week. We'll update this post and [tweet](https://twitter.com/urbit) when the network is online and stable.
 
-
 ## Rethinking the stack
 
 We've started to talk about Urbit as a stack of three parts: Azimuth, the address space and identity layer on Ethereum; Arvo, the OS and overlay network; and Aegean, a pattern for building decentralized communities on the Arvo network.
@@ -34,7 +33,6 @@ We've started to talk about Urbit as a stack of three parts: Azimuth, the addres
 We tried to capture this separation in [the primer](/primer), a new overview of Urbit. Explaining Urbit has always been challenging. A monolithic project that is OS, network, language, VM and UI barely makes sense. Separating the layers helps, we think.
 
 Let's step through them to see what's new.
-
 
 ## Azimuth
 
@@ -52,14 +50,13 @@ To manage your points, we built [Bridge](https://github.com/urbit/bridge/release
 
 If you're curious, you can find the source for the contracts in the [`urbit/azimuth`](https://github.com/urbit/azimuth) repo. The Bridge source is in the [`urbit/bridge`](https://github.com/urbit/bridge) repo.
 
-We had the source for our contracts audited by Open Zeppelin, Blockchain at Berkeley and Blocktrax. Did we miss something? We sure hope not — but we'd happily compensate anyone who can find bugs. Please reach out to security@urbit.org if you find something of concern. We'd be happy to hear from you.
+We had the source for our contracts audited by Open Zeppelin, Blockchain at Berkeley and Bloctrax. Did we miss something? We sure hope not — but we'd happily compensate anyone who can find bugs. Please reach out to security@urbit.org if you find something of concern. We'd be happy to hear from you.
 
 ![](https://storage.googleapis.com/media.urbit.org/site/sigils.svg)
 
 Azimuth names have always had a pronunciation system. `~ronryd-nidseg` is 13,695,781, for example. Now, they also have a visual system. We call these strange crests from another planet 'sigils', and you'll notice them used throughout all our new interfaces. You can find the source in the [`urbit/sigil-js`](https://github.com/urbit/sigil-js) repository. Building these was a lot of fun — we'll save the details for a future post.
 
 So, how do you get an Azimuth point? We've left that question unanswered intentionally. Azimuth points are meant to be like digital land, not currency. They should change hands slowly. In order to get an Azimuth point, you'll need to find someone who already has one and is willing to part with it.
-
 
 ## Arvo
 
@@ -70,7 +67,6 @@ Arvo boots from Ethereum, is no longer embarrassingly slow, and has a brand new 
 It's tough to talk about the progress we've made on Arvo without writing a long technical post. We'll save that for later. In a way, what's remarkable about Arvo is that it has become *less* remarkable. It's more stable, faster, and the code quality has improved.
 
 There's plenty of work to do, though. Should you be building on top of Arvo? Probably not yet. The kernel and kernel modules are really where the work still lies. We build things on top of Arvo, and in doing so it's pretty clear that the system can be better. Clay (the filesystem) and Gall (the application model) are due for a rewrite. A complete rewrite of the web server, Eyre is almost finished.
-
 
 ## Aegean
 
@@ -90,7 +86,6 @@ Our first agent is called [Landscape](https://github.com/urbit/landscape), an ag
 
 Anyone can create their own city, of course. The source is open. But we're not going to encourage you to just yet. Feel free to explore, but also be patient. We've got a lot planned around this. If Azimuth is done and Arvo is young, Aegean is just being born.
 
-
 ## Tlon
 
 ![](https://storage.googleapis.com/media.urbit.org/site/office-1.jpg)
@@ -100,7 +95,6 @@ So who is behind all of this? A team of collaborators and contributors. Many of 
 One important omission on `tlon.io` is Curtis. As of today, he's no longer working on Urbit. [His own words](/posts/essays/a-founders-farewell) are the best way to understand his thinking. It's an achievement for the team, I think, that he can depart with confidence.
 
 One major reason for that confidence is that Erik and Anthony have now become COO and CPO respectively. Having thoughtful, organized people leading the project is a huge benefit to the whole team. I'm very glad to have them on board.
-
 
 ## Looking ahead
 

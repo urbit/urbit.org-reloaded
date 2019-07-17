@@ -10,9 +10,8 @@ posts = ["Essays"]
 ![](https://media.urbit.org/site/blog-9.jpg)
 
 We love crowdsourced criticism.  We've heard a lot of great
-objections to  Urbit.  Surely there's more out there!  If so,
-comments are open at the bottom of the page.  We'll revise this
-document to include anything new and interesting.
+objections to  Urbit.  Surely there's more out there!  We'll
+revise this document to include anything new and interesting.
 
 Here's our list right now:
 
@@ -356,11 +355,7 @@ expressive power; but identity is optimal for the UI of the
 common case.  We'd need to see the Powerbox, Sandstorm's UI, more
 fully fleshed out to understand its UI approach better.
 
-;=
-  ;h2
-    ;div(id "planet"): Urbit doesn't have enough planets for every human
-  ==
-==
+## <a name="planet"></a>Urbit doesn't have enough planets for every human
 
 A 32-bit planet is a tool, not a toy.  Like a car, it's a device
 for a responsible and independent adult.  There aren't 4 billion
