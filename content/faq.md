@@ -161,7 +161,7 @@ There are three ways to receive a grant of stars for your contribution to the Ur
 
 ### How do I get a gift? {#grants-2}
 
-Make useful and substantial contributions to Urbit. These can be contributions to the project itself, or they can be outside tools that aren’t part of the Urbit codebase. There’s no formal system for determining who gets a gift; it’s at the discretion of employees at Tlon. Nothing is guaranteed, but you can get an idea for what kinds of contributions results in gifts by looking at the [gifts history.](grants.urbit.org/history)
+Make useful and substantial contributions to Urbit. These can be contributions to the project itself, or they can be outside tools that aren’t part of the Urbit codebase. There’s no formal system for determining who gets a gift; it’s at the discretion of employees at Tlon. Nothing is guaranteed, but you can get an idea for what kinds of contributions results in gifts by looking at the [gifts history.](https://grants.urbit.org/history)
 
 ### How often are gifts awarded? {#grants-3}
 
@@ -203,7 +203,7 @@ We will pay you within a 30-day window.
 
 ### Can I see the proposals of others that have been accepted? {#grants-12}
 
-Yes. Check out our [proposals page.](grants.urbit.org/proposals)
+Yes. Check out our [proposals page.](https://grants.urbit.org/proposals)
 
 ### How do I safely store my stars? {#grants-13}
 
@@ -239,7 +239,7 @@ Comets are 128 bits and have no parents. They can be launched by anyone. They ar
 
 ### What is a `@p`? Why is my username generated for me? {#azimuth-5}
 
-A `@p` (pronounced *pat-pee*) is a name like `~zod` or `~lodleb-ritrul` composed of pronounceable, three-letter phonemic elements like `zod`, `lod`, `leb`, `rit` and `rul`. Shorter names, such as `~zod` and `~marzod` are assigned to ships with special duties on the Arvo network ([stars and galaxies](@/docs/concepts/galaxies-stars-and-planets.md), respectively. Longer names like `~palfun-foslup` are identities for typical users.
+A `@p` (pronounced *pat-pee*) is a name like `~zod` or `~lodleb-ritrul` composed of pronounceable, three-letter phonemic elements like `zod`, `lod`, `leb`, `rit` and `rul`. Shorter names, such as `~zod` and `~marzod` are assigned to ships with special duties on the Arvo network ([stars and galaxies](@/docs/concepts/galaxies-stars-and-planets.md), respectively). Longer names like `~palfun-foslup` are identities for typical users.
 
 These names are pre-generated because they map directly to a number in the urbit address space. Galaxies occupy the 8-bit address space, so any galaxy is actually a number between zero to 255. Stars occupy the 16-bit address space, and planets occupy the 32-bit address space.
 
