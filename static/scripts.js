@@ -171,29 +171,22 @@ function makeTeaser(body, terms) {
       startIndex = word[2];
     }
 
-    // add dark color around search terms
-    if (word[1] === TERM_WEIGHT) {
-      teaser.push("<span>");
-    }
     startIndex = word[2] + word[0].length;
     teaser.push(body.substring(word[2], startIndex));
 
-    if (word[1] === TERM_WEIGHT) {
-      teaser.push("</span>");
-    }
   }
   teaser.push("…");
   return teaser.join("");
 }
 
-function formatSearchResultTitle(path) {
-  var pathArray = path.split( '/' );
+function formatSearchResultTitle(item) {
+  var pathArray = item.ref.split( '/' );
 
   // first directory is in 4th element of split path array
   var firstPartTitle = pathArray[3];
 
   // last directory is in 2nd to last element of array
-  var lastPartTitle = pathArray[pathArray.length-2].replace(/-/g,' ');
+  var lastPartTitle = item.doc.title;
 
   var fullTitle = firstPartTitle + '<span class="gray90 inline-block pl2">' + ' / ' + lastPartTitle + '</span>';
 
@@ -201,10 +194,11 @@ function formatSearchResultTitle(path) {
 }
 
 function formatSearchResultItem(item, terms) {
+  console.log(item);
   var li = document.createElement("li");
   var createA = document.createElement("a");
   li.appendChild(createA);
-  var teaserTitle = formatSearchResultTitle(item.ref);
+  var teaserTitle = formatSearchResultTitle(item);
   li.classList.add("search-results__item");
   li.classList.add("ph3");
   var hrefA = item.ref;
@@ -297,7 +291,7 @@ function initSearch() {
     }
 
     currentTerm = term;
-      searchResultsHeader.innerText = `${results.length} search results for '${term}':`;
+    searchResultsHeader.innerText = `${results.length} search results for '${term}':`;
     for (var i = 0; i < Math.min(results.length, MAX_ITEMS); i++) {
       if (!results[i].doc.body) {
         continue;
