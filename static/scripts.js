@@ -1,39 +1,4 @@
-//
-  // styling of input fields
-//
-
-var inputElements = document.querySelectorAll('input.tlon-input');
-for (var i = 0; i < inputElements.length; i++) {
-  //listen for changes in input
-  inputElements[i].addEventListener('input', function() {
-    // if input has a value do this
-    if (this.value) {
-      var inputContainer = this.parentNode;
-      var validInputs = inputContainer.querySelectorAll('input.tlon-input:valid');
-      var inputs = inputContainer.querySelectorAll('input.tlon-input');
-      if (validInputs.length !== 0) {
-        // has valid input
-        for (var i = 0; i < validInputs.length; i++) {
-          if (this.classList.contains('is-valid') == false ) {
-            validInputs[i].parentNode.classList.add('has-valid-input');
-          }
-        }
-      } else {
-        // doesn't have valid input
-        for (var i = 0; i < inputs.length; i++) {
-          inputs[i].parentNode.classList.remove('has-valid-input');
-        }
-      }
-    } else {
-      this.parentNode.classList.remove('has-valid-input');
-    }
-  });
-}
-
-//
-  // toggling of navigation menus
-//
-
+// toggling of navigation menus
 var toggleMainNav = document.getElementById('js-main-nav-toggle');
 if (toggleMainNav !== null) {
   toggleMainNav.onclick = function() {
@@ -84,10 +49,8 @@ function initHotKeys() {
   });
 };
 
-//
-  // search functionality
-//
 
+// search functionality
 function debounce(func, wait) {
   var timeout;
 
@@ -122,6 +85,7 @@ function makeTeaser(body, terms) {
   var stemmedTerms = terms.map(function (w) {
     return elasticlunr.stemmer(w.toLowerCase());
   });
+
   var termFound = false;
   var index = 0;
   var weighted = []; // contains elements of ["word", weight, index_in_document]
@@ -206,48 +170,49 @@ function makeTeaser(body, terms) {
       startIndex = word[2];
     }
 
-    // add <em/> around search terms
-    if (word[1] === TERM_WEIGHT) {
-      teaser.push("<b>");
-    }
     startIndex = word[2] + word[0].length;
     teaser.push(body.substring(word[2], startIndex));
 
-    if (word[1] === TERM_WEIGHT) {
-      teaser.push("</b>");
-    }
   }
   teaser.push("…");
   return teaser.join("");
 }
 
-function formatSearchResultTitle(path) {
-  var pathArray = path.split( 'docs/' );
-  var slug = pathArray[1];
-  var slugArray = slug.split( '/' );
-  var lastPartTitle = slugArray.splice(slugArray.length - 2, slugArray.length).join('');
-  var firstPartTitle = slugArray.join(' / ');
+function formatSearchResultTitle(item) {
+  var pathArray = item.ref.split( '/' );
 
-  var fullTitle = firstPartTitle + ' / ' + '<span class="search-results__item__title__slug-end">' + lastPartTitle + '</span>';
+  // first directory is in 4th element of split path array
+  var firstPartTitle = pathArray[3];
+
+  // last directory is in 2nd to last element of array
+  var lastPartTitle = item.doc.title;
+
+  var fullTitle = firstPartTitle + '<span class="gray90 inline-block pl2">' + ' / ' + lastPartTitle + '</span>';
 
   return fullTitle; 
 }
 
 function formatSearchResultItem(item, terms) {
+  console.log(item);
   var li = document.createElement("li");
   var createA = document.createElement("a");
   li.appendChild(createA);
-  var teaserTitle = formatSearchResultTitle(item.ref);
+  var teaserTitle = formatSearchResultTitle(item);
   li.classList.add("search-results__item");
+  li.classList.add("ph3");
   var hrefA = item.ref;
   createA.setAttribute('href', hrefA);
-  createA.innerHTML = `<span class="search-results__item__title">${teaserTitle}</span>`;
-  createA.innerHTML += `<div class="search-results__teaser">${makeTeaser(item.doc.body, terms)}</div>`;
+  createA.setAttribute('class','no-underline block pl6 pv3');
+  createA.innerHTML = `<span class="fs45 capitalize">${teaserTitle}</span>`;
+  createA.innerHTML += `<span class='pr7 fs5 none float-right'>→</span>`;
+  createA.innerHTML += `<div class="fs35 truncate mr10">${makeTeaser(item.doc.body, terms)}</div>`;
   return li;
 }
 
 function initSearch() {
   var searchInput = document.getElementById("search");
+  var searchForm = document.getElementById("search-form");
+  var inputReset = searchForm.nextElementSibling;
 
   if (!searchInput) {
     return;
@@ -257,9 +222,9 @@ function initSearch() {
   var searchResultsHeader = document.querySelector(".search-results__header");
   var searchResultsItems = document.querySelector(".search-results__items");
   var MAX_ITEMS = 200;
-
   var options = {
     bool: "AND",
+    expand: true, // turn on partial word search
     fields: {
       title: {boost: 2},
       body: {boost: 1},
@@ -267,19 +232,22 @@ function initSearch() {
   };
   var currentTerm = "";
   var index = elasticlunr.Index.load(window.searchIndex);
-
   // toggle search window
   var toggleSearchWindow = document.getElementById('js-search-window-toggle');
   var bodyEl = document.body;
   var searchOverlay = document.getElementById('search-overlay');
   var searchWindow = document.getElementById('search-window');
   var searchActive = bodyEl.classList.contains('has-active-search-window');
+
   if (toggleSearchWindow !== null) {
     toggleSearchWindow.onclick = function() {
+      inputReset.style.display="none";
+
       //activate search
       bodyEl.classList.toggle('has-active-search-window');
       //put input in focus when activating search
       searchInput.focus();
+
       searchInput.value = "";
       searchResultsHeader.value = "";
       searchResults.style.display = searchInput.value.trim() === "" ? "none" : "block";
@@ -291,12 +259,12 @@ function initSearch() {
     })
   }
 
-  // when typing
+
   searchInput.addEventListener("keyup", debounce(function() {
+    inputReset.style.display="block";
+
     searchResultsHeader.value = "";
-
     var term = searchInput.value.trim();
-
     /*
     //removed to fix: a state where there’s a valid search term, but no results
 
@@ -308,19 +276,21 @@ function initSearch() {
     searchResults.style.overflowY = term === "" ? "hidden" : "scroll";
     searchResultsItems.innerHTML = "";
     if (term === "") {
+      inputReset.style.display="none";
       return;
     }
 
     var results = index.search(term, options).filter(function (r) {
       return r.doc.body !== "";
     });
+
     if (results.length === 0) {
       searchResultsHeader.innerText = `No search results for '${term}'.`;
       return;
     }
 
     currentTerm = term;
-      searchResultsHeader.innerText = `${results.length} search results for '${term}':`;
+    searchResultsHeader.innerText = `${results.length} search results for '${term}':`;
     for (var i = 0; i < Math.min(results.length, MAX_ITEMS); i++) {
       if (!results[i].doc.body) {
         continue;
@@ -328,6 +298,17 @@ function initSearch() {
       searchResultsItems.appendChild(formatSearchResultItem(results[i], term.split(" ")));
     }
   }, 150));
+
+  // reset input button
+  inputReset.onclick=function(){
+    document.getElementById('search-form').reset();
+  }
+  searchForm.addEventListener("reset", function(event){
+    var e = document.createEvent('KeyboardEvent');
+    e.initEvent("keyup", false, true);
+    searchInput.dispatchEvent(e);
+  });
+
 }
 
 if (document.readyState === "complete" ||
