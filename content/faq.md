@@ -6,113 +6,72 @@ title = "FAQ"
 
 <details><summary>The Urbit Project</summary>
 
-[Why Urbit?](#urbit-project-1)
-
-[How secure is Urbit right now?](#urbit-project-2)
-
-[How can I contribute to Urbit?](#urbit-project-3)
-
-[What is Tlon?](#urbit-project-4)
-
-[Who Works at Tlon?](#urbit-project-5)
+- [Why Urbit?](#urbit-project-1)
+- [How secure is Urbit right now?](#urbit-project-2)
+- [How can I contribute to Urbit?](#urbit-project-3)
+- [What is Tlon?](#urbit-project-4)
+- [Who Works at Tlon?](#urbit-project-5)
 
 </details>
 
 <details><summary>Grants</summary>
 
-[What are the different types of grants](#grants-1)
-
-[How do I get a gift?](#grants-2)
-
-[How often are gifts awarded?](#grants-3)
-
-[What happens if a user does not complete a proposal but meets some milestones?](#grants-4)
-
-[Do I have to pay taxes on stars?](#grants-5)
-
-[Can I create a bounty?](#grants-6)
-
-[How are proposals approved?](#grants-7)
-
-[If I win a proposal, do I have an exclusive claim on the project?](#grants-8)
-
-[Will milestones be embedded in a smart contract?](#grants-9)
-
-[Does reputation play a role in the assessment of grants?](#grants-10)
-
-[I completed a proposal. When will I receive payment?](#grants-11)
-
-[Can I see the proposals of others that have been accepted?](#grants-12)
-
-[How do I safely store my stars?](#grants-13)
-
-[Can I delegate a bounty or proposal to someone else?](#grants-14)
+- [What are the different types of grants](#grants-1)
+- [How do I get a gift?](#grants-2)
+- [How often are gifts awarded?](#grants-3)
+- [What happens if a user does not complete a proposal but meets some milestones?](#grants-4)
+- [Do I have to pay taxes on stars?](#grants-5)
+- [Can I create a bounty?](#grants-6)
+- [How are proposals approved?](#grants-7)
+- [If I win a proposal, do I have an exclusive claim on the project?](#grants-8)
+- [Will milestones be embedded in a smart contract?](#grants-9)
+- [Does reputation play a role in the assessment of grants?](#grants-10)
+- [I completed a proposal. When will I receive payment?](#grants-11)
+- [Can I see the proposals of others that have been accepted?](#grants-12)
+- [How do I safely store my stars?](#grants-13)
+- [Can I delegate a bounty or proposal to someone else?](#grants-14)
 
 </details>
 
 <details><summary>Azimuth</summary>
 
-[What is Azimuth?](#azimuth-1)
-
-[What are stars, galaxies, and planets?](#azimuth-2)
-
-[How many planets, stars, and galaxies are active?](#azimuth-3)
-
-[What are comets and moons?](#azimuth-4)
-
-[What is a `@p`? Why is my username generated for me?](#azimuth-5)
-
-[Can I change my `@p`?](#azimuth-6)
-
-[How do I get an identity?](#azimuth-7)
-
-[How do I send an identity to someone else?](#azimuth-8)
-
-[What is the best way to access Azimuth?](#azimuth-9)
+- [What is Azimuth?](#azimuth-1)
+- [What are stars, galaxies, and planets?](#azimuth-2)
+- [How many planets, stars, and galaxies are active?](#azimuth-3)
+- [What are comets and moons?](#azimuth-4)
+- [What is a `@p`? Why is my username generated for me?](#azimuth-5)
+- [Can I change my `@p`?](#azimuth-6)
+- [How do I get an identity?](#azimuth-7)
+- [How do I send an identity to someone else?](#azimuth-8)
+- [What is the best way to access Azimuth?](#azimuth-9)
 
 </details>
 
 <details><summary>Urbit HD Wallet</summary>
 
-[What is the Urbit HD Wallet?](#wallet-1)
-
-[What is a master ticket?](#wallet-2)
-
-[What is an ownership address?](#wallet-3)
-
-[What are proxies?](#wallet-4)
-
-[What are seeds?](#wallet-5)
-
-[What does it mean to “set public keys”?](#wallet-6)
-
-[What do I do if I want to own multiple points?](#wallet-7)
-
-[How should I take care of my Urbit HD Wallet?](#wallet-8)
-
-[I have a galaxy or star with lockup conditions. How does this work?](#wallet-9)
+- [What is the Urbit HD Wallet?](#wallet-1)
+- [What is a master ticket?](#wallet-2)
+- [What is an ownership address?](#wallet-3)
+- [What are proxies?](#wallet-4)
+- [What are seeds?](#wallet-5)
+- [What does it mean to “set public keys”?](#wallet-6)
+- [What do I do if I want to own multiple points?](#wallet-7)
+- [How should I take care of my Urbit HD Wallet?](#wallet-8)
+- [I have a galaxy or star with lockup conditions. How does this work?](#wallet-9)
 
 </details>
 
 <details><summary>Arvo</summary>
 
-[What is Arvo?](#arvo-1)
-
-[What is unique about Arvo?](#arvo-2)
-
-[How is Arvo connected to Ethereum?](#arvo-3)
-
-[Will the Arvo network survive if Ethereum dies?](#arvo-4)
-
-[How do I install Arvo?](#arvo-5)
-
-[How do I use Arvo?](#arvo-6)
-
-[How do over-the-air updates work?](#arvo-7)
-
-[What is Landscape?](#arvo-8)
-
-[I have a point, now what?](#arvo-9)
+- [What is Arvo?](#arvo-1)
+- [What is unique about Arvo?](#arvo-2)
+- [How is Arvo connected to Ethereum?](#arvo-3)
+- [Will the Arvo network survive if Ethereum dies?](#arvo-4)
+- [How do I install Arvo?](#arvo-5)
+- [How do I use Arvo?](#arvo-6)
+- [How do over-the-air updates work?](#arvo-7)
+- [What is Landscape?](#arvo-8)
+- [I have a point, now what?](#arvo-9)
 
 </details>
 
@@ -161,7 +120,7 @@ There are three ways to receive a grant of stars for your contribution to the Ur
 
 ### How do I get a gift? {#grants-2}
 
-Make useful and substantial contributions to Urbit. These can be contributions to the project itself, or they can be outside tools that aren’t part of the Urbit codebase. There’s no formal system for determining who gets a gift; it’s at the discretion of employees at Tlon. Nothing is guaranteed, but you can get an idea for what kinds of contributions results in gifts by looking at the [gifts history.](https://grants.urbit.org/history)
+Make useful and substantial contributions to Urbit. These can be contributions to the project itself, or they can be outside tools that aren’t part of the Urbit codebase. There’s no formal system for determining who gets a gift; it’s at the discretion of employees at Tlon. Nothing is guaranteed, but you can get an idea for what kinds of contributions results in gifts by looking at the [gifts history.](grant.urbit.org/history)
 
 ### How often are gifts awarded? {#grants-3}
 
@@ -203,11 +162,11 @@ We will pay you within a 30-day window.
 
 ### Can I see the proposals of others that have been accepted? {#grants-12}
 
-Yes. Check out our [proposals page.](https://grants.urbit.org/proposals)
+Yes. Check out our [proposals page.](grant.urbit.org/proposals)
 
 ### How do I safely store my stars? {#grants-13}
 
-We recommend storing each star in its own Ethereum wallet. The private keys to these wallets should be stored on physical media that is not connected to a networked computer. Redundancies don’t hurt!
+We recommend storing each star in its own in its own Ethereum wallet. The private keys to these wallets should be stored on physical media that is not connected to a networked computer. Redundancies don’t hurt!
 
 ### Can I delegate a bounty or proposal to someone else? {#grants-14}
 
@@ -239,7 +198,7 @@ Comets are 128 bits and have no parents. They can be launched by anyone. They ar
 
 ### What is a `@p`? Why is my username generated for me? {#azimuth-5}
 
-A `@p` (pronounced *pat-pee*) is a name like `~zod` or `~lodleb-ritrul` composed of pronounceable, three-letter phonemic elements like `zod`, `lod`, `leb`, `rit` and `rul`. Shorter names, such as `~zod` and `~marzod` are assigned to ships with special duties on the Arvo network ([stars and galaxies](@/docs/concepts/galaxies-stars-and-planets.md), respectively). Longer names like `~palfun-foslup` are identities for typical users.
+A `@p` (pronounced *pat-pee*) is a name like `~zod` or `~lodleb-ritrul` composed of pronounceable, three-letter phonemic elements like `zod`, `lod`, `leb`, `rit` and `rul`. Shorter names, such as `~zod` and `~marzod` are assigned to ships with special duties on the Arvo network ([stars and galaxies](@/docs/concepts/galaxies-stars-and-planets.md), respectively. Longer names like `~palfun-foslup` are identities for typical users.
 
 These names are pre-generated because they map directly to a number in the urbit address space. Galaxies occupy the 8-bit address space, so any galaxy is actually a number between zero to 255. Stars occupy the 16-bit address space, and planets occupy the 32-bit address space.
 
@@ -391,7 +350,7 @@ Your sponsor, a star or galaxy that your ship “lives” under, may send you ne
 ### What is Landscape? {#arvo-8}
 
 Landscape is an experimental Arvo web interface that includes social functions such as chat and message boards. You can access Landscape by navigating to <your-planet>.arvo.network, where <your-planet> is your running ship, connected to the Arvo network.
-
+  
 Landscape will be removed from the Urbit distribution and no longer supported in July 2019.
 
 ### I have a point, now what? {#arvo-9}

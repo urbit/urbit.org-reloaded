@@ -489,8 +489,18 @@ summary {
   font-weight: 500;
   padding-bottom: (2rem / 4);
   padding-top: (2rem / 4);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+summary:focus {
+  outline: none;
 }
 details {
   padding-bottom: (1rem / 4);
   padding-top: (1rem / 4);
+  ul, ol {
+    padding-left: 0;
+    list-style: none;
+  }
 }
