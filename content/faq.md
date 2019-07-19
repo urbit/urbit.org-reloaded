@@ -14,24 +14,6 @@ title = "FAQ"
 
 </details>
 
-<details><summary>Grants</summary>
-
-- [What are the different types of grants](#grants-1)
-- [How do I get a gift?](#grants-2)
-- [How often are gifts awarded?](#grants-3)
-- [What happens if a user does not complete a proposal but meets some milestones?](#grants-4)
-- [Do I have to pay taxes on stars?](#grants-5)
-- [Can I create a bounty?](#grants-6)
-- [How are proposals approved?](#grants-7)
-- [If I win a proposal, do I have an exclusive claim on the project?](#grants-8)
-- [Will milestones be embedded in a smart contract?](#grants-9)
-- [Does reputation play a role in the assessment of grants?](#grants-10)
-- [I completed a proposal. When will I receive payment?](#grants-11)
-- [Can I see the proposals of others that have been accepted?](#grants-12)
-- [How do I safely store my stars?](#grants-13)
-- [Can I delegate a bounty or proposal to someone else?](#grants-14)
-
-</details>
 
 <details><summary>Azimuth</summary>
 
@@ -75,6 +57,25 @@ title = "FAQ"
 
 </details>
 
+<details><summary>Grants</summary>
+
+- [What are the different types of grants](#grants-1)
+- [How do I get a gift?](#grants-2)
+- [How often are gifts awarded?](#grants-3)
+- [What happens if a user does not complete a proposal but meets some milestones?](#grants-4)
+- [Do I have to pay taxes on stars?](#grants-5)
+- [Can I create a bounty?](#grants-6)
+- [How are proposals approved?](#grants-7)
+- [If I win a proposal, do I have an exclusive claim on the project?](#grants-8)
+- [Will milestones be embedded in a smart contract?](#grants-9)
+- [Does reputation play a role in the assessment of grants?](#grants-10)
+- [I completed a proposal. When will I receive payment?](#grants-11)
+- [Can I see the proposals of others that have been accepted?](#grants-12)
+- [How do I safely store my stars?](#grants-13)
+- [Can I delegate a bounty or proposal to someone else?](#grants-14)
+
+</details>
+
 ## The Urbit project
 
 ### Why Urbit? {#urbit-project-1}
@@ -108,69 +109,6 @@ Tlon is the San Francisco-based company that develops Urbit. Tlon doesn’t own 
 ### Who works at Tlon? {#urbit-project-5}
 
 You can see who we are at [tlon.io](https://tlon.io/).
-
-## Grants
-
-### What are the different types of grants? {#grants-1}
-
-There are three ways to receive a grant of stars for your contribution to the Urbit ecosystem.
-- You can submit a **Proposal** if you’re interested in working on a project of your own creation for a number of stars that you pitch.
-- You can apply to claim a **Bounty.** Bounties are requests for work created by Tlon that are claimable by the public, with a predetermined number of stars as the reward.
-- The **Gifts** program, which is Tlon’s informal way of rewarding contributions that don’t fall into the above categories. There is no way to apply for a gift.
-
-### How do I get a gift? {#grants-2}
-
-Make useful and substantial contributions to Urbit. These can be contributions to the project itself, or they can be outside tools that aren’t part of the Urbit codebase. There’s no formal system for determining who gets a gift; it’s at the discretion of employees at Tlon. Nothing is guaranteed, but you can get an idea for what kinds of contributions results in gifts by looking at the [gifts history.](grant.urbit.org/history)
-
-### How often are gifts awarded? {#grants-3}
-
-Gifts are awarded semiannually.
-
-### What happens if a user does not complete a proposal but meets some milestones? {#grants-4}
-
-You must complete the proposal to be guaranteed to receive the star grant. Partial star payouts can be negotiated for incomplete work, but such payouts are at the discretion of Tlon.
-
-However, either party may terminate a proposal on seven days’ written notice. In such a scenario, you may be paid pro rata for any portion of the proposal that has been completed.
-
-### Do I have to pay taxes on stars? {#grant-5}
-
-Yes. If you are American, we need your W-9 before we can pay you your stars. If you’re not an American, you don’t need to get us any forms, but you do need to personally follow the relevant tax laws in your jurisdiction.
-
-### Can I create a bounty? {#grants-6}
-
-No. Bounties are only created by Tlon, but we draw inspiration for bounties from various sources, including the community. If you want to pitch a project, use the Proposals system.
-
-### How are proposals approved? {#grants-7}
-
-The manager of the Grants program approves them after consulting with the relevant members of the engineering team. This proposal can be accepted, rejected, or accepted with changes by Tlon. The proposal’s star payout can also be adjusted.
-
-### If I win a proposal, do I have an exclusive claim on the project? {#grants-8}
-
-You have a claim to the reward of the project as long as milestones are met to the satisfaction of Tlon. However, Tlon may allow another developer to work on the same project in parallel, for a separate reward.
-
-### Will milestones be embedded in a smart contract? {#grants-9}
-
-No.
-
-### Does reputation play a role in the assessment of grants? {#grants-10}
-
-Yes. We consider this to be a feature.
-
-### I completed a proposal. When will I receive payment? {#grants-11}
-
-We will pay you within a 30-day window.
-
-### Can I see the proposals of others that have been accepted? {#grants-12}
-
-Yes. Check out our [proposals page.](grant.urbit.org/proposals)
-
-### How do I safely store my stars? {#grants-13}
-
-We recommend storing each star in its own in its own Ethereum wallet. The private keys to these wallets should be stored on physical media that is not connected to a networked computer. Redundancies don’t hurt!
-
-### Can I delegate a bounty or proposal to someone else? {#grants-14}
-
-No. Not unless explicitly authorized by Tlon.
 
 ## Azimuth
 
@@ -357,4 +295,68 @@ Landscape will be removed from the Urbit distribution and no longer supported in
 
 Follow our guide on how to boot a ship [here](@/docs/getting-started/booting-a-ship.md).  
 
-Get on the [mailing list](/../#mc_embed_signup). Learn [Hoon](@/docs/learn/hoon/_index.md). [Make stuff](@/docs/getting-started/contributing.md).
+Get on the [mailing list](/../#mc_embed_signup). Learn [Hoon](@/docs/learn/hoon/_index.md).
+
+## Grants
+
+### What are the different types of grants? {#grants-1}
+
+There are three ways to receive a grant of stars for your contribution to the Urbit ecosystem.
+- You can submit a **Proposal** if you’re interested in working on a project of your own creation for a number of stars that you pitch.
+- You can apply to claim a **Bounty.** Bounties are requests for work created by Tlon that are claimable by the public, with a predetermined number of stars as the reward.
+- The **Gifts** program, which is Tlon’s informal way of rewarding contributions that don’t fall into the above categories. There is no way to apply for a gift.
+
+### How do I get a gift? {#grants-2}
+
+Make useful and substantial contributions to Urbit. These can be contributions to the project itself, or they can be outside tools that aren’t part of the Urbit codebase. There’s no formal system for determining who gets a gift; it’s at the discretion of employees at Tlon. Nothing is guaranteed, but you can get an idea for what kinds of contributions results in gifts by looking at the [gifts history.](grant.urbit.org/history)
+
+### How often are gifts awarded? {#grants-3}
+
+Gifts are awarded semiannually.
+
+### What happens if a user does not complete a proposal but meets some milestones? {#grants-4}
+
+You must complete the proposal to be guaranteed to receive the star grant. Partial star payouts can be negotiated for incomplete work, but such payouts are at the discretion of Tlon.
+
+However, either party may terminate a proposal on seven days’ written notice. In such a scenario, you may be paid pro rata for any portion of the proposal that has been completed.
+
+### Do I have to pay taxes on stars? {#grant-5}
+
+Yes. If you are American, we need your W-9 before we can pay you your stars. If you’re not an American, you don’t need to get us any forms, but you do need to personally follow the relevant tax laws in your jurisdiction.
+
+### Can I create a bounty? {#grants-6}
+
+No. Bounties are only created by Tlon, but we draw inspiration for bounties from various sources, including the community. If you want to pitch a project, use the Proposals system.
+
+### How are proposals approved? {#grants-7}
+
+The manager of the Grants program approves them after consulting with the relevant members of the engineering team. This proposal can be accepted, rejected, or accepted with changes by Tlon. The proposal’s star payout can also be adjusted.
+
+### If I win a proposal, do I have an exclusive claim on the project? {#grants-8}
+
+You have a claim to the reward of the project as long as milestones are met to the satisfaction of Tlon. However, Tlon may allow another developer to work on the same project in parallel, for a separate reward.
+
+### Will milestones be embedded in a smart contract? {#grants-9}
+
+No.
+
+### Does reputation play a role in the assessment of grants? {#grants-10}
+
+Yes. We consider this to be a feature.
+
+### I completed a proposal. When will I receive payment? {#grants-11}
+
+We will pay you within a 30-day window.
+
+### Can I see the proposals of others that have been accepted? {#grants-12}
+
+Yes. Check out our [proposals page.](grant.urbit.org/proposals)
+
+### How do I safely store my stars? {#grants-13}
+
+We recommend storing each star in its own in its own Ethereum wallet. The private keys to these wallets should be stored on physical media that is not connected to a networked computer. Redundancies don’t hurt!
+
+### Can I delegate a bounty or proposal to someone else? {#grants-14}
+
+No. Not unless explicitly authorized by Tlon.
+Make stuff](@/docs/getting-started/contributing.md).
