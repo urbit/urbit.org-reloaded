@@ -306,7 +306,7 @@ There are three ways to receive a grant of stars for your contribution to the Ur
 
 ### How do I get a gift? {#grants-2}
 
-Make useful and substantial contributions to Urbit. These can be contributions to the project itself, or they can be outside tools that aren’t part of the Urbit codebase. There’s no formal system for determining who gets a gift; it’s at the discretion of employees at Tlon. Nothing is guaranteed, but you can get an idea for what kinds of contributions results in gifts by looking at the [gifts history.](grant.urbit.org/history)
+Make useful and substantial contributions to Urbit. These can be contributions to the project itself, or they can be outside tools that aren’t part of the Urbit codebase. There’s no formal system for determining who gets a gift; it’s at the discretion of employees at Tlon. Nothing is guaranteed, but you can get an idea for what kinds of contributions results in gifts by looking at the [gifts history.](https://grants.urbit.org/history)
 
 ### How often are gifts awarded? {#grants-3}
 
@@ -348,7 +348,7 @@ We will pay you within a 30-day window.
 
 ### Can I see the proposals of others that have been accepted? {#grants-12}
 
-Yes. Check out our [proposals page.](grant.urbit.org/proposals)
+Yes. Check out our [proposals page.](https://grants.urbit.org/proposals)
 
 ### How do I safely store my stars? {#grants-13}
 
@@ -357,4 +357,4 @@ We recommend storing each star in its own in its own Ethereum wallet. The privat
 ### Can I delegate a bounty or proposal to someone else? {#grants-14}
 
 No. Not unless explicitly authorized by Tlon.
-Make stuff](@/docs/getting-started/contributing.md).
+[Make stuff](@/docs/getting-started/contributing.md).
