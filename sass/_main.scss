@@ -42,6 +42,13 @@ iframe {
   padding-bottom: (32rem / 4);
 }
 
+.pop-up {
+  width: 100%;
+  max-width: 600px;
+  margin: (28rem / 4) auto;
+  background: #fff;
+}
+
 .container--fixed {
   position: fixed;
   margin-top: -(24rem / 4);
@@ -91,7 +98,19 @@ iframe {
   height: 100%;
   z-index: 0;
   .content-nav {
-    overflow-y: scroll;
+    &__search-bar {
+      width: 100%;
+      padding-left: 0rem;
+    }
+    &__index {
+      height: calc(100% - 48px);
+      overflow-y: scroll;
+      &__item {
+        &:last-child{
+          padding-bottom: 8rem;
+        }
+      }
+    }
     .list:first-child {
       padding-bottom: (14rem / 4);
     }
@@ -229,6 +248,10 @@ iframe {
       transform: translate(0, 7px);
     }
   }
+  &__search-icon {
+     -webkit-transform: rotate(-45deg);
+     vertical-align: bottom;
+  }
 }
 
 .has-active-main-nav {
@@ -278,6 +301,55 @@ iframe {
   max-width: 320px;
 }
 
+.padding-none {
+  padding: 0 !important;
+}
+
+.border-none {
+  border: none !important;
+}
+
+.b-transparent {
+  background: rgba(0,0,0,0.4);
+}
+
+.top0 {
+  top: 0;
+}
+
+.float-right {
+  float: right;
+}
+
+.search-overlay {
+  .search-bar {
+    &__input {
+      padding-left: 40px;
+    }
+  }
+}
+
+.search-results {
+  max-height: 400px;
+  &__item a:hover {
+    background: #F9F9F9;
+    span {
+      display:inline-block;
+    }
+  }
+}
+
+.has-active-search-window {
+  .search-overlay {
+    display: block;
+  }
+}
+
+#search-reset {
+  cursor: pointer;
+  user-select: none;
+}
+
 .form--big {
   max-width: 390px;
   .btn {
@@ -286,21 +358,47 @@ iframe {
 }
 
 .hoonschool-application {
- &__experience {
-   resize: vertical;
- }
+  &__experience {
+    resize: vertical;
+  }
 }
 
 /*
  * styling
  */
 
-textarea, input[type="text"], input[type="email"], input[type="number"], select {
+// remove default x icon
+ input[type="search"]::-webkit-search-decoration,
+ input[type="search"]::-webkit-search-cancel-button,
+ input[type="search"]::-webkit-search-results-button,
+ input[type="search"]::-webkit-search-results-decoration {
+   display: none;
+}
+
+input[type="search"] {
+  border: 1px solid #B1B2B3;
+  font-size: (4rem / 4);
+  line-height: (6rem / 4);
+  transition: all 0.1s linear;
+  padding-right: 40px;
+  position: relative;
+  border-radius: 0 !important;
+}
+
+textarea, input[type="text"], input[type="email"], input[type="number"], input[type="search"], select {
   border: 1px solid #000;
   padding: 12px;
   width: 100%;
   outline: none;
   box-sizing: border-box;
+  &:active, &:focus {
+    border: 1px solid #000000;
+  }
+  &:required, &:invalid {
+    box-shadow: none !important;
+    border: 1px solid #EE892B;
+    color: #EE892B;
+  }
 }
 
 textarea {
@@ -318,6 +416,38 @@ button, .btn {
   border: none;
   cursor: pointer;
 }
+
+.search-bar {
+  border: 1px solid #B1B2B3;
+  background: #fff;
+  font-size: (4rem / 4);
+  transition: all 0.1s linear;
+  padding: 12px 12px 12px 40px;
+  position: relative;
+  font-weight: normal;
+  text-align: left;
+  box-shadow: none !important;
+  color: #B1B2B3;
+}
+
+.has-valid-input {
+  position: relative;
+  &:after {
+    content: '✓';
+    color: #2AA779;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 15px;
+    height: 24px;
+    margin-top: -4px;
+  }
+  input[type="text"], input[type="email"], input[type="number"] {
+    border: 1px solid #2AA779;
+  }
+}
+
 
 /*
  * typography
@@ -493,9 +623,11 @@ summary {
   user-select: none;
   -webkit-user-select: none;
 }
+
 summary:focus {
   outline: none;
 }
+
 details {
   padding-bottom: (1rem / 4);
   padding-top: (1rem / 4);
