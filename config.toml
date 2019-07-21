@@ -42,9 +42,10 @@ urbit_menu = [
 ]
 
 urbit_footer = [
-  {url = "$BASE_URL/privacy/", name = "Privacy Policy"},
-  {url = "$BASE_URL/tos/", name = "Terms of Service"},
+  {url = "$BASE_URL/faq/", name = "FAQ"},
   {url = "$BASE_URL/bounty/", name = "Bug Bounty + Security"},
+  {url = "$BASE_URL/tos/", name = "Terms of Service"},
+  {url = "$BASE_URL/privacy/", name = "Privacy Policy"},
 ]
 
 docs_number_chapters = true
