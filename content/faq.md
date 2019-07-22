@@ -287,7 +287,7 @@ Your sponsor, a star or galaxy that your ship “lives” under, may send you ne
 
 ### What is Landscape? {#arvo-8}
 
-Landscape is an experimental Arvo web interface that includes social functions such as chat and publishing. You can access Landscape by navigating to http://localhost:8080 or https://your-planet.arvo.network, where `your-planet` is your running ship, connected to the Arvo network. 
+Landscape is an experimental Arvo web interface that includes social functions such as chat and publishing. You can access Landscape by navigating to `http://localhost` or `https://your-planet.arvo.network`, where `your-planet` is your running ship, connected to the Arvo network. 
 
 ### I have a point, now what? {#arvo-9}
 
