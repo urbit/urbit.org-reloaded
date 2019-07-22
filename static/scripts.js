@@ -28,7 +28,6 @@ function initHotKeys() {
       // ESC to close search window
       if (key === 'Escape' || key === 'Esc' || key === 27) {
         document.body.classList.remove('has-active-search-window');
-        console.log('esc');
       }
 
       // / to close toggle window
@@ -193,7 +192,6 @@ function formatSearchResultTitle(item) {
 }
 
 function formatSearchResultItem(item, terms) {
-  console.log(item);
   var li = document.createElement("li");
   var createA = document.createElement("a");
   li.appendChild(createA);
