@@ -261,7 +261,9 @@ function initSearch() {
 
   // Don't refresh the page on enter
   searchInput.addEventListener('keydown', function(event){
-    if (event.keyCode === 13) {
+    var key = event.key || event.keyCode;
+
+    if (key === 13 || key === "Enter") {
       event.preventDefault();
       return false;
     }
