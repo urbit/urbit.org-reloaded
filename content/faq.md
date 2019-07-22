@@ -62,6 +62,7 @@ title = "FAQ"
 - [What are the different types of grants?](#grants-1)
 - [How do I get a gift?](#grants-2)
 - [How often are gifts awarded?](#grants-3)
+- [How large are gifts?](#grants-31)
 - [What happens if a user does not complete a proposal but meets some milestones?](#grants-4)
 - [Do I have to pay taxes on stars?](#grants-5)
 - [Can I create a bounty?](#grants-6)
@@ -311,6 +312,10 @@ Make useful and substantial contributions to Urbit. These can be contributions t
 ### How often are gifts awarded? {#grants-3}
 
 Gifts are awarded semiannually.
+
+### Do gifts follow a set size? {#grants-31}
+
+Gifts do follow a structure. A gift can be in one of three categories of sizes: Gold, Silver, or Bronze. Gold gifts award the most stars, Bronze gifts award the least. These categories don't correspond to a set number of stars being awarded. That number will likely change as the project matures and star values increase. That's why you see many more stars being awarded as the earliest gifts in the [history section.](https://grants.urbit.org/history)
 
 ### What happens if a user does not complete a proposal but meets some milestones? {#grants-4}
 
