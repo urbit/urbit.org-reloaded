@@ -259,6 +259,14 @@ function initSearch() {
     })
   }
 
+  // Don't refresh the page on enter
+  searchInput.addEventListener('keydown', function(event){
+    if (event.keyCode === 13) {
+      event.preventDefault();
+      return false;
+    }
+  })
+
 
   searchInput.addEventListener("keyup", debounce(function() {
     inputReset.style.display="block";
