@@ -10,7 +10,7 @@ title = "FAQ"
 - [How secure is Urbit right now?](#urbit-project-2)
 - [How can I contribute to Urbit?](#urbit-project-3)
 - [What is Tlon?](#urbit-project-4)
-- [Who Works at Tlon?](#urbit-project-5)
+- [Who works at Tlon?](#urbit-project-5)
 
 </details>
 
@@ -59,7 +59,7 @@ title = "FAQ"
 
 <details><summary>Grants</summary>
 
-- [What are the different types of grants](#grants-1)
+- [What are the different types of grants?](#grants-1)
 - [How do I get a gift?](#grants-2)
 - [How often are gifts awarded?](#grants-3)
 - [What happens if a user does not complete a proposal but meets some milestones?](#grants-4)
@@ -275,7 +275,7 @@ Yes. It would be annoying, but Azimuth would be ported to another kind of decent
 
 ### How do I install Arvo? {#arvo-5}
 
-Check out our guides [here](@/docs/getting-started/_index.md)
+Check out our guides [here](@/docs/getting-started/_index.md).
 
 ### How do I use Arvo? {#arvo-6}
 
@@ -287,7 +287,7 @@ Your sponsor, a star or galaxy that your ship “lives” under, may send you ne
 
 ### What is Landscape? {#arvo-8}
 
-Landscape is an experimental Arvo web interface that includes social functions such as chat and publishing. You can access Landscape by navigating to http://localhost:8080 or https://<your-planet>.arvo.network, where <your-planet> is your running ship, connected to the Arvo network. 
+Landscape is an experimental Arvo web interface that includes social functions such as chat and publishing. You can access Landscape by navigating to http://localhost:8080 or https://your-planet.arvo.network, where `your-planet` is your running ship, connected to the Arvo network. 
 
 ### I have a point, now what? {#arvo-9}
 
