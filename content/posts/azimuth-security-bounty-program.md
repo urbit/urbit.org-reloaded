@@ -1,6 +1,6 @@
 +++
 title = "Azimuth Security Bounty Program"
-date = 2019-07-12
+date = 2019-07-22
 author = "Anthony Arroyo"
 description = "Inviting you (and your friends) to help us make Azimuth as secure as possible."
 aliases = ["/posts/essays/azimuth-security-bounty-program"]
