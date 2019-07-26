@@ -10,7 +10,9 @@ posts = ["Updates"]
 
 ![](https://media.urbit.org/site/posts/essays/azimuth-security-bounty-program-1.jpg)
 
-Since launching [Azimuth](https://urbit.org/posts/azimuth-is-on-chain/), we’ve been running a private bounty program with HackerOne. We’re now taking the program public and inviting you (and your friends) to help us make Azimuth as secure as possible.
+Since launching [Azimuth](https://urbit.org/posts/azimuth-is-on-chain/), we’ve been running a private bounty program with [HackerOne](https://hackerone.com/). We’re now taking the program public and inviting you (and your friends) to help us make Azimuth as secure as possible.
+
+[Go here](https://hackerone.com/tlon) to see the live program on HackerOne.
 
 ## What is Azimuth again?
 
