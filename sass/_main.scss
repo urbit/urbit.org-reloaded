@@ -76,6 +76,11 @@ iframe {
     font-size: inherit;
     line-height: inherit;
   }
+  li a:focus {
+      outline: 0;
+      border: none;
+      -moz-outline-style: none;
+  }
 }
 
 .content-nav-icon {
