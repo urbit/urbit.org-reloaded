@@ -335,7 +335,7 @@ let docsNavScroll = function() {
   let docsNav = document.querySelectorAll("ul.content-nav__index a")
   for (let link in docsNav) {
     if (window.location.href.includes(docsNav[link].href)) {
-      docsNav[link].focus()
+      docsNav[link].scrollIntoView()
     }
   }
 }
