@@ -334,7 +334,7 @@ if (document.readyState === "complete" ||
 let docsNavScroll = function() {
   let docsNav = document.querySelectorAll("ul.content-nav__index a")
   for (let link in docsNav) {
-    if (docsNav[link].href === window.location.href) {
+    if (window.location.href.includes(docsNav[link].href)) {
       docsNav[link].focus()
     }
   }
