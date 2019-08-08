@@ -74,6 +74,7 @@ title = "FAQ"
 - [Can I see the proposals of others that have been accepted?](#grants-12)
 - [How do I safely store my stars?](#grants-13)
 - [Can I delegate a bounty or proposal to someone else?](#grants-14)
+- [Do I need to sign a contract?](#grants-15)
 
 </details>
 
@@ -161,7 +162,7 @@ We have seen publicly hosted versions of Bridge online. We strongly recommend av
 
 ### What is the Urbit HD Wallet? {#urbit-hd-wallet}
 
-The Urbit Hierarchical Deterministic (HD) Wallet is a custom Ethereum wallet based on BIP39 and BIP44 – the same underlying technology used by wallet providers like Ledger, Trezor, Metamask, and MyEtherWallet. You can think of the Urbit HD wallet as a wallet of wallets, which lets you keep a single passphrase for all of your Azimuth keys. Azimuth uses multiple keys with different capabilities – a bit like permissions – so that you can keep the more valuable keys in cold storage while keeping less valuable keys, used in day-to-day operation, more easily accessible. If you're only operating a planet, you shouldn't have to worry this: you can simply think of your "master ticket" as the password to your Azimuth point. If you're operating a star or galaxy, the Urbit HD Wallet allows you to implement a multi-tier key custody scheme. 
+The Urbit Hierarchical Deterministic (HD) Wallet is a custom Ethereum wallet based on BIP39 and BIP44 – the same underlying technology used by wallet providers like Ledger, Trezor, Metamask, and MyEtherWallet. You can think of the Urbit HD wallet as a wallet of wallets, which lets you keep a single passphrase for all of your Azimuth keys. Azimuth uses multiple keys with different capabilities – a bit like permissions – so that you can keep the more valuable keys in cold storage while keeping less valuable keys, used in day-to-day operation, more easily accessible. If you're only operating a planet, you shouldn't have to worry this: you can simply think of your "master ticket" as the password to your Azimuth point. If you're operating a star or galaxy, the Urbit HD Wallet allows you to implement a multi-tier key custody scheme.
 
 To learn about the specifics, check out our [HD Wallet documentation](@/docs/concepts/azimuth.md#the-urbit-hd-wallet) and the [Urbit HD Wallet Spec (UP 8)[https://github.com/urbit/proposals/blob/master/008-urbit-hd-wallet.md].
 
@@ -297,13 +298,14 @@ Your sponsor, a star or galaxy that your ship "lives under", may send you new so
 
 ### What is Landscape? {#what-is-landscape}
 
-Landscape is an experimental Arvo web interface that includes social functions such as chat and publishing. You can access Landscape by navigating to `http://localhost:PORT`, where PORT is typically 80, 8080, or 8081 (check your boot messages). 
+Landscape is an experimental Arvo web interface that includes social functions such as chat and publishing. You can access Landscape by navigating to `http://localhost:PORT`, where PORT is typically 80, 8080, or 8081 (check your boot messages).
 
 ### I have a point, now what? {#now-what}
 
 Follow our guide on how to boot a ship [here](@/docs/getting-started/booting-a-ship.md).  
 
-Get on the [mailing list](/../#mc_embed_signup). Learn [Hoon](@/docs/learn/hoon/_index.md). Sign up for [Hoon School](@/hoonschool.md).
+Get on the [mailing list](/../#mc_embed_signup). Learn [Hoon](@/docs/learn/hoon/_index.md). Sign up for [Hoon School](@/hoonschool.md). [Make stuff](@/docs/getting-started/contributing.md).
+
 
 ## Grants
 
@@ -334,7 +336,7 @@ However, either party may terminate a proposal on seven days’ written notice. 
 
 ### Do I have to pay taxes on stars? {#grant-5}
 
-Yes. If you are American, we need your W-9 before we can pay you your stars. If you’re not an American, you don’t need to get us any forms, but you do need to personally follow the relevant tax laws in your jurisdiction.
+Yes. If you are American, we need your W-9 before we can pay you your stars. If you’re not an American, you don’t need to get us any forms, but you do need to personally follow the relevant tax laws in your jurisdiction. In the United States, stars are considered to be income.
 
 ### Can I create a bounty? {#grants-6}
 
@@ -371,4 +373,21 @@ We recommend storing each star in its own in its own Ethereum wallet. The privat
 ### Can I delegate a bounty or proposal to someone else? {#grants-14}
 
 No. Not unless explicitly authorized by Tlon.
-[Make stuff](@/docs/getting-started/contributing.md).
+
+## Do I need to sign a contract? {#grants-15}
+
+After you are approved to work on a bounty or a proposal, you will be sent a contract that you'll need to sign. You don't need to sign a contract to receive a gift, though.
+
+Here it's are a few important points from the bounty and proposal contracts:
+
+- **Intellectual property:** You agree to commit all intellectual property you create in connection with the relevant bounty or proposal. You agree that you won’t incorporate any IP that is licensed in a conflicting way.
+
+- **No conflicts:** You agree that you are not subject to any restrictions that would interfere with your ability to complete the bounty or proposal.
+
+- **No employment relationship:** You agree that the grant or bounty does not imply any employment relationship with Tlon.
+
+- **Termination:** Either party (your or Tlon) can terminate the agreement on seven days' written notice. If that happens, you may be compensated *pro rata* for the amount of work you've completed, but this compensation is at the sole discretion of Tlon.   
+
+- **Governing law:** The agreement is governed by the laws of the State of California.
+
+Note that these paraphrased points are just for summarization purposes. The language in contract that you receive and sign is the only source of authority for the grant agreement.
