@@ -19,6 +19,9 @@
   }
   .content-nav-icon {
     display: block;
+    &.none {
+      display: none;
+    }
   }
   .content, .content-spacer {
     flex-basis: 90%;

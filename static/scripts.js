@@ -7,6 +7,16 @@ if (toggleMainNav !== null) {
 }
 
 var toggleContentNav = document.getElementById('js-content-nav-toggle');
+
+// Only show the content nav for docs or posts
+let navEnabledSections = ['docs', 'posts']
+let showNav = false
+for (let section of navEnabledSections) {
+  window.location.href.includes(section) ? showNav = true : null
+}
+showNav ? null : toggleContentNav.classList.add('none')
+
+
 if (toggleContentNav !== null) {
   toggleContentNav.onclick = function() {
     document.body.classList.toggle('has-active-content-nav');
