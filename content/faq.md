@@ -378,15 +378,15 @@ No. Not unless explicitly authorized by Tlon.
 
 After you are approved to work on a bounty or a proposal, you will be sent a contract that you'll need to sign. You don't need to sign a contract to receive a gift, though.
 
-Here it's are a few important points from the bounty and proposal contracts:
+Here are a few important points from the bounty and proposal contracts:
 
 - **Intellectual property:** You agree to commit all intellectual property you create in connection with the relevant bounty or proposal. You agree that you won’t incorporate any IP that is licensed in a conflicting way.
 
 - **No conflicts:** You agree that you are not subject to any restrictions that would interfere with your ability to complete the bounty or proposal.
 
-- **No employment relationship:** You agree that the grant or bounty does not imply any employment relationship with Tlon.
+- **No employment relationship:** You agree that being approved for the grant or bounty does not imply any employment relationship with Tlon.
 
-- **Termination:** Either party (your or Tlon) can terminate the agreement on seven days' written notice. If that happens, you may be compensated *pro rata* for the amount of work you've completed, but this compensation is at the sole discretion of Tlon.   
+- **Termination:** Either party (you or Tlon) can terminate the agreement on seven days' written notice. If that happens, you may be compensated *pro rata* for the amount of work you've completed, but this compensation is at the sole discretion of Tlon.   
 
 - **Governing law:** The agreement is governed by the laws of the State of California.
 
