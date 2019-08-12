@@ -617,6 +617,10 @@ textarea, input[type="text"], input[type="email"], input[type="number"], select 
   text-align: inherit;
 }
 
+.no-liga {
+  font-feature-settings: 'liga' 0;
+}
+
 // Markdown
 summary {
   font-size: (5rem / 4);
