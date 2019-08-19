@@ -164,7 +164,7 @@ We have seen publicly hosted versions of Bridge online. We strongly recommend av
 
 The Urbit Hierarchical Deterministic (HD) Wallet is a custom Ethereum wallet based on BIP39 and BIP44 – the same underlying technology used by wallet providers like Ledger, Trezor, Metamask, and MyEtherWallet. You can think of the Urbit HD wallet as a wallet of wallets, which lets you keep a single passphrase for all of your Azimuth keys. Azimuth uses multiple keys with different capabilities – a bit like permissions – so that you can keep the more valuable keys in cold storage while keeping less valuable keys, used in day-to-day operation, more easily accessible. If you're only operating a planet, you shouldn't have to worry this: you can simply think of your "master ticket" as the password to your Azimuth point. If you're operating a star or galaxy, the Urbit HD Wallet allows you to implement a multi-tier key custody scheme.
 
-To learn about the specifics, check out our [HD Wallet documentation](@/docs/concepts/azimuth.md#the-urbit-hd-wallet) and the [Urbit HD Wallet Spec (UP 8)[https://github.com/urbit/proposals/blob/master/008-urbit-hd-wallet.md].
+To learn about the specifics, check out our [HD Wallet documentation](@/docs/concepts/azimuth.md#the-urbit-hd-wallet) and the [Urbit HD Wallet Spec (UP 8)](https://github.com/urbit/proposals/blob/master/008-urbit-hd-wallet.md).
 
 ### What is a master ticket? {#master-ticket}
 
@@ -189,7 +189,7 @@ Proxies are seeds derived from your master ticket used to generate sub-wallets, 
 
 All Ethereum key-pairs in the Urbit wallet system, including proxies, are produced by 128-bit cryptographically random values called seeds. These seeds are the equivalent of the BIP39 mnemonic of an Ethereum wallet. These seeds are yours alone. An ownership key pair is derived from an ownership seed, and likewise the various proxy key pairs, are generated from their respective proxy seeds.
 
-For detailed information, see the [Urbit HD Wallet Spec (UP 8)[https://github.com/urbit/proposals/blob/master/008-urbit-hd-wallet.md].
+For detailed information, see the [Urbit HD Wallet Spec (UP 8)](https://github.com/urbit/proposals/blob/master/008-urbit-hd-wallet.md).
 
 ### What does it mean to “set public keys”? {#set-public-keys}
 
