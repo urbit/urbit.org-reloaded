@@ -146,7 +146,7 @@ Unfortunately not, since there is a 1:1 mapping between name and point.
 
 You can either find someone to give you one, or try an ERC-721 (NFT) exchange (Google or Twitter should help you with this). This will probably involve a purchase and a transfer to an Ethereum address that you own. We recommend using [Bridge](https://github.com/urbit/bridge/releases) to access the address that the point is transferred to.
 
-If you don't want to use Bridge, a tool like [Etherscan](https://etherscan.io) will allow you to execute functions in the [azimuth.eth](https://etherscan.io/address/azimuth.eth#code) contract.
+If you don't want to use Bridge, a tool like [Etherscan](https://etherscan.io) will allow you to execute functions in the [ecliptic.eth](https://etherscan.io/address/ecliptic.eth#code) contract.
 
 ### How do I transfer an identity to someone else? {#transfer-identity}
 
