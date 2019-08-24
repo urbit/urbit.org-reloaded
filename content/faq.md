@@ -178,7 +178,7 @@ An ownership address is an Ethereum address that owns one or more of your Azimut
 
 ### What are proxies? {#proxies}
 
-Proxies are seeds derived from your master ticket used to generate sub-wallets, which are in turn used to generate keys that have the ability to execute different Azimuth functions associated with your Azimuth point. Proxies generally have restricted capabilities than your ownership seed. These capabilities include: spawning child points, voting, and setting networking keys.
+Proxies are seeds derived from your master ticket used to generate sub-wallets, which are in turn used to generate keys that have the ability to execute different Azimuth functions associated with your Azimuth point. Proxies generally have more restricted capabilities than your ownership seed. These capabilities include: spawning child points, voting, and setting networking keys.
 
 - Transfer proxy: Can transfer your point to another Ethereum address.
 - Spawn Proxy: For stars and galaxies only. Can create new child points.
@@ -368,7 +368,7 @@ Yes. Check out our [proposals page.](https://grants.urbit.org/proposals)
 
 ### How do I safely store my stars? {#grants-13}
 
-We recommend storing each star in its own in its own Ethereum wallet. The private keys to these wallets should be stored on physical media that is not connected to a networked computer. Redundancies don’t hurt!
+We recommend storing each star in its own Ethereum wallet. The private keys to these wallets should be stored on physical media that is not connected to a networked computer. Redundancies don’t hurt!
 
 ### Can I delegate a bounty or proposal to someone else? {#grants-14}
 
