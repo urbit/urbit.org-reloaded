@@ -174,7 +174,7 @@ If you're operating a planet, you can use your master ticket to authenticate wit
 
 ### What is an ownership address? {#ownership-address}
 
-An ownership address is an Ethereum address that owns one or more of your Azimuth points. The Urbit Wallet Generator creates one Urbit HD Wallet and associated addresses for each of your Azimuth points. Using ownership key associated with your ownership address, you can transfer points to other people, meaning that it’s very important to store securely.
+An ownership address is an Ethereum address that owns one or more of your Azimuth points. The Urbit Wallet Generator creates one Urbit HD Wallet and associated addresses for each of your Azimuth points. Using the ownership key associated with your ownership address, you can transfer points to other people, meaning that it’s very important to store securely.
 
 ### What are proxies? {#proxies}
 
