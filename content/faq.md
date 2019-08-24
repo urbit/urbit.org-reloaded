@@ -168,7 +168,7 @@ To learn about the specifics, check out our [HD Wallet documentation](@/docs/con
 
 ### What is a master ticket? {#master-ticket}
 
-The "master ticket" is the entropy seed from your other Azimuth keys are derived. It should be treated like a master password: **you should never share it with anyone, and you must store it very securely (see our practices below).** This ticket is used to derive the Ethereum wallet that holds your ownership keys, your Arvo key – used to boot your Urbit – and the other keys associated with your Azimuth point. You’ll have a ticket if you used the Urbit Wallet Generator or claimed a ship on our hosted version of Bridge.
+The "master ticket" is the entropy seed from which your other Azimuth keys are derived. It should be treated like a master password: **you should never share it with anyone, and you must store it very securely (see our practices below).** This ticket is used to derive the Ethereum wallet that holds your ownership keys, your Arvo key – used to boot your Urbit – and the other keys associated with your Azimuth point. You’ll have a ticket if you used the Urbit Wallet Generator or claimed a ship on our hosted version of Bridge.
 
 If you're operating a planet, you can use your master ticket to authenticate with Bridge.
 
