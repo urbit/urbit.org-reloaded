@@ -86,7 +86,7 @@ Urbit reimagines the internet as a peer-to-peer network designed to stay that wa
 
 Combining a deterministic operating system (Arvo) and a secure, global identity layer (Azimuth), the Urbit project has created something that’s never existed before: an encrypted peer-to-peer network where you can be sure that messages are never tampered with or surveilled, and where others can be trusted to have good intentions.
 
-The online world anticipated by Urbit is a much friendlier one, much like the early Internet, where collegial discussion and collaboration was the norm. Problems that are unsolvable without large-scale political centralization in our current internet – data breaches, spam, fake reviews, malware-spreading, harassment – become tractable for individuals. You have one login for everything. You own and control all of your software and all of your data by default. Software is designed around the friendships, families, communities, and organization you're already apart of – not the other way around.  
+The online world anticipated by Urbit is a much friendlier one, much like the early Internet, where collegial discussion and collaboration was the norm. Problems that are unsolvable without large-scale political centralization in our current internet – data breaches, spam, fake reviews, malware-spreading, harassment – become tractable for individuals. You have one login for everything. You own and control all of your software and all of your data by default. Software is designed around the friendships, families, communities, and organizations you're already apart of – not the other way around.  
 
 ### How secure is Urbit right now? {#how-secure-is-urbit}
 
