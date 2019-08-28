@@ -86,7 +86,7 @@ Urbit reimagines the internet as a peer-to-peer network designed to stay that wa
 
 Combining a deterministic operating system (Arvo) and a secure, global identity layer (Azimuth), the Urbit project has created something that’s never existed before: an encrypted peer-to-peer network where you can be sure that messages are never tampered with or surveilled, and where others can be trusted to have good intentions.
 
-The online world anticipated by Urbit is a much friendlier one, much like the early Internet, where collegial discussion and collaboration was the norm. Problems that are unsolvable without large-scale political centralization in our current internet – data breaches, spam, fake reviews, malware-spreading, harassment – become tractable for individuals. You have one login for everything. You own and control all of your software and all of your data by default. Software is designed around the friendships, families, communities, and organization you're already apart of – not the other way around.  
+The online world anticipated by Urbit is a much friendlier one, much like the early Internet, where collegial discussion and collaboration was the norm. Problems that are unsolvable without large-scale political centralization in our current internet – data breaches, spam, fake reviews, malware-spreading, harassment – become tractable for individuals. You have one login for everything. You own and control all of your software and all of your data by default. Software is designed around the friendships, families, communities, and organizations you're already apart of – not the other way around.  
 
 ### How secure is Urbit right now? {#how-secure-is-urbit}
 
@@ -162,23 +162,23 @@ We have seen publicly hosted versions of Bridge online. We strongly recommend av
 
 ### What is the Urbit HD Wallet? {#urbit-hd-wallet}
 
-The Urbit Hierarchical Deterministic (HD) Wallet is a custom Ethereum wallet based on BIP39 and BIP44 – the same underlying technology used by wallet providers like Ledger, Trezor, Metamask, and MyEtherWallet. You can think of the Urbit HD wallet as a wallet of wallets, which lets you keep a single passphrase for all of your Azimuth keys. Azimuth uses multiple keys with different capabilities – a bit like permissions – so that you can keep the more valuable keys in cold storage while keeping less valuable keys, used in day-to-day operation, more easily accessible. If you're only operating a planet, you shouldn't have to worry this: you can simply think of your "master ticket" as the password to your Azimuth point. If you're operating a star or galaxy, the Urbit HD Wallet allows you to implement a multi-tier key custody scheme.
+The Urbit Hierarchical Deterministic (HD) Wallet is a custom Ethereum wallet based on BIP39 and BIP44 – the same underlying technology used by wallet providers like Ledger, Trezor, Metamask, and MyEtherWallet. You can think of the Urbit HD wallet as a wallet of wallets, which lets you keep a single passphrase for all of your Azimuth keys. Azimuth uses multiple keys with different capabilities – a bit like permissions – so that you can keep the more valuable keys in cold storage while keeping less valuable keys, used in day-to-day operation, more easily accessible. If you're only operating a planet, you shouldn't have to worry about this: you can simply think of your "master ticket" as the password to your Azimuth point. If you're operating a star or galaxy, the Urbit HD Wallet allows you to implement a multi-tier key custody scheme.
 
 To learn about the specifics, check out our [HD Wallet documentation](@/docs/concepts/azimuth.md#the-urbit-hd-wallet) and the [Urbit HD Wallet Spec (UP 8)](https://github.com/urbit/proposals/blob/master/008-urbit-hd-wallet.md).
 
 ### What is a master ticket? {#master-ticket}
 
-The "master ticket" is the entropy seed from your other Azimuth keys are derived. It should be treated like a master password: **you should never share it with anyone, and you must store it very securely (see our practices below).** This ticket is used to derive the Ethereum wallet that holds your ownership keys, your Arvo key – used to boot your Urbit – and the other keys associated with your Azimuth point. You’ll have a ticket if you used the Urbit Wallet Generator or claimed a ship on our hosted version of Bridge.
+The "master ticket" is the entropy seed from which your other Azimuth keys are derived. It should be treated like a master password: **you should never share it with anyone, and you must store it very securely (see our practices below).** This ticket is used to derive the Ethereum wallet that holds your ownership keys, your Arvo key – used to boot your Urbit – and the other keys associated with your Azimuth point. You’ll have a ticket if you used the Urbit Wallet Generator or claimed a ship on our hosted version of Bridge.
 
 If you're operating a planet, you can use your master ticket to authenticate with Bridge.
 
 ### What is an ownership address? {#ownership-address}
 
-An ownership address is an Ethereum address that owns one or more of your Azimuth points. The Urbit Wallet Generator creates one Urbit HD Wallet and associated addresses for each of your Azimuth points. Using ownership key associated with your ownership address, you can transfer points to other people, meaning that it’s very important to store securely.
+An ownership address is an Ethereum address that owns one or more of your Azimuth points. The Urbit Wallet Generator creates one Urbit HD Wallet and associated addresses for each of your Azimuth points. Using the ownership key associated with your ownership address, you can transfer points to other people, meaning that it’s very important to store securely.
 
 ### What are proxies? {#proxies}
 
-Proxies are seeds derived from your master ticket used to generate sub-wallets, which are in turn used to generate keys that have the ability to execute different Azimuth functions associated with your Azimuth point. Proxies generally have restricted capabilities than your ownership seed. These capabilities include: spawning child points, voting, and setting networking keys.
+Proxies are seeds derived from your master ticket used to generate sub-wallets, which are in turn used to generate keys that have the ability to execute different Azimuth functions associated with your Azimuth point. Proxies generally have more restricted capabilities than your ownership seed. These capabilities include: spawning child points, voting, and setting networking keys.
 
 - Transfer proxy: Can transfer your point to another Ethereum address.
 - Spawn Proxy: For stars and galaxies only. Can create new child points.
@@ -368,7 +368,7 @@ Yes. Check out our [proposals page.](https://grants.urbit.org/proposals)
 
 ### How do I safely store my stars? {#grants-13}
 
-We recommend storing each star in its own in its own Ethereum wallet. The private keys to these wallets should be stored on physical media that is not connected to a networked computer. Redundancies don’t hurt!
+We recommend storing each star in its own Ethereum wallet. The private keys to these wallets should be stored on physical media that is not connected to a networked computer. Redundancies don’t hurt!
 
 ### Can I delegate a bounty or proposal to someone else? {#grants-14}
 
