@@ -5,7 +5,7 @@ author = "Anthony Arroyo"
 description = "Inviting you (and your friends) to help us make Azimuth as secure as possible."
 aliases = ["/posts/essays/azimuth-security-bounty-program"]
 [taxonomies]
-posts = ["Updates"]
+posts = ["Essays"]
 +++
 
 ![](https://media.urbit.org/site/posts/essays/azimuth-security-bounty-program-1.jpg)
