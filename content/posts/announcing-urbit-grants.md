@@ -5,7 +5,7 @@ author = "Robert Mariani"
 description = "Announcing Urbit Grants, a way to earn stars through contributing."
 aliases = ["/posts/essays/announcing-urbit-grants"]
 [taxonomies]
-posts = ["Updates"]
+posts = ["Essays"]
 +++
 
 We’ve long been grateful for the hard work of our open-source community, so we’re pleased to announce Grants, a program that gives contributors the opportunity to be compensated for their efforts. It’s in beta right now at [grants.urbit.org](https://grants.urbit.org/).
