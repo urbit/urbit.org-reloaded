@@ -1,6 +1,6 @@
 +++
 title = "Landscape: A Portrait"
-date = 2019-08-27
+date = 2019-08-30
 author = "Matilde Park"
 description = "On the latest Urbit user interface, and the interfaces to come."
 [taxonomies]
