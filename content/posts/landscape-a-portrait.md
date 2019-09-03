@@ -8,11 +8,17 @@ aliases = ["/posts/essays/landscape-a-portrait/"]
 posts = ["Essays"]
 +++
 
+![](https://media.urbit.org/site/posts/essays/landscape-a-portrait-1.png)
+
 Alongside [the v0.8.0 launch](https://urbit.org/posts/2019-7-25-update/) we released the latest incarnation of Landscape -- Urbit's prototype UI. Codenamed “Modulo,” it's our vision of an Urbit user interface designed for everyday use. Most importantly, it’s the beginning of an interface that has access to the entire Arvo OS, rather than just one facet. Previous iterations of Landscape solely made use of the [Hall](https://urbit.org/docs/learn/arvo/hall/) messaging protocol.
 
 Served after installation on your ship’s HTTP port, it allows you to interact with Arvo through a web interface built with [Indigo](https://github.com/urbit/indigo), our new UI design language. It has a home screen, which exposes ‘tiles’ for each Landscape application – each able to integrate and customise information from elsewhere in the system and from the broader internet – and connects them to full-screen, graphical applications.
 
 The first set of application includes Chat, a new, streamlined chat client; a basic Weather information tile; an analog clock; and Publish, a place for publishing, subscribing, and commenting on ‘notebooks’ – invite-oriented blogs hosted on your ship.
+
+![](https://media.urbit.org/site/posts/essays/landscape-a-portrait-2.png)
+
+![](https://media.urbit.org/site/posts/essays/landscape-a-portrait-3.png)
 
 Our unofficial mantra – “it’s not finished yet” – is performed yet again, but we're _close_. We can now talk with the broader community about both our inspirations and visions for its future and our plan to enact that future.
 
@@ -27,6 +33,8 @@ Alongside the latest release of Landscape came the rewrite of the [`%eyre`](http
 That is, a Hoon application, upon being started, now tells Eyre it wants to serve _these files_ at _this endpoint_ over HTTP, and Eyre facilitates that.
 
 Landscape, with this in mind, serves at the root endpoint (you know, at `/`). It pre-authenticates the user, and provides an API to your ship for applications (and their tiles) to access and _poke_, _peer_, and _scry_ the ship with.
+
+![](https://media.urbit.org/site/posts/essays/landscape-a-portrait-4.png)
 
 Whereas before, a ship had a web server that was good at serving text-dominant pages, but was more obscure for complex (or graphical) applications that made use of the Arvo OS and network, now a ship launches with a web-based interface for the Arvo OS that makes applications much simpler to experiment with and develop.
 
