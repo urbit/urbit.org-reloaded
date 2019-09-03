@@ -2,7 +2,7 @@
 title = "Landscape: A Portrait"
 date = 2019-09-03
 author = "Matilde Park"
-description = "On the latest Urbit user interface, and the interfaces to come."
+description = "~haddef-sigwen on the latest Urbit user interface, and the interfaces to come."
 aliases = ["/posts/essays/landscape-a-portrait/"]
 [taxonomies]
 posts = ["Essays"]
