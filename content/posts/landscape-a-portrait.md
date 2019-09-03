@@ -28,7 +28,7 @@ Urbit has been in “research mode” for most of its history, but the system ha
 
 Urbit’s kernel is graduating from its rebellious period, however its _userspace_ has remained embryonic for most of its history. The project of building an application model has been restarted and rescoped into _aspects_ that could weather the chaotic growth of the kernel, but it would never quite serve as an interface to the entire operating system. Due to one of our latest vane refactors, it’s becoming possible to start that work in earnest.
 
-Alongside the latest release of Landscape came the rewrite of the [`%eyre`](https://urbit.org/docs/learn/arvo/eyre/) vane, which serves an urbit’s files and applications over HTTP. Among the improvements came the decision to move from serving from one ‘/web’ folder by default to an application-specific endpoint. 
+Alongside the latest release of Landscape came the rewrite of the [`%eyre`](https://urbit.org/docs/learn/arvo/eyre/) vane, which serves an ship’s files and applications over HTTP. Among the improvements came the decision to move from serving from one ‘/web’ folder by default to an application-specific endpoint. 
 
 That is, a Hoon application, upon being started, now tells Eyre it wants to serve _these files_ at _this endpoint_ over HTTP and Eyre facilitates that.
 
@@ -36,7 +36,7 @@ Landscape, with this in mind, serves at the root endpoint (you know, at `/`). It
 
 ![](https://media.urbit.org/site/posts/essays/landscape-a-portrait-4.png)
 
-Whereas before, a ship had a web server that was good at serving text-dominant pages, but was more obscure for complex (or graphical) applications that made use of the Arvo OS and network, now a ship launches with a web-based interface for the Arvo OS that makes applications much simpler to experiment with and develop.
+Whereas, before, a ship had a web server that was good at serving text, but was more obscure for complex (or graphical) applications that made use of the Arvo OS and network, now a ship launches with a web-based interface that makes applications much simpler to experiment with and develop.
 
 If you want, you can just serve files at any endpoint with [a boilerplate](https://github.com/matildepark/urbit-static-page).
 
@@ -60,7 +60,7 @@ One reason this iteration of Landscape isn’t the last is because – we must e
 
 After all, we’re creating a decentralised platform of personal servers with an entirely new stack from the bytecode up. Most of the world’s computers descend from Unix, and Unix was based on [timesharing](https://en.wikipedia.org/wiki/Time-sharing) — multiple users in one computer, all pretending it was theirs. Everything since hasn’t left that mindset.
 
-So what do we think that new platform now needs from its interface?
+So what do we think that new platform needs from its interface?
 
 - **Landscape, and all of Urbit’s future interfaces, need a standardised way to view and edit the filesystem.** We had circumnavigated this by mounting to Unix, but it’s now time to confront that issue.
 
@@ -82,6 +82,6 @@ We will backport these exploratory developments into Landscape as they continue 
 
 Most importantly, we’ll continue to iterate on how we onboard new developers. [Hoon School](https://urbit.org/hoonschool) continues to evolve; its first cohort is thriving and friendly. We have a dedicated cast of teachers and ongoing access to much of the Urbit team through this stream.
 
-And if you’d like to come, you’ll discover a computer that you can learn and master from the bottom up. Right now, it is a labyrinth for the intrepid; but for the future, and forever, it is _mappable_. A landscape, after all, doesn’t show a single leaf, but the earth and the horizon ahead.
+If you’d like to join us here, you’ll discover a computer that you can learn and master from the bottom up. Right now, it is a labyrinth for the intrepid; but for the future, and forever, it is _mappable_. A landscape, after all, doesn’t show a single leaf, but the earth and the horizon ahead.
 
 **Matilde Park** `~haddef-sigwen`
