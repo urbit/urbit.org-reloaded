@@ -10,17 +10,17 @@ posts = ["Essays"]
 
 ![](https://media.urbit.org/site/posts/essays/landscape-a-portrait-1.png)
 
-Alongside [the v0.8.0 launch](https://urbit.org/posts/2019-7-25-update/) we released the latest incarnation of Landscape -- Urbit's prototype UI. Codenamed “Modulo,” it's our vision of an Urbit user interface designed for everyday use. Most importantly, it’s the beginning of an interface that has access to the entire Arvo OS, rather than just one facet. Previous iterations of Landscape solely made use of the [Hall](https://urbit.org/docs/learn/arvo/hall/) messaging protocol.
+Alongside [the v0.8.0 launch](https://urbit.org/posts/2019-7-25-update/) we released the latest version of Landscape – Urbit's prototype user interface. Codenamed “Modulo,” it's our vision of an Urbit UI designed for everyday use. Most importantly, it’s the beginning of an interface that has access to the entire Arvo OS, rather than just one facet. Previous iterations of Landscape solely made use of the [Hall](https://urbit.org/docs/learn/arvo/hall/) messaging protocol.
 
-Served after installation on your ship’s HTTP port, it allows you to interact with Arvo through a web interface built with [Indigo](https://github.com/urbit/indigo), our new UI design language. It has a home screen, which exposes ‘tiles’ for each Landscape application – each able to integrate and customise information from elsewhere in the system and from the broader internet – and connects them to full-screen, graphical applications.
+Served after installation on your ship’s HTTPS port, it allows you to interact with Arvo through a web interface built with [Indigo](https://github.com/urbit/indigo), our new UI design language. It has a home screen, which exposes ‘tiles’ for each Landscape application – each able to integrate and customise information from elsewhere in the system and from the broader internet – and connects them to full-screen, graphical applications.
 
-The first set of application includes Chat, a new, streamlined chat client; a basic Weather information tile; an analog clock; and Publish, a place for publishing, subscribing, and commenting on ‘notebooks’ – invite-oriented blogs hosted on your ship.
+The first set of application includes Chat, a new, streamlined chat client, a basic Weather information tile, an analog clock, and Publish, a place for publishing, subscribing, and commenting on ‘notebooks’ – invite-oriented blogs hosted on your ship.
 
 ![](https://media.urbit.org/site/posts/essays/landscape-a-portrait-2.png)
 
 ![](https://media.urbit.org/site/posts/essays/landscape-a-portrait-3.png)
 
-Our unofficial mantra – “it’s not finished yet” – is performed yet again, but we're _close_. We can now talk with the broader community about both our inspirations and visions for its future and our plan to enact that future.
+Our unofficial mantra – “it’s not finished yet” – is performed yet again, but we're _close_. We can now talk with the broader community about both our inspirations, our visions for its future and our plan to enact that future.
 
 ## Entering userspace
 
@@ -30,9 +30,9 @@ Urbit’s kernel is graduating from its rebellious period, however its _userspac
 
 Alongside the latest release of Landscape came the rewrite of the [`%eyre`](https://urbit.org/docs/learn/arvo/eyre/) vane, which serves an urbit’s files and applications over HTTP. Among the improvements came the decision to move from serving from one ‘/web’ folder by default to an application-specific endpoint. 
 
-That is, a Hoon application, upon being started, now tells Eyre it wants to serve _these files_ at _this endpoint_ over HTTP, and Eyre facilitates that.
+That is, a Hoon application, upon being started, now tells Eyre it wants to serve _these files_ at _this endpoint_ over HTTP and Eyre facilitates that.
 
-Landscape, with this in mind, serves at the root endpoint (you know, at `/`). It pre-authenticates the user, and provides an API to your ship for applications (and their tiles) to access and _poke_, _peer_, and _scry_ the ship with.
+Landscape, with this in mind, serves at the root endpoint (you know, at `/`). It pre-authenticates the user and provides an API to your ship for applications (and their tiles) to access and _poke_, _peer_ and _scry_ the ship with.
 
 ![](https://media.urbit.org/site/posts/essays/landscape-a-portrait-4.png)
 
@@ -50,7 +50,7 @@ All of this is fantastic news; and while Landscape-oriented userspace developmen
 
 Among the inspirations for our team are [the tales of Andy Hertzfeld](https://www.folklore.org/StoryView.py?project=Macintosh&story=Were_Not_Hackers!.txt), working on the Macintosh, and ongoing [discussions](http://doc.cat-v.org/plan_9/4th_edition/papers/812/) and [decisions](https://research.swtch.com/help.pdf) that went into Plan 9 from Bell Labs. (Sometimes, for fun, we also watch videos about [the Xerox Alto](https://www.youtube.com/watch?v=tngrLvyiNEI).)
 
-These inspirations share that their creators were dealing with really primordial stuff – the font of human-computer interface had really just sprung, and they were _seeing things no one had seen before_ because they _had to_. 
+These inspirations share that their creators were dealing with really primordial stuff – the font of human-computer interface had really just sprung and they were _seeing things no one had seen before_ because they _had to_. 
 
 Doing that now, after a lifetime of reflexive familiarity with the dominant solutions – from Apple’s macOS to Google’s Material Design – we have to do the work of _unseeing_. By engaging with what it was like to see for the first time, we get closer to seeing with fresh eyes. We work to avoid implicitly categorising the new territory as simply, well, comparative to the old one. 
 
@@ -76,7 +76,7 @@ Right now, Landscape applications are still _monolithic_ and geared exclusively 
 
 It should be easy to share whatever data with your friends as you like; to permission files programmatically on a server that is permanently, irrevocably _yours_.
 
-It should also be easy to read, annotate, and discuss a shared book with a specific set of friends; or only allow another set of people to see files in a specific directory if they meet specified requirements.
+It should also be easy to read, annotate and discuss a shared book with a specific set of friends; or only allow another set of people to see files in a specific directory if they meet specified requirements.
 
 We will backport these exploratory developments into Landscape as they continue and evolve. Even in the kernel, as we refactor [Gall](https://urbit.org/docs/learn/arvo/gall/) the userspace handler vane, and standardise new, streamlined practices for writing Hoon in user applications. Take, for example, the [async monad](https://groups.google.com/a/urbit.org/forum/#!topic/dev/DDG6gHSG1Lc), which allows you to avoid dealing with moves or handling each response in separate parts of the application. User applications and Hoon should be both laconic and accessible, and we’re reifying that.
 
