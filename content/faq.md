@@ -37,7 +37,7 @@ title = "FAQ"
 - [What are proxies?](#proxies)
 - [What are seeds?](#seeds)
 - [What does it mean to “set public keys”?](#set-public-keys)
-- [What do I do if I want to own multiple points?](#multiple-points)
+- [What do I do if I want to own multiple identities?](#multiple-points)
 - [How should I take care of my Urbit HD Wallet?](#custody)
 - [I have a galaxy or star with lockup conditions. How does this work?](#lockup-conditions)
 
@@ -53,7 +53,7 @@ title = "FAQ"
 - [How do I use Arvo?](#use-arvo)
 - [How do over-the-air updates work?](#over-the-air-updates)
 - [What is Landscape?](#what-is-landscape)
-- [I have a point, now what?](#now-what)
+- [I have an Urbit identity, now what?](#now-what)
 
 </details>
 
@@ -110,11 +110,11 @@ You can see who we are at [tlon.io](https://tlon.io/).
 
 ### What is Azimuth? {#what-is-azimuth}
 
-Azimuth is a general-purpose PKI ("public key infrastructure") that Urbit uses as an identity system. This system is implemented as a suite of smart contracts on the Ethereum blockchain, and it determines which Ethereum addresses own which Urbit planets, stars, or galaxies. In Arvo, a single identity is called a "ship," whereas in Azimuth, a single identity is called a "point."
+Azimuth is a general-purpose PKI ("public key infrastructure") that Urbit uses as an identity system. This system is implemented as a suite of smart contracts on the Ethereum blockchain, and it determines which Ethereum addresses own which Urbit planets, stars, or galaxies. In Arvo, a single identity is called a "ship," whereas in Azimuth, a single identity is just an "identity."
 
 ### What are stars, galaxies, and planets? {#stars-galaxies-planets}
 
-Azimuth points come in three classes: galaxies, stars, and planets. The length of a point’s name will tell you its class. Galaxies are 8-bit and have names like `~mul`. Galaxies issue 16-bit stars (`~dacmul`), which can themselves issue 32-bit planets (`~laptel-holfur`).
+Urbit identities come in three classes: galaxies, stars, and planets. The length of an identity’s name will tell you its class. Galaxies are 8-bit and have names like `~mul`. Galaxies issue 16-bit stars (`~dacmul`), which can themselves issue 32-bit planets (`~laptel-holfur`).
 
 Planets are intended for everyday use by individuals, and there are 4.3 billion of them (2 to the 32nd power). Stars and galaxies, on the other hand, are meant to act as network infrastructure: on the Arvo network they provide routing and are responsible for distributing software updates.
 
@@ -126,7 +126,7 @@ You can also inspect and execute functions in the [azimuth.eth](https://ethersca
 
 ### What are comets and moons? {#comets-moons}
 
-In addition to the three classes of Azimuth points mentioned above, there are two other kinds of Urbit identities that are not registered on Azimuth.
+In addition to the three classes of identities mentioned above, there are two other kinds of Urbit ships that are _not_ registered on Azimuth.
 
 Moons are 64 bits, issued by planets, and have names like `~doznec-salfun-naptul-habrys`. Moons are meant for connected devices: phones, desktops, smart TVs, digital thermostats, and other IoT devices. Moons are subordinated to their parent planet.
 
@@ -140,21 +140,21 @@ These names map directly to a corresponding number in the urbit address space. G
 
 ### Can I change my `@p`? {#change-my-@p}
 
-Unfortunately not, since there is a 1:1 mapping between name and point.
+Unfortunately not, since there is a 1:1 mapping between name and identity.
 
 ### How do I get an identity? {#get-an-identity}
 
-You can either find someone to give you one, or try an ERC-721 (NFT) exchange (Google or Twitter should help you with this). This will probably involve a purchase and a transfer to an Ethereum address that you own. We recommend using [Bridge](https://github.com/urbit/bridge/releases) to access the address that the point is transferred to.
+You can either find someone to give you one, or try an ERC-721 (NFT) exchange (Google or Twitter should help you with this). This will probably involve a purchase and a transfer to an Ethereum address that you own. We recommend using [Bridge](https://github.com/urbit/bridge/releases) to access the address that the identity is transferred to.
 
 If you don't want to use Bridge, a tool like [Etherscan](https://etherscan.io) will allow you to execute functions in the [ecliptic.eth](https://etherscan.io/address/ecliptic.eth#code) contract.
 
 ### How do I transfer an identity to someone else? {#transfer-identity}
 
-Access the Ethereum address that holds the point you wish to transfer via [Bridge](https://github.com/urbit/bridge/releases).
+Access the Ethereum address that holds the identity you wish to transfer via [Bridge](https://github.com/urbit/bridge/releases).
 
 ### What is the best way to access Azimuth? {#access-azimuth}
 
-We recommended using [Bridge](https://github.com/urbit/bridge/releases) for all Azimuth-related operations. It’s great for managing your points, as well as for viewing information about points you don’t own.
+We recommended using [Bridge](https://github.com/urbit/bridge/releases) for all Azimuth-related operations. It’s great for managing your identities, as well as for viewing information about identities you don’t own.
 
 We have seen publicly hosted versions of Bridge online. We strongly recommend avoiding these websites as they may compromise your security and privacy.
 
@@ -162,26 +162,26 @@ We have seen publicly hosted versions of Bridge online. We strongly recommend av
 
 ### What is the Urbit HD Wallet? {#urbit-hd-wallet}
 
-The Urbit Hierarchical Deterministic (HD) Wallet is a custom Ethereum wallet based on BIP39 and BIP44 – the same underlying technology used by wallet providers like Ledger, Trezor, Metamask, and MyEtherWallet. You can think of the Urbit HD wallet as a wallet of wallets, which lets you keep a single passphrase for all of your Azimuth keys. Azimuth uses multiple keys with different capabilities – a bit like permissions – so that you can keep the more valuable keys in cold storage while keeping less valuable keys, used in day-to-day operation, more easily accessible. If you're only operating a planet, you shouldn't have to worry about this: you can simply think of your "master ticket" as the password to your Azimuth point. If you're operating a star or galaxy, the Urbit HD Wallet allows you to implement a multi-tier key custody scheme.
+The Urbit Hierarchical Deterministic (HD) Wallet is a custom Ethereum wallet based on BIP39 and BIP44 – the same underlying technology used by wallet providers like Ledger, Trezor, Metamask, and MyEtherWallet. You can think of the Urbit HD wallet as a wallet of wallets, which lets you keep a single passphrase for all of your Azimuth keys. Azimuth uses multiple keys with different capabilities – a bit like permissions – so that you can keep the more valuable keys in cold storage while keeping less valuable keys, used in day-to-day operation, more easily accessible. If you're only operating a planet, you shouldn't have to worry about this: you can simply think of your "master ticket" as the password to your Urbit identity. If you're operating a star or galaxy, the Urbit HD Wallet allows you to implement a multi-tier key custody scheme.
 
 To learn about the specifics, check out our [HD Wallet documentation](@/docs/concepts/azimuth.md#the-urbit-hd-wallet) and the [Urbit HD Wallet Spec (UP 8)](https://github.com/urbit/proposals/blob/master/008-urbit-hd-wallet.md).
 
 ### What is a master ticket? {#master-ticket}
 
-The "master ticket" is the entropy seed from which your other Azimuth keys are derived. It should be treated like a master password: **you should never share it with anyone, and you must store it very securely (see our practices below).** This ticket is used to derive the Ethereum wallet that holds your ownership keys, your Arvo key – used to boot your Urbit – and the other keys associated with your Azimuth point. You’ll have a ticket if you used the Urbit Wallet Generator or claimed a ship on our hosted version of Bridge.
+The "master ticket" is the entropy seed from which your other Azimuth keys are derived. It should be treated like a master password: **you should never share it with anyone, and you must store it very securely (see our practices below).** This ticket is used to derive the Ethereum wallet that holds your ownership keys, your Arvo key – used to boot your Urbit – and the other keys associated with your identity. You’ll have a ticket if you used the Urbit Wallet Generator or claimed a ship on our hosted version of Bridge.
 
 If you're operating a planet, you can use your master ticket to authenticate with Bridge.
 
 ### What is an ownership address? {#ownership-address}
 
-An ownership address is an Ethereum address that owns one or more of your Azimuth points. The Urbit Wallet Generator creates one Urbit HD Wallet and associated addresses for each of your Azimuth points. Using the ownership key associated with your ownership address, you can transfer points to other people, meaning that it’s very important to store securely.
+An ownership address is an Ethereum address that owns one or more of your Urbit identities. The Urbit Wallet Generator creates one Urbit HD Wallet and associated addresses for each of your identities. Using the ownership key associated with your ownership address, you can transfer identities to other people, meaning that it’s very important to store securely.
 
 ### What are proxies? {#proxies}
 
-Proxies are seeds derived from your master ticket used to generate sub-wallets, which are in turn used to generate keys that have the ability to execute different Azimuth functions associated with your Azimuth point. Proxies generally have more restricted capabilities than your ownership seed. These capabilities include: spawning child points, voting, and setting networking keys.
+Proxies are seeds derived from your master ticket used to generate sub-wallets, which are in turn used to generate keys that have the ability to execute different Azimuth functions associated with your Urbit identity. Proxies generally have more restricted capabilities than your ownership seed. These capabilities include: spawning child identities, voting, and setting networking keys.
 
-- Transfer proxy: Can transfer your point to another Ethereum address.
-- Spawn Proxy: For stars and galaxies only. Can create new child points.
+- Transfer proxy: Can transfer your identity to another Ethereum address.
+- Spawn Proxy: For stars and galaxies only. Can create new child identities.
 - Management Proxy: Can configure or set networking keys and conduct sponsorship related operations.
 - Voting Proxy: Galaxies only. Galaxies are the part of the galactic senate, which means they can cast votes on new proposals including changes to the "Ecliptic" contract, which defines the operations of Azimuth.
 
@@ -193,17 +193,17 @@ For detailed information, see the [Urbit HD Wallet Spec (UP 8)](https://github.c
 
 ### What does it mean to “set public keys”? {#set-public-keys}
 
-This means registering the public keys of your point's encryption and authentication key pairs (together known as "networking keys") with Azimuth, so that others can discover them. The corresponding private keys can then be used to, for example, run a ship on the Arvo network.
+This means registering the public keys of your identity's encryption and authentication key pairs (together known as "networking keys") with Azimuth, so that others can discover them. The corresponding private keys can then be used to, for example, run a ship on the Arvo network.
 
 You want to reset these keys if they are compromised, or if your ship has sunk. This is of little practical significance today, but resetting your networking keys resets your relationship with other ships on the network.
 
-### What do I do if I want to own multiple points? {#multiple-points}
+### What do I do if I want to own multiple identities? {#multiple-points}
 
-We recommend using different HD Wallets for each point. You are able to assign any number of points to a single Ethereum address, however, since they are just ERC-721 tokens.
+We recommend using different HD Wallets for each identity. You are able to assign any number of identities to a single Ethereum address, however, since they are just ERC-721 tokens.
 
 ### How should I take care of my Urbit HD Wallet? {#custody}
 
-Urbit points have accompanying security realities that must be taken seriously. Cryptographic assets are unique among things of value, because all of the responsibility for keeping those assets safe rests with the party that owns them.
+Urbit identities have accompanying security realities that must be taken seriously. Cryptographic assets are unique among things of value, because all of the responsibility for keeping those assets safe rests with the party that owns them.
 
 The nature of decentralization is such that there is no authority that has the power to restore any lost or stolen wallet. Neither can anyone force you to follow good security practices. At most, they can give you recommendations. **Remember:** if critical items, such as your ownership key, are lost or compromised, your assets are likely gone forever.
 
@@ -276,7 +276,7 @@ All events are logged to disk, so you can always restore the system to a previou
 
 ### How is Arvo connected to Ethereum? {#arvo-ethereum}
 
-When an Arvo ship (instance) is started for the first time, you must use a "keyfile" containing the private keys for your Azimuth point's networking keys. Azimuth uses the Ethereum blockchain as its decentralized ledger.
+When an Arvo ship (instance) is started for the first time, you must use a "keyfile" containing the private keys for your identity's networking keys. Azimuth uses the Ethereum blockchain as its decentralized ledger.
 
 See our [Getting Started](@/docs/getting-started/_index.md) guide to learn how to get your ship onto the Arvo network.
 
@@ -300,7 +300,7 @@ Your sponsor, a star or galaxy that your ship "lives under", may send you new so
 
 Landscape is an experimental Arvo web interface that includes social functions such as chat and publishing. You can access Landscape by navigating to `http://localhost:PORT`, where PORT is typically 80, 8080, or 8081 (check your boot messages).
 
-### I have a point, now what? {#now-what}
+### I have an Urbit identity, now what? {#now-what}
 
 Follow our guide on how to boot a ship [here](@/docs/getting-started/booting-a-ship.md).  
 
