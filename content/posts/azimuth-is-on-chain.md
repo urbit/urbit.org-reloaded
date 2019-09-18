@@ -8,7 +8,7 @@ aliases = ["/posts/essays/azimuth-is-on-chain"]
 posts = ["Essays"]
 +++
 
-![](https://storage.googleapis.com/media.urbit.org/site/arvo-4.svg)
+![](https://media.urbit.org/site/arvo-4.svg)
 
 The Urbit address space is now live on the Ethereum blockchain. We’re calling the PKI ‘Azimuth’ and you can find it at [`0x223c067f8cf28ae173ee5cafea60ca44c335fecb`](https://etherscan.io/address/0x223c067f8cf28ae173ee5cafea60ca44c335fecb) or [`azimuth.eth`](https://etherscan.io/address/azimuth.eth). Owners of Azimuth ‘points’ (galaxies, stars or planets) can use [Bridge](https://github.com/urbit/bridge/releases) to manage them and view their balance now.
 
@@ -36,7 +36,7 @@ Let's step through them to see what's new.
 
 ## Azimuth
 
-![](https://storage.googleapis.com/media.urbit.org/site/bridge-0.png)
+![](https://media.urbit.org/site/bridge-0.png)
 
 As a quick refresher: Urbit addresses, now called Azimuth 'points', are short names like `~diblun-tidduc`. You own your Azimuth point with a private key and can use it as a routable network address on the Arvo network. You can read more about Azimuth in [the primer](/primer#what-azimuth-is). If you're curious who owns all this address space, you can find that [in there too](/primer#azimuth-distribution).
 
@@ -52,7 +52,7 @@ If you're curious, you can find the source for the contracts in the [`urbit/azim
 
 We had the source for our contracts audited by Open Zeppelin, Blockchain at Berkeley and Bloctrax. Did we miss something? We sure hope not — but we'd happily compensate anyone who can find bugs. Please reach out to security@urbit.org if you find something of concern. We'd be happy to hear from you.
 
-![](https://storage.googleapis.com/media.urbit.org/site/sigils.svg)
+![](https://media.urbit.org/site/sigils.svg)
 
 Azimuth names have always had a pronunciation system. `~ronryd-nidseg` is 13,695,781, for example. Now, they also have a visual system. We call these strange crests from another planet 'sigils', and you'll notice them used throughout all our new interfaces. You can find the source in the [`urbit/sigil-js`](https://github.com/urbit/sigil-js) repository. Building these was a lot of fun — we'll save the details for a future post.
 
@@ -60,7 +60,7 @@ So, how do you get an Azimuth point? We've left that question unanswered intenti
 
 ## Arvo
 
-![](https://storage.googleapis.com/media.urbit.org/site/fast-lux-3.gif)
+![](https://media.urbit.org/site/fast-lux-3.gif)
 
 Arvo boots from Ethereum, is no longer embarrassingly slow, and has a brand new build system. [Our documentation](https://urbit.org/docs/learn/arvo/hoon) has also improved quite a lot. Hoon, Arvo's programming language, has had a lot of work done to its type system and compiler. We built new tooling for generating static sites (you're probably reading this on one right now) that are much, much faster and easier to use.
 
@@ -70,7 +70,7 @@ There's plenty of work to do, though. Should you be building on top of Arvo? Pro
 
 ## Aegean
 
-![](https://storage.googleapis.com/media.urbit.org/site/landscape-inbox.png)
+![](https://media.urbit.org/site/landscape-inbox.png)
 
 Aegean is a pattern for building 'cities': groups of people running the same 'agent' on their Arvo servers. Agents aren't just 'apps' or programs. An agent rolls together the tools that a community needs. Today, our companies, communities, cults, cliques all have to duct tape together separate MEGACORP apps and services to compute together.
 
@@ -82,13 +82,13 @@ It's important to note: the pattern of these cities is _not_ the pattern of Azim
 
 Before we can let the ocean of cities grow we have to homestead a few of our own.
 
-Our first agent is called [Landscape](https://github.com/urbit/landscape), an agent for chat and longform discussion. We are using Landscape to run a few experimental cities over the next month or so. If you have an Azimuth point, you'll need to [request access](mailto:support@urbit.org) to join.
+Our first agent is called [Landscape](https://github.com/urbit/urbit/tree/master/pkg/interface), an agent for chat and longform discussion. We are using Landscape to run a few experimental cities over the next month or so. If you have an Azimuth point, you'll need to [request access](mailto:support@urbit.org) to join.
 
 Anyone can create their own city, of course. The source is open. But we're not going to encourage you to just yet. Feel free to explore, but also be patient. We've got a lot planned around this. If Azimuth is done and Arvo is young, Aegean is just being born.
 
 ## Tlon
 
-![](https://storage.googleapis.com/media.urbit.org/site/office-1.jpg)
+![](https://media.urbit.org/site/office-1.jpg)
 
 So who is behind all of this? A team of collaborators and contributors. Many of us work at [Tlon](https://tlon.io) — the company we started in 2013 to advance Urbit platform development. Tlon has attracted an incredible group of smart, talented people who want the world to be able to own and control their computers. I'm proud to work alongside them.
 
