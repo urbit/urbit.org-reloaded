@@ -14,7 +14,7 @@ Alongside [the v0.8.0 launch](https://urbit.org/posts/2019-7-25-update/) we rele
 
 Served after installation on your ship’s HTTPS port, it allows you to interact with Arvo through a web interface built with [Indigo](https://github.com/urbit/indigo), our new UI design language. It has a home screen, which exposes ‘tiles’ for each Landscape application – each able to integrate and customise information from elsewhere in the system and from the broader internet – and connects them to full-screen, graphical applications.
 
-The first set of application includes Chat, a new, streamlined chat client, a basic Weather information tile, an analog clock, and Publish, a place for publishing, subscribing, and commenting on ‘notebooks’ – invite-oriented blogs hosted on your ship.
+The first set of application includes Chat (a new, streamlined chat client), a basic Weather information tile, an analog clock, and Publish, a place for publishing, subscribing, and commenting on ‘notebooks’ – invite-oriented blogs hosted on your ship.
 
 ![](https://media.urbit.org/site/posts/essays/landscape-a-portrait-2.png)
 
