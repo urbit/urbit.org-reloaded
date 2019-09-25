@@ -9,8 +9,7 @@ title = "FAQ"
 - [What is Urbit?](#what-is-urbit)
 - [How secure is Urbit right now?](#how-secure-is-urbit)
 - [How can I contribute to Urbit?](#contribute)
-- [What is Tlon?](#what-is-tlon)
-- [Who works at Tlon?](#who-works-at-tlon)
+- [Who is building Urbit?](#who-builds-urbit)
 
 </details>
 
@@ -98,13 +97,9 @@ The rest of the Urbit project is still in research-mode. Arvo is safe to play wi
 
 We encourage outside contributors to become a part of the project. The best way to do this is to check out [Urbit](https://github.com/urbit) on Github, look at the pinned repositories, and check out our [Contributing](https://urbit.org/docs/getting-started/contributing/) guide. After you've gotten familiar with the system, feel free to open issues and make pull requests.
 
-### What is Tlon? {#what-is-tlon}
+### Who is building Urbit? {#who-builds-urbit}
 
-Tlon is the San Francisco-based company that develops the open-source (MIT licensed) Urbit project.
-
-### Who works at Tlon? {#who-works-at-tlon}
-
-You can see who we are at [tlon.io](https://tlon.io/).
+[Tlon](https://tlon.io), a San Francisco-based company, is the primary developer of Urbit, along with [various independent developers](https://github.com/urbit/urbit/graphs/contributors) and [urbit.live](https://urbit.live).
 
 ## Azimuth
 
