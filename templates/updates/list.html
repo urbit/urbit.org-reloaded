@@ -16,7 +16,7 @@
           {% set posts = get_section(path="updates/_index.md") %}
           {% for page in posts.pages | slice (end=1) %}
           <article class="mb6 relative">
-              <h1>{{ page.title }} <a class="absolute right-0 fw4" href="#more-updates">Go to older updates</a></h1>
+              <h1>{{ page.title }}</h1>
               <!-- body -->
               {{ page.content | safe }}
               {% if page.extra.author %} 
