@@ -78,6 +78,11 @@ a {
     text-decoration: none;
 }
 
+// homepage links
+nav.home li a {
+    @extend .bb, .b--black;
+}
+
 article {
     // default
     // links on body text
@@ -386,12 +391,11 @@ details {
         &::before {
             content: "›";
             display: inline-block;
-            vertical-align: middle;
+            vertical-align: baseline;
             margin-right: 0.5rem;
             @extend .gray1;
             font-family: "Inter UI", sans-serif;
             font-weight: 400;
-            font-size: 1.5rem;
         }
     }
     &[open] > summary {
