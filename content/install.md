@@ -1,5 +1,5 @@
 +++
-title = "Try"
+title = "Install"
 template = "page_indiced.html"
 +++
 

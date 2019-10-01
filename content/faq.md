@@ -199,7 +199,7 @@ All events are logged to disk, so you can always restore the system to a previou
 
 When an Arvo ship (instance) is started for the first time, you must use a "keyfile" containing the private keys for your Azimuth point's networking keys. Azimuth uses the Ethereum blockchain as its decentralized ledger.
 
-See our [Getting Started](@/try.md) guide to learn how to get your ship onto the Arvo network.
+See our [Getting Started](@/install.md) guide to learn how to get your ship onto the Arvo network.
 
 ### Will the Arvo network survive if Ethereum dies? {#if-ethereum-dies}
 
@@ -207,7 +207,7 @@ Yes. It would be annoying, but Azimuth would be ported to another decentralized 
 
 ### How do I install Arvo? {#install-arvo}
 
-Check out our guides [here](@/try.md).
+Check out our guides [here](@/install.md).
 
 ### How do I use Arvo? {#use-arvo}
 
@@ -223,9 +223,9 @@ Landscape is an experimental Arvo web interface that includes social functions s
 
 ### I have a point, now what? {#now-what}
 
-Follow our guide on how to boot a ship [here](@/try.md).  
+Follow our guide on how to boot a ship [here](@/install.md).  
 
-Get on the [mailing list](/../#mc_embed_signup). Learn [Hoon](@/docs/hoon/_index.md). Sign up for [Hoon School](@/hoonschool.md). [Make stuff](@/try.md).
+Get on the [mailing list](/../#mc_embed_signup). Learn [Hoon](@/docs/hoon/_index.md). Sign up for [Hoon School](@/hoonschool.md). [Make stuff](@/install.md).
 
 
 ## Grants
