@@ -78,11 +78,6 @@ a {
     text-decoration: none;
 }
 
-// homepage links
-nav.home li a {
-    @extend .bb, .b--black;
-}
-
 article {
     // default
     // links on body text
