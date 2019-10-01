@@ -437,18 +437,15 @@ nav.docs:not(.mobile) {
 }
 nav.docs details {
     summary {
-    @extend .fw4, .black;   
+    @extend .fw4, .black, .mt2;   
     }
     & > summary::before {
         content: "› ";
         display: inline-block;
         transform: rotate(90deg);
-        vertical-align: middle;
-        margin-right: 0.5rem;
-        @extend .gray1;
+        vertical-align: baseline;
+        @extend .gray1, .fw6;
         font-family: "Inter UI", sans-serif;
-        font-weight: 400;
-        font-size: 1.5rem;
     }
     &[open] > summary {
         @extend .fw6;
@@ -456,7 +453,6 @@ nav.docs details {
     &[open] > summary::before {
         content: "› ";
         display: inline-block;
-        margin-right: 0.5rem;
         transform: rotate(-90deg);
     }
 }
