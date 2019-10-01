@@ -167,11 +167,12 @@ function formatSearchResultTitle(item) {
 
   // first directory is in 4th element of split path array
   var firstPartTitle = pathArray[3];
+  let firstTitleCapitals = firstPartTitle.charAt(0).toUpperCase() + firstPartTitle.slice(1);
 
   // last directory is in 2nd to last element of array
   var lastPartTitle = item.doc.title;
 
-  var fullTitle = firstPartTitle + '<span class="gray1 dib pl2">' + ' / ' + lastPartTitle + '</span>';
+  var fullTitle = firstTitleCapitals + '<span class="gray1 dib pl2">' + ' / ' + lastPartTitle + '</span>';
 
   return fullTitle; 
 }
