@@ -9,17 +9,18 @@ a[href*="//"]:not([href*="{{config.base_url | safe}}"])::after {
 {% block title %} {{ section.title }} {% endblock title %}
 {% block content %}
 <nav class="home full fourth-1-md fourth-1-lg mt4 mb5">
-  <h1 class="mb4 mt2 fw4">Urbit is your last computer</h1>
-      <h3>What is Urbit?</h3>
+  <h1 class="mb4 mt2 fw4">Urbit is a new operating system 
+    designed from the ground up to be durable, simple, and yours.</h1>
   <ul> 
-    <li><a href="/what-is-urbit/#introduction">Introduction</a></li>
-    <li><a href="/what-is-urbit/#interface">Interface</a></li>
-    <li><a href="/what-is-urbit#infrastructure">Infrastructure</a></li>
+    <li><a href="#introduction">Introduction ↓</a></li>
+    <li><a href="/faq/">FAQ</a></li>
   </ul>
-  <li class="mt4"><a class="fw6" href="/faq/">FAQ</a></li>
-  <li class="mt3"><a class="fw6" href="/updates/">Updates</a></li>
-  <li class="mt3"><a class="fw6" href="/essays">Essays</a></li>
-  <li class="mt3"><a class="fw6" href="/media">Media</a></li>
+  <li class="mt4"><a href="/essays">Essays</a></li>
+  <li><a href="/updates/">Updates</a></li>
+  <li><a href="/media">Media</a></li>
+  <li class="mt4"><a href="/docs">Docs</a></li>
+  <li><a href="/install">Install</a></li>
+  <!-- TODO: Bottom footer this once IA and etc are not TBA. 
   <h3 class="mt4">Contributing</h3>
   <ul>
     <li><a href="/contributing/#how-can-i-help">How can I help?</a></li>
@@ -27,13 +28,11 @@ a[href*="//"]:not([href*="{{config.base_url | safe}}"])::after {
     <li><a href="/contributing/#developing-on-urbit">Developing on Urbit</a></li>
     <li><a href="https://grants.urbit.org">Grants and Bounties</a></li>
   </ul>
-  <h3 class="mt4">Try Urbit</h3>
   <ul>
-    <li><a href="/try/#install">Install</a></li>
-    <li><a href="/try/#using-landscape">Using Landscape</a></li>
-    <li><a href="/try/#using-the-cli">Using CLI</a></li>
-    <li><a href="/try/#using-bridge">Using Bridge</a></li>
-    <li><a href="/try/#invite-friends">Invite Friends</a></li>
+    <li><a href="/install/#using-landscape">Using Landscape</a></li>
+    <li><a href="/install/#using-the-cli">Using CLI</a></li>
+    <li><a href="/install/#using-bridge">Using Bridge</a></li>
+    <li><a href="/install/#invite-friends">Invite Friends</a></li>
   </ul>
   <h3 class="mt4">Operations</h3>
   <ul>
@@ -48,8 +47,8 @@ a[href*="//"]:not([href*="{{config.base_url | safe}}"])::after {
   <ul>
     <li><a href="/develop/#creating-a-development-ship">Creating a Development Ship</a></li>
     <li><a href="/develop/#community-tutorials">Community Tutorials</a></li>
-    <li><a href="/docs">Documentation</a></li>
   </ul>
+  -->
 </nav>
 <!-- "Latest posts" sidebar. Latest mockups don't have this. Delete if entering production.
 <aside class="mt4 fourth-3-md fourth-3-lg full">
@@ -91,8 +90,6 @@ a[href*="//"]:not([href*="{{config.base_url | safe}}"])::after {
           <li><a href="https://github.com/urbit">github.com/urbit</a></li>
         </nav>
         <aside class="fourth-3-md fourth-3-lg full mt4">
-          <!-- In the name of lining it up with "Company", gotta break the
-          powers of two. -->
           <h2 id="updates" class="mt2">
             Updates
           </h2>
