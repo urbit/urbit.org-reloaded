@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
-    <!-- meta -->
     <meta charset="UTF-8">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width">
@@ -10,7 +9,6 @@
     <link rel="icon" type="image/png" href="/images/favicon.ico" />
     <link rel="alternative" type="application/rss+xml" title="RSS" href="/rss.xml" />
     <title>{% block title %}{% endblock title %} - {{ config.title }}</title>
-    <!-- stylesheets -->
     <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
     <style type="text/css">
     	#mc_embed_signup{clear:left; width:100%;}
@@ -21,7 +19,6 @@
     </style>
     <link rel="stylesheet" href="/indigo.css">
     <link rel="stylesheet" href="/styles.css">
-    <!-- analytics -->
     <script type="text/javascript">
       var _paq = window._paq || [];
       /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
@@ -38,10 +35,8 @@
   </head>
   <body {% block bodyclasses %} {% endblock bodyclasses %}>
     {% include "partials/search-overlay.html" %}
-      <!-- content -->
     {% block content %}
     {% endblock content %}
-    <!-- scripts -->
     {% if config.build_search_index %}
       <script type="text/javascript" src="{{ get_url(path="runes.js") | safe }}"></script>
       <script type="text/javascript" src="{{ get_url(path="elasticlunr.min.js") | safe }}"></script>

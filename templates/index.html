@@ -2,142 +2,137 @@
 <!--External links are differentiated on home page.-->
 {% block templatestyles %}
 a[href*="//"]:not([href*="{{config.base_url | safe}}"])::after {
-  content: "↗";
+content: " ↗";
 }
 {% endblock templatestyles %}
 
 {% block title %} {{ section.title }} {% endblock title %}
-{% block content %}
-<nav class="home full c4-10-md c4-10-lg mt4 mb6 grid12">
-    <h1 class="mb6 full mt2 fw4 w-50">Urbit is a new operating system 
-        designed from the ground up to be durable, simple, and yours.</h1>
-  <section class="full half-1-md half-1-lg">
-  <ul> 
-    <li><a href="#introduction">Introduction ↓</a></li>
-    <li><a href="/faq/">FAQ</a></li>
-  <li class="mt4"><a href="/essays">Essays</a></li>
-  <li><a href="/updates/">Updates</a></li>
-  <li><a href="/media">Media</a></li>
-  <li class="mt4"><a href="/docs">Docs ↗</a></li>
-  <li><a class="green2" href="/install">Install ↗</a></li>
-</ul>
-</section>
-  <!-- TODO: Bottom footer this once IA and etc are not TBA. 
-  <h3 class="mt4">Contributing</h3>
-  <ul>
-    <li><a href="/contributing/#how-can-i-help">How can I help?</a></li>
-    <li><a href="/contributing/#galaxies-and-stars">Galaxies and Stars</a></li>
-    <li><a href="/contributing/#developing-on-urbit">Developing on Urbit</a></li>
-    <li><a href="https://grants.urbit.org">Grants and Bounties</a></li>
-  </ul>
-  <ul>
-    <li><a href="/install/#using-landscape">Using Landscape</a></li>
-    <li><a href="/install/#using-the-cli">Using CLI</a></li>
-    <li><a href="/install/#using-bridge">Using Bridge</a></li>
-    <li><a href="/install/#invite-friends">Invite Friends</a></li>
-  </ul>
-  <h3 class="mt4">Operations</h3>
-  <ul>
-    <li><a href="/operations/#urbit-administration">Admin and Operations</a></li>
-    <li><a href="/operations/#creating-a-comet">Creating a Comet</a></li>
-    <li><a href="/operations/#dns-proxying">DNS Proxying</a></li>
-    <li><a href="/operations/#messaging">Messaging</a></li>
-    <li><a href="/operations/#using-the-shell">Shell</a></li>
-    <li><a href="/operations/#filesystem">Filesystem</a></li>
-  </ul>
-  <h3 class="mt4">Develop</h3>
-  <ul>
-    <li><a href="/develop/#creating-a-development-ship">Creating a Development Ship</a></li>
-    <li><a href="/develop/#community-tutorials">Community Tutorials</a></li>
-  </ul>
-  -->
 
-<aside class="half-2-md half-2-lg half-1 mt0-l mt0-xl mt2">
-  <p class="lh-copy mt1">We send regular updates about our project. Enter your email to get them.</p>
-  <iframe name="nothing" style="display:none;"></iframe>
-  <form action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;amp;id=be143888d2" 
-  method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form" 
-  target="_blank" novalidate>
-  <div class="input-group" id="mc_embed_signup_scroll">
-    <div class="mc-field-group w-100">
-    <input class="bg-white black b--black ba pa3 w-100 mb2" type="email" name="EMAIL" id="mce-EMAIL" 
-    placeholder="your@email.com">
-    </div>
-    <div id="mce-responses" class="clear">
-    <div id="mce-error-response" class="response" style="display:none"></div>
-    <div id="mce-success-response" class="response" style="display:none"></div>
-    </div>
-    <div style="position: absolute; left: -5000px;" aria-hidden="true">
-      <input type="text" name="b_972a03db9e0c6c25bb58de8c8_be143888d2" tabindex="-1" value="">
-    </div>
-    <button id="mc-embedded-subscribe" class="bg-white mb4 justify-between b--black black w-100 tl" 
-    style="font-family: 'Inter UI', san-serif; padding: 16px; -webkit-appearance: none;" type="submit" 
-    name="subscribe" onclick="_paq.push(['trackEvent', 'Mailing List', 'Subscribe'])">
-    <span class="text-500">Subscribe</span> <span class="fr pr1">-></span>
-    </button>
-    </div>
-  </form>
-</aside>
-</nav>
-<article class="full-bleed full grid12 mt6">
-  <section id="introduction" class="full tc mb4">
-    Urbit is a simple, durable computer that you own 100% and forever. 
+{% block content %}
+
+<nav class="home full c4-10-md c4-10-lg mt4 mb6 grid12">
+
+  <h1 class="mb6 full mt2 fw4 w-50">Urbit is a new operating system
+    designed from the ground up to be durable, simple, and yours.</h1>
+
+  <section class="full half-1-md half-1-lg">
+
+    <ul>
+      <li><a href="#introduction">Introduction ↓</a></li>
+      <li><a href="/faq/">FAQ</a></li>
+
+      <li class="mt4"><a href="/essays">Essays</a></li>
+      <li><a href="/updates/">Updates</a></li>
+      <li><a href="/media">Media</a></li>
+
+      <li class="mt4"><a href="/docs">Docs ↗</a></li>
+      <li><a class="green2" href="/install">Install ↗</a></li>
+    </ul>
+
   </section>
+
+  <aside class="half-2-md half-2-lg half-1 mt0-l mt0-xl mt2" id="newsletter-subscribe-top">
+    <p class="lh-copy mt1">We send regular updates about our project. Enter your email to get them.</p>
+    <iframe name="nothing" style="display:none;"></iframe>
+    <form action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;amp;id=be143888d2"
+      method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form"
+      target="_blank" novalidate>
+      <div class="input-group" id="mc_embed_signup_scroll">
+        <div class="mc-field-group w-100">
+          <input class="bg-white black b--black ba pa3 w-100 mb2" type="email" name="EMAIL" id="mce-EMAIL"
+            placeholder="your@email.com">
+        </div>
+        <div id="mce-responses" class="clear">
+          <div id="mce-error-response" class="response" style="display:none"></div>
+          <div id="mce-success-response" class="response" style="display:none"></div>
+        </div>
+        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+          <input type="text" name="b_972a03db9e0c6c25bb58de8c8_be143888d2" tabindex="-1" value="">
+        </div>
+        <button id="mc-embedded-subscribe" class="bg-white mb4 justify-between ba b--black black w-100 tl"
+          style="font-family: 'Inter UI', san-serif; padding: 16px; -webkit-appearance: none;" type="submit"
+          name="subscribe" onclick="_paq.push(['trackEvent', 'Mailing List', 'Subscribe'])">
+          <span class="text-500">Subscribe</span> <span class="fr pr1">-></span>
+        </button>
+      </div>
+    </form>
+  </aside>
+</nav>
+
+<article class="full-bleed full grid12 mt6">
+
+  <section id="introduction" class="full tc mb4">
+    Urbit is a simple, durable computer that you own 100% and forever.
+  </section>
+
   <section id="intro-drawing" class="c4-9-md c4-9-lg full">
     <figure class="mt4">
-      <img src="assets/intro/ship.svg" alt="A drawing of an Urbit ship."/>
+      <img src="assets/intro/ship.svg" alt="A drawing of an Urbit ship." />
     </figure>
-  <p class="mb0">This is a drawing of an Urbit.</p>
-  <p class="mt0">It’s a new kind of computer.</p>
-  <p class="mt6">This image is representative of three key (yet familiar) aspects to this new kind of computer:</p>
-  <ul class="list">
-    <li class="mt4">The <img src="assets/intro/apps.svg"/> apps you use every day,</li>
-    <li class="mt4">the <img src="assets/intro/arvo.svg"/> OS that makes sure everything runs smoothly,</li>
-    <li class="mt4">and your <img src="assets/intro/id.svg"/> identity at the center of it all.</li>
-  </ul>
+
+    <p class="mb0">This is a drawing of an Urbit.</p>
+    <p class="mt0">It’s a new kind of computer.</p>
+    <p class="mt6">This image is representative of three key (yet familiar) aspects to this new kind of computer:</p>
+    <ul class="list">
+      <li class="mt4">The <img src="assets/intro/apps.svg" /> apps you use every day,</li>
+      <li class="mt4">the <img src="assets/intro/arvo.svg" /> OS that makes sure everything runs smoothly,</li>
+      <li class="mt4">and your <img src="assets/intro/id.svg" /> identity at the center of it all.</li>
+    </ul>
   </section>
+
   <section id="what-is-urbit" class="c4-9-md c4-9-lg full mt6">
     <p>So, what <em>is</em> an Urbit?</p>
-    <figure class="mt6">
-      <img src="assets/intro/social-software.svg"/>
+
+    <figure class="mt6 tc">
+      <img src="assets/intro/social-software.svg" />
+      <figcaption class="tl mt5">
+          Your Urbit is a calm, passive tool built for social software, not social networking.
+          On Urbit, you run (or build) your own software to connect and communicate with your friends and family.
+      </figcaption>
     </figure>
-    <p>Your Urbit is a calm, passive tool built for social software, not social networking. 
-      On Urbit, you run (or build) your own software to connect and communicate with your friends and family.</p>
+
     <figure class="tc mt6">
-      <img src="assets/intro/rock.svg"/>
+      <img src="assets/intro/rock.svg" />
+      <figcaption class="tl mt5">
+          Your Urbit is a permanent and completely private archive.
+          Your Urbit can store all your data safely, privately, forever.
+      </figcaption>
     </figure>
-    <p>Your Urbit is a permanent and completely private archive. 
-    Your Urbit can store all your data safely, privately, forever.</p>
+
     <figure class="tc mt6">
-      <img src="assets/intro/yours-forever.svg"/>
+      <img src="assets/intro/yours-forever.svg" />
+      <figcaption class="tl">You own your Urbit like you own Bitcoin.
+          Each Urbit is a piece of a new global network that’s owned and controlled by its users.</figcaption>
     </figure>
-    <p>You own your Urbit like you own Bitcoin. 
-    Each Urbit is a piece of a new global network that’s owned and controlled by its users.</p>
   </section>
+
   <section id="vid-ocean" class="full mt6 mb6 tc">
-    <p>Nothing quite like this has ever <br/>
-      been done before, <br/>
+    <p>Nothing quite like this has ever <br />
+      been done before, <br />
       and nothing is quite like it.</p>
   </section>
+
   <section id="megacorp" class="c4-9-md c4-9-lg full">
     <p>Today, technology controls us.</p>
-    <p>Every MEGACORP has the same incentive: <br/>
-        To keep us hooked on their platform.</p>
-    <p>We think that communities of people should decide their own structure, 
-      which means they also have to control their own history and the means by 
-      which they write into it.  We think that history should be owned by the people 
-      creating it, not by some external faction. Without control over the stories we tell one another, 
+    <p>Every MEGACORP has the same incentive: <br />
+      To keep us hooked on their platform.</p>
+    <p>We think that communities of people should decide their own structure,
+      which means they also have to control their own history and the means by
+      which they write into it. We think that history should be owned by the people
+      creating it, not by some external faction. Without control over the stories we tell one another,
       we’re ruled by someone else. </p>
   </section>
+
   <section id="outroduction" class="c4-10-md c4-10-lg full">
-      <p>We built Urbit so people can control their technology, shape their digital lives and freely build 
+    <p>We built Urbit so people can control their technology, shape their digital lives and freely build
       their digital communities.</p>
 
-      <p>We want to replace the internet with a foundation for computing that we can rely on far into the future.</p>
-      
-      <p class="mb0">Urbit is a large, ambitious project.</p>
-      <p class="mt0">But at the core it’s durable, simple and yours.</p>
+    <p>We want to replace the internet with a foundation for computing that we can rely on far into the future.</p>
+
+    <p class="mb0">Urbit is a large, ambitious project.</p>
+    <p class="mt0">But at the core it’s durable, simple and yours.</p>
   </section>
+
   <nav class="c4-10-md c4-10-lg full mt6 mb6">
     <h1 class="f2 fw3 mb3">Go Deeper</h1>
     <ul>
@@ -153,88 +148,93 @@ a[href*="//"]:not([href*="{{config.base_url | safe}}"])::after {
     </ul>
   </nav>
 </article>
-      <footer class="full-bleed mt4 grid12 bg-black white full">
-          <section class="full grid12 mb4">
-            <nav class="c1-3-md c1-3-lg half-1 mt4">
-              <h3>What is Urbit?</h3>
-              <li class="mt2">Project Overview</li>
-              <li class="mt2">Interface</li>
-              <li class="mt2">Infrastructure</li>
-              <li class="mt2">Azimuth</li>
-            </nav>
-            <nav class="c3-5-md c3-5-lg half-2 mt4">
-              <h3>Contributing</h3>
-              <li class="mt2">How can I help?</li>
-              <li class="mt2">Operating Galaxies and Stars</li>
-              <li class="mt2">Governance</li>
-            </nav>
-            <nav class="c5-7-md c5-7-lg half-1 mt4">
-              <h3>Learn More</h3>
-              <li class="mt2"><a href="/essays">Essays</a></li>
-              <li class="mt2"><a href="/updates">Updates</a></li>
-              <li class="mt2"><a href="/media">Media</a></li>
-              <li class="mt2"><a href="/faq">FAQ and Concerns</a></li>
-            </nav>
-            <nav class="c7-9-md c7-9-lg half-2 mt4">
-              <h3>Developers</h3>
-              <li class="mt2">Quickstart</li>
-              <li class="mt2"><a href="/docs">Documentation</a></li>
-              <li class="mt2">Core Development</li>
-              <li class="mt2">Application Development</li>
-              <li class="mt2"><a href="https://grants.urbit.org">Grants and Bounties</a></li>
-            </nav>
-            <nav class="c9-11-md c9-11-lg half-1 mt4">
-              <h3>Community</h3>
-              <li class="mt2"><a href="https://groups.google.com/a/urbit.org/forum/#!forum/dev">urbit-dev</a></li>
-              <li class="mt2"><a href="/hoonschool">Hoon School ↗</a></li>
-              <li class="mt2"><a href="https://www.meetup.com/urbit-sf/">Meetups</a></li>
-              <li class="mt2"><a href="https://www.threadless.com/discover/s/urbit">Merch</a></li>
-            </nav>
-            <nav class="c11-13-md c11-13-lg half-2 mt4">
-              <h3>Install Urbit</h3>
-              <li class="mt2">Getting an Azimuth Point</li>
-              <li class="mt2"><a href="/install">Install</a></li>
-            </nav>
-          </section>
-          <section class="full-bleed full grid12">
-          <nav class="fourth-1-md fourth-1-lg full mt4 mb4">
-          <h2 class="mb3">Company</h2>
-          <li class="mt2"><a href="/tos">Terms of Service</a></li>
-          <li class="mt2"><a href="/privacy">Privacy Policy</a></li>
-          <li class="mt2">Careers</li>
-          <li class="mt2"><a href="https://tlon.io">Tlon.io</a></li>
+<footer class="full-bleed mt4 grid12 bg-black white full">
+  <section class="full grid12 mb4">
+    <nav class="c1-3-md c1-3-lg half-1 mt4">
+      <h3>What is Urbit?</h3>
+      <li class="mt2">Project Overview</li>
+      <li class="mt2">Interface</li>
+      <li class="mt2">Infrastructure</li>
+      <li class="mt2">Azimuth</li>
+    </nav>
+    <nav class="c3-5-md c3-5-lg half-2 mt4">
+      <h3>Contributing</h3>
+      <li class="mt2">How can I help?</li>
+      <li class="mt2">Operating Galaxies and Stars</li>
+      <li class="mt2">Governance</li>
+    </nav>
+    <nav class="c5-7-md c5-7-lg half-1 mt4">
+      <h3>Learn More</h3>
+      <li class="mt2"><a href="/essays">Essays</a></li>
+      <li class="mt2"><a href="/updates">Updates</a></li>
+      <li class="mt2"><a href="/media">Media</a></li>
+      <li class="mt2"><a href="/faq">FAQ and Concerns</a></li>
+    </nav>
+    <nav class="c7-9-md c7-9-lg half-2 mt4">
+      <h3>Developers</h3>
+      <li class="mt2">Quickstart</li>
+      <li class="mt2"><a href="/docs">Documentation</a></li>
+      <li class="mt2">Core Development</li>
+      <li class="mt2">Application Development</li>
+      <li class="mt2"><a href="https://grants.urbit.org">Grants and Bounties</a></li>
+    </nav>
+    <nav class="c9-11-md c9-11-lg half-1 mt4">
+      <h3>Community</h3>
+      <li class="mt2"><a href="https://groups.google.com/a/urbit.org/forum/#!forum/dev">urbit-dev</a></li>
+      <li class="mt2"><a href="/hoonschool">Hoon School ↗</a></li>
+      <li class="mt2"><a href="https://www.meetup.com/urbit-sf/">Meetups</a></li>
+      <li class="mt2"><a href="https://www.threadless.com/discover/s/urbit">Merch</a></li>
+    </nav>
+    <nav class="c11-13-md c11-13-lg half-2 mt4">
+      <h3>Install Urbit</h3>
+      <li class="mt2">Getting an Azimuth Point</li>
+      <li class="mt2"><a href="/install">Install</a></li>
+    </nav>
+  </section>
+  <section class="full-bleed full grid12">
+    <nav class="fourth-1-md fourth-1-lg full mt4 mb4">
+      <h2 class="mb3">Company</h2>
+      <li class="mt2"><a href="/tos">Terms of Service</a></li>
+      <li class="mt2"><a href="/privacy">Privacy Policy</a></li>
+      <li class="mt2">Careers</li>
+      <li class="mt2"><a href="https://tlon.io">Tlon.io</a></li>
 
-          <h2 class="mt4">Need Help?</h2>
-          <li class="mt2"><a href="mailto:support@urbit.org">support@urbit.org↗</a></li>
-          <li class="mt2"><a href="https://twitter.com/urbit">twitter.com/urbit</a></li>
-          <li class="mt2"><a href="https://github.com/urbit">github.com/urbit</a></li>
-        </nav>
-          <aside class="c7-11-md c7-11-lg full mt4">
-              <h2 id="updates" class="mt0">
-                Updates
-              </h2>
-              <p class="lh-copy">Every month we send an email with community events and what we're up to.</p>
-              <iframe name="nothing" style="display:none;"></iframe>
-          <form action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;amp;id=be143888d2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form" target="_blank" novalidate>
-            <div class="input-group" id="mc_embed_signup_scroll">
-              <div class="mc-field-group w-100">
-                <small class="mb1 dib">Receiving Email Address</small>
-                <input class="bg-black white b--white ba pa3 w-100 mb2" type="email" name="EMAIL" id="mce-EMAIL" placeholder="your@email.com">
-              </div>
-              <div id="mce-responses" class="clear">
-                <div id="mce-error-response" class="response" style="display:none"></div>
-                <div id="mce-success-response" class="response" style="display:none"></div>
-              </div>
-              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_972a03db9e0c6c25bb58de8c8_be143888d2" tabindex="-1" value=""></div>
-              <button id="mc-embedded-subscribe" class="bg-white mb4 justify-between black w-100 tl" style="font-family: 'Inter UI', san-serif; padding: 16px; -webkit-appearance: none;" type="submit" name="subscribe" onclick="_paq.push(['trackEvent', 'Mailing List', 'Subscribe'])">
-                <span class="text-500">Subscribe</span> <span class="fr pr1">-></span>
-              </button>
-            </div>
-          </form>
-            </aside>
-          </section>
-      </footer>
-    </div>
-  </div>
-</div>
+      <h2 class="mt4">Need Help?</h2>
+      <li class="mt2"><a href="mailto:support@urbit.org">support@urbit.org↗</a></li>
+      <li class="mt2"><a href="https://twitter.com/urbit">twitter.com/urbit</a></li>
+      <li class="mt2"><a href="https://github.com/urbit">github.com/urbit</a></li>
+    </nav>
+
+    <aside class="c7-11-md c7-11-lg full mt4" id="newsletter-subscribe-bottom">
+      <h2 id="updates" class="mt0">
+        Updates
+      </h2>
+      <p class="lh-copy">Every month we send an email with community events and what we're up to.</p>
+      <iframe name="nothing" style="display:none;"></iframe>
+      <form action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;amp;id=be143888d2"
+        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form"
+        target="_blank" novalidate>
+        <div class="input-group" id="mc_embed_signup_scroll">
+          <div class="mc-field-group w-100">
+            <small class="mb1 dib">Receiving Email Address</small>
+            <input class="bg-black white b--white ba pa3 w-100 mb2" type="email" name="EMAIL" id="mce-EMAIL"
+              placeholder="your@email.com">
+          </div>
+          <div id="mce-responses" class="clear">
+            <div id="mce-error-response" class="response" style="display:none"></div>
+            <div id="mce-success-response" class="response" style="display:none"></div>
+          </div>
+          <div style="position: absolute; left: -5000px;" aria-hidden="true">
+            <input type="text" name="b_972a03db9e0c6c25bb58de8c8_be143888d2" tabindex="-1" value="">
+          </div>
+          <button id="mc-embedded-subscribe" class="bg-white mb4 bn justify-between black w-100 tl"
+            style="font-family: 'Inter UI', san-serif; padding: 16px; -webkit-appearance: none;" type="submit"
+            name="subscribe" onclick="_paq.push(['trackEvent', 'Mailing List', 'Subscribe'])">
+            <span class="text-500">Subscribe</span> <span class="fr pr1">-></span>
+          </button>
+        </div>
+      </form>
+    </aside>
+  </section>
+</footer>
 {% endblock content %}
