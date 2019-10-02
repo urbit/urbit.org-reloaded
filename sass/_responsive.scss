@@ -11,3 +11,12 @@
         left: 16px !important;
     }
 }
+
+// essay scaling below desktop
+@media all and (max-width: 59em) {
+    body.essay {
+        article > *:not(figure) {
+            grid-area: auto / 1 / auto / 13;
+        }
+    }
+}

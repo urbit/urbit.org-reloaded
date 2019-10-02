@@ -66,10 +66,20 @@ nav {
         margin-bottom: 8px;
     }
 }
+
+// full-bleed backgrounds
+
 .full-bleed {
     margin: 0 -32px 0 -32px;
     padding: 0 32px 0 32px;
 }
+
+// full-bleed images
+figure.full-bleed {
+    margin: 0 -32px 0 -32px;
+    padding: 0;
+}
+
 
 a {
     color: inherit;
@@ -145,6 +155,9 @@ body.essay {
     img {
         display: block;
         margin: 0 auto;
+    }
+    article > *:not(figure) {
+        grid-area: auto / 4 / auto / 10;
     }
 }
 
