@@ -44,9 +44,7 @@
 body {
     font-family: "Inter", "Inter UI", -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
-    &:not(.primer) {
-        @extend .grid12, .mh4;
-    }
+    @extend .grid12, .mh4;
     font-size: 1rem;
     color: #000;
 }
@@ -91,6 +89,10 @@ article {
     // post directories
     li {
         margin: 0rem 1rem 1rem 1rem;
+    }
+    // specific to homepage
+    nav li {
+        margin: 0;
     }
 }
 
@@ -159,6 +161,10 @@ ul {
 ul p {
     margin-block-start: 0;
     margin-block-end: 0;
+}
+    // figure reset
+figure {
+    margin: 0;
 }
 
     // images for posts
@@ -482,7 +488,3 @@ hr {
     margin: 2rem 0 2rem 0;
 }
 
-    // smooth scroll on /updates, etc.
-    .scroll-smooth {
-        scroll-behavior: smooth;
-    }
