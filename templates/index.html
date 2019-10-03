@@ -5,6 +5,7 @@ a[href*="//"]:not([href*="{{config.base_url | safe}}"])::after {
 content: " ↗";
 }
 {% endblock templatestyles %}
+{% block bodyclasses %}class="index"{% endblock bodyclasses %}
 
 {% block title %} {{ section.title }} {% endblock title %}
 
@@ -61,8 +62,14 @@ content: " ↗";
 
 <article class="full-bleed full grid12 mt6">
 
-  <section id="introduction" class="full tc pt7 pb7 mt4 mb4 ba b--black">
-    Urbit is a simple, durable computer that you own 100% and forever.
+  <section id="introduction" class="full tl mt5 mb5 relative">
+    <p class="absolute"
+    style="top: 3%; left: 3%; z-index: 1;">So, <em>your</em> Urbit is a simple, durable computer that you own 100% and forever.</p>
+    <video loop muted autoplay 
+    poster="https://media.urbit.org/site/understanding-urbit/landscape.png"
+    class="w-100 ba b--black"
+    id="landscapevid">
+  </video>
   </section>
 
   <section id="intro-drawing" class="c4-10-md c4-10-lg full">
@@ -106,10 +113,15 @@ content: " ↗";
     </figure>
   </section>
 
-  <section id="vid-ocean" class="full tc pt7 pb7 mt4 mb4 ba b--black">
-    <p>Nothing quite like this has ever <br />
-      been done before, <br />
-      and nothing is quite like it.</p>
+  <section id="vid-ocean" class="full tl mt5 mb5 relative">
+    <p class="absolute white"
+    style="top: 3%; left: 3%; z-index: 1;">Nothing quite like this has ever been done before, 
+    and nothing is quite like it.</p>
+    <video loop muted autoplay 
+    poster="https://media.urbit.org/site/understanding-urbit/ocean.png"
+    class="w-100 ba b--black"
+    id="oceanvid">
+  </video>
   </section>
 
   <section id="megacorp" class="c4-10-md c4-10-lg full">

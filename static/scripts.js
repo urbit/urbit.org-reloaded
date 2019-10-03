@@ -165,11 +165,9 @@ function makeTeaser(body, terms) {
 function formatSearchResultTitle(item) {
   var pathArray = item.ref.split( '/' );
 
-  // first directory is in 4th element of split path array
   var firstPartTitle = pathArray[3];
   let firstTitleCapitals = firstPartTitle.charAt(0).toUpperCase() + firstPartTitle.slice(1);
 
-  // last directory is in 2nd to last element of array
   var lastPartTitle = item.doc.title;
 
   var fullTitle = firstTitleCapitals + '<span class="gray1 dib pl2">' + ' / ' + lastPartTitle + '</span>';
@@ -390,22 +388,26 @@ window.addEventListener("scroll", event => {
       link.classList.remove("current");
     }
   });
-
-  // this is honestly weird UX when selecting a link,
-  // as every header flies open as you scroll.
-  // for later discussion and experimentation --
-  // may just need debouncing.
-  // Also still working out the logic for closing other summary
-  // headers as you scroll.
-  
-//  headers.forEach(summary => {
-//    let thisH2 = document.querySelector("h2#" + CSS.escape(summary.id));
-//    if (
-//      (thisH2.offsetTop <= fromTop) &&
-//      (thisH2.offsetTop + thisH2.offsetHeight > fromTop)
-//    ) {
-//      summary.parentElement.open = true;
-//    }
-//  })
-//
 })};
+
+// homepage video load behaviour on mobile
+
+
+if (document.body.classList.contains("index")) {
+  if( navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)
+    ){
+    } else {
+        document.getElementById("landscapevid").innerHTML = `
+        <source src="https://media.urbit.org/site/understanding-urbit/landscape.webm" type="video/webm">
+        <source src="https://media.urbit.org/site/understanding-urbit/landscape.mp4" type="video/mp4">`;
+        document.getElementById("oceanvid").innerHTML = `
+        <source src="https://media.urbit.org/site/understanding-urbit/ocean.webm" type="video/webm">
+        <source src="https://media.urbit.org/site/understanding-urbit/ocean.mp4" type="video/mp4">`;
+      }
+    }
