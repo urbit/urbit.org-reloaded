@@ -1,4 +1,3 @@
-// The cascading isn't operating as expected using just indigo here. :(
 @media all and (min-width: 1260px) {
     nav.previous, nav.next {
         width: auto !important;
@@ -12,11 +11,25 @@
     }
 }
 
-// essay scaling below desktop
+// scaling below desktop
 @media all and (max-width: 59em) {
     body.essay {
         article > *:not(figure) {
             grid-area: auto / 1 / auto / 13;
         }
+    }
+}
+
+// custom L breakpoint classes
+@media screen and (min-width: 46.875em) and (max-width: 60em) {
+    .white-l { 
+        color: #fff; 
+    }
+}
+
+// custom XL breakpoint classes
+@media screen and (min-width: 60em) {
+    .white-xl {
+        color: #fff;
     }
 }
