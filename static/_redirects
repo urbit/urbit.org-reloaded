@@ -1,8 +1,9 @@
-/docs/introduction                   /docs/concepts/
-/docs/getting-started/azimuth        /docs/getting-started/using-bridge/
-/landscape                           /docs/concepts/contributing/
-/docs/getting-started/using-a-star   /docs/getting-started/operating-a-star/
-/docs/bridge                         /docs/getting-started/azimuth/
-/docs/pki                            /docs/concepts/azimuth/
-/docs/arvo/internals/                /docs/learn/arvo/
+/docs/introduction                   /docs
+/docs/getting-started                /install
+/docs/getting-started/azimuth        /understanding-urbit/urbit-id
+/landscape                           /contributing
+/docs/getting-started/using-a-star   /contributing#galaxies-and-stars
+/docs/bridge                         /azimuth/glossary#bridge
+/docs/pki                            /docs/azimuth/
+/docs/arvo/internals/                /docs/arvo/
 /primer                              /
