@@ -53,5 +53,3 @@ All of these actions happen on Azimuth. There will be Bridge functionality to ha
 + The planet calls the `escape` function in the Ecliptic contract and writes the resulting data to the blockchain.
 + If the chosen star wants to become the planet's sponsor, it calls the `adopt` function in the Ecliptic contract.
 + The Arvo network notices the change, and the operation is complete.
-
-## Governance {#governance}

@@ -1,6 +1,6 @@
 +++
 title = "Technical Overview"
-weight = 5
+weight = 6
 [extra]
 readtime = "true"
 +++

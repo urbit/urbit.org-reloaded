@@ -1,6 +1,6 @@
 +++
 title = "Your Last Computer"
-weight = 3
+weight = 2
 [extra]
 readtime = "true"
 +++
