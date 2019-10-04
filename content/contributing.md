@@ -54,4 +54,4 @@ All of these actions happen on Azimuth. There will be Bridge functionality to ha
 + If the chosen star wants to become the planet's sponsor, it calls the `adopt` function in the Ecliptic contract.
 + The Arvo network notices the change, and the operation is complete.
 
-## Developing on Urbit {#developing-on-urbit}
+## Governance {#governance}

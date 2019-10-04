@@ -18,8 +18,9 @@
 <nav class="mt4 full fourth-1-md fourth-1-lg mb3 mb0-m mb0-l mb0-xl">
   <a class="gray3" href="/">Urbit</a> 
   <span class="gray3"> / </span>
-  <a class="section" href="/essays">
-    Essays
+  <a class="section" href="/{{ page.components[0] }}">
+    {% set sectionname = get_section(path=page.components[0] ~ "/_index.md") %}
+    {{ sectionname.title }}
   </a>
 
   {% include "partials/navigation-search.html" %}
@@ -33,9 +34,13 @@
   {% endif %}
   </span> 
   {% if page.date %}
-    <time class="mono full c4-10-lg db mv1 gray2 f5">{{page.date | date(format="~%Y.%-m.%-d") }}</time>
+    <time class="mono full c4-10-lg db mv2 gray0 f5">{{page.date | date(format="~%Y.%-m.%-d") }}</time>
   {% endif %}
 {% endif %}
+  {% if page.extra.readtime %}
+  <span class="dib mono full c4-10-lg ml2 mv1 gray2 f5"> {{ page.reading_time }}m read</span>
+  {% endif %} 
+
   <article class="mb4 mt4 full grid12">
     {{ page.content | safe }}
 

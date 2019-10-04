@@ -3,12 +3,6 @@ title = "Install"
 template = "page_indiced.html"
 +++
 
-## Install Urbit {#install-urbit}
+## Getting an Urbit ID {#id}
 
-## Using Landscape {#using-landscape}
-
-## Using the CLI {#using-the-cli}
-
-## Using Bridge {#using-bridge}
-
-## Invite Friends {#invite-friends}
+## Install Urbit {#urbit}

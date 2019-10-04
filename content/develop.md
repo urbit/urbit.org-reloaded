@@ -3,6 +3,10 @@ title = "Develop"
 template = "page_indiced.html"
 +++
 
+## Core Development {#core}
+
+## Application Development {#application}
+
 ## Creating a Development Ship {#creating-a-development-ship}
 
 To do work with Hoon and with the system, we recommended using a "fake" ship -- one not connected to the network.

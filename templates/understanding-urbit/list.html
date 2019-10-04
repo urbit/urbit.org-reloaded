@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %} Understanding Urbit {% endblock title %}
+{% block content %}
+<!-- header -->
+<nav class="mt4 full fourth-1-md fourth-1-lg mb3 mb0-m mb0-l mb0-xl">
+  <a class="gray3" href="/">Urbit</a> 
+  <span class="gray3"> / </span>
+  <a href="/understanding-urbit/">
+    Understanding Urbit
+  </a>
+  {% include "partials/navigation-search.html" %}
+</nav>
+<!-- content -->
+      <article class="mt4-l mt4-xl mb2 full c4-12-lg">
+        <ul class="posts">
+          {% set posts = get_section(path="understanding-urbit/_index.md") %}
+          {% for page in posts.pages %}
+          <li class="mb4">
+            <h2 class="f4 fw4"><a class="bb-0" href="{{ page.permalink }}">{{ page.title }}</a></h2>
+            <p class="mt0">{{ page.description }}</p>
+          </li>
+          {% endfor %}
+        </ul>
+      </article>
+{% endblock content %}
