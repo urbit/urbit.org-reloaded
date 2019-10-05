@@ -12,7 +12,7 @@
   {% include "partials/navigation-search.html" %}
 </nav>
 <!-- content -->
-      <main class="mt4 mb4 full c4-10-lg">
+      <main class="mt4 mb4 c1-12 c4-10-lg">
           {% set posts = get_section(path="updates/_index.md") %}
           {% for page in posts.pages | slice (end=1) %}
           <article class="mb6 relative">
