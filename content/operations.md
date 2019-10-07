@@ -4,10 +4,69 @@ template = "page_indiced.html"
 slug = "/operations/"
 +++
 
-## Admin and Operations {#urbit-administration}
+## Using Bridge {#using-bridge}
 
-Your urbit (also called your _ship_) is a persistent Unix process that you
-mainly control from the console. For some things, a browser will also work.
+[Bridge](https://github.com/urbit/bridge) is the application we built for interacting with [Azimuth](https://azimuth.network), the Urbit PKI, and managing your Urbit ID. Importantly, Bridge also allows you to generate a keyfile that you will need to boot your ship so that it can use the Arvo network.
+
+This guide assumes that you have an Urbit ID, or that you have found someone to send an Urbit ID to your Ethereum address and are looking to claim it.
+
+### Online Bridge
+
+To connect to Bridge, go to [https://bridge.urbit.org](https://bridge.urbit.org) into your browser, and enter your identity's credentials in the appropriate fields. If you were invited to claim an Urbit ID, it's very likely that you received an email that would direct you to Bridge, and you can simply follow the hyperlink in that email.
+
+Once you arrive proceed through the steps presented. You'll eventually arrive at a page with a few choices: `Invite`, `Admin`, and `Boot Arvo`. `Admin` is the only option that you're interested in right now; click on it. On the `Admin` page, click the `Download Arvo Keyfile` button. Once you have downloaded the keyfile, you can exit Bridge and proceed to [install the Urbit binary](@/install.md).
+
+### Offline Bridge
+
+Alternatively, Bridge can be run locally. It's more complicated, but we recommend this option for managing sufficiently valuable assets, such as several stars or more. To install local Bridge, navigate to the [release page on GitHub](https://github.com/urbit/bridge/releases/). Download the `.zip` file of the latest version. After you download it, follow the instructions below.
+
+To use Bridge:
+
+- Unzip the .zip file that you downloaded (bridge-$version.zip).
+- Open up your command line interface (Terminal on OSX, Command Prompt on Windows).
+- Navigate to the bridge-$version directory, where $version is the appropriate version number.
+- Run this command: `python3 -m http.server 5000 --bind 127.0.0.1.`
+
+You can then use the Bridge app by navigating to `http://localhost:5000` in your internet browser.
+
+Note: Bridge allows you to both make reads and writes to the Ethereum blockchain. Writing to the blockchain, such as changing your networking keys, will incur a transaction cost that will require you to have some ETH in your address.
+
+Once the program is running in your browser, go through the steps presented according to the type of wallet you have. You’ll be presented with a few login options. A notable option is Urbit Master Ticket. This is for those who used our Wallet Generator software. If you bought points from an Urbit sale and then used the Wallet Generator, your networking keys will be set for you. All other login options will require you to set your own networking keys.
+
+### Accept Your Transfer
+
+If you were given points by Tlon you likely already fully own them. But if someone else sent you a point, then you will first need to use Bridge to accept that transfer.
+
+After you access your Ethereum address, if a point was sent to that address, you'll come to a page that has an `Incoming Transfers` header, under which is a graphic. Click the `Details ->` link under that graphic.
+
+Now you'll be on the management page of your point. The transfer isn't completed yet, so click `Accept incoming transfer`. Then check both boxes and and click their associated `Sign Transaction` and `Send Transaction` buttons.
+
+If you already own a point, click on the `Details ->` under your sigil in the `Your Points` section.
+
+### Set Your Networking Keys
+
+If you just accepted a point, you'll be returned to your point screen. Notice that that links and buttons are now clickable. You now own this point!
+
+Click the link that says `Set network keys`. The field presented in the resulting page expects a 32-byte hexadecimal string. If it's filled already, no action is required. If it is empty, you will need to generate such a string. You can generate this data any way you please, but in the terminal on MacOS or Linux, you can write
+
+```sh
+hexdump -n 32 -e '4/4 "%08X"' /dev/random
+```
+
+and use the result.
+
+It should be noted that setting your network keys is an event on the Ethereum network and will therefore cost a trivial, but non-zero, amount of [gas](https://github.com/ethereum/wiki/wiki/Design-Rationale#gas-and-fees) to complete.
+
+### Generate Your Keyfile
+
+From the detail page associated with your point, click the `Generate Arvo Keyfile` link and you'll be taken to a page with a field titled `Network seed`. This field should already be filled in, and should match the hexadecimal string that you entered in the previous step. If it's not filled in or does not match, fill it in with the correct string.
+Click `Generate ->`, which will download a keyfile onto your machine.
+
+With that keyfile in hand, you can now exit Bridge and continue to the guide to [install the Urbit binary](@/install.md).
+
+## Using Your Ship {#urbit-administration}
+
+Your urbit (also called your _ship_) is a persistent Unix process that you mainly control from the console. 
 
 ### Shutdown
 
@@ -19,63 +78,56 @@ You can force-quit your urbit with `Ctrl-z` from anywhere.
 
 To restart your urbit simply pass the name of your pier:
 
-```
-$ urbit some-planet
+```sh
+$ ./urbit some-planet
 ```
 
 or
 
-```
-$ urbit comet
+```sh
+$ ./urbit comet
 ```
 
 ### Logging
 
 To log an urbit's command line output to a file, use `script`:
 
-```
-$ script urbit.log urbit your-urbit
+```sh
+$ script urbit.log ./urbit your-urbit
 ```
 
 ### Moving your pier
 
 Piers are designed to be portable, but it _must_ be done while the urbit
-is turned off. Urbit networking is stateful, so you can't run two copies
+is not running. Urbit networking is stateful, so you can't run two copies
 of the same urbit in two places.
 
 To move a pier, simply move the contents of the directory it lives in.
 To keep these files as small as possible we usually use the `--sparse`
 option in `tar`. With a pier `your-urbit/`, something like this should work:
 
-```
+```sh
 tar -Scvzf ~/your-urbit.tar.gz ~/your-urbit/
 scp your-old-server:~/your-urbit.tar.gz your-new-server:~
 ```
 
 Then to unzip it, on your other Unix server, run:
 
-```
+```sh
 tar xfvz your-urbit.tar.gz
 ```
 
-Delete the tar file, and, after installing Urbit on your new server,
-start your urbit back up with:
+Delete the tar file, and, after installing Urbit on your new server, start your urbit back up with:
 
-```
-urbit your-urbit
+```sh
+./urbit your-urbit
 ```
 
 ### Console
 
-Your Urbit terminal is separated into two parts: the prompt (the bottom
-line) and the record (everything above that). The record is shared; all
-the output from all the apps in your command set appears in it. The
-prompt is multiplexed.
+Your Urbit terminal is separated into two parts: the prompt (the bottom line) and the record (everything above that). The record is shared; all the output from all the apps in your command set appears in it. The prompt is multiplexed.
 
-In the CLI, Urbit apps can process your input before you hit return. To
-see this in action try entering `)` as the first character at the Dojo
-prompt. Since there is no Dojo command or Hoon expression that starts
-with ')', the Dojo rejects it.
+In the CLI, Urbit apps can process your input before you hit return. To see this in action try entering `)` as the first character at the Dojo prompt. Since there is no Dojo command or Hoon expression that starts with ')', the Dojo rejects it.
 
 `Ctrl-x` - Switches the prompt between running console apps
 
@@ -94,10 +146,10 @@ The following emacs-style key bindings are available:
 Ctrl-a    Cursor to beginning of the line (Home)
 Ctrl-b    Cursor one character backward (left-arrow)
 Ctrl-e    Cursor to the end of the line (End)
-Ctrl-f    Cursor one character forward (right-arrow)
+Ctrl-f     Cursor one character forward (right-arrow)
 Ctrl-g    Beep; cancel reverse-search
 Ctrl-k    Kill to end of line
-Ctrl-l    Clear the screen
+Ctrl-l     Clear the screen
 Ctrl-n    Next line in history (down-arrow)
 Ctrl-p    Previous line in history (up-arrow)
 Ctrl-r    Reverse-search
@@ -106,26 +158,15 @@ Ctrl-u    Kill to beginning of line
 Ctrl-y    Yank from kill buffer
 ```
 
-### Web
+### Landscape
 
-On startup Urbit tries to bind to `localhost:80`. If you're already
-running something on port `80` -- such as any other HTTP server, or another urbit -- you'll find the urbit
-that you just started on `8080`, `8081`, and so on. For planets only, we also proxy web
-domains through Urbit's own servers. Any planet `~your-urbit` is also at
-`your-urbit.arvo.network`, but only after you [set up DNS](../dns-proxying).
+On startup Urbit tries to bind to `localhost:80`. If you're already running something on port `80` -- such as any other HTTP server, or another urbit -- you'll find the urbit that you just started on `8080`, `8081`, and so on. For planets only, we also proxy web domains through Urbit's own servers. Any planet `~your-urbit` is also at `your-urbit.arvo.network`, but only after you [set up DNS](#dns-proxying).
 
-Your urbit serves a simple homepage from `http://localhost` or
-`https://your-urbit.arvo.network` that should be self-explanatory. Since
-our HTTPS isn't audited / battle tested, we just call it "secure" HTTPS.
-You can find that on `8443`. Or `8444` (and so on) if you're already
-running something on `8443`.
+Once running, you can sign into Landscape, your ship’s web interface, from `http://localhost` or `https://your-urbit.arvo.network`. Since our HTTPS isn't audited / battle tested, we just call it "secure" HTTPS. You can find that on `8443`. Or `8444` (and so on) if you're already running something on `8443`.
 
 ### Moons {#moons}
 
-Planets can spawn moons, which are meant for connected devices: phones, smart
-TVs, digital thermostats. The basic idea is: your planet runs permanently in a
-data center somewhere and moons run on all your devices.  Each planet can issue
-~4 billion (`2^32`) moons.
+Planets can spawn moons, which are meant for connected devices: phones, smart TVs, digital thermostats. The basic idea is that your planet runs permanently in a data center somewhere, while moons run on all your devices.  Each planet can issue ~4 billion (`2^32`) moons.
 
 To generate a random moon from your planet, run:
 
@@ -138,8 +179,7 @@ moon: ~faswep-navred-sampel-palnet
 \/                                                                                               \/
 ```
 
-You must manually edit the output of `+moon` to get
-the correct format for the `<key>`:
+You must manually edit the output of `+moon` to get the correct format for the `<key>`:
 
 - strip out the `\/`
 
@@ -159,20 +199,18 @@ Another way of generating `<keyfile>` is:
 moon: ~faswep-navred-sampel-palnet
 ```
 
-`<keyfile>` will be at `path/to/sampel-palnet/.urb/put/moon.key`
-and does not need editing to be used with the `-k` option.
+`<keyfile>` will be at `path/to/sampel-palnet/.urb/put/moon.key` and does not need editing to be used with the `-k` option.
 
-You can use the resulting output in the same installation flow from the
-[Booting a Ship](@/install.md) guide, following the same scheme as for booting a planet. That scheme is:
+You can use the resulting output in the same installation flow from the [Installing Urbit](@/install.md) guide, following the same scheme as for booting a planet. That scheme is:
 
-```
-$ urbit -w <moonname> -G <key> -c <piername>
+```sh
+$ ./urbit -w <moonname> -G <key> -c <piername>
 ```
 
 or
 
-```
-$ urbit -w <moonname> -k <keyfile> -c <piername>
+```sh
+$ ./urbit -w <moonname> -k <keyfile> -c <piername>
 ```
 
 The `-c <piername>` argument is not required, but it is recommended; otherwise,
@@ -180,36 +218,27 @@ the resulting directory is a rather unwieldy moon name.
 
 Here's how an example moon might be booted:
 
-```
-$ urbit -w faswep-navred-sampel-palnet -G <key> -c mymoon
+```sh
+$ ./urbit -w faswep-navred-sampel-palnet -G <key> -c mymoon
 ```
 
 or
 
-```
-$ urbit -w faswep-navred-sampel-palnet -k <keyfile> -c mymoon
+```sh
+$ ./urbit -w faswep-navred-sampel-palnet -k <keyfile> -c mymoon
 ```
 
-Moons are automatically synced to their parent `%kids` desk, and can control
-applications on their parent planet using `|link`.  
+Moons are automatically synced to their parent `%kids` desk, and can control applications on their parent planet using `|link`.  
 
 ### Continuity breaches
 
-While the Urbit network is in this alpha state, we sometimes have to
-reboot the whole network. This happens either when major changes need
-to be shipped or we hit a bug that can't be fixed over the air.
+While the Urbit network is in this alpha state, we sometimes have to reboot the whole network. This happens either when major changes need to be shipped or we hit a bug that can't be fixed over the air.
 
-Because Urbit networking is stateful we call this a _continuity breach_.
-Everything has to be restarted from scratch. Your pier will continue to
-function after we have breached, but it wont connect to the rest of the
-Urbit network.
+Because Urbit networking is stateful we call this a _continuity breach_. Everything has to be restarted from scratch. Your pier will continue to function after we have breached, but it won’t connect to the rest of the Urbit network.
 
-When this happens, back up any files you'd like to save, shut down your
-urbit and recreate it (as if you were starting for the first time).
-
+When this happens, back up any files you'd like to save, shut down your urbit, and recreate it (as if you were starting for the first time).
 
 ## Creating a Comet {#creating-a-comet}
-
 
 **Comets** are urbits whose names are 128-bits or 16 syllables, such as:
 
@@ -221,8 +250,8 @@ Comet names aren't quite as memorable as others, but they're disposable identiti
 
 To boot your comet, go into the command line and run the following command from the directory that was created during Urbit installation:
 
-```
-$ urbit -c mycomet
+```sh
+$ ./urbit -c mycomet
 ```
 
 This will take a few minutes and will spin out a bunch of boot messages. Toward the end, you'll see something like:
@@ -235,7 +264,6 @@ http: live (insecure, loopback) on 12321
 ~dasres_marzod:dojo>
 ```
 
-
 ## DNS Proxying {#dns-proxying}
 
 We have a system that lets you request a domain name for your ship in the form of `ship.arvo.network`, where `ship` is your ship's name minus the `~`. This allows users to access their ships remotely using Landscape, our graphical web interface.
@@ -246,7 +274,8 @@ Stars and planets follow the same process DNS proxying process, and galaxies hav
 
 For a planet or star's DNS proxying request to be made and fulfilled, they must be hosting their ship someplace with a public IP address, and its HTTP server must be listening on port 80.
 
-To get `ship.arvo.network` on a planet or star, you must set up DNS routing with its parent ship by starting the `:dns` app.
+To get `ship.arvo.network` on a planet or star, you must set up DNS routing with its parent ship by starting the `:dns` app. 
+
 To do so, simply run this command in your ship's Dojo:
 
 ```
@@ -261,9 +290,9 @@ You'll then be prompted to enter the public IP address of your ship. You can als
 
 `:dns`, running locally, will make an HTTP request to that IP address on port 80 to confirm that it is itself available at that IP and port. If that fails, you'll receive a `%bail-early` message in `:talk`; this request will retry a few times. If the self-check is successful, the request is relayed to `~zod`, and you'll receive a message saying, `request for DNS sent to ~zod`. Once `~zod` has acknowledged receipt of the request, your local `:dns` app will send a `:talk` message saying `awaiting response from ~zod`.
 
-The request will be picked up shortly, and the `ship.arvo.network` DNS record will be set to the given IP address. Once that's setup, `~zod` will be notified, and `~zod` will, in turn, notify your ship. That ship will now try to verify that it can reach itself on `ship.arvo.network` over port 80. If it can't, it'll send a message saying `unable to access via ship.arvo.network`. If it can, it will configure itself with that domain, and say `confirmed access via ship.arvo.network`.
+The request will be picked up shortly, and the `ship.arvo.network` DNS record will be set to the given IP address. Once that's set up, `~zod` will be notified and `~zod` will, in turn, notify your ship. That ship will now try to verify that it can reach itself on `ship.arvo.network` over port 80. If it can't, it'll send a message saying, `unable to access via ship.arvo.network`. If it can, it will configure itself with that domain and say `confirmed access via ship.arvo.network`.
 
-Great! You're set up now. Try accessing your `ship.arvo.network` in your browser to use Landscape; we recommend using Chrome or Brave.
+Great! You're set up now. Try accessing your `ship.arvo.network` in your browser to use Landscape; we recommend Chrome or Brave.
 
 ### Galaxies
 
@@ -283,44 +312,23 @@ Otherwise, `:dns|auto` works the same as `:dns|ip` does with stars and planets: 
 
 Configuring a ship's domain causes the `:acme` app to request an HTTPS certificate for that domain from LetsEncrypt. Note that LetsEncrypt also requires that the HTTP server be listening on port 80. If the certificate request fails, `:acme` will send a `:talk` message with an explanation. Once the certificate is successfully retrieved, `:acme` will install it, causing the HTTP servers to restart. A secure server will be started on port 443 (the HTTPS default) if it's available. Otherwise, it will try 8443, and then increment to the next port until it can successfully bind one.
 
-The built-in logic for listening on port 80 similar. Urbit tries to bind port 80; if it cannot, it tries 8080, then increments until it can bind a port. Port 80 is available to unprivileged process on recent version of macOS. Otherwise, the process needs to either be run as root, or be given special permission (CAP\_NET_BIND on Linux).
-
+The built-in logic for listening on port 80 is similar. Urbit tries to bind port 80; if it cannot, it tries 8080, then increments until it can bind a port. Port 80 is available to unprivileged process on recent version of macOS. Otherwise, the process needs to either be run as root, or be given special permission (CAP\_NET_BIND on Linux).
 
 ## Messaging {#messaging}
 
-Talk is the built-in frontend for the Urbit messaging and notifications
-protocol, Hall. Today we use Hall to chat and coordinate, but it's really
-a general purpose piece of infrastructure.
-
-For the time being come join us in `~dopzod/urbit-help` by using the
-'quickstart' section below. `~dopzod` is the host ship, and `/urbit-help` is the
-channel on that ship.
-
-Today, Hall is sort of like a distributed, encrypted Slack that can be
-used from the CLI and the browser. There’s no central Hall server.
-Any urbit can host one.
-
-Hall is a general purpose tool for both aggregating and publishing
-streams of messages. Applications can use Hall as their transport
-protocol, API connectors can push disparate data sources into Hall,
-and so on. There are lots of things a distributed message protocol can
-be used for that we haven't even thought of.
-
-Here we'll be discussing how to operate the default CLI frontend, Talk,
-to send and receive messages. For a more in-depth look at Hall's internals,
-take a look at its [documentation](@/docs/arvo/hall.md).
+Let’s get started using the :talk application from the command line.
 
 ### Quickstart
 
-The most common uses of Talk right now are communicating over a public chat channel called `~dopzod/urbit-help` and sending direct messages. Everyone is more than welcome in `~dopzod/urbit-help`. It's the place to get help, ask questions and chat about Urbit in general.
+The most common uses of :talk right now are communicating over a public chat channel on `~dopzod/urbit-help`, and sending direct messages. Everyone is more than welcome in `~dopzod/urbit-help`. It's the place to get help, ask questions and chat about Urbit in general.
 
-There are two ways of using Talk: from the terminal running the Urbit process, or through the Landscape web UI available at `http://localhost/~~/landscape`.
+There are two ways of using :talk: from the terminal running the Urbit process, or through the Landscape web UI available from your ship’s URL address.
 
 If you're using Landscape for the first time, you'll need to enter a code to gain access. You can obtain this code by running `+code` from the Dojo.
 
 ### Joining a channel
 
-In Hall, a medium for a message is called a _circle_. There are four types of circles, but we for now we'll be dealing with the _channel_: a publicly accessible chatroom for general use. We'll discuss the other three kinds in the [manual](#manual) section.
+Hall is the Arvo vane on the back-end that manages :talk. In Hall, a medium for a message is called a _circle_. There are four types of circles, but for now we'll be dealing with the _channel_: a publicly accessible chatroom for general use. We'll discuss the other three kinds in the [manual](#messaging-manual) section later on.
 
 Let's join the `~dopzod/urbit-help` channel. Use `ctrl-x` to switch from Dojo to Talk.
 
@@ -330,8 +338,7 @@ Then:
 ~your-urbit:talk> ;join ~dopzod/urbit-help
 ```
 
-Scrolling down your terminal window, you'll probably see the playback of
-previous `~dopzod/urbit-help` messages that you missed.
+Scrolling down your terminal window, you'll probably see a playback of previous `~dopzod/urbit-help` messages that you missed.
 
 Post a line to `~dopzod/urbit-help:`
 
@@ -344,18 +351,6 @@ You'll see your message printed below messages from others that came before it:
 ```
 ~your-urbit= Hello, world!
 ```
-
-### Subscribing to a channel in Landscape
-
-In Landscape, you can always navigate to a channel by opening the menu, or using the shortcut `cmd-k`, then typing `go ~host-urbit/channel-name`. However, if you want to see messages in your inbox, you'll need to join from the Talk terminal.
-
-Again, that's:
-
-```
-;join ~dopzod/urbit-help
-```
-
-Now, navigate to `localhost/~~/landscape`. You should see recent messages under the "Recent" tab, and if you navigate to the "All" tab, you should see your subscription to `~dopzod/urbit-help` under "Chats".
 
 ### Direct Messaging
 
@@ -404,9 +399,6 @@ Use `;leave` to unsubscribe from a channel:
 ~your-urbit:talk= ;leave ~dopzod/urbit-help
 ```
 
-The web UI ships as compiled JavaScript on your urbit, but has its own
-source repo [here](https://github.com/urbit/talk).
-
 Last, let's create a channel we can invite some friends to:
 
 ```
@@ -417,30 +409,21 @@ Now you can tell your friends to `;join ~your-urbit/my-channel`.
 
 ---
 
-### Manual
+### Messaging manual {#messaging-manual}
 
-Hall's design is similar in spirit to
-[NNTP](https://en.wikipedia.org/wiki/Network_News_Transfer_Protocol),
-the underlying protocol for Usenet.
+Hall, the back-end Arvo vane that provides the messaging for :talk, has a design that is similar in spirit to [NNTP](https://en.wikipedia.org/wiki/Network_News_Transfer_Protocol), the underlying protocol for Usenet.
 
-Our design is pretty simple: Hall messages are called _posts_. Posts
-go to _circles_. Any urbit can host or subscribe to any number of circles.
+The design is pretty simple: Hall messages are called _posts_. Posts go to _circles_. Any urbit can host or subscribe to any number of circles.
 
-There are four kinds of circles: a write-only `%mailbox` for direct
-messages, an invite-only `%village` for private conversation, a read-only
-`%journal` for curated content, and a public-access `%channel` for
-general use.
+There are four kinds of circles: a write-only `%mailbox` for direct messages, an invite-only %village` for private conversation, a read-only `%journal` for curated content, and a public-access `%channel` for general use.
 
 #### Posts
 
-A post can be a variety of different data structures. Let's look at the
-ones you can use from within Talk: lines, URLs, Hoon and replies.
+A post can be a variety of different data structures. Let's look at the ones you can use from within Talk: lines, URLs, Hoon, and replies.
 
 #### Lines
 
-A line is simply a string of text. Depending on the filtering rules set
-by the circle's host, these may or may not include uppercase and Unicode
-characters (see [filter](#filter)).
+A line is simply a string of text. Depending on the filtering rules set by the circle's host, these may or may not include uppercase and Unicode characters (see [filter](#filter)).
 
 If the line starts with `@`, it's an action (like `/me` in IRC).
 
@@ -464,8 +447,7 @@ A URL is any valid URL.
 
 #### Hoon
 
-You can use Talk to evaluate Hoon code and share the result with everyone in a
-Hall circle. To do so, preface your Hoon with `#`.
+You can use Talk to evaluate Hoon code and share the results with everyone in a Hall circle. To do so, preface your Hoon with `#`.
 
 ```
 ~your-urbit:talk= #(add 2 2)
@@ -495,8 +477,7 @@ will print as
 
 #### Activating Lines
 
-A line number identifying the **subsequent** line is displayed every 5
-lines.
+A line number identifying the **subsequent** line is displayed every 5 lines.
 
 ```
 ---------[0]
@@ -528,19 +509,14 @@ in reply to: ~your-urbit:
 That's my message!
 ```
 
-If information got truncated — like what happens for long URLs or expressions,
-or if there's additional information available — as is the case with
-replies and attachments (e.g. stack traces) — activating the message will show
-you all the details.
+If information got truncated – like what happens for long URLs or expressions,
+or if there's additional information available – as is the case with replies and attachments (e.g. stack traces) – activating the message will show you all the details.
 
-You can also activate the most recent line with `;`, the second-most recent
-with `;;`, and so on.
+You can also activate the most recent line with `;`, the second-most recent with `;;`, and so on.
 
 ### Creating and managing circles
 
-As mentioned before, any urbit can host any number of circles. Existing circles
-can be deleted or modified with various commands. All commands in this section
-shoild be sent from the `talk>` prompt.
+As mentioned before, any urbit can host any number of circles. Existing circles can be deleted or modified with various commands. All commands in this section should be sent from the `talk>` prompt.
 
 #### Create
 
@@ -625,9 +601,7 @@ And we get the output:
 
 Syntax: `;invite %name ~someone`
 
-Invites someone into your circle `%name`. If they were previously banished,
-removes them from the blacklist.
-Can also invite multiple ships at once, `~comma, ~separated`.
+Invites someone into your circle `%name`. If they were previously banished, removes them from the blacklist. Can also invite multiple ships at once, `~comma, ~separated`.
 
 For example:
 
@@ -639,16 +613,13 @@ For example:
 
 Syntax: `;banish %name ~someone`
 
-Removes someone from your circle `%name`. If they were previously invited,
-removes them from the whitelist.
-Can also banish multiple ships at once, `~comma, ~separated`.
+Removes someone from your circle `%name`. If they were previously invited, removes them from the whitelist. Can also banish multiple ships at once, `~comma, ~separated`.
 
 #### Source
 
 Syntax: `;source %name ~other/circle`
 
-Adds `~other/circle` as a source for circle `%name`. This causes all
-messages sent to `~other/circle` to also appear in `%name`.
+Adds `~other/circle` as a source for circle `%name`. This causes all messages sent to `~other/circle` to also appear in `%name`.
 
 For example:
 
@@ -670,27 +641,23 @@ For example:
 
 #### Circle Membership
 
-If you have joined a circle, you can make this information publicly
-available to help others find that circle as well.
+If you have joined a circle, you can make this information publicly available to help others find that circle as well.
 
 #### Show Membership
 
 Syntax: `;show ~some/circle`
 
-Adds a circle to your public membership list on your Hall profile. Hall profiles
-are not used yet.
+Adds a circle to your public membership list on your Hall profile. Hall profiles are not used yet.
 
 #### Hide Membership
 
 Syntax: `;hide ~some/circle`
 
-Removes a circle from your public membership list on your Hall profile. Hall
-profiles are not used yet.
+Removes a circle from your public membership list on your Hall profile. Hall profiles are not used yet.
 
 ### Status
 
-You'll see status notifications when people enter or leave circles you're
-subscribed to.
+You'll see status notifications when people enter or leave circles you're subscribed to.
 
 #### Notifications Off
 
@@ -859,7 +826,7 @@ Set audience to another ship.
 
 Syntax: `;%circle`
 
-Set audience to a circle on your own ship
+Set audience to a circle on your own ship.
 
 #### Set Audience + Send Message
 
@@ -919,8 +886,8 @@ Syntax: `;unset nicks`
 
 Show ship-names instead of nicknames.
 
-Nicknames and handles longer than 14 character will be truncated in
-output. Nicknames are strictly local - like the names on entries in a
+Nicknames and handles longer than 14 characters will be truncated in
+output. Nicknames are strictly local – like the names on entries in a
 phonebook.
 
 ### Miscellaneous configuration
@@ -941,7 +908,7 @@ Stop showing the timestamp for each message.
 
 Syntax: `;set timezone [+/-][hours]`
 
-Adjust the display of the timestamps to a specific timezone. Relative to UTC.
+Adjust the display of timestamps to a specific timezone. Relative to UTC.
 
 #### Sound Notification On
 
@@ -971,7 +938,6 @@ good place to quickly experiment with Urbit. On the surface the Dojo is just a
 Hoon REPL. On the inside, the Dojo is a system for operating on and transforming
 data in Urbit.
 
-
 ### Quickstart
 
 You can use the Dojo to run arbitrary Hoon code, as well as non-Hoon system
@@ -995,7 +961,7 @@ Tall-form Hoon may require multiple lines:
 ```
 
 Hoon uses something called [the subject](@/docs/hoon/hoon-tutorial/the-subject-and-its-legs.md).
-The Dojo has its own subject, and that's where Hoon's equivalent of variables,
+The Dojo has its own subject and that's where Hoon's equivalent of variables,
 called faces, are stored.
 
 Use `=var` to save faces to the Dojo subject.
@@ -1016,7 +982,7 @@ Use `=dir` to set the current working directory:
 ```
 
 (`%` represents your current directory. For a complete explanation on urbit
-paths, see the [filesystem section](@/operations.md))
+paths, see the [filesystem section](#filesystem).)
 
 Generators (files in `/gen`) are run with `+`:
 
@@ -1061,7 +1027,7 @@ arguments.
 
 #### `+curl`
 
-Retrives data from a URL. Accepts a `tape`. Similar to Unix `curl`.
+Retrieves data from a URL. Accepts a `tape`. Similar to Unix `curl`.
 
 ```
 ~your-urbit:dojo> +curl "http://nyt.com"
@@ -1173,14 +1139,14 @@ number of vane names.
 
 ---
 
-### Manual
+### Dojo manual
 
 #### Sources and sinks
 
 A Dojo command is either a **source** or a **sink**. A source is just something
 that can be printed to your console or the result of some computation. A
 sink is an **effect**: a change to the filesystem, a network message, a
-change to your environment, or typed message to an app.
+change to your environment, or a typed message to an app.
 
 Sources can be chained together, but we can only produce one effect per
 command.
@@ -1250,7 +1216,7 @@ Which outputs a new `urbit.pill` to `pier/.urb/put/urbit.pill`
 
 #### `&` - Mark conversion
 
-Convert between marks using `&`, with the destination mark first. You can stack multiple mark conversions together, and some marks can only be converted to specific other marks. In this example, [Udon](@/docs/arvo/sail-and-udon.md#udon) is converted to `&hymn` (a mark which supplies the `html`, `head`, `body` and closing tags) first, before being converted to HTML:
+Convert between marks using `&`, with the destination mark first. You can stack multiple mark conversions together, and some marks can only be converted to specific other marks. In this example, [Udon](@/docs/arvo/sail-and-udon.md#udon) is converted to `&hymn` (a mark which supplies the `html`, `head`, `body`, and closing tags) first, before being converted to HTML:
 
 ```
 ~your-urbit:dojo>&html &hymn &udon ';h1#hello: hello'
@@ -1409,8 +1375,7 @@ Urbit has its own revision-controlled filesystem, Clay. Clay is a typed, global,
 referentially transparent namespace. An easy way to think about it is like typed
 `git`.
 
-The most common way to use Clay is to mount a Clay node in a Unix directory. The mounted directory is always at the root of your
-pier directory.
+The most common way to use Clay is to mount a Clay node in a Unix directory. The mounted directory is always at the root of your pier directory.
 
 ### Quickstart
 
@@ -1426,7 +1391,7 @@ desk based on the `%home` desk:
 ```
 
 Running `our` produces your ship-name, meaning that you can run the following
-command instead of typing out the entire thing. Useful for comets, due to their
+command instead of typing out the entire thing. Useful for comets due to their
 very long names.
 
 ```
@@ -1507,7 +1472,7 @@ both connected as peers:
 
 ---
 
-### Manual
+### Clay manual
 
 #### Paths
 
@@ -1613,7 +1578,7 @@ access a file called
 ```
 
 Because both paths share a directory named `/gmail` at the same position in the
-address hierarchy -- which, if you recall, is just a `list` -- the above command
+address hierarchy – which, if you recall, is just a `list` – the above command
 works!
 
 We can do the same thing between desks. If `%sandbox` has been merged with
@@ -1738,8 +1703,8 @@ Merge the `%examples` desk from `~waxbex-ribmex`
 ```
 
 Subscribe to continuous updates from remote `plot` on local `desk`.
-`plot-desk` can specify the remote `desk` name. When omitted it is
-defaulted to being the same as `desk`. Non-comet urbits have
+`plot-desk` can specify the remote `desk` name. When omitted it defaults
+to being the same as `desk`. Non-comet urbits have
 `|sync %home ~parent %kids` automatically set up (where `~parent` is the
 planet that issued a moon, the star that issued a planet, or the galaxy
 that issued a star).
@@ -1783,12 +1748,12 @@ Example:
 
 ### Merge strategies
 
-`%init` - Used if it's the first commit to a desk. Also can be used to
-"reinitialize" a desk -- revision numbers keep going up, but the new
+`%init` - used if it's the first commit to a desk. Also can be used to
+"reinitialize" a desk – revision numbers keep going up, but the new
 revision isn't necessarily a descendent of the previously numbered
 version, allowing merges to be rerun.
 
-`%this` - Keep what's in Bob's desk, but join the ancestry.
+`%this` - keep what's in Bob's desk, but join the ancestry.
 
 `%that` - take what's in Alice's desk, but join the ancestry. This is
 the reverse of `%this`. This is different from `%init` because the new
@@ -1808,8 +1773,8 @@ Bob's changed files.
 
 A `%mate` merge attempts to merge changes to the same file when both
 Alice and Bob change it. If the merge is clean, we use it; otherwise, we
-fail. A merge between different types of changes -- for example,
-deleting a file vs changing it -- is always a conflict. If we succeed,
+fail. A merge between different types of changes – for example,
+deleting a file vs changing it – is always a conflict. If we succeed,
 the parents are both Alice's and Bob's heads, and the data is the merge
 base plus Alice's changed files plus Bob's changed files plus the merged
 files.
@@ -1854,8 +1819,8 @@ Produces a list of names at the `path`.
 
 Syntax: `|rm path`
 
-Remove the data at `path`. `path` must be a path to actual node, not a
-'directory'
+Remove the data at `path`. `Path` must be a path to the actual node, not a
+'directory'.
 
 #### `|cp`
 
