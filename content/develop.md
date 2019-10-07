@@ -3,10 +3,7 @@ title = "Develop"
 template = "page_indiced.html"
 +++
 
-We recognize that not every developer wants to work on Urbit itself – there’s a lot of space for developers building their applications on Urbit. To help you get settled, we have information that distinguishes the goals for both core and application development:
-
-- Core development: improving and extending Urbit itself
-- Application development: building end-user peer-to-peer applications that run on Urbit
+There are roughly two kinds of development on Urbit: core development and application development. Urbit applications are still young, but can be fun to experiment with. The kernel is much more stable, but generally more challenging from an engineering standpoint.
 
 This guide will start by getting you set up to run an Urbit ship, and then tell you everything you need to now do to either.
 
@@ -16,11 +13,11 @@ We assume you’ve gotten a basic introduction to Urbit. If you haven’t, read 
 
 Once you’re ready, you can get started on the network right away and take some first steps, without acquiring an identity, by [creating a comet](@/operations.md#creating-a-comet).
 
-When developing, however, we recommend [booting a development ship](#creating-a-development-ship) and working locally.
+When developing, however, we recommend [booting a development ship](#creating-a-development-ship) and working locally -- you may need to make changes that could, in the wrong hands, destroy the ship’s environment, and it’s best to do so in a safe, separate place.
 
 ## Core development {#core}
 
-Working on the core means improving the Urbit project itself, working with a global community of developers. 
+Working on the core means improving the Urbit project itself, working with the existing community of Urbit developers. 
 
 Just arrived and unsure what to work on? An ideal way to get started is by experimenting with the system, talking to other developers, and reading (or [contributing to](https://github.com/urbit/docs)) the [documentation](/docs/).
 
@@ -34,15 +31,12 @@ If you’re looking for some guidance, need help, or would prefer direct communi
 
 ## Application development {#application}
 
-Building an application on Urbit provides a lot of features for you. It means being able to leverage its [personal key infrastructure](https://azimuth.network/), which verifies its scarce address space and associating that verification with other data; or the [global filesystem](@/docs/arvo/clay.md), enabling permissioned directories and social software. Building your application on Urbit could be building decentralized applications for your own groups. Building your application on Urbit could also just be building your ship’s access to the rest of the world.
+When creating user applications on Urbit, you aren’t tied to any particular user interface. They can work without providing a response to the user, or by printing to the Dojo, or with an interface in Landscape, which uses [Eyre](@/docs/arvo/eyre.md) (the Arvo vane that serves HTTP to serve a React-based interface to the application through a web browser).
 
-The Arvo vane that manages user applications is called [Gall](@/docs/hoon/hoon-tutorial/gall.md). When writing your application, you will want to consult its documentation for information on its interface to the rest of your ship (or to other ships).
+When writing applications, you will often make use of [Gall](@/docs/hoon/hoon-tutorial/gall.md), the Arvo vane that manages user applications.
 
-Gall applications don’t tie you to use any particular user interface. They can work without providing a response to the user; or by printing to the Dojo; or with an interface in Landscape, which uses [Eyre](@/docs/arvo/eyre.md), the Arvo vane that serves HTTP, to serve a React-based interface to the application through a web browser.
+If you want to see examples of Urbit applications with common functionality requirements, you can see our [examples](https://github.com/urbit/examples) repository. If you want to get started building applications with a Landscape interface, check out our [create-landscape-app](https://github.com/urbit/create-landscape-app) repository.
 
-Landscape has both tile-specific and full-screen applications. For a Landscape template wizard, check out our [create-landscape-app](https://github.com/urbit/create-landscape-app) repository.
-
-For examples of Gall applications, you can see the [Egg Timer example](@/docs/hoon/hoon-tutorial/egg-timer.md) in the documentation; Gall applications with a Landscape interface include the [Weather tile](https://github.com/urbit/urbit/blob/master/pkg/arvo/app/weather.hoon) (its Landscape interface code is located [here](https://github.com/urbit/urbit/blob/master/pkg/interface/weather/tile/tile.js) and compiled separately).
 
 ## Creating a development ship {#creating-a-development-ship}
 
