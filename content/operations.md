@@ -33,7 +33,7 @@ Note: Bridge allows you to both make reads and writes to the Ethereum blockchain
 
 Once the program is running in your browser, go through the steps presented according to the type of wallet you have. You’ll be presented with a few login options. A notable option is Urbit Master Ticket. This is for those who used our Wallet Generator software. If you bought points from an Urbit sale and then used the Wallet Generator, your networking keys will be set for you. All other login options will require you to set your own networking keys.
 
-### Accept Your Transfer
+### Accept your transfer
 
 If you were given points by Tlon you likely already fully own them. But if someone else sent you a point, then you will first need to use Bridge to accept that transfer.
 
@@ -43,7 +43,7 @@ Now you'll be on the management page of your point. The transfer isn't completed
 
 If you already own a point, click on the `Details ->` under your sigil in the `Your Points` section.
 
-### Set Your Networking Keys
+### Set your networking keys
 
 If you just accepted a point, you'll be returned to your point screen. Notice that that links and buttons are now clickable. You now own this point!
 
@@ -57,14 +57,14 @@ and use the result.
 
 It should be noted that setting your network keys is an event on the Ethereum network and will therefore cost a trivial, but non-zero, amount of [gas](https://github.com/ethereum/wiki/wiki/Design-Rationale#gas-and-fees) to complete.
 
-### Generate Your Keyfile
+### Generate your keyfile
 
 From the detail page associated with your point, click the `Generate Arvo Keyfile` link and you'll be taken to a page with a field titled `Network seed`. This field should already be filled in, and should match the hexadecimal string that you entered in the previous step. If it's not filled in or does not match, fill it in with the correct string.
 Click `Generate ->`, which will download a keyfile onto your machine.
 
 With that keyfile in hand, you can now exit Bridge and continue to the guide to [install the Urbit binary](@/install.md).
 
-## Using Your Ship {#urbit-administration}
+## Using your ship {#urbit-administration}
 
 Your urbit (also called your _ship_) is a persistent Unix process that you mainly control from the console. 
 
@@ -238,7 +238,7 @@ Because Urbit networking is stateful we call this a _continuity breach_. Everyth
 
 When this happens, back up any files you'd like to save, shut down your urbit, and recreate it (as if you were starting for the first time).
 
-## Creating a Comet {#creating-a-comet}
+## Creating a comet {#creating-a-comet}
 
 **Comets** are urbits whose names are 128-bits or 16 syllables, such as:
 
@@ -246,7 +246,7 @@ When this happens, back up any files you'd like to save, shut down your urbit, a
 
 Comet names aren't quite as memorable as others, but they're disposable identities that anyone can make for free to join the live network.
 
-### Booting a Comet
+### Booting a comet
 
 To boot your comet, go into the command line and run the following command from the directory that was created during Urbit installation:
 
@@ -264,7 +264,7 @@ http: live (insecure, loopback) on 12321
 ~dasres_marzod:dojo>
 ```
 
-## DNS Proxying {#dns-proxying}
+## DNS proxying {#dns-proxying}
 
 We have a system that lets you request a domain name for your ship in the form of `ship.arvo.network`, where `ship` is your ship's name minus the `~`. This allows users to access their ships remotely using Landscape, our graphical web interface.
 
@@ -308,7 +308,7 @@ This will make HTTP-requests to self-check availability over `galaxy.$AMES-DOMAI
 
 Otherwise, `:dns|auto` works the same as `:dns|ip` does with stars and planets: if it's available or unavailable, talk messages, and so on.
 
-### More Information
+### More information
 
 Configuring a ship's domain causes the `:acme` app to request an HTTPS certificate for that domain from LetsEncrypt. Note that LetsEncrypt also requires that the HTTP server be listening on port 80. If the certificate request fails, `:acme` will send a `:talk` message with an explanation. Once the certificate is successfully retrieved, `:acme` will install it, causing the HTTP servers to restart. A secure server will be started on port 443 (the HTTPS default) if it's available. Otherwise, it will try 8443, and then increment to the next port until it can successfully bind one.
 
@@ -352,7 +352,7 @@ You'll see your message printed below messages from others that came before it:
 ~your-urbit= Hello, world!
 ```
 
-### Direct Messaging
+### Direct messaging
 
 To send a direct message to someone, first set your audience:
 
@@ -475,7 +475,7 @@ will print as
 ~your-urbit=^ Well, thanks!
 ```
 
-#### Activating Lines
+#### Activating lines
 
 A line number identifying the **subsequent** line is displayed every 5 lines.
 
@@ -559,7 +559,7 @@ To delete our example above:
 sampel-palnet:talk> ;delete %coolbox 'people sent uncool messages'
 ```
 
-#### Change Description
+#### Change description
 
 Syntax: `;depict %name 'description'`
 
@@ -639,17 +639,17 @@ For example:
 ~sampel-palnet:talk> ;unsource %coolbox ~marzod/urbit-help
 ```
 
-#### Circle Membership
+#### Circle membership
 
 If you have joined a circle, you can make this information publicly available to help others find that circle as well.
 
-#### Show Membership
+#### Show membership
 
 Syntax: `;show ~some/circle`
 
 Adds a circle to your public membership list on your Hall profile. Hall profiles are not used yet.
 
-#### Hide Membership
+#### Hide membership
 
 Syntax: `;hide ~some/circle`
 
@@ -659,13 +659,13 @@ Removes a circle from your public membership list on your Hall profile. Hall pro
 
 You'll see status notifications when people enter or leave circles you're subscribed to.
 
-#### Notifications Off
+#### Notifications off
 
 Syntax: `;set quiet`
 
 Turn off status (and config) notifications.
 
-#### Notifications On
+#### Notifications on
 
 Syntax: `;unset quiet`
 
@@ -703,7 +703,7 @@ For example:
 ~sampel-palnet:talk> ;attend ~marzod/urbit-help idle
 ```
 
-#### Set Display Name
+#### Set display name
 
 Syntax: `;name ~some/circle 'my handle'`
 
@@ -717,7 +717,7 @@ An audience consists of one or more messaging targets. These can be
 circles or ships. (In the latter case, it's secretly the `~ship/inbox`
 circle.)
 
-#### Circle Glyphs
+#### Circle glyphs
 
 Glyphs are found at the end of your prompt to as a quick indicator of where
 your messages will be sent.
@@ -804,31 +804,31 @@ There are a few special-purpose glyphs:
 
 ### Configuration
 
-#### Set Audience
+#### Set audience
 
 `;~ship/circle`
 
 Set audience to `~ship/circle`.
 
-#### Set Audience by Glyph
+#### Set audience by glyph
 
 Syntax: `;[glyph]`
 
 Set audience to the circle previously bound to the chosen glyph.
 
-#### Set Audience to Ship
+#### Set audience to ship
 
 syntax `;~ship`
 
 Set audience to another ship.
 
-#### Set Audience to Own Circle
+#### Set audience to own circle
 
 Syntax: `;%circle`
 
 Set audience to a circle on your own ship.
 
-#### Set Audience + Send Message
+#### Set audience and send message
 
 Syntax: `;~dannum-mitryl this is a private message`
 
@@ -843,44 +843,44 @@ Your audience is configured with regard to the following rules (in order):
 
 ### Local nicknames
 
-#### See Nicknames
+#### See nicknames
 
 Syntax: `;nick`
 
 List all local nicknames.
 
-#### Find Nickname
+#### Find nickname
 
 Syntax: `;nick ~some-urbit`
 
 Look up a nickname using the known ship-name.
 
-#### Reverse Find Nickname
+#### Reverse-find nickname
 
 syntax: `;nick plato`
 
 Find a ship's name using its nickname.
 
-#### Set Nickname
+#### Set nickname
 
 Syntax: `;nick ~some-urbit plato`
 
 Create a new nickname.
 
-#### Clear Nickname
+#### Clear nickname
 
 Syntax: `;nick ~some-urbit ~`
 
 Clear an assigned nickname.
 
-#### Display Nicks, Not Ship-Names
+#### Display nicknames, not ship names
 
 Syntax: `;set nicks`
 
 Show nicknames instead of ship-names. If no local nickname is set, uses
 that user's handle. If the user has no handle, just the urbit name.
 
-#### Display Ship-Names, Not Nicks
+#### Display ship names, not nicknames
 
 Syntax: `;unset nicks`
 
@@ -892,38 +892,38 @@ phonebook.
 
 ### Miscellaneous configuration
 
-#### Show Timestamps
+#### Show timestamps
 
 Syntax: `;set showtime`
 
 Show the timestamp for each message.
 
-#### Hide Timestamps
+#### Hide timestamps
 
 Syntax: `;unset showtime`
 
 Stop showing the timestamp for each message.
 
-#### Change Time Zone
+#### Change timezone
 
 Syntax: `;set timezone [+/-][hours]`
 
 Adjust the display of timestamps to a specific timezone. Relative to UTC.
 
-#### Sound Notification On
+#### Sound notification on
 
 Syntax: `;set notify`
 
 Emit a terminal bell sound if your six-syllable ship name is mentioned in
 a message.
 
-#### Sound Notification Off
+#### Sound notification off
 
 Syntax `;unset notify`
 
 Do not notify when your ship name is mentioned.
 
-#### Set Width
+#### Set width
 
 Syntax: `;set width [number]`
 
@@ -973,7 +973,7 @@ Use `=var` to save faces to the Dojo subject.
 Note, however, that `=var` is Dojo syntax, not Hoon syntax. You cannot bind a
 face in a `.hoon` file in this way.
 
-#### System Commands
+#### System commands
 
 Use `=dir` to set the current working directory:
 
@@ -1167,7 +1167,7 @@ Set any environment variable:
 Make sure to note that `=var` is Dojo syntax, not Hoon syntax. You cannot bind a
 variable in a `.hoon` file in this way.
 
-#### Special Variables
+#### Special variables
 
 There are a few special variables that the Dojo maintains.
 
@@ -1285,7 +1285,7 @@ fintyr-haldet-fassev-solhex
 You can use `=` to set an environment variable in Dojo, but there are
 a few reserved names that have special uses.
 
-#### dir
+#### `dir`
 
 Current working `%clay` desk and revision. Read / write.
 
@@ -1297,7 +1297,7 @@ Current working `%clay` desk and revision. Read / write.
 404/hoon docs/ dojo/hoon lib/ listen/hoon md static/udon talk/ testing/udon tree/main/ unmark/ womb/
 ```
 
-#### lib
+#### `lib`
 
 Current set of libraries (`/lib`) in your environment. Can be set
 with `/+`. Read / write.
@@ -1312,7 +1312,7 @@ Now we can use arms from lib/number-to-words.hoon
 ~your-urbit:dojo> (to-words:eng-us:number-to-words 123.456)
 ```
 
-#### sur
+#### `sur`
 
 Current set of structures (`/sur`) in your environment. Can be set
 with `/-`. Read / write.
@@ -1327,7 +1327,7 @@ Now we can use arms in sur/sole.hoon.
 ~your-urbit:dojo> `sole-effect:sole`[%bel ~]
 ```
 
-#### now
+#### `now`
 
 The current (128-bit `@da`) time. Read-only.
 
@@ -1338,7 +1338,7 @@ The current (128-bit `@da`) time. Read-only.
 ~2016.3.21..21.10.57..429a
 ```
 
-#### our
+#### `our`
 
 The current urbit ship. Read-only.
 
@@ -1349,7 +1349,7 @@ The current urbit ship. Read-only.
 ~your-urbit
 ```
 
-#### eny
+#### `eny`
 
 512 bits of entropy. Read-only.
 
