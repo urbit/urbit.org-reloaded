@@ -13,8 +13,8 @@ content: " ↗";
 
 <nav class="home full c4-10-lg mt4 mb6 grid12">
 
-  <h1 class="mb6 full mt2 fw4 w-100 w-50-m w-50-l w-50-xl">Urbit is a new operating system
-    designed from the ground up to be durable, simple, and yours.</h1>
+  <h1 class="mb6 full mt2 fw4 w-100 w-50-m w-50-l w-50-xl">Urbit is a simple, durable computer 
+    that you own 100% and forever.</h1>
 
   <section class="full half-1-md half-1-lg">
 
@@ -62,17 +62,7 @@ content: " ↗";
 
 <article class="full-bleed full grid12 mt6">
 
-  <section id="introduction" class="full tl mt5 mb5 relative">
-    <p class="static mb4 mb0-l mb0-xl absolute-l absolute-xl black f2 f4-l f4-xl"
-    style="top: 3%; left: 3%; z-index: 1;">So, <em>your</em> Urbit is a simple, durable computer that you own 100% and forever.</p>
-    <video loop muted autoplay 
-    poster="https://media.urbit.org/site/understanding-urbit/landscape.png"
-    class="w-100 ba b--black dn db-l db-xl"
-    id="landscapevid">
-  </video>
-  </section>
-
-  <section id="intro-drawing" class="c4-10-md c4-10-lg full">
+  <section id="introduction" class="c4-10-md c4-10-lg full">
     <figure class="mt4">
       <img src="assets/intro/ship.svg" alt="A drawing of an Urbit ship." />
     </figure>
@@ -93,6 +83,7 @@ content: " ↗";
     <figure class="mt6 tc">
       <img src="assets/intro/social-software.svg" />
       <figcaption class="tl mt5">
+        <h3 class="fw6 tc mb4"><span class="fl">1.</span>It's an unremarkable computer from scratch</h3>
           Your Urbit is a calm, passive tool built for social software, not social networking.
           On Urbit, you run (or build) your own software to connect and communicate with your friends and family.
       </figcaption>
@@ -101,6 +92,7 @@ content: " ↗";
     <figure class="tc mt6">
       <img src="assets/intro/rock.svg" />
       <figcaption class="tl mt5">
+          <h3 class="fw6 tc mb4"><span class="fl">2.</span>It's designed for permanence and durability</h3>
           Your Urbit is a permanent and completely private archive.
           Your Urbit can store all your data safely, privately, forever.
       </figcaption>
@@ -108,68 +100,51 @@ content: " ↗";
 
     <figure class="tc mt6">
       <img src="assets/intro/yours-forever.svg" />
-      <figcaption class="tl">You own your Urbit like you own Bitcoin.
+      <figcaption class="tl mt5">
+        <h3 class="fw6 tc mb4"><span class="fl">3.</span>It's cryptographically yours</h3>
+        You own your Urbit like you own Bitcoin.
           Each Urbit is a piece of a new global network that’s owned and controlled by its users.</figcaption>
     </figure>
   </section>
 
-  <section id="vid-ocean" class="full tl mt5 mb5 relative">
-    <p class="static mb4 mb0-l mb0-xl absolute-l absolute-xl black white-l white-xl f2 f4-l f4-xl"
-    style="top: 3%; left: 3%; z-index: 1;">Nothing quite like this has ever been done before, 
-    and nothing is quite like it.</p>
-    <video loop muted autoplay 
-    poster="https://media.urbit.org/site/understanding-urbit/ocean.png"
-    class="w-100 ba b--black dn db-l db-xl"
-    id="oceanvid">
-  </video>
-  </section>
-
   <section id="megacorp" class="c4-10-md c4-10-lg full">
-    <p>Today, technology controls us.</p>
-    <p>Every MEGACORP has the same incentive: <br />
+    <p>Today, technology controls us. Every MEGACORP has the same incentive:
       To keep us hooked on their platform.</p>
-    <p>We think that communities of people should decide their own structure,
-      which means they also have to control their own history and the means by
-      which they write into it. We think that history should be owned by the people
-      creating it, not by some external faction. Without control over the stories we tell one another,
-      we’re ruled by someone else. </p>
-  </section>
-
-  <section id="outroduction" class="c4-10-md c4-10-lg full">
     <p>We built Urbit so people can control their technology, shape their digital lives and freely build
-      their digital communities.</p>
-
-    <p>We want to replace the internet with a foundation for computing that we can rely on far into the future.</p>
-
-    <p class="mb0">Urbit is a large, ambitious project.</p>
-    <p class="mt0">But at the core it’s durable, simple and yours.</p>
+          their digital communities.</p>
+    <p>We want to replace the internet with a foundation for computing that we can all rely on far into the future.</p>
+    <p>Urbit is a large, ambitious project. But at the core it’s durable, simple and yours.</p>
   </section>
 
-  <nav class="c4-10-md c4-10-lg full mt6 mb6">
-    <h1 class="f2 fw3 mb3">Understanding Urbit</h1>
-    <p class="lh-copy">Want to continue down this rabbit hole? If you’re new to Urbit 
+  <nav class="full grid12 mt6 mb6">
+    <p class="full c4-10-lg lh-copy">Want to continue down this rabbit hole? If you’re new to Urbit 
       and want to learn more, start with the Understanding Urbit posts. If you’re technical, start 
       with the technical overview.</p>
-    <ul>
+      <section class="full c4-7-lg">
+      <h1>Understanding Urbit</h1>
+    <ul class="full c4-7-lg">
         {% set posts = get_section(path="understanding-urbit/_index.md") %}
         {% for page in posts.pages %}
         <li class="mt2"><a class="b--black bb" href="{{ page.permalink }}">{{ page.title }}</a></li>
         {% endfor %}
     </ul>
-    <h1 class="f2 fw3 mt4 mb3">Follow the Project</h1>
-    <p class="lh-copy mt1">Urbit is actively being built, explored, and experimented with.
-      To follow our progress you can:
-    </p>
-    <ul>
-      <li class="mt2">Follow us on <a href="https://twitter.com/urbit">Twitter</a></li>
-      <li class="mt2">Explore the code on <a href="https://github.com/urbit/urbit">GitHub</a></li>
-      <li class="mt2">Ask questions in our <a href="https://discord.gg/bkEX6EU">Discord</a></li>
-    </ul>
-    <p>or boot Urbit and join <code>~dopzod/urbit-help</code></p>
-    <p class="lh-copy mt4">We additionally send regular updates about our project. Enter your email to get them.</p>
+  </section>
+  <section class="full c7-10-lg mt4 mt0-xl">
+      <h1>Follow the Project</h1>
+      <p class="lh-copy">Urbit is actively being built, explored, and experimented with.
+        To follow our progress you can:
+      </p>
+      <ul>
+        <li class="mt2">Follow us on <a href="https://twitter.com/urbit">Twitter</a></li>
+        <li class="mt2">Explore the code on <a href="https://github.com/urbit/urbit">GitHub</a></li>
+        <li class="mt2">Ask questions in our <a href="https://discord.gg/bkEX6EU">Discord</a></li>
+      </ul>
+      <p class="lh-copy">or boot Urbit and join <code class="db">~dopzod/urbit-help</code></p>
+  </section>
+    <p class="full c4-10-lg mt5">We additionally send regular updates about our project. Enter your email to get them.</p>
     <iframe name="nothing" style="display:none;"></iframe>
     <form action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;amp;id=be143888d2"
-      method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form"
+      method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form full c4-7-lg"
       target="_blank" novalidate>
       <div class="input-group" id="mc_embed_signup_scroll">
         <div class="mc-field-group w-100 relative">

@@ -389,25 +389,3 @@ window.addEventListener("scroll", event => {
     }
   });
 })};
-
-// homepage video load behaviour on mobile
-
-
-if (document.body.classList.contains("index")) {
-  if( navigator.userAgent.match(/Android/i)
-    || navigator.userAgent.match(/webOS/i)
-    || navigator.userAgent.match(/iPhone/i)
-    || navigator.userAgent.match(/iPad/i)
-    || navigator.userAgent.match(/iPod/i)
-    || navigator.userAgent.match(/BlackBerry/i)
-    || navigator.userAgent.match(/Windows Phone/i)
-    ){
-    } else {
-        document.getElementById("landscapevid").innerHTML = `
-        <source src="https://media.urbit.org/site/understanding-urbit/landscape.webm" type="video/webm">
-        <source src="https://media.urbit.org/site/understanding-urbit/landscape.mp4" type="video/mp4">`;
-        document.getElementById("oceanvid").innerHTML = `
-        <source src="https://media.urbit.org/site/understanding-urbit/ocean.webm" type="video/webm">
-        <source src="https://media.urbit.org/site/understanding-urbit/ocean.mp4" type="video/mp4">`;
-      }
-    }
