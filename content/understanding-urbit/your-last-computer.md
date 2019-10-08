@@ -1,5 +1,6 @@
 +++
 title = "Your Last Computer"
+description = "Think of it as the “back to the land” computing movement."
 weight = 2
 +++
 

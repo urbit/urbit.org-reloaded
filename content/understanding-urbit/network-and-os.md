@@ -1,5 +1,6 @@
 +++
 title = "Network + OS"
+description = "The existing internet is a theme park. Learn how we leave it behind."
 weight = 5
 +++
 
@@ -11,7 +12,7 @@ While the world has drifted into a fever dream, we built Urbit.
 
 Your Urbit ID gets you a name, an address and a crypto wallet — but what about when you want to connect with other people? That’s where Urbit OS comes in.
 
-Urbit OS is everything that you need to build and run your own social software and compute with whomever you like. Create a pseudonymous chat group, edit a document together, then split a bar tab and later turn it into a syndicate and start investing. Eventually, maybe you’ll decide to become a microstate that funds everyone in bitcoin — the possibilities are wide open. 
+Urbit OS is everything that you need to build and run your own social software and compute with whomever you like. Create a pseudonymous chat group, edit a document together, then split a bar tab and later turn it into a syndicate and start investing. Eventually, maybe you’ll decide to become a microstate that funds everyone in Bitcoin — the possibilities are wide open. 
 
 Since we’ve got a decentralized identity system to build on and everyone runs their own OS, your social software is actually owned and operated by the collective of Urbit ID owners. You can (and should) do whatever you want.
 

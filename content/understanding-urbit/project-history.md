@@ -1,5 +1,6 @@
 +++
 title = "Project Status and History"
+description = "Still young, but very real."
 weight = 7
 +++
 

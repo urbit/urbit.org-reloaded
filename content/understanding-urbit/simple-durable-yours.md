@@ -1,5 +1,6 @@
 +++
 title = "Simple, Durable, Yours"
+description = "If computers are going to be a part of our lives for generations to come, we need a sound foundation for them."
 weight = 1
 +++
 

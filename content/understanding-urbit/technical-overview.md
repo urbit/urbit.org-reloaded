@@ -1,5 +1,6 @@
 +++
 title = "Technical Overview"
+description = "Simple and compact from the kernel up."
 weight = 6
 +++
 

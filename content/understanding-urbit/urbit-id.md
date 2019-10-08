@@ -1,5 +1,6 @@
 +++
 title = "Urbit ID"
+description = "Your identity should feel like a unique and precious object you can always carry with you. So we built one."
 weight = 4
 +++
 
