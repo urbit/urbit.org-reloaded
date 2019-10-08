@@ -11,7 +11,7 @@
   {% include "partials/navigation-search.html" %}
 </nav>
 <!-- content -->
-      <article class="mt4-l mt4-xl mb2 full c4-12-lg">
+      <article class="mt4 mb6 full c4-12-lg">
         <ul class="posts">
           {% set posts = get_section(path="understanding-urbit/_index.md") %}
           {% for page in posts.pages %}
@@ -22,4 +22,5 @@
           {% endfor %}
         </ul>
       </article>
+{% include "partials/footer.html" %}
 {% endblock content %}
