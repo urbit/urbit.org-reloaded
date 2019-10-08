@@ -80,6 +80,9 @@ figure.full-bleed {
     padding: 0;
 }
 
+figcaption.home {
+    margin: 4rem auto 0 auto;
+}
 
 a {
     color: inherit;
@@ -352,12 +355,6 @@ input[type="search"] {
 
 .tippy-content {
     color: white;
-}
-
-    // top alert on homepage
-.top-alert {
-    margin: 0 -32px 1rem -32px;
-    padding: 0.3rem 32px;
 }
 
     // code blocks
