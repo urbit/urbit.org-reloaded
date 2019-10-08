@@ -38,7 +38,7 @@
   {% endif %}
 {% endif %}
   {% if page.extra.readtime %}
-  <span class="dib mono full c4-10-lg ml2 mv1 gray2 f5"> {{ page.reading_time }}m read</span>
+  <span class="dib mono full c4-10-lg{% if page.date %} ml2{% endif %} gray2 f5">{{ page.reading_time }}m read</span>
   {% endif %} 
 
   <article class="mb4 mt4 full grid12">

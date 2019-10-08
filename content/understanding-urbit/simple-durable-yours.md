@@ -1,8 +1,6 @@
 +++
 title = "Simple, Durable, Yours"
 weight = 1
-[extra]
-readtime = "true"
 +++
 
 We live in a world dense with computers. We wake up and look at them, we see the world through them, we depend on them completely and they’re not going away. They’re only becoming more ubiquitous.

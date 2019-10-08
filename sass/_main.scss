@@ -206,8 +206,20 @@ h1, .f1 {
     @extend .lh-solid;
 }
 
+h2 {
+    margin: 4rem 0 2rem 0;
+}
+
 h2, .f2, h3, .f3 {
     @extend .lh-title;
+}
+
+h3 {
+    margin: 2rem 0 1rem 0;
+}
+
+h4 {
+    margin: 1rem 0 0.5rem 0;
 }
 
     // author and ship styling

@@ -1,8 +1,6 @@
 +++
 title = "Project Status and History"
 weight = 7
-[extra]
-readtime = "true"
 +++
 
 Can you move to Urbit today and never look back? No, not quite yet. Urbit is still young. 
