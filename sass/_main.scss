@@ -8,31 +8,31 @@
     src: url("https://storage.googleapis.com/media.urbit.org/fonts/scp-extralight.woff");
     font-weight: 200;
   }
-  
+
   @font-face {
     font-family: "Source Code Pro";
     src: url("https://storage.googleapis.com/media.urbit.org/fonts/scp-light.woff");
     font-weight: 300;
   }
-  
+
   @font-face {
     font-family: "Source Code Pro";
     src: url("https://storage.googleapis.com/media.urbit.org/fonts/scp-regular.woff");
     font-weight: 400;
   }
-  
+
   @font-face {
     font-family: "Source Code Pro";
     src: url("https://storage.googleapis.com/media.urbit.org/fonts/scp-medium.woff");
     font-weight: 500;
   }
-  
+
   @font-face {
     font-family: "Source Code Pro";
     src: url("https://storage.googleapis.com/media.urbit.org/fonts/scp-bold.woff");
     font-weight: 600;
   }
-  
+
   @font-face {
     font-family: "Source Code Pro";
     src: url("https://storage.googleapis.com/media.urbit.org/fonts/scp-black.woff");
@@ -51,7 +51,7 @@ body {
 
 nav {
     font-size: 1rem;
-    line-height: 1.33;  
+    line-height: 1.33;
     // If you need to flush the nav to break
     // the body's margin, use this:
     &.full-left {
@@ -139,7 +139,7 @@ footer nav {
     }
 }
 
-// essay template 
+// essay template
 
 body.essay {
     h1 {
@@ -337,11 +337,11 @@ input[type="search"] {
       }
     }
   }
-  
+
   .search-results {
     max-height: 400px;
     ul {
-        position: relative; 
+        position: relative;
     }
     &__item a:hover {
       background: #F9F9F9;
@@ -358,7 +358,7 @@ input[type="search"] {
   .glossary-results__item {
     padding: 0 1rem 0 1rem;
     &:hover {
-        background-color: #F9F9F9; 
+        background-color: #F9F9F9;
       }
   }
 
@@ -481,7 +481,7 @@ nav.docs:not(.mobile) {
 }
 nav.docs details {
     summary {
-    @extend .fw4, .black, .mt2;   
+    @extend .fw4, .black, .mt2;
     }
     & > summary::before {
         content: "› ";
@@ -505,10 +505,10 @@ nav.docs details {
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%;
+    padding-bottom: 56.25vw;
     padding-top: 30px; height: 0; overflow: hidden;
 }
-    
+
 .video-container iframe,
 .video-container object,
 .video-container embed {
