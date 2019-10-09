@@ -27,9 +27,9 @@
   {% set posts = get_section(path="understanding-urbit/_index.md") %}
   {% for directorypage in posts.pages %}
     {% if directorypage.title == page.title %}
-  <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="fw6" href="{{directorypage.permalink}}">{{directorypage.title}}</a></li>
+  <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="fw6 f6" href="{{directorypage.permalink}}">{{directorypage.title}}</a></li>
     {% else %}
-    <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a href="{{directorypage.permalink}}">{{directorypage.title}}</a></li>
+    <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="f6" href="{{directorypage.permalink}}">{{directorypage.title}}</a></li>
     {% endif %}
   {% endfor %}
 </nav>
