@@ -36,13 +36,13 @@
 
 {% for h2 in toc %}
 {% if h2.children %}
-<details class="dn mw5-xl mt2 mw5-l db-l db-xl page-indiced"><summary>{{ h2.title }}</summary>
+<details class="dn mw5-xl mt2 mw5-l db-xl page-indiced"><summary>{{ h2.title }}</summary>
     {% for h3 in h2.children %}
   <li class="ml3 mv1"><a href="{{h3.permalink | safe}}">{{h3.title}}</a></li>
     {% endfor %}
 </details>
 {% else %}
-  <li class="dn mw5-xl mw5-l db-l db-xl page-indiced mv2"><a href="{{h2.permalink}}">{{h2.title}}</a></li>
+  <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a href="{{h2.permalink}}">{{h2.title}}</a></li>
 {% endif %}
 {% endfor %}
 </nav>
