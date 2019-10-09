@@ -73,9 +73,10 @@
         <ul class="posts">
           {% set posts = get_section(path="understanding-urbit/_index.md") %}
           {% for page in posts.pages %}
-          <li class="mb4 ml0">
-            <h2 class="f4 ml0 fw4 mt0 mb0"><a class="b--black bb" href="{{ page.permalink }}">{{ page.title }}</a></h2>
-            <p class="mt1">{{ page.description }}</p>
+          <li class="mb4 ml0"><a class="bn" href="{{ page.permalink }}">
+            <h2 class="f4 dib ml0 fw4 mt0 mb0 b--black bb lh-solid">{{ page.title }}</h2>
+            <p class="mt1 db">{{ page.description }}</p>
+          </a>
           </li>
           {% endfor %}
         </ul>
