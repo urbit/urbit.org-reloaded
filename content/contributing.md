@@ -49,11 +49,11 @@ If you plan to distribute planets in any capacity, you must keep your star runni
 
 To make this as simple as possible, we’re building Terraform-based tooling for star and planet hosting via Google Cloud Platform. Once it’s ready we’ll open source the tooling so you can host stars and planets for yourself and others. 
 
-In the meantime, there are existing instructions for those familiar with booting a Linux instance on GCP, AWS, Digital Ocean, etc. 
+In the meantime, there are [existing instructions](@/install.md) for those familiar with booting a Linux instance on GCP, AWS, Digital Ocean, etc. 
 
 ### Distributing planets
 
-You can distribute planets from your star via Bridge. As a reminder if you do distribute planets, please boot and run your star on the Arvo network, otherwise those planets won't be able to connect, which has a negative effect on the network as a whole, as orphan planets are left with very limited functionality. 
+You can distribute planets from your star via [Bridge](https://bridge.urbit.org/). As a reminder if you do distribute planets, please boot and run your star on the Arvo network, otherwise those planets won't be able to connect, which has a negative effect on the network as a whole, as orphan planets are left with very limited functionality. 
 
 ### Software updates 
 
@@ -61,16 +61,15 @@ By default, your star accepts software updates from its galaxy and routes them t
 
 #### Breaches
 
-To ensure new planets can connect to you, you're expected to participate in network-wide breaches, by updating to the latest Urbit version, deleting (or archiving) your pier, and then booting your ship. If you don’t participate, you will be left behind by the rest of the network and won’t be able to communicate with anyone who has updated to the new era.
+To ensure new planets can connect to your ship, users are expected to participate in network-wide breaches by [updating to the latest Urbit version](@/install.md), deleting (or archiving) your pier, and then booting your ship using the new binary. If you don’t participate, you won’t be able to communicate with anyone on the network who has updated to the new era.
 
+Network-wide breaches are distinct from personal breaches, wherein an individual ship cycles its personal network keys using bridge, and then follows the same steps outlined above. 
 
 ### Star-owner etiquette 
 
-If you distribute planets, boot and run your star on the Arvo network, or the planets won't be able to boot for the first time or connect.
-
-A star is networking infrastructure. For that reason, the machine running your star or galaxy must have sufficient bandwidth and processing power for your dependent planets.
-
-When messaging others, communicate using your star only when speaking in an official/infrastructural capacity. Otherwise, use your personal planet.
+- If you distribute planets, boot and run your star on the Arvo network, or the planets won't be able to boot for the first time or connect.
+- A star is networking infrastructure. For that reason, the machine running your star or galaxy must have sufficient bandwidth and processing power for your dependent planets.
+- When messaging others, communicate using your star only when speaking in an official/infrastructural capacity. Otherwise, use your personal planet.
 
 
 ### Taxes 
@@ -86,16 +85,15 @@ We host regular contributor calls where you can discuss the technical matters of
 
 #### The urbit-dev mailing list 
 
-Those interested in developing on Urbit are encouraged to add themselves to the urbit-dev mailing list:https://groups.google.com/a/urbit.org/forum/#!forum/dev.
+Those interested in developing on Urbit are encouraged to add themselves to [the urbit-dev mailing list](https://groups.google.com/a/urbit.org/forum/#!forum/dev).
 
 #### Support 
 
-We are a small team, but we do our best to answer support related inquiries. Please email us at support@urbit.org with questions.
+We are a small team, but we do our best to answer support related inquiries. Please email us at [support@urbit.org](mailto:support@urbit.org) with questions.
 
 #### Roadmap for further development 
 
-We periodically publish our ongoing development roadmap. You can find the latest here: [https://urbit.org/posts/2019-10-3-roadmap/].
-
+We periodically publish our ongoing development roadmap. You can find the latest [here](https://urbit.org/posts/2019-10-3-roadmap/).
 
 ## Governance {#governance}
 
