@@ -1,34 +1,41 @@
 <footer class="relative mt4">{% if page.earlier %}
-        <a class="bb-0" href="{{page.earlier.permalink}}">
-          <nav class="previous mv5 absolute right-2 f4 t-right">
-            <p class="mb0 f5">Previous Post:</p>
-            <p class="fw6 f5 f4-l f4-xl mb0 mt0">{{page.earlier.title}}</p>
-            <time class="mono db f5 mb5">{{page.earlier.date | date(format="~%Y.%-m.%-d") }}</time>
-          </nav>
-        </a>
-        {% elif page.heavier %}
-        <a class="bb-0" href="{{page.heavier.permalink}}">
-            <nav class="previous mv5 absolute right-2 f4 t-right">
-              <p class="mb0 f5">Next Post:</p>
-              <p class="fw6 f5 f4-l f4-xl mb0 mt0">{{page.heavier.title}}</p>
-            </nav>
-          </a>
-          {% endif %}
+  <a class="bb-0" href="{{page.earlier.permalink}}">
+    <nav class="previous mv5 absolute right-2 f4 t-right">
+      <p class="mb0 f5">Previous Post:</p>
+      <p class="fw6 f5 f4-l f4-xl mb0 mt0">{{page.earlier.title}}</p>
+      <time class="mono db f5 mb5">{{page.earlier.date | date(format="~%Y.%-m.%-d") }}</time>
+    </nav>
+  </a>
 
-          {% if page.later %}
-          <a class="bb-0" href="{{page.later.permalink}}">
-          <nav class="next mv5 absolute left-2 f4">
-            <p class="mb0 f5">Next Post:</p>
-            <p class="fw6 f5 f4-l f4-xl mb0 mt0">{{page.later.title}}</p>
-            <time class="mono db f5 mb5">{{page.later.date | date(format="~%Y.%-m.%-d") }}</time>
-          </nav>
-        </a>
-        {% elif page.lighter %}
-        <a class="bb-0" href="{{page.lighter.permalink}}">
-            <nav class="next mv5 absolute left-2 f4">
-              <p class="mb0 f5">Previous Post:</p>
-              <p class="fw6 f5 f4-l f4-xl mb0 mt0">{{page.lighter.title}}</p>
-            </nav>
-          </a>
-          {% endif %}
-        </footer>
+  {% elif page.heavier %}
+
+  <a class="bb-0" href="{{page.heavier.permalink}}">
+    <nav class="previous mv5 absolute right-2 f4 t-right">
+      <p class="mb0 f5">Next Post:</p>
+      <p class="fw6 f5 f4-l f4-xl mb0 mt0">{{page.heavier.title}}</p>
+    </nav>
+  </a>
+  {% endif %}
+
+  {% if page.later %}
+
+  <a class="bb-0" href="{{page.later.permalink}}">
+    <nav class="next mv5 absolute left-2 f4">
+      <p class="mb0 f5">Next Post:</p>
+      <p class="fw6 f5 f4-l f4-xl mb0 mt0">{{page.later.title}}</p>
+      <time class="mono db f5 mb5">{{page.later.date | date(format="~%Y.%-m.%-d") }}</time>
+    </nav>
+  </a>
+
+  {% elif page.lighter %}
+
+  <a class="bb-0" href="{{page.lighter.permalink}}">
+    <nav class="next mv5 absolute left-2 f4">
+      <p class="mb0 f5">Previous Post:</p>
+      <p class="fw6 f5 f4-l f4-xl mb0 mt0">{{page.lighter.title}}</p>
+    </nav>
+  </a>
+
+  {% endif %}
+
+</footer>
