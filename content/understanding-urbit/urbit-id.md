@@ -28,7 +28,7 @@ For those curious to understand Urbit ID a bit better, we’ll cover the basics 
 
 Your Urbit ID is a short, memorable address that anyone can use to connect with you that *doesn’t* depend on any company. It’s an address you own completely and can keep forever.
 
-For most people, an Urbit ID looks something like `~poldec-tonteg`. You own it with a simple, memorable key twice its length, like `~winter-paches-palfun-foslup`. Urbit IDs are designed not to have any personally identifying information attached to them at all, sort of like a phone number. Each name and password is automatically generated — so we don’t accidentally leak data when we meet a stranger in the digital world.
+For most people, an Urbit ID looks something like `~tinbel-picpel`. You own it with a simple, memorable key twice its length, like `~winter-paches-palfun-foslup`. Urbit IDs are designed not to have any personally identifying information attached to them at all, sort of like a phone number. Each name and password is automatically generated — so we don’t accidentally leak data when we meet a stranger in the digital world.
 
 Your Urbit ID and passkey are all you need to log into Urbit OS and send and receive crypto payments. Together, they’re a simple keypair that an ordinary person can easily memorize. We think it’s the perfect form factor for ordinary people to take control of their digital lives.
 
