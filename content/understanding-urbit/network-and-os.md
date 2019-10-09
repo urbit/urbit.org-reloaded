@@ -1,5 +1,5 @@
 +++
-title = "Network + OS"
+title = "Urbit OS + Network"
 description = "The existing internet is a theme park. Learn how we leave it behind."
 weight = 5
 +++
