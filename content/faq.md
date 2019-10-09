@@ -27,7 +27,7 @@ We encourage outside contributors to become a part of the project. The best way 
 
 [Tlon](https://tlon.io), a San Francisco-based company, is the primary developer of Urbit, along with [various independent developers](https://github.com/urbit/urbit/graphs/contributors) and [urbit.live](https://urbit.live).
 
-## Objections to urbit
+## Objections to Urbit
 
 ### Who is Curtis? {#who-is-curtis}
 
