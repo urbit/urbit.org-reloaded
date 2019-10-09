@@ -433,6 +433,12 @@ details {
     }
 }
 
+body.docs article {
+    ul {
+        @extend .mt3, .mb4;
+    }
+}
+
 body.page-indiced {
     h2:not(:first-of-type) {
         margin: 3rem 0 1.5rem 0;
