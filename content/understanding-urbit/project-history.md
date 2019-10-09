@@ -6,7 +6,7 @@ weight = 7
 
 Can you move to Urbit today and never look back? No, not quite yet. Urbit is still young. 
 
-![](https://media.urbit.org/site/understanding-urbit/project-history/project-history-01%403x.svg)
+![](http://media.urbit.org/site/understanding-urbit/project-history/DSCF5386-edit.jpg)
 
 Currently, Urbit ID is live and deployed. That means you can own a piece of Urbit — if you can find one. There are thousands of people that can potentially invite you, and we give away invites from time to time. Your Urbit ID gets you a name, a sigil and access to Urbit OS.
 
