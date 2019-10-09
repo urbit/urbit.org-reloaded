@@ -61,7 +61,7 @@ One day we’d really like the Urbit ID registry to be hosted on Urbit OS itself
 
 There are things about Urbit that are weird by design, and some that are weird because we haven’t gotten around to cleaning them up. Hoon, for the most part, is weird by design. There are a few things we’d like to clean up.
 
-The runes are, once you get the hang of them, pretty nice. Your mileage may vary, of course, but many talented engineers have spent many, many hours writing hoon. It’s a simple, practical, language. But the learning curve can be a bit high.
+The runes are, once you get the hang of them, pretty nice. Your mileage may vary, of course, but many talented engineers have spent many, many hours writing Hoon. It’s a simple, practical, language. But the learning curve can be a bit high.
 
 The standard library and naming is something we’ve discussed changing, and it could happen. It’s definitely up for debate whether or not the four-letter naming convention works well. The vanes (kernel modules) have largely moved away from this convention.
 
