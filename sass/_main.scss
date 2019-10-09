@@ -165,7 +165,7 @@ body.essay {
         display: block;
         margin: 0 auto;
     }
-    article > *:not(figure) {
+    article > *:not(figure):not(picture) {
         grid-area: auto / 4 / auto / 10;
     }
 }

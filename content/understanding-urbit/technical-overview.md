@@ -4,9 +4,17 @@ description = "Simple and compact from the kernel up."
 weight = 6
 +++
 
+<picture class="full c4-10-lg mt4">
+<source srcset="https://media.urbit.org/site/understanding-urbit/technical-overview/technical-overview-1.png,
+https://media.urbit.org/site/understanding-urbit/technical-overview/technical-overview-1%402x.png 2x">
+<img src="https://media.urbit.org/site/understanding-urbit/technical-overview/technical-overview-1%402x.png">
+</picture>
+
 Owning a computer, especially a server, can feel like a part time job. Urbit, on the other hand, is engineered to be maintenance free. We figure, if people are actually going to use a new computing platform, it can’t feel like work. At all. 
 
 So we built our whole stack, starting with the VM, to be as simple and compact as possible. Let’s take a look at what the system looks like from a technical perspective and get a feel for how it’s built.
+
+![](https://media.urbit.org/site/understanding-urbit/technical-overview/technical-overview-2.svg)
 
 Under the hood, Urbit is two parts: an ID system and an OS. The ID system is live and deployed to Ethereum. The OS is a program that runs on top of any Unix machine with an internet connection. 
 
@@ -17,6 +25,8 @@ All of this is implemented as a [suite of Solidity contracts](https://github.com
 As a compliment to Urbit ID, we implemented the [Urbit HD wallet](https://github.com/urbit/urbit-wallet-generator) which lets most people own their Urbit IDs using a simple passkey that’s easy to remember. This means you own your Urbit ID and can log in to Urbit OS with something like `~ravmel-ropdyl`, `~poldec-tonteg-palfun-foslup`. 
 
 Until Urbit OS is completely secure (in the next year or so, we hope), you can interact with Urbit ID through a standalone, browser-based interface called [Bridge](https://bridge.urbit.org). Bridge lets you securely manage your keys, transfer your Urbit ID, log in to Urbit OS and so on.
+
+![](https://media.urbit.org/site/understanding-urbit/technical-overview/technical-overview-3.svg)
 
 In the simplest terms, Urbit OS is three things: a file, a key and a program. The file is a log of everything that has ever happened to your Urbit. The key is derived from the same key you own your Urbit ID with. 
 

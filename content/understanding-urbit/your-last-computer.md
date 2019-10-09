@@ -8,9 +8,22 @@ This whole ‘simple, durable, yours’ thing may sound good, but what does it a
 
 First, let’s talk about what it should feel like in the future.
 
+<picture class="full mt4 mb4 c3-11-lg">
+<source srcset="https://media.urbit.org/site/understanding-urbit/your-last-computer/last-computer-1.png,
+https://media.urbit.org/site/understanding-urbit/your-last-computer/last-computer-1%402x.png 2x"> 
+<img src="https://media.urbit.org/site/understanding-urbit/your-last-computer/last-computer-1%402x.png"/>
+</picture>
+
 Imagine that you can login from anywhere with one simple, memorable name and password. And when you do, an entire OS appears for you. Inside is your whole digital life. Every conversation you’ve ever had, all your biometric data — every step and heartbeat. Your personal mesh of devices: your doors, your car, your irrigation. All of your communities, every message you’ve shared with friends and family. Every connection you’ve made and every archival piece of data, in one place. Secure and private, forever.
 
 You own and control this OS completely. Your system doesn’t live on someone else’s server, so there’s no risk of leaking it in a mass data breach or losing it when a service shuts down. Your Urbit is a sealed, secure and durable system. 
+
+<picture class="full mt4 mb4 c3-11-lg">
+<source srcset="https://media.urbit.org/site/understanding-urbit/your-last-computer/last-computer-2.png,
+https://media.urbit.org/site/understanding-urbit/your-last-computer/last-computer-2%402x.png 2x,
+https://media.urbit.org/site/understanding-urbit/your-last-computer/last-computer-2%403x.svg 3x"> 
+<img src="https://media.urbit.org/site/understanding-urbit/your-last-computer/last-computer-2%402x.png"/>
+</picture>
 
 We’re on our way to this future, building it step by step, but we’re not there yet. The Urbit of today is much more stripped down.
 

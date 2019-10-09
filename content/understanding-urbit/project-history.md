@@ -20,7 +20,7 @@ Urbit OS is a solid alpha. We use it every day to coordinate and chat about the 
 
 Urbit OS isn’t just an interface — it’s a complete system. You should also check out the [GitHub repository](https://github.com/urbit/urbit), our [open grants program](https://grants.urbit.org) and the [documentation](@/docs/_index.md).Building a system from scratch is a huge and enormously fun undertaking.  There’s a lot going on, and we do all our development in public. Systems programmers, functional programming nerds, anyone who wants to tinker with their software will probably love playing with Urbit.
 
-{{ oversize(url="https://media.urbit.org/site/understanding-urbit/project-history/project-history-04%402x.png")}}
+![](https:///media.urbit.org/site/understanding-urbit/project-history/history-4.svg)
 
 At the beginning, Urbit was just a few people with the right combination of imagination and discipline to try to rebuild computing. Now it's a community of thousands of address space holders, dozens of open source developers, at least two independent companies ([Tlon](https://tlon.io) — which works mostly on kernel development and interface design, and [urbit.live](https://urbit.live) — which is building services on the platform), and who knows how many fans. 
 
