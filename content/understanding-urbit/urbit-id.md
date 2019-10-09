@@ -40,14 +40,14 @@ At a high level, there are three important things to understand about the overal
 
 First, there are only so many Urbit IDs, so they cost something. Since they cost something, people are less likely to use them to spam or abuse the network. And, when you meet a stranger with an Urbit ID you know they have some skin in the game.
 
-<table class="w-100 w-80-xl m0a f4 pt4 mono">
+<table class="w-100 w-80-xl m0a f5 pt4 mono">
 <tr><td>2<sup>8</sup> </td><td> <code>256</code> <span class="fr">galaxies</span></td></tr>
 <tr><td>2<sup>16</sup></td><td> <code>65,536</code> <span class="fr">stars</span></td></tr>
 <tr><td>2<sup>32</sup></td><td> <code>4,294,967,296</code> <span class="fr">planets</span></td></tr>
 <tr><td>2<sup>64</sup></td><td> <code>rly big number</code> <span class="fr">moons</span></td></tr>
 </table>
 
-<table class="w-100 w-80-xl m0a pt4 pb4 f4 mono">
+<table class="w-100 w-80-xl m0a pt4 pb4 f5 mono">
 <tr><td>1 galaxy</td><td><span class="fl"> =</span> <span class="fr"><code>2<sup>8</sup> (256)</code> stars</span></td></tr>
 <tr><td>1 star</td><td><span class="fl"> =</span><span class="fr"><code>2<sup>16</sup> (65K)</code> planets</span></td></tr>
 <tr><td>1 planet</td><td><span class="fl"> =</span><span class="fr"><code>2<sup>32</sup> (4B)</code> moons</span></td></tr>
