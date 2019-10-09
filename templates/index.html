@@ -11,15 +11,24 @@ content: " ↗";
 
 {% block content %}
 
-<section class="full video-container bg-black full-bleed relative" id="video" style="
-">
-<h1 class="white mt0 mb0 dib fw4 absolute" id="vid-header"
-style="z-index: 2; top: 50%;">
-Urbit is your last computer.
-</h1>
-  <iframe src="https://player.vimeo.com/video/365181756?background=1"
+<section class="full p0 vid-insert-wrap full-bleed">
+
+  <video class="vid-insert bg-black" autoplay muted loop>
+    <source
+      src="https://storage.googleapis.com/media.urbit.org/site/sea30-1440.mp4"
+      type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class='grid12' style='height: 100%; width:100%;'>
+    <div class='full c4-10-lg flex items-center align-center z10 white'>
+      Urbit is your last computer.
+    </div>
+  </div>
+  <!-- VIMEO VERSION KEPT AS SHIM -->
+  <!-- <iframe src="https://player.vimeo.com/video/365353672?background=1"
   class="w-100 ma0 h-100" frameborder="0" allow="autoplay;fullscreen" allowfullscreen="" style="
-"></iframe>
+"></iframe> -->
 </section>
 
 <nav class="home full c4-10-lg mt6 mb5 grid12">
