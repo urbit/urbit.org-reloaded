@@ -13,7 +13,7 @@
 <!-- header -->
 <!-- content -->
 {% if page.title %}
-<nav class="mt4 pb4 fixed-xl fixed-l full fourth-1-md fourth-1-lg page-indiced mb3 mb0-m mb0-l mb0-xl">
+<nav class="mt4 pb4 fixed-xl full fourth-1-md fourth-1-lg page-indiced mb3 mb0-m mb0-l mb0-xl">
   <a class="gray3" href="/">Urbit</a> 
   <span class="gray3"> / </span>
   <a href="/{{ page.components[0] }}">
@@ -23,7 +23,7 @@
   {% include "partials/navigation-search.html" %}
 
 {% else %}
-<nav class="mt4 fixed-xl fixed-l full fourth-1-md fourth-1-lg page-indiced mb3 mb0-m mb0-l mb0-xl">
+<nav class="mt4 fixed-xl full fourth-1-md fourth-1-lg page-indiced mb3 mb0-m mb0-l mb0-xl">
   <a class="gray3" href="/">Urbit</a> 
   <span class="gray3"> / </span>
   <a href="/{{ page.components[0] }}">
@@ -46,7 +46,7 @@
 {% endif %}
 {% endfor %}
 </nav>
-        <article class="mt4 mb7 c1-12 c6-12-md c4-12-lg">
+        <article class="mt4-xl mb7 c1-12 c4-12-lg">
           {% if page.extra.author %} 
           <span class="mt2 dib" rel="author"> {{ page.extra.author }} </span> 
           {% if page.extra.ship %} 
