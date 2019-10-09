@@ -24,6 +24,7 @@
   </a>
 
   {% include "partials/navigation-search.html" %}
+  <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="f6" href="/understanding-urbit/">Introduction</a></li>
   {% set posts = get_section(path="understanding-urbit/_index.md") %}
   {% for directorypage in posts.pages %}
     {% if directorypage.title == page.title %}

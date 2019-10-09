@@ -2,13 +2,18 @@
 {% block title %} Understanding Urbit {% endblock title %}
 {% block content %}
 <!-- header -->
-<nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl">
+<nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl absolute-xl">
   <a class="gray3" href="/">Urbit</a> 
   <span class="gray3"> / </span>
   <a href="/understanding-urbit/">
     Understanding Urbit
   </a>
   {% include "partials/navigation-search.html" %}
+  <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="fw6 f6" href="/understanding-urbit/">Introduction</a></li>
+  {% set posts = get_section(path="understanding-urbit/_index.md") %}
+  {% for directorypage in posts.pages %}
+    <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="f6" href="{{directorypage.permalink}}">{{directorypage.title}}</a></li>
+  {% endfor %}
 </nav>
 <!-- content -->
       <h1 class="mb4 full mt3 f2 fw3 c4-10-lg">Introduction</h1>
