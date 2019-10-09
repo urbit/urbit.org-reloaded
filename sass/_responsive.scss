@@ -13,10 +13,6 @@
 
 // scaling below desktop
 @media all and (max-width: 60em) {
-    h1#vid-header {
-        top: 32px;
-        left: 32px;
-    }
     body.essay {
         article > *:not(figure):not(picture) {
             grid-area: auto / 1 / auto / 12;
@@ -33,10 +29,6 @@
 
 // custom XL breakpoint classes
 @media screen and (min-width: 60em) {
-    h1#vid-header {
-        top: 10%;
-        margin-left: -32px;
-    }
     .white-xl {
         color: #fff;
     }
