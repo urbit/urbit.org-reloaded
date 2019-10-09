@@ -33,19 +33,19 @@
     {% endif %}
   {% endfor %}
 </nav>
-  <h1 class="mb4 full mt4 c4-10-lg">{{ page.title }}</h1>
+  <h1 class="mb4 full mt4 c4-12-lg">{{ page.title }}</h1>
   {% if page.extra.author %} 
-  <span class="dib full c4-10-lg" rel="author"> {{ page.extra.author }} 
+  <span class="dib full c4-12-lg" rel="author"> {{ page.extra.author }} 
     {% if page.extra.ship %} 
     <address class="dib fw4 ml2 mono">{{ page.extra.ship }}</address>
   {% endif %}
   </span> 
   {% if page.date %}
-    <time class="mono full c4-10-lg db mv2 gray0 f5">{{page.date | date(format="~%Y.%-m.%-d") }}</time>
+    <time class="mono full c4-12-lg db mv2 gray0 f5">{{page.date | date(format="~%Y.%-m.%-d") }}</time>
   {% endif %}
 {% endif %}
   {% if page.extra.readtime %}
-  <span class="dib mono full c4-10-lg{% if page.date %} ml2{% endif %} gray2 f5">{{ page.reading_time }}m read</span>
+  <span class="dib mono full c4-12-lg{% if page.date %} ml2{% endif %} gray2 f5">{{ page.reading_time }}m read</span>
   {% endif %} 
 
   <article class="mb4 full grid12">
