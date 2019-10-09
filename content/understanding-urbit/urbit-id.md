@@ -63,8 +63,6 @@ Finally, galaxies form a senate that can upgrade the logic of the Urbit ID syste
 
 Urbit ID isn’t just a design. It’s [live and deployed](https://azimuth.network) to the Ethereum blockchain.
 
-![](https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-5.svg)
-
 Urbit IDs are digital property. The entire address space of Urbit IDs is like a vast territory of digital land. Over time, we’ve used this land to fund the development of Urbit as a whole by selling some of it to people we felt would be great stewards of this new frontier.
 
 When we launched the Urbit ID system, in January of 2019, there were a few thousand different star and galaxy holders. Since then, that number is on the rise. 
