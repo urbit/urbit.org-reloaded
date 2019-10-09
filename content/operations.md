@@ -14,7 +14,7 @@ This guide assumes that you have an Urbit ID, or that you have found someone to 
 
 To connect to Bridge, go to [https://bridge.urbit.org](https://bridge.urbit.org) into your browser, and enter your identity's credentials in the appropriate fields. If you were invited to claim an Urbit ID, it's very likely that you received an email that would direct you to Bridge, and you can simply follow the hyperlink in that email.
 
-Once you arrive proceed through the steps presented. You'll eventually arrive at a page with a few choices: `Invite`, `Admin`, and `Boot Arvo`. `Admin` is the only option that you're interested in right now; click on it. On the `Admin` page, click the `Download Arvo Keyfile` button. Once you have downloaded the keyfile, you can exit Bridge and proceed to [install the Urbit binary](@/install.md).
+Once you arrive, proceed through the steps presented. You'll eventually arrive at a page with a few choices: `Invite`, `Admin`, and `Boot Arvo`. `Admin` is the only option that you're interested in right now; click on it. On the `Admin` page, click the `Download Arvo Keyfile` button. Once you have downloaded the keyfile, you can exit Bridge and proceed to [install the Urbit binary](@/install.md).
 
 ### Offline Bridge
 
@@ -66,11 +66,11 @@ With that keyfile in hand, you can now exit Bridge and continue to the guide to 
 
 ## Using your ship {#urbit-administration}
 
-Your urbit (also called your _ship_) is a persistent Unix process that you mainly control from the console. 
+Your urbit (also called your _ship_) is a persistent Unix process that you mainly control from the console.
 
 ### Shutdown
 
-You can turn your urbit off with `Ctrl-d` from the Talk or Dojo prompts.
+You can turn your urbit off with `Ctrl-d` from the Chat or Dojo prompts.
 
 You can force-quit your urbit with `Ctrl-z` from anywhere.
 
@@ -134,7 +134,7 @@ In the CLI, Urbit apps can process your input before you hit return. To see this
 `Ctrl-c` - Crash current event.  Processed at the Unix layer and prints a stack
 trace.
 
-`Ctrl-d` - From Talk or Dojo, stops your Urbit process.
+`Ctrl-d` - From Chat or Dojo, stops your Urbit process.
 
 `Ctrl-z` - Stops the Urbit process from _anywhere_.
 
@@ -274,7 +274,7 @@ Stars and planets follow the same process DNS proxying process, and galaxies hav
 
 For a planet or star's DNS proxying request to be made and fulfilled, they must be hosting their ship someplace with a public IP address, and its HTTP server must be listening on port 80.
 
-To get `ship.arvo.network` on a planet or star, you must set up DNS routing with its parent ship by starting the `:dns` app. 
+To get `ship.arvo.network` on a planet or star, you must set up DNS routing with its parent ship by starting the `:dns` app.
 
 To do so, simply run this command in your ship's Dojo:
 
@@ -288,7 +288,7 @@ You'll then be prompted to enter the public IP address of your ship. You can als
 > :dns|request .1.2.3.4
 ```
 
-`:dns`, running locally, will make an HTTP request to that IP address on port 80 to confirm that it is itself available at that IP and port. If that fails, you'll receive a `%bail-early` message in `:talk`; this request will retry a few times. If the self-check is successful, the request is relayed to `~zod`, and you'll receive a message saying, `request for DNS sent to ~zod`. Once `~zod` has acknowledged receipt of the request, your local `:dns` app will send a `:talk` message saying `awaiting response from ~zod`.
+`:dns`, running locally, will make an HTTP request to that IP address on port 80 to confirm that it is itself available at that IP and port. If that fails, you'll receive a `%bail-early` message in `:chat-cli`; this request will retry a few times. If the self-check is successful, the request is relayed to `~zod`, and you'll receive a message saying, `request for DNS sent to ~zod`. Once `~zod` has acknowledged receipt of the request, your local `:dns` app will send a `:chat-cli` message saying `awaiting response from ~zod`.
 
 The request will be picked up shortly, and the `ship.arvo.network` DNS record will be set to the given IP address. Once that's set up, `~zod` will be notified and `~zod` will, in turn, notify your ship. That ship will now try to verify that it can reach itself on `ship.arvo.network` over port 80. If it can't, it'll send a message saying, `unable to access via ship.arvo.network`. If it can, it will configure itself with that domain and say `confirmed access via ship.arvo.network`.
 
@@ -306,151 +306,107 @@ There is a command for galaxies that will try to re-use their already-necessary 
 
 This will make HTTP-requests to self-check availability over `galaxy.$AMES-DOMAIN` (currently galaxy.urbit.org), where `galaxy` is the galaxy's name minus the `~`.
 
-Otherwise, `:dns|auto` works the same as `:dns|ip` does with stars and planets: if it's available or unavailable, talk messages, and so on.
+Otherwise, `:dns|auto` works the same as `:dns|ip` does with stars and planets: if it's available or unavailable, Chat messages, and so on.
 
 ### More information
 
-Configuring a ship's domain causes the `:acme` app to request an HTTPS certificate for that domain from LetsEncrypt. Note that LetsEncrypt also requires that the HTTP server be listening on port 80. If the certificate request fails, `:acme` will send a `:talk` message with an explanation. Once the certificate is successfully retrieved, `:acme` will install it, causing the HTTP servers to restart. A secure server will be started on port 443 (the HTTPS default) if it's available. Otherwise, it will try 8443, and then increment to the next port until it can successfully bind one.
+Configuring a ship's domain causes the `:acme` app to request an HTTPS certificate for that domain from LetsEncrypt. Note that LetsEncrypt also requires that the HTTP server be listening on port 80. If the certificate request fails, `:acme` will send a `:chat-cli` message with an explanation. Once the certificate is successfully retrieved, `:acme` will install it, causing the HTTP servers to restart. A secure server will be started on port 443 (the HTTPS default) if it's available. Otherwise, it will try 8443, and then increment to the next port until it can successfully bind one.
 
 The built-in logic for listening on port 80 is similar. Urbit tries to bind port 80; if it cannot, it tries 8080, then increments until it can bind a port. Port 80 is available to unprivileged process on recent version of macOS. Otherwise, the process needs to either be run as root, or be given special permission (CAP\_NET_BIND on Linux).
 
 ## Messaging {#messaging}
 
-Let’s get started using the :talk application from the command line.
+Let’s get started using the `:chat-cli` application, also known more simply as _Chat_. It's the simplest way to talk to people using the command line interface.
 
 ### Quickstart
 
-The most common uses of :talk right now are communicating over a public chat channel on `~dopzod/urbit-help`, and sending direct messages. Everyone is more than welcome in `~dopzod/urbit-help`. It's the place to get help, ask questions and chat about Urbit in general.
+The most common uses of `:chat-cli` right now are communicating over a public chat channel on `~dopzod/urbit-help`, and sending direct messages. Everyone is more than welcome in `~dopzod/urbit-help`. It's the place to get help, ask questions and chat about Urbit in general.
 
-There are two ways of using :talk: from the terminal running the Urbit process, or through the Landscape web UI available from your ship’s URL address.
+There are two ways of using `:chat-cli`: from the terminal running the Urbit process, or through the Landscape web UI available from your ship’s URL address, mentioned earlier in this guide.
 
-If you're using Landscape for the first time, you'll need to enter a code to gain access. You can obtain this code by running `+code` from the Dojo.
+### Joining a chat
 
-### Joining a channel
+In `:chat-cli`, any kind of medium for a message is called a _chat_. There are four types of chats: the _channel_ (public with blacklist), _village_ (private with whitelist), the _journal_ (publicly readable, privately writable), and the _mailbox_ (privately readable, publicly writable). But for now we'll be dealing with the _channel_, a publicly accessible chatroom for general use. We'll discuss the other three kinds in the [manual](#messaging-manual) section later on.
 
-Hall is the Arvo vane on the back-end that manages :talk. In Hall, a medium for a message is called a _circle_. There are four types of circles, but for now we'll be dealing with the _channel_: a publicly accessible chatroom for general use. We'll discuss the other three kinds in the [manual](#messaging-manual) section later on.
-
-Let's join the `~dopzod/urbit-help` channel. Use `ctrl-x` to switch from Dojo to Talk.
+Let's join the `~dopzod/urbit-help` channel. Use `ctrl-x` to switch from the Dojo prompt to the Chat prompt.
 
 Then:
 
 ```
-~your-urbit:talk> ;join ~dopzod/urbit-help
+~your-urbit:chat-cli> ;join ~dopzod/urbit-help
 ```
 
-Scrolling down your terminal window, you'll probably see a playback of previous `~dopzod/urbit-help` messages that you missed.
+Scrolling down your terminal window, you'll probably see a playback of previous `~dopzod/urbit-help` messages that you missed. You c
 
 Post a line to `~dopzod/urbit-help:`
 
 ```
-~your-urbit:talk= Hello, world!
+~your-urbit:chat-cli= Hello, world!
 ```
 
-You'll see your message printed below messages from others that came before it:
+You'll see your message printed below messages from others that came before it. You can always type `;chats` in the `chat-cli` prompt to list all the chats you're in:
+
+
+
+Glyphs will be automatically assigned to channels, but have the option of binding a glyph (single non-alphanumeric character) to the channel you're joining; the syntax is in the form of `;join ~dopzod/books +`. The chosen glyph will be the symbol that ends your prompt, and it will be what you use as a shortcut to switch to this channel.
 
 ```
-~your-urbit= Hello, world!
+~your-urbit:chat-cli= ;+
+~your-urbit:chat-cli+
 ```
+
+Use `;leave` to unsubscribe from a channel:
+
+```
+~your-urbit:chat-cli= ;leave ~dopzod/urbit-help
+```
+
+Now, let's create a channel we can invite some friends to:
+
+```
+~your-urbit:chat-cli= ;create channel /my-channel
+```
+
+Now you can tell your friends to `;join ~your-urbit/my-channel`.
 
 ### Direct messaging
 
 To send a direct message to someone, first set your audience:
 
 ```
-~your-urbit:talk= ;~talsur-todres
+~your-urbit:chat-cli= ;~talsur-todres
 ```
 
 You'll see your prompt change:
 
 ```
-~your-urbit:talk[~talsur-todres]
+~your-urbit:chat-cli[~talsur-todres]
 ```
 
 Now you and `~talsur-todres` can exchange messages directly.
 
 ```
-~your-urbit:talk[~talsur-todres] Hey buddy!
+~your-urbit:chat-cli[~talsur-todres] Hey buddy!
 ```
 
 To set your audience back to `~dopzod/urbit-help`:
 
 ```
-~your-urbit:talk[~talsur-todres] ;~dopzod/urbit-help
+~your-urbit:chat-cli[~talsur-todres] ;~dopzod/urbit-help
 ```
 
 You'll see your prompt change back:
 
 ```
-~your-urbit:talk=
-```
-
-You can also use the ASCII "glyph" assigned to your `~dopzod/urbit-help` circle as a shortcut:
-
-```
-~your-urbit:talk[~talsur-todres] ;=
-~your-urbit:talk=
-```
-
-(Your ship may have a different glyph than `=` for your circle)
-
-Use `;leave` to unsubscribe from a channel:
-
-```
-~your-urbit:talk= ;leave ~dopzod/urbit-help
-```
-
-Last, let's create a channel we can invite some friends to:
-
-```
-~your-urbit:talk= ;create channel %my-channel 'Some description.'
-```
-
-Now you can tell your friends to `;join ~your-urbit/my-channel`.
-
----
-
-### Messaging manual {#messaging-manual}
-
-Hall, the back-end Arvo vane that provides the messaging for :talk, has a design that is similar in spirit to [NNTP](https://en.wikipedia.org/wiki/Network_News_Transfer_Protocol), the underlying protocol for Usenet.
-
-The design is pretty simple: Hall messages are called _posts_. Posts go to _circles_. Any urbit can host or subscribe to any number of circles.
-
-There are four kinds of circles: a write-only `%mailbox` for direct messages, an invite-only %village` for private conversation, a read-only `%journal` for curated content, and a public-access `%channel` for general use.
-
-#### Posts
-
-A post can be a variety of different data structures. Let's look at the ones you can use from within Talk: lines, URLs, Hoon, and replies.
-
-#### Lines
-
-A line is simply a string of text. Depending on the filtering rules set by the circle's host, these may or may not include uppercase and Unicode characters (see [filter](#filter)).
-
-If the line starts with `@`, it's an action (like `/me` in IRC).
-
-```
-~your-urbit:talk= @sends a message.
-```
-
-will print as
-
-```
-~your-urbit sends a message.
-```
-
-#### URLs
-
-A URL is any valid URL.
-
-```
-~your-urbit:talk= https://example.com/
+~your-urbit:chat-cli=
 ```
 
 #### Hoon
 
-You can use Talk to evaluate Hoon code and share the results with everyone in a Hall circle. To do so, preface your Hoon with `#`.
+You can use Chat to evaluate Hoon code and share the results with everyone in a chat. To do so, preface your Hoon with `#`.
 
 ```
-~your-urbit:talk= #(add 2 2)
+~your-urbit:chat-cli= #(add 2 2)
 ```
 
 will print as
@@ -460,204 +416,35 @@ will print as
 4
 ```
 
-#### Replies
+### Creating and managing chats
 
-To indicate what you're saying is in direct response to a specific message, select the message (see Activating Lines below) and type your response.
-
-```
-~some-urbit= Hello! How are you?
-~your-urbit:talk= ; Well, thanks!
-```
-
-will print as
-
-```
-~your-urbit=^ Well, thanks!
-```
-
-#### Activating lines
-
-A line number identifying the **subsequent** line is displayed every 5 lines.
-
-```
----------[0]
-~your-urbit= This is my message.
-~your-urbit= This is another message.
-~your-urbit sends a message.
-~your-urbit/ http://example.com/
-~your-urbit# (add 2 2)
-             4
----------[5]
-~your-urbit=^ That's my message!
-```
-
-You can use a line number to **activate** a line:
-
-```
-~your-urbit:talk= ;5
-```
-
-which prints the number, line identifier, timestamp, sender, audience,
-and contents:
-
-```
-? 0
-0v3.hl51p.jhege.amhec.vb37r.3rejr at ~2016.6.24..04.48.21..a235
-~your-urbit to ~another-urbit
-in reply to: ~your-urbit:
-> This is my message.
-That's my message!
-```
-
-If information got truncated – like what happens for long URLs or expressions,
-or if there's additional information available – as is the case with replies and attachments (e.g. stack traces) – activating the message will show you all the details.
-
-You can also activate the most recent line with `;`, the second-most recent with `;;`, and so on.
-
-### Creating and managing circles
-
-As mentioned before, any urbit can host any number of circles. Existing circles can be deleted or modified with various commands. All commands in this section should be sent from the `talk>` prompt.
+As mentioned before, any urbit can host any number of chats. Existing chats can be deleted or modified with various commands. All commands in this section should be sent from the `chat-cli>` prompt.
 
 #### Create
 
-Syntax: `;create [type] %name 'description'`
+Syntax: `;create [type] /name +`, where `+` represents an optional glyph.
 
-Creates and joins a circle, where `[type]` is any of the following:
-- `channel`: public circle. Has a blacklist for write control.
-- `village`: invite-only circle.
+Creates and joins a chat, where `[type]` is any of the following:
+- `channel`: public chat. Has a blacklist for write control.
+- `village`: invite-only chat.
 - `journal`: publicly readable, invite-only for writing.
 - `mailbox`: publicly writeable, can only be read by its host.
 
 Let's create an example mailbox:
 
 ```
-sampel-palnet:talk> ;create mailbox %coolbox 'cool messages only'
-```
-
-Something like this should print:
-
-```
---------------| ;create mailbox %coolbox 'cool messages only'
---------------| :: onn %coolbox
---------------| bound '>' {[hos=~sampel-palnet nom=%coolbox]}
---------------| %coolbox: see ~sampel-palnet hear
---------------| new > %coolbox
---------------| %coolbox: cap: cool messages only
---------------| %coolbox: fit: caps:Y unic:â
+sampel-palnet:chat-cli> ;create mailbox /coolbox ^
 ```
 
 #### Delete
 
-Syntax: `;delete %name 'optional reason'`
+Syntax: `;delete /name`
 
-Deletes a circle. If a reason is specified, that gets sent to all
-subscribers before the circle gets deleted.
-
-To delete our example above:
-
-```
-sampel-palnet:talk> ;delete %coolbox 'people sent uncool messages'
-```
-
-#### Change description
-
-Syntax: `;depict %name 'description'`
-
-Changes the description of an existing circle `%name`.
-
-For example:
-
-```
-sampel-palnet:talk> ;depict %coolbox 'cool messages only. NO EXCEPTIONS.'
-```
-
-
-#### Filter
-
-Syntax: `;filter %name [capitals] [unicode]`
-
-Configures the message filter for circle `%name`: whether to allow
-capital and/or unicode characters. `y`/`&`/`true` for allowed,
-`n`/`|`/`false` for disallowed.
-
-So, to allow capital letters and disallow unicode in the circle `%coolbox`:
-
-```
-sampel-palnet:talk> ;filter %coolbox & |
-```
-or
-```
-sampel-palnet:talk> ;filter %coolbox y n
-```
-
-And we get the output:
-
-```
---------------| ;filter %coolbox & |
---------------| %coolbox: fit: caps:Y unic:n
-```
-
-#### Invite
-
-Syntax: `;invite %name ~someone`
-
-Invites someone into your circle `%name`. If they were previously banished, removes them from the blacklist. Can also invite multiple ships at once, `~comma, ~separated`.
-
-For example:
-
-```
-~sampel-palnet:talk> ;invite %coolbox ~lodleb-ritrul
-```
-
-#### Banish
-
-Syntax: `;banish %name ~someone`
-
-Removes someone from your circle `%name`. If they were previously invited, removes them from the whitelist. Can also banish multiple ships at once, `~comma, ~separated`.
-
-#### Source
-
-Syntax: `;source %name ~other/circle`
-
-Adds `~other/circle` as a source for circle `%name`. This causes all messages sent to `~other/circle` to also appear in `%name`.
-
-For example:
-
-```
-~sampel-palnet:talk> ;source %coolbox ~marzod/urbit-help
-```
-
-#### Unsource
-
-Syntax: `;unsource %name ~other/circle`
-
-Removes `~other/circle` as a source for circle `%name`.
-
-For example:
-
-```
-~sampel-palnet:talk> ;unsource %coolbox ~marzod/urbit-help
-```
-
-#### Circle membership
-
-If you have joined a circle, you can make this information publicly available to help others find that circle as well.
-
-#### Show membership
-
-Syntax: `;show ~some/circle`
-
-Adds a circle to your public membership list on your Hall profile. Hall profiles are not used yet.
-
-#### Hide membership
-
-Syntax: `;hide ~some/circle`
-
-Removes a circle from your public membership list on your Hall profile. Hall profiles are not used yet.
+Deletes a chat.
 
 ### Status
 
-You'll see status notifications when people enter or leave circles you're subscribed to.
+You'll see status notifications when people enter or leave chats you're subscribed to.
 
 #### Notifications off
 
@@ -671,58 +458,12 @@ Syntax: `;unset quiet`
 
 Turn on status (and config) notifications.
 
-#### Who
-
-Syntax: `;who`
-
-List everyone in all your subscribed circles. Optionally specify a
-specific circle to list members of just those: `;who ~some/circle`
-
-For example:
-
-```
-~sampel-palnet:talk> ;who ~marzod/urbit-help
-```
-
-#### Attend
-
-Syntax: `;attend ~some/circle [presence]`
-
-Manually set your presence to show up as one of the following. (In the
-future, a sufficiently advanced client can automatically set these for
-you.)
-
-- `talk` - typing
-- `hear` - listening
-- `idle` - inactive
-- `gone` - not present
-
-For example:
-
-```
-~sampel-palnet:talk> ;attend ~marzod/urbit-help idle
-```
-
-#### Set display name
-
-Syntax: `;name ~some/circle 'my handle'`
-
-Set a handle ("name") for yourself in a specific circle. It will display
-to users who have done `;set nicks`, but gets truncated if it's longer
-than 14 characters.
-
-### Audience
-
-An audience consists of one or more messaging targets. These can be
-circles or ships. (In the latter case, it's secretly the `~ship/inbox`
-circle.)
-
-#### Circle glyphs
+#### Chat glyphs
 
 Glyphs are found at the end of your prompt to as a quick indicator of where
 your messages will be sent.
 
-Glyphs are assigned by circle hash out of the following list:
+Glyphs are assigned by chat hash out of the following list:
 
 ```
 > = + - } ) , . " ' ^ $ % & @
@@ -732,25 +473,25 @@ Alphanumeric characters and `|#;:*~_` are reserved; all others (the
 above list, and `\/!?({<`) can be manually assigned.
 
 For example, `-` the glyph at the end of the prompt below might indicates that
-messages sent from this prompt will go to some circle with that glyph:
+messages sent from this prompt will go to some chat with that glyph:
 
 ```
-~sampel-palnet:talk-
+~sampel-palnet:chat-cli-
 ```
 
-To see what circle is bound to a glyph, use the `;what` command followed by the
-glyph in question, or use `;what` without specifying a glyph to see all of your 
+To see what chat is bound to a glyph, use the `;what` command followed by the
+glyph in question, or use `;what` without specifying a glyph to see all of your
 subscriptions which are bound to glyphs. For example, to see `=`:
 
 ```
-~sampel-palnet:talk> ;what =
+~sampel-palnet:chat-cli> ;what =
 ~dopzod/urbit-help
 ```
 
 To see all of your glyph-bound subscriptions:
 
 ```
-~sampel-palnet:talk> ;what
+~sampel-palnet:chat-cli> ;what
 > ~paldev/numismatic-forum
 . ~middev/ny-martians
 = ~dopzod/urbit-help
@@ -761,31 +502,31 @@ such as in the case of direct-messaging a ship, we see their name at the end of
 the prompt instead. Here we're talking directly to `~dannum-mitryl`:
 
 ```
-~sampel-palnet:talk[~dannum-mitryl]
+~sampel-palnet:chat-cli[~dannum-mitryl]
 ```
 
 #### Bind
 
-Syntax: `;bind [glyph] /circle-name`
+Syntax: `;bind [glyph] /chat-name`
 
-Assigns the chosen glyph to a circle owned by your ship.
+Assigns the chosen glyph to a chat owned by your ship.
 
 For example:
 
 ```
-~sampel-palnet:talk> ;bind + /my-circle
+~sampel-palnet:chat-cli> ;bind + /my-chat
 ```
 
 #### Unbind
 
-Syntax: `;unbind [glyph] /circle-name`
+Syntax: `;unbind [glyph] /chat-name`
 
-Unassigns the chosen glyph from a circle owned by your ship.
+Unassigns the chosen glyph from a chat owned by your ship.
 
 For example:
 
 ```
-~sampel-palnet:talk> ;unbind + /my-circle
+~sampel-palnet:chat-cli> ;unbind + /my-chat
 ```
 
 #### Prefixes
@@ -806,15 +547,15 @@ There are a few special-purpose glyphs:
 
 #### Set audience
 
-`;~ship/circle`
+`;~ship/chat`
 
-Set audience to `~ship/circle`.
+Set audience to `~ship/chat`.
 
 #### Set audience by glyph
 
 Syntax: `;[glyph]`
 
-Set audience to the circle previously bound to the chosen glyph.
+Set audience to the chat previously bound to the chosen glyph.
 
 #### Set audience to ship
 
@@ -822,11 +563,11 @@ syntax `;~ship`
 
 Set audience to another ship.
 
-#### Set audience to own circle
+#### Set audience to own chat
 
-Syntax: `;%circle`
+Syntax: `;%chat`
 
-Set audience to a circle on your own ship.
+Set audience to a chat on your own ship.
 
 #### Set audience and send message
 
@@ -841,62 +582,13 @@ Your audience is configured with regard to the following rules (in order):
 - if you activated a post, the post you activated.
 - audience of the last post sent.
 
-### Local nicknames
-
-#### See nicknames
-
-Syntax: `;nick`
-
-List all local nicknames.
-
-#### Find nickname
-
-Syntax: `;nick ~some-urbit`
-
-Look up a nickname using the known ship-name.
-
-#### Reverse-find nickname
-
-syntax: `;nick plato`
-
-Find a ship's name using its nickname.
-
-#### Set nickname
-
-Syntax: `;nick ~some-urbit plato`
-
-Create a new nickname.
-
-#### Clear nickname
-
-Syntax: `;nick ~some-urbit ~`
-
-Clear an assigned nickname.
-
-#### Display nicknames, not ship names
-
-Syntax: `;set nicks`
-
-Show nicknames instead of ship-names. If no local nickname is set, uses
-that user's handle. If the user has no handle, just the urbit name.
-
-#### Display ship names, not nicknames
-
-Syntax: `;unset nicks`
-
-Show ship-names instead of nicknames.
-
-Nicknames and handles longer than 14 characters will be truncated in
-output. Nicknames are strictly local – like the names on entries in a
-phonebook.
-
 ### Miscellaneous configuration
 
 #### Show timestamps
 
 Syntax: `;set showtime`
 
-Show the timestamp for each message.
+Show the timestamp for each message. This is set by default.
 
 #### Hide timestamps
 
@@ -915,7 +607,7 @@ Adjust the display of timestamps to a specific timezone. Relative to UTC.
 Syntax: `;set notify`
 
 Emit a terminal bell sound if your six-syllable ship name is mentioned in
-a message.
+a message. This is set by default.
 
 #### Sound notification off
 
@@ -927,7 +619,7 @@ Do not notify when your ship name is mentioned.
 
 Syntax: `;set width [number]`
 
-Set the rendering width of `:talk` to a specific number of characters.
+Set the rendering width of `:chat-cli` to a specific number of characters.
 (Minimum of 30.)
 
 
@@ -978,7 +670,7 @@ face in a `.hoon` file in this way.
 Use `=dir` to set the current working directory:
 
 ```
-~your-urbit:dojo> =dir %/web
+~your-urbit:dojo> =dir %/gen
 ```
 
 (`%` represents your current directory. For a complete explanation on urbit
@@ -1046,8 +738,8 @@ Just prints the argument. Accepts a `@ta`.
 Similar to Unix `ls`. Accepts a path.
 
 ```
-~your-urbit:dojo> +ls %/web
-~your-urbit:dojo> +ls /~talsur-todres/home/2/web/notes
+~your-urbit:dojo> +ls %/gen
+~your-urbit:dojo> +ls /~talsur-todres/home/2/gen/program
 ```
 
 #### `+moon`
@@ -1090,7 +782,7 @@ Generate a ticket for an urbit ship. Takes an urbit name (`@p`).
 Generate a recursive directory listing. Takes a path.
 
 ```
-~your-urbit:dojo> +tree %/web
+~your-urbit:dojo> +tree %/sys
 ```
 
 ### Hood
@@ -1185,10 +877,10 @@ Apps usually expect marked data, so `&` is often used here.
 
 #### `*` - Save in `%clay`
 
-Save a new `.udon` ([Udon](@/docs/arvo/sail-and-udon.md)) file in `web`:
+Save a new `.hoon` file in `gen`:
 
 ```
-~your-urbit:dojo> *%/web/foo/udon '# hello'
+~your-urbit:dojo> *%/gen/foo/hoon '# hello'
 ```
 
 The last component of the path is expected to be the mark (or mime
@@ -1292,7 +984,7 @@ Current working `%clay` desk and revision. Read / write.
 **Examples:**
 
 ```
-~your-urbit:dojo> =dir %/web
+~your-urbit:dojo> =dir %/gen
 ~your-urbit:dojo> +ls %
 404/hoon docs/ dojo/hoon lib/ listen/hoon md static/udon talk/ testing/udon tree/main/ unmark/ womb/
 ```
@@ -1383,6 +1075,10 @@ This quick-start guide will walk you through some common commands. Follow along
 using your Dojo. When you get a `>=` message after entering a command, this means
 that the command was successful.
 
+It's important to note that whenever you want to sync changes from your Unix
+directory to your ship, you must use the `|commit %desk` command, where `%desk`
+is the desk that you'd like to sync to.
+
 When developing it's a good idea to use a separate desk. Create a `%sandbox`
 desk based on the `%home` desk:
 
@@ -1418,37 +1114,6 @@ is just like using `ls` in a Unix terminal.
 
 Notice how `+cat %` does the same thing. That's because everything in Clay,
 including directories, is a file.
-
-Let's explore the `/web` directory of the `%sandbox` desk.
-
-```
-~your-urbit:dojo> +ls /=sandbox=/web
-```
-
-Let's see the contents of `/=sandbox=/web/404/hoon`:
-
-```
-~your-urbit:dojo> +cat /=sandbox=/web/404/hoon
-```
-
-Now let's navigate to `/web` on `%sandbox` using `=dir`, which is like `cd` in Unix.
-
-```
-~your-urbit:dojo> =dir /=sandbox=/web
-```
-
-You'll notice that your prompt is now
-`~your-urbit:dojo/=/sandbox/~2018.10.2..00.35.44..d7e8/web>`.
-
-```
-~your-urbit:dojo/=/sandbox/~2018.10.2..00.35.44..d7e8/web> +ls %
-```
-
-To change back to our home directory, we use `=dir` without any path.
-
-```
-~your-urbit:dojo/=/sandbox/~2018.10.2..00.35.44..d7e8/web> =dir
-```
 
 Sync from your friend `~some-ship`'s `%experiment` desk to your
 `%sandbox` desk:
@@ -1638,12 +1303,6 @@ Mount the `clay-path` at the Unix mount point `Unix-name`.
 **Examples:**
 
 ```
-|mount %/web
-```
-
-Mounts `%/web` to `/web` inside your pier directory.
-
-```
 |mount %/gen generators
 ```
 
@@ -1660,10 +1319,10 @@ Unmount the path or name from Unix.
 **Examples:**
 
 ```
-|unmount %/web
+|unmount %/gen
 ```
 
-Unmounts the path `%/web` from whatever name it was mounted as.
+Unmounts the Clay path `%/gen` from whatever name it was mounted as.
 
 ```
 |unmount %generators
