@@ -3,7 +3,7 @@
 {% block content %}
 <!-- header -->
 <nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl">
-  <a class="gray3" href="/">Urbit</a> 
+  <a class="gray3" href="/">Urbit</a>
   <span class="gray3"> / </span>
   <a href="/essays">
     Essays
@@ -11,20 +11,20 @@
   {% include "partials/navigation-search.html" %}
 </nav>
 <!-- content -->
-      <article class="mt4 mb4 c1-12 c4-12-lg">
-        <ul class="posts">
-          {% set posts = get_section(path="essays/_index.md") %}
-          {% for page in posts.pages %}
-          <li class="mb4">
-            <h2 class="f4 fw4 mt0 mb0"><a class="bb-0" href="{{ page.permalink }}">{{ page.title }}</a></h2>
-            <p class="mt0">{{ page.description }}</p>
-            <time class="mono f5">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
-            <span class="mono f5">
-              {% if page.extra.ship %}<address class="mono f5 ml2">{{ page.extra.ship }}</address> {% endif %}
-            </span>
-          </li>
-          {% endfor %}
-        </ul>
-      </article>
-      {% include "partials/footer.html" %}
+<article class="mt4 mb4 c1-12 c4-12-lg">
+  <ul class="posts">
+    {% set posts = get_section(path="essays/_index.md") %}
+    {% for page in posts.pages %}
+    <li class="mb4">
+      <h2 class="f4 fw4 mt0 mb0"><a class="bb-0" href="{{ page.permalink }}">{{ page.title }}</a></h2>
+      <p class="mt0">{{ page.description }}</p>
+      <time class="mono f5">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
+      <span class="mono f5">
+        {% if page.extra.ship %}<address class="mono f5 ml2">{{ page.extra.ship }}</address> {% endif %}
+      </span>
+    </li>
+    {% endfor %}
+  </ul>
+</article>
+{% include "partials/footer.html" %}
 {% endblock content %}
