@@ -1,10 +1,10 @@
 +++
 title = "Project Status + History"
-description = "Still young, but very real."
+description = "Where we've been and were we are now"
 weight = 7
 +++
 
-Can you move to Urbit today and never look back? No, not quite yet. Urbit is still young. 
+Can you move to Urbit today and never look back? No, not quite yet. Urbit is still young.
 
 ![](https://media.urbit.org/site/understanding-urbit/project-history/DSCF5386-edit.jpg)
 
@@ -12,7 +12,7 @@ Currently, Urbit ID is live and deployed. That means you can own a piece of Urbi
 
 {{ oversize(url="https://media.urbit.org/site/understanding-urbit/project-history/project-history-02%402x.png")}}
 
-You can interact with your Urbit ID and invite friends using [Bridge](https://bridge.urbit.org), the Urbit authentication system. You can also use Bridge to boot the current alpha of Urbit OS. Soon, you’ll be able to use Bridge for payments and to explore the Urbit network. 
+You can interact with your Urbit ID and invite friends using [Bridge](https://bridge.urbit.org), the Urbit authentication system. You can also use Bridge to boot the current alpha of Urbit OS. Soon, you’ll be able to use Bridge for payments and to explore the Urbit network.
 
 {{ oversize(url="https://media.urbit.org/site/understanding-urbit/project-history/project-history-03%402x.png")}}
 
@@ -22,8 +22,11 @@ Urbit OS isn’t just an interface — it’s a complete system. You should also
 
 ![](https:///media.urbit.org/site/understanding-urbit/project-history/history-4.svg)
 
-At the beginning, Urbit was just a few people with the right combination of imagination and discipline to try to rebuild computing. Now it's a community of thousands of address space holders, dozens of open source developers, at least two independent companies ([Tlon](https://tlon.io) — which works mostly on kernel development and interface design, and [urbit.live](https://urbit.live) — which is building services on the platform), and who knows how many fans. 
+At the beginning, Urbit was just a few people with the right combination of imagination and discipline to try to rebuild computing. Now it's a community of thousands of address space holders, dozens of open source developers, at least two independent companies ([Tlon](https://tlon.io) — which works mostly on kernel development and interface design, and [urbit.live](https://urbit.live) — which is building services on the platform), and who knows how many fans.
 
+<<<<<<< HEAD
+![](https://media.urbit.org/site/understanding-urbit/project-history/project-history-05.svg)
+=======
 **History**
 
 ![](https://media.urbit.org/site/understanding-urbit/project-history/project-history-05.svg)
@@ -31,3 +34,4 @@ At the beginning, Urbit was just a few people with the right combination of imag
 **Roadmap**
 
 ![](https://media.urbit.org/site/understanding-urbit/project-history/project-history-06.svg)
+>>>>>>> 161f70a0fed1632f1bedae9c397d35a409f6255e
