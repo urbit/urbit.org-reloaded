@@ -3,6 +3,7 @@ title = "Using Your Ship"
 description = "How to operate your ship, including using your ship's filesystem and messaging applications, starting a moon, or requesting a DNS proxy."
 template = "page_indiced.html"
 weight = 2
+aliases = ["docs/using/arvo-network-dns/", "docs/using/messaging/", "docs/using/shell/", "docs/using/admin/"]
 +++
 
 ## DNS proxying {#dns-proxying}

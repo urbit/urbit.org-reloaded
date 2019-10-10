@@ -3,6 +3,7 @@ title = "Install + Setup"
 weight = 1
 description = "How to install Urbit."
 template = "page_indiced.html"
+aliases = ["/docs/getting-started/"]
 +++
 
 Urbit is not yet ready for everyday users -- but if you're technically inclined or generally intrepid, feel free to try it out. It's a good place to explore.

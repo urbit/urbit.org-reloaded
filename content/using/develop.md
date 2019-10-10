@@ -3,6 +3,7 @@ title = "Developer's Guide"
 description = "How to get started developing on Urbit."
 weight = 3
 template = "page_indiced.html"
+aliases = ["/docs/using/creating-a-development-ship/"]
 +++
 
 There are roughly two kinds of development on Urbit: core development and application development. Urbit applications are still young, but can be fun to experiment with. The kernel is much more stable, but generally more challenging from an engineering standpoint.
