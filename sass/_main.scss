@@ -144,7 +144,7 @@ footer nav {
 body.essay {
     h1 {
         font-size: 1rem;
-        font-weight: 400;
+        font-weight: 500;
         max-width: 95vw;
     }
     &:not(.bg-white) {
@@ -551,16 +551,4 @@ hr {
   object-fit: cover;
   overflow: hidden;
   z-index:-99;
-}
-
-.ul-black {
-  border-bottom: 1px solid black;
-}
-
-.ul-blue {
-  border-bottom: 1px solid #4330fc;
-}
-
-.ul-green {
-  border-bottom: 1px solid #2aa779;
 }
