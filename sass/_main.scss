@@ -543,14 +543,6 @@ hr {
   position: relative;
   width: 100vw;
   height: 100vh;
-
-  @media screen and (min-width: 34.375em) {
-    height: 100vh;
-  }
-
-  @media screen and (min-width: 60em) {
-    height: 100vh;
-  }
 }
 
 .vid-insert {
