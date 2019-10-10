@@ -16,7 +16,7 @@ You can interact with your Urbit ID and invite friends using [Bridge](https://br
 
 {{ oversize(url="https://media.urbit.org/site/understanding-urbit/project-history/project-history-03%402x.png")}}
 
-Urbit OS is a solid alpha. We use it every day to coordinate and chat about the future of Urbit. You’re [welcome to join](@/install.md). Our standards are high, so we aren’t asking everyone to use Urbit OS yet. If you’re someone who wants to customize their own software and experiment with a new system, [check it out](@/install.md). Otherwise, [join the mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;id=be143888d2). We have exciting things planned for 2020.
+Urbit OS is a solid alpha. We use it every day to coordinate and chat about the future of Urbit. You’re [welcome to join](@/using/install.md). Our standards are high, so we aren’t asking everyone to use Urbit OS yet. If you’re someone who wants to customize their own software and experiment with a new system, [check it out](@/using/install.md). Otherwise, [join the mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;id=be143888d2). We have exciting things planned for 2020.
 
 Urbit OS isn’t just an interface — it’s a complete system. You should also check out the [GitHub repository](https://github.com/urbit/urbit), our [open grants program](https://grants.urbit.org) and the [documentation](@/docs/_index.md).Building a system from scratch is a huge and enormously fun undertaking.  There’s a lot going on, and we do all our development in public. Systems programmers, functional programming nerds, anyone who wants to tinker with their software will probably love playing with Urbit.
 
