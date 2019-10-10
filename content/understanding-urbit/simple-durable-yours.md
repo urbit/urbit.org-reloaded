@@ -1,6 +1,6 @@
 +++
 title = "Simple, Durable, Yours"
-description = "If computers are going to be a part of our lives for generations to come, we need a sound foundation for them."
+description = "The core ideas that Urbit is built around"
 weight = 1
 +++
 
@@ -24,17 +24,25 @@ We built Urbit from scratch to be a system that’s simple, durable and yours. E
 
 What do we mean by simple, durable and yours? Let’s walk through it one by one.
 
+<br /><br />
+
 ## Simple
 
 Urbit is designed to be incredibly simple for ordinary users. Your data, applications and connections all live in a single, unified OS that belongs to you. Your Urbit requires no system administration at all and gets all its updates over the air. For developers, Urbit is incredibly compact and efficient. It’s about 50K lines of code — smaller than your average webapp. The entire OS can be understood by a single person and is designed to make building decentralized apps straightforward.
+
+<br /><br />
 
 ## Durable
 
 Your Urbit is designed to be durable: both to store your data across generations and to be resilient against crashes. You can't really trust a computer that could disappear or become obsolete. We’ve become accustomed to this distrust, but it’s not the way things should be. Your Urbit is meant to be a permanent digital home. At its foundation, Urbit is designed a bit like a blockchain — making reliability and permanence a priority for the individual.
 
+<br /><br />
+
 ## Yours
 
 And, finally, your Urbit belongs to you in every possible way. You own it with a private key, control it completely and can inspect its source code. We want your Urbit to be your digital home. A home you don’t own is just a hotel room.
+
+<br /><br />
 
 <picture class="full mt4 mb4 c3-11-lg">
 <source srcset="https://media.urbit.org/site/understanding-urbit/simple-durable-yours/sdy-3.png,
