@@ -1,6 +1,6 @@
 +++
 title = "Star and Galaxy Operations"
-descriptions = "Additional information and suggested ettiquette for Star and Galaxy owners."
+description = "Additional information and suggested ettiquette for Star and Galaxy owners."
 weight = 3
 aliases = ["/docs/using/operating-a-star/"]
 template = "page_indiced.html"

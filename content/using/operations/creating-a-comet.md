@@ -1,6 +1,6 @@
 +++
 title = "Creating a Comet"
-descriptions = "Comets are disposable identities you can use on the live network."
+description = "Comets are disposable identities you can use on the live network."
 weight = 4
 aliases = ["/docs/using/creating-a-comet/"]
 +++
