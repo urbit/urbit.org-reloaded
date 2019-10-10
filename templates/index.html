@@ -21,7 +21,7 @@ content: " ↗";
   </video>
 
   <div class='grid12' style='height: 100%; width:100%;'>
-    <div class='full c4-10-lg flex items-center align-center z10 white'>
+    <div class='full c3-10-lg flex items-center align-center z10 white'>
       Urbit is your last computer.
     </div>
   </div>
@@ -31,25 +31,67 @@ content: " ↗";
   "></iframe> -->
 </section>
 
-<nav class="home full c4-10-lg mt6 mb5 grid12">
-  <section class="full half-1-md half-1-lg">
-
+<nav class="home full c3-11-lg mt6 grid12">
+  <section class="full mb6">
+    <div>
+      It's a simple, durable computer you own 100% and forever.
+    </div>
+  </section>
+  <aside class="full half-1-md half-1-lg mb6">
     <ul>
-      <li><a href="/understanding-urbit/">Introduction -></a></li>
-
-      <li class="mt4"><a href="/essays">Essays</a></li>
-      <li><a href="/updates/">Updates</a></li>
-      <li><a href="/media">Media</a></li>
-      <li><a href="/faq/">FAQ</a></li>
-
-      <li class="mt4"><a class="blue2" href="/docs">Docs ↗</a></li>
-      <li><a class="green2" href="/install">Install ↗</a></li>
+      <li><a class='ul-black' href="/understanding-urbit/">Introduction</a></li>
+      <li class=""><a class="blue2 ul-blue" href="/docs">Docs</a></li>
+      <li><a class="green2 ul-green" href="/install">Install</a></li>
     </ul>
+  </aside>
+</nav>
 
+<article class="full-bleed full grid12 mt6">
+  <nav class="full grid12 mt4 mb6">
+    <section class="full c3-7-lg">
+      <h1 class="mb3">Understand Urbit</h1>
+      <p class="lh-copy mt1 mb4">For a quick explanation of what Urbit is and how Urbit works, see the <a href="/understanding-urbit">introduction</a>.
+      If you're more technical, feel free to skip ahead to the <a href="/understanding-urbit/technical-overview">technical overview.</a></p>
+    <ul class="full c4-7-lg">
+        <li class="mt2"><a class="b--black bb" href="/understanding-urbit/">Introduction</a></li>
+        {% set posts = get_section(path="understanding-urbit/_index.md") %}
+        {% for page in posts.pages %}
+        <li class="mt2"><a class="b--black bb" href="{{ page.permalink }}">{{ page.title }}</a></li>
+        {% endfor %}
+    </ul>
   </section>
 
-  <aside class="half-2-md half-2-lg full mt0-l mt0-xl mt4" id="newsletter-subscribe-top">
-    <p class="lh-copy mt1 mb3">We send regular updates about our project. Enter your email to get them.</p>
+  <section class="full c7-11-lg">
+    <h1 class="mb3">Learn More</h1>
+    <p class="lh-copy mt1 mb4">For a quick explanation of what Urbit is and how Urbit works, see the <a href="/understanding-urbit">introduction</a>.
+    If you're more technical, feel free to skip ahead to the <a href="/understanding-urbit/technical-overview">technical overview.</a></p>
+    <ul class="full c4-7-lg">
+        <li class="mt2"><a class="b--black bb" href="/understanding-urbit/">Introduction</a></li>
+        {% set posts = get_section(path="understanding-urbit/_index.md") %}
+        {% for page in posts.pages %}
+        <li class="mt2"><a class="b--black bb" href="{{ page.permalink }}">{{ page.title }}</a></li>
+        {% endfor %}
+    </ul>
+  </section>
+
+  <section class="c3-7-lg mt6">
+    <h1 class="mb3">Follow Us</h1>
+    <p class="lh-copy mt1 mb4">Urbit is actively being built, explored, and experimented with.
+      To follow our progress you can:
+    </p>
+    <ul>
+      <li class="mt2">Follow us on <a href="https://twitter.com/urbit">Twitter</a></li>
+      <li class="mt2">Explore the code on <a href="https://github.com/urbit/urbit">GitHub</a></li>
+      <li class="mt2">Ask questions in our <a href="https://discord.gg/bkEX6EU">Discord</a></li>
+    </ul>
+    <p class="lh-copy">or boot Urbit and join <code class="db">~dopzod/urbit-help</code></p>
+  </section>
+
+  <aside class="full c7-11-lg mt6" id="newsletter-subscribe-top">
+    <h1 class="mb3">Stay Up to Date</h1>
+    <p class="lh-copy mt1 mb3">
+      We send regular updates about our project. Enter your email to get them.
+    </p>
     <iframe name="nothing" style="display:none;"></iframe>
     <form action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;amp;id=be143888d2"
       method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form"
@@ -65,36 +107,6 @@ content: " ↗";
       </div>
     </form>
   </aside>
-</nav>
-
-<article class="full-bleed full grid12 mt6">
-
-  <nav class="full grid12 mt4 mb6">
-      <section class="full c4-7-lg">
-      <h1 class="mb3">Understanding Urbit</h1>
-      <p class="lh-copy mt1 mb4">For a quick explanation of what Urbit is and how Urbit works, see the <a href="/understanding-urbit">introduction</a>.
-      If you're more technical, feel free to skip ahead to the <a href="/understanding-urbit/technical-overview">technical overview.</a></p>
-    <ul class="full c4-7-lg">
-        <li class="mt2"><a class="b--black bb" href="/understanding-urbit/">Introduction</a></li>
-        {% set posts = get_section(path="understanding-urbit/_index.md") %}
-        {% for page in posts.pages %}
-        <li class="mt2"><a class="b--black bb" href="{{ page.permalink }}">{{ page.title }}</a></li>
-        {% endfor %}
-    </ul>
-  </section>
-
-  <section class="full c7-10-lg mt4 mt0-xl">
-      <h1 class="mb3">Follow the Project</h1>
-      <p class="lh-copy mt1 mb4">Urbit is actively being built, explored, and experimented with.
-        To follow our progress you can:
-      </p>
-      <ul>
-        <li class="mt2">Follow us on <a href="https://twitter.com/urbit">Twitter</a></li>
-        <li class="mt2">Explore the code on <a href="https://github.com/urbit/urbit">GitHub</a></li>
-        <li class="mt2">Ask questions in our <a href="https://discord.gg/bkEX6EU">Discord</a></li>
-      </ul>
-      <p class="lh-copy">or boot Urbit and join <code class="db">~dopzod/urbit-help</code></p>
-    </section>
 
   </nav>
 </article>
