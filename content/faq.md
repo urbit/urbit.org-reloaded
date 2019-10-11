@@ -9,21 +9,21 @@ hidetitle = "true"
 
 ### What is Urbit? {#what-is-urbit}
 
-Urbit reimagines the internet as a peer-to-peer network designed to stay that way. Previous attempts to "decentralize" the internet have only attempted to solve certain corners of the problem. Urbit proposes that only a new stack, built from the ground-up as a tightly integrated system, can realize a great user experience for people using a peer-to-peer web.
+Urbit reimagines the internet as a peer-to-peer network designed to stay that way. Previous attempts to "decentralize" the internet have only attempted to solve certain corners of the problem. Urbit proposes that only a new stack, built from the ground up as a tightly integrated system, can realize a great user experience for people using a peer-to-peer web.
 
 Combining a deterministic operating system (Urbit OS / Arvo) and a secure, global identity layer (Urbit ID / Azimuth), the Urbit project has created something that’s never existed before: an encrypted peer-to-peer network where you can be sure that messages are never tampered with or surveilled, and where strangers on that network can be trusted by default.
 
-The connected world anticipated by Urbit is a much friendlier one, much like the early Internet, where collegial discussion and collaboration was the norm. Problems that are unsolvable without large-scale political centralization in our current internet – data breaches, spam, fake reviews, malware-spreading, harassment – become tractable when individuals control their computing again. You have one login for everything. You own and control all of your software and all of your data by default. Software is designed around the friendships, families, communities, and organizations you're already apart of – not the other way around.  
+The connected world anticipated by Urbit is a much friendlier one, much like the early Internet, where collegial discussion and collaboration was the norm. Problems that are unsolvable without large-scale political centralization in our current internet – data breaches, spam, fake reviews, malware-spreading, harassment – become tractable when individuals control their computing again. You have one login for everything. You own and control all of your software and all of your data by default. Software is designed around the friendships, families, communities, and organizations you're already a part of – not the other way around.  
 
 ### How secure is Urbit right now? {#how-secure-is-urbit}
 
-Urbit ID / Azimuth, Urbit's identity layer, is live on the Ethereum blockchain and has been audited by Open Zeppelin, Blockchain at Berkeley and Bloctrax. [We run a bug bounty program](https://hackerone.com/tlon) on HackerOne.
+Urbit ID / Azimuth, Urbit's identity layer, is live on the Ethereum blockchain and has been audited by Open Zeppelin, Blockchain at Berkeley, and Bloctrax. [We run a bug bounty program](https://hackerone.com/tlon) on HackerOne.
 
 Urbit OS / Arvo is still an early beta. Arvo is safe to play with, but it’s not yet a place to store or share private information. Urbit's cryptographic protocols have not been professionally audited, and the OS itself doesn't provide protection from attackers on the network — although we haven't seen any yet.
 
 ### How can I contribute to Urbit? {#contribute}
 
-We encourage outside contributors to become a part of the project. The best way to do this is to check out [Urbit](https://github.com/urbit) on Github, look at the pinned repositories, and check out our [Contributing](https://urbit.org/docs/getting-started/contributing/) guide. After you've gotten familiar with the system, feel free to open issues and make pull requests.
+We encourage outside contributors to become a part of the project. The best way to do this is to check out [Urbit](https://github.com/urbit) on GitHub, look at the pinned repositories, and check out our [Contributing](https://urbit.org/docs/getting-started/contributing/) guide. After you've gotten familiar with the system, feel free to open issues and make pull requests.
 
 ### Who is building Urbit? {#who-builds-urbit}
 
@@ -33,13 +33,13 @@ We encourage outside contributors to become a part of the project. The best way 
 
 ### Who is Curtis? {#who-is-curtis}
 
-Urbit started back in 2002, as Curtis Yarvin’s personal project. Curtis developed the original prototype for Urbit and, separately, also wrote a blog on history and politics under the pen name ‘Mencius Moldbug’.
+Urbit started back in 2002 as Curtis Yarvin’s personal project. Curtis developed the original prototype for Urbit and, separately, wrote a blog on history and politics under the pen name ‘Mencius Moldbug’.
 
-In early 2019, Curtis left the Urbit project and gave all of his voting interest (both as address space and voting shares in the company) back to Tlon. He retains a non-voting, minority interest in both the address space and the company — but is not involved in the day to day development or operations.
+In early 2019, Curtis left the Urbit project and gave all of his voting interest (both as address space and voting shares in the company) back to Tlon. He retains a non-voting, minority interest in both the address space and the company — but is not involved in the day-to-day development or operations.
 
-Curtis laid the foundation for Urbit by delivering its first prototype, but it has been refined and (almost entirely) rewritten by a community of developers since 2013. No one working on Urbit today had anything to do with Curtis’ writing. For the most part, we couldn’t be less interested in it.
+Curtis laid the foundation for Urbit by delivering its first prototype but, since 2013, it has been refined and almost entirely rewritten by a community of developers. No one working on Urbit today had anything to do with Curtis’s writing. For the most part, we couldn’t be less interested in it.
 
-The community of people who build Urbit have widely varied ways of thinking and looking at the world. But they all share two things: the desire to build neutral infrastructure for all people and to think from first principles about hard problems. We welcome spirited debate and disagreement as a primary tool for refining our work. Successful infrastructure, we think, serves all people — no matter what their background, culture or worldview.
+The community of people who build Urbit have widely varied ways of thinking and looking at the world, but they all share two things: the desire to build neutral infrastructure for all people and to think from first principles about hard problems. We welcome spirited debate and disagreement as a primary tool for refining our work. Successful infrastructure, we think, serves all people — no matter their background, culture, or worldview.
 
 ### Why aren't there more planets? {#more-planets}
 
@@ -49,21 +49,21 @@ This pattern exists because it’s a simple way to enforce the scarcity of addre
 
 (For more background on why Urbit ID is the way it is, read [this](/understanding-urbit/urbit-id/).)
 
-The problem with populating the moons now is that <span class="mono">2<sup>64</sup></span> is a *really, really big* number. We’ll need some way of differentiating between humans and their devices (to prevent devices turning into rogue botnets). But that’s a hard problem, and we prefer to start with the simplest possible solution before solving hard problems. The current scheme works. And once we need to update it, we’ll figure it out.
+The problem with populating the moons now is that <span class="mono">2<sup>64</sup></span> is a *really, really big* number. We’ll need some way of differentiating between humans and their devices (to prevent devices turning into rogue botnets). But that’s a hard problem, and we prefer to start with the simplest possible solution before solving hard problems. The current scheme works. Once we need to update it, we’ll figure it out.
 
 It’s also worth noting that, while there are almost 8B people on Earth, there are almost certainly not 8B internet users. Facebook has about 2.5B users, Apple has about 1B. Urbit has a long way to go before we get close to <span class="mono">2<sup>32</sup></span>.
 
 ### Why do you use Ethereum? {#why-eth}
 
-As of 2019, Ethereum is the most widely deployed, most secure and best documented general purpose blockchain. Using Ethereum is a practical engineering choice. It’s the best way to bootstrap real cryptographic ownership. We’re not specifically interested in Ethereum one way or the other.
+As of 2019, Ethereum is the most widely deployed, most secure, and best documented general purpose blockchain. Using Ethereum is a practical engineering choice. It’s the best way to bootstrap real cryptographic ownership. We’re not specifically interested in Ethereum one way or the other.
 
 One day we’d really like the Urbit ID registry to be hosted on Urbit OS itself. But the first challenge is getting Urbit OS to be completely secure.
 
 ### Why is Hoon so weird? {#why-hoon}
 
-There are things about Urbit that are weird by design, and some that are weird because we haven’t gotten around to cleaning them up. Hoon, for the most part, is weird by design. There are a few things we’d like to clean up.
+There are things about Urbit that are weird by design, and some that are weird because we haven’t gotten around to cleaning them up. Hoon, for the most part, is weird by design, but there are a few things about it we’d like to clean up.
 
-The runes are, once you get the hang of them, pretty nice. Your mileage may vary, of course, but many talented engineers have spent many, many hours writing Hoon. It’s a simple, practical, language. But the learning curve can be a bit high.
+The runes are, once you get the hang of them, pretty nice. Your mileage may vary, of course, but many talented engineers have spent many, many hours writing Hoon. It’s a simple, practical language. But the learning curve can be a bit high.
 
 The standard library and naming is something we’ve discussed changing, and it could happen. It’s definitely up for debate whether or not the four-letter naming convention works well. The vanes (kernel modules) have largely moved away from this convention.
 
@@ -89,13 +89,13 @@ At the end of the day, if you’re really worried about security, it’s quite e
 
 ### What is Urbit ID? {#what-is-urbit-id}
 
-Urbit ID is a general-purpose PKI ("public key infrastructure") that Urbit uses as an identity system. This system is implemented as a suite of smart contracts on the Ethereum blockchain, and it determines which Ethereum addresses own which Urbit planets, stars, or galaxies. In Urbit OS, a single identity is called a "ship," whereas in Urbit ID, a single identity is just an "identity."
+Urbit ID is a general-purpose PKI ("public key infrastructure") that Urbit uses as an identity system. This system is implemented as a suite of smart contracts on the Ethereum blockchain, and it determines which Ethereum addresses own which Urbit planets, stars, or galaxies. In Urbit OS, a single identity is called a "ship", whereas in Urbit ID a single identity is just an "identity."
 
 ### What are stars, galaxies, and planets? {#stars-galaxies-planets}
 
 Urbit IDs come in three classes: galaxies, stars, and planets. The length of an identity’s name will tell you its class. Galaxies are 8-bit and have names like `~mul`. Galaxies issue 16-bit stars (`~dacmul`), which can themselves issue 32-bit planets (`~laptel-holfur`).
 
-Planets are intended for everyday use by individuals, and there are 4.3 billion of them (2 to the 32nd power). Stars and galaxies, on the other hand, are meant to act as network infrastructure: on the Urbit OS network they provide routing and are responsible for distributing software updates.
+Planets are intended for everyday use by individuals, and there are 4.3 billion of them (two to the 32nd power). Stars and galaxies, on the other hand, are meant to act as network infrastructure: on the Urbit OS network they provide routing and are responsible for distributing software updates.
 
 ### What is Azimuth? {#what-is-azimuth}
 
@@ -113,7 +113,7 @@ In addition to the three classes of identities mentioned above, there are two ot
 
 Moons are 64 bits, issued by planets, and have names like `~doznec-salfun-naptul-habrys`. Moons are meant for connected devices: phones, desktops, smart TVs, digital thermostats, and other IoT devices. Moons are subordinated to their parent planet.
 
-Comets are 128 bits and have no parents. They can be launched by anyone. They are temporary, disposable identities. Being disposable and essentially unlimited, they will likely not be trusted by default by others on the Urbit OS network, though you shouldn't have any problem until the network grows much larger. They have long, hard-to-memorize names, like `~racmus-mollen-fallyt-linpex--watres-sibbur-modlux-rinmex`.
+Comets are 128 bits and have no parents. They can be launched by anyone. They are temporary, disposable identities. Being disposable and essentially unlimited, they will likely not be trusted by default by others on the Urbit OS network, though you shouldn't have any problem until the network grows much larger. They have long, hard-to-memorize names, like `~racmus-mollen-fallyt-linpex-watres-sibbur-modlux-rinmex`.
 
 ### What is a `@p`? Why is my username generated for me? {#what-is-patp}
 
@@ -163,7 +163,7 @@ An ownership address is an Ethereum address that owns one or more of your Urbit 
 
 ### What are proxies? {#proxies}
 
-Proxies are seeds derived from your master ticket used to generate sub-wallets, which are in turn used to generate keys that have the ability to execute different Urbit ID functions associated with your Urbit identity. Proxies generally have more restricted capabilities than your ownership seed. These capabilities include: spawning child identities, voting, and setting networking keys.
+Proxies are seeds derived from your master ticket used to generate sub-wallets, which in turn are used to generate keys that have the ability to execute different Urbit ID functions associated with your Urbit identity. Proxies generally have more restricted capabilities than your ownership seed. These capabilities include spawning child identities, voting, and setting networking keys.
 
 - Transfer proxy: Can transfer your identity to another Ethereum address.
 - Spawn Proxy: For stars and galaxies only. Can create new child identities.
@@ -172,9 +172,9 @@ Proxies are seeds derived from your master ticket used to generate sub-wallets, 
 
 ### What are seeds? {#seeds}
 
-All Ethereum key-pairs in the Urbit wallet system, including proxies, are produced by 128-bit cryptographically random values called seeds. These seeds are the equivalent of the BIP39 mnemonic of an Ethereum wallet. These seeds are yours alone. An ownership key pair is derived from an ownership seed, and likewise the various proxy key pairs, are generated from their respective proxy seeds.
+All Ethereum key-pairs in the Urbit wallet system, including proxies, are produced by 128-bit cryptographically random values called seeds. These seeds are the equivalent of the BIP39 mnemonic of an Ethereum wallet and are yours alone. An ownership key pair is derived from an ownership seed and, likewise, the various proxy key pairs are generated from their respective proxy seeds.
 
-For detailed information, see the [Urbit HD Wallet Spec (UP 8)](https://github.com/urbit/proposals/blob/master/008-urbit-hd-wallet.md).
+For detailed information see the [Urbit HD Wallet Spec (UP 8)](https://github.com/urbit/proposals/blob/master/008-urbit-hd-wallet.md).
 
 ### What does it mean to “set public keys”? {#set-public-keys}
 
@@ -188,18 +188,18 @@ We recommend using different HD Wallets for each identity. You are able to assig
 
 ### How should I take care of my Urbit HD Wallet? {#custody}
 
-Urbit IDs have accompanying security realities that must be taken seriously. Cryptographic assets are unique among things of value, because all of the responsibility for keeping those assets safe rests with the party that owns them.
+Urbit IDs have accompanying security realities that must be taken seriously. The responsibility for keeping cryptographic assets safe rests fully with the party that owns them.
 
 The nature of decentralization is such that there is no authority that has the power to restore any lost or stolen wallet. Neither can anyone force you to follow good security practices. At most, they can give you recommendations. **Remember:** if critical items, such as your ownership key, are lost or compromised, your assets are likely gone forever.
 
 Below we list some good practices for storing keys, strictest first. Higher-value assets should be secured with stricter measures.
 
-#### Security Tier 1: Cold Storage*
+#### Security Tier 1: Cold storage*
 
 Cold storage refers to any method in which secrets are stored in a way that is not accessible to any network. Cold-stored keys should only ever be generated offline.
 
 Cold storage media options:
-- Printing the secret on a piece of paper. However, paper wallets are vulnerable to various forms of physical damage, such as rot, water damage, smoke, or fire. Laminating the paper can mitigate some of these risks, but the lamination can potentially trap moisture. Make sure that you trust the printer: some have memory and network connections.
+- Printing the secret on a piece of paper. However, paper wallets are vulnerable to various forms of physical damage, such as rot, water damage, smoke, or fire. Laminating the paper can mitigate some of these risks, but the lamination can potentially trap moisture. Make sure that you trust the printer; some have memory and network connections.
 - Storing the secret on a brand-new USB stick or hard drive that has never been connected to a networked machine.
 - Storing the secret on a hardware wallet like Ledger or Trezor.
 - Engraving the secret on a strip of stainless steel. This medium is resistant to both water and fire damage.
@@ -211,13 +211,13 @@ Places to store your cold-storage media:
 
 It’s a good idea to store your keys redundantly; for example, on both a USB stick and a piece of paper in the safe, in case one of those methods fails. If you deem a key to be valuable enough, you can **shard** it into thirds (or other splits) and store each third in secure, geographically distributed locations. Urbit HD wallets for galaxies automatically provide a 3-way sharded master ticket.
 
-#### Security Tier 2: Hardware Wallet or Paper Wallet
+#### Security Tier 2: Hardware wallet or paper wallet
 
-A hardware wallet is a digital storage device that’s purpose-built to store cryptographic secrets. They are unaffected by typical key-stealing malware, and have built-in security mechanisms that other digital devices lack. Do research and make sure that you are buying an authentic device manufactured by trustworthy, technically competent security experts with a good reputation. Trezor and Ledger are two popular brands of hardware wallets.
+A hardware wallet is a digital storage device that’s purpose-built to store cryptographic secrets. They are unaffected by typical key-stealing malware and have built-in security mechanisms that other digital devices lack. Do your research and make sure that you are buying an authentic device manufactured by trustworthy, technically competent security experts with a good reputation. Trezor and Ledger are two popular brands of hardware wallets.
 
-A "paper wallet" is a physical medium printed or engraved with a secret. These are resistent to network attacks, but have the downside that the secret must be entered into a computer by hand, exposing the user to attacks from malware and evesdroppers.
+A "paper wallet" is a physical medium printed or engraved with a secret. These are resistent to network attacks, but the downside is that the secret must be entered into a computer by hand, exposing the user to attacks from malware and eavesdroppers.
 
-#### Security Tier 3: On Your Computer
+#### Security Tier 3: On your computer
 
 This tier includes any method where secrets are stored on an everyday computing platform. Some such methods are:
 
@@ -227,21 +227,21 @@ This tier includes any method where secrets are stored on an everyday computing 
 
 This method is risky for a number of reasons. Networked computers can contain malware. Computers that see common use are also prone to crashes and data loss. Storing secrets on cloud accounts mitigates the risk of data destruction, but it exposes a much larger attack surface to malicious actors.
 
-For all of these reasons, make sure that you only use Tier 3 methods for the storage of low-value secrets.
+For all of these reasons, if you use Tier 3 methods, use them only for the storage of low-value secrets.
 
 ### I have a galaxy or star with lockup conditions. How does this work? {#lockup-conditions}
 
 There are two kinds of release schemes for locked up assets: linear and conditional.
 
-In either scheme, you start out being able to take one star out of lockup, regardless of the terms set around the lockup as a whole. This way, you get to participate with a star right away. Become useful! Go do something cool!
+In either scheme, you start out being able to take one star out of lockup, regardless of the terms set around the lockup as a whole. This way, you get to participate with a star right away. Go do something cool!
 
 If your lockup involved a galaxy, all of its stars will be locked up, but you will have immediate, lock-free control of the galaxy. You will likely need it to use that star.
 
-Note that the "releasing" of stars just means that they become available for you to claim. They don't automatically get transferred to you, you have to withdraw them from the appropriate lockup contract.
+Note that the "releasing" of stars just means that they become available for you to claim. They don't automatically get transferred to you; you have to withdraw them from the appropriate lockup contract.
 
-Linear release is the simplest, and does exactly what it sounds like. Your stars will be released linearly over a period of time. Most commonly, this is a period of four years. If you have four stars in lockup, that means you will be able to withdraw one star per year. In many cases, there is also an initial windup period, which has to pass before the linear releasing begins. Usually, this is one year. Since Azimuth launched in January 2019, this means the linear release will begin in January 2020.
+Linear release is the simplest: your stars will be released linearly over a period of time. Most often this is a period of four years. If you have four stars in lockup, that means you will be able to withdraw one star per year. In many cases, there is also an initial windup period which has to pass before linear releasing begins, typically one year. Since Azimuth launched in January 2019, the linear release will begin in January 2020.
 
-Conditional release is a bit more complicated. If your stars are in conditional lockup, they're likely divided over three so-called tranches. Each of these unlocks only after a unique condition is met. Since it's difficult to verify things about the real world using smart contracts, we instead have the Galactic Senate verify that they've been met. Once the Senate marks a condition for a tranche as cleared, it starts releasing linearly over the period of a year.
+Conditional release is a bit more complicated. If your stars are in conditional lockup, they're likely divided over three so-called tranches. Each of these unlocks only after a unique condition is met. Since it's difficult to verify things about the real world using smart contracts, the Galactic Senate verifies that they've been met. Once the Senate marks a condition for a tranche as cleared, it starts releasing linearly over the period of a year.
 
 ## Urbit OS
 
@@ -253,7 +253,7 @@ Instances of Urbit OS / Arvo, called 'ships', communicate as peers on what we re
 
 ### What is unique about Urbit OS / Arvo? {#what-is-unique-about-arvo}
 
-Arvo is quite different from other operating systems in many ways, but notably because it's completely deterministic. Processing in the system happens in a unique way: when an event happens, a transition function takes that event and the old state of Arvo, and then produces an effect and a new state of Arvo. To visualize:
+Arvo is different from other operating systems in many ways. One notable way is that it is completely deterministic. Processing in the system happens in a unique way: when an event happens, a transition function takes that event and the old state of Arvo, and produces an effect and a new state of Arvo. To visualize:
 
 `[event, old state] -> [effects, new state]`
 
@@ -261,13 +261,13 @@ All events are logged to disk, so you can always restore the system to a previou
 
 ### How is Urbit OS / Arvo connected to Ethereum? {#arvo-ethereum}
 
-When an Arvo ship (instance) is started for the first time, you must use a "keyfile" containing the private keys for your identity's networking keys. Urbit ID uses the Ethereum blockchain as its decentralized ledger.
+When an Arvo ship (instance) is started for the first time you must use a "keyfile" containing the private keys for your identity's networking keys. Urbit ID uses the Ethereum blockchain as its decentralized ledger.
 
 See our [Getting Started](@/using/install.md) guide to learn how to get your ship onto the Urbit OS / Arvo network.
 
 ### Will the Urbit OS network survive if Ethereum dies? {#if-ethereum-dies}
 
-Yes. It would be annoying, but Urbit ID / Azimuth could be ported to another decentralized ledger. Or hosted on Urbit OS / Arvo itself.
+Yes. It would be annoying, but Urbit ID / Azimuth could be ported to another decentralized ledger, or hosted on Urbit OS / Arvo itself.
 
 ### How do I install Urbit OS? {#install-urbit-os}
 
@@ -321,7 +321,7 @@ However, either party may terminate a proposal on seven days’ written notice. 
 
 ### Do I have to pay taxes on stars? {#grant-5}
 
-Yes. If you are American, we need your W-9 before we can pay you your stars. If you’re not an American, you don’t need to get us any forms, but you do need to personally follow the relevant tax laws in your jurisdiction. In the United States, stars are considered to be income.
+Yes. In the United States, stars are considered to be income. If you are American, we need your W-9 before we can pay out your stars. If you’re not an American, you don’t need to get us any forms, but you do need to personally follow the relevant tax laws in your jurisdiction.
 
 ### Can I create a bounty? {#grants-6}
 
@@ -357,7 +357,7 @@ We recommend storing each star in its own Ethereum wallet. The private keys to t
 
 ### Can I delegate a bounty or proposal to someone else? {#grants-14}
 
-No. Not unless explicitly authorized by Tlon.
+No, not unless explicitly authorized by Tlon.
 
 ### Do I need to sign a contract? {#grants-15}
 
