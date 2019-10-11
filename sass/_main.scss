@@ -175,7 +175,6 @@ body.essay {
     }
     article > *:not(figure):not(picture) {
         grid-area: auto / 4 / auto / 10;
-        max-width: 30em;
     }
 }
 
@@ -385,6 +384,7 @@ pre {
     margin: 0.5rem 0 0.5rem 0;
     padding: 1.25rem;
     overflow-x: scroll;
+    @extend .bg-gray5;
 }
 
 code, .code, .mono {

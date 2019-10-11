@@ -8,65 +8,39 @@
   <a href="/understanding-urbit/">
     Understanding Urbit
   </a>
-  {% include "partials/navigation-search.html" %}
-  <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="fw6 f6" href="/understanding-urbit/">Introduction</a></li>
-  {% set posts = get_section(path="understanding-urbit/_index.md") %}
-  {% for directorypage in posts.pages %}
-    <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="f6" href="{{directorypage.permalink}}">{{directorypage.title}}</a></li>
-  {% endfor %}
 </nav>
 <!-- content -->
-<h1 class="mb4 full mt4 c4-12-lg fw6">Introduction</h1>
+<h1 id="introduction" class="mb4 full mt4 c4-10-lg">Introduction</h1>
 <section class="full-bleed full grid12">
-  <section id="introduction" class=" c4-10-lg full lh-copy">
-    <figure class="mt0">
-      <img src="../assets/intro/ship.svg" alt="A drawing of an Urbit ship." />
-    </figure>
-
-      <p class="mb0 lh-copy">This is a drawing of an Urbit.</p>
-      <p class="mt0 lh-copy">It’s a new kind of computer.</p>
-    </section>
-
-    <section id="what-is-urbit" class=" c4-10-lg full">
-
-      <figure class="mt6 tc lh-copy">
-        <img src="../assets/intro/social-software.svg" />
-        <figcaption class="measure home tl mt5">
-          Your Urbit is a purpose built tool for your own social software, not MEGACORP social networking.
-          <br /><br />
-          On Urbit, you run (or build) your own software to connect and communicate with your friends and family.
-        </figcaption>
-      </figure>
-
-      <figure class="tc mt6 lh-copy">
-        <img src="../assets/intro/rock.svg" />
-        <figcaption class="measure home tl mt5">
-          Your Urbit is a permanent, private archive.
-          <br /><br />
-          Your Urbit can store all your data and digital assets safely, privately, forever.
-        </figcaption>
-      </figure>
-
-      <figure class="tc mt6 lh-copy">
-        <img src="../assets/intro/yours-forever.svg" />
-        <figcaption class="measure home tl mt5">
-          You own your Urbit like you own Bitcoin.
-          <br /><br />
-          Each Urbit is a piece of a new network that’s owned and controlled by its users.
-        </figcaption>
-      </figure>
-      <p class="mt6 mb6">Nothing quite like this has ever been done before. There’s nothing else like it.</p>
-    </section>
-
-    <section id="megacorp" class="c4-10-lg full">
-      <img class="db" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-1.svg" style="margin: 2rem auto 4rem auto;"/>
-      <p class="lh-copy">Today, technology controls us. Every MEGACORP has the same incentive:
-        To keep us hooked on their platform.</p>
-      <p class="lh-copy">We built Urbit so people can control their technology, shape their digital lives and freely build
-            their digital communities.</p>
-      <p class="lh-copy">We want to replace the internet with a foundation for computing that we can all rely on far into the future.</p>
-      <p class="lh-copy">Urbit is a large, ambitious project. But at the core it’s durable, simple and yours.</p>
-    </section>
+  <p class="full c4-7-lg mt0 mb4 mb2-xl lh-copy">This is a drawing of an Urbit — <br> a new kind of computer.</p>
+  <img  class="full c7-10-lg row-1 mt0 mb2 mb4-xl w-100" src="../assets/intro/intro-1.svg" alt="A drawing of an Urbit ship." />
+</section>
+<section class="full-bleed full grid12">
+  <p class="full c4-7-lg mt0 mb4 mb2-xl lh-copy"> Your Urbit is a purpose built tool for your own social software, not MEGACORP social networking.
+    On Urbit, you run (or build) your own software to connect and communicate with your friends and family.</p>
+  <img class="full c7-10-lg row-1 mt0 mb2 mb4-xl w-100" src="../assets/intro/intro-2.svg" alt="An Urbit ship receiving data." />
+</section>
+<section class="full-bleed full grid12">
+  <p class="full c4-7-lg mt0 mb4 mb2-xl lh-copy">Your Urbit is a permanent, private archive.
+  Your Urbit can store all your data and digital assets safely, privately, forever.</p>
+  <img class="full c7-10-lg row-1 mt0 mb2 mb4-xl w-100" src="../assets/intro/intro-3.svg" alt="An Urbit ship with its previous versions in a lifetime archive" />
+</section>
+<section class="full-bleed full grid12">
+  <p class="full c4-7-lg mt0 mb4 mb2-xl lh-copy">You own your Urbit like you own Bitcoin.
+  Each Urbit is a piece of a new network that’s owned and controlled by its users.</p>
+  <img class="full c7-10-lg row-1 mt0 mb2 mb4-xl w-100" src="../assets/intro/intro-4.svg" alt="An Urbit ship communicating with other ships" />
+</section>
+  <p class="c1-10 c4-10-lg mv7 lh-copy">Nothing quite like this has ever been done before. There’s nothing else like it.</p>
+  <section id="megacorp" class="full full-bleed grid12 bg-black">
+    <img class="full c4-10-lg mt7" src="../assets/intro/intro-5.jpg"/>
+    <p class="full c4-10-lg white lh-copy mt2 mt4-xl mb7">Today, technology controls us. Every MEGACORP has the same incentive: To keep us hooked on their platform.</p>
+  </section>
+  <section class="full full-bleed grid12 bg-yellow">
+  <img class="full c4-10-lg mt7" src="../assets/intro/intro-6.jpg"/>
+  <p class="full c4-10-lg lh-copy mt2 mt4-xl">We built Urbit so people can control their technology, shape their digital lives and freely build
+        their digital communities.</p>
+  <p class="full c4-10-lg lh-copy mt2">We want to replace the internet with a foundation for computing that we can all rely on far into the future.</p>
+  <p class="full c4-10-lg lh-copy mt2 mb7">Urbit is a large, ambitious project. But at the core it’s durable, simple and yours.</p>
   </section>
   <footer class="relative mt4 c4-10-lg full">
       {% set posts = get_section(path="understanding-urbit/_index.md") %}
