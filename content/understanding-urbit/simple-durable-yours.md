@@ -8,17 +8,15 @@ We live in a world dense with computers. We wake up and look at them, we see the
 
 But our computers are a mess.
 
-![](https://media.urbit.org/site/understanding-urbit/simple-durable-yours/sdy-1.svg)
+
+<img class="b—black ba mv5" src="https://media.urbit.org/site/understanding-urbit/simple-durable-yours/simple-durable-yours-notifications.svg">
+
 
 We spend all our time switching between services, juggling logins and different interfaces. And once we’re logged in, the services we use harvest our data, spy on us, and often shut down with little warning.
 
 If computers are going to be a part of our lives for generations to come, we need a sound foundation for them. We need a _system_, not a grab bag of apps and services. Urbit is that system.
 
-<picture class="full mt4 mb4 c4-10-lg measure">
-<source srcset="https://media.urbit.org/site/understanding-urbit/simple-durable-yours/sdy-2.png,
-https://media.urbit.org/site/understanding-urbit/simple-durable-yours/sdy-2%402x.png 2x">
-<img src="https://media.urbit.org/site/understanding-urbit/simple-durable-yours/sdy-2%402x.png"/>
-</picture>
+<img class="b—black ba mv5" src="https://media.urbit.org/site/understanding-urbit/simple-durable-yours/simple-durable-yours-rock%402x.png">
 
 We built Urbit from scratch to be a system that’s simple, durable, and yours. Everything that computing today is not — but should be.
 
@@ -42,13 +40,7 @@ Your Urbit is designed to be durable: both to store your data across generations
 
 Finally, your Urbit belongs to you in every possible way. You own it with a private key, control it completely, and can inspect its source code. We want your Urbit to be your digital home. A home you don’t own is just a hotel room.
 
-<br /><br />
-
-<picture class="full mt4 mb4 c3-11-lg">
-<source srcset="https://media.urbit.org/site/understanding-urbit/simple-durable-yours/sdy-3.png,
-https://media.urbit.org/site/understanding-urbit/simple-durable-yours/sdy-3%402x.png 2x">
-<img src="https://media.urbit.org/site/understanding-urbit/simple-durable-yours/sdy-3%402x.png"/>
-</picture>
+<img class="b—black ba mv5" src="https://media.urbit.org/site/understanding-urbit/simple-durable-yours/simple-durable-yours-evolution.svg">
 
 Urbit began as a sketch, driven from a basic intuition that a better platform could be built. Today, Urbit is two components: Urbit ID, an identity system that’s already live on Ethereum; and Urbit OS, a decentralized network and OS stack that’s young but working well.
 

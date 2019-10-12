@@ -50,8 +50,10 @@
   {% endif %}
 
   <article class="mb4 full grid12">
+    <div class="measure">
     {{ page.content | safe }}
 
     {% include "partials/pagination.html" %}
+    </div>
   </article>
 {% endblock content %}

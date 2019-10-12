@@ -171,7 +171,7 @@ body.essay {
     }
     img {
         display: block;
-        margin: 0 auto;
+        // margin: 0 auto;
     }
     article > *:not(figure):not(picture) {
         grid-area: auto / 4 / auto / 10;
