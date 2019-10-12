@@ -4,13 +4,13 @@ description = "An overview of the Urbit ID system"
 weight = 4
 +++
 
-![](https://media.urbit.org/site/understanding-urbit/urbit-id/megacorp.svg)
-
 Every time you post a comment, like something, send a message, or use any app or service, you need an account. (And, behind the scenes, a network address.) Neither of these things belongs to you. The way things are going, they never will. No matter what you’re up to with your phone or laptop, you’re dependent on MEGACORP.
+
+<img class="b—black ba mv5" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-megacorp.svg">
 
 We don’t like being owned by someone else. We think your identity and wallet should feel like a unique and precious object that you can always carry with you. So we built Urbit ID.
 
-![](https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-3.svg)
+<img class="b—black ba mv5" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-cards%402x.png">
 
 Urbit ID is meant to feel like a civilizational key. If your Urbit ID were a piece of hardware, you could tap it to unlock a door, swipe it to buy a coffee, and plug it into any computer to log in. It’s a unique, beautiful object that’s both an address and a wallet. It’s a key to a secret club and the ticket to your digital life.
 
@@ -24,7 +24,8 @@ Urbit ID is a completely separate system from Urbit OS. It’s finished and depl
 
 For those curious to understand Urbit ID a bit better, we’ll cover the basics of how Urbit ID works here: how addresses are distributed and who owns what.
 
-![](https://media.urbit.org/site/understanding-urbit/urbit-id/card.svg)
+<img class="b—black ba mv5" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-paperwallet%402x.png">
+
 
 Your Urbit ID is a short, memorable address that anyone can use to connect with you that *doesn’t* depend on any company. It’s an address you own completely and can keep forever.
 
@@ -32,7 +33,7 @@ For most people, an Urbit ID looks something like `~tinbel-picpel`. You own it w
 
 Your Urbit ID and passkey are all you need to log into Urbit OS and send and receive crypto payments. Together, they’re a simple keypair that are easily memorizable. We think it’s the perfect form factor for ordinary people to take control of their digital lives.
 
-![](https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-4.svg)
+<img class="b—black ba mv5" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-address-space-2.svg">
 
 We want everyone to own their own identity and wallet. One way to do this would be to build a MEGACORP or a State Department of Urbit. But we prefer decentralized, collectively owned systems. So that’s what we built. Let’s look briefly at how that system works.
 
@@ -40,7 +41,9 @@ At a high level, there are three important things to understand about the overal
 
 First, there are only so many Urbit IDs, so they cost something. Since they cost something, people are less likely to use them to spam or abuse the network. And, when you meet a stranger with an Urbit ID you know they have some skin in the game.
 
-<table class="w-100 w-80-xl m0a f5 pt4 mono">
+<img class="b—black ba mv5" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-address-space-1.svg">
+
+<!-- <table class="w-100 w-80-xl m0a f5 pt4 mono">
 <tr><td>2<sup>8</sup> </td><td> <code>256</code> <span class="fr">galaxies</span></td></tr>
 <tr><td>2<sup>16</sup></td><td> <code>65,536</code> <span class="fr">stars</span></td></tr>
 <tr><td>2<sup>32</sup></td><td> <code>4,294,967,296</code> <span class="fr">planets</span></td></tr>
@@ -51,7 +54,7 @@ First, there are only so many Urbit IDs, so they cost something. Since they cost
 <tr><td>1 galaxy</td><td><span class="fl"> =</span> <span class="fr"><code>2<sup>8</sup> (256)</code> stars</span></td></tr>
 <tr><td>1 star</td><td><span class="fl"> =</span><span class="fr"><code>2<sup>16</sup> (65K)</code> planets</span></td></tr>
 <tr><td>1 planet</td><td><span class="fl"> =</span><span class="fr"><code>2<sup>32</sup> (4B)</code> moons</span></td></tr>
-</table>
+</table> -->
 
 Second, Urbit IDs are distributed by a sponsorship tree. Each sponsor issues a fixed number of addresses. Since there are lots of sponsors, there are lots of ways to get an Urbit ID — not just one central authority.
 
@@ -63,7 +66,7 @@ Finally, galaxies form a senate that can upgrade the logic of the Urbit ID syste
 
 Urbit ID isn’t just a design. It’s [live and deployed](https://azimuth.network) to the Ethereum blockchain.
 
-![](https://media.urbit.org/site/understanding-urbit/urbit-id/distribution.svg)
+<img class="b—black ba mv5" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-sigils%402x.png">
 
 Urbit IDs are digital property. The entire address space of Urbit IDs is like a vast territory of digital land. Over time, we’ve used this land to fund the development of Urbit as a whole by selling some of it to people we felt would be great stewards of this new frontier.
 
