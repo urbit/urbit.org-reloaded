@@ -2,6 +2,10 @@
 title = "Project Status + History"
 description = "Where we've been and were we are now"
 weight = 7
+[extra]
+flatten_pagination = "true"
+hide_next_title = "true"
+hideprevious = "true"
 +++
 
 Can you move to Urbit today and never look back? Not quite yet. Urbit is still young.

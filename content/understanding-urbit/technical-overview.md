@@ -2,6 +2,10 @@
 title = "Technical Overview"
 description = "A quick tour of the technology"
 weight = 6
+[extra]
+flatten_pagination = "true"
+hide_next_title = "true"
+hideprevious = "true"
 +++
 
 

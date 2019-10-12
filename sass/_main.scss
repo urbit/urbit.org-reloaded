@@ -124,7 +124,8 @@ article {
 }
 
 footer nav {
-    &.previous p:first-of-type::after {
+    // non-flattened pagination
+    &.previous p:first-of-type:not([data-flat=true])::after {
         content: "-->";
         font-size: 1.25rem;
         position: absolute;
@@ -132,12 +133,27 @@ footer nav {
         top: 13px;
         font-family: "Inter UI", sans-serif;
     }
-    &.next p:first-of-type::before {
+    &.next p:first-of-type:not([data-flat=true])::before {
         content: "<--";
         font-size: 1.25rem;
         position: absolute;
         left: -36px;
         top: 13px;
+        font-family: "Inter UI", sans-serif;
+    }
+    // flattened pagination
+    &.previous p:first-of-type::after {
+        content: "->";
+        font-size: 1rem;
+        position: absolute;
+        right: -36px;
+        font-family: "Inter UI", sans-serif;
+    }
+    &.next p:first-of-type::before {
+        content: "<-";
+        font-size: 1rem;
+        position: absolute;
+        left: -36px;
         font-family: "Inter UI", sans-serif;
     }
 }

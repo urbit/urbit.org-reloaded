@@ -2,6 +2,10 @@
 title = "Urbit ID"
 description = "An overview of the Urbit ID system"
 weight = 4
+[extra]
+flatten_pagination = "true"
+hide_next_title = "true"
+hideprevious = "true"
 +++
 
 Every time you post a comment, like something, send a message, or use any app or service, you need an account. (And, behind the scenes, a network address.) Neither of these things belongs to you. The way things are going, they never will. No matter what you’re up to with your phone or laptop, you’re dependent on MEGACORP.

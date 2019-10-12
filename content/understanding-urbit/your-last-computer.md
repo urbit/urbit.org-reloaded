@@ -2,6 +2,10 @@
 title = "Your Last Computer"
 description = "What Urbit should feel like to an everyday user"
 weight = 2
+[extra]
+flatten_pagination = "true"
+hide_next_title = "true"
+hideprevious = "true"
 +++
 
 This whole ‘simple, durable, yours’ thing may sound good, but what does it add up to? What does it feel like?

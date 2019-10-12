@@ -2,6 +2,10 @@
 title = "Simple, Durable, Yours"
 description = "The core ideas that Urbit is built around"
 weight = 1
+[extra]
+flatten_pagination = "true"
+hide_next_title = "true"
+hideprevious = "true"
 +++
 
 We live in a world dense with computers. We wake up and look at them, we see the world through them, we depend on them completely, and they’re not going away. They’re only becoming more ubiquitous.

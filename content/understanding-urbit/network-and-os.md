@@ -2,6 +2,10 @@
 title = "Urbit OS + Network"
 description = "The Urbit OS + Network + how they work together"
 weight = 5
+[extra]
+flatten_pagination = "true"
+hide_next_title = "true"
+hideprevious = "true"
 +++
 
 

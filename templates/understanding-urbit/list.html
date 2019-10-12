@@ -46,9 +46,8 @@
       {% set posts = get_section(path="understanding-urbit/_index.md") %}
       {% for directorypage in posts.pages | slice (end=1) %}
   <a class="bb-0" href="{{directorypage.permalink}}">
-    <nav class="previous mv5 absolute right-2 f4 t-right">
-      <p class="mb0 f5">Next Post:</p>
-      <p class="fw6 f5 f4-l f4-xl mb0 mt0">{{directorypage.title}}</p>
+    <nav class="previous mv5 absolute right-2 t-right">
+      <p data-flat="true" class="mb0 mt0">{{directorypage.title}}</p>
     </nav>
   </a>
       {% endfor %}
