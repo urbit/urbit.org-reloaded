@@ -191,6 +191,7 @@ body.essay {
     }
     article > *:not(figure):not(picture) {
         grid-area: auto / 4 / auto / 10;
+        @extend .measure-wide
     }
 }
 
@@ -244,7 +245,7 @@ h4 {
 
     // author and ship styling
 span[rel=author] {
-    @extend .fw6;
+    @extend .fw4;
     margin-right: 5px;
 }
 
