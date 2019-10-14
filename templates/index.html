@@ -1,10 +1,9 @@
 {% extends "base.html" %}
 <!--External links are differentiated on home page.-->
 {% block templatestyles %}
-<!-- a[href*="//"]:not([href*="{{config.base_url | safe}}"])::after {
-content: " ↗"; -->
-}
+
 {% endblock templatestyles %}
+
 {% block bodyclasses %}class="index"{% endblock bodyclasses %}
 
 {% block title %} {{ section.title }} {% endblock title %}
@@ -12,11 +11,18 @@ content: " ↗"; -->
 {% block content %}
 
 <section class="full p0 vid-insert-wrap full-bleed">
-  <video class="vid-insert bg-black" autoplay muted loop>
+  <video
+    class="vid-insert bg-black"
+    autoplay
+    muted
+    loop
+    <!-- NB:Gavin: Removed playsinline for the sake of mobile users. -->
+    <!-- playsinline -->
+    poster="https://storage.cloud.google.com/media.urbit.org/site/sea30-poster.png">
     <source
       src="https://storage.googleapis.com/media.urbit.org/site/sea30-1440.mp4"
       type="video/mp4"/>
-    Your browser does not support the video tag.
+      Your browser does not support the video tag.
   </video>
 
   <div class="grid12" style="height: 100%; width:100%;">
