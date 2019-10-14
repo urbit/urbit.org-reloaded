@@ -5,7 +5,7 @@ weight = 7
 [extra]
 flatten_pagination = "true"
 hide_next_title = "true"
-hideprevious = "true"
+hide_previous_title = "true"
 +++
 
 Can you move to Urbit today and never look back? Not quite yet. Urbit is still young.
@@ -15,11 +15,11 @@ Can you move to Urbit today and never look back? Not quite yet. Urbit is still y
 
 Currently, Urbit ID is live and deployed. That means you can own a piece of Urbit — if you can find one. There are thousands of people that can potentially invite you, and we give away invites from time to time. Your Urbit ID gets you a name, a sigil, and access to Urbit OS.
 
-<img class="mv5" src="https://storage.cloud.google.com/media.urbit.org/site/understanding-urbit/project-history/project-status-bridge%402x.png">
+<img class="mv5" src="https://media.urbit.org/site/understanding-urbit/project-history/project-status-bridge%402x.png">
 
 You can interact with your Urbit ID and invite friends using [Bridge](https://bridge.urbit.org), the Urbit authentication system. You can also use Bridge to boot the current alpha of Urbit OS. Soon you’ll be able to use Bridge for payments and to explore the Urbit network.
 
-<img class="mv5" src="https://storage.cloud.google.com/media.urbit.org/site/understanding-urbit/project-history/project-status-landscape%402x.png">
+<img class="mv5" src="https://media.urbit.org/site/understanding-urbit/project-history/project-status-landscape%402x.png">
 
 Urbit OS is a solid alpha. We use it every day to coordinate and chat about the future of Urbit. You’re [welcome to join](@/using/install.md). Our standards are high, so we aren’t asking everyone to use Urbit OS yet. If you’re someone who wants to customize their own software and experiment with a new system, [check it out](@/using/install.md). Otherwise, [join the mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;id=be143888d2). We have exciting things planned for 2020.
 

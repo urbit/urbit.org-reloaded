@@ -1,19 +1,19 @@
 {% extends "base.html" %}
-{% block title %} Essays {% endblock title %}
+{% block title %} Blog {% endblock title %}
 {% block content %}
 <!-- header -->
 <nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl">
   <a class="gray3" href="/">Urbit</a>
   <span class="gray3"> / </span>
-  <a href="/essays">
-    Essays
+  <a href="/blog">
+    Blog
   </a>
   {% include "partials/navigation-search.html" %}
 </nav>
 <!-- content -->
 <article class="mt4 mb4 c1-12 c4-12-lg">
   <ul class="posts measure-wide">
-    {% set posts = get_section(path="essays/_index.md") %}
+    {% set posts = get_section(path="blog/_index.md") %}
     {% for page in posts.pages %}
     <li class="mb4">
       <h2 class="f5 fw6 mt0 mb1"><a class="bb-0" href="{{ page.permalink }}">{{ page.title }}</a></h2>

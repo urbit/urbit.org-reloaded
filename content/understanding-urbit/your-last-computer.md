@@ -5,7 +5,7 @@ weight = 2
 [extra]
 flatten_pagination = "true"
 hide_next_title = "true"
-hideprevious = "true"
+hide_previous_title = "true"
 +++
 
 This whole ‘simple, durable, yours’ thing may sound good, but what does it add up to? What does it feel like?

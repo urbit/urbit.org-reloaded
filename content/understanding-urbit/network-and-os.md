@@ -5,7 +5,7 @@ weight = 5
 [extra]
 flatten_pagination = "true"
 hide_next_title = "true"
-hideprevious = "true"
+hide_previous_title = "true"
 +++
 
 
