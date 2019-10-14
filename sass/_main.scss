@@ -572,3 +572,8 @@ hr {
   overflow: hidden;
   z-index:-99;
 }
+
+// Useful for hiding input inner shadows in Safari
+.wk-appearance-none {
+  -webkit-appearance: none;
+}
