@@ -5,7 +5,7 @@ weight = 7
 [extra]
 flatten_pagination = "true"
 hide_next_title = "true"
-hideprevious = "true"
+hide_previous_title = "true"
 +++
 
 Can you move to Urbit today and never look back? Not quite yet. Urbit is still young.
