@@ -18,7 +18,7 @@ The digital world feels like a theme park built to maximize ENGAGEMENT — but w
 
 While the world has drifted into a fever dream, we built Urbit.
 
-<img class="mv5 ba" src="https://media.urbit.org/site/understanding-urbit/network-os/urbit-os-diagram.svg">
+<img class="mv5 ba w-100" src="https://media.urbit.org/site/understanding-urbit/network-os/urbit-os-diagram.svg">
 
 Your Urbit ID gets you a name, an address, and a crypto wallet — but what about when you want to connect with other people? That’s where Urbit OS comes in.
 
@@ -26,7 +26,7 @@ Urbit OS is everything that you need to build and run your own social software a
 
 Since we’ve got a decentralized identity system to build on and everyone runs their own OS, your social software is actually owned and operated by the collective of Urbit ID owners. You can (and should) do whatever you want.
 
-<img class="mv5 ba" src="https://media.urbit.org/site/understanding-urbit/network-os/urbit-os-diagram-apart.svg">
+<img class="mv5 ba w-100" src="https://media.urbit.org/site/understanding-urbit/network-os/urbit-os-diagram-apart.svg">
 
 We built Urbit OS from scratch. It’s a completely new computing stack. Without getting into the technical details (you can find those [here](@/understanding-urbit/technical-overview.md)), Urbit OS is built to do three things: be a compact and complete system (simple); run forever with no maintenance (durable); and be extensible by anyone (yours).
 

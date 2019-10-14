@@ -12,11 +12,11 @@ hideprevious = "true"
 
 Owning a computer, especially a server, can feel like a job. Urbit, on the other hand, is engineered to be maintenance free. We figure that if people are actually going to use a new computing platform, it can’t feel like work. At all.
 
-<img class="b—black ba mv5" src="https://media.urbit.org/site/understanding-urbit/technical-overview/technical-overview-server.svg">
+<img class="b—black ba mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/technical-overview/technical-overview-server.svg">
 
 So we built our whole stack, starting with the VM, to be as simple and compact as possible. Let’s take a look at what the system looks like from a technical perspective and get a feel for how it’s built.
 
-<img class="b—black ba mv5" src="https://media.urbit.org/site/understanding-urbit/technical-overview/technical-overview-duo.svg">
+<img class="b—black ba mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/technical-overview/technical-overview-duo.svg">
 
 Under the hood, Urbit is two parts: an ID system and an OS. The ID system is live and deployed to Ethereum. The OS is a program that runs on top of any Unix machine with an internet connection.
 
