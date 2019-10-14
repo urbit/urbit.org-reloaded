@@ -28,7 +28,7 @@
 
 <h1 class="mb4 full mt4 c4-12-lg fw6">{{ page.title }}</h1>
 {% if page.extra.author %}
-<span class="dib full c4-12-lg" rel="author"> {{ page.extra.author }}
+<span class="dib full c4-12-lg " rel="author"> {{ page.extra.author }}
   {% if page.extra.ship %}
   <address class="dib fw4 ml2 mono">{{ page.extra.ship }}</address>
 {% endif %}
@@ -41,7 +41,7 @@
 <span class="dib mono full c4-12-lg{% if page.date %} ml2{% endif %} gray2 f5">{{ page.reading_time }}m read</span>
 {% endif %}
 
-<article class="mb4 full grid12">
+<article class="mb4 full grid12 ">
   {{ page.content | safe }}
   {% include "partials/pagination.html" %}
 </article>

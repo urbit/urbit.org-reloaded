@@ -12,7 +12,7 @@
   {% include "partials/navigation-search.html" %}
 </nav>
 <!-- content -->
-<main class="mt4 mb4 c1-12 c4-10-lg">
+<main class="mt4 mb4 c1-12 c4-10-lg measure-wide">
 
   {% set posts = get_section(path="updates/_index.md") %}
 
@@ -38,14 +38,16 @@
   <ul class="posts">
   {% for page in posts.pages | slice (start=1) %}
     <li class="mb4 mt4">
-      <h2 class="f4 fw4">
+      <!-- <h2 class="f5 fw6">
         <a class="bb0" href="{{ page.permalink }}">{{ page.title }}</a>
-      </h2>
-      <p class="mv2">{{ page.description }}</p>
-      <time class="mono f5">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
-      <span class="mono f5">
+      </h2> -->
+      <a class="bb0" href="{{ page.permalink }}">
+        <p class="mv2">{{ page.description }}</p>
+      </a>
+      <time class="mono f7">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
+      <span class="mono f7">
         {% if page.extra.ship %}
-          <address class="mono f5 ml2">{{ page.extra.ship }}</address>
+          <address class="mono f7 ml2">{{ page.extra.ship }}</address>
         {% endif %}
       </span>
     </li>

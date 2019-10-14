@@ -12,15 +12,15 @@
 </nav>
 <!-- content -->
 <article class="mt4 mb4 c1-12 c4-12-lg">
-  <ul class="posts">
+  <ul class="posts measure-wide">
     {% set posts = get_section(path="blog/_index.md") %}
     {% for page in posts.pages %}
     <li class="mb4">
-      <h2 class="f4 fw4 mt0 mb0"><a class="bb-0" href="{{ page.permalink }}">{{ page.title }}</a></h2>
+      <h2 class="f5 fw6 mt0 mb1"><a class="bb-0" href="{{ page.permalink }}">{{ page.title }}</a></h2>
       <p class="mt0">{{ page.description }}</p>
-      <time class="mono f5">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
-      <span class="mono f5">
-        {% if page.extra.ship %}<address class="mono f5 ml2">{{ page.extra.ship }}</address> {% endif %}
+      <time class="mono f7">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
+      <span class="mono f7">
+        {% if page.extra.ship %}<address class="mono f7 ml2">{{ page.extra.ship }}</address> {% endif %}
       </span>
     </li>
     {% endfor %}
