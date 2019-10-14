@@ -29,7 +29,19 @@
   </a>
   {% endif %}
 
-  {% if page.later %}
+  {% if page.relative_path == "understanding-urbit/simple-durable-yours.md" %}
+  <a class="bb-0" href="/understanding-urbit/">
+      <nav class="next mv5 absolute left-2 t-left">
+        <p {% if page.extra.flatten_pagination %}
+            data-flat="true" 
+            class="
+            {% else %}
+            class="fw6 f5 f4-l f4-xl 
+            {% endif %}
+            mb0 mt0">Introduction</p>
+      </nav>
+    </a>
+  {% elif page.later %}
 
   <a class="bb-0" href="{{page.later.permalink}}">
     <nav class="next mv5 absolute left-2">
