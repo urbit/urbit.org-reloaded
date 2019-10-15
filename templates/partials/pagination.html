@@ -3,10 +3,10 @@
     <nav class="previous absolute right-1 t-right">
       {% if page.extra.hide_previous_title %} {% else %}<p class="mb0 f5">Previous Post:</p>{% endif %}
       <p {% if page.extra.flatten_pagination %}
-          data-flat="true" 
+          data-flat="true"
           class="
           {% else %}
-          class="fw6 f5 f4-l f4-xl 
+          class="fw6 f5
           {% endif %}
           mt5 mb6">{{page.earlier.title}}</p>
       <time class="mono db f5 mb5">{{page.earlier.date | date(format="~%Y.%-m.%-d") }}</time>
@@ -19,10 +19,10 @@
     <nav class="previous absolute right-1 t-right">
       {% if page.extra.hide_next_title %} {% else %}<p class="mb0 f5">Next Post:</p>{% endif %}
       <p {% if page.extra.flatten_pagination %}
-      data-flat="true" 
+      data-flat="true"
       class="
       {% else %}
-      class="fw6 f5 f4-l f4-xl 
+      class="fw6 f5
       {% endif %}
       mt5 mb6">{{page.heavier.title}}</p>
     </nav>
@@ -33,10 +33,10 @@
   <a class="bb-0" href="/understanding-urbit/">
       <nav class="next absolute left-1 t-left">
         <p {% if page.extra.flatten_pagination %}
-            data-flat="true" 
+            data-flat="true"
             class="
             {% else %}
-            class="fw6 f5 f4-l f4-xl 
+            class="fw6 f5
             {% endif %}
             mt5 mb6">Introduction</p>
       </nav>
@@ -47,10 +47,10 @@
     <nav class="next absolute left-1">
       {% if page.extra.hide_next_title %} {% else %}<p class="mb0 f5">Next Post:</p>{% endif %}
       <p {% if page.extra.flatten_pagination %}
-          data-flat="true" 
+          data-flat="true"
           class="
           {% else %}
-          class="fw6 f5 f4-l f4-xl 
+          class="fw6 f5
           {% endif %}
           mt5 mb6">{{page.later.title}}</p>
       <time class="mono db f5 mb5">{{page.later.date | date(format="~%Y.%-m.%-d") }}</time>
@@ -64,10 +64,10 @@
     <nav class="next absolute left-1">
       {% if page.extra.hide_previous_title %} {% else %}<p class="mb0 f5">Previous Post:</p>{% endif %}
       <p {% if page.extra.flatten_pagination %}
-          data-flat="true" 
+          data-flat="true"
           class="
           {% else %}
-          class="fw6 f5 f4-l f4-xl 
+          class="fw6 f5
           {% endif %}
           mt5 mb6">{{page.lighter.title}}</p>
     </nav>
