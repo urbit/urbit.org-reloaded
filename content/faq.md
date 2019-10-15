@@ -129,17 +129,17 @@ Nope. There is a 1:1 mapping between name and identity. Think of your `@p` sort 
 
 The easiest way is to find a friend who can give you one. They're out there — just ask around.
 
-Or, if you must, try an ERC-721 (NFT) exchange (Google or Twitter should help you with this). This will probably involve a purchase and a transfer to an Ethereum address that you own. We recommend using [Bridge](https://github.com/urbit/bridge/releases) to access the address that the identity is transferred to.
+Or, if you must, try an ERC-721 (NFT) exchange (Google or Twitter should help you with this). This will probably involve a purchase and a transfer to an Ethereum address that you own. We recommend using [Bridge](https://bridge.urbit.org) to access the address that the identity is transferred to.
 
 If you don't want to use Bridge, a tool like [Etherscan](https://etherscan.io) will allow you to execute functions in the [ecliptic.eth](https://etherscan.io/address/ecliptic.eth#code) contract.
 
 ### How do I transfer an identity to someone else? {#transfer-identity}
 
-Access the Ethereum address that holds the identity you wish to transfer via [Bridge](https://github.com/urbit/bridge/releases).
+Access the Ethereum address that holds the identity you wish to transfer via [Bridge](https://bridge.urbit.org).
 
 ### What is the best way to access my Urbit ID? {#access-azimuth}
 
-We recommended using [Bridge](https://github.com/urbit/bridge/releases) for all Urbit ID-related operations. It’s great for managing your identities, as well as for viewing information about identities you don’t own.
+We recommended using [Bridge](https://bridge.urbit.org) for all Urbit ID-related operations. It’s great for managing your identities, as well as for viewing information about identities you don’t own.
 
 Be careful about using hosted versions of Bridge not hosted on urbit.org. Since Bridge touches your private keys, it can also steal them.
 
