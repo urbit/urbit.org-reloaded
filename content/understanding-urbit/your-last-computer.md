@@ -23,7 +23,7 @@ You own and control this OS completely. Your system doesn’t live on someone el
 
 We’re on our way to this future, building it step by step, but we’re not there yet. The Urbit of today is much more stripped down.
 
-Urbit starts out as a new kind of social network.
+The stripped down Urbit – Urbit OS 1 – starts out as a new kind of social network.
 
 Today, each of our social tools does one thing. And so each of our communities end up spanning multiple services. Urbit OS 1 gives you the tools to bring these together into one place.
 
