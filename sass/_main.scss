@@ -273,22 +273,22 @@ nav.previous, nav.next {
     border: 0;
     font-family: "Inter", sans-serif;
     position: relative;
-    width: 80%;
-    min-width: 110px;
+    // width: 80%;
+    // min-width: 110px;
     text-align: left;
     background: transparent;
     span#search-icon {
-        display: inline-block;
-        transform: rotate(-45deg);
+      display: inline-block;
+      transform: translate(-7px, 2px) rotate(-45deg);
     }
     span.search-slash {
-        font-size: 0.75em;
-        position: absolute;
-        right: 0px;
-        top: 6px;
-        padding: 6px;
-        border: 1px solid #b1b2b3;
-        border-radius: 3px;
+      font-size: 0.75em;
+      position: absolute;
+      right: 0px;
+      top: 6px;
+      padding: 6px;
+      border: 1px solid #b1b2b3;
+      border-radius: 3px;
     }
 }
 .has-active-search-window {
@@ -346,7 +346,7 @@ input[type="search"] {
   }
 
   .header__search-icon {
-    transform: rotate(-45deg);
+    transform: translateY(-1px) rotate(-45deg) scale(1.5);
     vertical-align: bottom;
   }
 
@@ -386,6 +386,7 @@ input[type="search"] {
     cursor: pointer;
     font-family: "Inter UI", sans-serif;
     user-select: none;
+    transform: scale(1.5);
   }
     // tooltipping
 .tippy-tooltip {

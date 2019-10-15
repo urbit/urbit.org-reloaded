@@ -18,9 +18,9 @@
     <li class="mb4">
       <h2 class="f5 fw6 mt0 mb1"><a class="bb-0" href="{{ page.permalink }}">{{ page.title }}</a></h2>
       <p class="mt0">{{ page.description }}</p>
-      <time class="mono f7">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
-      <span class="mono f7">
-        {% if page.extra.ship %}<address class="mono f7 ml2">{{ page.extra.ship }}</address> {% endif %}
+      <time class="mono f6">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
+      <span class="mono f6">
+        {% if page.extra.ship %}<address class="mono f6 ml2">{{ page.extra.ship }}</address> {% endif %}
       </span>
     </li>
     {% endfor %}
