@@ -11,10 +11,10 @@
 
   {% include "partials/navigation-search.html" %}
 
-  <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="fw6 f6" href="/understanding-urbit/">Introduction</a></li>	
-  {% set posts = get_section(path="understanding-urbit/_index.md") %}	
-  {% for directorypage in posts.pages %}	
-    <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="f6" href="{{directorypage.permalink}}">{{directorypage.title}}</a></li>	
+  <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="fw6 f6" href="/understanding-urbit/">Introduction</a></li>
+  {% set posts = get_section(path="understanding-urbit/_index.md") %}
+  {% for directorypage in posts.pages %}
+    <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="f6" href="{{directorypage.permalink}}">{{directorypage.title}}</a></li>
   {% endfor %}
 
 </nav>
@@ -35,9 +35,9 @@
   <img class="full c7-10-lg row-1 mt0 mb2 mb4-xl w-100 ba" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-3.svg" alt="An Urbit ship with its previous versions in a lifetime archive" />
 </section>
 <section class="full-bleed full grid12">
-  <p class="full c4-7-lg mt0 mb4 mb2-xl lh-copy">You own your Urbit like you own Bitcoin.
+  <p class="full c4-7-lg mt0 mb6 mb2-xl lh-copy">You own your Urbit like you own Bitcoin.
   Each Urbit is a piece of a new network that’s owned and controlled by its users.</p>
-  <img class="full c7-10-lg row-1 mt0 mb7 mb7-xl w-100 ba" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-4.svg" alt="An Urbit ship communicating with other ships" />
+  <img class="full c7-10-lg row-1 mt0 mb2 mb7-xl w-100 ba" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-4.svg" alt="An Urbit ship communicating with other ships" />
 </section>
   <section id="megacorp" class="full full-bleed grid12 bg-black">
     <img class="full c4-10-lg mt7" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-5.jpg"/>
@@ -55,8 +55,8 @@
       {% set posts = get_section(path="understanding-urbit/_index.md") %}
       {% for directorypage in posts.pages | slice (end=1) %}
   <a class="bb-0" href="{{directorypage.permalink}}">
-    <nav class="previous mv5 absolute right-2 t-right">
-      <p data-flat="true" class="mb0 mt0">{{directorypage.title}}</p>
+    <nav class="previous absolute right-2 t-right">
+      <p data-flat="true" class="mt5 mb6">{{directorypage.title}}</p>
     </nav>
   </a>
       {% endfor %}

@@ -28,7 +28,7 @@ As a compliment to Urbit ID, we implemented the [Urbit HD wallet](https://github
 
 Until Urbit OS is completely secure (in the next year or so, we hope), you can interact with Urbit ID through a standalone, browser-based interface called [Bridge](https://bridge.urbit.org). Bridge lets you securely manage your keys, transfer your Urbit ID, log in to Urbit OS, and so on.
 
-<img class="ba mv5" src="https://media.urbit.org/site/understanding-urbit/technical-overview/technical-overview-kernel@2x.png">
+<img class="ba mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/technical-overview/technical-overview-kernel@2x.png">
 
 In the simplest terms, Urbit OS is three things: a file, a key, and a program. The file is a log of everything that has ever happened to your Urbit. The key is derived from the same key you own your Urbit ID with.
 
