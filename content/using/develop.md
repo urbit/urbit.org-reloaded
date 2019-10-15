@@ -83,7 +83,7 @@ Stars and galaxies, however, have additional responsibilities and play a role in
 
 Running a reliable galaxy or star, and spawning stars and planets from them, are excellent ways to help bootstrap the Urbit network.
 
-If you’re interested in running a galaxy or star, you’ll be reliably providing peer discovery for your children just by running your node – and we’re doing our best to make this both easy and profitable. If you’re interested in this, see [Star and Galaxy Operations](/using/operations/stars-and-galaxies.md).
+If you’re interested in running a galaxy or star, you’ll be reliably providing peer discovery for your children just by running your node – and we’re doing our best to make this both easy and profitable. If you’re interested in this, see [Star and Galaxy Operations](@/using/operations/stars-and-galaxies.md).
 
 If you’re interested in distributing planets, read on.
 
