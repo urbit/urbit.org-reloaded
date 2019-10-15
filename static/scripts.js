@@ -389,3 +389,12 @@ window.addEventListener("scroll", event => {
     }
   });
 })};
+
+let oceanvid = document.getElementById("ocean");
+
+if ((oceanvid !== null) && (window.innerWidth > window.innerHeight)) {
+  oceanvid.innerHTML = `<source
+  src="https://storage.googleapis.com/media.urbit.org/site/sea30-1440.mp4"
+  type="video/mp4"/>
+  Your browser does not support the video tag.`
+}
