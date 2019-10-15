@@ -10,7 +10,7 @@ hide_previous_title = "true"
 
 We live in a world dense with computers. We wake up and look at them, we see the world through them, we depend on them completely, and they’re not going away. They’re only becoming more ubiquitous.
 
-But our computers are a mess.
+But computers are a mess.
 
 
 <img class="ba mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/simple-durable-yours/simple-durable-yours-notifications.svg">
