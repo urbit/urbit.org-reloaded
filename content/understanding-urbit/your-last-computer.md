@@ -19,7 +19,7 @@ Imagine that you can login from anywhere with one simple, memorable name and pas
 
 You own and control this OS completely. Your system doesn’t live on someone else’s server, so there’s no risk of leaking it in a mass data breach or losing it when a service shuts down. Your Urbit is a sealed, secure, and durable system.
 
-<img class="b—black ba mv5" src="https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-is-rock%402x.png">
+<img class="ba mv5" src="https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-is-rock%402x.png">
 
 We’re on our way to this future, building it step by step, but we’re not there yet. The Urbit of today is much more stripped down.
 
