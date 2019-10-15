@@ -20,7 +20,7 @@ We spend all our time switching between services, juggling logins and different 
 
 If computers are going to be a part of our lives for generations to come, we need a sound foundation for them. We need a _system_, not a grab bag of apps and services. Urbit is that system.
 
-<img class="ba mv5" src="https://media.urbit.org/site/understanding-urbit/simple-durable-yours/simple-durable-yours-rock%402x.png">
+<img class="ba mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/simple-durable-yours/simple-durable-yours-rock%402x.png">
 
 We built Urbit from scratch to be a system that’s simple, durable, and yours. Everything that computing today is not — but should be.
 

@@ -12,7 +12,7 @@ hide_previous_title = "true"
 
 Our phones are cluttered with apps, ads, and notifications. Our laptops are basically just web browsers that connect us to services controlled by MEGACORP. Who knows where your messages, images, contacts, and connections live, let alone how long they’ll last or who is looking at them.
 
-<img class="mv5" src="https://media.urbit.org/site/understanding-urbit/network-os/urbit-os-phones%402x.png">
+<img class="mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/network-os/urbit-os-phones%402x.png">
 
 The digital world feels like a theme park built to maximize ENGAGEMENT — but we think it’s BORING. What happened to the vision of a computer as a tool that would expand and enrich our lives?
 
