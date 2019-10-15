@@ -1,17 +1,23 @@
 {% block content %}
-<div id="search-overlay" class="search-overlay fix vh100 w-full b-transparent z10 none top0">
+<nav id="search-overlay" class="search-overlay black fixed w-100 full b-transparent z-999 dn">
   <div class="wrapper">
     <div id="search-window" class="pop-up">
-      <div class="search-bar padding-none border-none z1 inline align-center w-full">
-        <span class="header__search-icon ml3 abs z1 fs6 gray50">⚲</span>
-        <form id="search-form" class="w-full"><input id="search" autocomplete="off" type="search" class="search-bar__input border-none" placeholder="Go to..."></form>
-        <a id="search-reset" class="fs6 pr3 gray50 no-underline pointer:hover">&#57503;</a>
+      <div class="search-bar pa0 bw0 z-1 di items-center flex w-100">
+        <span class="header__search-icon ml3 absolute z-1 f5 gray3">⚲</span>
+        <form id="search-form" class="w-100"><input id="search" autocomplete="off" type="search" class="search-bar__input bw0 black" placeholder="Go to..."></form>
+        <a id="search-reset" class="f6 pr3 gray3 no-underline pointer:hover">&#57503;</a>
       </div>
-      <div id="search-results" class="search-results bt1 b-gray40">
-        <div class="search-results__header ml9 mv2 gray60 fs3"></div>
+      <div id="glossary-results" class="glossary-results bt b--gray3 w-100">
+        <div class="glossary-results__header mv1 gray3 f6">
+          <div class="glossary-results__item">
+          </div>
+        </div>
+      </div>
+      <div id="search-results" class="search-results bt b--gray3 w-100">
+        <div class="search-results__header ml3 mv2 gray3 f6"></div>
         <ul class="list search-results__items"></ul>
       </div>
     </div>
   </div>
-</div>
+</nav>
 {% endblock content %}

@@ -1,27 +1,58 @@
 {% extends "base.html" %}
 {% block title %} {{ page.title }} {% endblock title %}
+{% block description %}
+  {% if page.description %}
+    {{ page.description }}
+    {% else %}
+      {{ config.description }}
+    {% endif %}
+  {% endblock description %}
 {% block content %}
+
 <!-- header -->
-{% include "partials/navigation.html" %}
 <!-- content -->
-<div class="main-wrapper">
-  <div class="wrapper">
-    <div class="container container--fixed content-nav-container">
-      <div id="js-content-nav-toggle" class="content-nav-icon"></div>
-      <div class="content-spacer"></div>
-    </div>
-    <div class="container">
-      <div class="content-nav-spacer"></div>
-      <div class="content posts__content pb40">
-        <article class="article">
-          <!-- header -->
-          <!-- <h4 class="mb8"><code>&#126;{% if page.date %}{{ page.date | date(format="%Y.%m.%d") }}{% endif %}</code></h4> -->
-          <h1 class="mb8">{{ page.title }}</h1>
-          <!-- body -->
-          {{ page.content | safe }}
-        </article>
-      </div>
-    </div>
-  </div>
-</div>
+{% set lowercasetitle = page.title | lower %}
+{% if section or lowercasetitle == page.components[0] %}
+<nav class="mt4 pb4 fixed-xl full fourth-1-md fourth-1-lg page-indiced mb3 mb0-m mb0-l mb0-xl">
+  <a class="gray3" href="/">Urbit</a>
+  <span class="gray3"> / </span>
+  <a href="/{{ page.components[0] }}">
+    {{ page.title }}
+  </a>
+
+  {% include "partials/navigation-search.html" %}
+
+{% else %}
+<nav class="mt4 fixed-xl full fourth-1-md fourth-1-lg page-indiced mb3 mb0-m mb0-l mb0-xl">
+  <a class="gray3" href="/">Urbit</a>
+  <span class="gray3"> / </span>
+  <a href="/{{ page.components[0] }}{% if page.components[2] %}/{{ page.components[1] }}{% endif %}">
+    {% if page.components[2] %}{{ page.components[1] | capitalize }}
+    {% else %}
+    {{ page.components[0] | capitalize }}
+    {% endif %}
+  </a>
+
+  {% include "partials/navigation-search.html" %}
+
+</nav>
+
+{% endif %}
+
+<article class="mt4 mb4 c1-12 c4-10-lg">
+    {% if page.extra.hidetitle %} {% else %}<h1>{{ page.title }}</h1>{% endif %}
+    {% if page.extra.author %}
+  <span class="mt2 dib" rel="author"> {{ page.extra.author }} </span>
+  {% if page.extra.ship %}
+  <address class="mono">{{ page.extra.ship }}</address>
+  {% endif %}
+  {% if page.date %}
+  <time class="mono db mv1 gray2 f5">{{page.date | date(format="~%Y.%-m.%-d") }}</time>
+  {% endif %}
+  {% endif %}
+  <!-- body -->
+  {{ page.content | safe }}
+  {% include "partials/pagination.html" %}
+</article>
+
 {% endblock content %}

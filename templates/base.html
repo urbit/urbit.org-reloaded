@@ -1,24 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
-    <!-- meta -->
+    <!-- START META -->
     <meta charset="UTF-8">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ config.description }}">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="{% block description %}{% endblock description %}">
     <meta name="author" content="{{ config.extra.author.name }}">
+    <!-- END META -->
+
+    <!-- START FAVICON -->
     <link rel="icon" type="image/png" href="/images/favicon.ico" />
-    <link rel="alternative" type="application/rss+xml" title="RSS" href="{{ config.base_url }}/rss.xml" />
+    <!-- END FAVICON -->
+
+    <!-- START RSS -->
+    <link rel="alternative" type="application/rss+xml" title="RSS" href="/rss.xml" />
+    <!-- END RSS -->
+
     <title>{% block title %}{% endblock title %} - {{ config.title }}</title>
-    <!-- stylesheets -->
+
+    <!-- START CSS -->
     <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
     <style type="text/css">
+      /* Mailchimp style overrides */
     	#mc_embed_signup{clear:left; width:100%;}
-    	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-    	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+      {% block templatestyles %} {% endblock templatestyles%}
     </style>
-    <link rel="stylesheet" href="{{ config.base_url }}/indigo.css">
-    <link rel="stylesheet" href="{{ get_url(path="/styles.css", trailing_slash=true, cachebust=true) }}">
+    <link rel="stylesheet" href="/indigo.css">
+    <link rel="stylesheet" href="/styles.css">
+    <!-- END CSS -->
+
+    <!-- START MATOMO -->
     <script type="text/javascript">
       var _paq = window._paq || [];
       /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
@@ -32,17 +44,23 @@
         g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
       })();
     </script>
+    <!-- END MATOMO -->
+    <!-- START VH UNIT BUGGYFILL -->
+    <script src="{{ get_url(path="viewport-units-buggyfill.js") | safe }}"></script>
+    <script>window.viewportUnitsBuggyfill.init();</script>
+    <!-- END VH UNIT BUGGYFILL -->
+
   </head>
-  <body class="bg-white">
-    <!-- content -->
+  <body {% block bodyclasses %} {% endblock bodyclasses %}>
+    {% include "partials/search-overlay.html" %}
     {% block content %}
     {% endblock content %}
-    <!-- scripts -->
     {% if config.build_search_index %}
-      <script type="text/javascript" src="{{ get_url(path="elasticlunr.min.js") | safe }}"></script>
-      <script type="text/javascript" src="{{ get_url(path="search_index.en.js") | safe }}"></script>
-      <script src="https://unpkg.com/popper.js@1"></script>
-      <script src="https://unpkg.com/tippy.js@4"></script>
+    <script type="text/javascript" src="{{ get_url(path="runes.js") | safe }}"></script>
+    <script type="text/javascript" src="{{ get_url(path="elasticlunr.min.js") | safe }}"></script>
+    <script type="text/javascript" src="{{ get_url(path="search_index.en.js") | safe }}"></script>
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@4"></script>
     {% endif %}
     <script src="{{ config.base_url }}/scripts.js"></script>
   </body>

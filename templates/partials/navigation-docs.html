@@ -1,80 +1,126 @@
+<!-- First nav is desktop-specific. Second nav is dropdown version for mobile. -->
 {% block content %}
-<div id="js-content-nav-toggle" class="content-nav-icon"></div>
-<nav class="content-nav">
-  <button id="js-search-window-toggle" type="button" class="search-bar content-nav__search-bar inline align-center" style="outline:none">
-    <div class="inline-block"><span class="header__search-icon mh3 inline-block fs6">⚲</span></div><span class="gray50">Search</span>
+<nav class="bg-gray5 dn db-l db-xl pt4 full-left no-break docs pr4">
+    <a class="gray3" href="{{config.base_url}}">Urbit</a>
+  <span class="gray3"> / </span>
+  <a href="{{config.base_url}}/docs/">
+  Documentation
+  </a>
+  <button id="js-search-window-toggle" class="mt2 mb4 dn db-m db-l db-xl" type="button"  style="outline:none">
+    <span id="search-icon" class="f3 gray3">⚲</span><span class="ml3 gray2">Search</span>
   </button>
-  <ul class="list content-nav__index">
-    {% block menu %}
-      {% set index = get_section(path="docs/_index.md") %}
-      {% for s in index.subsections %}
-        {% set subsection = get_section(path=s) %}
-        <li class="list__item content-nav__index__item mt5">
-          <a class="text-600" href="{{ subsection.permalink }}">
-            {{ subsection.title }}
-          </a>
-          {% if subsection.pages %}
-          <!-- level 1 -->
-          <ul class="sub-list">
-            {% for page in subsection.pages %}
-            <li class="list__item">
-              <a href="{{ page.permalink }}">
-                {{ page.title }}
-              </a>
-            </li>
-            {% endfor %}
-
-            {% for y in subsection.subsections %}
-            {% set subsubsection = get_section(path=y) %}
-            <ul class="sub-list">
-              <li class="list__item">
-                <a href="{{ subsubsection.permalink }}">
-                  {{ subsubsection.title }}
-                </a>
-                <!-- level 2 -->
-                {% if subsubsection.pages %}
-                <ul class="sub-list subsub-list">
-                  {% for page in subsubsection.pages %}
-                    <li class="list__item">
-                      <a href="{{ page.permalink }}">
-                        {{ page.title }}
-                      </a>
-                    </li>
-                  {% endfor %}
-
-                  {% for x in subsubsection.subsections %}
-                  {% set subsubsubsection = get_section(path=x) %}
-                  <ul class="sub-list">
-                    <li class="list__item">
-                      <a href="{{ subsubsubsection.permalink }}">
-                        {{ subsubsubsection.title }}
-                      </a>
-                      {% if subsubsubsection.pages %}
-                      <!-- level 3 -->
-                      <ul class="sub-list subsub-list">
-                        {% for page in subsubsubsection.pages %}
-                          <li class="list__item">
-                            <a href="{{ page.permalink }}">
-                              {{ page.title }}
-                            </a>
-                          </li>
-                        {% endfor %}
-                      </ul>
-                      {% endif %}
-                    </li>
-                  </ul>
-                  {% endfor %}
-
-                </ul>
-                {% endif %}
-              </li>
-            </ul>
-            {% endfor %}
-          </ul>
+  <ul>
+  {% block menu %}
+    {% set index = get_section(path="docs/_index.md") %}
+    {% for s in index.subsections %}
+    {% set subsection = get_section(path=s) %}
+    <details {% if current_url is containing(subsection.path) %}
+              open
+             {% endif %}
+     class="mt1">
+      <summary>{{ subsection.title }}</summary>
+      {% if subsection.pages %}
+        {% for page in subsection.pages %}
+        <li class="ml2 mt1">
+          <a
+          {% if current_url == page.permalink %}
+            class="fw6"
           {% endif %}
+          href="{{ page.permalink }}">
+            {{ page.title }}
+          </a>
         </li>
-      {% endfor %}
-    {% endblock menu %}
+        {% endfor %}
+        {% for y in subsection.subsections %}
+        {% set subsubsection = get_section(path=y) %}
+          <details {% if current_url is containing(subsubsection.path) %}
+                    open
+                   {% endif %}
+           class="ml2 mt1">
+            <summary>{{ subsubsection.title }}</summary>
+            {% if subsubsection.pages %}
+              {% for page in subsubsection.pages %}
+              <li class="ml2 mt1">
+                <a
+                {% if current_url == page.permalink %}
+                  class="fw6"
+                {% endif %}
+                href="{{ page.permalink }}">{{ page.title }}</a></li>
+              {% endfor %}
+              {% for x in subsubsection.subsections %}
+                {% set subsubsubsection = get_section(path=x) %}
+                <details {% if current_url is containing(subsubsubsection.path) %}
+                         open
+                         {% endif %}
+                class="ml2 mt1">
+                  <summary>{{ subsubsubsection.title }}</summary>
+                  {% if subsubsubsection.pages %}
+                    {% for page in subsubsubsection.pages %}
+                    <li class="ml2 mt1">
+                      <a
+                      {% if current_url == page.permalink %}
+                        class="fw6"
+                      {% endif %}
+                      href="{{ page.permalink }}">{{ page.title }}</a></li>
+                    {% endfor %}
+                  {% endif %}
+                </details>
+              {% endfor %}
+            {% endif %}
+          </details>
+        {% endfor %}
+      {% endif %}
+    </details>
+    {% endfor %}
+  {% endblock menu %}
   </ul>
+</nav>
+
+<nav class="dn-l mobile dn-xl db pt4 no-break docs full">
+    <a class="gray3" href="{{config.base_url}}">Urbit</a>
+  <span class="gray3"> / </span>
+  <a href="{{config.base_url}}/docs/">
+  Documentation
+  </a>
+  <select class="db mt4 pa2 b--black ba br0 mw4 f6 fw5" id="docsSelect" style="text-align-last: center;">
+    <option>Navigation ↓</option>
+    {% set index = get_section(path="docs/_index.md") %}
+    {% for s in index.subsections %}
+    {% set subsection = get_section(path=s) %}
+    <option> </option>
+    <option>{{ subsection.title }}</option>
+    <option>---</option>
+    {% if subsection.pages %}
+      {% for page in subsection.pages %}
+      <option value="{{ page.permalink }}">{{ page.title }}</option>
+      {% endfor %}
+      {% for y in subsection.subsections %}
+      {% set subsubsection = get_section(path=y) %}
+      <option> </option>
+      <option>{{ subsubsection.title }}</option>
+      <option>---</option>
+        {% if subsubsection.pages %}
+          {% for page in subsubsection.pages %}
+          <option value="{{ page.permalink }}">{{ page.title }}</option>
+          {% endfor %}
+      {% for x in subsubsection.subsections %}
+      {% set subsubsubsection = get_section(path=x) %}
+      <option> </option>
+      <option>{{ subsubsubsection.title }}</option>
+      <option>---</option>
+        {% if subsubsubsection.pages %}
+          {% for page in subsubsubsection.pages %}
+          <option value="{{ page.permalink }}">{{ page.title }}</option>
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+    {% endfor %}
+  </select>
+  <button id="js-search-window-toggle" class="mt4 mb4 dn db-m db-l db-xl" type="button"  style="outline:none">
+    <span id="search-icon" class="f3 gray3">⚲</span><span class="ml3 gray2">Search</span>
+  </button>
 </nav>
 {% endblock content %}

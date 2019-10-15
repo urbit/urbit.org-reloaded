@@ -1,22 +1,23 @@
 +++
 title = "Privacy Policy"
+template = "page_indiced.html"
 +++
 
-## Scope of this Privacy Policy
+### Scope of this Privacy Policy {#scope}
 
 Tlon Corporation ('Tlon,' 'we,' 'our,' and/or 'us') values the privacy of individuals who use Urbit software, our websites, and related services (collectively, our 'Services'). This privacy policy (the 'Privacy Policy') explains how we collect, use, and share information from users of our Services ('Users'). By using our Services, you agree to the collection, use, disclosure, and procedures this Privacy Policy describes. Beyond the Privacy Policy, your use of our Services is also subject to our Terms of Service.
 
-## Information We Collect
+### Information we collect
 
 We may collect a variety of information from or about you or your devices from various sources, as described below.
 
-## Information You Provide to Us
+### Information you provide to us
 
 *Address Space Information.* When you acquire Urbit address space from Tlon, you provide us with certain information, such as your name and email. You may also provide us with your Ethereum wallet address and public key.
 
 *Communications.* If you contact us directly, we may receive additional information about you. For example, when you chat with us in Urbit or contact support, we may receive your email address, the contents of a message or attachments that you may send to us, and other information you choose to provide.
 
-## Information We Collect When You Use Our Services
+### Information we collect when you use our services
 
 *Device Information.* We receive information about the device and software you use to access our websites, including IP address, device identifier, web browser type, device model, and operating system version.
 
@@ -26,7 +27,7 @@ We may collect a variety of information from or about you or your devices from v
 
 Please review your web browser 'Help' file to learn the proper way to modify your cookie settings. Please note that if you delete, or choose not to accept, cookies from the Services, you may not be able to utilize the features of the Services to their fullest potential.
 
-## How We Use the Information We Collect
+### How we use the information we collect
 
 We use the information we collect:
 
@@ -38,7 +39,7 @@ We use the information we collect:
 + For compliance purposes, including enforcing our Terms of Service or other legal rights, or as may be required by applicable laws and regulations or requested by any judicial process or governmental agency; and
 + For other purposes for which we provide specific notice at the time of the collection of the information.
 
-## How we Share the Information We Collect:
+### How we share the information we collect
 
 We do not share or otherwise disclose information we collect from or about you except as described below or otherwise disclosed to you at the time of the collection.
 
@@ -54,34 +55,34 @@ We do not share or otherwise disclose information we collect from or about you e
 
 *Consent.* We may also disclose your information with your permission.
 
-## Your Choices
+### Your choices
 
 *Marketing Communications.* You can unsubscribe from our promotional emails via the link provided in the emails. Even if you opt-out of receiving promotional messages from us, you will continue to receive administrative messages from us.
 
 *Do Not Track.* There is no accepted standard on how to respond to Do Not Track signals, and we do not respond to such signals.
 
-## Third Parties
+### Third parties
 
 The Services may contain links to other websites, products, or services that Tlon does not own or operate. We are not responsible for the privacy practices of these third parties. Please be aware that this Privacy Policy will not apply to your activities or any information you disclose to these third parties. We encourage you to read their privacy policies before providing any information to them.
 
-## Security
+### Security
 
 We make reasonable efforts to protect your information by using physical and electronic safeguards designed to improve the security of the information we maintain. However, as our Services are hosted electronically, we can make no guarantees as to the security or privacy of your information.
 
-## Children's Privacy
+### Children's privacy
 
 We do not knowingly collect, maintain, or use personal information from children under 13 years of age, and no part of the Service is directed to children. If you learn that a child has provided us with personal information in violation of this Privacy Policy, then you may alert us at privacy@tlon.io.
 
-## International Visitors
+### International visitors
 
 The Services are hosted in the United States and are intended for visitors located within the United States. If you choose to use the Services from the European Union or other regions of the world with laws governing data collection and use that may differ from U.S. law, then please note that you are transferring your personal information outside of those regions to the United States for storage and processing. Also, we may transfer your data from the U.S. to other countries or regions in connection with storage and processing of data, fulfilling your requests, and operating the Services. By providing any information, including personal information, on or to the Services, you consent to such transfer, storage, and processing.
 
-## Changes to this Privacy Policy
+### Changes to this Privacy Policy
 
 We will post any adjustments to the Privacy Policy on this page, and the revised version will be effective when it is posted. If we materially change the ways in which we use or share personal information previously collected from you through the Services, we will notify you through the Services, by email, or other communication.
 
-## Contact Information
+### Contact information
 
-Tlon is responsible for processing your information. If you have any questions, comments, or concerns about our processing activities, please email us at privacy@tlon.io.
+Tlon is responsible for processing your information. If you have any questions, comments, or concerns about our processing activities, please email us at [privacy@tlon.io](mailto:privacy@tlon.io).
 
 *Last Updated:* September 12, 2018

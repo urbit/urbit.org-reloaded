@@ -1,28 +1,3 @@
-// toggling of navigation menus
-var toggleMainNav = document.getElementById('js-main-nav-toggle');
-if (toggleMainNav !== null) {
-  toggleMainNav.onclick = function() {
-    document.body.classList.toggle('has-active-main-nav');
-  }
-}
-
-var toggleContentNav = document.getElementById('js-content-nav-toggle');
-
-// Only show the content nav for docs or posts
-let navEnabledSections = ['docs', 'posts']
-let showNav = false
-for (let section of navEnabledSections) {
-  window.location.href.includes(section) ? showNav = true : null
-}
-showNav ? null : toggleContentNav.classList.add('none')
-
-
-if (toggleContentNav !== null) {
-  toggleContentNav.onclick = function() {
-    document.body.classList.toggle('has-active-content-nav');
-  }
-}
-
 function initHotKeys() {
 
   var bodyEl = document.body;
@@ -190,13 +165,12 @@ function makeTeaser(body, terms) {
 function formatSearchResultTitle(item) {
   var pathArray = item.ref.split( '/' );
 
-  // first directory is in 4th element of split path array
   var firstPartTitle = pathArray[3];
+  let firstTitleCapitals = firstPartTitle.charAt(0).toUpperCase() + firstPartTitle.slice(1);
 
-  // last directory is in 2nd to last element of array
   var lastPartTitle = item.doc.title;
 
-  var fullTitle = firstPartTitle + '<span class="gray90 inline-block pl2">' + ' / ' + lastPartTitle + '</span>';
+  var fullTitle = firstTitleCapitals + '<span class="gray1 dib pl2">' + ' / ' + lastPartTitle + '</span>';
 
   return fullTitle; 
 }
@@ -207,13 +181,12 @@ function formatSearchResultItem(item, terms) {
   li.appendChild(createA);
   var teaserTitle = formatSearchResultTitle(item);
   li.classList.add("search-results__item");
-  li.classList.add("ph3");
   var hrefA = item.ref;
   createA.setAttribute('href', hrefA);
-  createA.setAttribute('class','no-underline block pl6 pv3');
-  createA.innerHTML = `<span class="fs45 capitalize">${teaserTitle}</span>`;
-  createA.innerHTML += `<span class='pr7 fs5 none float-right'>→</span>`;
-  createA.innerHTML += `<div class="fs35 truncate mr10">${makeTeaser(item.doc.body, terms)}</div>`;
+  createA.setAttribute('class','no-underline db pl1 pv2');
+  createA.innerHTML = `<span class="capitalize ph3">${teaserTitle}</span>`;
+  createA.innerHTML += `<span class='dn arrow fr'>↩</span>`;
+  createA.innerHTML += `<div class="truncate pr2 ph3">${makeTeaser(item.doc.body, terms)}</div>`;
   return li;
 }
 
@@ -225,7 +198,9 @@ function initSearch() {
   if (!searchInput) {
     return;
   }
-
+  var glossaryResults = document.querySelector(".glossary-results");
+  var glossaryResultsHeader = document.querySelector(".glossary-results__header");
+  var glossaryResultsItem = document.querySelector(".glossary-results__item");
   var searchResults = document.querySelector(".search-results");
   var searchResultsHeader = document.querySelector(".search-results__header");
   var searchResultsItems = document.querySelector(".search-results__items");
@@ -280,7 +255,7 @@ function initSearch() {
 
   searchInput.addEventListener("keyup", debounce(function() {
     inputReset.style.display="block";
-
+    glossaryResults.style.display="none";
     searchResultsHeader.value = "";
     var term = searchInput.value.trim();
     /*
@@ -296,6 +271,17 @@ function initSearch() {
     if (term === "") {
       inputReset.style.display="none";
       return;
+    }
+
+    for (let rune of runes) {
+      if (rune.symbol === term) {
+        glossaryResults.style.display="block";
+        glossaryResultsItem.innerHTML = `
+        <h3 class="black"><code class="red3 mr1">${rune.symbol}</code> ${rune.name}</h3>
+        <p class="black">${rune.desc}</p>
+        <a href="${rune.link}" class="db tr black fw5" style="font-family: 'Inter UI', sans-serif;">Read more in Documentation -></a>
+        `
+      }
     }
 
     var results = index.search(term, options).filter(function (r) {
@@ -340,18 +326,7 @@ if (document.readyState === "complete" ||
   });
 }
 
-// Scroll to current document in nav list.
-let docsNavScroll = function() {
-  let docsNav = document.querySelectorAll("ul.content-nav__index a")
-  for (let link in docsNav) {
-    if (window.location.href.includes(docsNav[link].href)) {
-      docsNav[link].scrollIntoView()
-    }
-  }
-}
-
 if (window.location.href.includes("docs")) {
-  docsNavScroll();
   tippy('.tooltip', {
     content(reference) {
       const title = reference.getAttribute('title')
@@ -361,4 +336,65 @@ if (window.location.href.includes("docs")) {
     animateFill: false,
     animation: 'fade'
   })
+
+  let docsSelect = document.getElementById('docsSelect');
+  let goTo = function() {
+    let url = docsSelect.options[docsSelect.selectedIndex].value;
+    if (url.startsWith("http")) {
+      document.location.assign(url);
+    }
+  }
+
+  docsSelect.addEventListener('change', goTo);
+}
+
+// same-page navigation on-scroll behaviour
+
+if (document.body.classList.contains("page-indiced")) {
+let h2 = document.getElementsByTagName("h2");
+let h3 = document.getElementsByTagName("h3");
+let all = document.querySelectorAll("nav li a");
+let headers = document.querySelectorAll("details summary");
+
+// smooth scrolling on click
+all.forEach(link => {
+  link.addEventListener("click", event => {
+    event.preventDefault();
+    let target = document.querySelector(event.target.hash);
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
+});
+
+let lastId;
+let cur = [];
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  all.forEach(link => {
+    let section = document.querySelector(link.hash);
+    let sectionChildren = document.querySelector(link.hash).nextElementSibling;
+
+    if (
+      ((section.offsetTop <= fromTop) ||
+      (sectionChildren.offsetTop <= fromTop)) &&
+      (section.offsetTop + section.offsetHeight + sectionChildren.offsetHeight > fromTop)
+    ) {
+      link.classList.add("current");
+    } else {
+      link.classList.remove("current");
+    }
+  });
+})};
+
+let oceanvid = document.getElementById("ocean");
+
+if ((oceanvid !== null) && (window.innerWidth > window.innerHeight)) {
+  oceanvid.innerHTML = `<source
+  src="https://storage.googleapis.com/media.urbit.org/site/sea30-1440.mp4"
+  type="video/mp4"/>
+  Your browser does not support the video tag.`
 }
