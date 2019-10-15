@@ -39,9 +39,9 @@
       {% endif %}
       <h2 class="f5 fw6 mt0 mb1"><a class="bb-0" href="{{ page.permalink }}">{{ page.title }}</a></h2>
       <p class="mt0">{{ page.description }}</p>
-      <span class="mono f7">{{ page.date | date(format="~%Y.%-m.%-d") }}</span>
-      <span class="mono f7">
-        {% if page.extra.ship %}<span class="mono f7 ml2">{{ page.extra.ship }}</span> {% endif %}
+      <span class="mono f6">{{ page.date | date(format="~%Y.%-m.%-d") }}</span>
+      <span class="mono f6">
+        {% if page.extra.ship %}<span class="mono f6 ml2">{{ page.extra.ship }}</span> {% endif %}
       </span>
     </li>
     {% endfor %}

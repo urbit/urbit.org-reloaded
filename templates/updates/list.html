@@ -44,10 +44,10 @@
       <a class="bb0" href="{{ page.permalink }}">
         <p class="mv2">{{ page.description }}</p>
       </a>
-      <time class="mono f7">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
-      <span class="mono f7">
+      <time class="mono f6">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
+      <span class="mono f6">
         {% if page.extra.ship %}
-          <address class="mono f7 ml2">{{ page.extra.ship }}</address>
+          <address class="mono f6 ml2">{{ page.extra.ship }}</address>
         {% endif %}
       </span>
     </li>
