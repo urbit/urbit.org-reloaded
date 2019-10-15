@@ -26,7 +26,7 @@ Urbit ID is a simple, decentralized system for people to own their digital addre
 
 Urbit ID is a completely separate system from Urbit OS. It’s finished and deployed to Ethereum already. We designed Urbit ID to log in to Urbit OS, but it can be used for anything.
 
-For those curious to understand Urbit ID a bit better, we’ll cover the basics of how Urbit ID works here: how addresses are distributed and who owns what.
+For those curious to understand Urbit ID a bit better, we’ll cover the basics of how Urbit ID works.
 
 <img class="ba mv5" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-paperwallet%402x.png">
 
@@ -72,8 +72,8 @@ Urbit ID isn’t just a design. It’s [live and deployed](https://azimuth.netwo
 
 <img class="b—black ba mv5" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-sigils%402x.png">
 
-Urbit IDs are digital property. The entire address space of Urbit IDs is like a vast territory of digital land. Over time, we’ve used this land to fund the development of Urbit as a whole by selling some of it to people we felt would be great stewards of this new frontier.
-
-When we launched the Urbit ID system, in January of 2019, there were a few thousand different star and galaxy holders. Since then, that number is on the rise.
+Urbit IDs are digital property, and we think of the entire address space of Urbit IDs as a vast territory of digital land.
 
 The scarcity tree of Urbit ID address space drives decentralization even while the project is young, which is great. If Urbit ID is going to last a long time and succeed as neutral infrastructure, it has to be owned and controlled by a wide variety of people.
+
+When we launched the Urbit ID system, in January of 2019, there were a few thousand different star and galaxy holders – stewards of this digital land. Since then, that number is on the rise. 
