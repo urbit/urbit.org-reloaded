@@ -10,11 +10,11 @@ hide_previous_title = "true"
 
 Every time you post a comment, like something, send a message, or use any app or service, you need an account. (And, behind the scenes, a network address.) Neither of these things belongs to you. The way things are going, they never will. No matter what you’re up to with your phone or laptop, you’re dependent on MEGACORP.
 
-<img class="b—black ba mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-megacorp.svg">
+<img class="ba mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-megacorp.svg">
 
 We don’t like being owned by someone else. We think your identity and wallet should feel like a unique and precious object that you can always carry with you. So we built Urbit ID.
 
-<img class="b—black ba mv5" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-cards%402x.png">
+<img class="ba mv5" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-cards%402x.png">
 
 Urbit ID is meant to feel like a civilizational key. If your Urbit ID were a piece of hardware, you could tap it to unlock a door, swipe it to buy a coffee, and plug it into any computer to log in. It’s a unique, beautiful object that’s both an address and a wallet. It’s a key to a secret club and the ticket to your digital life.
 
@@ -28,7 +28,7 @@ Urbit ID is a completely separate system from Urbit OS. It’s finished and depl
 
 For those curious to understand Urbit ID a bit better, we’ll cover the basics of how Urbit ID works here: how addresses are distributed and who owns what.
 
-<img class="b—black ba mv5" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-paperwallet%402x.png">
+<img class="ba mv5" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-paperwallet%402x.png">
 
 
 Your Urbit ID is a short, memorable address that anyone can use to connect with you that *doesn’t* depend on any company. It’s an address you own completely and can keep forever.
