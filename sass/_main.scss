@@ -590,3 +590,8 @@ hr {
 .wk-appearance-none {
   -webkit-appearance: none;
 }
+
+// hide webkit scrollbars on windows, etc
+::-webkit-scrollbar {
+    display: none;
+}
