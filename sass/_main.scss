@@ -380,6 +380,9 @@ input[type="search"] {
     &:hover {
         background-color: #F9F9F9;
       }
+      h3 {
+          padding: 0;
+      }
   }
 
   #search-reset {
@@ -414,6 +417,15 @@ h1 code, h2 code, h3 code, h4 code {
     @extend .red3;
     background-color: transparent;
     font-weight: 600;
+}
+
+    // tables
+table {
+    @extend .w-100;
+    border-spacing: 0;
+}
+th {
+    @extend .fw6;
 }
     // hoon school
 iframe#apply {
@@ -580,4 +592,9 @@ hr {
 // Useful for hiding input inner shadows in Safari
 .wk-appearance-none {
   -webkit-appearance: none;
+}
+
+// hide webkit scrollbars on windows, etc
+::-webkit-scrollbar {
+    display: none;
 }

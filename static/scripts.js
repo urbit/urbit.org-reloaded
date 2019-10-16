@@ -277,9 +277,9 @@ function initSearch() {
       if (rune.symbol === term) {
         glossaryResults.style.display="block";
         glossaryResultsItem.innerHTML = `
-        <h3 class="black"><code class="red3 mr1">${rune.symbol}</code> ${rune.name}</h3>
+        <a href="${rune.link}"><h3 class="black"><code class="red3 mr1">${rune.symbol}</code> ${rune.name}</h3>
         <p class="black">${rune.desc}</p>
-        <a href="${rune.link}" class="db tr black fw5" style="font-family: 'Inter UI', sans-serif;">Read more in Documentation -></a>
+         <span class="db tr black fw5" style="font-family: 'Inter UI', sans-serif;">Read more in Documentation -></span></a>
         `
       }
     }
