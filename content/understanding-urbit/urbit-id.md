@@ -43,7 +43,7 @@ We want everyone to own their own identity and wallet. One way to do this would 
 
 At a high level, there are three important things to understand about the overall Urbit ID system design.
 
-First, there are only so many Urbit IDs, so they cost something. Since they cost something, people are less likely to use them to spam or abuse the network. And, when you meet a stranger with an Urbit ID you know they have some skin in the game.
+First, there are only so many Urbit IDs, so they cost something. Since they cost something, people are less likely to use them to spam or abuse the network. And, when you meet a stranger with an Urbit ID, you know they have some skin in the game.
 
 <img class="b—black ba mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-address-space-1.svg">
 
@@ -52,7 +52,7 @@ Second, Urbit IDs are distributed by a sponsorship tree. Each sponsor issues a f
 
 Urbit IDs need a sponsor even after they’re issued, but you can always change sponsors and sponsors can always reject children. This means bad actors can be banned and abusive sponsors can be ignored. We think this strikes a nice balance between accountability and freedom.
 
-Finally, galaxies form a senate that can upgrade the logic of the Urbit ID system by majority vote. We think Urbit ID should last for quite a long time, but if it ever needs to be changed, the galaxies can facilitate upgrades. Code may be law, but ultimately we acknowledge that human judgement can’t be factored out.
+Finally, galaxies form a senate that can upgrade the logic of the Urbit ID system by majority vote. We think Urbit ID should last for quite a long time, but if it ever needs to be changed, the galaxies can facilitate upgrades. Code may be law, but ultimately we acknowledge that human judgment can’t be factored out.
 
 (For a bit more on how all this works, see the [FAQ](@/faq.md).)
 
