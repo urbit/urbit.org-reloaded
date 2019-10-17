@@ -1,6 +1,13 @@
 +++
 title = "Meetups"
+[extra]
+hidetitle = "true"
 +++
+
+<picture>
+<source src="https://media.urbit.org/site/meetup.jpg">
+<img src="https://media.urbit.org/site/meetup.jpg"/>
+</picture>
 
 Turns out that getting Urbit fans together in one room is pretty fun. Here's an incomplete list of community-led Urbit IRL groups. These events are generally informal and very approachable – feel free to dive in. 
 
