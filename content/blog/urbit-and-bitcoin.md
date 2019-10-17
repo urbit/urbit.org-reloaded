@@ -7,7 +7,7 @@ author = "Christian Langalis"
 ship = "~pindet-timmut"
 +++
 
-Urbit imagines a new model for an OS that – among other changes – embeds money as a primitive in the system’s architecture. Developers within the Urbit ecosystem will be able to securely use money in their applications as easily as they might use file systems or networking protocols. Creating a new sound currency, however is not our goal; Bitcoin has already done that. 
+Urbit imagines a new model for an OS that – among other changes – includes money as a native service. Developers within the Urbit ecosystem will be able to securely use money in their applications as easily as they might use file systems or networking protocols. Creating a new sound currency, however is not our goal; Bitcoin has already done that. 
 
 Running a Bitcoin node is very much like running a single purpose personal server (one that hosts the Bitcoin blockchain and verifies transactions). Urbit is designed to be the *final* personal server, so this week we launched several grants to incorporate Bitcoin into our development cycle. The first of these are directed towards interacting with Bitcoin nodes directly from Urbit. 
 
