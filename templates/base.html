@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width">
-        <!-- TWITTER -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:site" content="@urbit">
-        <meta name="twitter:creator" content="@urbit">
-        <!-- END TWITTER -->
-    <meta name="description" content="{% block description %}{% endblock description %}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@urbit">
+    <meta name="twitter:creator" content="@urbit">
+    {% block title %}
+    {% endblock title %}
+    {% block description %}
+    {% endblock description %}
     <meta name="author" content="{{ config.extra.author.name }}">
     <!-- END META -->
 
@@ -21,8 +22,6 @@
     <!-- START RSS -->
     <link rel="alternative" type="application/rss+xml" title="RSS" href="/rss.xml" />
     <!-- END RSS -->
-
-    <title>{% block title %}{% endblock title %} - {{ config.title }}</title>
 
     <!-- START CSS -->
     <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">

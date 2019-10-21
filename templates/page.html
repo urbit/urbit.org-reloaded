@@ -1,12 +1,20 @@
 {% extends "base.html" %}
-{% block title %} {{ page.title }} {% endblock title %}
+
+{% block title %} 
+  <meta name="og:title" content="{{ page.title }} - {{ config.title }}">
+  <title>{{ page.title }} - {{ config.title }}</title>
+{% endblock title %}
+
 {% block description %}
   {% if page.description %}
-    {{ page.description }}
+  <meta name="og:description" content="{{ page.description }}">
+  <meta name="description" content="{{ page.description }}">
     {% else %}
-      {{ config.description }}
-    {% endif %}
-  {% endblock description %}
+    <meta name="og:description" content="{{ config.description }}">
+    <meta name="description" content="{{ config.description }}">
+  {% endif %}
+{% endblock description %}
+
 {% block content %}
 
 <!-- header -->

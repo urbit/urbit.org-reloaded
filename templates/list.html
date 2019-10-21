@@ -1,5 +1,13 @@
 {% extends "base.html" %}
-{% block title %} {{ section.title }} {% endblock title %}
+{% block title %} 
+  <meta name="og:title" content="{{ section.title }} - {{ config.title }}">
+  <title>{{ section.title }} - {{ config.title }}</title>
+{% endblock title %}
+{% block description %} 
+  <meta name="og:description" content="Directory for {{ section.title }}.">
+  <meta name="description" content="Directory for {{ section.title }}.">
+{% endblock description %}
+
 {% block content %}
 <!-- header -->
 <nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl">
