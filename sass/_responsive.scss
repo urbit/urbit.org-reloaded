@@ -11,15 +11,6 @@
     }
 }
 
-// scaling below desktop
-@media all and (max-width: 60em) {
-    body.essay {
-        article > *:not(figure):not(picture) {
-            grid-area: auto / 1 / auto / 12;
-        }
-    }
-}
-
 // custom L breakpoint classes
 @media screen and (min-width: 46.875em) and (max-width: 60em) {
     .white-l { 
