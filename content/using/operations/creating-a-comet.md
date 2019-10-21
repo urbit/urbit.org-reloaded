@@ -3,6 +3,9 @@ title = "Creating a Comet"
 description = "Comets are disposable identities you can use on the live network."
 weight = 4
 aliases = ["/docs/using/creating-a-comet/"]
+[extra]
+hideprevious = "true"
+hidenext = "true"
 +++
 
 **Comets** are Urbits whose names are 128-bits or 16 syllables, such as:
