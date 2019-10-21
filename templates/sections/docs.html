@@ -1,5 +1,12 @@
 {% extends "base.html" %}
-{% block title %} {{ section.title }} {% endblock title %}
+{% block title %} 
+  <meta name="og:title" content="{{ section.title }} - {{ config.title }}">
+  <title>{{ section.title }} - {{ config.title }}</title>
+{% endblock title %}
+{% block description %} 
+  <meta name="og:description" content="From the Urbit documentation.">
+  <meta name="description" content="From the Urbit documentation.">
+{% endblock description %}
 {% block bodyclasses %} class="docs" {% endblock bodyclasses %}
 {% block content %}
 <!-- header -->

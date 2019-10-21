@@ -1,5 +1,14 @@
 {% extends "base.html" %}
-{% block title %} Media {% endblock title %}
+{% block title %} 
+  <meta name="og:title" content="Media - {{ config.title }}">
+  <title>Media - {{ config.title }}</title>
+{% endblock title %}
+
+{% block description %} 
+  <meta name="og:description" content="A curated list of Urbit-related media.">
+  <meta name="description" content="A curated list of Urbit-related media.">
+{% endblock description %}
+
 {% block content %}
 <!-- header -->
 <nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl">

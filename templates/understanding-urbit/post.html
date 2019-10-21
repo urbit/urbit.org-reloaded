@@ -1,9 +1,19 @@
 {% extends "base.html" %}
-{% block title %}
-  {{ page.title }}
+
+{% block title %} 
+  <meta name="og:title" content="{{ page.title }} - {{ config.title }}">
+  <title>{{ page.title }} - {{ config.title }}</title>
 {% endblock title %}
 
-{% block description %} {{ page.description }} {% endblock description %}
+{% block description %}
+  {% if page.description %}
+  <meta name="og:description" content="{{ page.description }}">
+  <meta name="description" content="{{ page.description }}">
+    {% else %}
+    <meta name="og:description" content="{{ config.description }}">
+    <meta name="description" content="{{ config.description }}">
+  {% endif %}
+{% endblock description %}
 
 {% block bodyclasses %}
   class="essay
