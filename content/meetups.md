@@ -19,4 +19,4 @@ Location | Contact information
 San Francisco, CA | [Meetup.com](https://www.meetup.com/urbit-sf/)
 New York, NY | [Meetup.com](https://www.meetup.com/Urbit-New-York/)
 Austin, TX | [Meetup.com](https://www.meetup.com/Urbit-Austin/)
-Seattle, WA | TBA
+Seattle, WA | [Meetup.com](https://www.meetup.com/urbit-seattle/)
