@@ -17,5 +17,7 @@
   <h1>{{ page.title }}</h1>
   <!-- body -->
     {{ page.content | safe }}
+
+    {% include "partials/pagination-docs.html" %}
 </article>
 {% endblock content %}
