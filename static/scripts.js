@@ -15,11 +15,13 @@ function initHotKeys() {
         document.body.classList.remove('has-active-search-window');
       }
 
-      // / to close toggle window
+      // / to open toggle window
       if (key === '/' || key === 'Period' || key === 58) {
-        event.preventDefault();
-        document.body.classList.toggle('has-active-search-window');
         if (bodyEl.classList.contains('has-active-search-window')) {
+          // if it's already open don't do anything!
+        } else {
+          event.preventDefault();
+          document.body.classList.add('has-active-search-window');
           searchInput.focus();
         }
       }
@@ -28,6 +30,14 @@ function initHotKeys() {
       if (bodyEl.classList.contains('has-active-search-window')) {
         if (key === 'Tab' || key === 'Tab' || key === 9) {
           searchInput.focus();
+        }
+      }
+
+      if (bodyEl.classList.contains('has-active-search-window')) {
+        if (key === 'Enter' || key === 'Return' || key === 13) {
+          event.preventDefault();
+          let firstresult = document.querySelectorAll("div#full-results a")[0];
+          firstresult.click();
         }
       }
   });
@@ -241,17 +251,6 @@ function initSearch() {
       }
     })
   }
-
-  // Don't refresh the page on enter
-  searchInput.addEventListener('keydown', function(event){
-    var key = event.key || event.keyCode;
-
-    if (key === 13 || key === "Enter") {
-      event.preventDefault();
-      return false;
-    }
-  })
-
 
   searchInput.addEventListener("keyup", debounce(function() {
     inputReset.style.display="block";
