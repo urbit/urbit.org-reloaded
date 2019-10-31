@@ -854,6 +854,13 @@ var runes = [
       "desc": "The <code>==</code> rune is used to indicate the end of a 'jogging' or 'running' series of Hoon expressions."
     },
     {
+      "name": "fas",
+      "symbol": "/",
+      "usage": "Ford",
+      "link": "/docs/tutorials/arvo/ford/#ford-runes",
+      "desc": "Runes specific to Ford, not considered to be Hoon runes."
+    },
+    {
       "name": "faslus",
       "symbol": "/+",
       "usage": "Ford",
