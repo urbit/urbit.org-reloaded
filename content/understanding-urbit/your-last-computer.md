@@ -15,7 +15,7 @@ First, let’s talk about what it should feel like in the future.
 
 <img class="mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png">
 
-Imagine that you can login from anywhere with one simple, memorable name and password. And when you do, an entire OS appears for you. Inside is your whole digital life. Every conversation you’ve ever had, all your biometric data — every step and heartbeat. Your personal mesh of devices: your doors, your car, your irrigation. All of your communities, every message you’ve shared with friends and family. Every connection you’ve made and every archival piece of data, in one place. Secure and private, forever.
+Imagine that you can log in from anywhere with one simple, memorable name and password. And when you do, an entire OS appears for you. Inside is your whole digital life. Every conversation you’ve ever had, all your biometric data — every step and heartbeat. Your personal mesh of devices: your doors, your car, your irrigation. All of your communities, every message you’ve shared with friends and family. Every connection you’ve made and every archival piece of data, in one place. Secure and private, forever.
 
 You own and control this OS completely. Your system doesn’t live on someone else’s server, so there’s no risk of leaking it in a mass data breach or losing it when a service shuts down. Your Urbit is a sealed, secure, and durable system.
 
