@@ -325,7 +325,16 @@ if (document.readyState === "complete" ||
   });
 }
 
+// Scroll to current document in nav list.
+let docsNavScroll = function() {
+  let docsDetails = document.querySelectorAll("nav ul details")  
+  for (let details in docsDetails) {
+    if (docsDetails[details].open) docsDetails[details].scrollIntoView()
+    }
+}
+
 if (window.location.href.includes("docs")) {
+  // tooltip behaviour for standard library page
   tippy('.tooltip', {
     content(reference) {
       const title = reference.getAttribute('title')
@@ -336,6 +345,8 @@ if (window.location.href.includes("docs")) {
     animation: 'fade'
   })
 
+  // on mobile, dropdown selections go to the option
+
   let docsSelect = document.getElementById('docsSelect');
   let goTo = function() {
     let url = docsSelect.options[docsSelect.selectedIndex].value;
@@ -345,6 +356,8 @@ if (window.location.href.includes("docs")) {
   }
 
   docsSelect.addEventListener('change', goTo);
+  // docs autoscroll to current page
+  docsNavScroll();
 }
 
 // same-page navigation on-scroll behaviour
