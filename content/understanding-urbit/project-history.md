@@ -39,7 +39,7 @@ At the beginning, Urbit was just a few people with the right combination of imag
 
 ## Future updates
 
-Urbit is young, but developing quickly. If you've just finished our Understanding Urbit series and want to stay connected with the project, we recommend starting with our mailing list. 
+Urbit is young, but developing quickly. If you've just finished our Understanding Urbit series and want to stay connected with the project, we recommend starting with our mailing list.
 
 Enter your email below to get regular updates on the project.
 
@@ -71,4 +71,6 @@ novalidate>
     </button>
     </div>
 </div>
+
+You can also follow us on [Twitter](https://twitter.com/urbit) or [GitHub](https://github.com/urbit).
 </form>
