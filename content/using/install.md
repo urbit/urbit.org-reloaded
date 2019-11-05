@@ -6,7 +6,7 @@ template = "page_indiced.html"
 aliases = ["/docs/getting-started/"]
 +++
 
-Urbit is not yet ready for everyday users -- but if you're technically inclined or generally intrepid, feel free to try it out. It's a good place to explore.
+Urbit is not yet ready for everyday users — but if you're technically inclined or generally intrepid, feel free to try it out. It's a good place to explore.
 
 In order to get going on the network, you'll need an [Urbit ID](#id). To try the live network out with a disposable identity, you can always [create a comet](@/using/operations/creating-a-comet.md).
 
@@ -19,7 +19,11 @@ While Tlon does not currently sell or distribute Urbit IDs, there are still a fe
 - Getting an invitation from a friend
 - Purchasing an Urbit ID from a third party, such as [urbit.live](https://urbit.live), [OpenSea](https://opensea.io), or [Urbit Marketplace](https://urbitmarketplace.com/).
 
-Tlon occasionally selects candidates to distribute invitations, and users operating galaxies and stars can spawn and distribute a finite number of stars and planets, respectively.
+Tlon occasionally selects candidates to distribute invitations, and users operating galaxies and stars can spawn and distribute a finite number of stars and planets, respectively. 
+
+## Using your Urbit ID
+
+If you have an Urbit ID, you'll use [Bridge](https://bridge.urbit.org) to get your ship's keyfile before you can [boot your ship](#booting-your-ship). For more information on how to use Bridge, see [Using Bridge](@/using/operations/using-bridge.md). 
 
 ## Install Urbit {#urbit}
 
@@ -75,7 +79,7 @@ Urbit wants to map 2GB of memory when it boots up. It won’t necessarily use al
 
 Digital Ocean has a post on adding swap [here](https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04). For Amazon there’s a StackOverflow thread [here](https://stackoverflow.com/questions/17173972/how-do-you-add-swap-to-an-ec2-instance).
 
-## Booting your ship
+## Booting your ship {#booting-your-ship}
 
 Now the rubber meets the road. You'll be booting your ship with the keyfile that you [downloaded from Bridge](@/using/operations/using-bridge.md).
 
@@ -96,13 +100,13 @@ Type `cd` in your terminal to return to your home directory. If you want to stor
 Run the command below, except with `sampel-palnet` replaced by the name of your
 Urbit identity, and `path/to/my-planet.key` replaced with the path to your keyfile:
 
-```
+```sh
 ./urbit -w sampel-palnet -k path/to/my-planet.key
 ```
 
 Or, if you'd prefer to copy your key in, you can run:
 
-```
+```sh
 ./urbit -w sampel-palnet -G rAnDoMkEy
 ```
 

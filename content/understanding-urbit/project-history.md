@@ -29,10 +29,48 @@ Urbit OS isn’t just an interface — it’s a complete system. You should also
 
 At the beginning, Urbit was just a few people with the right combination of imagination and discipline to try to rebuild computing. Now it's a community of thousands of address space holders, dozens of open source developers, at least two independent companies ([Tlon](https://tlon.io) — which works mostly on kernel development and interface design, and [urbit.live](https://urbit.live) — which is building services on the platform), and who knows how many fans.
 
-**History**
+## History
 
 <img class="mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/project-history/project-history-05.svg">
 
-**Roadmap**
+## Roadmap
 
 <img class="mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/project-history/project-history-06.svg">
+
+## Future updates
+
+Urbit is young, but developing quickly. If you've just finished our Understanding Urbit series and want to stay connected with the project, we recommend starting with our mailing list.
+
+Enter your email below to get regular updates on the project.
+
+<iframe name="nothing" style="display:none;"></iframe>
+<form
+action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;amp;id=be143888d2"
+method="post"
+id="mc-embedded-subscribe-form"
+name="mc-embedded-subscribe-form"
+class="validate form"
+target="_blank"
+novalidate>
+<div class="input-group" id="mc_embed_signup_scroll">
+    <div class="mc-field-group w-100 relative">
+    <input
+        class="bg-white black b--black ba pa3 w-100 mb2 br0 wk-appearance-none"
+        type="email"
+        name="EMAIL"
+        id="mce-EMAIL"
+        placeholder="your@email.com"/>
+    <button
+        id="mc-embedded-subscribe"
+        class="dib bn absolute bg-transparent"
+        style="font-family: 'Inter UI', san-serif; right: 3px; top: 15px; -webkit-appearance: none;"
+        type="submit"
+        name="subscribe"
+        onclick="_paq.push(['trackEvent', 'Mailing List', 'Subscribe'])">
+        <span class="fr pr1">-></span>
+    </button>
+    </div>
+</div>
+
+You can also follow us on [Twitter](https://twitter.com/urbit) or [GitHub](https://github.com/urbit).
+</form>
