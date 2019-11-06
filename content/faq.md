@@ -289,21 +289,21 @@ Landscape is an experimental Urbit OS web interface that includes social functio
 
 Follow our guide on how to boot a ship [here](@/using/install.md).  
 
-Get on the [mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;id=be143888d2). Learn [Hoon](@/docs/tutorials/hoon/_index.md). Sign up for [Hoon School](@/hoonschool.md). [Make stuff](@/using/install.md).
+Get on the [mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;id=be143888d2). Learn [Hoon](@/docs/tutorials/hoon/_index.md). Sign up for [Hoon School](@/hoonschool.md). [Make stuff](https://grants.urbit.org).
 
 
 ## Urbit Grants
 
 ### What are the different types of grants? {#grants-1}
 
-There are three ways to receive a grant of stars for your contribution to the Urbit ecosystem.
+There are three ways to receive a [grant of stars](https://grants.urbit.org/) for your contribution to the Urbit ecosystem.
 - You can submit a **Proposal** if you’re interested in working on a project of your own creation for a number of stars that you pitch.
 - You can apply to claim a **Bounty.** Bounties are requests for work created by Tlon that are claimable by the public, with a predetermined number of stars as the reward.
 - The **Gifts** program, which is Tlon’s informal way of rewarding contributions that don’t fall into the above categories. There is no way to apply for a gift.
 
 ### How do I get a gift? {#grants-2}
 
-Make useful and substantial contributions to Urbit. These can be contributions to the project itself, or they can be outside tools that aren’t part of the Urbit codebase. There’s no formal system for determining who gets a gift; it’s at the discretion of employees at Tlon. Nothing is guaranteed, but you can get an idea for what kinds of contributions results in gifts by looking at the [gifts history.](https://grants.urbit.org/history)
+Make useful and substantial contributions to Urbit. These can be contributions to the project itself, or they can be outside tools that aren’t part of the Urbit codebase. There’s no formal system for determining who gets a gift; it’s at the discretion of employees at Tlon. Nothing is guaranteed, but you can get an idea for what kinds of contributions results in gifts by looking at the [gifts history](https://grants.urbit.org/history).
 
 ### How often are gifts awarded? {#grants-3}
 
