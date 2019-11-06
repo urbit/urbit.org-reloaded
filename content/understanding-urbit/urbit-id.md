@@ -39,20 +39,27 @@ Your Urbit ID and passkey are all you need to log into Urbit OS and send and rec
 
 <img class="b—black ba mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-address-space-2.svg">
 
-We want everyone to own their own identity and wallet. One way to do this would be to build a MEGACORP or a State Department of Urbit. But we prefer decentralized, collectively owned systems. So that’s what we built. Let’s look briefly at how that system works.
+We want everyone to own their own identity and wallet. One way to do this would be to build a MEGACORP or a Centralized Naming Authority of Urbit. But we prefer decentralized, collectively owned systems. So that’s what we built. Let’s look briefly at how that system works.
 
-At a high level, there are three important things to understand about the overall Urbit ID system design.
+Each Urbit ID is just a number. From that number we generate a pronounceable name and visually identifiable sigil. `~dalwel-fadrun` is `3,509,632,436`, for example.
 
-First, there are only so many Urbit IDs, so they cost something. Since they cost something, people are less likely to use them to spam or abuse the network. And, when you meet a stranger with an Urbit ID, you know they have some skin in the game.
+Urbit IDs are distributed by a sponsorship tree. At the top of the tree are `2^8` (`256`) galaxies. Each galaxy issues `2^8` stars, making a total of `2^16` (`65K`). Stars then each can issue 2^16 planets, making for `2^32` (`~4B`). As you might expect, each planet issues `2^32` moons.
+
+Every Urbit ID needs a sponsor, although stars and planets can always move to a new one. The galaxies act as a senate to upgrade the system by majority vote.
+
+And that's it. It's a simple, elegant system — but what's important is *why* it is the way it is. Let's take a look at that.
 
 <img class="b—black ba mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-address-space-1.svg">
 
+At a high level, there are three important things to understand about the overall Urbit ID system design.
+
+First, there are only so many Urbit IDs, so they cost something. Since they cost something, people are less likely to use them to spam or abuse the network. And, when you meet a stranger with an Urbit ID, you know they have some skin in the game without them leaking any personal data in either direction. Each Urbit ID is purely pseudonymous. `~dalwel-fadrun`, for example, is only proof of some stake in the network.
 
 Second, Urbit IDs are distributed by a sponsorship tree. Each sponsor issues a fixed number of addresses. Since there are lots of sponsors, there are lots of ways to get an Urbit ID — not just one central authority.
 
 Urbit IDs need a sponsor even after they’re issued, but you can always change sponsors and sponsors can always reject children. This means bad actors can be banned and abusive sponsors can be ignored. We think this strikes a nice balance between accountability and freedom.
 
-Finally, galaxies form a senate that can upgrade the logic of the Urbit ID system by majority vote. We think Urbit ID should last for quite a long time, but if it ever needs to be changed, the galaxies can facilitate upgrades. Code may be law, but ultimately we acknowledge that human judgment can’t be factored out.
+Finally, galaxies (the top of the sponsorship tree) form a senate that can upgrade the logic of the Urbit ID system by majority vote. We think Urbit ID should last for quite a long time, but if it ever needs to be changed, the galaxies can facilitate upgrades. Code may be law, but ultimately we acknowledge that human judgment can’t be factored out.
 
 (For a bit more on how all this works, see the [FAQ](@/faq.md).)
 
