@@ -1,10 +1,10 @@
 {% extends "base.html" %}
-{% block title %} 
+{% block title %}
   <meta name="og:title" content="Understanding Urbit - {{ config.title }}">
   <title>Understanding Urbit - {{ config.title }}</title>
 {% endblock title %}
 
-{% block description %} 
+{% block description %}
   <meta name="og:description" content="Urbit is a new kind of computer.">
   <meta name="description" content="Urbit is a new kind of computer.">
 {% endblock description %}
@@ -30,7 +30,28 @@
 <!-- content -->
 <h1 id="introduction" class="mb4 full mt4 c4-10-lg">Introduction</h1>
 <section class="full-bleed full grid12">
-  <p class="full c4-7-lg mt0 mb4 mb2-xl lh-copy">This is a drawing of an Urbit — <br> a new kind of computer.</p>
+  <img class="full c4-10-lg mb4" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-6.jpg"/>
+  <p class="full c4-10-lg mt0 mb4 mb4-xl lh-copy">
+    Imagine that you can login from anywhere with one simple, memorable name and password.
+  </p>
+  <p class="full c4-10-lg mt0 mb4 mb4-xl lh-copy">
+    And when you do, an entire OS appears for you.
+  </p>
+  <p class="full c4-10-lg mt0 mb4 mb4-xl lh-copy">
+    Inside is your whole digital life. Every conversation you’ve ever had, all your biometric data — every step and heartbeat. Your personal mesh of devices: your doors, your car, your irrigation. All of your communities, every message you’ve shared with friends and family. Every connection you’ve made and every archival piece of data, in one place. Secure and private, forever.
+  </p>
+  <p class="full c4-10-lg mt0 mb4 mb4-xl lh-copy">
+    You own and control this OS completely. Your system doesn’t live on someone else’s server, so there’s no risk of leaking it in a mass data breach or losing it when a service shuts down.
+  </p>
+  <p class="full c4-10-lg mt0 mb4 mb4-xl lh-copy">
+    This is your Urbit. Your Urbit is a simple, durable system that belongs to you 100% and forever.
+  </p>
+  <p class="full c4-10-lg mt0 mb8 mb6-xl lh-copy">
+    Let's back up and walk through what Urbit is, step by step, starting at the very beginning.
+  </p>
+</section>
+<section class="full-bleed full grid12">
+  <p class="full c4-7-lg mt0 mb4 mb2-xl lh-copy">This is a drawing of an Urbit&nbsp;—&nbsp;<br> a new kind of computer.</p>
   <img  class="full c7-10-lg row-1 mt0 mb2 mb4-xl w-100 ba" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-1.svg" alt="A drawing of an Urbit ship." />
 </section>
 <section class="full-bleed full grid12">
@@ -48,27 +69,26 @@
   Each Urbit is a piece of a new network that’s owned and controlled by its users.</p>
   <img class="full c7-10-lg row-1 mt0 mb2 mb7-xl w-100 ba" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-4.svg" alt="An Urbit ship communicating with other ships" />
 </section>
-  <section id="megacorp" class="full full-bleed grid12 bg-black">
-    <img class="full c4-10-lg mt7" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-5.jpg"/>
-    <p class="full c4-10-lg white lh-copy mt2 mt4-xl mb7">Today, technology controls us. Every MEGACORP has the same incentive: To keep us hooked on their platform.</p>
-  </section>
-  <section class="full full-bleed grid12 bg-yellow">
-  <img class="full c4-10-lg mt7" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-6.jpg"/>
-  <p class="full c4-10-lg lh-copy mt2 mt4-xl">We built Urbit so people can control their technology, shape their digital lives and freely build
-        their digital communities.</p>
-  <p class="full c4-10-lg lh-copy mt2">We want to replace the Internet with a foundation for computing that we can all rely on far into the future.</p>
-  <p class="full c4-10-lg lh-copy mt2">Urbit is a large, ambitious project. But at the core it’s simple, durable and yours.</p>
-  </section>
-  <p class="c1-10 c4-10-lg mt6 mb4 lh-copy">Nothing quite like this has ever been done before.</p>
-  <footer class="relative mt4 c4-10-lg full">
-      {% set posts = get_section(path="understanding-urbit/_index.md") %}
-      {% for directorypage in posts.pages | slice (end=1) %}
-  <a class="bb-0" href="{{directorypage.permalink}}">
-    <nav class="previous absolute right-2 t-right">
-      <p data-flat="true" class="mt5 mb6">{{directorypage.title}}</p>
-    </nav>
-  </a>
-      {% endfor %}
-  </footer>
-</article>
+<section id="megacorp" class="full full-bleed grid12 bg-black">
+  <img class="full c4-10-lg mt7" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-5.jpg"/>
+  <p class="full c4-10-lg white lh-copy mt2 mt4-xl mb7">Today, technology controls us. Every MEGACORP has the same incentive: To keep us hooked on their platform.</p>
+</section>
+<section class="full full-bleed grid12 bg-yellow">
+<img class="full c4-10-lg mt7" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-6.jpg"/>
+<p class="full c4-10-lg lh-copy mt2 mt4-xl">We built Urbit so people can control their technology, shape their digital lives and freely build
+      their digital communities.</p>
+<p class="full c4-10-lg lh-copy mt2">We want to replace the Internet with a foundation for computing that we can all rely on far into the future.</p>
+<p class="full c4-10-lg lh-copy mt2">Urbit is a large, ambitious project. But at the core it’s simple, durable and yours.</p>
+</section>
+<p class="c1-10 c4-10-lg mt6 mb4 lh-copy">Nothing quite like this has ever been done before.</p>
+<footer class="relative mt4 c4-10-lg full">
+    {% set posts = get_section(path="understanding-urbit/_index.md") %}
+    {% for directorypage in posts.pages | slice (end=1) %}
+<a class="bb-0" href="{{directorypage.permalink}}">
+  <nav class="previous absolute right-2 t-right">
+    <p data-flat="true" class="mt5 mb6">{{directorypage.title}}</p>
+  </nav>
+</a>
+    {% endfor %}
+</footer>
 {% endblock content %}
