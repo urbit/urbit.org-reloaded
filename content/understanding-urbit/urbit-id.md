@@ -39,15 +39,15 @@ Your Urbit ID and passkey are all you need to log into Urbit OS and send and rec
 
 <img class="b—black ba mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-address-space-2.svg">
 
-We want everyone to own their own identity and wallet. One way to do this would be to build a MEGACORP or a Centralized Naming Authority of Urbit. But we prefer decentralized, collectively owned systems. So that’s what we built. Let’s look briefly at how that system works.
+We want everyone to own their own identity and wallet. One way to do this would be to build a MEGACORP or a Centralized Naming Authority of Urbit. But we prefer decentralized, collectively owned systems. So that’s what we built. Let’s look briefly at the basic mechanics of Urbit ID.
 
 Each Urbit ID is just a number. From that number we generate a pronounceable name and visually identifiable sigil. `~dalwel-fadrun` is `3,509,632,436`, for example.
 
-Urbit IDs are distributed by a sponsorship tree. At the top of the tree are `2^8` (`256`) galaxies. Each galaxy issues `2^8` stars, making a total of `2^16` (`65K`). Stars then each can issue 2^16 planets, making for `2^32` (`~4B`). As you might expect, each planet issues `2^32` moons.
+Urbit IDs are distributed by a sponsorship tree. At the top of the tree are `2^8` (`256`) galaxies. Each galaxy issues `2^8` stars, making a total of `2^16` (`65K`). Stars then each can issue `2^16` planets, making for `2^32` (`~4B`). As you might expect, each planet issues `2^32` moons.
 
-Every Urbit ID needs a sponsor, although stars and planets can always move to a new one. The galaxies act as a senate to upgrade the system by majority vote.
+Every Urbit ID needs a sponsor. Stars and planets can always move to a new one. The galaxies act as a senate to upgrade the system by majority vote.
 
-And that's it. It's a simple, elegant system — but what's important is *why* it is the way it is. Let's take a look at that.
+And that's it. It's a simple system. What's important is *why* it is the way it is. Let's take a look at that.
 
 <img class="b—black ba mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-address-space-1.svg">
 
