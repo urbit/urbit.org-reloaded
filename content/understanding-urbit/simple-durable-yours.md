@@ -8,7 +8,7 @@ hide_next_title = "true"
 hide_previous_title = "true"
 +++
 
-We live in a world dense with computers. We wake up and look at them, we see the world through them, we depend on them completely, and they’re not going away. They’re only becoming more ubiquitous.
+We live in a world dense with digital services. We see the world through them, we depend on them completely, and they’re not going away. They’re only becoming more ubiquitous.
 
 But computers are a mess.
 
@@ -30,7 +30,7 @@ What do we mean by simple, durable, and yours? Let’s walk through it one by on
 
 ## Simple
 
-Urbit is designed to be incredibly simple for ordinary users. Your data, applications, and connections all live in a single, unified OS that belongs to you. Your Urbit requires no system administration and gets all its updates over the air. For developers, Urbit is incredibly compact and efficient. It’s about 50K lines of code — smaller than your average webapp. The entire OS can be understood by a single person and is designed to make building decentralized apps straightforward.
+Urbit is designed to be incredibly simple for ordinary users. Your data, applications, and connections all live in a single, unified operating system that belongs to you. Your Urbit requires no system administration and gets all its updates over the air. For developers, Urbit is incredibly compact and efficient. It’s about 50K lines of code — smaller than your average webapp. The entire OS can be understood by a single person and is designed to make building decentralized apps straightforward.
 
 <br /><br />
 
