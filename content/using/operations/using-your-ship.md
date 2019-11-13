@@ -1123,7 +1123,7 @@ already familiar with substitution syntax:
 ~your-urbit:dojo> =dir /=sandbox=
 ```
 
-The above command substitutes uses substitution to use your current `ship` and
+The above command uses substitution to use your current `ship` and
 `case`; only the `desk` argument, which is located between the other two, is
 given something new. Without substitution, you would need to write:
 
