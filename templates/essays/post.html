@@ -23,6 +23,14 @@
   {% endif %}"
 {% endblock bodyclasses %}
 
+{% block image %}
+  {% if page.extra.image %}
+    <meta name="twitter:image" content="{{ page.extra.image }}">
+  {% else %}
+    <meta name="twitter:image" content="https://media.urbit.org/logo/urbit-logo-card.png">
+  {% endif %}
+{% endblock image %}
+
 {% block content %}
 <nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl">
   <a class="gray3" href="/">Urbit</a>

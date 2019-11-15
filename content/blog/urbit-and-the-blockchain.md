@@ -6,6 +6,7 @@ aliases = ["/posts/essays/urbit-and-the-blockchain", "/posts/urbit-and-the-block
 [extra]
 author = "Curtis Yarvin"
 ship = "~sorreg-namtyv"
+image = "https://media.urbit.org/site/blog-1.jpg"
 +++
 ![](https://media.urbit.org/site/blog-1.jpg)
 

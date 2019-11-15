@@ -6,6 +6,7 @@ aliases = ["/posts/essays/azimuth-as-multipass/", "/posts/azimuth-as-multipass"]
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"
+image = "https://media.urbit.org/site/posts/essays/azimuth-as-multipass-1.png"
 +++
 
 ![](https://media.urbit.org/site/posts/essays/azimuth-as-multipass-1.png)

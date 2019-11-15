@@ -6,6 +6,7 @@ aliases = ["/posts/essays/2019-5-roadmap", "/posts/2019-5-roadmap"]
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"
+image = "https://media.urbit.org/site/posts/essays/2019-5-roadmap-1.png"
 +++
 
 ![](https://media.urbit.org/site/posts/essays/2019-5-roadmap-1.png)

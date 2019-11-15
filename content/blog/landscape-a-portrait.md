@@ -6,6 +6,7 @@ aliases = ["/posts/essays/landscape-a-portrait/", "/posts/landscape-a-portrait"]
 [extra]
 author = "Matilde Park"
 ship = "~haddef-sigwen"
+image = "https://media.urbit.org/site/posts/essays/landscape-a-portrait-1.png"
 +++
 
 ![](https://media.urbit.org/site/posts/essays/landscape-a-portrait-1.png)

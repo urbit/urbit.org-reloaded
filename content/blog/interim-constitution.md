@@ -6,7 +6,9 @@ aliases = ["/posts/essays/interim-constitution", "/posts/interim-constitution"]
 [extra]
 author = "Tlon"
 ship = ""
+image = "https://media.urbit.org/site/blog-7.jpg"
 +++
+
 ![](https://media.urbit.org/site/blog-7.jpg)
 
 ## Declaration of purpose
