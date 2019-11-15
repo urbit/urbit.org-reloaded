@@ -5,7 +5,10 @@ description = "The promise of Urbit lies in its reimagination of the digital wor
 [extra]
 author = "Ted Blackman"
 ship = "~rovnys-ricfer"
+image = "https://media.urbit.org/site/posts/essays/hoon.png"
 +++
+
+![](https://media.urbit.org/site/posts/essays/hoon.svg)
 
 ### What can Hoon do that other languages can't?
 
