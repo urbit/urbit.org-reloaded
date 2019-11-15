@@ -6,6 +6,7 @@ aliases = ["/posts/essays/azimuth-security-bounty-program", "/posts/azimuth-secu
 [extra]
 author = "Anthony Arroyo"
 ship = "~poldec-tonteg"
+image = "https://media.urbit.org/site/posts/essays/azimuth-security-bounty-program-1.jpg"
 +++
 
 ![](https://media.urbit.org/site/posts/essays/azimuth-security-bounty-program-1.jpg)

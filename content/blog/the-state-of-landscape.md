@@ -6,6 +6,7 @@ aliases = ["/posts/essays/the-state-of-landscape", "/posts/the-state-of-landscap
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"
+image = "https://media.urbit.org/site/posts/essays/the-state-of-landscape-1.png"
 +++
 
 ![](https://media.urbit.org/site/posts/essays/the-state-of-landscape-1.png)

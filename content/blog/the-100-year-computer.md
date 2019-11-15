@@ -6,6 +6,7 @@ aliases = ["/posts/essays/the-100-year-computer/", "/posts/the-100-year-computer
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"
+image = "https://media.urbit.org/site/posts/essays/100-year-computer-1.png"
 +++
 
 ![](https://media.urbit.org/site/posts/essays/100-year-computer-1.png)

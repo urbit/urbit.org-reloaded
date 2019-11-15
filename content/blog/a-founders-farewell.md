@@ -6,6 +6,7 @@ aliases = ["/posts/essays/a-founders-farewell", "/posts/a-founders-farewell"]
 [extra]
 author = "Curtis Yarvin"
 ship = "~sorreg-namtyv"
+image = "https://storage.googleapis.com/media.urbit.org/site/farewell.png"
 +++
 
 ![Curtis Yarvin portrait](https://storage.googleapis.com/media.urbit.org/site/farewell.png)

@@ -6,6 +6,7 @@ aliases = ["/posts/essays/urbit-grants-and-mid-2019-gifts", "/posts/urbit-grants
 [extra]
 author = "Galen Wolfe-Pauly + Alex Matzner"
 ship = "~ravmel-ropdyl + ~mignyt-mogseb"
+image = "https://media.urbit.org/site/posts/essays/urbit-grants-and-mid-2019-gifts-1.jpg"
 +++
 
 ![](https://media.urbit.org/site/posts/essays/urbit-grants-and-mid-2019-gifts-1.jpg)

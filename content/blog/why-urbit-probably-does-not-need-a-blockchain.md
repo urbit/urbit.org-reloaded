@@ -6,6 +6,7 @@ aliases = ["/posts/essays/why-urbit-probably-does-not-need-a-blockchain/", "/pos
 [extra]
 author = "Curtis Yarvin"
 ship = "~sorreg-namtyv"
+image = "https://media.urbit.org/site/blog-1.jpg"
 +++
 ![](https://media.urbit.org/site/blog-1.jpg)
 

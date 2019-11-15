@@ -6,6 +6,7 @@ weight = 5
 flatten_pagination = "true"
 hide_next_title = "true"
 hide_previous_title = "true"
+image = "https://media.urbit.org/site/understanding-urbit/network-os/urbit-os-phones@2x.png"
 +++
 
 

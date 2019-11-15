@@ -6,6 +6,7 @@ aliases = ["/posts/essays/magic", "/posts/magic"]
 [extra]
 author = "Curtis Yarvin"
 ship = "~sorreg-namtyv"
+image = "https://media.urbit.org/site/blog-7.jpg"
 +++
 ![](https://media.urbit.org/site/blog-7.jpg)
 

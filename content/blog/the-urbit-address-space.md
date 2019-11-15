@@ -6,6 +6,7 @@ aliases = ["/posts/essays/the-urbit-address-space", "/posts/the-urbit-address-sp
 [extra]
 author = "Galen Wolfe-Pauly + Curtis Yarvin"
 ship = "~ravmel-ropdyl + ~sorreg-namtyv"
+image = "https://media.urbit.org/site/blog-3.jpg"
 +++
 ![](https://media.urbit.org/site/blog-3.jpg)
 

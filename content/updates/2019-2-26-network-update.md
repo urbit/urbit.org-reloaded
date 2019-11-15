@@ -6,6 +6,7 @@ aliases = ["/posts/2019-2-26-network-update/"]
 [extra]
 author = "Anthony"
 ship = "~poldec-tonteg"
+image = "https://media.urbit.org/site/posts/updates/~2019.2.26-update-1.jpg"
 +++
 ![](https://media.urbit.org/site/posts/updates/~2019.2.26-update-1.jpg)
 

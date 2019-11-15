@@ -6,7 +6,9 @@ aliases = ["/posts/essays/an-urbit-overview", "/posts/an-urbit-overview"]
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"
+image = "https://media.urbit.org/site/blog-0.jpg"
 +++
+
 ![](https://media.urbit.org/site/blog-0.jpg)
 
 ## What Urbit is
