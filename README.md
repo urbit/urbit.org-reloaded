@@ -51,6 +51,9 @@ author = "Matilde Park"
 <!-- Ship: The author's ship. Used on post directory pages. -->
 ship = "~haddef-sigwen"
 
+<!-- Image: The URL to the article's main image. Used on Twitter cards and link previews to the site. -->
+image = "https://media.urbit.org/site/posts/updates/~2019.11.06-update.jpg"
+
 <!-- hidetitle: For non-post pages on the site, the title is automatically inserted as an <h1> at the top. If the title of the page is already displayed in the nav (this occurs in root content pages, like /governance, /privacy), then this just removes that <h1>. -->
 hidetitle = "true"
 
