@@ -17,7 +17,7 @@ sense.
 In particular, the problems Hoon solves that aren't solved by other
 functional languages are:
 - Compile and run other code in a typesafe manner at full speed,
-- Typesafe metaprogramming,and
+- Typesafe metaprogramming, and
 - Hot code reload and online data migration.
 
 ### What is Hoon good at?
