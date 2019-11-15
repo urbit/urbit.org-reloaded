@@ -16,6 +16,14 @@
   {% endif %}
 {% endblock description %}
 
+{% block image %}
+  {% if page.extra.image %}
+    <meta name="twitter:image" content="{{ page.extra.image }}">
+  {% else %}
+    <meta name="twitter:image" content="https://media.urbit.org/logo/urbit-logo-card.png">
+  {% endif %}
+{% endblock image %}
+
 {% block content %}
 
 <!-- header -->
