@@ -116,10 +116,8 @@ Hoon and Nock have several unusual properties:
   there are no cycles in Nock's memory model. Pointer equality is not
   exposed to the programmer. In practical Nock implementations, all
   data structures are what are elsewhere called "functional" or
-  "persistent" data structures, meaning they're immutable<sup>*</sup> and share
+  "persistent" data structures, meaning they're immutable and share
   structure wherever possible.
-  <br/><small>*with the exception of "unifying
-  equality", which some runtimes provide as an optimization</small><br/>
 
 - **Homoiconic**. Code and data are represented the same way and can be
   converted to each other. Lisp dialects are also homoiconic, but Hoon
