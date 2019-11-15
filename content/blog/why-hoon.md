@@ -39,7 +39,7 @@ The chain of reasoning goes something like this:
 Software complexity leads to monopolies and lack of individual digital
 sovereignty, in addition to bugs and security vulnerabilities. One of
 the best ways to reduce software complexity is to restrict oneself to
-pure mathematical functions —- no side effects, no implicit arguments.
+pure mathematical functions — no side effects, no implicit arguments.
 This makes the system deterministic. So we want a deterministic,
 functional operating system for individuals to run.
 
@@ -118,14 +118,14 @@ Hoon and Nock have several unusual properties:
   data structures are what are elsewhere called "functional" or
   "persistent" data structures, meaning they're immutable<sup>*</sup> and share
   structure wherever possible.
-  <br/><br/><small>*with the exception of "unifying
+  <br/><small>*with the exception of "unifying
   equality", which some runtimes provide as an optimization</small><br/>
 
 - **Homoiconic**. Code and data are represented the same way and can be
   converted to each other. Lisp dialects are also homoiconic, but Hoon
   and Nock are arguably even more so, since things like closures and the
   environment are just Nock trees. We even have a statically typed
-  metacircular interpreter called +mule. We run userspace code
+  metacircular interpreter called <code>+mule</code>. We run userspace code
   metacircularly with negligible performance overhead because of Urbit's
   jet system. In Lisp "eval is evil" is a common saying but, in Urbit,
   eval is a first-class feature.
@@ -199,7 +199,7 @@ Hoon and Nock have several unusual properties:
   lot of the system manipulates types. In particular, the `!>` rune, when
   applied to a piece of data, uses compile-time type reflection to
   produce something called a "vase": a pair of type and data, similar to
-  a Data.Dynamic in Haskell, or a limited form of a dependent pair.
+  a <code>Data.Dynamic</code> in Haskell, or a limited form of a dependent pair.
   Since the Arvo kernel does a lot of dynamic compilation, it uses vases
   to implement something akin to a dynamically typed language using
   Hoon. This allows for type-safe dynamic program loading, program
@@ -234,7 +234,7 @@ Even Hoon's seemingly baroque syntax is extremely regular and an
 unusually thin layer over the abstract syntax tree. It's designed to be
 a power tool; learning the syntax takes some time, but you only have to
 learn it once, and then it's not hard to read. It's like an English
-speaker learning Cyrillic. This heaping spoonful of syntactic sugar
+speaker learning Hiragana or Cyrillic. This heaping spoonful of syntactic sugar
 (along with jets for performance) is enough to take Nock from a Turing
 tarpit to a practical, ergonomic programming tool.
 
