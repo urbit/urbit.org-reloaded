@@ -113,6 +113,9 @@ article {
             border-bottom: 0;
         }
     }
+    b, strong {
+        @extend .fw6;
+    }
     // post directories
     li {
         margin: 0rem 1rem 1rem 1rem;
