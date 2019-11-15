@@ -196,7 +196,7 @@ Hoon and Nock have several unusual properties:
   used to validate untrusted data, such as from the network.
 
 - **Reflective**. The type of type is just a normal datatype in Hoon, and a
-  lot of the system manipulates types. In particular, the !> rune, when
+  lot of the system manipulates types. In particular, the `!>` rune, when
   applied to a piece of data, uses compile-time type reflection to
   produce something called a "vase": a pair of type and data, similar to
   a Data.Dynamic in Haskell, or a limited form of a dependent pair.
