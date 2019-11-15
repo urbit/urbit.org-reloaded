@@ -6,7 +6,7 @@ weight = 7
 flatten_pagination = "true"
 hide_next_title = "true"
 hide_previous_title = "true"
-image = "https://media.urbit.org/site/understanding-urbit/project-history/project-status-landscape-earth@2x.png"
+image = "https://media.urbit.org/site/understanding-urbit/project-history/project-status-landscape-earth%402x.png"
 +++
 
 Can you move to Urbit today and never look back? Not quite yet. Urbit is still young.

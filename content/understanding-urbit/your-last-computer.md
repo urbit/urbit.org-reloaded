@@ -6,7 +6,7 @@ weight = 2
 flatten_pagination = "true"
 hide_next_title = "true"
 hide_previous_title = "true"
-image = "https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves@2x.png"
+image = "https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png"
 +++
 
 This whole ‘simple, durable, yours’ thing may sound good, but what does it add up to? What does it feel like?
