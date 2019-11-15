@@ -185,7 +185,7 @@ Hoon and Nock have several unusual properties:
   consists of the standard library (itself a stack of cores), and
   possibly a "sample" (function argument).
 
-- **The type system has several unusual features**. It's intensional, in
+- **The type system has several unusual features**. It's intentional, in
   the sense that all constructs are first-class and can be down-cast to
   `noun`, Hoon's "any" or "top" type that matches all Nock nouns. Types
   are also used as scopes, so they store all of Hoon's variable names
