@@ -8,7 +8,7 @@ ship = "~rovnys-ricfer"
 image = "https://media.urbit.org/site/posts/essays/hoon.png"
 +++
 
-![](https://media.urbit.org/site/posts/essays/hoon.svg)
+![](https://media.urbit.org/site/posts/essays/hoon.png)
 
 ### What can Hoon do that other languages can't?
 
