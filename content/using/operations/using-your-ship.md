@@ -1303,7 +1303,7 @@ Example:
 #### Label
 
 ```
-|label desk name`
+|label desk name
 ```
 
 Label the current version of `desk` `name`.
