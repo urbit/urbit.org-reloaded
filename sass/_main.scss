@@ -413,6 +413,7 @@ code, .code, .mono {
 
 code {
     @extend .bg-gray5, .pa1;
+    white-space: pre-wrap;
 }
 
     // code in headers
