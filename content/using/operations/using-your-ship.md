@@ -90,10 +90,10 @@ The following emacs-style key bindings are available:
 Ctrl-a    Cursor to beginning of the line (Home)
 Ctrl-b    Cursor one character backward (left-arrow)
 Ctrl-e    Cursor to the end of the line (End)
-Ctrl-f     Cursor one character forward (right-arrow)
+Ctrl-f    Cursor one character forward (right-arrow)
 Ctrl-g    Beep; cancel reverse-search
 Ctrl-k    Kill to end of line
-Ctrl-l     Clear the screen
+Ctrl-l    Clear the screen
 Ctrl-n    Next line in history (down-arrow)
 Ctrl-p    Previous line in history (up-arrow)
 Ctrl-r    Reverse-search
