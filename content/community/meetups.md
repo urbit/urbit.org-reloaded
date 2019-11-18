@@ -1,5 +1,8 @@
 +++
 title = "Meetups"
+aliases = ["/meetups"]
+description = "Information on Urbit meetups and other community-led, Urbit IRL groups."
+weight = 1
 [extra]
 hidetitle = "true"
 +++
