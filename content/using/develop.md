@@ -24,7 +24,7 @@ Working on the core means improving the Urbit project itself, working with the e
 
 Just arrived and unsure what to work on? An ideal way to get started is by experimenting with the system, talking to other developers, and reading (or [contributing to](https://github.com/urbit/docs)) the [documentation](/docs/).
 
-Prefer learning with an instructor? We also offer an online course that covers the basics of Urbit development called [Hoon School](@/hoonschool.md). If course-based learning works well for you, we recommend you sign up.
+Prefer learning with an instructor? We also offer an online course that covers the basics of Urbit development called [Hoon School](@/community/hoonschool.md). If course-based learning works well for you, we recommend you sign up.
 
 The Urbit developer community congregates around [the urbit-dev mailing list](https://groups.google.com/a/urbit.org/forum/#!forum/dev), the `~dopzod/urbit-help channel` on Landscape, and [Urbit’s GitHub repository](https://github.com/urbit/urbit). It’s a good idea to sign up, see what people are talking about, and introduce yourself.
 
