@@ -7,7 +7,7 @@ aliases = ["/hoonschool"]
 
 Interested in developing on Urbit? You’ll want to learn [Hoon](https://urbit.org/docs/tutorials/hoon/), a functional programming language that’s custom-designed for use with Arvo, the Urbit operating system.
 
-We want you to learn Hoon, too. That’s why we’re offering Hoon School: a free, online, asynchronous program that’s fully supported by an instructor.
+We want you to learn Hoon, too. That’s why we’re offering Hoon School: a free, online, asynchronous program that’s fully supported by an instructor. We currently offer a 101-level course.
 
 [Apply below ↓](#apply)
 
