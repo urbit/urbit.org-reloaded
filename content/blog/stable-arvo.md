@@ -1,7 +1,7 @@
 +++
 title = "Stable Arvo"
 date = 2019-11-14
-description = "In order to get closer to an Urbit that can last forever, we set for ourselves the goal of getting Arvo to a point that we can credibly call ‘stable’ by the end of 2019. "
+description = "This year we set out to get Arvo to a point that we can credibly call ‘stable.' "
 aliases = ["/posts/essays/stable-arvo", "/posts/stable-arvo"]
 [extra]
 author = "Anthony Arroyo"
