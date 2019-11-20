@@ -259,10 +259,10 @@ var runes = [
       "desc": "<code>[%wtls p=wing q=hoon r=(list (pair spec hoon))]</code>: switch against"
     },
     {
-      "name": "wutpad",
+      "name": "wutpam",
       "symbol": "?&",
       "usage": "Conditionals",
-      "link": "/docs/reference/hoon-expressions/rune/wut/#wutpad",
+      "link": "/docs/reference/hoon-expressions/rune/wut/#wutpam",
       "desc": "<code>[%wtpd p=(list hoon)]</code>: logical AND."
     },
     {
