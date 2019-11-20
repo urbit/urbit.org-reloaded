@@ -1,8 +1,7 @@
 +++
 title = "Stable Arvo"
-date = 2019-11-14
+date = 2019-11-20
 description = "This year we set out to get Arvo to a point that we can credibly call ‘stable.' "
-aliases = ["/posts/essays/stable-arvo", "/posts/stable-arvo"]
 [extra]
 author = "Anthony Arroyo"
 ship = "~poldec-tonteg"
@@ -93,6 +92,4 @@ But — in order for that scene in 2059 to actually work, these upgrade mechanis
 
 Once this versioning scheme gets released later this year, there’s nothing technically preventing you from starting a late-2019 Urbit in 2039. We hope you’ll use it a lot in the interim — but this is an essential feature for a decentralized system that claims to upgrade itself. We’re really excited to get it implemented.
 
-These three areas of work are all due to complete later this quarter. This gets us something that’s much more resilient than what we’ve ever had before. Given a stable system, we can actually start to put some serious weight on it. 
-
-`~poldec-tonteg`
+These three areas of work are all due to complete later this quarter. This gets us something that’s much more resilient than what we’ve ever had before. Given a stable system, we can actually start to put some serious weight on it.
