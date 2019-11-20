@@ -55,7 +55,7 @@ Deterministic errors are currently handled within the virtual interpreter, Mock,
 An obvious case of causally-connected events is a timer; any code that sets a timer eventually suspends itself, waiting to be awoken. And yet, if the subsequent timer event were to crash, the state machine awaiting it would remain suspended, expecting a transition that can and will not 
 occur.
 
-We believe that we have a general scheme that accounts for both classes of error. We’ve formalized this and will use going forward to avoid falling into inconsistent states. 
+We believe that we have a general scheme that accounts for both classes of error. We’ve formalized this and will use it going forward to avoid falling into inconsistent states. 
 
 Our solution to this problem is simple: if Arvo or one of its vanes crashes while processing an event, the fact of the failed event itself becomes a new event. The runtime injects an error notification in the event log, named, as is befitting of a failed event: %crud.
 
