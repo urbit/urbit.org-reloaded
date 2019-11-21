@@ -280,10 +280,10 @@ var runes = [
       "desc": "<code>[%wtts p=spec q=wing]</code>: test pattern match."
     },
     {
-      "name": "wutvat",
+      "name": "wutpat",
       "symbol": "?@",
       "usage": "Conditionals",
-      "link": "/docs/reference/hoon-expressions/rune/wut/#wutvat",
+      "link": "/docs/reference/hoon-expressions/rune/wut/#wutpat",
       "desc": "<code>[%wtpt p=wing q=hoon r=hoon]</code>: branch on whether a wing of the subject is an atom."
     },
     {
@@ -364,10 +364,10 @@ var runes = [
       "desc": "Produce a gate (a one-armed core with a sample)."
     },
     {
-      "name": "barvat",
+      "name": "barpat",
       "symbol": "|@",
       "usage": "Cores",
-      "link": "/docs/reference/hoon-expressions/rune/bar/#barvat",
+      "link": "/docs/reference/hoon-expressions/rune/bar/#barpat",
       "desc": "Produce a 'wet' core <code>[battery payload]</code>."
     },
     {
@@ -581,10 +581,10 @@ var runes = [
       "desc": "<code>[%ktls p=hoon q=hoon]</code>: typecast by inferred type."
     },
     {
-      "name": "ketpad",
+      "name": "ketpam",
       "symbol": "^&",
       "usage": "Casts",
-      "link": "/docs/reference/hoon-expressions/rune/ket/#ketpad",
+      "link": "/docs/reference/hoon-expressions/rune/ket/#ketpam",
       "desc": "<code>[%ktpd p=hoon]</code>: convert a core to a zinc core (covariant)."
     },
     {
@@ -665,10 +665,10 @@ var runes = [
       "desc": "<code>[%bssg p=hoon q=spec]</code>: define a custom type default value"
     },
     {
-      "name": "bucvat",
+      "name": "bucpat",
       "symbol": "$@",
       "usage": "Structures",
-      "link": "/docs/reference/hoon-expressions/rune/buc/#bucvat",
+      "link": "/docs/reference/hoon-expressions/rune/buc/#bucpat",
       "desc": "<code>[%bsvt p=spec q=spec]</code>: structure which normalizes a union tagged by head depth (atom)."
     },
     {
@@ -798,17 +798,17 @@ var runes = [
       "desc": "<code>[%sgls p=hoon]</code>: cache a computation."
     },
     {
-      "name": "signet",
+      "name": "sigfas",
       "symbol": "~/",
       "usage": "Hints",
-      "link": "/docs/reference/hoon-expressions/rune/sig/#signet",
+      "link": "/docs/reference/hoon-expressions/rune/sig/#sigfas",
       "desc": "<code>[%sgnt p=term q=hoon]</code>: jet registration for gate with"
     },
     {
-      "name": "sigpad",
+      "name": "sigpam",
       "symbol": "~&",
       "usage": "Hints",
-      "link": "/docs/reference/hoon-expressions/rune/sig/#sigpad",
+      "link": "/docs/reference/hoon-expressions/rune/sig/#sigpam",
       "desc": "<code>[%sgpd p=hoon q=hoon]</code>: debugging printf."
     },
     {
