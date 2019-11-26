@@ -10,6 +10,8 @@ image = "https://media.urbit.org/site/posts/essays/pki-maze.png"
 
 ![](https://media.urbit.org/site/posts/essays/pki-maze.png)
 
+A public key infrastructure (PKI) is a system for binding a set of keys to a name. Sometimes a small amount of metadata is included.
+
 Existing PKIs include PGP-style ["web of trust"](https://en.wikipedia.org/wiki/Web_of_trust), [SSL certificates](https://en.wikipedia.org/wiki/Certificate_authority), [ZeroTier](https://www.zerotier.com/lf-announcement/), [Keybase](https://keybase.io/), [OpenID](https://openid.net/what-is-openid/), [Mozilla Persona](https://developer.mozilla.org/en-US/docs/Archive/Mozilla/Persona), and [Login with Google](https://developers.google.com/identity). These take unique approaches to the problem and have achieved some degree of success, but none provide globally consistent, permanent, and completely self-owned identities. Exhaustive exploration and categorization is unfortunately out of scope for this post, so we'll just describe Urbit's approach to achieving these properties in our PKI.
 
 In Urbit, a "name" is often called a "ship" or an "address" because we use the metadata in the PKI to make names routable. The total data is two 256-bit asymmetric keys, a cryptographic suite number (to allow changing crypto algorithms), the revision number of the key, and the name of a ship that will route for it. This sums to less than 128 bytes of data.
