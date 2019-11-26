@@ -3,7 +3,7 @@ title = "Designing a Permanent Personal Identity"
 date = 2019-11-20
 description = "A public key infrastructure (PKI) is a system for binding a set of keys to a name. Sometimes a small amount of metadata is included."
 [extra]
-author = "Philip"
+author = "Philip Monk"
 ship = "~wicdev-wisryt"
 image = "https://media.urbit.org/site/posts/essays/pki-maze.png"
 +++
@@ -16,7 +16,7 @@ In Urbit, a "name" is often called a "ship" or an "address" because we use the m
 
 Each PKI trades off various properties. We chose a tripartite system so that appropriate choices can be made for different use cases. Here, we explore the various properties we chose by following a series of binary choices -- the idea maze.
 
-There are two sorts of PKI: either you can change your keys or not. If you cannot, then your name is impermanent, for noone can keep a set of keys secure forever. Even if your opsec never fails, eventually your crypto algorithms may be compromised.
+There are two sorts of PKI: either you can change your keys or not. If you cannot, then your name is impermanent, for no one can keep a set of keys secure forever. Even if your opsec never fails, eventually your crypto algorithms may be compromised.
 
 However, if you sacrifice the ability to change your keys, you can have a very nice property: self-attesting keys. If your name is a hash of your public key information, then no other source of information is required to verify you are who you say you are. This is a useful property since it requires no coordination at all. Many things are impermanent, especially during development. It also provides a way to try out the network without obtaining a permanent address.
 
@@ -40,7 +40,7 @@ Some argue that blockchain is only good for money. This is myopic and is general
 
 Thus, we store our PKI data on a blockchain for our second kind of name: planets. A planet is a 32-bit address which has key information stored on the blockchain.[^2]  The owner of a planet may broadcast new PKI data by adding it to the blockchain. Any later messages by the old keys will be rejected, and everyone on the network will listen to the blockchain for key data. Thus, we have global consistency, permanence, and self sovereignty. We know of no other solution that can provide these properties.
 
-However, while small individually, the aggregate PKI data for all nodes on the network may become very large. This is not an issue for comets because nobody needs to store comet keys except for those which they're talking with, and even those can be garbage-collected and re-requested and verified. For planets, there is a canonical set of keys, and somebody must store that. There are about 2^32, or 4 billion planets. If the PKI data is about 100 bytes for each planet, this is about 400 GB of data. This may be more than most users wish to store, but it's small enough that it would be very cheap for someone to host this data for many users[^3].
+However, while small individually, the aggregate PKI data for all nodes on the network may become very large. This is not an issue for comets because nobody needs to store comet keys except for those which they're talking with, and even those can be garbage-collected and re-requested and verified. For planets, there is a canonical set of keys, and somebody must store that. There are about 2<sup>32</sup>, or 4 billion planets. If the PKI data is about 100 bytes for each planet, this is about 400 GB of data. This may be more than most users wish to store, but it's small enough that it would be very cheap for someone to host this data for many users[^3].
 
 This information is currently stored directly on the Ethereum 1.0 blockchain, but as is well understood in blockchain circles this approach will not scale beyond a certain point. Many chains are pursing designs that allow the users of the smart contracts to store locally the data associated with the contracts they care about and only commit hashes to the chain. We expect there to be several viable options for this by the time our scaling needs exceed what's provided by Ethereum 1.0. This will free us from the cost of hosting the PKI data on all Ethereum nodes, but the data must still be stored somewhere. Any service that could handle such a large amount of data would inherently centralize the network.
 
