@@ -257,10 +257,12 @@ ul.posts, nav ul, nav li {
     list-style-type: none;
 }
 
-ul.posts {
-    li {
-        margin: 1rem 0 1rem 0;
-    }
+ul.posts li:not(:first-child) {
+    margin:1rem 0 1rem 0;
+}
+
+ul.posts li:first-child {
+    margin: 0 0 1rem 0;
 }
 
 nav ul.docs {
