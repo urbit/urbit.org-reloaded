@@ -19,11 +19,11 @@ While Tlon does not currently sell or distribute Urbit IDs, there are still a fe
 - Getting an invitation from a friend
 - Purchasing an Urbit ID from a third party, such as [urbit.live](https://urbit.live), [OpenSea](https://opensea.io), or [Urbit Marketplace](https://urbitmarketplace.com/).
 
-Tlon occasionally selects candidates to distribute invitations, and users operating galaxies and stars can spawn and distribute a finite number of stars and planets, respectively. 
+Tlon occasionally selects candidates to distribute invitations, and users operating galaxies and stars can spawn and distribute a finite number of stars and planets, respectively.
 
 ## Using your Urbit ID
 
-If you have an Urbit ID, you'll use [Bridge](https://bridge.urbit.org) to get your ship's keyfile before you can [boot your ship](#booting-your-ship). For more information on how to use Bridge, see [Using Bridge](@/using/operations/using-bridge.md). 
+If you have an Urbit ID, you'll use [Bridge](https://bridge.urbit.org) to get your ship's keyfile before you can [boot your ship](#booting-your-ship). For more information on how to use Bridge, see [Using Bridge](@/using/operations/using-bridge.md).
 
 ## Install Urbit {#urbit}
 
@@ -45,8 +45,8 @@ Urbit: a personal server operating function
 We provide static binaries for macOS. You can grab the latest stable release as follows:
 
 ```sh
-curl -O https://bootstrap.urbit.org/urbit-darwin-v0.9.2.tgz
-tar xzf urbit-darwin-v0.9.2.tgz
+curl -O https://bootstrap.urbit.org/urbit-darwin-v0.10.0.tgz
+tar xzf urbit-darwin-v0.10.0.tgz
 ./urbit
 ```
 
@@ -55,8 +55,8 @@ tar xzf urbit-darwin-v0.9.2.tgz
 We also provide static binaries for 64-bit Linux distributions (Ubuntu, Debian, Fedora, Arch, etc.). You can get the latest stable release similarly:
 
 ```sh
-curl -O https://bootstrap.urbit.org/urbit-linux64-v0.9.2.tgz
-tar xzf urbit-linux64-v0.9.2.tgz
+curl -O https://bootstrap.urbit.org/urbit-linux64-v0.10.0.tgz
+tar xzf urbit-linux64-v0.10.0.tgz
 ./urbit
 ```
 
