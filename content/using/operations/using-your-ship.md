@@ -194,16 +194,10 @@ For a planet or star's DNS proxying request to be made and fulfilled, they must 
 
 To get `ship.arvo.network` on a planet or star, you must set up DNS routing with its parent ship by starting the `:dns` app.
 
-To do so, simply run this command in your ship's Dojo:
+To do so, simply run this command in your ship's Dojo, passing the IP address as an argument, using the .0.0.0.0 (`@if`) syntax. For example:
 
 ```
-> -dns-address +dns/request
-```
-
-You'll then be prompted to enter the public IP address of your ship. You can also pass the IP address as an argument, using the .0.0.0.0 (`@if`) syntax. For example:
-
-```
-> -dns-address +dns/request .1.2.3.4
+> -dns-address [%dns-address %if .1.2.3.4]
 ```
 
 `:dns`, running locally, will make an HTTP request to that IP address on port 80 to confirm that it is itself available at that IP and port. If that fails, you'll receive a `%bail-early` message in `:chat-cli`; this request will retry a few times. If the self-check is successful, the request is relayed to `~zod`, and you'll receive a message saying, `request for DNS sent to ~zod`. Once `~zod` has acknowledged receipt of the request, your local `:dns` app will send a `:chat-cli` message saying `awaiting response from ~zod`.
