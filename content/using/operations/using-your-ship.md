@@ -197,13 +197,13 @@ To get `ship.arvo.network` on a planet or star, you must set up DNS routing with
 To do so, simply run this command in your ship's Dojo:
 
 ```
-> :dns|request
+> -dns-address +dns/request
 ```
 
 You'll then be prompted to enter the public IP address of your ship. You can also pass the IP address as an argument, using the .0.0.0.0 (`@if`) syntax. For example:
 
 ```
-> :dns|request .1.2.3.4
+> -dns-address +dns/request .1.2.3.4
 ```
 
 `:dns`, running locally, will make an HTTP request to that IP address on port 80 to confirm that it is itself available at that IP and port. If that fails, you'll receive a `%bail-early` message in `:chat-cli`; this request will retry a few times. If the self-check is successful, the request is relayed to `~zod`, and you'll receive a message saying, `request for DNS sent to ~zod`. Once `~zod` has acknowledged receipt of the request, your local `:dns` app will send a `:chat-cli` message saying `awaiting response from ~zod`.
@@ -219,12 +219,12 @@ Galaxies are already required to have separate DNS entry at galaxy.urbit.org. Th
 There is a command for galaxies that will try to re-use their already-necessary Ames DNS entry for HTTPS:
 
 ```
-> :dns|auto
+> -dns-auto
 ```
 
 This will make HTTP-requests to self-check availability over `galaxy.$AMES-DOMAIN` (currently galaxy.urbit.org), where `galaxy` is the galaxy's name minus the `~`.
 
-Otherwise, `:dns|auto` works the same as `:dns|ip` does with stars and planets: if it's available or unavailable, Chat messages, and so on.
+Otherwise, `-dns-auto` works the same as `:dns|ip` does with stars and planets: if it's available or unavailable, Chat messages, and so on.
 
 ### More information
 
