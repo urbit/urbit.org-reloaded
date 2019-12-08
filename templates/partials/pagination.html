@@ -1,6 +1,6 @@
-<footer class="relative mt4">{% if page.earlier %}
+<footer class="relative mt4 mb4">{% if page.earlier %}
   <a class="bb-0" href="{{page.earlier.permalink}}">
-    <nav class="previous absolute right-1 t-right">
+    <nav class="previous absolute right-1 t-right mb4">
       {% if page.extra.hide_previous_title %} {% else %}<p class="mb0 f5">Previous Post:</p>{% endif %}
       <p {% if page.extra.flatten_pagination %}
           data-flat="true"
@@ -16,7 +16,7 @@
   {% elif page.heavier and not page.extra.hidenext %}
 
   <a class="bb-0" href="{{page.heavier.permalink}}">
-    <nav class="previous absolute right-1 t-right">
+    <nav class="previous absolute right-1 t-right mb4">
       {% if page.extra.hide_next_title %} {% else %}<p class="mb0 f5">Next Post:</p>{% endif %}
       <p {% if page.extra.flatten_pagination %}
       data-flat="true"
@@ -31,7 +31,7 @@
 
   {% if page.relative_path == "understanding-urbit/simple-durable-yours.md" %}
   <a class="bb-0" href="/understanding-urbit/">
-      <nav class="next absolute left-1 t-left">
+      <nav class="next absolute left-1 t-left mb4">
         <p {% if page.extra.flatten_pagination %}
             data-flat="true"
             class="mt5 mb6 
@@ -44,7 +44,7 @@
   {% elif page.later %}
 
   <a class="bb-0" href="{{page.later.permalink}}">
-    <nav class="next absolute left-1">
+    <nav class="next absolute left-1 mb4">
       {% if page.extra.hide_next_title %} {% else %}<p class="mb0 f5">Next Post:</p>{% endif %}
       <p {% if page.extra.flatten_pagination %}
           data-flat="true"
@@ -61,7 +61,7 @@
   {% elif page.lighter and not page.extra.hideprevious %}
 
   <a class="bb-0" href="{{page.lighter.permalink}}">
-    <nav class="next absolute left-1">
+    <nav class="next absolute left-1 mb4">
       {% if page.extra.hide_previous_title %} {% else %}<p class="mb0 f5">Previous Post:</p>{% endif %}
       <p {% if page.extra.flatten_pagination %}
           data-flat="true"

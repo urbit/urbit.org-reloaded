@@ -3,6 +3,9 @@ title = "Hoon School"
 description = "A free, instructed, asynchronous program to learn Hoon with peers."
 weight = 0
 aliases = ["/hoonschool"]
+[extra]
+hideprevious = "true"
+hidenext = "true"
 +++
 
 Interested in developing on Urbit? You’ll want to learn [Hoon](https://urbit.org/docs/tutorials/hoon/), a functional programming language that’s custom-designed for use with Arvo, the Urbit operating system.

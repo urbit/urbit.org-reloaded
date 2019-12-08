@@ -2,6 +2,10 @@
 title = "Hosting a Meetup"
 description = "Best practices for hosting your Urbit meetups."
 weight = 2
+[extra]
+flatten_pagination = "true"
+hidenext = "true"
+hide_previous_title = "true"
 +++
 
 There are already [a few](../meetups) Urbit meetups that take place in cities around the United States. Want to start a meetup in your home town? Consider these best practices.

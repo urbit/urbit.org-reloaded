@@ -5,6 +5,8 @@ aliases = ["/governance"]
 weight = 3
 [extra]
 hidetitle = "true"
+hideprevious = "true"
+hidenext = "true"
 +++
 
 Our goal is to design Urbit simply, such that as many decisions as possible are made by the architecture of the system itself – that is, code should be law whenever possible. Code can’t anticipate every eventuality, however, and so the system design must include mechanisms that allow decisions to be made outside of the code.
