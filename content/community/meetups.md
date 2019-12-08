@@ -18,6 +18,13 @@ Turns out that getting Urbit fans together in one room is pretty fun. Here's an 
 
 Interested in hosting an Urbit event of your own? Follow our [guide to meetup best-practices](../hosting-a-meetup). Send an email to [support@urbit.org](mailto:support@urbit.org) and we'll list your meetup on this page.
 
+### Europe
+
+Location | Contact information
+:------------ | :-------------
+Copenhagen, DK | [Twitter](https://twitter.com/UrbitCPH), [Meetup.com](https://www.meetup.com/Urbit-Copenhagen/)
+
+### United States
 
 Location | Contact information
 :------------ | :-------------
