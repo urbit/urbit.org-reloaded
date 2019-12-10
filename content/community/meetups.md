@@ -24,6 +24,12 @@ Location | Contact information
 :------------ | :-------------
 Copenhagen, DK | [Twitter](https://twitter.com/UrbitCPH), [Meetup.com](https://www.meetup.com/Urbit-Copenhagen/)
 
+### Oceania
+
+Location | Contact information
+:------------ | :-------------
+Sydney, AU | [Meetup.com](https://www.meetup.com/Urbit-Sydney)
+
 ### United States
 
 Location | Contact information
