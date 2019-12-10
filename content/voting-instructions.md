@@ -32,7 +32,5 @@ Below are instructions on how to support this document proposal.
 
 ## Verify that this proposal has passed
 
-- Execute the keccak-256 hash of the text. For example, copy into [this](https://emn178.github.io/online-tools/keccak_256.html) (removing any trailing newlines) and get the output hash.
-- This hash should be `cb1f81e42b5e75f000f94fc71a3ea70cab4bfc6f236b91e717f1b9516e5596b5`.
-- The Polls contract is [here](https://etherscan.io/dapp/0x7fecab617c868bb5996d99d95200d2fa708218e4#readContract). Put that hash preceded by "0x" into "documentHasAchievedMajority" and that should indicate "true". This means it was passed by the galactic senate.
+- The Polls contract is [here](https://etherscan.io/dapp/0x7fecab617c868bb5996d99d95200d2fa708218e4#readContract). Input the hash (`0x00000000000000000000000000000000000000000000000000000000000000a0`) into "documentHasAchievedMajority." If this returns "true," it means the proposal was passed by the galactic senate.
 - If desired, you can verify the above is in fact the real Polls contract by checking "polls" [here](https://etherscan.io/dapp/ecliptic.eth#readContract).
