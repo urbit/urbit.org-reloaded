@@ -276,7 +276,7 @@ function initSearch() {
       if (entry.symbol === term) {
         glossaryResults.style.display="block";
         glossaryResultsItem.innerHTML = `
-        <a href="${entry.link}"><h3 class="black"><code class="pa0 red3 mr1">${entry.symbol}</code>${entry.name}</h3>
+        <a href="${entry.link}"><h3 class="black"><code class="pa0 red3 mr2">${entry.symbol}</code>${entry.name}</h3>
         <p class="black">${entry.desc}</p>
          <span class="db tr black fw5 mb3" style="font-family: 'Inter UI', sans-serif;">Read more in Documentation -></span></a>
         `
