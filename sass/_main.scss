@@ -241,12 +241,6 @@ h4 {
     padding: 1rem 0 0.5rem 0;
 }
 
-    // author and ship styling
-span[rel=author] {
-    @extend .fw4;
-    margin-right: 5px;
-}
-
 address {
     display: inline;
     font-style: normal;
