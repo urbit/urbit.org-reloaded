@@ -4,42 +4,42 @@ function initHotKeys() {
   var searchInput = document.getElementById('search');
 
   document.addEventListener('keydown', function (event) {
-      if (event.defaultPrevented) {
-          return;
-      }
+    if (event.defaultPrevented) {
+      return;
+    }
 
-      var key = event.key || event.keyCode;
+    var key = event.key || event.keyCode;
 
-      // ESC to close search window
-      if (key === 'Escape' || key === 'Esc' || key === 27) {
-        document.body.classList.remove('has-active-search-window');
-      }
+    // ESC to close search window
+    if (key === 'Escape' || key === 'Esc' || key === 27) {
+      document.body.classList.remove('has-active-search-window');
+    }
 
-      // / to open toggle window
-      if (key === '/' || key === 'Period' || key === 58) {
-        if (bodyEl.classList.contains('has-active-search-window')) {
-          // if it's already open don't do anything!
-        } else {
-          event.preventDefault();
-          document.body.classList.add('has-active-search-window');
-          searchInput.focus();
-        }
-      }
-
-      //when search is active TAB puts search input into focus
+    // / to open toggle window
+    if (key === '/' || key === 'Period' || key === 58) {
       if (bodyEl.classList.contains('has-active-search-window')) {
-        if (key === 'Tab' || key === 'Tab' || key === 9) {
-          searchInput.focus();
-        }
+        // if it's already open don't do anything!
+      } else {
+        event.preventDefault();
+        document.body.classList.add('has-active-search-window');
+        searchInput.focus();
       }
+    }
 
-      if (bodyEl.classList.contains('has-active-search-window')) {
-        if (key === 'Enter' || key === 'Return' || key === 13) {
-          event.preventDefault();
-          let firstresult = document.querySelectorAll("div#full-results a")[0];
-          firstresult.click();
-        }
+    //when search is active TAB puts search input into focus
+    if (bodyEl.classList.contains('has-active-search-window')) {
+      if (key === 'Tab' || key === 'Tab' || key === 9) {
+        searchInput.focus();
       }
+    }
+
+    if (bodyEl.classList.contains('has-active-search-window')) {
+      if (key === 'Enter' || key === 'Return' || key === 13) {
+        event.preventDefault();
+        let firstresult = document.querySelectorAll("div#full-results a")[0];
+        firstresult.click();
+      }
+    }
   });
 };
 
@@ -173,7 +173,7 @@ function makeTeaser(body, terms) {
 }
 
 function formatSearchResultTitle(item) {
-  var pathArray = item.ref.split( '/' );
+  var pathArray = item.ref.split('/');
 
   var firstPartTitle = pathArray[3];
   let firstTitleCapitals = firstPartTitle.charAt(0).toUpperCase() + firstPartTitle.slice(1);
@@ -182,7 +182,7 @@ function formatSearchResultTitle(item) {
 
   var fullTitle = firstTitleCapitals + '<span class="gray1 dib pl2">' + ' / ' + lastPartTitle + '</span>';
 
-  return fullTitle; 
+  return fullTitle;
 }
 
 function formatSearchResultItem(item, terms) {
@@ -193,7 +193,7 @@ function formatSearchResultItem(item, terms) {
   li.classList.add("search-results__item");
   var hrefA = item.ref;
   createA.setAttribute('href', hrefA);
-  createA.setAttribute('class','no-underline db pl1 pv2');
+  createA.setAttribute('class', 'no-underline db pl1 pv2');
   createA.innerHTML = `<span class="capitalize ph3">${teaserTitle}</span>`;
   createA.innerHTML += `<span class='dn arrow fr'>↩</span>`;
   createA.innerHTML += `<div class="truncate pr2 ph3">${makeTeaser(item.doc.body, terms)}</div>`;
@@ -219,8 +219,8 @@ function initSearch() {
     bool: "AND",
     expand: true, // turn on partial word search
     fields: {
-      title: {boost: 2},
-      body: {boost: 1},
+      title: { boost: 2 },
+      body: { boost: 1 },
     }
   };
   var currentTerm = "";
@@ -233,8 +233,8 @@ function initSearch() {
   var searchActive = bodyEl.classList.contains('has-active-search-window');
 
   if (toggleSearchWindow !== null) {
-    toggleSearchWindow.onclick = function() {
-      inputReset.style.display="none";
+    toggleSearchWindow.onclick = function () {
+      inputReset.style.display = "none";
 
       //activate search
       bodyEl.classList.toggle('has-active-search-window');
@@ -245,16 +245,16 @@ function initSearch() {
       searchResultsHeader.value = "";
       searchResults.style.display = searchInput.value.trim() === "" ? "none" : "block";
     }
-    searchOverlay.addEventListener('click', function(e){
-    	if (!searchWindow.contains(e.target)){
+    searchOverlay.addEventListener('click', function (e) {
+      if (!searchWindow.contains(e.target)) {
         bodyEl.classList.toggle('has-active-search-window');
       }
     })
   }
 
-  searchInput.addEventListener("keyup", debounce(function() {
-    inputReset.style.display="block";
-    glossaryResults.style.display="none";
+  searchInput.addEventListener("keyup", debounce(function () {
+    inputReset.style.display = "block";
+    glossaryResults.style.display = "none";
     searchResultsHeader.value = "";
     var term = searchInput.value.trim();
     /*
@@ -268,24 +268,25 @@ function initSearch() {
     searchResults.style.overflowY = term === "" ? "hidden" : "scroll";
     searchResultsItems.innerHTML = "";
     if (term === "") {
-      inputReset.style.display="none";
+      inputReset.style.display = "none";
       return;
     }
 
     for (let entry of glossary) {
-      if (entry.symbol === term) {
-        glossaryResults.style.display="block";
-        glossaryResultsItem.innerHTML = `
-        <a href="${entry.link}"><h3 class="black"><code class="pa0 red3 mr2">${entry.symbol}</code>${entry.name}</h3>
-        <p class="black">${entry.desc}</p>
-         <span class="db tr black fw5 mb3" style="font-family: 'Inter UI', sans-serif;">Read more in Documentation -></span></a>
-        `
-      } else if (entry.name === term.toLowerCase()) {
-        glossaryResults.style.display="block";
+      if (entry.name === term.toLowerCase()) {
+        glossaryResults.style.display = "block";
         glossaryResultsItem.innerHTML = `
         <a href="${entry.link}"><h3 class="black">${entry.name}</h3>
         <p class="black">${entry.desc}</p>
          <span class="db tr black fw5 mb3" style="font-family: 'Inter UI', sans-serif;">Read more in Glossary -></span></a>
+        `
+        break;
+      } else if (entry.symbol === term) {
+        glossaryResults.style.display = "block";
+        glossaryResultsItem.innerHTML = `
+        <a href="${entry.link}"><h3 class="black"><code class="pa0 red3 mr1">${entry.symbol}</code>${entry.name}</h3>
+        <p class="black">${entry.desc}</p>
+         <span class="db tr black fw5 mb3" style="font-family: 'Inter UI', sans-serif;">Read more in Documentation -></span></a>
         `
       }
     }
@@ -310,10 +311,10 @@ function initSearch() {
   }, 150));
 
   // reset input button
-  inputReset.onclick=function(){
+  inputReset.onclick = function () {
     document.getElementById('search-form').reset();
   }
-  searchForm.addEventListener("reset", function(event){
+  searchForm.addEventListener("reset", function (event) {
     var e = document.createEvent('KeyboardEvent');
     e.initEvent("keyup", false, true);
     searchInput.dispatchEvent(e);
@@ -322,7 +323,7 @@ function initSearch() {
 }
 
 if (document.readyState === "complete" ||
-    (document.readyState !== "loading" && !document.documentElement.doScroll)
+  (document.readyState !== "loading" && !document.documentElement.doScroll)
 ) {
   initToggleSearchWindow();
 } else {
@@ -333,11 +334,11 @@ if (document.readyState === "complete" ||
 }
 
 // Scroll to current document in nav list.
-let docsNavScroll = function() {
-  let docsDetails = document.querySelectorAll("nav ul details")  
+let docsNavScroll = function () {
+  let docsDetails = document.querySelectorAll("nav ul details")
   for (let details in docsDetails) {
     if (docsDetails[details].open) docsDetails[details].scrollIntoView()
-    }
+  }
 }
 
 if (window.location.href.includes("docs")) {
@@ -355,7 +356,7 @@ if (window.location.href.includes("docs")) {
   // on mobile, dropdown selections go to the option
 
   let docsSelect = document.getElementById('docsSelect');
-  let goTo = function() {
+  let goTo = function () {
     let url = docsSelect.options[docsSelect.selectedIndex].value;
     if (url.startsWith("http")) {
       document.location.assign(url);
@@ -370,44 +371,45 @@ if (window.location.href.includes("docs")) {
 // same-page navigation on-scroll behaviour
 
 if (document.body.classList.contains("page-indiced")) {
-let h2 = document.getElementsByTagName("h2");
-let h3 = document.getElementsByTagName("h3");
-let all = document.querySelectorAll("nav li a");
-let headers = document.querySelectorAll("details summary");
+  let h2 = document.getElementsByTagName("h2");
+  let h3 = document.getElementsByTagName("h3");
+  let all = document.querySelectorAll("nav li a");
+  let headers = document.querySelectorAll("details summary");
 
-// smooth scrolling on click
-all.forEach(link => {
-  link.addEventListener("click", event => {
-    event.preventDefault();
-    let target = document.querySelector(event.target.hash);
-    target.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
+  // smooth scrolling on click
+  all.forEach(link => {
+    link.addEventListener("click", event => {
+      event.preventDefault();
+      let target = document.querySelector(event.target.hash);
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
     });
   });
-});
 
-let lastId;
-let cur = [];
+  let lastId;
+  let cur = [];
 
-window.addEventListener("scroll", event => {
-  let fromTop = window.scrollY;
+  window.addEventListener("scroll", event => {
+    let fromTop = window.scrollY;
 
-  all.forEach(link => {
-    let section = document.querySelector(link.hash);
-    let sectionChildren = document.querySelector(link.hash).nextElementSibling;
+    all.forEach(link => {
+      let section = document.querySelector(link.hash);
+      let sectionChildren = document.querySelector(link.hash).nextElementSibling;
 
-    if (
-      ((section.offsetTop <= fromTop) ||
-      (sectionChildren.offsetTop <= fromTop)) &&
-      (section.offsetTop + section.offsetHeight + sectionChildren.offsetHeight > fromTop)
-    ) {
-      link.classList.add("current");
-    } else {
-      link.classList.remove("current");
-    }
-  });
-})};
+      if (
+        ((section.offsetTop <= fromTop) ||
+          (sectionChildren.offsetTop <= fromTop)) &&
+        (section.offsetTop + section.offsetHeight + sectionChildren.offsetHeight > fromTop)
+      ) {
+        link.classList.add("current");
+      } else {
+        link.classList.remove("current");
+      }
+    });
+  })
+};
 
 let oceanvid = document.getElementById("ocean");
 
