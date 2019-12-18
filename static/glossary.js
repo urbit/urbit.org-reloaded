@@ -1351,6 +1351,20 @@ var glossary = [
     "usage": "azimuth",
     "link": "/docs/glossary/wallet-generator/",
     "desc": "Generates an Urbit HD wallet."
+  },
+  {
+    "name": "iris",
+    "symbol": "",
+    "usage": "arvo",
+    "link": "/docs/glossary/iris/",
+    "desc": "The server-side HTTP vane of Arvo. Its client-facing counterpart is Eyre."
+  },
+  {
+    "name": "jael",
+    "symbol": "",
+    "usage": "arvo",
+    "link": "/docs/glossary/jael/",
+    "desc": "Security and encryption vane of Arvo."
   }, //standard library
   {
     "name": "Primitive parser engine",
