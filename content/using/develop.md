@@ -12,7 +12,7 @@ This guide will start by getting you set up to run an Urbit ship, and then tell 
 
 ### Setting up your environment
 
-We assume you’ve gotten a basic introduction to Urbit. If you haven’t, read the [Understanding Urbit](@/understanding-urbit/_index.md) series, or just jump ahead to the [Technical Overview](@/understanding-urbit/technical-overview.md).
+We assume you’ve gotten a basic introduction to Urbit. If you haven’t, read the [Understanding Urbit](@/understanding-urbit/_index.md) series.
 
 Once you’re ready, you can get started on the network right away and take some first steps, without acquiring an identity, by [creating a comet](@/using/operations/creating-a-comet.md).
 

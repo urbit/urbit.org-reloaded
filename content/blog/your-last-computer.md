@@ -1,11 +1,8 @@
 +++
 title = "Your Last Computer"
+date = 2019-10-17
 description = "What Urbit should feel like to an everyday user"
-weight = 2
 [extra]
-flatten_pagination = "true"
-hide_next_title = "true"
-hide_previous_title = "true"
 image = "https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png"
 +++
 
