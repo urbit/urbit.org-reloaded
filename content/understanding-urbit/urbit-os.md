@@ -23,7 +23,7 @@ Today, we’re more or less back to the timesharing model of the 1970s. Urbit OS
 
 Let’s talk about how we think we’re going to pull this off from a technical standpoint, and our vision for using Urbit. 
 
-If you’d like to skip ahead to what Urbit will be like to use [go ahead](/understanding-urbit/roadmap). Or if you’re someone who just wants to head to the source, [it’s here](https://github.com/urbit/urbit#urbit). In that case you may also want to [read the docs](https://urbit.org/docs/) to get up and running.
+If you’d like to skip ahead to what Urbit will be like to use [go ahead](/understanding-urbit/interface). Or if you’re someone who just wants to head to the source, [it’s here](https://github.com/urbit/urbit#urbit). In that case you may also want to [read the docs](https://urbit.org/docs/) to get up and running.
 
 <img class="ba" src="https://media.urbit.org/site/understanding-urbit/technical-overview/technical-overview-kernel@2x.png">
 
@@ -49,7 +49,7 @@ This sounds like a lot — but the whole stack is incredibly compact. The whole 
 
 But why did we build all this technology? 
 
-First and foremost, to deliver a better user experience. Urbit OS alone is just a new layer for personal computing in the cloud. But with this new layer we open up the possibility of building a completely unified interface for people to compute in the cloud. (If you’d like to skip to how we envision that interface [go for it](/understanding-urbit/roadmap).)
+First and foremost, to deliver a better user experience. Urbit OS alone is just a new layer for personal computing in the cloud. But with this new layer we open up the possibility of building a completely unified interface for people to compute in the cloud. (If you’d like to skip to how we envision that interface [go for it](/understanding-urbit/interface).)
 
 From a broader perspective, it’s clear that connected computing is important and that it’s here to stay. We just want it to be as calm, simple and reliable as possible, and we don’t think can happen using existing technology. 
 

@@ -1,6 +1,6 @@
 +++
 title = "Roadmap: OS 1 -> OS N"
-description = "What Urbit will feel like to an everyday user"
+description = "The core ideas that Urbit is built around"
 weight = 4
 [extra]
 flatten_pagination = "true"
@@ -10,7 +10,7 @@ hide_previous_title = "true"
 
 Today, we call Urbit an ‘OS 0’. It’s an evolving open source project with a live network. In 2020, we’re planning to ship OS 1 — the first minimal but complete release of Urbit.
 
-We see Urbit’s primary advantage as bringing together groups to share a set of modules for communication and collaboration. As Urbit matures, the set of available modules grows and expands, and the system both stabilizes and becomes more secure.
+As we discussed in the [last post](/understanding-urbit/interface), we see Urbit’s primary advantage as bringing together groups to share a set of modules for communication and collaboration. As Urbit matures, the set of available modules grows and expands, and the system both stabilizes and becomes more secure.
 
 Let’s walk through the sequence of milestones we have planned for 2020 and 2021.
 
