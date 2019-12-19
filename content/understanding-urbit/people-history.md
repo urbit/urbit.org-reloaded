@@ -98,6 +98,6 @@ Keep in touch while we make build this vision into reality by [joining our maili
 
 If you’re somewhat technical and you’d like to help and contribute, [install Urbit](/using/install) and consider [applying for a grant](https://grants.urbit.org/s).
 
-If you’re interested in homesteading a community when OS 1 comes out, [apply here](community/community-grants).
+If you’re interested in homesteading a community when OS 1 comes out, [apply here](/community/community-grants).
 
 Or if you’re curious to try Hoon School, [let us know](/community/hoonschool).

@@ -41,7 +41,7 @@ While we’re excited about what OS 1 is, there are also plenty of gaps. For exa
 
 If OS 0 is for explorers, OS 1 is for tinkerers. More like car camping than backpacking.
 
-Tlon is also planning to provide free hosting to a limited number of groups who want to homestead the system. (Although you can always host Urbit yourself, of course.) If you’re interested in trying OS 1 with your group of friends, [let us know](community/community-grants). 
+Tlon is also planning to provide free hosting to a limited number of groups who want to homestead the system. (Although you can always host Urbit yourself, of course.) If you’re interested in trying OS 1 with your group of friends, [let us know](/community/community-grants). 
 
 OS 2 is where Urbit gets easier for a broader audience to try out.
 
