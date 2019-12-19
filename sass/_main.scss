@@ -102,6 +102,10 @@ a {
     text-decoration: none;
 }
 
+b, strong {
+  @extend .fw6;
+}
+
 article {
     // default
     // links on body text
@@ -111,9 +115,6 @@ article {
         &.mono {
             border-bottom: 0;
         }
-    }
-    b, strong {
-        @extend .fw6;
     }
     // post directories
     li {
