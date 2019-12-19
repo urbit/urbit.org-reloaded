@@ -10,11 +10,11 @@
 
 {% block bodyclasses %}class="index"{% endblock bodyclasses %}
 
-{% block title %} 
+{% block title %}
   <meta name="og:title" content="{{ config.title }} - Your personal server">
   <title>{{ config.title }} - Your personal server</title>
 {% endblock title %}
-{% block description %} 
+{% block description %}
   <meta name="og:description" content="Urbit is a simple, durable system for running a personal server that you own 100% and forever.">
   <meta name="description" content="Urbit is a simple, durable system for running a personal server that you own 100% and forever.">
 {% endblock description %}
@@ -32,8 +32,7 @@
 
   <div class="grid12 w-100 h-100">
     <div class="full c3-10-md c3-10-lg flex items-center align-center z10 white">
-      Urbit is a simple, durable system for running a personal server that you
-      own 100% and forever.
+      Urbit is a clean-slate OS and network for the 21st century.
     </div>
   </div>
   <!-- VIMEO VERSION KEPT AS SHIM -->
@@ -46,24 +45,26 @@
 
 <section class="full lh-copy c2-7-md c3-7-lg mt4">
   <p class="mb4">
-      Urbit is two new pieces of technology:</br>
-      Urbit OS and Urbit ID.
+      Urbit is two new pieces of technology:<br/>
+      Urbit OS + Urbit ID.
   </p>
-  <p><strong>Urbit OS</strong> is a clean-slate reimagining of what an operating system should be. It runs on any Unix machine with an internet connection. Urbit OS is a VM, a programming language and a set of kernel modules designed for an individual to run a permanent personal server on the network.</p>
-  <p><strong>Urbit ID</strong> is a PKI designed as an authentication system for Urbit OS. Your
-  Urbit ID is a combined username, network address and crypto wallet.</p> 
-  <p>Urbit OS and Urbit ID are designed to work together as a single system, but
-  each can be used individually. Both are completely <a href="https://github.com/urbit/urbit">open source</a> and free for
-  anyone to build on top of.</p>
+  <p><strong>Urbit OS</strong> is a clean slate reimaginging of the operating system as an 'overlay OS'. It runs on any Unix machine with an internet connection. Urbit OS is a compact system for an individual to run their own permanent personal server.</p>
+  <p><strong>Urbit ID</strong> is a decentralized digital identity system. Your
+  Urbit ID is a username, network address and crypto wallet designed for Urbit OS.</p>
+  <p>Urbit OS + Urbit ID are designed to work together as a single system. Both are completely <a class="bb" href="https://github.com/urbit/urbit">open source</a> for anyone to build on top of, play with and experiment with.</p>
+  <p>Urbit is <i>not quite</i> ready for everyday users. But if you're curious, keep going ↓</p>
 </section>
 
 <section class="full c2-7-md c3-7-lg mt5">
   <ul class="list">
-      <li>
-          <a class="green2" href="/using/install">Install OS1 locally</a>
-        </li>
+    <li>
+      <a class="green2" href="/understanding-urbit">Understanding Urbit</a>
+    </li>
     <li class="mt3">
-      <a class="blue2" href="/docs">Read about Urbit's stack</a>
+      <a href="/using/install">Install Urbit OS 0</a>
+    </li>
+    <li class="mt3">
+      <a class="blue2" href="/docs">Docs + Developer Resources</a>
     </li>
   </ul>
 </section>
