@@ -15,7 +15,7 @@ Today, Urbit is built and maintained by two companies, a community of contributo
 
 Let’s talk first about these individual groups within the Urbit community, then about the history of the project and how it came to be.
 
-![](https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png)
+![](https://media.urbit.org/site/understanding-urbit/project-history/project-status-landscape-earth@2x.png)
 
 There are currently two independent companies that work on building Urbit full-time: [Tlon](https://tlon.io/) and [urbit.live](https://urbit.live/). 
 
@@ -39,7 +39,7 @@ For those interested in contributing there are some simple instructions on [GitH
 
 We also run a bi-monthly course called ‘Hoon School’ to teach people about the system. Hoon School is designed for anyone with the most basic technical skills — you don’t have to be an expert programmer. If you’re interested, you should [apply](community/hoonschool). We accept everyone we can and only close the class when it gets too big.
 
-![](https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png)
+![](https://media.urbit.org/site/understanding-urbit/project-history/history-4.svg)
 
 At the beginning, Urbit was just a few people with the right combination of imagination and discipline to try to rebuild computing.
 
@@ -77,7 +77,7 @@ urbit.live gets going and starts selling Urbit IDs to the public.
 2019
 Tlon spends the year stabilizing Arvo and building OS 1.
  
-![](https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png)
+![](https://media.urbit.org/site/understanding-urbit/uu-history-4.jpg)
 
 Building Urbit is about building a future where technology doesn’t control us. Instead, we look forward to a future where technology is simpler, more reliable and less invasive. 
 

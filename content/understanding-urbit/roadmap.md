@@ -15,7 +15,7 @@ As we discussed in the [last post](/understanding-urbit/urbitos1-osn), we see Ur
 Let’s walk through the sequence of milestones we have planned for 2020 and 2021. 
 
 
-![](https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png)
+![](https://media.urbit.org/site/understanding-urbit/project-history/project-status-landscape%402x.png)
 OS 0
 2019
 
@@ -26,7 +26,8 @@ Urbit has evolved a lot during OS 0. We deployed the Urbit ID system to Ethereum
 Urbit is a community project, and the community hangs out on OS 0 to communicate and coordinate about developing the system. Come join us if you’d like to help, or just want to follow along as the system progresses.
 
 
-![](https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png)
+
+![](https://media.urbit.org/site/understanding-urbit/uu-roadmap-2.png)
 OS 1
 Q1 2020
 
@@ -45,7 +46,8 @@ Tlon is also planning to provide free hosting to a limited number of groups who 
 OS 2 is where Urbit gets easier for a broader audience to try out.
 
 
-![](https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png)
+
+![](https://media.urbit.org/site/understanding-urbit/uu-roadmap-3.png)
 OS 2
 Q2 2020
 
@@ -58,7 +60,8 @@ OS 2 is for those eager to leave behind MEGACORP platforms and build new, intent
 While OS 2 is a big improvement, it’s still not audited to be secure. Turning that corner happens with OS 3.
 
 
-![](https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png)
+
+![](https://media.urbit.org/site/understanding-urbit/uu-roadmap-4.png)
 OS 3
 2021
 
@@ -71,7 +74,6 @@ OS 3 means you can use Urbit in earnest for everyday work. Payments, contracts, 
 OS 3 means you can safely commit personal data to your Urbit with absolute peace of mind. Modules for location tracking, biometric and health data can be used without worrying about leaking bits. 
 
 OS 3 is ready for a small law firm, or an extended family, or the crypto syndicate you’ve been thinking of starting. Or, why not, go ahead and use OS 3 to launch that digital country you’ve been meaning to start.
-
 
 Where will Urbit be in 2022 or 2023? We can’t be sure exactly. We do have our eyes set on 2030 — when Urbit should be the primary platform for people to communicate and collaborate. We think our next steps are clear and we’re on the right path.
 
