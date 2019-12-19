@@ -41,7 +41,7 @@ For those interested in contributing there are some simple instructions on [GitH
 
 We also run a bi-monthly course called ‘Hoon School’ to teach people about the system. Hoon School is designed for anyone with the most basic technical skills — you don’t have to be an expert programmer. If you’re interested, you should [apply](/community/hoonschool). We accept everyone we can and only close the class when it gets too big.
 
-![](https://media.urbit.org/site/understanding-urbit/project-history/history-4.svg)
+<img class="full w-100 mv4" src="https://media.urbit.org/site/understanding-urbit/project-history/history-4.svg"/>
 
 At the beginning, Urbit was just a few people with the right combination of imagination and discipline to try to rebuild computing.
 

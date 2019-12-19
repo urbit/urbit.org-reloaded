@@ -20,7 +20,7 @@ In early 2020, we’ll release what we’re calling OS 1 — the first minimal b
 
 We’ve got a pretty clear picture of OS 1, 2 and 3 which we’ll explain in [the roadmap](/understanding-urbit/roadmap). Here, we’ll focus on the vision for Urbit as a user experience.
 
-![](https://media.urbit.org/site/understanding-urbit/project-history/uu-osn-1.svg)
+<img class="full w-100 mv4" src="https://media.urbit.org/site/understanding-urbit/project-history/uu-osn-1.svg"/>
 
 In the current world of apps and services, there’s no operating system in any meaningful sense. Our laptops and phones just let us switch between services. Our communities, co-workers and lives are spread between these services — and the work of combining them is left to the user. You have to remember all your passwords, who sent what message where, what files are on which platform, and so on. 
 
@@ -42,7 +42,7 @@ Think of a module like a particular way of communicating. Usually, groups have a
 
 Creating a group and customizing the modules it shares is easy. Building a new module is pretty straightforward as well, no more difficult than building an iOS app — although you do have to learn about the Urbit stack.
 
-![](https://media.urbit.org/site/understanding-urbit/uu-osn-3.svg)
+<img class="full w-100 mv4" src="https://media.urbit.org/site/understanding-urbit/uu-osn-3.svg"/>
 
 We think this basic metaphor can scale, over time, to be useful in many different contexts. 
 
@@ -54,7 +54,7 @@ A new tenant in a building could use an Urbit workspace to lock and unlock doors
 
 This model provides for unending possible combinations for ordinary users, without increasing complexity for developers. It’s clear to us what this can look like in the short term. What the zoomers will do with it is beyond our imagination.
 
-![](https://media.urbit.org/site/understanding-urbit/uu-osn-4.svg)
+<img class="full w-100 mv4" src="https://media.urbit.org/site/understanding-urbit/uu-osn-4.svg"/>
 
 Centralized services are great at replacing broadcast media: distributing content from a producer to a bunch of followers. 
 
