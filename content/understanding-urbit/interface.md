@@ -30,7 +30,7 @@ Operating systems for the PC took the desk of the 1970s and made it digital. Pap
 
 The ‘desk’ of today is cluttered with apps and services, data structures and interfaces. Refactoring this, unifying it, is the most important problem that a platform like Urbit can solve. We want Urbit, as a user experience, to be a single system for bringing together a group of people to do many things together.
 
-![](https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png)
+<img class="ba" src="https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png">
 
 What exactly does this look like? In the long run, we’re not 100% sure. There’s a lot to be invented — but we have a first pass that we think is quite good. At least, good enough that we like using it quite a lot.
 
