@@ -1,11 +1,8 @@
 +++
 title = "Your Last Computer"
-description = "What Urbit should feel like to an everyday user"
-weight = 2
+date = 2019-10-17
+description = "Your Urbit is a simpler computer, a quieter computer, a more private computer. We want it to feel predictable, safe, and reliable — things only a complete, sealed system can do. This, we hope, can get us a world where technology keeps us connected, but doesn’t dominate our lives."
 [extra]
-flatten_pagination = "true"
-hide_next_title = "true"
-hide_previous_title = "true"
 image = "https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png"
 +++
 

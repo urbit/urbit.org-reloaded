@@ -10,13 +10,13 @@
 
 {% block bodyclasses %}class="index"{% endblock bodyclasses %}
 
-{% block title %} 
-  <meta name="og:title" content="{{ config.title }} - Your last computer">
-  <title>{{ config.title }} - Your last computer</title>
+{% block title %}
+  <meta name="og:title" content="{{ config.title }} - Your personal server">
+  <title>{{ config.title }} - Your personal server</title>
 {% endblock title %}
-{% block description %} 
-  <meta name="og:description" content="Urbit is your last computer. It's is a simple, durable computer that you own 100% and forever.">
-  <meta name="description" content="Urbit is your last computer. It's is a simple, durable computer that you own 100% and forever.">
+{% block description %}
+  <meta name="og:description" content="Urbit is a simple, durable system for running a personal server that you own 100% and forever.">
+  <meta name="description" content="Urbit is a simple, durable system for running a personal server that you own 100% and forever.">
 {% endblock description %}
 {% block content %}
 
@@ -30,9 +30,9 @@
     poster="https://media.urbit.org/site/sea30-poster.jpg">
   </video>
 
-  <div class="grid12" style="height: 100%; width:100%;">
-    <div class="full c2-7-md c3-7-lg flex items-center align-center z10 white">
-      Urbit is your last computer.
+  <div class="grid12 w-100 h-100">
+    <div class="full c3-10-md c3-10-lg flex items-center align-center z10 white">
+      Urbit is a clean-slate OS and network for the 21st century.
     </div>
   </div>
   <!-- VIMEO VERSION KEPT AS SHIM -->
@@ -43,29 +43,21 @@
 
 <!-- <nav class="full-bleed full grid12"> -->
 
-<section class="full c2-7-md c3-7-lg mt6">
-  <p class="lh-copy mt1 mb4">
-    Urbit is a simple, durable computer that you own 100% and forever.
+<section class="full lh-copy c2-7-md c3-7-lg mt4">
+  <p class="mb4">
+      Urbit is two new pieces of technology:<br/>
+      Urbit OS + Urbit ID.
   </p>
+  <p><strong>Urbit OS</strong> is a clean slate reimaginging of the operating system as an 'overlay OS'. It runs on any Unix machine with an internet connection. Urbit OS is a compact system for an individual to run their own permanent personal server.</p>
+  <p><strong>Urbit ID</strong> is a decentralized digital identity system. Your
+  Urbit ID is a username, network address and crypto wallet designed for Urbit OS.</p>
+  <p>Urbit OS + Urbit ID are designed to work together as a single system. Both are completely <a href="https://github.com/urbit/urbit">open source</a> for anyone to build on top of, play with and experiment with.</p>
+  <p>Urbit is <i>not quite</i> ready for everyday users. But if you're curious, keep going ↓</p>
 </section>
 
-<section class="full c2-7-md c3-7-lg mt6">
-  <ul class="list">
-    <li class="">
-      <a class="bb b--black" href="/understanding-urbit/">Introduction</a>
-    </li>
-    <li class="mt3">
-      <a class="blue2 bb b--blue" href="/docs">Docs</a>
-    </li>
-    <li class="mt3">
-      <a class="green2 bb b--green" href="/using/install">Install</a>
-    </li>
-  </ul>
-</section>
-
-<section class="full c2-7-md c3-7-lg mt6">
+<section class="full c2-7-md c3-7-lg mt5">
   <h1 class="mb3">Understanding Urbit</h1>
-    <p class="lh-copy mt1">This sequence of posts will give you a high-level overview of Urbit. They take about 12 minutes to read.</p>
+    <p class="lh-copy mt1">This sequence of posts will give you a high-level overview of Urbit. They take about 20 minutes to read.</p>
   <ul class="list">
     <li class="mt3">
       <a class="b--black bb" href="/understanding-urbit/">Introduction</a>
@@ -83,13 +75,29 @@
   </ul>
 </section>
 
-<section class="full c7-12-md c7-11-lg mt6">
-  <h1 class="mb3">Learn More</h1>
-  <p class="lh-copy mt1">We share ongoing project developments, discuss technical considerations, and update our public roadmap as often as possible. You can follow along here.</p>
+<section class="full c2-7-md c7-11-lg mt5">
+  <h1 class="mb3">Developer Resources</h1>
+    <p class="lh-copy mt1">If you're someone who likes playing with experimental software, you should dive right in. Booting an Urbit takes only a few minutes.</p>
   <ul class="list">
     <li class="mt3">
-      <a class="b--black bb" href="/blog/2019-10-3-roadmap/">Roadmap</a>
+      <a class="b--black bb" href="/using/install/">Install + Setup</a>
     </li>
+    <li class="mt3">
+      <a class="b--black bb" href="/docs/">Documentation</a>
+    </li>
+    <li class="mt3">
+      <a class="b--black bb" href="/community/hoonschool">Hoon School</a>
+    </li>
+    <li class="mt3">
+      <a class="b--black bb" href="https://grants.urbit.org">Developer Grants</a>
+    </li>
+  </ul>
+</section>
+
+<section class="full c7-12-md c3-7-lg mt5">
+  <h1 class="mb3">Learn More</h1>
+  <p class="lh-copy mt1">We share ongoing project developments, discuss technical considerations, and update our public roadmap as often as possible.</p>
+  <ul class="list">
     <li class="mt3">
       <a class="b--black bb" href="/blog">Blog</a>
     </li>
@@ -105,64 +113,56 @@
   </ul>
 </section>
 
-<section class="full c2-7-md c3-7-lg mv6">
-  <h1 class="mb3">Follow Us</h1>
-  <p class="lh-copy mt1 mb4">Urbit is actively being built, explored, and experimented with.
-    To follow our progress you can:
-  </p>
+<section class="full c2-7-md c7-11-lg mv5">
+  <h1 class="mb3">Stay Up to Date</h1>
+  <p class="lh-copy mt1 mb3">
+      We send regular updates about our project. Enter your email to get them.
+    </p>
+    <iframe name="nothing" style="display:none;"></iframe>
+    <form
+      action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;amp;id=be143888d2"
+      method="post"
+      id="mc-embedded-subscribe-form"
+      name="mc-embedded-subscribe-form"
+      class="validate form"
+      target="_blank"
+      novalidate>
+      <div class="input-group" id="mc_embed_signup_scroll">
+        <div class="mc-field-group w-100 relative">
+          <input
+            class="bg-white black b--black ba pa3 w-100 mb2 br0 wk-appearance-none"
+            type="email"
+            name="EMAIL"
+            id="mce-EMAIL"
+            placeholder="your@email.com"/>
+          <button
+            id="mc-embedded-subscribe"
+            class="dib bn absolute bg-transparent"
+            style="font-family: 'Inter UI', san-serif; right: 3px; top: 15px; -webkit-appearance: none;"
+            type="submit"
+            name="subscribe"
+            onclick="_paq.push(['trackEvent', 'Mailing List', 'Subscribe'])">
+            <span class="fr pr1">-></span>
+          </button>
+        </div>
+      </div>
+    </form>
+    <p>You can also:</p>
   <ul class="list">
-    <li class="mt2">
+    <li class="mt3">
       Follow us on <a class="b--black bb" href="https://twitter.com/urbit">Twitter</a>
     </li>
-    <li class="mt2">
+    <li class="mt3">
       Explore the code on
       <a class="b--black bb" href="https://github.com/urbit/urbit">GitHub</a>
     </li>
-    <li class="mt2">
+    <li class="mt3">
       Ask questions in our <a class="b--black bb" href="https://discord.gg/Mae2bk7">Discord</a>
     </li>
   </ul>
   <p class="lh-copy">
     Or, boot Urbit and join <code>~dopzod/urbit-help</code>
   </p>
-</section>
-
-<section
-  class="full c7-12-md c7-11-lg mb6 mt6-xl mt6-l mt6-m"
-  id="newsletter-subscribe-top">
-  <h1 class="mb3">Stay Up to Date</h1>
-  <p class="lh-copy mt1 mb3">
-    We send regular updates about our project. Enter your email to get them.
-  </p>
-  <iframe name="nothing" style="display:none;"></iframe>
-  <form
-    action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;amp;id=be143888d2"
-    method="post"
-    id="mc-embedded-subscribe-form"
-    name="mc-embedded-subscribe-form"
-    class="validate form"
-    target="_blank"
-    novalidate>
-    <div class="input-group" id="mc_embed_signup_scroll">
-      <div class="mc-field-group w-100 relative">
-        <input
-          class="bg-white black b--black ba pa3 w-100 mb2 br0 wk-appearance-none"
-          type="email"
-          name="EMAIL"
-          id="mce-EMAIL"
-          placeholder="your@email.com"/>
-        <button
-          id="mc-embedded-subscribe"
-          class="dib bn absolute bg-transparent"
-          style="font-family: 'Inter UI', san-serif; right: 3px; top: 15px; -webkit-appearance: none;"
-          type="submit"
-          name="subscribe"
-          onclick="_paq.push(['trackEvent', 'Mailing List', 'Subscribe'])">
-          <span class="fr pr1">-></span>
-        </button>
-      </div>
-    </div>
-  </form>
 </section>
 
   <!-- </nav> -->

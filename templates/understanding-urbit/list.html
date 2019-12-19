@@ -32,91 +32,85 @@
 
 </nav>
 <!-- content -->
-<h1 id="introduction" class="mb4 full mt4 c4-10-lg">Introduction</h1>
-<section class="full-bleed full grid12">
-  <img class="full c4-10-lg mb4" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-0.jpg"/>
-  <p class="full c4-10-lg mt0 mb4 mb4-xl lh-copy">
-    Imagine that you can login from anywhere with one name and password.
-  </p>
-  <p class="full c4-10-lg mt0 mb4 mb4-xl lh-copy">
-    And when you do, your entire OS appears.
-  </p>
-  <p class="full c4-10-lg mt0 mb4 mb4-xl lh-copy">
-    Inside is your whole digital life. All of your communities, conversations, and connections. All of your biometric data and devices. Your entire personal archive in one place that’s secure, private, and designed to last forever.
-  </p>
-  <p class="full c4-10-lg mt0 mb4 mb4-xl lh-copy">
-    You own and control this OS completely. It’s yours. No one else can look at it without your permission, it can never show you ads.
-  </p>
-  <p class="full c4-10-lg mt0 mb4 mb4-xl lh-copy">
-    This is what Urbit is. Your Urbit is a simple, durable computer that belongs to you 100% and forever.
-  </p>
-  <p class="full c4-10-lg mt0 mb4 mb4-xl lh-copy">
-    Urbit is not vaporware. It's real and it works. Two separate companies and a community of contributors are working together to build the Urbit future.
-  </p>
-  <p class="full c4-10-lg mt0 mb4 mb4-xl lh-copy">
-    But Urbit isn't ready for everyone yet. Today, it's a version <code>0</code>. Brave explorers should find a way in. In 2020, we plan to open Urbit for more people.
-  </p>
-  <p class="full c4-10-lg mt0 mb8 mb7-xl lh-copy">
-    Let’s walk through what Urbit is, what it’s for and where we’re going step by step.
-  </p>
+<section class="full c4-10-lg">
+  <h1 id="introduction" class="mb4 full mt4 ">Introduction</h1>
+  <p class="full mt0 mb4 mb4-xl lh-copy">We think the internet can’t be saved. The way things are going, MEGACORP will always control our apps and services because we can no longer run them ourselves.</p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">The only way out of this mess is with a completely new platform that’s owned and controlled by its users.</p>
+  <img class="full ba mb4" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-0.jpg"/>
+  <p class="full mt0 mb4 mb4-xl lh-copy">Urbit is a new OS and peer-to-peer network that’s simple by design, built to last forever, and 100% owned by its users. Under the hood, Urbit is a clean-slate software stack compact enough that an individual developer can understand and control it completely.</p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">We built this new stack to give people a single integrated tool for communicating and building communities – a tool they can trust, control, and extend to their liking. We want to do away with the terrible user experience of the current ‘frankenstack’ of apps and services that we all use today. </p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">Urbit is designed to become an effective, customizable productivity tool for collaborators, and a calm noninvasive communication tool for friends and families.</p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">This probably sounds crazy, so let’s get concrete and talk about (1) Urbit as a piece of technology and (2) Urbit as a user experience.</p>
+  <p class="full mt0 mb4 mb4-xl lh-copy b">1 - Technology</p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">Technically, Urbit is two components: Urbit OS and Urbit ID.</p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">Both are completely <a class="bb" href="https://github.com/urbit/urbit">open</a> <a class="bb" href="https://github.com/urbit/azimiuth">source</a> and MIT licensed.</p>
+  <img class="full w-100 mb4" src="https://media.urbit.org/site/understanding-urbit/uu-intro-2.svg"/>
+  <p class="full mt0 mb4 mb4-xl lh-copy">Urbit OS is a new, carefully architected software stack: a VM, programming language and kernel designed to run software for an individual. </p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">Urbit OS is a program that runs on almost any cloud server, most laptops and many phones: anything with Unix and an internet connection. Urbit OS is completely sealed from the system it runs on, sort of like WASM or the JVM. We sometimes call it an ‘overlay OS’.</p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">In an Urbit world, each person has their own Urbit OS node, or ‘urbit’. Your urbit is secure and private to you and entirely under your control. When you want to connect with others, you connect to their urbit directly — rather than going through a centralized service. </p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">If you’re curious to dive even deeper into Urbit OS, feel free to <a class="bb" href="/understanding-urbit/urbit-os">skip ahead</a>.</p>
+  <img class="full w-100 mb4" src="https://media.urbit.org/site/understanding-urbit/uu-intro-3.svg"/>
+  <p class="full mt0 mb4 mb4-xl lh-copy">Urbit ID is an identity and authentication system specifically designed to work with Urbit OS. When you boot or log in to Urbit OS, you use your Urbit ID. </p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">Your Urbit ID is a short, memorable name (like <code>~ravmel-ropdyl</code>) that’s a username, network address and crypto wallet all in one. It’s registered on a blockchain, you own it with a key and no one can take it away from you. Urbit IDs are cryptographic property. </p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">Urbit IDs aren’t money, but they are scarce, so each one costs something. This means that when you meet a stranger on the Urbit network, they have some skin in the game and are less likely to be a bot or a spammer.</p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">The Urbit ID system is live and deployed, and we don’t plan to change it all that much. It works well. If you’re curious to dive further into the details, jump ahead to <a class="bb" href="/understanding-urbit/urbit-id">this post.</a></p>
+  <p class="full mt0 mb4 mb4-xl lh-copy b">2 - User experience</p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">We want Urbit to be a single, simple interface for your whole digital life.</p>
+  <img class="full ba mb4" src="https://media.urbit.org/site/understanding-urbit/uu-intro-4.png"/>
+  <p class="full mt0 mb4 mb4-xl lh-copy">Over the years, Urbit has been built in public as an open source project. Anyone can <a class="bb" href="/using/install/">join the network</a> and check out what we’re up to. It’s a bit like signing on to IRC in the early 90s. </p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">In early 2020, we’ll release Urbit OS 1: a minimal interface for group communication, and our first complete interface. OS 1 is a tool to chat, share notes and links, and stay connected. </p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">OS 1 is the first step toward a truly complete OS for a networked world. </p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">Over time, Urbit will grow into a system that can bring together all our different modes of communicating: chat, payments, documents, images, biometric data. We want individuals and their communities to be able to both control their software in fact, through the source code, and in action, through a simple interface.</p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">We want to leave behind a world of apps and services for one where we can bring everything together in one place. And, in doing so, ordinary users can create customized digital environments for their friends and communities.</p>
+  <img class="full ba mb4" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-6.jpg"/>
+  <p class="full mt0 mb4 mb4-xl lh-copy">To see how we’re going to get there, let’s walk through these two pieces of new technology individually, Urbit OS and Urbit ID. We’ll then talk about our vision for the future and how we’ll get there.</p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">For technical people, it’s important to note that Urbit as a stack is in no way required to be used together. Don’t like our client? Feel free to build your own. Just like the Urbit ID system? No problem — use it!
+  <p class="full mt0 mb4 mb4-xl lh-copy">Ultimately, we think that new technology is most likely to get adopted if it can provide a much, much better user experience. So that’s what we’re focussing on creating.</p>
 </section>
-<section class="full-bleed full grid12 mt7">
-  <p class="full c4-7-lg mt0 mb4 mb2-xl lh-copy">
-    This is a drawing of an Urbit&nbsp;—&nbsp; a new kind of computer. <br /><br />
-    Your Urbit isn’t a physical device: it lives in the cloud or your laptop.
-  </p>
-  <img  class="full c7-10-lg row-1 mt0 mb2 mb4-xl w-100 ba" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-1.svg" alt="A drawing of an Urbit ship." />
-</section>
-<section class="full-bleed full grid12">
-  <p class="full c4-7-lg mt0 mb4 mb2-xl lh-copy">
-    Your Urbit is a tool for you to run your own social software to connect and communicate with your friends and family. <br /><br />
-    Urbit is the opposite of MEGACORP social media.
-  </p>
-  <img class="full c7-10-lg row-1 mt0 mb2 mb4-xl w-100 ba" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-2.svg" alt="An Urbit ship receiving data." />
-</section>
-<section class="full-bleed full grid12">
-  <p class="full c4-7-lg mt0 mb4 mb2-xl lh-copy">
-    Your Urbit is a permanent, private archive.<br /><br />
-    Your Urbit can store all your data and digital assets safely, privately, forever.
-  </p>
-  <img class="full c7-10-lg row-1 mt0 mb2 mb4-xl w-100 ba" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-3.svg" alt="An Urbit ship with its previous versions in a lifetime archive" />
-</section>
-<section class="full-bleed full grid12">
-  <p class="full c4-7-lg mt0 mb6 mb2-xl lh-copy">
-    You own your Urbit like you own Bitcoin.<br /><br />
-    Each Urbit is a piece of a new network that’s owned and controlled by its users.
-  </p>
-  <img class="full c7-10-lg row-1 mt0 mb2 mb7-xl w-100 ba" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-4.svg" alt="An Urbit ship communicating with other ships" />
-</section>
-<section id="megacorp" class="full full-bleed grid12 bg-black">
-  <img class="full c4-10-lg mt7" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-5.jpg"/>
-  <p class="full c4-10-lg white lh-copy mt2 mt4-xl mb7">
-    Today, technology controls us. Every MEGACORP has the same incentive: To keep us hooked on their platform.
-  </p>
-</section>
-<section class="full full-bleed grid12 bg-yellow">
-  <img class="full c4-10-lg mt7" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-6.jpg"/>
-  <p class="full c4-10-lg lh-copy mt2 mt4-xl">
-    We built Urbit so people can control their technology, shape their digital lives and freely build their digital communities.
-  </p>
-  <p class="full c4-10-lg lh-copy mt2">
-    We want to replace the Internet with a foundation for computing that we can all rely on far into the future.
-  </p>
-  <p class="full c4-10-lg lh-copy mt2">
-    Urbit is a large, ambitious project. But at the core it’s simple, durable and yours.
-  </p>
-</section>
-<p class="c1-10 c4-10-lg mt6 mb4 lh-copy">
-  Nothing quite like this has ever been done before.
-</p>
+
 <footer class="relative mt4 c4-10-lg full">
     {% set posts = get_section(path="understanding-urbit/_index.md") %}
     {% for directorypage in posts.pages | slice (end=1) %}
-    <a class="bb-0" href="{{directorypage.permalink}}">
+    <a href="{{directorypage.permalink}}">
       <nav class="previous absolute right-2 t-right">
         <p data-flat="true" class="mt5 mb6">{{directorypage.title}}</p>
       </nav>
     </a>
     {% endfor %}
 </footer>
+
+<section class="c4-10-lg mv6">
+    <iframe name="nothing" style="display:none;"></iframe>
+    <p class="mt5">If you’d like to follow our progress, we send monthly updates via email:</p>
+    <form
+    action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;amp;id=be143888d2"
+    method="post"
+    id="mc-embedded-subscribe-form"
+    name="mc-embedded-subscribe-form"
+    class="validate form"
+    target="_blank"
+    novalidate>
+    <div class="input-group" id="mc_embed_signup_scroll">
+        <div class="mc-field-group w-100 relative">
+        <input
+            class="bg-white black b--black ba pa3 w-100 mb2 br0 wk-appearance-none"
+            type="email"
+            name="EMAIL"
+            id="mce-EMAIL"
+            placeholder="your@email.com"/>
+        <button
+            id="mc-embedded-subscribe"
+            class="dib bn absolute bg-transparent"
+            style="font-family: 'Inter UI', san-serif; right: 3px; top: 15px; -webkit-appearance: none;"
+            type="submit"
+            name="subscribe"
+            onclick="_paq.push(['trackEvent', 'Mailing List', 'Subscribe'])">
+            <span class="fr pr1">-></span>
+        </button>
+        </div>
+    </div>
+    </form>
+    <p class="full mt3 mb3 mb3-xl lh-copy">You can also follow us on <a class="bb" href="https://twitter.com/urbit">Twitter</a> or <a class="bb" href="https://github.com/urbit">Github</a>.</p>
+    <p class="full mt0 mb3 mb4-xl lh-copy">Or, preferably, on Urbit itself in <code>~dopzod/urbit-help</code></p>
+</section>
 {% endblock content %}
