@@ -101,38 +101,3 @@ If you’re somewhat technical and you’d like to help and contribute, [install
 If you’re interested in homesteading a community when OS 1 comes out, [apply here](community/community-grants).
 
 Or if you’re curious to try Hoon School, [let us know](/community/hoonschool).
-
-<iframe name="nothing" style="display:none;"></iframe>
-<p class="mt5">If you’d like to follow our progress, we send monthly updates via email:</p>
-<form
-action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;amp;id=be143888d2"
-method="post"
-id="mc-embedded-subscribe-form"
-name="mc-embedded-subscribe-form"
-class="validate form"
-target="_blank"
-novalidate>
-<div class="input-group" id="mc_embed_signup_scroll">
-    <div class="mc-field-group w-100 relative">
-    <input
-        class="bg-white black b--black ba pa3 w-100 mb2 br0 wk-appearance-none"
-        type="email"
-        name="EMAIL"
-        id="mce-EMAIL"
-        placeholder="your@email.com"/>
-    <button
-        id="mc-embedded-subscribe"
-        class="dib bn absolute bg-transparent"
-        style="font-family: 'Inter UI', san-serif; right: 3px; top: 15px; -webkit-appearance: none;"
-        type="submit"
-        name="subscribe"
-        onclick="_paq.push(['trackEvent', 'Mailing List', 'Subscribe'])">
-        <span class="fr pr1">-></span>
-    </button>
-    </div>
-</div>
-</form>
-
-You can also follow us on [Twitter](https://twitter.com/urbit) or [GitHub](https://github.com/urbit).
-
-Or, preferably, on Urbit itself in `~dopzod/urbit-help`
