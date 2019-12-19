@@ -54,7 +54,7 @@ A new tenant in a building could use an Urbit workspace to lock and unlock doors
 
 This model provides for unending possible combinations for ordinary users, without increasing complexity for developers. It’s clear to us what this can look like in the short term. What the zoomers will do with it is beyond our imagination.
 
-![](https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png)
+![](https://media.urbit.org/site/understanding-urbit/uu-osn-4.svg)
 
 Centralized services are great at replacing broadcast media: distributing content from a producer to a bunch of followers. 
 

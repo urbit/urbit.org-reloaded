@@ -31,13 +31,17 @@ The community of contributors and core developers has been steadily contributing
 
 When the Urbit ID address space went on-chain in early 2019 there were about 2,000 star holders and 70 galaxy holders – that number has since grown steadily. For the most part, the best way to connect with them is through Urbit itself. 
 
-![](https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png)
+![](https://media.urbit.org/site/understanding-urbit/uu-people-history-2a.jpg)
+
+![](https://media.urbit.org/site/understanding-urbit/uu-people-history-2b.jpg)
+
+![](https://media.urbit.org/site/understanding-urbit/uu-people-history-2c.jpg)
 
 Given how new and unusual Urbit is, it attracts a wide variety of interesting people — both technical and non-technical. The community is generally happy to talk to people about what Urbit is, what we’re up to, and where we’re going. The best way to get involved is to simply join `~dopzod/urbit-help` — which our [setup instructions](/using/operations/using-your-ship/) can help you do.
 
 For those interested in contributing there are some simple instructions on [GitHub](https://github.com/urbit/urbit/blob/master/CONTRIBUTING.md#contributing-to-urbit), but we also run a [grants program](https://grants.urbit.org/) where we reward contributors with Urbit ID address space. Grants aren’t solely for pre-determined projects, either. If you have something you’d like to propose, we’d love to hear from you.
 
-We also run a bi-monthly course called ‘Hoon School’ to teach people about the system. Hoon School is designed for anyone with the most basic technical skills — you don’t have to be an expert programmer. If you’re interested, you should [apply](community/hoonschool). We accept everyone we can and only close the class when it gets too big.
+We also run a bi-monthly course called ‘Hoon School’ to teach people about the system. Hoon School is designed for anyone with the most basic technical skills — you don’t have to be an expert programmer. If you’re interested, you should [apply](/community/hoonschool). We accept everyone we can and only close the class when it gets too big.
 
 ![](https://media.urbit.org/site/understanding-urbit/project-history/history-4.svg)
 
