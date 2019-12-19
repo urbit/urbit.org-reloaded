@@ -27,13 +27,11 @@ Tlon is also working to set up an urbit.org foundation. This is still in process
 
 Urbit.live started selling Urbit IDs very early once that became possible, and also plans to offer services within the Urbit ecosystem. 
 
-The community of contributors and core developers has been steadily contributing to the code base since before Tlon existed, and they’re still going strong. They can primarily be found on Urbit itself, in `~dopzod/urbit-help`, the [urbit-dev mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&id=be143888d2) and on [GitHub](https://github.com/urbit).
+The community of contributors and core developers has been steadily contributing to the code base since before Tlon existed, and they’re still going strong. They can primarily be found on Urbit itself, in `~dopzod/urbit-help`, the [urbit-dev mailing list](https://groups.google.com/a/urbit.org/forum/#!forum/dev) and on [GitHub](https://github.com/urbit).
 
 When the Urbit ID address space went on-chain in early 2019 there were about 2,000 star holders and 70 galaxy holders – that number has since grown steadily. For the most part, the best way to connect with them is through Urbit itself. 
 
 ![](https://media.urbit.org/site/understanding-urbit/uu-people-history-2a.jpg)
-
-![](https://media.urbit.org/site/understanding-urbit/uu-people-history-2b.jpg)
 
 ![](https://media.urbit.org/site/understanding-urbit/uu-people-history-2c.jpg)
 
