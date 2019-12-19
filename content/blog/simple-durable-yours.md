@@ -1,7 +1,7 @@
 +++
 title = "Simple, Durable, Yours"
 date = 2019-10-17
-description = "The core ideas that Urbit is built around"
+description = "We built Urbit from scratch to be a system that’s simple, durable, and yours. Everything that computing today is not — but should be."
 [extra]
 +++
 

@@ -27,7 +27,7 @@ Tlon is also working to set up an urbit.org foundation. This is still in process
 
 Urbit.live started selling Urbit IDs very early once that became possible, and also plans to offer services within the Urbit ecosystem. 
 
-The community of contributors and core developers has been steadily contributing to the code base since before Tlon existed, and they’re still going strong. They can primarily be found on Urbit itself, in `~dopzod/urbit-help`, the [urbit-dev mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&id=be143888d2) and on [GitHub](https://github.com/urbit/urbit/issues).
+The community of contributors and core developers has been steadily contributing to the code base since before Tlon existed, and they’re still going strong. They can primarily be found on Urbit itself, in `~dopzod/urbit-help`, the [urbit-dev mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&id=be143888d2) and on [GitHub](https://github.com/urbit).
 
 When the Urbit ID address space went on-chain in early 2019 there were about 2,000 star holders and 70 galaxy holders – that number has since grown steadily. For the most part, the best way to connect with them is through Urbit itself. 
 
@@ -92,13 +92,13 @@ Tlon spends the year stabilizing Arvo and building OS 1.
 
 Building Urbit is about building a future where technology doesn’t control us. Instead, we look forward to a future where technology is simpler, more reliable and less invasive. 
 
-Keep in touch while we make build this vision into reality by [joining our mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&id=be143888d2) or following us on [twitter/urbit](https://twitter.com/urbit) or [github/urbit](https://github.com/urbit). 
+Keep in touch while we make build this vision into reality by [joining our mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&id=be143888d2) or following us on [Twitter](https://twitter.com/urbit) or [GitHub](https://github.com/urbit). 
 
-If you’re somewhat technical and you’d like to help and contribute, [install urbit](/using/install) and consider [applying for a grant](https://grants.urbit.org/s).
+If you’re somewhat technical and you’d like to help and contribute, [install Urbit](/using/install) and consider [applying for a grant](https://grants.urbit.org/s).
 
 If you’re interested in homesteading a community when OS 1 comes out, [apply here](community/community-grants).
 
-Or if you’re curious to try hoon school, [let us know](/community/hoonschool).
+Or if you’re curious to try Hoon School, [let us know](/community/hoonschool).
 
 <iframe name="nothing" style="display:none;"></iframe>
 <p class="mt5">If you’d like to follow our progress, we send monthly updates via email:</p>
