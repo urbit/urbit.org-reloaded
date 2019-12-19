@@ -10,7 +10,7 @@ hide_previous_title = "true"
 
 Today, we call Urbit an ‘OS 0’. It’s an evolving open source project with a live network. In 2020, we’re planning to ship OS 1 — the first minimal but complete release of Urbit.
 
-As we discussed in the [last post](), we see Urbit’s primary advantage as bringing together groups to share a set of modules for communication and collaboration. As Urbit matures, the set of available modules grows and expands, and the system both stabilizes and becomes more secure. 
+As we discussed in the [last post](/understanding-urbit/urbitos1-osn), we see Urbit’s primary advantage as bringing together groups to share a set of modules for communication and collaboration. As Urbit matures, the set of available modules grows and expands, and the system both stabilizes and becomes more secure. 
 
 Let’s walk through the sequence of milestones we have planned for 2020 and 2021. 
 
@@ -19,9 +19,9 @@ Let’s walk through the sequence of milestones we have planned for 2020 and 202
 OS 0
 2019
 
-Today, Urbit OS is an evolving prototype. Brave explorers, open-minded systems software nerds and those who want the future to arrive as fast as possible should [install Urbit](), [check it out](), and potentially [enroll in Hoon School](). 
+Today, Urbit OS is an evolving prototype. Brave explorers, open-minded systems software nerds and those who want the future to arrive as fast as possible should [install Urbit](/using/install), [check it out](https://urbit.org/using/operations/), and potentially [enroll in Hoon School](/community/hoonschool). 
 
-Urbit has evolved a lot during OS 0. We deployed the Urbit ID system to Ethereum and made huge strides toward the stability of Urbit OS (detailed [here]()). OS 0 has been all about refining our interface goals and making sure our system works as well as possible.
+Urbit has evolved a lot during OS 0. We deployed the Urbit ID system to Ethereum and made huge strides toward the stability of Urbit OS (detailed [here](/blog/stable-arvo)). OS 0 has been all about refining our interface goals and making sure our system works as well as possible.
 
 Urbit is a community project, and the community hangs out on OS 0 to communicate and coordinate about developing the system. Come join us if you’d like to help, or just want to follow along as the system progresses.
 
@@ -30,17 +30,17 @@ Urbit is a community project, and the community hangs out on OS 0 to communicate
 OS 1
 Q1 2020
 
-OS 1 is the first minimal but complete release of Urbit. We think of it as the [Nokia 3310]() of cloud computers.
+OS 1 is the first minimal but complete release of Urbit. We think of it as the [Nokia 3310](https://en.wikipedia.org/wiki/Nokia_3310) of cloud computers.
 
 OS 1 is a simple system to publish notes, chat and share links with groups of friends all in one place. OS 1 is stripped down, but open for anyone to extend and build on top of. It’s easy to onboard a group of friends into OS 1 via email and there will be hosting available to select groups. 
 
 OS 1 is aimed first and foremost at communities looking to homestead a new platform they can truly make their own. We’ve been using Urbit ourselves over the years, and OS 1 is what we’ve been looking forward to using for our own daily communication and collaboration.
 
-While we’re excited about what OS 1 is, there are also plenty of things that it isn’t. OS 1 doesn’t have an exceptional notification system, it still lives in a browser, and it lacks great tooling for distributing new modules. While we aren’t inventing any new cryptography, Urbit also hasn’t been audited, so we aren’t calling it secure just yet. 
+While we’re excited about what OS 1 is, there are also plenty of gaps. For example, OS 1 doesn’t have an exceptional notification system, it still lives in a browser, and it lacks great tooling for distributing new modules. While we aren’t inventing any new cryptography, Urbit also hasn’t been audited, so we aren’t calling it secure just yet. 
 
 If OS 0 is for explorers, OS 1 is for tinkerers. More like car camping than backpacking.
 
-Tlon is also planning to provide free hosting to a limited number of groups who want to homestead the system. (Although you can always host Urbit yourself, of course.) If you’re interested in trying OS 1 with your group of friends, [let us know](). 
+Tlon is also planning to provide free hosting to a limited number of groups who want to homestead the system. (Although you can always host Urbit yourself, of course.) If you’re interested in trying OS 1 with your group of friends, [let us know](community/community-grants). 
 
 OS 2 is where Urbit gets easier for a broader audience to try out.
 
@@ -76,3 +76,38 @@ OS 3 is ready for a small law firm, or an extended family, or the crypto syndica
 Where will Urbit be in 2022 or 2023? We can’t be sure exactly. We do have our eyes set on 2030 — when Urbit should be the primary platform for people to communicate and collaborate. We think our next steps are clear and we’re on the right path.
 
 By this point you might be wondering, who built this thing? Where did it come from? That’s next.
+
+<iframe name="nothing" style="display:none;"></iframe>
+<p class="mt5">If you’d like to follow our progress, we send monthly updates via email:</p>
+<form
+action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;amp;id=be143888d2"
+method="post"
+id="mc-embedded-subscribe-form"
+name="mc-embedded-subscribe-form"
+class="validate form"
+target="_blank"
+novalidate>
+<div class="input-group" id="mc_embed_signup_scroll">
+    <div class="mc-field-group w-100 relative">
+    <input
+        class="bg-white black b--black ba pa3 w-100 mb2 br0 wk-appearance-none"
+        type="email"
+        name="EMAIL"
+        id="mce-EMAIL"
+        placeholder="your@email.com"/>
+    <button
+        id="mc-embedded-subscribe"
+        class="dib bn absolute bg-transparent"
+        style="font-family: 'Inter UI', san-serif; right: 3px; top: 15px; -webkit-appearance: none;"
+        type="submit"
+        name="subscribe"
+        onclick="_paq.push(['trackEvent', 'Mailing List', 'Subscribe'])">
+        <span class="fr pr1">-></span>
+    </button>
+    </div>
+</div>
+</form>
+
+You can also follow us on [Twitter](https://twitter.com/urbit) or [GitHub](https://github.com/urbit).
+
+Or, preferably, on Urbit itself in `~dopzod/urbit-help`

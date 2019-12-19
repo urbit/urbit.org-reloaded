@@ -1,5 +1,5 @@
 +++
-title = "Urbit OS1 –> OSN"
+title = "Urbit OS¹ -> OSⁿ"
 description = "A quick tour of the technology"
 weight = 3
 [extra]
@@ -8,19 +8,21 @@ hide_next_title = "true"
 hide_previous_title = "true"
 +++
 
+# Urbit Interface
+
 We started at the bottom of the stack, years ago, with the VM. We’re just now getting to the top: the interface. Urbit ID and Urbit OS are great tools — but technology on its own isn’t enough. As far as we’re concerned, if people don’t actually use this thing, it doesn’t matter.
 
 Urbit, VM to UI, is meant to feel like the a desktop OS for a networked world: a single, unified system where you can interact with, update and archive all of your personal data; communicate with your friends and family; and collaborate with the people you work with. 
 
-One way to imagine Urbit is as the Western answer to WeChat: a seamless, multi-purpose, vastly extensible social network, but without the surveillance. As a platform anyone can extend, we see Urbit as the ultimate productivity tool: no more frankenstack of apps and services needed for companies and collaborators – because everything lives in one interface. With the power to build whatever you want on top of Urbit, you can bring everything together in one place.
+One way to imagine Urbit is as the Western answer to WeChat: a seamless, multi-purpose, vastly extensible social network, but without the surveillance. As a platform anyone can extend, we see Urbit as the ultimate productivity tool: no more frankenstack of apps and services needed for companies and collaborators, because everything lives in one interface. With the power to build whatever you want on top of Urbit, you can bring everything together in one place.
 
 In early 2020, we’ll release what we’re calling OS 1 — the first minimal but complete user experience for Urbit. OS 1 brings together the whole Urbit stack into a single interface. OS 1 is simple in the extreme. It’s a calm, ad-free, privacy-respecting environment to homestead new digital communities. 
 
-We’ve got a pretty clear picture of OS 1, 2 and 3 which we’ll explain in [the roadmap](). Here, we’ll focus on the vision for Urbit as a user experience.
+We’ve got a pretty clear picture of OS 1, 2 and 3 which we’ll explain in [the roadmap](/understanding-urbit/roadmap). Here, we’ll focus on the vision for Urbit as a user experience.
 
 ![](https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png)
 
-In the current world of apps and services, there’s no operating system in any meaningful sense. Our laptops and phones just let us switch between services. Our communities, co-workers and lives are spread between these services — the work of combining them is left to the user. You have to remember all your passwords, who sent what message where, what files are on which platform, and so on. 
+In the current world of apps and services, there’s no operating system in any meaningful sense. Our laptops and phones just let us switch between services. Our communities, co-workers and lives are spread between these services — and the work of combining them is left to the user. You have to remember all your passwords, who sent what message where, what files are on which platform, and so on. 
 
 The most severely lacking thing about our digital lives today is that they lack a sense of place or a sense of home. 
 
@@ -38,13 +40,13 @@ In Urbit, there are two building blocks: groups and modules. A group is exactly 
 
 Think of a module like a particular way of communicating. Usually, groups have a few different ways they want to communicate. Urbit makes this simple and straightforward. With one group, you may decide to chat and share photos. Another might share annotated research, watch the markets, and manage payments on a blockchain.
 
-Bringing together a group and customizing the modules it shares is easy. Building a new module is pretty straightforward, no more difficult than building an iOS app — although you do have to learn about the Urbit stack.
+Creating a group and customizing the modules it shares is easy. Building a new module is pretty straightforward as well, no more difficult than building an iOS app — although you do have to learn about the Urbit stack.
 
 ![](https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png)
 
 We think this basic metaphor can scale, over time, to be useful in many different contexts. 
 
-For example, parents might give their young children an Urbit that’s locked, at first, to only two groups: family and friends from school. It might also be limited to  one module: chat. 
+For example, parents might give their young children an Urbit that’s locked, at first, to only two groups: family and friends from school. It might also be limited to one module: chat. 
 
 A broader group of siblings, parents and grandparents might create a group with a few more modules to share photos, chat and coordinate events. 
 
@@ -58,6 +60,41 @@ Centralized services are great at replacing broadcast media: distributing conten
 
 Urbit is for everything else. That is, Urbit is for actual two-way communication: keeping a group of friends connected, staying in touch with your family, or working with a group of collaborators. 
 
-We designed Urbit to become the best tool for communicating with friends and family or collaborating with peers. It’s a social network, but much calmer and more purposeful. It’s a productivity tool, but much more secure and powerful.
+We designed Urbit to become the best tool for communicating with friends and family, or collaborating with peers. It’s a social network, but much calmer and more purposeful. It’s a productivity tool, but much more secure and powerful.
 
 How do we get to this future? By staying focussed, writing code, and iterating through design. We have a rough outline of this process — let’s walk through it.
+
+<iframe name="nothing" style="display:none;"></iframe>
+<p class="mt5">If you’d like to follow our progress, we send monthly updates via email:</p>
+<form
+action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;amp;id=be143888d2"
+method="post"
+id="mc-embedded-subscribe-form"
+name="mc-embedded-subscribe-form"
+class="validate form"
+target="_blank"
+novalidate>
+<div class="input-group" id="mc_embed_signup_scroll">
+    <div class="mc-field-group w-100 relative">
+    <input
+        class="bg-white black b--black ba pa3 w-100 mb2 br0 wk-appearance-none"
+        type="email"
+        name="EMAIL"
+        id="mce-EMAIL"
+        placeholder="your@email.com"/>
+    <button
+        id="mc-embedded-subscribe"
+        class="dib bn absolute bg-transparent"
+        style="font-family: 'Inter UI', san-serif; right: 3px; top: 15px; -webkit-appearance: none;"
+        type="submit"
+        name="subscribe"
+        onclick="_paq.push(['trackEvent', 'Mailing List', 'Subscribe'])">
+        <span class="fr pr1">-></span>
+    </button>
+    </div>
+</div>
+</form>
+
+You can also follow us on [Twitter](https://twitter.com/urbit) or [GitHub](https://github.com/urbit).
+
+Or, preferably, on Urbit itself in `~dopzod/urbit-help`

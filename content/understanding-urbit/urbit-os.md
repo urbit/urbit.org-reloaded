@@ -9,21 +9,21 @@ hide_previous_title = "true"
 image = "https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png"
 +++
 
-For the most part, we use our laptops simply as access points to MEGACORP services. Our phones are the same way. These services are amazing and convenient. But for that convenience we’ve traded away control, ownership and privacy. The way we live our digital lives is completely out of our hands. 
+For the most part, we use our laptops simply as access points to MEGACORP services. Our phones are the same. These services are amazing and convenient. But for that convenience we’ve traded away control, ownership and privacy. The way we live our digital lives is completely out of our hands. 
 
 ![](https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png)
 
-Today’s MEGACORP monopolies retain their control because of one central technical advantage: they make the server side usable. In exchange, they mine your data.
+Today’s MEGACORP monopolies retain their control because of one central technical advantage: they make the server side usable. 
 
-Urbit OS is built to break these monopolies at this central point of control. Urbit OS makes the server side usable for individuals and cuts out the MEGACORP.
+Urbit OS is built to break these monopolies at this central point of control. Urbit OS makes the server side usable for individuals without the need for MEGACORP to run their software. 
 
-In 1974 a computer was the size of a room and was shared by hundreds of people. By 1984 a computer was the size of a desk and everyone had their own. With the rise of the internet, the PC has slowly become irrelevant. 
+We’ve already been through this before. In 1974 a computer was a mainframe the size of a room and was shared by hundreds of people. By 1984 a computer was the size of a desk and everyone had their own PC. The PC was more flexible and more fun, so it won by a wide margin. Then, with the rise of the internet, the PC’s flexibility slowly became irrelevant. 
 
-Today, MEGACORP runs giant server farms that everyone shares. We’re basically back to the timesharing model of the 70s. If everyone had their own Urbit OS we could talk directly to one another, shape our communities and explore what networked, multiplayer computing should look like.
+Today, we’re more or less back to the timesharing model of the 1970s. Urbit OS is the PC to MEGACORP’s mainframe. It’s more flexible, more fun, and most of all, poised to capture the everyday creativity of the individual.
 
 Let’s talk about how we think we’re going to pull this off from a technical standpoint, and our vision for using Urbit. 
 
-If you’d like to skip ahead to exactly what Urbit will be like to use [go ahead](). Or if you’re someone who just wants to head to the source, [it’s here](). In that case you may also want to [read the docs]() to get up and running.
+If you’d like to skip ahead to what Urbit will be like to use [go ahead](/understanding-urbit/urbitos1-osn). Or if you’re someone who just wants to head to the source, [it’s here](https://github.com/urbit/urbit#urbit). In that case you may also want to [read the docs](https://urbit.org/docs/) to get up and running.
 
 ![](https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png)
 
@@ -49,10 +49,45 @@ This sounds like a lot — but the whole stack is incredibly compact. The whole 
 
 But why did we build all this technology? 
 
-First and foremost, to deliver a better user experience. Urbit OS alone is just a new layer for personal computing in the cloud. But with this new layer we open up the possibility of building a completely unified interface for people to compute in the cloud. (If you’d like to skip to how we envision that interface [go for it]().)
+First and foremost, to deliver a better user experience. Urbit OS alone is just a new layer for personal computing in the cloud. But with this new layer we open up the possibility of building a completely unified interface for people to compute in the cloud. (If you’d like to skip to how we envision that interface [go for it](/understanding-urbit/urbitos1-osn).)
 
-From a broader perspective, it’s clear that connected computing is important, and here to stay. We just want it to be as calm, simple and reliable as possible. And we think it’s impossible to get there using existing technology. 
+From a broader perspective, it’s clear that connected computing is important and that it’s here to stay. We just want it to be as calm, simple and reliable as possible, and we don’t think can happen using existing technology. 
 
 All of Urbit is built to function as a single stack, and we think that building a useful product is the best way to mature the system as a whole. That said, each component of this system can be used on its own. Don’t like our client? That’s okay, you can build your own. Don’t want to use Urbit OS? No problem — you can use Urbit ID as an authentication system for some other OS, or for anything, really. 
 
 Speaking of Urbit ID, let’s talk about what that actually is.
+
+<iframe name="nothing" style="display:none;"></iframe>
+<p class="mt5">If you’d like to follow our progress, we send monthly updates via email:</p>
+<form
+action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;amp;id=be143888d2"
+method="post"
+id="mc-embedded-subscribe-form"
+name="mc-embedded-subscribe-form"
+class="validate form"
+target="_blank"
+novalidate>
+<div class="input-group" id="mc_embed_signup_scroll">
+    <div class="mc-field-group w-100 relative">
+    <input
+        class="bg-white black b--black ba pa3 w-100 mb2 br0 wk-appearance-none"
+        type="email"
+        name="EMAIL"
+        id="mce-EMAIL"
+        placeholder="your@email.com"/>
+    <button
+        id="mc-embedded-subscribe"
+        class="dib bn absolute bg-transparent"
+        style="font-family: 'Inter UI', san-serif; right: 3px; top: 15px; -webkit-appearance: none;"
+        type="submit"
+        name="subscribe"
+        onclick="_paq.push(['trackEvent', 'Mailing List', 'Subscribe'])">
+        <span class="fr pr1">-></span>
+    </button>
+    </div>
+</div>
+</form>
+
+You can also follow us on [Twitter](https://twitter.com/urbit) or [GitHub](https://github.com/urbit).
+
+Or, preferably, on Urbit itself in `~dopzod/urbit-help`
