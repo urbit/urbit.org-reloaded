@@ -73,7 +73,7 @@
     {% for directorypage in posts.pages | slice (end=1) %}
     <a href="{{directorypage.permalink}}">
       <nav class="previous absolute right-2 t-right">
-        <p data-flat="true" class="mt5 mb6">{{directorypage.title}}</p>
+        <p data-flat="true" class="mt5 relative mb6">{{directorypage.title}}</p>
       </nav>
     </a>
     {% endfor %}
