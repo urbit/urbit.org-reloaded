@@ -48,7 +48,7 @@ For example, parents might give their young children an Urbit that’s locked, a
 
 A broader group of siblings, parents and grandparents might create a group with a few more modules to share photos, chat and coordinate events.
 
-A new tenant in a building could use an Urbit workspace to lock and unlock doors, pay their utilities and rent, and communicate with the landlord. The building owner could use an urbit workspace to keep up with all her tenants, accept rent payments, check on critical building systems and communicate with subcontractors.
+A new tenant in a building could use an Urbit workspace to lock and unlock doors, pay their utilities and rent, and communicate with the landlord. The building owner could use an Urbit workspace to keep up with all her tenants, accept rent payments, check on critical building systems and communicate with subcontractors.
 
 This model provides for unending possible combinations for ordinary users, without increasing complexity for developers. It’s clear to us what this can look like in the short term. What the zoomers will do with it is beyond our imagination.
 
