@@ -996,6 +996,13 @@ var glossary = [
     "desc": "A virtualization tool whose primary purpose is testing and development."
   },
   {
+    "name": "arm",
+    "symbol": "",
+    "usage": "arm",
+    "link": "/docs/glossary/arm/",
+    "desc": "A Hoon expression encoded as a noun. Part of a core."
+  },
+  {
     "name": "arvo",
     "symbol": "",
     "usage": "Arvo",
@@ -1022,6 +1029,13 @@ var glossary = [
     "usage": "arvo",
     "link": "/docs/glossary/behn/",
     "desc": "Timing vane of Arvo. Allows for applications to schedule events."
+  },
+  {
+    "name": "battery",
+    "symbol": "",
+    "usage": "battery",
+    "link": "/docs/glossary/battery/",
+    "desc": "A collection of Hoon expressions stored at the head of a core."
   },
   {
     "name": "bridge",
@@ -1073,6 +1087,13 @@ var glossary = [
     "desc": "A type of ship on the Urbit network."
   },
   {
+    "name": "core",
+    "symbol": "",
+    "usage": "core",
+    "link": "/docs/glossary/core/",
+    "desc": "A cell of battery and payload."
+  },
+  {
     "name": "delegated sending",
     "symbol": "",
     "usage": "azimuth",
@@ -1099,6 +1120,13 @@ var glossary = [
     "usage": "azimuth",
     "link": "/docs/glossary/docvote/",
     "desc": "A voting action taken by the Galactic Senate over Azimuth."
+  },
+  {
+    "name": "door",
+    "symbol": "",
+    "usage": "door",
+    "link": "/docs/glossary/door/",
+    "desc": "A core the payload of which is a cell of sample and context."
   },
   {
     "name": "ecliptic",
@@ -1141,6 +1169,13 @@ var glossary = [
     "usage": "arvo",
     "link": "/docs/glossary/gall/",
     "desc": "The application-management vane of Arvo. Userspace applications are stopped, started, and sandboxed by Gall."
+  },
+  {
+    "name": "gate",
+    "symbol": "",
+    "usage": "gate",
+    "link": "/docs/glossary/gate/",
+    "desc": "A core with one arm named $. The Hoon equivalent of a function."
   },
   {
     "name": "hall",
@@ -1234,6 +1269,13 @@ var glossary = [
     "desc": "Ships have the ability to upgrade themselves over the air. They receive updates from a sponsor star or galaxy."
   },
   {
+    "name": "payload",
+    "symbol": "",
+    "usage": "payload",
+    "link": "/docs/glossary/payload/",
+    "desc": "The set of data needed to run computations in a core."
+  },
+  {
     "name": "pH",
     "symbol": "",
     "usage": "arvo",
@@ -1261,6 +1303,7 @@ var glossary = [
     "link": "/docs/glossary/proxies/",
     "desc": "Ethereum addresses in the Urbit HD Wallet that have limited powers."
   },
+    
   {
     "name": "replay",
     "symbol": "",
@@ -1274,6 +1317,13 @@ var glossary = [
     "usage": "arvo",
     "link": "/docs/glossary/sailudon",
     "desc": "A domain specific language for Hoon. Expresses XML data structures to render webpages."
+  },
+  {
+    "name": "trap",
+    "symbol": "",
+    "usage": "trap",
+    "link": "/docs/glossary/trap/",
+    "desc": "A core with one arm named $ and no sample."
   },
   {
     "name": "udon",
