@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 
-{% block title %} 
-  <meta name="og:title" content="Blog - {{ config.title }}">
-  <title>Blog - {{ config.title }}</title>
+{% block title %}
+<meta name="og:title" content="Blog - {{ config.title }}">
+<title>Blog - {{ config.title }}</title>
 {% endblock title %}
 
-{% block description %} 
-  <meta name="og:description" content="Directory for the Urbit Blog.">
-  <meta name="description" content="Directory for the Urbit Blog.">
+{% block description %}
+<meta name="og:description" content="Directory for the Urbit Blog.">
+<meta name="description" content="Directory for the Urbit Blog.">
 {% endblock description %}
 
 {% block image %}
-  <meta name="twitter:image" content="https://media.urbit.org/logo/urbit-logo-card.png">
+<meta name="twitter:image" content="https://media.urbit.org/logo/urbit-logo-card.png">
 {% endblock image %}
 
 {% block content %}
@@ -29,14 +29,19 @@
   <ul class="posts measure-wide">
     {% set posts = get_section(path="blog/_index.md") %}
     {% for page in posts.pages %}
-    <li class="mb4">
-      <h2 class="f5 fw6 mt0 mb1"><a class="bb-0" href="{{ page.permalink }}">{{ page.title }}</a></h2>
-      <p class="mt0">{{ page.description }}</p>
-      <time class="mono f6">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
-      <span class="mono f6">
-        {% if page.extra.ship %}<address class="mono f6 ml2">{{ page.extra.ship }}</address> {% endif %}
-      </span>
-    </li>
+    <a class="bb-0" href="{{ page.permalink }}">
+      <li class="mb4">
+        <h2 class="f5 fw6 mt0 mb1">{{ page.title }}</h2>
+        <p class="mt0">{{ page.description }}</p>
+        {% if page.extra.image %}
+        <img class="pv2 obj-cover h5 w-100" src="{{ page.extra.image }}"/>
+        {% endif %}
+        <time class="mono f6">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
+        <span class="mono f6">
+          {% if page.extra.ship %}<address class="mono f6 ml2">{{ page.extra.ship }}</address> {% endif %}
+        </span>
+      </li>
+    </a>
     {% endfor %}
   </ul>
 </article>
