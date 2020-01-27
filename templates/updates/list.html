@@ -49,12 +49,9 @@
 
   {% endfor %}
   <h2 id="more-updates" class="mt5 mb3">More Updates</h2>
-  <ul class="posts">
+  <ul class="posts update">
   {% for page in posts.pages | slice (start=1) %}
-    <li class="mb4 mt4">
-      <!-- <h2 class="f5 fw6">
-        <a class="bb0" href="{{ page.permalink }}">{{ page.title }}</a>
-      </h2> -->
+    <li>
       <a class="bb0" href="{{ page.permalink }}">
         <p class="mv2">{{ page.description }}</p>
       </a>
