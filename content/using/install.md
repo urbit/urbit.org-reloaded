@@ -47,6 +47,7 @@ We provide static binaries for macOS. You can grab the latest stable release as 
 ```sh
 curl -O https://bootstrap.urbit.org/urbit-darwin-v0.10.3.tgz
 tar xzf urbit-darwin-v0.10.3.tgz
+cd urbit-darwin-v0.10.3
 ./urbit
 ```
 
@@ -57,6 +58,7 @@ We also provide static binaries for 64-bit Linux distributions (Ubuntu, Debian, 
 ```sh
 curl -O https://bootstrap.urbit.org/urbit-linux64-v0.10.3.tgz
 tar xzf urbit-linux64-v0.10.3.tgz
+cd urbit-linux64-v0.10.3
 ./urbit
 ```
 
