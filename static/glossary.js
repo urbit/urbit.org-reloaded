@@ -57,6 +57,13 @@ var glossary = [
     "desc": "<code>[%zpgr p=hoon]</code>: wrap a noun in its type."
   },
   {
+    "name": "zapgal",
+    "symbol": "!<",
+    "usage": "wild",
+    "link": "/docs/reference/hoon-expressions/rune/zap/#zapgal",
+    "desc": "<code>[%zpld p=spec q=hoon]</code>: extracts typed value from a vase."
+  },
+  {
     "name": "zapcol",
     "symbol": "!:",
     "usage": "wild",
