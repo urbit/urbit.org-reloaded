@@ -197,7 +197,7 @@ body.essay {
         }
     }
 
-    h2 {
+    h2:not(:first-of-type) {
       margin-top: 4rem;
     }
 
