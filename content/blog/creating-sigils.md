@@ -50,7 +50,7 @@ We also spent a good amount of time with both Anni Albers and Agnes Martin. Both
 
 <iframe class="arena-iframe" width="100%" src="https://www.are.na/tlon/stella-xfroicotm_4/embed"></iframe>
 
-Frank Stella is a master at producing incredibly dynamic work from only a few elements. His ability to create a sense of depth from only a few overlapping elements is fantastic.
+Frank Stella is a master at producing incredibly dynamic work from only a few elements. His ability to create a sense of depth from simple overlapping elements is fantastic.
 
 <br /><br />
 
