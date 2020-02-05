@@ -4,7 +4,6 @@ description = "On the governance of the project, including both the senate of ga
 aliases = ["/governance"]
 weight = 4
 [extra]
-hidetitle = "true"
 hideprevious = "true"
 hidenext = "true"
 +++
@@ -19,8 +18,8 @@ In a similar process, document hashes can be proposed. While their off-chain doc
 
 For off-chain process around proposals, as suggested by core developers, please see [senate.md](https://github.com/urbit/azimuth/blob/master/senate.md).
 
-The group of core developers manages Urbit’s [GitHub repository](https://github.com/urbit/), which controls Arvo, Urbit’s operating system. Changes and upgrades are decided upon by consensus. 
+The group of core developers manages Urbit’s [GitHub repository](https://github.com/urbit/), which controls Arvo, Urbit’s operating system. Changes and upgrades are decided upon by consensus.
 
-You can participate in the governance of the senate by acquiring a galaxy. If you would like to be involved with the governance of Arvo, check out our [developer guide](@/using/develop.md) to learn how you can contribute to core development. 
+You can participate in the governance of the senate by acquiring a galaxy. If you would like to be involved with the governance of Arvo, check out our [developer guide](@/using/develop.md) to learn how you can contribute to core development.
 
 
