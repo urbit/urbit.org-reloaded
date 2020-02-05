@@ -10,17 +10,17 @@ image ="https://media.urbit.org/site/posts/essays/sigils3.png"
 
 <!-- ![](https://media.urbit.org/site/blog-9.jpg) -->
 
-One of the basic building blocks of Urbit is Urbit ID, our naming and identity system. Your Urbit ID is a short, recognizable name that’s also a network address for your Urbit OS instance. (You can find a complete, high level description of Urbit ID [here](https://urbit.org/understanding-urbit/urbit-id/)).
+One of the basic building blocks of Urbit is Urbit ID, our naming and identity system. Your Urbit ID is a short, recognizable name that’s also a network address for your Urbit OS instance. (You can find a complete, high level description of Urbit ID [here](https://urbit.org/understanding-urbit/urbit-id/).)
 
-Your Urbit ID is meant to feel a bit like a secret code name. It doesn’t leak any information about the real you — but it’s still memorable and recognizable. Getting an Urbit Id should feel exciting, like getting a brand new identity in a new world.
+Your Urbit ID is meant to feel a bit like a secret code name. It doesn’t leak any information about the real you — but it’s still memorable and recognizable. Getting an Urbit ID should feel exciting, like getting a brand new identity in a new world.
 
 From a design standpoint, some of this is accomplished simply by having a system for the names themselves. Under the hood, Urbit IDs are actually just numbers. There has always been an algorithm for turning these numbers into pronounceable names like `~tacryt-socryp` (13,304,832) or `~litzod` (1,280) or `~nes` (212).
 
 While the names are great, they’re not quite enough. Especially in a rich interface. Each Urbit ID really needed some form of visual representation, image, or crest. A digital identity needs to be something you can really attach to, both yours and those that belong to your friends.
 
-There are 2^32 or 4.2 billion unique Urbit IDs. Clearly there’s no way that we were going to do this by hand. And purely algorithmic solutions can often produce disappointing, undifferentiated output.
+There are 2<sup>32</sup> or 4.2 billion unique Urbit IDs. Clearly there’s no way that we were going to do this by hand. And purely algorithmic solutions can often produce disappointing, undifferentiated output.
 
-Regardless, we set out to tackle this problem. In the end, every Urbit ID got its very own ‘sigil’.
+Regardless, we set out to tackle this problem. In the end, every Urbit ID got its very own ‘sigil.’
 
 In this post we’ll walk through how we thought about the problem, iterated through possible solutions, and the toolchain we used to arrive at the final result.
 
@@ -64,7 +64,7 @@ The plans of both Ledoux and Palladio are incredibly dynamic. They’re mostly g
 
 Another influence: international maritime signal flags. We like these not only because of their striking visual qualities, but also because they correspond with a letter system, just like our sigils. Each one conveys useful information; for example, “Keep clear of me; I am maneuvering with difficulty,” a flag we all feel like raising from time to time. This influence was key to the idea that pairing symbol to phoneme was a possibility.
 
-You can see the whole collection of our visual research here: [https://www.are.na/tlon/2019-sigils-research](https://www.are.na/tlon/2019-sigils-research)
+You can see the whole collection of our visual research [here](https://www.are.na/tlon/2019-sigils-research).
 
 Ultimately, we didn’t specifically draw on any of these influences very consciously. The goal of visual research is to get a sense of the territory, what has been tried, and what works. We think these threads of prior work are evident in the final result — you can *feel* them, but it’s tough to point to them individually.
 
@@ -72,13 +72,13 @@ Ultimately, we didn’t specifically draw on any of these influences very consci
 
 > *“Lev’s sigil appeared, strobing, as Netherton was getting out of the cab in Henrietta Street. “Yes?” Netherton asked.”*
 >
-> — William Gibson, The Peripheral
+> <cite>— William Gibson, The Peripheral</cite>
 
 Before we get to how we worked through the problem of actually designing these things, let’s talk about the problem of naming.
 
 We went through so many names for these things. Crest, symbol, seal, tag, pictograph, stamp, emblem, signet, icon, glyph, holomark, visage, radigy, pattern, the list goes on for an incredibly (embarrassingly) long time. We argued about this, we went back and forth about it.
 
-Sigil won, ultimately, because of the way that it’s personified in William Gibson’s The Peripheral. In the far future characters talk to each other by some kind of telepresence. When a call comes in from someone else they first appear as a ‘sigil’. It’s a strange word, but we were imagining a similar use-case.
+Sigil won, ultimately, because of the way that it’s personified in William Gibson’s *The Peripheral*. In the far future, characters talk to each other by some kind of telepresence. When a call comes in from someone else, they first appear as a ‘sigil.’ It’s a strange word, but we were imagining a similar use-case.
 
 While we can’t point to any specific parts of our visual research that reappear directly, sigil is lovingly borrowed.
 

@@ -22,4 +22,4 @@ Hoon 101 is a six-week, introductory-level course. It’s appropriate for motiva
 
 We're in the process of designing advanced Hoon Courses, but they aren't ready yet. They'll cover advanced development with Hoon, such as app development, kernel development, and the details of the Hoon type system. Such classes will be appropriate for graduates of Hoon 101. Check back later if you're interested in enrolling.
 
-<iframe id="apply" src="https://docs.google.com/forms/d/e/1FAIpQLSdcEoEqpFvB1WCTKPaYUSbJcjQ2nHk_z4XcZPIQc0SFD1rgmA/viewform?embedded=true" width="640" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<iframe id="apply" src="https://docs.google.com/forms/d/e/1FAIpQLSdcEoEqpFvB1WCTKPaYUSbJcjQ2nHk_z4XcZPIQc0SFD1rgmA/viewform?embedded=true" width="640" height="1350" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>

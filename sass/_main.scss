@@ -173,7 +173,6 @@ footer nav {
 
 body.essay {
     h1 {
-        font-size: 1rem;
         max-width: 95vw;
     }
     &:not(.bg-white) {
@@ -197,13 +196,25 @@ body.essay {
         }
     }
 
-    h2:not(:first-of-type) {
+    h2 {
       margin-top: 4rem;
     }
 
     img {
         display: block;
-        // margin: 0 auto;
+    }
+    div.footnote-definition {
+      &[id="0"] {
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px solid black;
+      }
+      p {
+        display: inline;
+      }
+      &:not([id="0"]) {
+        margin: 2rem 0;
+      }
     }
 }
 
@@ -225,6 +236,17 @@ ul p {
 figure {
     margin: 0;
 }
+    // blockquote reset
+blockquote {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  margin-bottom: 2rem;
+  cite {
+    font-style: normal;
+  }
+}
 
     // images for posts
 img {
@@ -237,13 +259,6 @@ h1, h2, h3, h4, h5 {
     margin-block-end: 0;
     @extend .fw6;
     font-size: 1rem;
-}
-
-h1, .f1 {
-    @extend .lh-solid;
-}
-
-h2, .f2, h3, .f3 {
     @extend .lh-title;
 }
 

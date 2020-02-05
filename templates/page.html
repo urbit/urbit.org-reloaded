@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %} 
+{% block title %}
   <meta name="og:title" content="{{ page.title }} - {{ config.title }}">
   <title>{{ page.title }} - {{ config.title }}</title>
 {% endblock title %}
@@ -22,6 +22,9 @@
     <meta name="twitter:image" content="https://media.urbit.org/logo/urbit-logo-card.png">
   {% endif %}
 {% endblock image %}
+{% block bodyclasses %}
+class="essay bg-white"
+{% endblock bodyclasses %}
 
 {% block content %}
 
