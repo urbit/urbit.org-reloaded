@@ -153,7 +153,7 @@ The final step, using the tool we built, was to hand select individual phoneme s
 
 <br /><br />
 
-![](https://media.urbit.org/site/posts/essays/sigils8-cropped.jpg)
+![](https://media.urbit.org/site/posts/essays/sigils8-square-v2.png)
 
 This allowed us to start looking at possible combinations and selecting phoneme symbols based on their interplay with others.
 
