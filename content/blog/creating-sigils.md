@@ -10,9 +10,9 @@ image ="https://media.urbit.org/site/blog-9.jpg"
 
 <!-- ![](https://media.urbit.org/site/blog-9.jpg) -->
 
-One of the basic building blocks of Urbit is Urbit ID, our naming and identity system. Your Urbit ID is a short, recognisable name that’s also a network address for your Urbit OS instance. (You can find a complete, high level description of Urbit ID [here](https://urbit.org/understanding-urbit/urbit-id/)).
+One of the basic building blocks of Urbit is Urbit ID, our naming and identity system. Your Urbit ID is a short, recognizable name that’s also a network address for your Urbit OS instance. (You can find a complete, high level description of Urbit ID [here](https://urbit.org/understanding-urbit/urbit-id/)).
 
-Your Urbit ID is meant to feel a bit like a secret code name. It doesn’t leak any information about the real you — but it’s still memorable and recognisable. Getting an Urbit Id should feel exciting, like getting a brand new identity in a new world.
+Your Urbit ID is meant to feel a bit like a secret code name. It doesn’t leak any information about the real you — but it’s still memorable and recognizable. Getting an Urbit Id should feel exciting, like getting a brand new identity in a new world.
 
 From a design standpoint, some of this is accomplished simply by having a system for the names themselves. Under the hood, Urbit IDs are actually just numbers. There has always been an algorithm for turning these numbers into pronounceable names like `~tacryt-socryp` (13,304,832) or `~litzod` (1,280) or `~nes` (212).
 
@@ -66,7 +66,7 @@ Another influence: international maritime signal flags. We like these not only b
 
 You can see the whole collection of our visual research here: [https://www.are.na/tlon/2019-sigils-research](https://www.are.na/tlon/2019-sigils-research)
 
-We didn’t specifically draw on any of these influences very consciously at the end of the day. The goal of visual research is to get a sense of the territory, what has been tried, and what works. We think these threads of prior work are evident in the final result — you can *feel* them, but it’s tough to point to them individually.
+Ultimately, we didn’t specifically draw on any of these influences very consciously. The goal of visual research is to get a sense of the territory, what has been tried, and what works. We think these threads of prior work are evident in the final result — you can *feel* them, but it’s tough to point to them individually.
 
 ## What’s in a name
 
@@ -78,7 +78,7 @@ Before we get to how we worked through the problem of actually designing these t
 
 We went through so many names for these things. Crest, symbol, seal, tag, pictograph, stamp, emblem, signet, icon, glyph, holomark, visage, radigy, pattern, the list goes on for an incredibly (embarrassingly) long time. We argued about this, we went back and forth about it.
 
-Sigil won, ultimately, because of the way that it’s personified in William Gibson’s The Peripheral. In the far future characters talk to each other by some kind of telepresence. When a call comes in from someone else they first appear as a ‘sigil’. It’s a strange word, but we were imagining the exact same use-case.
+Sigil won, ultimately, because of the way that it’s personified in William Gibson’s The Peripheral. In the far future characters talk to each other by some kind of telepresence. When a call comes in from someone else they first appear as a ‘sigil’. It’s a strange word, but we were imagining a similar use-case.
 
 While we can’t point to any specific parts of our visual research that reappear directly, sigil is lovingly borrowed.
 
@@ -116,7 +116,7 @@ Thinking in terms of syllables greatly reduced the complexity of the problem, bu
 
 At first, we thought about using a 4 x 4 tile grid, as shown here. These designs were tricky to implement because of the detailed lines and arcs spanning across individual tiles. In order to generate a result that matched these mockups, a program would have to generate a data model that knew about which tiles touched which other tiles.
 
-We felt this was too complicated and had an unknown performance profile because we predicted that a tiling algorithm would need to be used. Plus, they proposed a deterministic color scheme and we felt strongly that color is personal — in the end we thought it better to create something that had the potential for user customization.
+We felt this was too complicated and had an unknown performance profile. Plus, they proposed a deterministic color scheme and we felt strongly that color is personal, not to mention hard. In the end we thought it better to create something that had the potential for user customization.
 
 <br /><br />
 
@@ -152,14 +152,12 @@ The final step, using the tool we built, was to hand select individual phoneme s
 
 This allowed us to start looking at possible combinations and selecting phoneme symbols based on their interplay with others.
 
-Once we had selected the final set, we went about compiling the sigil-js library that’s now publicly available. This turned out to be pretty technically complex — but the end result is a single js library that you can use to embed an SVG in almost any context on a web page. It’s called sigil-js, and you can find it [here](https://github.com/urbit/sigil-js). You can also see it in action and browse the available sigils [here](https://urbit.live/explore).
+Once we had selected the final set, we went about compiling the `sigil-js` library that’s now publicly available. This turned out to be fairly technically complex due to the different ways SVG is handled between browsers and Figma — but the end result is a single Javascript library you can use to embed an SVG in almost any context on a web page. See it in action and browse the available sigils [here](https://urbit.live/explore). If you're technically inclined, the [source](https://github.com/urbit/sigil-js) can be found on Github.
 
 <br /><br />
 
 ![](https://media.urbit.org/site/posts/essays/sigils9.png)
 
-We think the sigils are pretty successful. They look pretty nice in our native Urbit interfaces, people have made them into shirts and posters and cards, even laser-cut them to make stamps.
+We think sigils are pretty successful. They look nice in our native Urbit interfaces, people have made them into shirts and posters and cards, even laser-cut them to make stamps.
 
 Urbit ID and the sigils are components of Urbit that are totally separate from the OS — you can use them on their own and potentially even extend their functionality. We’re happy with what we’ve done with them so far, and hope that people will experiment with what’s possible with this naming and identity system as time goes on.
-
-Once your Urbit is actually simulating your entire physical experience, you can expect to see sigils appear in your field of view when someone calls you. Surely that can’t be too far away!
