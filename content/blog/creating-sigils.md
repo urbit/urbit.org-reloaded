@@ -68,7 +68,7 @@ You can see the whole collection of our visual research here: [https://www.are.n
 
 We didn’t specifically draw on any of these influences very consciously at the end of the day. The goal of visual research is to get a sense of the territory, what has been tried, and what works. We think these threads of prior work are evident in the final result — you can *feel* them, but it’s tough to point to them individually.
 
-## What’s in a name
+## What’s in a name?
 
 > *“Lev’s sigil appeared, strobing, as Netherton was getting out of the cab in Henrietta Street. “Yes?” Netherton asked.”*
 >
@@ -148,11 +148,11 @@ The final step, using the tool we built, was to hand select individual phoneme s
 
 <br /><br />
 
-![](https://media.urbit.org/site/posts/essays/sigils8.jpg)
+![](https://media.urbit.org/site/posts/essays/sigils8-cropped.jpg)
 
 This allowed us to start looking at possible combinations and selecting phoneme symbols based on their interplay with others.
 
-Once we had selected the final set, we went about compiling the sigil-js library that’s now publicly available. This turned out to be pretty technically complex — but the end result is a single js library that you can use to embed an SVG in almost any context on a web page. It’s called sigil-js, and you can find it [here](https://github.com/urbit/sigil-js). You can also see it in action and browse the available sigils [here](https://urbit.live/explore).
+Once we had selected the final set, we went about compiling the sigil-js library that’s now publicly available. This turned out to be pretty technically complex — but the end result is a single js library that you can use to embed an SVG in almost any context on a web page. It’s called sigil-js, and you can find it [here](https://github.com/urbit/sigil-js). You can also see it in action and browse the available sigils [here](https://sigil.azimuth.network).
 
 <br /><br />
 
