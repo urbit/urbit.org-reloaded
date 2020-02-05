@@ -196,6 +196,11 @@ body.essay {
             color: black;
         }
     }
+
+    h2:not(:first-of-type) {
+      margin-top: 4rem;
+    }
+
     img {
         display: block;
         // margin: 0 auto;
@@ -561,6 +566,14 @@ nav.docs details {
         display: inline-block;
         transform: rotate(-90deg);
     }
+}
+
+// are.na embeds
+
+iframe.arena-iframe {
+  border: 0;
+  min-height: 300px;
+  width: 100%;
 }
 
 // youtube
