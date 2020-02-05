@@ -1,11 +1,11 @@
 +++
 title = "Creating Sigils"
 date = 2020-02-04
-description = "TBD"
+description = "The origin and design process informing Urbit's generative user avatar system, Sigils."
 [extra]
 author = "Gavin Atkinson"
 ship = "~ridlur-figbud"
-image ="https://media.urbit.org/site/blog-9.jpg"
+image ="https://media.urbit.org/site/posts/essays/sigils3.png"
 +++
 
 <!-- ![](https://media.urbit.org/site/blog-9.jpg) -->
