@@ -9,6 +9,7 @@ image ="https://media.urbit.org/site/posts/essays/sigils3.png"
 +++
 
 <!-- ![](https://media.urbit.org/site/blog-9.jpg) -->
+![](https://media.urbit.org/site/posts/essays/sigils0-v3.png)
 
 One of the basic building blocks of Urbit is Urbit ID, our naming and identity system. Your Urbit ID is a short, recognizable name that’s also a network address for your Urbit OS instance. (You can find a complete, high level description of Urbit ID [here](https://urbit.org/understanding-urbit/urbit-id/).)
 
@@ -16,17 +17,17 @@ Your Urbit ID is meant to feel a bit like a secret code name. It doesn’t leak 
 
 From a design standpoint, some of this is accomplished simply by having a system for the names themselves. Under the hood, Urbit IDs are actually just numbers. There has always been an algorithm for turning these numbers into pronounceable names like `~tacryt-socryp` (13,304,832) or `~litzod` (1,280) or `~nes` (212).
 
-While the names are great, they’re not quite enough. Especially in a rich interface. Each Urbit ID really needed some form of visual representation, image, or crest. A digital identity needs to be something you can really attach to, both yours and those that belong to your friends.
+While the names are great, they’re not quite enough, especially in a rich interface. Each Urbit ID really needed some form of visual representation, image, or crest. A digital identity needs to be something you can really attach to, both yours and those that belong to your friends.
 
 There are 2<sup>32</sup> or 4.2 billion unique Urbit IDs. Clearly there’s no way that we were going to do this by hand. And purely algorithmic solutions can often produce disappointing, undifferentiated output.
 
-Regardless, we set out to tackle this problem. In the end, every Urbit ID got its very own ‘sigil.’
+Regardless, we set out to tackle this problem. By the end of this process, every Urbit ID got its very own ‘sigil.’
 
 In this post we’ll walk through how we thought about the problem, iterated through possible solutions, and the toolchain we used to arrive at the final result.
 
 ## Background
 
-What are the basic primitives of visual language? There aren’t any completely authoritative answers to this question, of course. But we knew, at first, that to produce such a large number of visually distinct items we’d need some way to reason about form that’s closer to letterforms.
+What are the basic primitives of a visual language? There aren’t any completely authoritative answers to this question, of course. But we knew that to produce such a large number of visually distinct items we’d need some way to reason about form that’s closer to letterforms.
 
 So we started by collecting influences.
 
@@ -90,17 +91,17 @@ We iterated through plenty of possibilities before landing on our final approach
 
 <br /><br />
 
-![](https://media.urbit.org/site/posts/essays/sigils1.png)
+![](https://media.urbit.org/site/posts/essays/sigils1-v2.png)
 
-The first attempt was a series of images in the style of Karel Martens. Overall this technique was just too cluttered and difficult to parameterize in a predictable way. We kept iterating.
+The first attempt was a series of images in the style of Karel Martens. Overall this technique was just too cluttered and sometimes difficult to parameterize in a predictable way. We kept iterating.
 
 <br /><br />
 
-![](https://media.urbit.org/site/posts/essays/sigils2.png)
+![](https://media.urbit.org/site/posts/essays/sigils2-v2.png)
 
-Just like the previous example, the main idea was that we could take a set of geometric primitives and combine them, but alter their appearance along a set of parameters, like color, rotation, and size.
+Just like the previous example, the main idea was that we could take a set of geometric primitives, combine them, then alter their appearance along a set of parameters, like color, rotation, and size.
 
-But also just like the previous attempt, the technique of overlapping symbols made the images too difficult to read and differentiate. We wanted to create sigils that were not just great to look at, but visually ordered. Since overlapping elements didn’t seem to quite hit the mark, on we went.
+But also just like the previous attempt, the technique of overlapping symbols made the images too difficult to read and differentiate. We wanted to create sigils that were not only great to look at, but visually ordered. Since overlapping elements didn’t seem to quite hit the mark, on we went.
 
 ## Closing in
 
@@ -112,29 +113,33 @@ Thinking in terms of syllables greatly reduced the complexity of the problem, bu
 
 <br /><br />
 
-![](https://media.urbit.org/site/posts/essays/sigils3.png)
+![](https://media.urbit.org/site/posts/essays/sigils3-v2.png)
 
 At first, we thought about using a 4 x 4 tile grid, as shown here. These designs were tricky to implement because of the detailed lines and arcs spanning across individual tiles. In order to generate a result that matched these mockups, a program would have to generate a data model that knew about which tiles touched which other tiles.
 
-We felt this was too complicated and had an unknown performance profile. Plus, they proposed a deterministic color scheme and we felt strongly that color is personal, not to mention hard. In the end we thought it better to create something that had the potential for user customization.
+We felt this was too complicated and had an unknown performance profile. Plus, they proposed a deterministic color scheme and we felt strongly that color is personal, not to mention hard to parameterize. In the end we thought it better to create something that had the potential for user customization.
 
 <br /><br />
 
-![](https://media.urbit.org/site/posts/essays/sigils4.png)
+![](https://media.urbit.org/site/posts/essays/sigils4-v2.png)
 
 Around this stage, we were thinking a lot about how architectural plans aren’t unduly constrained by the fact that they’re only one color. We had a feeling we could make the grid smaller and assign details to the tiles individually.
 
-So, we scaled it down to a 2 x 2 grid and stuck with it. It’s simple to implement, visually unique, consistent, and the color scheme is black and white so users can customize their sigil. Not a bad start. Now all we had to do was manually draw 512 unique but consistent individual ‘phonemes’.
+<br /><br />
+
+![](https://media.urbit.org/site/posts/essays/sigils10-v3.png)
+
+So, we scaled it down to a 2 x 2 grid and stuck with it. It’s simple to implement, visually unique, consistent, and the color scheme is black and white, leaving room for user customization. We felt we had reached a semblance of a final result. Now all we had to do was manually draw 512 unique but consistent individual ‘phonemes’.
 
 <br /><br />
 
-![](https://media.urbit.org/site/posts/essays/sigils5.png)
+![](https://media.urbit.org/site/posts/essays/sigils5-v2.png)
 
-As it turns out, drawing 512 consistent, abstract elements by hand isn’t easy. We had to strike a balance between authorship and automation — we wanted each tile to look well-made, but not too authored. To do so, we turned to Figma’s web API which helped us design in SVG but iterate programmatically.
+As it turns out, drawing 512 consistent, abstract elements by hand isn’t easy. We had to strike a balance between authorship and automation — we wanted each tile to look well-made, but not too authored. To do so, we took advantage of Figma’s web API which helped us design in SVG but iterate programmatically.
 
-## Final Process
+## Final process
 
-![](https://media.urbit.org/site/posts/essays/sigils6.png)
+![](https://media.urbit.org/site/posts/essays/sigils6-v4.png)
 
 We took a look at our hand drawn mockups and drew each individual visual building block of the tiles separately. Then we loaded the SVG elements into a script that programmatically combined them to create trillions of layered symbols. This way, we were able to easily select candidate phoneme symbols that worked visually.
 
@@ -142,13 +147,13 @@ We eventually added a rule system to find higher quality phoneme symbols — but
 
 <br /><br />
 
-![](https://media.urbit.org/site/posts/essays/sigils7.png)
+![](https://media.urbit.org/site/posts/essays/sigils7-v2.png)
 
 The final step, using the tool we built, was to hand select individual phoneme symbols and create a complete index.
 
 <br /><br />
 
-![](https://media.urbit.org/site/posts/essays/sigils8-cropped.jpg)
+![](https://media.urbit.org/site/posts/essays/sigils8-square-v2.png)
 
 This allowed us to start looking at possible combinations and selecting phoneme symbols based on their interplay with others.
 
@@ -160,4 +165,6 @@ Once we had selected the final set, we went about compiling the `sigil-js` libra
 
 We think sigils are pretty successful. They look nice in our native Urbit interfaces, people have made them into shirts and posters and cards, even laser-cut them to make stamps.
 
-Urbit ID and the sigils are components of Urbit that are totally separate from the OS — you can use them on their own and potentially even extend their functionality. We’re happy with what we’ve done with them so far, and hope that people will experiment with what’s possible with this naming and identity system as time goes on.
+Urbit ID and the sigils are components of Urbit that are totally separate from the OS — you can use them on their own and potentially even extend their functionality. We’re happy with what we’ve done with them so far, and hope that people will experiment with what’s possible with this naming and identity system.
+
+![](https://media.urbit.org/site/posts/essays/sigils11-v2.png)
