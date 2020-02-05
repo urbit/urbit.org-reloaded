@@ -69,7 +69,7 @@ You can see the whole collection of our visual research [here](https://www.are.n
 
 Ultimately, we didn’t specifically draw on any of these influences very consciously. The goal of visual research is to get a sense of the territory, what has been tried, and what works. We think these threads of prior work are evident in the final result — you can *feel* them, but it’s tough to point to them individually.
 
-## What’s in a Name?
+## What’s in a name?
 
 > *“Lev’s sigil appeared, strobing, as Netherton was getting out of the cab in Henrietta Street. “Yes?” Netherton asked.”*
 >
@@ -83,7 +83,7 @@ Sigil won, ultimately, because of the way that it’s personified in William Gib
 
 While we can’t point to any specific parts of our visual research that reappear directly, sigil is lovingly borrowed.
 
-## Experiments + Iterations
+## Experiments + iterations
 
 So, how did we actually end up making these things?
 
@@ -137,7 +137,7 @@ So, we scaled it down to a 2 x 2 grid and stuck with it. It’s simple to implem
 
 As it turns out, drawing 512 consistent, abstract elements by hand isn’t easy. We had to strike a balance between authorship and automation — we wanted each tile to look well-made, but not too authored. To do so, we took advantage of Figma’s web API which helped us design in SVG but iterate programmatically.
 
-## Final Process
+## Final process
 
 ![](https://media.urbit.org/site/posts/essays/sigils6-v4.png)
 
