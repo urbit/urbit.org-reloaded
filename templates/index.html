@@ -50,7 +50,43 @@
   <p><strong>Urbit ID</strong> is a decentralized digital identity system. Your
   Urbit ID is a username, network address and crypto wallet designed for Urbit OS.</p>
   <p>Urbit OS + Urbit ID are designed to work together as a single system. Both are completely <a href="https://github.com/urbit/urbit">open source</a> for anyone to build on top of, play with and experiment with.</p>
-  <p>Urbit is <i>not quite</i> ready for everyday users. But if you're curious, keep going ↓</p>
+    <ul class="list">
+      <li class="mt3">
+        <a class="b--blue2 blue2 bb" href="/using/install/">Install + Setup</a>
+      </li>
+      <li class="mt3">
+        <a class="b--green2 green2 bb" href="/docs/">Documentation</a>
+      </li>
+    </ul>
+</section>
+
+
+<section class="full lh-copy c-7-12-md c7-11-lg mt4">
+  <p class="fw6">Latest Posts</p>
+  {% set s = get_section(path="updates/_index.md") %}
+  {% set e = get_section(path="blog/_index.md") %}
+  {% set allposts = s.pages
+            | concat (with=e.pages)
+            | sort(attribute="date")
+            | reverse
+            %}
+  {% for page in allposts | slice (end=2) %}
+    <a class="bb-0" href="{{ page.permalink }}">
+      <li class="mb2 list">
+        <h2 class="f5 fw6 mt0 mb1">{{ page.title }}</h2>
+        {% if page.extra.image %}
+        <img class="db pv2 obj-cover h4 w-50" src="{{ page.extra.image }}" />
+        {% endif %}
+        <time class="mono f6">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
+        <span class="mono f6">
+          {% if page.extra.ship %}
+            <address class="mono f6 mh2">{{ page.extra.ship }}</address>
+          {% endif %}
+          <a class="mono f6" href="/{{page.components[0] | lower}}">{{ page.components[0] | lower}}</a>
+        </span>
+      </li>
+    </a>
+  {% endfor %}
 </section>
 
 <section class="full c2-7-md c3-7-lg mt5">
@@ -70,44 +106,6 @@
       </a>
     </li>
     {% endfor %}
-  </ul>
-</section>
-
-<section class="full c7-12-md c7-11-lg mt5">
-  <h1 class="mb3">Developer Resources</h1>
-    <p class="lh-copy mt1">If you're someone who likes playing with experimental software, you should dive right in. Booting an Urbit takes only a few minutes.</p>
-  <ul class="list">
-    <li class="mt3">
-      <a class="b--black bb" href="/using/install/">Install + Setup</a>
-    </li>
-    <li class="mt3">
-      <a class="b--black bb" href="/docs/">Documentation</a>
-    </li>
-    <li class="mt3">
-      <a class="b--black bb" href="/community/hoonschool">Hoon School</a>
-    </li>
-    <li class="mt3">
-      <a class="b--black bb" href="https://grants.urbit.org">Developer Grants</a>
-    </li>
-  </ul>
-</section>
-
-<section class="full c2-7-md c3-7-lg mt5">
-  <h1 class="mb3">Learn More</h1>
-  <p class="lh-copy mt1">We share ongoing project developments, discuss technical considerations, and update our public roadmap as often as possible.</p>
-  <ul class="list">
-    <li class="mt3">
-      <a class="b--black bb" href="/blog">Blog</a>
-    </li>
-    <li class="mt3">
-      <a class="b--black bb" href="/updates/">Updates</a>
-    </li>
-    <li class="mt3">
-      <a class="b--black bb" href="/media">Media</a>
-    </li>
-    <li class="mt3">
-      <a class="b--black bb" href="/faq/">FAQ</a>
-    </li>
   </ul>
 </section>
 
