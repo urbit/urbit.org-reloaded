@@ -42,15 +42,12 @@
 </section>
 
 <section class="full lh-copy c2-7-md c3-7-lg mt4">
-  <p class="mb4">
-      Urbit is two new pieces of technology:<br/>
-      Urbit OS + Urbit ID.
-  </p>
-  <p><strong>Urbit OS</strong> is a clean slate reimagining of the operating system as an 'overlay OS'. It runs on any Unix machine with an internet connection. Urbit OS is a compact system for an individual to run their own permanent personal server.</p>
+  <p><strong>Urbit OS</strong> is a clean slate reimagining of the operating system as an 'overlay OS.' It runs on any Unix machine with an internet connection.</p>
+  <p>It's a compact system for an individual to run their own permanent personal server.</p>
   <p><strong>Urbit ID</strong> is a decentralized digital identity system. Your
-  Urbit ID is a username, network address and crypto wallet designed for Urbit OS.</p>
-  <p>Urbit OS + Urbit ID are designed to work together as a single system. Both are completely <a href="https://github.com/urbit/urbit">open source</a> for anyone to build on top of, play with and experiment with.</p>
-    <ul class="list">
+  Urbit ID is a username, network address, and crypto wallet.</p>
+  <p>Both are designed to work together as a single system, completely <a class="b--black bb" href="https://github.com/urbit/urbit">open source</a>.</p>
+    <ul class="list mt4">
       <li class="mt3">
         <a class="b--blue2 blue2 bb" href="/using/install/">Install + Setup</a>
       </li>
@@ -72,7 +69,7 @@
             %}
   {% for page in allposts | slice (end=2) %}
     <a class="bb-0" href="{{ page.permalink }}">
-      <li class="mb2 list">
+      <li class="mb4 list">
         <h2 class="f5 fw6 mt0 mb1">{{ page.title }}</h2>
         {% if page.extra.image %}
         <img class="db pv2 obj-cover h4 w-50" src="{{ page.extra.image }}" />
