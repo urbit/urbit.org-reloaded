@@ -8,15 +8,15 @@ ship = "~patnes-rigtyn"
 image ="https://media.urbit.org/site/posts/essays/normies-2.png"
 +++
 
-Urbit is a challenging project to fully describe because it’s an entire system rather than a single product. Often when I talk about one of the individual elements of the system, someone will tell me that another company is already building that — and they’re usually right. What sets Urbit apart is that we’re building all these elements at once to work together seamlessly.
+Urbit is a challenging project to fully describe because, rather than a singly product, it’s an entire system. Often when I talk about one of the individual elements of the system, someone will tell me that another company is already building that — and they’re usually right. What sets Urbit apart is that we’re building all these elements at once to work together seamlessly.
 
-For that reason, this overview is long. I wanted to explain as much of the system at a high level as possible; this is my attempt to share an image of the entire forest rather than spending too much time with any of the trees. 
+For that reason, this overview is long. I wanted to explain as much of the system at a high level as possible, to share an image of the entire forest rather than spending too much time on any of the trees. 
 
-My own path to Urbit was not predictable, and so it turns out I’m a useful ambassador to describe what the heck we’re doing to my fellow normies.
+My own path to Urbit was not predictable, so it turns out I’m a useful ambassador to describe what the heck we’re doing to my fellow normies.
 
-I refer to myself as a normie because I’m a lawyer by training, not the typical code-savvy early Urbit adopter. I ran a law firm for a decade, and after retiring that, founded a podcast and magazine about relationship dynamics. During that time I came to believe that humanity was in desperate need of better ways to relate to one another. I didn’t know how, but I knew that my podcast about romance wasn’t going to move the needle. I began to look for a bigger project. I wanted something I truly could invest myself in, something that could have a real impact on this problem.
+I refer to myself as a normie because I’m a lawyer by training, not the typical code-savvy early Urbit adopter. I ran a law firm for a decade and, after retiring that, founded a podcast and magazine about relationship dynamics. During that time I came to believe that humanity was in desperate need of better ways to relate. I didn’t know how, but I knew that my podcast about romance wasn’t going to move the needle. I began to look for a bigger project. I wanted something I truly could invest myself in, something that could have a real impact on this problem.
 
-That’s when a friend introduced me to Urbit, saying it was the most credible project he’d seen in years; he described it as “an open-source decentralized internet project,” and he said it “would give control of computing back to regular people.” That definitely sparked my interest, but I didn’t totally understand it. After looking over the website and watching a couple of obscure descriptive videos on YouTube, my response was threefold: 
+That’s when a friend introduced me to Urbit. Saying it was the most credible project he’d seen in years, he described it as “an open-source decentralized internet project,” and that it “would give control of computing back to regular people.” That sparked my interest, but I didn’t totally understand it. After looking over the website and watching a couple of obscure descriptive videos on YouTube my response was threefold: 
 
 1) **This is huge** — if it actually works, it’s the future.
 2) **This is real** — It’s got working code, dozens of engineers, and a very unorthodox solution.
@@ -24,11 +24,11 @@ That’s when a friend introduced me to Urbit, saying it was the most credible p
 
 So of course I asked for an intro.
 
-Fast forward: I ended up becoming COO at Tlon, the primary developer of Urbit. Urbit is exactly the sort of project I was looking for — one that represents an important promise for humanity. But, boy did I have to fake my way through the technical elements of my new job those first few months. 
+Fast forward: I ended up becoming COO at Tlon, the primary developer of Urbit. Urbit is exactly the sort of project I was looking for — one that represents an important promise for humanity. But, boy, did I have to fake my way through the technical elements of my new job those first few months. 
 
-What I eventually came to realize is that if Urbit is only accessible to programmers, it’s dead on arrival. In order to be useful, Urbit has to be understandable by the non-technical user. Like me. And, maybe like you. 
+What I eventually came to realize is that if Urbit is only accessible to programmers, it’s dead on arrival. In order to be useful, Urbit has to be understandable by the non-technical user. Like me. And maybe like you. 
 
-I understand as well as anyone how complicated Urbit can appear. But, fundamentally, Urbit is quite simple, and it promises a critical upgrade to human interaction. That might sound like hyperbole, but It’s the only reason I work here. This is my attempt to explain to fellow normies the scope and scale of this world-changing project called Urbit.
+I understand as well as anyone how complicated Urbit can appear. But, fundamentally, Urbit is quite simple and it promises a critical upgrade to human interaction. That might sound like hyperbole but it’s the reason I work here. This is my attempt to explain to fellow normies the scope and scale of this world-changing project called Urbit.
 
 
 ## What is Urbit?
@@ -45,9 +45,9 @@ At its most basic level, an Urbit is:
 
 Taking that a half-step deeper, each Urbit user gets a permanent identity, which allows them to access their personal computer in the cloud, and then talk to directly with other Urbit computers (i.e. other people) on the network, all without using an intermediary. 
 
-When I say “computer,” I’m not talking about a physical device, but rather the software that computes. Urbit is a virtual computer, not a hardware device. Today that means you can access your Urbit computer from anywhere, on just about any device with a web browser. Eventually you won’t even need the web browser.
+When I say “computer” I’m not talking about a physical device, but rather the software that computes. Urbit is a virtual computer, not a hardware device. Today that means you can access your Urbit computer from anywhere, on just about any device with a web browser. Eventually you won’t even need the web browser.
 
-By “intermediary,” I’m talking about all those centralized servers that we use every day to do our computing. Servers owned by Google, Facebook, YouTube, Instagram, Twitter, Slack, Amazon, Nest, Apple, and so on. All of these companies and products keep close tabs on our activity and use that information to sell us things and influence our opinions. Everything we do online is watched and recorded.
+By “intermediary” I’m talking about all those centralized servers that we use every day to do our computing. Servers owned by Google, Facebook, YouTube, Instagram, Twitter, Slack, Amazon, Nest, Apple, and so on. All of these companies and products keep close tabs on our activity and use that information to sell us things and influence our opinions. Everything we do online is watched and recorded.
 
 Urbit will fundamentally change that — more about the privacy implications later. 
 
@@ -67,13 +67,13 @@ For me, Urbit’s core purpose is to give us all back our privacy and our autono
 
 ## Key elements
 
-One potential barrier to understanding Urbit is that we’re building out multiple layers of this new internet simultaneously, and each has its own explanations and value propositions. Remember, what sets Urbit apart is that we’re building all these elements at once to work together as a system. 
+One potential barrier to understanding Urbit is that we’re building out multiple layers of this new internet simultaneously, and each has its own explanations and value propositions. Remember, what sets Urbit apart is that we’re building of all these elements at once to work together as a system. 
 
 I’ll try to explain the most important of these without straying too deep into the technical weeds.
 
 1. **A peer-to-peer network**
 
-    Peer-to-peer networking is a really big deal. On the current internet, essentially all of our communications and activities go through centralized servers owned by corporations (Facebook, Google, etc.) — and those corporations can’t help but use all that information to make money. They’re capitalists after all, and so we get constant privacy violations and interfaces built for maximum dopamine addiction.  
+    Peer-to-peer networking is a really big deal. On the current internet, essentially all of our communications and activities go through centralized servers owned by corporations (Facebook, Google, etc.) — and those corporations can’t help but use all that information to make money. They’re capitalists, after all, and so we get constant privacy violations and interfaces built for maximum dopamine addiction.  
 
     In an Urbit world, all those communications go directly between users (i.e. peer-to-peer) with nobody in the middle. That means there’s no data capture by any megacorp, less intrusion into your life online, and communications go back to the semi-private one-to-one or small group format that is most comfortable for humans. It’s more like real life.
 
@@ -105,9 +105,9 @@ I’ll try to explain the most important of these without straying too deep into
 
 6. **Lessons from the last half century**
 
-    Bear with me: this is where some jargon kicks in. In many ways, Urbit is an attempt to apply lessons learned from the failures of 20th century computer development. From an engineer’s perspective, Urbit solves a series of problems that we end users rarely notice, but which cause extraordinary amounts of complexity and waste. The list of applied lessons is long, but rather than bullet them all, I’ll explain the one that surprised me the most. 
+    Bear with me — this is where some jargon kicks in. In many ways, Urbit is an attempt to apply lessons learned from the failures of 20th century computer development. From an engineer’s perspective, Urbit solves a series of problems that we end users rarely notice, but which cause extraordinary amounts of complexity and waste. The list of applied lessons is long, but rather than bullet them all, I’ll explain the one that surprised me the most. 
 
-    Urbit is deterministic. That is, a given sequence of inputs always produces the same output. When I first heard that, I thought “Wait, isn’t that what all operating systems do? Give you the same result every time?” Weirdly, the answer is no. Normal operating systems don’t work this way. Normal modern operating systems actually get varying results when they compute things. This is a deep problem that causes programmers countless hours of frustration. The most common implication of this that you’ve probably experienced is having to reboot your computer — either because it’s locked up, or because it simply won’t do something that it was totally doing a second ago. What’s annoying to a regular user, though, is absolutely crazy-making to developers. 
+    Urbit is deterministic. That is, a given sequence of inputs always produces the same output. When I first heard that, I thought, “Wait, isn’t that what all operating systems do? Give you the same result every time?” Weirdly, the answer is no. Normal operating systems don’t work this way. Normal modern operating systems actually get varying results when they compute things. This is a deep problem that causes programmers countless hours of frustration. The most common implication of this that you’ve probably experienced is having to reboot your computer — either because it’s locked up, or because it simply won’t do something that it was totally doing a second ago. What’s annoying to a regular user, though, is absolutely crazy-making to developers. 
 
     This determinism makes programming on an Urbit immensely more efficient than other environments.
 
@@ -115,9 +115,9 @@ I’ll try to explain the most important of these without straying too deep into
  
 7. **Private, human-sized, and efficient**
 
-    Because Urbit isn’t centralized or owned by any one company, there’s no incentive for it to dominate your life. Your Urbit isn’t designed to spy on you, or get you addicted to clicking its buttons, or manipulate your emotions to gain attention, or nudge you to buy something. Your Urbit is a simple, customizable, permanent place for you to do all your computer-based tasks with your friends in absolute privacy.
+    Because Urbit isn’t centralized or owned by any one company, there’s no incentive for it to dominate your life. Your Urbit isn’t designed to spy on you, get you addicted to clicking its buttons, manipulate your emotions to gain attention, or nudge you to buy something. Your Urbit is a simple, customizable, permanent place for you to do all your computer-based tasks with your friends in absolute privacy.
 
-    This is so much the case, in fact, that it presents a bit of a problem for Tlon, the company I work for. We don’t know how many people use Urbit every day, who they talk to, or what they’re doing. While we think this is how things should be, it puts us in a bind when a VC wants to know about our user base; we can only make educated guesses. That said, we think this is the right problem to have. 
+    This is so much the case, in fact, that it presents a bit of a problem for Tlon. We don’t know how many people use Urbit every day, who they talk to, or what they’re doing. While we think this is how things should be, it puts us in a bind when a VC wants to know about our user base; we can only make educated guesses. That said, we think this is the right problem to have. 
 
     What all this adds up to is that the Urbit network is immensely more resource efficient, secure, easier to customize, and smaller in size than any other computing system in the world. If you care about data security, privacy, durability, or even just elegance, Urbit has the best design going.
 
@@ -138,7 +138,7 @@ Let’s get to some real-world examples.
 
 Imagine you’d like to discuss a certain research topic with a group of friends. Say, Canadian small cap equities or the best cookie recipes. You’ll need a chat interface for live discussion, a notebook to record concepts, and a way to share links for discussion. You can do this in the default web if you want: use Reddit for the links (but make sure it’s a private group), use Google Docs for the notebook (but make sure everyone has gmail), and use iMessage for the chat (but everyone needs a Mac). And don’t forget, each service has their own login and security holes, and they’re all mining your data.  
 
-The alternative is spin up a group on Urbit. All of that functionality is available today in one clean, simple interface. It’s private; you own the data; there’s only one login; and you can even learn to build apps for your group. 
+The alternative is spin up a group on Urbit. All of that functionality is available today in one clean, simple interface. It’s private, you own the data, there’s only one login, and you can even learn to build apps for your group. 
 
 ## Urbit vs. Facebook, Twitter, etc.
 
@@ -166,7 +166,7 @@ For now, if you like the way this sounds you can [get yourself an Urbit ID](http
 
 We humans haven’t evolved enough to manage the firehose of information that modern technology blasts us with. There’s too much news, too many connections, too many opinions, and more agendas out there than any of us can mindfully comprehend. We’re designed for much smaller communities, one-to-one connections, and slower idea assimilation than our modern infrastructure allows. The pace of change is increasing, and we don’t know how to manage it. 
 
-We’re scared, and to manage that fear we’re becoming more insular, and more entrenched. Layer on top of all that the incentives that big business and big politics have to manipulate our emotions, and we’re headed in a very dangerous direction. 
+We’re scared, and to manage that fear we’re becoming more insular, more entrenched. Layer on top of all that the incentives that big business and big politics have to manipulate our emotions, and we’re headed in a very dangerous direction. 
 
 We can’t turn back the technological clock; humanity can only ever press onward. This is where Urbit comes in. Urbit is a forward-looking solution to this particular set of problems around human-scale computing and personal autonomy. Urbit provides a means by which groups can live peacefully in parallel. 
 
