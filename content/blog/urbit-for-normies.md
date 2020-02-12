@@ -1,16 +1,12 @@
 +++
 title = "Urbit for Normies"
 date = 2020-02-12
-description = "What is Urbit and why should you care?"
+description = "A layperson’s guide to the coming new internet."
 [extra]
 author = "Erik Newton"
 ship = "~patnes-rigtyn"
 image ="https://media.urbit.org/site/posts/essays/normies-2.png"
 +++
-
-## What is Urbit and why should you care?
-
-*A layperson’s guide to the coming new internet.*
 
 Urbit is a challenging project to fully describe because it’s an entire system rather than a single product. Often when I talk about one of the individual elements of the system, someone will tell me that another company is already building that — and they’re usually right. What sets Urbit apart is that we’re building all these elements at once to work together seamlessly.
 
@@ -22,9 +18,9 @@ I refer to myself as a normie because I’m a lawyer by training, not the typica
 
 That’s when a friend introduced me to Urbit, saying it was the most credible project he’d seen in years; he described it as “an open-source decentralized internet project,” and he said it “would give control of computing back to regular people.” That definitely sparked my interest, but I didn’t totally understand it. After looking over the website and watching a couple of obscure descriptive videos on YouTube, my response was threefold: 
 
-1) This is huge — if it actually works, it’s the future.
-2) This is real — It’s got working code, dozens of engineers, and a very unorthodox solution.
-3) I don’t truly understand this — I can’t read the code, and I can barely comprehend the paradigm shift.
+1) **This is huge** — if it actually works, it’s the future.
+2) **This is real** — It’s got working code, dozens of engineers, and a very unorthodox solution.
+3) **I don’t truly understand this** — I can’t read the code, and I can barely comprehend the paradigm shift.
 
 So of course I asked for an intro.
 
