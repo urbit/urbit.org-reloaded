@@ -8,7 +8,7 @@ ship = "~patnes-rigtyn"
 image ="https://media.urbit.org/site/posts/essays/normies-2.png"
 +++
 
-Urbit is a challenging project to fully describe because, rather than a singly product, it’s an entire system. Often when I talk about one of the individual elements of the system, someone will tell me that another company is already building that — and they’re usually right. What sets Urbit apart is that we’re building all these elements at once to work together seamlessly.
+Urbit is a challenging project to fully describe because, rather than a single product, it’s an entire system. Often when I talk about one of the individual elements of the system, someone will tell me that another company is already building that — and they’re usually right. What sets Urbit apart is that we’re building all these elements at once to work together seamlessly.
 
 For that reason, this overview is long. I wanted to explain as much of the system at a high level as possible, to share an image of the entire forest rather than spending too much time on any of the trees. 
 
