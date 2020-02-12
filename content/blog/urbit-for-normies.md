@@ -1,16 +1,16 @@
 +++
 title = "Urbit for Normies"
 date = 2020-02-12
-description = "What is Urbit and why should you care? A layperson’s guide to the coming new internet."
+description = "What is Urbit and why should you care?"
 [extra]
 author = "Erik Newton"
 ship = "~patnes-rigtyn"
-image ="https://media.urbit.org/site/posts/essays/sigils3.png"
+image ="https://media.urbit.org/site/posts/essays/normies-2.png"
 +++
 
-<!-- ![](https://media.urbit.org/site/posts/essays/sigils0-v3.png) -->
-
 ## What is Urbit and why should you care?
+
+*A layperson’s guide to the coming new internet.*
 
 Urbit is a challenging project to fully describe because it’s an entire system rather than a single product. Often when I talk about one of the individual elements of the system, someone will tell me that another company is already building that — and they’re usually right. What sets Urbit apart is that we’re building all these elements at once to work together seamlessly.
 
@@ -99,7 +99,7 @@ I’ll try to explain the most important of these without straying too deep into
 
 4.  **An incentive for good behavior**
 
-    On the Urbit network, identities are finite, and they accrue reputation. Compare that to the current internet where identity is infinite (anyone can create as many email addresses or social media profiles as they want, essentially for free) and so spam, scams, and DoS attacks (“denial-of-service”: when many disposable identities ‘attack’ a server at the same time) are rampant. On the Urbit network, there are just over 4 billion total IDs (2^32 to be exact). Scarcity creates value. That scarcity, combined with reputation accrual, means there's an incentive for good behavior. 
+    On the Urbit network, identities are finite, and they accrue reputation. Compare that to the current internet where identity is infinite (anyone can create as many email addresses or social media profiles as they want, essentially for free) and so spam, scams, and DoS attacks (“denial-of-service”: when many disposable identities ‘attack’ a server at the same time) are rampant. On the Urbit network, there are just over 4 billion total IDs (2<sup>32</sup> to be exact). Scarcity creates value. That scarcity, combined with reputation accrual, means there's an incentive for good behavior. 
 
     You might think 4 billion IDs sounds like too few given how many humans we have on the planet. I won’t go into the technical details here, but if we ever get to the point where that’s a problem (which would be a great problem to have), we’ve outlined several solutions that allow everyone alive to get on the network. We don’t intend to lock anyone out. 
 
