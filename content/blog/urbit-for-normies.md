@@ -123,7 +123,11 @@ I’ll try to explain the most important of these without straying too deep into
 
     This is so much the case, in fact, that it presents a bit of a problem for Tlon, the company I work for. We don’t know how many people use Urbit every day, who they talk to, or what they’re doing. While we think this is how things should be, it puts us in a bind when a VC wants to know about our user base; we can only make educated guesses. That said, we think this is the right problem to have. 
 
-    What all this adds up to is that the Urbit network is immensely more resource efficient, secure, easier to customize, and smaller in size than any other computing system in the world. If you care about data security, privacy, durability, or even just elegance, Urbit has the best design going. 
+    What all this adds up to is that the Urbit network is immensely more resource efficient, secure, easier to customize, and smaller in size than any other computing system in the world. If you care about data security, privacy, durability, or even just elegance, Urbit has the best design going.
+
+    <br></br>
+
+<img class="ba" src="https://media.urbit.org/site/posts/essays/normies-2.png">
 
 ## How it compares
 
@@ -134,27 +138,27 @@ Again, on the current internet, we all access megacorp software using our web br
 Let’s get to some real-world examples. 
 
 
-## Why we need Urbit
+## Urbit vs. Reddit
 
 Imagine you’d like to discuss a certain research topic with a group of friends. Say, Canadian small cap equities or the best cookie recipes. You’ll need a chat interface for live discussion, a notebook to record concepts, and a way to share links for discussion. You can do this in the default web if you want: use Reddit for the links (but make sure it’s a private group), use Google Docs for the notebook (but make sure everyone has gmail), and use iMessage for the chat (but everyone needs a Mac). And don’t forget, each service has their own login and security holes, and they’re all mining your data.  
 
 The alternative is spin up a group on Urbit. All of that functionality is available today in one clean, simple interface. It’s private; you own the data; there’s only one login; and you can even learn to build apps for your group. 
 
-## Why we need Urbit
+## Urbit vs. Facebook, Twitter, etc.
 
 Or let’s say you want to share pictures with your friends, post micro-messages to the world, write a blog, or share a podcast. There’s simply no reason you should use some centralized company (one that then owns your content) to broadcast any of those things. Instead, send it out from your Urbit. You’ll own the content, you’ll control the data, no company will spy on you, and nobody can ever take your ID from you. With Urbit we all finally own the tools, and that means we own the data by default. 
 
-## Why we need Urbit
+## Urbit vs. Nest
 
 Imagine, as I do, that you want a connected video camera in your house, but don’t want the Nest corporation (which is now owned by Google) to be able to spy on you. Or perhaps you just don’t want to have to sign up for yet another duplicative service in order to use the camera you just bought. If any of that is the case, you can run your camera through your Urbit instead. The video feed will never leave your control, because it no longer has to live on Nest’s servers. Your camera will talk over a secure channel only to your Urbit. Your Urbit is the server. 
 
 You can apply this same concept to smart speakers, a Ring doorbell, connected baby monitor, smart fridge, or any of the innumerable connected devices that give someone else access to your personal life. Why should anyone else have access to that information? 
 
-## Why we need Urbit
+## Urbit vs. Google Docs
 
 Imagine you want to write a screenplay with a small group of friends, but you don’t want Google mining the content of your shared doc for advertising keywords, and you won’t want to use multiple services for chat, document sharing, email, etc. In that case, simply create an Urbit group with your friends and write together using Urbit’s writing tools. Your content will stay completely private to the team until you decide to release it to the world, and you’ll communicate using one simple interface. Even better, the archive of your multimodal work lives in one place, so looking back at your process doesn’t require reconstructing it from dozens of different apps. And everything is stored on your respective Urbit computers, not Google’s servers. 
 
-## Why we need Urbit
+## Urbit for your protected health information
 
 Imagine, as is already becoming the case, that it becomes highly valuable to have your genome sequenced in order to make good healthcare decisions. In that scenario, most of us would want our health care providers to be able to make precise assessments of parts of our genome, but we wouldn’t want insurance companies or other third parties to have access without our permission. In the current paradigm, once you share the information, it’s out there and can beleaked or sold. So much so that we all sort of assume that leaks are the default. In the Urbit paradigm, that information lives on your Urbit computer and nowhere else, and any software necessary to process it can be run on your Urbit as well. In other words, there’s never any need to share the raw data with anyone; instead, you can download a small program, run it on your Urbit, and share the final analyses only without ever exposing your data. 
 
