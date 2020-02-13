@@ -57,7 +57,7 @@ Urbit will fundamentally change that — more about the privacy implications lat
 
 Another way of explaining Urbit is to describe how it feels and looks. Visually, Urbit belongs to a genre often called “calm computing.” Urbit is designed to be simple, basic, and non-addictive. You won’t find any flashy-blinky lights here; no zany colors; no wacky branding. Just calm, functional, purpose-built tools for people to connect and work together. (One of my favorite examples of calm computing is the [light phone](https://www.thelightphone.com/).)
 
-Today Urbit’s interface looks like a tab in your web browser that has some limited functionality (chat, a weather app, a notebook, link sharing). Soon, you won’t even need the web browser — you’ll be able to access or run Urbit directly in its own window. Inside will be a super clean interface with all the functionality you might want from your computer, in one place and with one login (think document creation, email, social media access, accounting) — but it will run on your virtual Urbit computer, so it will be safe from corporate prying, available on any device, and all inside one simple interface. 
+Today Urbit’s interface looks like a tab in your web browser that has some limited functionality (chat, a weather app, a notebook, link sharing). Soon, you won’t even need the web browser — you’ll be able to access or run Urbit directly in its own window. Inside will be a super clean interface with all the functionality you might want from your computer, in one place and with one login (think document creation, email, social media access, accounting) — but it will run on your virtual Urbit computer, so it will be safe from corporate prying and data leaks, available on any device, and all inside one simple interface. 
 
 ## What it’s for
 
@@ -174,4 +174,4 @@ Urbit is a computing environment that allows humans to do everything they want o
 
 And that is what we need. Humans need a way to at once take advantage of our vast technological advances but not be dominated by them. Urbit is an open-source tool that we all own, that anyone can understand down to its roots, that’s fully under its user’s control. It is human-scale computing for human-scale communities. Simple, durable, yours. 
 
-For me, this first iteration of Urbit is more than enough, and it’s exactly the sort of peaceful future I want to work towards. 
+For me, this first iteration of Urbit is more than enough, and it’s exactly the sort of peaceful future I want to work towards.
