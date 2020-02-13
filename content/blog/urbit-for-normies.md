@@ -10,11 +10,11 @@ image ="https://media.urbit.org/site/posts/essays/normies-2.png"
 
 Urbit is a challenging project to fully describe because, rather than a single product, it’s an entire system. Often when I talk about one of the individual elements of the system, someone will tell me that another company is already building that — and they’re usually right. What sets Urbit apart is that we’re building all these elements at once to work together seamlessly.
 
-For that reason, this overview is long. I wanted to explain as much of the system at a high level as possible, to share an image of the entire forest rather than spending too much time on any of the trees. 
+For that reason, this overview is long. I wanted to explain, at a very high level, as much of the system as possible, to share an image of the entire forest rather than spending too much time on any of the trees. 
 
 My own path to Urbit was not predictable, so it turns out I’m a useful ambassador to describe what the heck we’re doing to my fellow normies.
 
-I refer to myself as a normie because I’m a lawyer by training, not the typical code-savvy early Urbit adopter. I ran a law firm for a decade and, after retiring that, founded a podcast and magazine about relationship dynamics. During that time I came to believe that humanity was in desperate need of better ways to relate. I didn’t know how, but I knew that my podcast about romance wasn’t going to move the needle. I began to look for a bigger project. I wanted something I truly could invest myself in, something that could have a real impact on this problem.
+I refer to myself as a normie because I’m a lawyer by training, not the typical code-savvy early Urbit adopter. I ran a law firm and, after retiring, founded a podcast and magazine about relationship dynamics. During that time I came to believe that humanity was in desperate need of better ways to relate. I didn’t know how, but I knew that my podcast about romance wasn’t going to move the needle. I began to look for a bigger project. I wanted something I truly could invest myself in; something that could have a real impact on this problem.
 
 That’s when a friend introduced me to Urbit. Saying it was the most credible project he’d seen in years, he described it as “an open-source decentralized internet project,” and that it “would give control of computing back to regular people.” That sparked my interest, but I didn’t totally understand it. After looking over the website and watching a couple of obscure descriptive videos on YouTube my response was threefold: 
 
@@ -136,7 +136,7 @@ Let’s get to some real-world examples.
 
 ## Urbit vs. Reddit
 
-Imagine you’d like to discuss a certain research topic with a group of friends. Say, Canadian small cap equities or the best cookie recipes. You’ll need a chat interface for live discussion, a notebook to record concepts, and a way to share links for discussion. You can do this in the default web if you want: use Reddit for the links (but make sure it’s a private group), use Google Docs for the notebook (but make sure everyone has gmail), and use iMessage for the chat (but everyone needs a Mac). And don’t forget, each service has their own login and security holes, and they’re all mining your data.  
+Imagine you’d like to discuss a certain research topic with a group of friends. Say, Canadian small cap equities or the best cookie recipes. You’ll need a chat interface for live discussion, a notebook to record concepts, and a way to share links for discussion. You can do this in the default web if you want: use Reddit for the links (but make sure it’s a private group), use Google Docs for the notebook (but make sure everyone has Gmail), and use iMessage for the chat (but everyone needs a Mac). And don’t forget, each service has their own login and security holes, and they’re all mining your data.  
 
 The alternative is spin up a group on Urbit. All of that functionality is available today in one clean, simple interface. It’s private, you own the data, there’s only one login, and you can even learn to build apps for your group. 
 
@@ -156,7 +156,7 @@ Imagine you want to write a screenplay with a small group of friends, but you do
 
 ## Urbit for your protected health information
 
-Imagine, as is already becoming the case, that it becomes highly valuable to have your genome sequenced in order to make good healthcare decisions. In that scenario, most of us would want our health care providers to be able to make precise assessments of parts of our genome, but we wouldn’t want insurance companies or other third parties to have access without our permission. In the current paradigm, once you share the information, it’s out there and can beleaked or sold. So much so that we all sort of assume that leaks are the default. In the Urbit paradigm, that information lives on your Urbit computer and nowhere else, and any software necessary to process it can be run on your Urbit as well. In other words, there’s never any need to share the raw data with anyone; instead, you can download a small program, run it on your Urbit, and share the final analyses only without ever exposing your data. 
+Imagine, as is already becoming the case, that it becomes highly valuable to have your genome sequenced in order to make good healthcare decisions. In that scenario, most of us would want our health care providers to be able to make precise assessments of parts of our genome, but we wouldn’t want insurance companies or other third parties to have access without our permission. In the current paradigm, once you share the information, it’s out there and can be leaked or sold. So much so that we all sort of assume that leaks are the default. In the Urbit paradigm, that information lives on your Urbit computer and nowhere else, and any software necessary to process it can be run on your Urbit as well. In other words, there’s never any need to share the raw data with anyone; instead, you can download a small program, run it on your Urbit, and share the final analyses only without ever exposing your data. 
 
 Some of these cases are, admittedly, a bit speculative since we haven’t built all the functionality yet. But it’s coming, and quite soon. 
 
