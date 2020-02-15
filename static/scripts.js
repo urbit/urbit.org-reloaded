@@ -15,8 +15,11 @@ function initHotKeys() {
       document.body.classList.remove('has-active-search-window');
     }
 
-    // / to open toggle window
-    if (key === '/' || key === 'Period' || key === 58) {
+    // Ctrl or Meta + / to open toggle window
+    if (
+      (event.getModifierState("Control") || event.getModifierState("Meta")) &&
+      (key === '/' || key === 'Period' || key === 58)
+      ) {
       if (bodyEl.classList.contains('has-active-search-window')) {
         // if it's already open don't do anything!
       } else {
@@ -232,6 +235,7 @@ function initSearch() {
   var searchWindow = document.getElementById('search-window');
   var searchActive = bodyEl.classList.contains('has-active-search-window');
 
+
   if (toggleSearchWindow !== null) {
     toggleSearchWindow.onclick = function () {
       inputReset.style.display = "none";
@@ -325,7 +329,6 @@ function initSearch() {
 if (document.readyState === "complete" ||
   (document.readyState !== "loading" && !document.documentElement.doScroll)
 ) {
-  initToggleSearchWindow();
 } else {
   document.addEventListener("DOMContentLoaded", function () {
     initSearch();
