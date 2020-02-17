@@ -1,4 +1,30 @@
 <!-- First nav is desktop-specific. Second nav is dropdown version for mobile. -->
+
+{% set sectionTitle = "urbit.org" %}
+{% if page %}
+  {% if "docs" in page.components %}
+    {% set sectionTitle = "Docs" %}
+  {% endif %}
+  {% if "updates" in page.components %}
+    {% set sectionTitle = "Updates" %}
+  {% endif %}
+  {% if "blog" in page.components %}
+    {% set sectionTitle = "Blog" %}
+  {% endif %}
+{% endif %}
+
+{% if section %}
+  {% if "docs" in section.components %}
+    {% set sectionTitle = "Docs" %}
+  {% endif %}
+  {% if "updates" in section.components %}
+    {% set sectionTitle = "Updates" %}
+  {% endif %}
+  {% if "blog" in section.components %}
+    {% set sectionTitle = "Blog" %}
+  {% endif %}
+{% endif %}
+
 {% block content %}
 <nav class="bg-gray5 dn db-xl pt4 full-left no-break docs pr4">
     <a class="gray3" href="{{config.base_url}}">Urbit</a>
@@ -6,9 +32,11 @@
   <a href="{{config.base_url}}/docs/">
   Documentation
   </a>
-  <button id="js-search-window-toggle" class="mt2 mb4 dn db-m db-l db-xl" type="button"  style="outline:none">
-    <span id="search-icon" class="f3 gray3">⚲</span><span class="ml3 gray2">Search</span>
-  </button>
+<button id="js-search-window-toggle" class="pointer pa0 pv3 dn db-m db-l db-xl bw-0 relative" type="button"
+  style="outline:none">
+  <span class="dib pv1 v-mid gray3">Search {{sectionTitle}}</span>
+  <span class="ml1 pa1 dib v-mid ba br1 b--gray3 gray3 f7" id="keyhint">Ctrl + /</span>
+</button>
   <ul class="lh-copy">
   <li class="ml2 mt1"><a href="/using/install">Install -> </a></li>
   <li class="ml2 mt1"><a href="/using/operations/">Operations Manual -></a></li>
@@ -140,8 +168,10 @@
     {% endif %}
     {% endfor %}
   </select>
-  <button id="js-search-window-toggle" class="mt4 mb4 dn db-m db-l db-xl" type="button"  style="outline:none">
-    <span id="search-icon" class="f3 gray3">⚲</span><span class="ml3 gray2">Search</span>
+  <button id="js-search-window-toggle" class="pointer pa0 pt3 dn db-m db-l db-xl bw-0 relative" type="button"
+    style="outline:none">
+    <span class="pv1 dib v-mid gray3">Search {{sectionTitle}}</span>
+    <span class="ml1 pa1 dib v-mid ba br1 b--gray3 gray3 f7" id="keyhint">Ctrl + /</span>
   </button>
 </nav>
 {% endblock content %}
