@@ -652,6 +652,20 @@ var glossary = [
     "desc": "<code>[%bscl p=(list spec)]</code>: form a cell type."
   },
   {
+    "name": "bucgal",
+    "symbol": "$<",
+    "usage": "Structures",
+    "link": "/docs/reference/hoon-expressions/rune/buc/#bucgal",
+    "desc": "<code>[%bsld p=spec q=spec]</code>: restrict a pre-existing structure by excluding some structure."
+  },
+  {
+    "name": "bucgar",
+    "symbol": "$>",
+    "usage": "Structures",
+    "link": "/docs/reference/hoon-expressions/rune/buc/#bucgar",
+    "desc": "<code>[%bshp p=spec q=spec]</code>: restrict a pre-existing structure by requiring some structure."
+  },
+  {
     "name": "buchep",
     "symbol": "$-",
     "usage": "Structures",
