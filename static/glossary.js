@@ -656,14 +656,14 @@ var glossary = [
     "symbol": "$<",
     "usage": "Structures",
     "link": "/docs/reference/hoon-expressions/rune/buc/#bucgal",
-    "desc": "<code>[%bsld p=spec q=spec]</code>: restrict a pre-existing structure by excluding some structure."
+    "desc": "<code>[%bsld p=spec q=spec]</code>: restrict a mold by excluding some given mold."
   },
   {
     "name": "bucgar",
     "symbol": "$>",
     "usage": "Structures",
     "link": "/docs/reference/hoon-expressions/rune/buc/#bucgar",
-    "desc": "<code>[%bshp p=spec q=spec]</code>: restrict a pre-existing structure by requiring some structure."
+    "desc": "<code>[%bshp p=spec q=spec]</code>: filter a mold to obtain a new mold."
   },
   {
     "name": "buchep",
