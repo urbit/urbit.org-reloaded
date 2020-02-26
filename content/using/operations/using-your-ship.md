@@ -182,6 +182,12 @@ Because Urbit networking is stateful we call this a _continuity breach_. Everyth
 
 When this happens, back up any files you'd like to save, shut down your urbit, and recreate it (as if you were starting for the first time).
 
+### Life and rift number
+
+You can check your ship's _life_ and _rift_ number by running `+keys our` in
+dojo. You can inspect another ship's life and rift number by running `+keys
+~sampel-palnet`. For information on what life and rift are, see [Guide to Breaches](@/docs/tutorials/guide-to-breaches.md).
+
 ## DNS proxying {#dns-proxying}
 
 We have a system that lets you request a domain name for your ship in the form of `ship.arvo.network`, where `ship` is your ship's name minus the `~`. This allows users to access their ships remotely using Landscape, our graphical web interface.
