@@ -200,6 +200,12 @@ body.essay {
       margin-top: 4rem;
     }
 
+    blockquote {
+        border-left: 1px solid black;
+        padding-left: 2rem;
+        font-style: italic;
+    }
+
     img {
         display: block;
     }

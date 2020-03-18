@@ -1,10 +1,10 @@
 +++
 title = "Precepts"
-date = 2020-03-14
-description = "Urbit is a principled approach to system design and programming, but it's often not obvious what those technical principles are.  This is a list of the technical maxims that define Urbit's approach to engineering."
+date = 2020-03-18
+description = "Technical maxims that define Urbit's approach to engineering."
 [extra]
 author = "Philip Monk"
-ship = "~wicdev-wisret"
+ship = "~wicdev-wisryt"
 image ="https://media.urbit.org/site/posts/essays/pre-01.jpg"
 +++
 
@@ -196,7 +196,7 @@ We’ll start with a brief description of many principles, then we’ll go into 
       follow conventions, and fire anyone who won't. Anything that can
       be solved by discipline is not a real problem.
 
-      "To him who knows to do good and does not do it, to him it is
+      > "To him who knows to do good and does not do it, to him it is
       sin."
 
 3) When a smart person makes an obviously stupid suggestion, before

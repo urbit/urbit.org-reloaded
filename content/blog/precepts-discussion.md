@@ -1,10 +1,10 @@
 +++
 title = "Precepts: Discussion"
-date = 2020-03-14
-description = "Urbit is a principled approach to system design and programming, but it's often not obvious what those technical principles are.  This is a list of the technical maxims that define Urbit's approach to engineering."
+date = 2020-03-18
+description = "The precepts aren’t arguments. We discuss and justify them here."
 [extra]
 author = "Philip Monk"
-ship = "~wicdev-wisret"
+ship = "~wicdev-wisryt"
 image ="https://media.urbit.org/site/posts/essays/discuss-01.jpg"
 +++
 
@@ -210,22 +210,22 @@ case correctly than to "snap" to the nearest elegant formulation.
 
 > A11: Be simple and uncompromising in defining what's correct; go crazy
 > with optimizations.
->
->     Nock is a great example of this. It contains the character of the
->     virtual machine, but its asymptotics are bad. Add jets to fix the
->     asymptotics.
->
->     Another example is the ACID nature of Arvo. Arvo is a pure
->     function f(logs) of its event log, so formally Arvo is just a
->     function run against an event log. A naive implementation has
->     very bad asymptotics; processing each new event is O(n) in the
->     number of historical events. Choose the function g(state,log)
->     such that f(logs ++ log) = g(f(logs),log). Then, as long as you
->     keep the state in memory, processing each new event is constant in
->     the number of previous events. This still requires O(n) restart
->     from disk, but you can also periodically (and non-blockingly)
->     write a checkpoint of the state to disk, so that restart from disk
->     is only linear in the number of events since the last checkpoint.
+
+Nock is a great example of this. It contains the character of the
+virtual machine, but its asymptotics are bad. Add jets to fix the
+asymptotics.
+
+Another example is the ACID nature of Arvo. Arvo is a pure
+function f(logs) of its event log, so formally Arvo is just a
+function run against an event log. A naive implementation has
+very bad asymptotics; processing each new event is O(n) in the
+number of historical events. Choose the function g(state,log)
+such that f(logs ++ log) = g(f(logs),log). Then, as long as you
+keep the state in memory, processing each new event is constant in
+the number of previous events. This still requires O(n) restart
+from disk, but you can also periodically (and non-blockingly)
+write a checkpoint of the state to disk, so that restart from disk
+is only linear in the number of events since the last checkpoint.
 
 This pretty much says it all. Define what's correct in as simple of
 terms as possible — this will make it easier to implement and reason
@@ -394,8 +394,7 @@ A perfect static type system can guarantee `T` is a subset of `S` — if it type
 
 Dually, a perfect testing suite can guarantee that `S` is a subset of `T` — no correct program fails the tests. This is vacuously true if you have no tests, for then `T = U`. So you want `T` to be as small as possible while still being a superset of `S` — you don't want to reject valid programs if you can help it. But you can't make `T == S` — there will always be some programs that are invalid but pass your typechecks (at least, if your program requires a Turing machine).
 
-(It is possible to create a static type system that has `S` subset `T` property described above for a testing suite — see Erlang's Dialyzerand (related
-work)[http://user.it.uu.se/~tobiasl/publications/contracts.pdf].)
+(It is possible to create a static type system that has `S` subset `T` property described above for a testing suite — see Erlang's Dialyzerand [related work](http://user.it.uu.se/~tobiasl/publications/contracts.pdf).)
 
 A dynamic type system tells you neither of these ahead of time. Instead, you end up with type errors at runtime. Errors at runtime must be handled at runtime, when the programmer is not present. Errors at compile time are handled at compile time, when the programmer is present.
 
@@ -424,17 +423,17 @@ Better to define rules in a more powerful language. This allows you to follow A6
 Good code is the result of people approaching the act of engineering with the right attitude.
 
 > C1: Code courageously.
-> 
->       If you avoid changing a section of code for fear of awakening the
->       demons therein, you are living in fear. If you stay in the
->       comfortable confines of the small section of the code you wrote or
->       know well, you will never write legendary code. All code was
->       written by humans and can be mastered by humans.
-> 
->       It's natural to feel fear of code; however, you must act as though
->       you are able to master and change any part of it. To code
->       courageously is to walk into any abyss, bring light, and make it
->       right.
+ 
+ If you avoid changing a section of code for fear of awakening the
+ demons therein, you are living in fear. If you stay in the
+ comfortable confines of the small section of the code you wrote or
+ know well, you will never write legendary code. All code was
+ written by humans and can be mastered by humans.
+ 
+ It's natural to feel fear of code; however, you must act as though
+ you are able to master and change any part of it. To code
+ courageously is to walk into any abyss, bring light, and make it
+ right.
 
 The unix/internet stack is a giant ball of mud. It's so big that when you're standing on it, it looks like a bog, and it's not clear that there is a bottom to it. You know there must be, but it doesn't matter because you learned long ago that the best solution is to not dig too deep. Build a strong structure by spreading out your weight and using strong construction materials. If there's something useful deep in the mud, it's probably not worth diving in to pull it out. That's dangerous and prone to failure, and you know many people who have gotten stuck down there.
 
@@ -445,14 +444,14 @@ Urbit is small enough that, while there's definitely some construction-related d
 This property is worth fighting for. It's the whole reason Urbit was written. New Urbit programmers are instinctively distrustful of anything below them and code defensively and fearfully. They must learn that it's all drastically simpler and more legible than they're used to. It's still hard, but you can actually make progress. To do so, you have to stand up straight, so you can get a firm footing on the ground. Keep your chin up and your shoulders back, and adopt the posture of a conqueror. When something doesn't work right, don't retreat into your shell of safety and control — fix it. The forces of chaos are always lurking, but their victory isn't inevitable. It's all on the line, so code with abandon.
 
 > C2: No time for lazy people.
-> 
->       If there's clearly a right way to do something and a wrong way, do
->       it the right way. Coding requires incredible discipline. Always
->       follow conventions, and fire anyone who won't. Anything that can
->       be solved by discipline is not a real problem.
-> 
->       "To him who knows to do good and does not do it, to him it is
->       sin."
+
+If there's clearly a right way to do something and a wrong way, do
+it the right way. Coding requires incredible discipline. Always
+follow conventions, and fire anyone who won't. Anything that can
+be solved by discipline is not a real problem.
+
+> "To him who knows to do good and does not do it, to him it is
+sin."
 
 Preserving the property of solid ground requires perpetual discipline. Once lost, it's often impossible to reacquire. Don't compromise your standards.
 
