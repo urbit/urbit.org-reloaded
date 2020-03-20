@@ -115,7 +115,7 @@ Or, if you'd prefer to copy your key in, you can run:
 
 Either command will create a directory called `sampel-palnet/` and begin building your ship. It may take a few minutes.
 
-When your ship is finished booting, you will see the `~sampel-palnet:dojo>` prompt. At that point, you should permanently erase your keyfile from your machine.
+When your ship is finished booting, you will see the `~sampel-palnet:chat-cli/` prompt. Press `Ctrl-x` to switch from chat-cli into Dojo. At that point, you should permanently erase your keyfile from your machine.
 
 ## The Dojo
 
