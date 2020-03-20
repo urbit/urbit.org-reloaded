@@ -17,7 +17,7 @@ For an introduction to Urbit IDs and the address space more generally, see [Urbi
 While Tlon does not currently sell or distribute Urbit IDs, there are still a few ways to get your own Urbit ID:
 
 - Getting an invitation from a friend
-- Purchasing an Urbit ID from a third party, such as [urbit.live](https://urbit.live), [OpenSea](https://opensea.io), or [Urbit Marketplace](https://urbitmarketplace.com/).
+- Purchasing an Urbit ID from a third party, such as [urbit.live](https://urbit.live), [OpenSea](https://opensea.io), [planet.market](https://planet.market/), or [Urbit Marketplace](https://urbitmarketplace.com/).
 
 Tlon occasionally selects candidates to distribute invitations, and users operating galaxies and stars can spawn and distribute a finite number of stars and planets, respectively.
 
@@ -45,8 +45,9 @@ Urbit: a personal server operating function
 We provide static binaries for macOS. You can grab the latest stable release as follows:
 
 ```sh
-curl -O https://bootstrap.urbit.org/urbit-darwin-v0.10.1.tgz
-tar xzf urbit-darwin-v0.10.1.tgz
+curl -O https://bootstrap.urbit.org/urbit-v0.10.4-darwin.tgz
+tar xzf urbit-v0.10.4-darwin.tgz
+cd urbit-v0.10.4-darwin
 ./urbit
 ```
 
@@ -55,8 +56,9 @@ tar xzf urbit-darwin-v0.10.1.tgz
 We also provide static binaries for 64-bit Linux distributions (Ubuntu, Debian, Fedora, Arch, etc.). You can get the latest stable release similarly:
 
 ```sh
-curl -O https://bootstrap.urbit.org/urbit-linux64-v0.10.1.tgz
-tar xzf urbit-linux64-v0.10.1.tgz
+curl -O https://bootstrap.urbit.org/urbit-v0.10.4-linux64.tgz
+tar xzf urbit-v0.10.4-linux64.tgz
+cd urbit-v0.10.4-linux64
 ./urbit
 ```
 
@@ -66,6 +68,7 @@ To access your Urbit via HTTP on port 80 on Ubuntu, you may need to run the foll
 sudo apt-get install libcap2-bin
 sudo setcap 'cap_net_bind_service=+ep' /path/to/urbit
 ```
+(Where `urbit` is the urbit executable downloaded with `curl` prior)
 
 ### Compile from source
 
@@ -131,7 +134,14 @@ When you press Enter, you should see this:
 4
 ```
 
-Good, your Dojo is working correctly.
+Good, your Dojo is working correctly. Now let's run our first useful command in the Dojo. The first thing you generally want to do with a new ship is to **mount** it. A ship being mounted means that it has a presence on your Unix filesystem, so the files can be copied manipulated between Unix and your ship. To mount you ship, type `|mount %` at the Dojo prompt.
+
+```
+|mount %
+>=
+```
+
+The `>=` output means that a command was successful. Now you can see your ship's files in its Unix directory.
 
 ### Using Landscape
 
@@ -141,4 +151,3 @@ Landscape is the Urbit web interface, and it's the best way to interact with you
 2.  If the port given is 80, simply type `localhost` into your browser's address bar. If the given port is a different number, such as `8080`, you would type `localhost:8080`. Alternatively, you access landscape by navigating to `ship.arvo.network` into your URL bar, where `sampel-palnet` is the name of your ship, without the `~`. You will need to [set up DNS proxying](@/using/operations/using-your-ship.md#dns-proxying) to use this option.
 3. Type `+code` into your ship's Dojo. Copy-paste the returned code into the field asking for it in the browser page.
 4. You're in! Now you can explore apps such as Chat for messages, Publish for blogging, and Weather.
-

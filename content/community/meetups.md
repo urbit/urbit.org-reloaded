@@ -34,9 +34,11 @@ Copenhagen, DK | [Twitter](https://twitter.com/UrbitCPH), [Meetup.com](https://w
 
 Location | Contact information
 :------------ | :-------------
-Phoenix, AZ | [Twitter](https://twitter.com/UrbitPHX)
+Phoenix, AZ | [Twitter](https://twitter.com/UrbitPHX), [Meetup.com](https://www.meetup.com/urbit-phx/)
 San Francisco, CA | [Meetup.com](https://www.meetup.com/urbit-sf/)
 New York, NY | [Meetup.com](https://www.meetup.com/Urbit-New-York/)
+Toronto, ON | [Twitter](https://twitter.com/UrbitToronto), [Meetup.com](https://www.meetup.com/Urbit-Toronto/)
+Eugene, OR | [Twitter](https://twitter.com/EugeneUrbit)
 Austin, TX | [Meetup.com](https://www.meetup.com/Urbit-Austin/)
 Denton, TX | [Twitter](https://twitter.com/UrbitDFW)
 Seattle, WA | [Meetup.com](https://www.meetup.com/urbit-seattle/)

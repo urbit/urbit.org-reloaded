@@ -1,9 +1,9 @@
 {% extends "base.html" %}
-{% block title %} 
+{% block title %}
   <meta name="og:title" content="{{ section.title }} - {{ config.title }}">
   <title>{{ section.title }} - {{ config.title }}</title>
 {% endblock title %}
-{% block description %} 
+{% block description %}
   <meta name="og:description" content="Directory for {{ section.title }}.">
   <meta name="description" content="Directory for {{ section.title }}.">
 {% endblock description %}
@@ -23,7 +23,7 @@
   {% include "partials/navigation-search.html" %}
 </nav>
 <!-- content -->
-<article class="mt4 mb7 c1-12 c4-12-lg">
+<article class="mt4 mb4 c1-13 c4-12-lg measure-wide">
   <ul class="posts">
     {% set posts = get_section(path=section.relative_path) %}
     {% for page in posts.pages %}
@@ -40,7 +40,7 @@
       <li class="mb4">
           <h2 class="f4 fw4 mt0 mb0"><a class="bb-0" href="{{ subsection.permalink }}">{{ subsection.title }}</a></h2>
           <p class="mt0">{{ subsection.description }}</p>
-        </li>    
+        </li>
     {% endfor %}
   </ul>
 </article>

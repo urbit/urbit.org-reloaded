@@ -1,11 +1,8 @@
 +++
 title = "Simple, Durable, Yours"
-description = "The core ideas that Urbit is built around"
-weight = 1
+date = 2019-10-17
+description = "We built Urbit from scratch to be a system that’s simple, durable, and yours. Everything that computing today is not — but should be."
 [extra]
-flatten_pagination = "true"
-hide_next_title = "true"
-hide_previous_title = "true"
 +++
 
 We live in a world dense with digital services. We see the world through them, we depend on them completely, and they’re not going away. They’re only becoming more ubiquitous.

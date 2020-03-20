@@ -97,9 +97,19 @@ figcaption.home {
     margin: 0 auto;
 }
 
+// obj-fit contain util
+
+.obj-cover {
+  object-fit: cover;
+}
+
 a {
     color: inherit;
     text-decoration: none;
+}
+
+b, strong {
+  @extend .fw6;
 }
 
 article {
@@ -111,9 +121,6 @@ article {
         &.mono {
             border-bottom: 0;
         }
-    }
-    b, strong {
-        @extend .fw6;
     }
     // post directories
     li {
@@ -149,6 +156,7 @@ footer nav {
         font-size: 1rem;
         position: absolute;
         right: -36px;
+        top: 0;
         font-family: "Inter UI", sans-serif;
     }
     &.next p:first-of-type::before {
@@ -156,6 +164,7 @@ footer nav {
         font-size: 1rem;
         position: absolute;
         left: -36px;
+        top: 0;
         font-family: "Inter UI", sans-serif;
     }
 }
@@ -164,7 +173,6 @@ footer nav {
 
 body.essay {
     h1 {
-        font-size: 1rem;
         max-width: 95vw;
     }
     &:not(.bg-white) {
@@ -187,9 +195,33 @@ body.essay {
             color: black;
         }
     }
+
+    h2 {
+      margin-top: 4rem;
+    }
+
+    blockquote {
+        border-left: 1px solid black;
+        padding-left: 2rem;
+        font-style: italic;
+        margin-bottom: 0;
+    }
+
     img {
         display: block;
-        // margin: 0 auto;
+    }
+    div.footnote-definition {
+      &[id="0"] {
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px solid black;
+      }
+      p {
+        display: inline;
+      }
+      &:not([id="0"]) {
+        margin: 2rem 0;
+      }
     }
 }
 
@@ -211,6 +243,17 @@ ul p {
 figure {
     margin: 0;
 }
+    // blockquote reset
+blockquote {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  margin-bottom: 2rem;
+  cite {
+    font-style: normal;
+  }
+}
 
     // images for posts
 img {
@@ -223,13 +266,6 @@ h1, h2, h3, h4, h5 {
     margin-block-end: 0;
     @extend .fw6;
     font-size: 1rem;
-}
-
-h1, .f1 {
-    @extend .lh-solid;
-}
-
-h2, .f2, h3, .f3 {
     @extend .lh-title;
 }
 
@@ -239,12 +275,6 @@ h3 {
 
 h4 {
     padding: 1rem 0 0.5rem 0;
-}
-
-    // author and ship styling
-span[rel=author] {
-    @extend .fw4;
-    margin-right: 5px;
 }
 
 address {
@@ -258,11 +288,19 @@ ul.posts, nav ul, nav li {
 }
 
 ul.posts li:not(:first-child) {
-    margin:2rem 0 2rem 0;
+    margin:6rem 0 6rem 0;
 }
 
 ul.posts li:first-child {
-    margin: 0 0 2rem 0;
+    margin: 0 0 6rem 0;
+}
+
+ul.posts.update li:first-child {
+  margin: 0 0 2rem 0;
+}
+
+ul.posts.update li:not(:first-child) {
+  margin: 2rem 0;
 }
 
 nav ul.docs {
@@ -283,10 +321,6 @@ nav.previous, nav.next {
     // min-width: 110px;
     text-align: left;
     background: transparent;
-    span#search-icon {
-      display: inline-block;
-      transform: translate(-4px, 2px) rotate(-45deg);
-    }
     span.search-slash {
       font-size: 0.75em;
       position: absolute;
@@ -382,7 +416,6 @@ input[type="search"] {
     }
   }
   .glossary-results__item {
-    padding: 0 1rem 0 1rem;
     &:hover {
         background-color: #F9F9F9;
       }
@@ -551,6 +584,14 @@ nav.docs details {
         display: inline-block;
         transform: rotate(-90deg);
     }
+}
+
+// are.na embeds
+
+iframe.arena-iframe {
+  border: 0;
+  min-height: 34em;
+  width: 100%;
 }
 
 // youtube

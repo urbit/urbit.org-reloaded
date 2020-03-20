@@ -1,7 +1,7 @@
 +++
 title = "Urbit ID"
 description = "An overview of the Urbit ID system"
-weight = 4
+weight = 2
 [extra]
 flatten_pagination = "true"
 hide_next_title = "true"
@@ -9,67 +9,60 @@ hide_previous_title = "true"
 image = "https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-cards%402x.png"
 +++
 
-Every time you post a comment, like something, send a message, or use any app or service, you need an account. (And, behind the scenes, a network address.) Neither of these things belongs to you. The way things are going, they never will. No matter what you’re up to with your phone or laptop, you’re dependent on MEGACORP.
+Assuming Urbit OS is simple enough for an ordinary user to own and operate, how do they log in? How do people identify one another on this new network? When people want to get data, files and messages to one another, how do they do it?  And how do we prevent spam?
 
-<img class="ba mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-megacorp.svg">
+Urbit ID is the answer to all these questions. Urbit ID is a decentralized addressing and public key infrastructure designed for Urbit OS.
 
-We don’t like being owned by someone else. We think your identity and wallet should feel like a unique and precious object that you can always carry with you. So we built Urbit ID.
+Let’s talk first about what an Urbit ID is and what it does. Then we’ll cover our design goals and how the system works overall.
 
-<img class="ba mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-cards%402x.png">
+<img class="ba" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-cards%402x.png">
 
-Urbit ID is meant to feel like a civilizational key. If your Urbit ID were a piece of hardware, you could tap it to unlock a door, swipe it to buy a coffee, and plug it into any computer to log in. It’s a unique, beautiful object that’s both an address and a wallet. It’s a key to a secret club and the ticket to your digital life.
+Your Urbit ID is a short, four-syllable name like `~ravmel-ropdyl` that you own with an eight-syllable master passkey like `~palfun-foslup-fallyn-balfus`. This name and key lets you log into Urbit OS, and it’s used to encrypt packets you send over the Urbit network. Soon it will also be a master key that allows holding and sending of Bitcoin and other cryptocurrencies. Your Urbit ID and passkey belong to you like any other cryptographic assets. No one can take them away from you (just make sure to store the key safely).
 
-Your Urbit ID isn’t a physical object (yet). Instead, it’s even simpler. Your Urbit ID is a name and passkey that’s easy to memorize.
+The Urbit ID registry is live and deployed to the Ethereum blockchain. Urbit ID isn’t specifically wedded to Ethereum – someday we’d like it to be hosted by Urbit OS itself. Also, Urbit ID is the only component of the stack using Ethereum – your Urbit OS node is hosted wherever you choose. The primary function of the Urbit ID registry is to keep track of who owns what, to specify which keys are associated with which names, and to enforce the rules of address distribution. We’ll get into the details a bit more below.
 
-If you wake up in the desert, unsure how you got there, you’ll be fine so long as you remember your Urbit ID and passkey. With it, you still own your digital identity and your digital assets. If you remember your friend’s Urbit ID you can always connect and send them money or messages.
+First, let’s talk about Urbit ID’s implementation and design goals, then about where we envision it going in the future.
 
-Urbit ID is a simple, decentralized system for people to own their digital addresses and crypto wallets. Urbit ID is a system owned by its users, designed to last far into the future, that’s live and usable today.
+If you’re curious to see exactly how this system works, the code is of course [open source](https://github.com/urbit/urbit). Including the source for our [phonemic naming system](https://github.com/urbit/urbit-ob/blob/master/src/internal/co.js) and the [visual representations](https://github.com/urbit/sigil-js). There’s even a [Figma plugin](https://github.com/urbit/sigil-figma-plugin) for using them. There’s also an interface for interacting with Urbit ID whose source is [open too](https://github.com/urbit/bridge).
 
-Urbit ID is a completely separate system from Urbit OS. It’s finished and deployed to Ethereum already. We designed Urbit ID to log in to Urbit OS, but it can be used for anything.
+Since the Urbit ID registry is live and deployed you can even [look at the chain](https://github.com/urbit/azimuth#live-contracts).
 
-For those curious to understand Urbit ID a bit better, we’ll cover the basics of how Urbit ID works.
+<img class="ba" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-paperwallet%402x.png">
 
-<img class="ba mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-paperwallet%402x.png">
+Each Urbit ID is really just a number. From that number we generate a pronounceable name and a visually identifiable sigil. `~dalwel-fadrun` is `3,509,632,436`, for example.
 
+Urbit IDs are distributed by a sponsorship tree. At the top of the tree are 2<sup>8</sup> (256) galaxies. Each galaxy issues 2<sup>8</sup> stars, making a total of 2<sup>16</sup> (65K). Stars then each can issue 2<sup>16</sup> planets, making for 2<sup>32</sup> (~4B). As you might expect, each planet issues 2<sup>32</sup> moons.
 
-Your Urbit ID is a short, memorable address that anyone can use to connect with you that *doesn’t* depend on any company. It’s an address you own completely and can keep forever.
+You can also call stars ‘infrastructure nodes’ and galaxies ‘governance nodes’, since those are more descriptive names for their roles. Stars help route packets, kind of like an ISP. And galaxies are a bit like DNS root servers or ICANN members. The difference, of course, is that Urbit IDs are owned cryptographically by many different people and accrue reputation independently.
 
-For most people, an Urbit ID looks something like `~tinbel-picpel`. You own it with a simple, memorable key twice its length, like `~winter-paches-palfun-foslup`. Urbit IDs are designed not to have any personally identifying information attached to them at all, sort of like a phone number. Each name and password is automatically generated — so we don’t accidentally leak data when we meet a stranger in the digital world.
+And that's it. It's a simple system. What's important is why it is the way it is. Let's take a look at that.
 
-Your Urbit ID and passkey are all you need to log into Urbit OS and send and receive crypto payments. Together, they’re a simple keypair that are easily memorizable. We think it’s the perfect form factor for ordinary people to take control of their digital lives.
-
-<img class="b—black ba mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-address-space-2.svg">
-
-We want everyone to own their own identity and wallet. One way to do this would be to build a MEGACORP or a Centralized Naming Authority of Urbit. But we prefer decentralized, collectively owned systems. So that’s what we built. Let’s look briefly at the basic mechanics of Urbit ID.
-
-Each Urbit ID is just a number. From that number we generate a pronounceable name and visually identifiable sigil. `~dalwel-fadrun` is `3,509,632,436`, for example.
-
-Urbit IDs are distributed by a sponsorship tree. At the top of the tree are `2^8` (`256`) galaxies. Each galaxy issues `2^8` stars, making a total of `2^16` (`65K`). Stars then each can issue `2^16` planets, making for `2^32` (`~4B`). As you might expect, each planet issues `2^32` moons.
-
-Every Urbit ID needs a sponsor. Stars and planets can always move to a new one. The galaxies act as a senate to upgrade the system by majority vote.
-
-And that's it. It's a simple system. What's important is *why* it is the way it is. Let's take a look at that.
-
-<img class="b—black ba mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-address-space-1.svg">
+<img class="full ba w-100 mv4" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-address-space-1.svg"/>
 
 At a high level, there are three important things to understand about the overall Urbit ID system design.
 
-First, there are only so many Urbit IDs, so they cost something. Since they cost something, people are less likely to use them to spam or abuse the network. And, when you meet a stranger with an Urbit ID, you know they have some skin in the game without them leaking any personal data in either direction. Each Urbit ID is purely pseudonymous. `~dalwel-fadrun`, for example, is only proof of some stake in the network.
+First, scarcity: there are only 2<sup>32</sup> (~4B) Urbit IDs, so they cost something. Since they cost something, people are less likely to use them to spam or abuse the network. When you meet a stranger with an Urbit ID, you know they have some skin in the game (even without leaking personal data in either direction). That said, each Urbit ID is purely pseudonymous, so `~dalwel-fadrun` for example, is proof of some stake in the network, but not much more.
 
-Second, Urbit IDs are distributed by a sponsorship tree. Each sponsor issues a fixed number of addresses. Since there are lots of sponsors, there are lots of ways to get an Urbit ID — not just one central authority.
+Second, decentralization: Urbit IDs are distributed by a sponsorship tree. Each sponsor issues a fixed number of addresses. Since there are lots of sponsors, there are lots of ways to get an Urbit ID — not just one central authority. Once you get one, it’s yours forever.
 
-Urbit IDs need a sponsor even after they’re issued, but you can always change sponsors and sponsors can always reject children. This means bad actors can be banned and abusive sponsors can be ignored. We think this strikes a nice balance between accountability and freedom.
+One point that’s useful to understand about sponsors is that while Urbit IDs always need a sponsor, or parent node on the network (primarily for peer discovery), it’s always possible to change sponsors and sponsors can always reject children. This means bad actors can be banned and abusive sponsors can be ignored. We think this strikes a nice balance between accountability and freedom.
 
-Finally, galaxies (the top of the sponsorship tree) form a senate that can upgrade the logic of the Urbit ID system by majority vote. We think Urbit ID should last for quite a long time, but if it ever needs to be changed, the galaxies can facilitate upgrades. Code may be law, but ultimately we acknowledge that human judgment can’t be factored out.
+Third, governance: galaxies (the top of the sponsorship tree) form a senate that can upgrade the logic of the Urbit ID system by majority vote. We think Urbit ID will last for quite a long time, but if it ever needs to be updated, the galaxies can vote to approve, reject, or propose changes to the contracts. Code may be law, but ultimately we acknowledge that human judgment can’t be factored out.
 
-(For a bit more on how all this works, see the [FAQ](@/faq.md).)
+The Urbit ID sponsorship tree is not intended to be a social system in any way. Interactions between people and communities on the Urbit network are peer-to-peer, entirely organic and completely uncontrolled by the address hierarchy. Urbit ID is simply an authentication substrate upon which reputation and communication systems can be built. (We’ve even considered renaming stars and galaxies ‘infrastructure’ and ‘governance’ nodes, respectively).
 
-Urbit ID isn’t just a design. It’s [live and deployed](https://azimuth.network) to the Ethereum blockchain.
+Your relationship with your sponsor should be sort of like your ISP or a utility provider: a passive, non-invasive relationship. If it isn’t to your liking, moving to a new sponsor is very easy.
 
-<img class="b—black ba mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-sigils%402x.png">
+<img class="ba" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-sigils%402x.png">
 
-Urbit IDs are digital property, and we think of the entire address space of Urbit IDs as a vast territory of digital land.
+Urbit IDs are property, and we think of the entire registry of Urbit IDs as a vast territory of digital land.
 
-The scarcity tree of Urbit ID address space drives decentralization even while the project is young, which is great. If Urbit ID is going to last a long time and succeed as neutral infrastructure, it has to be owned and controlled by a wide variety of people.
+The scarcity of Urbit ID address space gives it value and that in turn helps bootstrap decentralization even while the project is young. Broad distribution is important – If Urbit is going to last a long time and succeed as neutral infrastructure, it has to be owned and controlled by a wide variety of people.
 
-When we launched the Urbit ID system, in January of 2019, there were a few thousand different star and galaxy holders – stewards of this digital land. Since then, that number is on the rise.
+When we launched the Urbit ID system, in January of 2019, there were a couple thousand different star and galaxy holders acting as stewards of this digital land. Since then, that number has been steadily on the rise.
+
+<img class="ba" src="https://media.urbit.org/site/understanding-urbit/project-history/uu-id-5.jpg">
+
+Ultimately, we want your Urbit ID to feel like a civilizational key. If your Urbit ID were a piece of hardware, you could tap it to unlock a door, swipe it to buy a coffee, and plug it into any computer to log in. Your Urbit ID should be a unique, beautiful object that’s both an address and a wallet. It’s a key to a secret club and the ticket to your digital life.
+
+Moving on, let’s talk about what we want this whole stack to feel like as a user experience.

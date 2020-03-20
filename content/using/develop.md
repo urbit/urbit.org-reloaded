@@ -8,11 +8,11 @@ aliases = ["/docs/using/creating-a-development-ship/", "/docs/getting-started/co
 
 There are roughly two kinds of development on Urbit: core development and application development. Urbit applications are still young, but can be fun to experiment with. The kernel is much more stable, but generally more challenging from an engineering standpoint.
 
-This guide will start by getting you set up to run an Urbit ship, and then tell you everything you need to now do to either.
+This guide will start by getting you set up to run an Urbit ship, and then tell you everything you need to know to do either.
 
 ### Setting up your environment
 
-We assume you’ve gotten a basic introduction to Urbit. If you haven’t, read the [Understanding Urbit](@/understanding-urbit/_index.md) series, or just jump ahead to the [Technical Overview](@/understanding-urbit/technical-overview.md).
+We assume you’ve gotten a basic introduction to Urbit. If you haven’t, read the [Understanding Urbit](@/understanding-urbit/_index.md) series.
 
 Once you’re ready, you can get started on the network right away and take some first steps, without acquiring an identity, by [creating a comet](@/using/operations/creating-a-comet.md).
 

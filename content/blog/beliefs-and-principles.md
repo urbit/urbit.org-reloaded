@@ -2,7 +2,8 @@
 title = "Beliefs and principles guiding the Urbit project."
 date = 2016-05-11
 description = "We believe."
-aliases = ["/posts/essays/beliefs-and-principles", "/posts/beliefs-and-principles"]
+aliases = ["/posts/essays/beliefs-and-principles",
+"/posts/beliefs-and-principles", "/posts/principles"]
 [extra]
 author = "Curtis Yarvin + Galen Wolfe-Pauly"
 ship = "~sorreg-namtyv + ~ravmel-ropdyl"
