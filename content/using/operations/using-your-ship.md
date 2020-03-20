@@ -232,7 +232,7 @@ Let’s get started using the `:chat-cli` application, also known more simply as
 
 ### Quickstart
 
-The most common uses of `:chat-cli` right now are communicating over a public chat channel on `~dopzod/urbit-help.` Everyone is more than welcome in `~dopzod/urbit-help`. It's the place to get help, ask questions and chat about Urbit in general.
+The most common uses of `:chat-cli` right now are communicating over a public chat channel on `~/~dopzod/urbit-help.` Everyone is more than welcome in `~/~dopzod/urbit-help`. It's the place to get help, ask questions and chat about Urbit in general.
 
 Note that largely equivalent functionality is also available through Chat's web UI in landscape. This is available from your ship’s URL address, mentioned earlier in this guide.
 
@@ -240,15 +240,15 @@ Note that largely equivalent functionality is also available through Chat's web 
 
 In `:chat-cli`, any kind of medium for a message is called a _chat_. There are four "types" of chats, but for now we'll be dealing with the _channel_, a publicly accessible chatroom for general use. We'll discuss the other three kinds in the [chat management](#chat-management) section later on.
 
-Let's join the `~dopzod/urbit-help` channel. Use `ctrl-x` to switch from the Dojo prompt to the Chat prompt.
+Let's join the `~/~dopzod/urbit-help` channel. Use `ctrl-x` to switch from the Dojo prompt to the Chat prompt.
 
 Then:
 
 ```
-~sampel-palnet:chat-cli/ ;join ~dopzod/urbit-help
+~sampel-palnet:chat-cli/ ;join ~/~dopzod/urbit-help
 ```
 
-Now that you're in, try post a line to `~dopzod/urbit-help`:
+Now that you're in, try post a line to `~/~dopzod/urbit-help`:
 
 ```
 ~sampel-palnet:chat-cli= Hello, world!
@@ -261,7 +261,7 @@ You'll see your message printed below messages from others that came before it. 
 ~dopzod/urbit-help
 ```
 
-Glyphs will be automatically assigned to channels, but have the option of binding a glyph (single non-alphanumeric character) to the channel you're joining; the syntax is in the form of `;join ~dopzod/books +`. The chosen glyph will be the symbol that ends your prompt, and it will be what you use as a shortcut to switch to this channel.
+Glyphs will be automatically assigned to channels, but have the option of binding a glyph (single non-alphanumeric character) to the channel you're joining; the syntax is in the form of `;join ~/~dopzod/books +`. The chosen glyph will be the symbol that ends your prompt, and it will be what you use as a shortcut to switch to this channel.
 
 ```
 ~sampel-palnet:chat-cli= ;+
@@ -271,7 +271,7 @@ Glyphs will be automatically assigned to channels, but have the option of bindin
 Use `;leave` to unsubscribe from a channel:
 
 ```
-~sampel-palnet:chat-cli= ;leave ~dopzod/urbit-help
+~sampel-palnet:chat-cli= ;leave ~/~dopzod/urbit-help
 ```
 
 Now, let's create a channel we can invite some friends to:
@@ -280,7 +280,7 @@ Now, let's create a channel we can invite some friends to:
 ~sampel-palnet:chat-cli= ;create channel /my-channel
 ```
 
-Now you can tell your friends to `;join ~your-urbit/my-channel`.
+Now you can tell your friends to `;join ~/~your-urbit/my-channel`.
 
 ### Hoon
 
