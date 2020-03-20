@@ -27,7 +27,7 @@ Tlon is also working to set up an urbit.org foundation. This is still in process
 
 Urbit.live started selling Urbit IDs very early once that became possible, and also plans to offer services within the Urbit ecosystem. 
 
-The community of contributors and core developers has been steadily contributing to the code base since before Tlon existed, and they’re still going strong. They can primarily be found on Urbit itself, in `~dopzod/urbit-help`, the [urbit-dev mailing list](https://groups.google.com/a/urbit.org/forum/#!forum/dev) and on [GitHub](https://github.com/urbit).
+The community of contributors and core developers has been steadily contributing to the code base since before Tlon existed, and they’re still going strong. They can primarily be found on Urbit itself, in `~/~dopzod/urbit-help`, the [urbit-dev mailing list](https://groups.google.com/a/urbit.org/forum/#!forum/dev) and on [GitHub](https://github.com/urbit).
 
 When the Urbit ID address space went on-chain in early 2019 there were about 2,000 star holders and 70 galaxy holders – that number has since grown steadily. For the most part, the best way to connect with them is through Urbit itself. 
 
@@ -38,7 +38,7 @@ src="https://media.urbit.org/site/understanding-urbit/uu-people-history-2a.jpg"/
 src="https://media.urbit.org/site/understanding-urbit/uu-people-history-2c.jpg"
 />
 
-Given how new and unusual Urbit is, it attracts a wide variety of interesting people — both technical and non-technical. The community is generally happy to talk to people about what Urbit is, what we’re up to, and where we’re going. The best way to get involved is to simply join `~dopzod/urbit-help` — which our [setup instructions](/using/operations/using-your-ship/) can help you do.
+Given how new and unusual Urbit is, it attracts a wide variety of interesting people — both technical and non-technical. The community is generally happy to talk to people about what Urbit is, what we’re up to, and where we’re going. The best way to get involved is to simply join `~/~dopzod/urbit-help` — which our [setup instructions](/using/operations/using-your-ship/) can help you do.
 
 For those interested in contributing there are some simple instructions on [GitHub](https://github.com/urbit/urbit/blob/master/CONTRIBUTING.md#contributing-to-urbit), but we also run a [grants program](https://grants.urbit.org/) where we reward contributors with Urbit ID address space. Grants aren’t solely for pre-determined projects, either. If you have something you’d like to propose, we’d love to hear from you.
 
