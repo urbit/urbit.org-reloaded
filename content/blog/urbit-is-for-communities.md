@@ -1,7 +1,7 @@
 +++
 title = "Urbit is for Communities"
 date = 2020-03-23
-description = "Urbit is for giving communities the tools to evolve their own environments; for us all to feel a sense of life and self-directedness in the digital world."
+description = "Urbit is for giving communities the tools to shape their own environments; for us all to feel a sense of life and self-directedness in the digital world."
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"
@@ -73,7 +73,7 @@ We’re not quite to this level of sophistication, but we’re on the path. Let�
 
 ## OS 1
 
-Our roughest attempt to satisfy this goal is hovering on the horizon. We call it OS 1.
+Our rough attempt to satisfy this goal is hovering on the horizon. We call it OS 1.
 
 In OS 1, you bring a group of people together to share a set of channels. A channel can be a chat, a notebook, or a collection of links. We built an interface for doing this, but you could just as well build your own. Inside OS1, data and interface aren’t stuck together like they are with apps in the default web. Nor are the people you’re connected with locked into any given Urbit app. App, data, and social graph are always separate in Urbit; they’re modular and always under your control.
 
