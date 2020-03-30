@@ -378,9 +378,8 @@ price in ether of a planet, and the number of planets available.
 
 ## Okay, so
 
-That was quite a lot of information!  We've created a fora thread
-[here](https://urbit.org/fora/posts/~2017.9.20..22.56.04..47ce~) for discussion,
-and would be glad to hear your feedback.  GitHub issues on the
+That was quite a lot of information! There's a blog post about the constitution
+[here](https://urbit.org/blog/interim-constitution/).  GitHub issues on the
 [urbit/constitution repo](https://github.com/urbit/constitution) are also more
 than welcome.
 
