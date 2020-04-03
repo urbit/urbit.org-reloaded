@@ -5,12 +5,12 @@ description = "An expansion of our position on Urbit's address space value"
 [extra]
 author = "Erik Newton + Galen Wolfe-Pauly"
 ship = "~patnes-rigtyn + ~ravmel-ropdyl"
-image ="https://media.urbit.org/site/posts/essays/pre-01.jpg"
+image ="https://media.urbit.org/site/posts/essays/value-of-address-space-pt1.jpg"
 +++
 
 <br>
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/pre-01.jpg">
+<img class="ba" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt1.jpg">
 
 <br>
 
