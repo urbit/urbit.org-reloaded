@@ -30,15 +30,15 @@ First, a brief refresher about what we’re doing.
 
 The goal of Urbit is to deliver a complete, cohesive, and superior user experience for personal computing in a networked world. We’ve built a system that is simple, durable, and entirely owned by the user. Urbit gives autonomy back to users in a world where most of our computing and platforms are owned by centralized authorities. 
 
-Broadly speaking, Urbit is two pieces of technology designed to be used together: Urbit ID and[ Urbit OS](https://urbit.org/understanding-urbit/urbit-os/). This post deals primarily with Urbit ID, as that is the component of the Urbit system that is actively being traded on open markets. 
+Broadly speaking, Urbit is two pieces of technology designed to be used together: Urbit ID and[Urbit OS](https://urbit.org/understanding-urbit/urbit-os/). This post deals primarily with Urbit ID, as that is the component of the Urbit system that is actively being traded on open markets. 
 
 We think of Urbit as a digital frontier with vast amounts of uncharted territory. Right now early pioneers are settling Urbit and creating communities and ecosystems that aren’t possible in the centralized version of the internet. Urbit IDs are the cornerstones of this activity.
 
-For a deeper dive into what Urbit is, check out our[ introductory materials](https://urbit.org/understanding-urbit/) or [Urbit for Normies](https://urbit.org/blog/urbit-for-normies/).
+For a deeper dive into what Urbit is, check out our [introductory materials](https://urbit.org/understanding-urbit/) or [Urbit for Normies](https://urbit.org/blog/urbit-for-normies/).
 
 In order to explore why Urbit IDs have value, we’ll start by explaining the basics of how they function.
 
-## Urbit ID basics ## 
+## Urbit ID basics
 
 From one perspective, Urbit ID is simply a means of logging into Urbit OS. From another, Urbit IDs represent a new class of digital asset. 
 
@@ -76,7 +76,7 @@ So, fundamentally, Urbit ID is just a finite set of names and a system for assig
 
 In our view, the short history of the internet has been a lesson in centralization and consolidation. DNS is a cabal of root servers. IP is essentially controlled by a single entity. All of our naming schemes have been more or less centralized. Certificate signing is a mess of competing authorities. Search is Google. Hosting is AWS. And don’t even get us started on social networks.
 
-Centralization on its own isn’t bad, but it certainly has some negative implications, privacy being the most obvious. Beyond that the naming schemes we have on the internet today aren’t _personal;_they’re not controlled by their users. 
+Centralization on its own isn’t bad, but it certainly has some negative implications, privacy being the most obvious. Beyond that the naming schemes we have on the internet today aren’t _personal;_ they’re not controlled by their users. 
 
 Simultaneously working against this trend are a variety of decentralized web projects, various digital currencies, and dozens of protocols that are all focused on individual use and distributed ownership. But how do any of those actually surface to the mainstream? How do people identify themselves in this new digital world? Where do they call home? Where’s the Schelling point when they want to connect and work together?
 
@@ -106,27 +106,27 @@ We’ve often said that Urbit address space, particularly stars and galaxies, ha
 
 Let’s dig a bit deeper into these activities through the lens of some analogues to the existing world. 
 
-DNS – 
+### DNS
 
 We’ve often compared Urbit ID to the IPv4 and IPv6 systems. In this scheme, galaxies are much like [/8 blocks](https://en.wikipedia.org/wiki/List_of_assigned_/8_IPv4_address_blocks) of IPv4 addresses, while planets are much like individual IP addresses. The difference is that IP addresses are rarely owned by end users, and they’re typically assigned dynamically, so they tend to change. This is why IP addresses can’t be used to accrue reputation for end users or to prevent spam. It’s worth noting that while most of us don’t own our IP addresses; they are currently [traded](https://auctions.ipv4.global/) on the open market. As of the time of this writing, individual addresses are selling for ~$20 /8 blocks are extremely valuable, and none are currently on the market. 
 
-ISPs –
+### ISPs
 
 Another analogy that we often use is that of ISPs (internet service providers). Stars in the Urbit network are the closest approximation here in that they help planets connect to the network. Ultimately connections on Urbit are peer-to-peer, but stars provide initial connections, distribute software updates, and route packets when peer to peer connections don’t yet exist. These services all represent a cost, and we believe they’ll eventually be metered and priced. 
 
-CDNs –
+### CDNs
 
 CDNs (content delivery networks) are another useful comparison. Stars are perfectly positioned to play this role in the Urbit ecosystem. Because stars are designed as packet routing infrastructure, they’re able to easily spin up greater bandwidth to service high-demand content, or to aggregate content. Stars can also act as content curators and providers, or as content filters for those who want a more narrow range of access. On the other end of that spectrum, stars could easily function as something similar to VPNs (virtual private networks) for any type of content. 
 
-Software distribution –
+### Software distribution
 
 An infrastructure innovation that’s relevant here is that Urbit OS is specifically designed to make over-the-air (OTA) updates to the system — meaning software and updates are distributed automatically with no effort on the part of the end user. By default, planets and stars get their system updates from their sponsors. As the system evolves, we expect stars and galaxies to not only provide core system (kernel) updates, but also to act as software distribution hubs. This service likewise represents a potential profit center. 
 
-Payments and transactions –
+### Payments and transactions
 
 On top of routing and software distribution, there are likely other worthwhile services for stars and galaxies to provide. A payments-focused star could run Bitcoin, Lightning or Ethereum nodes exclusively for sponsored planets. A trading-focussed star could run a 0x relayer and provide an order book for sponsored planets. It’s easy to imagine machine learning or compute services being offered as a service; for example, a star could bolt on a TensorFlow chip and allow its sponsored planets to run computer functions for a fee. 
 
-Land –
+### Land
 
 We often use land as an analogy to describe Urbit address space. This is not simply because Urbit address space is finite or because IDs act as addresses on the network. It’s because Urbit is designed to be extremely extensible. Once you take possession of your Urbit — whether it’s a galaxy, star, or planet — you have immense flexibility: you can use it as-is out of the box, you can rearrange your environment, or you can go as far as writing code to create new functionality. Urbit address space is meant to be used productively. Urbit is very much territory for homesteaders. 
 
@@ -134,7 +134,7 @@ We expect that certain groups of Urbit IDs will be more valuable than other grou
 
 In the long term, the real value of an infrastructure node (a star or galaxy) is not simply in trading on the unit price of planets, but in developing and improving the real estate. 
 
-Dealer-operators –
+### Dealer-operators
 
 Another approach to developing the value of address space that is already emerging is that of the dealer-operator. The most convenient way for an ordinary person to use Urbit is to have a planet hosted in the cloud so they can log in from any device. Because the long-term value of a star or galaxy is in providing services, and because most planets and stars need to be hosted, providers of these services have begun to emerge. 
 
