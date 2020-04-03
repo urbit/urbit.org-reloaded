@@ -1,7 +1,7 @@
 +++
 title = "The value of Urbit address space (1 of 3)"
 date = 2020-04-03
-description = "Technical maxims that define Urbit's approach to engineering."
+description = "An expansion of our position on Urbit's address space value"
 [extra]
 author = "Erik Newton + Galen Wolfe-Pauly"
 ship = "~patnes-rigtyn + ~ravmel-ropdyl"
@@ -11,6 +11,8 @@ image ="https://media.urbit.org/site/posts/essays/pre-01.jpg"
 <br>
 
 <img class="ba" src="https://media.urbit.org/site/posts/essays/pre-01.jpg">
+
+<br>
 
 # Part One – What/why, a history, and some analogies
 
