@@ -1,6 +1,6 @@
 +++
 title = "The value of Urbit address space (1 of 3)"
-date = 2020-04-03
+date = 2020-04-07
 description = "An expansion of our position on Urbit's address space value"
 [extra]
 author = "Erik Newton + Galen Wolfe-Pauly"
