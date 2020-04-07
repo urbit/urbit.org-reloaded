@@ -1,10 +1,10 @@
-/docs/introduction                   /docs
-/docs/getting-started                /using/install
-/docs/getting-started/azimuth        /understanding-urbit/urbit-id
-/landscape                           /using/develop
-/docs/getting-started/using-a-star   /using/operations/stars-and-galaxies/
-/docs/bridge                         /using/operations/using-bridge/
-/docs/pki                            /docs/concepts/azimuth/
-/docs/arvo/internals/                /docs/tutorials/arvo/
-/primer                              /understanding-urbit/
-/install                             /using/install
+/docs/introduction                   /docs 301!
+/docs/getting-started                /using/install 301!
+/docs/getting-started/azimuth        /understanding-urbit/urbit-id 301!
+/landscape                           /using/develop 301!
+/docs/getting-started/using-a-star   /using/operations/stars-and-galaxies/ 301!
+/docs/bridge                         /using/operations/using-bridge/ 301!
+/docs/pki                            /docs/concepts/azimuth/ 301!
+/docs/arvo/internals/                /docs/tutorials/arvo/ 301!
+/primer                              /understanding-urbit/ 301!
+/install                             /using/install 301!
