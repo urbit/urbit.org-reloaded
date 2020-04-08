@@ -2,6 +2,7 @@
 title = "The value of Urbit address space (2 of 3)"
 date = 2020-04-10
 description = "Scarcity, utility, liquidity, and network effect"
+draft = true
 [extra]
 author = "Erik Newton + Galen Wolfe-Pauly"
 ship = "~patnes-rigtyn + ~ravmel-ropdyl"
