@@ -26,19 +26,11 @@ Now that people are using Urbit on a daily basis, we want to make sure that Urbi
 
 There’s a lot to discuss, so we’re breaking this discussion into three posts. The first explores what Urbit ID is, shares some history, and provides a few analogies that can help in understanding value on the network. The second looks at scarcity, utility, liquidity, and network effect. The third post explains lockups and availability.
 
-First, a brief refresher about what we’re doing. 
-
-The goal of Urbit is to deliver a complete, cohesive, and superior user experience for personal computing in a networked world. We’ve built a system that is simple, durable, and entirely owned by the user. Urbit gives autonomy back to users in a world where most of our computing and platforms are owned by centralized authorities. 
-
-Broadly speaking, Urbit is two pieces of technology designed to be used together: Urbit ID and[Urbit OS](https://urbit.org/understanding-urbit/urbit-os/). This post deals primarily with Urbit ID, as that is the component of the Urbit system that is actively being traded on open markets. 
-
-We think of Urbit as a digital frontier with vast amounts of uncharted territory. Right now early pioneers are settling Urbit and creating communities and ecosystems that aren’t possible in the centralized version of the internet. Urbit IDs are the cornerstones of this activity.
-
-For a deeper dive into what Urbit is, check out our [introductory materials](https://urbit.org/understanding-urbit/) or [Urbit for Normies](https://urbit.org/blog/urbit-for-normies/).
-
-In order to explore why Urbit IDs have value, we’ll start by explaining the basics of how they function.
+For a refresher about what we’re doing, check out our [introductory materials](https://urbit.org/understanding-urbit/) or [Urbit for Normies](https://urbit.org/blog/urbit-for-normies/).
 
 ## Urbit ID basics
+
+In order to explore why Urbit IDs have value, we’ll start by explaining the basics of how they function.
 
 From one perspective, Urbit ID is simply a means of logging into Urbit OS. From another, Urbit IDs represent a new class of digital asset. 
 
