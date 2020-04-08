@@ -163,7 +163,7 @@ All Groups, and in there you should see an invitation. From this interface you
 can join the various Chat, Publish, and Link instances contained in the group.
 
 You can join `~/~dopzod/urbit-help` from either Landscape or dojo. To join from
-Landscape, click on the Messaging tile on the home screen. Then press Join Chat
+Landscape first click on the Messaging tile on the home screen. Then press Join Chat
 in the upper left corner and enter `~/~dopzod/urbit-help` into the prompt and
 press Join Chat. To join from dojo, enter `;join ~/~dopzod/urbit-help` into dojo
 and press enter.
