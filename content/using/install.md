@@ -151,3 +151,19 @@ Landscape is the Urbit web interface, and it's the best way to interact with you
 2.  If the port given is 80, simply type `localhost` into your browser's address bar. If the given port is a different number, such as `8080`, you would type `localhost:8080`. Alternatively, you access landscape by navigating to `ship.arvo.network` into your URL bar, where `sampel-palnet` is the name of your ship, without the `~`. You will need to [set up DNS proxying](@/using/operations/using-your-ship.md#dns-proxying) to use this option.
 3. Type `+code` into your ship's Dojo. Copy-paste the returned code into the field asking for it in the browser page.
 4. You're in! Now you can explore apps such as Chat for messages, Publish for blogging, and Weather.
+
+### Joining the community
+
+Once you are in Landscape we recommend joining the Urbit Community group. You
+will need to obtain an invite, which can be had by first joining
+the `~/~dopzod/urbit-help` chat channel and asking for an invitation from there.
+Once you have the invite you can accept it by navigating to your Groups by
+clicking on All Groups in the upper left hand corner of Landscape, then Manage
+All Groups, and in there you should see an invitation. From this interface you
+can join the various Chat, Publish, and Link instances contained in the group.
+
+You can join `~/~dopzod/urbit-help` from either Landscape or dojo. To join from
+Landscape, click on the Messaging tile on the home screen. Then press Join Chat
+in the upper left corner and enter `~/~dopzod/urbit-help` into the prompt and
+press Join Chat. To join from dojo, enter `;join ~/~dopzod/urbit-help` into dojo
+and press enter.
