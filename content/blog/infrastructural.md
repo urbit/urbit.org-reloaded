@@ -36,11 +36,11 @@ Here at Tlon, we’re assembling thoughtful infrastructure you can spend your li
 
 OS 1, while incremental in its initial expression from Modulo, serves to outline our sense of what beautiful (in the sense of sublime beauty), useful, and durable digital infrastructure should feel like to inhabit. For the purposes of OS 1, we can imagine “Beautiful Infrastructure” to form the spirit of what we’re building:
 
-Beautiful infrastructure is inhabitable. You’re not floating in an infinite feed of content streams. You are situated in a defined space with edges you can shift at-will, as your needs deem fit. Our model for inhabitable computing is new and in limited flux, but our vision is long.
+**Beautiful infrastructure is inhabitable**. You’re not floating in an infinite feed of content streams. You are situated in a defined space with edges you can shift at-will, as your needs deem fit. Our model for inhabitable computing is new and in limited flux, but our vision is long.
 
-Beautiful infrastructure is a gravitational force. Even if you can’t feel it or directly experience it, well-designed infrastructure is a cohering force. One is grounded with respect to the infrastructure they live alongside.
+**Beautiful infrastructure is a gravitational force**. Even if you can’t feel it or directly experience it, well-designed infrastructure is a cohering force. One is grounded with respect to the infrastructure they live alongside.
 
-Beautiful infrastructure is like a [shell](https://en.wikipedia.org/wiki/Shell). Well-considered infrastructural projects provide durable, generalized, reusable, and most importantly, *self-designed* containers around otherwise formless flows of information. 
+**Beautiful infrastructure is like a [shell](https://en.wikipedia.org/wiki/Shell)**. Well-considered infrastructural projects provide durable, generalized, reusable, and most importantly, *self-designed* containers around otherwise formless flows of information. 
 The current state of mass software design has gotten many of the “reusable” elements of design down pat, but these structures are optimized to pump ads and information into your brain, algorithmically-sorted-linear-feed style. 
 In Urbit, I can take the conceptual container of "temporal linearity" and use this to shape communication data as I see fit. I should be able to shape once-linear communication and cast it into a nodal communication model: My DM is now a MUD.
 
@@ -66,10 +66,10 @@ Counterintuitively, designing around this notion of a "rich blank slate” requi
 
 A few key design decisions emphasized the above gestalt we sought to express:
 
-We decided very early on to revert the colorful presentation of Modulo to a literal blank slate—OS 1 is much like a sheet of graph paper now.
-All typography and typographic representation was severely flattened. This decision was one of our more drastic ones, and granted OS 1 a sense of being somewhat more "undirected" in the sense of its form. We hope that as our system becomes more robust, users can decide which elements of their systems require emphasizing, to feel most at home with their information.
-The majority of graphics used throughout the system were rendered into black and white line drawings. As architectural schematics and orthographic projections flatten their representation of reality so an architect can “see structure” easier, we made the decision to express a visual foundation that felt more like a diagram than an ergonomic user interface.
-A coupled notion of the above point is that we wanted to give our users the sense that modifying the underlying system was a simple task. Rather than present Urbit's first users with beautiful artistry and a sense that our infrastructure was to remain untouched and sacred, we decided to present a visual face to the project that felt nearly rudimentary, nothing outside the realm of editorial capability for the average person.
+- We decided very early on to revert the colorful presentation of Modulo to a literal blank slate—OS 1 is much like a sheet of graph paper now.
+- All typography and typographic representation was severely flattened. This decision was one of our more drastic ones, and granted OS 1 a sense of being somewhat more "undirected" in the sense of its form. We hope that as our system becomes more robust, users can decide which elements of their systems require emphasizing, to feel most at home with their information.
+- The majority of graphics used throughout the system were rendered into black and white line drawings. As architectural schematics and orthographic projections flatten their representation of reality so an architect can “see structure” easier, we made the decision to express a visual foundation that felt more like a diagram than an ergonomic user interface.
+- A coupled notion of the above point is that we wanted to give our users the sense that modifying the underlying system was a simple task. Rather than present Urbit's first users with beautiful artistry and a sense that our infrastructure was to remain untouched and sacred, we decided to present a visual face to the project that felt nearly rudimentary, nothing outside the realm of editorial capability for the average person.
 
 Many other small constraints have been set into place to build what we truly believe to be simple, durable, personal, digital infrastructure. 
 
