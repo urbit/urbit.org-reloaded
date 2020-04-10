@@ -1,11 +1,11 @@
 +++
 title = "Infrastructural"
-date = 2020-04-13
-description = "TBD"
+date = 2020-04-10
+description = "A reflection–meditation on OS 1’s initial form development and the attitude we brought to bear in designing it"
 [extra]
 author = "É. Urcades"
 ship = "~fabled-faster"
-image ="https://media.urbit.org/site/posts/essays/stance-2.jpg"
+image ="https://media.urbit.org/site/posts/essays/infrastructural-2.jpg"
 +++
 
 <br>
