@@ -28,7 +28,7 @@ This post serves as a reflection–meditation on OS 1’s initial form developme
 
 Urbit’s interfaces, and the process by which we build them, are resolutely not projections of the world’s current conception of digital design—that of mass digital product design. Products are sold, bought, and discarded as they are in their physical sense. Digital products are slotted into the [vending machines](https://urcad.es/writing/personal-computer-vending-machine/) we call our phones and are mass produced as candy is produced. Candy is *essentially* free, and contemporary digital products are *absolutely* free of cost. If you’re reading this, you probably already have a good sense of what free corporate digital products mean for your privacy.
 
-Urbit is *distinctly* not free (as in freely offered as a service via a corporate entity), and your urbit is *distinctly* not a product. As we trace over the interfaces we design with our cursors, we’re not building a product, we’re not selling a product, we’re not painting a product, and we’re certainly not decorating a product.
+Urbit is distinctly *not* free (as in freely offered as a service via a corporate entity), and your urbit is distinctly *not* a product. As we trace over the interfaces we design with our cursors, we’re not building a product, we’re not selling a product, we’re not painting a product, and we’re certainly not decorating a product.
 
 Here at Tlon, we’re assembling thoughtful infrastructure you can spend your life using, learning, and extending. We’re attempting to assemble spaces you can one day pass on to friends, close collaborators, or possibly your grandchildren. We are resolute in our practice and stay our hands to the greatest degree possible as a result of this mindset.
 
