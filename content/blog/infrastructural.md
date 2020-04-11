@@ -26,7 +26,7 @@ This post serves as a reflection–meditation on OS 1’s initial form developme
 
 ## Products
 
-Urbit’s interfaces, and the process by which we build them, are resolutely not projections of the world’s current conception of digital design—that of mass digital product design. Products are sold, bought, and discarded as they are in their physical sense. Digital products are slotted into the [vending machines](https://urcad.es/writing/personal-computer-vending-machine/) we call our phones and are mass produced as candy is produced. Candy is *essentially* free, and contemporary digital products are *absolutely* free of cost. If you’re reading this, you probably already have a good sense of what free corporate digital products mean for your privacy.
+Urbit’s interfaces, and the process by which we build them, are resolutely not projections of the world’s current conception of digital design—that of mass digital product design. Products are sold, bought, and discarded as they are in their physical sense. Digital products are slotted into the [vending machines](https://urcad.es/writing/personal-computer-vending-machine/) we call our phones and are mass produced as candy is produced. Candy is *essentially* free, and contemporary digital products are *absolutely* free of cost. If you’re reading this, you probably already have a good idea of what free corporate digital products mean for your privacy.
 
 Urbit is distinctly *not* free (as in freely offered as a service via a corporate entity), and your urbit is distinctly *not* a product. As we trace over the interfaces we design with our cursors, we’re not building a product, we’re not selling a product, we’re not painting a product, and we’re certainly not decorating a product.
 
@@ -34,7 +34,7 @@ Here at Tlon, we’re assembling thoughtful infrastructure you can spend your li
 
 ## Beautiful Infrastructure
 
-OS 1, while incremental in its initial expression from Modulo, serves to outline our sense of what beautiful (in the sense of sublime beauty), useful, and durable digital infrastructure should feel like to inhabit. For the purposes of OS 1, we can imagine “Beautiful Infrastructure” to form the spirit of what we’re building:
+OS 1, while incremental in its initial expression from OS 0, serves to outline our stance of what sublimely beautiful, useful, and durable digital infrastructure should feel like to inhabit. For the purposes of OS 1, we can imagine “Beautiful Infrastructure” to form the spirit of what we’re building:
 
 **Beautiful infrastructure is inhabitable**. You’re not floating in an infinite feed of content streams. You are situated in a defined space with edges you can shift at-will, as your needs deem fit. Our model for inhabitable computing is new and in limited flux, but our vision is long.
 
@@ -67,12 +67,12 @@ Counterintuitively, designing around this notion of a "rich blank slate” requi
 A few key design decisions emphasized the above gestalt we sought to express:
 
 - We decided very early on to revert the colorful presentation of Modulo to a literal blank slate—OS 1 is much like a sheet of graph paper now.
-- All typography and typographic representation was severely flattened. This decision was one of our more drastic ones, and granted OS 1 a sense of being somewhat more "undirected" in the sense of its form. We hope that as our system becomes more robust, users can decide which elements of their systems require emphasizing, to feel most at home with their information.
+- All typography and typographic representation was severely flattened. This decision was one of our more drastic ones, and granted OS 1 a sense of being somewhat more "undirected" in terms of its form. We hope that as our system becomes more robust, users can decide which elements of their systems require emphasizing, to feel most at home with their information.
 - The majority of graphics used throughout the system were rendered into black and white line drawings. As architectural schematics and orthographic projections flatten their representation of reality so an architect can “see structure” easier, we made the decision to express a visual foundation that felt more like a diagram than an ergonomic user interface.
-- A coupled notion of the above point is that we wanted to give our users the sense that modifying the underlying system was a simple task. Rather than present Urbit's first users with beautiful artistry and a sense that our infrastructure was to remain untouched and sacred, we decided to present a visual face to the project that felt nearly rudimentary, nothing outside the realm of editorial capability for the average person.
+- In its visual simplicity, OS 1 was essentially arranged to emanate the quality that modifying the underlying system was a simple task. Rather than present Urbit's first users with beautiful artistry and a sense that our infrastructure was to remain untouched and sacred, we decided to present a visual face to the project that felt nearly rudimentary, nothing outside the realm of editorial capability for the average person.
 
 Many other small constraints have been set into place to build what we truly believe to be simple, durable, personal, digital infrastructure. 
 
-While visually primitive, OS 1 has managed to convey a sense of rich systematic expressiveness based on how it seems to be currently inhabited. We've been enjoying witnessing the ways people are beginning to interpret and make use of the faculties provided to create communal computing experiences of their own.
+While visually primitive, OS 1 has managed to manifest a rich systematic expressiveness based on how it seems to be currently inhabited. We've been enjoying witnessing the ways people are beginning to interpret and make use of the faculties provided to create communal computing experiences of their own.
 
 What's most wonderful to observe is the fun people are having in striking out on their own in this collective endeavor. More than anything, we hope Urbit’s inhabitants are having a good time and learning to enjoy computers again.
