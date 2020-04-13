@@ -70,6 +70,16 @@ sudo setcap 'cap_net_bind_service=+ep' /path/to/urbit
 ```
 (Where `urbit` is the urbit executable downloaded with `curl` prior)
 
+### Windows
+
+Please note that this method of installing Urbit is more experimental, and we may not be able to assist you if you encounter issues related to WSL 2, but these instructions have been tested and verified for WSL 2 + Ubuntu 18.04 LTS.
+
+Urbit cannot run on Windows itself, but there is a convenient way to run a Linux distro using the [Windows Subsystem for Linux 2](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux), an initiative by Microsoft to bring Linux to Windows 10. For Urbit to work, it is necessary to [install WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install) and not just WSL, since version 2 uses virtualization and the real Linux kernel under the hood. Currently, WSL 2 is only available if you have signed up for the Windows Insider Program (the ‘Slow’ ring is sufficient), but this will change soon as WSL 2 is scheduled for general release in 2020.
+
+Once WSL 2 is installed, open a Linux terminal in Windows and then follow the Linux installation instructions above. For performance reasons, do not install Urbit in the mounted Windows volume, but install it in the Linux file system. For example, in your home directory, by typing `cd ~`.
+
+The latest version of WSL 2 also supports port forwarding, so you should be able to open Chrome on Windows and browse to port 80 on localhost (or port 8080).
+
 ### Compile from source
 
 If you want to compile from source, see the [instructions on GitHub](https://github.com/urbit/urbit#development).
