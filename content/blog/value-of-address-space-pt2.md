@@ -1,7 +1,7 @@
 +++
 title = "The value of Urbit address space (2 of 3)"
 date = 2020-04-13
-description = "An expansion of our position on Urbit's address space value"
+description = "Scarcity, utility, liquidity, and network effect."
 [extra]
 author = "Erik Newton + Galen Wolfe-Pauly"
 ship = "~patnes-rigtyn + ~ravmel-ropdyl"
@@ -14,9 +14,7 @@ image ="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2.jpg
 
 <br>
 
-## Part Two: Scarcity, utility, liquidity, and network effect
-
-Measuring value
+## Measuring value
 
 Value and price are distinct concepts that often get conflated. In our view, Urbit address space has value for four fundamental reasons: it’s scarce; it has utility; it’s tradeable with increasing liquidity; and it has network effect. Price, on the other hand, is always a function of supply and demand. Let’s take a look at these fundamentals within the Urbit ecosystem.
 
@@ -35,7 +33,7 @@ A foundational design principle of the Urbit network is that the address space i
 
 There are 256 galaxies on the network. Each galaxy is initialized with ownership of 256 stars. Galaxies act as root nodes for peer discovery and packet routing within the Urbit network, and they are each also entitled to vote on updates to the smart contracts which govern the network. To date, galaxies trade primarily on OTC (over the counter) desks, and rarely appear on the open market. 
 
-There are 65,536 total stars on the network. In turn, each star is initialized with ownership of 65,536 planets. Stars currently trade on platforms independent of Tlon, such as urbit.live and opensea.io. The current price range can easily be ascertained on those sites, but as of the time of this writing, stars are selling at a price that greatly discounts their planet holdings. 
+There are 65,536 total stars on the network. In turn, each star is initialized with ownership of 65,536 planets. Stars currently trade on platforms independent of Tlon, such as [urbit.live](https://urbit.live/) and [opensea.io](https://opensea.io/). The current price range can easily be ascertained on those sites, but as of the time of this writing, stars are selling at a price that greatly discounts their planet holdings. 
 
 We anticipate the relative pricing of stars and planets to align (so to speak) as Tlon and others increase education about Urbit, and as additional planet sellers and hosting providers enter the market. 
 
