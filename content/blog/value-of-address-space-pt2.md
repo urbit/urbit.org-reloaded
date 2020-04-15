@@ -73,29 +73,17 @@ Trading non-fungible tokens like Urbit IDs is rather different than trading quas
 ## Planet Sales
 
 <br>
-<img class="" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2c-price-usd.svg">
+<img class="" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2e-price-eth.svg">
 <br>
 
 <br>
-<img class="" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2c-price-btc.svg">
-<br>
-
-<br>
-<img class="" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2c-price-eth.svg">
+<img class="" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2e-price-btc.svg">
 <br>
 
 ## Star Sales
 
 <br>
-<img class="" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2d-price-usd.svg">
-<br>
-
-<br>
-<img class="" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2d-price-btc.svg">
-<br>
-
-<br>
-<img class="" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2d-price-eth.svg">
+<img class="w-100" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2e-price-btc-usd.svg">
 <br>
 
 This ID-specific trading pattern is generally appropriate in our view: Urbit ID isn’t designed to be rapidly traded at high volume. Urbit is more like a house than a fungible good like a currency. 
