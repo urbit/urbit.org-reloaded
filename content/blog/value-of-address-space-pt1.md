@@ -14,7 +14,7 @@ image ="https://media.urbit.org/site/posts/essays/value-of-address-space-pt1.jpg
 
 <br>
 
-# Part One – What/why, a history, and some analogies
+## Part One – What/why, a history, and some analogies
 
 Does Urbit address space have value?
 
