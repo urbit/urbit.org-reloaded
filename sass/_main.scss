@@ -145,7 +145,7 @@ footer nav {
         position: absolute;
         right: -36px;
         top: 13px;
-        font-family: "Inter UI", sans-serif;
+        font-family: "Inter UI", "Inter", sans-serif;
     }
     &.next p:first-of-type:not([data-flat=true])::before {
         content: "<--";
@@ -153,7 +153,7 @@ footer nav {
         position: absolute;
         left: -36px;
         top: 13px;
-        font-family: "Inter UI", sans-serif;
+        font-family: "Inter UI", "Inter", sans-serif;
     }
     // flattened pagination
     &.previous p:first-of-type::after {
@@ -162,7 +162,7 @@ footer nav {
         position: absolute;
         right: -36px;
         top: 0;
-        font-family: "Inter UI", sans-serif;
+        font-family: "Inter UI", "Inter", sans-serif;
     }
     &.next p:first-of-type::before {
         content: "<-";
@@ -170,7 +170,7 @@ footer nav {
         position: absolute;
         left: -36px;
         top: 0;
-        font-family: "Inter UI", sans-serif;
+        font-family: "Inter UI", "Inter", sans-serif;
     }
 }
 
@@ -431,7 +431,7 @@ input[type="search"] {
 
   #search-reset {
     cursor: pointer;
-    font-family: "Inter UI", sans-serif;
+    font-family: "Inter UI", "Inter", sans-serif;
     user-select: none;
     transform: scale(1.5);
   }
@@ -508,7 +508,7 @@ details {
             vertical-align: baseline;
             margin-right: 0.5rem;
             @extend .gray1;
-            font-family: "Inter UI", sans-serif;
+            font-family: "Inter UI", "Inter", sans-serif;
             font-weight: 400;
         }
     }
@@ -560,7 +560,7 @@ select {
     border: 0;
     outline: 0;
     background: transparent;
-    font-family: "Inter UI", sans-serif;
+    font-family: "Inter UI", "Inter", sans-serif;
 }
 nav.docs:not(.mobile) {
     height: 100vh;
@@ -579,7 +579,7 @@ nav.docs details {
         transform: rotate(90deg);
         vertical-align: baseline;
         @extend .gray1, .fw6;
-        font-family: "Inter UI", sans-serif;
+        font-family: "Inter UI", "Inter", sans-serif;
     }
     &[open] > summary {
         @extend .fw6;
