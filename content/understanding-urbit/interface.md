@@ -10,7 +10,7 @@ hide_previous_title = "true"
 
 We started at the bottom of the stack, years ago, with the VM. We’re just now getting to the top: the interface. Urbit ID and Urbit OS are great tools — but technology on its own isn’t enough. As far as we’re concerned, if people don’t actually use this thing, it doesn’t matter.
 
-Urbit, VM to UI, is meant to feel like the a desktop OS for a networked world: a single, unified system where you can interact with, update and archive all of your personal data; communicate with your friends and family; and collaborate with the people you work with.
+Urbit, VM to UI, is meant to feel like the desktop OS for a networked world: a single, unified system where you can interact with, update and archive all of your personal data; communicate with your friends and family; and collaborate with the people you work with.
 
 One way to imagine Urbit is as the Western answer to WeChat: a seamless, multi-purpose, vastly extensible social network, but without the surveillance. As a platform anyone can extend, we see Urbit as the ultimate productivity tool: no more frankenstack of apps and services needed for companies and collaborators, because everything lives in one interface. With the power to build whatever you want on top of Urbit, you can bring everything together in one place.
 
