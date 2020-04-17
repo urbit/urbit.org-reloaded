@@ -51,7 +51,7 @@ But why did we build all this technology?
 
 First and foremost, to deliver a better user experience. Urbit OS alone is just a new layer for personal computing in the cloud. But with this new layer we open up the possibility of building a completely unified interface for people to compute in the cloud. (If you’d like to skip to how we envision that interface [go for it](/understanding-urbit/interface).)
 
-From a broader perspective, it’s clear that connected computing is important and that it’s here to stay. We just want it to be as calm, simple and reliable as possible, and we don’t think can happen using existing technology. 
+From a broader perspective, it’s clear that connected computing is important and that it’s here to stay. We just want it to be as calm, simple and reliable as possible, and we don’t think that can happen using existing technology. 
 
 All of Urbit is built to function as a single stack, and we think that building a useful product is the best way to mature the system as a whole. That said, each component of this system can be used on its own. Don’t like our client? That’s okay, you can build your own. Don’t want to use Urbit OS? No problem — you can use Urbit ID as an authentication system for some other OS, or for anything, really. 
 
