@@ -60,7 +60,7 @@ Second, each chat message is encrypted and signed by your Urbit ID. Again, we do
 
 Third, chat in Urbit OS is a protocol for sending messages between ships. It’s easy to imagine extending chat in all kinds of fun and interesting directions. Chats that only accept certain message types, chats that have disappearing history, chats that you can only post to during certain times of day, and so on. 
 
-(If you’re curious to try one of these things, or have an idea about something you’d like to experiment with — consider submitting a proposal in our [grants program](). We regularly reward contributor work with address space.)
+(If you’re curious to try one of these things, or have an idea about something you’d like to experiment with — consider submitting a proposal in our [grants program](https://grants.urbit.org/). We regularly reward contributor work with address space.)
 
 We think of chat as a primitive, not simply a ‘better IRC’. But even in the rudimentary form it’s in today chat is essential to delivering a feeling of being at home. There’s no way to deliver a complete interface for groups without chat.
 
@@ -74,7 +74,7 @@ Links is a bit like Hacker News or Reddit. It’s just a collection of links wit
 
 We use links to collect external references and track things we’re thinking about. We’re always looking at things going on outside our small digital universe and talking about them. Links lets us keep an archive of those discussions.
 
-We originally imagined links as evolving into more of a general-purpose ‘collection creation’ interface. One where you can pull together images, video, urls, maybe even runnable code and so on into a single channel. We’ll get there.
+We originally imagined links as evolving into more of a general-purpose ‘collection creation’ interface. One where you can pull together images, video, URLs, maybe even runnable code and so on into a single channel. We’ll get there.
 
 ### Publishing
 
@@ -110,7 +110,7 @@ OS 1 is a first step down the road back to a system that’s simple, durable and
 
 One really critical thing about OS 1 is the pattern of ‘groups sharing modules’. This pattern makes it perfectly clear how a virtual computer can outcompete a bunch of different services. As the collection of modules in OS 1 → N grows, we make it easier for others to contribute modules, and we increase the flexibility of connecting modules our system quickly outruns the messy, disconnected world we’re currently stuck in.
 
-OS 1 isn’t mature enough to be *easy* for outside contributors to easily add modules — but it is [open source](), and anyone is welcome to tinker and experiment with modifying it. We run a [grants program]() to reward contributors for improving any part of Urbit OS. As the system matures we expect this program to expand and accelerate. 
+OS 1 isn’t mature enough to be *easy* for outside contributors to easily add modules — but it is [open source](https://github.com/urbit/urbit), and anyone is welcome to tinker and experiment with modifying it. We run a [grants program](https://grants.urbit.org/) to reward contributors for improving any part of Urbit OS. As the system matures we expect this program to expand and accelerate. 
 
 ## Looking ahead
 
@@ -138,4 +138,4 @@ As a distributed team trying to stay connected, we like using OS 1 from day to d
 
 Each community that’s selected will get a block of address space to share, direct support and (in the near future) free hosting. 
 
-Please tell us a bit about yourselves [here]().
+Please tell us a bit about yourselves [here](https://urbit.org/community/community-grants/).
