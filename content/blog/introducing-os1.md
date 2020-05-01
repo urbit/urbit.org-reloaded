@@ -134,7 +134,7 @@ As we expand the affordances of the system and add modules over the course of OS
 
 <img class="ba" src="https://media.urbit.org/site/posts/essays/intro-os1-landscape.png">
 
-As a distributed team trying to stay connected, we like using OS 1 from day to day. We’d really like to hand-onboard a small group of like minded groups of people who want to experiment with living on the fringe of the digital world. Toward this end, we started the community grants program.
+As a distributed team trying to stay connected, we like using OS 1 from day to day. We’d really like to hand-onboard a small group of like-minded groups of people who want to experiment with living on the fringe of the digital world. Toward this end, we started the community grants program.
 
 Each community that’s selected will get a block of address space to share, direct support, and (in the near future) free hosting.
 
