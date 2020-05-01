@@ -58,7 +58,7 @@ First, each chat channel is only shared between the host and the members of a ch
 
 Second, each chat message is encrypted and signed by your Urbit ID. Again, we don’t call Urbit ‘secure’ yet since it’s unaudited — but we’re working to have Urbit audited this year.
 
-Third, chat in Urbit OS is a protocol for sending messages between ships. It’s easy to imagine extending chat in all kinds of fun and interesting directions. Chats that only accept certain message types, chats that have disappearing history, chats that you can only post to during certain times of day, and so on.
+Third, chat in Urbit OS is a protocol for sending messages between computers on the network (known as “[ships](https://urbit.org/docs/glossary/ship/)” and identified by their Urbit IDs). It’s easy to imagine extending chat in all kinds of fun and interesting directions. Chats that only accept certain message types, chats that have disappearing history, chats that you can only post to during certain times of day, and so on.
 
 (If you’re curious to try one of these things, or have an idea about something you’d like to experiment with — consider submitting a proposal in our [grants program](https://grants.urbit.org/). We regularly reward contributor work with address space.)
 
