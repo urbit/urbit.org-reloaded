@@ -23,7 +23,7 @@ The Urbit ID registry is live and deployed to the Ethereum blockchain. Urbit ID 
 
 First, let’s talk about Urbit ID’s implementation and design goals, then about where we envision it going in the future.
 
-If you’re curious to see exactly how this system works, the code is of course [open source](https://github.com/urbit/urbit). Including the source for our [phonemic naming system](https://github.com/urbit/urbit-ob/blob/master/src/internal/co.js) and the [visual representations](https://github.com/urbit/sigil-js). There’s even a [Figma plugin](https://github.com/urbit/sigil-figma-plugin) for using them. There’s also an interface for interacting with Urbit ID whose source is [open too](https://github.com/urbit/bridge).
+If you’re curious to see exactly how this system works, the code is of course [open source](https://github.com/urbit/urbit). Including the source for our [phonemic naming system](https://github.com/urbit/urbit-ob/blob/master/src/internal/co.js) and the [visual representations](https://github.com/urbit/sigil-js). There’s even a [Figma plugin](https://github.com/urbit/sigil-figma-plugin) for using them. There’s also an interface for interacting with Urbit ID whose [source is open](https://github.com/urbit/bridge), too.
 
 Since the Urbit ID registry is live and deployed you can even [look at the chain](https://github.com/urbit/azimuth#live-contracts).
 
@@ -49,7 +49,7 @@ One point that’s useful to understand about sponsors is that while Urbit IDs a
 
 Third, governance: galaxies (the top of the sponsorship tree) form a senate that can upgrade the logic of the Urbit ID system by majority vote. We think Urbit ID will last for quite a long time, but if it ever needs to be updated, the galaxies can vote to approve, reject, or propose changes to the contracts. Code may be law, but ultimately we acknowledge that human judgment can’t be factored out.
 
-The Urbit ID sponsorship tree is not intended to be a social system in any way. Interactions between people and communities on the Urbit network are peer-to-peer, entirely organic and completely uncontrolled by the address hierarchy. Urbit ID is simply an authentication substrate upon which reputation and communication systems can be built. (We’ve even considered renaming stars and galaxies ‘infrastructure’ and ‘governance’ nodes, respectively).
+The Urbit ID sponsorship tree is not intended to be a social system in any way. Interactions between people and communities on the Urbit network are peer-to-peer, entirely organic and completely uncontrolled by the address hierarchy. Urbit ID is simply an authentication substrate upon which reputation and communication systems can be built. (We’ve even considered renaming stars and galaxies ‘infrastructure’ and ‘governance’ nodes, respectively.)
 
 Your relationship with your sponsor should be sort of like your ISP or a utility provider: a passive, non-invasive relationship. If it isn’t to your liking, moving to a new sponsor is very easy.
 
@@ -57,7 +57,7 @@ Your relationship with your sponsor should be sort of like your ISP or a utility
 
 Urbit IDs are property, and we think of the entire registry of Urbit IDs as a vast territory of digital land.
 
-The scarcity of Urbit ID address space gives it value and that in turn helps bootstrap decentralization even while the project is young. Broad distribution is important – If Urbit is going to last a long time and succeed as neutral infrastructure, it has to be owned and controlled by a wide variety of people.
+The scarcity of Urbit ID address space gives it value and that in turn helps bootstrap decentralization even while the project is young. Broad distribution is important – if Urbit is going to last a long time and succeed as neutral infrastructure, it has to be owned and controlled by a wide variety of people.
 
 When we launched the Urbit ID system, in January of 2019, there were a couple thousand different star and galaxy holders acting as stewards of this digital land. Since then, that number has been steadily on the rise.
 

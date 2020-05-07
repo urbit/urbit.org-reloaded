@@ -31,13 +31,13 @@ Urbit OS is a completely new, carefully architected software stack: a VM, progra
 
 The main thing to understand about our ‘overlay OS’, as we call it, is that the foundation is a single, simple function. This function is the Urbit OS virtual machine. We call it ‘Nock’. The entire Urbit OS system compiles down to Nock, and Nock is just 33 lines of code.
 
-Nock is similar in spirit to WASM or the JVM: it’s a uniform machine code for every Urbit ship. A frozen foundation makes for some nice features: 
+Nock is similar in spirit to WASM or the JVM: it’s a uniform machine code for every Urbit [ship](https://urbit.org/docs/glossary/ship/). A frozen foundation makes for some nice features: 
 
 The state of your Urbit OS is a pure function of its event history. It’s auditable, inspectable, repeatable. You can actually trust it.
-Writing decentralized apps becomes vasty simpler than in the old world, since every node computes exactly the same way.
+Writing decentralized apps becomes vastly simpler than in the old world, since every node computes exactly the same way.
 The entire Urbit OS stack, from programming language to applications, is upgradeable over the network. For ordinary users, this makes for almost no system administration.
 
-Since Nock is a protocol for computing itself, any two nodes on the urbit network can easily share data, communicate and connect their software. 20th century systems could never do this without a MEGACORP acting as the intermediary.
+Since Nock is a protocol for computing itself, any two nodes on the Urbit network can easily share data, communicate and connect their software. 20th century systems could never do this without a MEGACORP acting as the intermediary.
 
 <img class="full ba w-100 mv4" src="https://media.urbit.org/site/understanding-urbit/network-os/urbit-os-diagram-apart.svg"/>
 
@@ -49,7 +49,7 @@ This sounds like a lot — but the whole stack is incredibly compact. The whole 
 
 But why did we build all this technology? 
 
-First and foremost, to deliver a better user experience. Urbit OS alone is just a new layer for personal computing in the cloud. But with this new layer we open up the possibility of building a completely unified interface for people to compute in the cloud. (If you’d like to skip to how we envision that interface [go for it](/understanding-urbit/interface).)
+First and foremost, to deliver a better user experience. Urbit OS alone is just a new layer for personal computing in the cloud. But with this new layer we open up the possibility of building a completely unified interface for people to compute in the cloud. (If you’d like to skip to how we envision that interface, [go for it](/understanding-urbit/interface).)
 
 From a broader perspective, it’s clear that connected computing is important and that it’s here to stay. We just want it to be as calm, simple and reliable as possible, and we don’t think that can happen using existing technology. 
 

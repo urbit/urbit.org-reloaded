@@ -53,7 +53,7 @@ OS 2 is where Urbit gets easier for a broader audience to try out.
 
 OS 2 is an approachable, expanded and easier to use OS 1. We think of OS 2 as the [iOS 1](https://en.wikipedia.org/wiki/IPhone_OS_1) of cloud computers — no matter how silly that sounds.
 
-Like OS 1, OS 2 let’s a group of people chat, publish blogs and short messages, and share links. The main difference  is that OS 2 is a standalone app (rather than the browser tab of OS 1) and supports Urbit-to-Urbit payments in BTC and ETH. OS 2 is the calm, private computing environment we’ve been waiting for.
+Like OS 1, OS 2 lets a group of people chat, publish blogs and short messages, and share links. The main difference  is that OS 2 is a standalone app (rather than the browser tab of OS 1) and supports Urbit-to-Urbit payments in BTC and ETH. OS 2 is the calm, private computing environment we’ve been waiting for.
 
 OS 2 is for those eager to leave behind MEGACORP platforms and build new, intentionally architected communities. If OS 1 is car camping, OS 2 is a geodesic dome on the playa. Not exactly a permanent home, but a good start.
 

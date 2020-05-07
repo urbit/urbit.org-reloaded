@@ -26,18 +26,18 @@ There’s nothing even remotely like this in the digital world. The digital worl
 
 It’s not just the surveillance, lack of privacy, or interfaces optimized for addiction — those are all downstream from the root problem: our software can’t evolve with us. It’s designed and controlled by the people that make it. We don’t participate in shaping it directly at all.
 
-And since our software can’t evolve with us, our connection to it remains thin. The digital world of today is low trust by design. We live in a digital world controlled by other people. Nothing about it belongs to us.
+And since our software can’t evolve with us, our connection to it remains thin. The digital world of today is low-trust by design. We live in a digital world controlled by other people. Nothing about it belongs to us.
 
-It’d be great if we felt a deep appreciation for and connection to our digital communities the same way we do in the physical world. Digital communities should feel alive and engaged with their surroundings. They should feel vibrant as a city on a summer night, cozy like a family dinner in an old ranch house.
+It’d be great if we felt a deep appreciation for and connection to our digital communities the same way we do in the physical world. Digital communities should feel alive and engaged with their surroundings. They should feel as vibrant as a city on a summer night, cozy like a family dinner in an old ranch house.
 
 We don’t often talk about it explicitly, but this is what Urbit is for. Urbit is for giving communities the tools to evolve their own environments; for us all to feel a sense of life and self-directedness in the digital world.
 
-It’s not any single specific technical feature of Urbit that makes it well suited for communities to homestead and develop. It’s the combination of the technology under the hood and the interfaces we build on top. Let’s talk about both.
+It’s not any single specific technical feature of Urbit that makes it well-suited for communities to homestead and develop. It’s the combination of the technology under the hood and the interfaces we build on top. Let’s talk about both.
 
 
 ## Technically capable
 
-I love [this tweet](https://twitter.com/devonzuegel/status/1221804267083718656) about becoming a ‘digital prepper’. It feels like it has already happened to me too. I’ve seen enough centralized services shut down and disappear (often with my data) that I’m reluctant to try new ones. No matter how friendly and cozy their branding.
+I love [this tweet](https://twitter.com/devonzuegel/status/1221804267083718656) about becoming a ‘digital prepper’. It feels like it has already happened to me, too. I’ve seen enough centralized services shut down and disappear (often with my data) that I’m reluctant to try new ones. No matter how friendly and cozy their branding.
 
 I find myself vetting every new app or service to figure out whether they have the potential to survive far into the future. The giant services I’ve become dependent on all seem somewhat worrisome. How long can these free services possibly stick around? Certainly not forever.
 
@@ -51,7 +51,7 @@ The simple fact is, I let companies run my software because it’s too much work
 
 This is more or less the entire technical value proposition of Urbit: to build a system that’s simple enough that it requires almost no maintenance. Our approach to building software makes all of the above problems easily solvable.
 
-Perhaps more importantly we have a direct incentive to solve these problems. Tlon funds Urbit’s development by selling addresses and providing hosting. And the only reason anyone pays us for these things is because we make Urbit as directly useful for you as possible.
+Perhaps more importantly, we have a direct incentive to solve these problems. Tlon funds Urbit’s development by selling addresses and providing hosting. And the only reason anyone pays us for these things is because we make Urbit as directly useful for you as possible.
 
 That means we have to solve the problems inherent to the legacy internet. There can’t be any sense of suspicion or uncertainty in our new system. Your Urbit has to be something you can really trust and attach to. This is why your Urbit lets you run or write whatever code you like, and why we’re focused on making sure the data you put into your Urbit lasts forever: it won’t disappear when some company dies.
 
@@ -64,9 +64,9 @@ In the physical world, you can arrange the furniture in your house, or go to Ike
 
 The digital world is, of course, nothing like this. Even software developers are stuck with the current system. None of our existing apps or services can connect to one another, so whether you’re a user or a developer, you’re faced with the daunting task of replacing everything all at once if you want a better system. But nobody can do that.
 
-Urbit provides an experience with less distance between ordinary use and total customization. To start, we’ve created Ikea-like, Lego-like and woodshop-like levels of usability. What we’ve built isn’t nearly as complex as the physical world of course, but it’s a start.
+Urbit provides an experience with less distance between ordinary use and total customization. To start, we’ve created Ikea-like, Lego-like and woodshop-like levels of usability. What we’ve built isn’t nearly as complex as the physical world, of course, but it’s a start.
 
-For most people, customizing your Urbit should be a matter of picking from an available suite of modules. Not unlike going to Ikea. For some people, recombining interfaces and data sources within Ubit should feel like playing with Legos. And for others, who want to dive in and write code, it’s the same as going into a shop full of high quality tools.
+For most people, customizing your Urbit should be a matter of picking from an available suite of modules. Not unlike going to Ikea. For some people, recombining interfaces and data sources within Ubit should feel like playing with Legos. And for others, who want to dive in and write code, it’s the same as going into a shop full of high-quality tools.
 
 We’re not quite to this level of sophistication, but we’re on the path. Let’s talk about where we are and where we’re going.
 
@@ -81,7 +81,7 @@ OS 1 is designed to make it easy to start a group. Everyone in the group runs th
 
 If you want to go deeper, anyone can build a new protocol for storing data and transferring it around Urbit without too much difficulty, but you do have to write some code. If you really want to dive all the way in, you can modify the system all the way through to the kernel.
 
-Currently our Ikea experience is pretty limited, there are only a few Legos to play with, and the shop is still quite rudimentary — but it’s a good start and, for the first time, it exists as one complete system.
+Currently, our Ikea experience is pretty limited, there are only a few Legos to play with, and the shop is still quite rudimentary — but it’s a good start and, for the first time, it exists as one complete system.
 
 The system is ripe for experimentation, customization, and exploration. It’s ready for earnest homesteading. Come build.
 
