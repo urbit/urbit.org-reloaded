@@ -23,7 +23,7 @@ The Urbit ID registry is live and deployed to the Ethereum blockchain. Urbit ID 
 
 First, let’s talk about Urbit ID’s implementation and design goals, then about where we envision it going in the future.
 
-If you’re curious to see exactly how this system works, the code is of course [open source](https://github.com/urbit/urbit). Including the source for our [phonemic naming system](https://github.com/urbit/urbit-ob/blob/master/src/internal/co.js) and the [visual representations](https://github.com/urbit/sigil-js). There’s even a [Figma plugin](https://github.com/urbit/sigil-figma-plugin) for using them. There’s also an interface for interacting with Urbit ID whose source is [open too](https://github.com/urbit/bridge).
+If you’re curious to see exactly how this system works, the code is of course [open source](https://github.com/urbit/urbit). Including the source for our [phonemic naming system](https://github.com/urbit/urbit-ob/blob/master/src/internal/co.js) and the [visual representations](https://github.com/urbit/sigil-js). There’s even a [Figma plugin](https://github.com/urbit/sigil-figma-plugin) for using them. There’s also an interface for interacting with Urbit ID whose [source is open](https://github.com/urbit/bridge), too.
 
 Since the Urbit ID registry is live and deployed you can even [look at the chain](https://github.com/urbit/azimuth#live-contracts).
 

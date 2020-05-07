@@ -49,7 +49,7 @@ This sounds like a lot — but the whole stack is incredibly compact. The whole 
 
 But why did we build all this technology? 
 
-First and foremost, to deliver a better user experience. Urbit OS alone is just a new layer for personal computing in the cloud. But with this new layer we open up the possibility of building a completely unified interface for people to compute in the cloud. (If you’d like to skip to how we envision that interface [go for it](/understanding-urbit/interface).)
+First and foremost, to deliver a better user experience. Urbit OS alone is just a new layer for personal computing in the cloud. But with this new layer we open up the possibility of building a completely unified interface for people to compute in the cloud. (If you’d like to skip to how we envision that interface, [go for it](/understanding-urbit/interface).)
 
 From a broader perspective, it’s clear that connected computing is important and that it’s here to stay. We just want it to be as calm, simple and reliable as possible, and we don’t think that can happen using existing technology. 
 
