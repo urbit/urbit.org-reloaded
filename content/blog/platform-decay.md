@@ -12,7 +12,7 @@ image ="https://media.urbit.org/site/posts/essays/platform-decay-preview.png"
 
 <img class="ba" src="https://media.urbit.org/site/posts/essays/platform-decay.png">
 
-Platform decay, decentralized marketplaces, and Urbit
+## Platform decay, decentralized marketplaces, and Urbit
 
 The current model followed by almost all social media services is one of easy and free participation in exchange for advertising and data collection. If you’re a fan of decentralized projects like Urbit, or just someone who pays attention to the ongoing debate over social media incentives, you’re likely to be familiar by now with a central critique of this model. There are historical reasons for why we ended up here: ad-serving and user-tracking technology outpaced subscription and micro-payment models because of recalcitrance by banks and regulatory hassles that prevented ‘real money’ from easily integrating into websites. Instead, we pay in eyeballs and analytical data. 
 
