@@ -309,6 +309,13 @@ var glossary = [
     "desc": "Runes used to produce cores."
   },
   {
+    "name": "barbuc",
+    "symbol": "|$",
+    "usage": "Cores",
+    "link": "/docs/reference/hoon-expressions/rune/bar/#barbuc",
+    "desc": "Produce a wet gate that yields a structure."
+  },
+  {
     "name": "barcab",
     "symbol": "|_",
     "usage": "Cores",
