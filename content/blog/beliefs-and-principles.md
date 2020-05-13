@@ -1,5 +1,5 @@
 +++
-title = "Beliefs and principles guiding the Urbit project."
+title = "Beliefs and Principles Guiding the Urbit Project"
 date = 2016-05-11
 description = "We believe."
 aliases = ["/posts/essays/beliefs-and-principles",
