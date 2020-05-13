@@ -1,6 +1,6 @@
 +++
 title = "Tools of Our Own"
-date = 2020-05-14
+date = 2020-05-13
 description = "What is a digital environment? What does it mean to shape your own digital environment?"
 [extra]
 author = "Matilde Park"
