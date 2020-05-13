@@ -1,7 +1,7 @@
 +++
 title = "Infrastructural"
 date = 2020-04-10
-description = "A reflection–meditation on OS 1’s initial form development and the attitude we brought to bear in designing it"
+description = "A reflection–meditation on OS 1’s initial form development, and the attitude we brought to bear in designing it."
 [extra]
 author = "É. Urcades"
 ship = "~fabled-faster"
@@ -40,13 +40,13 @@ OS 1, while incremental in its initial expression from OS 0, serves to outline o
 
 **Beautiful infrastructure is a gravitational force**. Even if you can’t feel it or directly experience it, well-designed infrastructure is a cohering force. One is grounded with respect to the infrastructure they live alongside.
 
-**Beautiful infrastructure is like a [shell](https://en.wikipedia.org/wiki/Shell)**. Well-considered infrastructural projects provide durable, generalized, reusable, and most importantly, *self-designed* containers around otherwise formless flows of information. 
-The current state of mass software design has gotten many of the “reusable” elements of design down pat, but these structures are optimized to pump ads and information into your brain, algorithmically-sorted-linear-feed style. 
+**Beautiful infrastructure is like a [shell](https://en.wikipedia.org/wiki/Shell)**. Well-considered infrastructural projects provide durable, generalized, reusable, and most importantly, *self-designed* containers around otherwise formless flows of information.
+The current state of mass software design has gotten many of the “reusable” elements of design down pat, but these structures are optimized to pump ads and information into your brain, algorithmically-sorted-linear-feed style.
 In Urbit, I can take the conceptual container of "temporal linearity" and use this to shape communication data as I see fit. I should be able to shape once-linear communication and cast it into a nodal communication model: My DM is now a MUD.
 
 Truly beautiful infrastructure undergirds the daily exchanges people actually care about—I don’t drink plumbing, I drink the water it carries and protects.
 
-Another way of thinking about “Infrastructure” (here defined loosely as “the *truly* essential structures that allow society at varying scales to operate”) is to think about it in terms of interpersonal support structure. 
+Another way of thinking about “Infrastructure” (here defined loosely as “the *truly* essential structures that allow society at varying scales to operate”) is to think about it in terms of interpersonal support structure.
 
 We deeply hope that Urbit can form a support structure for you and your community.
 
@@ -60,9 +60,9 @@ These self-evident statements underlie the core problems we sought to address in
 
 ## Expressing Infrastructure
 
-OS 1 was optimized from an interface design standpoint to ensure that a new inhabitant viscerally felt like there was a “space to inhabit”, or a “canvas to be painted”, or a set of simple and fundamental digital structures they could arrange to make their computer their own. 
+OS 1 was optimized from an interface design standpoint to ensure that a new inhabitant viscerally felt like there was a “space to inhabit”, or a “canvas to be painted”, or a set of simple and fundamental digital structures they could arrange to make their computer their own.
 
-Counterintuitively, designing around this notion of a "rich blank slate” required OS 1 to be designed in a manner that *almost* results in it feeling incomplete, or on the verge of appearing deeply unremarkable. 
+Counterintuitively, designing around this notion of a "rich blank slate” required OS 1 to be designed in a manner that *almost* results in it feeling incomplete, or on the verge of appearing deeply unremarkable.
 
 A few key design decisions emphasized the above gestalt we sought to express:
 
@@ -71,7 +71,7 @@ A few key design decisions emphasized the above gestalt we sought to express:
 - The majority of graphics used throughout the system were rendered into black and white line drawings. As architectural schematics and orthographic projections flatten their representation of reality so an architect can “see structure” easier, we made the decision to express a visual foundation that felt more like a diagram than an ergonomic user interface.
 - In its visual simplicity, OS 1 was essentially arranged to emanate the quality that modifying the underlying system was a simple task. Rather than present Urbit's first users with beautiful artistry and a sense that our infrastructure was to remain untouched and sacred, we decided to present a visual face to the project that felt nearly rudimentary, nothing outside the realm of editorial capability for the average person.
 
-Many other small constraints have been set into place to build what we truly believe to be simple, durable, personal, digital infrastructure. 
+Many other small constraints have been set into place to build what we truly believe to be simple, durable, personal, digital infrastructure.
 
 While visually primitive, OS 1 has managed to manifest a rich systematic expressiveness based on how it seems to be currently inhabited. We've been enjoying witnessing the ways people are beginning to interpret and make use of the faculties provided to create communal computing experiences of their own.
 
