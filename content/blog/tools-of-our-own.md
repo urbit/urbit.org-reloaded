@@ -5,7 +5,7 @@ description = "What is a digital environment? What does it mean to shape your ow
 [extra]
 author = "Matilde Park"
 ship = "~haddef-sigwen"
-image =""
+image ="https://media.urbit.org/site/posts/essays/tools-of-our-own-1.png"
 +++
 
 <br>
