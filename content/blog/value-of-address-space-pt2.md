@@ -1,5 +1,5 @@
 +++
-title = "The value of Urbit address space (2 of 3)"
+title = "The Value of Urbit Address Space (2 of 3)"
 date = 2020-04-13
 description = "Scarcity, utility, liquidity, and network effect."
 [extra]
