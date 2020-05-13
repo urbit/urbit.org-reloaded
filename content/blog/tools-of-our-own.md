@@ -12,7 +12,7 @@ image ="https://media.urbit.org/site/posts/essays/tools-of-our-own-1.png"
 
 <img class="ba" src="https://media.urbit.org/site/posts/essays/tools-of-our-own-1.png">
 
-## Tools of Our Own
+<br>
 
 > People need only not to obtain things, they need above all the freedom to make things among which they can live, or give shape to them according to their own tastes, and to put them to use in caring for and about others.
 >
@@ -26,9 +26,11 @@ The [Rube Goldberg machine](https://en.wikipedia.org/wiki/Rube_Goldberg_machine)
 
 And it's nobody's distinct fault that the experience of aligning all these disparate services into a workflow is a skill in itself. It's a collective restriction that comes from the systems beneath.
 
+<br>
+
 <img class="ba" src="https://media.urbit.org/site/posts/essays/tools-of-our-own-2.png">
 
-## Systems as masters
+### Systems as masters
 
 > If you don't understand a system you're using, you don't control it. If nobody understands the system, the system is in control.
 >
@@ -50,9 +52,11 @@ And for productivity tools—for the personal activities we do every day—the s
 
 This is why hybrid products are born *and* why massive enterprises are shifting toward subscription models for office software. With the [clearnet](https://en.wikipedia.org/wiki/Clearnet_(networking)), using our own computers for everyday tasks that extend outside themselves is not easy. It's way easier to sign into an enterprise's server farm for your persistent data storage and manipulation. In 2020, the prefab parts for the exoskeleton only come in "left arm, right leg" pairs, or you can just give up and plug straight into SkyNet.
 
+<br>
+
 <img class="ba" src="https://media.urbit.org/site/posts/essays/tools-of-our-own-3.png">
 
-## The collective body
+### The collective body
 
 > “Autonomy” means that we make the **worlds that we are** grow.
 >
