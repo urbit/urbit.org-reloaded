@@ -1,5 +1,5 @@
 +++
-title = "Platform decay, decentralized marketplaces, and Urbit"
+title = "Platform Decay, Decentralized Marketplaces, and Urbit"
 date = 2020-05-08
 description = "Urbit is calm computing. Calm commerce follows naturally. "
 [extra]
