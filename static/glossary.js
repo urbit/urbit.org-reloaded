@@ -313,7 +313,7 @@ var glossary = [
     "symbol": "|$",
     "usage": "Cores",
     "link": "/docs/reference/hoon-expressions/rune/bar/#barbuc",
-    "desc": "Produce a wet gate that is a mold builder."
+    "desc": "Declare a wet gate mold builder."
   },
   {
     "name": "barcab",
