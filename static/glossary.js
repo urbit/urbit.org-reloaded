@@ -690,7 +690,7 @@ var glossary = [
     "name": "bucpam",
     "symbol": "$&",
     "usage": "Structures",
-    "link": "/docs/reference/hoon-expressions/rune/buc/#bucpat",
+    "link": "/docs/reference/hoon-expressions/rune/buc/#bucpam",
     "desc": "<code>[%bspd p=spec q=hoon]</code>: repair a value of a tagged union type"
   },
   {
