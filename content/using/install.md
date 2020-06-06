@@ -45,9 +45,9 @@ Urbit: a personal server operating function
 We provide static binaries for macOS. You can grab the latest stable release as follows:
 
 ```sh
-curl -O https://bootstrap.urbit.org/urbit-v0.10.4-darwin.tgz
-tar xzf urbit-v0.10.4-darwin.tgz
-cd urbit-v0.10.4-darwin
+curl -O https://bootstrap.urbit.org/urbit-v0.10.5-darwin.tgz
+tar xzf urbit-v0.10.5-darwin.tgz
+cd urbit-v0.10.5-darwin
 ./urbit
 ```
 
@@ -56,9 +56,9 @@ cd urbit-v0.10.4-darwin
 We also provide static binaries for 64-bit Linux distributions (Ubuntu, Debian, Fedora, Arch, etc.). You can get the latest stable release similarly:
 
 ```sh
-curl -O https://bootstrap.urbit.org/urbit-v0.10.4-linux64.tgz
-tar xzf urbit-v0.10.4-linux64.tgz
-cd urbit-v0.10.4-linux64
+curl -O https://bootstrap.urbit.org/urbit-v0.10.5-linux64.tgz
+tar xzf urbit-v0.10.5-linux64.tgz
+cd urbit-v0.10.5-linux64
 ./urbit
 ```
 
@@ -108,7 +108,7 @@ Find the absolute path to the keyfile that you downloaded from Bridge. Copy it.
 
 ### Step 3: Run the boot command
 
-If you are not already within the directory you installed above, enter it by running `cd urbit-v0.10.4-darwin` (for Mac) or `cd urbit-v0.10.4-linux64` (for Linux) from where you ran the install commands. It contains your Urbit binary, and your ship will be installed here as well.
+If you are not already within the directory you installed above, enter it by running `cd urbit-v0.10.5-darwin` (for Mac) or `cd urbit-v0.10.5-linux64` (for Linux) from where you ran the install commands. It contains your Urbit binary, and your ship will be installed here as well.
 
 Once you're inside, run the command below, except with `sampel-palnet` replaced by the name of your
 Urbit identity, and `path/to/my-planet.key` replaced with the path to your keyfile:
