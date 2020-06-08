@@ -142,7 +142,7 @@ this from happening on accident by only ever keeping a single copy of your pier.
 
 Most updates to Urbit are downloaded and applied automatically as OTA (Over the
 Air) updates. Occasionally it would be infeasible to distribute an update this
-way, and a new `urbit` binary is released. This is announced in the `urbit-dev`
+way, and a new `urbit` binary is released. This is announced in the [urbit-dev](https://groups.google.com/a/urbit.org/forum/#!forum/dev)
 Google Group when it occurs (as are all OTA updates). To update to the latest binary, follow
 the same process outlined [above](#urbit) to download and extract it into a new folder
 (the binary linked on this page will always be the latest). Then run it as
