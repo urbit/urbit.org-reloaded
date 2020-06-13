@@ -1,6 +1,6 @@
 +++
 title = "Hackathon Results"
-date = 2020-05-26
+date = 2020-06-12
 description = "We recently held an invite-only Urbit Hackathon for graduates of our Hoon School program, and the submissions really impressed us across the board. Submissions were judged on several criteria: creativity, usefulness, and code quality."
 [extra]
 author = "Robert Mariani"
