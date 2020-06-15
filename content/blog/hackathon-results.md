@@ -48,7 +48,7 @@ Pyry Kovanen (`~dinleb-rambep`) was also awarded second prize for his reading-li
 ### Third Place: Two Stars Each
 
 
-N E Davis (`~lagreb-nocfep`) brought the heavy infrastructural artillery with Roessler, and won third prize. Roessler is actually three related Hoon tools: 
+N E Davis (`~lagrev-nocfep`) brought the heavy infrastructural artillery with Roessler, and won third prize. Roessler is actually three related Hoon tools: 
 `roessler` proper, a library for solving the differential equations producing the [Roessler attractor](https://en.wikipedia.org/wiki/R%C3%B6ssler_attractor).
 `lazytrig`, a library for transcendental functions.
 `proj-3d`, a generator that takes the 3D coordinates produced by `Roessler`. 
