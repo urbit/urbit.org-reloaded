@@ -34,7 +34,7 @@ In this post, we don’t expand that framework, but rather explore two elements 
 
 One way to think about galaxies, stars, and planets is that they’re different-sized buckets of Urbit IDs. A star contains 216 (~65K) planets, a galaxy contains 28 (256) stars and, in turn, 224 planets (16,777,216). Beyond this nesting pattern, there are three further considerations to note: booted versus unbooted addresses, locked versus unlocked addresses, and planet spawning limits.
 
-Booted and Unbooted Addresses–
+Booted and Unbooted Addresses –
 
 A booted address is one that has actually been used to boot Urbit OS. By convention, booted addresses are expected to have some existing reputation outside of their name alone, since they’ve been used on the network. Reputation, good and bad, comes in many forms. Did the address operate any useful infrastructure? Did it get placed on any blacklists for spam or abuse? Did it simply send and receive messages? The ability to programatically track reputation is still in its infancy, but we expect the tooling to develop  as urbit grows. 
 
@@ -42,7 +42,7 @@ Unbooted addresses, on the other hand, have no reputation. Both booted and unboo
 
 For the purposes of this discussion, we’re primarily referring to unbooted addresses, as they have no reputation, and so are more similar to one another. We anticipate that booted addresses will trade infrequently — and likely via broker or auction, since users will prefer to control the reputation of the ID they’ve developed, rather than transfer that reputation to another. 
 
-Locked vs. Unlocked Addresses–
+Locked vs. Unlocked Addresses –
 
 At present, the majority of Urbit address space is locked by smart contracts. When Urbit address space was first registered on the Ethereum blockchain, this unlocking mechanism was put in place to prevent the market from being flooded. A young Urbit network in which all of the address space had been unlocked would be exposed to attacks by bots and spammers. Scarcity, on the other hand, encourages good behavior as it increases the cost to spam.
 
@@ -111,7 +111,7 @@ We’re laying the groundwork so that we can, in earnest, invite our friends and
 
 Second, and perhaps more importantly, capturing data about traction on the network is difficult by design. Due to Urbit's privacy-forward architecture, there’s quite a lot we will never know. Once an Urbit is up and running, we don’t know how often it operates, where it’s hosted, or what it’s doing. This makes capturing usage metrics challenging, but we think this is the right problem to have. 
 
-The Network Explorer–
+The Network Explorer –
 
 In the next several months we plan to roll out the first iteration of a network explorer that will allow users to visualize the structure and composition of the network as well as some basic activity data. Our first version of the network explorer will include representations of how the various layers of address space fit together, the finiteness of address space, historical uptime for nodes, and the various unlocking schedules.
 The network explorer will also allow users to zoom in on various nodes to learn more about them and what they offer. 
