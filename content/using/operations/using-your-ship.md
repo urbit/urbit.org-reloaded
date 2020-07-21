@@ -160,7 +160,7 @@ or
 $ ./urbit -w faswep-navred-sampel-palnet -k <keyfile> -c mymoon
 ```
 
-Moons are automatically synced to their parent `%kids` desk, and can control applications on their parent planet using `|link`.  
+Moons are automatically synced to their parent `%kids` desk, and can control applications on their parent planet using `|link`.
 
 To breach a moon -- that is, to reset its presence on the network so that it's treated as a freshly spawned ship by others -- run from the parent ship:
 
@@ -183,7 +183,7 @@ To use the network as a planet or star, you must be sponsored by an active star 
 
 - A little bit of ETH in your management proxy address to pay for the transaction.
 - The identity number of the sponsor you want to escape from.
-- The identity number of the sponsor you want to escape to. 
+- The identity number of the sponsor you want to escape to.
 
 You can find an identity's number by running ``` `@`~marzod ``` in any Dojo, where `~marzod` is the name of the relevant identity.
 
@@ -197,7 +197,7 @@ You can find an identity's number by running ``` `@`~marzod ``` in any Dojo, whe
 5. Select the `escape()` function, passing in two arguments: your identity number, and the number of your desired sponsor.
 6. Sign and submit the transaction.
 7. Get in touch with your prospective sponsor, since they won't be notified otherwise. You can do this by contacting them on the network via chat, or joining `~/~dopzod/urbit-help` and asking around.
-8. Wait for your request to be accepted by the prospective sponsor. 
+8. Wait for your request to be accepted by the prospective sponsor.
 9. If your request is not accepted by your prospective sponsor, a last resort, you can make a request to escape to `~marzod`, which is operated by Tlon, the company leading the development of Urbit.
 
 ### Continuity breaches
@@ -413,7 +413,7 @@ You can permit and ban people from reading and/or writing to the chats you host,
 
 Syntax: `;invite [rw] /name ~ships`
 
-Where `rw` is either `r`, `w`, or `rw`, representing "read" and "write" permissions.  
+Where `rw` is either `r`, `w`, or `rw`, representing "read" and "write" permissions.
 And where `~ships` is a comma-seperated list of ships to invite.
 
 For example, to grant two people full access to a `village` we created:
@@ -846,29 +846,6 @@ This is very often used with `+solid`:
 Which outputs a new `urbit.pill` to `pier/.urb/put/urbit.pill`
 
 ### Sources
-
-#### `&` - Mark conversion
-
-Convert between marks using `&`, with the destination mark first. You can stack multiple mark conversions together, and some marks can only be converted to specific other marks. In this example, [Udon](@/docs/tutorials/sail-and-udon.md#udon) is converted to `&hymn` (a mark which supplies the `html`, `head`, `body`, and closing tags) first, before being converted to HTML:
-
-```
-~your-urbit:dojo>&html &hymn &udon ';h1#hello: hello'
-'<html><head></head><body><h1 id="hello">hello</h1></body></html>'
-```
-
-Performing a conversion straight from Udon to the `&hymn` mark reveals a bit more about its mark conversion:
-
-```
-~your-urbit:dojo>&hymn &udon ';h1#hello: hello'
-[[%html ~] [[%head ~] ~] [[%body ~] [g=[n=%h1 a=~[[n=%id v="hello"]]] c=~[[g=[n=%$ a=~[[n=%$ v="hello"]]] c=~]]] ~] ~]
-```
-
-As does converting straight from Udon to HTML:
-
-```
-~your-urbit:dojo>&html &udon ';h1#hello: hello'
-';h1#hello: hello'
-```
 
 #### `_` - Run a function
 
