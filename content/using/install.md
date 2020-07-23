@@ -205,16 +205,7 @@ Landscape is the Urbit web interface, and it's the best way to interact with you
 
 ### Joining the community
 
-Once you are in Landscape we recommend joining the Urbit Community group. You
-will need to obtain an invite, which can be had by first joining
-the `~/~dopzod/urbit-help` chat channel and asking for an invitation from there.
-This is most likely to succeed quickly during standard US West Coast working hours.
-Once you have the invite you can accept it by navigating to your Groups by
-clicking on All Groups in the upper left hand corner of Landscape, then Manage
-All Groups, and in there you should see an invitation. From this interface you
+Once you are in Landscape we recommend joining the Urbit Community group.
+Navigating to your Groups by clicking on All Groups in the upper left hand corner of Landscape, then Manage
+All Groups. Click "Join Group" and enter `~bitbet-bolbel/urbit-community`. From this interface you
 can join the various Chat, Publish, and Link instances contained in the group.
-
-You can join `~/~dopzod/urbit-help` from either Landscape or chat-cli. To join from
-Landscape first click on the Messaging tile on the home screen. Then press Join Chat
-in the upper left corner and enter `~/~dopzod/urbit-help` into the prompt and
-press Join Chat. To join from chat-cli, first make sure your console has been switched from Dojo to the `:chat-cli` application by pressing `Ctrl-x`. The prompt will display `~sampel-palnet:chat-cli` if in the correct mode. Then type `;join ~/~dopzod/urbit-help` and press Enter.
