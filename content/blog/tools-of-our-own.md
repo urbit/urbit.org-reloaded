@@ -22,7 +22,7 @@ One of the recent ways we've come to describe the mission of the Urbit project i
 
 After all, we think of our slate of tools as our entire toolbox. This makes sense for physical tools. And for a lot of people in the real world (at least, I think), their tools remain physical notebooks and paper. I, however, left those tools behind ages ago, and found myself in a world that used my habits, my memory, to loosely organize a wide array of online tools, that were themselves shaped according to the values of their creators.
 
-The [Rube Goldberg machine](https://en.wikipedia.org/wiki/Rube_Goldberg_machine) made out of aligning these tools in increasingly virtuosic, but also increasingly restrained and mechanical ways, felt like constructing an exoskeleton out of prefab parts. The person in my social group closest to constructing the full range of human movement became a legend. But let's be honest: none of us came even close. 
+The [Rube Goldberg machine](https://en.wikipedia.org/wiki/Rube_Goldberg_machine) made out of aligning these tools in increasingly virtuosic, but also increasingly restrained and mechanical ways, felt like constructing an exoskeleton out of prefab parts. The person in my social group closest to constructing the full range of human movement became a legend. But let's be honest: none of us came even close.
 
 And it's nobody's distinct fault that the experience of aligning all these disparate services into a workflow is a skill in itself. It's a collective restriction that comes from the systems beneath.
 
@@ -42,11 +42,11 @@ We just want to be where our friends are, to see who knows whom, to see a new fr
 
 Why is the social graph even a consideration when choosing a tool? Why do I have to know who has accounts where, how they choose to assemble their digital body, so that I can see that it exists?
 
-For a tool like a microblog—a bunch of entries in a database with metadata, usually threaded —the attachment of the social graph capture becomes not only an underlying appeal to us when choosing to use it, but also to the tool’s creators when trying to justify its existence.
+For a tool like a microblog—a bunch of entries in a database with metadata, usually threaded—the attachment of the social graph capture becomes not only an underlying appeal to us when choosing to use it, but also to the tool’s creators when trying to justify its existence.
 
-In this example, you could say that every social internet product is trying to make up for its missing ability to connect coherent identities underneath. The battle becomes a matter between the stagnant empire of who owns the graph versus the various attempts to create a secure identity primitive as a layer of the internet.
+In this example, you could say that every social Internet product is trying to make up for its missing ability to connect coherent identities underneath. The battle becomes a matter between the stagnant empire of who owns the graph versus the various attempts to create a secure identity primitive as a layer of the Internet.
 
-But this is crazy: for decades, an aspect of the internet stack that necessitated the creation of platforms—the ability to talk to other computers directly and to, privately, opt-in, organize an array of devices as belonging to an identity—has driven not only the financial incentives of every product, but the use case for every person in the equation. A practically unrelated problem emerged that was too hard to wrangle and solve, and so it became the master.
+But this is crazy: for decades, an aspect of the Internet stack that necessitated the creation of platforms—the ability to talk to other computers directly and to, privately, opt in, organize an array of devices as belonging to an identity—has driven not only the financial incentives of every product, but the use case for every person in the equation. A practically unrelated problem emerged that was too hard to wrangle and solve, and so it became the master.
 
 And for productivity tools—for the personal activities we do every day—the same problem ultimately applies. Either you wrangle more and more single-use "products" into a framework, wrangling combinatorial explosion, or you punt the problem to the user's brain, remembering the relation between tools.
 
@@ -66,7 +66,7 @@ So why does this matter for us? Me and you and everyone we know? We put up with 
 
 You have to ask yourself, "Why are we doing this again?"
 
-These days I find myself away from broadcast tools and more in the insular channels of my friend groups. What I want from technology is to share life with my friends; to be given the opportunity, and the power, to share that life, and all it includes ... showing them care, or sharing the bits of knowledge that seem important to us as a group. 
+These days I find myself away from broadcast tools and more in the insular channels of my friend groups. What I want from technology is to share life with my friends; to be given the opportunity, and the power, to share that life, and all it includes… showing them care, or sharing the bits of knowledge that seem important to us as a group.
 
 To reinforce the fulfilment of collective potential in whatever direction our groups take off in. Some of my friends watch stuff together; some of my friends remark on goings-on; some of my friends research together; all communicate entirely differently. Not all of them belong on "IRC, but for gamers," or "IRC, but for highly productive and extremely important teams." And yet, that's where we are.
 

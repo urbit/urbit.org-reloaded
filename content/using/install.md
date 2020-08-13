@@ -378,6 +378,7 @@ Never boot multiple instances of your ship at the same time. You can prevent thi
 
 Welcome to your ship. Let's start exploring.
 
+
 ### The Dojo
 
 Let's try our first command in the Dojo, the Urbit OS command line and Hoon REPL, to get oriented.

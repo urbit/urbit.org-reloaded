@@ -133,18 +133,6 @@ in this example.
 
 Put `<key>` in a file and that file becomes `<keyfile>`.
 
-To breach a moon -- that is, to reset its presence on the network so that it's treated as a freshly spawned ship by others -- run from the parent ship:
-
-```
-|moon-breach ~faswep-navred-sampel-palnet
-```
-
-To cycle the keys of a moon without breaching, run:
-
-```
-|moon-cycle-keys ~sampel-sipnym-wicdev-wisryt
-```
-
 You can use the resulting output in the same installation flow from the [Installing Urbit](@/using/install.md) guide, following the same scheme as for booting a planet. That scheme is:
 
 ```sh
@@ -172,7 +160,20 @@ or
 $ ./urbit -w faswep-navred-sampel-palnet -k <keyfile> -c mymoon
 ```
 
-Moons are automatically synced to their parent `%kids` desk, and can control applications on their parent planet using `|link`.  
+Moons are automatically synced to their parent `%kids` desk, and can control applications on their parent planet using `|link`.
+
+To breach a moon -- that is, to reset its presence on the network so that it's treated as a freshly spawned ship by others -- run from the parent ship:
+
+```
+|moon-breach ~faswep-navred-sampel-palnet
+```
+
+To cycle the keys of a moon without breaching, run:
+
+```
+|moon-cycle-keys ~sampel-sipnym-wicdev-wisryt
+```
+
 
 ### Escaping A Sponsor
 
@@ -182,7 +183,7 @@ To use the network as a planet or star, you must be sponsored by an active star 
 
 - A little bit of ETH in your management proxy address to pay for the transaction.
 - The identity number of the sponsor you want to escape from.
-- The identity number of the sponsor you want to escape to. 
+- The identity number of the sponsor you want to escape to.
 
 You can find an identity's number by running ``` `@`~marzod ``` in any Dojo, where `~marzod` is the name of the relevant identity.
 
@@ -195,8 +196,8 @@ You can find an identity's number by running ``` `@`~marzod ``` in any Dojo, whe
 4. Copy the "contract ABI" from [here](https://etherscan.io/address/ecliptic.eth#code) and paste it into the "ABI/JSON interface" field.
 5. Select the `escape()` function, passing in two arguments: your identity number, and the number of your desired sponsor.
 6. Sign and submit the transaction.
-7. Get in touch with your prospective sponsor, since they won't be notified otherwise. You can do this by contacting them on the network via chat, or joining `~/~dopzod/urbit-help` and asking around.
-8. Wait for your request to be accepted by the prospective sponsor. 
+7. Get in touch with your prospective sponsor, since they won't be notified otherwise. You can do this by contacting them on the network via chat, or joining `~bitbet-bolbel/urbit-community` and asking around.
+8. Wait for your request to be accepted by the prospective sponsor.
 9. If your request is not accepted by your prospective sponsor, a last resort, you can make a request to escape to `~marzod`, which is operated by Tlon, the company leading the development of Urbit.
 
 ### Continuity breaches
@@ -263,23 +264,21 @@ Let’s get started using the `:chat-cli` application, also known more simply as
 
 ### Quickstart
 
-The most common uses of `:chat-cli` right now are communicating over a public chat channel on `~/~dopzod/urbit-help.` Everyone is more than welcome in `~/~dopzod/urbit-help`. It's the place to get help, ask questions and chat about Urbit in general.
-
-Note that largely equivalent functionality is also available through Chat's web UI in landscape. This is available from your ship’s URL address, mentioned earlier in this guide.
+The most common use for `:chat-cli` right now is, of course, communicating in group chats.
 
 ### Joining a chat
 
 In `:chat-cli`, any kind of medium for a message is called a _chat_. There are four "types" of chats, but for now we'll be dealing with the _channel_, a publicly accessible chatroom for general use. We'll discuss the other three kinds in the [chat management](#chat-management) section later on.
 
-Let's join the `~/~dopzod/urbit-help` channel. Use `ctrl-x` to switch from the Dojo prompt to the Chat prompt.
+Join the Urbit Community from Dojo using `:group-store|join ~bitbet-bolbel/urbit-community`. Once you've joined, join the General chat from chat-cli. Use `ctrl-x` to switch from the Dojo prompt to the Chat prompt.
 
 Then:
 
 ```
-~sampel-palnet:chat-cli/ ;join ~/~dopzod/urbit-help
+~sampel-palnet:chat-cli/ ;join ~darrux-landes/general
 ```
 
-Now that you're in, try post a line to `~/~dopzod/urbit-help`:
+Now that you're in, try post a line to `~darrux-landes/general`:
 
 ```
 ~sampel-palnet:chat-cli= Hello, world!
@@ -289,7 +288,7 @@ You'll see your message printed below messages from others that came before it. 
 
 ```
 ~sampel-palnet:chat-cli= ;chats
-~dopzod/urbit-help
+~darrux-landes/general
 ```
 
 Glyphs will be automatically assigned to channels, but have the option of binding a glyph (single non-alphanumeric character) to the channel you're joining; the syntax is in the form of `;join ~/~dopzod/books +`. The chosen glyph will be the symbol that ends your prompt, and it will be what you use as a shortcut to switch to this channel.
@@ -302,7 +301,7 @@ Glyphs will be automatically assigned to channels, but have the option of bindin
 Use `;leave` to unsubscribe from a channel:
 
 ```
-~sampel-palnet:chat-cli= ;leave ~/~dopzod/urbit-help
+~sampel-palnet:chat-cli= ;leave ~darrux-landes/general
 ```
 
 Now, let's create a channel we can invite some friends to:
@@ -311,7 +310,7 @@ Now, let's create a channel we can invite some friends to:
 ~sampel-palnet:chat-cli= ;create channel /my-channel
 ```
 
-Now you can tell your friends to `;join ~/~your-urbit/my-channel`.
+Now you can tell your friends to `;join ~your-urbit/my-channel`.
 
 In order to see messages in `:chat-cli` you may need to do the following in Dojo:
 
@@ -412,7 +411,7 @@ You can permit and ban people from reading and/or writing to the chats you host,
 
 Syntax: `;invite [rw] /name ~ships`
 
-Where `rw` is either `r`, `w`, or `rw`, representing "read" and "write" permissions.  
+Where `rw` is either `r`, `w`, or `rw`, representing "read" and "write" permissions.
 And where `~ships` is a comma-seperated list of ships to invite.
 
 For example, to grant two people full access to a `village` we created:
@@ -845,29 +844,6 @@ This is very often used with `+solid`:
 Which outputs a new `urbit.pill` to `pier/.urb/put/urbit.pill`
 
 ### Sources
-
-#### `&` - Mark conversion
-
-Convert between marks using `&`, with the destination mark first. You can stack multiple mark conversions together, and some marks can only be converted to specific other marks. In this example, [Udon](@/docs/tutorials/sail-and-udon.md#udon) is converted to `&hymn` (a mark which supplies the `html`, `head`, `body`, and closing tags) first, before being converted to HTML:
-
-```
-~your-urbit:dojo>&html &hymn &udon ';h1#hello: hello'
-'<html><head></head><body><h1 id="hello">hello</h1></body></html>'
-```
-
-Performing a conversion straight from Udon to the `&hymn` mark reveals a bit more about its mark conversion:
-
-```
-~your-urbit:dojo>&hymn &udon ';h1#hello: hello'
-[[%html ~] [[%head ~] ~] [[%body ~] [g=[n=%h1 a=~[[n=%id v="hello"]]] c=~[[g=[n=%$ a=~[[n=%$ v="hello"]]] c=~]]] ~] ~]
-```
-
-As does converting straight from Udon to HTML:
-
-```
-~your-urbit:dojo>&html &udon ';h1#hello: hello'
-';h1#hello: hello'
-```
 
 #### `_` - Run a function
 
