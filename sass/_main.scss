@@ -216,16 +216,17 @@ body.essay {
         display: block;
     }
     div.footnote-definition {
-      &[id="0"] {
+      &[id="1"] {
         margin-top: 4rem;
-        padding-top: 2rem;
+        padding-top: 4rem;
         border-top: 1px solid black;
+      }
+      &:not([id="1"]) {
+        margin: 1rem 0;
       }
       p {
         display: inline;
-      }
-      &:not([id="0"]) {
-        margin: 2rem 0;
+        font-size: smaller;
       }
     }
 }
