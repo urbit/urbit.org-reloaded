@@ -1,7 +1,7 @@
 +++
 title = "First Steps Towards urbit.org"
-date = 2020-08-27
-description = "With a stable platform taking shape and a strong community forming that wants to help build Urbit, it’s time to make urbit.org real. We’ve had plenty of time to think about what it should look like, how it should work, and who should lead it."
+date = 2020-08-12
+description = "With a stable platform taking shape and a strong community forming that wants to help build Urbit, it’s time to make urbit.org real."
 [extra]
 author = "Josh Lehman"
 ship = "~wolref-podlex"
@@ -48,7 +48,7 @@ To that end, the first objective of urbit.org is to recruit builders and give th
 
 The product work that Tlon is doing is crucial to Urbit’s long-term success, so I’ll also be leveraging bounties to more directly accelerate their development efforts. Landscape represents the clearest example of a cohesive vision for Urbit’s use. The existence of a polished product built on Urbit demonstrates to the world that the platform is robust and capable, and the growing community seems eager to help. You can expect more bounties very soon that provide a direct connection to the Landscape roadmap.
 
-As I’m only just getting started, I’d love to hear your thoughts. If you’re working on any grants you’ll hear from me soon, and if you have an idea that you want to pursue, I’m here to help you make it happen. You can reach me directly via Urbit as ~wolref-podlex or by email at josh@urbit.org. 
+As I’m only just getting started, I’d love to hear your thoughts. If you’re working on any grants you’ll hear from me soon, and if you have an idea that you want to pursue, I’m here to help you make it happen. You can reach me directly via Urbit as `~wolref-podlex` or by email at josh@urbit.org. 
 
 I look forward to working with you.
 
