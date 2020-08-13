@@ -195,9 +195,11 @@ As mentioned previously, there are a few ways to acquire a planet. All methods, 
 
 ## Installation
 
-There are two supported ways of running an Urbit ship: using a [cloud service](#cloud), or running it [locally on your own machine](#local). We recommend using a cloud service for Urbit because, because it it's more reliable than running it locally and allows your ship to be easily access from anywhere. Using a cloud service costs money and has a more involved setup process, but it's more convenient to use than a local install.
+There are two supported ways of running an Urbit ship: using a [cloud service](#cloud), or running it [locally on your own machine](#local). We recommend using a cloud service for Urbit because it will likely be more reliable than running it locally and allows your ship to be easily accesed from anywhere, without worrying about forwarding ports to and from your home router or your Internet service provider blocking traffic on the default HTTP port. Using a cloud service costs money and has a more involved setup process, but it's more convenient to use than a local install.
 
-A cloud service that we like is DigitalOcean, so we give instructions for running Urbit on that service.
+A cloud service that we like is DigitalOcean, so we give instructions for running Urbit on that service in the section below.
+
+If you use Amazon Web Services instead, take note: putting a swap file on Amazon's Elastic Block Store does not work well, and will likely result in your Urbit becoming unresponsive when it tries to access swapped memory. With Amazon instances, swap should only be used on [Instance Stores](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-store-swap-volumes.html).
 
 ### Option A: DigitalOcean {#cloud}
 
@@ -375,6 +377,7 @@ Never boot multiple instances of your ship at the same time. You can prevent thi
 ## System Administration {#admin}
 
 Welcome to your ship. Let's start exploring.
+
 
 ### The Dojo
 
