@@ -1,7 +1,7 @@
 +++
 title = "First Steps Towards urbit.org"
 date = 2020-08-27
-description = ""
+description = "With a stable platform taking shape and a strong community forming that wants to help build Urbit, it’s time to make urbit.org real. We’ve had plenty of time to think about what it should look like, how it should work, and who should lead it."
 [extra]
 author = "Josh Lehman"
 ship = "~wolref-podlex"
