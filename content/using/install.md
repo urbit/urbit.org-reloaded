@@ -20,7 +20,7 @@ Urbit works as a p2p network where others fail because ships are associated with
 
 On the network, Urbit IDs function as network addresses, represented by pronounceable names like `~padmyn-pasnux`. There are a few kinds of Urbit ID, but ones meant for typical users are called **planets**. Anyone who has a planet can be thought of as a full "citizen" of the Urbit network. But to run your ship on the network, you need to start it with a piece of cryptographic information from its Urbit ID. This guide walk you through getting onto Urbit with an ID.
 
-But sometimes a user might not want a persistent identity for whatever reason. In that case, they can use Urbit without an Urbit ID by using something called called a **comet**. Comets can be spun up at will and for free. They are good for bots and for people who are new to Urbit and want to check out the network, but they aren't good for building a reputation as a friendly and responsible peer. If you want to jump right in with a comet, check out [this](#comet) section.
+But sometimes a user might not want a persistent identity for whatever reason. In that case, they can use Urbit without an Urbit ID by using something called a **comet**. Comets can be spun up at will and for free. They are good for bots and for people who are new to Urbit and want to check out the network, but they aren't good for building a reputation as a friendly and responsible peer. If you want to jump right in with a comet, check out [this](#comet) section.
 
 ### Stars and Galaxies
 
