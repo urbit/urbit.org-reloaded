@@ -1,6 +1,6 @@
 +++
 title = "Providers"
-date = 2020-08-14
+date = 2020-08-18
 description = "We’ve always assumed that providers would have to come into existence sooner or later. By the look of it, that time is now. Tlon and a few others have provider-like services in the works."
 [extra]
 author = "Galen Wolfe-Pauly"
