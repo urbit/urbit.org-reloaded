@@ -7,7 +7,7 @@ weight = 2
 hidetitle = "true"
 +++
 
-## Hosting Your Ship On The Cloud
+## Hosting Your Ship In The Cloud
 The goal of this guide is to have clear and easy to follow best practices for deploying an Urbit node to a server you control in the cloud. Deploying in the cloud allows you to access your Urbit from any device.
 
 Most Urbit users start out running their ship locally on one machine in order to play with it, but this means when your machine is offline your Urbit node is offline too (and can't get updates). You can also only access your Urbit from that one machine.
