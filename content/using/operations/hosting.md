@@ -1,9 +1,8 @@
 +++
-title = "Hosting Your Ship On The Cloud"
+title = "Hosting Your Ship In The Cloud"
 description = "How to host your ship in the cloud so you can access it from any device."
 template = "page_indiced.html"
 weight = 2
-aliases = ["docs/using/hosting/"]
 [extra]
 hidetitle = "true"
 +++
@@ -11,8 +10,7 @@ hidetitle = "true"
 ## Hosting Your Ship On The Cloud
 The goal of this guide is to have clear and easy to follow best practices for deploying an Urbit node to a server you control in the cloud. Deploying in the cloud allows you to access your Urbit from any device.
 
-Most Urbit users start out running their ship locally on one machine in order to play with it, but this means when your machine is offline your Urbit node is offline too (and can't get updates). 
-You can also only access your Urbit from that one machine.
+Most Urbit users start out running their ship locally on one machine in order to play with it, but this means when your machine is offline your Urbit node is offline too (and can't get updates). You can also only access your Urbit from that one machine.
 
 This guide uses Digital Ocean as the cloud provider, but others can be used. 
 
@@ -39,7 +37,7 @@ This guide uses Digital Ocean as the cloud provider, but others can be used.
 ## Getting your own domain
 Your own domain will make accessing your Urbit a lot easier (it'll also allow you to secure things with a Let's Encrypt cert). Domains are relatively inexpensive and since this guide is about best practices I'm making it a required step. 
 
-There are a lot of domain name registrars you can use, this guide suggests [gandi.net][Gandi] because that's the one I use. From there you can search for and register a domain that you like.
+There are a lot of domain name registrars you can use, this guide suggests [gandi.net][Gandi]. From there you can search for and register a domain that you like.
 
 ## Configuring your domain for your Digital Ocean droplet
 Once you've registered your domain you'll need to configure it to use Digital Ocean for DNS. The following steps are done on the Gandi website.
