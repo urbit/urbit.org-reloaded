@@ -368,7 +368,9 @@ Or, if you'd prefer to copy your key in, you can run:
 
 Either command will create a directory called `sampel-palnet/` and begin building your ship. It may take a few minutes.
 
-When your ship is finished booting, you will see either the `~sampel-palnet:dojo>` or `~sampel-palnet:chat-cli/` prompt. If you're seeing `:chat-cli` press `Ctrl-x` to switch into Dojo. At that point, you should permanently erase your keyfile from your machine.
+When your ship is finished booting, you will see either the `~sampel-palnet:dojo>` or `~sampel-palnet:chat-cli/` prompt. If you're seeing `:chat-cli` press `Ctrl-x` to switch into Dojo.
+
+**Important:** once a key has been used to boot a ship onto the network, it cannot be used to boot that ship again later - doing so will cause communication problems with other ships. For this reason you should **delete the keyfile from your machine once your ship has booted successfully**. (If you do use the same key twice, you'll need to conduct a [personal breach](#breaches) to restore your ship to full functionality).
 
 To shut down your ship, use `Ctrl-d`. To start your ship up again, run `./urbit sampel-palnet/` from the directory where your Urbit binary is saved. Note that in this usage, `sampel-palnet/` is the path of a folder, which by default is located in the same folder as the Urbit binary. This folder is called your ship's **pier**, and you can put it wherever you like.
 
