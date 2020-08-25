@@ -19,29 +19,10 @@
   <meta name="description" content="Urbit is a simple, durable system for running a personal server that you own 100% and forever.">
 {% endblock description %}
 {% block content %}
-
-<section class="full p0 vid-insert-wrap full-bleed">
-  <video
-    class="vid-insert bg-black"
-    id="ocean"
-    autoplay
-    muted
-    loop
-    poster="https://media.urbit.org/site/sea30-poster.jpg">
-  </video>
-
-  <div class="grid12 w-100 h-100">
-    <div class="full c3-10-md c3-10-lg flex items-center align-center z10 white">
-      Urbit is a clean-slate OS and network for the 21st century.
-    </div>
-  </div>
-  <!-- VIMEO VERSION KEPT AS SHIM -->
-  <!-- <iframe src="https://player.vimeo.com/video/365353672?background=1"
-    class="w-100 ma0 h-100" frameborder="0" allow="autoplay;fullscreen" allowfullscreen="" style="
-  "></iframe> -->
-</section>
-
-<section class="full lh-copy c2-7-md c3-7-lg mt5">
+<header class="mt7 mb7 c1-12 c2-11-md c3-11-lg">
+  Urbit is a clean-slate OS and network for the 21st century.
+</header>
+<section class="full lh-copy c2-7-md c3-7-lg mt4">
   <p><strong>Urbit OS</strong> is a clean slate reimagining of the operating system as an 'overlay OS.' It runs on any Unix machine with an internet connection.</p>
   <p>It's a compact system for an individual to run their own permanent personal server.</p>
   <p><strong>Urbit ID</strong> is a decentralized digital identity system. Your
@@ -58,7 +39,7 @@
 </section>
 
 
-<section class="full lh-copy c7-12-md c7-11-lg mt5">
+<section class="full lh-copy c7-12-md c7-11-lg mt4">
   <p class="fw6">Latest Posts</p>
   {% set s = get_section(path="updates/_index.md") %}
   {% set e = get_section(path="blog/_index.md") %}
