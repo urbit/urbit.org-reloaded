@@ -100,14 +100,16 @@ To boot your comet, go into the command line and run the following command from 
 $ ./urbit -c mycomet
 ```
 
-This will take a few minutes and will spin out a bunch of boot messages. Toward the end, you'll see something like:
+This will take a few minutes to an hour, and will spin out a bunch of boot messages. It will also create a directory called `mycomet` in the Unix directory that you ran the command from.
+
+Toward the end of the boot process, you'll see something like:
 
 ```
 ames: on localhost, UDP 31337.
 http: live (insecure, public) on 8080
 http: live ("secure", public) on 8443
 http: live (insecure, loopback) on 12321
-~dasres_marzod:dojo>
+~sampel_commet:dojo>
 ```
 
 When your ship is finished booting, you will see either the `~sampel_commet:dojo>` or `~sampel_commet:chat-cli/` prompt. If you're seeing `:chat-cli` press `Ctrl-x` to switch into Dojo. At that point, you should permanently erase your keyfile from your machine.
