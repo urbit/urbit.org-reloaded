@@ -289,7 +289,7 @@ Landscape is an experimental Urbit OS web interface that includes social functio
 
 Follow our guide on how to boot a ship [here](@/using/install.md).  
 
-Get on the [mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;id=be143888d2). Learn [Hoon](@/docs/tutorials/hoon/_index.md). Sign up for [Hoon School](@/community/hoonschool.md). [Make stuff](https://grants.urbit.org).
+Get on the [mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;id=be143888d2). Learn [Hoon](@/docs/tutorials/hoon/hoon-school/_index.md). Sign up for [Hoon School](@/community/hoonschool.md). [Make stuff](https://grants.urbit.org).
 
 
 ## Urbit Grants

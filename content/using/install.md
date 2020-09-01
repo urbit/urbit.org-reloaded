@@ -112,6 +112,8 @@ http: live (insecure, loopback) on 12321
 
 When your ship is finished booting, you will see either the `~sampel_commet:dojo>` or `~sampel_commet:chat-cli/` prompt. If you're seeing `:chat-cli` press `Ctrl-x` to switch into Dojo. At that point, you should permanently erase your keyfile from your machine.
 
+**Important:** once a key has been used to boot a ship onto the network, it cannot be used to boot that ship again later - doing so will cause communication problems with other ships. For this reason you should **delete the keyfile from your machine once your ship has booted successfully**. (If you do use the same key twice, you'll need to conduct a [personal breach](#breaches) to restore your ship to full functionality).
+
 To exit Urbit, use `Ctrl-d`. To start your ship up again, run  `./urbit mycomet` from the directory that you first booted from. Now let's do some basic commands from inside your ship.
 
 ### The Dojo
