@@ -114,8 +114,6 @@ http: live (insecure, loopback) on 12321
 
 When your ship is finished booting, you will see either the `~sampel_commet:dojo>` or `~sampel_commet:chat-cli/` prompt. If you're seeing `:chat-cli` press `Ctrl-x` to switch into Dojo. At that point, you should permanently erase your keyfile from your machine.
 
-**Important:** once a key has been used to boot a ship onto the network, it cannot be used to boot that ship again later - doing so will cause communication problems with other ships. For this reason you should **delete the keyfile from your machine once your ship has booted successfully**. (If you do use the same key twice, you'll need to conduct a [personal breach](#breaches) to restore your ship to full functionality).
-
 To exit Urbit, use `Ctrl-d`. To start your ship up again, run  `./urbit mycomet` from the directory that you first booted from. Now let's do some basic commands from inside your ship.
 
 ### The Dojo
@@ -202,6 +200,47 @@ There are two supported ways of running an Urbit ship: using a cloud service, or
 Using a cloud service costs money, but it's more convenient to use than a local install.
 
 We have a guide for [hosting your ship on DigitalOcean](@/using/operations/hosting.md) which we've found works well, but any cloud hosting service should work.
+
+### Booting Your Planet
+
+You'll be booting your ship with the keyfile that you downloaded from Bridge [earlier in this document](#id).
+
+Note that this section is only for booting a ship that uses the live Urbit network.
+
+#### Step 1: Find Your Urbit ID
+
+This will look something like `~lodleb-ritrul`. You can see the name of your Urbit ID when you log into your wallet using the [Bridge client](#id).
+
+#### Step 2: Find the path to your keyfile
+
+Find the absolute path to the keyfile that you downloaded from Bridge. Copy it.
+
+#### Step 3: Run the boot command
+
+If you are not already within the directory you installed above, enter it by running `cd urbit-v0.10.8-darwin` (for Mac) or `cd urbit-v0.10.8-linux64` (for Linux) from where you ran the install commands. It contains your Urbit binary, and your ship will be installed here as well.
+
+Once you're inside, run the command below, except with `sampel-palnet` replaced by the name of your
+Urbit identity, and `path/to/my-planet.key` replaced with the path to your keyfile:
+
+```sh
+./urbit -w sampel-palnet -k path/to/my-planet.key
+```
+
+Or, if you'd prefer to copy your key in, you can run:
+
+```sh
+./urbit -w sampel-palnet -G rAnDoMkEy
+```
+
+Either command will create a directory called `sampel-palnet/` and begin building your ship. It may take a few minutes.
+
+When your ship is finished booting, you will see either the `~sampel-palnet:dojo>` or `~sampel-palnet:chat-cli/` prompt. If you're seeing `:chat-cli` press `Ctrl-x` to switch into Dojo. At that point, you should permanently erase your keyfile from your machine.
+
+To shut down your ship, use `Ctrl-d`. To start your ship up again, run `./urbit sampel-palnet/` from the directory where your Urbit binary is saved. Note that in this usage, `sampel-palnet/` is the path of a folder, which by default is located in the same folder as the Urbit binary. This folder is called your ship's **pier**, and you can put it wherever you like.
+
+Never boot multiple instances of your ship at the same time. You can prevent this from happening on accident by only ever keeping a single copy of your pier.
+
+**Important:** once a key has been used to boot a ship onto the network, it cannot be used to boot that ship again later - doing so will cause communication problems with other ships. For this reason you should **delete the keyfile from your machine once your ship has booted successfully**. (If you do use the same key twice, you'll need to conduct a [personal breach](#breaches) to restore your ship to full functionality).
 
 ### Updating to the latest binary
 
