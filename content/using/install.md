@@ -24,7 +24,7 @@ There are also free IDs meant for temporary use called **comets**. They are good
 
 In addition to comets and planets, two other types of ships are **stars** and **galaxies**. Together these perform essential infrastructural roles for Urbit OS network and for Urbit ID.
 
-On the Urbit ID side galaxies, galaxies are at the top of the ID hierarchy, with 256 in existence. Each galaxy can distribute 256 stars, and each star can distribute 65,536 planets. So any given planet ultimately came from a specific star, which itself came from a specific galaxy.
+On the Urbit ID side, galaxies are at the top of the ID hierarchy, with 256 in existence. Each galaxy can distribute 256 stars, and each star can distribute 65,536 planets. So any given planet ultimately came from a specific star, which itself came from a specific galaxy.
 
 On the Urbit OS side, stars help route packets, kind of like an ISP. And galaxies are like DNS root servers or ICANN members. The difference is that Urbit IDs are owned cryptographically by many different people and accrue reputation independently.
 
