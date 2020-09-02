@@ -197,7 +197,7 @@ As mentioned previously, there are a few ways to acquire a planet. All methods, 
 
 ## Hosting
 
-There are two supported ways of running an Urbit ship: using a cloud service, or running it locally on your own machine. Most users run things locally at first, but we recommend using a cloud service for Urbit because it allows your ship to be accessed from anywhere on multiple devices. Hosting your ship in the cloud also allows it to always be online and ready for OTA updates. It's technically possible to run your Urbit ship on a home server, but ISPs often restrict this to business plans and opening up your home network to the internet can be unsafe if done improperly.
+There are two supported ways of running an Urbit ship: using a cloud service, or running it locally on your own machine. Most users run things locally at first, but we recommend eventually using a cloud service for Urbit because it allows your ship to be accessed from anywhere on multiple devices. Hosting your ship in the cloud also allows it to always be online and ready for OTA updates. It's technically possible to run your Urbit ship on a home server, but ISPs often restrict this to business plans and opening up your home network to the internet can be unsafe if done improperly.
 
 Using a cloud service costs money, but it's more convenient to use than a local install.
 
