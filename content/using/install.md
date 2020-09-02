@@ -184,7 +184,7 @@ Urbit ID secrets operate as a system of separate but hierarchically related Ethe
 
 - **Management Proxy**: Derived from the master ticket. Can perform non-ownership related operations such as configuring Urbit OS networking keys.
 
-- **Keyfile**: Derived from the management proxy. Used as cryptographic proof that your Urbit ship it is who it says it is. You use it to start up your ship for the first time.
+- **Keyfile**: Derived from the management proxy. Used as cryptographic proof that your Urbit ship is who it says it is. You use it to start up your ship for the first time.
 
 ### Getting Your Keyfile {#keyfile}
 
