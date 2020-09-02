@@ -24,7 +24,7 @@ There are also free IDs meant for temporary use called **comets**. They are good
 
 In addition to comets and planets, two other types of ships are **stars** and **galaxies**. Together these perform essential infrastructural roles for Urbit OS network and for Urbit ID.
 
-On the Urbit ID side, galaxies are at the top of the ID hierarchy, with 256 in existence. Each galaxy can distribute 256 stars, and each star can distribute 65,536 planets. So any given planet ultimately came from a specific star, which itself came from a specific galaxy.
+On the Urbit ID side, galaxies are at the top of the ID hierarchy with 256 in existence. Each galaxy can distribute 256 stars, and each star can distribute 65,536 planets. So any given planet ultimately came from a specific star, which itself came from a specific galaxy.
 
 On the Urbit OS side, stars help route packets, kind of like an ISP. And galaxies are like DNS root servers or ICANN members. The difference is that Urbit IDs are owned cryptographically by many different people and accrue reputation independently.
 
@@ -94,7 +94,7 @@ Comets are disposable, free identities that anyone can make to join the live net
 
 ### Booting a comet
 
-To boot your comet, go into the command line and run the following command from the directory that was created during Urbit installation:
+To boot a comet, go into the command line and run the following command from the directory that was created during Urbit installation:
 
 ```sh
 $ ./urbit -c mycomet
@@ -112,13 +112,13 @@ http: live (insecure, loopback) on 12321
 ~sampel_commet:dojo>
 ```
 
-When your ship is finished booting, you will see either the `~sampel_commet:dojo>` or `~sampel_commet:chat-cli/` prompt. If you're seeing `:chat-cli` press `Ctrl-x` to switch into Dojo. At that point, you should permanently erase your keyfile from your machine.
+When your ship is finished booting, you will see either the `~sampel_commet:dojo>` or `~sampel_commet:chat-cli/` prompt. If you're seeing `:chat-cli` press `Ctrl-x` to switch into Dojo. 
 
-To exit Urbit, use `Ctrl-d`. To start your ship up again, run  `./urbit mycomet` from the directory that you first booted from. Now let's do some basic commands from inside your ship.
+To exit Urbit, use `Ctrl-d`. To start your ship up again, run  `./urbit mycomet` from the directory that you first booted from.
 
 ### The Dojo
 
-Welcome to your comet! Let's try our first command in the Dojo, the Urbit OS command line and Hoon REPL, to get oriented.
+Let's try our first command in the Dojo, the Urbit OS command line and Hoon REPL, to get oriented.
 
 Type `(add 2 2)` into the Dojo. You should see the following:
 
@@ -144,7 +144,7 @@ The `>=` output means that a command was successful. Now you can see your ship's
 
 ### Using Landscape
 
-Landscape is the Urbit web interface, and it's the best way to interact with your ship. Chrome and Brave are the recommended browsers for using Landscape. To get onto Landscape:
+Landscape is the Urbit web interface, and it's the best way to interact with your ship. Chrome, Firefox, and Brave are the recommended browsers for using Landscape. To get onto Landscape:
 
 1. Start your ship. In the boot messages, look for a line that says something like `http: live (insecure, public) on 80`. The number given is the port that your ship is using.
 2.  If the port given is 80, simply type `localhost` into your browser's address bar. If the given port is a different number, such as `8080`, you would type `localhost:8080`. You'll be met with a login prompt.
@@ -166,6 +166,8 @@ Tlon doesn't currently sell or distribute Urbit IDs, but there are a few ways to
 - Getting an invitation from a friend
 - Purchasing an Urbit ID from a third party, such as [urbit.live](https://urbit.live), [OpenSea](https://opensea.io), [planet.market](https://planet.market/), or [Urbit Marketplace](https://urbitmarketplace.com/).
 
+Note that if you buy a planet from opensea you may have to change its star, ask around in the `urbit-community` chat as a comet first for help before purchasing.
+
 Tlon occasionally selects candidates to distribute invitations, and users operating galaxies and stars can spawn and distribute a finite number of stars and planets, respectively.
 
 ### Using your Urbit ID (Planet or Star) {#id}
@@ -176,13 +178,13 @@ If you have an Urbit ID, you'll use the [Bridge](https://bridge.urbit.org) clien
 
 Your Urbit ID is actually yours. As long as you control its cryptographic secrets, nobody can take it away from you. That's why it's important to know a little bit about the cryptographic architecture of Urbit secrets.
 
-Urbit ID secrets operate as a system of separate but hierarchically realted Ethereum key-pairs. For any given ID, this system of key-pairs is referred to as a **Hierarchical Deterministic (HD) Wallet**. the Urbit HD wallet. Each of these Ethereum addresses have different powers over the same identity, from setting networking keys for communicating in the Urbit network to transferring ownership of identities. Important elements of the HD wallet:
+Urbit ID secrets operate as a system of separate but hierarchically related Ethereum key-pairs. For any given ID, this system of key-pairs is referred to as a **Hierarchical Deterministic (HD) Wallet**. the Urbit HD wallet. Each of these Ethereum addresses have different powers over the same identity, from setting networking keys for communicating in the Urbit network to transferring ownership of identities. Important elements of the HD wallet:
 
-- **Master Ticket**: The "password" at the top of the hierarchy that determines the ownership. All other secrets are derived from this. If the rest of the wallet is lost or compromised, the master ticket can rederive everything. You'll log into Bridge with this. Always keep your master ticket extremely safe.
+- **Master Ticket**: The "password" at the top of the hierarchy that determines the ownership. All other secrets are derived from this. If the rest of the wallet is lost or compromised, the master ticket can derive everything. You'll log into Bridge with this. Always keep your master ticket extremely safe.
 
 - **Management Proxy**: Derived from the master ticket. Can perform non-ownership related operations such as configuring Urbit OS networking keys.
 
-- **Keyfile**: Derived from the management proxy. Used as crytographic proof that your Urbit ship it is who it says it is. You use it to start up your ship for the first time.
+- **Keyfile**: Derived from the management proxy. Used as cryptographic proof that your Urbit ship it is who it says it is. You use it to start up your ship for the first time.
 
 ### Getting Your Keyfile {#keyfile}
 
@@ -295,7 +297,6 @@ It’s a good idea to store your keys redundantly: for example, on both a hardwa
 Because of their need for near-perfect uptime Stars should use cloud services. 
 
 We have a guide for [hosting on DigitalOcean](@/using/operations/hosting.md), but any cloud provider should work.
-
 
 #### Maintaining a Star
 
