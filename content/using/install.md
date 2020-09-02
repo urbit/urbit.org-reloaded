@@ -168,6 +168,8 @@ Tlon doesn't currently sell or distribute Urbit IDs, but there are a few ways to
 
 Note that if you buy a planet from opensea you may have to change its star, ask around in the `urbit-community` chat as a comet first for help before purchasing.
 
+If you already have a planet and need to escape its star, see [Escaping A Sponsor](@/using/operations/using-your-ship.md#escape).
+
 Tlon occasionally selects candidates to distribute invitations, and users operating galaxies and stars can spawn and distribute a finite number of stars and planets, respectively.
 
 ### Using your Urbit ID (Planet or Star) {#id}
@@ -198,8 +200,6 @@ As mentioned previously, there are a few ways to acquire a planet. All methods, 
 ## Hosting
 
 There are two supported ways of running an Urbit ship: using a cloud service, or running it locally on your own machine. Most users run things locally at first, but we recommend eventually using a cloud service for Urbit because it allows your ship to be accessed from anywhere on multiple devices. Hosting your ship in the cloud also allows it to always be online and ready for OTA updates. It's technically possible to run your Urbit ship on a home server, but ISPs often restrict this to business plans and opening up your home network to the internet can be unsafe if done improperly.
-
-Using a cloud service costs money, but it's more convenient to use than a local install.
 
 We have a guide for [hosting your ship on DigitalOcean](@/using/operations/hosting.md) which we've found works well, but any cloud hosting service should work.
 
@@ -279,7 +279,7 @@ Galaxies are rare and extremely valuable, meaning that there is no liquid market
 
 As mentioned before, stars are valuable. You are solely responsible for safeguarding your seeds and secret keys, and arming yourself with the computer-security knowledge that is attendant upon that safeguarding. You act at your own risk in reliance upon the contents of the manual. In no way is the Tlon Corporation responsible for the actions, decisions, or other behavior taken or not taken by you in reliance upon this manual.
 
-It’s a good idea to store your keys redundantly: for example, on both a hardware wallet and engraved on steel in a safe place, in case one of those methods fails. If you deem a key to be valuable enough, you can shard it into thirds and store each third in secure, geographically distributed locations. Consider these storage media options:
+It’s a good idea to store your keys redundantly in case one method fails. If you deem a key to be valuable enough, you can shard it into thirds and store each third in secure, geographically distributed locations. Consider these storage media options:
 
 - Storing the secret on a hardware wallet (such as a Trezor or Ledger) that is never connected to a networked machine.
 - There are products that let you store the key on steel (such as Cryptosteel or BILLFODL). This medium is resistant to both water damage and fire damage.

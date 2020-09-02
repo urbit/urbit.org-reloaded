@@ -175,7 +175,7 @@ To cycle the keys of a moon without breaching, run:
 ```
 
 
-### Escaping A Sponsor
+### Escaping A Sponsor {#escape}
 
 To use the network as a planet or star, you must be sponsored by an active star or galaxy, respectively. If your sponsor isn't suiting your needs, you can escape to a different one. The [Bridge](https://bridge.urbit.org/) software doesn't yet support escaping. For the time being, however, you can follow this guide.
 
