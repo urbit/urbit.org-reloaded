@@ -35,7 +35,7 @@ This guide uses Digital Ocean as the cloud provider, but others can be used.
  - **Backups**: Optional (it costs a little extra, but I have it enabled for peace of mind).
 
 ## Getting your own domain
-Your own domain will make accessing your Urbit a lot easier (it'll also allow you to secure things with a Let's Encrypt cert). Domains are relatively inexpensive and since this guide is about best practices I'm making it a required step. 
+Your own domain will make accessing your Urbit a lot easier (it'll also allow you to secure things with a Let's Encrypt cert). Domains are relatively inexpensive and since this guide is about best practices it's a required step. 
 
 There are a lot of domain name registrars you can use, this guide suggests [gandi.net][Gandi]. From there you can search for and register a domain that you like.
 
@@ -100,7 +100,7 @@ Continuing to follow the DO docs we're going to configure the ufw firewall.
    ```
 
 ## Installing Urbit
-Finally we're ready to install Urbit on your very own server. This part is actually pretty easy, if you haven't installed Urbit locally then the instructions are the exact same as the ones in the Urbit [install doc][Urbit Install]. If you have a local ship already, we're going to install Urbit on the server and then send your local ship up.
+Finally we're ready to install Urbit on your very own server. This part is actually pretty easy, if you haven't installed Urbit locally then the instructions are the exact same as the ones in the Urbit [install doc][@/using/install.md]. If you have a local ship already, we're going to install Urbit on the server and then send your local ship up.
  - **WARN**: Since Urbit is p2p you don't want to ever run two copies of your ship simultaneously. This is because other nodes that interact with each of your copies will be confused by which one is the most up to date. If you end up accidentally doing this you'll have to do a 'personal breach' described in the Urbit docs to fix things.
  - The first thing you're going to want to do is shut down your local ship, either with control-d or `|exit` in dojo.
  - Next we're going to install Urbit on the server and permit it to bind to the web port:
@@ -161,7 +161,7 @@ On iOS you can save a website to your homescreen as an icon. If you do this for 
    - [Digital Ocean Nginx Installation][DO Nginx Install]
    - [Digital Ocean Nginx Config][DO Nginx Config]
    - [Digital Ocean SSL Cert Setup][DO SSL Config]
-   - [Urbit Install Docs][Urbit Install]
+   - [Urbit Install Docs][@/using/install.md]
    - [Urbit Basic Cloud Install][Urbit Basic Cloud Install]
 
  [Gandi]: https://www.gandi.net/
@@ -170,7 +170,6 @@ On iOS you can save a website to your homescreen as an icon. If you do this for 
  [DO Nginx Install]: https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
  [DO Nginx Config]: https://www.digitalocean.com/community/tutorials/how-to-deploy-a-go-web-application-using-nginx-on-ubuntu-18-04
  [DO SSL Config]: https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04
- [Urbit Install]: https://urbit.org/using/install/
  [Urbit Basic Cloud Install]: https://medium.com/@urbitlive/hello-world-urbit-edition-install-boot-and-run-your-urbit-planet-on-a-10-cloud-server-b9579745b9a8
  [DO Initial Setup]: https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04
  [Blog Github]: https://github.com/zalberico/zalberico.github.io
