@@ -294,7 +294,7 @@ It’s a good idea to store your keys redundantly: for example, on both a hardwa
 
 ### Star: Setup And Install
 
-Because of their need for near-perfect uptime Stars should use cloud services. 
+Because of their need for near-perfect uptime Stars should be hosted on [cloud services](insert link here). 
 
 We have a guide for [hosting on DigitalOcean](@/using/operations/hosting.md), but any cloud provider should work.
 
