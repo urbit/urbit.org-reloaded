@@ -86,7 +86,7 @@ If this is your first time using Urbit, it'll be easiest to start with a comet i
 
 If you don't have your own Planet ID, but still want to try out the Urbit network you can launch a comet.
 
-**Comets** are temporary 128-bit or 16 syllable Urbit IDs, that look like:
+**Comets** are 128-bit or 16 syllable Urbit IDs, that look like:
 
 `~dasres-ragnep-lislyt-ribpyl--mosnyx-bisdem-nidful-marzod`
 
