@@ -18,7 +18,7 @@ Urbit works as a p2p network where others fail because ships are associated with
 
 On the network, Urbit IDs function as network addresses, represented by pronounceable names like `~padmyn-pasnux`. There are a few kinds of Urbit ID, but ones meant for typical users are called **planets**. Anyone who has a planet can be thought of as a full "citizen" of the Urbit network. But to run your ship on the network, you need to start it with a piece of cryptographic information from its Urbit ID. This guide walk you through getting onto Urbit with an ID.
 
-There are also free IDs meant for temporary use called **comets**. They are good for bots and people who are new to Urbit and want to check out the network, but they aren't good for building a reputation as a friendly and responsible peer. Their long names make them difficult to remember and their low default reputation makes them less likely to get over the air updates. Some communities ban comets to prevent spam, but they're still a good way to see what Urbit is about before buying your own planet.
+There are also free IDs called **comets**. They are good for bots and people who are new to Urbit and want to check out the network, but they aren't good for building a reputation as a friendly and responsible peer. Their long names make them difficult to remember and some communities ban comets to prevent spam, but they're still a good way to see what Urbit is about before buying your own planet.
 
 ### Stars and Galaxies
 
@@ -90,7 +90,7 @@ If you don't have your own Planet ID, but still want to try out the Urbit networ
 
 `~dasres-ragnep-lislyt-ribpyl--mosnyx-bisdem-nidful-marzod`
 
-Comets are disposable, free identities that anyone can make to join the live network and try things out.
+Comets are disposable, free identities that can be used to quickly join the network and try things out.
 
 ### Booting a comet
 
@@ -166,7 +166,7 @@ Tlon doesn't currently sell or distribute Urbit IDs, but there are a few ways to
 - Getting an invitation from a friend
 - Purchasing an Urbit ID from a third party, such as [urbit.live](https://urbit.live), [OpenSea](https://opensea.io), [planet.market](https://planet.market/), or [Urbit Marketplace](https://urbitmarketplace.com/).
 
-Note that if you buy a planet from opensea you may have to change its star, ask around in the `urbit-community` chat as a comet first for help before purchasing.
+Note that when you buy a planet you may have to escape its star if the star your planet is linked to isn't operating. Ask around in the `urbit-community` chat as a comet first for help before purchasing.
 
 If you already have a planet and need to escape its star, see [Escaping A Sponsor](@/using/operations/using-your-ship.md#escape).
 
@@ -281,9 +281,8 @@ As mentioned before, stars are valuable. You are solely responsible for safeguar
 
 It’s a good idea to store your keys redundantly in case one method fails. If you deem a key to be valuable enough, you can shard it into thirds and store each third in secure, geographically distributed locations. Consider these storage media options:
 
-- Storing the secret on a hardware wallet (such as a Trezor or Ledger) that is never connected to a networked machine.
-- There are products that let you store the key on steel (such as Cryptosteel or BILLFODL). This medium is resistant to both water damage and fire damage.
-
+- Storing the secret on a hardware wallet that is never connected to a networked machine.
+- There are products that let you store the key on steel. This medium is resistant to both water damage and fire damage.
 
 ### Getting a Star's Keyfile
 
