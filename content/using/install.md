@@ -45,19 +45,21 @@ Urbit: a personal server operating function
 ### macOS
 
 ```sh
+mkdir urbit
+cd urbit
 curl -O https://bootstrap.urbit.org/urbit-v0.10.8-darwin.tgz
 tar xzf urbit-v0.10.8-darwin.tgz
-cd urbit-v0.10.8-darwin
-./urbit
+./urbit-v0.10.8-darwin/urbit
 ```
 
 ### Linux (64-bit)
 
 ```sh
+mkdir urbit
+cd urbit
 curl -O https://bootstrap.urbit.org/urbit-v0.10.8-linux64.tgz
 tar xzf urbit-v0.10.8-linux64.tgz
-cd urbit-v0.10.8-linux64
-./urbit
+./urbit-v0.10.8-linux64/urbit
 ```
 
 To access your Urbit via HTTP on port 80 on Ubuntu, you may need to run the following:
@@ -80,6 +82,8 @@ Once WSL 2 is installed, open a Linux terminal in Windows and then follow the Li
 
 Now that you have Urbit installed you can start it up with an ID.
 
+You should have an `urbit` directory with two files in it: the `urbit-v0.XX.X-<OS>` directory, and the .tgz of that directory. The .tgz file can now be safely deleted.
+
 If this is your first time using Urbit, it'll be easiest to start with a comet in order to get on the network.
 
 ### Comet: Install and Setup {#comet}
@@ -94,13 +98,13 @@ Comets are disposable, free identities that can be used to quickly join the netw
 
 ### Booting a comet
 
-To boot a comet, go into the command line and run the following command from the directory that was created during Urbit installation:
+To boot a comet, go into the command line and run the following command from the urbit directory you created during Urbit installation:
 
 ```sh
-$ ./urbit -c mycomet
+$ ./urbit-v0.10.8-darwin/urbit -c mycomet
 ```
 
-This will take a few minutes to an hour, and will spin out a bunch of boot messages. It will also create a directory called `mycomet` in the Unix directory that you ran the command from.
+This will take up to an hour, and will spin out a bunch of boot messages. It will also create a directory called `mycomet` in the Unix directory that you ran the command from (which should be your urbit directory).
 
 Toward the end of the boot process, you'll see something like:
 
@@ -114,7 +118,9 @@ http: live (insecure, loopback) on 12321
 
 When your ship is finished booting, you will see either the `~sampel_commet:dojo>` or `~sampel_commet:chat-cli/` prompt. If you're seeing `:chat-cli` press `Ctrl-x` to switch into Dojo. 
 
-To exit Urbit, use `Ctrl-d`. To start your ship up again, run  `./urbit mycomet` from the directory that you first booted from.
+To exit Urbit, use `Ctrl-d`. 
+
+To start your ship up again, run  `./urbit-v0.10.8-darwin/urbit mycomet` from your `urbit` directory.
 
 ### The Dojo
 
@@ -123,7 +129,7 @@ Let's try our first command in the Dojo, the Urbit OS command line and Hoon REPL
 Type `(add 2 2)` into the Dojo. You should see the following:
 
 ```
-~sampel-palnet:dojo> (add 2 2)
+~sampel_commet:dojo> (add 2 2)
 ```
 
 When you press Enter, you should see this:
@@ -246,7 +252,36 @@ Never boot multiple instances of your ship at the same time. You can prevent thi
 
 ### Updating to the latest binary
 
-Most updates to Urbit are downloaded and applied automatically as OTA (Over the Air) updates. Occasionally it would be infeasible to distribute an update this way, and a new `urbit` binary is released. This is announced in the [urbit-dev](https://groups.google.com/a/urbit.org/forum/#!forum/dev) Google Group when it occurs (as are all OTA updates). To update to the latest binary, follow the same process outlined above to download and extract it into a new folder. (the binary linked on this page will always be the latest). Then run it as before with `./urbit path/to/sampel-palnet/`.
+Most updates to Urbit are downloaded and applied automatically as OTA (Over the Air) updates. Occasionally it would be infeasible to distribute an update this way, and a new `urbit` binary is released. This is announced in the [urbit-dev](https://groups.google.com/a/urbit.org/forum/#!forum/dev) Google Group when it occurs (as are all OTA updates). 
+
+To update to the latest binary, download and extract it to replace your existing one. Then run it as before.
+
+For example, if in your current `urbit` directory you have an `urbit-v0.10.7-darwin` directory along with a ship directory called `mycomet`, and a new `urbit-v0.10.8-darwin` binary was just released, then you'd run the following commands from your `urbit` directory (the example commands below use the darwin installer, but you should use the one for your OS):
+
+First shut down your ship, by running the following in dojo (or control-d).
+```
+|exit
+```
+
+Next download and extract the most recent binary from inside your `urbit` directory:
+```
+curl -O https://bootstrap.urbit.org/urbit-v0.10.8-darwin.tgz
+tar xzf urbit-v0.10.8-darwin.tgz
+```
+
+Delete the old binary directory from your `urbit` directory:
+
+**NOTE**: Your ship itself can be reused, only the binary needs to be changed. This is why we have the directory structure configured as an urbit directory that contains your ship and your binary. This structure makes it easy to swap in new binaries. If you have your ship *inside* the `urbit-vX.XX.X` directory, move it out before deleting that directory.
+```
+rm -rf urbit-v0.10.7-darwin
+```
+
+Start up your ship with the new binary from your `urbit` directory:
+```
+./urbit-v0.10.8-darwin/urbit mycomet
+```
+
+Then you're good to go, in the future you'll just modify the version numbers in the example above to the most recent version.
 
 ### Breaches
 
