@@ -123,7 +123,7 @@ Let's try our first command in the Dojo, the Urbit OS command line and Hoon REPL
 Type `(add 2 2)` into the Dojo. You should see the following:
 
 ```
-~sampel-palnet:dojo> (add 2 2)
+~sampel_commet:dojo> (add 2 2)
 ```
 
 When you press Enter, you should see this:
