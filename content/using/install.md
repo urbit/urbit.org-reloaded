@@ -256,8 +256,6 @@ Most updates to Urbit are downloaded and applied automatically as OTA (Over the 
 
 To update to the latest binary, download and extract it to replace your existing one. Then run it as before.
 
-**NOTE**: Your ship itself can be reused, only the binary needs to be changed. This is why we have the directory structure configured as an urbit directory that contains your ship and your binary. This structure makes it easy to swap in new binaries. If you have your ship *inside* the `urbit-vX.XX.X` directory, move it out before deleting that directory.
-
 For example, if in your current `urbit` directory you have an `urbit-v0.10.7-darwin` directory along with a ship directory called `mycomet`, and a new `urbit-v0.10.8-darwin` binary was just released, then you'd run the following commands from your `urbit` directory (the example commands below use the darwin installer, but you should use the one for your OS):
 
 First shut down your ship, by running the following in dojo (or control-d).
@@ -272,6 +270,8 @@ tar xzf urbit-v0.10.8-darwin.tgz
 ```
 
 Delete the old binary directory from your `urbit` directory:
+
+**NOTE**: Your ship itself can be reused, only the binary needs to be changed. This is why we have the directory structure configured as an urbit directory that contains your ship and your binary. This structure makes it easy to swap in new binaries. If you have your ship *inside* the `urbit-vX.XX.X` directory, move it out before deleting that directory.
 ```
 rm -rf urbit-v0.10.7-darwin
 ```
