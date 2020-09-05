@@ -98,7 +98,7 @@ Comets are disposable, free identities that can be used to quickly join the netw
 
 ### Booting a comet
 
-To boot a comet, go into the command line and run the following command from the urbit directory you created during Urbit installation:
+To boot a comet, go into the command line and run the following command from the `urbit` directory you created during Urbit installation:
 
 ```sh
 macOS:
@@ -108,7 +108,7 @@ Linux:
 $ ./urbit-v0.10.8-linux64/urbit -c mycomet
 ```
 
-This will take up to an hour, and will spin out a bunch of boot messages. It will also create a directory called `mycomet` in the Unix directory that you ran the command from (which should be your urbit directory).
+This will take up to an hour, and will spin out a bunch of boot messages. It will also create a directory called `mycomet` in the Unix directory that you ran the command from (which should be your `urbit` directory).
 
 Toward the end of the boot process, you'll see something like:
 
@@ -297,14 +297,14 @@ To update to the latest binary, download and extract it to replace your existing
 
 For example, if in your current `urbit` directory you have an `urbit-v0.10.7-<OS>` directory along with a ship directory called `mycomet`, and a new `urbit-v0.10.8-<OS>` binary was just released, then you'd run the following commands from your `urbit` directory:
 
-First shut down your ship, by running the following in dojo (or control-d).
+First shut down your ship, by running the following in dojo (or `control-d`).
 ```
 |exit
 ```
 
 Delete the old binary directory from your `urbit` directory:
 
-**NOTE**: Your ship itself can be reused, only the binary needs to be changed. This is why we have the directory structure configured as an urbit directory that contains your ship and your binary. This structure makes it easy to swap in new binaries. If you have your ship *inside* the `urbit-vX.XX.X` directory, move it out before deleting that directory.
+**NOTE**: Your ship itself can be reused, only the binary needs to be changed. This is why we have the directory structure configured as an `urbit` directory that contains your ship and your binary. This structure makes it easy to swap in new binaries. If you have your ship *inside* the `urbit-vX.XX.X` directory, move it out before deleting that directory.
 ```sh
 macOS:
 rm -rf urbit-v0.10.7-darwin
