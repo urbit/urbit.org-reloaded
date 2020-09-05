@@ -120,9 +120,9 @@ http: live (insecure, loopback) on 12321
 ~sampel_commet:dojo>
 ```
 
-When your ship is finished booting, you will see either the `~sampel_commet:dojo>` or `~sampel_commet:chat-cli/` prompt. If you're seeing `:chat-cli` press `Ctrl-x` to switch into Dojo. 
+When your ship is finished booting, you will see either the `~sampel_commet:dojo>` or `~sampel_commet:chat-cli/` prompt. If you're seeing `:chat-cli` press `Ctrl-X` to switch into Dojo. 
 
-To exit Urbit, use `control-d` or enter `|exit` into Dojo.
+To exit Urbit, use `Ctrl-D` or enter `|exit` into Dojo.
 
 To start your ship up again, run the following from your `urbit` directory (note the lack of `-c` argument):
 ```sh
@@ -261,9 +261,9 @@ Linux:
 
 Either command will create a directory called `sampel-palnet/` and begin building your ship. It may take a few minutes.
 
-When your ship is finished booting, you will see either the `~sampel-palnet:dojo>` or `~sampel-palnet:chat-cli/` prompt. If you're seeing `:chat-cli` press `Ctrl-x` to switch into Dojo.
+When your ship is finished booting, you will see either the `~sampel-palnet:dojo>` or `~sampel-palnet:chat-cli/` prompt. If you're seeing `:chat-cli` press `Ctrl-X` to switch into Dojo.
 
-To shut down your ship, use `control-d`. To start your ship up again, run the following from your `urbit` directory:
+To shut down your ship, use `Ctrl-D`. To start your ship up again, run the following from your `urbit` directory:
 
 ```sh
 macOS:
@@ -297,14 +297,15 @@ To update to the latest binary, download and extract it to replace your existing
 
 For example, if in your current `urbit` directory you have an `urbit-v0.10.7-<OS>` directory along with a ship directory called `mycomet`, and a new `urbit-v0.10.8-<OS>` binary was just released, then you'd run the following commands from your `urbit` directory:
 
-First shut down your ship, by running the following in dojo (or `control-d`).
+First shut down your ship, by running the following in dojo (or `Ctrl-D`).
 ```
 |exit
 ```
 
+**NOTE**: Your ship itself can be reused, only the binary needs to be changed. This is why we have the directory structure configured as an `urbit` directory that contains your ship and your binary. This structure makes it easy to swap in new binaries. If you have your ship *inside* the `urbit-vX.XX.X` directory, move it out before deleting that directory.
+
 Delete the old binary directory from your `urbit` directory:
 
-**NOTE**: Your ship itself can be reused, only the binary needs to be changed. This is why we have the directory structure configured as an `urbit` directory that contains your ship and your binary. This structure makes it easy to swap in new binaries. If you have your ship *inside* the `urbit-vX.XX.X` directory, move it out before deleting that directory.
 ```sh
 macOS:
 rm -rf urbit-v0.10.7-darwin
