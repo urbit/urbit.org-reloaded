@@ -42,19 +42,17 @@ Once you've followed the appropriate install instructions, you can check if ever
 Urbit: a personal server operating function
 ```
 
-### macOS
+### macOS and Linux
 
 ```sh
+macOS:
 mkdir urbit
 cd urbit
 curl -O https://bootstrap.urbit.org/urbit-v0.10.8-darwin.tgz
 tar xzf urbit-v0.10.8-darwin.tgz
 ./urbit-v0.10.8-darwin/urbit
-```
 
-### Linux (64-bit)
-
-```sh
+Linux:
 mkdir urbit
 cd urbit
 curl -O https://bootstrap.urbit.org/urbit-v0.10.8-linux64.tgz
@@ -63,7 +61,6 @@ tar xzf urbit-v0.10.8-linux64.tgz
 ```
 
 To access your Urbit via HTTP on port 80 on Ubuntu, you may need to run the following:
-
 ```sh
 sudo apt-get install libcap2-bin
 sudo setcap 'cap_net_bind_service=+ep' /path/to/urbit
@@ -72,11 +69,17 @@ sudo setcap 'cap_net_bind_service=+ep' /path/to/urbit
 
 ### Windows
 
-> Please note that this method of installing Urbit is experimental, and we may not be able to assist you if you encounter issues related to WSL 2. These instructions have been tested and verified for WSL 2 + Ubuntu 18.04 LTS.
+> Please note that this method of installing Urbit is experimental, and we may not be able to assist you if you encounter issues related to WSL 2. 
 
-Urbit cannot run on Windows itself, but there is a convenient way to run a Linux distro using the [Windows Subsystem for Linux 2](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux) on Windows 10. For Urbit to work, it is necessary to [install WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install) and not just WSL.
+These instructions have been tested and verified for WSL 2 + Ubuntu 18.04 LTS.
 
-Once WSL 2 is installed, open a Linux terminal in Windows and then follow the Linux installation instructions above. For performance reasons, do not install Urbit in the mounted Windows volume, but install it in the Linux file system. For example, in your home directory, by typing `cd ~`.
+Urbit cannot run on Windows itself, but there is a convenient way to run a Linux distro using the [Windows Subsystem for Linux 2](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux) on Windows 10. 
+
+For Urbit to work, it is necessary to [install WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install) and not just WSL.
+
+Once WSL 2 is installed, open a Linux terminal in Windows and then follow the Linux installation instructions above. 
+
+For performance reasons, do not install Urbit in the mounted Windows volume, but install it in the Linux file system. For example, in your home directory, by typing `cd ~`.
 
 ## Launching Urbit
 
@@ -102,10 +105,10 @@ To boot a comet, go into the command line and run the following command from the
 
 ```sh
 macOS:
-$ ./urbit-v0.10.8-darwin/urbit -c mycomet
+./urbit-v0.10.8-darwin/urbit -c mycomet
 
 Linux:
-$ ./urbit-v0.10.8-linux64/urbit -c mycomet
+./urbit-v0.10.8-linux64/urbit -c mycomet
 ```
 
 This will take up to an hour, and will spin out a bunch of boot messages. It will also create a directory called `mycomet` in the Unix directory that you ran the command from (which should be your `urbit` directory).
@@ -127,10 +130,10 @@ To exit Urbit, use `Ctrl-D` or enter `|exit` into Dojo.
 To start your ship up again, run the following from your `urbit` directory (note the lack of `-c` argument):
 ```sh
 macOS:
-$ ./urbit-v0.10.8-darwin/urbit mycomet
+./urbit-v0.10.8-darwin/urbit mycomet
 
 Linux:
-$ ./urbit-v0.10.8-linux64/urbit mycomet
+./urbit-v0.10.8-linux64/urbit mycomet
 ```
 
 ### The Dojo
