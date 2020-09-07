@@ -42,19 +42,17 @@ Once you've followed the appropriate install instructions, you can check if ever
 Urbit: a personal server operating function
 ```
 
-### macOS
+### macOS and Linux
 
 ```sh
+#macOS:
 mkdir urbit
 cd urbit
 curl -O https://bootstrap.urbit.org/urbit-v0.10.8-darwin.tgz
 tar xzf urbit-v0.10.8-darwin.tgz
 ./urbit-v0.10.8-darwin/urbit
-```
 
-### Linux (64-bit)
-
-```sh
+#Linux:
 mkdir urbit
 cd urbit
 curl -O https://bootstrap.urbit.org/urbit-v0.10.8-linux64.tgz
@@ -63,7 +61,6 @@ tar xzf urbit-v0.10.8-linux64.tgz
 ```
 
 To access your Urbit via HTTP on port 80 on Ubuntu, you may need to run the following:
-
 ```sh
 sudo apt-get install libcap2-bin
 sudo setcap 'cap_net_bind_service=+ep' /path/to/urbit
@@ -72,11 +69,17 @@ sudo setcap 'cap_net_bind_service=+ep' /path/to/urbit
 
 ### Windows
 
-> Please note that this method of installing Urbit is experimental, and we may not be able to assist you if you encounter issues related to WSL 2. These instructions have been tested and verified for WSL 2 + Ubuntu 18.04 LTS.
+> Please note that this method of installing Urbit is experimental, and we may not be able to assist you if you encounter issues related to WSL 2. 
 
-Urbit cannot run on Windows itself, but there is a convenient way to run a Linux distro using the [Windows Subsystem for Linux 2](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux) on Windows 10. For Urbit to work, it is necessary to [install WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install) and not just WSL.
+These instructions have been tested and verified for WSL 2 + Ubuntu 18.04 LTS.
 
-Once WSL 2 is installed, open a Linux terminal in Windows and then follow the Linux installation instructions above. For performance reasons, do not install Urbit in the mounted Windows volume, but install it in the Linux file system. For example, in your home directory, by typing `cd ~`.
+Urbit cannot run on Windows itself, but there is a convenient way to run a Linux distro using the [Windows Subsystem for Linux 2](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux) on Windows 10. 
+
+For Urbit to work, it is necessary to [install WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install) and not just WSL.
+
+Once WSL 2 is installed, open a Linux terminal in Windows and then follow the Linux installation instructions above. 
+
+For performance reasons, do not install Urbit in the mounted Windows volume, but install it in the Linux file system. For example, in your home directory, by typing `cd ~`.
 
 ## Launching Urbit
 
@@ -98,13 +101,17 @@ Comets are disposable, free identities that can be used to quickly join the netw
 
 ### Booting a comet
 
-To boot a comet, go into the command line and run the following command from the urbit directory you created during Urbit installation:
+To boot a comet, go into the command line and run the following command from the `urbit` directory you created during Urbit installation:
 
 ```sh
-$ ./urbit-v0.10.8-darwin/urbit -c mycomet
+#macOS:
+./urbit-v0.10.8-darwin/urbit -c mycomet
+
+#Linux:
+./urbit-v0.10.8-linux64/urbit -c mycomet
 ```
 
-This will take up to an hour, and will spin out a bunch of boot messages. It will also create a directory called `mycomet` in the Unix directory that you ran the command from (which should be your urbit directory).
+This will take up to an hour, and will spin out a bunch of boot messages. It will also create a directory called `mycomet` in the Unix directory that you ran the command from (which should be your `urbit` directory).
 
 Toward the end of the boot process, you'll see something like:
 
@@ -116,11 +123,18 @@ http: live (insecure, loopback) on 12321
 ~sampel_commet:dojo>
 ```
 
-When your ship is finished booting, you will see either the `~sampel_commet:dojo>` or `~sampel_commet:chat-cli/` prompt. If you're seeing `:chat-cli` press `Ctrl-x` to switch into Dojo. 
+When your ship is finished booting, you will see either the `~sampel_commet:dojo>` or `~sampel_commet:chat-cli/` prompt. If you're seeing `:chat-cli` press `Ctrl-X` to switch into Dojo. 
 
-To exit Urbit, use `Ctrl-d`. 
+To exit Urbit, use `Ctrl-D` or enter `|exit` into Dojo.
 
-To start your ship up again, run  `./urbit-v0.10.8-darwin/urbit mycomet` from your `urbit` directory.
+To start your ship up again, run the following from your `urbit` directory (note the lack of `-c` argument):
+```sh
+#macOS:
+./urbit-v0.10.8-darwin/urbit mycomet
+
+#Linux:
+./urbit-v0.10.8-linux64/urbit mycomet
+```
 
 ### The Dojo
 
@@ -225,30 +239,58 @@ Find the absolute path to the keyfile that you downloaded from Bridge. Copy it.
 
 #### Step 3: Run the boot command
 
-If you are not already within the directory you installed above, enter it by running `cd urbit-v0.10.8-darwin` (for Mac) or `cd urbit-v0.10.8-linux64` (for Linux) from where you ran the install commands. It contains your Urbit binary, and your ship will be installed here as well.
+Enter your `urbit` directory.
 
 Once you're inside, run the command below, except with `sampel-palnet` replaced by the name of your
 Urbit identity, and `path/to/my-planet.key` replaced with the path to your keyfile:
 
 ```sh
-./urbit -w sampel-palnet -k path/to/my-planet.key
+#macOS:
+./urbit-v0.10.8-darwin/urbit -w sampel-palnet -k path/to/my-planet.key
+
+#Linux:
+./urbit-v0.10.8-linux64/urbit -w sampel-palnet -k path/to/my-planet.key
 ```
 
 Or, if you'd prefer to copy your key in, you can run:
 
 ```sh
-./urbit -w sampel-palnet -G rAnDoMkEy
+#macOS:
+./urbit-v0.10.8-darwin/urbit -w sampel-palnet -G rAnDoMkEy
+
+#Linux:
+./urbit-v0.10.8-linux64/urbit -w sampel-palnet -G rAnDoMkEy
 ```
 
 Either command will create a directory called `sampel-palnet/` and begin building your ship. It may take a few minutes.
 
-When your ship is finished booting, you will see either the `~sampel-palnet:dojo>` or `~sampel-palnet:chat-cli/` prompt. If you're seeing `:chat-cli` press `Ctrl-x` to switch into Dojo. At that point, you should permanently erase your keyfile from your machine.
+When your ship is finished booting, you will see either the `~sampel-palnet:dojo>` or `~sampel-palnet:chat-cli/` prompt. If you're seeing `:chat-cli` press `Ctrl-X` to switch into Dojo.
 
-To shut down your ship, use `Ctrl-d`. To start your ship up again, run `./urbit sampel-palnet/` from the directory where your Urbit binary is saved. Note that in this usage, `sampel-palnet/` is the path of a folder, which by default is located in the same folder as the Urbit binary. This folder is called your ship's **pier**, and you can put it wherever you like.
+To shut down your ship, use `Ctrl-D`. To start your ship up again, run the following from your `urbit` directory:
+
+```sh
+#macOS:
+./urbit-v0.10.8-darwin/urbit sampel-palnet
+
+#Linux:
+./urbit-v0.10.8-linux64/urbit sampel-palnet
+```
+
+Note that `sampel-palnet/` is the path of a folder, which we just created in your `urbit` directory. This folder is called your ship's **pier**.
 
 Never boot multiple instances of your ship at the same time. You can prevent this from happening on accident by only ever keeping a single copy of your pier.
 
-**Important:** once a key has been used to boot a ship onto the network, it cannot be used to boot that ship again later - doing so will cause communication problems with other ships. For this reason you should **delete the keyfile from your machine once your ship has booted successfully**. (If you do use the same key twice, you'll need to conduct a [personal breach](#breaches) to restore your ship to full functionality).
+**Important:** once a key has been used to boot a ship onto the network, it cannot be used to boot that ship again later - doing so will cause communication problems with other ships. 
+
+For this reason you should **delete the keyfile from your machine once your ship has booted successfully**. 
+
+If you do use the same key twice, you'll need to conduct a [personal breach](#breaches) to restore your ship to full functionality). 
+
+Delete the keyfile with the command below:
+
+```sh
+rm path/to/my-planet.key
+```
 
 ### Updating to the latest binary
 
@@ -256,34 +298,48 @@ Most updates to Urbit are downloaded and applied automatically as OTA (Over the 
 
 To update to the latest binary, download and extract it to replace your existing one. Then run it as before.
 
-For example, if in your current `urbit` directory you have an `urbit-v0.10.7-darwin` directory along with a ship directory called `mycomet`, and a new `urbit-v0.10.8-darwin` binary was just released, then you'd run the following commands from your `urbit` directory (the example commands below use the darwin installer, but you should use the one for your OS):
+For example, if in your current `urbit` directory you have an `urbit-v0.10.7-<OS>` directory along with a ship directory called `mycomet`, and a new `urbit-v0.10.8-<OS>` binary was just released, then you'd run the following commands from your `urbit` directory:
 
-First shut down your ship, by running the following in dojo (or control-d).
+First shut down your ship, by running the following in dojo (or `Ctrl-D`).
 ```
 |exit
 ```
 
-Next download and extract the most recent binary from inside your `urbit` directory:
-```
-curl -O https://bootstrap.urbit.org/urbit-v0.10.8-darwin.tgz
-tar xzf urbit-v0.10.8-darwin.tgz
-```
+**NOTE**: Your ship itself can be reused, only the binary needs to be changed. This is why we have the directory structure configured as an `urbit` directory that contains your ship and your binary. This structure makes it easy to swap in new binaries. If you have your ship *inside* the `urbit-vX.XX.X` directory, move it out before deleting that directory.
 
 Delete the old binary directory from your `urbit` directory:
 
-**NOTE**: Your ship itself can be reused, only the binary needs to be changed. This is why we have the directory structure configured as an urbit directory that contains your ship and your binary. This structure makes it easy to swap in new binaries. If you have your ship *inside* the `urbit-vX.XX.X` directory, move it out before deleting that directory.
-```
+```sh
+#macOS:
 rm -rf urbit-v0.10.7-darwin
+
+#Linux:
+rm -rf urbit-v0.10.7-linux64
+```
+
+Next download and extract the most recent binary from inside your `urbit` directory:
+```sh
+#macOS:
+curl -O https://bootstrap.urbit.org/urbit-v0.10.8-darwin.tgz
+tar xzf urbit-v0.10.8-darwin.tgz
+
+#Linux:
+curl -O https://bootstrap.urbit.org/urbit-v0.10.8-linux64.tgz
+tar xzf urbit-v0.10.8-linux64.tgz
 ```
 
 Start up your ship with the new binary from your `urbit` directory:
-```
+```sh
+#macOS:
 ./urbit-v0.10.8-darwin/urbit mycomet
+
+#Linux:
+./urbit-v0.10.8-linux64/urbit mycomet
 ```
 
 Then you're good to go, in the future you'll just modify the version numbers in the example above to the most recent version.
 
-### Breaches
+### Breaches {#breaches}
 
 An important concept on the Urbit network is that of continuity. Continuity refers to how ships remember the order of their own network messages and the network messages of others -- these messages are numbered, starting from zero. A breach is when ships on the network agree to forget about this sequence and treat one or more ships like they are brand new.
 
