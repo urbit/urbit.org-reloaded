@@ -45,14 +45,14 @@ Urbit: a personal server operating function
 ### macOS and Linux
 
 ```sh
-macOS:
+#macOS:
 mkdir urbit
 cd urbit
 curl -O https://bootstrap.urbit.org/urbit-v0.10.8-darwin.tgz
 tar xzf urbit-v0.10.8-darwin.tgz
 ./urbit-v0.10.8-darwin/urbit
 
-Linux:
+#Linux:
 mkdir urbit
 cd urbit
 curl -O https://bootstrap.urbit.org/urbit-v0.10.8-linux64.tgz
@@ -104,10 +104,10 @@ Comets are disposable, free identities that can be used to quickly join the netw
 To boot a comet, go into the command line and run the following command from the `urbit` directory you created during Urbit installation:
 
 ```sh
-macOS:
+#macOS:
 ./urbit-v0.10.8-darwin/urbit -c mycomet
 
-Linux:
+#Linux:
 ./urbit-v0.10.8-linux64/urbit -c mycomet
 ```
 
@@ -129,10 +129,10 @@ To exit Urbit, use `Ctrl-D` or enter `|exit` into Dojo.
 
 To start your ship up again, run the following from your `urbit` directory (note the lack of `-c` argument):
 ```sh
-macOS:
+#macOS:
 ./urbit-v0.10.8-darwin/urbit mycomet
 
-Linux:
+#Linux:
 ./urbit-v0.10.8-linux64/urbit mycomet
 ```
 
@@ -245,20 +245,20 @@ Once you're inside, run the command below, except with `sampel-palnet` replaced 
 Urbit identity, and `path/to/my-planet.key` replaced with the path to your keyfile:
 
 ```sh
-macOS:
+#macOS:
 ./urbit-v0.10.8-darwin/urbit -w sampel-palnet -k path/to/my-planet.key
 
-Linux:
+#Linux:
 ./urbit-v0.10.8-linux64/urbit -w sampel-palnet -k path/to/my-planet.key
 ```
 
 Or, if you'd prefer to copy your key in, you can run:
 
 ```sh
-macOS:
+#macOS:
 ./urbit-v0.10.8-darwin/urbit -w sampel-palnet -G rAnDoMkEy
 
-Linux:
+#Linux:
 ./urbit-v0.10.8-linux64/urbit -w sampel-palnet -G rAnDoMkEy
 ```
 
@@ -269,10 +269,10 @@ When your ship is finished booting, you will see either the `~sampel-palnet:dojo
 To shut down your ship, use `Ctrl-D`. To start your ship up again, run the following from your `urbit` directory:
 
 ```sh
-macOS:
+#macOS:
 ./urbit-v0.10.8-darwin/urbit sampel-palnet
 
-Linux:
+#Linux:
 ./urbit-v0.10.8-linux64/urbit sampel-palnet
 ```
 
@@ -310,30 +310,30 @@ First shut down your ship, by running the following in dojo (or `Ctrl-D`).
 Delete the old binary directory from your `urbit` directory:
 
 ```sh
-macOS:
+#macOS:
 rm -rf urbit-v0.10.7-darwin
 
-Linux:
+#Linux:
 rm -rf urbit-v0.10.7-linux64
 ```
 
 Next download and extract the most recent binary from inside your `urbit` directory:
 ```sh
-macOS:
+#macOS:
 curl -O https://bootstrap.urbit.org/urbit-v0.10.8-darwin.tgz
 tar xzf urbit-v0.10.8-darwin.tgz
 
-Linux:
+#Linux:
 curl -O https://bootstrap.urbit.org/urbit-v0.10.8-linux64.tgz
 tar xzf urbit-v0.10.8-linux64.tgz
 ```
 
 Start up your ship with the new binary from your `urbit` directory:
 ```sh
-macOS:
+#macOS:
 ./urbit-v0.10.8-darwin/urbit mycomet
 
-Linux:
+#Linux:
 ./urbit-v0.10.8-linux64/urbit mycomet
 ```
 
