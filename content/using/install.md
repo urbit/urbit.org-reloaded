@@ -20,7 +20,7 @@ Two other types of ships are **stars** and **galaxies**. Together these perform 
 
 If you just want to try Urbit out, there are also free IDs called **comets**. They are good for bots and people who are new to Urbit and want to check out the network, but they aren't good for building a reputation as a friendly and responsible peer. Their long names make them difficult to remember—and some communities ban comets to prevent spam—but they're still a good way to see what Urbit is about before buying your own planet.
 
-To start with a comet, continue below. For planet instructions, see [further below](#booting-your-planet). For star or galaxy instructions, see [this section](#star-setup-and-install).
+To start with a comet, continue below. For planet instructions, see [further below](#boot-your-planet). For star or galaxy instructions, see [this section](#supernode).
 
 ## Installing Urbit
 
