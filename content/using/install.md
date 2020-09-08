@@ -65,7 +65,7 @@ These instructions have been tested and verified for WSL 2 + Ubuntu 18.04 LTS.
 
 Urbit cannot run on Windows itself, but there is a convenient way to run a Linux distro using the [Windows Subsystem for Linux 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install) on Windows 10. Install the Windows Subsystem for Linux 2 and open a Linux terminal in Windows, then follow the Linux installation instructions above.
 
-For performance reasons, do not install Urbit in the mounted Windows volume, but install it in the Linux file system. For example, in your home directory, by typing `cd ~`.
+For performance reasons, do not install Urbit in the mounted Windows volume, but install it in the Linux file system. For example, in your home directory, which can be navigated to by entering `cd ~`.
 
 ## Setting up a comet {#comet}
 
@@ -156,7 +156,7 @@ From the Urbit Community group you can join a variety of chatrooms, notebooks, a
 
 ## Setting up a planet {#id}
 
-If you have an Urbit ID, you'll use the [Bridge](https://bridge.urbit.org) client to get your ship's *keyfile* before you can [boot your ship](#booting-your-ship).  Your keyfile is a cryptographic secret that allows your Urbit instance to authenticate itself on the network, so you can't boot your planet without it. Your keyfile is deterministically derived from your other cryptographic secrets.
+If you have an Urbit ID, you'll use the [Bridge](https://bridge.urbit.org) client to get your ship's *keyfile* before you can [boot your ship](#booting-your-ship).  Your keyfile is a cryptographic secret that allows your Urbit instance to authenticate itself on the network, so it is required the first time you boot your ship. Your keyfile is deterministically derived from your other cryptographic secrets.
 
 ### Purchase an Urbit ID
 
