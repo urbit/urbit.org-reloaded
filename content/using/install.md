@@ -6,41 +6,25 @@ template = "page_indiced.html"
 aliases = ["/docs/getting-started/"]
 +++
 
-Urbit is not yet ready for everyday users — but if you're technically inclined or generally intrepid, feel free to try it out. It's a good place to explore.
+Urbit is not for everyday users yet — but if you're technically inclined or generally intrepid, feel free to try it out. It's a good place to explore.
 
 ## Overview
 
 There are two major components of the Urbit ecosystem: **Urbit OS** and **Urbit ID**.
 
-The the Urbit peer-to-peer (p2p) network is composed of instances of Urbit OS -- called **ships** -- that are virtual machines that run on any Unix platform.
+The Urbit peer-to-peer (P2P) network is composed of instances of Urbit OS — also called **ships** — that run as virtual machines on any Unix platform. The Urbit ID registry is deployed on the Ethereum blockchain, and individual IDs exist as non-fungible ([ERC-721](https://eips.ethereum.org/EIPS/eip-721)) tokens. On the network, Urbit IDs function as network addresses, represented by pronounceable names like `~padmyn-pasnux`.
 
-Urbit works as a p2p network where others fail because ships are associated with persistent and scarce identities that we refer to as Urbit IDs. The Urbit ID registry is deployed on the Ethereum blockchain, and individual IDs exist as non-fungible ([ERC-721](https://eips.ethereum.org/EIPS/eip-721)) tokens.
+As we'll explain, there are a few types of Urbit ID, but everyday users tend to use **planets**, as full citizens of the network.
 
-On the network, Urbit IDs function as network addresses, represented by pronounceable names like `~padmyn-pasnux`. There are a few kinds of Urbit ID, but ones meant for typical users are called **planets**. Anyone who has a planet can be thought of as a full "citizen" of the Urbit network. But to run your ship on the network, you need to start it with a piece of cryptographic information from its Urbit ID. This guide walk you through getting onto Urbit with an ID.
+Two other types of ships are **stars** and **galaxies**. Together these perform essential infrastructural roles for the Urbit network. Each galaxy can distribute 256 stars, and each star can distribute 65,536 planets. So any given planet ultimately came from a specific star, which itself came from a specific galaxy. On the Urbit OS side, stars help route packets; galaxies are more like DNS root servers or ICANN members. The difference with Urbit in the analogy is that Urbit IDs are owned cryptographically by individuals, collectives, and companies alike, and accrue reputation independently.
 
-There are also free IDs called **comets**. They are good for bots and people who are new to Urbit and want to check out the network, but they aren't good for building a reputation as a friendly and responsible peer. Their long names make them difficult to remember and some communities ban comets to prevent spam, but they're still a good way to see what Urbit is about before buying your own planet.
+If you just want to try Urbit out, there are also free IDs called **comets**. They are good for bots and people who are new to Urbit and want to check out the network, but they aren't good for building a reputation as a friendly and responsible peer. Their long names make them difficult to remember—and some communities ban comets to prevent spam—but they're still a good way to see what Urbit is about before buying your own planet.
 
-### Stars and Galaxies
-
-In addition to comets and planets, two other types of ships are **stars** and **galaxies**. Together these perform essential infrastructural roles for Urbit OS network and for Urbit ID.
-
-On the Urbit ID side, galaxies are at the top of the ID hierarchy with 256 in existence. Each galaxy can distribute 256 stars, and each star can distribute 65,536 planets. So any given planet ultimately came from a specific star, which itself came from a specific galaxy.
-
-On the Urbit OS side, stars help route packets, kind of like an ISP. And galaxies are like DNS root servers or ICANN members. The difference is that Urbit IDs are owned cryptographically by many different people and accrue reputation independently.
-
-If you're trying to get your star or galaxy set up, skip to [this section](#supernode).
+To start with a comet, continue below. For planet instructions, see [further below](#booting-your-planet). For star or galaxy instructions, see [this section](#star-setup-and-install).
 
 ## Installing Urbit
 
-The Urbit binary runs on a Unix-like operating system – Ubuntu, Fedora, or macOS, for example.
-
-We have different installation instructions for different platforms. To install and run Urbit OS, and its binary, run the commands that are listed for your operating system.
-
-Once you've followed the appropriate install instructions, you can check if everything went right by running the `./urbit` command. Installation was successful if you get a block of output that begins with the line below:
-
-```
-Urbit: a personal server operating function
-```
+Regardless of your Urbit ID, you'll want the Urbit binary installed first. The Urbit binary runs on a Unix-like operating system – Ubuntu, Fedora, or macOS, for example.
 
 ### macOS and Linux
 
@@ -60,6 +44,12 @@ tar xzf urbit-v0.10.8-linux64.tgz
 ./urbit-v0.10.8-linux64/urbit
 ```
 
+Once you've followed the appropriate install instructions, you can check if everything went right by running the `./urbit` command. Installation was successful if you get a block of output that begins with the line below:
+
+```
+Urbit: a personal server operating function
+```
+
 To access your Urbit via HTTP on port 80 on Ubuntu, you may need to run the following:
 ```sh
 sudo apt-get install libcap2-bin
@@ -69,29 +59,15 @@ sudo setcap 'cap_net_bind_service=+ep' /path/to/urbit
 
 ### Windows
 
-> Please note that this method of installing Urbit is experimental, and we may not be able to assist you if you encounter issues related to WSL 2. 
+> Please note that this method of installing Urbit is experimental, and we may not be able to assist you if you encounter issues related to WSL 2.
 
 These instructions have been tested and verified for WSL 2 + Ubuntu 18.04 LTS.
 
-Urbit cannot run on Windows itself, but there is a convenient way to run a Linux distro using the [Windows Subsystem for Linux 2](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux) on Windows 10. 
+Urbit cannot run on Windows itself, but there is a convenient way to run a Linux distro using the [Windows Subsystem for Linux 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install) on Windows 10. Install the Windows Subsystem for Linux 2 and open a Linux terminal in Windows, then follow the Linux installation instructions above.
 
-For Urbit to work, it is necessary to [install WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install) and not just WSL.
+For performance reasons, do not install Urbit in the mounted Windows volume, but install it in the Linux file system. For example, in your home directory, which can be navigated to by entering `cd ~`.
 
-Once WSL 2 is installed, open a Linux terminal in Windows and then follow the Linux installation instructions above. 
-
-For performance reasons, do not install Urbit in the mounted Windows volume, but install it in the Linux file system. For example, in your home directory, by typing `cd ~`.
-
-## Launching Urbit
-
-Now that you have Urbit installed you can start it up with an ID.
-
-You should have an `urbit` directory with two files in it: the `urbit-v0.XX.X-<OS>` directory, and the .tgz of that directory. The .tgz file can now be safely deleted.
-
-If this is your first time using Urbit, it'll be easiest to start with a comet in order to get on the network.
-
-### Comet: Install and Setup {#comet}
-
-If you don't have your own Planet ID, but still want to try out the Urbit network you can launch a comet.
+## Setting up a comet {#comet}
 
 **Comets** are 128-bit or 16 syllable Urbit IDs, that look like:
 
@@ -101,7 +77,7 @@ Comets are disposable, free identities that can be used to quickly join the netw
 
 ### Booting a comet
 
-To boot a comet, go into the command line and run the following command from the `urbit` directory you created during Urbit installation:
+To boot a comet, go into the command line and run the following command from the `urbit` directory you created during [Urbit installation](#installing-urbit):
 
 ```sh
 #macOS:
@@ -111,23 +87,22 @@ To boot a comet, go into the command line and run the following command from the
 ./urbit-v0.10.8-linux64/urbit -c mycomet
 ```
 
-This will take up to an hour, and will spin out a bunch of boot messages. It will also create a directory called `mycomet` in the Unix directory that you ran the command from (which should be your `urbit` directory).
-
-Toward the end of the boot process, you'll see something like:
+Since your identity on the network is not verified, it may take up to an hour to generate your comet. As it boots, will spin out a bunch of boot messages and create a directory called `mycomet`. Toward the end of the boot process, you'll see something like:
 
 ```
 ames: on localhost, UDP 31337.
 http: live (insecure, public) on 8080
 http: live ("secure", public) on 8443
 http: live (insecure, loopback) on 12321
-~sampel_commet:dojo>
+~sampel_marzod:dojo>
 ```
 
-When your ship is finished booting, you will see either the `~sampel_commet:dojo>` or `~sampel_commet:chat-cli/` prompt. If you're seeing `:chat-cli` press `Ctrl-X` to switch into Dojo. 
+When your ship is finished booting, you will see either the `~sampel_marzod:dojo>` or `~sampel_marzod:chat-cli/` prompt. If you see `:chat-cli`, press `Ctrl-X` to switch into Dojo.
 
 To exit Urbit, use `Ctrl-D` or enter `|exit` into Dojo.
 
 To start your ship up again, run the following from your `urbit` directory (note the lack of `-c` argument):
+
 ```sh
 #macOS:
 ./urbit-v0.10.8-darwin/urbit mycomet
@@ -143,7 +118,7 @@ Let's try our first command in the Dojo, the Urbit OS command line and Hoon REPL
 Type `(add 2 2)` into the Dojo. You should see the following:
 
 ```
-~sampel_commet:dojo> (add 2 2)
+~sampel_marzod:dojo> (add 2 2)
 ```
 
 When you press Enter, you should see this:
@@ -164,39 +139,37 @@ The `>=` output means that a command was successful. Now you can see your ship's
 
 ### Using Landscape
 
-Landscape is the Urbit web interface, and it's the best way to interact with your ship. Chrome, Firefox, and Brave are the recommended browsers for using Landscape. To get onto Landscape:
+Landscape is the Urbit web interface, and it's the best way to interact with your ship. To access Landscape:
 
 1. Start your ship. In the boot messages, look for a line that says something like `http: live (insecure, public) on 80`. The number given is the port that your ship is using.
 2.  If the port given is 80, simply type `localhost` into your browser's address bar. If the given port is a different number, such as `8080`, you would type `localhost:8080`. You'll be met with a login prompt.
 3. Type `+code` into your comet's Dojo. Copy-paste the returned code into the field asking for it in the browser page.
-4. You're in! Now you can explore apps such as Chat for messages, Publish for blogging, and Weather.
+4. You're in! Now you can explore apps such as Chat, Publish, and more.
 
-### Join a Chat
+### Join a group
 
-Now that you're on landscape, let's join the Urbit Community chat, a great place for newcomers to ask questions.
+Now that you're on Landscape, join the Urbit Community, a great place for newcomers to ask questions.
 
-Click that `Chat` type on your Landscape home page, and then click the `Join Chat` column. Then, enter `~bitbet-bolbel/urbit-community` into the field and press the `Join Chat` button.
+Click the 'Groups' button on your Landscape home page, and then click the `Join Group` column. Then, enter `~bitbet-bolbel/urbit-community` into the field and press the `Join Group` button.
 
-You can send and receive messages here, just like any other chatroom.
+From the Urbit Community group you can join a variety of chatrooms, notebooks, and collections.
 
-## Getting an Urbit ID (Planet or Star)
+## Setting up a planet {#id}
+
+If you have an Urbit ID, you'll use the [Bridge](https://bridge.urbit.org) client to get your ship's *keyfile* before you can [boot your ship](#booting-your-ship).  Your keyfile is a cryptographic secret that allows your Urbit instance to authenticate itself on the network, so it is required the first time you boot your ship. Your keyfile is deterministically derived from your other cryptographic secrets.
+
+### Purchase an Urbit ID
 
 Tlon doesn't currently sell or distribute Urbit IDs, but there are a few ways to get your own:
 
 - Getting an invitation from a friend
 - Purchasing an Urbit ID from a third party, such as [urbit.live](https://urbit.live), [OpenSea](https://opensea.io), [planet.market](https://planet.market/), or [Urbit Marketplace](https://urbitmarketplace.com/).
 
-Note that when you buy a planet you may have to escape its star if the star your planet is linked to isn't operating. Ask around in the `urbit-community` chat as a comet first for help before purchasing.
-
-If you already have a planet and need to escape its star, see [Escaping A Sponsor](@/using/operations/using-your-ship.md#escape).
+Note that when you buy a planet, you should ensure with the provider that the star is operating. If you already have a planet and need to escape a non-operational star, see [Escaping A Sponsor](@/using/operations/using-your-ship.md#escape).
 
 Tlon occasionally selects candidates to distribute invitations, and users operating galaxies and stars can spawn and distribute a finite number of stars and planets, respectively.
 
-### Using your Urbit ID (Planet or Star) {#id}
-
-If you have an Urbit ID, you'll use the [Bridge](https://bridge.urbit.org) client to get your ship's *keyfile* before you can [boot your ship](#booting-your-ship).  Your keyfile is a cryptographic secret that allows your Urbit instance to authenticate itself on the network, so you can't boot your planet without it. Your keyfile is deterministically derived from your other cryptographic secrets.
-
-### The Urbit ID Wallet
+### About your Urbit ID wallet
 
 Your Urbit ID is actually yours. As long as you control its cryptographic secrets, nobody can take it away from you. That's why it's important to know a little bit about the cryptographic architecture of Urbit secrets.
 
@@ -208,36 +181,30 @@ Urbit ID secrets operate as a system of separate but hierarchically related Ethe
 
 - **Keyfile**: Derived from the management proxy. Used as cryptographic proof that your Urbit ship is who it says it is. You use it to start up your ship for the first time.
 
-### Getting Your Keyfile {#keyfile}
+### Get your keyfile {#keyfile}
 
 As mentioned previously, there are a few ways to acquire a planet. All methods, however, should result in you receiving at least one secret, such as a **master ticket**. If you received an email invite to Urbit, the master ticket should a `.pdf` the passport folder that you downloaded.
 
-1. To connect to Bridge, go to https://bridge.urbit.org.
-2. Enter the name of your planet and the associated master ticket in the appropriate fields. If you received your secret is in another form, such as a dictionary mnemonic, click the `Metamask, Mnemonic, Hardware Wallet...` button for alternate login methods.
-3. Once you're logged in, click the `OS` option.
-4. In resulting page, click the `Download Arvo Keyfile` button. You should receive a `.key` file that contains the secret needed to boot your ship. Hold on to this file.
+1. Connect to [Bridge](https://bridge.urbit.org).
+2. Enter the name of your planet and the associated master ticket in the appropriate fields. Click the "Metamask, Mnemonic, Hardware Wallet..." button for alternate login methods if you don't have a master ticket.
+3. Once you're logged in, click the "OS" option.
+4. In resulting page, click the "Download Arvo Keyfile" button. You should receive a `.key` file that contains the secret needed to boot your ship. Hold onto this file.
 
-## Hosting
+### Choose to host or run your ship locally
 
 There are two supported ways of running an Urbit ship: using a cloud service, or running it locally on your own machine. Most users run things locally at first, but we recommend eventually using a cloud service for Urbit because it allows your ship to be accessed from anywhere on multiple devices. Hosting your ship in the cloud also allows it to always be online and ready for OTA updates. It's technically possible to run your Urbit ship on a home server, but ISPs often restrict this to business plans and opening up your home network to the internet can be unsafe if done improperly.
 
 We have a guide for [hosting your ship on DigitalOcean](@/using/operations/hosting.md) which we've found works well, but any cloud hosting service should work.
 
-### Booting Your Planet
+### Boot your planet
 
-You'll be booting your ship with the keyfile that you downloaded from Bridge [earlier in this document](#id).
+You'll be booting your ship with the keyfile that you downloaded from Bridge.
 
-Note that this section is only for booting a ship that uses the live Urbit network.
-
-#### Step 1: Find Your Urbit ID
-
-This will look something like `~lodleb-ritrul`. You can see the name of your Urbit ID when you log into your wallet using the [Bridge client](#id).
-
-#### Step 2: Find the path to your keyfile
+#### Step 1: Find the path to your keyfile
 
 Find the absolute path to the keyfile that you downloaded from Bridge. Copy it.
 
-#### Step 3: Run the boot command
+#### Step 2: Run the boot command
 
 Enter your `urbit` directory.
 
@@ -280,11 +247,7 @@ Note that `sampel-palnet/` is the path of a folder, which we just created in you
 
 Never boot multiple instances of your ship at the same time. You can prevent this from happening on accident by only ever keeping a single copy of your pier.
 
-**Important:** once a key has been used to boot a ship onto the network, it cannot be used to boot that ship again later - doing so will cause communication problems with other ships. 
-
-For this reason you should **delete the keyfile from your machine once your ship has booted successfully**. 
-
-If you do use the same key twice, you'll need to conduct a [personal breach](#breaches) to restore your ship to full functionality). 
+**Important:** once a key has been used to boot a ship onto the network, it cannot be used to boot that ship again later - doing so will cause communication problems with other ships. For this reason you should **delete the keyfile from your machine once your ship has booted successfully**. If you do use the same key twice, you'll need to conduct a [personal breach](#breaches) to restore your ship to full functionality).
 
 Delete the keyfile with the command below:
 
@@ -294,7 +257,7 @@ rm path/to/my-planet.key
 
 ### Updating to the latest binary
 
-Most updates to Urbit are downloaded and applied automatically as OTA (Over the Air) updates. Occasionally it would be infeasible to distribute an update this way, and a new `urbit` binary is released. This is announced in the [urbit-dev](https://groups.google.com/a/urbit.org/forum/#!forum/dev) Google Group when it occurs (as are all OTA updates). 
+Most updates to Urbit are downloaded and applied automatically as OTA (Over the Air) updates. Occasionally it would be infeasible to distribute an update this way, and a new `urbit` binary is released. This is announced in the [urbit-dev](https://groups.google.com/a/urbit.org/forum/#!forum/dev) Google Group when it occurs (as are all OTA updates).
 
 To update to the latest binary, download and extract it to replace your existing one. Then run it as before.
 
@@ -341,7 +304,7 @@ Then you're good to go, in the future you'll just modify the version numbers in 
 
 ### Breaches {#breaches}
 
-An important concept on the Urbit network is that of continuity. Continuity refers to how ships remember the order of their own network messages and the network messages of others -- these messages are numbered, starting from zero. A breach is when ships on the network agree to forget about this sequence and treat one or more ships like they are brand new.
+An important concept on the Urbit network is that of continuity. Continuity refers to how ships remember the order of their own network messages and the network messages of others — these messages are numbered, starting from zero. A breach is when ships on the network agree to forget about this sequence and treat one or more ships like they are brand new.
 
 There are two kinds of breaches: personal breaches and network breaches.
 
@@ -349,15 +312,11 @@ A personal breach can fix many problems with your ship, but should be used as a 
 
 For details on breaching, please read the [Guide to Breaches](@/docs/tutorials/guide-to-breaches.md) documentation.
 
-### Reporting Bugs
-
-If you find a bug, please report it as an Issue at https://github.com/urbit/urbit/issues/new/choose. Give as much detail as possible with your bug report so the engineer team can fix it.
-
-## Running a Star or Galaxy {#supernode}
+## Running a star or galaxy {#supernode}
 
 Setting up and running a star or galaxy is a little bit different from setting up and running a planet.
 
-### Getting a Star or Galaxy
+### Getting a star or galaxy
 
 Stars are valuable cryptographic assets. They can be bought in one of two ways.
 
@@ -366,7 +325,7 @@ Stars are valuable cryptographic assets. They can be bought in one of two ways.
 
 Galaxies are rare and extremely valuable, meaning that there is no liquid market for them. If you want to buy a galaxy, you'll have to find an individual galaxy owner and transact with them.
 
-### A Note Regarding Security
+### A note on security
 
 As mentioned before, stars are valuable. You are solely responsible for safeguarding your seeds and secret keys, and arming yourself with the computer-security knowledge that is attendant upon that safeguarding. You act at your own risk in reliance upon the contents of the manual. In no way is the Tlon Corporation responsible for the actions, decisions, or other behavior taken or not taken by you in reliance upon this manual.
 
@@ -375,20 +334,16 @@ It’s a good idea to store your keys redundantly in case one method fails. If y
 - Storing the secret on a hardware wallet that is never connected to a networked machine.
 - There are products that let you store the key on steel. This medium is resistant to both water damage and fire damage.
 
-### Getting a Star's Keyfile
+### Getting a star's keyfile
 
-1. To connect to Bridge, go to https://bridge.urbit.org.
-2. Enter the name of your star and the associated master ticket in the appropriate fields. If you received your secret is in another form, such as a dictionary mnemonic, click the `Metamask, Mnemonic, Hardware Wallet...` button for alternate login methods.
-3. Once you're logged in, click the `OS` option.
-4. In resulting page, click the `Download Arvo Keyfile` button. You should receive a `.key` file that contains the secret needed to boot your ship. Hold on to this file.
+1. Connect to [Bridge](https://bridge.urbit.org).
+2. Enter the name of your star and the associated master ticket in the appropriate fields. Click the "Metamask, Mnemonic, Hardware Wallet..." button for alternate login methods if you don't have a master ticket.
+3. Once you're logged in, click the "OS" option.
+4. In resulting page, click the "Download Arvo Keyfile" button. You should receive a `.key` file that contains the secret needed to boot your ship. Hold onto this file.
 
-### Star: Setup And Install
+### Boot your star
 
-Because of their need for near-perfect uptime Stars should be hosted on cloud services. 
-
-We have a guide for [hosting on DigitalOcean](@/using/operations/hosting.md), but any cloud provider should work.
-
-#### Maintaining a Star
+Because of their need for near-perfect uptime Stars should be hosted on cloud services. We have a guide for [hosting on DigitalOcean](@/using/operations/hosting.md), but any cloud provider should work.
 
 Being an infrastructure node, a star has certain responsibilities to the Urbit network.
 
@@ -400,6 +355,6 @@ Network-wide breaches are distinct from personal breaches, wherein an individual
 
 See our [Guide to Breaches](@/docs/tutorials/guide-to-breaches.md) for more information and for instructions on breaching.
 
-### Running a Galaxy
+### Running a galaxy
 
 A galaxy is at the top of the hierarchy in terms of importance. Thus, if you're interested in running one, please contact support@urbit.org, and we will give you personalized assistance in getting set up.
