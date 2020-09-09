@@ -20,7 +20,7 @@ Sounds good—but how does this actually come to pass? Urbit has to be technical
 
 Urbit has been getting nicer to use and more stable every day. We use it constantly, both as a company (Tlon) and for the broader Urbit community. From what we can tell, people are using Urbit to start communities of their own here and there. The problem is: to use our platform, you’ve got to run it yourself. This limits our audience *a lot*. Setting up a VPS and running an Urbit OS node is pretty easy if you’re comfortable in the command line, which makes it completely impossible for most people. 
 
-We hear from people regularly who want to be able to sign up for Urbit like it was any cloud service. What they want is what we’ve been calling a *provider*: a service to provide easy onboarding and hosting. Given a good provider, we’d be pretty close to our long-term vision: Urbit would feel like an ubiquitous, easily accessible service.
+We hear from people regularly who want to be able to sign up for Urbit like it was any cloud service. What they want is what we’ve been calling a *provider*: a service to provide easy onboarding and hosting. Given a good provider, we’d be pretty close to our long-term vision: Urbit would feel like a ubiquitous, easily accessible service.
 
 We’ve always assumed that providers would have to come into existence sooner or later. By the look of it, that time is now. Tlon and a few others have provider-like services in the works. We’ll talk about the specifics of what Tlon is planning to do in a future post. In this one, we’ll talk about what a provider is, why anyone would start one, and give a few examples of what they might look like. 
 
@@ -44,13 +44,13 @@ Let’s move on and talk a bit about why starting a provider makes sense to begi
 
 ## Why would anyone start a provider?
 
-Our aim is to make Urbit OS so obviously nice to use that it’s well worth paying for. Today, a planet goes for about $10 - $20 and, once you buy one, you’ve got to figure out how to really put it to use. Which takes some work.
+Our aim is to make Urbit OS so obviously nice to use that it’s well worth paying for. Today, a planet goes for about $10–$20 and, once you buy one, you’ve got to figure out how to really put it to use. Which takes some work.
 
 Any large holder of address space should immediately see the opportunity here: the more useful Urbit is, the more value can be captured by starting a provider. Providers make it possible to actually capture the value in address space, both by selling it and by operating nodes.
 
 Let’s say the base cost of running an Urbit OS node, in a hosted environment, is $10 / node / month. If you can sell hosting for $200 / year, you’re making back the ‘cost’ of the planet when someone signs up. Given that it’s more desirable to buy a planet when you know the star is online and you can put it to good use, this seems like a pretty good proposition: both for the provider and the customer. 
 
-Starting a provider doesn’t *have* to be done by address space holders. You could start a provider with no address space of your own by custodying the address space of others. Then, you could take a cut of the address space sales and all of the hosting revenue. With a market of people looking to use Urbit, the crux of success with this approach is simply whether you can compete on user experience.
+Starting a provider doesn’t *have* to be done by address-space holders. You could start a provider with no address space of your own by custodying the address space of others. Then, you could take a cut of the address space sales and all of the hosting revenue. With a market of people looking to use Urbit, the crux of success with this approach is simply whether you can compete on user experience.
 
 Providers are, in a way, like the miners of Urbit. They’re incentivized to run fleets of very specific VMs for profit. The profit motive, in Urbit’s case, is just a bit more conventional than a bitcoin miner. An Urbit provider is just offering a service in exchange for money.
 
@@ -59,7 +59,7 @@ Providers are, in a way, like the miners of Urbit. They’re incentivized to run
 
 If you think of a provider simply as a business, its most basic incentive is to attract as many customers as possible. You can do that by competing on price or performance, or by competing on aesthetics and community—there are lots of ways that providers can compete. 
 
-As a roughly similar ecosystem, the world of webhosting is a great comparison. There are lots of small webhosts that all have very specific services: Dreamhost, MediaTemple, prgmr.com, Linode all come to mind. Then there are the more generic, large-scale, performance-oriented options: AWS, GCP, Azure. It’s not quite time for an AWS-scale Urbit provider, but perhaps the AWS of Urbit will start as something much smaller. 
+As a roughly similar ecosystem, the world of webhosting is a great comparison. There are lots of small webhosts that all have very specific services: Dreamhost, MediaTemple, prgmr.com, and Linode all come to mind. Then there are the more generic, large-scale, performance-oriented options: AWS, GCP, Azure. It’s not quite time for an AWS-scale Urbit provider, but perhaps the AWS of Urbit will start as something much smaller. 
 
 Let’s walk through a few examples to get a feel for what’s possible:
 
@@ -80,10 +80,10 @@ Let’s say our base cost of $10 / month / planet from above is correct (it’s 
 
 ## What about Tlon?
 
-Before there can be an ecosystem of providers, there has to be *one* provider. While we’ve heard of a few other people working on things—we expect Tlon to be the first to try to really get into the provider business in earnest. 
+Before there can be an ecosystem of providers, there has to be *one* provider. While we’ve heard of a few other people working on things, we expect Tlon to be the first to try to really get into the provider business in earnest. 
 
 I’ll save the details of what we’re going to do for a future post. Launching Tlon as a separate business will be the beginning of the separation of Tlon and Urbit. I’m really quite excited about it. Tlon is only able to consider becoming a business of its own because Urbit is mature enough that we can actually do it.
 
 For now, I’ll just say that Tlon will pick the low-hanging fruit first. Our goal is to make onboarding a group into Urbit incredibly simple. We want people to be able to go from email invite to running Urbit in a few minutes without ever knowing anything about Ethereum, Unix, or what a private key is. 
 
-Once we’ve laid the groundwork with something that *just works*, we plan to open source some of our components. Scaling up Urbit isn’t going to be easy. We hope that others will help us, and will help explore what’s possible in supporting Urbit users in the future.
+Once we’ve laid the groundwork with something that *just works*, we plan to open-source some of our components. Scaling up Urbit isn’t going to be easy. We hope that others will help us, and will help explore what’s possible in supporting Urbit users in the future.
