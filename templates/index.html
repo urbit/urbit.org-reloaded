@@ -19,74 +19,50 @@
   <meta name="description" content="Urbit is a simple, durable system for running a personal server that you own 100% and forever.">
 {% endblock description %}
 {% block content %}
-<header class="mt7 mb7 c1-12 c2-11-md c3-11-lg">
-  Urbit is a clean-slate OS and network for the 21st century.
-</header>
-<section class="full lh-copy c2-7-md c3-7-lg mt4">
-  <p><strong>Urbit OS</strong> is a clean slate reimagining of the operating system as an 'overlay OS.' It runs on any Unix machine with an internet connection.</p>
-  <p>It's a compact system for an individual to run their own permanent personal server.</p>
-  <p><strong>Urbit ID</strong> is a decentralized digital identity system. Your
+
+<section class="full lh-copy c2-11-md c3-11-lg mt4 f6">
+  <strong>Urbit</strong>
+  <a class="ml4" href="/understanding-urbit">Introduction</a>
+  <a class="ml3" href="/blog">Blog</a>
+  <a class="ml3" href="/docs">Documentation</a>
+</section>
+
+<section class="full lh-copy c2-7-md c3-7-lg mt4 mb6">
+  <p class="mt0 mb4"><strong>Urbit</strong> is a clean-slate OS and network for the 21st century.</p>
+  <p><strong>Urbit OS</strong> is a clean slate reimagining of the operating system as an 'overlay OS.'</p>
+  <p class="mb4">It's a compact system for an individual to run their own permanent personal server on any Unix machine with an internet connection.</p>
+  <p class="mb4"><strong>Urbit ID</strong> is a decentralized digital identity system. Your
   Urbit ID is a username, network address, and crypto wallet.</p>
-  <p>Both are designed to work together as a single system, completely <a class="b--black bb" href="https://github.com/urbit/urbit">open source</a>.</p>
-    <ul class="list mt4">
-      <li class="mt3">
-        <a class="b--blue2 blue2 bb" href="/using/install/">Install + Setup</a>
-      </li>
-      <li class="mt3">
-        <a class="b--green2 green2 bb" href="/docs/">Documentation</a>
-      </li>
-    </ul>
+  <p><strong>Urbit OS + Urbit ID</strong> are designed to work together as a single system, are completely open source and 100% owned by the people who use them.</p>
+</section>
+
+<section class="full lh-copy c7-12-md c7-11-lg mt4 mb6">
+  <video class="vid-insert bg-black" id="ocean" autoplay="" muted="" loop="" poster="https://media.urbit.org/site/sea30-poster.jpg"><source src="https://storage.googleapis.com/media.urbit.org/site/sea30-1440.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
 </section>
 
 
-<section class="full lh-copy c7-12-md c7-11-lg mt4">
-  <p class="fw6">Latest Posts</p>
-  {% set s = get_section(path="updates/_index.md") %}
-  {% set e = get_section(path="blog/_index.md") %}
-  {% set allposts = s.pages
-            | concat (with=e.pages)
-            | sort(attribute="date")
-            | reverse
-            %}
-  {% for page in allposts | slice (end=2) %}
-    <a class="bb-0" href="{{ page.permalink }}">
-      <li class="mb4 list">
-        <h2 class="f5 fw6 mt0 mb1">{{ page.title }}</h2>
-        {% if page.extra.image %}
-        <img class="db pv2 obj-cover h4 w-50" src="{{ page.extra.image }}" />
-        {% endif %}
-        <time class="mono f6">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
-        <span class="mono f6">
-          {% if page.extra.ship %}
-            <address class="mono f6 mh2">{{ page.extra.ship }}</address>
-          {% endif %}
-        </span>
-      </li>
-    </a>
-  {% endfor %}
-</section>
 
-<section class="full c2-7-md c3-7-lg mt5">
-  <h1 class="mb3">Understanding Urbit</h1>
-    <p class="lh-copy mt1">This sequence of posts will give you a high-level overview of Urbit. They take about 20 minutes to read.</p>
-  <ul class="list">
-    <li class="mt3">
-      <a class="b--black bb" href="/understanding-urbit/">Introduction</a>
+<section class="full lh-copy c2-7-md c3-7-lg">
+  <ul class="list mt0">
+    <li class="mt0">
+      <a class="bb" href="/understanding-urbit">Introduction</a><br />
+      Never heard of Urbit before? Start here to read a bit about the project.
     </li>
-    {% set posts = get_section(path="understanding-urbit/_index.md") %} {%
-    for page in posts.pages %}
     <li class="mt3">
-      <a
-        class="b--black bb"
-        href="{{ page.permalink }}">
-        {{ page.title }}
-      </a>
+      <a class="b--blue2 blue2 bb" href="/using/install/">Install + Setup</a><br />
+      If you're comfortable in the command-line, feel free to boot a node and try Urbit.
     </li>
-    {% endfor %}
+    <li class="mt3">
+      <a class="b--green2 green2 bb" href="/docs/">Documentation</a><br />
+      To learn more about the technology, head to the docs.
+    </li>
   </ul>
 </section>
 
-<section class="full c7-12-md c7-11-lg mv5">
+
+<section class="full lh-copy c7-12-md c7-11-lg" id="follow">
   <h1 class="mb3">Stay Up to Date</h1>
   <p class="lh-copy mt1 mb3">
       We send regular updates about our project. Enter your email to get them.
@@ -120,22 +96,66 @@
         </div>
       </div>
     </form>
-    <p>You can also:</p>
+  <p class="lh-copy">
+      Follow us on <a class="b--black bb" href="https://twitter.com/urbit">Twitter</a>
+  </p>
+  <p class="lh-copy">
+    Explore the code on <a class="b--black bb" href="https://github.com/urbit/urbit">GitHub</a>
+  </p>
+  <p class="lh-copy">
+    Ask questions in our <a class="b--black bb" href="https://discord.gg/Mae2bk7">Discord</a>
+  </p>
+  <p class="lh-copy">
+    Boot Urbit and join:<br /> <code>~bitbet-bolbel/urbit-community</code><br /> (That's where we hang out.)
+  </p>
+</section>
+
+<section class="full c2-7-md c3-7-lg mt5">
+  <h1 class="mb3">Understanding Urbit</h1>
+    <p class="lh-copy mt1">This sequence of posts will give you a high-level overview of Urbit. They take about 20 minutes to read.</p>
   <ul class="list">
     <li class="mt3">
-      Follow us on <a class="b--black bb" href="https://twitter.com/urbit">Twitter</a>
+      <a class="b--black bb" href="/understanding-urbit/">Introduction</a>
     </li>
+    {% set posts = get_section(path="understanding-urbit/_index.md") %} {%
+    for page in posts.pages %}
     <li class="mt3">
-      Explore the code on
-      <a class="b--black bb" href="https://github.com/urbit/urbit">GitHub</a>
+      <a
+        class="b--black bb"
+        href="{{ page.permalink }}">
+        {{ page.title }}
+      </a>
     </li>
-    <li class="mt3">
-      Ask questions in our <a class="b--black bb" href="https://discord.gg/Mae2bk7">Discord</a>
-    </li>
+    {% endfor %}
   </ul>
-  <p class="lh-copy">
-    Or, boot Urbit and join the <code>~bitbet-bolbel/urbit-community</code>
-  </p>
+</section>
+
+<section class="full c7-12-md c7-11-lg mv5">
+  <h1 class="mb3">Latest Posts</h1>
+  <p class="lh-copy mt1">We regularly write posts on our <a class="bb" href="/blog">blog</a> about what we're working on.</p>
+  {% set s = get_section(path="updates/_index.md") %}
+  {% set e = get_section(path="blog/_index.md") %}
+  {% set allposts = s.pages
+            | concat (with=e.pages)
+            | sort(attribute="date")
+            | reverse
+            %}
+  {% for page in allposts | slice (end=2) %}
+    <a class="bb-0" href="{{ page.permalink }}">
+      <li class="mb4 list">
+        <h2 class="f5 fw6 mt0 mb1">{{ page.title }}</h2>
+        {% if page.extra.image %}
+        <img class="db pv2 obj-cover h4 w-50 ba" src="{{ page.extra.image }}" />
+        {% endif %}
+        <time class="mono f6">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
+        <span class="mono f6">
+          {% if page.extra.ship %}
+            <address class="mono f6 mh2">{{ page.extra.ship }}</address>
+          {% endif %}
+        </span>
+      </li>
+    </a>
+  {% endfor %}
 </section>
 
 {% include "partials/footer.html" %}
