@@ -18,8 +18,7 @@ This guide uses Digital Ocean as the cloud provider, but others can be used.
  - Create an account on [Digital Ocean][Digital Ocean].
  - Create a droplet with the following settings:
  - **Image**: Ubuntu 20.04 x64
- - **Plan**: Basic
- - **Size**: $20 (4GB/2CPU)
+ - **Plan**: 4GB RAM
  - **Add block storage**: Skip
  - **Datacenter Region**: Choose the region closest to you.
  - **VPC Network**: No VPC
