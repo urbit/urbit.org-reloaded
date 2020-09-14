@@ -255,7 +255,7 @@ Delete the keyfile with the command below:
 rm path/to/my-planet.key
 ```
 
-### Updating to the latest binary
+### Updating to the latest binary {#updating}
 
 Most updates to Urbit are downloaded and applied automatically as OTA (Over the Air) updates. Occasionally it would be infeasible to distribute an update this way, and a new `urbit` binary is released. This is announced in the [urbit-dev](https://groups.google.com/a/urbit.org/forum/#!forum/dev) Google Group when it occurs (as are all OTA updates).
 
