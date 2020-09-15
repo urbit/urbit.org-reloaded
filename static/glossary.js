@@ -1318,6 +1318,13 @@ var glossary = [
     "desc": "A Gall app that is a framework for fleet testing using Aqua."
   },
   {
+    "name": "pier",
+    "symbol": "",
+    "usage": "arvo",
+    "link": "/docs/glossary/pier/",
+    "desc": "The stored state of an Urbit ship on disk."
+  },
+  {
     "name": "pill",
     "symbol": "",
     "usage": "arvo",
