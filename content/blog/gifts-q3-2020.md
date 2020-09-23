@@ -1,6 +1,6 @@
 +++
 title = "Gifts Q3 2020"
-date = 2020-09-22
+date = 2020-09-23
 description = "Twice a year we distribute address space to those that have made valuable contributions to Urbit. Now called our *Gifts* program, the gifting of address space has been part of Urbit long before we had a grants program."
 [extra]
 author = "Josh Lehman"
