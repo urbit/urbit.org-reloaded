@@ -46,7 +46,6 @@ Without further ado, here are the recipients:
 [`~radbur-sivmus`](https://github.com/tylershuster) has more or less become an unofficial member of the interface team by tackling an absolutely [immense](https://github.com/urbit/urbit/pulls?q=is%3Apr+author%3Atylershuster+) amount of Landscape-related work.
 
 ### Silver
-- [`~lagrev-nocfep`](https://github.com/davis68): In addition to being highly active throughout nearly all of Urbit, Neal has created a first of its kind graduate-level course focused on Urbit at the University of Illinois: [CS 498MC](https://relate.cs.illinois.edu/course/cs498mc-fa20/).
 - [`~littel-wolfur`](https://github.com/ryjm): Jake maintains the premier development group in Urbit, The Forge, and has led the way for other developers by authoring [srrs](https://github.com/ryjm/srrs), one of the more popular community-developed applications on Urbit.
 - [`~botter-nidnul`](https://github.com/botter-nidnul): `~botter` has been instrumental in furthering [Urbit on ARM](https://botter-nidnul.github.io/), has made contributions across Vere and our documentation, and been highly active in onboarding newcomers on our Discord server.
 - [`~timluc-miptev`](https://github.com/timlucmiptev): `~timluc` is highly engaged in many groups and the maintainer of some, wrote the [Nock for Everyday Coders](https://blog.timlucmiptev.space/part1.html) guide, and has gone far above and beyond in teaching the community about developing Landscape applications.
