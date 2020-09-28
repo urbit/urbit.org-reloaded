@@ -8,73 +8,91 @@ hide_next_title = "true"
 hide_previous_title = "true"
 +++
 
-Today, we call Urbit an ‘OS 0’. It’s an evolving open source project with a live network. In 2020, we’re planning to ship OS 1 — the first minimal but complete release of Urbit.
+# Roadmap: Landscape 1 → 3
 
-As we discussed in the [last post](/understanding-urbit/interface), we see Urbit’s primary advantage as bringing together groups to share a set of modules for communication and collaboration. As Urbit matures, the set of available modules grows and expands, and the system both stabilizes and becomes more secure.
+Let’s talk about where we’d like Urbit to go and how we’re going to get there.
 
-Let’s walk through the sequence of milestones we have planned for 2020 and 2021.
+We’re working to build Urbit ID + Urbit OS into a human-scale replacement for the industrial-grade software stack that powers our centralized apps and services today. In time, we want Urbit to be as robust as Unix and the internet protocol suite that today’s stack rests on. We look forward to a future where Urbit is a standardized, unremarkable, ubiquitous computing substrate used and owned by everyone.
+
+We started out by building a prototype for what this future foundation should look like. We spent the early years working primarily on the architecture of the system—but a new platform needs a clear use-case, a way to put it to work. This is what we’ve been building in the last year or so. It’s called Landscape.
+
+Landscape is a flexible tool for communicating and collaborating with friends that runs on top of Urbit OS. 
+
+Landscape lets you bring a group of people together to communicate, collaborate, and do business. Think of it as a combination of ‘productivity software’ and ‘social networking’. Landscape is for bringing together a group of people to share a set of ‘modules’, or things to do, and customizing an environment for the group to stay connected. For a full rundown, see the [interface section]().
+
+Bringing together many different things in one place is something only a general-purpose platform like Urbit can do, and it’s exactly what we want as an alternative to single-purpose centralized software.
+
+As Urbit matures, other killer digital environments may emerge—but Landscape is the app we need if we want to move away from the world of MEGACORP software and onto a secure, distraction-free network of our own.
+
+<br>
+
+![](https://storage.googleapis.com/media.urbit.org/tlon/landscape.jpg)
+
+Today, we pour all of our focus into making Landscape a comfortable place for digital communities to call home, starting with our own. This effort forces us to mature the entire stack, from the interpreter to the interface. 
+
+Let’s walk through the next few phases of Landscape to get a sense of where we are and where we’re headed.
+
+<br>
+
+![](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-interface-3.png)
+
+### Today: Landscape OS 1.N
+
+We built OS 1 for ourselves, because we wanted to use a communication tool that we can trust and put our system to work for real. 
+
+Today we use OS 1 every day to chat, write, and share links. It’s a calm, minimalist tool that gets us one step away from the ads, tracking, distraction and disruption of mainstream software. (We won’t get into the details of OS 1 here, but you can check out [this post](https://urbit.org/blog/introducing-os1/) for a walkthrough. You’re also welcome to try [booting a node yourself]())
+
+The first version of OS 1 shipped in March and we’ve been improving it continuously ever since. OS 1 now runs on a much faster, more reliable Urbit OS kernel and network. The interface itself has been cleaned up and made vastly more efficient. If we weren’t so busy, we would have called it OS 1.12 by now. 
+
+Our initial goal was just to get ourselves living on Urbit everyday. We achieved that, and managed to see quite a few other communities pop up along the way. We made enormous progress, but our system isn’t refined or reliable enough. It also still needs a thorough security audit (which we’re already working on).
+
+OS 1 was a huge step forward. Let’s talk about what’s next.
+
+<br>
+
+![](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-interface-4.png)
+
+## Late 2020: Landscape S2
+
+**It’s weird to have both ‘Urbit OS’ and a client called ‘OS 1’. After OS 1 we’re going to move to a different naming scheme for Landscape—starting with Landscape S2.**
+
+OS 1 is nice, but it’s only usable by explorers, tinkerers, and hobbyists. It’s rough around the edges. You have to *want* to use Urbit as much as we do.
+
+Landscape S2 is much more comfortable. Landscape S2 has a polished, groups-oriented interface, a much more robust data storage format, significant gains in performance and memory management, and a much more reliable way to migrate your data.
+
+Most importantly, Landscape S2 has a completely redesigned invitation and onboarding process that will arrive in tandem with a [hosting service](https://tlon.io) from Tlon. (Last we heard there are a few others working on Urbit hosting as well—we’ll link to them as soon as they’re ready.)
+
+This means you can easily invite a friend from within Landscape and have them up and running in a few minutes without ever leaving a browser. Every conventional app does this already, of course, but none of them can offer the simplicity and clarity of running on Urbit OS. 
+
+We know that getting onto the network can be difficult for less technical users. Everyone currently has to run and care for their own node. With easy onboarding we can use Landscape to start building the communities that never really felt at home on these conventional, one-size-fits-all platforms: the-contemporary-monastery, music-in-the-age-of-COVID, and so on.
+
+We’re planning to share the hosted version of S2 with a few small communities to test it out and put it through the paces. If you’re curious, [let us know](https://tlon.io).
+
+<br>
+
+![](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-roadmap-4.jpg)
+
+## Early 2021: Landscape S3
+
+Landscape S3 will be a tool for communicating and working together that we can enthusiastically invite others to use. 
+
+A native desktop and mobile app, Landscape S3 will be supported by at least one host (Tlon) for easy inviting and onboarding that can support urbit-to-urbit crypto payments. With the addition of basic commerce, Landscape S3 will be a comprehensive environment for communities to make their own.
+
+Perhaps most importantly, Landscape 3 will be backed by a fully audited networking protocol. We’re in the process of auditing our networking now and, once complete, we can be confident that communication over Urbit is secure. 
+
+Landscape inherits the benefits of Urbit itself: simplicity, durability, and a real sense of ownership. These come out of the box, from the beginning, but supporting a fully-featured interface makes a lot of demands of a new stack. By Landscape 3 our interface and infrastructure will have matured to the point that it can be confidently held up against alternatives.
+
+<br>
+
+![](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-roadmap-5.jpg)
+
+## 2021 and beyond
+
+Our goal with Landscape is to give communities the tools they deserve to customize their digital environments. By Landscape S3, our interface and infrastructure will truly support this.
+
+But Landscape in early 2021 will likely still only come with a few modules out of the box. Our major next step during 2021 is to make it easy for anyone to add their own modules and for developers to build and publish their own. Enabling third-party development will really enable Urbit-centric communities to tailor their own software. 
 
 
-![](https://media.urbit.org/site/understanding-urbit/project-history/project-status-landscape%402x.png)
+We can’t cover everything about Landscape in a short post, nor about how the community works or evolves what we do. If you’re curious to learn more, try [booting a node]() and joining the Urbit Community group where most of us hang out. That’s where we hang out most of the time, but you can also find us working in public on [GitHub]() and on the [urbit-dev]() mailing list.
 
-**OS 0 — 2019**
-
-Today, Urbit OS is an evolving prototype. Brave explorers, open-minded systems software nerds and those who want the future to arrive as fast as possible should [install Urbit](/using/install), [check it out](https://urbit.org/using/operations/), and potentially [enroll in Hoon School](/community/hoonschool).
-
-Urbit has evolved a lot during OS 0. We deployed the Urbit ID system to Ethereum and made huge strides toward the stability of Urbit OS (detailed [here](/blog/stable-arvo)). OS 0 has been all about refining our interface goals and making sure our system works as well as possible.
-
-Urbit is a community project, and the community hangs out on OS 0 to communicate and coordinate about developing the system. Come join us if you’d like to help, or just want to follow along as the system progresses.
-
-
-
-![](https://media.urbit.org/site/understanding-urbit/uu-roadmap-2.png)
-
-**OS 1 — Q1 2020**
-
-OS 1 is the first minimal but complete release of Urbit. We think of it as the [Nokia 3310](https://en.wikipedia.org/wiki/Nokia_3310) of cloud computers.
-
-OS 1 is a simple system to publish notes, chat and share links with groups of friends all in one place. OS 1 is stripped down, but open for anyone to extend and build on top of. It’s easy to onboard a group of friends into OS 1 via email and there will be hosting available to select groups.
-
-OS 1 is aimed first and foremost at communities looking to homestead a new platform they can truly make their own. We’ve been using Urbit ourselves over the years, and OS 1 is what we’ve been looking forward to using for our own daily communication and collaboration.
-
-While we’re excited about what OS 1 is, there are also plenty of gaps. For example, OS 1 doesn’t have an exceptional notification system, it still lives in a browser, and it lacks great tooling for distributing new modules. While we aren’t inventing any new cryptography, Urbit also hasn’t been audited, so we aren’t calling it secure just yet.
-
-If OS 0 is for explorers, OS 1 is for tinkerers. More like car camping than backpacking.
-
-Tlon is also planning to provide free hosting to a limited number of groups who want to homestead the system. (Although you can always host Urbit yourself, of course.) If you’re interested in trying OS 1 with your group of friends, [let us know](/community/community-grants).
-
-OS 2 is where Urbit gets easier for a broader audience to try out.
-
-
-
-![](https://media.urbit.org/site/understanding-urbit/uu-roadmap-3.png)
-
-**OS 2 — Q2 2020**
-
-OS 2 is an approachable, expanded and easier to use OS 1. We think of OS 2 as the [iOS 1](https://en.wikipedia.org/wiki/IPhone_OS_1) of cloud computers — no matter how silly that sounds.
-
-Like OS 1, OS 2 lets a group of people chat, publish blogs and short messages, and share links. The main difference  is that OS 2 is a standalone app (rather than the browser tab of OS 1) and supports Urbit-to-Urbit payments in BTC and ETH. OS 2 is the calm, private computing environment we’ve been waiting for.
-
-OS 2 is for those eager to leave behind MEGACORP platforms and build new, intentionally architected communities. If OS 1 is car camping, OS 2 is a geodesic dome on the playa. Not exactly a permanent home, but a good start.
-
-While OS 2 is a big improvement, it’s still not audited to be secure. Turning that corner happens with OS 3.
-
-
-
-![](https://media.urbit.org/site/understanding-urbit/uu-roadmap-4.png)
-
-**OS 3 — 2021**
-
-Over the course of 2020 Urbit OS will be audited to ensure it’s completely secure. Real security, along with big improvements to our hosting infrastructure, will make OS 3 the first Urbit OS for serious work and very broad consumption.
-
-OS 3 makes it possible to customize a permanent, secure space for your friends, company or collaborators. With OS 3, Urbit is no longer just experimental; it’s ready for real work.
-
-OS 3 means you can use Urbit in earnest for everyday work. Payments, contracts, managing your entire crypto portfolio, and connecting to critical IoT devices are all possible. The range of features you can create with a truly secure personal server are really exciting to imagine.
-
-OS 3 means you can safely commit personal data to your Urbit with absolute peace of mind. Modules for location tracking, biometric and health data can be used without worrying about leaking bits.
-
-OS 3 is ready for a small law firm, or an extended family, or the crypto syndicate you’ve been thinking of starting. Or, why not, go ahead and use OS 3 to launch that digital country you’ve been meaning to start.
-
-Where will Urbit be in 2022 or 2023? We can’t be sure exactly. We do have our eyes set on 2030 — when Urbit should be the primary platform for people to communicate and collaborate. We think our next steps are clear and we’re on the right path.
-
-By this point you might be wondering, who built this thing? Where did it come from? That’s next.
+For now, let’s move on to who builds this thing and where it came from.
