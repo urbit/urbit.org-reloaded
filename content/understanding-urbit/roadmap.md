@@ -18,7 +18,7 @@ We started out by building a prototype for what this future foundation should lo
 
 Landscape is a flexible tool for communicating and collaborating with friends that runs on top of Urbit OS. 
 
-Landscape lets you bring a group of people together to communicate, collaborate, and do business. Think of it as a combination of ‘productivity software’ and ‘social networking’. Landscape is for bringing together a group of people to share a set of ‘modules’, or things to do, and customizing an environment for the group to stay connected. For a full rundown, see the [interface section]().
+Landscape lets you bring a group of people together to communicate, collaborate, and do business. Think of it as a combination of ‘productivity software’ and ‘social networking’. Landscape is for bringing together a group of people to share a set of ‘modules’, or things to do, and customizing an environment for the group to stay connected. For a full rundown, see the [interface section](/interface).
 
 Bringing together many different things in one place is something only a general-purpose platform like Urbit can do, and it’s exactly what we want as an alternative to single-purpose centralized software.
 
@@ -26,7 +26,7 @@ As Urbit matures, other killer digital environments may emerge—but Landscape i
 
 <br>
 
-![](https://storage.googleapis.com/media.urbit.org/tlon/landscape.jpg)
+![A Landscape](https://storage.googleapis.com/media.urbit.org/tlon/landscape.jpg)
 
 Today, we pour all of our focus into making Landscape a comfortable place for digital communities to call home, starting with our own. This effort forces us to mature the entire stack, from the interpreter to the interface. 
 
@@ -34,13 +34,13 @@ Let’s walk through the next few phases of Landscape to get a sense of where we
 
 <br>
 
-![](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-interface-3.png)
+![The current state of Landscape/OS1](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-interface-3.png)
 
 ### Today: Landscape OS 1.N
 
 We built OS 1 for ourselves, because we wanted to use a communication tool that we can trust and put our system to work for real. 
 
-Today we use OS 1 every day to chat, write, and share links. It’s a calm, minimalist tool that gets us one step away from the ads, tracking, distraction and disruption of mainstream software. (We won’t get into the details of OS 1 here, but you can check out [this post](https://urbit.org/blog/introducing-os1/) for a walkthrough. You’re also welcome to try [booting a node yourself]())
+Today we use OS 1 every day to chat, write, and share links. It’s a calm, minimalist tool that gets us one step away from the ads, tracking, distraction and disruption of mainstream software. (We won’t get into the details of OS 1 here, but you can check out [this post](https://urbit.org/blog/introducing-os1/) for a walkthrough. You’re also welcome to try [booting a node yourself](https://urbit.org/using/install/))
 
 The first version of OS 1 shipped in March and we’ve been improving it continuously ever since. OS 1 now runs on a much faster, more reliable Urbit OS kernel and network. The interface itself has been cleaned up and made vastly more efficient. If we weren’t so busy, we would have called it OS 1.12 by now. 
 
@@ -50,7 +50,7 @@ OS 1 was a huge step forward. Let’s talk about what’s next.
 
 <br>
 
-![](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-interface-4.png)
+![A speculative interface for Landscape S2](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-interface-4.png)
 
 ## Late 2020: Landscape S2
 
@@ -70,7 +70,7 @@ We’re planning to share the hosted version of S2 with a few small communities 
 
 <br>
 
-![](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-roadmap-4.jpg)
+![A speculative payments interface](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-roadmap-4.jpg)
 
 ## Early 2021: Landscape S3
 
@@ -84,7 +84,7 @@ Landscape inherits the benefits of Urbit itself: simplicity, durability, and a r
 
 <br>
 
-![](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-roadmap-5.jpg)
+![A landscape](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-roadmap-5.jpg)
 
 ## 2021 and beyond
 
@@ -93,6 +93,6 @@ Our goal with Landscape is to give communities the tools they deserve to customi
 But Landscape in early 2021 will likely still only come with a few modules out of the box. Our major next step during 2021 is to make it easy for anyone to add their own modules and for developers to build and publish their own. Enabling third-party development will really enable Urbit-centric communities to tailor their own software. 
 
 
-We can’t cover everything about Landscape in a short post, nor about how the community works or evolves what we do. If you’re curious to learn more, try [booting a node]() and joining the Urbit Community group where most of us hang out. That’s where we hang out most of the time, but you can also find us working in public on [GitHub]() and on the [urbit-dev]() mailing list.
+We can’t cover everything about Landscape in a short post, nor about how the community works or evolves what we do. If you’re curious to learn more, try [booting a node](https://urbit.org/using/install/) and joining the Urbit Community group where most of us hang out. That’s where we hang out most of the time, but you can also find us working in public on [GitHub](https://github.com/urbit) and on the [urbit-dev](https://groups.google.com/a/urbit.org/g/dev) mailing list.
 
 For now, let’s move on to who builds this thing and where it came from.
