@@ -1,7 +1,7 @@
 +++
-title = "The State of Urbit: OS 1 → OS 1.N"
+title = "Late 2020 Progress Update: OS 1 -> OS 1.N"
 date = 2020-09-29
-description = ""
+description = "When we announced OS 1, in April, we started to disappear into Urbit. Since then, we’ve been living on Urbit like we never have before."
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"
@@ -10,13 +10,9 @@ image ="https://storage.googleapis.com/media.urbit.org/site/posts/essays/provide
 
 <br>
 
-<img class="ba" src="https://storage.googleapis.com/media.urbit.org/site/posts/essays/providers.png">
+![Pajaro Dunes](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-1.JPG)
 
 <br>
-
-OS 1 → OS 1.N
-
-[Outdoor landscape]
 
 When we announced OS 1, in April, we started to disappear into Urbit. Since then, we’ve been living on Urbit like we never have before. This has been our goal for years: to mature the system we’re building by becoming its first committed users. We knew that critical step toward Urbit’s maturity was being able to depend on it ourselves, but the system itself had to mature to the point that we could do that practically.
 
@@ -33,7 +29,7 @@ Anyway, let’s walk through the details. We’ll talk about our infrastructure 
 
 Infrastructure -
 
-![](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-1.png)
+![Debugging Interface](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-2.png)
 
 In April, Urbit was slow, fragile, and didn’t always update itself properly. We made enormous progress on all of these.
 
@@ -50,7 +46,7 @@ The network is stable, fast, and safe from day to day. We’re pretty confident 
 
 Interface -
 
-[Chat image]
+![](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-3.jpg)
 
 When we shipped OS 1 it was a bunch of separate pages (that were slow to load), all with separate ways of storing and processing data. Our interface work over the past six months is all about unification and simplification.
 
@@ -60,7 +56,7 @@ Next, we unified the way we store data and compute. It used to be that each indi
 
 Those two are by far the most significant, but there’s so much more. We [rewrote](https://github.com/urbit/urbit/pull/2937) the `group-store`, allowing for different roles (admin, moderators, and so on) in a group. We shipped better debugging tools, automatic reconnection, a settings panel, and overall visual polish and refinement.
 
-[Leap image]
+![](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-4.jpg)
 
 And I almost forgot [Leap](https://github.com/urbit/urbit/pull/3231): an omnibox for navigating around OS 1 with the keyboard. We have plans to make Leap much more powerful — but it’s a great first start toward making OS 1 keyboard accessible. I almost exclusively use [Leap](https://upload.wikimedia.org/wikipedia/commons/0/06/Canon_Cat_keyboard.jpg) to get around OS 1 these days.
 
