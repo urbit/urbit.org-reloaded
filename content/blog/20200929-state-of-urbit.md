@@ -5,12 +5,12 @@ description = "When we announced OS 1, in April, we started to disappear into Ur
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"
-image ="https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-1.JPG"
+image ="https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-1.jpg"
 +++
 
 <br>
 
-![Pajaro Dunes](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-1.JPG)
+![Pajaro Dunes](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-1.jpg)
 
 <br>
 
