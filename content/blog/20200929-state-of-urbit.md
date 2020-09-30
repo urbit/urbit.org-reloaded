@@ -10,7 +10,7 @@ image ="https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-o
 
 <br>
 
-![Pajaro Dunes](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-1.jpg)
+![Grassy Knoll](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-1.jpg)
 
 <br>
 
@@ -27,7 +27,7 @@ The tl;dr is that Urbit is much faster, more reliable, and nicer to use than it 
 Anyway, let’s walk through the details. We’ll talk about our infrastructure and interface work independently, since that’s how we organize things internally. Then we’ll talk a bit about what’s going on on the network.
 
 
-Infrastructure -
+### Infrastructure
 
 ![Debugging Interface](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-2.png)
 
@@ -37,14 +37,14 @@ First off, Urbit is about 10x faster for most users. With some careful debugging
 
 Second, we got our memory usage under control. Urbit still uses a 2GB memory arena. If the state of your Urbit grows to over 2GB things, uh, fall apart. This used to happen regularly, and now it’s pretty much unheard of. We implemented [tooling](https://github.com/urbit/urbit/pull/3235) to compact and deduplicate the memory image when it’s growing too large. We brought the memory usage of the compiler [down ~90%](https://github.com/urbit/urbit/pull/3041). There are areas where we can be more disciplined about how we use memory, but this is more or less a solved problem for the near term.
 
-Third, we implemented a completely new build system. Well, we actually got rid of the build system altogether and [made it a part of the filesystem](https://github.com/urbit/urbit/pull/3041). This made it possible for us to fix our over the air (OTA) updates and make them both fast and reliable. In April, an OTA could bring down your node and would take hours or even days to apply. Today, we regularly deploy OTAs with no fear of them breaking any nodes — they often go from galaxy → planet in a minute or less.
+Third, we implemented a completely new build system. Well, we actually got rid of the build system altogether and [made it a part of the filesystem](https://urbit.org/blog/ford-fusion/). This made it possible for us to fix our over the air (OTA) updates and make them both fast and reliable. In April, an OTA could bring down your node and would take hours or even days to apply. Today, we regularly deploy OTAs with no fear of them breaking any nodes — they often go from galaxy → planet in a minute or less.
 
 We also rewrote a large part of our runtime in Haskell and made overall progress on [network scaling](https://github.com/urbit/urbit/pull/3174). And: we implemented a [principled approach](https://github.com/urbit/urbit/pull/2366) to [error handling](https://github.com/urbit/urbit/pull/3064), making nodes much less likely to become unrecoverable.
 
 The network is stable, fast, and safe from day to day. We’re pretty confident it can grow quite a bit without serious issues. When we shipped OS 1 we really weren’t sure what we could handle. Now we’re standing on much more solid ground.
 
 
-Interface -
+### Interface
 
 ![](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-3.jpg)
 
@@ -61,7 +61,7 @@ Those two are by far the most significant, but there’s so much more. We [rewro
 And I almost forgot [Leap](https://github.com/urbit/urbit/pull/3231): an omnibox for navigating around OS 1 with the keyboard. We have plans to make Leap much more powerful — but it’s a great first start toward making OS 1 keyboard accessible. I almost exclusively use [Leap](https://upload.wikimedia.org/wikipedia/commons/0/06/Canon_Cat_keyboard.jpg) to get around OS 1 these days.
 
 
-Community + network -
+### Community + network
 
 ![Fishing Village](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-5.png)
 
@@ -72,7 +72,7 @@ Getting onto Urbit is still relatively challenging. By the standards of software
 Turns out, there are plenty of people who are up for running Urbit themselves and quite a few small communities have sprouted around the network. Overall the network has a fun, cozy feeling. It’s nice.
 
 
-What’s next -
+### What’s next
 
 We’re still more or less flat-out, full speed ahead into an even better Urbit-world. The seeds of change were planted when we made Josh the [interim technical director of urbit.org](https://urbit.org/blog/first-steps-towards-urbit-org/). Urbit itself is getting close to the point where the separation between Urbit and Tlon has to become more real. Urbit is aimed at being an ubiquitous platform, Tlon is aimed at making it as usable and useful as possible.
 
