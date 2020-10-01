@@ -1,6 +1,6 @@
 +++
 title = "Hosting the Future"
-date = 2020-09-30
+date = 2020-10-01
 description = "The way we see it, hosting is the most important thing, next to Landscape, that Tlon can do to help Urbit continue toward widespread adoption."
 [extra]
 author = "Nick Simmons"
