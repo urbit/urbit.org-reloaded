@@ -8,9 +8,9 @@ aliases = ["/docs/using/creating-a-development-ship/", "/docs/getting-started/co
 
 You can develop on Urbit in three ways:
 
-- [Applications on Urbit](#api), which use Urbit as the back-end to store data and communicate with others
+- [Applications using Urbit](#api), which use Urbit as the back-end to store data and communicate with others
 - [Urbit Applications](#application), which are written in [Hoon](/docs/glossary/hoon/), and run as part of Urbit
-- [Urbit Core](#core)
+- [Urbit Core](#core), which involves contributing to Urbit's operating system ([Arvo](https://github.com/urbit/urbit/tree/master/pkg/arvo)) or runtime ([Vere](https://github.com/urbit/urbit/tree/master/pkg/urbit))
 
 This guide will start by getting you set up to run an Urbit ship, and then tell you everything you need to know to do either.
 
@@ -22,11 +22,11 @@ Once you’re ready, you can get started on the network right away and take some
 
 When developing, however, we recommend [booting a development ship](#creating-a-development-ship) and working locally -- you may need to make changes that could, in the wrong hands, destroy the ship’s environment, and it’s best to do so in a safe, separate place.
 
-## Applications on Urbit {#api}
+## Applications using Urbit {#api}
 
-Urbit ships with its own set of apps written in its own language, Hoon. However it is also meant to integrate with applications written in other languages via an API. The clearest example of an application for Urbit is Landscape, the default client. Although it does currently ship with Urbit, its front-end is a separate piece of software that uses the Urbit API to interact with an Urbit ship. back. You can create your own application that uses Urbit to store data and interact with other Urbit ships without writing any Hoon code thanks to this API. This could be a chat client, a writing app, a game, or anything else.
+Urbit ships with its own set of apps written in its own language, Hoon. However it is also meant to integrate with applications written in other languages via an API. The clearest example of an application using Urbit is Landscape, the default client. Although it does currently ship with Urbit, its front-end is a separate piece of software that uses Urbit's HTTP APIs to interact with an Urbit ship. You can create your own application that uses Urbit to store data and interact with other Urbit ships without writing any Hoon code thanks to Urbit's HTTP APIs. This could be a chat client, a writing app, a game, or anything else that can communicate over HTTP.
 
-To get started quickly with the language of your choice, see the following libraries:
+To get started quickly with the language of your choice, see the following libraries provide HTTP interfaces to Urbit:
 
  - [Python](https://github.com/baudtack/urlock-py) (Stable)
  - [Haskell](https://github.com/bsima/urbit-airlock) (Under active development)
@@ -51,7 +51,7 @@ Working on the core means improving the Urbit project itself, working with the e
 
 Just arrived and unsure what to work on? An ideal way to get started is by experimenting with the system, talking to other developers, and reading (or [contributing to](https://github.com/urbit/docs)) the [documentation](/docs/).
 
-Prefer learning with an instructor? We also offer an online course that covers the basics of Urbit development called [Hoon School](@/community/hoonschool.md). If course-based learning works well for you, we recommend you sign up.
+Prefer learning with an instructor? Our community runs an online course that covers the basics of Urbit development called [Hooniversity](https://hooniversity.org/). If course-based learning works well for you, we recommend you sign up.
 
 The Urbit developer community congregates around [the urbit-dev mailing list](https://groups.google.com/a/urbit.org/forum/#!forum/dev), the `~bitbet-bolbel/urbit-community` group on Landscape, and [Urbit’s GitHub repository](https://github.com/urbit/urbit). It’s a good idea to sign up, see what people are talking about, and introduce yourself.
 
