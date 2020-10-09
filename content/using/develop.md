@@ -26,9 +26,10 @@ When developing, however, we recommend [booting a development ship](#creating-a-
 
 Urbit ships with its own set of apps written in its own language, Hoon. However it is also meant to integrate with applications written in other languages via an API. The clearest example of an application using Urbit is Landscape, the default client. Although it does currently ship with Urbit, its front-end is a separate piece of software that uses Urbit's HTTP APIs to interact with an Urbit ship. You can create your own application that uses Urbit to store data and interact with other Urbit ships without writing any Hoon code thanks to Urbit's HTTP APIs. This could be a chat client, a writing app, a game, or anything else that can communicate over HTTP.
 
-To get started quickly with the language of your choice, see the following libraries provide HTTP interfaces to Urbit:
+To get started quickly with the language of your choice, see the following libraries that provide HTTP interfaces to Urbit:
 
  - [Python](https://github.com/baudtack/urlock-py) (Stable)
+ - [Swift](https://github.com/dclelland/UrsusAirlock) (Under development)
  - [Haskell](https://github.com/bsima/urbit-airlock) (Under active development)
  - [JavaScript](https://www.npmjs.com/package/urbit) (Under active development)
  - Go (Pending release)
