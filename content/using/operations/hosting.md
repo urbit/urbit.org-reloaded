@@ -172,3 +172,9 @@ On iOS you can save a website to your homescreen as an icon. If you do this for 
  [DO Initial Setup]: https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04
  [Blog Github]: https://github.com/zalberico/zalberico.github.io
 
+If you plan to use Nginx as a reverse proxy for your Urbit, it is important that you include the following settings in your configuration in order to allow the Landscape web client to properly communicate with your Urbit:
+    ```
+    chunked_transfer_encoding off;
+    proxy_buffering off;
+    proxy_cache off;
+    ```
