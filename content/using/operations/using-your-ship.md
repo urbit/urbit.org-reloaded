@@ -104,7 +104,7 @@ Ctrl-y    Yank from kill buffer
 
 ### Updates
 
-By default, you will automatically receive updates ([OTAs](@/docs/glossary/ota-updates.md)) from your sponsor. To check your OTA source, run `|ota` in the [dojo]((@/docs/glossary/dojo.md).
+By default, you will automatically receive updates ([OTAs](@/docs/glossary/ota-updates.md)) from your sponsor. To check your OTA source, run `|ota` in the [dojo](@/docs/glossary/dojo.md).
 
 If for some reason (for example, if your sponsor is out of date), you can switch OTA sources by running `|ota ~otasrc %kids` in the dojo, where `~otasrc` is the ship from which you want to receive updates. It is a good idea to contact the source ship and ask permission to sync from them.
 
