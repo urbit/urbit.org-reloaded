@@ -102,6 +102,14 @@ Ctrl-u    Kill to beginning of line
 Ctrl-y    Yank from kill buffer
 ```
 
+### Updates
+
+By default, you will automatically receive updates ([OTAs](@/docs/glossary/ota-updates.md)) from your sponsor. To check your OTA source, run `|ota` in the [dojo]((@/docs/glossary/dojo.md).
+
+If for some reason (for example, if your sponsor is out of date), you can switch OTA sources by running `|ota ~otasrc %kids` in the dojo, where `~otasrc` is the ship from which you want to receive updates. It is a good idea to contact the source ship and ask permission to sync from them.
+
+If OTAs are not succeeding, or if you are on an version of Urbit before the `|ota` command was introduced, you can run `|merge %kids (sein:title our now our) %kids, =gem %that`. **Warning:** this will wipe out any documents in the publish app, as well as any custom code. It will leave chats, links, and group memberships intact.
+
 ### Landscape
 
 On startup Urbit tries to bind to `localhost:80`. If you're already running something on port `80` -- such as any other HTTP server, or another urbit -- you'll find the urbit that you just started on `8080`, `8081`, and so on. For planets only, we also proxy web domains through Urbit's own servers. Any planet `~your-urbit` is also at `your-urbit.arvo.network`, but only after you [set up DNS](#dns-proxying).
