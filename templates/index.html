@@ -137,6 +137,8 @@
         <h2 class="f5 fw6 mt0 mb1">{{ page.title }}</h2>
         {% if page.extra.image %}
         <img class="db mv2 obj-cover h4 w-50 ba" src="{{ page.extra.image }}" />
+        {% elif page.extra.description %}
+        <p class="lh-copy mt1">{{ page.extra.description }}</p>
         {% endif %}
         <time class="mono f6">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
         <span class="mono f6">
