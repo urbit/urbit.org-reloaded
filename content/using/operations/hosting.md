@@ -83,7 +83,8 @@ Continuing to follow the DO docs we're going to configure the ufw firewall.
    ```
    $ sudo ufw app list
    ```
- - Next we'll configure ufw to allow connections via ssh and to allow Urbit to use the standard web port when the firewall is enabled, as well as opening a port that we'll later use for Ames, Urbit's p2p protocol.
+ - Next we'll configure ufw to allow connections via ssh and to allow Urbit to use the standard web port when the firewall is enabled,
+ as well as opening a port that we'll later use for Ames, Urbit's p2p protocol.
    ```
    $ sudo ufw allow OpenSSH
    $ sudo ufw allow www
