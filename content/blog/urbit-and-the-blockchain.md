@@ -6,9 +6,10 @@ aliases = ["/posts/essays/urbit-and-the-blockchain", "/posts/urbit-and-the-block
 [extra]
 author = "Curtis Yarvin"
 ship = "~sorreg-namtyv"
-image = "https://media.urbit.org/site/blog-1.jpg"
+image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/urbit-and-the-blockchain-1.jpg"
 +++
-![](https://media.urbit.org/site/blog-1.jpg)
+
+![](https://storage.googleapis.com/media.urbit.org/site/posts/essays/urbit-and-the-blockchain-1.jpg)
 
 One core principle of the Urbit network is that *Urbit doesn't take sides*.
 This is true in all kinds of conflicts -- and especially blockchain wars.

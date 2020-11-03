@@ -6,10 +6,10 @@ aliases = ["/posts/essays/common-objections-to-urbit", "/posts/common-objections
 [extra]
 author = "Curtis Yarvin"
 ship = "~sorreg-namtyv"
-image ="https://media.urbit.org/site/blog-9.jpg"
+image ="https://storage.googleapis.com/media.urbit.org/site/posts/essays/common-objections-to-urbit-1.jpg"
 +++
 
-![](https://media.urbit.org/site/blog-9.jpg)
+![](https://storage.googleapis.com/media.urbit.org/site/posts/essays/common-objections-to-urbit-1.jpg)
 
 We love crowdsourced criticism.  We've heard a lot of great
 objections to  Urbit.  Surely there's more out there!  We'll

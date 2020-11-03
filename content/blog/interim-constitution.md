@@ -6,10 +6,10 @@ aliases = ["/posts/essays/interim-constitution", "/posts/constitution"]
 [extra]
 author = "Tlon"
 ship = ""
-image = "https://media.urbit.org/site/blog-7.jpg"
+image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/interim-constitution.jpg"
 +++
 
-![](https://media.urbit.org/site/blog-7.jpg)
+![](https://storage.googleapis.com/media.urbit.org/site/posts/essays/interim-constitution.jpg)
 
 ## Declaration of purpose
 

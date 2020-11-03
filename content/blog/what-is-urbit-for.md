@@ -6,9 +6,9 @@ aliases = ["/posts/essays/what-is-urbit-for", "/posts/what-is-urbit-for"]
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"
-image = "https://media.urbit.org/site/blog-1.jpg"
+image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/what-is-urbit-for.jpg" 
 +++
-![](https://media.urbit.org/site/blog-1.jpg)
+![](https://storage.googleapis.com/media.urbit.org/site/posts/essays/what-is-urbit-for.jpg)
 
 Open platforms don't beat closed systems just because they're open.
 They win because you can do more exciting things with them.  We

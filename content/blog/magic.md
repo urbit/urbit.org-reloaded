@@ -6,9 +6,10 @@ aliases = ["/posts/essays/magic", "/posts/magic"]
 [extra]
 author = "Curtis Yarvin"
 ship = "~sorreg-namtyv"
-image = "https://media.urbit.org/site/blog-7.jpg"
+image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/magic.jpg"
 +++
-![](https://media.urbit.org/site/blog-7.jpg)
+
+![](https://storage.googleapis.com/media.urbit.org/site/posts/essays/magic.jpg)
 
 It's easy to get too obsessed with Urbit's alien technology.  We
 didn't build Urbit for its tech.  We built it for people to use.
