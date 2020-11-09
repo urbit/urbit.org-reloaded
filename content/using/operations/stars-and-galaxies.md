@@ -12,9 +12,8 @@ To boot your galaxy or star, follow our [installation instructions](@/using/inst
 
 If you plan to distribute planets in any capacity, you must keep your star running. If you fail to do so, those planets will become orphans that are unable to communicate with the network.
 
-To make this as simple as possible, we’re building Terraform-based tooling for star and planet hosting via Google Cloud Platform. Once it’s ready we’ll open source the tooling so you can host stars and planets for yourself and others.
-
-In the meantime, there are [existing instructions](@/using/install.md) for those familiar with booting a Linux instance on GCP, AWS, Digital Ocean, etc.
+See our [cloud hosting instructions](@/using/operations/hosting.md) for
+instructions on settings up a Digital Ocean droplet.
 
 ### Distributing planets
 
