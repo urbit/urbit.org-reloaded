@@ -83,6 +83,8 @@ Here are some tutorials written by members of the Urbit community. Some are a li
 - [Learning Hoon](https://github.com/knubie/learning-hoon) by `@knubie`
 - [A Nock Interpreter](https://jtobin.io/nock) by `~nidsut-tomdun`
 - [Basic Hoonery](https://jtobin.io/basic-hoonery) by `~nidsut-tomdun`
+- [The Complete Guide to
+  Gall](https://github.com/timlucmiptev/gall-guide/blob/master/overview.md) by `~timluc-miptev`
 
 If you want to add something to the list, [shoot us an email](mailto:support@urbit.org) or make a pull request in the [docs repository](https://github.com/urbit/docs).
 
