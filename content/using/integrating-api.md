@@ -9,7 +9,7 @@ This guide is aimed at developers who have a working knowledge of HTTP grammar (
 
 ## Authentication
 
-The first step in creating an application *on* Urbit (to be distinguished from an Urbit application) is to authenticate with the desired ship. This can be a planet, comet, or any other Urbit ship. For the purposes of this example, we will be running a "fakezod" on port 8080. Run this code, subsituting the appropriate path to your Urbit binary:
+The first step in creating an application *on* Urbit (to be distinguished from an Urbit application) is to authenticate with the desired ship. This can be a planet, comet, or any other Urbit ship. For the purposes of this example, we will be running a "fakezod" on port 8080. Run this code, substituting the appropriate path to your Urbit binary:
 
 ```bash
 /path/to/urbit -p 8080 -F zod
@@ -71,13 +71,13 @@ For this example, we will use the following channel:
 http://localhost:8080/~/channel/1601844290-ae45b
 ```
 
-Let's exampine the parts. A channel is simply a URL in this pattern: `{url}/~/channel/{uid}` where `{uid}` is a string of your choosing. Most libraries default to the current unix time plus six hexadecimal characters. Your program should determine a channel for its current session and store that in its state.
+Let's examine the parts. A channel is simply a URL in this pattern: `{url}/~/channel/{uid}` where `{uid}` is a string of your choosing. Most libraries default to the current unix time plus six hexadecimal characters. Your program should determine a channel for its current session and store that in its state.
 
 The channel does not yet exist in Urbit, however. To subscribe to events on this URL, you must first make a request (PUT) to Urbit on this URL. The simplest way to do this is to `hi` ourselves, as if we had entered `|hi our` in the dojo. A `hi` is analogous to a ping, and does not manipulate state. Let's learn how to make requests using this as an example.
 
 ### Making Requests
 
-All requests will take the form of sending a message. Messages can take different forms, such as `subscribe`s, `ack`s, and `poke`s. These are called actions and there are more than these, but these will cover most basic use cases. You can think of them as a somewhat more sophisticated HTTP grammar. A messsage always requires an `id` and an `action`. Other fields depend on the specific action.
+All requests will take the form of sending a message. Messages can take different forms, such as `subscribe`s, `ack`s, and `poke`s. These are called actions and there are more than these, but these will cover most basic use cases. You can think of them as a somewhat more sophisticated HTTP grammar. A message always requires an `id` and an `action`. Other fields depend on the specific action.
 
 Let's look at the structure of a message by examining the most basic `hi` we will send.
 
