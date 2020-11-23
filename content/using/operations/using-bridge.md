@@ -44,7 +44,7 @@ After you access your Ethereum address, if a point was sent to that address, you
 
 Now you'll be on the management page of your point. The transfer isn't completed
 yet, so click `Accept incoming transfer`. If you are transferring to yourself
-and do not wish to [breach](@/glossary/breach.md), check the box labeled `Retain
+and do not wish to [breach](@/docs/glossary/breach.md), check the box labeled `Retain
 proxies and key configuration, in case of transferring to self`. Otherwise leave
 the box unchecked, ensuring that your ship will be breached upon transfer. Then
 press the `Generate and Sign Transaction` button, followed by the `Send Transaction` button.
