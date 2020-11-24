@@ -703,7 +703,7 @@ arguments.
 ~your-urbit:dojo> +code
 ```
 
-You can change your code to a new randomly generated on by entering `|code %reset`.
+You can change your code to a new randomly generated one by entering `|code %reset`.
 
 #### `+curl`
 
