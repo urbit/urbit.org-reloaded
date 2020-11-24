@@ -42,7 +42,14 @@ If you were given points by Tlon you likely already fully own them. But if someo
 
 After you access your Ethereum address, if a point was sent to that address, you'll come to a page that has an `Incoming Transfers` header, under which is a graphic. Click the `Details ->` link under that graphic.
 
-Now you'll be on the management page of your point. The transfer isn't completed yet, so click `Accept incoming transfer`. Then check both boxes and and click their associated `Sign Transaction` and `Send Transaction` buttons.
+Now you'll be on the management page of your point. The transfer isn't completed
+yet, so click `Accept incoming transfer`. If you are transferring to yourself
+and do not wish to [breach](@/docs/glossary/breach.md), check the box labeled
+`Retain proxies and key configuration, in case of transferring to self`.
+Otherwise leave the box unchecked, ensuring that your ship will be breached upon
+transfer and thus no Azimuth data from the previous owner (namely proxies and
+networking keys) will be retained. Then press the `Generate and Sign
+Transaction` button, followed by the `Send Transaction` button.
 
 If you already own a point, click on the `Details ->` under your sigil in the `Your Points` section.
 
