@@ -703,6 +703,8 @@ arguments.
 ~your-urbit:dojo> +code
 ```
 
+You can change your code to a new randomly generated on by entering `|code %reset`.
+
 #### `+curl`
 
 Retrieves data from a URL. Accepts a `tape`. Similar to Unix `curl`.
