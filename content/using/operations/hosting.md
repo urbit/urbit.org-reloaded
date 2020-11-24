@@ -92,7 +92,7 @@ Continuing to follow the DO docs we're going to configure the ufw firewall.
    ```
    $ sudo ufw enable
    ```
- - To see the current the current firewall status use the following.
+ - To see the current firewall status use the following.
    ```
    $ sudo ufw status
    ```
