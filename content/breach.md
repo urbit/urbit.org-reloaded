@@ -47,11 +47,11 @@ Follow these steps:
 4. [Download the latest version](@/using/install.md#macos-and-linux) of the urbit binary
 5. [Boot your ship with the new keyfile](https://urbit.org/using/install/#boot-your-planet)
 
-If you are using the flagday tool that we will provide, it will perform all of these actions on your behalf, as well as exporting and reimporting your data.
+If you are using the `flagday` tool that we will provide, it will perform all of these actions on your behalf, as well as exporting and reimporting your data.
 
 ## What happens to my data?
 
-We’ve written a tool called flagday that will allow you to easily export your ship’s Landscape data. This includes your subscriptions and any content such as Collections, Notebooks and Chats that are on your ship. This data can then be seamlessly imported into a new ship.
+We’ve written a tool called `flagday` that will allow you to easily export your ship’s Landscape data. This includes your subscriptions and any content such as Collections, Notebooks and Chats that are on your ship. This data can then be seamlessly imported into a new ship.
 
 ## What is unique about this breach?
 
@@ -63,6 +63,6 @@ We are optimistic that this will be our last breach, as all future updates to th
 
 ## What happens if I don’t breach?
 
-Your Urbit will fall out of communication with the rest of the Urbit network which has performed the breach. This means that updates (OTAs) will no longer process and won’t be able to communicate with the rest of the network.
+Your Urbit will fall out of communication with the rest of the Urbit network which has performed the breach. This means that updates (OTAs) will no longer process and you won’t be able to communicate with anyone else on the network.
 
 
