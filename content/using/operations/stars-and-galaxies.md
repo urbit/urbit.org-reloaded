@@ -8,7 +8,7 @@ template = "page_indiced.html"
 
 To boot your galaxy or star, follow our [installation instructions](@/using/install.md).
 
-### Hosting your star 
+### Hosting your star
 
 If you plan to distribute planets in any capacity, we ask that you keep your star
 running. If you fail to do so, those planets will become orphans that are unable
