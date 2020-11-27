@@ -108,7 +108,7 @@ By default, you will automatically receive updates ([OTAs](@/docs/glossary/ota-u
 
 If for some reason (for example, if your sponsor is out of date), you can switch OTA sources by running `|ota ~otasrc %kids` in the dojo, where `~otasrc` is the ship from which you want to receive updates. It is a good idea to contact the source ship and ask permission to sync from them.
 
-If OTAs are not succeeding, or if you are on an version of Urbit before the `|ota` command was introduced, you can run `|merge %kids (sein:title our now our) %kids, =gem %take-that`. **Note:** This will wipe out any custom changes to the base distribution.
+If OTAs are not succeeding, or if you are on an version of Urbit before the `|ota` command was introduced, you can run `|merge %home (sein:title our now our) %kids, =gem %take-that`. **Note:** This will wipe out any custom changes to the base distribution.
 
 ### Landscape
 
