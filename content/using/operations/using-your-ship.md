@@ -185,28 +185,11 @@ To cycle the keys of a moon without breaching, run:
 
 ### Escaping A Sponsor {#escape}
 
-To use the network as a planet or star, you must be sponsored by an active star or galaxy, respectively. If your sponsor isn't suiting your needs, you can escape to a different one. The [Bridge](https://bridge.urbit.org/) software doesn't yet support escaping. For the time being, however, you can follow this guide.
-
-#### Prerequisites
-
-- A little bit of ETH in your management proxy address to pay for the transaction.
-- The identity number of the sponsor you want to escape from.
-- The identity number of the sponsor you want to escape to.
-
-You can find an identity's number by running ``` `@`~marzod ``` in any Dojo, where `~marzod` is the name of the relevant identity.
-
-#### Instructions
-
-0. If you have your management proxy in Metamask, you can use Etherscan [here](https://etherscan.io/address/ecliptic.eth#writeContract). Skip steps 1-4.
-1. Go to either myetherwallet.com or mycrypto.com. Since this is a low-risk operation, and you're signing with a low-value key, it's fine to use their online versions. Sign in with your management mnemonic. (They may still force you to download their tool to log in like this.)
-2. Navigate to the "interact with contract" page of the tool you're using.
-3. Specify a contract address of `0x6ac07B7C4601B5CE11de8Dfe6335B871C7C4dd4d`.
-4. Copy the "contract ABI" from [here](https://etherscan.io/address/ecliptic.eth#code) and paste it into the "ABI/JSON interface" field.
-5. Select the `escape()` function, passing in two arguments: your identity number, and the number of your desired sponsor.
-6. Sign and submit the transaction.
-7. Get in touch with your prospective sponsor, since they won't be notified otherwise. You can do this by contacting them on the network via chat, or joining `~bitbet-bolbel/urbit-community` and asking around.
-8. Wait for your request to be accepted by the prospective sponsor.
-9. If your request is not accepted by your prospective sponsor, a last resort, you can make a request to escape to `~marzod`, which is operated by Tlon, the company leading the development of Urbit.
+To use the network as a planet or star, you must be sponsored by an active star
+or galaxy, respectively. If your sponsor isn't suiting your needs, you can
+escape to a different one. This can be done with
+[Bridge](https://bridge.urbit.org/) following the instructions
+[here](@/using/operations/using-bridge.md#escaping-your-sponsor).
 
 ### Continuity breaches
 

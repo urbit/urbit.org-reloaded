@@ -73,3 +73,39 @@ From the detail page associated with your point, click the `Generate Arvo Keyfil
 Click `Generate ->`, which will download a keyfile onto your machine.
 
 With that keyfile in hand, you can now exit Bridge and continue to the guide to [install the Urbit binary](@/using/install.md).
+
+### Escaping your sponsor
+
+To use the network as a planet or star, you must be sponsored by an active star
+or galaxy, respectively. If your sponsor isn't suiting your needs, you can
+escape to a different one. 
+
+#### Prerequisites
+
+- A little bit of ETH in your management proxy address to pay for the
+  transaction.
+- The `@p` of the sponsor you want to escape to. You should negotiate the
+  transfer with the sponsor ahead of time, as they will need to accept it on
+  their end. If you cannot find one, contact Tlon at support@urbit.org and we
+  will assist you in escaping to one of our stars/galaxies.
+
+#### Instructions
+
+1. Login to [Bridge](https://bridge.urbit.org) with the management proxy address
+   for the ship that will be escaping their sponsor. The ownership address will
+   also do, as will the master ticket if you have that.
+2. Click on the "OS" button at the bottom of the screen.
+3. Below Network, you will find the `@p` of your current sponsor. Click "Change"
+   to the right of that.
+4. Enter the `@p` of your new sponsor.
+5. Click the "Request" button and then complete the transaction.
+
+This action will consume a small amount of ETH. Your sponsor will then need to
+accept you via a similar process in Bridge, which will require ETH on their end.
+After the transaction is completed on Ethereum, it will still take some time for
+the information to propagate to the Urbit network. After 30 minutes or so, you
+may check that your sponsor has successfully been altered by running
+`(sein:title our now our)` in dojo and confirming that the `@p` matches that of
+your new sponsor.
+
+Changing your sponsor will also automatically change your OTA source to your new sponsor.
