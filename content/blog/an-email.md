@@ -1,7 +1,7 @@
 +++
 title = "An Email from the Archive"
 description = "I found this email in my archives recently and thought it might be fun to share publicly."
-date = 2020-11-16
+date = 2020-11-30
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"
