@@ -76,9 +76,9 @@ With that keyfile in hand, you can now exit Bridge and continue to the guide to 
 
 ### Escaping your sponsor
 
-To use the network as a planet or star, you must be sponsored by an active star
-or galaxy, respectively. If your sponsor isn't suiting your needs, you can
-escape to a different one. 
+As a planet or star, it behooves you to be sponsored by an active star or galaxy,
+respectively. If your sponsor isn't suiting your needs, you can escape to a
+different one.
 
 #### Prerequisites
 
@@ -108,4 +108,6 @@ may check that your sponsor has successfully been altered by running
 `(sein:title our now our)` in dojo and confirming that the `@p` matches that of
 your new sponsor.
 
-Changing your sponsor will also automatically change your OTA source to your new sponsor.
+Once you change your sponsor, you will likely want to change your source of
+[OTAs](@/docs/glossary/ota-updates.md) to them as well. To accomplish this, enter `|ota
+~sponsor %kids` in dojo, where `~sponsor` is the `@p` of your new sponsor.
