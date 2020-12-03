@@ -8,3 +8,5 @@
 /docs/arvo/internals/                /docs/tutorials/arvo/ 301!
 /primer                              /understanding-urbit/ 301!
 /install                             /using/install 301!
+/install/mac/latest                  http://github.com/urbit/urbit/releases/latest/download/darwin.tgz
+/install/linux64/latest              http://github.com/urbit/urbit/releases/latest/download/linux64.tgz
