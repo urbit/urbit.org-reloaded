@@ -184,12 +184,21 @@ Urbit ID secrets operate as a system of separate but hierarchically related Ethe
 
 ### Get your keyfile {#keyfile}
 
-As mentioned previously, there are a few ways to acquire a planet. All methods, however, should result in you receiving at least one secret, such as a **master ticket**. If you received an email invite to Urbit, the master ticket should a `.pdf` the passport folder that you downloaded.
+As mentioned previously, there are a few ways to acquire a planet. All methods,
+however, should result in you receiving at least one secret, such as a **master
+ticket**. If you received an email invite to Urbit, the master ticket should be
+a `.pdf` file in the passport folder inside the archive that you downloaded.
 
 1. Connect to [Bridge](https://bridge.urbit.org).
 2. Enter the name of your planet and the associated master ticket in the appropriate fields. Click the "Metamask, Mnemonic, Hardware Wallet..." button for alternate login methods if you don't have a master ticket.
 3. Once you're logged in, click the "OS" option.
-4. In resulting page, click the "Download Arvo Keyfile" button. You should receive a `.key` file that contains the secret needed to boot your ship. Hold onto this file.
+4. In resulting page, click the "Download Arvo Keyfile" button. You should
+   receive a `.key` file that contains the secret needed to boot your ship. Hold
+   onto this file. This may be grayed out if you are not using a master ticket.
+   If so, click on "Reset Networking Keys", then click on "Reset Networking Keys" on
+   the following page, validate the transaction using your wallet, and then
+   click Send Trasaction. Once the transaction is complete, the "Download Arvo
+   Keyfile" button should be available for you to press.
 
 ### Choose to host or run your ship locally
 
