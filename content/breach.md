@@ -5,11 +5,11 @@ template = "page_indiced.html"
 
 ## TL;DR
 
-*Last updated ~2020.12.6*
+*Last updated ~2020.12.7*
 
 A network breach is coming up on Tuesday, ~2020.12.8.
 
-Unlike past breaches, this one comes with a tool to export and reimport all of your data so that you don't lose anything; we call it `flagday` (details below).
+Unlike past breaches, this one comes with a tool to export and reimport all of your data so that you don't lose anything; we call it `flagday`. Currently a test version of `flagday` and details about its usage can be found below.
 
 This document will be kept up-to-date throughout the process, and updates will be issued via Twitter [here](https://twitter.com/tloncorporation/).
 
@@ -52,9 +52,10 @@ There are no Ethereum transactions necessary for this breach.
 
 ## I’m self-hosted—what do I need to do?
 
-**Simply use the `flagday` tool that we have provided**. It will perform all the
+**Simply use the `flagday` tool that we will provide**. It will perform all the
 relevant actions on your behalf, as well as exporting and reimporting your data.
-You can find the `flagday` script
+
+You can find a test version of the `flagday` script
 [here](https://gist.github.com/philipcmonk/8e3d095b9545069237c759cd9aad32c2).
 Usage instructions are provided in the comments at the top of the file. **It's
 not necessary to run `flagday` until after the breach**. Furthermore, your ship
