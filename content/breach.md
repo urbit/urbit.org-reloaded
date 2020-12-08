@@ -52,13 +52,12 @@ There are no Ethereum transactions necessary for this breach.
 
 ## I’m self-hosted—what do I need to do?
 
-**Simply use the `flagday` tool that we have provided**. It will perform all the
-relevant actions on your behalf, as well as exporting and reimporting your data.
+**Simply use the `flagday` tool that we have provided**. It will perform all the relevant actions on your behalf, as well as exporting and reimporting your data. Flagday should be run **after the breach has occurred.**
 
 To use `flagday`, run the following:
 
 ```shell
-curl https://bootstrap.urbit.org/flagday.sh > flagday.sh; chmod 755 ./flagday.sh; ./flagday PIER_DIRECTORY
+curl https://bootstrap.urbit.org/flagday.sh > flagday.sh; chmod 755 ./flagday.sh; ./flagday.sh PIER_DIRECTORY
 ```
 
 Alternatively, you can perform the migration manually (see below).
