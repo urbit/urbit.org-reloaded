@@ -36,7 +36,7 @@ One way to think about galaxies, stars, and planets is that they’re different-
 
 Booted and Unbooted Addresses –
 
-A booted address is one that has actually been used to boot Urbit OS. By convention, booted addresses are expected to have some existing reputation outside of their name alone, since they’ve been used on the network. Reputation, good and bad, comes in many forms. Did the address operate any useful infrastructure? Did it get placed on any blacklists for spam or abuse? Did it simply send and receive messages? The ability to programatically track reputation is still in its infancy, but we expect the tooling to develop  as urbit grows. 
+A booted address is one that has actually been used to boot Urbit OS. By convention, booted addresses are expected to have some existing reputation outside of their name alone, since they’ve been used on the network. Reputation, good and bad, comes in many forms. Did the address operate any useful infrastructure? Did it get placed on any blacklists for spam or abuse? Did it simply send and receive messages? The ability to programatically track reputation is still in its infancy, but we expect the tooling to develop as Urbit grows. 
 
 Unbooted addresses, on the other hand, have no reputation. Both booted and unbooted addresses can be transferred between owners, but booted addresses will likely vary widely in price depending on the reputation each of them has acquired, and how they’ve been used. 
 
@@ -103,7 +103,7 @@ We intend to further distribute Tlon’s address space over the coming years thr
 
 ## Usage data and composition
 
-Usage data is an obvious missing piece of the puzzle in this discussion. We understand this, and yet we don’t actively capture usage data, for two important reasons: it’s premature, and Urbit is privacy focused by design.
+Usage data is an obvious missing piece of the puzzle in this discussion. We understand this, and yet we don’t actively capture usage data, for two important reasons: it’s premature, and Urbit is privacy-focused by design.
 
 First, it’s too early. Urbit’s current users are a fanbase of pioneers who are willing to put up with the challenges of a young network. This fanbase grows on its own, but Tlon doesn’t actively encourage that growth yet. For the vast majority of potential users, the barriers to entry are still high enough that an invitation would risk losing them permanently. You can think of Urbit today as being a developer alpha.
 
