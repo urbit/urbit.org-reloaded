@@ -5,19 +5,17 @@ template = "page_indiced.html"
 
 ## TL;DR
 
-*Last updated ~2020.12.8*
+*Last updated ~2020.12.9*
 
-A network breach is happening this morning at 10am PST (~2020.12.8).
+A network breach happened on ~2020.12.8 — you may need to take action.
 
 Unlike past breaches, this one comes with a tool to export and reimport all of your data so that you don't lose anything; we call it `flagday`. Details on its usage can be found below.
 
-This document will be kept up-to-date throughout the process, and updates will be issued via Twitter [here](https://twitter.com/zodisok/).
-
 *If you are self-hosting your ship, following these instructions is mandatory in order to communicate with the rest of the network.*
 
-## When is the next breach?
+## When was the last network breach?
 
-Today at 10am PST (~2020.12.8).
+On Tuesday, ~2020.12.8.
 
 ## How do I get updates about what's going on throughout the process?
 
