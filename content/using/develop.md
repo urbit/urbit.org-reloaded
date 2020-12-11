@@ -76,13 +76,15 @@ Now you should see a block of boot messages, starting with the Urbit version num
 
 ## Community tutorials {#community-tutorials}
 
-Here are some tutorials written by members of the Urbit community. Some are a little outdated, but they may still prove useful.
+Here are some tutorials written by members of the Urbit community.
 
-- [Generators](https://github.com/joemfb/mardev/tree/master/docs/gen) by `~master-morzod`
-- [Urbit by Doing](https://github.com/Fang-/Urbit-By-Doing) by `~palfun-foslup`
-- [Learning Hoon](https://github.com/knubie/learning-hoon) by `@knubie`
 - [A Nock Interpreter](https://jtobin.io/nock) by `~nidsut-tomdun`
 - [Basic Hoonery](https://jtobin.io/basic-hoonery) by `~nidsut-tomdun`
+- [The Complete Guide to
+  Gall](https://github.com/timlucmiptev/gall-guide/blob/master/overview.md) by
+  `~timluc-miptev`
+- [Nock for Everyday Coders](https://blog.timlucmiptev.space/part1.html) by `~timluc-miptev`
+- [Rote - An Annotated Flashcard App](https://github.com/lukechampine/rote)
 
 If you want to add something to the list, [shoot us an email](mailto:support@urbit.org) or make a pull request in the [docs repository](https://github.com/urbit/docs).
 
