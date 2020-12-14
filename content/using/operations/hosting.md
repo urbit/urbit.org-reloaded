@@ -123,12 +123,15 @@ Finally we're ready to install Urbit on your very own server. This part is actua
    $ tar -zxvf <ship_dir_name>.tar.gz
    $ ./urbit-v0.10.8-linux64/urbit <ship_dir_name>
    ```
- - Now we run a few commands in Dojo to request a Let’s Encrypt cert for your domain (replace `tld` with whatever your top-level domain is e.g. `com` in `example.com`:
+ - Now we run a few commands in Dojo to request a Let’s Encrypt cert for your
+   domain. Replace `tld` with whatever your top-level domain is e.g. `com` in
+   `example.com`. `your_subdomain` is optional and that part of the command
+   should be omitted if you are not using it):
    ```
    ~sampel-palnet:dojo> |start %acme
-   ~sampel-palnet:dojo> :acme &path /tld/your_domain
+   ~sampel-palnet:dojo> :acme &path /tld/your_domain/your_subdomain
    ```
- - Your ship should now be sailing on the digital ocean. Check `https://your_domain`, if everything is working properly you should see a login page.
+ - Your ship should now be sailing on the digital ocean. Check `https://your_subdomain.your_domain.tld`, if everything is working properly you should see a login page.
  - Log in with the code from `+code` in dojo like normal and you should see all of your applications.
 
 ## Leaving your Urbit running in a Screen session
