@@ -106,22 +106,21 @@ Finally we're ready to install Urbit on your very own server. This part is actua
    $ ssh your_user@your_domain
    $ mkdir urbit
    $ cd urbit
-   $ curl -O https://bootstrap.urbit.org/urbit-v0.10.8-linux64.tgz
-   $ tar xzf urbit-v0.10.8-linux64.tgz
-   $ cd urbit-v0.10.8-linux64
+   $ wget --content-disposition https://urbit.org/install/linux64/latest
+   $ tar zxf ./linux64.tgz --strip=1
    $ sudo setcap 'cap_net_bind_service=+ep' urbit
    ```
  - Now we're going to tar up your local ship and send it to your server, from your local machine's urbit directory:
    ```
    $ tar -zcvf <ship_dir_name>.tar.gz <ship_dir_name>
-   $ scp <ship_dir_name>.tar.gz  your_user@your_domain:/home/your_user/urbit
+   $ scp <ship_dir_name>.tar.gz  your_user@your_domain:urbit
    ```
  - Back on your server let's untar your ship and start it up with the Ames port we allowed through the firewall:
    ```
    $ ssh your_user@your_domain
    $ cd urbit
    $ tar -zxvf <ship_dir_name>.tar.gz
-   $ ./urbit-v0.10.8-linux64/urbit <ship_dir_name>
+   $ ./urbit <ship_dir_name>
    ```
  - Now we run a few commands in Dojo to request a Let’s Encrypt cert for your
    domain. Replace `tld` with whatever your top-level domain is e.g. `com` in
@@ -142,7 +141,7 @@ Finally, to leave your Urbit running after you disconnect we can leave it in a S
    ```
  - This will start a screen session, we can now start up the Urbit ship from the `urbit` directory in this session:
    ```
-   $ ./urbit-v0.10.8-linux64/urbit <ship_dir_name>
+   $ ./urbit <ship_dir_name>
    ```
  - Then we can disconnect from the screen session and leave the ship running with `control-a d`
  - To get back into the screen session:
