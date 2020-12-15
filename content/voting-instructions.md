@@ -5,7 +5,7 @@ template = "page_indiced.html"
 hidetitle = "true"
 +++
 
-## Arvo Stability Vote
+## Urbit Continuity & Security Vote
 
 As a galaxy owner, you have the opportunity to participate in one of the first votes conducted on the Azimuth network – a vote on whether Tlon has designated the Urbit network as continuous and confirmed to be secure by a third-party auditer, the third component in the [roadmap](https://github.com/urbit/azimuth/blob/master/proposals/0xcb1f81e42b5e75f000f94fc71a3ea70cab4bfc6f236b91e717f1b9516e5596b5.txt) embedded in Azimuth.
 
