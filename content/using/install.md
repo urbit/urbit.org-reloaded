@@ -80,11 +80,7 @@ Comets are disposable, free identities that can be used to quickly join the netw
 To boot a comet, go into the command line and run the following command from the `urbit` directory you created during [Urbit installation](#installing-urbit):
 
 ```sh
-#macOS:
-./urbit-v0.10.8-darwin/urbit -c mycomet
-
-#Linux:
-./urbit-v0.10.8-linux64/urbit -c mycomet
+./urbit -c mycomet
 ```
 
 Since your identity on the network is not verified, it may take up to an hour to generate your comet. As it boots, will spin out a bunch of boot messages and create a directory called `mycomet`. Toward the end of the boot process, you'll see something like:
@@ -104,11 +100,7 @@ To exit Urbit, use `Ctrl-D` or enter `|exit` into Dojo.
 To start your ship up again, run the following from your `urbit` directory (note the lack of `-c` argument):
 
 ```sh
-#macOS:
-./urbit-v0.10.8-darwin/urbit mycomet
-
-#Linux:
-./urbit-v0.10.8-linux64/urbit mycomet
+./urbit mycomet
 ```
 
 ### The Dojo
@@ -222,21 +214,13 @@ Once you're inside, run the command below, except with `sampel-palnet` replaced 
 Urbit identity, and `path/to/my-planet.key` replaced with the path to your keyfile:
 
 ```sh
-#macOS:
-./urbit-v0.10.8-darwin/urbit -w sampel-palnet -k path/to/my-planet.key
-
-#Linux:
-./urbit-v0.10.8-linux64/urbit -w sampel-palnet -k path/to/my-planet.key
+./urbit -w sampel-palnet -k path/to/my-planet.key
 ```
 
-Or, if you'd prefer to copy your key in, you can run:
+Or, if you'd prefer to copy-paste your key, you can run:
 
 ```sh
-#macOS:
-./urbit-v0.10.8-darwin/urbit -w sampel-palnet -G rAnDoMkEy
-
-#Linux:
-./urbit-v0.10.8-linux64/urbit -w sampel-palnet -G rAnDoMkEy
+./urbit -w sampel-palnet -G rAnDoMkEy
 ```
 
 Either command will create a directory called `sampel-palnet/` and begin building your ship. It may take a few minutes.
@@ -246,11 +230,7 @@ When your ship is finished booting, you will see either the `~sampel-palnet:dojo
 To shut down your ship, use `Ctrl-D`. To start your ship up again, run the following from your `urbit` directory:
 
 ```sh
-#macOS:
-./urbit-v0.10.8-darwin/urbit sampel-palnet
-
-#Linux:
-./urbit-v0.10.8-linux64/urbit sampel-palnet
+./urbit sampel-palnet
 ```
 
 Note that `sampel-palnet/` is the path of a folder, which we just created in your `urbit` directory. This folder is called your ship's **pier**.
@@ -271,46 +251,30 @@ Most updates to Urbit are downloaded and applied automatically as OTA (Over the 
 
 To update to the latest binary, download and extract it to replace your existing one. Then run it as before.
 
-For example, if in your current `urbit` directory you have an `urbit-v0.10.7-<OS>` directory along with a ship directory called `mycomet`, and a new `urbit-v0.10.8-<OS>` binary was just released, then you'd run the following commands from your `urbit` directory:
-
-First shut down your ship, by running the following in dojo (or `Ctrl-D`).
+First shut down your ship, by running the following in dojo (or with `Ctrl-D`).
 ```
 |exit
-```
-
-**NOTE**: Your ship itself can be reused, only the binary needs to be changed. This is why we have the directory structure configured as an `urbit` directory that contains your ship and your binary. This structure makes it easy to swap in new binaries. If you have your ship *inside* the `urbit-vX.XX.X` directory, move it out before deleting that directory.
-
-Delete the old binary directory from your `urbit` directory:
-
-```sh
-#macOS:
-rm -rf urbit-v0.10.7-darwin
-
-#Linux:
-rm -rf urbit-v0.10.7-linux64
 ```
 
 Next download and extract the most recent binary from inside your `urbit` directory:
 ```sh
 #macOS:
-curl -O https://bootstrap.urbit.org/urbit-v0.10.8-darwin.tgz
-tar xzf urbit-v0.10.8-darwin.tgz
+wget --content-disposition https://urbit.org/install/mac/latest
+tar zxvf ./darwin.tgz --strip=1
 
 #Linux:
-curl -O https://bootstrap.urbit.org/urbit-v0.10.8-linux64.tgz
-tar xzf urbit-v0.10.8-linux64.tgz
+wget --content-disposition https://urbit.org/install/linux64/latest
+tar zxvf ./linux64.tgz --strip=1
 ```
+
+**NOTE**: Do not delete the directory named after your ship. Your ship itself can be reused, only the binary needs to be changed. This is why we have the directory structure configured as an `urbit` directory that contains your ship and your binary. This structure makes it easy to swap in new binaries.
 
 Start up your ship with the new binary from your `urbit` directory:
 ```sh
-#macOS:
-./urbit-v0.10.8-darwin/urbit mycomet
-
-#Linux:
-./urbit-v0.10.8-linux64/urbit mycomet
+./urbit sampel-palnet
 ```
 
-Then you're good to go, in the future you'll just modify the version numbers in the example above to the most recent version.
+Then you're good to go!
 
 ### Breaches {#breaches}
 
