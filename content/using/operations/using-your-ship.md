@@ -67,6 +67,12 @@ Delete the tar file, and, after installing Urbit on your new server, start your 
 ./urbit your-urbit
 ```
 
+### Hardware requirements
+
+Urbit can run on any x86 computer, ideally with at least 2GB of RAM.
+
+Urbit maintains a persistent log of the history of your ship. Eventually this log will be automatically trimmed when necessary, but for now it only increases in size. An actively used planet will consume 5-50 GB of storage space per year of operation.
+
 ### Console
 
 Your Urbit terminal is separated into two parts: the prompt (the bottom line) and the record (everything above that). The record is shared; all the output from all the apps in your command set appears in it. The prompt is multiplexed.
