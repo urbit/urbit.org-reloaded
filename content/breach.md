@@ -61,7 +61,8 @@ a galaxy that Tlon has left running in the old era specifically for this
 purpose. Enter `|ota ~fet %kids` into dojo and wait until the OTA update is
 complete. Now you are ready to proceed.
 
-**Simply use the `flagday` tool that we have provided**. It will perform all the relevant actions on your behalf, as well as exporting and reimporting your data. Flagday should be run **after the breach has occurred.**
+**Simply use the `flagday` tool that we have provided**. It will perform all the
+relevant actions on your behalf, as well as exporting and reimporting your data.
 
 To use `flagday`, run the following:
 
