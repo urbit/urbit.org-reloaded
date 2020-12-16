@@ -50,6 +50,17 @@ There are no Ethereum transactions necessary for this breach.
 
 ## I’m self-hosted—what do I need to do?
 
+You are still in the old era. First you need to ensure that you are on the
+correct base hash - run `+trouble` in dojo and check that the following line
+is displayed.
+```
+[%base-hash [0v1f.lbtqc.5o909.qqja6.17dgp.m8gde.bmiqc.fa97p.8jer8.msu43.5rf36]]
+```
+If `%base-hash` is different, you need to download the correct OTA from `~fet`,
+a galaxy that Tlon has left running in the old era specifically for this
+purpose. Enter `|ota ~fet %kids` into dojo and wait until the OTA complete. Now
+you are ready to proceed.
+
 **Simply use the `flagday` tool that we have provided**. It will perform all the relevant actions on your behalf, as well as exporting and reimporting your data. Flagday should be run **after the breach has occurred.**
 
 To use `flagday`, run the following:
