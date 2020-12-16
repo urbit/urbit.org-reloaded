@@ -42,8 +42,6 @@ No. A network breach subsumes all personal breaches, so please don’t also perf
 
 If you are using a self-hosted ship, you need to affirmatively perform the breach using the instructions below. If you are using hosting, your ship will process the breach automatically.
 
-In either case, the breach will render your ship unavailable for roughly one hour.
-
 ## Do I need to do anything with Bridge/Ethereum?
 
 There are no Ethereum transactions necessary for this breach.
