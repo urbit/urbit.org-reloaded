@@ -17,7 +17,8 @@ The connected world anticipated by Urbit is a much friendlier one, much like the
 
 ### How secure is Urbit right now? {#how-secure-is-urbit}
 
-Urbit ID / Azimuth, Urbit's identity layer, is live on the Ethereum blockchain and has been audited by Open Zeppelin, Blockchain at Berkeley, and Bloctrax. [We run a bug bounty program](https://hackerone.com/tlon) on HackerOne.
+Urbit ID / Azimuth, Urbit's identity layer, is live on the Ethereum blockchain
+and has been audited by Open Zeppelin, Blockchain at Berkeley, and Bloctrax.
 
 Urbit OS / Arvo is still an early beta. Arvo is safe to play with, but it’s not yet a place to store or share private information. Urbit's cryptographic protocols have not been professionally audited, and the OS itself doesn't provide protection from attackers on the network — although we haven't seen any yet.
 
