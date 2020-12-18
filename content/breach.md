@@ -1,5 +1,5 @@
 +++
-title = "~2020.12 Network Breach"
+title = "~2020.12 Network Reset"
 template = "page_indiced.html"
 +++
 
@@ -7,7 +7,7 @@ template = "page_indiced.html"
 
 *Last updated ~2020.12.9*
 
-A network breach happened on ~2020.12.8 — you may need to take action.
+A network reset happened on ~2020.12.8 — you may need to take action. We call an event like this a 'breach' since we breach the continuity of Urbit's network protocol. This isn't a security incident.
 
 Unlike past breaches, this one comes with a tool to export and reimport all of your data so that you don't lose anything; we call it `flagday`. Details on its usage can be found below.
 
