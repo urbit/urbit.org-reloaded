@@ -32,7 +32,7 @@ Regardless of your Urbit ID, you'll want the Urbit binary installed first. The U
 #macOS:
 mkdir urbit
 cd urbit
-wget --content-disposition https://urbit.org/install/mac/latest
+curl -JLO https://urbit.org/install/mac/latest
 tar zxvf ./darwin.tgz --strip=1
 ./urbit
 
@@ -259,7 +259,7 @@ First shut down your ship, by running the following in dojo (or with `Ctrl-D`).
 Next download and extract the most recent binary from inside your `urbit` directory:
 ```sh
 #macOS:
-wget --content-disposition https://urbit.org/install/mac/latest
+curl -JLO https://urbit.org/install/mac/latest
 tar zxvf ./darwin.tgz --strip=1
 
 #Linux:
