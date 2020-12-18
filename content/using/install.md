@@ -55,7 +55,7 @@ To access your Urbit via HTTP on port 80 on Ubuntu, you may need to run the foll
 sudo apt-get install libcap2-bin
 sudo setcap 'cap_net_bind_service=+ep' /path/to/urbit
 ```
-(Where `urbit` is the urbit executable downloaded with `curl` prior)
+(Where `urbit` is the urbit executable downloaded with `wget` prior)
 
 ### Windows
 
