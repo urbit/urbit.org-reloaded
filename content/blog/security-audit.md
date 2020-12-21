@@ -1,10 +1,10 @@
 +++
-title = "Security Audit Postmortem"
+title = "Ames Security Audit and the Future of the Protocol"
 description = "Ames’ design has unparalleled potential to deter, mitigate, and recover from attacks, since every packet is authenticated and encrypted and backed by a stable, decentralized PKI."
 date = 2020-12-18
 [extra]
-author = "Athony Arroyo"
-ship = "~poldec-tonteg"
+author = "Ted Blackman + Anthony Arroyo"
+ship = "~rovnys-ricfer + ~poldec-tonteg"
 image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/20201218-audit.png"
 +++
 
