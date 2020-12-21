@@ -14,8 +14,6 @@ image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/202012
 
 <br>
 
-# Security Audit Postmortem
-
 The security firm Leviathan has now finished their initial audit of the security of Urbit's Ames network protocol. In addition to their review of Ames, we also asked them to identify any other issues in order to help guide further development.
 
 I'm pleased to report they confirmed the cryptographic soundness of the protocol, namely that "a ship must have possession of their own valid Urbit key in order to authenticate as that ship and to send valid Ames messages. Additionally, no other ship except the two communicating may be able to decrypt or modify messages during transport."
