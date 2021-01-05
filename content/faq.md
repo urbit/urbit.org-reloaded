@@ -181,9 +181,11 @@ moon. Urbit elevates everybody to the level of planet.
 
 ### What is a `@p`? Why is my username generated for me? {#what-is-patp}
 
-A `@p` (pronounced *pat-pee*) is a name like `~zod` or `~lodleb-ritrul` composed
-of pronounceable, three-letter phonemic elements like `zod`, `lod`, `leb`, `rit`
-and `rul`. Shorter names, such as `~zod` and `~marzod`, are assigned to
+A `@p`
+([pronounced](@/docs/tutorials/hoon/hoon-school/hoon-syntax.md#reading-hoon-aloud)
+*pat-pee*) is a name like `~zod` or `~lodleb-ritrul` composed of pronounceable,
+three-letter phonemic elements like `zod`, `lod`, `leb`, `rit` and `rul`.
+Shorter names, such as `~zod` and `~marzod`, are assigned to
 [ship](@/docs/glossary/ship.md)s with special duties on the
 [Arvo](#what-is-arvo) network stars and galaxies, respectively. Longer names
 like `~palfun-foslup` are identities for typical users.
