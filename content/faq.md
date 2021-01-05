@@ -109,11 +109,14 @@ Hoon can do.
 
 ### What is the point of Nock? {#why-nock}
 
-The primary technical reason we can’t run our own computers already is that they
-don’t all compute the same way. [Nock](/docs/glossary/nock.md) solves this
-problem. It provides a single computing foundation for the whole network. It’s
-also deterministic — which is an important feature when designing a personal
-server with the objective of being as simple to manage as a personal computer.
+The primary technical reason it is difficult for the individual to run a
+personal server is that modern computing architectures are not deterministic.
+What solves a problem for one person is not guaranteed to work on another
+person's computer, even if they are using identical hardware.
+[Nock](/docs/glossary/nock.md) solves this problem. It provides a single
+computing foundation for the whole network, so that difficult issues that
+arise when running a server need only to be solved once and the solution is
+guaranteed to work for everyone on the network.
 
 It’s true that Nock, without jets, is slow. With the ability to call out to a
 native function, it’s not so bad. This is done by our runtime,
