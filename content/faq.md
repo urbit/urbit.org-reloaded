@@ -387,7 +387,7 @@ Urbit OS, also called [Arvo](@/docs/glossary/arvo.md), is our functional and
 deterministic software stack. Arvo is written in [Hoon](@/docs/glossary/hoon.md), our purely functional
 programming language, which compiles to [Nock](@/docs/glossary/nock.md), a compact bytecode language.
 
-Instances of Urbit OS / Arvo, called '[ships](@/docs/glossary/ship.md)',
+Instances of Urbit OS, called '[ships](@/docs/glossary/ship.md)',
 communicate as peers on what we refer to as “the [Ames](@/docs/glossary/ames.md)
 network.” Using Urbit ID, Urbit OS ships can prove their identities to one
 another.
