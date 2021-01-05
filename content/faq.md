@@ -15,11 +15,12 @@ solve certain corners of the problem. Urbit proposes that only a new stack,
 built from the ground up as a tightly integrated system, can realize a great
 user experience for people using a peer-to-peer web.
 
-Combining a deterministic operating system ([Urbit OS](#what-is-arvo) / Arvo) and a secure,
-global identity layer ([Urbit ID](#what-is-urbit-id) / [Azimuth](#what-is-azimuth)), the Urbit project has created
-something that’s never existed before: an encrypted peer-to-peer network where
-you can be sure that messages are never tampered with or surveilled, and where
-strangers on that network can be trusted by default.
+Combining a deterministic operating system ([Urbit OS](#what-is-arvo) / Arvo)
+and a secure, global identity layer ([Urbit ID](#what-is-urbit-id) /
+[Azimuth](#what-is-azimuth)), the Urbit project has created something that’s
+never existed before: an encrypted [Sybil
+resistant](https://en.wikipedia.org/wiki/Sybil_attack) peer-to-peer network
+where you can be sure that messages are never tampered with or surveilled.
 
 The connected world anticipated by Urbit is a much friendlier one, much like the early Internet, where collegial discussion and collaboration was the norm. Problems that are unsolvable without large-scale political centralization in our current internet – data breaches, spam, fake reviews, malware-spreading, harassment – become tractable when individuals control their computing again. You have one login for everything. You own and control all of your software and all of your data by default. Software is designed around the friendships, families, communities, and organizations you're already a part of – not the other way around.  
 
