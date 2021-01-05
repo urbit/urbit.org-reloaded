@@ -216,7 +216,7 @@ replacing the storage contracts.
 
 We'll walk through how we have designed these contracts in detail here.  You can
 also view our in-progress source at the
-[`urbit/constitution` GitHub repo](https://github.com/urbit/constitution).
+[`urbit/azimuth` GitHub repo](https://github.com/urbit/azimuth).
 
 ### Certificate storage contract
 
