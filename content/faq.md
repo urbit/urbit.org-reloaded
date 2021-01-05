@@ -77,10 +77,11 @@ It’s also worth noting that, while there are almost 8B people on Earth, there 
 
 ### Why do you use Ethereum? {#why-eth}
 
-As of 2019 (when [Azimuth](#what-is-azimuth) was launched), Ethereum is the most widely deployed,
-most secure, and best documented general purpose blockchain. Using Ethereum is a
-practical engineering choice. It’s the best way to bootstrap real cryptographic
-ownership. We’re not specifically interested in Ethereum one way or the other.
+In 2019 (when [Azimuth](#what-is-azimuth) was launched), Ethereum was the most
+widely deployed, most secure, and best documented general purpose blockchain,
+and it remains so today. Using Ethereum is a practical engineering choice. It’s the
+best way to bootstrap real cryptographic ownership. We’re not specifically
+interested in Ethereum one way or the other.
 
 One day we’d really like the Urbit ID registry to be hosted on [Urbit
 OS](#what-is-arvo) itself. But the first challenge is getting Urbit OS to be
