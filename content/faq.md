@@ -134,14 +134,14 @@ Urbit's deterministic design.
 
 ### What is Urbit ID? {#what-is-urbit-id}
 
-Urbit ID is a general-purpose decentralized PKI ("public key infrastructure")
-that Urbit uses as an identity system. This system is implemented as a suite of
-smart contracts on the Ethereum blockchain, and it determines which Ethereum
-addresses own which Urbit [planets](@/docs/glossary/planet.md),
-[stars](@/docs/glossary/star.md), or [galaxies](@/docs/glossary/galaxy.md). In
-[Urbit OS](#what-is-arvo), a single identity is called a
-"[ship](@/docs/glossary/ship.md)", whereas in Urbit ID a single identity is just
-an "identity."
+Urbit ID is the identity system utilized by Urbit, which associates to each
+[ship](@/docs/glossary/ship.md) a public and private key used to establish
+encrypted connections between one another and to guard private data. For
+[planets](@/docs/glossary/planet.md), [stars](@/docs/glossary/star.md), and
+[galaxies](@/docs/glossary/galaxy.md), this is achieved with a set of Ethereum
+smart contracts called [Azimuth](#what-is-azimuth). Keys for
+[moons](@/docs/glossary/moon.md) and [comets](@/docs/glossary/comet.md) are
+handled within Urbit.
 
 ### What are stars, galaxies, and planets? {#stars-galaxies-planets}
 
@@ -151,7 +151,13 @@ Planets are intended for everyday use by individuals, and there are 4.3 billion 
 
 ### What is Azimuth? {#what-is-azimuth}
 
-[Azimuth](@/docs/glossary/azimuth.md) is what we call the set of Ethereum contracts that make up Urbit ID. It's also kind of a [cool astronomical concept](https://en.wikipedia.org/wiki/Azimuth).
+[Azimuth](@/docs/glossary/azimuth.md) is what we call the set of Ethereum
+contracts that make up a general-purpose decentralized PKI ("public key
+infrastructure") utilized by Urbit ID. It keeps a record of which Ethereum
+addresses own which Urbit planets, stars, and galaxies, as well as the public
+keys associated with those ships.
+ 
+It's also kind of a [cool astronomical concept](https://en.wikipedia.org/wiki/Azimuth).
 
 ### How many planets, stars, and galaxies are active? {#how-many-planets-stars-galaxies}
 
