@@ -83,11 +83,15 @@ Continuing to follow the DO docs we're going to configure the ufw firewall.
    ```
    $ sudo ufw app list
    ```
- - Next we'll configure ufw to allow connections via ssh and to allow Urbit to use the standard web port when the firewall is enabled.
+ - Next we'll configure ufw to allow connections via ssh and to allow Urbit to use the standard web port when the firewall is enabled,
+ as well as opening a port that we'll later specify for your urbit to use to communicate directly with other ships.
    ```
    $ sudo ufw allow OpenSSH
    $ sudo ufw allow www
+   $ sudo ufw allow 34543/udp
    ```
+ Note that you can choose any port in place of 34543 for Ames. Just be sure to pass the same port via the `-p` option when starting your ship.
+   
  - Next we'll turn on the firewall.
    ```
    $ sudo ufw enable
@@ -120,7 +124,7 @@ Finally we're ready to install Urbit on your very own server. This part is actua
    $ ssh your_user@your_domain
    $ cd urbit
    $ tar -zxvf <ship_dir_name>.tar.gz
-   $ ./urbit <ship_dir_name>
+   $ ./urbit -p 34543 <ship_dir_name>
    ```
  - Now we run a few commands in Dojo to request a Let’s Encrypt cert for your
    domain. Replace `tld` with whatever your top-level domain is e.g. `com` in
