@@ -200,7 +200,7 @@ something like DNS chooses (i) and (ii).
 
 Regardless, you can always choose to
 set your nickname in [Landscape](#what-is-landscape), so if you wish for a
-different name to displayed then you have the freedom to do so.
+different name to be displayed then you have the freedom to do so.
 
 ### Can I change my `@p`? {#change-my-patp}
 
