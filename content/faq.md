@@ -187,7 +187,7 @@ A `@p`
 three-letter phonemic elements like `zod`, `lod`, `leb`, `rit` and `rul`.
 Shorter names, such as `~zod` and `~marzod`, are assigned to
 [ship](@/docs/glossary/ship.md)s with special duties on the
-[Arvo](#what-is-arvo) network stars and galaxies, respectively. Longer names
+[Arvo](#what-is-arvo) network galaxies and stars, respectively. Longer names
 like `~palfun-foslup` are identities for typical users.
 
 These names map directly to a corresponding number in the Urbit ID address space. Galaxies occupy the 8-bit address space, so any galaxy is actually a number between zero and 255. Stars occupy the 16-bit address space, and planets occupy the 32-bit address space.
