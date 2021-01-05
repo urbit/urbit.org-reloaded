@@ -380,7 +380,7 @@ price in ether of a planet, and the number of planets available.
 
 That was quite a lot of information! There's also a blog post about the constitution
 [here](https://urbit.org/blog/interim-constitution/), and GitHub issues on the
-[urbit/constitution repo](https://github.com/urbit/constitution) are more
+[urbit/azimuth repo](https://github.com/urbit/azimuth) are more
 than welcome.
 
 There's a lot more to come on this front as our contracts get closer to getting
