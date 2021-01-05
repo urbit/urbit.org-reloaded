@@ -108,7 +108,7 @@ By default, you will automatically receive updates ([OTAs](@/docs/glossary/ota-u
 
 If for some reason (for example, if your sponsor is out of date), you can switch OTA sources by running `|ota ~otasrc %kids` in the dojo, where `~otasrc` is the ship from which you want to receive updates. It is a good idea to contact the source ship and ask permission to sync from them.
 
-If OTAs are not succeeding, or if you are on an version of Urbit before the `|ota` command was introduced, you can run `|merge %kids (sein:title our now our) %kids, =gem %take-that`. **Note:** This will wipe out any custom changes to the base distribution.
+If OTAs are not succeeding, or if you are on an version of Urbit before the `|ota` command was introduced, you can run `|merge %home (sein:title our now our) %kids, =gem %take-that`. **Note:** This will wipe out any custom changes to the base distribution.
 
 ### Landscape
 
@@ -185,28 +185,11 @@ To cycle the keys of a moon without breaching, run:
 
 ### Escaping A Sponsor {#escape}
 
-To use the network as a planet or star, you must be sponsored by an active star or galaxy, respectively. If your sponsor isn't suiting your needs, you can escape to a different one. The [Bridge](https://bridge.urbit.org/) software doesn't yet support escaping. For the time being, however, you can follow this guide.
-
-#### Prerequisites
-
-- A little bit of ETH in your management proxy address to pay for the transaction.
-- The identity number of the sponsor you want to escape from.
-- The identity number of the sponsor you want to escape to.
-
-You can find an identity's number by running ``` `@`~marzod ``` in any Dojo, where `~marzod` is the name of the relevant identity.
-
-#### Instructions
-
-0. If you have your management proxy in Metamask, you can use Etherscan [here](https://etherscan.io/address/ecliptic.eth#writeContract). Skip steps 1-4.
-1. Go to either myetherwallet.com or mycrypto.com. Since this is a low-risk operation, and you're signing with a low-value key, it's fine to use their online versions. Sign in with your management mnemonic. (They may still force you to download their tool to log in like this.)
-2. Navigate to the "interact with contract" page of the tool you're using.
-3. Specify a contract address of `0x6ac07B7C4601B5CE11de8Dfe6335B871C7C4dd4d`.
-4. Copy the "contract ABI" from [here](https://etherscan.io/address/ecliptic.eth#code) and paste it into the "ABI/JSON interface" field.
-5. Select the `escape()` function, passing in two arguments: your identity number, and the number of your desired sponsor.
-6. Sign and submit the transaction.
-7. Get in touch with your prospective sponsor, since they won't be notified otherwise. You can do this by contacting them on the network via chat, or joining `~bitbet-bolbel/urbit-community` and asking around.
-8. Wait for your request to be accepted by the prospective sponsor.
-9. If your request is not accepted by your prospective sponsor, a last resort, you can make a request to escape to `~marzod`, which is operated by Tlon, the company leading the development of Urbit.
+To use the network as a planet or star, you must be sponsored by an active star
+or galaxy, respectively. If your sponsor isn't suiting your needs, you can
+escape to a different one. This can be done with
+[Bridge](https://bridge.urbit.org/) following the instructions
+[here](@/using/operations/using-bridge.md#escaping-your-sponsor).
 
 ### Continuity breaches
 
@@ -578,6 +561,37 @@ Syntax `;unset notify`
 Do not notify when your ship name is mentioned.
 
 
+## S3 {#s3}
+
+Amazon S3, which stands for Amazon Simple Storage Service, is a technology that was introduced by Amazon Web Services for cloud storage that has since been extended more broadly into a [standard programming interface](https://en.wikipedia.org/wiki/Amazon_S3#S3_API_and_competing_services).
+
+Our S3 support lets you store credentials for your S3 object storage buckets on your Urbit ship; once you have done so, you will get additional functionality for uploading your own media within Chat and Groups (for avatars).
+
+To enable S3 support on your ship you'll need to first set up a bucket, and then add its credentials to Landscape using *either* Landscape or the Dojo.
+
+### Bucket Setup
+
+If you’re using AWS, it will have to support signature v2, not v4. We've found DigitalOcean's Spaces to work well also. The bucket has to be publicly readable, allow CORS from `*` origins, allow GET and PUT methods, and allow `*` headers. Your provider should have details on setting access permissions and CORS.
+
+### Add your credentials: Landscape
+
+Navigate to your `https://<your-ship-url>/~profile/settings`, or click your sigil in the upper-right corner of the window. Fill out the **S3 Credentials** and **S3 Buckets** sections and you're all set!
+
+### Add your credentials: Dojo
+
+Once you have gotten your bucket setup, poke the `s3-store` on your ship with your details. You can do this in Dojo or in web Dojo.
+
+```
+:s3-store|set-endpoint 'endpoint.mys3provider.com'
+:: AWS endpoint example: s3-us-west-2.amazonaws.com
+:: Digital Ocean endpoint example: sfo2.digitaloceanspaces.com
+:s3-store|set-access-key-id 'MYACCESSKEYID'
+:s3-store|set-secret-access-key 'MYSECRETACCESSKEY'
+:s3-store|set-current-bucket 'yourbucketname'
+```
+
+Done! If you need to peek at s3-store’s state, you can always run :s3-store +dbug (inside Dojo, not web Dojo, unfortunately). You’ll see the additional functionality appear in Groups and Chat.
+
 ## Shell {#using-the-shell}
 
 The Dojo is our shell; it processes system commands and returns output. It's a
@@ -671,6 +685,10 @@ arguments.
 ```
 ~your-urbit:dojo> +code
 ```
+
+You can change your code to a new randomly generated one by entering `|code
+%reset`. Please note that this will prevent [Bridge](@/docs/glossary/bridge.md)
+from being able to derive your code in the future.
 
 #### `+curl`
 
@@ -1331,50 +1349,7 @@ Example:
 
 ### Merge strategies
 
-`%init` - used if it's the first commit to a desk. Also can be used to
-"reinitialize" a desk – revision numbers keep going up, but the new
-revision isn't necessarily a descendent of the previously numbered
-version, allowing merges to be rerun.
-
-`%this` - keep what's in Bob's desk, but join the ancestry.
-
-`%that` - take what's in Alice's desk, but join the ancestry. This is
-the reverse of `%this`. This is different from `%init` because the new
-commit has both sides in its ancestry.
-
-`%fine` - "fast-forward" merge. This succeeds if and only if one head is in the
-ancestry of the other.
-
-`%meet`, `%mate`, and `%meld` - find the most recent common ancestor to
-use as our merge base.
-
-A `%meet` merge only succeeds if the changes from the merge base to
-Alice's head (hereafter, "Alice's changes") are in different files than
-Bob's changes. In this case, the parents are both Alice's and Bob's
-heads, and the data is the merge base plus Alice's changed files plus
-Bob's changed files.
-
-A `%mate` merge attempts to merge changes to the same file when both
-Alice and Bob change it. If the merge is clean, we use it; otherwise, we
-fail. A merge between different types of changes – for example,
-deleting a file vs changing it – is always a conflict. If we succeed,
-the parents are both Alice's and Bob's heads, and the data is the merge
-base plus Alice's changed files plus Bob's changed files plus the merged
-files.
-
-A `%meld` merge will succeed even if there are conflicts. If there are
-conflicts in a file, then we use the merge base's version of that file,
-and we produce a set of files with conflicts. The parents are both
-Alice's and Bob's heads, and the data is the merge base plus Alice's
-changed files plus Bob's changed files plus the successfully merged
-files plus the merge base's version of the conflicting files.
-
-`%auto` - meta-strategy. Check to see if Bob's desk exists, and if it
-doesn't we use an `%init` merge. Otherwise, we progressively try
-`%fine`, `%meet`, and `%mate` until one succeeds. If none succeed, we
-merge Bob's desk into a scratch desk. Then, we merge Alice's desk into
-the scratch desk with the `%meld` option to force the merge. Finally, we
-annotate any conflicts, if we know how.
+See [@/docs/tutorials/arvo/clay.md#merge-strategies](Clay merge strategies).
 
 ### Manipulation
 

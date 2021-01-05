@@ -96,7 +96,7 @@ Continuing to follow the DO docs we're going to configure the ufw firewall.
    ```
    $ sudo ufw enable
    ```
- - To see the current the current firewall status use the following.
+ - To see the current firewall status use the following.
    ```
    $ sudo ufw status
    ```
@@ -110,29 +110,31 @@ Finally we're ready to install Urbit on your very own server. This part is actua
    $ ssh your_user@your_domain
    $ mkdir urbit
    $ cd urbit
-   $ curl -O https://bootstrap.urbit.org/urbit-v0.10.8-linux64.tgz
-   $ tar xzf urbit-v0.10.8-linux64.tgz
-   $ cd urbit-v0.10.8-linux64
+   $ wget --content-disposition https://urbit.org/install/linux64/latest
+   $ tar zxf ./linux64.tgz --strip=1
    $ sudo setcap 'cap_net_bind_service=+ep' urbit
    ```
  - Now we're going to tar up your local ship and send it to your server, from your local machine's urbit directory:
    ```
    $ tar -zcvf <ship_dir_name>.tar.gz <ship_dir_name>
-   $ scp <ship_dir_name>.tar.gz  your_user@your_domain:/home/your_user/urbit
+   $ scp <ship_dir_name>.tar.gz  your_user@your_domain:urbit
    ```
  - Back on your server let's untar your ship and start it up with the Ames port we allowed through the firewall:
    ```
    $ ssh your_user@your_domain
    $ cd urbit
    $ tar -zxvf <ship_dir_name>.tar.gz
-   $ ./urbit-v0.10.8-linux64/urbit -p 34543 <ship_dir_name>
+   $ ./urbit -p 34543 <ship_dir_name>
    ```
- - Now we run a few commands in Dojo to request a Let’s Encrypt cert for your domain (replace `tld` with whatever your top-level domain is e.g. `com` in `example.com`:
+ - Now we run a few commands in Dojo to request a Let’s Encrypt cert for your
+   domain. Replace `tld` with whatever your top-level domain is e.g. `com` in
+   `example.com`. `your_subdomain` is optional and that part of the command
+   should be omitted if you are not using it):
    ```
    ~sampel-palnet:dojo> |start %acme
-   ~sampel-palnet:dojo> :acme &path /tld/your_domain
+   ~sampel-palnet:dojo> :acme &path /tld/your_domain/your_subdomain
    ```
- - Your ship should now be sailing on the digital ocean. Check `https://your_domain`, if everything is working properly you should see a login page.
+ - Your ship should now be sailing on the digital ocean. Check `https://your_subdomain.your_domain.tld`, if everything is working properly you should see a login page.
  - Log in with the code from `+code` in dojo like normal and you should see all of your applications.
 
 ## Leaving your Urbit running in a Screen session
@@ -143,7 +145,7 @@ Finally, to leave your Urbit running after you disconnect we can leave it in a S
    ```
  - This will start a screen session, we can now start up the Urbit ship from the `urbit` directory in this session:
    ```
-   $ ./urbit-v0.10.8-linux64/urbit <ship_dir_name>
+   $ ./urbit <ship_dir_name>
    ```
  - Then we can disconnect from the screen session and leave the ship running with `control-a d`
  - To get back into the screen session:

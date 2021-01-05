@@ -32,16 +32,16 @@ Regardless of your Urbit ID, you'll want the Urbit binary installed first. The U
 #macOS:
 mkdir urbit
 cd urbit
-curl -O https://bootstrap.urbit.org/urbit-v0.10.8-darwin.tgz
-tar xzf urbit-v0.10.8-darwin.tgz
-./urbit-v0.10.8-darwin/urbit
+curl -JLO https://urbit.org/install/mac/latest
+tar zxvf ./darwin.tgz --strip=1
+./urbit
 
 #Linux:
 mkdir urbit
 cd urbit
-curl -O https://bootstrap.urbit.org/urbit-v0.10.8-linux64.tgz
-tar xzf urbit-v0.10.8-linux64.tgz
-./urbit-v0.10.8-linux64/urbit
+wget --content-disposition https://urbit.org/install/linux64/latest
+tar zxvf ./linux64.tgz --strip=1
+./urbit
 ```
 
 Once you've followed the appropriate install instructions, you can check if everything went right by running the `./urbit` command. Installation was successful if you get a block of output that begins with the line below:
@@ -55,15 +55,13 @@ To access your Urbit via HTTP on port 80 on Ubuntu, you may need to run the foll
 sudo apt-get install libcap2-bin
 sudo setcap 'cap_net_bind_service=+ep' /path/to/urbit
 ```
-(Where `urbit` is the urbit executable downloaded with `curl` prior)
+(Where `urbit` is the urbit executable downloaded with `wget` prior)
 
 ### Windows
 
 > Please note that this method of installing Urbit is experimental, and we may not be able to assist you if you encounter issues related to WSL 2.
 
-These instructions have been tested and verified for WSL 2 + Ubuntu 18.04 LTS.
-
-Urbit cannot run on Windows itself, but there is a convenient way to run a Linux distro using the [Windows Subsystem for Linux 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install) on Windows 10. Install the Windows Subsystem for Linux 2 and open a Linux terminal in Windows, then follow the Linux installation instructions above.
+Urbit cannot run on Windows itself, but there is a convenient way to run a Linux distro using the [Windows Subsystem for Linux 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install) on Windows 10. Install the Windows Subsystem for Linux 2 and open a Linux terminal in Windows, then follow the Linux installation instructions above. These instructions have been tested and verified for WSL 2 + Ubuntu 18.04 LTS, as demonstrated in `~sitful-hatred`'s step-by-step setup guide [here](https://subject.network/posts/urbit-wsl2/).
 
 For performance reasons, do not install Urbit in the mounted Windows volume, but install it in the Linux file system. For example, in your home directory, which can be navigated to by entering `cd ~`.
 
@@ -80,11 +78,7 @@ Comets are disposable, free identities that can be used to quickly join the netw
 To boot a comet, go into the command line and run the following command from the `urbit` directory you created during [Urbit installation](#installing-urbit):
 
 ```sh
-#macOS:
-./urbit-v0.10.8-darwin/urbit -c mycomet
-
-#Linux:
-./urbit-v0.10.8-linux64/urbit -c mycomet
+./urbit -c mycomet
 ```
 
 Since your identity on the network is not verified, it may take up to an hour to generate your comet. As it boots, will spin out a bunch of boot messages and create a directory called `mycomet`. Toward the end of the boot process, you'll see something like:
@@ -104,11 +98,7 @@ To exit Urbit, use `Ctrl-D` or enter `|exit` into Dojo.
 To start your ship up again, run the following from your `urbit` directory (note the lack of `-c` argument):
 
 ```sh
-#macOS:
-./urbit-v0.10.8-darwin/urbit mycomet
-
-#Linux:
-./urbit-v0.10.8-linux64/urbit mycomet
+./urbit mycomet
 ```
 
 ### The Dojo
@@ -184,12 +174,21 @@ Urbit ID secrets operate as a system of separate but hierarchically related Ethe
 
 ### Get your keyfile {#keyfile}
 
-As mentioned previously, there are a few ways to acquire a planet. All methods, however, should result in you receiving at least one secret, such as a **master ticket**. If you received an email invite to Urbit, the master ticket should a `.pdf` the passport folder that you downloaded.
+As mentioned previously, there are a few ways to acquire a planet. All methods,
+however, should result in you receiving at least one secret, such as a **master
+ticket**. If you received an email invite to Urbit, the master ticket should be
+a `.pdf` file in the passport folder inside the archive that you downloaded.
 
 1. Connect to [Bridge](https://bridge.urbit.org).
 2. Enter the name of your planet and the associated master ticket in the appropriate fields. Click the "Metamask, Mnemonic, Hardware Wallet..." button for alternate login methods if you don't have a master ticket.
 3. Once you're logged in, click the "OS" option.
-4. In resulting page, click the "Download Arvo Keyfile" button. You should receive a `.key` file that contains the secret needed to boot your ship. Hold onto this file.
+4. In resulting page, click the "Download Arvo Keyfile" button. You should
+   receive a `.key` file that contains the secret needed to boot your ship. Hold
+   onto this file. This may be grayed out if you are not using a master ticket.
+   If so, click on "Reset Networking Keys", then click on "Reset Networking Keys" on
+   the following page, validate the transaction using your wallet, and then
+   click Send Trasaction. Once the transaction is complete, the "Download Arvo
+   Keyfile" button should be available for you to press.
 
 ### Choose to host or run your ship locally
 
@@ -213,21 +212,13 @@ Once you're inside, run the command below, except with `sampel-palnet` replaced 
 Urbit identity, and `path/to/my-planet.key` replaced with the path to your keyfile:
 
 ```sh
-#macOS:
-./urbit-v0.10.8-darwin/urbit -w sampel-palnet -k path/to/my-planet.key
-
-#Linux:
-./urbit-v0.10.8-linux64/urbit -w sampel-palnet -k path/to/my-planet.key
+./urbit -w sampel-palnet -k path/to/my-planet.key
 ```
 
-Or, if you'd prefer to copy your key in, you can run:
+Or, if you'd prefer to copy-paste your key, you can run:
 
 ```sh
-#macOS:
-./urbit-v0.10.8-darwin/urbit -w sampel-palnet -G rAnDoMkEy
-
-#Linux:
-./urbit-v0.10.8-linux64/urbit -w sampel-palnet -G rAnDoMkEy
+./urbit -w sampel-palnet -G rAnDoMkEy
 ```
 
 Either command will create a directory called `sampel-palnet/` and begin building your ship. It may take a few minutes.
@@ -237,11 +228,7 @@ When your ship is finished booting, you will see either the `~sampel-palnet:dojo
 To shut down your ship, use `Ctrl-D`. To start your ship up again, run the following from your `urbit` directory:
 
 ```sh
-#macOS:
-./urbit-v0.10.8-darwin/urbit sampel-palnet
-
-#Linux:
-./urbit-v0.10.8-linux64/urbit sampel-palnet
+./urbit sampel-palnet
 ```
 
 Note that `sampel-palnet/` is the path of a folder, which we just created in your `urbit` directory. This folder is called your ship's **pier**.
@@ -262,46 +249,30 @@ Most updates to Urbit are downloaded and applied automatically as OTA (Over the 
 
 To update to the latest binary, download and extract it to replace your existing one. Then run it as before.
 
-For example, if in your current `urbit` directory you have an `urbit-v0.10.7-<OS>` directory along with a ship directory called `mycomet`, and a new `urbit-v0.10.8-<OS>` binary was just released, then you'd run the following commands from your `urbit` directory:
-
-First shut down your ship, by running the following in dojo (or `Ctrl-D`).
+First shut down your ship, by running the following in dojo (or with `Ctrl-D`).
 ```
 |exit
-```
-
-**NOTE**: Your ship itself can be reused, only the binary needs to be changed. This is why we have the directory structure configured as an `urbit` directory that contains your ship and your binary. This structure makes it easy to swap in new binaries. If you have your ship *inside* the `urbit-vX.XX.X` directory, move it out before deleting that directory.
-
-Delete the old binary directory from your `urbit` directory:
-
-```sh
-#macOS:
-rm -rf urbit-v0.10.7-darwin
-
-#Linux:
-rm -rf urbit-v0.10.7-linux64
 ```
 
 Next download and extract the most recent binary from inside your `urbit` directory:
 ```sh
 #macOS:
-curl -O https://bootstrap.urbit.org/urbit-v0.10.8-darwin.tgz
-tar xzf urbit-v0.10.8-darwin.tgz
+curl -JLO https://urbit.org/install/mac/latest
+tar zxvf ./darwin.tgz --strip=1
 
 #Linux:
-curl -O https://bootstrap.urbit.org/urbit-v0.10.8-linux64.tgz
-tar xzf urbit-v0.10.8-linux64.tgz
+wget --content-disposition https://urbit.org/install/linux64/latest
+tar zxvf ./linux64.tgz --strip=1
 ```
+
+**NOTE**: Do not delete the directory named after your ship. Your ship itself can be reused, only the binary needs to be changed. This is why we have the directory structure configured as an `urbit` directory that contains your ship and your binary. This structure makes it easy to swap in new binaries.
 
 Start up your ship with the new binary from your `urbit` directory:
 ```sh
-#macOS:
-./urbit-v0.10.8-darwin/urbit mycomet
-
-#Linux:
-./urbit-v0.10.8-linux64/urbit mycomet
+./urbit sampel-palnet
 ```
 
-Then you're good to go, in the future you'll just modify the version numbers in the example above to the most recent version.
+Then you're good to go!
 
 ### Breaches {#breaches}
 
