@@ -22,7 +22,7 @@ never existed before: an encrypted [Sybil
 resistant](https://en.wikipedia.org/wiki/Sybil_attack) peer-to-peer network
 where you can be sure that messages are never tampered with or surveilled.
 
-The connected world anticipated by Urbit is a much friendlier one, much like the early Internet, where collegial discussion and collaboration was the norm. Problems that are unsolvable without large-scale political centralization in our current internet – data breaches, spam, fake reviews, malware-spreading, harassment – become tractable when individuals control their computing again. You have one login for everything. You own and control all of your software and all of your data by default. Software is designed around the friendships, families, communities, and organizations you're already a part of – not the other way around.  
+The connected world anticipated by Urbit is a much friendlier one, much like the early Internet, where collegial discussion and collaboration was the norm. Problems that are unsolvable without large-scale political centralization in our current internet – data breaches, spam, fake reviews, malware-spreading, harassment – become tractable when individuals control their computing again. You have one login for everything. You own and control all of your software and all of your data by default. Software is designed around the friendships, families, communities, and organizations you're already a part of – not the other way around.
 
 ### How secure is Urbit right now? {#how-secure-is-urbit}
 
@@ -32,7 +32,7 @@ Blockchain at Berkeley, and Bloctrax.
 
 In late 2020, Urbit's [Ames](@/docs/glossary/ames.md) networking protocol was
 audited by [Leviathan Security](https://www.leviathansecurity.com/). You can
-read about this milestone [here](@/blog/security-and-continuity/).
+read about this milestone [here](@/blog/security-and-continuity.md).
 
 Looking to the future, Tlon has plans to begin working to make Urbit secure
 against attacks from quantum computers in 2021.
@@ -124,7 +124,7 @@ native function, it’s not so bad. This is done by our runtime,
 
 ### Can I host my Urbit with someone else? {#why-hosting}
 
-Yes, [Tlon](@/blog/hosting.md) and [a few others](@/blog/providers.md) began [accepting
+Yes, [Tlon](@/blog/hosting-the-future.md) and [a few others](@/blog/providers.md) began [accepting
 signups](https://tlon.io) for our hosting service in 2020. Under this
 arrangement, Tlon does all the work of setting up cloud infrastructure and
 getting your planet up and running, making getting started with Urbit as simple
@@ -161,7 +161,7 @@ contracts that make up a general-purpose decentralized PKI ("public key
 infrastructure") utilized by Urbit ID. It keeps a record of which Ethereum
 addresses own which Urbit planets, stars, and galaxies, as well as the public
 keys associated with those ships.
- 
+
 It's also kind of a [cool astronomical concept](https://en.wikipedia.org/wiki/Azimuth).
 
 ### How many planets, stars, and galaxies are active? {#how-many-planets-stars-galaxies}
@@ -437,7 +437,7 @@ typically 80, 8080, or 8081 (check your boot messages).
 
 ### I have an Urbit ID, now what? {#now-what}
 
-Follow our guide on how to boot a ship [here](@/using/install.md).  
+Follow our guide on how to boot a ship [here](@/using/install.md).
 
 Get on the [mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;id=be143888d2). Learn [Hoon](@/docs/tutorials/hoon/hoon-school/_index.md). Sign up for [Hooniversity](https://hooniversity.org/). [Make stuff](https://grants.urbit.org).
 
@@ -525,7 +525,7 @@ Here are a few important points from the bounty and proposal contracts:
 
 - **No employment relationship:** You agree that being approved for the grant or bounty does not imply any employment relationship with Tlon.
 
-- **Termination:** Either party (you or Tlon) can terminate the agreement on seven days' written notice. If that happens, you may be compensated *pro rata* for the amount of work you've completed, but this compensation is at the sole discretion of Tlon.   
+- **Termination:** Either party (you or Tlon) can terminate the agreement on seven days' written notice. If that happens, you may be compensated *pro rata* for the amount of work you've completed, but this compensation is at the sole discretion of Tlon.
 
 - **Governing law:** The agreement is governed by the laws of the State of California.
 
