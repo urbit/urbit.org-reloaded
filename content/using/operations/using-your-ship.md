@@ -1355,7 +1355,7 @@ Example:
 
 ### Merge strategies
 
-See [@/docs/tutorials/arvo/clay.md#merge-strategies](Clay merge strategies).
+See [Clay merge strategies](@/docs/tutorials/arvo/clay.md#merge-strategies).
 
 ### Manipulation
 
