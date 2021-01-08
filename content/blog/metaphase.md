@@ -14,6 +14,8 @@ image = "https://media.urbit.org/site/posts/essays/metaphase.jpg"
 
 <br>
 
+*Previous versions of this essay specified the stream deploy date as December 11, 2020; then December 18, 2020. This has been amended to the actual date of release, with our sincere apologies. For new readers, you can opt into the dev stream by running `|ota ~lomlyx-lopsem-nidsut-tomdun %kids` (you may have to resolve a merge conflict using `|merge %home ~lomlyx-lopsem-nidsut-tomdun %kids, =gem %take-that`). We will surface this option more broadly in a future settings overhaul.*
+
 A few weeks ago, the Landscape team — those of us building Tlon’s suite of userspace applications on top of Urbit— deployed our first over-the-air update for notifications. This is a big leap forward for us. Of course, getting notifications inside Landscape itself is a big deal, but getting a push notification on your phone, or an email digest based on activity inside Urbit is now just one step away, a weekend project for a hobby developer, not an indeterminate number of steps away.
 
 After release, we received some feedback from users on the behaviour and design of this feature; beyond the obvious kinks that come from an initial release, it seemed to some like a minimum viable affordance pitched as a fully designed feature. This “bottom-up” development approach was, to us, fairly straightforward; to some of our users, it seemed that we had closed the door on the feature without even beginning to expose all its possibilities.
@@ -53,7 +55,7 @@ So now, before we could launch a stable stream, we had some things to do first:
 - **We wanted to release the notification-store**. After the October 2020 groups release, Landscape simply wouldn’t be complete without it.
 - Finally, **we wanted all of Landscape to use the [Indigo component library](https://github.com/urbit/indigo-react).** Landscape shipped with each application using its own build with handwritten, bespoke DOM components. Once we moved to a single-page application architecture in June 2020, we wanted the same guaranteed consistency for both back-end and front-end code.
 
-Most of these are now accomplished; the remaining tasks are awaiting some final tests and UX work. We’re aiming for a stable stream of Landscape to deploy by **December 18, 2020**.
+Most of these are now accomplished; the remaining tasks are awaiting some final tests and UX work. We’re aiming for a stable stream of Landscape to deploy by **January 5, 2021**.
 
 What does this mean? For everyday users, you can expect Landscape releases every six weeks; the slate of features and any breaking changes will be flagged well in advance for third-party developers; and you can expect a more thoroughly considered user experience with notes and copy for each new release.
 
@@ -70,5 +72,3 @@ Now, each day, we stray a little closer to these entities splitting apart, a ste
 The same has occurred with Landscape. Previously Landscape was “*the* interface to Urbit,” the proof that there was more to the project than a Unix executable. And slowly to those of us at Tlon, it became obvious what it was destined to become: a flagship client for an entire network, a tree branch rooting a world beneath clearnet, the first cell by which other clients might be born. Mitosis can be clumsy to watch; it can be nauseating to experience; it can be difficult to make out what will arrive where.
 
 But this is, after all, how a body forms.
-
-*A previous version of this essay specified the stream deploy date as December 11, 2020. We appreciate your patience as we wrap up the final pieces of the logistics...*
