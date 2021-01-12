@@ -9,33 +9,19 @@ hidetitle = "true"
 
 ### What is Urbit? {#what-is-urbit}
 
-Urbit reimagines the internet as a peer-to-peer network designed to stay that
-way. Previous attempts to "decentralize" the internet have only attempted to
-solve certain corners of the problem. Urbit proposes that only a new stack,
-built from the ground up as a tightly integrated system, can realize a great
-user experience for people using a peer-to-peer web.
+Urbit reimagines the internet as a peer-to-peer network designed to stay that way. Previous attempts to "decentralize" the internet have only attempted to solve certain corners of the problem. Urbit proposes that only a new stack, built from the ground up as a tightly integrated system, can realize a great user experience for people using a peer-to-peer web.
 
-Combining a deterministic operating system ([Urbit OS](#what-is-arvo) / Arvo)
-and a secure, global identity layer ([Urbit ID](#what-is-urbit-id) /
-[Azimuth](#what-is-azimuth)), the Urbit project has created something that’s
-never existed before: an encrypted [Sybil
-resistant](https://en.wikipedia.org/wiki/Sybil_attack) peer-to-peer network
-where you can be sure that messages are never tampered with or surveilled.
+Combining a deterministic operating system ([Urbit OS](#what-is-arvo) / Arvo) and a secure, global identity layer ([Urbit ID](#what-is-urbit-id) / [Azimuth](#what-is-azimuth)), the Urbit project has created something that’s never existed before: an encrypted [Sybil resistant](https://en.wikipedia.org/wiki/Sybil_attack) peer-to-peer network where you can be sure that messages are never tampered with or surveilled.
 
 The connected world anticipated by Urbit is a much friendlier one, much like the early Internet, where collegial discussion and collaboration was the norm. Problems that are unsolvable without large-scale political centralization in our current internet – data breaches, spam, fake reviews, malware-spreading, harassment – become tractable when individuals control their computing again. You have one login for everything. You own and control all of your software and all of your data by default. Software is designed around the friendships, families, communities, and organizations you're already a part of – not the other way around.
 
 ### How secure is Urbit right now? {#how-secure-is-urbit}
 
-[Urbit ID](#what-is-urbit-id) / [Azimuth](#what-is-azimuth), Urbit's identity
-layer, is live on the Ethereum blockchain and has been audited by Open Zeppelin,
-Blockchain at Berkeley, and Bloctrax.
+[Urbit ID](#what-is-urbit-id) / [Azimuth](#what-is-azimuth), Urbit's identity layer, is live on the Ethereum blockchain and has been audited by Open Zeppelin, Blockchain at Berkeley, and Bloctrax.
 
-In late 2020, Urbit's [Ames](@/docs/glossary/ames.md) networking protocol was
-audited by [Leviathan Security](https://www.leviathansecurity.com/). You can
-read about this milestone [here](@/blog/security-and-continuity.md).
+In late 2020, Urbit's [Ames](@/docs/glossary/ames.md) networking protocol was audited by [Leviathan Security](https://www.leviathansecurity.com/). You can read about this milestone [here](@/blog/security-and-continuity.md).
 
-Looking to the future, Tlon has plans to begin working to make Urbit secure
-against attacks from quantum computers in 2021.
+Looking to the future, Tlon has plans to begin working to make Urbit secure against attacks from quantum computers in 2021.
 
 ### How can I contribute to Urbit? {#contribute}
 
@@ -59,13 +45,7 @@ The community of people who build Urbit have widely varied ways of thinking and 
 
 ### Why aren't there more planets? {#more-planets}
 
-Urbit is designed to be as simple as possible. The sponsorship tree for Urbit ID
-simply expands by squaring the size of the last tier. That is, there are <span
-class="mono">2<sup>8</sup> (256)</span> [galaxies](@/docs/glossary/galaxy.md), <span
-class="mono">(2<sup>8</sup>)<sup>2</sup> = 2<sup>16</sup> (~65K)</span> [stars](@/docs/glossary/star.md),
-<span class="mono">(2<sup>16</sup>)<sup>2</sup> = 2<sup>32</sup> (~4B)</span>
-[planets](@/docs/glossary/planet.md). There are <span class="mono">2<sup>64</sup></span> [moons](@/docs/glossary/moon.md) — but moons
-are tethered to their planet, unlike stars and planets.
+Urbit is designed to be as simple as possible. The sponsorship tree for Urbit ID simply expands by squaring the size of the last tier. That is, there are <span class="mono">2<sup>8</sup> (256)</span> [galaxies](@/docs/glossary/galaxy.md), <span class="mono">(2<sup>8</sup>)<sup>2</sup> = 2<sup>16</sup> (~65K)</span> [stars](@/docs/glossary/star.md), <span class="mono">(2<sup>16</sup>)<sup>2</sup> = 2<sup>32</sup> (~4B)</span> [planets](@/docs/glossary/planet.md). There are <span class="mono">2<sup>64</sup></span> [moons](@/docs/glossary/moon.md) — but moons are tethered to their planet, unlike stars and planets.
 
 This pattern exists because it’s a simple way to enforce the scarcity of addresses and build a friendly network. When a tier of the address space begins to be populated, we start populating the next tier down. When Urbit nears the limit of <span class="mono">2<sup>32</sup> (4B)</span> planets, we’ll figure out a way to populate the <span class="mono">2<sup>64</sup></span> moons. The galaxies that govern the Urbit ID contracts can always vote to upgrade them — and we expect that they will.
 
@@ -77,15 +57,9 @@ It’s also worth noting that, while there are almost 8B people on Earth, there 
 
 ### Why do you use Ethereum? {#why-eth}
 
-In 2019 (when [Azimuth](#what-is-azimuth) was launched), Ethereum was the most
-widely deployed, most secure, and best documented general purpose blockchain,
-and it remains so today. Using Ethereum is a practical engineering choice. It’s the
-best way to bootstrap real cryptographic ownership. We’re not specifically
-interested in Ethereum one way or the other.
+In 2019 (when [Azimuth](#what-is-azimuth) was launched), Ethereum was the most widely deployed, most secure, and best documented general purpose blockchain, and it remains so today. Using Ethereum is a practical engineering choice. It’s the best way to bootstrap real cryptographic ownership. We’re not specifically interested in Ethereum one way or the other.
 
-One day we’d really like the Urbit ID registry to be hosted on [Urbit
-OS](#what-is-arvo) itself. But the first challenge is getting Urbit OS to be
-completely secure.
+One day we’d really like the Urbit ID registry to be hosted on [Urbit OS](#what-is-arvo) itself. But the first challenge is getting Urbit OS to be completely secure.
 
 ### Why is Hoon so weird? {#why-hoon}
 
@@ -95,58 +69,27 @@ The runes are, once you get the hang of them, pretty nice. Your mileage may vary
 
 The standard library and naming is something we’ve discussed changing, and it could happen. It’s definitely up for debate whether or not the four-letter naming convention works well. The vanes (kernel modules) have largely moved away from this convention.
 
-The right way to think about Hoon is as the ‘C of Urbit’. It’s a bare bones
-language that gets you pretty close to Nock. Eventually, we’ll probably
-implement more expressive languages that compile to Urbit. But for now, satisfy
-your curiosity and [sign up for Hooniversity](https://hooniversity.org/), a
-community led Hoon educational organization.
+The right way to think about Hoon is as the ‘C of Urbit’. It’s a bare bones language that gets you pretty close to Nock. Eventually, we’ll probably implement more expressive languages that compile to Urbit. But for now, satisfy your curiosity and [sign up for Hooniversity](https://hooniversity.org/), a community led Hoon educational organization.
 
-Another option is to treat [Urbit as an API](@/using/integrating-api.md), which
-allows one to use common languages such as Python and Javascript to build
-userspace programs. For now this option is not as powerful as Hoon, but
-there is still a lot that a developer without the time or inclination to learn
-Hoon can do.
+Another option is to treat [Urbit as an API](@/using/integrating-api.md), which allows one to use common languages such as Python and Javascript to build userspace programs. For now this option is not as powerful as Hoon, but there is still a lot that a developer without the time or inclination to learn Hoon can do.
 
 ### What is the point of Nock? {#why-nock}
 
-The primary technical reason it is difficult for the individual to run a
-personal server is that modern computing architectures are not deterministic.
-What solves a problem for one person is not guaranteed to work on another
-person's computer, even if they are using identical hardware.
-[Nock](/docs/glossary/nock.md) solves this problem. It provides a single
-computing foundation for the whole network, so that difficult issues that
-arise when running a server need only to be solved once and the solution is
-guaranteed to work for everyone on the network.
+The primary technical reason it is difficult for the individual to run a personal server is that modern computing architectures are not deterministic. What solves a problem for one person is not guaranteed to work on another person's computer, even if they are using identical hardware. [Nock](/docs/glossary/nock.md) solves this problem. It provides a single computing foundation for the whole network, so that difficult issues that arise when running a server need only to be solved once and the solution is guaranteed to work for everyone on the network.
 
-It’s true that Nock, without jets, is slow. With the ability to call out to a
-native function, it’s not so bad. This is done by our runtime,
-[Vere](@/docs/glossary/vere.md), a Nock interpreter written in C.
+It’s true that Nock, without jets, is slow. With the ability to call out to a native function, it’s not so bad. This is done by our runtime, [Vere](@/docs/glossary/vere.md), a Nock interpreter written in C.
 
 ### Can I host my Urbit with someone else? {#why-hosting}
 
-Yes, [Tlon](@/blog/hosting-the-future.md) and [a few others](@/blog/providers.md) began [accepting
-signups](https://tlon.io) for our hosting service in 2020. Under this
-arrangement, Tlon does all the work of setting up cloud infrastructure and
-getting your planet up and running, making getting started with Urbit as simple
-as signing up for an ordinary online service.
+Yes, [Tlon](@/blog/hosting-the-future.md) and [a few others](@/blog/providers.md) began [accepting signups](https://tlon.io) for our hosting service in 2020. Under this arrangement, Tlon does all the work of setting up cloud infrastructure and getting your planet up and running, making getting started with Urbit as simple as signing up for an ordinary online service.
 
-Should you one day wish to run your Urbit yourself, any hosting provider ought
-to offer you the ability to download your [ship](@/docs/glossary/ship.md)'s [pier](@/docs/glossary/pier.md)
-to your own device and do so. This is a very low frction process thanks to
-Urbit's deterministic design.
+Should you one day wish to run your Urbit yourself, any hosting provider ought to offer you the ability to download your [ship](@/docs/glossary/ship.md)'s [pier](@/docs/glossary/pier.md) to your own device and do so. This is a very low frction process thanks to Urbit's deterministic design.
 
 ## Urbit ID
 
 ### What is Urbit ID? {#what-is-urbit-id}
 
-Urbit ID is the identity system utilized by Urbit, which associates to each
-[ship](@/docs/glossary/ship.md) a public and private key used to establish
-encrypted connections between one another and to guard private data. For
-[planets](@/docs/glossary/planet.md), [stars](@/docs/glossary/star.md), and
-[galaxies](@/docs/glossary/galaxy.md), this is achieved with a set of Ethereum
-smart contracts called [Azimuth](#what-is-azimuth). Keys for
-[moons](@/docs/glossary/moon.md) and [comets](@/docs/glossary/comet.md) are
-handled within Urbit.
+Urbit ID is the identity system utilized by Urbit, which associates to each [ship](@/docs/glossary/ship.md) a public and private key used to establish encrypted connections between one another and to guard private data. For [planets](@/docs/glossary/planet.md), [stars](@/docs/glossary/star.md), and [galaxies](@/docs/glossary/galaxy.md), this is achieved with a set of Ethereum smart contracts called [Azimuth](#what-is-azimuth). Keys for [moons](@/docs/glossary/moon.md) and [comets](@/docs/glossary/comet.md) are handled within Urbit.
 
 ### What are stars, galaxies, and planets? {#stars-galaxies-planets}
 
@@ -156,11 +99,7 @@ Planets are intended for everyday use by individuals, and there are 4.3 billion 
 
 ### What is Azimuth? {#what-is-azimuth}
 
-[Azimuth](@/docs/glossary/azimuth.md) is what we call the set of Ethereum
-contracts that make up a general-purpose decentralized PKI ("public key
-infrastructure") utilized by Urbit ID. It keeps a record of which Ethereum
-addresses own which Urbit planets, stars, and galaxies, as well as the public
-keys associated with those ships.
+[Azimuth](@/docs/glossary/azimuth.md) is what we call the set of Ethereum contracts that make up a general-purpose decentralized PKI ("public key infrastructure") utilized by Urbit ID. It keeps a record of which Ethereum addresses own which Urbit planets, stars, and galaxies, as well as the public keys associated with those ships.
 
 It's also kind of a [cool astronomical concept](https://en.wikipedia.org/wiki/Azimuth).
 
@@ -174,38 +113,19 @@ You can also inspect and execute functions in the [azimuth.eth](https://ethersca
 
 In addition to the three classes of identities mentioned above, there are two other kinds of Urbit [ship](@/docs/glossary/ship.md)s that are _not_ registered in the Urbit ID / Azimuth contracts.
 
-[Moons](@/docs/glossary/moon.md) are 64 bits, issued by
-[planets](@/docs/glossary/planet.md), and have names like
-`~doznec-salfun-naptul-habrys`. Moons are meant for connected devices: phones,
-desktops, smart TVs, digital thermostats, and other IoT devices. Moons are
-subordinate to their parent planet. A strong analogy here is that ordinary
-social media sites are somewhat like planets, and your account on them is a
-moon. Urbit elevates everybody to the level of planet.
+[Moons](@/docs/glossary/moon.md) are 64 bits, issued by [planets](@/docs/glossary/planet.md), and have names like `~doznec-salfun-naptul-habrys`. Moons are meant for connected devices: phones, desktops, smart TVs, digital thermostats, and other IoT devices. Moons are subordinate to their parent planet. A strong analogy here is that ordinary social media sites are somewhat like planets, and your account on them is a moon. Urbit elevates everybody to the level of planet.
 
 [Comets](@/docs/glossary/comet.md) are 128 bits and have no parents. They can be launched by anyone. They are temporary, disposable identities. Being disposable and essentially unlimited, they will likely not be trusted by default by others on the [Urbit OS](#what-is-arvo) network, though you shouldn't have any problem until the network grows much larger. They have long, hard-to-memorize names, like `~racmus-mollen-fallyt-linpex-watres-sibbur-modlux-rinmex`.
 
 ### What is a `@p`? Why is my username generated for me? {#what-is-patp}
 
-A `@p`
-([pronounced](@/docs/tutorials/hoon/hoon-school/hoon-syntax.md#reading-hoon-aloud)
-*pat-pee*) is a name like `~zod` or `~lodleb-ritrul` composed of pronounceable,
-three-letter phonemic elements like `zod`, `lod`, `leb`, `rit` and `rul`.
-Shorter names, such as `~zod` and `~marzod`, are assigned to
-[ship](@/docs/glossary/ship.md)s with special duties on the
-[Arvo](#what-is-arvo) network galaxies and stars, respectively. Longer names
-like `~palfun-foslup` are identities for typical users.
+A `@p` ([pronounced](@/docs/tutorials/hoon/hoon-school/hoon-syntax.md#reading-hoon-aloud) *pat-pee*) is a name like `~zod` or `~lodleb-ritrul` composed of pronounceable, three-letter phonemic elements like `zod`, `lod`, `leb`, `rit` and `rul`. Shorter names, such as `~zod` and `~marzod`, are assigned to [ship](@/docs/glossary/ship.md)s with special duties on the [Arvo](#what-is-arvo) network galaxies and stars, respectively. Longer names like `~palfun-foslup` are identities for typical users.
 
 These names map directly to a corresponding number in the Urbit ID address space. Galaxies occupy the 8-bit address space, so any galaxy is actually a number between zero and 255. Stars occupy the 16-bit address space, and planets occupy the 32-bit address space.
 
-Your name is generated for you as a solution to [Zooko's
-triangle](https://en.wikipedia.org/wiki/Zooko%27s_triangle), which roughly
-states that names on a network protocol can only be two of (i) human-meaningful,
-(ii) secure, and (iii) decentralized. Urbit chooses (ii) and (iii), which
-something like DNS chooses (i) and (ii).
+Your name is generated for you as a solution to [Zooko's triangle](https://en.wikipedia.org/wiki/Zooko%27s_triangle), which roughly states that names on a network protocol can only be two of (i) human-meaningful, (ii) secure, and (iii) decentralized. Urbit chooses (ii) and (iii), which something like DNS chooses (i) and (ii).
 
-Regardless, you can always choose to
-set your nickname in [Landscape](#what-is-landscape), so if you wish for a
-different name to be displayed then you have the freedom to do so.
+Regardless, you can always choose to set your nickname in [Landscape](#what-is-landscape), so if you wish for a different name to be displayed then you have the freedom to do so.
 
 ### Can I change my `@p`? {#change-my-patp}
 
@@ -213,16 +133,9 @@ Nope. There is a 1:1 mapping between name and identity. Think of your `@p` sort 
 
 ### How do I get an identity? {#get-an-identity}
 
-The easiest way is to find a friend who can give you one. They're out there —
-just ask around. You'll have a good chance of meeting one if you join Urbit
-Community, the default group for new [ship](@/docs/glossary/ship.md)s at `~bitbet-bolbel/urbit-community`,
-as a [comet](@/docs/glossary/comet.md) and contribute pleasantly to the conversation.
+The easiest way is to find a friend who can give you one. They're out there — just ask around. You'll have a good chance of meeting one if you join Urbit Community, the default group for new [ship](@/docs/glossary/ship.md)s at `~bitbet-bolbel/urbit-community`, as a [comet](@/docs/glossary/comet.md) and contribute pleasantly to the conversation.
 
-Or, if you must, try an ERC-721 (NFT) exchange (Google or Twitter should help
-you with this). This will probably involve a purchase and a transfer to an
-Ethereum address that you own. We recommend using
-[Bridge](@/docs/glossary/bridge.md), available at
-[https://bridge.urbit.org](https://bridge.urbit.org), to access the address that the identity is transferred to.
+Or, if you must, try an ERC-721 (NFT) exchange (Google or Twitter should help you with this). This will probably involve a purchase and a transfer to an Ethereum address that you own. We recommend using [Bridge](@/docs/glossary/bridge.md), available at [https://bridge.urbit.org](https://bridge.urbit.org), to access the address that the identity is transferred to.
 
 ### How do I transfer an identity to someone else? {#transfer-identity}
 
@@ -238,77 +151,38 @@ Be careful about using online versions of Bridge not hosted on urbit.org. Since 
 
 ### What is the Urbit HD Wallet? {#urbit-hd-wallet}
 
-The [Urbit Hierarchical Deterministic (HD) Wallet](@/docs/glossary/hdwallet.md)
-is a custom Ethereum wallet based on BIP39 and BIP44 – the same underlying
-technology used by wallet providers like Ledger, Trezor, Metamask, and
-MyEtherWallet. You can think of the Urbit HD wallet as a wallet of wallets,
-which lets you keep a single passphrase for all of your Urbit ID keys. Urbit ID
-uses multiple keys with different capabilities – a bit like permissions – so
-that you can keep the more valuable keys in cold storage while keeping less
-valuable keys, used in day-to-day operation, more easily accessible. If you're
-only operating a planet, you shouldn't have to worry about this: you can simply
-think of your "master ticket" as the password to your Urbit ID. If you're
-operating a star or galaxy, the Urbit HD Wallet allows you to implement a
-multi-tier key custody scheme.
+The [Urbit Hierarchical Deterministic (HD) Wallet](@/docs/glossary/hdwallet.md) is a custom Ethereum wallet based on BIP39 and BIP44 – the same underlying technology used by wallet providers like Ledger, Trezor, Metamask, and MyEtherWallet. You can think of the Urbit HD wallet as a wallet of wallets, which lets you keep a single passphrase for all of your Urbit ID keys. Urbit ID uses multiple keys with different capabilities – a bit like permissions – so that you can keep the more valuable keys in cold storage while keeping less valuable keys, used in day-to-day operation, more easily accessible. If you're only operating a planet, you shouldn't have to worry about this: you can simply think of your "master ticket" as the password to your Urbit ID. If you're operating a star or galaxy, the Urbit HD Wallet allows you to implement a multi-tier key custody scheme.
 
 If you're interested, you can read the spec here: [Urbit HD Wallet Spec (UP 8)](https://github.com/urbit/proposals/blob/master/008-urbit-hd-wallet.md).
 
 ### What is a master ticket? {#master-ticket}
 
-The "master ticket" is the entropy seed from which your other Urbit ID keys are
-derived. It should be treated like a master password: **you should never share
-it with anyone, and you must store it very securely (see our practices below).**
-This ticket is used to derive the Ethereum wallet that holds your ownership
-keys, your [Urbit OS](#what-is-arvo) key – used to boot your Urbit – and the other keys
-associated with your identity. You’ll have a master ticket if you used the Urbit
-Wallet Generator or claimed a [ship](@/docs/glossary/ship.md) on our hosted version of Bridge.
+The "master ticket" is the entropy seed from which your other Urbit ID keys are derived. It should be treated like a master password: **you should never share it with anyone, and you must store it very securely (see our practices below).** This ticket is used to derive the Ethereum wallet that holds your ownership keys, your [Urbit OS](#what-is-arvo) key – used to boot your Urbit – and the other keys associated with your identity. You’ll have a master ticket if you used the Urbit Wallet Generator or claimed a [ship](@/docs/glossary/ship.md) on our hosted version of Bridge.
 
 If you're operating a planet, you can use your master ticket to authenticate with Bridge.
 
 ### What is an ownership address? {#ownership-address}
 
-An ownership address is an Ethereum address that owns one or more of your Urbit
-IDs. The Urbit Wallet Generator creates one [Urbit HD
-Wallet](@/docs/glossary/hdwallet.md) and associated addresses for each of your
-identities. Using the ownership key associated with your ownership address, you
-can transfer identities to other people, meaning that it’s very important to
-store securely.
+An ownership address is an Ethereum address that owns one or more of your Urbit IDs. The Urbit Wallet Generator creates one [Urbit HD Wallet](@/docs/glossary/hdwallet.md) and associated addresses for each of your identities. Using the ownership key associated with your ownership address, you can transfer identities to other people, meaning that it’s very important to store securely.
 
 ### What are proxies? {#proxies}
 
-[Proxies](@/docs/glossary/proxies.md) are seeds derived from your master ticket
-used to generate sub-wallets, which in turn are used to generate keys that have
-the ability to execute different Urbit ID functions associated with your Urbit
-identity. Proxies generally have more restricted capabilities than your
-ownership seed. These capabilities include spawning child identities, voting,
-and setting networking keys.
+[Proxies](@/docs/glossary/proxies.md) are seeds derived from your master ticket used to generate sub-wallets, which in turn are used to generate keys that have the ability to execute different Urbit ID functions associated with your Urbit identity. Proxies generally have more restricted capabilities than your ownership seed. These capabilities include spawning child identities, voting, and setting networking keys.
 
 - Transfer proxy: Can transfer your identity to another Ethereum address.
 - Spawn Proxy: For [stars](@/docs/glossary/star.md) and [galaxies](@/docs/glossary/galaxy.md) only. Can create new child identities.
-- Management Proxy: Can configure or set networking keys and conduct sponsorship
-  related operations.
-- Voting Proxy: [Galaxies](@/docs/glossary/galaxy.md) only. Galaxies are the part of the [galactic senate](@/docs/glossary/senate.md),
-  which means they can cast votes on new proposals including changes to the
-  "[Ecliptic](@/docs/glossary/ecliptic.md)" contract, which defines the operations of [Azimuth](@/docs/glossary/azimuth.md).
+- Management Proxy: Can configure or set networking keys and conduct sponsorship related operations.
+- Voting Proxy: [Galaxies](@/docs/glossary/galaxy.md) only. Galaxies are the part of the [galactic senate](@/docs/glossary/senate.md), which means they can cast votes on new proposals including changes to the "[Ecliptic](@/docs/glossary/ecliptic.md)" contract, which defines the operations of [Azimuth](@/docs/glossary/azimuth.md).
 
 ### What are seeds? {#seeds}
 
-All Ethereum key-pairs in the Urbit wallet system, including
-[proxies](@/docs/glossary/proxies.md), are produced by 128-bit cryptographically
-random values called seeds. These seeds are the equivalent of the BIP39 mnemonic
-of an Ethereum wallet and are yours alone. An ownership key pair is derived from
-an ownership seed and, likewise, the various proxy key pairs are generated from
-their respective proxy seeds.
+All Ethereum key-pairs in the Urbit wallet system, including [proxies](@/docs/glossary/proxies.md), are produced by 128-bit cryptographically random values called seeds. These seeds are the equivalent of the BIP39 mnemonic of an Ethereum wallet and are yours alone. An ownership key pair is derived from an ownership seed and, likewise, the various proxy key pairs are generated from their respective proxy seeds.
 
 For detailed information see the [Urbit HD Wallet Spec (UP 8)](https://github.com/urbit/proposals/blob/master/008-urbit-hd-wallet.md).
 
 ### What does it mean to “set public keys”? {#set-public-keys}
 
-This means registering the public keys of your identity's encryption and
-authentication key pairs (together known as "networking keys") with Urbit ID /
-[Azimuth](@/docs/glossary/azimuth.md), so that others can discover them. The
-corresponding private keys can then be used to, for example, run a
-[ship](@/docs/glossary/ship.md) on the [Urbit OS](#what-is-arvo) network.
+This means registering the public keys of your identity's encryption and authentication key pairs (together known as "networking keys") with Urbit ID / [Azimuth](@/docs/glossary/azimuth.md), so that others can discover them. The corresponding private keys can then be used to, for example, run a [ship](@/docs/glossary/ship.md) on the [Urbit OS](#what-is-arvo) network.
 
 You want to reset these keys if they are compromised, or if your ship has sunk. This is of little practical significance today, but resetting your networking keys resets your relationship with other ships on the network.
 
@@ -371,26 +245,15 @@ Note that the "releasing" of stars just means that they become available for you
 
 Linear release is the simplest: your stars will be released linearly over a period of time. Most often this is a period of four years. If you have four stars in lockup, that means you will be able to withdraw one star per year. In many cases, there is also an initial windup period which has to pass before linear releasing begins, typically one year. Since Azimuth launched in January 2019, the linear release will begin in January 2020.
 
-Conditional release is a bit more complicated. If your stars are in conditional
-lockup, they're likely divided over three so-called tranches. Each of these
-unlocks only after a unique condition is met. Since it's difficult to verify
-things about the real world using smart contracts, the [Galactic
-Senate](@/docs/glossary/senate.md) verifies that they've been met. Once the
-Senate marks a condition for a tranche as cleared, it starts releasing linearly
-over the period of a year.
+Conditional release is a bit more complicated. If your stars are in conditional lockup, they're likely divided over three so-called tranches. Each of these unlocks only after a unique condition is met. Since it's difficult to verify things about the real world using smart contracts, the [Galactic Senate](@/docs/glossary/senate.md) verifies that they've been met. Once the Senate marks a condition for a tranche as cleared, it starts releasing linearly over the period of a year.
 
 ## Urbit OS
 
 ### What is Urbit OS? {#what-is-arvo}
 
-Urbit OS, also called [Arvo](@/docs/glossary/arvo.md), is our functional and
-deterministic software stack. Arvo is written in [Hoon](@/docs/glossary/hoon.md), our purely functional
-programming language, which compiles to [Nock](@/docs/glossary/nock.md), a compact bytecode language.
+Urbit OS, also called [Arvo](@/docs/glossary/arvo.md), is our functional and deterministic software stack. Arvo is written in [Hoon](@/docs/glossary/hoon.md), our purely functional programming language, which compiles to [Nock](@/docs/glossary/nock.md), a compact bytecode language.
 
-Instances of Urbit OS, called '[ships](@/docs/glossary/ship.md)',
-communicate as peers on what we refer to as “the [Ames](@/docs/glossary/ames.md)
-network.” Using Urbit ID, Urbit OS ships can prove their identities to one
-another.
+Instances of Urbit OS, called '[ships](@/docs/glossary/ship.md)', communicate as peers on what we refer to as “the [Ames](@/docs/glossary/ames.md) network.” Using Urbit ID, Urbit OS ships can prove their identities to one another.
 
 ### What is unique about Urbit OS / Arvo? {#what-is-unique-about-arvo}
 
@@ -402,19 +265,13 @@ All events are logged to disk, so you can always restore the system to a previou
 
 ### How is Urbit OS / Arvo connected to Ethereum? {#arvo-ethereum}
 
-When an [Arvo](@/docs/glossary/arvo.md) ship (instance) is started for the first
-time you must use a "[keyfile](@/docs/glossary/keyfile.md)" containing the
-private keys for your identity's networking keys. Urbit ID uses the Ethereum
-blockchain as its decentralized ledger.
+When an [Arvo](@/docs/glossary/arvo.md) ship (instance) is started for the first time you must use a "[keyfile](@/docs/glossary/keyfile.md)" containing the private keys for your identity's networking keys. Urbit ID uses the Ethereum blockchain as its decentralized ledger.
 
-See our [Getting Started](@/using/install.md) guide to learn how to get your
-ship onto the Urbit OS / [Ames](@/docs/glossary/ames.md) network.
+See our [Getting Started](@/using/install.md) guide to learn how to get your ship onto the Urbit OS / [Ames](@/docs/glossary/ames.md) network.
 
 ### Will the Urbit OS network survive if Ethereum dies? {#if-ethereum-dies}
 
-Yes. It would be annoying, but Urbit ID / [Azimuth](@/docs/glossary/azimuth.md)
-could be ported to another decentralized ledger, or hosted on Urbit OS /
-[Arvo](@/docs/glossary/arvo.md) itself.
+Yes. It would be annoying, but Urbit ID / [Azimuth](@/docs/glossary/azimuth.md) could be ported to another decentralized ledger, or hosted on Urbit OS / [Arvo](@/docs/glossary/arvo.md) itself.
 
 ### How do I install Urbit OS? {#install-urbit-os}
 
@@ -430,10 +287,7 @@ Your sponsor, a star or galaxy that your ship is connected to, may send you new 
 
 ### What is Landscape? {#what-is-landscape}
 
-[Landscape](@/docs/glossary/landscape.md) is an experimental Urbit OS web
-interface that includes social functions such as chat and publishing. You can
-access Landscape by navigating to `http://localhost:PORT`, where PORT is
-typically 80, 8080, or 8081 (check your boot messages).
+[Landscape](@/docs/glossary/landscape.md) is an experimental Urbit OS web interface that includes social functions such as chat and publishing. You can access Landscape by navigating to `http://localhost:PORT`, where PORT is typically 80, 8080, or 8081 (check your boot messages).
 
 ### I have an Urbit ID, now what? {#now-what}
 
