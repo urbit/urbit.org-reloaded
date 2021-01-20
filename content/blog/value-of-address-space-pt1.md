@@ -88,15 +88,15 @@ Urbit was originally an experimental personal project. The original Urbit addres
 
 Once Urbit became a working prototype, in mid 2013, a company (Tlon) got off the ground to help develop Urbit and a number of other developers joined. At this point, Tlon bought half the address space from Curtis for what now looks like an exceptionally good deal. Then Curtis and Tlon each earmarked a significant chunk of address space for infrastructure and community development — we refer to this as the urbit.org address space, and it’s held by Tlon.
 
-From 2014-2018 Tlon and Curtis both gave away address space to individual contributors who were helping with the project. In 2016 and 2017, Tlon sold some of its address space in two crowdsales to fund the development of Urbit (which formatted the Urbit address space as a user-facing system).
+From 2014-2018 Tlon and Curtis both gave away address space to individual contributors who were helping with the project. In 2016 and 2017, Tlon sold some of its address space in two crowdsales to fund the development of Urbit (which formatted the Urbit address space as a user-facing system). These sales were focused on getting address space into the custody of users with an interest in the technology and developing the network.
 
 It was then decided that a public key infrastructure was the most logical way to instantiate ownership of Urbit address space. Thus, after much [consideration](https://urbit.org/blog/urbit-and-the-blockchain/), Urbit ID was deployed to Ethereum in January 2019 under a set of contracts called Azimuth. At this point, there were about 2000 star holders and around 80 galaxy holders. We can’t be sure how many independent holders there are now — the address space is entirely out of our hands — but the distribution has been steadily increasing. Addresses trade regularly on urbit.live and Opensea, and are sold by a few other smaller outlets like planet.market and Urbit Marketplace, all of which are independent of Tlon.
 
 ## Analogues and the intrinsic value of address space
 
-We’ve often said that Urbit address space, particularly stars and galaxies, have intrinsic value that should be understood beyond simply the price of the planets they contain. Another way of putting this is that, because stars and galaxies are infrastructure nodes, they’re uniquely positioned to generate cash flow from activities on the network beyond simply selling their planets.
+We’ve often said that Urbit address space, particularly stars and galaxies, have intrinsic value that should be understood beyond simply the price of the planets they contain. Another way of putting this is that, because stars and galaxies are infrastructure nodes, they’re uniquely positioned to generate cash flow from activities on the network beyond simply selling their planets. 
 
-Let’s dig a bit deeper into these activities through the lens of some analogues to the existing world.
+This cash flow won't likely come from passive activity, but from actively working to develop businesses located on stars and galaxies. Let’s dig a bit deeper into these activities through the lens of some analogues to the existing world.
 
 ### DNS
 
@@ -112,7 +112,7 @@ CDNs (content delivery networks) are another useful comparison. Stars are perfec
 
 ### Software distribution
 
-An infrastructure innovation that’s relevant here is that Urbit OS is specifically designed to make over-the-air (OTA) updates to the system — meaning software and updates are distributed automatically with no effort on the part of the end user. By default, planets and stars get their system updates from their sponsors. As the system evolves, we expect stars and galaxies to not only provide core system (kernel) updates, but also to act as software distribution hubs. This service likewise represents a potential profit center.
+An infrastructure innovation that’s relevant here is that Urbit OS is specifically designed to make over-the-air (OTA) updates to the system — meaning software and updates are distributed automatically with no effort on the part of the end user. By default, planets and stars get their system updates from their sponsors. As the system evolves, we expect stars and galaxies to not only provide core system (kernel) updates, but also to act as software distribution hubs. Stars will distinguish themselves from one another by the quality of their service. Some might focus on speed of distrubtion; others on assesing the quality of the code they distribute. All of this represents effort on behalf of the star, and could act as a profit center for the star operator.
 
 ### Payments and transactions
 
@@ -132,13 +132,13 @@ Another approach to developing the value of address space that is already emergi
 
 These providers sell users a planet, host it for them, and deliver related services through their stars and galaxies. This means that with a couple of clicks an ordinary user could buy a planet, sign up for a hosting/routing bundle, get access to a set of services, and be immediately ready to interact with the community of their choice.
 
-There are plenty of other examples that we haven’t even imagined yet. The important thing is that stars will likely distinguish themselves through the services they provide. Since planets and stars can always change sponsors, a large part of the long-term monetization of a star or galaxy lies in the quality of service.
+There are plenty of other examples that we haven’t even imagined yet. The important thing is that stars will likely distinguish themselves through the services they provide. Since planets and stars can always change sponsors, a large part of the long-term monetization of a star or galaxy lies in the quality of service that a given star operator provides.
 
 This independent ecosystem has a secondary benefit of creating a varied tapestry of digital environments on Urbit, since every community and every dealer-operator can customize as they see fit. That variety will make the landscape much more interesting and ripe for exploration than anything we might create with the top-down approach found on centralized services. That variety will also likely cause a range of values for planets depending on their sponsor or “location”.
 
 This ecosystem has already begun to emerge. Both Tlon and urbit.live are working on developing services along these lines, and we’ve heard from several other entrepreneurs considering similar offerings. This is emerging not simply because it serves a user need, but because it’s the directional flow of the system. In other words, it’s the simplest way to monetize address space while avoiding the oligarchic, surveillance-based, advertising-oriented systems we’re stuck with today.
 
-To summarize, our view is that Urbit address space is valuable because it’s useful and it’s scarce (also, it’s tradable and has network effect, but more on those later). What’s more, while the use case has already begun to take shape, it will grow in directions we can’t yet imagine because the system is designed to be extensible — Urbit is a homestead, not a hotel.
+To summarize, our view is that Urbit address space is valuable because it’s useful and it’s scarce (and it has network effect, but more on that later). What’s more, while the use case has already begun to take shape, it will grow in directions we can’t yet imagine because the system is designed to be extensible — Urbit is a homestead, not a hotel.
 
 We’re looking forward to seeing what the world builds with Urbit.
 
