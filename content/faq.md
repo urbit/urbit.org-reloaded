@@ -123,7 +123,7 @@ A `@p` ([pronounced](@/docs/tutorials/hoon/hoon-school/hoon-syntax.md#reading-ho
 
 These names map directly to a corresponding number in the Urbit ID address space. Galaxies occupy the 8-bit address space, so any galaxy is actually a number between zero and 255. Stars occupy the 16-bit address space, and planets occupy the 32-bit address space.
 
-Your name is generated for you as a solution to [Zooko's triangle](https://en.wikipedia.org/wiki/Zooko%27s_triangle), which roughly states that names on a network protocol can only be two of (i) human-meaningful, (ii) secure, and (iii) decentralized. Urbit chooses (ii) and (iii), which something like DNS chooses (i) and (ii).
+Your name is generated for you as a solution to [Zooko's triangle](https://en.wikipedia.org/wiki/Zooko%27s_triangle), which roughly states that names on a network protocol can only be two of (i) human-meaningful, (ii) secure, and (iii) decentralized. Urbit chooses (ii) and (iii), while something like DNS chooses (i) and (ii).
 
 Regardless, you can always choose to set your nickname in [Landscape](#what-is-landscape), so if you wish for a different name to be displayed then you have the freedom to do so.
 
