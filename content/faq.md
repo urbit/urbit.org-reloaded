@@ -83,7 +83,7 @@ It’s true that Nock, without jets, is slow. With the ability to call out to a 
 
 Yes, [Tlon](@/blog/hosting-the-future.md) and [a few others](@/blog/providers.md) began [accepting signups](https://tlon.io) for our hosting service in 2020. Under this arrangement, Tlon does all the work of setting up cloud infrastructure and getting your planet up and running, making getting started with Urbit as simple as signing up for an ordinary online service.
 
-Should you one day wish to run your Urbit yourself, any hosting provider ought to offer you the ability to download your [ship](@/docs/glossary/ship.md)'s [pier](@/docs/glossary/pier.md) to your own device and do so. This is a very low frction process thanks to Urbit's deterministic design.
+Should you one day wish to run your Urbit yourself, any hosting provider ought to offer you the ability to download your [ship](@/docs/glossary/ship.md)'s [pier](@/docs/glossary/pier.md) to your own device and do so. This is a very low friction process thanks to Urbit's deterministic design.
 
 ## Urbit ID
 
@@ -115,7 +115,7 @@ In addition to the three classes of identities mentioned above, there are two ot
 
 [Moons](@/docs/glossary/moon.md) are 64 bits, issued by [planets](@/docs/glossary/planet.md), and have names like `~doznec-salfun-naptul-habrys`. Moons are meant for connected devices: phones, desktops, smart TVs, digital thermostats, and other IoT devices. Moons are subordinate to their parent planet. A strong analogy here is that ordinary social media sites are somewhat like planets, and your account on them is a moon. Urbit elevates everybody to the level of planet.
 
-[Comets](@/docs/glossary/comet.md) are 128 bits and have no parents. They can be launched by anyone. They are temporary, disposable identities. Being disposable and essentially unlimited, they will likely not be trusted by default by others on the [Urbit OS](#what-is-arvo) network, though you shouldn't have any problem until the network grows much larger. They have long, hard-to-memorize names, like `~racmus-mollen-fallyt-linpex-watres-sibbur-modlux-rinmex`.
+[Comets](@/docs/glossary/comet.md) are 128 bits and have no parents. They can be launched by anyone for free. Since their identity is not maintained on the blockchain, they will likely not be trusted by default by others on the [Urbit OS](#what-is-arvo) network, though you shouldn't have any problem until the network grows much larger. They have long, hard-to-memorize names, like `~racmus-mollen-fallyt-linpex-watres-sibbur-modlux-rinmex`.
 
 ### What is a `@p`? Why is my username generated for me? {#what-is-patp}
 
