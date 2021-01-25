@@ -49,17 +49,29 @@ Urbit is designed to be as simple as possible. The sponsorship tree for Urbit ID
 
 This pattern exists because it’s a simple way to enforce the scarcity of addresses and build a friendly network. When a tier of the address space begins to be populated, we start populating the next tier down. When Urbit nears the limit of <span class="mono">2<sup>32</sup> (4B)</span> planets, we’ll figure out a way to populate the <span class="mono">2<sup>64</sup></span> moons. The galaxies that govern the Urbit ID contracts can always vote to upgrade them — and we expect that they will.
 
-(For more background on why Urbit ID is the way it is, read [this](/understanding-urbit/urbit-id/).)
-
 The problem with populating the moons now is that <span class="mono">2<sup>64</sup></span> is a *really, really big* number. We’ll need some way of differentiating between humans and their devices (to prevent devices turning into rogue botnets). But that’s a hard problem, and we prefer to start with the simplest possible solution before solving hard problems. The current scheme works. Once we need to update it, we’ll figure it out.
 
+The number of addresses is in a sort of 'Goldilocks zone' for preventing spam. Too many addresses will result in them being very cheap and thus spammers can just acquire more once they get blocked. Too few addresses and they end up too expensive for the average user. The technical term for what the finite address space bestows upon the network is [Sybil resistance](https://en.wikipedia.org/wiki/Sybil_attack), a very important property for any decentralized network.
+
 It’s also worth noting that, while there are almost 8B people on Earth, there are almost certainly not 8B internet users. Facebook has about 2.5B users, Apple has about 1B. Urbit has a long way to go before we get close to <span class="mono">2<sup>32</sup></span>.
+
+(For more background on why Urbit ID is the way it is, read [this](/understanding-urbit/urbit-id/).)
 
 ### Why do you use Ethereum? {#why-eth}
 
 In 2019 (when [Azimuth](#what-is-azimuth) was launched), Ethereum was the most widely deployed, most secure, and best documented general purpose blockchain, and it remains so today. Using Ethereum is a practical engineering choice. It’s the best way to bootstrap real cryptographic ownership. We’re not specifically interested in Ethereum one way or the other.
 
 One day we’d really like the Urbit ID registry to be hosted on [Urbit OS](#what-is-arvo) itself. But the first challenge is getting Urbit OS to be completely secure.
+
+### Why is is currently expensive to acquire a planet?
+
+As of early 2021, if you try to acquire a planet from a market, you will likely encounter an enormous "gas price" fee. This fee is unrelated to Urbit specifically, rather it results from how Ethereum transactions are paid for. The gas fee does not go to the person selling you the planet, nor to the market, nor to anybody associated with Urbit - it goes to the "miners" processing all Ethereum transactions.
+
+Ethereum is going through some growing pains, and this is an issue for every smart contract on the network. Thankfully, there are a number of possible solutions, under the moniker of "Layer 2", and Tlon considers it a top priority to implement one and are working towards this goal every day. We do not yet have a timeline on when it will be ready, but when it does we expect the gas fees to be at least 100x cheaper.
+
+In the meantime, we recommend either using the network as a [comet](@/docs/glossary/comet.md), or signing up with a [hosting provider](#why-hosting), which includes a free planet.
+
+We understand that this is an enormous frustration, and will keep this section updated as we get closer to resolving it.
 
 ### Why is Hoon so weird? {#why-hoon}
 
@@ -81,7 +93,7 @@ It’s true that Nock, without jets, is slow. With the ability to call out to a 
 
 ### Can I host my Urbit with someone else? {#why-hosting}
 
-Yes, [Tlon](@/blog/hosting-the-future.md) and [a few others](@/blog/providers.md) began [accepting signups](https://tlon.io) for our hosting service in 2020. Under this arrangement, Tlon does all the work of setting up cloud infrastructure and getting your planet up and running, making getting started with Urbit as simple as signing up for an ordinary online service.
+Yes, [Tlon](@/blog/hosting-the-future.md) and [a few others](@/blog/providers.md) began [accepting signups](https://tlon.io) to proivde hosting service in 2020. Under this arrangement, Tlon does all the work of setting up cloud infrastructure and getting your planet up and running, making getting started with Urbit as simple as signing up for an ordinary online service.
 
 Should you one day wish to run your Urbit yourself, any hosting provider ought to offer you the ability to download your [ship](@/docs/glossary/ship.md)'s [pier](@/docs/glossary/pier.md) to your own device and do so. This is a very low friction process thanks to Urbit's deterministic design.
 
