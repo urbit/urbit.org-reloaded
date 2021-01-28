@@ -116,6 +116,14 @@ If for some reason (for example, if your sponsor is out of date), you can switch
 
 If OTAs are not succeeding, or if you are on an version of Urbit before the `|ota` command was introduced, you can run `|merge %home (sein:title our now our) %kids, =gem %take-that`. **Note:** This will wipe out any custom changes to the base distribution.
 
+#### Additional OTA Troubleshooting
+Please check the Support Wiki for additional OTA troubleshooting, such as:
+[OTA 1.0.71 failed](https://github.com/urbit/support/wiki/OTA-1.0.71-failed), 
+[Missing OTA](https://github.com/urbit/support/wiki/Missing-OTA),
+[Stuck flow preventing planets from receiving
+OTAs](https://github.com/urbit/support/wiki/Stuck-flow-preventing-planets-from-receiving-OTAs),
+and [No content shows in Links page after OTA](https://github.com/urbit/support/wiki/No-content-shows-in-Links-page-after-OTA).
+
 ### Landscape
 
 On startup Urbit tries to bind to `localhost:80`. If you're already running something on port `80` -- such as any other HTTP server, or another urbit -- you'll find the urbit that you just started on `8080`, `8081`, and so on. For planets only, we also proxy web domains through Urbit's own servers. Any planet `~your-urbit` is also at `your-urbit.arvo.network`, but only after you [set up DNS](#dns-proxying).
