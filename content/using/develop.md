@@ -18,7 +18,7 @@ This guide will start by getting you set up to run an Urbit ship, and then tell 
 
 We assume you’ve gotten a basic introduction to Urbit. If you haven’t, read the [Understanding Urbit](@/understanding-urbit/_index.md) series.
 
-Once you’re ready, you can get started on the network right away and take some first steps, without acquiring an identity, by [creating a comet](@/using/install.md#comet).
+Once you’re ready, you can get started on the network right away and take some first steps, without acquiring an identity, by [creating a comet](@/using/running/install.md#comet).
 
 When developing, however, we recommend [booting a development ship](#creating-a-development-ship) and working locally -- you may need to make changes that could, in the wrong hands, destroy the ship’s environment, and it’s best to do so in a safe, separate place.
 
@@ -104,7 +104,7 @@ Stars and galaxies, however, have additional responsibilities and play a role in
 
 Running a reliable galaxy or star, and spawning stars and planets from them, are excellent ways to help bootstrap the Urbit network.
 
-If you’re interested in running a galaxy or star, you’ll be reliably providing peer discovery for your children just by running your node – and we’re doing our best to make this both easy and profitable. If you’re interested in this, see [Star and Galaxy Operations](@/using/operations/stars-and-galaxies.md).
+If you’re interested in running a galaxy or star, you’ll be reliably providing peer discovery for your children just by running your node – and we’re doing our best to make this both easy and profitable. If you’re interested in this, see [Star and Galaxy Operations](@/using/os/stars-and-galaxies.md).
 
 If you’re interested in distributing planets, read on.
 
@@ -114,4 +114,4 @@ Want to get your friends and family into Urbit? Distribute planets using Bridge 
 
 Here’s how it works: any star can grant a number of invites to any of its child planets. Those planets can then send one-time-use invite codes via email to anyone of their choosing.
 
-For instructions on how to grant and send invites, check out [Using Bridge](@/using/operations/using-bridge.md).
+For instructions on how to grant and send invites, check out [Using Bridge](@/using/id/using-bridge.md).

@@ -3,7 +3,7 @@ title = "Using Your Ship"
 description = "How to operate your ship, including using your ship's filesystem and messaging applications, starting a moon, or requesting a DNS proxy."
 template = "page_indiced.html"
 weight = 2
-aliases = ["docs/using/arvo-network-dns/", "docs/using/messaging/", "docs/using/shell/", "docs/using/admin/"]
+aliases = ["docs/using/messaging/", "docs/using/admin/"]
 [extra]
 hidetitle = "true"
 +++
@@ -155,7 +155,7 @@ in this example.
 
 Put `<key>` in a file and that file becomes `<keyfile>`.
 
-You can use the resulting output in the same installation flow from the [Installing Urbit](@/using/install.md) guide, following the same scheme as for booting a planet. That scheme is:
+You can use the resulting output in the same installation flow from the [Installing Urbit](@/using/running/install.md) guide, following the same scheme as for booting a planet. That scheme is:
 
 ```sh
 $ ./urbit -w <moonname> -G <key> -c <piername>
@@ -203,7 +203,7 @@ To use the network as a planet or star, you must be sponsored by an active star
 or galaxy, respectively. If your sponsor isn't suiting your needs, you can
 escape to a different one. This can be done with
 [Bridge](https://bridge.urbit.org/) following the instructions
-[here](@/using/operations/using-bridge.md#escaping-your-sponsor).
+[here](@/using/id/using-bridge.md#escaping-your-sponsor).
 
 ### Continuity breaches
 

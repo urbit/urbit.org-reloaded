@@ -237,7 +237,7 @@ All events are logged to disk, so you can always restore the system to a previou
 
 When an [Arvo](@/docs/glossary/arvo.md) ship (instance) is started for the first time you must use a "[keyfile](@/docs/glossary/keyfile.md)" containing the private keys for your identity's networking keys. Urbit ID uses the Ethereum blockchain as its decentralized ledger.
 
-See our [Getting Started](@/using/install.md) guide to learn how to get your ship onto the Urbit OS / [Ames](@/docs/glossary/ames.md) network.
+See our [Getting Started](@/using/planet.md) guide to learn how to get your ship onto the Urbit OS / [Ames](@/docs/glossary/ames.md) network.
 
 ### Will the Urbit OS network survive if Ethereum dies? {#if-ethereum-dies}
 
@@ -245,11 +245,11 @@ Yes. It would be annoying, but Urbit ID / [Azimuth](@/docs/glossary/azimuth.md) 
 
 ### How do I install Urbit OS? {#install-urbit-os}
 
-Check out our guides [here](@/using/install.md).
+Check out our guides [here](@/using/planet.md).
 
 ### How do I use Urbit OS? {#use-urbit-os}
 
-The [Using](@/using/operations/_index.md) section of the documentation will help you out.
+The [Using](@/using/os/using-your-ship.md) section of the documentation will help you out.
 
 ### How do over-the-air updates work? {#over-the-air-updates}
 
@@ -261,7 +261,7 @@ Your sponsor, a star or galaxy that your ship is connected to, may send you new 
 
 ### I have an Urbit ID, now what? {#now-what}
 
-Follow our guide on how to boot a ship [here](@/using/install.md).
+Follow our guide on how to boot a ship [here](@/using/planet.md).
 
 Get on the [mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;id=be143888d2). Learn [Hoon](@/docs/tutorials/hoon/hoon-school/_index.md). Sign up for [Hooniversity](https://hooniversity.org/). [Make stuff](https://grants.urbit.org).
 
