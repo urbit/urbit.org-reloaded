@@ -641,7 +641,7 @@ var glossary = [
       "name": "bucbar",
       "symbol": "$|",
       "usage": "Structures",
-      "link": "/docs/reference/hoon-expressions/rune/buc/#bucbar"
+      "link": "/docs/reference/hoon-expressions/rune/buc/#bucbar",
       "desc": "<code>[%bsbr p=spec q=hoon]</code>: structure that satisfies a validator."
   },
   {
