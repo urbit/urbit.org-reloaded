@@ -75,7 +75,7 @@ In addition to the three classes of identities mentioned above, there are two ot
 
 ### What is a `@p`? Why is my username generated for me? {#what-is-patp}
 
-A `@p` ([pronounced](@/docs/tutorials/hoon/hoon-school/hoon-syntax.md#reading-hoon-aloud) *pat-pee*) is a name like `~zod` or `~lodleb-ritrul` composed of pronounceable, three-letter phonemic elements like `zod`, `lod`, `leb`, `rit` and `rul`. Shorter names, such as `~zod` and `~marzod`, are assigned to [ship](@/docs/glossary/ship.md)s with special duties on the [Arvo](#what-is-arvo) network galaxies and stars, respectively. Longer names like `~palfun-foslup` are identities for typical users.
+A `@p` ([pronounced](@/docs/hoon/hoon-school/hoon-syntax.md#reading-hoon-aloud) *pat-pee*) is a name like `~zod` or `~lodleb-ritrul` composed of pronounceable, three-letter phonemic elements like `zod`, `lod`, `leb`, `rit` and `rul`. Shorter names, such as `~zod` and `~marzod`, are assigned to [ship](@/docs/glossary/ship.md)s with special duties on the [Arvo](#what-is-arvo) network galaxies and stars, respectively. Longer names like `~palfun-foslup` are identities for typical users.
 
 These names map directly to a corresponding number in the Urbit ID address space. Galaxies occupy the 8-bit address space, so any galaxy is actually a number between zero and 255. Stars occupy the 16-bit address space, and planets occupy the 32-bit address space.
 
@@ -263,7 +263,7 @@ Your sponsor, a star or galaxy that your ship is connected to, may send you new 
 
 Follow our guide on how to boot a ship [here](@/using/planet.md).
 
-Get on the [mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;id=be143888d2). Learn [Hoon](@/docs/tutorials/hoon/hoon-school/_index.md). Sign up for [Hooniversity](https://hooniversity.org/). [Make stuff](https://grants.urbit.org).
+Get on the [mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;id=be143888d2). Learn [Hoon](@/docs/hoon/hoon-school/_index.md). Sign up for [Hooniversity](https://hooniversity.org/). [Make stuff](https://grants.urbit.org).
 
 
 ## Urbit Grants

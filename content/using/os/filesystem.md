@@ -350,7 +350,7 @@ Example:
 
 ### Merge strategies
 
-See [Clay merge strategies](@/docs/tutorials/arvo/clay.md#merge-strategies).
+See [Clay merge strategies](@/docs/arvo/clay/clay.md#merge-strategies).
 
 ### Manipulation
 

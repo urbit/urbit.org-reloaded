@@ -155,7 +155,7 @@ in this example.
 
 Put `<key>` in a file and that file becomes `<keyfile>`.
 
-You can use the resulting output in the same installation flow from the [Installing Urbit](@/using/running/install.md) guide, following the same scheme as for booting a planet. That scheme is:
+You can use the resulting output in the same installation flow from the [Installing Urbit](@/using/install.md) guide, following the same scheme as for booting a planet. That scheme is:
 
 ```sh
 $ ./urbit -w <moonname> -G <key> -c <piername>
@@ -217,7 +217,7 @@ When this happens, back up any files you'd like to save, shut down your urbit, a
 
 You can check your ship's _life_ and _rift_ number by running `+keys our` in
 dojo. You can inspect another ship's life and rift number by running `+keys
-~sampel-palnet`. For information on what life and rift are, see [Guide to Breaches](@/docs/tutorials/guide-to-breaches.md).
+~sampel-palnet`. For information on what life and rift are, see [Guide to Breaches](@/using/id/guide-to-breaches.md).
 
 ## DNS proxying {#dns-proxying}
 

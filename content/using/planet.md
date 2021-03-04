@@ -5,7 +5,7 @@ description = "Getting started with a permanent Urbit identity."
 template = "page_indiced.html"
 +++
 
-A planet is a permanent Urbit identity. Like all Urbit identities, they can never be taken away from you. Unlike comets which are free, planets are designed for use well into the future. If you're not yet familiar with the Urbit network, please follow the [Getting Started guide](/using/running/install), which will explain the bafasdfsics and walk you through using a free identity. This guide explains the next steps.
+A planet is a permanent Urbit identity. Like all Urbit identities, they can never be taken away from you. Unlike comets which are free, planets are designed for use well into the future. If you're not yet familiar with the Urbit network, please follow the [Getting Started guide](@/using/install.md), which will explain the bafasdfsics and walk you through using a free identity. This guide explains the next steps.
 
 ### Purchase a planet {#purchase}
 
@@ -103,7 +103,7 @@ The first thing you generally want to do with a new planet is to **mount** it. A
 
 The `>=` output means that a command was successful. Now you can see your planet's files in its directory.
 
-To understand what happened with this command, read more about Urbit’s filesystem (called “clay”) [here](@/docs/tutorials/arvo/clay.md).
+To understand what happened with this command, read more about Urbit’s filesystem (called “clay”) [here](@/docs/arvo/clay/clay.md).
 
 ## Updating {#updating}
 
