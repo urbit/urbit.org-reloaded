@@ -42,11 +42,22 @@
   <li class="ml2 mt1"><a href="/using/operations/">Operations Manual -></a></li>
   <li class="ml2 mt1 mb4"><a href="/using/develop/">Developer's Guide -></a></li>
   {% block menu %}
+    {% if sectionTitle == "Docs" %}
+      <li class="ml3 mt1">
+        <a
+          {% if section and section.relative_path == "docs/_index.md" %}
+            class="fw6"
+          {% endif %}
+          href="/docs">
+          Introduction
+        </a>
+      </li>
+    {% endif %}
     {% set index = get_section(path="docs/_index.md") %}
     {% for s in index.subsections %}
     {% set subsection = get_section(path=s) %}
     {% if subsection.extra.nav %}
-      <li class="ml3 mt1"><a
+      <li class="ml3 mt2"><a
         {% if current_url == subsection.permalink %}
           class="fw6"
         {% endif %}
