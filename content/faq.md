@@ -249,7 +249,7 @@ Check out our guides [here](@/using/planet.md).
 
 ### How do I use Urbit OS? {#use-urbit-os}
 
-The [Using](@/using/os/using-your-ship.md) section of the documentation will help you out.
+The [Using](@/using/os/getting-started.md) section of the documentation will help you out.
 
 ### How do over-the-air updates work? {#over-the-air-updates}
 

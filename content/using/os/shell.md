@@ -1,6 +1,6 @@
 +++
 title = "Shell"
-template = "page_indiced.html"
+template = "doc.html"
 weight = 2
 +++
 

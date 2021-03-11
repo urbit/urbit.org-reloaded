@@ -2,7 +2,7 @@
 title = "Getting Started"
 weight = 1
 description = "How to install Urbit."
-template = "page_indiced.html"
+template = "doc.html"
 aliases = ["/docs/getting-started/"]
 +++
 

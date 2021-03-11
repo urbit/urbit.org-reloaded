@@ -1,6 +1,7 @@
 <!-- First nav is desktop-specific. Second nav is dropdown version for mobile. -->
 
 {% set sectionTitle = "urbit.org" %}
+{% set directory = "docs" %}
 {% if page %}
   {% if "docs" in page.components %}
     {% set sectionTitle = "Docs" %}
@@ -10,6 +11,9 @@
   {% endif %}
   {% if "blog" in page.components %}
     {% set sectionTitle = "Blog" %}
+  {% endif %}
+  {% if "using" in page.components %}
+    {% set directory = "using" %}
   {% endif %}
 {% endif %}
 
@@ -23,6 +27,10 @@
   {% if "blog" in section.components %}
     {% set sectionTitle = "Blog" %}
   {% endif %}
+  {% if "using" in section.components %}
+    {% set directory = "using" %}
+  {% endif %}
+
 {% endif %}
 
 {% block content %}
@@ -39,7 +47,7 @@
 </button>
   <ul class="lh-copy">
   <li class="ml2 mt1"><a href="/using/install">Install -> </a></li>
-  <li class="ml2 mt1"><a href="/using/operations/">Operations Manual -></a></li>
+  <li class="ml2 mt1"><a href="/using/os/">Operations Manual -></a></li>
   <li class="ml2 mt1 mb4"><a href="/using/develop/">Developer's Guide -></a></li>
   {% block menu %}
     {% if sectionTitle == "Docs" %}
@@ -53,7 +61,7 @@
         </a>
       </li>
     {% endif %}
-    {% set index = get_section(path="docs/_index.md") %}
+    {% set index = get_section(path=directory ~ "/_index.md") %}
     {% for s in index.subsections %}
     {% set subsection = get_section(path=s) %}
     {% if subsection.extra.nav %}

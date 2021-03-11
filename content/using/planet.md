@@ -2,7 +2,7 @@
 title = "Setting up Your Planet"
 weight = 1
 description = "Getting started with a permanent Urbit identity."
-template = "page_indiced.html"
+template = "doc.html"
 +++
 
 A planet is a permanent Urbit identity. Like all Urbit identities, they can never be taken away from you. Unlike comets which are free, planets are designed for use well into the future. If you're not yet familiar with the Urbit network, please follow the [Getting Started guide](@/using/install.md), which will explain the basics and walk you through using a free identity. This guide explains the next steps.
@@ -125,5 +125,5 @@ If for some reason your sponsor (in this case, `~dopzod`) is not responding, rea
 Now that you’re up and running, take some time to deepen your understanding by checking out some of our other guides:
 
 - [Host your Ship in the Cloud](@/using/running/hosting.md): Follow this guide to set your ship up to run as a cloud server, accessible from anywhere.
-- [Read the Operations Manual](@/using/os/using-your-ship.md): Become an expert pilot by learning to use your ship.
+- [Read the Operations Manual](@/using/os/getting-started.md): Become an expert pilot by learning to use your ship.
 - [Learn to Develop on Urbit](@/using/develop.md): Learn how to contribute to or develop on Urbit.

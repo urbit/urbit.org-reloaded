@@ -1,7 +1,7 @@
 +++
 title = "Filesystem"
-template = "page_indiced.html"
-weight = 2
+template = "doc.html"
+weight = 3
 +++
 
 ## Filesystem {#filesystem}

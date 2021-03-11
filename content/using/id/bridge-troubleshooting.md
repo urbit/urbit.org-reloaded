@@ -1,6 +1,6 @@
 +++
 title = "Bridge Troubleshooting"
-template = "page_indiced.html"
+template = "doc.html"
 description = "Troubleshooting Bridge if you are running into errors"
 weight = 5
 +++

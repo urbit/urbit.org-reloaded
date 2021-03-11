@@ -1,6 +1,6 @@
 +++
 title = "Using Bridge"
-template = "page_indiced.html"
+template = "doc.html"
 description = "How to use Bridge to interact with Azimuth and manage your Urbit ID."
 weight = 1
 aliases = ["/docs/getting-started/using-bridge/"]
