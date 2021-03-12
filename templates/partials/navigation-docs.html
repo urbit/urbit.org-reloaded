@@ -44,11 +44,11 @@
   <span class="gray3"> / </span>
   {% if base == "docs" %}
   <a href="{{config.base_url}}/docs/">
-    Development
+    Development Docs
   </a>
   {% elif base == "using" %}
   <a href="{{config.base_url}}/using/">
-    Operations
+    Usage Docs
   </a>
   {% endif %}
   <button id="js-search-window-toggle" class="pointer pa0 pv3 dn db-m db-l db-xl bw-0 relative" type="button"
@@ -62,7 +62,7 @@
     {% if base == "using" %}
       <a href="/docs/">Development Docs -></a>
     {% elif base == "docs" %}
-      <a href="/using/">Operations Docs -></a>
+      <a href="/using/">Usage Docs -></a>
     {% endif %}
   </li>
   {% block menu %}
