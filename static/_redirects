@@ -1,20 +1,31 @@
-/docs/introduction                                                                  /docs 301!
-/docs/getting-started                                                               /using/install 301!
-/docs/getting-started/azimuth                                                       /understanding-urbit/urbit-id 301!
-/landscape                                                                          /using/develop 301!
-/docs/getting-started/using-a-star                                                  /using/operations/stars-and-galaxies/ 301!
-/docs/bridge                                                                        /using/operations/using-bridge/ 301!
-/docs/pki                                                                           /docs/concepts/azimuth/ 301!
-/docs/arvo/internals/                                                               /docs/tutorials/arvo/ 301!
 /primer                                                                             /understanding-urbit/ 301!
-/install                                                                            /using/install 301!
+/breach                                                                             /reset 301!
+/landscape                                                                          /docs/development/develop 301!
+/install                                                                            /getting-started 301!
 /install/mac/latest                                                                 http://github.com/urbit/urbit/releases/latest/download/darwin.tgz
 /install/linux64/latest                                                             http://github.com/urbit/urbit/releases/latest/download/linux64.tgz
-/breach                                                                             /reset 301!
-/using/integrating-api                                                              /docs/arvo/eyre/using-eyre 301!
-/docs/reference/vane-apis/airlock                                                   /docs/arvo/eyre/using-eyre 301!
+/using/install                                                                      /getting-started 301!
+/using/planet                                                                       /getting-started/planet 301!
 /using/develop                                                                      /docs/development/develop 301!
+/using/integrating-api                                                              /docs/arvo/eyre/using-eyre 301!
+/using/operations                                                                   /using 301!
+/using/operations/bridge                                                            /using/id/using-bridge 301!
+/using/operations/hosting                                                           /TODO
+/using/operations/using-your-ship                                                   /using/os/getting-started 301!
+/using/operations/stars-and-galaxies                                                /using/os/stars-and-galaxies 301!
+/using/operations/bridge-troubleshooting                                            /using/os/bridge-troubleshooting 301!
+/docs/getting-started/using-a-star                                                  /using/os/stars-and-galaxies/ 301!
+/docs/bridge                                                                        /using/id/using-bridge/ 301!
+/docs/pki                                                                           /docs/system-overview/azimuth 301!
+/docs/getting-started/azimuth                                                       /understanding-urbit/urbit-id 301!
+/docs/arvo/internals/                                                               /docs/arvo/overview/ 301!
+/docs/reference/vane-apis/airlock                                                   /docs/arvo/eyre/using-eyre 301!
+/docs/introduction                                                                  /docs 301!
+/docs/getting-started                                                               /getting-started 301!
 /docs/tutorials/concepts/technical-overview                                         /docs/system-overview 301!
+/docs/tutorials/ship-troubleshooting                                                /using/os/ship-troubleshooting 301!
+/docs/tutorials/creating-an-invite-pool                                             /using/id/creating-an-invite-pool 301!
+/docs/tutorials/guide-to-breaches/                                                  /using/id/guide-to-breaches 301!
 /docs/tutorials/arvo/arvo                                                           /docs/arvo/overview 301!
 /docs/tutorials/arvo/ames                                                           /docs/arvo/ames/ames 301!
 /docs/reference/vane-apis/ames                                                      /docs/arvo/ames/ames-api 301!
