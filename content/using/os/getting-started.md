@@ -8,9 +8,8 @@ aliases = ["docs/using/messaging/", "docs/using/admin/"]
 hidetitle = "true"
 +++
 
-## Using your ship
-
-Your urbit (also called your _ship_) is a persistent Unix process that you mainly control from the console.
+Your urbit (also called your _ship_) is a persistent Unix process that you
+mainly control from its console, called the `dojo`.
 
 ### Shutdown
 
@@ -155,7 +154,7 @@ in this example.
 
 Put `<key>` in a file and that file becomes `<keyfile>`.
 
-You can use the resulting output in the same installation flow from the [Installing Urbit](@/using/install.md) guide, following the same scheme as for booting a planet. That scheme is:
+You can use the resulting output in the same installation flow from the [Installing Urbit](@/getting-started.md) guide, following the same scheme as for booting a planet. That scheme is:
 
 ```sh
 $ ./urbit -w <moonname> -G <key> -c <piername>

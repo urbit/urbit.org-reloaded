@@ -97,7 +97,7 @@ Building Urbit is about building a future where technology doesn’t control us.
 
 Keep in touch while we make build this vision into reality by [joining our mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&id=be143888d2) or following us on [Twitter](https://twitter.com/urbit) or [GitHub](https://github.com/urbit).
 
-If you’re somewhat technical and you’d like to help and contribute, [install Urbit](/using/install) and consider [applying for a grant](https://grants.urbit.org/s).
+If you’re somewhat technical and you’d like to help and contribute, [install Urbit](/getting-started) and consider [applying for a grant](https://grants.urbit.org/s).
 
 If you’re interested in homesteading a community when OS 1 comes out, [apply here](/community/community-grants).
 

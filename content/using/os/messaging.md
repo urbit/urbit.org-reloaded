@@ -4,9 +4,9 @@ template = "doc.html"
 weight = 2
 +++
 
-## Messaging {#messaging}
-
-Let’s get started using the `:chat-cli` application, also known more simply as _Chat_. It's the simplest way to talk to people using the command line interface.
+Let’s get started using the `:chat-cli` application, also known more simply as
+_Chat_. It's the simplest way to talk to people using the command line
+interface.
 
 ### Quickstart
 

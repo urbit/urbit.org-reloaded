@@ -40,7 +40,7 @@ Let’s walk through the next few phases of Landscape to get a sense of where we
 
 We built OS 1 for ourselves, because we wanted to use a communication tool that we can trust and put our system to work for real. 
 
-Today we use OS 1 every day to chat, write, and share links. It’s a calm, minimalist tool that gets us one step away from the ads, tracking, distraction and disruption of mainstream software. (We won’t get into the details of OS 1 here, but you can check out [this post](https://urbit.org/blog/introducing-os1/) for a walkthrough. You’re also welcome to try [booting a node yourself](https://urbit.org/using/install/).)
+Today we use OS 1 every day to chat, write, and share links. It’s a calm, minimalist tool that gets us one step away from the ads, tracking, distraction and disruption of mainstream software. (We won’t get into the details of OS 1 here, but you can check out [this post](https://urbit.org/blog/introducing-os1/) for a walkthrough. You’re also welcome to try [booting a node yourself](https://urbit.org/getting-started/).)
 
 The first version of OS 1 shipped in March and we’ve been improving it continuously ever since. OS 1 now runs on a much faster, more reliable Urbit OS kernel and network. The interface itself has been cleaned up and made vastly more efficient. If we weren’t so busy, we would have called it OS 1.12 by now. 
 
@@ -93,6 +93,6 @@ Our goal with Landscape is to give communities the tools they deserve to customi
 But Landscape in early 2021 will likely still only come with a few modules out of the box. Our major next step during 2021 is to make it easy for anyone to add their own modules and for developers to build and publish their own. Enabling third-party development will really enable Urbit-centric communities to tailor their own software. 
 
 
-We can’t cover everything about Landscape in a short post, nor about how the community works or evolves what we do. If you’re curious to learn more, try [booting a node](https://urbit.org/using/install/) and joining the Urbit Community group where most of us hang out. That’s where we hang out most of the time, but you can also find us working in public on [GitHub](https://github.com/urbit) and on the [urbit-dev](https://groups.google.com/a/urbit.org/g/dev) mailing list.
+We can’t cover everything about Landscape in a short post, nor about how the community works or evolves what we do. If you’re curious to learn more, try [booting a node](https://urbit.org/getting-started/) and joining the Urbit Community group where most of us hang out. That’s where we hang out most of the time, but you can also find us working in public on [GitHub](https://github.com/urbit) and on the [urbit-dev](https://groups.google.com/a/urbit.org/g/dev) mailing list.
 
 For now, let’s move on to who builds this thing and where it came from.
