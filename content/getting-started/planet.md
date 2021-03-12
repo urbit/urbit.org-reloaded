@@ -35,7 +35,7 @@ Current hosting providers are:
 
 Urbit must run on an existing computer somewhere.  Most users run their planet on their personal computer, but we recommend eventually using a cloud service (Digital Ocean, Linode, etc) because it allows your planet to be accessed from anywhere on multiple devices. Hosting your planet in the cloud also allows it to always be online and ready for automatic updates. You are welcome to run from your personal computer and switch to the cloud later...all without losing any data!
 
-There is a guide for [hosting your planet on DigitalOcean](@/using/os/hosting.md) and [hosting your planet on Linode](https://jeremytunnell.com/2021/01/09/how-to-install-urbit-on-a-linode-vps), but any cloud hosting service should work.
+There is a guide for [hosting your planet on DigitalOcean](@/using/running/hosting.md) and [hosting your planet on Linode](https://jeremytunnell.com/2021/01/09/how-to-install-urbit-on-a-linode-vps), but any cloud hosting service should work.
 
 ### Get your keyfile {#keyfile}
 
@@ -124,6 +124,6 @@ If for some reason your sponsor (in this case, `~dopzod`) is not responding, rea
 
 Now that you’re up and running, take some time to deepen your understanding by checking out some of our other guides:
 
-- [Host your Ship in the Cloud](@/using/os/hosting.md): Follow this guide to set your ship up to run as a cloud server, accessible from anywhere.
+- [Host your Ship in the Cloud](@/using/running/hosting.md): Follow this guide to set your ship up to run as a cloud server, accessible from anywhere.
 - [Read the Operations Manual](@/using/os/getting-started.md): Become an expert pilot by learning to use your ship.
 - [Learn to Develop on Urbit](@/docs/development/develop.md): Learn how to contribute to or develop on Urbit.

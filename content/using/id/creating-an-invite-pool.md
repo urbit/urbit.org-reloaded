@@ -1,6 +1,6 @@
 +++
 title = "Creating an Invite Pool"
-weight = 9
+weight = 30
 template = "doc.html"
 +++
 

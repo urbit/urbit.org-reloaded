@@ -1,5 +1,5 @@
 +++
-title = "Hosting Your Ship In The Cloud"
+title = "Cloud Hosting"
 description = "How to host your ship in the cloud so you can access it from any device."
 template = "doc.html"
 weight = 2
