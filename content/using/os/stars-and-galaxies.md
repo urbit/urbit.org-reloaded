@@ -14,7 +14,7 @@ If you plan to distribute planets in any capacity, we ask that you keep your sta
 running. If you fail to do so, those planets will become orphans that are unable
 to communicate with the network unless they transfer to a new star.
 
-See our [cloud hosting instructions](@/using/running/hosting.md) for
+See our [cloud hosting instructions](@/using/os/hosting.md) for
 instructions on settings up a Digital Ocean droplet.
 
 ### Distributing planets
