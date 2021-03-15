@@ -53,17 +53,28 @@
   {% endif %}
   <button id="js-search-window-toggle" class="pointer pa0 pv3 dn db-m db-l db-xl bw-0 relative" type="button"
   style="outline:none">
-  <span class="dib pv1 v-mid gray3">Search {{sectionTitle}}</span>
+  <span class="dib pv1 v-mid gray3">Search Docs</span>
   <span class="ml1 pa1 dib v-mid ba br1 b--gray3 gray3 f7" id="keyhint">Ctrl + /</span>
 </button>
   <ul class="lh-copy">
   <li class="ml2 mt1"><a href="/getting-started">Install / Get Started -> </a></li>
+  <li class="ml2 mt1">
+    <a href="/using/"
+      {% if base == "using" %}
+      class="fw6"
+      {% endif %}
+    >
+      Usage Docs ->
+    </a>
+  </li>
   <li class="ml2 mt1 mb4">
-    {% if base == "using" %}
-      <a href="/docs/">Development Docs -></a>
-    {% elif base == "docs" %}
-      <a href="/using/">Usage Docs -></a>
-    {% endif %}
+    <a href="/docs/"
+      {% if base == "docs" %}
+      class="fw6"
+      {% endif %}
+    >
+      Development Docs ->
+    </a>
   </li>
   {% block menu %}
     <li class="ml3 mt1">
@@ -167,7 +178,7 @@
     <option>Navigation ↓</option>
     <option> </option>
     <option value="https://urbit.org/getting-started">Install</option>
-    <option value="https://urbit.org/using/operations/">Operations Manual</option>
+    <option value="https://urbit.org/using">Operations Manual</option>
     <option value="https://urbit.org/using/develop">Developer's Guide</option>
     {% set index = get_section(path="docs/_index.md") %}
     {% for s in index.subsections %}
