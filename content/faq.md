@@ -393,6 +393,6 @@ It’s true that Nock, without jets, is slow. With the ability to call out to a 
 
 ### Can I host my Urbit with someone else? {#why-hosting}
 
-Yes, [Tlon](@/blog/hosting-the-future.md) and [a few others](@/blog/providers.md) began [accepting signups](https://tlon.io) to proivde hosting service in 2020. Under this arrangement, Tlon does all the work of setting up cloud infrastructure and getting your planet up and running, making getting started with Urbit as simple as signing up for an ordinary online service.
+Yes, [Tlon](@/blog/hosting-the-future.md) and [a few others](@/blog/providers.md) began [accepting signups](https://tlon.io) to provide hosting service in 2020. Under this arrangement, Tlon does all the work of setting up cloud infrastructure and getting your planet up and running, making getting started with Urbit as simple as signing up for an ordinary online service.
 
 Should you one day wish to run your Urbit yourself, any hosting provider ought to offer you the ability to download your [ship](@/docs/glossary/ship.md)'s [pier](@/docs/glossary/pier.md) to your own device and do so. This is a very low friction process thanks to Urbit's deterministic design.
