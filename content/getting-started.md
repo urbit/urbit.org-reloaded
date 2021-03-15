@@ -201,7 +201,7 @@ use |ota %disable or |ota ~sponsor %kids to reset it
 
 The dojo is Urbit's command line. You can use it to control your ship, or to execute arbitrary code. Check out the links below for more information.
 
-- [Basic Operations](/using/operations/using-your-ship)
+- [Basic Operations](@/using/os/getting-started.md)
 - [Basic Hoon](/docs/tutorials/hoon/hoon-school/setup)
 - [Glossary Entry](/docs/glossary/dojo)
 

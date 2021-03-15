@@ -15,7 +15,7 @@ There are a few ways to get your own planet:
 - Purchasing a planet, including hosting, from a [hosting provider](#hosting-providers) such as [geturbitid.com](https://www.geturbitid.com/).
 - Manually setting up and hosting an planet purchased from a third party such as [urbit.live](https://urbit.live), [OpenSea](https://opensea.io), [planet.market](https://planet.market/), [urbit.me](https://urbit.me), [urth systems](https://urth.systems/), or [Urbit Marketplace](https://urbitmarketplace.com/).
 
-Note that when you buy a planet, you should ensure with the provider that your parent star is operating. If you need to escape a non-operational star, see [Escaping A Sponsor](/using/operations/using-bridge/#escaping-your-sponsor).
+Note that when you buy a planet, you should ensure with the provider that your parent star is operating. If you need to escape a non-operational star, see [Escaping A Sponsor](@/using/id/using-bridge.md#escaping-your-sponsor).
 
 ### Hosting Providers {#hosting-providers}
 
@@ -117,7 +117,7 @@ use |ota %disable or |ota ~sponsor %kids to reset it
 >=
 ```
 
-If for some reason your sponsor (in this case, `~dopzod`) is not responding, read instructions on [escaping your sponsor](/using/operations/using-bridge.md#escaping-your-sponsor).
+If for some reason your sponsor (in this case, `~dopzod`) is not responding, read instructions on [escaping your sponsor](@/using/id/using-bridge.md#escaping-your-sponsor).
 
 
 ## Next Steps
