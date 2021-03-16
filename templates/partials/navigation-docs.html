@@ -5,6 +5,8 @@
 {% if page %}
   {% if "docs" in page.components %}
     {% set sectionTitle = "Docs" %}
+  {% elif "using" in page.components %}
+    {% set directory = "using" %}
   {% endif %}
   {% if "updates" in page.components %}
     {% set sectionTitle = "Updates" %}
@@ -12,14 +14,13 @@
   {% if "blog" in page.components %}
     {% set sectionTitle = "Blog" %}
   {% endif %}
-  {% if "using" in page.components %}
-    {% set directory = "using" %}
-  {% endif %}
 {% endif %}
 
 {% if section %}
   {% if "docs" in section.components %}
     {% set sectionTitle = "Docs" %}
+  {% elif "using" in section.components %}
+    {% set directory = "using" %}
   {% endif %}
   {% if "updates" in section.components %}
     {% set sectionTitle = "Updates" %}
@@ -27,10 +28,6 @@
   {% if "blog" in section.components %}
     {% set sectionTitle = "Blog" %}
   {% endif %}
-  {% if "using" in section.components %}
-    {% set directory = "using" %}
-  {% endif %}
-
 {% endif %}
 
 {% block content %}
