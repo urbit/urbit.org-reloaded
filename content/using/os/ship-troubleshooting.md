@@ -22,11 +22,11 @@ If your issue is not covered here, please check out our [Troubleshooting Knowled
 
 An ounce of prevention is worth a pound of cure, so let's first go over some best practices to keep your ship in working order.
 
-### Only boot your ship once
+### Only initialize your ship once
 
-Once your ship is booted, you should never boot it a second time. If you do boot it anew without special measures, you will experience trouble communicating with ships on the network you had talked to before.
+Once your ship has been initialized (with the `-w` variation of the `./urbit` command), you should never do so a second time. If you do initialize it anew without special measures, you will experience trouble communicating with ships on the network you had talked to before.
 
-If you accidentally booted a second time, or want to intentionally start fresh, you need to perform a [personal breach](#personal-breach), which is explained in the next section.
+If you accidentally did this a second time, or want to intentionally start fresh, you need to perform a [personal breach](#personal-breach), which is explained in the next section.
 
 ### Do not delete your pier
 
