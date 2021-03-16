@@ -348,8 +348,7 @@ Example:
 
 ### Merge strategies
 
-See [Clay merge strategies](@/docs/arvo/clay/clay.md#merge-strategies).
-
+See [Clay merge strategies](@/docs/arvo/clay/using.md#merging).
 ### Manipulation
 
 #### `+cat`
