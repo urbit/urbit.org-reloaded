@@ -75,7 +75,7 @@ In addition to the three classes of identities mentioned above, there are two ot
 
 ### What is a `@p`? Why is my username generated for me? {#what-is-patp}
 
-A `@p` ([pronounced](@/docs/tutorials/hoon/hoon-school/hoon-syntax.md#reading-hoon-aloud) *pat-pee*) is a name like `~zod` or `~lodleb-ritrul` composed of pronounceable, three-letter phonemic elements like `zod`, `lod`, `leb`, `rit` and `rul`. Shorter names, such as `~zod` and `~marzod`, are assigned to [ship](@/docs/glossary/ship.md)s with special duties on the [Arvo](#what-is-arvo) network galaxies and stars, respectively. Longer names like `~palfun-foslup` are identities for typical users.
+A `@p` ([pronounced](@/docs/hoon/hoon-school/hoon-syntax.md#reading-hoon-aloud) *pat-pee*) is a name like `~zod` or `~lodleb-ritrul` composed of pronounceable, three-letter phonemic elements like `zod`, `lod`, `leb`, `rit` and `rul`. Shorter names, such as `~zod` and `~marzod`, are assigned to [ship](@/docs/glossary/ship.md)s with special duties on the [Arvo](#what-is-arvo) network galaxies and stars, respectively. Longer names like `~palfun-foslup` are identities for typical users.
 
 These names map directly to a corresponding number in the Urbit ID address space. Galaxies occupy the 8-bit address space, so any galaxy is actually a number between zero and 255. Stars occupy the 16-bit address space, and planets occupy the 32-bit address space.
 
@@ -237,7 +237,7 @@ All events are logged to disk, so you can always restore the system to a previou
 
 When an [Arvo](@/docs/glossary/arvo.md) ship (instance) is started for the first time you must use a "[keyfile](@/docs/glossary/keyfile.md)" containing the private keys for your identity's networking keys. Urbit ID uses the Ethereum blockchain as its decentralized ledger.
 
-See our [Getting Started](@/using/install.md) guide to learn how to get your ship onto the Urbit OS / [Ames](@/docs/glossary/ames.md) network.
+See our [Getting Started](@@/getting-started/planet.md.md) guide to learn how to get your ship onto the Urbit OS / [Ames](@/docs/glossary/ames.md) network.
 
 ### Will the Urbit OS network survive if Ethereum dies? {#if-ethereum-dies}
 
@@ -245,11 +245,11 @@ Yes. It would be annoying, but Urbit ID / [Azimuth](@/docs/glossary/azimuth.md) 
 
 ### How do I install Urbit OS? {#install-urbit-os}
 
-Check out our guides [here](@/using/install.md).
+Check out our guides [here](@@/getting-started/planet.md.md).
 
 ### How do I use Urbit OS? {#use-urbit-os}
 
-The [Using](@/using/operations/_index.md) section of the documentation will help you out.
+The [Using](@/using/os/getting-started.md) section of the documentation will help you out.
 
 ### How do over-the-air updates work? {#over-the-air-updates}
 
@@ -261,9 +261,9 @@ Your sponsor, a star or galaxy that your ship is connected to, may send you new 
 
 ### I have an Urbit ID, now what? {#now-what}
 
-Follow our guide on how to boot a ship [here](@/using/install.md).
+Follow our guide on how to boot a ship [here](@@/getting-started/planet.md.md).
 
-Get on the [mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;id=be143888d2). Learn [Hoon](@/docs/tutorials/hoon/hoon-school/_index.md). Sign up for [Hooniversity](https://hooniversity.org/). [Make stuff](https://grants.urbit.org).
+Get on the [mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;id=be143888d2). Learn [Hoon](@/docs/hoon/hoon-school/_index.md). Sign up for [Hooniversity](https://hooniversity.org/). [Make stuff](https://grants.urbit.org).
 
 
 ## Urbit Grants
@@ -375,7 +375,7 @@ One day we’d really like the Urbit ID registry to be hosted on [Urbit OS](#wha
 
 ### Why is Hoon so weird? {#why-hoon}
 
-There are things about Urbit that are weird by design, and some that are weird because we haven’t gotten around to cleaning them up. [Hoon](@/docs/glossary/hoon.md), for the most part, is weird by design, but there are a few things about it we’d like to clean up.
+There are things about Urbit that are weird by design, and some that are weird because we haven’t gotten around to cleaning them up. [Hoon](@/docs/glossary/hoon.md), for the most part, is weird by design, but there are a few things about it we’d like to clean up. For a complete description of why we created Hoon, see the [Hoon overview](@/docs/hoon/overview.md).
 
 The runes are, once you get the hang of them, pretty nice. Your mileage may vary, of course, but many talented engineers have spent many, many hours writing Hoon. It’s a simple, practical language. But the learning curve can be a bit high.
 
@@ -383,7 +383,7 @@ The standard library and naming is something we’ve discussed changing, and it 
 
 The right way to think about Hoon is as the ‘C of Urbit’. It’s a bare bones language that gets you pretty close to Nock. Eventually, we’ll probably implement more expressive languages that compile to Urbit. But for now, satisfy your curiosity and [sign up for Hooniversity](https://hooniversity.org/), a community led Hoon educational organization.
 
-Another option is to treat [Urbit as an API](@/using/integrating-api.md), which allows one to use common languages such as Python and Javascript to build userspace programs. For now this option is not as powerful as Hoon, but there is still a lot that a developer without the time or inclination to learn Hoon can do.
+Another option is to treat [Urbit as an API](@/docs/arvo/eyre/using-eyre.md), which allows one to use common languages such as Python and Javascript to build userspace programs. For now this option is not as powerful as Hoon, but there is still a lot that a developer without the time or inclination to learn Hoon can do.
 
 ### What is the point of Nock? {#why-nock}
 

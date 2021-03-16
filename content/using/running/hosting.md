@@ -1,13 +1,12 @@
 +++
-title = "Hosting Your Ship In The Cloud"
+title = "Cloud Hosting"
 description = "How to host your ship in the cloud so you can access it from any device."
-template = "page_indiced.html"
+template = "doc.html"
 weight = 2
 [extra]
 hidetitle = "true"
 +++
 
-## Hosting Your Ship In The Cloud
 The goal of this guide is to have clear and easy to follow best practices for deploying an Urbit node to a server you control in the cloud. Deploying in the cloud allows you to access your Urbit from any device.
 
 Most Urbit users start out running their ship locally on one machine in order to play with it, but this means when your machine is offline your Urbit node is offline too (and can't get updates). You can also only access your Urbit from that one machine.
@@ -104,8 +103,8 @@ Continuing to follow the DO docs we're going to configure the ufw firewall.
    ```
 
 ## Installing Urbit
-Finally we're ready to install Urbit on your very own server. This part is actually pretty easy, if you haven't installed Urbit locally then the instructions are the exact same as the ones in the Urbit [install doc](@/using/install.md). If you have a local ship already, we're going to install Urbit on the server and then send your local ship up.
- - **WARN**: Since Urbit is p2p you don't want to ever run two copies of your ship simultaneously. This is because other nodes that interact with each of your copies will be confused by which one is the most up to date. If you end up accidentally doing this you'll have to do a 'personal breach' described in the [guide to breaches](@/docs/tutorials/guide-to-breaches.md) to fix things.
+Finally we're ready to install Urbit on your very own server. This part is actually pretty easy, if you haven't installed Urbit locally then the instructions are the exact same as the ones in the Urbit [install doc](@/getting-started.md). If you have a local ship already, we're going to install Urbit on the server and then send your local ship up.
+ - **WARN**: Since Urbit is p2p you don't want to ever run two copies of your ship simultaneously. This is because other nodes that interact with each of your copies will be confused by which one is the most up to date. If you end up accidentally doing this you'll have to do a 'personal breach' described in the [guide to breaches](@/using/id/guide-to-breaches.md) to fix things.
  - The first thing you're going to want to do is shut down your local ship, either with control-d or `|exit` in dojo.
  - Next we're going to install Urbit on the server and permit it to bind to the web ports:
    ```
@@ -167,7 +166,7 @@ On iOS you can save a website to your homescreen as an icon. If you do this for 
    - [Digital Ocean Nginx Installation][DO Nginx Install]
    - [Digital Ocean Nginx Config][DO Nginx Config]
    - [Digital Ocean SSL Cert Setup][DO SSL Config]
-   - [Urbit Install Docs](@/using/install.md)
+   - [Urbit Install Docs](@/getting-started.md)
    - [Urbit Basic Cloud Install][Urbit Basic Cloud Install]
 
  [Gandi]: https://www.gandi.net/

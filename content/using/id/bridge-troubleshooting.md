@@ -1,9 +1,11 @@
 +++
 title = "Bridge Troubleshooting"
-template = "page_indiced.html"
+template = "doc.html"
 description = "Troubleshooting Bridge if you are running into errors"
-weight = 5
+weight = 20
 +++
+
+This page covers common issues encountered with the [Bridge](https://bridge.urbit.org) application.
 
 ### Canvas Issues
 

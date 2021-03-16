@@ -2,10 +2,10 @@
 title = "Setting up Your Planet"
 weight = 1
 description = "Getting started with a permanent Urbit identity."
-template = "page_indiced.html"
+template = "page/getting_started.html"
 +++
 
-A planet is a permanent Urbit identity. Like all Urbit identities, they can never be taken away from you. Unlike comets which are free, planets are designed for use well into the future. If you're not yet familiar with the Urbit network, please follow the [Getting Started guide](/using/install), which will explain the basics and walk you through using a free identity. This guide explains the next steps.
+A planet is a permanent Urbit identity. Like all Urbit identities, they can never be taken away from you. Unlike comets which are free, planets are designed for use well into the future. If you're not yet familiar with the Urbit network, please follow the [Getting Started guide](@/getting-started.md), which will explain the basics and walk you through using a free identity. This guide explains the next steps.
 
 ### Purchase a planet {#purchase}
 
@@ -15,7 +15,7 @@ There are a few ways to get your own planet:
 - Purchasing a planet, including hosting, from a [hosting provider](#hosting-providers) such as [geturbitid.com](https://www.geturbitid.com/).
 - Manually setting up and hosting an planet purchased from a third party such as [urbit.live](https://urbit.live), [OpenSea](https://opensea.io), [planet.market](https://planet.market/), [urbit.me](https://urbit.me), [urth systems](https://urth.systems/), or [Urbit Marketplace](https://urbitmarketplace.com/).
 
-Note that when you buy a planet, you should ensure with the provider that your parent star is operating. If you need to escape a non-operational star, see [Escaping A Sponsor](/using/operations/using-bridge/#escaping-your-sponsor).
+Note that when you buy a planet, you should ensure with the provider that your parent star is operating. If you need to escape a non-operational star, see [Escaping A Sponsor](@/using/id/using-bridge.md#escaping-your-sponsor).
 
 ### Hosting Providers {#hosting-providers}
 
@@ -35,7 +35,7 @@ Current hosting providers are:
 
 Urbit must run on an existing computer somewhere.  Most users run their planet on their personal computer, but we recommend eventually using a cloud service (Digital Ocean, Linode, etc) because it allows your planet to be accessed from anywhere on multiple devices. Hosting your planet in the cloud also allows it to always be online and ready for automatic updates. You are welcome to run from your personal computer and switch to the cloud later...all without losing any data!
 
-There is a guide for [hosting your planet on DigitalOcean](@/using/operations/hosting.md) and [hosting your planet on Linode](https://jeremytunnell.com/2021/01/09/how-to-install-urbit-on-a-linode-vps), but any cloud hosting service should work.
+There is a guide for [hosting your planet on DigitalOcean](@/using/running/hosting.md) and [hosting your planet on Linode](https://jeremytunnell.com/2021/01/09/how-to-install-urbit-on-a-linode-vps), but any cloud hosting service should work.
 
 ### Get your keyfile {#keyfile}
 
@@ -103,7 +103,7 @@ The first thing you generally want to do with a new planet is to **mount** it. A
 
 The `>=` output means that a command was successful. Now you can see your planet's files in its directory.
 
-To understand what happened with this command, read more about Urbit’s filesystem (called “clay”) [here](@/docs/tutorials/arvo/clay.md).
+To understand what happened with this command, read more about Urbit’s filesystem (called “clay”) [here](@/docs/arvo/clay/clay.md).
 
 ## Updating {#updating}
 
@@ -117,13 +117,13 @@ use |ota %disable or |ota ~sponsor %kids to reset it
 >=
 ```
 
-If for some reason your sponsor (in this case, `~dopzod`) is not responding, read instructions on [escaping your sponsor](/using/operations/using-bridge.md#escaping-your-sponsor).
+If for some reason your sponsor (in this case, `~dopzod`) is not responding, read instructions on [escaping your sponsor](@/using/id/using-bridge.md#escaping-your-sponsor).
 
 
 ## Next Steps
 
 Now that you’re up and running, take some time to deepen your understanding by checking out some of our other guides:
 
-- [Host your Ship in the Cloud](@/using/operations/hosting.md): Follow this guide to set your ship up to run as a cloud server, accessible from anywhere.
-- [Read the Operations Manual](@/using/operations/using-your-ship.md): Become an expert pilot by learning to use your ship.
-- [Learn to Develop on Urbit](@/using/develop.md): Learn how to contribute to or develop on Urbit.
+- [Host your Ship in the Cloud](@/using/running/hosting.md): Follow this guide to set your ship up to run as a cloud server, accessible from anywhere.
+- [Read the Operations Manual](@/using/os/getting-started.md): Become an expert pilot by learning to use your ship.
+- [Learn to Develop on Urbit](@/docs/development/develop.md): Learn how to contribute to or develop on Urbit.

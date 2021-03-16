@@ -215,20 +215,21 @@ body.essay {
     img {
         display: block;
     }
-    div.footnote-definition {
-      &[id="1"] {
-        margin-top: 4rem;
-        padding-top: 2rem;
-        border-top: 1px solid black;
-      }
-      &:not([id="1"]) {
-        margin: 1rem 0;
-      }
-      p {
-        display: inline;
-        font-size: smaller;
-      }
-    }
+}
+
+div.footnote-definition {
+  &[id="0"] {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid black;
+  }
+  &:not([id="0"]) {
+    margin: 1rem 0;
+  }
+  p {
+    display: inline;
+    font-size: smaller;
+  }
 }
 
 // components

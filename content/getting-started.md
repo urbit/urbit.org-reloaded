@@ -16,7 +16,7 @@ There are currently two ways to run Urbit:
 
 If you use Mac or Linux and are not afraid of a few terminal commands, we recommend you run it yourself. That is the aim of this guide.
 
-If you run Windows or just want to give it a shot without worrying about the gritty bits, you may want to consider a [hosting provider](/using/planet#hosting-providers).
+If you run Windows or just want to give it a shot without worrying about the gritty bits, you may want to consider a [hosting provider](@/getting-started/planet.md#hosting-providers).
 
 ## Installing Urbit {#macos-and-linux}
 
@@ -122,9 +122,9 @@ There are five kinds of Urbit IDs but to get started you only need to know about
 
 A planet name looks like `~sampel-palnet`.
 
-[Follow this guide](/using/planet) if you have already acquired a planet.
+[Follow this guide](@/getting-started/planet.md) if you have already acquired a planet.
 
-[Find a planet to purchase](/using/planet#purchase)
+[Find a planet to purchase](@/getting-started/planet.md#purchase)
 
 ***
 
@@ -201,7 +201,7 @@ use |ota %disable or |ota ~sponsor %kids to reset it
 
 The dojo is Urbit's command line. You can use it to control your ship, or to execute arbitrary code. Check out the links below for more information.
 
-- [Basic Operations](/using/operations/using-your-ship)
+- [Basic Operations](@/using/os/getting-started.md)
 - [Basic Hoon](/docs/tutorials/hoon/hoon-school/setup)
 - [Glossary Entry](/docs/glossary/dojo)
 
@@ -211,4 +211,4 @@ You can continue using this comet indefinitely. There are currently few differen
 
 A comet also comes with a long and fairly unmemorable name whereas a planet has a short name and a "sigil" (avatar) associated with it that makes it more identifiable on the network. You may notice all this within the first few minutes of using Urbit.
 
-[To read instructions on how to purchase and use a planet, visit this page](/using/planet).
+[To read instructions on how to purchase and use a planet, visit this page](@/getting-started/planet.md).

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+<!-- JAL(2021.3.12) This page is a hack in order to get the title set properly in the /getting-started/planet route because I'm a Zola noob. -->
 {% block bodyclasses %}class="page-indiced"{% endblock bodyclasses %}
 
 {% block title %}
@@ -28,32 +29,14 @@
 
 <!-- header -->
 <!-- content -->
-{%- set lowercasetitle = page.title | lower | split(pat=" ") | join(sep="-") -%}
-{% if section or lowercasetitle == page.components[0] %}
-<nav class="mt4 pb4 fixed-xl full fourth-1-lg page-indiced mb3 mb0-m mb0-l mb0-xl">
-  <a class="gray3" href="/">Urbit</a>
-  <span class="gray3"> / </span>
-  <a href="/{{ page.components[0] }}">
-    {{ page.title }}
-  </a>
-
-  {% include "partials/navigation-search.html" %}
-
-{% else %}
 <nav class="mt4 fixed-xl full fourth-1-lg page-indiced mb3 mb0-m mb0-l mb0-xl">
   <a class="gray3" href="/">Urbit</a>
   <span class="gray3"> / </span>
   <a href="/{{ page.components[0] }}{% if page.components[2] %}/{{ page.components[1] }}{% endif %}">
-    {% if page.components[2] %}
-    {{ page.components[1] | capitalize }}
-    {% else %}
-    {{ page.components[0] | capitalize }}
-    {% endif %}
+    Getting Started
   </a>
 
   {% include "partials/navigation-search.html" %}
-
-{% endif %}
 
 {% for h2 in toc %}
 {% if h2.children %}
