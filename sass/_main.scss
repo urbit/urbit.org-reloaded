@@ -651,3 +651,22 @@ hr {
 nav::-webkit-scrollbar {
     display: none;
 }
+
+
+// custom anchor styling
+a.zola-anchor {
+    visibility: hidden;
+    padding: 0 0.1rem;
+    &:hover {
+	background-color: black;
+	color: white;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    &:hover > a.zola-anchor {
+        visibility: visible;
+        border-bottom-style: none;
+    }
+}
+
