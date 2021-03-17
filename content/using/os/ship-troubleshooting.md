@@ -22,19 +22,19 @@ If your issue is not covered here, please check out our [Troubleshooting Knowled
 
 An ounce of prevention is worth a pound of cure, so let's first go over some best practices to keep your ship in working order.
 
-### Only boot with your keyfile once
+### Only initialize your ship once
 
-Once your ship is booted with your keyfile, you should never use that same keyfile again. If you do boot with the same keyfile twice, any other ship on the network that your ship has communicated with will not be able to talk to your ship.
+Once your ship has been initialized (with the `-w` variation of the `./urbit` command), you should never do so a second time. If you do initialize it anew without special measures, you will experience trouble communicating with ships on the network you had talked to before.
 
-If you accidentally booted with the same keyfile twice, the only remedy is performing a [personal breach](#personal-breach), which is explained in the next section.
+If you accidentally did this a second time, or want to intentionally start fresh, you need to perform a [personal breach](#personal-breach), which is explained in the next section.
 
 ### Do not delete your pier
 
-Urbit is stateful, meaning that it needs to hold onto all your data. If you delete your pier and start your ship again, you won't be able to talk to any ship you've talked to before. The only solution to this is performing a [personal breach](#personal-breach)
+Urbit is stateful, meaning that it needs to hold onto all your data. If you delete your pier and start your ship again, you won't be able to talk to any ship you've talked to before. The only solution to this is performing a [personal breach](#personal-breach).
 
 ### Keep track of the directory that you put your ship in
 
-When you first start your ship, you should make sure you put it a place where you can find it again and where it won't get accidentally deleted. Remember that you must perform `|mount %` in your ship's Dojo to make your ship visible as a directory in the Unix file system.
+When you first start your ship, you should make sure you put it a place where you can find it again and where it won't get accidentally deleted.
 
 ### Keep up-to-date builds
 
@@ -66,7 +66,7 @@ So for example, to silence all Ames packet-related errors, try `|knob %hole %hus
 
 ### Perform a personal breach. {#personal-breach}
 
-A personal breach is when a ship tells all the other ships that have communicated with it to treat it as though the ship was just started for the first time again, since everyone on the network has forgotten about it.
+A personal breach is when a ship tells the rest of the network to treat it as though the ship was just started for the first time again. Any ongoing or outstanding communication is forgotten and connections are reestablished from scratch.
 
 Personal breaches often fix connectivity issues, but should only be used as a
 last resort. To find out how to perform a personal breach, check out our [Guide
@@ -84,10 +84,6 @@ will prevent [Bridge](@/docs/glossary/bridge.md) from being to derive your code,
 meaning you will only be able to check it from dojo in the future.
 
 ## Operation Issues {#operation-issues}
-
-### My urbit is very slow
-
-Run `|wash-gall`. This clears caches in Gall, and may result in steep performance improvements.
 
 ### My urbit is frozen
 
@@ -107,7 +103,7 @@ Since version `0.8.0`, changes no longer automatically sync between the Unix sid
 
 ### I can't communicate with anyone
 
-You may have booted a ship with your keyfile twice in the same era. To fix this, you must perform a [personal breach](#personal-breach).
+Maybe you booted your ship twice, or ran it using old files. If this is the case, you must perform a [personal breach](#personal-breach).
 
 ### I don't have the latest OTA
 
@@ -142,7 +138,7 @@ The last line above syncs from an Ethereum node for _all_ ships on the network. 
 :azimuth-tracker|listen ~[~sampel-palnet ~zod ~marzod] %app %azimuth-tracker
 ```
 
-`~sampel-palnet ~zod ~marzod` are example ship-names; replace these with any number of desired ships-names.
+`~sampel-palnet ~zod ~marzod` are example ship-names; replace these with any number of desired ship-names.
 
 The above commands work if you have the wrong keys of other ships. If other ships have wrong keys of _yours_, you need to somehow ask them to to run such a command.
 
@@ -166,7 +162,7 @@ This means that you gave your development ship an invalid `@p`. So, you will get
 
 Try bringing it back up; it will often start working just fine again.
 
-However, if you get a `bail` error again, you should perform a [personal breach](#personal-breach).
+However, if you get a `bail` error again, this is a serious issue and should be reported (see below). It's advised to keep the old files around to assist issue research. If you want to get back on the network immediately, you might want to perform a [personal breach](#personal-breach).
 
 #### Making a GitHub issue out of your `bail`
 
@@ -197,9 +193,13 @@ This means that your ship ran out of memory.
 
 2. Restart your ship. If you don't crash again, everything may be fine.
 
-3. Try the procedure outlined [here](https://github.com/urbit/support/wiki/ship-exits-with-a-bail:-meme-error).
+3. If you **do** crash again, try running the following after your ship has shut down:
+   `./urbit-worker meld your-ship` (Replacing `your-ship` with the name/directory of your ship.)
+   This will attempt to compact the memory of your ship. Note that this may use large amounts of memory on the machine you are running it on, and will be very slow if the machine has little memory available.
 
-4. If you **do** crash again, then you should perform a [personal breach](#personal-breach).
+4. If the above succeeds, but you still get `bail: meme` immediately, or after running for a little while, please [file an issue](https://github.com/urbit/urbit/issues). If you can, run `|mass` and share its output.
+
+5. As a last resort, you may perform a [personal breach](#personal-breach).
 
 ### My ship crashed with a `bail: oops` error
 
