@@ -43,11 +43,12 @@ Urbit IDs come in three classes: galaxies, stars, and planets. The length of an 
 
 Planets are intended for everyday use by individuals, and there are 4.3 billion of them (two to the 32nd power). Stars and galaxies, on the other hand, are meant to act as network infrastructure: on the [Urbit OS](#what-is-arvo) network they provide routing and are responsible for distributing software updates.
 
-### Why is is currently expensive to acquire a planet?
+### Why is is currently expensive to acquire a planet? {#gas-prices}
 
-As of early 2021, if you try to acquire a planet from a market, you will likely encounter an enormous "gas price" fee. This fee is unrelated to Urbit specifically, rather it results from how Ethereum transactions are paid for. The gas fee does not go to the person selling you the planet, nor to the market, nor to anybody associated with Urbit - it goes to the "miners" processing all Ethereum transactions.
+As of early 2021, if you try to acquire a planet from a market, you will likely encounter an enormous "gas price" fee. Ethereum is going through some growing pains, and this is an issue for every
+smart contract on the network. This fee is unrelated to Urbit specifically, rather it results from how Ethereum transactions are paid for. The gas fee does not go to the person selling you the planet, nor to the market, nor to anybody associated with Urbit - it goes to the "miners" processing all Ethereum transactions.
 
-Ethereum is going through some growing pains, and this is an issue for every smart contract on the network. Thankfully, there are a number of possible solutions, under the moniker of "Layer 2", and Tlon considers it a top priority to implement one and are working towards this goal every day. We do not yet have a timeline on when it will be ready, but when it does we expect the gas fees to be at least 100x cheaper.
+Tlon is aggressively pursuing a solution we call "naive rollups" which we predict to reduce gas costs by a factor of at least 100. We cannot give a precise estimate on when this will be complete, but it is top priority and this solution was chosen in part for the speed with which it can be implemented without sacrificing security. If you'd like to know more, we recommend watching this [Developer Call](https://www.youtube.com/watch?v=CKuHXrdkIw0) with `~wicdev-wisryt`.
 
 In the meantime, we recommend either using the network as a [comet](@/docs/glossary/comet.md), or signing up with a [hosting provider](#why-hosting), which includes a free planet.
 
