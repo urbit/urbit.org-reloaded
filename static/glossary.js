@@ -743,6 +743,13 @@ var glossary = [
     "desc": "<code>[%mccl p=hoon q=(list hoon)]</code>: call a binary function as an n-ary function."
   },
   {
+    "name": "micgal",
+    "symbol": ";<",
+    "usage": "Make",
+    "link": "/docs/reference/hoon-expressions/rune/mic/#micgal",
+    "desc": "<code>[%mcgl p=spec q=hoon r=hoon s=hoon]</code>: monadic do notation."
+  },
+  {
     "name": "miclus",
     "symbol": ";+",
     "usage": "Make",
