@@ -238,7 +238,7 @@ All events are logged to disk, so you can always restore the system to a previou
 
 When an [Arvo](@/docs/glossary/arvo.md) ship (instance) is started for the first time you must use a "[keyfile](@/docs/glossary/keyfile.md)" containing the private keys for your identity's networking keys. Urbit ID uses the Ethereum blockchain as its decentralized ledger.
 
-See our [Getting Started](@@/getting-started/planet.md.md) guide to learn how to get your ship onto the Urbit OS / [Ames](@/docs/glossary/ames.md) network.
+See our [Getting Started](@/getting-started/planet.md) guide to learn how to get your ship onto the Urbit OS / [Ames](@/docs/glossary/ames.md) network.
 
 ### Will the Urbit OS network survive if Ethereum dies? {#if-ethereum-dies}
 
@@ -246,7 +246,7 @@ Yes. It would be annoying, but Urbit ID / [Azimuth](@/docs/glossary/azimuth.md) 
 
 ### How do I install Urbit OS? {#install-urbit-os}
 
-Check out our guides [here](@@/getting-started/planet.md.md).
+Check out our guides [here](@/getting-started.md).
 
 ### How do I use Urbit OS? {#use-urbit-os}
 
@@ -262,7 +262,7 @@ Your sponsor, a star or galaxy that your ship is connected to, may send you new 
 
 ### I have an Urbit ID, now what? {#now-what}
 
-Follow our guide on how to boot a ship [here](@@/getting-started/planet.md.md).
+Follow our guide on how to boot a ship [here](@/getting-started/planet.md).
 
 Get on the [mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;id=be143888d2). Learn [Hoon](@/docs/hoon/hoon-school/_index.md). Sign up for [Hooniversity](https://hooniversity.org/). [Make stuff](https://grants.urbit.org).
 
@@ -388,7 +388,7 @@ Another option is to treat [Urbit as an API](@/docs/arvo/eyre/using-eyre.md), wh
 
 ### What is the point of Nock? {#why-nock}
 
-The primary technical reason it is difficult for the individual to run a personal server is that modern computing architectures are not deterministic. What solves a problem for one person is not guaranteed to work on another person's computer, even if they are using identical hardware. [Nock](/docs/glossary/nock.md) solves this problem. It provides a single computing foundation for the whole network, so that difficult issues that arise when running a server need only to be solved once and the solution is guaranteed to work for everyone on the network.
+The primary technical reason it is difficult for the individual to run a personal server is that modern computing architectures are not deterministic. What solves a problem for one person is not guaranteed to work on another person's computer, even if they are using identical hardware. [Nock](@/docs/glossary/nock.md) solves this problem. It provides a single computing foundation for the whole network, so that difficult issues that arise when running a server need only to be solved once and the solution is guaranteed to work for everyone on the network.
 
 It’s true that Nock, without jets, is slow. With the ability to call out to a native function, it’s not so bad. This is done by our runtime, [Vere](@/docs/glossary/vere.md), a Nock interpreter written in C.
 
