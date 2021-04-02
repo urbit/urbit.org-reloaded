@@ -215,20 +215,21 @@ body.essay {
     img {
         display: block;
     }
-    div.footnote-definition {
-      &[id="1"] {
-        margin-top: 4rem;
-        padding-top: 2rem;
-        border-top: 1px solid black;
-      }
-      &:not([id="1"]) {
-        margin: 1rem 0;
-      }
-      p {
-        display: inline;
-        font-size: smaller;
-      }
-    }
+}
+
+div.footnote-definition {
+  &[id="0"] {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid black;
+  }
+  &:not([id="0"]) {
+    margin: 1rem 0;
+  }
+  p {
+    display: inline;
+    font-size: smaller;
+  }
 }
 
 // components
@@ -650,3 +651,22 @@ hr {
 nav::-webkit-scrollbar {
     display: none;
 }
+
+
+// custom anchor styling
+a.zola-anchor {
+    visibility: hidden;
+    padding: 0 0.1rem;
+    &:hover {
+	background-color: black;
+	color: white;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    &:hover > a.zola-anchor {
+        visibility: visible;
+        border-bottom-style: none;
+    }
+}
+

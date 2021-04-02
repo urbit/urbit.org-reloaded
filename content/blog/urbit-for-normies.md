@@ -160,7 +160,7 @@ Imagine, as is already becoming the case, that it becomes highly valuable to hav
 
 Some of these cases are, admittedly, a bit speculative since we haven’t built all the functionality yet. But it’s coming, and quite soon. 
 
-For now, if you like the way this sounds you can [get yourself an Urbit ID](https://urbit.org/using/install/#id) and start learning about how to safely store cryptographic keys (it’s really not that hard, and we give you suggestions). If you’re feeling technical or adventurous, you can try booting our beta OS interface to see what it looks like. It’s fussy, but it exists. Soon it will be less fussy. You can check out our [roadmap](https://urbit.org/understanding-urbit/roadmap/) if you’d like to know when.
+For now, if you like the way this sounds you can [get yourself an Urbit ID](https://urbit.org/getting-started/#id) and start learning about how to safely store cryptographic keys (it’s really not that hard, and we give you suggestions). If you’re feeling technical or adventurous, you can try booting our beta OS interface to see what it looks like. It’s fussy, but it exists. Soon it will be less fussy. You can check out our [roadmap](https://urbit.org/understanding-urbit/roadmap/) if you’d like to know when.
 
 ## Why we need Urbit
 

@@ -216,7 +216,7 @@ replacing the storage contracts.
 
 We'll walk through how we have designed these contracts in detail here.  You can
 also view our in-progress source at the
-[`urbit/constitution` GitHub repo](https://github.com/urbit/constitution).
+[`urbit/azimuth` GitHub repo](https://github.com/urbit/azimuth).
 
 ### Certificate storage contract
 
@@ -378,10 +378,9 @@ price in ether of a planet, and the number of planets available.
 
 ## Okay, so
 
-That was quite a lot of information!  We've created a fora thread
-[here](https://urbit.org/fora/posts/~2017.9.20..22.56.04..47ce~) for discussion,
-and would be glad to hear your feedback.  GitHub issues on the
-[urbit/constitution repo](https://github.com/urbit/constitution) are also more
+That was quite a lot of information! There's also a blog post about the constitution
+[here](https://urbit.org/blog/interim-constitution/), and GitHub issues on the
+[urbit/azimuth repo](https://github.com/urbit/azimuth) are more
 than welcome.
 
 There's a lot more to come on this front as our contracts get closer to getting

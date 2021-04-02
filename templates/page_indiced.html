@@ -44,7 +44,8 @@
   <a class="gray3" href="/">Urbit</a>
   <span class="gray3"> / </span>
   <a href="/{{ page.components[0] }}{% if page.components[2] %}/{{ page.components[1] }}{% endif %}">
-    {% if page.components[2] %}{{ page.components[1] | capitalize }}
+    {% if page.components[2] %}
+    {{ page.components[1] | capitalize }}
     {% else %}
     {{ page.components[0] | capitalize }}
     {% endif %}
