@@ -167,7 +167,7 @@ To start your comet up again, run the following from your `urbit` directory (not
 
 Urbit is an entirely new computer, so by default it drops you into the "dojo," which is its terminal. Like your current computer, it can be used to do just about anything if you know the right commands. You only need to know one command for now.
 
-At the moment, the most common way to use Urbit is through a web app named Landscape, which comes with Urbit. It runs in your browser and provides an interface to Urbit without using the terminal. You need to get the password, or `code`.
+At the moment, the most common way to use Urbit is through a web app named [Landscape](@/docs/glossary/landscape.md), which comes with Urbit. It runs in your browser and provides an interface to Urbit without using the terminal. You need to get the password, or `code`.
 
 1. With your Urbit running, look for a line that says something like `http: live (insecure, public) on 80`. The number given is the port that your ship is using. It will probably be 80, but we're just making sure. (Don't worry about the "insecure, public" part — that just means you can access it from your own web browser. It doesn't give anyone else access.)
 2.  If the port given is `80`, simply type `localhost` into your browser's address bar. If the given port is a different number, such as `8080`, you would type `localhost:8080`. You'll be met with a login prompt.
