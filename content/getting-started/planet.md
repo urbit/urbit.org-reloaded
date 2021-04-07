@@ -74,11 +74,7 @@ Either command will create a directory called `sampel-palnet/` and begin booting
 
 When your planet is finished booting, you will see `~sampel-palnet:dojo>` (Dojo: the Urbit command line).
 
-Get your password to log into landscape (the Urbit web interface) by typing:
-
-```sh
-+code
-```
+To log into [Landscape](@/docs/glossary/landscape.md), check out the directions [here](/getting-started/#using-landscape).
 
 To shut down your planet, use `Ctrl-D`.
 
