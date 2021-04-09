@@ -22,7 +22,7 @@ Things only accelerate from here. Our next objective, to integrate Lightning Net
 
 ## Being Paid
 
-However, a good wallet is only half the equation for a holistic P2P commercial experience. Interfaces for offering goods and services for money is the other half. While we don’t part with our Bitcoin [easily](https://nakamotoinstitute.org/mempool/everyones-a-scammer/), two initial markets appear logical and attractive: content and Urbit-native services.
+However, a good wallet is only half the equation for a holistic P2P commercial experience. Interfaces for selling goods and services is the other half. While we don’t part with our Bitcoin [easily](https://nakamotoinstitute.org/mempool/everyones-a-scammer/), two initial markets appear logical and attractive: content and Urbit-native services.
 
 First, digital cottage industry, the “creator economy”, is blossoming. Streaming, podcasting, and writing on platforms like Youtube, Patreon, and Substack has been big business [lately](https://otherlife.co/barbarians-past-the-gate/). What fintech did to “unbundle the banks", we will now do to media monopolies and their centralized distribution platforms. With the introduction of Urbit payments, you can syndicate, distribute, and monetize your media on Urbit. By selling access to a private group containing content, digital creatives can begin doing this today.
 
