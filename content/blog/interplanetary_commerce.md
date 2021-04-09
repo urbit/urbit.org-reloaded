@@ -5,6 +5,7 @@ description = "Commercial primitives at the OS-level."
 [extra]
 author = "Christian Langalis"
 ship = "~pindet-timmut"
+image = "https://media.urbit.org/site/posts/essays/ocean.jpeg"
 +++
 
 <br>
