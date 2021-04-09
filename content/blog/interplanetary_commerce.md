@@ -13,7 +13,7 @@ ship = "~pindet-timmut"
 
 <br>
 
-Interplanetary Commerce
+**Interplanetary Commerce**
 
 ## Paying
 
