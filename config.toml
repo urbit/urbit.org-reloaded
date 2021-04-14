@@ -10,6 +10,7 @@ base_url = "https://urbit.org"
 compile_sass = true
 # Whether to generate a RSS feed automatically
 generate_feed = true
+build_search_index = true
 
 [markdown]
 # A list of directories used to search for additional `.sublime-syntax` files.
@@ -20,10 +21,6 @@ extra_syntaxes = ["syntaxes"]
 highlight_code = true
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_theme = "demain"
-
-[slugify]
-# Whether to build a search index to be used later on by a JavaScript library
-build_search_index = true
 
 # You can put any kind of data here. The data
 # will be accessible in all templates
