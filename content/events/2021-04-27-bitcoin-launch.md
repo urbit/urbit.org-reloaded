@@ -5,7 +5,7 @@ template = "events/event-landing.html"
 [extra]
 pinned = true
 host = "Urbit Foundation"
-time = "09:00 PST"
+time = "12:00pm PDT"
 location = "Online Event"
 image = "https://storage.googleapis.com/media.urbit.org/site/events/20210413-bitcoin-header.png"
 registration_url = "https://www.meetup.com/urbit-sf/events/276741426/"

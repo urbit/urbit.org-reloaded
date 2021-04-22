@@ -16,6 +16,7 @@ taxonomies = [
   { name = "grant_category" },
   { name = "post_type" }
 ]
+feed_filename = "rss.xml"
 
 [markdown]
 # A list of directories used to search for additional `.sublime-syntax` files.
