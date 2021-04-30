@@ -2,7 +2,7 @@
 title = "Docker image for cloud container orchestration"
 date = 2020-12-21
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["Dev Tool"]
 [extra]
 image = ""
@@ -32,4 +32,15 @@ Many cloud providers offer container orchestration services that abstract away f
 
 # Team
 Edward Amsden ~ritpub-sipsyl is a veteran developer with several years experience using Nix to manage production builds and deployments. He is the principal of Black River Software LLC
+
+## Milestones
+
+
+### Merged PR: Nix docker integration
+1 stars
+- Nix code to generate an Urbit docker image
+- CI integration to release docker images on GitHub
+- CI integration to publish docker images on Docker Hub
+- Documentation
+
     

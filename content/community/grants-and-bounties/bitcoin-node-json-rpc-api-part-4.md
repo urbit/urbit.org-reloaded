@@ -37,4 +37,12 @@ This bounty is to create a portion of the Gall app library for Remote Procedure 
 * Base your work off of the [btc-node-grant branch](https://github.com/urbit/urbit/tree/btc-node-grant).  Follow Boilerplate.  Look for `TODO`s.
 * Submit your code as a PR to the [btc-node-grant](https://github.com/urbit/urbit/tree/btc-node-grant) branch of the `urbit` repo in form of a `.hoon` file.
 * You have 90 days from the time of approval to complete this bounty.
+
+## Milestones
+
+
+### Your PR is merged
+2 stars
+Your PR containing all the relevant code updates is accepted and merged.
+
     

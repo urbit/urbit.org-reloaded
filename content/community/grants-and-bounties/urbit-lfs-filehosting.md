@@ -2,7 +2,7 @@
 title = "Urbit LFS - filehosting"
 date = 2021-03-11
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["App Dev: Other"]
 [extra]
 image = ""
@@ -34,4 +34,35 @@ When the uploading is finished, the fileserver notifies the provider to update c
 I'm an experienced functional programmer, but amateur hooner. I've read through the Urbit hoon docs, and the GitHub Gall Guide, and I'm starting to appreciate the odd martian soil. I want to try building something real and practical on the platform. I want to run a personal fileserver with my Urbit instead of emailing files and moving USBs.
 
 After completing an exploratory proof-of-concept, this proposal replaces https://grants.urbit.org/proposals/1760204192 with more detailed project milestones. 
+
+## Milestones
+
+
+### Proof of concept 
+1 stars
+Client – Proivder – Fileserver
+
+Client subscribes to a provider, and pokes to request an upload. Provider creates an upload url on the fileserver, and passes it to the client.
+
+
+### Upload limits
+1 stars
+Provider tracks uploaded files per client and enforces filesize limits based on groups, %kids, list of ships. Clients store limits locally as well.
+
+Fileserver confirms upload to provider
+
+
+### Handle Errors
+1 stars
+When any of the servers shutdown, a transaction is either canceled or can be resumed from a checkpoint.
+
+Provider can import/export the map from ship to uploaded files to prevent data loss.
+
+
+### Permissions and demo UI
+1 stars
+The fileid gives permission to delete the file on the fileserver. Create and manage share-links using fileid. Provider can throttle file requests.
+
+Demo html/javascript UI for client to manage files.
+
     

@@ -41,4 +41,12 @@ Additionally, write a one-page explanation for your design choices in the readme
 - You have 90 days from the time of approval to complete this bounty.
 - Successful completion of this bounty may result in an invitation to complete other API bounties.
 
+
+## Milestones
+
+
+### You are finished
+2 stars
+Your work has been approved.
+
     

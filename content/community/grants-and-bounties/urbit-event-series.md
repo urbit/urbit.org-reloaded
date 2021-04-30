@@ -2,7 +2,7 @@
 title = "Urbit Event Series"
 date = 2020-10-11
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["Community"]
 [extra]
 image = ""
@@ -69,4 +69,22 @@ Deliverable: A one day virtual summit, this will be the first public Urbit confe
 Scope of work: Act as project manager for the event. Consult with Tlon, community members, event staff/volunteers, and speakers to finalize event schedule and budget, and plan event logistics. Review applications for speaking slots and develop process to allocate speaking slots. Recruit guest speakers. Work with speakers to review and prepare talks and decks. Design the event agenda. Design sponsorship packages and recruit sponsors. Host and emcee event itself. Work with production company to record all talks in high definition, edit recordings, and share them after the event. Ensure that the event produces a high-quality, on-brand knowledge base of material on “all things Urbit.” Work with artist to plan the artistic component of the event. Post event recap, along with recordings.
 
 **Who am I?** I work full time for a blockchain project called Spacemesh in a hybrid role as a core developer, and as an evangelist/community organizer. I previously worked as an Ethereum core developer 2017-2019, and during my time working on Ethereum, I helped organize a number of community events, online and offline, around the world. I've attended dozens of technical conferences and hackathons. I also co-founded a blockchain co-working space and community based in New York and have hosted dozens of events as part of that community.
+
+## Milestones
+
+
+### Phase I: Developer calls
+1 stars
+An introductory series of 3-4 developer calls for the Urbit community. See Details for more information and scope of work.
+
+
+### Phase II: Town Hall
+2 stars
+A one-off, 2-3 hour “town hall” event that will be appropriate for both a technical and a non-technical audience. See Details for more information and scope of work.
+
+
+### Phase III: UrbitCon
+3 stars
+A daylong virtual summit, the first public Urbit conference. See Details for more information and scope of work.
+
     

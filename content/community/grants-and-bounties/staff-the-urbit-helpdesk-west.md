@@ -46,4 +46,12 @@ It will help if you identify yourself periodically as a support resource so that
 - Claimant will be online and responsive, 4 hours daily, for 30 days  
 - It may be requested that staffers modify their hours to improve coverage of issues.
 - Estimated work: 2 - 4 hours per day
+
+## Milestones
+
+
+### Work Complete
+1 stars
+You've spent the last month helping out newcomers.
+
     

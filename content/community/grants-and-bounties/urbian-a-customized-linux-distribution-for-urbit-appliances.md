@@ -2,7 +2,7 @@
 title = "Urbian: a customized Linux distribution for Urbit appliances"
 date = 2020-10-06
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["Dev Tool"]
 [extra]
 image = ""
@@ -69,5 +69,18 @@ This is meant to be the start of a Linux distribution designed for self-hosted U
 It has the potential to evolve into a system that makes it easier for users to self host their own S3 buckets with MinIO, run IoT gateways on the device which can communicate with Urbit, and help with the setup of a local bitcoin node.
 
 The development of this backend will support UX experiments with a frontend meant to create a user friendly, turnkey-style Urbit device.
+
+
+## Milestones
+
+
+### An Armbian userpatches overlay for Urbit
+1 stars
+Overlay with scripts and services integrated, used to create an image for installation to a device, which will setup Urbit upon being booted.
+
+
+### Demo of image generation and boot
+1 stars
+Blog style write-up of how to create an image with the Armbian build tool, flashing it to a device, and how it might work with a simple frontend to communicate with the user.
 
     

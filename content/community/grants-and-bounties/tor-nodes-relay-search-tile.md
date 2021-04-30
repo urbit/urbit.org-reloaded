@@ -35,4 +35,12 @@ We would like to create an Urbit-native Tor node relay search tool which replica
 - Successful completion of this bounty may result in an invitation to complete other API integration bounties. 
 
 
+
+## Milestones
+
+
+### Your PR is merged
+3 stars
+Your code is accepted and merged.
+
     

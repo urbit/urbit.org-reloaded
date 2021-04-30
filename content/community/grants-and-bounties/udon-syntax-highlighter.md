@@ -31,4 +31,12 @@ Write a CodeMirror language-mode file that results in correct syntax highlightin
 #### Contribution Guidelines
 
 * Your submission should come in the form of a single JavaScript file. Email the submission to grants@urbit.org
+
+## Milestones
+
+
+### The highlighter is complete
+1 stars
+The highlighter has been finished and tested, and the language-mode file is finished.
+
     

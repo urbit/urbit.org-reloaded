@@ -2,7 +2,7 @@
 title = "Minimal Urbit OS"
 date = 2021-01-20
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["Core Dev"]
 [extra]
 image = ""
@@ -30,4 +30,27 @@ Possible environments:
 All management functionality that will be essential regardless of environment will be included and exposed through a basic API. This API will most likely be a command line program, and it will simplify tasks like breaching by combining multiple steps into a single, reliable command. While there are most likely existing scripts to handle some of these tasks, it will be necessary to adapt those processes to this new OS since some things will be missing or work differently.
 
 Qualifications: I recently installed Gentoo on a 20 year old ThinkPad for fun.
+
+## Milestones
+
+
+### Proof of concept
+1 stars
+A minimal VM that supports booting and running a comet for several hours with a small amount of manual setup
+
+
+### System architecture plan
+1 stars
+A diagram and written overview of all components and their dependencies, explaining how the system works and why those components were chosen. I will seek input from Tlon.
+
+
+### Usable OS image
+2 stars
+A reasonably stable and complete OS image that testers can use for hosting their planets
+
+
+### Documentation and fixes
+2 stars
+Documentation for the entire system and build process, including specs for each component and ideas for replacements within Urbit. The OS will be updated to address known problems.
+
     

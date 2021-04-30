@@ -50,4 +50,12 @@ Save the test files in the `/tests/sys/hoon` directory in Arvo. Use the same fra
 * Submit your tests as a PR to the [“urbit” repository](https://github.com/urbit/urbit). Your test file should be under `pkg/arvo/tests/sys/hoon` within the repository. Link this bounty in the PR’s description.
 * You have 30 days from the time of approval to complete this bounty. 
 
+
+## Milestones
+
+
+### Test files are merged
+1 stars
+Your test files are accepted and merged on GitHub.
+
     

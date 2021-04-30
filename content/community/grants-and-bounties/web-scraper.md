@@ -33,4 +33,12 @@ Do not begin work until your request to claim this bounty is accepted. We will a
 - Do not begin work until your request to claim this bounty is accepted. We will assign a designer to work with you on the interface.
 - Submit your code as a PR to the [urbit](https://github.com/urbit/urbit) repository.
 - You have 45 days from the time of approval to complete this bounty.
+
+## Milestones
+
+
+### PR is merged
+1 stars
+Your pull request is merged.
+
     

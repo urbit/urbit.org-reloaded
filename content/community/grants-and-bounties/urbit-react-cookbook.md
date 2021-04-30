@@ -2,7 +2,7 @@
 title = "Urbit React Cookbook"
 date = 2021-04-10
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["App Dev: Other"]
 [extra]
 image = ""
@@ -25,4 +25,22 @@ The first deliverable is a simple application demonstrating basic subscriptions,
 The first two apps will be very simple and each contained in a single file to keep basic documentation in one place. As such, there will be opportunities for additional instructions such as setting up a React environment, a deeper dive into Hooks, and leveraging things like functional components and Context Provider to help with larger, more complex apps. The third deliverable is aimed to cover these points and address supplementary needs that Tlon identifies while reviewing the first two examples.
 
 This guide is robust enough for a JavaScript beginner and of course more advanced developers can read from a more general perspective to grok the structure of these development techniques. While this serves Urbit by making it easy for general web developers to start building on Urbit without having to write Hoon, ideologically this guide is aligned and written with Hoon developers in mind.
+
+## Milestones
+
+
+### First Example App: Groups and Channels
+1 stars
+Covering Subscriptions, Pokes, Threads, and Scries to create groups/channels, manage members, and send messages. Delivered as a merged PR into the urbit.org documentation.
+
+
+### Second Example App: Advanced Functions
+1 stars
+Notebooks, Collections, and advanced functions not covered in the first app such as parsing mentions and code snippets from channels. Delivered as a merged PR into the urbit.org documentation.
+
+
+### Breakout Lessons
+1 stars
+React topics for more complex apps i.e. Context Provider and advanced Hooks. Adding examples Tlon would like to see documented. Delivered as a merged PR into the urbit.org documentation.
+
     

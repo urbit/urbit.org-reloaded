@@ -2,7 +2,7 @@
 title = "Calendar UI"
 date = 2020-07-16
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["App Dev: Arvo"]
 [extra]
 image = ""
@@ -37,4 +37,17 @@ The second stage is to integrate the screens with the Gall agent implemented as 
 # Basis for future integration
 
 These pages can provide the basis for UX experiments and integrations with other parts of Landscape. One possibility is to integrate notebook posts with the timeline of a calendar, allowing a temporal exploration of the notebook posts a ship has seen.
+
+## Milestones
+
+
+### Functional pages
+1 stars
+Build the necessary pages that will allow Landscape to interact with a Calendar Gall app
+
+
+### Working integration with Gall app
+1 stars
+Fully capable of importing an .ics calendar, creating new events, looking through existing events in the calendar of a ship.
+
     

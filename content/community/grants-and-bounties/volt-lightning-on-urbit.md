@@ -202,4 +202,32 @@ It is possible to re-balance channel liquidity (shifting more of the balance to 
 * The contributor will work with the Foundation coordinator to on-board fully to Lightning and Bitcoin within Urbit.
 * After initial onboarding, the contributor will do a weekly check-in call with the coordinator, more frequently if needed/desired.
 * The contributor will fork [this Github repo](https://github.com/urbit/volt) and submit PRs to it to get feedback.
+
+## Milestones
+
+
+### transaction/invoice RFCs
+2 stars
+* Implement RFCs 2, 3 and 11 from BOLT.
+* Create the libs and types that further stages will depend on
+
+
+### on-chain transaction RFC
+2 stars
+* implement RFC 5, on-chain transaction handling
+* test that channels can be opened and closed in the manner described there
+
+
+### provider libraries
+1 stars
+* implement the `volt` provider that will talk to `lnd`
+* create any configuration files needed to start `lnd` locally
+
+
+### `volt` agent and cleanup
+2 stars
+* create the Gall agent to manage transactions
+* connect it to the provider libs
+* use the RFC libs to wire up all on-chain transactions
+
     

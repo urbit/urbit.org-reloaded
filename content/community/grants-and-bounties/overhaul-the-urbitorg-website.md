@@ -57,4 +57,17 @@ The path to implementation is necessarily dependent on the outcomes of the desig
 
 - A vision document from the Urbit Foundation will be made available.
 - The Urbit Foundation and Tlon design team will be available for assistance and will provide feedback and design review throughout the process.
+
+## Milestones
+
+
+### Designs are complete
+2 stars
+Completion of the contents of the Design section above.
+
+
+### Implementation is complete
+4 stars
+Completion of the contents of the Implementation section above.
+
     

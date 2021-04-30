@@ -200,4 +200,30 @@ implementer.
   worker.
 - The director of urbit.org will ensure access to other resources or personnel
   as needed.
+
+## Milestones
+
+
+### Data ETL
+2 stars
+The database has been designed and data from both sources is ingested
+(extracted, transformed and loaded) on a regular schedule. Analysis can be
+performed at the database layer.
+
+
+
+### HTTP API
+2 stars
+An HTTP API is written per the above specification and deployed to
+`https://api.network.urbit.org`.
+
+
+
+### UI Integration
+1 stars
+The Network Explorer UI will be a separate proposal, but integration with an
+interface inevitably surfaces oversights in the original design. An additional
+star will be awarded for providing ongoing maintenance as-needed during
+front-end integration.
+
     

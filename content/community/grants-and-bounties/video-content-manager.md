@@ -38,4 +38,22 @@ A wealth of Urbit-centric content has been produced in the past several months, 
 - [Urbit YouTube Channel](https://www.youtube.com/channel/UCNYIS9_SktINCC9yqO4CFZw/featured)
 - [urbit.org Media Page](https://urbit.org/media/)
 - The Tlon Comms team and Urbit Foundation will be available as resources for content direction, questions and feedback.
+
+## Milestones
+
+
+### Bring channels up-to-date
+1 stars
+Wrangle content from around the web (with creators' permission) and upload it to both channels. Provide organizational structure to content—on YouTube that's creating channels/playlists, on urbit.org it's up to you.
+
+
+### Ongoing maintenance
+1 stars
+In the three months following the first month of work, keep an eye out for additional content and upload it as needed.
+
+
+### Optional: Content creation/facilitation
+1 stars
+Either create or directly facilitate the creation of new video/audio content (and, of course, upload it).
+
     

@@ -76,4 +76,17 @@ The director will ensure that you have access to the necessary resources to comp
 
 The worker should have a background that either demonstrates experience building Gall agents, or developing on Bitcoin (or similar crypto systems)--both would be even better.
 
+
+## Milestones
+
+
+### Implement the full node bridge/provider
+3 stars
+Create a set of gall agents to interface with a Bitcoin full node, access to which can be provided to other ships.
+
+
+### Implement the wallet
+3 stars
+Create a set of gall agents to handle extended public keys, address derivation, and facilitate payments between ships.
+
     

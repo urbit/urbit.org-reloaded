@@ -2,7 +2,7 @@
 title = "Graph Store Documenation Guide"
 date = 2021-02-13
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["Documentation"]
 [extra]
 image = ""
@@ -79,4 +79,22 @@ As a developer who already understands `graph-store` I can:
 * look up API information
 * maintain existing `graph-store` applications on the backend
 * maintain existing `graph-store` applications on the frontend in the frontend stack of my choice
+
+## Milestones
+
+
+### Explainer
+1 stars
+Full written explainer posted online
+
+
+### Tutorial
+1 stars
+Full written tutorial with tested code samples
+
+
+### Cookbooks & Reference, Finalization
+2 stars
+Full written cookbook document, updated reference, and finalization of the content
+
     

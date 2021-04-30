@@ -50,4 +50,12 @@ Repos to file issues:
 - It may be requested that staffers modify their hours to improve coverage of issues. 
 - Estimated work: 2 - 4 hours per day
 
+
+## Milestones
+
+
+### You have been staffing a help desk for 30 days
+1 stars
+You have been responsive daily for 30 days.
+
     

@@ -2,11 +2,11 @@
 title = "Up-to-date Hoon reference card"
 date = 2020-03-15
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["Documentation"]
 [extra]
 image = ""
-description = "I have made an up-to-date version of the Urbit Hoon reference card and will maintain it."
+description = "I have made an up-to-date version of the Urbit Hoon reference card and will maintain it.https://github.com/natareo/hooncard"
 reward = 1
 assignee = "N E Davis"
 id = "607772785"
@@ -19,4 +19,12 @@ I have made and will maintain an up-to-date Urbit Hoon reference card.  (I am se
 You can see the current version here:  https://github.com/natareo/hooncard/blob/master/hooncard.pdf
 
 I put 1 star, but, whatever, I don't really think this is worth a whole star—I was encouraged to put this up as a proposal, which has the added benefit of making Tlon aware that this now exists.  But if not, a Nock shirt or the like would be nice.
+
+## Milestones
+
+
+### Make card public
+1 stars
+Make an accurate, up-to-date Hoon reference card available.
+
     

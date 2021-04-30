@@ -43,4 +43,12 @@ The generator should accept a few parameters:
 - The Urbit Foundation will connect you with Tlon engineers for 1:1 support, should you need it
 - Code should be submitted as a pull request against https://github.com/urbit/urbit
 - The generator shall be called `crunch` (we're open to better ideas)
+
+## Milestones
+
+
+### Work is complete
+1 stars
+The generator is submitted as a pull request to the Urbit repository, reviewed, and merged.
+
     

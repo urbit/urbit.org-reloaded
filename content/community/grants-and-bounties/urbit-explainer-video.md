@@ -2,7 +2,7 @@
 title = "Urbit Explainer Video"
 date = 2020-09-13
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["Community"]
 [extra]
 image = ""
@@ -23,4 +23,12 @@ Contrasting the original [Tlon-produced explainer](https://www.youtube.com/watch
 ~rivpyl-sidfyl: I am experienced in video, audio and animation work. 
 I'll try my best in translating and adapting our idea to the audiovisual medium.
 Here's a short video [reel](https://streamable.com/lpzh4s) showcasing some of my recent work.
+
+## Milestones
+
+
+### It's Done
+2 stars
+We publish the finalized video, after developing a working storyboard that has been reviewed and shared with people that might add relevant perspectives to the project.
+
     

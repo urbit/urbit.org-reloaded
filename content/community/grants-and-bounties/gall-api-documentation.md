@@ -38,4 +38,17 @@ Developers should be able to use this document as a template for writing their G
 * Submit your document in the form of a pull-request to the [Docs repo](https://github.com/urbit/docs). This file should live under the reference directory.
 * Expect to receive requests for changes to your document.
 
+
+## Milestones
+
+
+### First draft is submitted
+0 stars
+Your first draft is submitted as a pull request to the Docs repository. 
+
+
+### Final draft is merged
+1 stars
+Your edits are satisfactory, and your PR is merged to master.
+
     

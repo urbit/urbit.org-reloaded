@@ -44,4 +44,12 @@ Create a Gall app that can output the byte code for a contract ABI.
 - When applying to work on the bounty, tell us a little about yourself and some projects you’ve worked on in the past.
 - You have 90 days from the time of approval to complete this bounty.
 
+
+## Milestones
+
+
+### PR is merged
+2 stars
+Your code is accepted and merged.
+
     

@@ -2,7 +2,7 @@
 title = "Translate key parts of Urbit.org into German"
 date = 2021-01-19
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["Documentation"]
 [extra]
 image = ""
@@ -19,4 +19,12 @@ Analog to https://grants.urbit.org/proposals/1921641407-translate-key-parts-of-u
 Files could be sent in Markdown as PR to the urbit/docs repository or be transmitted via Email.
 
 I am a native German speaker with a long history of speaking and writing English and currently assisting in the translation team of a worldwide operating education and development enterprise, doing both written translation as well as live interpretation.
+
+## Milestones
+
+
+### Translation of Key Website Content
+1 stars
+Introduction, Urbit OS, Urbit ID, Interface, Roadmap: OS1-> OS N, People + History, and Install + Setup
+
     

@@ -2,7 +2,7 @@
 title = "Calendar"
 date = 2020-05-19
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["App Dev: Arvo"]
 [extra]
 image = ""
@@ -89,4 +89,27 @@ END:VCALENDAR
 ```
 
 If time permits, we'd also want to support parsing VALARM components, which correspond to alarms/reminders about events. These components can be nested within VEVENTs, and have three flavors - audio, display, and email (each representing the kind of reminder the component can give you). We aim to support parsing display alarms (displaying some text) initially, as audio is only useful once a UI is built and we don't have email on mars. While handling the alarms is outside the scope of this proposal, by parsing them we hope to make it easy for future proposals to build on them. 
+
+## Milestones
+
+
+### VEVENT Parser
+1 stars
+A generator that can parse `.ics` files from the dojo containing VEVENTs into hoon data structures. This milestone will NOT support top-level calendar properties.
+
+
+### Calendar Gall Agent
+1 stars
+Creation of a gall agent that can be used to persist and read events from `.ics` files into a "calendar" on the running ship.
+
+
+### Gall Agent Enrichment
+1 stars
+Extend the gall agent to support queries (e.g. within a range), updates and deletes of events, and a generator to create events without use of `.ics` files.
+
+
+### Pubsub/Channel Support
+2 stars
+Extend the gall agent to allow pubsub with other ships and integration with Groups to ultimately allow calendars to exist as an additional channel.
+
     

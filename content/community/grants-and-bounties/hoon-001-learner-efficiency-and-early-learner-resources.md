@@ -2,7 +2,7 @@
 title = "Hoon 001: Learner efficiency and early-learner resources"
 date = 2020-02-10
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["Documentation"]
 [extra]
 image = ""
@@ -69,5 +69,13 @@ Let’s create! Five generators, from fairly trivial (1-2) to stretching the lea
 
 
 Expected hours: 125
+
+
+## Milestones
+
+
+### Full Project
+3 stars
+Full project delivery, including content, learning materials, generators, walkthroughs, video walkthroughs
 
     

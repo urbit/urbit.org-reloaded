@@ -45,4 +45,12 @@ Create a gall application, and a user interface for that application, that are u
 - When applying to work on the bounty, tell us a little about yourself and some projects you’ve worked on in the past.
 - You have 90 days from the time of approval to complete this bounty.
 
+
+## Milestones
+
+
+### Work is finished
+1 stars
+Your work has been finished and accepted.
+
     

@@ -23,4 +23,12 @@ Applicants should:
 - have general information available (FAQ, Eth/gas prices, Urbit documentation, etc.)
 - encourage and help new members to start a new group and publicize it in the Directory
 - send a weekly digest email to support@urbit.org, with a report of key events, most frequently asked questions, and hours worked
+
+## Milestones
+
+
+### 80 hours of concierge service
+1 stars
+Provide concierge service for 4 hours/day, 5 days/week, for 4 weeks during prime West Coast hours
+
     

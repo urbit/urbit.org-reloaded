@@ -33,4 +33,12 @@ The file should strip the content out of HTML and save it into the Markdown form
 - Submit your code as a PR to the [urbit](github.com/urbit/urbit] repository.
 - You have 90 days from the time of approval to complete this bounty.
 
+
+## Milestones
+
+
+### PR is merged
+2 stars
+Your code is accepted and merged.
+
     

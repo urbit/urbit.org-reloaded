@@ -2,7 +2,7 @@
 title = "Cross-Platform Desktop Urbit App"
 date = 2021-02-23
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["App Dev: Other"]
 [extra]
 image = ""
@@ -59,4 +59,27 @@ People like to jump in and experiment with things first. I think this app provid
 My name is Hunter Miller, and I've been building on the web for 7 years. I currently work as a Senior Software Engineer for This Dot building websites and web apps for our clients. I'm focused on delivering the best user experience, which takes delicate coordination between back-end and front-end architecture to really achieve near-perfection. Throughout my time as a developer I've gained a variety of experience starting at an advertising and design agency, moving to a half a billion dollar e-commerce website, and then on to a high-level contracting and consulting firm.
 
 You can checkout [my website](https://hmiller.dev/), [LinkedIn](https://www.linkedin.com/in/hunter-miller-dev/), and [Twitter](https://twitter.com/hmillerdev) to see more about me.
+
+## Milestones
+
+
+### Ability to run basic ship features 
+1 stars
+Includes start/stop/restart ship, show status, eject ship for hosting, boot new planets, moons, and comets, boot existing planets and comets, act as browser for hosted ships, and ship removal.
+
+
+### (Timeboxed) Proof of Concept for Windows
+1 stars
+To include the Windows' user base, the PoC should enable running on Windows either through WSL or some other means. Two week timebox to make sure we don't spend too much time here.
+
+
+### Urbit Client Beta Release
+4 stars
+Significant testing during this time. Cross-platform, include all basic ship features, with no major bugs. Renamed to Urbit Client and added to urbit.org as an easy download.
+
+
+### Azimuth Integration and Official Release
+4 stars
+Integrating Urbit key generation for easy booting of new planets. Adding further refinements to UI, all moderate issues resolved, and documentation for users and contributors.
+
     

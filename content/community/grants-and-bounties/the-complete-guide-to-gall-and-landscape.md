@@ -2,7 +2,7 @@
 title = "The Complete Guide to Gall and Landscape"
 date = 2020-06-22
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["Documentation"]
 [extra]
 image = ""
@@ -60,4 +60,18 @@ The student who completes this course will not only be able to author their own 
 
 ## Video Materials
 * 5 Lessons of 2-3 hours in length each, taught on a weekly basis to help students through the material who are more interactive learners.
+
+## Milestones
+
+
+### Written Guide
+1 stars
+Full written guide (table of contents in proposal) posted online.
+
+
+### Videos Courses & Full Sample Application
+1 stars
+* Videos made for the course
+* Full sample application finished and polished with extensive commenting, integrated into the lessons
+
     

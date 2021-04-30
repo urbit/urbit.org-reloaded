@@ -38,4 +38,12 @@ The tile interface should encompass:
 - Please note that this bounty is for the CTA Train API and not for the CTA Bus API. 
 - Do not use copyrighted images, including the CTA logo or the official route map. Instead, always refer to CTA in plaintext, and use the provided train image which is detailed in the above Developer License Agreement link. You should include an external link to the CTA L Train route map; do not host this map locally (we are open to an open-source, good quality route map which does not include the CTA logo or other trademarks, however). 
 - Please read the Developer License Agreement and Branding Guide carefully and obey their guidelines for application naming and presentation of API data. 
+
+## Milestones
+
+
+### Your PR is merged
+3 stars
+Your code is accepted and merged.
+
     

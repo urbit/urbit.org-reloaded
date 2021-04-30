@@ -2,7 +2,7 @@
 title = "Translate key parts of Urbit.org into Spanish"
 date = 2021-03-20
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["Documentation"]
 [extra]
 image = ""
@@ -19,4 +19,12 @@ Similar to other translation proposals for German and Korean, this would provide
 Translations can be provided as pull requests to the urbit.org repo, or whatever is convenient for the team managing the resource.
 
 I am a fluent speaker with 20+ years of experience with the language and have lived in a handful of Spanish-speaking locales for several years. With professional experience as a programmer and teacher, I am skilled at breaking down complex technical concepts to new learners.
+
+## Milestones
+
+
+### Translation of key site content
+1 stars
+Introduction, Urbit OS, Urbit ID, Interface, Roadmap: OS1-> OS N, People + History, and Install + Setup
+
     

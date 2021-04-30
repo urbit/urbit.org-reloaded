@@ -2,11 +2,11 @@
 title = "Comprehensive local, server and mum explanation video"
 date = 2021-01-31
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["Community"]
 [extra]
 image = ""
-description = "Series of three videos"
+description = "Series of three videos:1) Purchase planet, install and run on a local machine2) nginx setup3) Explaining Urbit to my tech illiterate mum "
 reward = 1
 assignee = "mislyr-midnyt"
 id = "2020133197"
@@ -30,4 +30,12 @@ Explain Urbit in a simple way to my sister and technologically illiterate mum. I
 Videos will be entertaining and engaging, not entirely dissimilar to voice messages posted on urbit-community. Reckon this will be a good way to allow people to very easily onboard onto the network.
 
 Granted star would be used to onboard friends, family and people from the easypeasymethod.org community (currently Discord server).
+
+## Milestones
+
+
+### Record, edit and upload all videos
+1 stars
+Upload all three videos to Youtube, post links in proposal updates.
+
     

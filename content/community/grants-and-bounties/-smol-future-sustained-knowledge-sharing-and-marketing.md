@@ -2,7 +2,7 @@
 title = "-=[smol future]=- Sustained Knowledge Sharing and Marketing"
 date = 2021-01-15
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["Community"]
 [extra]
 image = ""
@@ -44,5 +44,58 @@ Let's do this and change the world.
 
 
 
+
+
+## Milestones
+
+
+### Initial Documentation: Beginner's Guide
+1 stars
+Publish a comprehensive guide on urbit.org wiki explaining how to run Urbit on a Raspberry Pi using recommended and tested hardware configurations. Walk the user through every step of of the process.
+
+
+### Initial Marketing: Outreach + Messaging
+1 stars
+Research and outreach to engage existing Raspberry Pi users and key hardware manufacturers. Introduce the Urbit narrative into new communities, including memes/vibes.
+
+
+### Sustained Documentation + Marketing: MAR
+1 stars
+A fire-and-forget approach will fail.  To succeed and continually gain traction, both documentation (updated content) and marketing (new outreach/engagement/materials) must be sustained efforts.  
+
+
+### Sustained Documentation + Marketing: APR
+1 stars
+A fire-and-forget approach will fail.  To succeed and continually gain traction, both documentation (updated content) and marketing (new outreach/engagement/materials) must be sustained efforts.  
+
+
+### Sustained Documentation+Marketing: MAY
+1 stars
+A fire-and-forget approach will fail.  To succeed and continually gain traction, both documentation (updated content) and marketing (new outreach/engagement/materials) must be sustained efforts.  
+
+
+### Sustained Documentation + Marketing: JUN
+1 stars
+A fire-and-forget approach will fail.  To succeed and continually gain traction, both documentation (updated content) and marketing (new outreach/engagement/materials) must be sustained efforts.  
+
+
+### Sustained Documentation + Marketing: JUL
+1 stars
+A fire-and-forget approach will fail.  To succeed and continually gain traction, both documentation (updated content) and marketing (new outreach/engagement/materials) must be sustained efforts.  
+
+
+### Sustained Documentation + Marketing: AUG
+1 stars
+A fire-and-forget approach will fail.  To succeed and continually gain traction, both documentation (updated content) and marketing (new outreach/engagement/materials) must be sustained efforts.  
+
+
+### Sustained Documentation + Marketing: SEP
+1 stars
+A fire-and-forget approach will fail.  To succeed and continually gain traction, both documentation (updated content) and marketing (new outreach/engagement/materials) must be sustained efforts.  
+
+
+### Sustained Documentation + Marketing: OCT
+1 stars
+A fire-and-forget approach will fail.  To succeed and continually gain traction, both documentation (updated content) and marketing (new outreach/engagement/materials) must be sustained efforts.  
 
     

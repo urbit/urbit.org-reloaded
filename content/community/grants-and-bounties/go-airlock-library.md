@@ -34,4 +34,12 @@ Additionally, write a one-page explanation for the design choices for this libra
 - You have 90 days from the time of approval to complete this bounty.
 - Successful completion of this bounty may result in an invitation to complete other Airlock library bounties. If you are interested in creating an Airlock library for a language other than the ones currently presented, please contact us at grants@urbit.org ; it’s likely we’ll approve this as a proposal.
 
+
+## Milestones
+
+
+### Work is finished
+3 stars
+You have completed your work and pushed it to a Github repo.
+
     

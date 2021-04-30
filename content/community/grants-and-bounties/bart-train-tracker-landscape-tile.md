@@ -38,4 +38,12 @@ Resources:
 - You have 90 days from the time of approval to complete this bounty.
 - Successful completion of this bounty may result in an invitation to complete other API integration bounties. 
 
+
+## Milestones
+
+
+### Your PR is merged
+3 stars
+Your code is accepted and merged.
+
     

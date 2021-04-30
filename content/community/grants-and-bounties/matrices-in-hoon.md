@@ -46,4 +46,12 @@ Any paradigm is acceptable as long as it results in code whose performance is at
 - Submit your code as a PR to the [urbit Github repo](https://github.com/urbit/urbit)
 - You have 180 days from the time of approval to complete this bounty. 
 
+
+## Milestones
+
+
+### Your PR is merged
+5 stars
+Your PR is accepted and merged.
+
     

@@ -39,4 +39,17 @@ Check it out our [guide](https://urbit.org/community/hosting-a-meetup/) to best 
 - When applying to work on the bounty, tell us a little about yourself and mention which city you'd be hosting the meetups in.
 - Proof of the meetups happening will be determined by the recordings of the presentations. Email links to these recordings to grants@tlon.io.
 - You have 100 days from the time of approval to complete this bounty.
+
+## Milestones
+
+
+### The first meetup is held
+0 stars
+The first meetup is held, and a recording of that meetup's talk or presentation is sent to grants@urbit.org.
+
+
+### The second meetup is held
+1 stars
+The second meetup is held, and a recording of that meetup's talk or presentation is sent to grants@urbit.org.
+
     

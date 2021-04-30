@@ -41,4 +41,12 @@ Save the test files in the `tests/sys/zuse/crypto` directory in Arvo. Use the sa
 * You have 60 days from acceptance to complete this bounty.
 * Write the appropriate number of unit tests per function. Some arms will only need one test, but some arms may or may not require more. An insufficient number of tests for arms may result in your submission being rejected.
 * Submit your tests as a PR to the [“urbit” repository](https://github.com/urbit/urbit). Your test file should be under `pkg/arvo/tests/sys/hoon` within the repository. Link this bounty in the PR’s description.
+
+## Milestones
+
+
+### Your test file is merged
+1 stars
+Your test file for all the relevant functions is accepted and merged. 
+
     

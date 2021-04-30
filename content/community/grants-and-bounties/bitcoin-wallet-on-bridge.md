@@ -47,4 +47,12 @@ A completed wallet should:
 - Bounty claimant should have a good working knowledge of React and Bitcoin transactions.
 - Submit your code as a PR to the [Bridge](https://github.com/urbit/bridge) repository.
 - You have 45 days from the time of approval to complete this bounty. 
+
+## Milestones
+
+
+### Pull request is accepted
+1 stars
+Your pull request containing all of the relevant code has been merged. 
+
     

@@ -64,4 +64,12 @@ This can be thin for now, because most necessary thread functions are in `lib/st
 
 ## resources available
 `~timluc-miptev` will be available to whomever does the bounty to explain things, work through any tough spots, and connect to useful people if necessary.
+
+## Milestones
+
+
+### Complete the bounty
+1 stars
+Everything in "sections" is done.
+
     

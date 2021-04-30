@@ -1,6 +1,6 @@
 +++
 title = "Staff the Urbit Helpdesk, East"
-date = 2020-12-03
+date = 2021-01-25
 [taxonomies]
 grant_type = ["bounty"]
 grant_category = ["Community"]
@@ -8,8 +8,8 @@ grant_category = ["Community"]
 image = ""
 description = "Help guide newcomers onto the network."
 reward = 1
-assignee = "~ritfed-tabryg"
-id = "1282409899"
+assignee = "~libmud-bonted"
+id = "1140084926"
 completed = false
 link = ""
 +++
@@ -48,5 +48,13 @@ It will help if you identify yourself periodically as a support resource so that
 - Estimated work: 2 - 4 hours per day
 
 
+
+
+## Milestones
+
+
+### Work Complete
+1 stars
+You've spent the last month helping out newcomers.
 
     

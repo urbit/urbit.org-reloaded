@@ -2,7 +2,7 @@
 title = "Llelogram"
 date = 2020-07-29
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["App Dev: Arvo"]
 [extra]
 image = ""
@@ -23,5 +23,33 @@ Nothing happens in a vacuum. For however complicated and impenetrable legislatio
 Technically, Llelogram is a set of tables to run contravariant to legislation. Technically illiterate as I am, from what I could gather on the Urbit Gall App tutorial, the unary function would help to illustrate the fiscal dynamic, while the binary function would translate the more abstract philosophical displacement of the text. The unary table would be made up of contemporary econometrics having to do with wealth portfolios; i.e. income/tax[liabilities] across demographics such as public sector employees (eg. teachers and janitors)/elected representatives, to private sector employees/capitalists (eg. tycoons). The binary function would be comprised of diametrica that reflect the spectrum of modern* discourse/experience. The unary table is a little more straightforward in that it’s parameters are neatly class/quantified through a currency which is universally accepted/desired. On the other hand, the binary table would be something like a literary collage made up of seminal sociological texts spanning the entire spectrum of (actionable)pop discourse that resonates variably between partisan positions to illustrate displacement. 
 
 2020 has been a scary year, but for all the sound and fury I can see light in our eyes. If we can create what I have been conceptualizing since 2015, Llelogram will be a tool for people to see how well legislation written in their names reflects the light in their eyes. Thank you so much for reading, I hope I can be part of utilizing Urbit and bringing it into the real world with you folks!     
+
+
+## Milestones
+
+
+### Build the CLI
+1 stars
+At this point we should have a basic CLI that imports actionable* federal legislation, and provides a basic way for us to flag language/numbers and score it according to how generally displaced is.
+
+
+### Compiling the tables
+1 stars
+Having worked in parallel with the engineers as they put together the CLI, I'll be compiling a basic list of tax liabilities issued by tax code; also a literary collage of seminal sociology
+
+
+### Interpret the stimulus package
+1 stars
+Given the gravity of the stimulus package congress is working on, we should apply our project to it as a way of testing how well our agent illustrates the content and resonates with our control
+
+
+### Write a paper
+1 stars
+The paper should stand as a kind of thesis which would be tested as the election happens and we can see how these developments were interpreted through the constituents. 
+
+
+### Create a kind of graphic rendition
+1 stars
+Given that the ultimate goal of Llelogram is to be something like a stock ticker, I want to create a coherent design language that would reflect the State we are managing. 
 
     

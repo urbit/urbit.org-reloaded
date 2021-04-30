@@ -2,7 +2,7 @@
 title = "Search in groups"
 date = 2021-02-25
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["App Dev: Other"]
 [extra]
 image = ""
@@ -25,4 +25,17 @@ The user-facing interface would be a shoe app where you enter your search word i
 This basic version of search only searches for exact word from post, when limited between whitespace and contains English characters. Later iterations will bring more improvements.
 
 There will also be a generator with nearly same functionality but it's stateless so could only search specified fixed nr. of posts.
+
+## Milestones
+
+
+### search generator done
+1 stars
+↑
+
+
+### shoe app done
+1 stars
+↑
+
     

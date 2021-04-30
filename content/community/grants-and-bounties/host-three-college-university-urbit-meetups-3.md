@@ -48,4 +48,12 @@ Check out our [guide](https://urbit.org/community/hosting-a-meetup/) to best pra
 - When applying to work on the bounty, tell us a little about yourself and mention which university and location you'd be hosting the meetups in.
 - Proof of the meetups happening will be determined by the recordings of the presentations. Email links to these recordings to grants@urbit.org.
 - You have 100 days from the time of approval to complete this bounty.
+
+## Milestones
+
+
+### Three meetups are held
+1 stars
+Your three meetups are held, and links to the presentations have been posted and sent to grants@urbit.org. 
+
     

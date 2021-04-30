@@ -2,7 +2,7 @@
 title = "WebRTC Gall Agent and external app"
 date = 2021-01-08
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["App Dev: Other"]
 [extra]
 image = ""
@@ -55,4 +55,23 @@ Edward Amsden ~ritpub-sipsyl is a vertan software developer and principal of Bla
 ## References
 [Mozilla Developer Network WebRTC walkthrough](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
 [Dealing with connectivity](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity)
+
+## Milestones
+
+
+### Gall agents (WebRTC, ICE/STUN)
+2 stars
+A Gall agent which handles exchanging SDP messages for WebRTC applications
+Another Gall agent which handles advertising ICE and STUN servers from stars to planets
+
+
+### Standalone WebRTC-via-Urbit app
+4 stars
+Urbit app running in browser and hosted/interfaced via Eyre which provides the three categories of calling functionality described in the body of the proposal
+
+
+### Authenticated TURN advertising
+2 stars
+Extension of the ICE/STUN Gall agent to allow stars to advertise an authenticated TURN server to some or all of their sponsored planets. Extension of the WebRTC application to use TURN servers.
+
     

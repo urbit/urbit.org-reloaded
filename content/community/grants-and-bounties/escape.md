@@ -2,7 +2,7 @@
 title = "Escape"
 date = 2019-12-04
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["App Dev: Arvo"]
 [extra]
 image = ""
@@ -29,4 +29,17 @@ The aim of this proposal is not to create a perfect reputation system but rather
 The Beta Reputation is a system that is very easy to understand to non-technical users but has a statistical background behind it. Nevertheless this is just one of the many reputation systems that are out there like [Regret](https://dl.acm.org/doi/pdf/10.1145/375735.376110), [Fire](https://eprints.soton.ac.uk/259559/1/dong-ecai2004.pdf) or [Travos](https://idp.springer.com/authorize/casa?redirect_uri=https://link.springer.com/content/pdf/10.1007/s10458-006-5952-x.pdf&casa_token=M38itGxqsu0AAAAA:lAUgQUvbc4dZFhrNs4SSPWrQ9PzUj05pzmU5zkvPkytDOfgFOIxVP0a8Tzk_VkRi37J1bRHPJ2IhTD8C). I envision this work as a starting point for introducing reputation systems in Urbit as libraries that can be used by the community for experimentation.
 
 With this is mind the Beta library (`/lib/beta.hoon`) can be used with any app that has a well defined data structure that comprises a list of timestamped events with a certain score, weighted, if desired, for a specific dimension. The ability to tag each event with a weighted dimension allows for complex reputations where different data points can be aggregated together.
+
+## Milestones
+
+
+### Gall Agent and Beta Reputation Library
+2 stars
+Delivery of the agent and library for the Beta reputation that's able to poke Azimuth for the Blockchain data, calculate the reputation score, and store it on the agent.
+
+
+### Escape UI
+2 stars
+Delivery of the UI interface that will show the Reputation Score to the user, with the ability to search for specific sponsors and filter the results accordingly.
+
     

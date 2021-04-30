@@ -63,4 +63,12 @@ Create a Gall app and that creates a Urbit ID based identity service and hosts a
 - You have 90 days from the time of approval to complete this bounty.
 
 
+
+## Milestones
+
+
+### PR is merged
+2 stars
+Your work is accepted, and your PR is merged.
+
     

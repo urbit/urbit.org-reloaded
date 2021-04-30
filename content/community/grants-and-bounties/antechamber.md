@@ -87,4 +87,17 @@ Your solution to this bounty should include pull requests against these reposito
 You will work closely with the director of urbit.org on this project. This means that regular check-in calls will be held to discuss the project's progress. Additionally, the you are expected to provide regular status updates on the project to the Urbit community via twice-monthly updates on this bounty.
 
 The director will ensure that you have access to the necessary resources to complete this project. All prior work done on this project will be explained and made available to you, and should questions arise that require the expertise of engineers at Tlon, time will be made (schedules permitting) for your questions to be answered either in writing or over a call.
+
+## Milestones
+
+
+### Part 1: Extend Bridge to Support Claims
+2 stars
+Pull requests to azimuth-js and bridge, as specified above, have been merged.
+
+
+### Part 2: Create the senate-group-hook
+2 stars
+Pull requests against the antechamber repo mentioned above have been merged.
+
     

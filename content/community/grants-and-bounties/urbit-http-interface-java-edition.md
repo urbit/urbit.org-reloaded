@@ -2,7 +2,7 @@
 title = "Urbit HTTP Interface — Java Edition"
 date = 2020-10-20
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["Core Dev"]
 [extra]
 image = ""
@@ -47,5 +47,23 @@ Qualifications:
 I'm qualified to implement this because I am experienced with Java. I have used Java for 3+ years, written robotics code using Java, and have experience using the Gradle build system.
 
  My github profile is at https://github.com/ynx0, where I have written software projects in other languages, such as a parser/interpreter combo for a fantasy assembly language.
+
+
+## Milestones
+
+
+### Basic HTTP Interface
+1 stars
+Implementation of the HTTP Interface responsible for sending and receiving JSON to/from an Urbit ship
+
+
+### Graph Store Interface
+1 stars
+Implementation of the interface to `graph-store`, which sits on top of the HTTP Interface
+
+
+### Additional Agent Interfaces
+1 stars
+Implementation of the `group-store` and `metadata-store` Gall agents
 
     

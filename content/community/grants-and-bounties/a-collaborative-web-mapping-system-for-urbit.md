@@ -2,7 +2,7 @@
 title = "﻿A Collaborative Web Mapping System for Urbit"
 date = 2020-09-03
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["App Dev: Other"]
 [extra]
 image = ""
@@ -82,5 +82,18 @@ I am a beef farmer and software engineer (geospatial web applications).  I work 
 
 
 ~lomped-firser
+
+
+## Milestones
+
+
+### Stage 1 
+2 stars
+A spatial store, spatial types, simple demo landscape app
+
+
+### Stage 2
+2 stars
+A Portal Store and Collaboration System
 
     

@@ -2,7 +2,7 @@
 title = "Matrix(Riot.im) bridge/bot"
 date = 2020-11-05
 [taxonomies]
-grant_type = ["bounty"]
+grant_type = ["grant"]
 grant_category = ["Community"]
 [extra]
 image = ""
@@ -21,5 +21,18 @@ I'm currently apart of a group split between the two platforms, us Martians push
 ## Stars
 I'm a close friend of ~nartes-fasrum, a prominent member of the community. They've gotten me addicted to this new age internet and gave me the idea for this project. I'm seeking a single star to cement my place in the galaxy, helping grow the community. I've actively recruited people in the real world under ~sorwet on behalf of ~nart but would like to start sponsoring them myself. I'm an AWS certified engineer with a burning passion for bleeding edge tech, this is my newest and most burning passion. The second milestone is more of a stretch goal of mine, I'm not sure I'm able to complete that alone, but I think it would be a really nice addition to lower the entry bar for fellow martians.
 
+
+
+## Milestones
+
+
+### Working base client
+1 stars
+At this point I'd like to have the base client working, subscribing and emitting messages between systems. I'd plan on this running via a separate cli-based client.
+
+
+### Web Client
+1 stars
+A self hosted administration portal for the bot, able to add matrix channels/ships seamlessly. This is something that I'd like to complete but not sure on an ETA.
 
     

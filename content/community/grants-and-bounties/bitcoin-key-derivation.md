@@ -50,4 +50,12 @@ The worker should have a background that demonstrates proficiency with building 
 
 * [Urbit HD Wallet design](https://github.com/urbit/fora-posts/blob/master/proposals/posts/~2018.11.8..19.31.59..ba77~.md)
 * [BIP-32 re: extended public keys](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki#Extended_keys)
+
+## Milestones
+
+
+### Work is Complete
+2 stars
+Pull requests to each repository have been submitted, reviewed and merged.
+
     
