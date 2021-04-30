@@ -59,7 +59,7 @@ new one elsewhere. Moons possess no such freedom.
 
 It may come as a surprise to you that you are already very familiar with moon
 identities—they've just never been explained as such because the context in
-which that terminology makes sense didn't before Urbit. Moons, in fact, are not
+which that terminology makes sense didn't exist before Urbit. Moons, in fact, are not
 a new concept at all. Virtually your entire experience of the internet in the
 modern era is the experience of someone who possesses some number of moons
 subordinate to planets who mostly refuse to talk to one another. The feeling you
@@ -275,7 +275,7 @@ trades for which this dynamic holds will only increase over time.
  
 Agricultural automation has been a primary engine for the growth of
 civilization, but it has been hampered by the downsides of IoT elaborated in the
-previous section. One bellweather of this dynamic is the right to repair one's
+previous section. One bellwhether of this dynamic is the right to repair one's
 own equipment. [John
 Deere](https://www.thetruthaboutcars.com/2020/03/its-payback-time-right-to-repair-movement-targets-john-deere/)
 has long been at the center of this controversy. Farmers have lost the ability
