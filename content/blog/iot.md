@@ -275,7 +275,7 @@ trades for which this dynamic holds will only increase over time.
  
 Agricultural automation has been a primary engine for the growth of
 civilization, but it has been hampered by the downsides of IoT elaborated in the
-previous section. One bellwhether of this dynamic is the right to repair one's
+previous section. One bellwether of this dynamic is the right to repair one's
 own equipment. [John
 Deere](https://www.thetruthaboutcars.com/2020/03/its-payback-time-right-to-repair-movement-targets-john-deere/)
 has long been at the center of this controversy. Farmers have lost the ability
