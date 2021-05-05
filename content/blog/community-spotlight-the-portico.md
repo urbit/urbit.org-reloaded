@@ -26,13 +26,13 @@ I encourage you to take a look. Find The Portico at ~topnup-firber/the-portico.
 
 \-\-\-\-
 
-**Do you see any connection between Rod Dreher’s The Benedict Option and your community on Urbit? Dreher sees a need for American Christians to create self-sustaining communities outside of the mainstream to protect the Christian religion and culture.**
+**Do you see any connection between Rod Dreher’s *The Benedict Option* and your community on Urbit? Dreher sees a need for American Christians to create self-sustaining communities outside of the mainstream to protect the Christian religion and culture.**
 
-It’s tough to say with certainty—I’ve never read The Benedict Option.
+It’s tough to say with certainty—I’ve never read *The Benedict Option*.
 
 A few years ago, while he was writing the book, I was a regular reader of Dreher’s blog. From his descriptions there, I was never clear about what exactly he was proposing. Much of his “clarification” came by way of metaphor: don’t “run for the hills”, but stop “shoring up the American imperium”. I didn’t read his book because I didn’t have much confidence that he would be especially precise or insightful.
 
-[There is an interesting review I’d recommend](https://handleshaus.wordpress.com/2020/10/06/review-of-rod-drehers-live-not-by-lies/), however, of his later book, Live Not By Lies. I believe it accurately characterizes the scale of the threat Christians will soon face in this country.
+[There is an interesting review I’d recommend](https://handleshaus.wordpress.com/2020/10/06/review-of-rod-drehers-live-not-by-lies/), however, of his later book, *Live Not By Lies*. I believe it accurately characterizes the scale of the threat Christians will soon face in this country.
 
 As I said in my last answer I grew up with a counter-cultural mindset. It comes naturally to me, so I find it obvious that Christians should form self-sustaining communities. But the details matter. What do such communities look like? How do we secure the freedom to pursue such communities? How do we sustain them, when myriad external forces seek to undermine them? How do we solve the long-term problem of the declining cultural importance of Christianity (which surely erodes the plausibility of our religion to many, even to some of those with sympathies toward it)?
 
@@ -67,6 +67,7 @@ Sometimes people seem to think formal logic is an infallible gift from heaven th
 Mathematical logic is a convenient, generally reliable, man-made tool that, when used carelessly in certain untamed domains, can lead one astray. Probably most people reading this are familiar with such puzzles as the Liar paradox. When one understands that logic is not a completed science, and perhaps never will be, there is less reason to worry about whether it can be used to nuke entire disciplines, like theology.
 
 For more on this topic, see the blog post in my Urbit group: “St. Gregory the Theologian and the Liar Paradox”.
+
 (2) There is perhaps a deeper challenge than the one I’ve just sketched. The Stoics used the term “logic” to encompass what we might today call “epistemology”. If the word “logic” is meant in some such broad and normative sense, then we may restate the challenge as one about rationality and theology. Is it irrational to pursue theology in our modern age?
 
 As an undergraduate under the influence of Kierkegaard, I was attracted to a romantic, vaguely irrationalist notion of faith. Dawkins-mania was at its peak and I was disgusted by the pop-rationality (or was it empiricism?) of his annoying followers. Their view seemed to be that rationality just means “following the evidence”. The raw evidence is foundational, and theories are built atop by generalizing from the evidence. The ghost of logical positivism is with us even now.
