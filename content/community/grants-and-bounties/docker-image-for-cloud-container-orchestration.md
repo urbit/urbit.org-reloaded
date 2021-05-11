@@ -2,7 +2,7 @@
 title = "Docker image for cloud container orchestration"
 date = 2020-12-21
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["Dev Tool"]
 [extra]
 image = ""

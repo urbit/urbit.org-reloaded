@@ -2,7 +2,7 @@
 title = "Translate key parts of Urbit.org into Spanish"
 date = 2021-03-20
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["Documentation"]
 [extra]
 image = ""

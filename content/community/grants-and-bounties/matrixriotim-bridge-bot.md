@@ -2,7 +2,7 @@
 title = "Matrix(Riot.im) bridge/bot"
 date = 2020-11-05
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["Community"]
 [extra]
 image = ""

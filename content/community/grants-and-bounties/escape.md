@@ -2,7 +2,7 @@
 title = "Escape"
 date = 2019-12-04
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["App Dev: Arvo"]
 [extra]
 image = ""

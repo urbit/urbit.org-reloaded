@@ -2,7 +2,7 @@
 title = "Comprehensive local, server and mum explanation video"
 date = 2021-01-31
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["Community"]
 [extra]
 image = ""

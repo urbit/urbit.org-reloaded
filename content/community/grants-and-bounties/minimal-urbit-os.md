@@ -2,7 +2,7 @@
 title = "Minimal Urbit OS"
 date = 2021-01-20
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["Core Dev"]
 [extra]
 image = ""

@@ -2,7 +2,7 @@
 title = "Urbit Explainer Video"
 date = 2020-09-13
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["Community"]
 [extra]
 image = ""

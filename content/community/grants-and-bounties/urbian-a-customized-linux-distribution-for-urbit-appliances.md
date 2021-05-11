@@ -2,7 +2,7 @@
 title = "Urbian: a customized Linux distribution for Urbit appliances"
 date = 2020-10-06
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["Dev Tool"]
 [extra]
 image = ""

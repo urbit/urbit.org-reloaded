@@ -2,7 +2,7 @@
 title = "Up-to-date Hoon reference card"
 date = 2020-03-15
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["Documentation"]
 [extra]
 image = ""

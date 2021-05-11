@@ -2,7 +2,7 @@
 title = "Urbit HTTP API for Rust"
 date = 2020-12-16
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["App Dev: Other"]
 [extra]
 image = ""

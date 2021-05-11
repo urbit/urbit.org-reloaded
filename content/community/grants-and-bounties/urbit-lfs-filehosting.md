@@ -2,7 +2,7 @@
 title = "Urbit LFS - filehosting"
 date = 2021-03-11
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["App Dev: Other"]
 [extra]
 image = ""

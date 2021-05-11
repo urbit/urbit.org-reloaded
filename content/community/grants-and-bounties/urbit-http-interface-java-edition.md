@@ -2,7 +2,7 @@
 title = "Urbit HTTP Interface — Java Edition"
 date = 2020-10-20
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["Core Dev"]
 [extra]
 image = ""

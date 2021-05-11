@@ -2,7 +2,7 @@
 title = "WebRTC Gall Agent and external app"
 date = 2021-01-08
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["App Dev: Other"]
 [extra]
 image = ""

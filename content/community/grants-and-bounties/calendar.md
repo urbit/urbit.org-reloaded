@@ -2,7 +2,7 @@
 title = "Calendar"
 date = 2020-05-19
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["App Dev: Arvo"]
 [extra]
 image = ""

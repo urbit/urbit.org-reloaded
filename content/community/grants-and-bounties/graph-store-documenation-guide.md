@@ -2,7 +2,7 @@
 title = "Graph Store Documenation Guide"
 date = 2021-02-13
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["Documentation"]
 [extra]
 image = ""

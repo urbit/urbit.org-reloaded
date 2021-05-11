@@ -2,7 +2,7 @@
 title = "Urbit Ship and Star Hosting and Troubleshooting Docs"
 date = 2020-08-19
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["Documentation"]
 [extra]
 image = ""

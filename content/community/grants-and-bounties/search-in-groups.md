@@ -2,7 +2,7 @@
 title = "Search in groups"
 date = 2021-02-25
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["App Dev: Other"]
 [extra]
 image = ""

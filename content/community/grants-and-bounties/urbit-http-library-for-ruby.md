@@ -2,7 +2,7 @@
 title = "Urbit HTTP Library for Ruby"
 date = 2020-11-05
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["Dev Tool"]
 [extra]
 image = ""

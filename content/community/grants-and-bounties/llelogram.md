@@ -2,7 +2,7 @@
 title = "Llelogram"
 date = 2020-07-29
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["App Dev: Arvo"]
 [extra]
 image = ""

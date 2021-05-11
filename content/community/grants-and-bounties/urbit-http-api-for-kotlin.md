@@ -2,7 +2,7 @@
 title = "Urbit HTTP API for Kotlin"
 date = 2020-10-27
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["App Dev: Other"]
 [extra]
 image = ""

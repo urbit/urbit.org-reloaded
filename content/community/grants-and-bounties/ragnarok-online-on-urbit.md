@@ -2,7 +2,7 @@
 title = "Ragnarok Online on Urbit"
 date = 2019-08-30
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["App Dev: Other"]
 [extra]
 image = ""

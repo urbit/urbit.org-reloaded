@@ -2,7 +2,7 @@
 title = "-=[smol future]=- Sustained Knowledge Sharing and Marketing"
 date = 2021-01-15
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["Community"]
 [extra]
 image = ""

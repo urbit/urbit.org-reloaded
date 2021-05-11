@@ -2,7 +2,7 @@
 title = "Translate key parts of Urbit.org into Norwegian"
 date = 2021-04-07
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["Community"]
 [extra]
 image = ""

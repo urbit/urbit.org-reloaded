@@ -2,7 +2,7 @@
 title = "Urbit Event Series"
 date = 2020-10-11
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["Community"]
 [extra]
 image = ""

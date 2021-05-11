@@ -2,7 +2,7 @@
 title = "Links in Urbit Reference Docs"
 date = 2020-06-16
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["Documentation"]
 [extra]
 image = ""

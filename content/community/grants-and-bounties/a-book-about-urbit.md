@@ -2,7 +2,7 @@
 title = "A book about Urbit"
 date = 2020-07-23
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["Community"]
 [extra]
 image = ""

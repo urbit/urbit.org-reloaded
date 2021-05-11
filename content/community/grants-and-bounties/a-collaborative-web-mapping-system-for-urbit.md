@@ -2,7 +2,7 @@
 title = "﻿A Collaborative Web Mapping System for Urbit"
 date = 2020-09-03
 [taxonomies]
-grant_type = ["grant"]
+grant_type = ["proposal"]
 grant_category = ["App Dev: Other"]
 [extra]
 image = ""

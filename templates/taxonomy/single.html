@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 
 {% block title %}
-<meta name="og:title" content="Blog - {{ config.title }}">
-<title>Blog - {{ config.title }}</title>
+<meta name="og:title" content="{{ term.name | capitalize }} Archive - {{ config.title }}">
+<title>{{ term.name | capitalize }} - {{ config.title }}</title>
 {% endblock title %}
 
 {% block description %}
-<meta name="og:description" content="Urbit {{ term.name }} Archive">
-<meta name="description" content="Urbit {{ term.name }} Archive">
+<meta name="og:description" content="Urbit {{ term.name | capitalize }} Archive">
+<meta name="description" content="Urbit {{ term.name | capitalize }} Archive">
 {% endblock description %}
 
 {% block image %}
@@ -18,10 +18,6 @@
 <!-- header -->
 <nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl">
   <a class="gray3" href="/">Urbit</a>
-  <span class="gray3"> / </span>
-  <a href="/blog">
-    Blog
-  </a>
   {% include "partials/navigation-search.html" %}
 </nav>
 <!-- content -->
