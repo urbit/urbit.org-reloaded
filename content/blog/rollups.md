@@ -41,8 +41,8 @@ utilized by projects other than Urbit. As we're avoiding technicality here, weâ€
 
 Very briefly, a rollup is a way to combine many transactions into one, and we
 are building infrastructure so that any Urbit ship may be utilized as a "roller". A
-roller will collect layer 2 Urbit ID transactions, compute their effects, and post the
-result of the transactions onto the Ethereum blockchain. Anybody may set up a
+roller will collect layer 2 Urbit ID transactions, confirm their validity, and
+post them to the Ethereum blockchain. More detail is given [at the end](#technical). Anybody may set up a
 ship to [act as a roller](#rollers). Tlon will be launching our own publicly accessible roller, but as Urbit is a decentralized network, by no means will we have a monopoly.
 
 #### Pros and cons
