@@ -61,30 +61,15 @@ you are transferring to another address you own. The process here is slightly di
 - Delete your keyfile after successfully booting.
 - Rejoin your favorite chat channels and subscriptions.
 
-Performing a personal breach on your ship increments an integer value called
-your ship's _life_ by one, which refers to your ship's [Azimuth](@/docs/azimuth/azimuth.md) _key
-revision number_. This value is utilized by
-Ames and Jael to ensure that you are
-communicating with a ship created using its most recent set of keys. Your
-ship's life is written at the end of the name of its keyfile, e.g.
-`sampel-palnet-4.key`. Changing the Etherum address that holds the Urbit ID,
-called _reticketing_, increments a number called the ship's _rift_ by one in
-addition to incrementing your ship's life.
-Rift refers to your ship's Azimuth _continuity number_.
-
-You can check your current life and rift number by running the
-`+keys our` generator in Dojo. You can inspect another ship's life and rift can be checked by
-running `+keys ~sampel-palnet`.
-
-
 ## Network Breaches
 
-A network breach is an event where all ships on the network are required to update to a new continuity era. Network breaches happen when an Arvo update is released that is too large to release over the air. The current continuity era is given by a value in Ames, our networking vane, that is incremented when a network breaches; only ships with the same such value are able to communicate with one another.
+A network breach is an event where all ships on the network are required to
+update to a new continuity era. Network breaches happen when an Arvo update is
+released that is too large to release over the air. The current continuity era
+is given by an integer in Ames, our networking vane, that is incremented when a
+network breaches; only ships with the same such value are able to communicate
+with one another. The most recent network breach occurred in December 2020, and
+we expect it to be the final one.
 
-If a network breach is happening, follow the steps below.
-
-- Delete your old Urbit binary.
-- Delete or archive your old pier.
-- Download the new Urbit binary by following the instructions in the [Install page](@/getting-started/_index.md).
-- Create a new pier by booting your ship with your key, according to the instructions on the install page. (Note: You do _not_ need to use a new key to boot into a new continuity era.)
-- Rejoin your favorite chat channels and subscriptions.
+If another network breach does occur, we will provide accompanying documentation
+on what to do to transfer your ship and all of its data to the new era.
