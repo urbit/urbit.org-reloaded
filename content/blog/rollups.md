@@ -114,7 +114,7 @@ sponsored by either layer 1 or layer 2 stars, meaning that nothing will change
 in terms of how sponsorship works.
 
 When you buy a ship, any reputable seller will inform you whether or not it is
-on layer 1 or layer 2. Anyone running an urbit will be able to verify this information, and we expect for tools to exist to make this information publicly available (see [this grant](https://grants.urbit.org/bounties/1101665172-network-explorer-data-pipeline-http-api).
+on layer 1 or layer 2. Anyone running an urbit will be able to verify this information, and we expect for tools to exist to make this information publicly available (see [this grant](https://grants.urbit.org/bounties/1101665172-network-explorer-data-pipeline-http-api)).
 
 And that's it! If you'd like to know how things will be changing for
 [stars](#stars), what goes into [setting up a roller](#rollers), and additional
