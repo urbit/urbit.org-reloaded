@@ -1,9 +1,12 @@
 <!-- First nav is desktop-specific. Second nav is dropdown version for mobile. -->
 
 {% set sectionTitle = "urbit.org" %}
+{% set directory = "docs" %}
 {% if page %}
   {% if "docs" in page.components %}
     {% set sectionTitle = "Docs" %}
+  {% elif "using" in page.components %}
+    {% set directory = "using" %}
   {% endif %}
   {% if "updates" in page.components %}
     {% set sectionTitle = "Updates" %}
@@ -16,6 +19,8 @@
 {% if section %}
   {% if "docs" in section.components %}
     {% set sectionTitle = "Docs" %}
+  {% elif "using" in section.components %}
+    {% set directory = "using" %}
   {% endif %}
   {% if "updates" in section.components %}
     {% set sectionTitle = "Updates" %}
@@ -26,27 +31,70 @@
 {% endif %}
 
 {% block content %}
+{% if section %}
+  {%- set base = section.components[0] -%}
+{% elif page %}
+  {%- set base = page.components[0] -%}
+{% endif %}
 <nav class="bg-gray5 dn db-xl pt4 full-left no-break docs pr4">
     <a class="gray3" href="{{config.base_url}}">Urbit</a>
   <span class="gray3"> / </span>
+  {% if base == "docs" %}
   <a href="{{config.base_url}}/docs/">
-  Documentation
+    Development Docs
   </a>
-<button id="js-search-window-toggle" class="pointer pa0 pv3 dn db-m db-l db-xl bw-0 relative" type="button"
+  {% elif base == "using" %}
+  <a href="{{config.base_url}}/using/">
+    Usage Docs
+  </a>
+  {% endif %}
+  <button id="js-search-window-toggle" class="pointer pa0 pv3 dn db-m db-l db-xl bw-0 relative" type="button"
   style="outline:none">
-  <span class="dib pv1 v-mid gray3">Search {{sectionTitle}}</span>
+  <span class="dib pv1 v-mid gray3">Search Docs</span>
   <span class="ml1 pa1 dib v-mid ba br1 b--gray3 gray3 f7" id="keyhint">Ctrl + /</span>
 </button>
   <ul class="lh-copy">
-  <li class="ml2 mt1"><a href="/using/install">Install -> </a></li>
-  <li class="ml2 mt1"><a href="/using/operations/">Operations Manual -></a></li>
-  <li class="ml2 mt1 mb4"><a href="/using/develop/">Developer's Guide -></a></li>
+  <li class="ml2 mt1"><a href="/getting-started">Install / Get Started -> </a></li>
+  <li class="ml2 mt1">
+    <a href="/using/"
+      {% if base == "using" %}
+      class="fw6"
+      {% endif %}
+    >
+      Usage Docs ->
+    </a>
+  </li>
+  <li class="ml2 mt1 mb4">
+    <a href="/docs/"
+      {% if base == "docs" %}
+      class="fw6"
+      {% endif %}
+    >
+      Development Docs ->
+    </a>
+  </li>
   {% block menu %}
-    {% set index = get_section(path="docs/_index.md") %}
+    <li class="ml3 mt1">
+      <a
+        {% if section and section.relative_path == "docs/_index.md" %}
+          class="fw6"
+        {% elif section and section.relative_path == "using/_index.md" %}
+          class="fw6"
+        {% endif %}
+        {% if base == "docs" %}
+          href="/docs"
+        {% elif base == "using" %}
+          href="/using"
+        {% endif %}
+        >
+        Introduction
+      </a>
+    </li>
+    {% set index = get_section(path=directory ~ "/_index.md") %}
     {% for s in index.subsections %}
     {% set subsection = get_section(path=s) %}
     {% if subsection.extra.nav %}
-      <li class="ml3 mt1"><a
+      <li class="ml3 mt2"><a
         {% if current_url == subsection.permalink %}
           class="fw6"
         {% endif %}
@@ -126,8 +174,8 @@
   <select class="db mt4 pa2 b--black ba br0 mw4 f6 fw5" id="docsSelect" style="text-indent: 0.725rem;">
     <option>Navigation ↓</option>
     <option> </option>
-    <option value="https://urbit.org/using/install">Install</option>
-    <option value="https://urbit.org/using/operations/">Operations Manual</option>
+    <option value="https://urbit.org/getting-started">Install</option>
+    <option value="https://urbit.org/using">Operations Manual</option>
     <option value="https://urbit.org/using/develop">Developer's Guide</option>
     {% set index = get_section(path="docs/_index.md") %}
     {% for s in index.subsections %}

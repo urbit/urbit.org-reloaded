@@ -6,9 +6,9 @@ aliases = ["/posts/essays/why-urbit-probably-does-not-need-a-blockchain/", "/pos
 [extra]
 author = "Curtis Yarvin"
 ship = "~sorreg-namtyv"
-image = "https://media.urbit.org/site/blog-1.jpg"
+image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/why-urbit-probably-does-not-need-a-blockchain.jpg"
 +++
-![](https://media.urbit.org/site/blog-1.jpg)
+![](https://storage.googleapis.com/media.urbit.org/site/posts/essays/why-urbit-probably-does-not-need-a-blockchain.jpg)
 
 TLDR: Urbit (probably) doesn't need a blockchain, because the Urbit
 address-space PKI is a special case of a consensus ledger (itself a

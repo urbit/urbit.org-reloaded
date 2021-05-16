@@ -1,13 +1,12 @@
 +++
-title = "Hosting Your Ship In The Cloud"
+title = "Cloud Hosting"
 description = "How to host your ship in the cloud so you can access it from any device."
-template = "page_indiced.html"
+template = "doc.html"
 weight = 2
 [extra]
 hidetitle = "true"
 +++
 
-## Hosting Your Ship In The Cloud
 The goal of this guide is to have clear and easy to follow best practices for deploying an Urbit node to a server you control in the cloud. Deploying in the cloud allows you to access your Urbit from any device.
 
 Most Urbit users start out running their ship locally on one machine in order to play with it, but this means when your machine is offline your Urbit node is offline too (and can't get updates). You can also only access your Urbit from that one machine.
@@ -83,52 +82,60 @@ Continuing to follow the DO docs we're going to configure the ufw firewall.
    ```
    $ sudo ufw app list
    ```
- - Next we'll configure ufw to allow connections via ssh and to allow Urbit to use the standard web port when the firewall is enabled.
+   
+ - Next we'll configure ufw to allow connections via ssh and to allow Urbit to use the standard web port when the firewall is enabled,
+ as well as opening a port that we'll later specify for your urbit to use to communicate directly with other ships.
    ```
    $ sudo ufw allow OpenSSH
    $ sudo ufw allow www
+   $ sudo ufw allow https
+   $ sudo ufw allow 34543/udp
    ```
+ Note that you can choose any port in place of 34543 for Ames. Just be sure to pass the same port via the `-p` option when starting your ship.
+   
  - Next we'll turn on the firewall.
    ```
    $ sudo ufw enable
    ```
- - To see the current the current firewall status use the following.
+ - To see the current firewall status use the following.
    ```
    $ sudo ufw status
    ```
 
 ## Installing Urbit
-Finally we're ready to install Urbit on your very own server. This part is actually pretty easy, if you haven't installed Urbit locally then the instructions are the exact same as the ones in the Urbit [install doc](@/using/install.md). If you have a local ship already, we're going to install Urbit on the server and then send your local ship up.
- - **WARN**: Since Urbit is p2p you don't want to ever run two copies of your ship simultaneously. This is because other nodes that interact with each of your copies will be confused by which one is the most up to date. If you end up accidentally doing this you'll have to do a 'personal breach' described in the [guide to breaches](@/docs/tutorials/guide-to-breaches.md) to fix things.
+Finally we're ready to install Urbit on your very own server. This part is actually pretty easy, if you haven't installed Urbit locally then the instructions are the exact same as the ones in the Urbit [install doc](@/getting-started/_index.md). If you have a local ship already, we're going to install Urbit on the server and then send your local ship up.
+ - **WARN**: Since Urbit is p2p you don't want to ever run two copies of your ship simultaneously. This is because other nodes that interact with each of your copies will be confused by which one is the most up to date. If you end up accidentally doing this you'll have to do a 'personal breach' described in the [guide to breaches](@/using/id/guide-to-breaches.md) to fix things.
  - The first thing you're going to want to do is shut down your local ship, either with control-d or `|exit` in dojo.
- - Next we're going to install Urbit on the server and permit it to bind to the web port:
+ - Next we're going to install Urbit on the server and permit it to bind to the web ports:
    ```
    $ ssh your_user@your_domain
    $ mkdir urbit
    $ cd urbit
-   $ curl -O https://bootstrap.urbit.org/urbit-v0.10.8-linux64.tgz
-   $ tar xzf urbit-v0.10.8-linux64.tgz
-   $ cd urbit-v0.10.8-linux64
+   $ wget --content-disposition https://urbit.org/install/linux64/latest
+   $ tar zxf ./linux64.tgz --strip=1
    $ sudo setcap 'cap_net_bind_service=+ep' urbit
    ```
  - Now we're going to tar up your local ship and send it to your server, from your local machine's urbit directory:
    ```
    $ tar -zcvf <ship_dir_name>.tar.gz <ship_dir_name>
-   $ scp <ship_dir_name>.tar.gz  your_user@your_domain:/home/your_user/urbit
+   $ scp <ship_dir_name>.tar.gz  your_user@your_domain:urbit
    ```
  - Back on your server let's untar your ship and start it up with the Ames port we allowed through the firewall:
    ```
    $ ssh your_user@your_domain
    $ cd urbit
    $ tar -zxvf <ship_dir_name>.tar.gz
-   $ ./urbit-v0.10.8-linux64/urbit <ship_dir_name>
+   $ ./urbit -p 34543 <ship_dir_name>
    ```
- - Now we run a few commands in Dojo to request a Let’s Encrypt cert for your domain (replace `tld` with whatever your top-level domain is e.g. `com` in `example.com`:
+ - Now we run a few commands in Dojo to request a Let’s Encrypt cert for your
+   domain. Replace `tld` with whatever your top-level domain is e.g. `com` in
+   `example.com`. `your_subdomain` is optional and that part of the command
+   should be omitted if you are not using it):
    ```
    ~sampel-palnet:dojo> |start %acme
-   ~sampel-palnet:dojo> :acme &path /tld/your_domain
+   ~sampel-palnet:dojo> :acme &path /tld/your_domain/your_subdomain
    ```
- - Your ship should now be sailing on the digital ocean. Check `https://your_domain`, if everything is working properly you should see a login page.
+ - Your ship should now be sailing on the digital ocean. Check `https://your_subdomain.your_domain.tld`, if everything is working properly you should see a login page.
  - Log in with the code from `+code` in dojo like normal and you should see all of your applications.
 
 ## Leaving your Urbit running in a Screen session
@@ -139,7 +146,7 @@ Finally, to leave your Urbit running after you disconnect we can leave it in a S
    ```
  - This will start a screen session, we can now start up the Urbit ship from the `urbit` directory in this session:
    ```
-   $ ./urbit-v0.10.8-linux64/urbit <ship_dir_name>
+   $ ./urbit <ship_dir_name>
    ```
  - Then we can disconnect from the screen session and leave the ship running with `control-a d`
  - To get back into the screen session:
@@ -159,7 +166,7 @@ On iOS you can save a website to your homescreen as an icon. If you do this for 
    - [Digital Ocean Nginx Installation][DO Nginx Install]
    - [Digital Ocean Nginx Config][DO Nginx Config]
    - [Digital Ocean SSL Cert Setup][DO SSL Config]
-   - [Urbit Install Docs](@/using/install.md)
+   - [Urbit Install Docs](@/getting-started/_index.md)
    - [Urbit Basic Cloud Install][Urbit Basic Cloud Install]
 
  [Gandi]: https://www.gandi.net/
@@ -170,7 +177,7 @@ On iOS you can save a website to your homescreen as an icon. If you do this for 
  [DO SSL Config]: https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04
  [Urbit Basic Cloud Install]: https://medium.com/@urbitlive/hello-world-urbit-edition-install-boot-and-run-your-urbit-planet-on-a-10-cloud-server-b9579745b9a8
  [DO Initial Setup]: https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04
- [Blog Github]: https://github.com/zalberico/zalberico.github.io
+ [Blog GitHub]: https://github.com/zalberico/zalberico.github.io
 
 If you plan to use Nginx as a reverse proxy for your Urbit, it is important that you include the following settings in your configuration in order to allow the Landscape web client to properly communicate with your Urbit:
     ```

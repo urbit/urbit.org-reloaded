@@ -7,10 +7,10 @@ aliases = ["/posts/essays/beliefs-and-principles",
 [extra]
 author = "Curtis Yarvin + Galen Wolfe-Pauly"
 ship = "~sorreg-namtyv + ~ravmel-ropdyl"
-image = "https://media.urbit.org/site/blog-2.jpg"
+image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/beliefs-and-principles.jpg"
 +++
 
-![](https://media.urbit.org/site/blog-2.jpg)
+![](https://storage.googleapis.com/media.urbit.org/site/posts/essays/beliefs-and-principles.jpg)
 
 ## Beliefs
 
