@@ -15,9 +15,9 @@
 <!-- content -->
 <section class="full c4-10-lg pt4 lh-copy">
   <h1>Grant Type: {{ term.name  | capitalize}}</h1>
-  {% if term.name == 'bounty' %}
+  {% if term.name == 'bounties' %}
     <p>The Urbit foundation creates bounties to build out specific features or undertake various projects, which community members may apply to work on in exchange for address space.</p>
-  {% elif term.name == 'proposal' %}
+  {% elif term.name == 'proposals' %}
     <p>Community members may submit proposals to develop a specific feature or work in a particular area. Once approved by the Urbit Foundation, they may complete them in exchange for address space.</p>
   {% endif %}
   {% for page in term.pages %}
