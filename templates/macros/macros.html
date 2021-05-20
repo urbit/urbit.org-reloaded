@@ -10,6 +10,10 @@
   </span>
 {% endmacro event_metadata %}
 
+{% macro reward(page) %}
+  {{ page.extra.reward }} star{% if page.extra.reward > 1 %}s{% endif %} {% if not page.extra.assignee %}reward{% else %}{% if page.extra.completed %}awarded{% else %}pending{% endif %}{% endif %}
+{% endmacro reward %}
+
 {% macro grant(page, mode="full", classes="") %}
   {% if mode == "mini" %}
     <article data-date="{{ page.date }}" id="grant-{{ page.slug }}" class="grant flex items-stretch {{ classes }}">
@@ -22,7 +26,7 @@
         </div>
         <div class="gray3">
           {% if page.extra.reward %}
-            <span>{{ page.extra.reward }} stars</span>
+            <span>{{ macros::reward(page=page) }}</span>
           {% endif %}
         </div>
       </a>
@@ -44,7 +48,7 @@
             <a href="{{ get_taxonomy_url(kind="grant_category", name=category, lang=page.lang) }}" class="mr3 gray1">{{ category }}</a>
           {% endfor %}
           {% if page.extra.reward %}
-            <span class="mr3 gray1">{{ page.extra.reward }} star{% if page.extra.reward > 1 %}s{% endif %}</span>
+            <span class="mr3 gray1">{{ macros::reward(page=page) }}</span>
           {% endif %}
           {% if page.extra.assignee %}
             <span class="mr3 gray1 mono">{{ page.extra.assignee }}</span>
