@@ -73,6 +73,7 @@
 /docs/tutorials/hoon/hoon-school/type-checking-and-type-inference                   /docs/hoon/hoon-school/type-checking-and-type-inference 301!
 /docs/tutorials/hoon/hoon-school/type-polymorphism                                  /docs/hoon/hoon-school/type-polymorphism 301!
 /docs/tutorials/hoon/hoon-school/_index                                             /docs/hoon/hoon-school/_index 301!
+/docs/tutorials/hoon/style                                                          /docs/hoon/reference/style 301!
 /docs/reference/hoon-expressions/advanced                                           /docs/hoon/reference/advanced 301!
 /docs/reference/hoon-expressions/basic                                              /docs/hoon/reference/basic 301!
 /docs/reference/cheat-sheet                                                         /docs/hoon/reference/cheat-sheet 301!
