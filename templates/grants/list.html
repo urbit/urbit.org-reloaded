@@ -86,10 +86,7 @@
       <li style="flex: 0 1 15rem;" class="f5 flex items-center"><a href="{{ category.permalink }}" class="bb">{{ category.name }}</a></li>
     {% endfor %}
   </ul>
-
-  <p>This is a partial list, check <a href="https://grants.urbit.org" target="_blank" class="bb">grants.urbit.org</a> to see more and apply for a grant or propose your own.</p>
-
-
+  
   {% for page in posts.pages %}
     {{ macros::grant(page=page, classes="full c1-10-lg mv5")}}
   {% endfor %}
