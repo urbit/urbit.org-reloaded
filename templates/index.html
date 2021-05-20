@@ -21,44 +21,38 @@
   <meta name="description" content="Urbit is a simple, durable system for running a personal server that you own 100% and forever.">
 {% endblock description %}
 {% block content %}
-<section class="full lh-copy c2-7-md c3-7-lg mt6 mb6">
-  <p class="mt0 mb4"><strong>Urbit</strong> is a clean-slate OS and network for the 21st century.</p>
-  <p><strong>Urbit OS</strong> is a reimagining of the operating system as an ‘overlay OS.’</p>
-  <p class="mb4">It's a compact system for an individual to run their own permanent personal server on any Unix machine with an internet connection.</p>
-  <p class="mb4"><strong>Urbit ID</strong> is a decentralized digital identity system. Your
-  Urbit ID is a username, network address, and crypto wallet.</p>
-  <p><strong>Urbit OS + Urbit ID</strong> are designed to work together as a single system, are completely open source, and 100% owned by the people who use them.</p>
+
+<section class="full c2-12-md c3-11-lg">
+  <div class="flex flex-column flex-row-m flex-row-l flex-row-xl justify-between mv5">
+  <h1 class="f4">Urbit</h1>
+    <nav class="flex flex-column dib-m dib-l dib-xl">
+      <a href="/install" class="tc bg-blue0-new blue2-new f4 pa1 fw6">Download Port</a>
+      <a href="/docs" class="f4 tc fw6 gray6 ml0 ml3-m ml3-l ml3-xl">Docs</a>
+      <a href="/blog" class="f4 tc fw6 gray6 ml0 ml3-m ml3-l ml3-xl">Blog</a>
+    </nav>
+  </div>
+  <h2 class="f4 mv5">A <span class="green2-new tooltip" title="Able to do anything you can imagine a computer can do.">general purpose</span>, <span class="yellow2-new tooltip" title="Built from scratch for direct communication between machines - no intermediate platforms required.">peer-to-peer</span> computing platform.</h2>
 </section>
 
-<section class="full lh-copy c7-12-md c7-11-lg mt6 mb6">
-  <video class="vid-insert bg-black" id="ocean" autoplay="" muted="" loop="" poster="https://media.urbit.org/site/sea30-poster.jpg">
-  </video>
+<section class="full c2-12-md c3-11-lg mb5">
+<div class="tc tl-m tl-l tl-xl bg-blue0-new w-100 pv6">
+  <div class="ml0 ml6-m ml6-l ml6-xl">
+    <h1 class="blue3-new" style="font-size: 100px;">Port</h1>
+    <div id="download" class="db">
+      <div id="download-div" class="bg-blue3-new white br2 pv2 ph3 dib">
+        <a id="download-info" href="https://github.com/arthyn/taisho/releases/latest/download/taisho.dmg">
+          Download for macOS
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 </section>
 
-
-
-<section class="full lh-copy c2-7-md c3-7-lg mb6">
-  <ul class="list mt0">
-    <li class="mt0">
-      <a class="b--blue2 blue2 bb" href="/getting-started/">Get Started</a><br />
-      Learn more about how to run Urbit and join the network.
-    </li>
-    <li class="mt3">
-      <a class="b--green2 green2 bb" href="/docs/">Documentation</a><br />
-      Read our documentation to learn more about the technology.
-    </li>
-    <li class="mt3">
-      <a class="bb" href="/understanding-urbit">Introduction</a><br />
-      Never heard of Urbit before? Start here to read a bit about the project.
-    </li>
-    <li class="mt3">
-      <a class="bb" href="/faq">FAQ</a> <br />
-      Answers to commonly asked questions.
-    </li>
-  </ul>
-</section>
-
-<section class="full c7-12-md c7-11-lg mb5">
+<section class="full c2-12-md c3-11-lg mb5">
+  <h1 class="mb5 gray6 f3">Community</h1>
+  <div class="community">
+  {% set e = get_section(path="blog/_index.md") %}
   {% set s = get_section(path="events/_index.md") %}
   {% set pins = s.pages
     | filter(attribute="extra.pinned", value=true)
@@ -66,105 +60,39 @@
     | reverse
     %}
   {% set allposts = s.pages
-            | sort(attribute="date")
             | filter(attribute="extra.pinned", value=false)
+            | concat(with=e.pages)
+            | sort(attribute="date")
             | concat(with=pins)
             | reverse
             %}
-  {% for page in allposts | slice (end=2) %}
-    <li class="mb4 list event">
+  {% for page in allposts | slice (end=4) %}
+    <li class="mb4 list w-100">
       <a class="bb-0" href="{{ page.permalink }}">
-        <h2 class="f5 fw6 mt0 mb1">{{ page.title }}</h2>
-        {% if page.extra.description %}
-          <p class="lh-copy mt1">{{ page.extra.description }}</p>
+        {% if page.extra.image %}
+        <img class="db mb2 obj-cover h5 w-100 ba" src="{{ page.extra.image }}" />
+        {% elif page.extra.youtube %}
+        <div class="video-container index mb2">
+          <iframe height=auto src="https://www.youtube.com/embed/{{page.extra.youtube}}" webkitallowfullscreen
+            mozallowfullscreen allowfullscreen>
+          </iframe>
+        </div>
         {% endif %}
+        <h2 class="f4 fw6 mt0 mb2">{{ page.title }}</h2>
+        <div class="flex flex-row justify-between">
+        <span class="f6">
+          {% if page.extra.ship %}
+          <address class="mono">{{ page.extra.ship }}</address>
+          {% elif page.extra.location %}
+          <span>{{ page.extra.location }}</span>
+          {% endif %}
+          </span>
+          <time class="f6">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
+        </div>
       </a>
-      {{ macros::event_metadata(page=page)}}
     </li>
   {% endfor %}
-  <a href="/events" class="bb">View more events</a>
+  </div>
 </section>
-
-
-
-<section class="full c2-7-md c3-7-lg mt5">
-  <h1 class="mb3">Latest Posts</h1>
-  <p class="lh-copy mt1">We regularly write posts on our <a class="bb" href="/blog">blog</a> about what we're working on.</p>
-  {% set s = get_section(path="updates/_index.md") %}
-  {% set e = get_section(path="blog/_index.md") %}
-  {% set allposts = s.pages
-            | concat (with=e.pages)
-            | sort(attribute="date")
-            | reverse
-            %}
-  {% for page in allposts | slice (end=2) %}
-  <li class="mb4 list">
-        <a class="bb-0" href="{{ page.permalink }}">
-        <h2 class="f5 fw6 mt0 mb1">{{ page.title }}</h2>
-        {% if page.extra.image %}
-        <img class="db mv2 obj-cover h4 w-50 ba" src="{{ page.extra.image }}" />
-        {% elif page.extra.description %}
-        <p class="lh-copy mt1">{{ page.extra.description }}</p>
-        {% endif %}
-        <time class="mono f6">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
-        <span class="mono f6">
-          {% if page.extra.ship %}
-            <address class="mono f6 mh2">{{ page.extra.ship }}</address>
-          {% endif %}
-        </span>
-      </a>
-      </li>
-  {% endfor %}
-</section>
-
-
-<section class="full lh-copy c7-12-md c7-11-lg mt5" id="follow">
-  <p class="lh-copy mt1 mb3">
-      We send regular updates about our project. Enter your email to get them.
-    </p>
-    <iframe name="nothing" style="display:none;"></iframe>
-    <form
-      action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;amp;id=be143888d2"
-      method="post"
-      id="mc-embedded-subscribe-form"
-      name="mc-embedded-subscribe-form"
-      class="validate form"
-      target="_blank"
-      novalidate>
-      <div class="input-group" id="mc_embed_signup_scroll">
-        <div class="mc-field-group w-100 relative">
-          <input
-            class="bg-white black b--black ba pa3 w-100 mb2 br0 wk-appearance-none"
-            type="email"
-            name="EMAIL"
-            id="mce-EMAIL"
-            placeholder="your@email.com"/>
-          <button
-            id="mc-embedded-subscribe"
-            class="dib bn absolute bg-transparent"
-            style="font-family: 'Inter UI', san-serif; right: 3px; top: 15px; -webkit-appearance: none;"
-            type="submit"
-            name="subscribe"
-            onclick="_paq.push(['trackEvent', 'Mailing List', 'Subscribe'])">
-            <span class="fr pr1">-></span>
-          </button>
-        </div>
-      </div>
-    </form>
-  <p class="lh-copy">
-      Follow us on <a class="b--black bb" href="https://twitter.com/urbit">Twitter</a>
-  </p>
-  <p class="lh-copy">
-    Explore the code on <a class="b--black bb" href="https://github.com/urbit/urbit">GitHub</a>
-  </p>
-  <p class="lh-copy">
-    Ask questions in our <a class="b--black bb" href="https://discord.gg/Mae2bk7">Discord</a>
-  </p>
-  <p class="lh-copy">
-    Boot Urbit and join:<br /> <code>~bitbet-bolbel/urbit-community</code>
-  </p>
-</section>
-
-
 {% include "partials/footer.html" %}
 {% endblock content %}

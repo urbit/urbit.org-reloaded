@@ -607,6 +607,9 @@ iframe.arena-iframe {
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 30px; height: 0; overflow: hidden;
+    &.index {
+      padding-bottom: 14.25rem;
+    }
 }
 
 .video-container iframe,
@@ -669,4 +672,40 @@ h1, h2, h3, h4, h5, h6 {
         visibility: visible;
         border-bottom-style: none;
     }
+}
+
+
+.community {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 48px;
+}
+
+.gray6 {
+  color: #666666;
+}
+
+.bg-blue0-new {
+  background-color: #f4faff;
+}
+
+.blue2-new {
+  color: #219dff;
+}
+
+.blue3-new {
+  color: #75c2ff;
+}
+
+.bg-blue3-new {
+  background-color: #75c2ff;
+}
+
+.green2-new {
+  color: #009F65;
+}
+
+.yellow2-new {
+  color: #FFC700;
 }
