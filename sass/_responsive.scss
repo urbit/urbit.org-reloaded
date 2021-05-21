@@ -16,6 +16,9 @@
       grid-template-columns: 1fr;
       grid-template-rows: repeat(1fr);
   }
+  footer.full-bleed {
+    padding: 8rem 2rem;
+  }
 }
 
 // custom L breakpoint classes
