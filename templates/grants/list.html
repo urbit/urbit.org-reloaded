@@ -30,10 +30,10 @@
 
   <p>We reward contributors in four different ways:</p>
   <ul class='list'>
-    <li class="mb2"><a class="b bb" href="/grant-type/proposals">Proposals</a> from community members</li>
-    <li class="mb2"><a class="b bb" href="/grant-type/bounties">Bounties</a> for specific features</li>
-    <li class="mb2"><a class="b bb" href="/community/apprenticeships">Apprenticeships</a> undertaken with a mentor</li>
-    <li class="mb2"><a class="b bb" href="/post-type/gifts">Gifts</a> given post facto for exceptional contributions</li>
+    <li class="mb2"><a class="b bb" href="/grants/proposals">Proposals</a> from community members</li>
+    <li class="mb2"><a class="b bb" href="/grants/bounties">Bounties</a> for specific features</li>
+    <li class="mb2"><a class="b bb" href="/grants/apprenticeships">Apprenticeships</a> undertaken with a mentor</li>
+    <li class="mb2"><a class="b bb" href="/grants/gifts">Gifts</a> given post facto for exceptional contributions</li>
   </ul>
 
   <div class="flex tc mv5 flex-wrap">
@@ -86,7 +86,7 @@
       <li style="flex: 0 1 15rem;" class="f5 flex items-center"><a href="{{ category.permalink }}" class="bb">{{ category.name }}</a></li>
     {% endfor %}
   </ul>
-  
+
   {% for page in posts.pages %}
     {{ macros::grant(page=page, classes="full c1-10-lg mv5")}}
   {% endfor %}

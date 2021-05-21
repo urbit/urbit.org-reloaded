@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% import "macros/macros.html" as macros %}
+
+{% block title %}
+<meta name="og:title" content="Proposals Archive - {{ config.title }}">
+<title>Proposals - {{ config.title }}</title>
+{% endblock title %}
+
+{% block description %}
+<meta name="og:description" content="Urbit Proposals Archive">
+<meta name="description" content="Urbit Proposals Archive">
+{% endblock description %}
+
+{% block image %}
+<meta name="twitter:image" content="https://media.urbit.org/logo/urbit-logo-card.png">
+{% endblock image %}
+
+{% block content %}
+  {% set taxonomy = get_taxonomy(kind="grant_type") %}
+  {% for t in taxonomy.items %}
+    {% if t.name == 'proposals' %}
+      {% set_global term = t %}
+    {% endif %}
+  {% endfor %}
+<!-- header -->
+<nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl">
+  <a class="gray3" href="/">Urbit</a>
+  <span class="gray3"> / </span>
+  <a class="gray3" href="/grants">Grants</a>
+  <span class="gray3"> / </span>
+  <a href="{{ current_url }}">Proposals</a>
+  {% include "partials/navigation-search.html" %}
+</nav>
+<!-- content -->
+<section class="full c4-10-lg pt4 lh-copy">
+  <h1>Proposals</h1>
+  <p>Community members may submit proposals to develop a specific feature or work in a particular area. Once approved by the Urbit Foundation, they may complete them in exchange for address space.</p>
+  {% for page in term.pages %}
+    {{ macros::grant(page=page, classes="full c1-10-lg mv5")}}
+  {% endfor %}
+</section>
+{% include "partials/footer.html" %}
+{% endblock content %}
