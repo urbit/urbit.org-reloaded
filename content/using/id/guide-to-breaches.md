@@ -6,27 +6,32 @@ template = "doc.html"
 
 An important concept on the [Ames](@/docs/arvo/ames/ames.md) network is that of continuity. Continuity refers to how ships remember the order of their own network messages and the network messages of others -- these messages are numbered, starting from zero. A _breach_ is when ships on the network agree to forget about this sequence and treat one or more ships like they are brand new.
 
-There are two kinds of breaches: **personal breaches** and **network breaches**.
+There are two kinds of breaches: (personal) **breaches** and **network breaches**.
 
-## Personal Breaches
+## Breaches
 
-Ships on the Ames network sometimes need to reset their continuity. A personal breach is when an individual ship announces to the network: "I forgot who I am, let's start over from scratch." That is, it clears its own event log and sends an announcement to the network, asking all ships that have communicated with it to reset its networking information in their state. This makes it as though the ship was just started for the first time again, since everyone on the network has forgotten about it.
+Ships on the Ames network sometimes need to reset their continuity. A breach is
+when an individual ship announces to the network: "I forgot who I am, let's
+start over from scratch." That is, it clears its own event log and sends an
+announcement to the network, asking all ships that have communicated with it to
+reset its networking information in their state. This makes it as though the
+ship was just started for the first time again, since everyone on the network
+has forgotten about it.
 
-Personal breaches often fix connectivity issues, but should only be used as a
-last resort. Before performing a personal breach, look at alternative fixes in
-the [Ship Troubleshooting](../ship-troubleshooting) guide. Also reach out for
-help in the Help channel in the Urbit Community group
-`~bitbet-bolbel/urbit-community`, or, failing that, in the
-`#ship-starting-support` channel in our [Discord
+Breaches often fix connectivity issues, but should only be used as a last
+resort. Before performing a breach, look at alternative fixes in the [Ship
+Troubleshooting](../ship-troubleshooting) guide. Also reach out for help in the
+Help channel in the Urbit Community group `~bitbet-bolbel/urbit-community`, or,
+failing that, in the `#ship-starting-support` channel in our [Discord
 server](https://discord.gg/n9xhMdz) to see if there is another option.
 
-There are two types of personal breaches - one where your Ethereum ownership address
+There are two types of breaches - one where your Ethereum ownership address
 remains the same, and one where you are switching to a new Ethereum ownership
-address. We make the emphasis about the Ethereum _ownership_ address as
-changing your [proxies](@/docs/glossary/proxies.md) does not require a breach.
+address. We make the emphasis about the Ethereum _ownership_ address as changing
+your [proxies](@/docs/glossary/proxies.md) does not require a breach.
 
 If you will be keeping the same Ethereum ownership address and would like to perform a
-personal breach, follow the steps below.
+breach, follow the steps below.
 
 - Go to [bridge.urbit.org](https://bridge.urbit.org) and log into your identity.
 - Click on `OS: Urbit OS Settings` at the bottom, then click `Reset Networking Keys`.
@@ -63,13 +68,13 @@ you are transferring to another address you own. The process here is slightly di
 
 ## Network Breaches
 
-A network breach is an event where all ships on the network are required to
-update to a new continuity era. Network breaches happen when an Arvo update is
-released that is too large to release over the air. The current continuity era
-is given by an integer in Ames, our networking vane, that is incremented when a
-network breaches; only ships with the same such value are able to communicate
-with one another. The most recent network breach occurred in December 2020, and
-we expect it to be the final one.
+Network breaches were events where all ships on the network were required to
+update to a new continuity era. Network breaches happened when an Arvo update
+was released that could not be implemented via an [OTA
+update](@/docs/glossary/ota-updates.md). The continuity era is given by an
+integer in Ames that is incremented when the network breaches. Only ships with
+the same such value are able to communicate with one another. The most recent
+network breach occurred in December 2020, and we expect it to be the final one.
 
 If another network breach does occur, we will provide accompanying documentation
 on what to do to transfer your ship and all of its data to the new era.
