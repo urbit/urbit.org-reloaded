@@ -24,22 +24,22 @@
 
 <section class="full c2-12-md c3-11-lg">
   <div class="flex flex-column flex-row-m flex-row-l flex-row-xl justify-between mv5">
-  <h1 class="f4">Urbit</h1>
+  <h1 class="f3">Urbit</h1>
     <nav class="flex flex-column dib-m dib-l dib-xl">
-      <a href="/install" class="tc bg-blue0-new blue2-new f4 pa1 fw6">Download Port</a>
-      <a href="/docs" class="f4 tc fw6 gray6 ml0 ml3-m ml3-l ml3-xl">Docs</a>
-      <a href="/blog" class="f4 tc fw6 gray6 ml0 ml3-m ml3-l ml3-xl">Blog</a>
+      <a href="/install" class="f3 pv1 ph3 tc fw6 bg-blue0-new blue2-new br3 ">Download Port</a>
+      <a href="/docs" class="f3 pv1 ph3 tc fw6 gray6 ml0 ml3-m ml3-l ml3-xl">Docs</a>
+      <a href="/blog" class="f3 pv1 ph3 tc fw6 gray6 ml0 ml3-m ml3-l ml3-xl">Blog</a>
     </nav>
   </div>
-  <h2 class="f4 mv5">A <span class="green2-new tooltip" title="Able to do anything you can imagine a computer can do.">general purpose</span>, <span class="yellow2-new tooltip" title="Built from scratch for direct communication between machines - no intermediate platforms required.">peer-to-peer</span> computing platform.</h2>
+  <h2 class="f3 mv6">A <span class="tooltip" title="Able to do anything you can imagine a computer can do.">general purpose</span>, <span class="tooltip" title="Built from scratch for direct communication between machines - no intermediate platforms required.">peer-to-peer</span>, <br> personal computing system.</h2>
 </section>
 
 <section class="full c2-12-md c3-11-lg mb5">
-<div class="tc tl-m tl-l tl-xl bg-blue0-new w-100 pv6">
+<div class="tc tl-m tl-l tl-xl bg-white ba b--gray5  bw2 w-100 pv6 br4">
   <div class="ml0 ml6-m ml6-l ml6-xl">
-    <h1 class="blue3-new" style="font-size: 100px;">Port</h1>
+    <h1 class="tracked-tight" style="font-size: 100px;">Port</h1>
     <div id="download" class="db">
-      <div id="download-div" class="bg-blue3-new white br2 pv2 ph3 dib">
+      <div id="download-div" class="bg-blue3-new white br3 pv3 ph4 dib">
         <a id="download-info" href="https://github.com/arthyn/taisho/releases/latest/download/taisho.dmg">
           Download for macOS
         </a>
@@ -50,7 +50,7 @@
 </section>
 
 <section class="full c2-12-md c3-11-lg mb5">
-  <h1 class="mb5 gray6 f3">Community</h1>
+  <h1 class="mb5 gray6 f3">News + Community</h1>
   <div class="community">
   {% set e = get_section(path="blog/_index.md") %}
   {% set s = get_section(path="events/_index.md") %}
@@ -70,9 +70,9 @@
     <li class="mb4 list w-100">
       <a class="bb-0" href="{{ page.permalink }}">
         {% if page.extra.image %}
-        <img class="db mb2 obj-cover h5 w-100 ba" src="{{ page.extra.image }}" />
+        <img class="db mb2 obj-cover h5 w-100 ba br2" src="{{ page.extra.image }}" />
         {% elif page.extra.youtube %}
-        <div class="video-container index mb2">
+        <div class="video-container index mb2 br2">
           <iframe height=auto src="https://www.youtube.com/embed/{{page.extra.youtube}}" webkitallowfullscreen
             mozallowfullscreen allowfullscreen>
           </iframe>
@@ -93,6 +93,7 @@
     </li>
   {% endfor %}
   </div>
+  <h1 class="mb5 gray6 f3">Check out other <a href="" class="green2-new">posts</a> or <a href="" class="green2-new">events</a>.</h1>
 </section>
 {% include "partials/footer.html" %}
 {% endblock content %}
