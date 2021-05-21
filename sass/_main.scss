@@ -81,6 +81,10 @@ nav {
     padding: 0 -32px 0 -32px;
 }
 
+footer.full-bleed {
+  padding: 128px 270px;
+}
+
 // full-bleed images
 figure.full-bleed {
     margin: 0 -32px 0 -32px;
@@ -686,6 +690,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #666666;
 }
 
+.bg-gray6 {
+  background-color: #666666;
+}
+
 .bg-blue0-new {
   background-color: #f4faff;
 }
@@ -708,4 +716,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .yellow2-new {
   color: #FFC700;
+}
+
+.bg-gray7 {
+  background-color: #EFEEEC;
+}
+
+.gray8 {
+  color: #bfbebd;
 }
