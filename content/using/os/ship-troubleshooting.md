@@ -92,7 +92,7 @@ Sometimes this happens if you're processing a very large event, or if you're in 
 
 Before doing anything, try waiting for a minute: an event might finish processing. If it doesn't clear up, then use the Unix kill-command, `ctrl-z`, to end your ship's process. Then restart your ship.
 
-### When I try to type into the Dojo, it prints `dy-noprompt`
+### When I try to type into the Dojo, it prints `%dy-edit-busy` or `%dy-no-prompt`
 
 This happens when your Dojo is waiting on a request, such as an HTTP request. You can fix it simply by typing `backspace` or (`delete` on Mac).
 
