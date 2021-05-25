@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% import "macros/macros.html" as macros %}
+
+{% block title %}
+<meta name="og:title" content="Apprenticeships Archive - {{ config.title }}">
+<title>Apprenticeships - {{ config.title }}</title>
+{% endblock title %}
+
+{% block description %}
+<meta name="og:description" content="Urbit Apprenticeships Archive">
+<meta name="description" content="Urbit Apprenticeships Archive">
+{% endblock description %}
+
+{% block image %}
+<meta name="twitter:image" content="https://media.urbit.org/logo/urbit-logo-card.png">
+{% endblock image %}
+
+{% block content %}
+
+<!-- header -->
+<nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl">
+  <a class="gray3" href="/">Urbit</a>
+  <span class="gray3"> / </span>
+  <a class="gray3" href="/grants">Grants</a>
+  <span class="gray3"> / </span>
+  <a href="{{ current_url }}">Apprenticeships</a>
+  {% include "partials/navigation-search.html" %}
+</nav>
+<!-- content -->
+<section class="full c4-10-lg pt4 lh-copy">
+  <h1>Apprenticeships</h1>
+  <p>Apprenticeships pair a community member with an Urbit core developer. The apprentice works on a specific scope of work under the tutelage of the core developer. The developer offers guidance and review of the project, and the apprentice contributes directly to the Urbit project. The apprentice also receives compensation in the form of address space.</p>
+  <p>Apprenticeships are offered on a limited basis. Email <a href="mailto:josh@urbit.org">josh@urbit.org</a> to register your interest.</p>
+  <br />
+  <br />
+  <br />
+  <br />
+</section>
+{% include "partials/footer.html" %}
+{% endblock content %}
