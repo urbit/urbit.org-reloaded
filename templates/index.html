@@ -26,7 +26,7 @@
   <div class="flex flex-row justify-between mv5">
   <h1 class="f3">Urbit</h1>
     <nav class="flex flex-row dib-m dib-l dib-xl">
-      <a href="/install" class="dn di-m di-l di-xl f3 pv1 ph3 tc fw6 bg-blue0-new blue2-new br3 ">Download Port</a>
+      <a href="/install" class="dn di-m di-l di-xl f3 pv1 ph3 tc fw6 bg-yellow3-faded yellow3-new br3 ">Download Port</a>
       <a href="/docs" class="f3 pv1 ph3 tc fw6 gray6 ml0 ml3-m ml3-l ml3-xl">Docs</a>
       <a href="/blog" class="f3 pv1 ph3 tc fw6 gray6 ml0 ml3-m ml3-l ml3-xl">Blog</a>
     </nav>
@@ -35,14 +35,17 @@
 </section>
 
 <section class="full c2-12-md c2-12-lg mb5">
-<div class="tc tl-m tl-l tl-xl bg-white ba b--gray5 bw2 w-100 pv6 br4">
+<div id="hero" class="tc tl-m tl-l tl-xl bg-gray7 ba b--gray5 bw2 w-100 pv6 br4">
   <div class="ml0 ml6-m ml6-l ml6-xl">
-    <h1 class="tracked-tight" style="font-size: 100px;">Port</h1>
+    <div class="tc dib">
+    <h1 class="tracked-tight dib" style="font-size: 100px;">Port</h1>
+    <p class="f6 fw6 gray6 mt0">The Urbit client.</p>
     <div id="download" class="db">
-      <div id="download-div" class="bg-blue3-new white br3 pv3 ph4 dib">
+      <div id="download-div" class="bg-yellow3-new white br3 pv3 ph4 dib">
         <a id="download-info" href="https://github.com/arthyn/taisho/releases/latest/download/taisho.dmg">
-          Download for macOS
-        </a>
+            Download for macOS
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -93,7 +96,9 @@
     </li>
   {% endfor %}
   </div>
-  <h1 class="mv4 gray6 f3">Check out other <a href="/blog" class="green2-new">posts</a> or <a href="/events" class="green2-new">events</a>.</h1>
+  <h1 class="mv5 f3">Check out other <a href="/blog" class="green2-new">posts</a> or <a href="/events" class="green2-new">events</a>.</h1>
+  <h1 class="mb6 f3">
+    <a href="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;id=be143888d2" class="blue2-new">Subscribe to the Urbit Newsletter</a> to receive monthly updates.</h1>
 </section>
 {% include "partials/footer.html" %}
 {% endblock content %}
