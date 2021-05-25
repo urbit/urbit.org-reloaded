@@ -710,6 +710,18 @@ h1, h2, h3, h4, h5, h6 {
   color: #009F65;
 }
 
+.bg-green2-new {
+  background-color: #009F65;
+}
+
+.bg-green2-faded {
+  background-color: rgba(#009F65,0.05);
+}
+
+.b--green2-faded {
+  border-color: rgba(#009F65,0.05);
+}
+
 .yellow2-new {
   color: #FFC700;
 }
