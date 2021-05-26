@@ -10,7 +10,7 @@ description = "Create a library for the Go language to be used for Airlock, the 
 reward = 3
 assignee = "Caio"
 id = "764093285"
-completed = false
+completed = true
 link = ""
 +++
 

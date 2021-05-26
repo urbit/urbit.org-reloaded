@@ -10,7 +10,7 @@ description = "Create Hoon learning resources catered to learner efficiency, wit
 reward = 3
 assignee = "som, ~risruc-habteb, ~rabsef-bicrym"
 id = "471015542"
-completed = false
+completed = true
 link = ""
 +++
 

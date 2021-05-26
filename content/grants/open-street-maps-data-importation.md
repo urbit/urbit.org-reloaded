@@ -11,6 +11,7 @@ reward = 2
 assignee = ""
 id = "1072822195"
 completed = false
+canceled = true
 link = ""
 +++
 

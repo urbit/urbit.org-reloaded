@@ -8,9 +8,9 @@ grant_category = ["App Dev: Arvo"]
 image = ""
 description = "An Arvo calendar agent based on the iCalendar spec."
 reward = 5
-assignee = "Josh Lehman, ~wolref-podlex, sovmep-ripsum"
+assignee = "~wolref-podlex, sovmep-ripsum"
 id = "1851255517"
-completed = false
+completed = true
 link = ""
 +++
 

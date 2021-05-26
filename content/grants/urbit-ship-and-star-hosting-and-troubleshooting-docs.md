@@ -6,11 +6,12 @@ grant_type = ["proposals"]
 grant_category = ["Documentation"]
 [extra]
 image = ""
-description = "Update to: https://grants.urbit.org/proposals/30964804 (post phone call)User docs for ship/star owners around best practices for hosting"
+description = "User docs for ship/star owners around best practices for hosting"
 reward = 2
 assignee = "~dovsem-bornyl"
 id = "1452740478"
 completed = false
+canceled = true
 link = ""
 +++
 

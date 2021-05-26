@@ -11,6 +11,7 @@ reward = 2
 assignee = "lurodrigo (~tirdyr-lagrum)"
 id = "1163181298"
 completed = false
+canceled = true
 link = ""
 +++
 

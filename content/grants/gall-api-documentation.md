@@ -10,7 +10,7 @@ description = "Write reference documentation for using the API for developing Ga
 reward = 1
 assignee = "Liam Fitzgerald, borlyt-salnus"
 id = "1251133389"
-completed = false
+completed = true
 link = ""
 +++
 

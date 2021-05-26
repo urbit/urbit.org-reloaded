@@ -10,7 +10,7 @@ description = "Write a Remote Procedure Call library for a Bitcoin Gall app -- p
 reward = 1
 assignee = "yosoyubik"
 id = "649469235"
-completed = false
+completed = true
 link = ""
 +++
 

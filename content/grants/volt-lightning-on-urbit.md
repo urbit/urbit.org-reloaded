@@ -8,8 +8,7 @@ grant_category = ["App Dev: Arvo"]
 image = ""
 description = "An Urbit-native Lightning client and integration with `lnd` on 'provider' ships."
 reward = 7
-assignee = ""
-id = "845229227"
+assignee = "~martyr-binbex, ~dasrun-fadben"
 completed = false
 link = ""
 +++

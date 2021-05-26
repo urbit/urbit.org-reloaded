@@ -10,7 +10,7 @@ description = "The Urbit identity system uses a suite of Ethereum contracts as i
 reward = 1
 assignee = "dominic22"
 id = "831044524"
-completed = false
+completed = true
 link = ""
 +++
 

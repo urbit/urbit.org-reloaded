@@ -11,6 +11,7 @@ reward = 1
 assignee = "Andreas Atakan"
 id = "1227012285"
 completed = false
+canceled = true
 link = ""
 +++
 

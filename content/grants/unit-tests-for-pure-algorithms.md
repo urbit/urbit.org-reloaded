@@ -10,7 +10,7 @@ description = "Write unit tests for +in, +by, +to, and +diff."
 reward = 1
 assignee = "yosoyubik"
 id = "1322185260"
-completed = false
+completed = true
 link = ""
 +++
 

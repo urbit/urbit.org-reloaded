@@ -11,6 +11,7 @@ reward = 3
 assignee = "~ronreg-ribdev"
 id = "1026701722"
 completed = false
+canceled = true
 link = ""
 +++
 

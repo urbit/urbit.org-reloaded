@@ -10,7 +10,7 @@ description = "Write unit tests for JSON-parsing arms of the zuse.hoon standard 
 reward = 2
 assignee = "courajs"
 id = "905205498"
-completed = false
+completed = true
 link = ""
 +++
 

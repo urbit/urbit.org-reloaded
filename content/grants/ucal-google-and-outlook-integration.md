@@ -6,7 +6,7 @@ grant_type = ["bounties"]
 grant_category = ["App Dev: Arvo"]
 [extra]
 image = ""
-description = ""
+description = "Extend the Urbit Calendar (ucal) to integrate with other calendaring systems."
 reward = 1
 assignee = ""
 id = ""

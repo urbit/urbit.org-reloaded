@@ -11,6 +11,7 @@ reward = 1
 assignee = "~dirwex-dosrev"
 id = "981084186"
 completed = false
+canceled = true
 link = ""
 +++
 

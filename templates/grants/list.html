@@ -30,9 +30,9 @@
 
   <p>We reward contributors in four different ways:</p>
   <ul class='list'>
-    <li class="mb2"><a class="b bb" href="/grants/proposals">Proposals</a> from community members</li>
-    <li class="mb2"><a class="b bb" href="/grants/bounties">Bounties</a> for specific features</li>
-    <li class="mb2"><a class="b bb" href="/grants/apprenticeships">Apprenticeships</a> undertaken with a mentor</li>
+    <li class="mb2"><a class="b bb" href="/grants/proposals">Proposals</a> from community members to work on their own projects</li>
+    <li class="mb2"><a class="b bb" href="/grants/bounties">Bounties</a> for specific work needed by the Urbit Foundation</li>
+    <li class="mb2"><a class="b bb" href="/grants/apprenticeships">Apprenticeships</a> for projects undertaken with a mentor</li>
     <li class="mb2"><a class="b bb" href="/grants/gifts">Gifts</a> given post facto for exceptional contributions</li>
   </ul>
 
@@ -42,12 +42,12 @@
       <figcaption class="f5">Stars Awarded</figcaption>
     </figure>
     <figure class="flex-auto">
-      <span class="f2" id="worth">$1,000,000</span>
-      <figcaption class="f5">Approximate USD Worth</figcaption>
+      <span class="f2" id="worth">&gt;400</span>
+      <figcaption class="f5">Different Contributors</figcaption>
     </figure>
     <figure class="flex-auto">
-      <span class="f2">&gt;90</span>
-      <figcaption class="f5">Current Projects</figcaption>
+      <span class="f2">&gt;45</span>
+      <figcaption class="f5">Active Projects</figcaption>
     </figure>
   </div>
 
@@ -88,7 +88,9 @@
   </ul>
 
   {% for page in posts.pages %}
-    {{ macros::grant(page=page, classes="full c1-10-lg mv5")}}
+    {% if not page.extra.canceled %}
+      {{ macros::grant(page=page, classes="full c1-10-lg mv5")}}
+    {% endif %}
   {% endfor %}
 
 </section>

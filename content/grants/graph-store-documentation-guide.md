@@ -1,5 +1,5 @@
 +++
-title = "Graph Store Documenation Guide"
+title = "Graph Store Documentation Guide"
 date = 2021-02-13
 [taxonomies]
 grant_type = ["proposals"]

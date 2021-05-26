@@ -11,6 +11,7 @@ reward = 2
 assignee = "modmes-livheb"
 id = "1496457780"
 completed = false
+canceled = true
 link = ""
 +++
 

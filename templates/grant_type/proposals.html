@@ -37,7 +37,9 @@
   <h1>Proposals</h1>
   <p>Community members may submit proposals to develop a specific feature or work in a particular area. Once approved by the Urbit Foundation, they may complete them in exchange for address space.</p>
   {% for page in term.pages %}
-    {{ macros::grant(page=page, classes="full c1-10-lg mv5")}}
+    {% if not page.extra.canceled %}
+      {{ macros::grant(page=page, classes="full c1-10-lg mv5")}}
+    {% endif %}
   {% endfor %}
 </section>
 {% include "partials/footer.html" %}

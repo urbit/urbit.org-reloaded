@@ -11,6 +11,7 @@ reward = 1
 assignee = "tug"
 id = "1967189374"
 completed = false
+canceled = true
 link = ""
 +++
 

@@ -11,6 +11,7 @@ reward = 4
 assignee = "xiphiness"
 id = "523261174"
 completed = false
+canceled = true
 link = ""
 +++
 

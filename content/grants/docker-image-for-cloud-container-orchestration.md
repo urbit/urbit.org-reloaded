@@ -10,7 +10,7 @@ description = "Nix infrastructure to generate Docker images for Urbit releases. 
 reward = 1
 assignee = "Edward Amsden ~ritpub-sipsyl"
 id = "626138244"
-completed = false
+completed = true
 link = ""
 +++
 

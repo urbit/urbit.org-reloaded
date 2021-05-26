@@ -10,7 +10,7 @@ description = "I teach a Python class online. Many students would be interested 
 reward = 1
 assignee = "~fonnyx-nopmer"
 id = "1672069956"
-completed = false
+completed = true
 link = ""
 +++
 

@@ -11,6 +11,7 @@ reward = 3
 assignee = "pilwex-migsun"
 id = "872371692"
 completed = false
+canceled = true
 link = ""
 +++
 

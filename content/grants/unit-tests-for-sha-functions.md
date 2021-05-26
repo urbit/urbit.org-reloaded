@@ -10,7 +10,7 @@ description = "Write unit tests for SHA cryptographic functions of the Hoon stan
 reward = 1
 assignee = "Ken Meier"
 id = "179152973"
-completed = false
+completed = true
 link = ""
 +++
 

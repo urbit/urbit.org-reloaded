@@ -10,7 +10,7 @@ description = "Write unit tests for cryptographic functions of the Zuse library.
 reward = 1
 assignee = "lukechampine"
 id = "1097913361"
-completed = false
+completed = true
 link = ""
 +++
 

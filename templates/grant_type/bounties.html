@@ -37,7 +37,9 @@
   <h1>Bounties</h1>
   <p>The Urbit foundation creates bounties to build out specific features or undertake various projects, which community members may apply to work on in exchange for address space.</p>
   {% for page in term.pages %}
-    {{ macros::grant(page=page, classes="full c1-10-lg mv5")}}
+    {% if not page.extra.canceled %}
+      {{ macros::grant(page=page, classes="full c1-10-lg mv5")}}
+    {% endif %}
   {% endfor %}
 </section>
 {% include "partials/footer.html" %}

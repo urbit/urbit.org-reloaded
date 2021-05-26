@@ -11,6 +11,7 @@ reward = 3
 assignee = "~littel-wolfur"
 id = "2084005955"
 completed = false
+canceled = true
 link = ""
 +++
 

@@ -11,6 +11,7 @@ reward = 3
 assignee = "nforbes6"
 id = "2039941382"
 completed = false
+canceled = true
 link = ""
 +++
 
