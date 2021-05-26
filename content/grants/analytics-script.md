@@ -1,6 +1,6 @@
 +++
 title = "Analytics Script"
-date = 2021-03-12
+date = 2021-05-12
 [taxonomies]
 grant_type = ["bounties"]
 grant_category = ["App Dev: Other"]
@@ -8,10 +8,10 @@ grant_category = ["App Dev: Other"]
 image = ""
 description = "Write a generator that exports chat data into a CSV."
 reward = 1
-assignee = "moop"
+assignee = ""
 id = "1421596040"
 completed = false
-link = ""
+link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Bounty+ID=B0015&prefill_Bounty+Name=Analytics%20Script"
 +++
 
 ## Overview
