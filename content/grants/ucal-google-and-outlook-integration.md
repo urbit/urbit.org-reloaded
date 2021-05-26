@@ -1,5 +1,5 @@
 +++
-title = "ucal Google and Outlook Integration""
+title = "ucal Google and Outlook Integration"
 date = 2021-05-13
 [taxonomies]
 grant_type = ["bounties"]
