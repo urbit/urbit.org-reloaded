@@ -10,7 +10,7 @@ description = "We want to make a short animated video that introduces Urbit to a
 reward = 2
 assignee = "~rivpyl-sidfyl, ~minder-folden"
 id = "1350087489"
-completed = false
+completed = true
 link = ""
 +++
 
