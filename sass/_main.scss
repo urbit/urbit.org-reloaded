@@ -699,8 +699,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 
     #hero {
-            background-image: url(https://media.urbit.org/hero.svg);
+            background-image: url(https://media.urbit.org/port.svg);
             background-position: center;
-            background-size: 85%;
+            background-size: contain;
             background-repeat: no-repeat;
      }
