@@ -9,9 +9,8 @@ image = ""
 description = "Write a generator that exports chat data into a CSV."
 reward = 1
 assignee = ""
-id = "1421596040"
 completed = false
-link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Bounty+ID=B0015&prefill_Bounty+Name=Analytics%20Script"
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Bounty+ID=B0015&prefill_Bounty+Name=Analytics%20Script"
 +++
 
 ## Overview

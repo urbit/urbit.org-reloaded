@@ -53,8 +53,10 @@
           {% if page.extra.assignee %}
             <span class="mr3 gray1 mono">{{ page.extra.assignee }}</span>
           {% endif %}
-          {% if page.extra.id and not page.extra.assignee %}
-            <a href="https://grants.urbit.org/{% if 'bounty' in page.taxonomies.grant_type %}bounties{% else %}proposals{% endif %}/{{ page.extra.id }}" target="_blank">Apply for this grant</a>
+          {% if page.extra.work_request_link and not page.extra.assignee %}
+            <a href="{{ page.extra.work_request_link  }}" target="_blank">
+              Apply for this grant
+            </a>
           {% endif %}
         </div>
       </div>

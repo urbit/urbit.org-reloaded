@@ -11,7 +11,7 @@ reward = 1
 assignee = ""
 id = ""
 completed = false
-link = ""
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Bounty+ID=B0014&prefill_Bounty+Name=ucal%20Google%20and%20Outlook%20Integration"
 +++
 ### Purpose
 
