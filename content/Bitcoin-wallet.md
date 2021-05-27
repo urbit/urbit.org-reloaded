@@ -10,7 +10,7 @@ The latest Urbit release includes a native Bitcoin wallet. Please read the follo
 
 ### Verify
 
-You should verify your version of this Bitcoin wallet. To do so, follow the instructions in the README in our [Github](https://github.com/urbit/urbit/blob/release/bitcoin-wallet/pkg/btc-wallet/README.md) repo. 
+You should verify your version of this Bitcoin wallet. To do so, follow the instructions in the README in our [Github](https://github.com/urbit/urbit/blob/master/pkg/btc-wallet/README.md) repo. 
 
 Instructions reproduced here: 
 
@@ -23,7 +23,7 @@ It should return with the following hash:
 ### Statement
 
 The Urbit Bitcoin Wallet and its related components are experimental pieces of software. You are free to review the open-source code before using: 
-- [Wallet](https://github.com/urbit/urbit/tree/release/bitcoin-wallet) 
+- [Wallet](https://github.com/urbit/urbit/tree/master/pkg/btc-wallet) 
 - [Full Node Provider Agents](https://github.com/timlucmiptev/btc-agents)
 
 No guarantees are made about the security of this software. It may contain vulnerabilities that could lead to loss of funds. This wallet software has not had a formal security security audit. 
