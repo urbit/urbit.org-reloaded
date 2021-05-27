@@ -1,7 +1,7 @@
 if (document.body.classList.contains("index")) {
   let download = document.getElementById("download");
-  let downloadDiv = document.getElementById("download-div");
-  let downloadInfo = document.getElementById("download-info");
+  let downloadDiv = document.getElementById("download-info");
+  let downloadInfo = document.getElementById("download-div");
 
   let curOS = "";
   if (navigator.appVersion.indexOf("Win")!=-1) curOS="Windows";
