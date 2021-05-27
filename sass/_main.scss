@@ -670,3 +670,34 @@ h1, h2, h3, h4, h5, h6 {
         border-bottom-style: none;
     }
 }
+  
+  .yellow2-new {
+    color: #FFC700;
+  }
+  
+  .bg-yellow3-new {
+    background-color: #D7AC14;
+  }
+  
+  .yellow3-new {
+    color: #D7AC14;
+  }
+  
+  .bg-yellow3-faded {
+    background-color: rgba(#D7AC14,0.05);
+  }
+  
+  .bg-gray7 {
+    background-color: #EFEEEC;
+  }
+  
+  .gray8 {
+    color: #bfbebd;
+  }
+  
+  #hero {
+    background-image: url(https://media.urbit.org/hero.svg);
+    background-position: 400px 50%;
+    background-size: 50%;
+    background-repeat: no-repeat;
+  }
