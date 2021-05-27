@@ -34,9 +34,21 @@
     <img class="db mv2 obj-cover w-100 ba" src="{{ page.extra.image }}" />
   {% endif %}
 
-  {% if page.extra.assignee %}
-    <span class="db mb1">{{ page.extra.assignee }}</span>
+  {% if page.extra.mentor %}
+    <span class="db mb1">Mentor: <span class="mono">{{ page.extra.mentor }}</span></span>
   {% endif %}
+
+  {% if page.extra.assignee %}
+    <span class="db mb1">
+      Worker(s):
+      <span class="mono">{{ page.extra.assignee }}</span>
+    </span>
+  {% endif %}
+
+  {% if page.extra.reward %}
+    <span class="db mb1">Reward: {{ page.extra.reward }} Stars</span>
+  {% endif %}
+
 
   {% if page.extra.completed %}
     <span class="db mb1">Completed</span>
@@ -46,10 +58,6 @@
     <a href="{{ page.extra.work_request_link }}" target="_blank">
       Apply for this grant
     </a>
-  {% endif %}
-
-  {% if page.extra.reward %}
-    <span class="db mb1">Reward: {{ page.extra.reward }} Stars</span>
   {% endif %}
 
   {% if page.date %}
