@@ -11,8 +11,9 @@ reward = 1
 assignee = ""
 id = ""
 completed = false
-work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Bounty+ID=B0014&prefill_Bounty+Name=ucal%20Google%20and%20Outlook%20Integration"
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0014&prefill_Grant+Name=ucal%20Google%20and%20Outlook%20Integration"
 +++
+
 ### Purpose
 
 The current ucal project has .ics support, but does not currently sync with Google and Outlook. This creates a chicken-egg problem, where users in organizations with those tools cannot reliably migrate to using ucal, because they can't correctly expose availability.
