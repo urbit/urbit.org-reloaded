@@ -26,7 +26,7 @@ The Urbit Bitcoin Wallet and its related components are experimental pieces of s
 - [Wallet](https://github.com/urbit/urbit/tree/master/pkg/btc-wallet) 
 - [Full Node Provider Agents](https://github.com/timlucmiptev/btc-agents)
 
-No guarantees are made about the security of this software. It may contain vulnerabilities that could lead to loss of funds. This wallet software has not had a formal security security audit. 
+No guarantees are made about the security of this software. It may contain vulnerabilities that could lead to loss of funds. This wallet software has not had a formal security  audit. 
 
 You can read about the security audit for Urbit's networking protocol in this [post](https://urbit.org/blog/security-audit/). This audit does not encompass the wallet, except to the extent that the wallet operates on Urbit's networking architecture.
 
