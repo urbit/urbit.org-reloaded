@@ -24,14 +24,18 @@ Troubleshooting](../ship-troubleshooting) guide. Also reach out for help in the
 Help channel in the Urbit Community group `~bitbet-bolbel/urbit-community`, or,
 failing that, in the `#ship-starting-support` channel in our [Discord
 server](https://discord.gg/n9xhMdz) to see if there is another option.
+Connectivity issues are typically related to a bug, and you may be able to help
+us fix it by emailing us at `support@urbit.org`.
 
-There are two types of breaches - one where your Ethereum ownership address
-remains the same, and one where you are switching to a new Ethereum ownership
-address. We make the emphasis about the Ethereum _ownership_ address as changing
-your [proxies](@/docs/glossary/proxies.md) does not require a breach.
+There are two separate sequences of actions you need to take in order to breach.
+One flow is for when you wish to keep Ethereum ownership address of the ship the
+same, and the other is for when you are transferring the ship to a new Ethereum
+ownership address. We make the emphasis about the Ethereum _ownership_ address
+as changing your [proxies](@/docs/glossary/proxies.md) does not require a
+breach.
 
-If you will be keeping the same Ethereum ownership address and would like to perform a
-breach, follow the steps below.
+If you will be keeping your ship at the same Ethereum ownership address and
+would like to perform a breach, follow the steps below.
 
 - Go to [bridge.urbit.org](https://bridge.urbit.org) and log into your identity.
 - Click on `OS: Urbit OS Settings` at the bottom, then click `Reset Networking Keys`.
@@ -43,7 +47,7 @@ breach, follow the steps below.
 - Delete your keyfile after successfully booting.
 - Rejoin your favorite chat channels and subscriptions.
 
-If you are switching to a new Ethereum ownership address you will have the
+If you are transferring a ship to a new Ethereum ownership address you will have the
 choice as to whether or not you want to breach. This is to cover the case when
 you are transferring to another address you own. The process here is slightly different.
 
@@ -74,7 +78,7 @@ was released that could not be implemented via an [OTA
 update](@/docs/glossary/ota-updates.md). The continuity era is given by an
 integer in Ames that is incremented when the network breaches. Only ships with
 the same such value are able to communicate with one another. The most recent
-network breach occurred in December 2020, and we expect it to be the final one.
+network breach occurred in December 2020, and we expect it to have been the final one.
 
 If another network breach does occur, we will provide accompanying documentation
 on what to do to transfer your ship and all of its data to the new era.
