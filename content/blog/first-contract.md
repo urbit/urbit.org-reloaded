@@ -136,7 +136,7 @@ has voted on have been document proposals. The [most recent
 vote](https://github.com/urbit/azimuth/pull/34) declared the Urbit network as
 (i) being secure (as confirmed by a [third party
 audit](@/blog/security-audit.md)) and (ii) having reached continuity (as in, no
-further [network breaches](@/glossary/breach.md) are expected). Previous votes
+further [network breaches](@/docs/glossary/breach.md) are expected). Previous votes
 were to declare that [Azimuth is live](https://github.com/urbit/azimuth/pull/25)
 and that [Arvo is stable](https://github.com/urbit/azimuth/pull/24).
 
