@@ -1,7 +1,7 @@
 +++
 title = "Azimuth’s First Contract Upgrade"
 date = 2021-06-03
-description = “Galactic Senate makes first concrete action"
+description = "Galactic Senate makes first concrete action"
 [extra]
 author = "Jonathan Paprocki and Mark"
 ship = "~datnut-pollen and ~palfun-foslup"
@@ -290,3 +290,4 @@ governance in the future, so there is ample opportunity for the system to evolve
 in response to the will of the users. As always, it is important to keep in mind
 the unfinished nature of the Urbit of today and the still moldable clay of the
 Urbit of tomorrow⁠—nothing yet is set in stone.
+
