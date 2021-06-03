@@ -117,12 +117,12 @@ checkup. Here are some previous posts that are relevant, but please note that
 some of them are several years old and as such may not accurately reflect our
 current position, but still serve as useful historical markers. We hope to
 revisit and refresh these documents soon. [2016.5.16 - Interim
-Constitution](https://urbit.org/blog/interim-constitution/) [2016.5.16 - The
-Urbit Address Space](https://urbit.org/blog/the-urbit-address-space/)
+Constitution](@/blog/interim-constitution.md) [2016.5.16 - The
+Urbit Address Space](@/blog/the-urbit-address-space.md)
 [2016.6.24 - The DAO as a Lesson in Decentralized
-Governance](https://urbit.org/blog/the-dao-as-a-lesson-in-decentralized-governance/)
+Governance](@/blog/the-dao-as-a-lesson-in-decentralized-governance.md)
 [2019.1.11 - Governance of
-urbit.org](https://urbit.org/blog/governance-of-urbit/)
+urbit.org](@/blog/governance-of-urbit.md)
 
 ### Galactic Senate
 
@@ -152,7 +152,7 @@ In the beginning, Urbit’s creator Curtis Yarvin was in possession of the entir
 address space - all 256 galaxies, and everything underneath it. A network of one
 is no network at all, and so over the last decade Urbit’s development has been
 primarily driven by selling or giving away these galaxies. On [June 1,
-2016](@/the-urbit-address-space/), the allocation was:
+2016](@/blog/the-urbit-address-space.md), the allocation was:
 
 > 95, to the Tlon Corporation. 50, to urbit.org, the future community
 > foundation. 40, to Tlon employees and their family members (24 to Curtis, who
@@ -164,9 +164,9 @@ primarily driven by selling or giving away these galaxies. On [June 1,
 In the period since then leading up to the present, Tlon has sold a number of
 its galaxies to fund development, and others have changed hands, to the point
 that Tlon and urbit.org no longer possess a majority share of galaxies. In
-January 2019, [Curtis gave all of his galaxies](@/blog/a-founders-farewell/) to
+January 2019, [Curtis gave all of his galaxies](@/blog/a-founders-farewell.md) to
 Tlon when he left the project. In August 2020 we shared an update on the [known
-distribution of address space](@/blog/value-of-address-space-pt3/), where
+distribution of address space](@/blog/value-of-address-space-pt3.md), where
 Curtis’ galaxies are marked as Tlon’s “naked galaxies”. Since then, Tlon
 disbursed its naked galaxies among the employees that wanted one who did not
 already possess one, thus removing Tlon and urbit.org’s controlling share of the
