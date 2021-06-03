@@ -34,7 +34,7 @@ existing centralized services, where your account is always at risk of being
 taken away from you. What the Senate can change is Ecliptic, which is the
 “business logic” that decides how you can interact with the data in Azimuth.
 These are mechanisms such as what powers various
-[proxies](@/docs/glossary/proxy.md) have, how stars/planets are released over
+[proxies](@/docs/glossary/proxies.md) have, how stars/planets are released over
 time, and how sponsorship works. Put another way, the data and database format
 must remain the same, but the rules by which we interact with it may change
 according to the governance rules we [detail below](#senate).
