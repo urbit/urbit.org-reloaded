@@ -11,6 +11,11 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
+}
+
+p a {
+  @apply text-green;
 }
 
 * {
@@ -30,33 +35,42 @@ a {
 }
 
 h1, .type-h1 {
-   @apply text-6xl leading-tight font-sans tracking-tighter font-bold;
+   @apply text-6xl leading-tight font-sans tracking-tight font-bold;
  }
  
 h2, .type-h2 {
-   @apply text-5xl font-sans tracking-tighter font-bold;
+   @apply text-5xl font-sans font-bold;
 }
  
 h3, .type-h3 {
-   @apply text-3xl font-sans tracking-tight font-semibold;
+   @apply text-2xl font-sans font-semibold;
 }
  
  .type-ui {
-   @apply text-lg font-sans tracking-tight font-semibold;
+   @apply text-lg font-sans font-semibold;
  }
  
- p, .type p {
-   @apply text-lg font-sans tracking-tight font-medium;
+ p, .type-p {
+   @apply text-lg font-sans font-medium;
+ }
+ 
+ caption, .type-caption {
+   @apply text-base font-sans font-medium block text-left;
  }
  
  .button-sm {
-     @apply flex px-4 py-2 bg-black rounded text-white;
+     @apply flex px-4 py-1 bg-black rounded text-white type-ui;
     border:none;
   }
   
   .button-lg {
-    @apply flex px-4 py-2 bg-black rounded-lg text-white;
+    @apply flex px-6 py-2 bg-black rounded-lg text-white h-16 flex-center type-ui;
     border:none;
+  }
+  
+  .tab-button-lg {
+    @apply type-h2 h-16;
+    overflow: visible;
   }
   
   .button-sm:hover {
@@ -92,3 +106,28 @@ h3, .type-h3 {
     align-items: center;
     justify-content: center;
   }
+  
+  .blog-grid {
+    width: 100%;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "blog-grid-0 blog-grid-1"
+      "blog-grid-2 blog-grid-3"
+  }
+  
+  .blog-grid-0 { grid-area: blog-grid-0; }
+  .blog-grid-1 { grid-area: blog-grid-1; }
+  .blog-grid-2 { grid-area: blog-grid-2; }
+  .blog-grid-3 { grid-area: blog-grid-3; }
+  
+.bg-img {
+  @apply w-full h-80 rounded;
+  background: silver;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+  

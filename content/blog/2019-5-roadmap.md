@@ -1,13 +1,13 @@
----
-title: "~2019.5 Roadmap"
-date: "2019-05-16"
-description: "Where we are and where we're going as of mid-2019."
-aliases: ["/posts/essays/2019-5-roadmap", "/posts/2019-5-roadmap"]
-author: "Galen Wolfe-Pauly"
-ship: "~ravmel-ropdyl"
-image: "https://media.urbit.org/site/posts/essays/2019-5-roadmap-1.png"
----
-
++++
+title = "~2019.5 Roadmap"
+date = 2019-05-16
+description = "Where we are and where we're going as of mid-2019."
+aliases = ["/posts/essays/2019-5-roadmap", "/posts/2019-5-roadmap"]
+[extra]
+author = "Galen Wolfe-Pauly"
+ship = "~ravmel-ropdyl"
+image = "https://media.urbit.org/site/posts/essays/2019-5-roadmap-1.png"
++++
 
 ![](https://media.urbit.org/site/posts/essays/2019-5-roadmap-1.png)
 

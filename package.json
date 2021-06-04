@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@iarna/toml": "^2.2.5",
     "gray-matter": "^4.0.3",
     "next": "10.2.3",
     "react": "17.0.2",
@@ -16,6 +17,7 @@
     "remark-html": "^13.0.1",
     "remark-parse": "^9.0.0",
     "remark-react": "^8.0.0",
+    "toml": "^3.0.0",
     "unified": "^9.2.1"
   },
   "devDependencies": {
