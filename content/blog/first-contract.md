@@ -27,7 +27,7 @@ Before we dive into what the proposed changes are, let’s review what the Senat
 is actually capable of changing. Urbit ID is really two sets of smart contracts:
 Azimuth and [Ecliptic](@/docs/glossary/ecliptic.md). Azimuth is the data of the
 public key infrastructure - roughly, this is the list of
-[ships](@/docs/glossary/ship.md) and which Ethereum address owns them, along
+[ships](@/docs/glossary/ship.md) and which Ethereum addresses own them, along
 with other data such as networking keys and sponsorship status. The Senate has
 no ability to touch this data directly. This is in direct contrast to all
 existing centralized services, where your account is always at risk of being
@@ -41,8 +41,11 @@ according to the governance rules we [detail below](#senate).
 
 ## Changelist {#changelist}
 
-The currently open vote to Ecliptic contains the following changes: Fixed ERC721
-compatibility Self-modifying proxies Upgraded Claims contract
+The currently open vote to Ecliptic contains the following changes: 
+
+- Fixed ERC721 compatibility 
+- Self-modifying proxies 
+- Upgraded Claims contract
 
 ### Fixed ERC721 compatibility
 
@@ -72,8 +75,8 @@ proxies to be able to change themselves.
 
 This means that, in addition to being able to configure networking keys and
 sponsorship, your management proxy would be able to assign a new management
-proxy. This would let you or a trusted third party holding your management proxy
-rotate your proxy keys without needing to take your ownership keys out of cold
+proxy. This would allow you, or a trusted third party holding your management proxy,
+to rotate your proxy keys without needing to take your ownership keys out of cold
 storage.
 
 ### Upgraded Claims contract
@@ -116,12 +119,15 @@ rehashing too much, but the first contract upgrade is an apt time for a routine
 checkup. Here are some previous posts that are relevant, but please note that
 some of them are several years old and as such may not accurately reflect our
 current position, but still serve as useful historical markers. We hope to
-revisit and refresh these documents soon. [2016.5.16 - Interim
-Constitution](@/blog/interim-constitution.md) [2016.5.16 - The
+revisit and refresh these documents soon. 
+
+- [2016.5.16 - Interim
+Constitution](@/blog/interim-constitution.md) 
+- [2016.5.16 - The
 Urbit Address Space](@/blog/the-urbit-address-space.md)
-[2016.6.24 - The DAO as a Lesson in Decentralized
+- [2016.6.24 - The DAO as a Lesson in Decentralized
 Governance](@/blog/the-dao-as-a-lesson-in-decentralized-governance.md)
-[2019.1.11 - Governance of
+- [2019.1.11 - Governance of
 urbit.org](@/blog/governance-of-urbit.md)
 
 ### Galactic Senate
@@ -188,7 +194,7 @@ As was written in [The DAO as a Lesson in Decentralized
 Governance](https://urbit.org/blog/the-dao-as-a-lesson-in-decentralized-governance/),
 we are keenly aware of the threat of _decentralization theater_. Urbit has
 undergone steady progress towards decentralization, and with the developments we
-outline below it’s never been more clear that the project is beginning to leave
+outline below, it’s never been more clear that the project is beginning to leave
 the cradle of Tlon. It’s also important to note that decentralization of a
 project is always a procession away from an initial centralized state⁠—you cannot
 go from A to Z without first traversing every letter in between. While Urbit was
@@ -269,12 +275,12 @@ almost impossible to hold accountable.
 
 With (ii), we see this to be the case on many early blockchain projects where
 power is shared by the developers and the miners, but what each is capable of
-doing has never been codified and thus users of the blockchain can never have a
+doing has never been codified, and thus users of the blockchain can never have a
 great deal of certainty of what changes might occur in the future. This doesn’t
 guarantee a bad outcome, but it does create more wariness for individuals to
 contribute to a project when they cannot know whether they really have a say in
 its direction. Recognizing this issue, many newer blockchain and
-blockchain-adjacent projects have built in governance mechanisms that lay out
+blockchain-adjacent projects have built-in governance mechanisms that lay out
 exactly what an individual can expect should they join and contribute to that
 network.
 
