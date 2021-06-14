@@ -5,7 +5,7 @@ import remark2react from 'remark-react'
 
 function P({ children }) {
   return (
-	<p className='leading-snug max-w-prose'>
+	<p className='leading-snug'>
 	  {children}
 	</p>
   )

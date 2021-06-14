@@ -18,18 +18,8 @@
   }
   
   .markdown h3 {
-	@apply font-semibold mt-8 mb-4;
+  	@apply font-semibold mt-8 mb-4;
   }
-
-  .markdown p,
-  .markdown h1,
-  .markdown h2,
-  .markdown h3,
-  .markdown h4,
-  .markdown h5 {
-	@apply max-w-prose;
-  }
-
 
   .markdown img {
 	width: 100%;

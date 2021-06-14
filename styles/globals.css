@@ -23,16 +23,11 @@ p a {
 }
 
 .layout-narrow {
-  /* padding-left: 16.6667%;
-  padding-right: 16.6667%;
- */  
-  width: 66.6667%;
+   @apply w-8/12;
 }
 
 .layout-wide {
-  /* padding-left: 8.3334%;
-  padding-right: 8.3334%; */
-  width: 83.3334%;
+  @apply w-10/12;
 }
 
 h1, .type-h1 {
