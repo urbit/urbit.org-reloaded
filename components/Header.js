@@ -8,7 +8,7 @@ export default function Header() {
 			<Link href="/docs"><a className="type-ui text-gray mr-6">Docs</a></Link>
 			<Link href="/blog"><a className="type-ui text-gray mr-6">Blog</a></Link>
 			<Link href="/events"><a className="type-ui text-gray mr-6">Events</a></Link>
-			<button className="button-sm">Download Port</button>
+			<button className="button-sm bg-green">Download Port</button>
 		  </nav>
 	  </header>
 	)

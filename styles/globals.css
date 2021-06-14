@@ -47,7 +47,7 @@ h3, .type-h3 {
  }
  
  p, .type-p {
-   @apply text-lg font-sans font-medium;
+   @apply text-lg font-sans;
  }
  
  caption, .type-caption {
@@ -55,12 +55,12 @@ h3, .type-h3 {
  }
  
  .button-sm {
-     @apply flex px-4 py-1 bg-black rounded text-white type-ui;
+     @apply flex px-4 py-1 rounded text-white type-ui;
     border:none;
   }
   
   .button-lg {
-    @apply flex px-6 py-2 bg-black rounded-lg text-white h-16 flex-center type-ui;
+    @apply flex px-6 py-2 rounded-lg text-white h-16 flex-center type-ui;
     border:none;
   }
   

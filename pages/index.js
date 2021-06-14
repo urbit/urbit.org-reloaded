@@ -32,66 +32,72 @@ export default function Home({ posts, events }) {
         <Header />
         
         <section className="layout-narrow pt-48">
-          <h1>A general-purpose, peer-to-peer, personal computing system.</h1>
+          <h1>A general-purpose,</h1>
+          <h1>peer-to-peer,</h1>
+          <h1>personal computing system.</h1>
         </section>
         
         <section className="layout-wide pt-48">
-          <div className="bg-yellow w-11/12 hero-card-height rounded-3xl flex">
+          <div className="bg-wall w-11/12 hero-card-height rounded-3xl flex">
             <div className="pt-20 pl-12 w-7/12">
-              <div className="pb-7">
-                <h2 className="text-gray p-0 m-0">Introducing</h2><h2 className="p-0 m-0">Port</h2>
+              <div className="pb-8">
+                <h2 className="p-0 m-0 pb-2">Introducing</h2><h2 className="text-green p-0 m-0">Port</h2>
               </div>
-              <h3 className="pb-5">The Urbit client, now in beta.</h3>
-              <p className="pb-5">Port lets you... Sed iste iusto deserunt id dolores dignissimos est expedita. Earum ut et nemo et voluptatem sunt ea. Delectus sed unde fugit reiciendis. Voluptatum animi laborum fugit dolores. Dolore qui asperiores eum iusto debitis sit. Et vel dolores voluptas.</p>
-              <button className="button-lg type-ui mb-5">Download For Mac</button>
-              <a className="">View on GitHub</a>
+              <h3 className="pb-8">The Urbit client, now in beta.</h3>
+              <p className="pb-24">Getting into Urbit is now as simple as installing an app on your computer.</p>
+              <button className="button-lg type-ui mb-5 bg-green">Download For Mac</button>
+              <a className="type-ui text-gray">View on GitHub</a>
             </div>
             <div className="bg-black w-full rounded-xl hero-image-height hero-image mt-8" />
           </div>
         </section>
         
         <section className="layout-narrow pt-48">
-          <div className='measure'>
-            <h2 className="pb-12">Develop on Urbit</h2>
-            <h3 className="pb-12">
-              Urbit is a personal OS designed from scratch to run peer-to-peer applications.
-            </h3>
-            <p className="pb-12">
-              The entire OS is a <a>single pure function</a> that provides application developers with strong guarantees: automated persistence and memory management, repeatable builds, and support for hot code reloading.
-            </p>
-            <button className="button-lg type-ui">Contribute</button>
-          </div>
-        </section>
-        
-        <section className="layout-narrow pt-48">
           <div className='flex items-center measure pb-12'>
             <h2 className="m-0 p-0 mr-4">Urbit Grants</h2>
-            <button className="flex bg-green type-ui px-4 items-center justify-center h-12 rounded-full">32 Open</button>
+            <button className="flex bg-green text-white type-ui px-4 items-center justify-center h-12 rounded-full">32 Open</button>
           </div>
-          <h3 className="pb-12 measure">
-            Contribute to Urbit and get rewarded with address space.
-          </h3>
-          <div className="flex w-full items-center bg-lightGreen px-8 py-10 rounded-xl">
+          <div className="flex w-full items-center bg-washedGreen px-8 py-8 rounded-xl">
             <div className="flex items-center flex-col p-4 w-full">
-              <h2>200+</h2>
-              <h3 className="text-gray text-center pt-4">Urbit stars awarded</h3>
+              <h2 className="text-green">200+</h2>
+              <h3 className="text-green text-center pt-2">Urbit stars awarded</h3>
             </div>
-            <div className="h-32 w-4 bg-green" />
+            <div className="h-24 w-4 bg-lightGreen" />
             <div className="flex items-center flex-col p-4 w-full">
-              <h2>1M+</h2>
-              <h3 className="text-gray text-center pt-4">USD Rewarded</h3>
+              <h2 className="text-green">1M+</h2>
+              <h3 className="text-green text-center pt-2">USD Rewarded</h3>
             </div>
-            <div className="h-32 w-4 bg-green" />
+            <div className="h-24 w-4 bg-lightGreen" />
             <div className="flex items-center flex-col p-4 w-full">
-              <h2>90+</h2>
-              <h3 className="text-gray text-center pt-4">Grants completed</h3>
+              <h2 className="text-green">90+</h2>
+              <h3 className="text-green text-center pt-2">Grants completed</h3>
             </div>
           </div>
           <div className='measure py-12'>
               <p className="pb-12">We regularly give away address space to reward community contributions, including education, promotion, and development.</p>
-              <button className="button-lg">View Grants</button>
+              <button className="button-lg bg-green">View Grants</button>
           </div>
         </section>
+        
+        <section className="layout-narrow pt-48">
+        <div className='measure'>
+          <h2 className="pb-12">Build on Urbit</h2>
+          <h3 className="pb-12">
+            Urbit is a personal OS designed from scratch to run peer-to-peer applications.
+          </h3>
+          <p className="pb-12">
+            It solves the hard problems of implementing a peer-to-peer network (including identity, NAT traversal, and exactly-once delivery) in the kernel so app developers canfocus on business logic. 
+          </p>
+          <p className="pb-12">
+            The entire OS is a <a>single pure function</a> that provides application developers with strong guarantees: automated persistence and memory management, repeatable builds, and support for hot code reloading.
+          </p>
+          <p className="pb-12">
+          You can get started learning how to <Link href=''><a>contribute to the project</a></Link>, or view a variety of <Link href=''><a>libraries</a></Link> for building on Urbit using the languages you already know.
+          </p>
+          <button className="button-lg type-ui bg-black">Read the Developer Docs</button>
+        </div>
+      </section>
+      
         
         <section className="layout-narrow pt-48">
           <div className='flex items-center measure pb-12'>
@@ -116,9 +122,9 @@ export default function Home({ posts, events }) {
                       <Link href={'/blog/' + post.slug} key={`post-${post.slug}`}>
                         <div>
                           <BackgroundImage src={post.extra.image || ''} />
-                          <p className='text-black mt-2'>{post.title}</p>
+                          <p className='text-black type-h3 mt-2'>{post.title}</p>
                           <caption className='text-black mt-2'>{post.extra.author}</caption>
-                          <caption className='text-gray'>{post.date}</caption>
+                          <caption className='text-gray mt-2'>{post.date}</caption>
                         </div>
                       </Link>
                     </div>

@@ -58,9 +58,7 @@ export async function getStaticProps({ params }) {
 		'description',
 		'extra',
 	], 'blog')
-	
-	// console.log(previousPost, nextPost)
-			
+				
 	const post = getPostBySlug(params.slug, [
 		'title',
 		'slug',
