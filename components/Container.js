@@ -1,9 +1,8 @@
+// Ensures the root container is always 100vw, min 100vh, and centers all children along the y-axis
 export default function Container({children}) {
 	return (
-	  <div className='flex min-h-screen w-screen justify-center'>
-		<div className='flex flex-col w-full items-center'>
+	  <div className='flex flex-col min-h-screen w-screen items-center'>
 		  {children}
-		</div>
 	  </div>
 	)
   }

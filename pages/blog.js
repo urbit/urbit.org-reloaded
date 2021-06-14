@@ -7,11 +7,6 @@ import Header from '../components/Header'
 import SingleColumn from '../components/SingleColumn'
 import { getAllPosts } from '../lib/lib'
 
-function BackgroundImage(props) {
-  return (
-    <div className={`bg-img`} style={{backgroundImage: `url(${props.src})`}}/>
-  )
-}
 
 export default function BlogPost({ posts }) {
     

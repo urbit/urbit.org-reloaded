@@ -5,22 +5,10 @@ import Container from '../components/Container'
 import SingleColumn from '../components/SingleColumn'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { getAllPosts } from '../lib/lib'
-
-function TabCarousel(props) {
-  if (props.children) {
-    if (props.children[props.index]) {
-      return props.children[props.index]
-    }
-  }
-  return null
-}
-
-function BackgroundImage(props) {
-  return (
-    <div className={`bg-img`} style={{backgroundImage: `url(${props.src})`}}/>
-  )
-}
+import BackgroundImage from '../components/BackgroundImage'
+import TabCarousel from '../components/TabCarousel'
+import { getAllPosts, formatDate } from '../lib/lib'
+import { contact } from '../lib/constants'
 
 export default function Home({ posts, events }) {
   
@@ -124,7 +112,7 @@ export default function Home({ posts, events }) {
                           <BackgroundImage src={post.extra.image || ''} />
                           <p className='text-black type-h3 mt-2'>{post.title}</p>
                           <caption className='text-black mt-2'>{post.extra.author}</caption>
-                          <caption className='text-gray mt-2'>{post.date}</caption>
+                          <caption className='text-gray mt-2'>{formatDate(new Date(post.date))}</caption>
                         </div>
                       </Link>
                     </div>
@@ -144,7 +132,7 @@ export default function Home({ posts, events }) {
                         <div>
                           <BackgroundImage src={event.extra.image || ''} />
                           <p className='text-black mt-2'>{event.title || ''}</p>
-                          <caption className='text-gray'>{event.date}</caption>
+                          <caption className='text-gray'>{formatDate(new Date(event.date))}</caption>
                         </div>
                       </Link>
                     </div>
@@ -153,19 +141,51 @@ export default function Home({ posts, events }) {
               }
             </div>
           </TabCarousel>
-          
-          
         </section>
         
         <section className="layout-narrow pt-48">
-          <div className='measure pb-12'>
-            <h2 className="m-0 p-0 mr-4 pb-12">Inside the OS</h2>
-            <p>We send monthly emails on system improvements, upcoming events, and community spotlights.</p>
+          <div className='measure'>
+            <h2 className="m-0 p-0 mr-4 pb-12">Stay In Touch</h2>
+            <p className='pb-12'>We send monthly emails on system improvements, upcoming events, and community spotlights.</p>
           </div>
+            <form 
+              action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;amp;id=be143888d2"
+              method="post" id="mc-embedded-subscribe-form" 
+              name="mc-embedded-subscribe-form" 
+              className="validate form"
+              target="_blank" 
+              novalidate>
+              <div className="input-group" id="mc_embed_signup_scroll">
+                <div className="mc-field-group w-full relative">
+                  <input
+                    className="text-gray type-ui black border-green border-4 px-3 w-full mb-2 h-16 rounded-xl" 
+                    type="email" 
+                    name="EMAIL"
+                    id="mce-EMAIL" 
+                    placeholder="your@email.com" />
+                  <div className="flex h-16 items-center justify-center absolute top-0 right-6">
+                    <button 
+                      id="mc-embedded-subscribe" 
+                      className="type-ui text-gray bg-transparent" 
+                      type="submit" 
+                      name="subscribe" 
+                      onclick="_paq.push(['trackEvent', 'Mailing List', 'Subscribe'])">
+                        Sign Up
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <h3 className="mt-8">Follow us on <a className="text-green" href={contact.twitter}>Twitter</a></h3>
+            <h3 className="mt-8">Explore code on <a className="text-green" href={contact.github}>Github</a></h3>
+            <h3 className="mt-8">Ask questions in our <a className="text-green" href={contact.discord}>Discord</a></h3>
+            <h3 className="mt-8">Boot Urbit and join <code className="bg-wall p-2 rounded-lg">{contact.urbitCommunity}</code></h3>
+          
         </section>
+        
       </SingleColumn>
       
-      <Footer />
+      <Footer/>
       
     </Container>
   )

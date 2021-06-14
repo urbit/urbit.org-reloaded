@@ -2,6 +2,9 @@
   font-size:16px;
 } */
 
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Code+Pro:wght@400;500;600;700&display=swap');
+
 html,
 body {
   padding: 0;
@@ -52,6 +55,10 @@ h3, .type-h3 {
  
  caption, .type-caption {
    @apply text-base font-sans font-medium block text-left;
+ }
+ 
+ code .type-code {
+   @apply bg-wall p-4 font-mono;
  }
  
  .button-sm {

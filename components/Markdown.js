@@ -28,6 +28,7 @@ const options = {
   }
 }
 
+// Converts markdown strings into markdown HTML/React components
 export default function Markdown({ post }) {
   return (
 	<div className={markdownStyles['markdown']}>
