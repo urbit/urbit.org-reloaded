@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useState } from 'react';
 import Container from '../components/Container'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 import { getAllPosts } from '../lib/lib'
 
 function TabCarousel(props) {
@@ -155,10 +156,8 @@ export default function Home({ posts, events }) {
         </div>
       </section>
       
-      <footer className="pt-12 bg-yellow h-80 w-full">
+      <Footer />
       
-      </footer>
-
     </Container>
   )
 }

@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useState } from 'react';
 import Container from '../components/Container'
+import Footer from '../components/Footer'
 import { getAllPosts } from '../lib/lib'
 
 function BackgroundImage(props) {
@@ -27,8 +28,8 @@ export default function Home({ posts }) {
           posts.map((post) => <div key={post.slug}>{post.title}</div>)
         }
       </section>
+      <Footer/>
       
-           
     </Container>
   )
 }

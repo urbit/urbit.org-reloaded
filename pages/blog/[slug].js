@@ -5,6 +5,8 @@ import ErrorPage from '../404'
 import Container from '../../components/Container'
 import Markdown from '../../components/Markdown'
 import Header from '../../components/Header'
+import Footer from '../components/Footer'
+
 import {
   name,
 } from '../../lib/constants'
@@ -23,6 +25,7 @@ export default function Post({ post }) {
 	    		<Markdown post={post} />
 			</article>
 		</section>
+		<Footer />
 	</Container>
   )
 }

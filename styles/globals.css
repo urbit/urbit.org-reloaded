@@ -23,15 +23,16 @@ p a {
 }
 
 .layout-narrow {
-  padding-left: 16.6667%;
+  /* padding-left: 16.6667%;
   padding-right: 16.6667%;
-  width: 100%;
+ */  
+  width: 66.6667%;
 }
 
 .layout-wide {
-  padding-left: 8.3334%;
-  padding-right: 8.3334%;
-  width: 100%;
+  /* padding-left: 8.3334%;
+  padding-right: 8.3334%; */
+  width: 83.3334%;
 }
 
 h1, .type-h1 {
