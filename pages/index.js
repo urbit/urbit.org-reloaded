@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useState } from 'react';
 import Container from '../components/Container'
+import Header from '../components/Header'
 import { getAllPosts } from '../lib/lib'
 
 function TabCarousel(props) {
@@ -25,14 +26,7 @@ export default function Home({ posts, events }) {
   
   return (
     <Container>
-      <header className="layout-wide flex justify-between items-center pt-8">
-          <a href="/docs" className="type-ui">Urbit</a>
-          <nav className="flex items-center">
-            <a href="/docs" className="type-ui text-gray mr-6">Docs</a>
-            <a href="/blog" className="type-ui text-gray mr-6">Blog</a>
-            <button className="button-sm">Download Port</button>
-          </nav>
-      </header>
+      <Header />
       
       <section className="layout-narrow pt-48">
         <h1>A general-purpose, peer-to-peer, personal computing system.</h1>
@@ -128,6 +122,9 @@ export default function Home({ posts, events }) {
                 )
               })
             }
+            <div>
+              <Link href="/blog"><button className="button-lg type-ui">Read More</button></Link>
+            </div>
           </div>
           <div className="blog-grid">
             {
@@ -173,9 +170,6 @@ export async function getStaticProps() {
     'date',
     'description',
     'extra',
-    // 'author',
-    // 'ship',
-    // 'image'
   ], 'blog')
   
   const events = getAllPosts([
@@ -184,8 +178,6 @@ export async function getStaticProps() {
     'date',
     'extra',
   ], 'events')
-  
-  console.log(posts)
 
   return {
     props: { posts, events },

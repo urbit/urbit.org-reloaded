@@ -4,41 +4,49 @@ import Head from 'next/head'
 import ErrorPage from '../404'
 import Container from '../../components/Container'
 import Markdown from '../../components/Markdown'
+import Header from '../../components/Header'
 import {
   name,
 } from '../../lib/constants'
 
-export default function Post({ project }) {
+export default function Post({ post }) {
   const router = useRouter()
-  if (!router.isFallback && !project?.slug) {
+  if (!router.isFallback && !post?.slug) {
 	return <ErrorPage />
   }
+  
   return (
 	<Container>
-	  <Markdown post={project} />
+		<Header />
+		<section className="layout-narrow pt-48">
+			<article>
+	    		<Markdown post={post} />
+			</article>
+		</section>
 	</Container>
   )
 }
-
+// 
 export async function getStaticProps({ params }) {
-  const project = getPostBySlug(params.slug, [
+  const post = getPostBySlug(params.slug, [
 	'title',
-	'date',
-	'subtitle',
-	'content',
 	'slug',
-  ])
+	'date',
+	'description',
+	'content',
+	'extra',
+  ], 'blog')
 
   return {
-	props: { project },
+	props: { post },
   }
 }
 
 export async function getStaticPaths() {
-  const projects = getAllPosts(['slug'])
+  const posts = getAllPosts(['slug', 'date'], 'blog')
 
   return {
-	paths: projects.map((post) => {
+	paths: posts.map((post) => {
 	  return {
 		params: {
 		  slug: post.slug,
