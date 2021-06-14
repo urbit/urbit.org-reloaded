@@ -18,3 +18,5 @@ Programming Bitcoin is fun, particularly on Urbit, but the devil is in the detai
 Tim is the technical director at the Urbit Foundation, and wrote the backend for the Urbit Bitcoin wallet. He is currently managing `volt`, a project to integrate a Lightning client into Urbit.  This workshop will be interactive &mdash; Tim will take questions throughout, and will conduct another session later if material remains.
 
 As always, there will be an informal call afterwards to hang out. We will also open a Bitcoin development channel on Urbit specifically to handle follow-ups from this and for those who can't make it live.
+
+Event will be [streamed on YouTube](https://www.youtube.com/watch?v=ltKz1MmluEY)
