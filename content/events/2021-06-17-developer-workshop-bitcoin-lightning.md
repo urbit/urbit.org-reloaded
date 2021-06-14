@@ -4,7 +4,8 @@ title = "Developer Call: Programming Bitcoin on Urbit Workshop"
 date = 2021-06-17 
 [extra] 
 pinned = false 
-host = "Tim (~timluc-miptev)" 
+host = "Josh Lehman (~wolref-podlex)"
+guests = "Tim (~timluc-miptev)" 
 time = "9:00 PDT" 
 location = "Online Event" 
 image = "" 
