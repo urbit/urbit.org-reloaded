@@ -11,7 +11,7 @@ pool and how to share it with your friends using our tool
 [Bridge](https://bridge.urbit.org).
 
 For more general tips on using your star, check out the [Star and Galaxy
-Operations page](/using/_index).
+Operations page](/using/).
 
 ## Anatomy of an Invite Pool
 

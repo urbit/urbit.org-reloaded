@@ -248,7 +248,7 @@ Yes. It would be annoying, but Urbit ID / [Azimuth](/docs/glossary/azimuth) coul
 
 ### How do I install Urbit OS? {#install-urbit-os}
 
-Check out our guides [here](/getting-started/_index).
+Check out our guides [here](/getting-started/).
 
 ### How do I use Urbit OS? {#use-urbit-os}
 
@@ -266,7 +266,7 @@ Your sponsor, a star or galaxy that your ship is connected to, may send you new 
 
 Follow our guide on how to boot a ship [here](/getting-started/planet).
 
-Get on the [mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;id=be143888d2). Learn [Hoon](/docs/hoon/hoon-school/_index). Sign up for [Hooniversity](https://hooniversity.org/). [Make stuff](https://grants.urbit.org).
+Get on the [mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;id=be143888d2). Learn [Hoon](/docs/hoon/hoon-school/). Sign up for [Hooniversity](https://hooniversity.org/). [Make stuff](https://grants.urbit.org).
 
 
 ## Urbit Grants

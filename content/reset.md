@@ -77,8 +77,8 @@ Yes, by following these steps (note that these steps **will not** back up your d
 1. Download your [keyfile from Bridge](https://urbit.org/getting-started/#keyfile).
 2. Shut down your ship.
 3. [Archive and move your old pier](/using/os/getting-started#moving-your-pier) (this is the directory that contains your urbit event log).
-4. [Download the latest version](/getting-started/_index) of the urbit binary.
-5. [Boot your ship with the new keyfile](/getting-started/_index).
+4. [Download the latest version](/getting-started/) of the urbit binary.
+5. [Boot your ship with the new keyfile](/getting-started/).
 
 ## I’m hosted by Tlon, or someone else—what do I need to do?
 
