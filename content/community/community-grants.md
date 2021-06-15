@@ -7,7 +7,7 @@ hideprevious = "true"
 hidenext = "true"
 +++
 
-Interested in getting your community on Urbit? We are currently accepting applications for select groups to get started on Urbit together using an [invite pool](@/using/id/creating-an-invite-pool.md).
+Interested in getting your community on Urbit? We are currently accepting applications for select groups to get started on Urbit together using an [invite pool](/using/id/creating-an-invite-pool).
 
 To get started, fill out the application below. Any information you share will be held privately, and only for the purpose of consideration for the grant.
 

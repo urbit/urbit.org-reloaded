@@ -11,7 +11,7 @@ pool and how to share it with your friends using our tool
 [Bridge](https://bridge.urbit.org).
 
 For more general tips on using your star, check out the [Star and Galaxy
-Operations page](@/using/_index.md).
+Operations page](/using/_index).
 
 ## Anatomy of an Invite Pool
 
@@ -66,7 +66,7 @@ Once the transaction is complete, the planet will have access to the invite pool
 
 1. Log into Bridge using the planet assigned an invite pool above using the
    planet's Master Ticket or ownership address.
-   
+
 2. Under "Invite Group", click "Add Members" to unroll the invitation UI.
 
 3. Select either "Email" or "URL".

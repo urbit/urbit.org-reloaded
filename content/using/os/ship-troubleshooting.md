@@ -38,7 +38,7 @@ When you first start your ship, you should make sure you put it a place where yo
 
 ### Keep up-to-date builds
 
-Check for latest Urbit version at https://github.com/urbit/urbit/releases. If you're behind, update using [this guide](@/getting-started/cli.md#updating).
+Check for latest Urbit version at https://github.com/urbit/urbit/releases. If you're behind, update using [this guide](/getting-started/cli#updating).
 
 ### `|hi` your star to see if you're connected
 
@@ -70,7 +70,7 @@ A personal breach is when a ship tells the rest of the network to treat it as th
 
 Personal breaches often fix connectivity issues, but should only be used as a
 last resort. To find out how to perform a personal breach, check out our [Guide
-to Breaches](@/using/id/guide-to-breaches.md). Before taking such a drastic measure, try
+to Breaches](/using/id/guide-to-breaches). Before taking such a drastic measure, try
 other methods in this guide. You can also ask for help on
 in the Help channel in the Urbit Community group at `~bitbet-bolbel/urbit-community` or, failing that, in the `#ship-starting-support`
 channel in our [Discord server](https://discord.gg/n9xhMdz).
@@ -81,7 +81,7 @@ channel in our [Discord server](https://discord.gg/n9xhMdz).
 You login to Landscape using the camel-case phrase obtained from dojo by
 entering `+code`. For security reasons you may wish to change this code
 regularly. You may do so by entering `|code %reset` into dojo. Doing this
-will prevent [Bridge](@/docs/glossary/bridge.md) from being able to derive your code,
+will prevent [Bridge](/docs/glossary/bridge) from being able to derive your code,
 meaning you will only be able to check it from dojo in the future.
 
 ## Operation Issues {#operation-issues}

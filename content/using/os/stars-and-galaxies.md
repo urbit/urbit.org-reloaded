@@ -6,7 +6,7 @@ aliases = ["/docs/using/operating-a-star/"]
 template = "doc.html"
 +++
 
-To boot your galaxy or star, follow our [installation instructions](@/getting-started/_index.md).
+To boot your galaxy or star, follow our [installation instructions](/getting-started/_index).
 
 ### Hosting your star
 
@@ -14,7 +14,7 @@ If you plan to distribute planets in any capacity, we ask that you keep your sta
 running. If you fail to do so, those planets will become orphans that are unable
 to communicate with the network unless they transfer to a new star.
 
-See our [cloud hosting instructions](@/using/running/hosting.md) for
+See our [cloud hosting instructions](/using/running/hosting) for
 instructions on settings up a Digital Ocean droplet.
 
 ### Distributing planets
@@ -27,7 +27,7 @@ By default, your star accepts software updates from its galaxy and routes them t
 
 #### Breaches
 
-To ensure new planets can connect to your ship, users are expected to participate in network-wide breaches by [updating to the latest Urbit version](@/getting-started/_index.md), deleting (or archiving) your pier, and then booting your ship using the new binary. If you don’t participate, you won’t be able to communicate with anyone on the network who has updated to the new era.
+To ensure new planets can connect to your ship, users are expected to participate in network-wide breaches by [updating to the latest Urbit version](/getting-started/_index), deleting (or archiving) your pier, and then booting your ship using the new binary. If you don’t participate, you won’t be able to communicate with anyone on the network who has updated to the new era.
 
 Network-wide breaches are distinct from personal breaches, wherein an individual ship cycles its personal network keys using Bridge, and then follows the same steps outlined above.
 

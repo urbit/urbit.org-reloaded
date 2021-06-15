@@ -11,7 +11,7 @@ The goal of this guide is to have clear and easy to follow best practices for de
 
 Most Urbit users start out running their ship locally on one machine in order to play with it, but this means when your machine is offline your Urbit node is offline too (and can't get updates). You can also only access your Urbit from that one machine.
 
-This guide uses Digital Ocean as the cloud provider, but others can be used. 
+This guide uses Digital Ocean as the cloud provider, but others can be used.
 
 ## Create a Digital Ocean droplet
  - Create an account on [Digital Ocean][Digital Ocean].
@@ -30,7 +30,7 @@ This guide uses Digital Ocean as the cloud provider, but others can be used.
  - **Backups**: Optional (it costs a little extra, but I have it enabled for peace of mind).
 
 ## Getting your own domain
-Your own domain will make accessing your Urbit a lot easier (it'll also allow you to secure things with a Let's Encrypt cert). Domains are relatively inexpensive and since this guide is about best practices it's a required step. 
+Your own domain will make accessing your Urbit a lot easier (it'll also allow you to secure things with a Let's Encrypt cert). Domains are relatively inexpensive and since this guide is about best practices it's a required step.
 
 There are a lot of domain name registrars you can use, this guide suggests [gandi.net][Gandi]. From there you can search for and register a domain that you like.
 
@@ -58,12 +58,12 @@ With our domain in place we're now ready to actually log into the box and start 
    $ ssh root@your_server_ip
    ```
  - If you set a passphrase on your ssh key, you'll be asked for it. If not, you should automatically be logged in.
- - Create a new user, in our example we'll use *sammy* (to match the DO docs), but you should use your own username: 
+ - Create a new user, in our example we'll use *sammy* (to match the DO docs), but you should use your own username:
    ```
    # adduser sammy
    ```
  - Enter a strong password for your user. The questions `adduser` asks you don't matter, hit enter to skip them.
- - Give your new user sudo access: 
+ - Give your new user sudo access:
    ```
    # usermod -aG sudo sammy
    ```
@@ -82,7 +82,7 @@ Continuing to follow the DO docs we're going to configure the ufw firewall.
    ```
    $ sudo ufw app list
    ```
-   
+
  - Next we'll configure ufw to allow connections via ssh and to allow Urbit to use the standard web port when the firewall is enabled,
  as well as opening a port that we'll later specify for your urbit to use to communicate directly with other ships.
    ```
@@ -92,7 +92,7 @@ Continuing to follow the DO docs we're going to configure the ufw firewall.
    $ sudo ufw allow 34543/udp
    ```
  Note that you can choose any port in place of 34543 for Ames. Just be sure to pass the same port via the `-p` option when starting your ship.
-   
+
  - Next we'll turn on the firewall.
    ```
    $ sudo ufw enable
@@ -103,8 +103,8 @@ Continuing to follow the DO docs we're going to configure the ufw firewall.
    ```
 
 ## Installing Urbit
-Finally we're ready to install Urbit on your very own server. This part is actually pretty easy, if you haven't installed Urbit locally then the instructions are the exact same as the ones in the Urbit [install doc](@/getting-started/_index.md). If you have a local ship already, we're going to install Urbit on the server and then send your local ship up.
- - **WARN**: Since Urbit is p2p you don't want to ever run two copies of your ship simultaneously. This is because other nodes that interact with each of your copies will be confused by which one is the most up to date. If you end up accidentally doing this you'll have to do a 'personal breach' described in the [guide to breaches](@/using/id/guide-to-breaches.md) to fix things.
+Finally we're ready to install Urbit on your very own server. This part is actually pretty easy, if you haven't installed Urbit locally then the instructions are the exact same as the ones in the Urbit [install doc](/getting-started/_index). If you have a local ship already, we're going to install Urbit on the server and then send your local ship up.
+ - **WARN**: Since Urbit is p2p you don't want to ever run two copies of your ship simultaneously. This is because other nodes that interact with each of your copies will be confused by which one is the most up to date. If you end up accidentally doing this you'll have to do a 'personal breach' described in the [guide to breaches](/using/id/guide-to-breaches) to fix things.
  - The first thing you're going to want to do is shut down your local ship, either with control-d or `|exit` in dojo.
  - Next we're going to install Urbit on the server and permit it to bind to the web ports:
    ```
@@ -139,7 +139,7 @@ Finally we're ready to install Urbit on your very own server. This part is actua
  - Log in with the code from `+code` in dojo like normal and you should see all of your applications.
 
 ## Leaving your Urbit running in a Screen session
-Finally, to leave your Urbit running after you disconnect we can leave it in a Screen session. This is just a way to leave applications running in the background and then reconnect to them later. Alternatively, the same can be done with tmux. 
+Finally, to leave your Urbit running after you disconnect we can leave it in a Screen session. This is just a way to leave applications running in the background and then reconnect to them later. Alternatively, the same can be done with tmux.
  - First start with your ship stopped, then run the following:
    ```
    $ screen -S urbit
@@ -166,7 +166,7 @@ On iOS you can save a website to your homescreen as an icon. If you do this for 
    - [Digital Ocean Nginx Installation][DO Nginx Install]
    - [Digital Ocean Nginx Config][DO Nginx Config]
    - [Digital Ocean SSL Cert Setup][DO SSL Config]
-   - [Urbit Install Docs](@/getting-started/_index.md)
+   - [Urbit Install Docs](/getting-started/_index)
    - [Urbit Basic Cloud Install][Urbit Basic Cloud Install]
 
  [Gandi]: https://www.gandi.net/

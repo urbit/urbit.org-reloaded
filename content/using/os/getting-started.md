@@ -109,7 +109,7 @@ Ctrl-y    Yank from kill buffer
 
 ### Updates
 
-By default, you will automatically receive updates ([OTAs](@/docs/glossary/ota-updates.md)) from your sponsor. To check your OTA source, run `|ota` in the [dojo](@/docs/glossary/dojo.md).
+By default, you will automatically receive updates ([OTAs](/docs/glossary/ota-updates)) from your sponsor. To check your OTA source, run `|ota` in the [dojo](/docs/glossary/dojo).
 
 If for some reason (for example, if your sponsor is out of date), you can switch OTA sources by running `|ota ~otasrc %kids` in the dojo, where `~otasrc` is the ship from which you want to receive updates. It is a good idea to contact the source ship and ask permission to sync from them.
 
@@ -117,7 +117,7 @@ If OTAs are not succeeding, or if you are on an version of Urbit before the `|ot
 
 #### Additional OTA Troubleshooting
 Please check the Support Wiki for additional OTA troubleshooting, such as:
-[OTA 1.0.71 failed](https://github.com/urbit/support/wiki/OTA-1.0.71-failed), 
+[OTA 1.0.71 failed](https://github.com/urbit/support/wiki/OTA-1.0.71-failed),
 [Missing OTA](https://github.com/urbit/support/wiki/Missing-OTA),
 [Stuck flow preventing planets from receiving
 OTAs](https://github.com/urbit/support/wiki/Stuck-flow-preventing-planets-from-receiving-OTAs),
@@ -154,7 +154,7 @@ in this example.
 
 Put `<key>` in a file and that file becomes `<keyfile>`.
 
-You can use the resulting output in the same installation flow from the [Installing Urbit](@/getting-started/_index.md) guide, following the same scheme as for booting a planet. That scheme is:
+You can use the resulting output in the same installation flow from the [Installing Urbit](/getting-started/_index) guide, following the same scheme as for booting a planet. That scheme is:
 
 ```sh
 $ ./urbit -w <moonname> -G <key> -c <piername>
@@ -202,7 +202,7 @@ To use the network as a planet or star, you must be sponsored by an active star
 or galaxy, respectively. If your sponsor isn't suiting your needs, you can
 escape to a different one. This can be done with
 [Bridge](https://bridge.urbit.org/) following the instructions
-[here](@/using/id/using-bridge.md#escaping-your-sponsor).
+[here](/using/id/using-bridge#escaping-your-sponsor).
 
 ### Continuity breaches
 
@@ -216,7 +216,7 @@ When this happens, back up any files you'd like to save, shut down your urbit, a
 
 You can check your ship's _life_ and _rift_ number by running `+keys our` in
 dojo. You can inspect another ship's life and rift number by running `+keys
-~sampel-palnet`. For information on what life and rift are, see [Life and Rift](@/docs/azimuth/life-and-rift.md).
+~sampel-palnet`. For information on what life and rift are, see [Life and Rift](/docs/azimuth/life-and-rift).
 
 ## DNS proxying {#dns-proxying}
 

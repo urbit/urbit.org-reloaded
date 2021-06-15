@@ -14,10 +14,10 @@ image = "https://media.urbit.org/site/posts/essays/phobos.jpeg"
 
 <br>
 
-Each of the ~4B 32-or-fewer-bit or [Azimuth](@/docs/glossary/azimuth.md)
-identities, namely [planets](@/docs/glossary/planet.md),
-[stars](@/docs/glossary/star.md), and [galaxies](@/docs/glossary/galaxy.md), may
-spawn ~4B 64-bit child identities known as [moons](@/docs/glossary/moon.md).
+Each of the ~4B 32-or-fewer-bit or [Azimuth](/docs/glossary/azimuth)
+identities, namely [planets](/docs/glossary/planet),
+[stars](/docs/glossary/star), and [galaxies](/docs/glossary/galaxy), may
+spawn ~4B 64-bit child identities known as [moons](/docs/glossary/moon).
 Moons are the undeveloped wild outback of Urbit, with a story waiting to be told
 that promises to be as enormous in scale as the cloud personal computing story
 told by planets, and possibly even more so.
@@ -37,7 +37,7 @@ settings, especially with respect to agriculture, and how they may manifest as
 the workhorse collection unit of decentralized data markets.
 
 For those unfamiliar, moons differ from all other
-[ships](@/docs/glossary/ship.md) in that they are not independent identities
+[ships](/docs/glossary/ship) in that they are not independent identities
 with total sovereignty over their data and keys. Instead, their cryptographic
 keys are issued and controlled by their parent identity. The relationship
 between the keys of a parent ship and its moons are analogous to the
@@ -114,7 +114,7 @@ In 2021, moons are mostly unused on Urbit. There's a smattering of minor use
 cases which we'll describe here, but they represent only a tiny fraction of
 their ultimate potential.
 
-Tlon recently launched a survey bot called [Eliza](@/blog/eliza.md), which was
+Tlon recently launched a survey bot called [Eliza](/blog/eliza), which was
 initially a comet. We frequently got questions on whether Eliza was actually
 Tlon's bot, because it could just as easily be a malicious actor posing as Tlon.
 We soon plan to relaunch Eliza as a moon of `~zod`, which is the most
@@ -143,7 +143,7 @@ to maintain a more performant planet.
 As we currently lack a real system for 3rd party software distribution (though
 see this recent [developer call](https://youtu.be/XwICC6Its1E) on a solution in
 progress), one stopgap has been to download software by syncing a foreign
-[desk](@/docs/glossary/desk.md) to your ship. This is risky, as buggy software
+[desk](/docs/glossary/desk) to your ship. This is risky, as buggy software
 may make break your ship and make it difficult to get running properly again.
 For this reason, testing new software on the livenet is frequently performed on
 moons, so as not to risk the parent ship if something were to go wrong.
@@ -228,8 +228,8 @@ Here, the hub or controller referred to would be your planet.
 Urbit has many other features that make it well-suited for IoT, above and beyond
 eliminating the SaaS model and providing self-authenticating identities. Many of
 these additional advantages derive from the fact that Urbit is a [solid state
-interpreter](@/docs/arvo/overview.md#solid-state-interpreter) and that
-[Ames](@/docs/glossary/ames.md) is a network of solid-state interpreters
+interpreter](/docs/arvo/overview#solid-state-interpreter) and that
+[Ames](/docs/glossary/ames) is a network of solid-state interpreters
 equipped with cryptographic identity. We explore this in the next section.
 
 ### Future lunar cosmotechnics
@@ -253,7 +253,7 @@ In order to respect the reader's time, I'm narrowing our scope to a particular
 topic: the agriculture industry. I'm also assuming a future with specialized and
 increasingly small hardware to run Urbit. Right now, a 4 GB Raspberry Pi is the
 standard for "small Urbit". If someday there are CPUs specifically designed for
-running [Nock](@/docs/glossary/nock.md), one could imagine going much smaller.
+running [Nock](/docs/glossary/nock), one could imagine going much smaller.
 Ultimately, I'm going to assume that there will someday be [solid-state
 interpreter](#ssi) microcontrollers - so the inclusion of Urbit on a device may
 require nothing more than a couple [surface-mount
@@ -272,7 +272,7 @@ industrial scale, and show how computerized and mechanized workflows add to the
 amazing productivity of modern farms and demonstrate that individual-sized
 inputs are able to create industrial-sized outputs. I predict that the set of
 trades for which this dynamic holds will only increase over time.
- 
+
 Agricultural automation has been a primary engine for the growth of
 civilization, but it has been hampered by the downsides of IoT elaborated in the
 previous section. One bellwether of this dynamic is the right to repair one's
@@ -325,8 +325,8 @@ properties are of great benefit in an industrial IoT context such as
 agriculture. We'd also like to predict that Urbit will not be the only SSI.
 Other sorts of SSI's specialized to various tasks may one day roam the planet,
 and these may be better suited for particular IoT tasks than
-[Arvo](@/docs/glossary/arvo.md). However, this article will be couched in terms
-of SSIs communicating with an [Ames](@/docs/glossary/ames.md)-like networking
+[Arvo](/docs/glossary/arvo). However, this article will be couched in terms
+of SSIs communicating with an [Ames](/docs/glossary/ames)-like networking
 protocol and Urbit ID-style cryptographic identity, rather than Urbit in
 particular.
 
@@ -350,7 +350,7 @@ deterministic at the CPU level, interruptions to power can result in an
 undefined semantic state and result in the random erasure of half of its brain.
 This determinism is what begets ease of maintainability of Urbit—problems
 generally only need to be solved once by experts and the solution propagates to
-the rest of the network via [OTA updates](@/docs/glossary/ota-updates.md). We
+the rest of the network via [OTA updates](/docs/glossary/ota-updates). We
 addressed this maintenance issue previously—we only remark now that this
 property is derived from being a SSI, rather than something particular only to
 Arvo or Urbit. When one has hundreds or thousands of devices to manage, the
