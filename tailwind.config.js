@@ -6,6 +6,7 @@ module.exports = {
       black: '#000',
       white: '#FFF',
       gray: 'rgba(0, 0, 0, 0.6)',
+      lightGray: 'rgba(0, 0, 0, 0.2)',
       wall: 'rgba(244, 243, 241, 1)',
       yellow: '#FCDB63',
       midYellow: 'rgba(255, 199, 0, 0.6)',
