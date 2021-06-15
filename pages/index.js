@@ -74,10 +74,10 @@ export default function Home({ posts, events }) {
             Urbit is a personal OS designed from scratch to run peer-to-peer applications.
           </h3>
           <p className="pb-12">
-            It solves the hard problems of implementing a peer-to-peer network (including identity, NAT traversal, and exactly-once delivery) in the kernel so app developers canfocus on business logic. 
+            It solves the hard problems of implementing a peer-to-peer network (including identity, NAT traversal, and exactly-once delivery) in the kernel so app developers can focus on business logic. 
           </p>
           <p className="pb-12">
-            The entire OS is a <a>single pure function</a> that provides application developers with strong guarantees: automated persistence and memory management, repeatable builds, and support for hot code reloading.
+            The entire OS is a <Link href=''><a>single pure function</a></Link> that provides application developers with strong guarantees: automated persistence and memory management, repeatable builds, and support for hot code reloading.
           </p>
           <p className="pb-12">
           You can get started learning how to <Link href=''><a>contribute to the project</a></Link>, or view a variety of <Link href=''><a>libraries</a></Link> for building on Urbit using the languages you already know.
@@ -130,7 +130,7 @@ export default function Home({ posts, events }) {
                     <div className={`border-black cursor-pointer blog-grid-${i}`} key={event.slug}>
                       <Link href={'/events/' + event.slug} key={`post-${event.slug}`}>
                         <div>
-                          <BackgroundImage className="w-full h-80 rounded" src={event.extra.image || ''} />
+                          <BackgroundImage className="w-full h-80 rounded-lg" src={event.extra.image || ''} />
                           <p className='text-black mt-2'>{event.title || ''}</p>
                           <p className='text-gray'>{formatDate(new Date(event.date))}</p>
                         </div>
@@ -152,7 +152,7 @@ export default function Home({ posts, events }) {
               action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;amp;id=be143888d2"
               method="post" id="mc-embedded-subscribe-form" 
               name="mc-embedded-subscribe-form" 
-              className="validate form"
+              className="validate form max-w-screen-sm"
               target="_blank" 
               novalidate>
               <div className="input-group" id="mc_embed_signup_scroll">

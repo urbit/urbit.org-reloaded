@@ -23,11 +23,9 @@ export default function Post({ post, nextPost, previousPost }) {
 	<Container>
 		<SingleColumn>
 			<Header />
-			<section className="layout-narrow pt-48">
-				<article>
+			<article className="flex items-center pt-48">
 		    		<Markdown post={post} />
-				</article>
-			</section>
+			</article>
 			<section className="layout-narrow pt-48">
 				<Link href={nextPost.slug}>{nextPost.title}</Link>
 				<Link href={previousPost.slug}>{previousPost.title}</Link>

@@ -28,7 +28,12 @@ export default function BlogPost({ posts }) {
               return (
                 <Link href={`/blog/${post.slug}`}>
                   <div key={post.slug} className='pb-24 cursor-pointer'>
-                    <BackgroundImage src={post.extra.image || ''} style={{ height:"720px" }} className="w-full rounded" />
+                    {
+                      // Not all blog posts have images
+                      post.extra.image
+                        ? <BackgroundImage src={post.extra.image} style={{ height:"720px" }} className="w-full rounded-lg" />
+                        : null
+                    }
                     <h3 className='mt-4'>{post.title}</h3>
                     <p className='text-black mt-2'>{post.extra.author}</p>
                     <p className='text-gray mt-2'>{formatDate(new Date(post.date))}</p>

@@ -23,7 +23,7 @@ function Img({ src, children }) {
 
 const options = {
   remarkReactComponents: {
-	// img: Img,
+	img: Img,
 	// p: P,
   }
 }
