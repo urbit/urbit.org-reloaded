@@ -55,7 +55,7 @@ export default function DocsLayout({ posts }) {
 }
 
 // export async function getStaticProps() {
-//   const posts = getAllPosts([
+//   const docs = getAllPosts([
 //     'title',
 //     'slug',
 //     'date',
