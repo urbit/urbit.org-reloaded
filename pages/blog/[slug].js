@@ -29,13 +29,11 @@ export default function Post({ post, nextPost, previousPost }) {
 				</article>
 			</section>
 			<section className="layout-narrow pt-48">
-				
 				<Link href={nextPost.slug}>{nextPost.title}</Link>
 				<Link href={previousPost.slug}>{previousPost.title}</Link>
-
 			</section>
-			<Footer />
 		</SingleColumn>
+		<Footer />
 	</Container>
   )
 }

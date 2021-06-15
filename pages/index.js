@@ -109,10 +109,10 @@ export default function Home({ posts, events }) {
                     <div className={`border-black cursor-pointer blog-grid-${i}`} key={post.slug}>
                       <Link href={'/blog/' + post.slug} key={`post-${post.slug}`}>
                         <div>
-                          <BackgroundImage src={post.extra.image || ''} />
+                          <BackgroundImage className="w-full h-80 rounded" src={post.extra.image || ''} />
                           <p className='text-black type-h3 mt-2'>{post.title}</p>
-                          <caption className='text-black mt-2'>{post.extra.author}</caption>
-                          <caption className='text-gray mt-2'>{formatDate(new Date(post.date))}</caption>
+                          <p className='text-black mt-2'>{post.extra.author}</p>
+                          <p className='text-gray mt-2'>{formatDate(new Date(post.date))}</p>
                         </div>
                       </Link>
                     </div>
@@ -130,9 +130,9 @@ export default function Home({ posts, events }) {
                     <div className={`border-black cursor-pointer blog-grid-${i}`} key={event.slug}>
                       <Link href={'/events/' + event.slug} key={`post-${event.slug}`}>
                         <div>
-                          <BackgroundImage src={event.extra.image || ''} />
+                          <BackgroundImage className="w-full h-80 rounded" src={event.extra.image || ''} />
                           <p className='text-black mt-2'>{event.title || ''}</p>
-                          <caption className='text-gray'>{formatDate(new Date(event.date))}</caption>
+                          <p className='text-gray'>{formatDate(new Date(event.date))}</p>
                         </div>
                       </Link>
                     </div>
@@ -168,8 +168,8 @@ export default function Home({ posts, events }) {
                       id="mc-embedded-subscribe" 
                       className="type-ui text-gray bg-transparent" 
                       type="submit" 
-                      name="subscribe" 
-                      onclick="_paq.push(['trackEvent', 'Mailing List', 'Subscribe'])">
+                      name="subscribe">
+                      {/* onClick={() => _paq.push(['trackEvent', 'Mailing List', 'Subscribe'])}> */}
                         Sign Up
                     </button>
                   </div>

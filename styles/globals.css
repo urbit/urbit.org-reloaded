@@ -127,7 +127,6 @@ h3, .type-h3 {
   .blog-grid-3 { grid-area: blog-grid-3; }
   
 .bg-img {
-  @apply w-full h-80 rounded;
   background: silver;
   background-repeat: no-repeat;
   background-size: cover;

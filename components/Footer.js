@@ -17,6 +17,10 @@ export default function Footer() {
 					</div>
 					<div className="w-1/3 flex flex-col">
 						<h3 className='mb-4'>About</h3>
+						<Link className="mt-4" href="/understanding-urbit"><a className="type-ui text-gray">What's Urbit?</a></Link>
+						<Link className="mt-4" href="/understanding-urbit/urbit-id"><a className="type-ui text-gray">Urbit ID</a></Link>
+						<Link className="mt-4" href="/understanding-urbit/urbit-os"><a className="type-ui text-gray">Urbit OS</a></Link>
+						<Link className="mt-4" href="/faq"><a className="type-ui text-gray">FAQ</a></Link>
 					</div>
 					<div className="w-1/3 flex flex-col">
 						<h3 className='mb-4'>News</h3>
