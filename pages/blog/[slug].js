@@ -23,6 +23,9 @@ export default function Post({ post, nextPost, previousPost }) {
 	<Container>
 		<SingleColumn>
 			<Header />
+			<section className="flex flex-col layout-wide pt-48">
+				<h1>{post.title}</h1>
+			</section>
 			<article className="flex items-center pt-48">
 		    		<Markdown post={post} />
 			</article>
