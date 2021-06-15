@@ -38,7 +38,7 @@ src="https://media.urbit.org/site/understanding-urbit/uu-people-history-2a.jpg"/
 src="https://media.urbit.org/site/understanding-urbit/uu-people-history-2c.jpg"
 />
 
-Given how new and unusual Urbit is, it attracts a wide variety of interesting people — both technical and non-technical. The community is generally happy to talk to people about what Urbit is, what we’re up to, and where we’re going. The best way to get involved is to simply join the Urbit Community at `~bitbet-bolbel/urbit-community` — which our [setup instructions](@/using/os/getting-started.md) can help you do.
+Given how new and unusual Urbit is, it attracts a wide variety of interesting people — both technical and non-technical. The community is generally happy to talk to people about what Urbit is, what we’re up to, and where we’re going. The best way to get involved is to simply join the Urbit Community at `~bitbet-bolbel/urbit-community` — which our [setup instructions](/using/os/getting-started) can help you do.
 
 For those interested in contributing there are some simple instructions on [GitHub](https://github.com/urbit/urbit/blob/master/CONTRIBUTING.md#contributing-to-urbit), but we also run a [grants program](https://grants.urbit.org/) where we reward contributors with Urbit ID address space. Grants aren’t solely for pre-determined projects, either. If you have something you’d like to propose, we’d love to hear from you.
 

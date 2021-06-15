@@ -8,7 +8,7 @@ template = "getting-started/index.html"
 
 If you use Mac or Linux and just want to jump in, you can download **Port** and install it to run Urbit for you and get going right away. You can also set up Urbit using the command line.
 
-If you run Windows, or just want to give it a shot without worrying about the gritty bits, you may want to consider a [hosting provider](@/getting-started/planet.md#hosting-providers), though Windows instructions are provided [for power users](@/getting-started/cli.md).
+If you run Windows, or just want to give it a shot without worrying about the gritty bits, you may want to consider a [hosting provider](/getting-started/planet#hosting-providers), though Windows instructions are provided [for power users](/getting-started/cli).
 
 ### Get Port {#port}
 
@@ -81,4 +81,4 @@ Or to install `snap` for your distribution, snapcraft provides [installation ins
 }
 </style>
 
-If you'd like to have more direct control over the Urbit virtual machine, or are setting up Urbit on a cloud droplet, try [installation using the command line](@/getting-started/cli.md).
+If you'd like to have more direct control over the Urbit virtual machine, or are setting up Urbit on a cloud droplet, try [installation using the command line](/getting-started/cli).

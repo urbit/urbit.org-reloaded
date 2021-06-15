@@ -74,9 +74,9 @@ There are five kinds of Urbit IDs but to get started you only need to know about
 
 A planet name looks like `~sampel-palnet`.
 
-[Follow this guide](@/getting-started/planet.md) if you have already acquired a planet.
+[Follow this guide](/getting-started/planet) if you have already acquired a planet.
 
-[Find a planet to purchase](@/getting-started/planet.md#purchase)
+[Find a planet to purchase](/getting-started/planet#purchase)
 
 ***
 
@@ -119,7 +119,7 @@ To start your comet up again, run the following from your `urbit` directory (not
 
 Urbit is an entirely new computer, so by default it drops you into the "dojo," which is its terminal. Like your current computer, it can be used to do just about anything if you know the right commands. You only need to know one command for now.
 
-At the moment, the most common way to use Urbit is through a web app named [Landscape](@/docs/glossary/landscape.md), which comes with Urbit. It runs in your browser and provides an interface to Urbit without using the terminal. You need to get the password, or `code`.
+At the moment, the most common way to use Urbit is through a web app named [Landscape](/docs/glossary/landscape), which comes with Urbit. It runs in your browser and provides an interface to Urbit without using the terminal. You need to get the password, or `code`.
 
 1. With your Urbit running, look for a line that says something like `http: live (insecure, public) on 80`. The number given is the port that your ship is using. It will probably be 80, but we're just making sure. (Don't worry about the "insecure, public" part — that just means you can access it from your own web browser. It doesn't give anyone else access.)
 2.  If the port given is `80`, simply type `localhost` into your browser's address bar. If the given port is a different number, such as `8080`, you would type `localhost:8080`. You'll be met with a login prompt.
@@ -153,7 +153,7 @@ use |ota %disable or |ota ~sponsor %kids to reset it
 
 The dojo is Urbit's command line. You can use it to control your ship, or to execute arbitrary code. Check out the links below for more information.
 
-- [Basic Operations](@/using/os/getting-started.md)
+- [Basic Operations](/using/os/getting-started)
 - [Basic Hoon](/docs/tutorials/hoon/hoon-school/setup)
 - [Glossary Entry](/docs/glossary/dojo)
 
@@ -163,7 +163,7 @@ You can continue using this comet indefinitely. There are currently few differen
 
 A comet also comes with a long and fairly unmemorable name whereas a planet has a short name and a "sigil" (avatar) associated with it that makes it more identifiable on the network. You may notice all this within the first few minutes of using Urbit.
 
-[To read instructions on how to purchase and use a planet, visit this page](@/getting-started/planet.md).
+[To read instructions on how to purchase and use a planet, visit this page](/getting-started/planet).
 
 
 <style>
