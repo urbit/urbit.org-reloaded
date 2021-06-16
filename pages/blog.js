@@ -1,0 +1,78 @@
+import Head from 'next/head'
+import Link from 'next/link'
+import { useState } from 'react';
+import Container from '../components/Container'
+import Footer from '../components/Footer'
+import Header from '../components/Header'
+import SingleColumn from '../components/SingleColumn'
+import BackgroundImage from '../components/BackgroundImage'
+import { getAllPosts, formatDate } from '../lib/lib'
+
+
+export default function BlogPost({ posts }) {
+    
+  return (
+    <Container>
+      <SingleColumn>
+        <Header />
+        <section className="layout-wide pt-48">
+          <div className="measure">
+            <h2 className="pb-16">Urbit Blog</h2>
+            <p className="pb-6">Stories from the broader Urbit community, the Urbit Foundation, and the many people contributing to Urbit.</p>
+            <p>Subscribe to the Urbit Newsletter for regular updates, including new blog posts and events.</p>
+          </div>
+        </section>
+        <section className="layout-wide pt-24">
+          {
+            posts.map((post) => {
+              return (
+                <Link href={`/blog/${post.slug}`}>
+                  <div key={post.slug} className='pb-24 cursor-pointer'>
+                    {
+                      // Not all blog posts have images
+                      post.extra.image
+                        ? <BackgroundImage src={post.extra.image} style={{ height:"720px" }} className="w-full rounded-lg" />
+                        : null
+                    }
+                    <h2 className='mt-4'>{post.title}</h2>
+                    <div className="flex items-baseline">
+                      {
+                        post.extra.author ? <div className='type-ui text-gray mt-4'>{post.extra.author}</div> : null
+                      }
+                      {
+                        post.extra.author && post.extra.ship ? <div className="mx-1 text-gray">•</div> : null
+                      }
+                      {
+                        post.extra.ship ? <div className='type-ui text-gray font-mono'>{post.extra.ship}</div> : null
+                      }
+                    </div>
+                    
+                    <div className='type-ui text-gray mt-2'>{formatDate(new Date(post.date))}</div>
+                  </div>
+                </Link>
+              )
+            })
+          }
+        </section>
+
+      </SingleColumn>
+      <Footer/>
+    </Container>
+  )
+}
+
+export async function getStaticProps() {
+  const posts = getAllPosts([
+    'title',
+    'slug',
+    'date',
+    'description',
+    'extra',
+  ], 'blog')
+
+  return {
+    props: { posts },
+  }
+}
+
+
