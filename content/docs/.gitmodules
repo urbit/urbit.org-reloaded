@@ -1,3 +1,0 @@
-[submodule "docs/hoon/workbook"]
-	path = docs/hoon/workbook
-	url = git@github.com:urbit/hoon-workbook.git
