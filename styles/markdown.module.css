@@ -1,25 +1,31 @@
 .markdown {
 	/* @apply leading-relaxed; */
-  max-width: 600px;
+  /* max-width: ; */
+  @apply w-8/12;
 }
   
   .markdown p,
   .markdown ul,
   .markdown ol,
   .markdown blockquote {
-	@apply my-6;
+	  @apply my-8;
   }
 
   .markdown h1 {
-	  @apply font-semibold mt-12 mb-4;
+	  @apply text-5xl font-bold mt-24 mb-12;
   }
   
   .markdown h2 {
-	  @apply font-semibold mt-12 mb-4;
+	  @apply text-4xl font-bold mt-16 mb-12;
   }
   
   .markdown h3 {
-  	@apply font-semibold mt-8 mb-4;
+  	@apply text-2xl font-semibold mt-8 mb-8;
+  }
+  
+    
+  .markdown h4 {
+    @apply text-xl font-semibold mt-4 mb-4;
   }
   
   .markdown p {
@@ -36,12 +42,33 @@
   .markdown img {
     width: 100%;
     height: auto;
-    @apply rounded-lg
+    @apply rounded-lg;
   }
   
   .markdown figure {
     position: relative;
-    width: 160%;
-    left: -30%;
+    width: 125%;
+    left: -12.5%;
+    @apply mt-12 mb-12;
   }
   
+  .markdown pre {
+    @apply p-8 bg-wall rounded-lg;
+  }
+  
+  .markdown code {
+    @apply px-2 py-0.5 bg-wall rounded-lg;
+  }
+  
+  .markdown ul {
+    list-style-type: disc;
+  }
+  
+  .markdown ol {
+  }
+  
+  .markdown li {
+    font-size: 20px;
+    @apply py-2 ml-6;
+  }
+

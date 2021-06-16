@@ -34,27 +34,27 @@ p a {
 }
 
 h1, .type-h1 {
-   @apply text-6xl leading-tight font-sans tracking-tight font-bold;
+   @apply text-6xl leading-tight tracking-tight font-bold;
  }
  
 h2, .type-h2 {
-   @apply text-5xl font-sans font-bold;
+   @apply text-5xl font-bold;
 }
  
 h3, .type-h3 {
-   @apply text-2xl font-sans font-semibold;
+   @apply text-2xl font-semibold;
 }
  
  .type-ui {
-   @apply text-lg font-sans font-semibold;
+   @apply text-lg font-semibold;
  }
  
  p, .type-p {
-   @apply text-lg font-sans;
+   @apply text-lg;
  }
  
  caption, .type-caption {
-   @apply text-base font-sans font-medium block text-left;
+   @apply text-base font-medium block text-left;
  }
  
  code .type-code {

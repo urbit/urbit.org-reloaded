@@ -17,7 +17,7 @@ export default function BlogPost({ posts }) {
         <Header />
         <section className="layout-wide pt-48">
           <div className="measure">
-            <h2 className="pb-12">Urbit Blog</h2>
+            <h2 className="pb-16">Urbit Blog</h2>
             <p className="pb-6">Stories from the broader Urbit community, the Urbit Foundation, and the many people contributing to Urbit.</p>
             <p>Subscribe to the Urbit Newsletter for regular updates, including new blog posts and events.</p>
           </div>
@@ -34,9 +34,20 @@ export default function BlogPost({ posts }) {
                         ? <BackgroundImage src={post.extra.image} style={{ height:"720px" }} className="w-full rounded-lg" />
                         : null
                     }
-                    <h3 className='mt-4'>{post.title}</h3>
-                    <p className='text-black mt-2'>{post.extra.author}</p>
-                    <p className='text-gray mt-2'>{formatDate(new Date(post.date))}</p>
+                    <h2 className='mt-4'>{post.title}</h2>
+                    <div className="flex items-baseline">
+                      {
+                        post.extra.author ? <div className='type-ui text-gray mt-4'>{post.extra.author}</div> : null
+                      }
+                      {
+                        post.extra.author && post.extra.ship ? <div className="mx-1 text-gray">•</div> : null
+                      }
+                      {
+                        post.extra.ship ? <div className='type-ui text-gray font-mono'>{post.extra.ship}</div> : null
+                      }
+                    </div>
+                    
+                    <div className='type-ui text-gray mt-2'>{formatDate(new Date(post.date))}</div>
                   </div>
                 </Link>
               )

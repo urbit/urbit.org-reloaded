@@ -33,7 +33,7 @@ export default function Home({ posts, events }) {
               </div>
               <h3 className="pb-8">The Urbit client, now in beta.</h3>
               <p className="pb-24">Getting into Urbit is now as simple as installing an app on your computer.</p>
-              <button className="button-lg type-ui mb-5 bg-green">Download For Mac</button>
+              <button className="button-lg type-ui mb-5 bg-green text-white">Download For Mac</button>
               <a className="type-ui text-gray">View on GitHub</a>
             </div>
             <div className="bg-black w-full rounded-xl hero-image-height hero-image mt-8" />
@@ -63,7 +63,7 @@ export default function Home({ posts, events }) {
           </div>
           <div className='measure py-12'>
               <p className="pb-12">We regularly give away address space to reward community contributions, including education, promotion, and development.</p>
-              <button className="button-lg bg-green">View Grants</button>
+              <button className="button-lg bg-green text-white">View Grants</button>
           </div>
         </section>
         
@@ -82,7 +82,7 @@ export default function Home({ posts, events }) {
           <p className="pb-12">
           You can get started learning how to <Link href=''><a>contribute to the project</a></Link>, or view a variety of <Link href=''><a>libraries</a></Link> for building on Urbit using the languages you already know.
           </p>
-          <button className="button-lg type-ui bg-black">Read the Developer Docs</button>
+          <button className="button-lg type-ui text-white bg-black">Read the Developer Docs</button>
         </div>
       </section>
       
@@ -180,7 +180,6 @@ export default function Home({ posts, events }) {
             <h3 className="mt-8">Explore code on <a className="text-green" href={contact.github}>Github</a></h3>
             <h3 className="mt-8">Ask questions in our <a className="text-green" href={contact.discord}>Discord</a></h3>
             <h3 className="mt-8">Boot Urbit and join <code className="bg-wall p-2 rounded-lg">{contact.urbitCommunity}</code></h3>
-          
         </section>
         
       </SingleColumn>
