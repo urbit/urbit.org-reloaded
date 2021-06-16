@@ -26,7 +26,7 @@ and we hope many others emerge that build on top of the Arvo kernel. We plan on
 making Landscape itself more extensible for user-developers in late 2021.
 
 Landscape is specifically a social suite of applications, meant to enable
-communication and socializing in many forms. 
+communication and socializing in many forms.
 
 
 ## What is Landscape technically composed of?
@@ -37,7 +37,7 @@ Landscape is composed of two primary parts: its backend, which runs as a suite o
 ### Backend
 
 The Landscape backend is implemented as a collection of long-running
-microservices known as [Gall agents](@/docs/userspace/gall/gall.md). They can be divided into the following,
+microservices known as [Gall agents](/docs/userspace/gall/gall). They can be divided into the following,
 though this is a simplification:
 
 - **Graph**: handles storing messages / posts in a non-relational database
@@ -104,7 +104,7 @@ received.
 #### Poke-Proxy Hook
 
 The poke-proxy-hook conditionally forwards a poke from a foreign ship to a store
-on the local ship if the foreign ship has permission to do so. 
+on the local ship if the foreign ship has permission to do so.
 
 
 ### Major Components
@@ -152,7 +152,7 @@ Pinterest equivalent, a more private version of Facebook, a decentralized
 Reddit, or an even more distributed version of Mastodon. You can read more about
 graph-store by [viewing the
 source](https://github.com/urbit/urbit/blob/ac096d85ae847fcfe8786b51039c92c69abc006e/pkg/arvo/app/graph-store.hoon)
-or reading our [API Reference](@/docs/userspace/landscape/reference/graph-store.md) documentation.
+or reading our [API Reference](/docs/userspace/landscape/reference/graph-store) documentation.
 
 The `%graph-store` may be accessed from foreign ships through the use of the
 `%graph-pull-hook` and `%graph-push-hook`.
@@ -163,7 +163,7 @@ Metadata is stored in the `%metadata-store`, and is where we store metadata
 about resources (ex: graphs or groups). We store their display name,
 description, a color, and the date they were added. We also store what group the
 resource is associated with, what app the resource is associated with, and what
-module (display mode) the resource should be used with. 
+module (display mode) the resource should be used with.
 
 Metadata within the broader context of the userspace application suite can best
 be thought of as a database join between the `%group-store` and the

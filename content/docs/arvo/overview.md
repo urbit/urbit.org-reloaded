@@ -23,12 +23,12 @@ companion to this document, and some segments are direct quotes or paraphrases, 
 The conceptual section titled [What is Arvo?](#what-is-arvo-) can be understood
 without knowing Hoon, the Urbit programming language. The technical section
 titled [The kernel](#the-kernel) will require Chapter One of the [Hoon
-tutorial](@/docs/hoon/hoon-school/_index.md) for full understanding, and some
+tutorial](/docs/hoon/hoon-school/) for full understanding, and some
 material from Chapter Two will be helpful as well. At the bare minimum, we
 presume that the reader has read through the [Technical
-Overview](@/docs/system-overview/_index.md).
+Overview](/docs/system-overview/).
 
-We also suggest to the reader to peruse the [glossary](@/docs/glossary/_index.md) before diving into this article. It will provide the initial scaffolding that you will be able to gradually fill in as you read this article and go deeper into the alternate universe of computing that is Urbit.
+We also suggest to the reader to peruse the [glossary](/docs/glossary/) before diving into this article. It will provide the initial scaffolding that you will be able to gradually fill in as you read this article and go deeper into the alternate universe of computing that is Urbit.
 
 
 # Table of Contents
@@ -125,7 +125,7 @@ The formal state of an Arvo instance is an event history, as a linked list of [n
 
 The Arvo event log is a list of every action ever performed on your ship that
 lead up to the current state. In principle, this event log is maintained by the
-[Nock runtime environment](@/docs/vere/_index.md), but in practice
+[Nock runtime environment](/docs/vere/), but in practice
 event logs become too long over time to keep, as the event log has a size of
 O(n) where n is the number of events. Thus it is our intention to
 implement a feature whereby periodic snapshots of the state of Arvo are taken
@@ -174,7 +174,7 @@ Typically, updates to an operating system are given via a pre-compiled binary,
 which is why some updates will work on some systems but not on others where the
 hardware and environment may differ. This is not so on Arvo - because it is an
 [interpreter](#solid-state-interpreter), Arvo may update itself by receiving
-source code from your sponsor over [Ames](@/docs/arvo/ames/ames.md), our
+source code from your sponsor over [Ames](/docs/arvo/ames/ames), our
 network. As Hoon compiles down to Nock, which is an axiomatic representation of
 a deterministic computer, this code is guaranteed to run identically on your machine as it
 would on anybody else's.
@@ -205,7 +205,7 @@ Database theory studies in precise terms the possible properties of anything tha
    Arvo
    transactions are sequential and performed by the daemon, persistence and effect application are performed
    in parallel by the worker; see [worker and
-   daemon](@/docs/vere/_index.md) for more detail.
+   daemon](/docs/vere/) for more detail.
 
  - Durability: Completed transactions will survive permanently. In other words,
    since the event log is stored on disk, if power is lost you are guaranteed
@@ -214,7 +214,7 @@ Database theory studies in precise terms the possible properties of anything tha
 It is easy to think that "completed transaction will survive permanently"
 along with "the state of Arvo is pure function of its event log" implies that
 nothing can ever be deleted. This is not quite true.
-[Clay](@/docs/arvo/clay/clay.md) is our [referentially
+[Clay](/docs/arvo/clay/clay) is our [referentially
 transparency](https://en.wikipedia.org/wiki/Referential_transparency)
 file system, which could naively be thought to mean that since data must be
 immutable, files cannot be deleted. However, Clay can replace a file with a
@@ -248,10 +248,10 @@ cooperative multitasking.
 
 The Arvo kernel, stored in `sys/arvo.hoon`, is about 1k lines of Hoon whose primary purpose is to implement the transition function, `+poke`. In this section we point out the most important parts of `arvo.hoon` and describe their role in the greater system. We also give brief descriptions of Arvo's kernel modules, known as vanes, and how Arvo interfaces with them.
 
-This section requires an understanding of Hoon of at least the level of Chapter One of the [Hoon tutorial](@/docs/hoon/hoon-school/_index.md).
+This section requires an understanding of Hoon of at least the level of Chapter One of the [Hoon tutorial](/docs/hoon/hoon-school/).
 
 After concluding this section, the reader is encouraged to follow along with the
-[move trace tutorial](@/docs/arvo/tutorials/move-trace.md),
+[move trace tutorial](/docs/arvo/tutorials/move-trace),
 which applies many of the concepts covered below.
 
 ## Overall structure
@@ -264,7 +264,7 @@ which applies many of the concepts covered below.
  + Larval stage core
  + Formal interface
 
-See [Section 1.7](@/docs/hoon/hoon-school/arms-and-cores.md) of the Hoon tutorial for further explanation of what is meant here by "nesting". We now describe the functionality of each of these components.
+See [Section 1.7](/docs/hoon/hoon-school/arms-and-cores) of the Hoon tutorial for further explanation of what is meant here by "nesting". We now describe the functionality of each of these components.
 
 ### Formal interface
 
@@ -442,7 +442,7 @@ A short summary of the purpose of each these arms are as follows:
  - `+poke` is the transition function that `move`s Arvo from one state to the
    next. It is the most fundamental arm in the entire system. It is a typed
    transactional message that is processed at most once. If the `+poke` causes
-   Arvo to send an message over [Ames](@/docs/arvo/ames/ames.md) Ames
+   Arvo to send an message over [Ames](/docs/arvo/ames/ames) Ames
    guarantees that the message will be delivered exactly once. This is sometimes said
    to be impossible, and it is for standard operating systems, but that is not the case for single-level stores engaged in
    a permanent session, as is the case among Arvo ships.
@@ -559,14 +559,14 @@ data that directly causes the desired outcome of a `move`. This event data is co
 
 As of this writing, we have nine vanes, which each provide the following services:
 
-- [Ames](@/docs/arvo/ames/ames.md): the name of both our network and the vane that communicates over it.
-- [Behn](@/docs/arvo/behn/behn.md): a simple timer.
-- [Clay](@/docs/arvo/clay/clay.md): our version-controlled, referentially- transparent, and global filesystem.
-- [Dill](@/docs/arvo/dill/dill.md): a terminal driver. Unix sends keyboard events to `%dill` from the console, and `%dill` produces terminal output.
-- [Eyre](@/docs/arvo/eyre/eyre.md): an http server. Unix sends http messages to `%eyre`, and `%eyre` produces http messages in response.
-- [Ford](@/docs/arvo/ford/ford.md): a build system also utilized for marks
+- [Ames](/docs/arvo/ames/ames): the name of both our network and the vane that communicates over it.
+- [Behn](/docs/arvo/behn/behn): a simple timer.
+- [Clay](/docs/arvo/clay/clay): our version-controlled, referentially- transparent, and global filesystem.
+- [Dill](/docs/arvo/dill/dill): a terminal driver. Unix sends keyboard events to `%dill` from the console, and `%dill` produces terminal output.
+- [Eyre](/docs/arvo/eyre/eyre): an http server. Unix sends http messages to `%eyre`, and `%eyre` produces http messages in response.
+- [Ford](/docs/arvo/ford/ford): a build system also utilized for marks
   (file types) and debugging.
-- [Gall](@/docs/userspace/gall/gall.md): manages our userspace applications. `%gall` keeps state and manages subscribers.
+- [Gall](/docs/userspace/gall/gall): manages our userspace applications. `%gall` keeps state and manages subscribers.
 - `Iris`: an http client.
 - `Jael`: storage for Azimuth information.
 
@@ -574,4 +574,4 @@ As of this writing, we have nine vanes, which each provide the following service
 
 Now that you've learned about the nuts and bolts of the Arvo kernel, why not
 check it out in action? An in-depth "move trace" tutorial for running a timer app
-is available [here](@/docs/arvo/tutorials/move-trace.md).
+is available [here](/docs/arvo/tutorials/move-trace).

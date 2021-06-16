@@ -14,7 +14,7 @@ each `task` that Jael can be `%pass`ed, and which `gift`(s) Jael can `%give` in 
 
 This `task` is called once per ship during the vane initialization
 phase immediately following the beginning of the [adult
-stage](@/docs/arvo/overview.md#structural-interface-core). This `task` is `%pass`ed to Jael by Dill, as Dill is the first vane to be loaded for
+stage](/docs/arvo/overview#structural-interface-core). This `task` is `%pass`ed to Jael by Dill, as Dill is the first vane to be loaded for
 technical reasons, though we consider Jael to be the true "first" vane. This
 `task` is only used for ships that will join the Ames network - fake ships (i.e.
 made with `./urbit -F zod`) use the `%fake` `task` instead.
@@ -59,7 +59,7 @@ related data and can be found in `zuse.hoon`.
 `czar` is a map from each galaxy's `@p` to its `rift`, `life`, and public key (`pass`).
 
 `turf` is a `list` of DNS suffixes used by the Ames network, which for now is
-just `arvo.network`. 
+just `arvo.network`.
 
 `bloq` is the number of the Ethereum block in which the ship registered its keys
 with the Azimuth smart contract.
@@ -226,7 +226,7 @@ a `%public-keys` `task`.
 
 #### Returns
 
-Jael `%give`s a `%done` `gift` in response to a `%plea` `task`. 
+Jael `%give`s a `%done` `gift` in response to a `%plea` `task`.
 
 #### Passes
 
@@ -279,7 +279,7 @@ keys kept by Jael. This `task` can originate locally or remotely.
 If the `task` originated locally, Jael `%give`s a `%public-keys` `gift` in
 response. If it originated remotely, Jael `%give`s a `%boon` `gift` to back
 to Ames wrapping a `%public-keys` `gift`.
-    
+
 A `$public-keys-result` is the following.
 ```hoon
     +$  public-keys-result

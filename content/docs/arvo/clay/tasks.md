@@ -33,7 +33,7 @@ template = "doc.html"
 
 # Introduction
 
-This document details all the `task`s you're likely to use to interact with Clay, as well as the `gift`s you'll receive in response. Each section has a corresponding practical example in the [Examples](@/docs/arvo/clay/examples.md) document. Many of the types referenced are detailed in the [Data Types](@/docs/arvo/clay/data-types.md) document. It may also be useful to look at the `++  clay` section of `/sys/lull.hoon` in Arvo where these `task`s, `gift`s and data structures are defined.
+This document details all the `task`s you're likely to use to interact with Clay, as well as the `gift`s you'll receive in response. Each section has a corresponding practical example in the [Examples](/docs/arvo/clay/examples) document. Many of the types referenced are detailed in the [Data Types](/docs/arvo/clay/data-types) document. It may also be useful to look at the `++  clay` section of `/sys/lull.hoon` in Arvo where these `task`s, `gift`s and data structures are defined.
 
 The focus of this document is on interacting with Clay from userspace applications and threads, so it doesn't delve into the internal mechanics of Clay from a kernel development perspective.
 
@@ -47,7 +47,7 @@ A `%warp` `task` is for reading a subscribing to files and directories.
 [wer=ship rif=riff]
 ```
 
-The `wer` field is the target ship. The `(unit rave)` of the [riff](@/docs/arvo/clay/data-types.md#riff-clay-request-desist) is null to cancel an existing subscription, otherwise the [rave](@/docs/arvo/clay/data-types.md#rave-clay-general-subscription-request) is tagged with one of:
+The `wer` field is the target ship. The `(unit rave)` of the [riff](/docs/arvo/clay/data-types#riff-clay-request-desist) is null to cancel an existing subscription, otherwise the [rave](/docs/arvo/clay/data-types#rave-clay-general-subscription-request) is tagged with one of:
 
 - `%sing` - Read a single file or directory.
 - `%next` - Subscribe for the next change to a file or directory.
@@ -72,25 +72,25 @@ A `%wris` `gift` looks like:
 [%writ p=riot]  ::  response
 ```
 
-The `unit` of the [riot](@/docs/arvo/clay/data-types.md#riot-clay-response) will be null if the target file cannot be found or if a subscription has ended (depending on context). Otherwise it will have a [rant](@/docs/arvo/clay/data-types.md#rant-clay-response-data) with a `cage` containing the data you requested. Its contents will vary depending on the kind of request and `care`.
+The `unit` of the [riot](/docs/arvo/clay/data-types#riot-clay-response) will be null if the target file cannot be found or if a subscription has ended (depending on context). Otherwise it will have a [rant](/docs/arvo/clay/data-types#rant-clay-response-data) with a `cage` containing the data you requested. Its contents will vary depending on the kind of request and `care`.
 
 Now we'll look at each of the `rave` request types in turn.
 
 ## `%sing`
 
 ```hoon
-[%sing =mood] 
+[%sing =mood]
 ```
 
 This `rave` is for reading a single file or directory immediately.
 
-The `care` of the [mood](@/docs/arvo/clay/data-types.md#mood-clay-single-subscription-request) will determine what you can read and what type of data will be returned. See the [care](@/docs/arvo/clay/data-types.md#care-clay-clay-submode) documentation and [scry](@/docs/arvo/clay/scry.md) documentation for details on the various `care`s.
+The `care` of the [mood](/docs/arvo/clay/data-types#mood-clay-single-subscription-request) will determine what you can read and what type of data will be returned. See the [care](/docs/arvo/clay/data-types#care-clay-clay-submode) documentation and [scry](/docs/arvo/clay/scry) documentation for details on the various `care`s.
 
-The [case](@/docs/arvo/clay/data-types.md#case-specifying-a-commit) specifies the `desk` revision and you can use whichever kind you prefer. The `path` will usually be a path to a file or directory like `/gen/hood/hi/hoon` but may be something else depending on the `care`.
+The [case](/docs/arvo/clay/data-types#case-specifying-a-commit) specifies the `desk` revision and you can use whichever kind you prefer. The `path` will usually be a path to a file or directory like `/gen/hood/hi/hoon` but may be something else depending on the `care`.
 
 ### Example
 
-[See here for an example of using %sing.](@/docs/arvo/clay/examples.md#sing)
+[See here for an example of using %sing.](/docs/arvo/clay/examples#sing)
 
 ## `%next`
 
@@ -98,13 +98,13 @@ The [case](@/docs/arvo/clay/data-types.md#case-specifying-a-commit) specifies th
 [%next =mood]  ::  await next version
 ```
 
-This subscribes to the next version of the specified file. See [here](@/docs/arvo/clay/data-types.md#mood-clay-single-subscription-request) for details of the `mood` structure.
+This subscribes to the next version of the specified file. See [here](/docs/arvo/clay/data-types#mood-clay-single-subscription-request) for details of the `mood` structure.
 
 If you subscribe to the current `case` of the `desk`, Clay will not respond until the file changes. If you subscribe to a previous `case` of the `desk` and the file has changed in between then and now, it will immediately return the first change it comes across in that range. For example, if you're currently at `case` `100`, subscribe to case `50` and the file in question has been modified at both `60` and `80`, clay will immediately return the version of the file at `case` `60`.
 
 ### Example
 
-[See here for an example of using %next.](@/docs/arvo/clay/examples.md#next)
+[See here for an example of using %next.](/docs/arvo/clay/examples#next)
 
 ## `%mult`
 
@@ -126,7 +126,7 @@ You can use a different `care` for each of the files specified by the `path` if 
 
 ### Example
 
-[See here for an example of using %mult.](@/docs/arvo/clay/examples.md#mult)
+[See here for an example of using %mult.](/docs/arvo/clay/examples#mult)
 
 ## `%many`
 
@@ -144,9 +144,9 @@ If the `track` is `%.y` it will just return a `%writ` like:
 
 ...that merely informs you of a change. If you want the actual data you'll have to request it separately.
 
-If the `track` is `%.n`, the `cage` of the `%writ` will contain a [nako](@/docs/arvo/clay/data-types.md#nako-subscription-response-data) with the relevant data for all changes to a desk between what you have and the `case` requested. It is very large and fairly complicated. The `nako` structure is defined in the `clay.hoon` source file itself rather than in `lull.hoon` or elsewhere since you're unlikely to work with it yourself.
+If the `track` is `%.n`, the `cage` of the `%writ` will contain a [nako](/docs/arvo/clay/data-types#nako-subscription-response-data) with the relevant data for all changes to a desk between what you have and the `case` requested. It is very large and fairly complicated. The `nako` structure is defined in the `clay.hoon` source file itself rather than in `lull.hoon` or elsewhere since you're unlikely to work with it yourself.
 
-The `from` and `to` fields of the [moat](@/docs/arvo/clay/data-types.md#moat-clay-range-subscription-request) specify the range of `case`s for which to subscribe. The range is *inclusive*. It can be specified by date or by revision number, whichever you prefer.
+The `from` and `to` fields of the [moat](/docs/arvo/clay/data-types#moat-clay-range-subscription-request) specify the range of `case`s for which to subscribe. The range is *inclusive*. It can be specified by date or by revision number, whichever you prefer.
 
 The `path` in the `moat` is a path to a file or directory. If it's `~` it refers to the root of the `desk` in question. This lets you say "only inform me of changes to the `desk` if the specified file or directory exists". If it doesn't exist, Clay will not send you anything.
 
@@ -158,7 +158,7 @@ When you reach the end of the subscribed range of `case`s, Clay will send you a 
 
 ### Example
 
-[See here for an example of using %many.](@/docs/arvo/clay/examples.md#many)
+[See here for an example of using %many.](/docs/arvo/clay/examples#many)
 
 ## Cancel Subscription
 
@@ -166,7 +166,7 @@ To cancel a subscription, you just send a `%warp` with a null `(unit rave)` in t
 
 ### Example
 
-[See here for an example of cancelling a subscription.](@/docs/arvo/clay/examples.md#cancel-subscription)
+[See here for an example of cancelling a subscription.](/docs/arvo/clay/examples#cancel-subscription)
 
 # Write and Modify
 
@@ -180,7 +180,7 @@ To write or modify a file, we send Clay a `%info` `task`.
 [des=desk dit=nori]
 ```
 
-The `%|` tag in the [nori](@/docs/arvo/clay/data-types.md#nori-clay-repository-action) is not currently supported and will crash with a `%labelling-not-implemented` if used, so you can focus on the `%&` part. The [soba](@/docs/arvo/clay/data-types.md#soba-clay-delta) in the `nori` is just a list of changes so you can make more than one change in one request. Its `path` is just the path to a file like `/gen/hood/hi/hoon` and the [miso](@/docs/arvo/clay/data-types.md#miso-clay-ankh-delta) is one of these types of requests:
+The `%|` tag in the [nori](/docs/arvo/clay/data-types#nori-clay-repository-action) is not currently supported and will crash with a `%labelling-not-implemented` if used, so you can focus on the `%&` part. The [soba](/docs/arvo/clay/data-types#soba-clay-delta) in the `nori` is just a list of changes so you can make more than one change in one request. Its `path` is just the path to a file like `/gen/hood/hi/hoon` and the [miso](/docs/arvo/clay/data-types#miso-clay-ankh-delta) is one of these types of requests:
 
 - `%del` - Delete a file.
 - `%ins` - Insert file. This will also replace an existing file.
@@ -195,10 +195,10 @@ Clay does not give any response to an `%info` `task` so don't expect a `sign` ba
 
 Here are examples of using each of these as well as making multiple changes in one request:
 
-- [%del](@/docs/arvo/clay/examples.md#del)
-- [%ins](@/docs/arvo/clay/examples.md#ins)
-- [%mut](@/docs/arvo/clay/examples.md#mut)
-- [Multiple Changes](@/docs/arvo/clay/examples.md#multiple-changes)
+- [%del](/docs/arvo/clay/examples#del)
+- [%ins](/docs/arvo/clay/examples#ins)
+- [%mut](/docs/arvo/clay/examples#mut)
+- [Multiple Changes](/docs/arvo/clay/examples#multiple-changes)
 
 
 # Manage Mounts
@@ -236,7 +236,7 @@ The type it returns is a `%hill` `gift`, which looks like:
 
 ### Example
 
-[See here for an example of using %boat.](@/docs/arvo/clay/examples.md#boat)
+[See here for an example of using %boat.](/docs/arvo/clay/examples#boat)
 
 ## `%mont`
 
@@ -263,11 +263,11 @@ Clay does not return a `gift` in response to a `%mont` `%task`.
 
 ### Example
 
-[See here for an example of using %mont.](@/docs/arvo/clay/examples.md#mont)
+[See here for an example of using %mont.](/docs/arvo/clay/examples#mont)
 
 ## `%ogre`
 
-A `%ogre` `task` unmounts the specified mount. 
+A `%ogre` `task` unmounts the specified mount.
 
 ### Accepts
 
@@ -283,7 +283,7 @@ Clay does not return a `gift` in response to a `%ogre` `task`.
 
 ### Example
 
-[See here for an example of using %ogre.](@/docs/arvo/clay/examples.md#ogre)
+[See here for an example of using %ogre.](/docs/arvo/clay/examples#ogre)
 
 ## `%dirk`
 
@@ -303,7 +303,7 @@ Clay does not return a `gift` in response to a `%dirk` `task`.
 
 ### Example
 
-[See here for an example of using %dirk.](@/docs/arvo/clay/examples.md#dirk)
+[See here for an example of using %dirk.](/docs/arvo/clay/examples#dirk)
 
 # Merge Desks
 
@@ -319,7 +319,7 @@ $:  des=desk                    ::  target
     how=germ                    ::  method
 ==
 ```
-The `germ` specifies the merge strategy. You can refer to the [Strategies](@/docs/arvo/clay/using.md#strategies) section of the [Using Clay](@/docs/arvo/clay/using.md) document for details of each `germ`.
+The `germ` specifies the merge strategy. You can refer to the [Strategies](/docs/arvo/clay/using#strategies) section of the [Using Clay](/docs/arvo/clay/using) document for details of each `germ`.
 
 If you're merging into a new `desk` you must use `%init`, all other strategies will fail. If the desk already exists, you cannot use `%init`. Otherwise, you're free to use whichever you'd like.
 
@@ -346,7 +346,7 @@ If the merge failed, `p` will have a head of `%.n` and then a `[term tang]` wher
 
 ### Example
 
-[See here for an example of using %merg.](@/docs/arvo/clay/examples.md#merg)
+[See here for an example of using %merg.](/docs/arvo/clay/examples#merg)
 
 # Permissions
 
@@ -431,7 +431,7 @@ Clay does not return a `gift` in response to a `%perm` `task`.
 
 ### Example
 
-[See here for an example of using %perm.](@/docs/arvo/clay/examples.md#perm)
+[See here for an example of using %perm.](/docs/arvo/clay/examples#perm)
 
 ## `%cred`
 
@@ -455,7 +455,7 @@ Clay does not return a `gift` in response to a `%cred` `task`.
 
 ### Example
 
-[See here for an example of using %cred.](@/docs/arvo/clay/examples.md#cred)
+[See here for an example of using %cred.](/docs/arvo/clay/examples#cred)
 
 ## `%crew`
 
@@ -481,7 +481,7 @@ The `cez` is just a map from group name to `crew` which is just a `(set ship)`.
 
 ### Example
 
-[See here for an example of using %crew.](@/docs/arvo/clay/examples.md#crew)
+[See here for an example of using %crew.](/docs/arvo/clay/examples#crew)
 
 ## `%crow`
 
@@ -511,7 +511,7 @@ The `gift` you get back is a `%croz` which looks like:
 
 ### Example
 
-[See here for an example of using %crow.](@/docs/arvo/clay/examples.md#crow)
+[See here for an example of using %crow.](/docs/arvo/clay/examples#crow)
 
 # Foreign Ships
 
@@ -540,7 +540,7 @@ Note that if you're reading a whole `desk` or directory, all subfolders and file
 
 ### Example
 
-[See here for examples of requests to foreign ships.](@/docs/arvo/clay/examples.md#foreign-ships)
+[See here for examples of requests to foreign ships.](/docs/arvo/clay/examples#foreign-ships)
 
 ## `%merg` - Remote
 
@@ -552,4 +552,4 @@ Note that all subfolders and individual files within the `desk` must permit your
 
 ### Example
 
-[See here for examples of requests to foreign ships.](@/docs/arvo/clay/examples.md#foreign-ships)
+[See here for examples of requests to foreign ships.](/docs/arvo/clay/examples#foreign-ships)

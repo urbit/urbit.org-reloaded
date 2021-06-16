@@ -186,7 +186,7 @@ code a little clearer.
 `trim` is a a gate from the standard library that splits a tape at into two
 parts at a specified position. So `=+  (trim (mod my-steps length) my-alphabet)` splits the
 tape `my-alphabet` into two parts, `p` and `q`, which are now directly available in the subject.
-We call the modulus operation `mod` to make sure that the point at which we split our `tape` is 
+We call the modulus operation `mod` to make sure that the point at which we split our `tape` is
 a valid point inside of `my-alphabet` even if `my-steps` is greater than `length`, the length of
 `my-alphabet`.  Try trim in the dojo:
 
@@ -199,7 +199,7 @@ a valid point inside of `my-alphabet` even if `my-steps` is greater than `length
 ```
 
 `(weld q p)` uses `weld`, which combines two strings into one. Remember that `trim` has given us
-a split version of `my-alphabet` with `p` being the front half that was split off of `my-alphabet` 
+a split version of `my-alphabet` with `p` being the front half that was split off of `my-alphabet`
 and `q` being the back half. Here we are welding the two parts back together, but in reverse order:
 the second part `q` is welded to the front, and the first part `p` is welded to the back.
 
@@ -217,15 +217,15 @@ the second part `q` is welded to the front, and the first part `p` is welded to 
 ```
 
 The `map-maker` arm, as the name implies, takes two tapes and creates a [`map`](/docs/hoon/reference/stdlib/2o/#map) out of them.
-A `map` is a type equivalent to a dictionary in other languages: it's a data structure that 
-associates a key with a value. If, for example, we wanted to have an association 
+A `map` is a type equivalent to a dictionary in other languages: it's a data structure that
+associates a key with a value. If, for example, we wanted to have an association
 between `a` and 1 and `b` and 2, we could use a `map`.
 
 `|=  [a=tape b=tape]` builds a gate that takes two tapes, `a` and `b`, as its
 sample.
 
 `^-  (map @t @t)` casts the gate to a `map` with a `cord` (or `@t`) key and a `cord`
-value. 
+value.
 
 You might wonder, if our gate in this arm takes `tape`s, why then are we producing
 a map of `cord` keys and values?
@@ -233,7 +233,7 @@ a map of `cord` keys and values?
 As we discussed earlier, a `tape` is a list of `cord`s.  In this case what we are going to do
 is map a single element of a `tape` (either our alphabet or shifted-alphabet) to an element of
 a different `tape` (either our shifted-alphabet or our alphabet).  This pair will therefore be
-a pair of `cord`s.  When we go to use this `map` to convert our incoming `msg`, we will take 
+a pair of `cord`s.  When we go to use this `map` to convert our incoming `msg`, we will take
 each element (`cord`) of our `msg` `tape`, use it as a `key` when accessing our `map` and get
 the corresponding `value` from that position in the `map`. This is how we're going to encode
 or decode our `msg` `tape`.
@@ -256,7 +256,7 @@ that constructs our `map`: `$(chart (~(put by chart) i.a i.b), a t.a, b t.b)`.
 This code recursively adds an entry in our `map` where the head of the `tape` `a`
 maps to the value of the head of `tape` `b` with  `~(put by chart)`, our calling
 of the `put` arm of the `by` map-engine core (note that `~(<wing> <door> <sample>`) is
-a shorthand for `%~  <wing>  <door>  <sample>` (see the [Calls % ('cen')](@/docs/hoon/reference/rune/cen.md#censig)
+a shorthand for `%~  <wing>  <door>  <sample>` (see the [Calls % ('cen')](/docs/hoon/reference/rune/cen#censig)
 documentation for more information). The recursion also "consumes"
 those heads with every iteration by changing `a` and `b` to their tails using `a t.a, b t.b`.
 
@@ -301,7 +301,7 @@ In both cases, we create a gate that accepts a `@ud` named `steps`.
 
 In `encoder`:
 `=/  value-tape=tape  (rotation alpha steps)` creates a `value-tape` noun by calling `rotation`
-on `alpha`. `alpha` is our arm which contains a `tape` of the entire alphabet. The 
+on `alpha`. `alpha` is our arm which contains a `tape` of the entire alphabet. The
 `value-tape` will be the list of `value`s in our `map`.
 
 In `decoder`:
@@ -355,7 +355,7 @@ with a pair sample. The arm we are going to pull is `turn`. This arm
 takes two arguments, a `list` and a `gate` to apply to each element of the
 `list`.
 
-In this case, the `gate` we are applying to our `message` uses the `got` arm 
+In this case, the `gate` we are applying to our `message` uses the `got` arm
 of the `by` door with our `shift-map` as the sample (which is either the standard alphabet
 for keys, and the shifted alphabet for values, or the other way, depending on
 whether we are encoding or decoding) to look up each `cord` in our `message`, one by one

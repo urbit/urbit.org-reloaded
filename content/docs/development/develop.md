@@ -13,21 +13,21 @@ contribute to. At a high level, you can:
 - [Build clients](#clients), which use Urbit as their back-end to store data and
   interact with the network
 - [Develop agents](#agents), or more precisely [*gall*
-  agents](@/docs/userspace/gall/gall.md), which are written in [Hoon](/docs/hoon/)
+  agents](/docs/userspace/gall/gall), which are written in [Hoon](/docs/hoon/)
   and can best be thought of as microservices
 - [Contribute to Urbit's core](#core), which involves contributing to Urbit
   itself &mdash; either the operating system
   ([Arvo](https://github.com/urbit/urbit/tree/master/pkg/arvo)), runtime
   ([Vere](https://github.com/urbit/urbit/tree/master/pkg/urbit)), or public key
   infrastructure ([Azimuth](https://github.com/urbit/azimuth))
-  
+
 Below we'll go into more detail about each of these options and do our best to
 point you towards a number of additional helpful resources that can be found
 throughout the docs.
 
 ### Build Clients {#clients}
 
-Urbit ships with [Landscape](@/docs/userspace/landscape/overview.md), which can be thought
+Urbit ships with [Landscape](/docs/userspace/landscape/overview), which can be thought
 of as its flagship client. Landscape can be broken into two different technical
 components: there's the collection of [agents](#agents) that utilize the
 Urbit for networking and data persistence, and the JavaScript client, which is
@@ -45,32 +45,32 @@ other Urbit ships without writing any Hoon code thanks to Urbit's HTTP APIs.
 This could be a chat client, a writing app, a game, or anything else that can
 communicate over HTTP.
 
-To get started quickly with the language of your choice, see the list 
+To get started quickly with the language of your choice, see the list
 libraries that provide HTTP interfaces to Urbit [here](https://github.com/urbit/awesome-urbit#http-apis-airlock).
 
 To learn more about how to work with Urbit's HTTP interface, follow [this
-guide](@/docs/arvo/eyre/using-eyre.md).
+guide](/docs/arvo/eyre/using-eyre).
 
 Alternatively, command-line interface (CLI) applications can be built using a
 library called `shoe`, which you can learn more about
-[here](@/docs/hoon/guides/cli-tutorial.md). This does require Hoon knowledge.
+[here](/docs/hoon/guides/cli-tutorial). This does require Hoon knowledge.
 
 ### Develop Agents {#agents}
 
 Gall agents can be best thought of as individual services with a
 statically-typed interface and built-in database. They're written in
-[Hoon](@/docs/hoon/overview.md) and all conform to a specific
-[interface](@/docs/userspace/gall/gall-api.md) that's defined by the kernel vane
-called [Gall](@/docs/userspace/gall/gall.md).
+[Hoon](/docs/hoon/overview) and all conform to a specific
+[interface](/docs/userspace/gall/gall-api) that's defined by the kernel vane
+called [Gall](/docs/userspace/gall/gall).
 
 Applications built on Urbit utilize a collection of different agents, each of
 which handle specific functionality. The [Landscape
-architecture](@/docs/userspace/landscape/overview.md) is a good reference implementation
+architecture](/docs/userspace/landscape/overview) is a good reference implementation
 to see how this pattern works in practice.
 
 If you want to learn how to build gall agents, your best bet is to first [learn
-the Hoon programming language](@/docs/hoon/hoon-school/_index.md), and then follow that
-up with the [Gall guide](@/docs/userspace/gall/tutorial.md).
+the Hoon programming language](/docs/hoon/hoon-school/), and then follow that
+up with the [Gall guide](/docs/userspace/gall/tutorial).
 
 ### Contribute to Urbit Core {#core}
 
@@ -105,11 +105,11 @@ communication for your ideas, you can also always reach out to us directly at
 
 From here, you'll probably want to learn more about:
 
-- How to set up a [development environment](@/docs/development/environment.md)
-- Our [grants program](@/docs/development/grants.md), where you can earn address
+- How to set up a [development environment](/docs/development/environment)
+- Our [grants program](/docs/development/grants), where you can earn address
   space for helping the project grow
 - The different [project
-  repositories](@/docs/development/project-repositories.md), both official and
+  repositories](/docs/development/project-repositories), both official and
   community-maintained
-- Our development [Precepts](@/docs/development/precepts.md), which outline the
+- Our development [Precepts](/docs/development/precepts), which outline the
   philosophies that drive Urbit development

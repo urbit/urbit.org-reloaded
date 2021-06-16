@@ -16,18 +16,18 @@ appropriate OS module. The result of each Vere 'poke' is a pair of `<output
 events, new state>`. Events are typed, and each has an explicit call-stack
 structure indicating the event's source module in Arvo.
 
-For a more in-depth technical introduction, see [Arvo Overview](@/docs/arvo/overview.md).
+For a more in-depth technical introduction, see [Arvo Overview](/docs/arvo/overview).
 
 Arvo modules are also called 'vanes'.  Arvo's vanes are:
 
-- [Ames](@/docs/arvo/ames/ames.md): defines and implements Urbit's encrypted P2P network protocol, as well
+- [Ames](/docs/arvo/ames/ames): defines and implements Urbit's encrypted P2P network protocol, as well
   as Urbit's identity protocol.
-- [Behn](@/docs/arvo/behn/behn.md): manages timer events for other vanes.
-- [Clay](@/docs/arvo/clay/clay.md): global, version-controlled, and referentially-transparent file system.
+- [Behn](/docs/arvo/behn/behn): manages timer events for other vanes.
+- [Clay](/docs/arvo/clay/clay): global, version-controlled, and referentially-transparent file system.
   Also includes our typed functional build system.
-- [Dill](@/docs/arvo/dill/dill.md): terminal driver.
-- [Eyre](@/docs/arvo/eyre/eyre.md): HTTP server.
-- [Gall](@/docs/userspace/gall/gall.md): application sandbox and manager.
-- [Iris](@/docs/arvo/iris/iris-api.md): HTTP client.
-- [Jael](@/docs/arvo/jael/jael-api.md): Public and private key storage.
+- [Dill](/docs/arvo/dill/dill): terminal driver.
+- [Eyre](/docs/arvo/eyre/eyre): HTTP server.
+- [Gall](/docs/userspace/gall/gall): application sandbox and manager.
+- [Iris](/docs/arvo/iris/iris-api): HTTP client.
+- [Jael](/docs/arvo/jael/jael-api): Public and private key storage.
 

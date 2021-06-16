@@ -22,7 +22,7 @@ the functionality of the `%shoe` app and then go through the code line-by-line.
 
 This tutorial can be
 considered to be an application equivalent of the [Hoon school
-lesson](@/docs/hoon/hoon-school/generators.md#ask) on `sole` and `%ask`
+lesson](/docs/hoon/hoon-school/generators#ask) on `sole` and `%ask`
 generators, which only covers the bare minimum necessary to write generators
 that take user input.
 
@@ -54,7 +54,7 @@ emitted to. An empty `sole-ids` sends the effect to all connected sessions.
 prompt, beeping, etc. These are described in the section on the [`sole` library](#the-sole-library).
 
 For example, a `%shoe` `card` that causes all connected sessions to beep would
-be `[%shoe ~ %sole %bel ~]`. 
+be `[%shoe ~ %sole %bel ~]`.
 
 ### `shoe` core
 
@@ -166,7 +166,7 @@ be structured as
 ## `%shoe` app walkthrough {#shoe-app-walkthrough}
 
 Here we explore the capabilities of the `%shoe` example app and then go through
-the code, explaining what each line does. 
+the code, explaining what each line does.
 
 ### Playing with `%shoe`
 
@@ -182,7 +182,7 @@ automatically
 change the prompt to `~zod:shoe>` and `~nus:shoe>`. Type `demo` and watch the following appear:
 ```
 ~zod ran the command
-~zod:shoe> 
+~zod:shoe>
 ```
 `~zod ran the command` should be displayed in bold green text, signifying that
 the command originated locally.
@@ -336,7 +336,7 @@ Here begins the implementation of the additional arms required by the
 `+command-parser` is of central importance - it is what is used to parse user
 input and transform it into `command`s for the app to execute. Writing a proper
 command parser requires understanding of the Hoon parsing functions found in the
-standard library. How to do so may be found in the [parsing tutorial](@/docs/hoon/guides/parsing.md). For now, it is sufficient to know that this arm matches the text "demo" and
+standard library. How to do so may be found in the [parsing tutorial](/docs/hoon/guides/parsing). For now, it is sufficient to know that this arm matches the text "demo" and
 produces a `[? command]`-shaped noun in response. Note how the `&` signifies that the command will be run as soon as it has been entered, without waiting for the user to press return.
 
 

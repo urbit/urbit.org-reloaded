@@ -6,7 +6,7 @@ aliases = ["/docs/learn/azimuth"]
 +++
 Azimuth is a general-purpose public-key infrastructure (PKI) on the Ethereum blockchain, used as a platform for _Urbit identities_. You need such an identity to use the Arvo network.
 
-The primary way to interact with Azimuth is through our [Bridge](https://github.com/urbit/bridge) application and the node libraries that it depends on, [azimuth-js](https://github.com/urbit/azimuth-js) and [urbit-key-generation](https://github.com/urbit/urbit-key-generation). Take a look at the source and play around, or see [Getting Started](@/getting-started/_index.md).
+The primary way to interact with Azimuth is through our [Bridge](https://github.com/urbit/bridge) application and the node libraries that it depends on, [azimuth-js](https://github.com/urbit/azimuth-js) and [urbit-key-generation](https://github.com/urbit/urbit-key-generation). Take a look at the source and play around, or see [Getting Started](/getting-started/).
 
 ## Arvo vs. Azimuth
 
@@ -128,7 +128,7 @@ wallet address you generated on your hardware wallet for ownership.
 Next, login to Bridge using your hardware wallet. While Bridge supports Trezor
 and Ledger natively, this may require using Metamask as an intermediary anyways,
 depending on which firmware you are running. Then [accept the
-transfer](@/using/id/using-bridge.md#accept-your-transfer). Your Azimuth
+transfer](/using/id/using-bridge#accept-your-transfer). Your Azimuth
 point is now stored on your hardware wallet.
 
 To finish the process, use Bridge to set your management, voting, and spawn

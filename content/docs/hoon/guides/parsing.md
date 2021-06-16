@@ -143,11 +143,11 @@ words, a parser.
 
 These functions are used to build `rule`s (i.e. parsers), and thus are often
 called rule-builders. For a complete list of parser builders, see [4f: Parsing
-(Rule-Builders)](@/docs/hoon/reference/stdlib/4f.md), but also the more specific
+(Rule-Builders)](/docs/hoon/reference/stdlib/4f), but also the more specific
 functions in [4h: Parsing (ASCII
-Glyphs)](@/docs/hoon/reference/stdlib/4h.md), [4i: Parsing (Useful
-Idioms)](@/docs/hoon/reference/stdlib/4i.md), [4j: Parsing (Bases and Base
-Digits)](@/docs/hoon/reference/stdlib/4j.md), [4l: Atom Parsing](@/docs/hoon/reference/stdlib/4l.md).
+Glyphs)](/docs/hoon/reference/stdlib/4h), [4i: Parsing (Useful
+Idioms)](/docs/hoon/reference/stdlib/4i), [4j: Parsing (Bases and Base
+Digits)](/docs/hoon/reference/stdlib/4j), [4l: Atom Parsing](/docs/hoon/reference/stdlib/4l).
 
 ### `+just`
 
@@ -243,7 +243,7 @@ is `%foo`.
 ```
 
 One common scenario where `+cold` sees play is when writing [command line
-interface (CLI) apps](@/docs/hoon/guides/cli-tutorial.md). We usher the
+interface (CLI) apps](/docs/hoon/guides/cli-tutorial). We usher the
 reader there to find an example where `+cold` is used.
 
 
@@ -268,7 +268,7 @@ alongside a `rule`, and attempt to parse the input with the `rule`. If the
 parse succeeds, it returns the result. There are crashing and unitized versions
 of each caller, corresponding to what happens when a parse fails.
 
-For additional information including additional examples see [4g: Parsing (Outside Caller)](@/docs/hoon/reference/stdlib/4g.md).
+For additional information including additional examples see [4g: Parsing (Outside Caller)](/docs/hoon/reference/stdlib/4g).
 
 ### Parsing `tape`s
 
@@ -298,7 +298,7 @@ need to deal directly with `nail`s except where it is ilustrative to do so.
 
 ### Parsing atoms
 
-[Recall](@/docs/hoon/hoon-school/lists.md) that `cord`s are atoms with the aura
+[Recall](/docs/hoon/hoon-school/lists) that `cord`s are atoms with the aura
 `@t` and are typically used to represent strings internally as data, as atoms
 are faster for the computer to work with than `tape`s, which are `list`s of
 `@tD` atoms. `+rash` and `+rush` are for parsing atoms, with `+rash` being
@@ -310,7 +310,7 @@ similary for `+rust`.
 
 The standard library provides a number of gates that take a `rule` and
 produce a new modified `rule` according to some process. We call these _parser modifiers_. These are
-documented among the [parser builders](@/docs/hoon/reference/stdlib/4f.md).
+documented among the [parser builders](/docs/hoon/reference/stdlib/4f).
 
 
 ### `+ifix`
@@ -324,7 +324,7 @@ surrounded on both sides by text that matches a pair of `rule`s, which is discar
 ```
 `+pal` and `+par` are shorthand for `(just '(')` and `(just ')')`, respectively. All
 ASCII glyphs have counterparts of this sort, documented
-[here](@/docs/hoon/reference/stdlib/4h.md).
+[here](/docs/hoon/reference/stdlib/4h).
 
 
 ### `+star` {#star}
@@ -353,8 +353,8 @@ and we note that the parsing ceases when it fails.
 
 Building complex parsers from simpler parsers is accomplished in Hoon with the
 use of two tools: the monadic applicator rune
-[`;~`](@/docs/hoon/reference/rune/mic.md#micsig) and [parsing
-combinators](@/docs/hoon/reference/stdlib/4e.md). First we introduce a few
+[`;~`](/docs/hoon/reference/rune/mic#micsig) and [parsing
+combinators](/docs/hoon/reference/stdlib/4e). First we introduce a few
 combinators, then we examine more closely how `;~` is used to chain them together.
 
 The syntax to combine `rule`s is
@@ -448,7 +448,7 @@ syntax error
 ## Parsing numbers
 
 Functions for parsing numbers are documented in [4j: Parsing (Bases and Base
-Digits)](@/docs/hoon/reference/stdlib/4j.md). In particular, `dem` is a `rule`
+Digits)](/docs/hoon/reference/stdlib/4j). In particular, `dem` is a `rule`
 for parsing decimal numbers.
 
 ```
@@ -593,7 +593,7 @@ and over again. Then it follows the `rule` we described above.
 An _expression_ is either a term plus an expression or a term.
 
 In the case of a term plus an expression, we actually must compute what that equals. Thus we will
-make use of [`+slug`](@/docs/hoon/reference/stdlib/4f.md#slug), which parses a
+make use of [`+slug`](/docs/hoon/reference/stdlib/4f#slug), which parses a
 delimited list into `tape`s separated by a given delimiter and then composes
 them by folding with a binary gate. In this case, our delimiter is `+` and our
 binary gate is `+add`. That is to say, we will split the input string into terms

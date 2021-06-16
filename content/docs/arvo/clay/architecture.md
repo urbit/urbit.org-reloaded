@@ -4,7 +4,7 @@ weight = 2
 template = "doc.html"
 +++
 
-Clay is the primary filesystem for the [Arvo](@/docs/arvo/overview.md) operating system,
+Clay is the primary filesystem for the [Arvo](/docs/arvo/overview) operating system,
 which is the [core](/docs/glossary/core/) of an urbit. The architecture of Clay is
 intrinsically connected with Arvo, but for this section we assume no knowledge of
 either Arvo or Urbit. We will point out only those features of
@@ -54,7 +54,7 @@ definitions, apps, and so forth.
 Traditionally, an urbit has at least a `%home` `desk` and `%kids` `desk`. The
 `%home` `desk` has all the system software from the distribution, along with your
 personal files. The `%home` `desk` is a fork of the `%kids` desk of whichever ship
-you download [OTAs](@/docs/glossary/ota-updates.md) from - typically your sponsor,
+you download [OTAs](/docs/glossary/ota-updates) from - typically your sponsor,
 but theoretically may be any ship. You will also find references to a `%base`
 `desk` - which is not a real `desk`, rather it just a hash associated to the
 `desk` from which your `%home` `desk` was forked.

@@ -7,7 +7,7 @@ aliases = ["/docs/learn/arvo/ford/"]
 
 *The Ford vane was refactored so drastically in 2020 that it was completely
  removed as a standalone vane, with its functionality merged into
- [clay](@/docs/arvo/clay/clay.md). The following is a reproduced [blog
+ [clay](/docs/arvo/clay/clay). The following is a reproduced [blog
  post](https://urbit.org/blog/ford-fusion/) that documents this transformation,
  which we called "Ford Fusion".*
 
@@ -27,7 +27,7 @@ Ford Fusion has fixed the major upgrade issues of the past by guaranteeing three
   (dependence on previous system states) when building the new software
   from source.
 - Ordered: updates must be monotonically sequenced from the system's
-  lowest layer to highest. 
+  lowest layer to highest.
 
 Let’s walk through them one by one.
 

@@ -17,7 +17,7 @@ Anything Nock can do, Hoon can do also.
 
 ### .+ dotlus
 
-[docs](@/docs/hoon/reference/rune/dot.md#dotlus) \\+
+[docs](/docs/hoon/reference/rune/dot#dotlus) \\+
 `[%dtls p=atom]`: increment an atom with Nock 4.
 
 R: `.+(p)`
@@ -25,7 +25,7 @@ I: `+(p)`
 
 ### .= dottis
 
-[docs](@/docs/hoon/reference/rune/dot.md#dottis) \\=
+[docs](/docs/hoon/reference/rune/dot#dottis) \\=
 `[%dtts p=hoon q=hoon]`: test for equality with Nock 5.
 
 R: `.=(p q)`
@@ -37,7 +37,7 @@ Miscellaneous useful macros.
 
 ### ;: miccol
 
-[docs](@/docs/hoon/reference/rune/mic.md#miccol) \\:
+[docs](/docs/hoon/reference/rune/mic#miccol) \\:
 `[%mccl p=hoon q=(list hoon)]`: call a binary function as an n-ary function.
 
 R: `;:(p q)`
@@ -49,7 +49,7 @@ The cell runes.
 
 ### :- colhep
 
-[docs](@/docs/hoon/reference/rune/col.md#colhep)  \\[\\]\\^\\+\\\`\\~
+[docs](/docs/hoon/reference/rune/col#colhep)  \\[\\]\\^\\+\\\`\\~
 `[%clhp p=hoon q=hoon]`: construct a cell (2-tuple).
 
 R: `:-(p q)`
@@ -72,7 +72,7 @@ Flow hoons change the subject. All non-flow hoons (except cores) pass the subjec
 
 ### =< tisgal
 
-[docs](@/docs/hoon/reference/rune/tis.md#tisgal) \\:
+[docs](/docs/hoon/reference/rune/tis#tisgal) \\:
 `[%tsgl p=hoon q=hoon]`: compose two hoons, inverted.
 
 R: `=<(p q)`
@@ -80,7 +80,7 @@ I: `p:q`
 
 ## | bar (core)
 
-[docs](@/docs/hoon/reference/rune/bar.md) \\$
+[docs](/docs/hoon/reference/rune/bar) \\$
 Core hoons are flow hoon.
 
 Technically not irregular syntax, but worth mentioning.
@@ -98,7 +98,7 @@ The invocation family of runes.
 
 ### %= centis
 
-[docs](@/docs/hoon/reference/rune/cen.md#centis)  \\(\\)
+[docs](/docs/hoon/reference/rune/cen#centis)  \\(\\)
 `[%cnts p=wing q=(list (pair wing hoon))]`: take a wing with changes.
 
 R: `%=(p a 1)`
@@ -106,7 +106,7 @@ I: `p(a 1)`
 
 ### %~ censig
 
-[docs](@/docs/hoon/reference/rune/cen.md#censig) \\~
+[docs](/docs/hoon/reference/rune/cen#censig) \\~
 `[%cnsg p=wing q=hoon r=hoon]`: call with multi-armed door.
 
 R: `%~(p q r)`
@@ -114,7 +114,7 @@ I: `~(p q r)`
 
 ### %- cenhep
 
-[docs](@/docs/hoon/reference/rune/cen.md#cenhep) \\(\\)
+[docs](/docs/hoon/reference/rune/cen#cenhep) \\(\\)
 `[%cnhp p=hoon q=hoon]`: call a gate (function).
 
 R: `%-(p q)`
@@ -128,7 +128,7 @@ A mold is a gate (function) that helps us build simple and rigorous data structu
 
 ### $? bucwut
 
-[docs](@/docs/hoon/reference/rune/buc.md#bucwut) \\?
+[docs](/docs/hoon/reference/rune/buc#bucwut) \\?
 `[%bcwt p=(list model)]`: mold which normalizes a general union.
 
 R: `$?(p)`
@@ -136,7 +136,7 @@ I: `?(p)`
 
 ### $_ buccab
 
-[docs](@/docs/hoon/reference/rune/buc.md#buccab) \\_
+[docs](/docs/hoon/reference/rune/buc#buccab) \\_
 `[%bccb p=value]`: mold which normalizes to an example.
 
 R: `$_(p)`
@@ -148,7 +148,7 @@ Hoon has the usual branches and logical tests.
 
 ### ?! wutzap
 
-[docs](@/docs/hoon/reference/rune/wut.md#wutzap) \\!
+[docs](/docs/hoon/reference/rune/wut#wutzap) \\!
 `[%wtzp p=hoon]`: logical not.
 
 R: `?!(p)`
@@ -156,7 +156,7 @@ I: `!(p)`
 
 ### ?& wutpam
 
-[docs](@/docs/hoon/reference/rune/wut.md#wutpam) \\&
+[docs](/docs/hoon/reference/rune/wut#wutpam) \\&
 `[%wtpm p=(list hoon)]`: logical and.
 
 R: `?&(p)`
@@ -164,7 +164,7 @@ I: `&(p)`
 
 ### ?| wutbar
 
-[docs](@/docs/hoon/reference/rune/wut.md#wutbar) \\|
+[docs](/docs/hoon/reference/rune/wut#wutbar) \\|
 `[%wtbr p=(list hoon)]`: logical or.
 
 R: `?|(p)`
@@ -176,7 +176,7 @@ Lets us adjust types without violating type constraints.
 
 ### ^- kethep
 
-[docs](@/docs/hoon/reference/rune/ket.md#kethep) \\\`
+[docs](/docs/hoon/reference/rune/ket#kethep) \\\`
 `[%kthp p=model q=value]`: typecast by mold.
 
 R: `^-(p q)`
@@ -184,7 +184,7 @@ I: `` `p`q ``
 
 ### ^= kettis
 
-[docs](@/docs/hoon/reference/rune/ket.md#kettis) \\=
+[docs](/docs/hoon/reference/rune/ket#kettis) \\=
 `[%ktts p=toga q=value]`: name a value.
 
 R: `^=(p q)`
@@ -210,7 +210,7 @@ I: `p=q`
 - `|` loobean false.
 - `%a` constant `a`, where `a` can be an ((ir)regularly defined) atom or a symbol.
 
-See [%sand](@/docs/hoon/reference/rune/constants.md#warm) for other irregular definitions of atoms.
+See [%sand](/docs/hoon/reference/rune/constants#warm) for other irregular definitions of atoms.
 
 ### List addressing
 
@@ -219,7 +219,7 @@ See [%sand](@/docs/hoon/reference/rune/constants.md#warm) for other irregular de
 
 ### Limbs
 
-[docs](@/docs/hoon/reference/limbs/limb.md) \\+\\.\\^
+[docs](/docs/hoon/reference/limbs/limb) \\+\\.\\^
 `[%limb p=(each @ud [p=@ud q=@tas])]`: attribute of subject.
 
 - `+15` is slot 15

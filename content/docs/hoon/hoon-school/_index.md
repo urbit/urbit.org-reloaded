@@ -19,8 +19,8 @@ offering a practical implementation of the concepts taught in the reading
 before.
 
 If you're curious about why Urbit is written in this new language, we recommend
-reading the [Hoon overview](@/docs/hoon/overview.md) that covers the high-level
-design decisions behind the language. 
+reading the [Hoon overview](/docs/hoon/overview) that covers the high-level
+design decisions behind the language.
 
 Chapter 1 introduces and explains the fundamental concepts you need in order to
 understand Hoon's semantics.

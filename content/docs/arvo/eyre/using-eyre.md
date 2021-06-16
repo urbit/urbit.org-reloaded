@@ -17,13 +17,13 @@ substituting the appropriate path to your Urbit binary:
 /path/to/urbit -p 8080 -F zod
 ```
 
-For the unfamiliar, this will create a folder named "zod" in your working directory, from which the ship will run. Use `/path/to/urbit -p 8080 zod` in the future. For more information on this process, see our guide on [Environment Setup](@/docs/development/environment.md).
+For the unfamiliar, this will create a folder named "zod" in your working directory, from which the ship will run. Use `/path/to/urbit -p 8080 zod` in the future. For more information on this process, see our guide on [Environment Setup](/docs/development/environment).
 
 ## Authentication
 
 We'll authenticate with a code that can be retrieved from the dojo. You can run
 `+code` in the dojo to obtain it, but a fakezod's code is always
-`lidlut-tabwed-pillex-ridrup`. 
+`lidlut-tabwed-pillex-ridrup`.
 
 Run this code in your bash terminal (requires cURL):
 

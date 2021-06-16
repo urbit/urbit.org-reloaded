@@ -59,7 +59,7 @@ find-fork-d
 `=>` is a reversed form of the `:` operator we've been using, meaning that `=>  a  b` is the
 same as `b:a`. Here, this means we're evaluation the `?~` expression with the
 `b=...` expression as the subject. We explore this rune in more detail in a
-[later lesson](@/docs/hoon/hoon-school/arms-and-cores.md#cores-and-contexts).
+[later lesson](/docs/hoon/hoon-school/arms-and-cores#cores-and-contexts).
 
 It's important to note that performing tests like `?~ mylist` will actually transform `mylist` into a `lest`, a non-null list. Because `lest` is a different type than `list`, performing such tests can come back to bite you later in non-obvious ways when you try to use some standard library functions meant for lists.
 
@@ -304,7 +304,7 @@ c
 
 ## Using `hoon.hoon` to Learn Hoon
 
-The Hoon standard library and compiler are written in Hoon. At this point, you know enough Hoon to be able to explore the standard library portions of `hoon.hoon` and find more functions relevant to lists. Look around in [section 2b](@/docs/hoon/reference/stdlib/2b.md) (and elsewhere).
+The Hoon standard library and compiler are written in Hoon. At this point, you know enough Hoon to be able to explore the standard library portions of `hoon.hoon` and find more functions relevant to lists. Look around in [section 2b](/docs/hoon/reference/stdlib/2b) (and elsewhere).
 
 ## Additional Exercises
 

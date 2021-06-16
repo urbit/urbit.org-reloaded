@@ -36,7 +36,7 @@ template = "doc.html"
 
 # Introduction
 
-This document contains a number of examples of interacting with Clay using its various `task`s. Sections correspond to the general details in the [API Reference](@/docs/arvo/clay/tasks.md) document.
+This document contains a number of examples of interacting with Clay using its various `task`s. Sections correspond to the general details in the [API Reference](/docs/arvo/clay/tasks) document.
 
 Most examples will either use `|pass` to just send a `task` or the following thread to send a `task` and take the resulting `gift`. You can save the following thread to the `ted` directory of your `%home` `desk`:
 
@@ -63,7 +63,7 @@ Most examples will either use `|pass` to just send a `task` or the following thr
 
 # `%warp`
 
-See the [Read and Subscribe](@/docs/arvo/clay/tasks.md#warp) section of the [API Reference](@/docs/arvo/clay/tasks.md) document for general details.
+See the [Read and Subscribe](/docs/arvo/clay/tasks#warp) section of the [API Reference](/docs/arvo/clay/tasks) document for general details.
 
 ## `%sing`
 
@@ -146,7 +146,7 @@ Now run the thread again, and this time delete the file in unix and again `|comm
 - /~zod/home/4/foo/txt
 ```
 
-You can see the `riot` is just `~` due to the file being deleted. 
+You can see the `riot` is just `~` due to the file being deleted.
 
 Here's a breakdown of the task we sent:
 
@@ -161,12 +161,12 @@ This thread will subscribe to `/foo/txt` with an `%x` `care` and `/bar/txt` with
 `sub-mult.hoon`
 
 ```hoon
-/-  spider 
+/-  spider
 /+  strandio
-=,  strand=strand:spider 
-^-  thread:spider 
-|=  arg=vase 
-=/  m  (strand ,vase) 
+=,  strand=strand:spider
+^-  thread:spider
+|=  arg=vase
+=/  m  (strand ,vase)
 ^-  form:m
 =/  files=(set (pair care:clay path))
   %-  sy  :~
@@ -220,7 +220,7 @@ This thread will subscribe to changes to your `%home` `desk` for the next three 
 `sub-many.hoon`
 
 ```hoon
-/-  spider 
+/-  spider
 /+  strandio
 =,  strand=strand:spider
 |%
@@ -236,10 +236,10 @@ This thread will subscribe to changes to your `%home` `desk` for the next three 
       ~&  res
       (pure:m ~)
   ==
--- 
-^-  thread:spider 
-|=  arg=vase 
-=/  m  (strand ,vase) 
+--
+^-  thread:spider
+|=  arg=vase
+=/  m  (strand ,vase)
 ^-  form:m
 =/  uarg  !<  (unit path)  arg
 ?~  uarg
@@ -297,7 +297,7 @@ Now wait until the three minutes is up and try making a change, for example dele
 - /~zod/home/263/baz/txt
 ```
 
-You can see that along with the normal `%writ` it's also sent a second `%writ` with a null `riot` to indicate the subscription has ended. This is because it has now passed the end of the range of `case`s to which you subscribed. 
+You can see that along with the normal `%writ` it's also sent a second `%writ` with a null `riot` to indicate the subscription has ended. This is because it has now passed the end of the range of `case`s to which you subscribed.
 
 Run `:spider|kill` to stop the thread.
 
@@ -314,12 +314,12 @@ This thread will subscribe to the `%next` version of `/foo/txt`, then immediatel
 `stop-sub.hoon`
 
 ```hoon
-/-  spider 
+/-  spider
 /+  strandio
-=,  strand=strand:spider 
-^-  thread:spider 
-|=  arg=vase 
-=/  m  (strand ,vase) 
+=,  strand=strand:spider
+^-  thread:spider
+|=  arg=vase
+=/  m  (strand ,vase)
 ^-  form:m
 ;<  =bowl:strand  bind:m  get-bowl:strandio
 =/  =task:clay  [%warp our.bowl %home ~ %next %x da+now.bowl /foo/txt]
@@ -327,7 +327,7 @@ This thread will subscribe to the `%next` version of `/foo/txt`, then immediatel
 ;<  ~             bind:m  (send-raw-card:strandio card)
 =.  task  [%warp our.bowl %home ~]
 =.  card  [%pass /next %arvo %c task]
-;<  ~             bind:m  (send-raw-card:strandio card) 
+;<  ~             bind:m  (send-raw-card:strandio card)
 ;<  =riot:clay    bind:m  (take-writ:strandio /next)
 ~&  riot
 (pure:m !>(~))
@@ -351,7 +351,7 @@ Here's a breakdown of the `task` we sent:
 
 # `%info`
 
-See the [Write and Modify](@/docs/arvo/clay/tasks.md#write-and-modify) section of the [API Reference](@/docs/arvo/clay/tasks.md) document for general details.
+See the [Write and Modify](/docs/arvo/clay/tasks#write-and-modify) section of the [API Reference](/docs/arvo/clay/tasks) document for general details.
 
 ## `%ins`
 
@@ -370,7 +370,7 @@ We've created the `cage` of the content like `[%txt !>(~['foo'])]`, if you want 
 
 Here's a breakdown of the `task` we sent:
 
-![%ins diagram](https://media.urbit.org/docs/arvo/clay/ins.png) 
+![%ins diagram](https://media.urbit.org/docs/arvo/clay/ins.png)
 
 ## `%del`
 
@@ -387,7 +387,7 @@ If you have a look in the home of your pier you'll see the `foo.txt` file is now
 
 Here's a breakdown of the `task` we sent:
 
-![%del diagram](https://media.urbit.org/docs/arvo/clay/del.png) 
+![%del diagram](https://media.urbit.org/docs/arvo/clay/del.png)
 
 ## `%mut`
 
@@ -402,12 +402,12 @@ Since `soba` is just a `list` of `miso`, you can add a bunch of `miso` and they'
 `multi-change.hoon`
 
 ```hoon
-/-  spider 
+/-  spider
 /+  strandio
-=,  strand=strand:spider 
-^-  thread:spider 
-|=  arg=vase 
-=/  m  (strand ,vase) 
+=,  strand=strand:spider
+^-  thread:spider
+|=  arg=vase
+=/  m  (strand ,vase)
 ^-  form:m
 =/  soba-a  :~  [/foo/txt %ins %txt !>(['foo' ~])]
                 [/bar/txt %ins %txt !>(['bar' ~])]
@@ -436,7 +436,7 @@ Save to `ted/multi-change.hoon`, `|commit %home`, and run:
 
 # Manage Mounts
 
-See the [Manage Mounts](@/docs/arvo/clay/tasks.md#manage-mounts) section of the [API Reference](@/docs/arvo/clay/tasks.md) document for general details.
+See the [Manage Mounts](/docs/arvo/clay/tasks#manage-mounts) section of the [API Reference](/docs/arvo/clay/tasks) document for general details.
 
 ## `%boat`
 
@@ -538,7 +538,7 @@ If you have the same `desk` mounted to multiple points, a committed change in on
 
 # Merge Desks
 
-See the [Merge Desks](@/docs/arvo/clay/tasks.md#merge-desks) section of the [API Reference](@/docs/arvo/clay/tasks.md) document for general details.
+See the [Merge Desks](/docs/arvo/clay/tasks#merge-desks) section of the [API Reference](/docs/arvo/clay/tasks) document for general details.
 
 ## `%merg`
 
@@ -613,7 +613,7 @@ You can also specify it by revision number or label.
 
 # Permissions
 
-See the [Permissions](@/docs/arvo/clay/tasks.md#permissions) section of the [API Reference](@/docs/arvo/clay/tasks.md) document for general details.
+See the [Permissions](/docs/arvo/clay/tasks#permissions) section of the [API Reference](/docs/arvo/clay/tasks) document for general details.
 
 ## `%perm`
 
@@ -693,7 +693,7 @@ As you can see it's back to the default inherited from `/`.
 
 Here's a breakdown of a `%perm` task:
 
-![perm diagram](https://media.urbit.org/docs/arvo/clay/perm-diagram.png) 
+![perm diagram](https://media.urbit.org/docs/arvo/clay/perm-diagram.png)
 
 ## `%cred`
 
@@ -752,7 +752,7 @@ Now we'll use the `send-task-take-gift.hoon` thread to try `%crow`:
 
 # Foreign Ships
 
-See the [Foreign Ships](@/docs/arvo/clay/tasks.md#foreign-ships) section of the [API Reference](@/docs/arvo/clay/tasks.md) document for general details.
+See the [Foreign Ships](/docs/arvo/clay/tasks#foreign-ships) section of the [API Reference](/docs/arvo/clay/tasks) document for general details.
 
 ## `%warp` - Remote
 

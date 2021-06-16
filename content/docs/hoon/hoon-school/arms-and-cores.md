@@ -181,7 +181,7 @@ To reinforce your newfound understanding of arms and cores, let's go over the va
 
 ### Address-Based Wings
 
-In the [previous lesson](@/docs/hoon/hoon-school/the-subject-and-its-legs.md), you saw how the following expressions return legs based on an address in the subject: `+n`, `.`, `-`, `+`, `+>`, `+<`, `->`, `-<`, `&`, `|` etc.  When these resolve to the part of the subject containing an arm, they **don't** evaluate the arm.  They simply return the indicated noun fragment of the subject, as if it were a leg.
+In the [previous lesson](/docs/hoon/hoon-school/the-subject-and-its-legs), you saw how the following expressions return legs based on an address in the subject: `+n`, `.`, `-`, `+`, `+>`, `+<`, `->`, `-<`, `&`, `|` etc.  When these resolve to the part of the subject containing an arm, they **don't** evaluate the arm.  They simply return the indicated noun fragment of the subject, as if it were a leg.
 
 Let's use `-.c` to look at the head of `c`, i.e., the battery of the core:
 
@@ -574,7 +574,7 @@ and so on, down to
   $@(~ [~ u=item])
 --
 ```
-This core contains the arms in parts [1a-1c of the standard library documentation](@/docs/hoon/reference/stdlib/1a.md). If you count them, there are 41 arms in the core from `++  add` down to `++  unit`. We again can see this fact reflected in the dojo by looking at the subject of `add`.
+This core contains the arms in parts [1a-1c of the standard library documentation](/docs/hoon/reference/stdlib/1a). If you count them, there are 41 arms in the core from `++  add` down to `++  unit`. We again can see this fact reflected in the dojo by looking at the subject of `add`.
 ```
 > ..add
 <41.mac 1.ane $141>
@@ -582,7 +582,7 @@ This core contains the arms in parts [1a-1c of the standard library documentatio
 Here we see that core containing `hoon-version` is in the subject of the
 section one core.
 
-Next, [section two](@/docs/hoon/reference/stdlib/2a.md) starts:
+Next, [section two](/docs/hoon/reference/stdlib/2a) starts:
 ```
 =>
 ::                                                      ::

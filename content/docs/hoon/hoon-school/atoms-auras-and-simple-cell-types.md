@@ -18,7 +18,7 @@ In this lesson we'll cover (1)-(4) as they pertain to atoms and simple cell type
 
 ## Atoms and Auras
 
-In [Lesson 1.2](@/docs/hoon/hoon-school/nouns.md) we defined what an atom is: any unsigned integer.  In this lesson we'll expand on that discussion, going over how Hoon's type system implements auras.
+In [Lesson 1.2](/docs/hoon/hoon-school/nouns) we defined what an atom is: any unsigned integer.  In this lesson we'll expand on that discussion, going over how Hoon's type system implements auras.
 
 In the most straightforward sense, atoms simply are unsigned integers.  But they can also be interpreted as representing signed integers, ASCII symbols, floating-point values, dates, binary numbers, hexadecimal numbers, and more.  Every atom is, in and of itself, just an unsigned integer; but Hoon keeps track of type information about each atom, and this info tells Hoon how to interpret the atom in question.
 
@@ -109,7 +109,7 @@ Aura         Meaning                        Example Literal Syntax
 
 Some of these auras nest under others.  For example, `@u` is for all unsigned auras.  But there are other, more specific auras; `@ub` for unsigned binary numbers, `@ux` for unsigned hexadecimal numbers, etc.
 
-For a more complete list of auras, see [Auras](@/docs/hoon/reference/auras.md).
+For a more complete list of auras, see [Auras](/docs/hoon/reference/auras).
 
 ## Aura Inference in Hoon
 

@@ -11,7 +11,7 @@ over it. When Unix receives a packet over the correct UDP port, it pipes
 it straight into Ames for handling. Also, all packets sent over the
 Ames network are sent by the Ames vane. Apps and vanes may use
 Ames to directly send messages to other ships. In general, apps use
-[Gall](@/docs/userspace/gall/gall.md) and [Clay](@/docs/arvo/clay/clay.md)
+[Gall](/docs/userspace/gall/gall) and [Clay](/docs/arvo/clay/clay)
 to communicate with other ships rather than using Ames
 directly, but this isn't a requirement. Of course, Gall and Clay use
 Ames behind the scenes to communicate across the network. Jael is the only other
@@ -28,7 +28,7 @@ vane or app, is defined in Ames.
 This section summarizes the design of Ames. Beyond this section are deeper
 elaborations on the concepts presented here.
 
-Ames extends [Arvo's](@/docs/arvo/overview.md) `%pass`/`%give` `move` semantics across the network.
+Ames extends [Arvo's](/docs/arvo/overview) `%pass`/`%give` `move` semantics across the network.
 
 Ames receives packets as Arvo events and emits packets as Arvo
 effects.  The runtime is responsible for transferring the bytes in
@@ -130,7 +130,7 @@ The 32-bit header is given by the following data, presented in order:
 
  - 3 bits: Ames `protocol-version`,
  - 20 bits: a checksum as a truncated insecure hash of the body, done with
-   [`+mug`](@/docs/hoon/reference/stdlib/2e.md#mug),
+   [`+mug`](/docs/hoon/reference/stdlib/2e#mug),
  - 2 bits: the bit width of the sender address encoded as a 2-bit enum,
  - 2 bits: the bit width of the receiver address encoded as a 2-bit enum,
  - 1 bit: whether the packet is encrypted or not,
@@ -144,7 +144,7 @@ The body is of variable length and consists of three parts in this order:
 
  - The `@p` of the sending ship,
  - The `@p` of the receiving ship,
- - The payload, which is the [`+jam`](@/docs/hoon/reference/stdlib/2p.md#jam) (i.e. serialization) of the noun `[origin content]`.
+ - The payload, which is the [`+jam`](/docs/hoon/reference/stdlib/2p#jam) (i.e. serialization) of the noun `[origin content]`.
 
  `origin` is the IP and port of the original sender if the packet was proxied
  through a relay and null otherwise. `content` is a noun that is either an encrypted ack or an
@@ -241,7 +241,7 @@ This means all re-sends of an ack packet will be bitwise identical to each other
 Each datum in this noun is an atom with the aura `@ud` or an aura that nests
 under `@ud`.
 
-Here, `our-life` refers to the [`life`](@/docs/glossary/breach.md), or revision
+Here, `our-life` refers to the [`life`](/docs/glossary/breach), or revision
 number, of the acking ship's networking keys, and `her-life` is the `life` of
 the ack-receiving ship's networking keys. `bone` is an opaque number identifying
 the flow. `message-num` denotes the number of the
@@ -367,7 +367,7 @@ using the Diffie-Hellman symmetric key that was previously computed.
 
 `~zod` receives the packet and reads the body. It sees that it is not the
 intended recipient of the packet, and so gets ready to forward it to
-`~worwel-sipnum`. First, it [`+cue`s](@/docs/hoon/reference/stdlib/2p.md#cue)
+`~worwel-sipnum`. First, it [`+cue`s](/docs/hoon/reference/stdlib/2p#cue)
 (deserializes) the payload and changes the `origin` to the IP and port of
 `~bacbel-tagfeb`. Then it `+jam`s `[origin content]` to form a new payload, and
 `+mug`s that payload to get a new checksum. It replaces the old payload and
@@ -386,7 +386,7 @@ until one of them changes their IP address, port, or networking keys.
 
 Urbit's functionality is split between the two binaries `urbit-worker` (sometimes
 called the Serf) and `urbit-king` (sometimes called the King). This division of
-labor is currently not well-documented outside of the [Vere documents](@/docs/vere/_index.md), but we summarize it here.
+labor is currently not well-documented outside of the [Vere documents](/docs/vere/), but we summarize it here.
 
 In short, the Serf is the Nock runtime and so keeps track of the current state
 of Arvo as a Nock noun and updates the state by `%poke`ing it with nouns, and

@@ -4,20 +4,20 @@ weight = 70
 template = "doc.html"
 +++
 
-Auras are system of nested "soft types" on [atoms](@/docs/glossary/atom.md) that
+Auras are system of nested "soft types" on [atoms](/docs/glossary/atom) that
 are used to track metadata about how a particular atom is to be interpreted.
 This is used for type checking as well as pretty printing.
 
-You can learn more about auras in [Hoon school](@/docs/hoon/hoon-school/atoms-auras-and-simple-cell-types.md).
+You can learn more about auras in [Hoon school](/docs/hoon/hoon-school/atoms-auras-and-simple-cell-types).
 
 ### Table of Auras
 
 ```
 Aura         Meaning                                 Example Literal Syntax
 -------------------------------------------------------------------------
-@            empty aura                             
+@            empty aura
 @c           Unicode codepoint                       ~-~45fed
-@d           date                                  
+@d           date
   @da        absolute date                           ~2018.5.14..22.31.46..1435
   @dr        relative date (ie, timespan)            ~h5.m30.s12
 @f           Loobean (for compiler, not castable)    &
@@ -27,12 +27,12 @@ Aura         Meaning                                 Example Literal Syntax
 @n           nil (for compiler, not castable)        ~
 @p           phonemic base (ship name)               ~sorreg-namtyv
 @q           phonemic base, unscrambled              .~litsyn-polbel
-@r           IEEE-754 floating-point                
+@r           IEEE-754 floating-point
   @rh        half precision (16 bits)                .~~3.14
   @rs        single precision (32 bits)              .6.022141e23
   @rd        double precision (64 bits)              .~6.02214085774e23
   @rq        quad precision (128 bits)               .~~~6.02214085774e23
-@s           signed integer, sign bit low          
+@s           signed integer, sign bit low
   @sb        signed binary                           --0b11.1000
   @sd        signed decimal                          --1.000.056
   @sv        signed base32                           -0v1df64.49beg
@@ -41,7 +41,7 @@ Aura         Meaning                                 Example Literal Syntax
 @t           UTF-8 text (cord)                       'howdy'
   @ta        ASCII text (knot)                       ~.howdy
     @tas     ASCII text symbol (term)                %howdy
-@u              unsigned integer                   
+@u              unsigned integer
   @ub           unsigned binary                      0b11.1000
   @ud           unsigned decimal                     1.000.056
   @uv           unsigned base32                      0v1df64.49beg

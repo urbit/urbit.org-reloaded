@@ -8,4 +8,4 @@ template = "doc.html"
 
 Gall is located at `/home/sys/vane/gall.hoon` within Arvo.
 
-For more details, see the [userspace](@/docs/userspace/gall/gall.md) section.
+For more details, see the [userspace](/docs/userspace/gall/gall) section.

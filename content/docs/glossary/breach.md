@@ -23,6 +23,6 @@ it to be the final one.
 
 ### Further Reading
 
-- [Guide to breaches](@/using/id/guide-to-breaches.md): A more in-depth
+- [Guide to breaches](/using/id/guide-to-breaches): A more in-depth
   explanation of breaches, including how to perform a personal breach.
-- [Ship Troubleshooting](@/using/os/ship-troubleshooting.md): General instructions on getting your ship to work, which includes network connectivity issues.
+- [Ship Troubleshooting](/using/os/ship-troubleshooting): General instructions on getting your ship to work, which includes network connectivity issues.

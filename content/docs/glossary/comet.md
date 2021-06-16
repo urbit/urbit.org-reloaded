@@ -29,4 +29,4 @@ Some groups on [Landscape](../landscape) may not allow comet membership, but thi
 
 ### Further reading
 
-- [Creating a Comet](@/getting-started/_index.md): A guide to spinning up a comet of your own.
+- [Creating a Comet](/getting-started/): A guide to spinning up a comet of your own.

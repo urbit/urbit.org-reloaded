@@ -6,7 +6,7 @@ template = "doc.html"
 
 The [Urbit Foundation](https://urbit.org/blog/first-steps-towards-urbit-org/)
 runs a [Grants program](https://grants.urbit.org), where you can earn address
-space ([stars](@/docs/glossary/star.md)) in exchange for contributing to the
+space ([stars](/docs/glossary/star)) in exchange for contributing to the
 project.
 
 Grants come in four different flavors at present: [bounties](#bounties),
@@ -21,7 +21,7 @@ us](https://calendly.com/wolref/30min).
 [Bounties](https://grants.urbit.org/bounties) are specific, tightly-scoped
 pieces of work that we at the Urbit Foundation think are of high value to the
 ecosystem at large. They're frequently development-focused, but also often
-relate to marketing, community-building or technical writing. 
+relate to marketing, community-building or technical writing.
 
 Bounties are usually competitive&mdash;worker requests should provide plenty of
 information about why the requester is right candidate for the job.
@@ -59,8 +59,8 @@ time with us [here](https://calendly.com/wolref/30min).
 Scholarships are the newest addition to the grants program that pairs
 contributors with core Urbit developers to tackle infrastructure projects. These
 generally take the form of contributions to
-[Arvo](@/docs/system-overview/arvo.md) or
-[Vere](@/docs/system-overview/vere.md).
+[Arvo](/docs/system-overview/arvo) or
+[Vere](/docs/system-overview/vere).
 
 Tackling a scholarship requires an advanced understanding of Urbit. It's
 expected that you've got a demonstrated command of the Hoon language or other

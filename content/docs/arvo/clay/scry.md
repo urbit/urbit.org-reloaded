@@ -20,7 +20,7 @@ The various Clay scries are specified by a `care`, which is a single character c
 - [%e](#e) - Static `mark`.
 - [%f](#f) - Static `mark` conversion.
 - [%p](#p) - File permissions.
-- [%r](#r) - Vase-wrapped file data. 
+- [%r](#r) - Vase-wrapped file data.
 - [%s](#s) - Miscellaneous scries:
     - [%yaki](#yaki) - `yaki:clay` of the specified commit.
     - [%blob](#blob) - `blob:clay` of file.
@@ -141,15 +141,15 @@ Crash!
 
 A scry with a `care` of `%s` is for miscellaneous internal and debug functions and is liable to change in the future.
 
-Rather than just a `path` to a file, the head of the `path` is tagged with one of `%yaki %blob %hash %cage %open %late %base` and the tail depends on which tag you use. We'll look at each in turn. 
+Rather than just a `path` to a file, the head of the `path` is tagged with one of `%yaki %blob %hash %cage %open %late %base` and the tail depends on which tag you use. We'll look at each in turn.
 
 ### %yaki
 
-This will return the [yaki:clay](@/docs/arvo/clay/data-types.md#yaki-clay-commit) of the specified commit. It takes a [tako:clay](@/docs/arvo/clay/data-types.md#tako-clay-commit-reference).
+This will return the [yaki:clay](/docs/arvo/clay/data-types#yaki-clay-commit) of the specified commit. It takes a [tako:clay](/docs/arvo/clay/data-types#tako-clay-commit-reference).
 
 Example:
 
-Here we scry the [dome:clay](@/docs/arvo/clay/data-types.md#dome-desk-data) for `/===`, get the latest `tako:clay` and the do a `%s` scry for the `yaki:clay` in question.
+Here we scry the [dome:clay](/docs/arvo/clay/data-types#dome-desk-data) for `/===`, get the latest `tako:clay` and the do a `%s` scry for the `yaki:clay` in question.
 
 ```
 > =/  =dome:clay  .^(dome:clay %cv /===)
@@ -170,7 +170,7 @@ Here we scry the [dome:clay](@/docs/arvo/clay/data-types.md#dome-desk-data) for 
 
 ### %blob
 
-This will return the [blob:clay](@/docs/arvo/clay/data-types.md#blob-clay-data) of some file. It takes a [lobe:clay](@/docs/arvo/clay/data-types.md#lobe-clay-data-reference).
+This will return the [blob:clay](/docs/arvo/clay/data-types#blob-clay-data) of some file. It takes a [lobe:clay](/docs/arvo/clay/data-types#lobe-clay-data-reference).
 
 Example:
 

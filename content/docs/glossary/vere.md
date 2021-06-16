@@ -14,5 +14,5 @@ Vere consists of two processes that communicate via a socket: a daemon process i
 
 ### Further Reading
 
-- [The Technical Overview](@/docs/system-overview/_index.md)
-- [The Vere tutorial](@/docs/vere/_index.md): An in-depth technical guide to Vere.
+- [The Technical Overview](/docs/system-overview/)
+- [The Vere tutorial](/docs/vere/): An in-depth technical guide to Vere.

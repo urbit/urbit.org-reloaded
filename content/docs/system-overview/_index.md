@@ -12,20 +12,20 @@ machine.
 
 The Urbit stack is primarily comprised of:
 
-- [Arvo](@/docs/system-overview/arvo.md): the functional operating system of
+- [Arvo](/docs/system-overview/arvo): the functional operating system of
   each urbit, written in Hoon.
-- [Hoon](@/docs/system-overview/hoon.md): a strictly typed functional
+- [Hoon](/docs/system-overview/hoon): a strictly typed functional
   programming language whose standard library includes a Hoon-to-Nock compiler.
-- [Nock](@/docs/system-overview/nock.md): a low-level combinator language whose
+- [Nock](/docs/system-overview/nock): a low-level combinator language whose
   formal specification fits readably on a t-shirt.
-- [Vere](@/docs/system-overview/vere.md): a Nock interpreter and Unix-based
+- [Vere](/docs/system-overview/vere): a Nock interpreter and Unix-based
   virtual machine that mediates between each urbit and the Unix software layer.
-- [Azimuth](@/docs/system-overview/azimuth.md): the Urbit identity layer, built
+- [Azimuth](/docs/system-overview/azimuth): the Urbit identity layer, built
   on the Ethereum blockchain.
-  
+
 Central to the operation of Urbit are cryptographic methods. We give a
 high-level overview on the usage of cryptography in Urbit and how it is
-implemented [here](@/docs/system-overview/cryptography.md).
+implemented [here](/docs/system-overview/cryptography).
 
 ## Anatomy of a personal server
 
