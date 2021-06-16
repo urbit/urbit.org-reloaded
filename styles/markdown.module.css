@@ -1,74 +1,77 @@
 .markdown {
-	/* @apply leading-relaxed; */
+  /* @apply leading-relaxed; */
   /* max-width: ; */
   @apply w-8/12;
 }
-  
-  .markdown p,
-  .markdown ul,
-  .markdown ol,
-  .markdown blockquote {
-	  @apply my-8;
-  }
 
-  .markdown h1 {
-	  @apply text-5xl font-bold mt-24 mb-12;
-  }
-  
-  .markdown h2 {
-	  @apply text-4xl font-bold mt-16 mb-12;
-  }
-  
-  .markdown h3 {
-  	@apply text-2xl font-semibold mt-8 mb-8;
-  }
-  
-    
-  .markdown h4 {
-    @apply text-xl font-semibold mt-4 mb-4;
-  }
-  
-  .markdown p {
-    //styleName: P;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 32px;
-    letter-spacing: -0.011em;
-    text-align: left;
-  }
+.markdown *:last-child {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
 
-  .markdown img {
-    width: 100%;
-    height: auto;
-    @apply rounded-lg;
-  }
-  
-  .markdown figure {
-    position: relative;
-    width: 125%;
-    left: -12.5%;
-    @apply mt-12 mb-12;
-  }
-  
-  .markdown pre {
-    @apply p-8 bg-wall rounded-lg;
-  }
-  
-  .markdown code {
-    @apply px-2 py-0.5 bg-wall rounded-lg;
-  }
-  
-  .markdown ul {
-    list-style-type: disc;
-  }
-  
-  .markdown ol {
-  }
-  
-  .markdown li {
-    font-size: 20px;
-    @apply py-2 ml-6;
-  }
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  @apply my-8;
+}
 
+.markdown h1 {
+  @apply text-5xl font-bold mt-24 mb-12;
+}
+
+.markdown h2 {
+  @apply text-4xl font-bold mt-16 mb-12;
+}
+
+.markdown h3 {
+  @apply text-2xl font-semibold mt-8 mb-8;
+}
+
+.markdown h4 {
+  @apply text-xl font-semibold mt-4 mb-4;
+}
+
+.markdown p {
+  //styleName: P;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.011em;
+  text-align: left;
+}
+
+.markdown img {
+  width: 100%;
+  height: auto;
+  @apply rounded-lg;
+}
+
+.markdown figure {
+  position: relative;
+  width: 125%;
+  left: -12.5%;
+  @apply mt-12 mb-12;
+}
+
+.markdown pre {
+  @apply p-8 bg-wall rounded-lg;
+}
+
+.markdown code {
+  @apply px-2 py-0.5 bg-wall rounded-lg;
+}
+
+.markdown ul {
+  list-style-type: disc;
+}
+
+.markdown ol {
+}
+
+.markdown li {
+  font-size: 20px;
+  @apply py-2 ml-6;
+}

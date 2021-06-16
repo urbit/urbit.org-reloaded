@@ -15,8 +15,9 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import BackgroundImage from "../../components/BackgroundImage";
 import SingleColumn from "../../components/SingleColumn";
-
-import { name } from "../../lib/constants";
+import NewsletterSignup from "../../components/NewletterSignup";
+import PostPreview from "../../components/PostPreview";
+import { name, contact } from "../../lib/constants";
 
 export default function Post({ post, nextPost, previousPost }) {
   const router = useRouter();
@@ -43,53 +44,57 @@ export default function Post({ post, nextPost, previousPost }) {
         <article className="flex justify-center pt-12">
           <Markdown post={post} />
         </article>
+        <section className="layout-narrow pt-24">
+          <div className="measure">
+            <h4 className="pb-6">
+              If you’d like to follow our progress, we send monthly updates via
+              email:
+            </h4>
+          </div>
+          <NewsletterSignup color="black" />
+          <h4 className="mt-12 text-gray">
+            Follow us on{" "}
+            <a className="text-black" href={contact.twitter}>
+              Twitter
+            </a>
+          </h4>
+          <h4 className="mt-6 text-gray">
+            Explore code on{" "}
+            <a className="text-black" href={contact.github}>
+              Github
+            </a>
+          </h4>
+          <h4 className="mt-6 text-gray">
+            Ask questions in our{" "}
+            <a className="text-black" href={contact.discord}>
+              Discord
+            </a>
+          </h4>
+          <h4 className="mt-6 text-gray">
+            Boot Urbit and join{" "}
+            <code className="bg-wall p-2 rounded-lg">
+              {contact.urbitCommunity}
+            </code>
+          </h4>
+        </section>
         <section className="layout-wide pt-24 flex">
           {previousPost === null ? (
-            <div className={`w-1/2 mr-4`} />
+            <div className={"w-1/2 mr-4"} />
           ) : (
-            <div
-              className={`cursor-pointer w-1/2 mr-4`}
-              key={previousPost.slug}
-            >
-              <Link
-                href={"/blog/" + previousPost.slug}
-                key={`post-${previousPost.slug}`}
-              >
-                <div>
-                  <h3>Previous Post</h3>
-                  <BackgroundImage
-                    className="w-full h-80 rounded-lg"
-                    src={previousPost.extra.image || ""}
-                  />
-                  <p className="text-black mt-2">{previousPost.title || ""}</p>
-                  <p className="text-gray">
-                    {formatDate(new Date(previousPost.date))}
-                  </p>
-                </div>
-              </Link>
-            </div>
+            <PostPreview
+              title="Previous Post"
+              post={previousPost}
+              className="mr-4 w-1/2"
+            />
           )}
           {nextPost === null ? (
-            <div className={`w-1/2 ml-4`} />
+            <div className={"w-1/2 ml-4"} />
           ) : (
-            <div className={`cursor-pointer w-1/2 ml-4`}>
-              <Link
-                href={"/blog/" + nextPost.slug}
-                key={`post-${nextPost.slug}`}
-              >
-                <div>
-                  <h3>Next Post</h3>
-                  <BackgroundImage
-                    className="w-full h-80 rounded-lg"
-                    src={nextPost.extra.image || ""}
-                  />
-                  <p className="text-black mt-2">{nextPost.title || ""}</p>
-                  <p className="text-gray">
-                    {formatDate(new Date(nextPost.date))}
-                  </p>
-                </div>
-              </Link>
-            </div>
+            <PostPreview
+              title="Next Post"
+              post={nextPost}
+              className="ml-4 w-1/2"
+            />
           )}
         </section>
       </SingleColumn>
