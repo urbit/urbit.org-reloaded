@@ -95,10 +95,7 @@ export default function Events({ pastEvents, currentEvents }) {
 }
 
 export async function getStaticProps() {
-  const posts = getAllPosts(
-    ["title", "slug", "date", "description", "extra"],
-    "events"
-  );
+  const posts = getAllPosts(["title", "slug", "date", "extra"], "events");
 
   // NB Gavin: This logic can change based on how we want to separate past vs current events
   const pastEvents = posts.filter((post) => !post.extra.pinned);

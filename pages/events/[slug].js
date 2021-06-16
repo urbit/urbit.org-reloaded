@@ -109,20 +109,20 @@ export async function getStaticProps({ params }) {
     getNextPost(
       params.slug,
       ["title", "slug", "date", "description", "extra"],
-      "blog"
+      "events"
     ) || null;
 
   const previousPost =
     getPreviousPost(
       params.slug,
       ["title", "slug", "date", "description", "extra"],
-      "blog"
+      "events"
     ) || null;
 
   const post = getPostBySlug(
     params.slug,
     ["title", "slug", "date", "description", "content", "extra"],
-    "blog"
+    "events"
   );
 
   return {
@@ -131,7 +131,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(["slug", "date"], "blog");
+  const posts = getAllPosts(["slug", "date"], "events");
 
   return {
     paths: posts.map((post) => {
