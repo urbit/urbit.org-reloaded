@@ -2,6 +2,10 @@ The website for Urbit.
 
 ## Getting Started
 
+```bash
+npm install
+```
+
 Run the development server:
 
 ```bash
