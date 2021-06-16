@@ -2,17 +2,7 @@ The website for Urbit.
 
 ## Getting Started
 
-First, pull docs as a submodule:
-
-```bash
-git submodule init
-```
-
-```bash
-git submodule update
-```
-
-Then, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
