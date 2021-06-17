@@ -50,9 +50,7 @@ export default function Home({ posts, events }) {
         <section className="layout-narrow pt-48">
           <div className="flex items-center measure pb-12">
             <h2 className="m-0 p-0 mr-4">Urbit Grants</h2>
-            <button className="flex bg-green text-white type-ui px-4 items-center justify-center h-12 rounded-full">
-              32 Open
-            </button>
+            <button className="bg-green text-white badge-lg">32 Open</button>
           </div>
           <div className="flex w-full items-center bg-washedGreen px-8 py-8 rounded-xl">
             <div className="flex items-center flex-col p-4 w-full">

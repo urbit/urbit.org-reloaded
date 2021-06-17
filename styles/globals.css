@@ -67,14 +67,20 @@ code .type-code {
   @apply bg-wall p-4 font-mono;
 }
 
+button {
+  border: none;
+}
+
 .button-sm {
   @apply flex px-4 py-1 rounded type-ui;
-  border: none;
 }
 
 .button-lg {
   @apply flex px-6 py-2 rounded-lg h-16 flex-center type-ui;
-  border: none;
+}
+
+.badge-lg {
+  @apply flex type-ui px-4 items-center justify-center h-12 rounded-full;
 }
 
 .tab-button-lg {

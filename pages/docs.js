@@ -7,7 +7,7 @@ import Header from "../components/Header";
 import SingleColumn from "../components/SingleColumn";
 import BackgroundImage from "../components/BackgroundImage";
 import Lorem from "../components/Lorem";
-import { getAllPosts, formatDate } from "../lib/lib";
+import { getDocs, formatDate } from "../lib/lib";
 
 function Sidebar(props) {
   return (

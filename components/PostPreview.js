@@ -7,7 +7,7 @@ export default function PostPreview(props) {
     <div className={`cursor-pointer ${props.className}`}>
       {props.title ? <h3 className="mb-2">{props.title}</h3> : null}
 
-      <Link href={`/blog/ ${props.post.slug}`} key={`post-${props.post.slug}`}>
+      <Link href={`/blog/${props.post.slug}`} key={`post-${props.post.slug}`}>
         <div>
           <BackgroundImage
             className="w-full h-80 rounded-lg"
