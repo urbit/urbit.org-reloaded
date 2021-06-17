@@ -1,12 +1,22 @@
 +++
-title = "Bitcoin Wallet Disclaimers"
+title = "Bitcoin Wallet"
 +++
 
 
 
 The latest Urbit release includes a native Bitcoin wallet. Please read the following security recommendations and disclaimers carefully. Urbit.org cannot recover any lost keys.
 
+### Instructions
 
+Run `|start %btc-wallet` in the dojo. In the first row of tiles on Landscape you should now see an orange bitcoin tile. Clicking on it will prompt a two-step process:
+
+1. Enter a provider who is connected to a full-node (such as `~matwet`). The provider will maintain a synced Bitcoin ledger, index your public addresses to determine your balance, and process your transactions.
+
+2. The next step is to provide an extended public key (or xpub). Providing your xpub allows the Bitcoin Wallet to automatically generate new public addresses (called *child public keys*—you can learn more about this [here](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)) when bitcoin is sent to your ship. To provide an xpub you can either enter your master ticket (which can be downloaded from [Bridge](https://bridge.urbit.org)), or directly import your xpub (such as from a hardware wallet like [Ledger](https://support.ledger.com/hc/en-us/articles/360011069619-Extended-public-key) or [Trezor](https://wiki.trezor.io/User_manual:Displaying_account_public_key_(XPUB))).
+
+Clicking on the Landscape tile will take you to the Bitcoin Wallet application, where you can view your balance and send bitcoin. All that you'll need to do is enter the recipient's Urbit ID (if they have configured the wallet using the above steps) or a Bitcoin address.
+
+If you are interested in [being a provider](https://subject.network/posts/btc-wallet-config/#connecting-a-provider-to-a-full-node) or [running a bitcoin full node](https://subject.network/posts/pi-fullnode-urbit/#bitcoind) on the Urbit network please check out `~sitful-hatred`’s excellent tutorials.
 
 ### Verify
 
@@ -20,7 +30,7 @@ It should return with the following hash:
 `0v9t022.n8kv1.5emkt.s2p9i.hvsa9`
 
 
-### Statement
+### Disclaimer Statement
 
 The Urbit Bitcoin Wallet and its related components are experimental pieces of software. You are free to review the open-source code before using: 
 - [Wallet](https://github.com/urbit/urbit/tree/master/pkg/btc-wallet) 
