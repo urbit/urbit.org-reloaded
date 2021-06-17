@@ -8,7 +8,7 @@ The latest Urbit release includes a native Bitcoin wallet. Please read the follo
 
 ### Instructions
 
-Run `|start %btc-wallet` in the dojo. In the first row of tiles on Landscape you should now see an orange bitcoin tile. Clicking on it will prompt a two-step process:
+Run `|start %btc-wallet` in the dojo. After refreshing Landscape you should see an orange bitcoin tile in the first row. Clicking on it will prompt a two-step process:
 
 1. Enter a provider who is connected to a full-node (such as `~matwet`). The provider will maintain a synced Bitcoin ledger, index your public addresses to determine your balance, and process your transactions.
 
