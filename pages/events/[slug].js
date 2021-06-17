@@ -41,7 +41,20 @@ export default function Event({ post, nextPost, previousPost }) {
             {formatDate(new Date(post.date))}
           </div>
         </section>
-        <article className="flex justify-center pt-12">
+        <section className="flex layout-wide pt-24">
+          {post.extra.youtube ? (
+            <iframe
+              className="rounded-xl"
+              width="100%"
+              height="640px"
+              src={`https://www.youtube.com/embed/${post.extra.youtube}`}
+              frameborder="0"
+              allow="encrypted-media"
+              allowfullscreen
+            ></iframe>
+          ) : null}
+        </section>
+        <article className="flex flex-col items-center pt-12 w-full">
           <Markdown post={post} />
         </article>
         <section className="layout-narrow pt-24">

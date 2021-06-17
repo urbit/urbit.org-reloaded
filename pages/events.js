@@ -8,26 +8,40 @@ import SingleColumn from "../components/SingleColumn";
 import BackgroundImage from "../components/BackgroundImage";
 import { getAllPosts, formatDate } from "../lib/lib";
 
+function assignEventCard(event) {
+  if (event.extra.youtube) {
+    return (
+      <img
+        src={`http://img.youtube.com/vi/${event.extra.youtube}/maxresdefault.jpg`}
+        className="w-full rounded-lg h-auto w-full"
+      />
+    );
+  }
+
+  if (event.extra.image) {
+    return (
+      <BackgroundImage
+        src={event.extra.image}
+        style={{ height: "720px" }}
+        className="w-full rounded-lg"
+      />
+    );
+  }
+
+  return (
+    <div
+      className="w-full rounded-lg bg-wall"
+      style={{ height: "720px" }}
+    ></div>
+  );
+}
+
 function EventCard(props) {
   return (
     <div key={props.event.slug} className="mb-24 cursor-pointer">
       <Link href={`/events/${props.event.slug}`}>
         <div>
-          {
-            // Not all event posts have images
-            props.event.extra.image ? (
-              <BackgroundImage
-                src={props.event.extra.image}
-                style={{ height: "720px" }}
-                className="w-full rounded-lg"
-              />
-            ) : (
-              <div
-                className="w-full rounded-lg bg-wall"
-                style={{ height: "720px" }}
-              ></div>
-            )
-          }
+          {assignEventCard(props.event)}
           <h2 className="mt-4">{props.event.title}</h2>
           <div className="flex items-baseline">
             {props.event.extra.author ? (
@@ -46,7 +60,7 @@ function EventCard(props) {
           </div>
 
           <div className="type-ui text-gray mt-2">
-            {formatDate(new Date(props.event.date))}
+            {formatDate(new Date(props.event.date))} - {props.event.extra.time}
           </div>
         </div>
       </Link>
@@ -55,6 +69,7 @@ function EventCard(props) {
 }
 
 export default function Events({ pastEvents, currentEvents }) {
+  console.log(currentEvents);
   return (
     <Container>
       <SingleColumn>
