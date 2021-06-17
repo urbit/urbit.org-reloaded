@@ -1,13 +1,52 @@
-import Head from "next/head";
 import Link from "next/link";
-import { useState } from "react";
-import Container from "../components/Container";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import SingleColumn from "../components/SingleColumn";
-import BackgroundImage from "../components/BackgroundImage";
-import Lorem from "../components/Lorem";
-import { getDocs, formatDate } from "../lib/lib";
+import { useRouter } from "next/router";
+import { join } from "path";
+import { getDocs, formatDate, buildPageTree, getIndexPage } from "../lib/lib";
+import Markdown from "../components/Markdown";
+
+const breadcrumbs = (posts, paths) => {
+  const results = [
+    <Link href="/">Urbit.org</Link>,
+    <span className="px-1">/</span>,
+    <Link href="/docs">Documentation</Link>,
+  ];
+  let thisLink = "/docs";
+  for (const path of paths) {
+    posts = posts.children[path];
+    thisLink = join(thisLink, path);
+    results.push(
+      <span className="px-1">/</span>,
+      <Link href={thisLink}>{posts.title}</Link>
+    );
+  }
+  return results;
+};
+
+const childPages = (thisLink, children) => (
+  <ul className="pl-1">
+    {Object.entries(children).map(([childSlug, child]) => (
+      <li>{pageTree(join(thisLink, childSlug), child)}</li>
+    ))}
+  </ul>
+);
+
+const pageTree = (thisLink, tree) => (
+  <div>
+    <Link href={thisLink}>
+      <span className="font-medium text-lg cursor-pointer">{tree.title}</span>
+    </Link>
+    <ul className="pl-1">
+      {tree.pages
+        .sort((a, b) => a.weight - b.weight)
+        .map(({ title, slug }) => (
+          <li className="font-thin py-1">
+            <Link href={join(thisLink, slug)}>{title}</Link>
+          </li>
+        ))}
+    </ul>
+    {childPages(thisLink, tree.children)}
+  </div>
+);
 
 function Sidebar(props) {
   return (
@@ -32,8 +71,8 @@ function ContentArea(props) {
         <div className="type-ui">Install Urbit</div>
       </header>
       <div className="px-24 pb-24 pt-16 flex flex-col w-full max-h-screen h-screen overflow-y-scroll">
-        <div className="type-ui text-lightGray">Breadcrumbs/go/here</div>
-        <h2 className="mb-16 mt-4">Getting Started</h2>
+        <div className="type-ui text-lightGray">{props.breadcrumbs}</div>
+        <h2 className="mb-16 mt-4">{props.title}</h2>
         {props.children}
         <div className="pb-32" />
       </div>
@@ -41,29 +80,21 @@ function ContentArea(props) {
   );
 }
 
-export default function DocsLayout({ posts }) {
+export default function DocsLayout({ posts, data, content }) {
   return (
     <div className="flex w-screen h-screen min-h-screen w-screen overflow-hidden">
-      <Sidebar>
-        <Lorem />
-      </Sidebar>
-      <ContentArea>
-        <Lorem />
+      <Sidebar>{childPages("/docs", posts.children)}</Sidebar>
+      <ContentArea breadcrumbs={breadcrumbs(posts, [])} title={data.title}>
+        <Markdown post={{ content: content }} />
       </ContentArea>
     </div>
   );
 }
 
-// export async function getStaticProps() {
-//   const docs = getAllPosts([
-//     'title',
-//     'slug',
-//     'date',
-//     'description',
-//     'extra',
-//   ], 'docs')
-//
-//   return {
-//     props: { posts },
-//   }
-// }
+export async function getStaticProps() {
+  const posts = buildPageTree(join(process.cwd(), "content/docs"));
+  const { data, content } = getIndexPage(
+    join(process.cwd(), "content/docs", "_index.md")
+  );
+  return { props: { posts, data, content } };
+}
