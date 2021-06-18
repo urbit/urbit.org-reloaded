@@ -1,12 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { join } from "path";
-import {
-  getDocs,
-  formatDate,
-  buildPageTree,
-  getIndexPage,
-} from "../../lib/lib";
+import { getDocs, formatDate, buildPageTree, getPage } from "../../lib/lib";
 import Markdown from "../../components/Markdown";
 
 const breadcrumbs = (posts, paths) => {
@@ -85,23 +80,26 @@ function ContentArea(props) {
   );
 }
 
-export default function DocsLayout({ posts, data, content }) {
+export default function DocsLayout({ posts, data, content, params }) {
   return (
     <div className="flex w-screen h-screen min-h-screen w-screen overflow-hidden">
       <Sidebar>{childPages("/docs", posts.children)}</Sidebar>
-      <ContentArea breadcrumbs={breadcrumbs(posts, [])} title={data.title}>
+      <ContentArea
+        breadcrumbs={breadcrumbs(posts, params.slug.slice(0, -1))}
+        title={data.title}
+      >
         <Markdown post={{ content: content }} />
       </ContentArea>
     </div>
   );
 }
 
-export async function getStaticProps() {
+export async function getStaticProps({ params }) {
   const posts = buildPageTree(join(process.cwd(), "content/docs"));
-  const { data, content } = getIndexPage(
-    join(process.cwd(), "content/docs", "_index.md")
+  const { data, content } = getPage(
+    join(process.cwd(), "content/docs", params.slug.join("/"))
   );
-  return { props: { posts, data, content } };
+  return { props: { posts, data, content, params } };
 }
 
 export async function getStaticPaths() {
@@ -118,7 +116,6 @@ export async function getStaticPaths() {
     });
   };
   allHrefs("/docs", posts);
-  console.log(slugs);
   return {
     paths: slugs.filter((e) => e !== "/docs"),
     fallback: false,

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { join } from "path";
-import { getDocs, formatDate, buildPageTree, getIndexPage } from "../lib/lib";
+import { getDocs, formatDate, buildPageTree, getPage } from "../lib/lib";
 import Markdown from "../components/Markdown";
 
 const breadcrumbs = (posts, paths) => {
@@ -93,8 +93,6 @@ export default function DocsLayout({ posts, data, content }) {
 
 export async function getStaticProps() {
   const posts = buildPageTree(join(process.cwd(), "content/docs"));
-  const { data, content } = getIndexPage(
-    join(process.cwd(), "content/docs", "_index.md")
-  );
+  const { data, content } = getPage(join(process.cwd(), "content/docs"));
   return { props: { posts, data, content } };
 }
