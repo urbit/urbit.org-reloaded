@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { join } from "path";
@@ -82,15 +83,20 @@ function ContentArea(props) {
 
 export default function DocsLayout({ posts, data, content, params }) {
   return (
-    <div className="flex w-screen h-screen min-h-screen w-screen overflow-hidden">
-      <Sidebar>{childPages("/docs", posts.children)}</Sidebar>
-      <ContentArea
-        breadcrumbs={breadcrumbs(posts, params.slug.slice(0, -1))}
-        title={data.title}
-      >
-        <Markdown post={{ content: content }} />
-      </ContentArea>
-    </div>
+    <>
+      <Head>
+        <title>{data.title} / Documentation / Urbit.org</title>
+      </Head>
+      <div className="flex w-screen h-screen min-h-screen w-screen overflow-hidden">
+        <Sidebar>{childPages("/docs", posts.children)}</Sidebar>
+        <ContentArea
+          breadcrumbs={breadcrumbs(posts, params.slug.slice(0, -1))}
+          title={data.title}
+        >
+          <Markdown post={{ content: content }} />
+        </ContentArea>
+      </div>
+    </>
   );
 }
 
