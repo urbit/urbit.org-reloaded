@@ -1,9 +1,10 @@
 [build]
-    publish = "public"
-    command = "curl -sL https://github.com/getzola/zola/releases/download/v0.13.0/zola-v0.13.0-x86_64-unknown-linux-gnu.tar.gz | tar zxv && ./zola build"
+  command = "npm run build"
+  publish = "out"
 
-[build.environment]
-    ZOLA_VERSION = "0.13.0"
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
-[context.deploy-preview]
-    command = "curl -sL https://github.com/getzola/zola/releases/download/v0.13.0/zola-v0.13.0-x86_64-unknown-linux-gnu.tar.gz | tar zxv && ./zola build --base-url $DEPLOY_PRIME_URL"
+[context.production.environment]
+  NEXT_SERVERLESS = "true"
+  NODE_ENV = "production"

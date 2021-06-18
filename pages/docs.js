@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { join } from "path";
-import { getDocs, formatDate, buildPageTree, getPage } from "../lib/lib";
+import { buildPageTree, getPage } from "../lib/lib";
 import Markdown from "../components/Markdown";
 
 const breadcrumbs = (posts, paths) => {
