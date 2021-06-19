@@ -41,11 +41,6 @@ https://github.com/urbit/urbit/blob/master/pkg/arvo/sys/hoon.hoon#L5767
 * Tlon engineer explanation/assistance as needed
 * Check-in with a Foundation director as needed
 
-
-## Milestones
-
-### Work is complete
-1 star
-The jet is tested and merged.
-
-    
+## Milestone: Completion, 1 star
+- jet is implemented and passes all tests
+- Tlon engineer gives final approval on merging jet into core
