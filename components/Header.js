@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import classnames from "classnames";
 import path from "path";
+import { useLockBodyScroll } from "../lib/hooks";
 
 function ActiveLink({ children, href, className }) {
   const router = useRouter();
@@ -21,12 +22,28 @@ function ActiveLink({ children, href, className }) {
   );
 }
 
-function MenuTray({ props }) {
+function MenuTray(props) {
+  // Locks document scrolling when menu is open
+  if (typeof document !== "undefined") {
+    if (props.isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "visible";
+    }
+  }
+
   const activeClasses = classnames({
-    "": props.isOpen,
+    "tray-menu-open": props.isOpen,
+    "tray-menu-closed": !props.isOpen,
   });
 
-  return <nav></nav>;
+  return (
+    <nav
+      className={`w-screen h-screen bg-wall flex top-0 left-0 flex-col p-8 fixed ${activeClasses}`}
+    >
+      {props.children}
+    </nav>
+  );
 }
 
 // This is the header for the index page
@@ -58,8 +75,26 @@ export default function Header() {
       {
         // Small screen header
       }
+
       <div className="block md:hidden">
-        <button onClick={() => toggleTray(!isOpen)}>
+        <MenuTray isOpen={isOpen}>
+          <ActiveLink className="mr-5 type-h3" href="/docs">
+            Docs
+          </ActiveLink>
+          <ActiveLink className="mr-5 type-h3" href="/blog">
+            Blog
+          </ActiveLink>
+          <ActiveLink className="mr-5 type-h3" href="/events">
+            Events
+          </ActiveLink>
+          <button className="button-sm bg-wall text-gray">
+            Search Urbit.org<div className="ml-4 text-lightGray">⌘K</div>
+          </button>
+        </MenuTray>
+        <button
+          onClick={() => toggleTray(!isOpen)}
+          className="z-10 absolute right-8"
+        >
           {isOpen ? (
             <svg
               width="16"

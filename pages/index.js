@@ -20,12 +20,18 @@ export default function Home({ posts, events }) {
       <SingleColumn>
         <Header />
 
+        {
+          // Hero Statement
+        }
         <section className="layout-narrow">
           <h1>A general-purpose,</h1>
           <h1>peer-to-peer,</h1>
           <h1>personal computing system.</h1>
         </section>
 
+        {
+          // Introducing Port
+        }
         <section className="layout-wide hidden md:flex">
           <div className="bg-wall w-11/12 hero-card-height rounded-3xl flex">
             <div className="pt-20 pl-12 w-7/12">
@@ -47,24 +53,29 @@ export default function Home({ posts, events }) {
           </div>
         </section>
 
+        {
+          // Grants
+        }
         <section className="layout-narrow">
-          <div className="flex items-center measure pb-12">
-            <h2 className="m-0 p-0 mr-4">Urbit Grants</h2>
-            <button className="bg-green text-white badge-lg">32 Open</button>
+          <div className="flex flex-col md:flex-row md:items-center measure pb-12">
+            <h2 className="m-0 p-0 mr-4 md:mb-0 mb-4">Urbit Grants</h2>
+            <div>
+              <button className="bg-green text-white badge-lg">32 Open</button>
+            </div>
           </div>
-          <div className="flex w-full items-center bg-washedGreen px-8 py-8 rounded-xl">
+          <div className="flex flex-col md:flex-row w-full items-center bg-washedGreen px-8 py-8 rounded-xl">
             <div className="flex items-center flex-col p-4 w-full">
               <h2 className="text-green">200+</h2>
               <h3 className="text-green text-center pt-2">
                 Urbit stars awarded
               </h3>
             </div>
-            <div className="h-24 w-4 bg-lightGreen" />
+            <div className="h-0 w-0 md:h-24 md:w-4 bg-lightGreen" />
             <div className="flex items-center flex-col p-4 w-full">
               <h2 className="text-green">1M+</h2>
               <h3 className="text-green text-center pt-2">USD Rewarded</h3>
             </div>
-            <div className="h-24 w-4 bg-lightGreen" />
+            <div className="h-0 w-0 md:h-24 md:w-4 bg-lightGreen" />
             <div className="flex items-center flex-col p-4 w-full">
               <h2 className="text-green">90+</h2>
               <h3 className="text-green text-center pt-2">Grants completed</h3>
@@ -81,6 +92,9 @@ export default function Home({ posts, events }) {
           </div>
         </section>
 
+        {
+          // Build on Urbit Developer CTA
+        }
         <section className="layout-narrow">
           <div className="measure">
             <h2 className="pb-12">Build on Urbit</h2>
@@ -119,6 +133,9 @@ export default function Home({ posts, events }) {
           </div>
         </section>
 
+        {
+          // Blog and Events Combo Section
+        }
         <section className="layout-narrow">
           <div className="flex items-center measure pb-12">
             <button
@@ -140,16 +157,27 @@ export default function Home({ posts, events }) {
           </div>
 
           <TabCarousel index={tab}>
-            <div className="blog-grid">
-              {posts.slice(0, 4).map((post, i) => {
-                return (
-                  <PostPreview
-                    post={post}
-                    className={`blog-grid-${i}`}
-                    key={post.slug}
-                  />
-                );
-              })}
+            <div className="flex flex-wrap">
+              <PostPreview
+                post={posts[0]}
+                className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
+                key={posts[0].slug}
+              />
+              <PostPreview
+                post={posts[1]}
+                className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
+                key={posts[1].slug}
+              />
+              <PostPreview
+                post={posts[3]}
+                className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
+                key={posts[3].slug}
+              />
+              <PostPreview
+                post={posts[4]}
+                className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
+                key={posts[4].slug}
+              />
               <div>
                 <Link href="/blog">
                   <button className="button-lg type-ui text-white bg-black">
@@ -158,20 +186,41 @@ export default function Home({ posts, events }) {
                 </Link>
               </div>
             </div>
-            <div className="blog-grid">
-              {events.slice(0, 4).map((event, i) => {
-                return (
-                  <PostPreview
-                    post={event}
-                    className={`blog-grid-${i}`}
-                    key={event.slug}
-                  />
-                );
-              })}
+            <div className="flex flex-wrap">
+              <PostPreview
+                post={events[0]}
+                className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
+                key={events[0].slug}
+              />
+              <PostPreview
+                post={events[1]}
+                className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
+                key={events[1].slug}
+              />
+              <PostPreview
+                post={events[3]}
+                className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
+                key={events[3].slug}
+              />
+              <PostPreview
+                post={events[4]}
+                className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
+                key={events[4].slug}
+              />
+              <div>
+                <Link href="/events">
+                  <button className="button-lg type-ui text-white bg-black">
+                    More Events
+                  </button>
+                </Link>
+              </div>
             </div>
           </TabCarousel>
         </section>
 
+        {
+          // Newsletter and social media
+        }
         <section className="layout-narrow">
           <div className="measure">
             <h2 className="m-0 p-0 mr-4 pb-12">Stay In Touch</h2>
@@ -199,12 +248,12 @@ export default function Home({ posts, events }) {
               Discord
             </a>
           </h4>
-          <h4 className="mt-6">
-            Boot Urbit and join{" "}
+          <div className="mt-4 flex flex-wrap items-baseline">
+            <h4 className="mr-2">Boot Urbit and join</h4>
             <code className="bg-wall p-2 rounded-lg">
               {contact.urbitCommunity}
             </code>
-          </h4>
+          </div>
         </section>
       </SingleColumn>
 

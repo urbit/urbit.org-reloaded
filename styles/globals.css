@@ -122,32 +122,18 @@ a:hover {
   justify-content: center;
 }
 
-.blog-grid {
-  width: 100%;
-  display: grid;
-  gap: 3rem;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-    "blog-grid-0 blog-grid-1"
-    "blog-grid-2 blog-grid-3";
-}
-
-.blog-grid-0 {
-  grid-area: blog-grid-0;
-}
-.blog-grid-1 {
-  grid-area: blog-grid-1;
-}
-.blog-grid-2 {
-  grid-area: blog-grid-2;
-}
-.blog-grid-3 {
-  grid-area: blog-grid-3;
-}
-
 .bg-img {
-  background: silver;
   background-repeat: no-repeat;
   background-position: center center;
+  @apply bg-wall;
+}
+
+.tray-menu-open {
+  transform: translateX(0);
+  transition: transform 200ms;
+}
+
+.tray-menu-closed {
+  transform: translateX(100vw);
+  transition: transform 200ms;
 }
