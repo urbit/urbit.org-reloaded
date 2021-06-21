@@ -20,13 +20,13 @@ export default function Home({ posts, events }) {
       <SingleColumn>
         <Header />
 
-        <section className="layout-narrow pt-48">
+        <section className="layout-narrow">
           <h1>A general-purpose,</h1>
           <h1>peer-to-peer,</h1>
           <h1>personal computing system.</h1>
         </section>
 
-        <section className="layout-wide pt-48">
+        <section className="layout-wide hidden md:flex">
           <div className="bg-wall w-11/12 hero-card-height rounded-3xl flex">
             <div className="pt-20 pl-12 w-7/12">
               <div className="pb-8">
@@ -47,7 +47,7 @@ export default function Home({ posts, events }) {
           </div>
         </section>
 
-        <section className="layout-narrow pt-48">
+        <section className="layout-narrow">
           <div className="flex items-center measure pb-12">
             <h2 className="m-0 p-0 mr-4">Urbit Grants</h2>
             <button className="bg-green text-white badge-lg">32 Open</button>
@@ -81,7 +81,7 @@ export default function Home({ posts, events }) {
           </div>
         </section>
 
-        <section className="layout-narrow pt-48">
+        <section className="layout-narrow">
           <div className="measure">
             <h2 className="pb-12">Build on Urbit</h2>
             <h3 className="pb-12">
@@ -119,7 +119,7 @@ export default function Home({ posts, events }) {
           </div>
         </section>
 
-        <section className="layout-narrow pt-48">
+        <section className="layout-narrow">
           <div className="flex items-center measure pb-12">
             <button
               onClick={() => setTab(0)}
@@ -172,7 +172,7 @@ export default function Home({ posts, events }) {
           </TabCarousel>
         </section>
 
-        <section className="layout-narrow pt-48">
+        <section className="layout-narrow">
           <div className="measure">
             <h2 className="m-0 p-0 mr-4 pb-12">Stay In Touch</h2>
             <p className="pb-6">

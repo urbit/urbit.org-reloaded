@@ -17,50 +17,50 @@ p a {
   @apply text-green;
 }
 
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 .layout-narrow {
-  @apply w-8/12;
+  @apply w-full md:w-8/12 px-4 md:px-0 pb-20 md:pb-32 lg:pb-48;
 }
 
 .layout-wide {
-  @apply w-10/12;
+  @apply w-full md:w-10/12 px-4 md:px-0 pb-20 md:pb-32 lg:pb-48;
 }
 
 h1,
 .type-h1 {
-  @apply text-6xl tracking-tight font-bold leading-tight;
+  @apply text-4xl md:text-5xl lg:text-6xl tracking-tight font-bold leading-tight;
 }
 
 h2,
 .type-h2 {
-  @apply text-5xl font-bold leading-tight;
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
 }
 
 h3,
 .type-h3 {
-  @apply text-2xl font-semibold leading-normal;
+  @apply text-lg md:text-xl lg:text-2xl font-semibold leading-normal;
 }
 
 h4,
 .type-ui {
-  @apply text-xl font-semibold leading-normal;
+  @apply text-base md:text-lg lg:text-xl font-semibold leading-normal;
 }
 
 p,
 .type-p {
-  @apply text-xl;
+  @apply text-base md:text-lg lg:text-xl;
 }
 
 .type-sub {
-  @apply text-base font-semibold leading-normal;
+  @apply text-sm lg:text-base font-semibold leading-normal;
 }
 
 caption,
 .type-caption {
-  @apply text-base font-medium block text-left;
+  @apply text-sm lg:text-base font-medium block text-left;
 }
 
 code .type-code {
