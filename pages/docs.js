@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { useState } from "react";
+import classnames from "classnames";
 import { join } from "path";
 import { buildPageTree, getPage } from "../lib/lib";
 import Markdown from "../components/Markdown";
@@ -21,38 +23,52 @@ const breadcrumbs = (posts, paths) => {
   return results;
 };
 
-const childPages = (thisLink, children) => (
+const childPages = (thisLink, children, level = 0) => (
   <ul className="pl-1">
     {Object.entries(children).map(([childSlug, child]) => (
-      <li>{pageTree(join(thisLink, childSlug), child)}</li>
+      <li>{pageTree(join(thisLink, childSlug), child, level)}</li>
     ))}
   </ul>
 );
 
-const pageTree = (thisLink, tree) => (
-  <div>
-    <Link href={thisLink}>
-      <span className="font-medium text-lg cursor-pointer">{tree.title}</span>
-    </Link>
-    <ul className="pl-1">
-      {tree.pages
-        .sort((a, b) => a.weight - b.weight)
-        .map(({ title, slug }) => (
-          <li className="font-thin py-1">
-            <Link href={join(thisLink, slug)}>{title}</Link>
-          </li>
-        ))}
-    </ul>
-    {childPages(thisLink, tree.children)}
-  </div>
-);
+const pageTree = (thisLink, tree, level = 0) => {
+  const [isOpen, toggleTree] = useState(false);
+
+  const activeClasses = classnames({
+    hidden: !isOpen,
+  });
+  return (
+    <>
+      <span
+        className={
+          "font-medium text-gray text-lg cursor-pointer hover:text-black"
+        }
+        onClick={() => toggleTree(!isOpen)}
+      >
+        {tree.title}
+      </span>
+      <div className={activeClasses}>
+        <ul className={"pl-1"}>
+          {tree.pages
+            .sort((a, b) => a.weight - b.weight)
+            .map(({ title, slug }) => (
+              <li className="font-thin py-1">
+                <Link href={join(thisLink, slug)}>{title}</Link>
+              </li>
+            ))}
+        </ul>
+        {childPages(thisLink, tree.children, level + 1)}
+      </div>
+    </>
+  );
+};
 
 function Sidebar(props) {
   return (
     <div className="flex flex-col w-72 bg-wall max-h-screen h-screen">
-      <header className="flex justify-between items-center pl-12 pt-8 pb-8">
+      <header className="flex flex-shrink-0 justify-between items-center pl-12 pt-12 pb-8">
         <Link href="/">
-          <a className="type-ui">Urbit</a>
+          <a className="type-ui text-gray">Urbit.org</a>
         </Link>
       </header>
       <div className="overflow-y-scroll p-12 pt-16">
@@ -66,8 +82,11 @@ function Sidebar(props) {
 function ContentArea(props) {
   return (
     <div className="w-full">
-      <header className="flex justify-between items-center px-24 pt-8 pb-8">
-        <div className="type-ui">Install Urbit</div>
+      <header className="flex justify-between items-center px-24 pt-12 pb-8">
+        <div className="type-ui">Urbit Documentation</div>
+        <button className="button-sm bg-wall text-gray">
+          Search Urbit.org<div className="ml-4 text-lightGray">⌘K</div>
+        </button>
       </header>
       <div className="px-24 pb-24 pt-16 flex flex-col w-full max-h-screen h-screen overflow-y-scroll">
         <div className="type-ui text-lightGray">{props.breadcrumbs}</div>
