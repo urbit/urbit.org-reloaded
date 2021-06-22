@@ -17,7 +17,7 @@ function ActiveLink({ children, href, className }) {
 
   return (
     <Link href={href}>
-      <a className={className + " " + activeClassName}>{children}</a>
+      <a className={`${className} ${activeClassName}`}>{children}</a>
     </Link>
   );
 }
@@ -39,7 +39,7 @@ function MenuTray(props) {
 
   return (
     <nav
-      className={`w-screen h-screen bg-wall flex top-0 left-0 flex-col p-8 fixed ${activeClasses}`}
+      className={`z-9 w-screen h-screen bg-wall flex top-0 left-0 flex-col p-4 pt-24 fixed ${activeClasses}`}
     >
       {props.children}
     </nav>
@@ -51,8 +51,13 @@ export default function Header() {
   const [isOpen, toggleTray] = useState(false);
   return (
     <header className="layout-wide flex justify-between items-center pt-8">
+      <div className="absolute z-10">
+        <Link href="/">
+          <a className="type-ui">Urbit</a>
+        </Link>
+      </div>
       <Link href="/">
-        <a className="type-ui">Urbit</a>
+        <a className="type-ui text-white">Urbit</a>
       </Link>
       {
         // Large screen header
@@ -93,7 +98,7 @@ export default function Header() {
         </MenuTray>
         <button
           onClick={() => toggleTray(!isOpen)}
-          className="z-10 absolute right-8"
+          className="z-10 absolute right-4 top-8"
         >
           {isOpen ? (
             <svg
@@ -113,7 +118,7 @@ export default function Header() {
           ) : (
             <svg
               width="16"
-              height="17"
+              height="16"
               viewBox="0 0 16 17"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

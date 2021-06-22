@@ -1,12 +1,15 @@
 .markdown {
   /* @apply leading-relaxed; */
   /* max-width: ; */
-  @apply w-8/12;
+  /* @apply w-full md:w-8/12 px-4 md:px-0 pb-20 md:pb-32 lg:pb-48; */
 }
 
 .markdown *:last-child {
-  padding-bottom: 0px;
-  margin-bottom: 0px;
+  @apply pb-0 mb-0;
+}
+
+.markdown *:first-child {
+  @apply pt-0 mt-0;
 }
 
 .markdown p,
@@ -17,30 +20,23 @@
 }
 
 .markdown h1 {
-  @apply text-5xl font-bold mt-24 mb-12;
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold mt-24 mb-12;
 }
 
 .markdown h2 {
-  @apply text-4xl font-bold mt-16 mb-12;
+  @apply text-2xl md:text-3xl lg:text-4xl font-bold mt-16 mb-12;
 }
 
 .markdown h3 {
-  @apply text-2xl font-semibold mt-8 mb-8;
+  @apply text-lg md:text-xl lg:text-2xl font-semibold mt-8 mb-8;
 }
 
 .markdown h4 {
-  @apply text-xl font-semibold mt-4 mb-4;
+  @apply text-base md:text-lg lg:text-xl font-semibold mt-4 mb-4;
 }
 
 .markdown p {
-  //styleName: P;
-  font-family: Inter;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 32px;
-  letter-spacing: -0.011em;
-  text-align: left;
+  @apply text-base md:text-lg lg:text-xl;
 }
 
 .markdown img {
@@ -51,9 +47,19 @@
 
 .markdown figure {
   position: relative;
-  width: 125%;
-  left: -12.5%;
-  @apply mt-12 mb-12;
+  @apply mt-12 mb-12 z-0;
+}
+
+.markdown figure {
+  width: 100%;
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .markdown figure {
+    width: 125%;
+    left: -12.5%;
+  }
 }
 
 .markdown pre {
@@ -65,13 +71,16 @@
 }
 
 .markdown ul {
+  list-style: outside;
   list-style-type: disc;
 }
 
 .markdown ol {
+  list-style: outside;
+  list-style-type: decimal;
 }
 
 .markdown li {
   font-size: 20px;
-  @apply py-2 ml-6;
+  @apply py-2 ml-6 text-base md:text-lg lg:text-xl;
 }

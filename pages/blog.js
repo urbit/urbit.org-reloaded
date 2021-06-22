@@ -13,7 +13,7 @@ export default function Blog({ posts }) {
     <Container>
       <SingleColumn>
         <Header />
-        <section className="layout-wide pt-48">
+        <section className="layout-wide">
           <div className="measure">
             <h2 className="pb-16">Urbit Blog</h2>
             <p className="pb-6">
@@ -26,7 +26,7 @@ export default function Blog({ posts }) {
             </p>
           </div>
         </section>
-        <section className="layout-wide pt-24">
+        <section className="layout-wide">
           {posts.map((post) => {
             return (
               <div key={post.slug} className="mb-24 cursor-pointer">

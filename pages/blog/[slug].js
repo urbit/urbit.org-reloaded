@@ -29,7 +29,7 @@ export default function Post({ post, nextPost, previousPost }) {
     <Container>
       <SingleColumn>
         <Header />
-        <section className="flex flex-col layout-wide pt-24">
+        <section className="flex flex-col layout-wide">
           <h1>{post.title}</h1>
           {post.extra.author ? (
             <div className="type-ui text-gray mt-4">{post.extra.author}</div>
@@ -37,14 +37,14 @@ export default function Post({ post, nextPost, previousPost }) {
           {post.extra.ship ? (
             <div className="type-ui text-gray font-mono">{post.extra.ship}</div>
           ) : null}
-          <div className="type-ui text-gray mt-16">
+          <div className="type-ui text-gray mt-8 md:mt-12 lg:mt-16">
             {formatDate(new Date(post.date))}
           </div>
         </section>
-        <article className="flex justify-center pt-12">
+        <article className="layout-wide">
           <Markdown post={post} />
         </article>
-        <section className="layout-narrow pt-24">
+        <section className="layout-narrow">
           <div className="measure">
             <h4 className="pb-6">
               If you’d like to follow our progress, we send monthly updates via
@@ -77,7 +77,7 @@ export default function Post({ post, nextPost, previousPost }) {
             </code>
           </h4>
         </section>
-        <section className="layout-wide pt-24 flex">
+        <section className="layout-wide flex">
           {previousPost === null ? (
             <div className={"w-1/2 mr-4"} />
           ) : (

@@ -22,11 +22,11 @@ p a {
 } */
 
 .layout-narrow {
-  @apply w-full md:w-8/12 px-4 md:px-0 pb-20 md:pb-32 lg:pb-48;
+  @apply w-full md:w-8/12 px-4 md:px-8 pb-20 md:pb-32 lg:pb-48;
 }
 
 .layout-wide {
-  @apply w-full md:w-10/12 px-4 md:px-0 pb-20 md:pb-32 lg:pb-48;
+  @apply w-full md:w-10/12 px-4 md:px-8 pb-20 md:pb-32 lg:pb-48;
 }
 
 h1,
@@ -76,11 +76,11 @@ button {
 }
 
 .button-lg {
-  @apply flex px-6 py-2 rounded-lg h-16 flex-center type-ui;
+  @apply flex px-4 lg:px-6 py-2 rounded-lg h-12 md:h-16 flex-center type-ui;
 }
 
 .badge-lg {
-  @apply flex type-ui px-4 items-center justify-center h-12 rounded-full;
+  @apply flex type-ui px-4 lg:px-6 items-center justify-center h-12 md:h-16 rounded-full;
 }
 
 .tab-button-lg {
