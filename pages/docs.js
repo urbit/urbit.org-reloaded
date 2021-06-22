@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
 import classnames from "classnames";
@@ -101,6 +102,9 @@ function ContentArea(props) {
 export default function DocsLayout({ posts, data, content }) {
   return (
     <div className="flex w-screen h-screen min-h-screen w-screen overflow-hidden">
+      <Head>
+        <title>Documentation / Urbit.org</title>
+      </Head>
       <Sidebar>{childPages("/docs", posts.children)}</Sidebar>
       <ContentArea breadcrumbs={breadcrumbs(posts, [])} title={data.title}>
         <Markdown post={{ content: content }} />
