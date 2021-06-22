@@ -41,9 +41,6 @@ const pageTree = (thisLink, tree, level = 0) => {
   const isThisPage = firstCrumb === thisLink;
   const [isOpen, toggleTree] = useState(includesThisPage);
 
-  console.log(thisLink);
-  console.log(firstCrumb);
-
   const activeClasses = classnames({
     hidden: !isOpen,
   });
