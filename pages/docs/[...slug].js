@@ -35,23 +35,29 @@ const childPages = (thisLink, children, level = 0) => (
 
 const pageTree = (thisLink, tree, level = 0) => {
   const router = useRouter();
-  const firstCrumb = "/" + router.asPath.split("/").slice(1).join("/");
+  const firstCrumb = "/" + router.asPath.split("/").slice(1, -1).join("/");
 
-  const thisPage = firstCrumb.includes(thisLink);
-  const [isOpen, toggleTree] = useState(thisPage);
+  const includesThisPage = firstCrumb.includes(thisLink);
+  const isThisPage = firstCrumb === thisLink;
+  const [isOpen, toggleTree] = useState(includesThisPage);
+
+  console.log(thisLink);
+  console.log(firstCrumb);
 
   const activeClasses = classnames({
     hidden: !isOpen,
   });
 
   const headerClass = classnames({
-    "text-gray": !thisPage,
+    "text-gray": !isThisPage,
+    dot: isThisPage,
   });
   return (
     <>
       <span
         className={
-          "font-medium text-lg cursor-pointer hover:text-black " + headerClass
+          "font-medium text-lg cursor-pointer hover:text-black relative " +
+          headerClass
         }
         onClick={() => toggleTree(!isOpen)}
       >
