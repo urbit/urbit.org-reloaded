@@ -1,5 +1,5 @@
 +++
-title = "JSON Parsing/Serializaiton Jet" 
+title = "JSON Parsing/Serialization Jet" 
 date = 2021-06-17
 [taxonomies]
 grant_type = ["bounties"]
@@ -24,8 +24,8 @@ Completing this bounty will have an immediate impact on the perceived speed of t
 
 ### Code
 
-* https://github.com/urbit/urbit/blob/master/pkg/arvo/sys/zuse.hoon#L3263
-* https://github.com/urbit/urbit/blob/master/pkg/arvo/sys/zuse.hoon#L3320
+* [JSON Encoders](https://github.com/urbit/urbit/blob/master/pkg/arvo/sys/zuse.hoon#L3263)
+* [JSON Reparser](https://github.com/urbit/urbit/blob/master/pkg/arvo/sys/zuse.hoon#L3320)
 
 ### Requirements
 
