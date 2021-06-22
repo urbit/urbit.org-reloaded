@@ -131,7 +131,7 @@ export default function DocsLayout({ posts, data, content, params }) {
 }
 
 export async function getStaticProps({ params }) {
-  const posts = buildPageTree(join(process.cwd(), "content/docs"));
+  const posts = buildPageTree(join(process.cwd(), "content/docs"), "weight");
   const { data, content } = getPage(
     join(process.cwd(), "content/docs", params.slug.join("/"))
   );
@@ -139,7 +139,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const posts = buildPageTree(join(process.cwd(), "content/docs"));
+  const posts = buildPageTree(join(process.cwd(), "content/docs"), "weight");
   const slugs = [];
   const allHrefs = (thisLink, tree) => {
     slugs.push(thisLink, ...tree.pages.map((e) => join(thisLink, e.slug)));

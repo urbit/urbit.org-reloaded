@@ -114,7 +114,7 @@ export default function DocsLayout({ posts, data, content }) {
 }
 
 export async function getStaticProps() {
-  const posts = buildPageTree(join(process.cwd(), "content/docs"));
+  const posts = buildPageTree(join(process.cwd(), "content/docs"), "weight");
   const { data, content } = getPage(join(process.cwd(), "content/docs"));
   return { props: { posts, data, content } };
 }
