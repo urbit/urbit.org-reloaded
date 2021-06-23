@@ -2,8 +2,8 @@
 title = "Analytics Script"
 date = 2021-05-12
 [taxonomies]
-grant_type = ["bounties"]
-grant_category = ["App Dev: Other"]
+grant_type = ["Bounty"]
+grant_category = ["App Dev"]
 [extra]
 image = ""
 description = "Write a generator that exports chat data into a CSV."
@@ -23,9 +23,9 @@ The generator will read data from `graph-store` (and other requisite agents) and
 
 ### Output
 
-The output of the generator is a CSV file with the following format: `timestamp,ship,group,channel,channel-type,content`. Each row of data represents a single post of some type; either a chat message, notebook post, or collection post. 
+The output of the generator is a CSV file with the following format: `timestamp,ship,group,channel,channel-type,content`. Each row of data represents a single post of some type; either a chat message, notebook post, or collection post.
 
-The result of running the CSV should output the clay path to the file. 
+The result of running the CSV should output the clay path to the file.
 
 ### Inputs
 
@@ -35,7 +35,7 @@ The generator should accept a few parameters:
 - `from` (required): absolute date (`@da`) from which data should be pulled.
 - `to` (optional): absolute date (`@da`) up until which point data should be pulled. Default is the current time.
 - `groups` (optional): list of groups to read data from. Default is to pull data from all groups that the running ship is a member of.
-- `content` (optional): boolean of whether or not to include content in the CSV. Defaults to `false`. 
+- `content` (optional): boolean of whether or not to include content in the CSV. Defaults to `false`.
 
 ## Requirements & Resources
 
@@ -45,9 +45,7 @@ The generator should accept a few parameters:
 
 ## Milestones
 
-
 ### Work is complete
+
 1 stars
 The generator is submitted as a pull request to the Urbit repository, reviewed, and merged.
-
-    

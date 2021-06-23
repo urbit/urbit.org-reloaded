@@ -2,7 +2,7 @@
 title = "Translate key parts of Urbit.org into Norwegian"
 date = 2021-04-07
 [taxonomies]
-grant_type = ["proposals"]
+grant_type = ["Proposal"]
 grant_category = ["Community"]
 [extra]
 image = ""
@@ -24,9 +24,7 @@ In addition to contributing with my translation work, I can also contribute to t
 
 ## Milestones
 
-
 ### Translation of key site content
+
 1 stars
 Introduction, Urbit OS, Urbit ID, Interface, Roadmap: OS1-> OS N, People + History, and Install + Setup
-
-    

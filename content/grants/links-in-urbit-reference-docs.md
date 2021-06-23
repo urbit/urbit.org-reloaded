@@ -2,7 +2,7 @@
 title = "Links in Urbit Reference Docs"
 date = 2020-06-16
 [taxonomies]
-grant_type = ["proposals"]
+grant_type = ["Proposal"]
 grant_category = ["Documentation"]
 [extra]
 image = ""
@@ -22,9 +22,7 @@ Consider, for contrast, a [random Python doc page](https://docs.python.org/3/lib
 
 ## Milestones
 
-
 ### Links added to Reference documentation
+
 1 stars
 Concepts that refer to pages with documentation have links to said documentation.
-
-    

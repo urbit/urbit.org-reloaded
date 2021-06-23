@@ -2,7 +2,7 @@
 title = "Educational Guide: TodoMVC, Urbit Edition"
 date = 2021-01-05
 [taxonomies]
-grant_type = ["bounties"]
+grant_type = ["Bounty"]
 grant_category = ["Documentation"]
 [extra]
 image = ""
@@ -24,7 +24,7 @@ Urbit.
 The application we'll demonstrate is the classic [TodoMVC](http://todomvc.com/examples/react/#/) app, which many
 developers will be immediately familiar with. Even if a newcomer isn't familiar
 with TodoMVC, it's quite easy to get a handle on it because it's a todo
-list--surely *everyone* at this point has experience with todo lists.
+list--surely _everyone_ at this point has experience with todo lists.
 
 The classic TodoMVC example is a simple, functional and aesthetically pleasing
 web-based todo list. What it lacks, however, is any form of persistence or
@@ -46,12 +46,12 @@ For reference, see the
 application, which is a standalone application served from the `/~debug` URI.
 
 Our goal is to serve a pre-built `TodoMVC` application at the route `/~todo`.
-It's important to note that this process could be applied to serve *any* HTML
+It's important to note that this process could be applied to serve _any_ HTML
 file, whether it's a single-page application or not. With very little
 imagination, it becomes easy to see how one could serve their personal blog at
 `/~blog`, or a static "About Me" page at `/~about`.
 
-Urbit as a personal *file* server is useful in and of itself, but it will
+Urbit as a personal _file_ server is useful in and of itself, but it will
 require a basic understanding of Hoon, Clay, Gall, and the development
 environment more generally. We'll break this guide into two sections: one
 focused on getting a development environment set up, and another on actually
@@ -71,7 +71,7 @@ with development ships (this is essentially the "deployment process"), and how
 to use some basic generators.
 
 This guide should satisfy the following user stories, each of which start with
-*As a new developer reading this guide, ...*:
+_As a new developer reading this guide, ..._:
 
 - I can install the Urbit binary.
 - I can boot a fake ship for development.
@@ -91,11 +91,11 @@ it is or how it works.
 
 To start, let's talk a bit about what a pier is and its relation to the unix
 filesystem, the way files are represented and how to navigate our pier from
-within Urbit (*e.g.* `+ls %`, `+cat %/gen/cat`), and what `|mount` and `|commit`
+within Urbit (_e.g._ `+ls %`, `+cat %/gen/cat`), and what `|mount` and `|commit`
 are doing (at a high level).
 
 That might be a good segue into some basic Hoon via a super simple
-generator--just enough to explain important syntax rules (*e.g.* ace v. gap),
+generator--just enough to explain important syntax rules (_e.g._ ace v. gap),
 the concept of runes, and provide links to places where you can learn more about
 all of these things.
 
@@ -120,7 +120,7 @@ conversion from one to the other would be an informative bonus lesson.
 By the end of this lesson:
 
 - I understand what Gall is at a high level.
-- I know what an *agent* is.
+- I know what an _agent_ is.
 - I know how to start a gall agent.
 - I can serve a static file (or directory of files) from a URI on my ship.
 
@@ -210,7 +210,7 @@ By the end of this lesson:
 
 Urbit makes heavy use of [Command Query Responsibility
 Segregation](https://www.martinfowler.com/bliki/CQRS.html), or CQRS, which means
-that our application can either issue *commands* or *queries*, but not both
+that our application can either issue _commands_ or _queries_, but not both
 simultaneously. This is contrasted with the more common Create Read Update
 Delete (CRUD) model, in which our client is performing more direct manipulation
 of records in a datastore. In Urbit, CQRS is paired with an [Event
@@ -230,7 +230,7 @@ To contrast that with a CQRS + Event Sourcing model, we'd have the following:
 1. Client queries for all todos to load into the page.
 2. Client sets up a subscription to receive any new todos that are created as
    events.
-3. Client issues a command to create a new todo, which produces *no response,*
+3. Client issues a command to create a new todo, which produces _no response,_
    since these responsibilities are separated.
 4. After the new todo is created by the server, it emits an event which is
    picked up by the subscription in step (2), which is then added to the list.
@@ -254,10 +254,10 @@ The answer becomes clear when you consider Urbit's primary purpose, which is for
 building distributed systems. In a distributed system, each agent is interacting
 with many others through message passing. Imagine a chat application, in which
 many agents are sending messages at once: creating a message and then adding the
-returned message into your UI would work for messages *you* send, but would miss
+returned message into your UI would work for messages _you_ send, but would miss
 any messages sent to you by other agents. In Urbit's approach, messages sent by
 other agents are no different than those sent by your agent, meaning the same
-implementation that handles one agent also handles *n* other agents.
+implementation that handles one agent also handles _n_ other agents.
 
 After explaining the rationale behind the approach, we'll want to demonstrate
 how to extend `on-watch` to expose our todos, how to publish events to
@@ -286,14 +286,14 @@ By the end of this section:
 - I understand how to set up a subscription on a foreign ship.
 - I understand how to tear down subscriptions.
 - I understand how to store and represent data belonging to multiple ships.
-- I understand how to upgrade my application's state. 
-
+- I understand how to upgrade my application's state.
 
 ## Deliverables
+
 Your solution to this bounty should include:
 
-* A standalone repository with gall agent(s) that demonstrate each working part.
-* A pull request against the [urbit/docs](https://github.com/urbit/docs) repository that adds guided tutorials for each section.
+- A standalone repository with gall agent(s) that demonstrate each working part.
+- A pull request against the [urbit/docs](https://github.com/urbit/docs) repository that adds guided tutorials for each section.
 
 ## Expectations
 
@@ -303,29 +303,27 @@ The director will ensure that you have access to the necessary resources to comp
 
 ## Milestones
 
-
 ### Part 1: Serving Static Content
+
 2 stars
 Sample code and guide are completed and ready for merge against urbit/docs.
 
-
 ### Part 2: Data Modeling
+
 1 stars
 Sample code and guide are completed and ready for merge against urbit/docs.
-
 
 ### Part 3: Taking Action
+
 1 stars
 Sample code and guide are completed and ready for merge against urbit/docs.
 
-
 ### Part 4: Client Integration
+
 3 stars
 Sample code and guide are completed and ready for merge against urbit/docs.
-
 
 ### Part 5: Collaboration
+
 3 stars
 Sample code and guide are completed and ready for merge against urbit/docs.
-
-    

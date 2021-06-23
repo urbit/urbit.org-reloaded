@@ -41,7 +41,7 @@ h2,
 
 h3,
 .type-h3 {
-  @apply text-lg md:text-xl lg:text-2xl font-semibold;
+  @apply text-xl md:text-2xl lg:text-3xl font-bold;
 }
 
 h4,
@@ -76,11 +76,11 @@ button {
 }
 
 .button-sm {
-  @apply flex px-4 py-1 rounded type-ui;
+  @apply flex px-4 py-1 rounded-lg type-ui;
 }
 
 .button-lg {
-  @apply flex px-4 lg:px-6 py-2 rounded-lg h-12 md:h-16 flex-center type-ui;
+  @apply flex px-4 lg:px-6 py-2 rounded-xl h-12 md:h-16 flex-center type-ui;
 }
 
 .badge-sm {

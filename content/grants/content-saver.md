@@ -2,8 +2,8 @@
 title = "Content Saver"
 date = 2020-03-20
 [taxonomies]
-grant_type = ["bounties"]
-grant_category = ["App Dev: Arvo"]
+grant_type = ["Bounty"]
+grant_category = ["App Dev", "Arvo"]
 [extra]
 image = ""
 description = "Extract and save content from HTML."
@@ -22,7 +22,7 @@ This app should be able to: Copy both a given highlighted block of text, or a di
 If you have a web scraper that can go out and fetch web pages for you, like the one indicated in [this bounty](https://grants.urbit.org/bounties/1967189374-web-scraper), you can just poke the Publish app to save it and be able to read it in Publish. (Note: this bounty is not to build a web scraper, but simply the content-extraction component)
 The file should strip the content out of HTML and save it into the Markdown format.
 
-### Resources: 
+### Resources:
 
 - [The Instapaper API](https://www.instapaper.com/api)
 - [Firefox Readability](https://github.com/mozilla/readability); this implementation can be copied to the extent that you desire.
@@ -34,12 +34,9 @@ The file should strip the content out of HTML and save it into the Markdown form
 - Submit your code as a PR to the [urbit](github.com/urbit/urbit] repository.
 - You have 90 days from the time of approval to complete this bounty.
 
-
 ## Milestones
 
-
 ### PR is merged
+
 2 stars
 Your code is accepted and merged.
-
-    

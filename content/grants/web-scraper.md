@@ -2,8 +2,8 @@
 title = "Web Scraper"
 date = 2020-02-07
 [taxonomies]
-grant_type = ["bounties"]
-grant_category = ["App Dev: Arvo"]
+grant_type = ["Bounty"]
+grant_category = ["App Dev", "Arvo"]
 [extra]
 image = ""
 description = "It is often useful for archival purposes to pull down an entire website, however many sites have a complex network of pages that would be difficult to download one at a time."
@@ -37,9 +37,7 @@ Do not begin work until your request to claim this bounty is accepted. We will a
 
 ## Milestones
 
-
 ### PR is merged
+
 1 stars
 Your pull request is merged.
-
-    

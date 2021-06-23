@@ -2,8 +2,8 @@
 title = "Boston T Train Tracker Landscape Tile"
 date = 2020-03-24
 [taxonomies]
-grant_type = ["bounties"]
-grant_category = ["App Dev: Arvo"]
+grant_type = ["Bounty"]
+grant_category = ["App Dev", "Arvo"]
 [extra]
 image = ""
 description = "Create a landscape tile that tracks the Boston T train."
@@ -21,8 +21,8 @@ Create a backend for importing MBTA (Massachusetts Bay Transportation Authority)
 
 We would like to create a T Train information Landscape tile. The backend should access real-time departure and arrival information for the complete list of stations via the MBTA API, as well as the data feeds for schedule tables, elevator outages, and customer alerts. The tile interface should encompass:
 
-- A real-time trip planner using the MBTA data, similar to the one on the official MBTA  website. 
-- Links for schedule tables for weekday, weekend, and holiday service. 
+- A real-time trip planner using the MBTA data, similar to the one on the official MBTA website.
+- Links for schedule tables for weekday, weekend, and holiday service.
 - A link to the official MBTA L Train map linked below, or an open-source workaround.
 - A place (possibly a scrolling feed?) for MBTA alerts, using the ‘Alerts’ API stream.
 - A place for MBTA station facilities closure status information.
@@ -36,20 +36,16 @@ We would like to create a T Train information Landscape tile. The backend should
 ## Contribution Guidelines:
 
 - Do not begin work until your request to claim this bounty is accepted.
-- Do not use copyrighted images, including the MBTA logo or the official route map. Instead, always refer to MBTA in plaintext. You should include an external link to the T Train route map; do not host this map locally (we are open to an open-source, good quality route map which does not include the MBTA logo or other trademarks, however). 
-- Please read the Developer License Agreement carefully and obey their guidelines for application naming and presentation of API data. 
+- Do not use copyrighted images, including the MBTA logo or the official route map. Instead, always refer to MBTA in plaintext. You should include an external link to the T Train route map; do not host this map locally (we are open to an open-source, good quality route map which does not include the MBTA logo or other trademarks, however).
+- Please read the Developer License Agreement carefully and obey their guidelines for application naming and presentation of API data.
 - Submit your work as a pull request to the [urbit/urbit](https://github.com/urbit/urbit/pulls) repo
 - When applying to work on the bounty, tell us a little about yourself and some projects you’ve worked on in the past.
 - You have 90 days from the time of approval to complete this bounty.
--  Successful completion of this bounty may result in an invitation to complete other API integration bounties. 
-
-
+- Successful completion of this bounty may result in an invitation to complete other API integration bounties.
 
 ## Milestones
 
-
 ### Your PR is merged
+
 3 stars
 Your code is accepted and merged.
-
-    

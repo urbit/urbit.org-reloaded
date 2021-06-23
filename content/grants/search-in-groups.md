@@ -2,8 +2,8 @@
 title = "Search in groups"
 date = 2021-02-25
 [taxonomies]
-grant_type = ["proposals"]
-grant_category = ["App Dev: Other"]
+grant_type = ["Proposal"]
+grant_category = ["App Dev"]
 [extra]
 image = ""
 description = "Implement a basic text search in groups channels"
@@ -14,7 +14,8 @@ completed = false
 link = ""
 +++
 
-I saw this post in u-c feature requests channel [~bitbet-bolbel/urbit-community/resource/publish/ship/~bitpyx-dildus/feature-requests/note/170141184504903337445158066480138420224](http://localhost:8080/~landscape/ship/~bitbet-bolbel/urbit-community/resource/publish/ship/~bitpyx-dildus/feature-requests/note/170141184504903337445158066480138420224) 
+I saw this post in u-c feature requests channel [~bitbet-bolbel/urbit-community/resource/publish/ship/~bitpyx-dildus/feature-requests/note/170141184504903337445158066480138420224](http://localhost:8080/~landscape/ship/~bitbet-bolbel/urbit-community/resource/publish/ship/~bitpyx-dildus/feature-requests/note/170141184504903337445158066480138420224)
+
 > Even the sort of thing that could be thrown together in an afternoon would be 1000x better than nothing.
 
 and I likewise thought even a basic search function would be immediately useful
@@ -28,14 +29,12 @@ There will also be a generator with nearly same functionality but it's stateless
 
 ## Milestones
 
-
 ### search generator done
+
 1 stars
 ↑
-
 
 ### shoe app done
+
 1 stars
 ↑
-
-    

@@ -2,8 +2,8 @@
 title = "Calendar UI"
 date = 2020-07-16
 [taxonomies]
-grant_type = ["proposals"]
-grant_category = ["App Dev: Arvo"]
+grant_type = ["Proposal"]
+grant_category = ["App Dev", "Arvo"]
 [extra]
 image = ""
 description = "Build a Landscape-native calendar UI"
@@ -25,9 +25,10 @@ The current proposal aims to create a Landscape tile and app to improve the acce
 The UI will be backed by the calendar app implementation described in the aforementioned previous proposal. In order to allow the parallel implementation of a UI and the Gall app, this proposal will be executed in two stages.
 
 The first stage is the development of working prototypes of the screens that the calendar will initially support. These include:
- - a monthly view with clickable dates to daily views;
- - a daily view that lists the events in chronological order with a short description
- - a form to create new events with fields for the required properties per RFC 5545.
+
+- a monthly view with clickable dates to daily views;
+- a daily view that lists the events in chronological order with a short description
+- a form to create new events with fields for the required properties per RFC 5545.
 
 The deliverables will be functional web pages that can be integrated with Landscape. The screens will be built entirely with components from the [Indigo-react](https://github.com/urbit/indigo-react) library.
 The UI will be built with the assumption that event participants are ships.
@@ -40,14 +41,12 @@ These pages can provide the basis for UX experiments and integrations with other
 
 ## Milestones
 
-
 ### Functional pages
+
 1 stars
 Build the necessary pages that will allow Landscape to interact with a Calendar Gall app
 
-
 ### Working integration with Gall app
+
 1 stars
 Fully capable of importing an .ics calendar, creating new events, looking through existing events in the calendar of a ship.
-
-    

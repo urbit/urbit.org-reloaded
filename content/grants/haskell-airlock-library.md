@@ -2,7 +2,7 @@
 title = "Haskell Airlock Library"
 date = 2020-06-25
 [taxonomies]
-grant_type = ["bounties"]
+grant_type = ["Bounty"]
 grant_category = ["Core Dev"]
 [extra]
 image = ""
@@ -14,7 +14,7 @@ completed = true
 link = ""
 +++
 
-Create an Airlock library for the Haskell programming language. Airlock is the set of HTTP APIs for communicating with an Urbit. This bounty will involve creating a Haskell library wrapper for the server side event and HTTP API. 
+Create an Airlock library for the Haskell programming language. Airlock is the set of HTTP APIs for communicating with an Urbit. This bounty will involve creating a Haskell library wrapper for the server side event and HTTP API.
 
 Additionally, write a one-page explanation for the design choices for this library in the readme. If you have ideas for what Urbit applications would be useful for this library, please also include those suggestions in the readme.
 
@@ -23,7 +23,6 @@ Additionally, write a one-page explanation for the design choices for this libra
 - https://github.com/urbit/urbit/blob/master/pkg/arvo/sys/vane/eyre.hoon#L493
 - https://github.com/baudtack/urlock-py
 - [UrlockPy as an example of an Airlock integration](https://github.com/urbit/docs/pull/892)
-
 
 ### Contribution Guidelines:
 
@@ -34,12 +33,9 @@ Additionally, write a one-page explanation for the design choices for this libra
 - You have 90 days from the time of approval to complete this bounty.
 - Successful completion of this bounty may result in an invitation to complete other Airlock library bounties. If you are interested in creating an Airlock library for a language other than the ones currently presented, please contact us at grants@urbit.org ; it’s likely we’ll approve this as a proposal.
 
-
 ## Milestones
 
-
 ### Your work is finished
+
 3 stars
 You have completed your work and pushed it to a Github repo.
-
-    

@@ -39,7 +39,7 @@ export default function Home({ posts, events, openGrantsCount }) {
                 <h2 className="p-0 m-0 pb-2">Introducing</h2>
                 <h2 className="text-green p-0 m-0">Port</h2>
               </div>
-              <h3 className="pb-8">The Urbit client, now in beta.</h3>
+              <h4 className="pb-8">The Urbit client, now in beta.</h4>
               <p className="pb-24">
                 Getting into Urbit is now as simple as installing an app on your
                 computer.
@@ -70,19 +70,19 @@ export default function Home({ posts, events, openGrantsCount }) {
           <div className="flex flex-col md:flex-row w-full items-center bg-washedGreen px-8 py-8 rounded-xl">
             <div className="flex items-center flex-col p-4 w-full">
               <h2 className="text-green">200+</h2>
-              <h3 className="text-green text-center pt-2">
+              <h4 className="text-green text-center pt-2">
                 Urbit stars awarded
-              </h3>
+              </h4>
             </div>
             <div className="h-0 w-0 md:h-24 md:w-4 bg-lightGreen" />
             <div className="flex items-center flex-col p-4 w-full">
               <h2 className="text-green">1M+</h2>
-              <h3 className="text-green text-center pt-2">USD Rewarded</h3>
+              <h4 className="text-green text-center pt-2">USD Rewarded</h4>
             </div>
             <div className="h-0 w-0 md:h-24 md:w-4 bg-lightGreen" />
             <div className="flex items-center flex-col p-4 w-full">
               <h2 className="text-green">90+</h2>
-              <h3 className="text-green text-center pt-2">Grants completed</h3>
+              <h4 className="text-green text-center pt-2">Grants completed</h4>
             </div>
           </div>
           <div className="measure py-12">
@@ -104,10 +104,10 @@ export default function Home({ posts, events, openGrantsCount }) {
         <section className="layout-narrow">
           <div className="measure">
             <h2 className="pb-12">Build on Urbit</h2>
-            <h3 className="pb-12">
+            <h4 className="pb-12">
               Urbit is a personal OS designed from scratch to run peer-to-peer
               applications.
-            </h3>
+            </h4>
             <p className="pb-12">
               It solves the hard problems of implementing a peer-to-peer network
               (including identity, NAT traversal, and exactly-once delivery) in

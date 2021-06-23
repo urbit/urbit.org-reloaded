@@ -2,8 +2,8 @@
 title = "Display ETH Data"
 date = 2020-01-31
 [taxonomies]
-grant_type = ["bounties"]
-grant_category = ["App Dev: Arvo"]
+grant_type = ["Bounty"]
+grant_category = ["App Dev", "Arvo"]
 [extra]
 image = ""
 description = "The Urbit identity system uses a suite of Ethereum contracts as its PKI. As such, a lot of Ethereum-related functionality is available within the system."
@@ -26,7 +26,7 @@ Create a gall application, and a user interface for that application, that are u
 - Set up with just contract address, retrieving ABI from etherscan.io API.
 - Stores lists of events and relevant details per contract and config, and make them available to the user interface.
 
-##### User interface 
+##### User interface
 
 - Allows adding/removing watched contracts per the above app interface.
 - Displays events, per contract+config or for all watched, in readable format (ie, "Transfer: from: 0xabc, to: 0xdef, value: 123", with block number or timestamp, link to transaction on Etherscan.")
@@ -45,12 +45,9 @@ Create a gall application, and a user interface for that application, that are u
 - When applying to work on the bounty, tell us a little about yourself and some projects you’ve worked on in the past.
 - You have 90 days from the time of approval to complete this bounty.
 
-
 ## Milestones
 
-
 ### Work is finished
+
 1 stars
 Your work has been finished and accepted.
-
-    

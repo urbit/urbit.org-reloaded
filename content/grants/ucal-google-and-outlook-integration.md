@@ -2,8 +2,8 @@
 title = "ucal Google and Outlook Integration"
 date = 2021-05-13
 [taxonomies]
-grant_type = ["bounties"]
-grant_category = ["App Dev: Arvo"]
+grant_type = ["Bounty"]
+grant_category = ["App Dev", "Arvo"]
 [extra]
 image = ""
 description = "Extend the Urbit Calendar (ucal) to integrate with other calendaring systems."
@@ -22,9 +22,9 @@ Tools like the iPhone Calendar app handle this by syncing from and to those cale
 
 This is a project intended primarily for developer use. Once it is completed, it will:
 
- - unlock further development of ucal for end users
- - allow use of Urbit ucal as a single source of truth to manage a user's schedule, inside and outside of Urbit
- - enable future integration with WebRTC for native Urbit video calls and ephemeral chats
+- unlock further development of ucal for end users
+- allow use of Urbit ucal as a single source of truth to manage a user's schedule, inside and outside of Urbit
+- enable future integration with WebRTC for native Urbit video calls and ephemeral chats
 
 ### End Product
 
@@ -34,22 +34,22 @@ The step of "pushing" events to Google, Outlook and other ucal users should be i
 
 todo: find out which files the below goes into and where the ICS type is.
 
- - mar
+- mar
   -- modify the grow arm to take an ICS Hoon type and convert to a valid ICS calendar file
- - lib
+- lib
   -- add a converter from ICS to
- - ted
+- ted
   -- take a user's authentication info
   -- pull Google or Outlook ICS file
   -- convert into Hoon format
   -- push Hoon calendar events to Google or Outlook
   -- push calendar events to other ucal users
- - tests
+- tests
   -- unit tests of outside ICS files parsing into Hoon format
   -- unit tests of Hoon calendar structures into ICS
   -- unit test producing "cards" representing calendar event updates
   -- thread testing of syncing
- - possible external code
+- possible external code
   -- handle situation when extra auth flows are needed with Google/MS.
   -- could require a webpage to be opened to generate an OAuth code or similar
 
@@ -59,26 +59,24 @@ This code will not need to be merged into Urbit core.
 
 As a developer, I want to
 
- - input credentials for a Google or Outlook calendar
- - retrieve ICS files associated with those credentials
- - create/modify events
- - push out created/modified events as updates to ucal or external users
+- input credentials for a Google or Outlook calendar
+- retrieve ICS files associated with those credentials
+- create/modify events
+- push out created/modified events as updates to ucal or external users
 
 ### Resources and Workflow
- - Improvements will be PRs to the https://github.com/taalhavras/ucal/ project
- - Contributor will check in weekly with a Foundation director
- - Current ucal contributors
- - Example article on pulling ICS files from those services: https://www.digitaltrends.com/computing/how-to-sync-outlook-calendar-with-google-calendar/
+
+- Improvements will be PRs to the https://github.com/taalhavras/ucal/ project
+- Contributor will check in weekly with a Foundation director
+- Current ucal contributors
+- Example article on pulling ICS files from those services: https://www.digitaltrends.com/computing/how-to-sync-outlook-calendar-with-google-calendar/
 
 ### Milestones
 
-1) Data conversion, sync and calendar updates
+1. Data conversion, sync and calendar updates
    Estimate: 21 days - a month | Reward: 2 Stars
 
-    - handle credential imput and auth flows
-    - handle syncing
-    - push updates to Google/Outlook calendars from CLI
-    - push updates to Urbit Calendar
-
-
-    
+   - handle credential imput and auth flows
+   - handle syncing
+   - push updates to Google/Outlook calendars from CLI
+   - push updates to Urbit Calendar

@@ -1,9 +1,9 @@
 +++
-title = "Apprenticeship: Marketplace"
+title = "Marketplace"
 date = 2021-05-27
 [taxonomies]
-grant_type = ["apprenticeships"]
-grant_category = ["App Dev: Arvo"]
+grant_type = ["Apprenticeship"]
+grant_category = ["App Dev", "Arvo"]
 [extra]
 image = ""
 description = "A marketplace in which users can post items for sale and browse goods for sale by other users."
@@ -20,7 +20,6 @@ The most likely architecture has users hosting their items, with aggregator-type
 
 Simple versions of this can be implemented to learn userspace programming, and a particular good design could become its own product.
 
-
 ## User Stories
 
 As a user I can:
@@ -31,4 +30,3 @@ As a user I can:
 - buy products
 - sell products
 - have a 3rd party confirm when a sale is complete
-

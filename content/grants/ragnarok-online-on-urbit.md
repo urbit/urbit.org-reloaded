@@ -2,8 +2,8 @@
 title = "Ragnarok Online on Urbit"
 date = 2019-08-30
 [taxonomies]
-grant_type = ["proposals"]
-grant_category = ["App Dev: Other"]
+grant_type = ["Proposal"]
+grant_category = ["App Dev"]
 [extra]
 image = ""
 description = "Landscape app that supports registering an urbit ID with an RO server, exposing various account management actions and guild / channel chats"
@@ -16,7 +16,6 @@ link = ""
 +++
 
 # Ragnarok Online on Urbit
-
 
 This is a Landscape / Gall app proposal for registering an urbit ID with an account in an MMORPG, with initial support for Ragnarok Online and exposing various actions like inventory management, friend lists, guild / main chat, and in-game market tools. Most importantly, account state will be persisted on your ship and can be transferred between supported servers.
 
@@ -36,19 +35,17 @@ Other potential outcomes:
 
 ## Milestones
 
+### Gall app
 
-### Gall app 
 1 stars
 A gall app that handles updates to all linked character states and relevant game state. The data model should be constructed with an eye towards supporting multiple games and permissioning
 
-
 ### Frontend UI
+
 1 stars
 Character and game state display. Should be able to view various server and character stats as well as read chat channels. Character creation and account deletion as well.
 
-
 ### Working connection to RO server
+
 1 stars
 A customized urbit RO server that only accepts @p logins and a documented communication pattern with the gall app.
-
-    

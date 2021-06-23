@@ -2,7 +2,7 @@
 title = "Minimal Urbit OS"
 date = 2021-01-20
 [taxonomies]
-grant_type = ["proposals"]
+grant_type = ["Proposal"]
 grant_category = ["Core Dev"]
 [extra]
 image = ""
@@ -21,6 +21,7 @@ It will be designed and built with the larger goal of identifying and isolating 
 This OS is intended to be a foundation for most of the different environments where people will want to run Urbit. It will be simple for future projects to combine this OS with an overlay that includes software specific to the target environment.
 
 Possible environments:
+
 - local server
 - single cloud server
 - planet hosting provider
@@ -33,24 +34,22 @@ Qualifications: I recently installed Gentoo on a 20 year old ThinkPad for fun.
 
 ## Milestones
 
-
 ### Proof of concept
+
 1 stars
 A minimal VM that supports booting and running a comet for several hours with a small amount of manual setup
 
-
 ### System architecture plan
+
 1 stars
 A diagram and written overview of all components and their dependencies, explaining how the system works and why those components were chosen. I will seek input from Tlon.
 
-
 ### Usable OS image
+
 2 stars
 A reasonably stable and complete OS image that testers can use for hosting their planets
 
-
 ### Documentation and fixes
+
 2 stars
 Documentation for the entire system and build process, including specs for each component and ideas for replacements within Urbit. The OS will be updated to address known problems.
-
-    

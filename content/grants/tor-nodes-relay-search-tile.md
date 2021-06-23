@@ -2,8 +2,8 @@
 title = "Tor Nodes Relay Search Tile"
 date = 2020-03-31
 [taxonomies]
-grant_type = ["bounties"]
-grant_category = ["App Dev: Arvo"]
+grant_type = ["Bounty"]
+grant_category = ["App Dev", "Arvo"]
 [extra]
 image = ""
 description = "An Urbit-native Tor search-tool."
@@ -19,7 +19,7 @@ link = ""
 
 Create a backend for importing Tor network node relay search data into Urbit, and design a Landscape tile which will serve as a functional search tool for Tor relay node information inside Urbit.
 
-We would like to create an Urbit-native Tor node relay search tool which replicates the same functions as the search tool linked below. 
+We would like to create an Urbit-native Tor node relay search tool which replicates the same functions as the search tool linked below.
 
 ### Resources
 
@@ -33,15 +33,11 @@ We would like to create an Urbit-native Tor node relay search tool which replica
 - Submit your work as a pull request to the [urbit/urbit](https://github.com/urbit/urbit) repo
 - When applying to work on the bounty, tell us a little about yourself and some projects you’ve worked on in the past.
 - You have 90 days from the time of approval to complete this bounty.
-- Successful completion of this bounty may result in an invitation to complete other API integration bounties. 
-
-
+- Successful completion of this bounty may result in an invitation to complete other API integration bounties.
 
 ## Milestones
 
-
 ### Your PR is merged
+
 3 stars
 Your code is accepted and merged.
-
-    
