@@ -69,7 +69,6 @@ function EventCard(props) {
 }
 
 export default function Events({ pastEvents, currentEvents }) {
-  console.log(currentEvents);
   return (
     <Container>
       <SingleColumn>

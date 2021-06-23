@@ -60,9 +60,11 @@ export default function Home({ posts, events, openGrantsCount }) {
           <div className="flex flex-col md:flex-row md:items-center measure pb-12">
             <h2 className="m-0 p-0 mr-4 md:mb-0 mb-4">Urbit Grants</h2>
             <div>
-              <button className="bg-green text-white badge-lg">
-                {openGrantsCount} Open
-              </button>
+              <Link href="/grants">
+                <a className="bg-green text-white badge-lg">
+                  {openGrantsCount} Open
+                </a>
+              </Link>
             </div>
           </div>
           <div className="flex flex-col md:flex-row w-full items-center bg-washedGreen px-8 py-8 rounded-xl">
@@ -88,9 +90,11 @@ export default function Home({ posts, events, openGrantsCount }) {
               We regularly give away address space to reward community
               contributions, including education, promotion, and development.
             </p>
-            <button className="button-lg bg-green text-white">
-              View Grants
-            </button>
+            <div className="table">
+              <Link href="/grants">
+                <a className="button-lg bg-green text-white">View Grants</a>
+              </Link>
+            </div>
           </div>
         </section>
 

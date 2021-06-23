@@ -49,6 +49,10 @@ h4,
   @apply text-base md:text-lg lg:text-xl font-semibold;
 }
 
+.type-ui-small {
+  @apply text-sm lg:text-base font-medium;
+}
+
 p,
 .type-p {
   @apply text-base md:text-lg lg:text-xl;
@@ -79,12 +83,21 @@ button {
   @apply flex px-4 lg:px-6 py-2 rounded-lg h-12 md:h-16 flex-center type-ui;
 }
 
+.badge-sm {
+  @apply flex type-ui-small px-2 lg:px-3 items-center justify-center h-8 md:h-10 rounded-full;
+}
+
 .badge-lg {
   @apply flex type-ui px-4 lg:px-6 items-center justify-center h-12 md:h-16 rounded-full;
 }
 
 .tab-button-lg {
   @apply type-h2 h-16;
+  overflow: visible;
+}
+
+.tab-button-sm {
+  @apply type-ui h-12;
   overflow: visible;
 }
 
