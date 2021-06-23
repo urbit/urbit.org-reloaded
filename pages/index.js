@@ -9,10 +9,10 @@ import BackgroundImage from "../components/BackgroundImage";
 import TabCarousel from "../components/TabCarousel";
 import NewsletterSignup from "../components/NewletterSignup";
 import PostPreview from "../components/PostPreview";
-import { getAllPosts, formatDate } from "../lib/lib";
+import { getAllPosts, formatDate, getOpenGrantsCount } from "../lib/lib";
 import { contact } from "../lib/constants";
 
-export default function Home({ posts, events }) {
+export default function Home({ posts, events, openGrantsCount }) {
   const [tab, setTab] = useState(0);
 
   return (
@@ -60,7 +60,9 @@ export default function Home({ posts, events }) {
           <div className="flex flex-col md:flex-row md:items-center measure pb-12">
             <h2 className="m-0 p-0 mr-4 md:mb-0 mb-4">Urbit Grants</h2>
             <div>
-              <button className="bg-green text-white badge-lg">32 Open</button>
+              <button className="bg-green text-white badge-lg">
+                {openGrantsCount} Open
+              </button>
             </div>
           </div>
           <div className="flex flex-col md:flex-row w-full items-center bg-washedGreen px-8 py-8 rounded-xl">
@@ -263,6 +265,8 @@ export default function Home({ posts, events }) {
 }
 
 export async function getStaticProps() {
+  const openGrantsCount = getOpenGrantsCount();
+
   const posts = getAllPosts(
     ["title", "slug", "date", "description", "extra"],
     "blog"
@@ -271,6 +275,6 @@ export async function getStaticProps() {
   const events = getAllPosts(["title", "slug", "date", "extra"], "events");
 
   return {
-    props: { posts, events },
+    props: { posts, events, openGrantsCount },
   };
 }
