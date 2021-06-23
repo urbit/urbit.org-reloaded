@@ -8,8 +8,6 @@ hide_next_title = "true"
 hide_previous_title = "true"
 +++
 
-# Roadmap: Landscape 1 → 3
-
 Let’s talk about where we’d like Urbit to go and how we’re going to get there.
 
 We’re working to build Urbit ID + Urbit OS into a human-scale replacement for the industrial-grade software stack that powers our centralized apps and services today. In time, we want Urbit to be as robust as Unix and the internet protocol suite that today’s stack rests on. We look forward to a future where Urbit is a standardized, unremarkable, ubiquitous computing substrate used and owned by everyone.
@@ -26,7 +24,7 @@ As Urbit matures, other killer digital environments may emerge—but Landscape i
 
 <br>
 
-![A Landscape](https://storage.googleapis.com/media.urbit.org/tlon/landscape.jpg)
+![A Landscape](https://storage.googleapis.com/media.urbit.org/tlon/landscape.png)
 
 Today, we pour all of our focus into making Landscape a comfortable place for digital communities to call home, starting with our own. This effort forces us to mature the entire stack, from the interpreter to the interface. 
 
