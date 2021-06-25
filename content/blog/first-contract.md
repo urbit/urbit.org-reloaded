@@ -252,7 +252,7 @@ Urbit would be that the Senate makes sweeping changes to the PKI and invites a
 schism like that outlined above.
 
 For these reasons, there are strong disincentives for any one organization or
-individual to acquire too many galaxies. If galaxy owenship becomes more centralized, individuals will be less incentivized to build on the network which will reduce the value of address space. Furthermore, such centralization might provoke a fork if such centralized powers are perceived as malicious by the users. This is in contrast to real-life republics, where there is little risk
+individual to acquire too many galaxies. If galaxy ownership becomes more centralized, individuals will be less incentivized to build on the network which will reduce the value of address space. Furthermore, such centralization might provoke a fork if such centralized powers are perceived as malicious by the users. This is in contrast to real-life republics, where there is little risk
 for one party to accumulate as much power as they can manage since the cost to
 the citizens to overthrow that power is enormous. Thus, only especially
 egregious displays of power ever result in rebellion. Within the Urbit republic,
