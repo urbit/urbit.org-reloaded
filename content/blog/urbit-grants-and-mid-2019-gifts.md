@@ -5,6 +5,7 @@ description = "Announcing an upcoming Urbit grants program and star gifts for Mi
 aliases = ["/posts/essays/urbit-grants-and-mid-2019-gifts", "/posts/urbit-grants-and-mid-2019-gifts"]
 [taxonomies]
 grant_type = ["Gift"]
+grant_category = []
 [extra]
 author = "Galen Wolfe-Pauly + Alex Matzner"
 ship = "~ravmel-ropdyl + ~mignyt-mogseb"

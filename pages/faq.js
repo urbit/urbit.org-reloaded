@@ -2,7 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
 import Container from "../components/Container";
-import Search from "../components/Search";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SingleColumn from "../components/SingleColumn";
@@ -10,15 +9,13 @@ import BackgroundImage from "../components/BackgroundImage";
 import { getAllPosts, formatDate } from "../lib/lib";
 
 export default function Blog({ posts }) {
-  const [showSearch, toggleSearch] = useState(false);
   return (
-    <Container toggleSearch={() => toggleSearch((state) => !state)}>
-      {showSearch && <Search toggleSearch={() => toggleSearch(false)} />}
+    <Container>
       <SingleColumn>
-        <Header toggleSearch={() => toggleSearch(true)} />
+        <Header />
         <section className="layout-wide">
           <div className="measure">
-            <h2 className="pb-16">FAQ</h2>
+            <h2 className="pb-16">Urbit Blog</h2>
             <p className="pb-6">
               Stories from the broader Urbit community, the Urbit Foundation,
               and the many people contributing to Urbit.
@@ -78,7 +75,7 @@ export default function Blog({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = getAllPosts(
+  const posts = getPostBySlug(
     ["title", "slug", "date", "description", "extra"],
     "blog"
   );

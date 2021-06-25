@@ -4,6 +4,7 @@ date = 2020-09-23
 description = "Twice a year we distribute address space to those that have made valuable contributions to Urbit. Now called our Gifts program, the gifting of address space has been part of Urbit long before we had a grants program."
 [taxonomies]
 grant_type = ["Gift"]
+grant_category = []
 [extra]
 author = "Josh Lehman"
 ship = "~wolref-podlex"

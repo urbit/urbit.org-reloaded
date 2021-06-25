@@ -59,15 +59,13 @@ export default function Home({ posts, events, openGrantsCount }) {
           // Grants
         }
         <section className="layout-narrow">
-          <div className="flex flex-col md:flex-row md:items-center measure pb-12">
+          <div className="flex flex-col md:flex-row md:items-center items-start measure pb-12">
             <h2 className="m-0 p-0 mr-4 md:mb-0 mb-4">Urbit Grants</h2>
-            <div>
-              <Link href="/grants">
-                <a className="bg-green text-white badge-lg">
-                  {openGrantsCount} Open
-                </a>
-              </Link>
-            </div>
+            <Link href="/grants">
+              <a className="bg-green text-white badge-lg">
+                {openGrantsCount} Open
+              </a>
+            </Link>
           </div>
           <div className="flex flex-col md:flex-row w-full items-center bg-washedGreen px-8 py-8 rounded-xl">
             <div className="flex items-center flex-col p-4 w-full">
