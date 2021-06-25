@@ -6,6 +6,7 @@ import { join } from "path";
 import { buildPageTree, getPage } from "../lib/lib";
 import Markdown from "../components/Markdown";
 import Search from "../components/Search";
+import { configure, GlobalHotKeys } from "react-hotkeys";
 
 const breadcrumbs = (posts, paths) => {
   const results = [
@@ -108,12 +109,19 @@ function ContentArea(props) {
 
 export default function DocsLayout({ posts, data, content }) {
   const [showSearch, toggleSearch] = useState(false);
+  const toggle = () => toggleSearch((state) => !state);
+  const keyMap = { search: ["command+k", "ctrl+k", "esc"] };
+  const handlers = { search: toggle };
+  configure({
+    ignoreTags: [],
+  });
   return (
     <div className="flex w-screen h-screen min-h-screen w-screen overflow-hidden">
+      <GlobalHotKeys keyMap={keyMap} handlers={handlers} />
       <Head>
         <title>Documentation / Urbit.org</title>
       </Head>
-      {showSearch && <Search toggleSearch={() => toggleSearch(!showSearch)} />}
+      {showSearch && <Search toggleSearch={() => toggleSearch(false)} />}
       <Sidebar>{childPages("/docs", posts.children)}</Sidebar>
       <ContentArea
         breadcrumbs={breadcrumbs(posts, [])}
