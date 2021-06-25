@@ -6,6 +6,8 @@ import classnames from "classnames";
 import { join } from "path";
 import { getDocs, formatDate, buildPageTree, getPage } from "../../lib/lib";
 import Markdown from "../../components/Markdown";
+import ContentArea from "../../components/ContentArea";
+import Sidebar from "../../components/Sidebar";
 
 const breadcrumbs = (posts, paths) => {
   const results = [
@@ -38,78 +40,59 @@ const pageTree = (thisLink, tree, level = 0) => {
   const firstCrumb = "/" + router.asPath.split("/").slice(1, -1).join("/");
 
   const includesThisPage = firstCrumb.includes(thisLink);
-  const isThisPage = firstCrumb === thisLink;
+  const isThisPage = router.asPath === thisLink;
   const [isOpen, toggleTree] = useState(includesThisPage);
 
   const activeClasses = classnames({
     hidden: !isOpen,
   });
 
-  const headerClass = classnames({
-    "text-gray": !isThisPage,
+  const headingItemClasses = classnames({
+    "pl-0 text-black text-base font-semibold hover:text-green leading-relaxed":
+      level === 0,
+    "pl-4 text-black text-base font-semibold hover:text-green": level === 1,
+    "pl-8 text-black text-base hover:text-green": level === 2,
+  });
+
+  const pageItemClasses = classnames({
+    "pl-4 text-black text-base hover:text-green": level === 0,
+    "pl-8 text-black text-base hover:text-green": level === 1,
+    "pl-12 text-black text-base hover:text-green": level === 2,
     dot: isThisPage,
   });
+
   return (
     <>
-      <span
-        className={
-          "font-medium text-lg cursor-pointer hover:text-black relative " +
-          headerClass
-        }
-        onClick={() => toggleTree(!isOpen)}
-      >
-        {tree.title}
+      <span onClick={() => toggleTree(!isOpen)}>
+        <p className={`${headingItemClasses} cursor-pointer`}>{tree.title}</p>
       </span>
       <div className={activeClasses}>
         <ul className={"pl-1"}>
-          {tree.pages
-            .sort((a, b) => a.weight - b.weight)
-            .map(({ title, slug }) => (
-              <li className="font-thin py-1">
-                <Link href={join(thisLink, slug)}>{title}</Link>
+          {tree.pages.map(({ title, slug }) => {
+            const href = join(thisLink, slug);
+            const isSelected = router.asPath === href;
+            const selectedClasses = classnames({
+              dot: isSelected,
+              "text-green": isSelected,
+            });
+            return (
+              <li>
+                <Link href={href}>
+                  <a
+                    className={`relative ${pageItemClasses} ${selectedClasses}`}
+                  >
+                    {title}
+                  </a>
+                </Link>
               </li>
-            ))}
+            );
+          })}
         </ul>
         {childPages(thisLink, tree.children, level + 1)}
       </div>
     </>
   );
 };
-
-function Sidebar(props) {
-  return (
-    <div className="flex flex-col w-72 bg-wall max-h-screen h-screen">
-      <header className="flex flex-shrink-0 justify-between items-center pl-12 pt-12 pb-8">
-        <Link href="/">
-          <a className="type-ui text-gray">Urbit.org</a>
-        </Link>
-      </header>
-      <div className="overflow-y-scroll p-12 pt-16">
-        {props.children}
-        <div className="pb-32" />
-      </div>
-    </div>
-  );
-}
-
-function ContentArea(props) {
-  return (
-    <div className="w-full">
-      <header className="flex justify-between items-center px-24 pt-12 pb-8">
-        <div className="type-ui">Urbit Documentation</div>
-        <button className="button-sm bg-wall text-gray">
-          Search Urbit.org<div className="ml-4 text-lightGray">⌘K</div>
-        </button>
-      </header>
-      <div className="px-24 pb-24 pt-16 flex flex-col w-full max-h-screen h-screen overflow-y-scroll">
-        <div className="type-ui text-lightGray">{props.breadcrumbs}</div>
-        <h2 className="mb-16 mt-4">{props.title}</h2>
-        {props.children}
-        <div className="pb-32" />
-      </div>
-    </div>
-  );
-}
 
 export default function DocsLayout({ posts, data, content, params }) {
   return (
@@ -120,7 +103,7 @@ export default function DocsLayout({ posts, data, content, params }) {
       <div className="flex w-screen h-screen min-h-screen w-screen overflow-hidden">
         <Sidebar>{childPages("/docs", posts.children)}</Sidebar>
         <ContentArea
-          breadcrumbs={breadcrumbs(posts, params.slug.slice(0, -1))}
+          breadcrumbs={breadcrumbs(posts, params.slug?.slice(0, -1) || "")}
           title={data.title}
         >
           <Markdown post={{ content: content }} />
@@ -132,15 +115,18 @@ export default function DocsLayout({ posts, data, content, params }) {
 
 export async function getStaticProps({ params }) {
   const posts = buildPageTree(join(process.cwd(), "content/docs"), "weight");
+
   const { data, content } = getPage(
-    join(process.cwd(), "content/docs", params.slug.join("/"))
+    join(process.cwd(), "content/docs", params.slug?.join("/") || "/")
   );
+
   return { props: { posts, data, content, params } };
 }
 
 export async function getStaticPaths() {
   const posts = buildPageTree(join(process.cwd(), "content/docs"), "weight");
   const slugs = [];
+
   const allHrefs = (thisLink, tree) => {
     slugs.push(thisLink, ...tree.pages.map((e) => join(thisLink, e.slug)));
     allHrefsChildren(thisLink, tree.children);
@@ -151,9 +137,11 @@ export async function getStaticPaths() {
       allHrefs(join(thisLink, childSlug), child);
     });
   };
+
   allHrefs("/docs", posts);
+
   return {
-    paths: slugs.filter((e) => e !== "/docs"),
+    paths: slugs,
     fallback: false,
   };
 }

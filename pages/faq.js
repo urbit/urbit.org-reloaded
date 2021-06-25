@@ -8,14 +8,14 @@ import SingleColumn from "../components/SingleColumn";
 import BackgroundImage from "../components/BackgroundImage";
 import { getAllPosts, formatDate } from "../lib/lib";
 
-export default function Faq({ posts }) {
+export default function Blog({ posts }) {
   return (
     <Container>
       <SingleColumn>
         <Header />
         <section className="layout-wide">
           <div className="measure">
-            <h2 className="pb-16">FAQ</h2>
+            <h2 className="pb-16">Urbit Blog</h2>
             <p className="pb-6">
               Stories from the broader Urbit community, the Urbit Foundation,
               and the many people contributing to Urbit.
@@ -75,7 +75,7 @@ export default function Faq({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = getAllPosts(
+  const posts = getPostBySlug(
     ["title", "slug", "date", "description", "extra"],
     "blog"
   );

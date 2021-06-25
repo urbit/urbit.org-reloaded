@@ -50,7 +50,7 @@ function MenuTray(props) {
 export default function Header() {
   const [isOpen, toggleTray] = useState(false);
   return (
-    <header className="layout-wide flex justify-between items-center pt-8">
+    <header className="layout-wide flex justify-between items-center pt-12">
       <div className="absolute z-10">
         <Link href="/">
           <a className="type-ui">Urbit</a>

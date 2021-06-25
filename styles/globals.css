@@ -31,12 +31,12 @@ p a {
 
 h1,
 .type-h1 {
-  @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-relaxed;
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
 }
 
 h2,
 .type-h2 {
-  @apply text-3xl md:text-4xl lg:text-5xl font-bold;
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
 }
 
 h3,
@@ -88,7 +88,7 @@ button {
 }
 
 .badge-lg {
-  @apply flex type-ui px-4 lg:px-6 items-center justify-center h-12 md:h-16 rounded-full;
+  @apply flex type-ui px-4 lg:px-6 items-center justify-center h-10 md:h-14 rounded-full;
 }
 
 .tab-button-lg {
@@ -152,9 +152,12 @@ a:hover {
 }
 
 .dot::before {
-  content: "·";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 99px;
+  content: "";
   position: absolute;
-  left: -16px;
-  margin-top: -2px;
-  font-size: 3rem;
+  left: -1.25rem;
+  top: 0.4rem;
+  @apply bg-green;
 }
