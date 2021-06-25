@@ -5,6 +5,7 @@ import Container from "../components/Container";
 import SingleColumn from "../components/SingleColumn";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Search from "../components/Search";
 import BackgroundImage from "../components/BackgroundImage";
 import TabCarousel from "../components/TabCarousel";
 import NewsletterSignup from "../components/NewletterSignup";
@@ -14,10 +15,10 @@ import { contact } from "../lib/constants";
 
 export default function Home({ posts, events, openGrantsCount }) {
   const [tab, setTab] = useState(0);
-
   return (
     <Container>
       <SingleColumn>
+        <Search />
         <Header />
 
         {

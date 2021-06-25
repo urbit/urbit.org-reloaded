@@ -6,6 +6,7 @@ import classnames from "classnames";
 import { join } from "path";
 import { getDocs, formatDate, buildPageTree, getPage } from "../../lib/lib";
 import Markdown from "../../components/Markdown";
+import Search from "../../components/Search";
 
 const breadcrumbs = (posts, paths) => {
   const results = [
@@ -117,6 +118,7 @@ export default function DocsLayout({ posts, data, content, params }) {
       <Head>
         <title>{data.title} / Documentation / Urbit.org</title>
       </Head>
+      <Search />
       <div className="flex w-screen h-screen min-h-screen w-screen overflow-hidden">
         <Sidebar>{childPages("/docs", posts.children)}</Sidebar>
         <ContentArea

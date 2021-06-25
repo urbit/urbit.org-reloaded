@@ -4,6 +4,7 @@ import { useState } from "react";
 import Container from "../components/Container";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Search from "../components/Search";
 import SingleColumn from "../components/SingleColumn";
 import BackgroundImage from "../components/BackgroundImage";
 import { getAllPosts, formatDate } from "../lib/lib";
@@ -71,6 +72,7 @@ function EventCard(props) {
 export default function Events({ pastEvents, currentEvents }) {
   return (
     <Container>
+      <Search />
       <SingleColumn>
         <Header />
         <section className="layout-wide">

@@ -2,10 +2,12 @@ import Container from "../components/Container";
 import SingleColumn from "../components/SingleColumn";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Search from "../components/Search";
 
 export default function NotFound() {
   return (
     <Container>
+      <Search />
       <SingleColumn>
         <Header />
         <section className="layout-wide pt-48">

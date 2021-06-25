@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
 import Container from "../components/Container";
+import Search from "../components/Search";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SingleColumn from "../components/SingleColumn";
@@ -11,6 +12,7 @@ import { getAllPosts, formatDate } from "../lib/lib";
 export default function Blog({ posts }) {
   return (
     <Container>
+      <Search />
       <SingleColumn>
         <Header />
         <section className="layout-wide">

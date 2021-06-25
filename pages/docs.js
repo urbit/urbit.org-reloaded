@@ -5,6 +5,7 @@ import classnames from "classnames";
 import { join } from "path";
 import { buildPageTree, getPage } from "../lib/lib";
 import Markdown from "../components/Markdown";
+import Search from "../components/Search";
 
 const breadcrumbs = (posts, paths) => {
   const results = [

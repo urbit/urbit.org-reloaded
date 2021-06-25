@@ -5,6 +5,7 @@ import classnames from "classnames";
 import Container from "../components/Container";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Search from "../components/Search";
 import SingleColumn from "../components/SingleColumn";
 import BackgroundImage from "../components/BackgroundImage";
 import TabCarousel from "../components/TabCarousel";
@@ -79,6 +80,7 @@ export default function Grants({ posts, categories, types, featuredGrants }) {
   return (
     <Container>
       <SingleColumn>
+        <Search />
         <Header />
         {
           // Heading and introduction

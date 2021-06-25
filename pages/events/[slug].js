@@ -13,6 +13,7 @@ import Container from "../../components/Container";
 import Markdown from "../../components/Markdown";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Search from "../../components/Search";
 import BackgroundImage from "../../components/BackgroundImage";
 import SingleColumn from "../../components/SingleColumn";
 import NewsletterSignup from "../../components/NewletterSignup";
@@ -27,6 +28,7 @@ export default function Event({ post, nextPost, previousPost }) {
 
   return (
     <Container>
+      <Search />
       <SingleColumn>
         <Header />
         <section className="flex flex-col layout-wide pt-24">
