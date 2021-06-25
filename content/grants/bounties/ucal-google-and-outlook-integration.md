@@ -7,7 +7,7 @@ grant_category = ["App Dev: Arvo"]
 [extra]
 image = ""
 description = "Extend the Urbit Calendar (ucal) to integrate with other calendaring systems."
-reward = 1
+reward = 2
 assignee = ""
 id = ""
 completed = false
