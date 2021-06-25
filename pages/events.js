@@ -4,6 +4,7 @@ import { useState } from "react";
 import Container from "../components/Container";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Search from "../components/Search";
 import SingleColumn from "../components/SingleColumn";
 import BackgroundImage from "../components/BackgroundImage";
 import { getAllPosts, formatDate } from "../lib/lib";
@@ -69,10 +70,14 @@ function EventCard(props) {
 }
 
 export default function Events({ pastEvents, currentEvents }) {
+  const [showSearch, toggleSearch] = useState(false);
   return (
-    <Container>
+    <Container toggleSearch={() => toggleSearch((state) => !state)}>
+      {showSearch && (
+        <Search toggleSearch={() => toggleSearch(!toggleSearch)} />
+      )}
       <SingleColumn>
-        <Header />
+        <Header toggleSearch={() => toggleSearch(true)} />
         <section className="layout-wide">
           <div className="measure">
             <h2 className="pb-16">Urbit Events</h2>

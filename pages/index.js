@@ -5,6 +5,7 @@ import Container from "../components/Container";
 import SingleColumn from "../components/SingleColumn";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Search from "../components/Search";
 import BackgroundImage from "../components/BackgroundImage";
 import TabCarousel from "../components/TabCarousel";
 import NewsletterSignup from "../components/NewletterSignup";
@@ -14,11 +15,12 @@ import { contact } from "../lib/constants";
 
 export default function Home({ posts, events, openGrantsCount }) {
   const [tab, setTab] = useState(0);
-
+  const [showSearch, toggleSearch] = useState(false);
   return (
-    <Container>
+    <Container toggleSearch={() => toggleSearch((state) => !state)}>
       <SingleColumn>
-        <Header />
+        {showSearch && <Search toggleSearch={() => toggleSearch(false)} />}
+        <Header toggleSearch={() => toggleSearch(true)} />
 
         {
           // Hero Statement

@@ -3,7 +3,13 @@ export default function ContentArea(props) {
     <div className="w-full">
       <header className="flex justify-between items-center px-24 pt-12 pb-8">
         <div className="type-ui">Urbit Documentation</div>
-        <button className="button-sm bg-wall text-gray">
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            props.toggleSearch();
+          }}
+          className="button-sm bg-wall text-gray"
+        >
           Search Urbit.org<div className="ml-4 text-lightGray">⌘K</div>
         </button>
       </header>

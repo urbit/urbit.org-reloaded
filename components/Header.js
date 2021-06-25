@@ -47,7 +47,7 @@ function MenuTray(props) {
 }
 
 // This is the header for the index page
-export default function Header() {
+export default function Header(props) {
   const [isOpen, toggleTray] = useState(false);
   return (
     <header className="layout-wide flex justify-between items-center pt-12">
@@ -73,7 +73,13 @@ export default function Header() {
           Events
         </ActiveLink>
         <button className="mr-5 text-green type-ui">Download Port</button>
-        <button className="button-sm bg-wall text-gray">
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            props.toggleSearch();
+          }}
+          className="button-sm bg-wall text-gray"
+        >
           Search Urbit.org<div className="ml-4 text-lightGray">⌘K</div>
         </button>
       </nav>
