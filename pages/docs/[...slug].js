@@ -98,7 +98,13 @@ function ContentArea(props) {
     <div className="w-full">
       <header className="flex justify-between items-center px-24 pt-12 pb-8">
         <div className="type-ui">Urbit Documentation</div>
-        <button className="button-sm bg-wall text-gray">
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            props.toggleSearch();
+          }}
+          className="button-sm bg-wall text-gray"
+        >
           Search Urbit.org<div className="ml-4 text-lightGray">⌘K</div>
         </button>
       </header>
@@ -113,17 +119,19 @@ function ContentArea(props) {
 }
 
 export default function DocsLayout({ posts, data, content, params }) {
+  const [showSearch, toggleSearch] = useState(false);
   return (
     <>
       <Head>
         <title>{data.title} / Documentation / Urbit.org</title>
       </Head>
-      <Search />
+      {showSearch && <Search toggleSearch={() => toggleSearch(!showSearch)} />}
       <div className="flex w-screen h-screen min-h-screen w-screen overflow-hidden">
         <Sidebar>{childPages("/docs", posts.children)}</Sidebar>
         <ContentArea
           breadcrumbs={breadcrumbs(posts, params.slug.slice(0, -1))}
           title={data.title}
+          toggleSearch={() => toggleSearch(true)}
         >
           <Markdown post={{ content: content }} />
         </ContentArea>

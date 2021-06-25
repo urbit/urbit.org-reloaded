@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import { useState } from "react";
 import {
   getPostBySlug,
   getAllPosts,
@@ -25,12 +26,12 @@ export default function Post({ post, nextPost, previousPost }) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
   }
-
+  const [showSearch, toggleSearch] = useState(false);
   return (
     <Container>
-      <Search />
+      {showSearch && <Search toggleSearch={() => toggleSearch(!showSearch)} />}
       <SingleColumn>
-        <Header />
+        <Header toggleSearch={() => toggleSearch(true)} />
         <section className="flex flex-col layout-wide">
           <h1>{post.title}</h1>
           {post.extra.author ? (

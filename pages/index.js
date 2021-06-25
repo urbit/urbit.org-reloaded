@@ -15,11 +15,14 @@ import { contact } from "../lib/constants";
 
 export default function Home({ posts, events, openGrantsCount }) {
   const [tab, setTab] = useState(0);
+  const [showSearch, toggleSearch] = useState(false);
   return (
     <Container>
       <SingleColumn>
-        <Search />
-        <Header />
+        {showSearch && (
+          <Search toggleSearch={() => toggleSearch(!showSearch)} />
+        )}
+        <Header toggleSearch={() => toggleSearch(true)} />
 
         {
           // Hero Statement

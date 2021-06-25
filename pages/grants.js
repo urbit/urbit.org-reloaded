@@ -63,6 +63,7 @@ export default function Grants({ posts, categories, types, featuredGrants }) {
   const [activeTags, setTags] = useState([]);
   const [activeTypes, setTypes] = useState(types);
   const [tab, setTab] = useState(0);
+  const [showSearch, toggleSearch] = useState(false);
 
   const filteredPosts = posts.reduce((acc, post) => {
     // Posts are returned if they match both the selected category and selected tags, or if the user has no category filters set.
@@ -80,8 +81,10 @@ export default function Grants({ posts, categories, types, featuredGrants }) {
   return (
     <Container>
       <SingleColumn>
-        <Search />
-        <Header />
+        {showSearch && (
+          <Search toggleSearch={() => toggleSearch(!toggleSearch)} />
+        )}
+        <Header toggleSearch={() => toggleSearch(true)} />
         {
           // Heading and introduction
         }

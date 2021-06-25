@@ -8,12 +8,11 @@ const glossarySearch = (query) => {
   });
 };
 
-export default function Search() {
+export default function Search(props) {
   const searchRef = useRef(null);
   const [query, SetQuery] = useState("");
   const [active, setActive] = useState(false);
   const [results, setResults] = useState([]);
-  const [hidden, toggle] = useState(true);
   const searchEndpoint = (query) => `/api/search?q=${query}`;
 
   const onChange = useCallback((event) => {
@@ -39,6 +38,7 @@ export default function Search() {
     if (searchRef.current && !searchRef.current.contains(event.target)) {
       setActive(false);
       window.removeEventListener("click", onClick);
+      props.toggleSearch();
     }
   }, []);
 
@@ -52,15 +52,9 @@ export default function Search() {
   }, []);
 
   return (
-    <div
-      className={
-        "fixed w-screen h-screen bg-black bg-opacity-30 z-50 flex flex-col " +
-        (hidden ? "hidden" : "")
-      }
-      ref={searchRef}
-    >
+    <div className="fixed w-screen h-screen bg-black bg-opacity-30 z-50 flex flex-col">
       <div className="p-12 w-100 flex flex-col min-h-0">
-        <div className="relative flex flex-col">
+        <div className="relative flex flex-col" ref={searchRef}>
           <input
             className="bg-white type-ui text-green rounded-xl border-transparent p-2 outline-none relative"
             onChange={onChange}
@@ -68,6 +62,7 @@ export default function Search() {
             placeholder="Search..."
             type="text"
             value={query}
+            autoFocus={true}
           />
           {query.length > 0 && (
             <span

@@ -10,11 +10,12 @@ import BackgroundImage from "../components/BackgroundImage";
 import { getAllPosts, formatDate } from "../lib/lib";
 
 export default function Blog({ posts }) {
+  const [showSearch, toggleSearch] = useState(false);
   return (
     <Container>
-      <Search />
+      {showSearch && <Search toggleSearch={() => toggleSearch(!showSearch)} />}
       <SingleColumn>
-        <Header />
+        <Header toggleSearch={() => toggleSearch(true)} />
         <section className="layout-wide">
           <div className="measure">
             <h2 className="pb-16">Urbit Blog</h2>
