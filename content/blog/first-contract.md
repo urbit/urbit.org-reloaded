@@ -196,7 +196,12 @@ go from A to Z without first traversing every letter in between. While Urbit was
 centralized at the beginning, the journey towards a network owned and
 controlled by the users is now well underway.
 
-In the past, nearly all Urbit software was written by Tlon. While Tlon is still the only corporation actively updating Urbit’s MIT-licensed open source software, namely [Vere](@/docs/glossary/vere.md) (the runtime), and [Arvo](@/docs/glossary/arvo.md) (the kernel), unaffiliated individuals have been making enormous contributions to Urbit over the past couple of years via the [grants program](https://grants.urbit.org/history). Recent examples include the [Bitcoin node and wallet integration](https://github.com/urbit/urbit/pull/4940), [WebRTC integration](https://grants.urbit.org/proposals/21131866-webrtc-gall-agent-and-external-app), [Port, an Urbit installer and ship manager](https://github.com/arthyn/port), and [`|fuse`, an important primitive for 3rd party software distribution](https://github.com/urbit/urbit/pull/4820).  
+In the past, nearly all Urbit software was written by Tlon. While Tlon is still
+the only corporation actively updating Urbit’s MIT-licensed open source
+software, namely [Vere](@/docs/glossary/vere.md) (the runtime),
+[Arvo](@/docs/glossary/arvo.md) (the kernel),
+[Landscape](@/docs/glossary/landscape.md) (the client), and
+[Bridge](@/docs/glossary/bridge.md) (the ID manager), unaffiliated individuals have been making enormous contributions to Urbit over the past couple of years via the [grants program](https://grants.urbit.org/history). Recent examples include the [Bitcoin node and wallet integration](https://github.com/urbit/urbit/pull/4940), [WebRTC integration](https://grants.urbit.org/proposals/21131866-webrtc-gall-agent-and-external-app), [Port, an Urbit installer and ship manager](https://github.com/arthyn/port), and [`|fuse`, an important primitive for 3rd party software distribution](https://github.com/urbit/urbit/pull/4820).  
 
 The only real power Tlon holds over Urbit is the ability to push [OTA
 updates](@/docs/glossary/ota-updates.md) via `~zod`, and suggest that people
