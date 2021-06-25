@@ -79,7 +79,7 @@ export default function Grants({ posts, categories, types, featuredGrants }) {
   }, []);
 
   return (
-    <Container>
+    <Container toggleSearch={() => toggleSearch((state) => !state)}>
       <SingleColumn>
         {showSearch && (
           <Search toggleSearch={() => toggleSearch(!toggleSearch)} />

@@ -12,8 +12,8 @@ import { getAllPosts, formatDate } from "../lib/lib";
 export default function Blog({ posts }) {
   const [showSearch, toggleSearch] = useState(false);
   return (
-    <Container>
-      {showSearch && <Search toggleSearch={() => toggleSearch(!showSearch)} />}
+    <Container toggleSearch={() => toggleSearch((state) => !state)}>
+      {showSearch && <Search toggleSearch={() => toggleSearch(false)} />}
       <SingleColumn>
         <Header toggleSearch={() => toggleSearch(true)} />
         <section className="layout-wide">

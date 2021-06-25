@@ -28,7 +28,7 @@ export default function Post({ post, nextPost, previousPost }) {
   }
   const [showSearch, toggleSearch] = useState(false);
   return (
-    <Container>
+    <Container toggleSearch={() => toggleSearch((state) => !state)}>
       {showSearch && <Search toggleSearch={() => toggleSearch(!showSearch)} />}
       <SingleColumn>
         <Header toggleSearch={() => toggleSearch(true)} />

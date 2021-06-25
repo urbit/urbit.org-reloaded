@@ -17,11 +17,9 @@ export default function Home({ posts, events, openGrantsCount }) {
   const [tab, setTab] = useState(0);
   const [showSearch, toggleSearch] = useState(false);
   return (
-    <Container>
+    <Container toggleSearch={() => toggleSearch((state) => !state)}>
       <SingleColumn>
-        {showSearch && (
-          <Search toggleSearch={() => toggleSearch(!showSearch)} />
-        )}
+        {showSearch && <Search toggleSearch={() => toggleSearch(false)} />}
         <Header toggleSearch={() => toggleSearch(true)} />
 
         {

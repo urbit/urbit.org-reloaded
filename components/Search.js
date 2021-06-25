@@ -47,7 +47,8 @@ export default function Search(props) {
     glossaryResults = glossarySearch(query);
   }
 
-  const clear = useCallback(() => {
+  const clear = useCallback((e) => {
+    e.stopPropagation();
     SetQuery("");
   }, []);
 

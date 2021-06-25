@@ -8,8 +8,8 @@ import Search from "../components/Search";
 export default function NotFound() {
   const [showSearch, toggleSearch] = useState(false);
   return (
-    <Container>
-      {showSearch && <Search toggleSearch={() => toggleSearch(!showSearch)} />}
+    <Container toggleSearch={() => toggleSearch((state) => !state)}>
+      {showSearch && <Search toggleSearch={() => toggleSearch(false)} />}
       <SingleColumn>
         <Header toggleSearch={() => toggleSearch(true)} />
         <section className="layout-wide pt-48">

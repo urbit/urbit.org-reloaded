@@ -28,10 +28,8 @@ export default function Event({ post, nextPost, previousPost }) {
   }
   const [showSearch, toggleSearch] = useState(false);
   return (
-    <Container>
-      {showSearch && (
-        <Search toggleSearch={() => toggleSearch(!toggleSearch)} />
-      )}
+    <Container toggleSearch={() => toggleSearch((state) => !state)}>
+      {showSearch && <Search toggleSearch={() => toggleSearch(false)} />}
       <SingleColumn>
         <Header toggleSearch={() => toggleSearch(true)} />
         <section className="flex flex-col layout-wide pt-24">
