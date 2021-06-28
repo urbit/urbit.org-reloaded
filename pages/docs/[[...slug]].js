@@ -8,8 +8,6 @@ import { getDocs, formatDate, buildPageTree, getPage } from "../../lib/lib";
 import Markdown from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
-import Search from "../../components/Search";
-import { configure, GlobalHotKeys } from "react-hotkeys";
 
 const breadcrumbs = (posts, paths) => {
   const results = [
@@ -96,21 +94,18 @@ const pageTree = (thisLink, tree, level = 0) => {
   );
 };
 
-export default function DocsLayout({ posts, data, content, params }) {
-  const [showSearch, toggleSearch] = useState(false);
-  const toggle = () => toggleSearch((state) => !state);
-  const keyMap = { search: ["command+k", "ctrl+k", "esc"] };
-  const handlers = { search: toggle };
-  configure({
-    ignoreTags: [],
-  });
+export default function DocsLayout({
+  posts,
+  data,
+  content,
+  params,
+  toggleSearch,
+}) {
   return (
     <>
       <Head>
         <title>{data.title} / Documentation / Urbit.org</title>
       </Head>
-      <GlobalHotKeys keyMap={keyMap} handlers={handlers} />
-      {showSearch && <Search toggleSearch={() => toggleSearch(!showSearch)} />}
       <div className="flex w-screen h-screen min-h-screen w-screen overflow-hidden">
         <Sidebar>{childPages("/docs", posts.children)}</Sidebar>
         <ContentArea

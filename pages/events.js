@@ -69,13 +69,9 @@ function EventCard(props) {
   );
 }
 
-export default function Events({ pastEvents, currentEvents }) {
-  const [showSearch, toggleSearch] = useState(false);
+export default function Events({ pastEvents, currentEvents, toggleSearch }) {
   return (
-    <Container toggleSearch={() => toggleSearch((state) => !state)}>
-      {showSearch && (
-        <Search toggleSearch={() => toggleSearch(!toggleSearch)} />
-      )}
+    <Container>
       <SingleColumn>
         <Header toggleSearch={() => toggleSearch(true)} />
         <section className="layout-wide">

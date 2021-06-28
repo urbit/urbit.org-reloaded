@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import { useState } from "react";
 import {
   getPostBySlug,
   getAllPosts,
@@ -14,22 +13,19 @@ import Container from "../../components/Container";
 import Markdown from "../../components/Markdown";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import Search from "../../components/Search";
 import BackgroundImage from "../../components/BackgroundImage";
 import SingleColumn from "../../components/SingleColumn";
 import NewsletterSignup from "../../components/NewletterSignup";
 import PostPreview from "../../components/PostPreview";
 import { name, contact } from "../../lib/constants";
 
-export default function Event({ post, nextPost, previousPost }) {
+export default function Event({ post, nextPost, previousPost, toggleSearch }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
   }
-  const [showSearch, toggleSearch] = useState(false);
   return (
-    <Container toggleSearch={() => toggleSearch((state) => !state)}>
-      {showSearch && <Search toggleSearch={() => toggleSearch(false)} />}
+    <Container>
       <SingleColumn>
         <Header toggleSearch={() => toggleSearch(true)} />
         <section className="flex flex-col layout-wide pt-24">

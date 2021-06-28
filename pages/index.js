@@ -5,7 +5,6 @@ import Container from "../components/Container";
 import SingleColumn from "../components/SingleColumn";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Search from "../components/Search";
 import BackgroundImage from "../components/BackgroundImage";
 import TabCarousel from "../components/TabCarousel";
 import NewsletterSignup from "../components/NewletterSignup";
@@ -13,13 +12,11 @@ import PostPreview from "../components/PostPreview";
 import { getAllPosts, formatDate, getOpenGrantsCount } from "../lib/lib";
 import { contact } from "../lib/constants";
 
-export default function Home({ posts, events, openGrantsCount }) {
+export default function Home({ posts, events, openGrantsCount, toggleSearch }) {
   const [tab, setTab] = useState(0);
-  const [showSearch, toggleSearch] = useState(false);
   return (
-    <Container toggleSearch={() => toggleSearch((state) => !state)}>
+    <Container>
       <SingleColumn>
-        {showSearch && <Search toggleSearch={() => toggleSearch(false)} />}
         <Header toggleSearch={() => toggleSearch(true)} />
 
         {

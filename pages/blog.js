@@ -1,19 +1,15 @@
 import Head from "next/head";
 import Link from "next/link";
-import { useState } from "react";
 import Container from "../components/Container";
-import Search from "../components/Search";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SingleColumn from "../components/SingleColumn";
 import BackgroundImage from "../components/BackgroundImage";
 import { getAllPosts, formatDate } from "../lib/lib";
 
-export default function Blog({ posts }) {
-  const [showSearch, toggleSearch] = useState(false);
+export default function Blog({ posts, toggleSearch }) {
   return (
-    <Container toggleSearch={() => toggleSearch((state) => !state)}>
-      {showSearch && <Search toggleSearch={() => toggleSearch(false)} />}
+    <Container>
       <SingleColumn>
         <Header toggleSearch={() => toggleSearch(true)} />
         <section className="layout-wide">

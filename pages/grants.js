@@ -59,12 +59,17 @@ function toggleAll(currentArray, fullSet) {
   }
 }
 
-export default function Grants({ posts, categories, types, featuredGrants }) {
+export default function Grants({
+  posts,
+  categories,
+  types,
+  featuredGrants,
+  toggleSearch,
+}) {
   const [activeTags, setTags] = useState([]);
   const [activeTypes, setTypes] = useState(types);
   const [includeCompleted, setIncludeCompleted] = useState(false);
   const [tab, setTab] = useState(0);
-  const [showSearch, toggleSearch] = useState(false);
 
   const filteredPosts = posts.filter((post) => {
     // Posts are returned if they match both the selected category and selected tags, or if the user has no category filters set.
@@ -85,11 +90,8 @@ export default function Grants({ posts, categories, types, featuredGrants }) {
   });
 
   return (
-    <Container toggleSearch={() => toggleSearch((state) => !state)}>
+    <Container>
       <SingleColumn>
-        {showSearch && (
-          <Search toggleSearch={() => toggleSearch(!toggleSearch)} />
-        )}
         <Header toggleSearch={() => toggleSearch(true)} />
         {
           // Heading and introduction

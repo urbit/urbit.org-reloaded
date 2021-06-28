@@ -8,11 +8,11 @@ import SingleColumn from "../components/SingleColumn";
 import BackgroundImage from "../components/BackgroundImage";
 import { getAllPosts, formatDate } from "../lib/lib";
 
-export default function Blog({ posts }) {
+export default function Blog({ posts, toggleSearch }) {
   return (
     <Container>
       <SingleColumn>
-        <Header />
+        <Header toggleSearch={() => toggleSearch(true)} />
         <section className="layout-wide">
           <div className="measure">
             <h2 className="pb-16">Urbit Blog</h2>
