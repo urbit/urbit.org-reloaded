@@ -2,6 +2,16 @@ import markdownStyles from "../styles/markdown.module.css";
 import unified from "unified";
 import parse from "remark-parse";
 import remark2react from "remark-react";
+import RemarkLowlight from "remark-react-lowlight";
+import codeblocks from "remark-code-blocks";
+import bash from "highlight.js/lib/languages/bash";
+import sh from "highlight.js/lib/languages/shell";
+import js from "highlight.js/lib/languages/javascript";
+import c from "highlight.js/lib/languages/c";
+import http from "highlight.js/lib/languages/http";
+import sanitizeGhSchema from "hast-util-sanitize/lib/github.json";
+import merge from "deepmerge";
+import "highlight.js/styles/idea.css";
 import slug from "remark-slug";
 import heading from "remark-heading-id";
 
@@ -21,11 +31,13 @@ function Img({ src, children }) {
 const options = {
   remarkReactComponents: {
     img: Img,
+    code: RemarkLowlight({ bash, sh, js, c, http }),
     // p: P,
   },
-  sanitize: {
+  sanitize: merge(sanitizeGhSchema, {
     clobberPrefix: "",
-  },
+    attributes: { code: ["className"] },
+  }),
 };
 
 // Converts markdown strings into markdown HTML/React components

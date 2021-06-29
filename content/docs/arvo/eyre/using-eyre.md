@@ -30,16 +30,17 @@ Run this code in your bash terminal (requires cURL):
 ```bash
 curl -i localhost:8080/~/login -X POST -d "password=lidlut-tabwed-pillex-ridrup"
 ```
+
 Let's explain what this does:
 
- - `-i` displays the headers, so that you can see the cookie that gets sent
- - `localhost:8080/~/login` is the URL to which you are POSTing. You will note this is also the URL you visit when you log into Landscape.
- - `-X POST` specifies that you are POSTing data, not GETting.
- - `-d "password=lidlut-tabwed-pillex-ridrup"` specifies the code for your Urbit that we retrieved above. It is sent as form data, as if it were sent from an HTML form input field (which it is in Landscape)
+- `-i` displays the headers, so that you can see the cookie that gets sent
+- `localhost:8080/~/login` is the URL to which you are POSTing. You will note this is also the URL you visit when you log into Landscape.
+- `-X POST` specifies that you are POSTing data, not GETting.
+- `-d "password=lidlut-tabwed-pillex-ridrup"` specifies the code for your Urbit that we retrieved above. It is sent as form data, as if it were sent from an HTML form input field (which it is in Landscape)
 
 You should see the following:
 
-```bash
+```http
 HTTP/1.1 200 ok
 Date: Sun, 01 Jan 2020 00:00:00 GMT
 Connection: keep-alive
@@ -52,11 +53,11 @@ The `Date` and `set-cookie` will be slightly different of course.
 
 Take a look at the `set-cookie` line. This is now your session authentication, and will need to be sent with any future requests. It consists of three parts:
 
- - `urbauth` is a prefix that Eyre uses to check for presence of authentication
- - `~zod` is the name of the ship you are logging in as
- - `0v3.fvaqc.nnjda.vude1.vb5l6.kmjmg` is the actual authentication token.
+- `urbauth` is a prefix that Eyre uses to check for presence of authentication
+- `~zod` is the name of the ship you are logging in as
+- `0v3.fvaqc.nnjda.vude1.vb5l6.kmjmg` is the actual authentication token.
 
-At present there is no way to separate these parts — you must pass a cookie *as* a cookie. This string must be in the `Cookie` header. The `set-cookie` header is only used for this request upon response. It is what browsers expect when receiving a cookie.
+At present there is no way to separate these parts — you must pass a cookie _as_ a cookie. This string must be in the `Cookie` header. The `set-cookie` header is only used for this request upon response. It is what browsers expect when receiving a cookie.
 
 ## Interacting with Eyre
 
@@ -73,7 +74,7 @@ These can be used independently, i.e. you may choose to only send information or
 
 For this example, we will use the following channel:
 
-```
+```bash
 http://localhost:8080/~/channel/1601844290-ae45b
 ```
 
@@ -135,21 +136,23 @@ This is all we need to send Urbit to say "On this URL through which I am sending
 You should be able to send this information if you were able to send the above cURL example. However, we now need to be able to listen to the SSEs. The `EventSource` object is available for JavaScript in the browser context, as this is why SSEs were invented, but there should be a library for it in your chosen language. Take a look at a Browser JavaScript example:
 
 ```js
-const eventSource = new EventSource('http://localhost:8080/~/channel/1601844290-ae45b', {
-  withCredentials: true // Required, sends your cookie
-});
+const eventSource = new EventSource(
+  "http://localhost:8080/~/channel/1601844290-ae45b",
+  {
+    withCredentials: true, // Required, sends your cookie
+  }
+);
 
-eventSource.addEventListener('message', function (event) {
+eventSource.addEventListener("message", function (event) {
   ack(Number(event.lastEventId)); // See section below
   const payload = JSON.parse(event.data); // Data is sent in JSON format
   payload.id === event.lastEventId; // The SSE spec includes event IDs. This information is duplicated in the payload.
   const data = payload.json; // Beyond this, the actual data will vary between apps
 });
 
-eventSource.addEventListener('error', function (event) {
+eventSource.addEventListener("error", function (event) {
   handleError(event);
 });
-
 ```
 
 ### Handling Received Events
@@ -166,7 +169,7 @@ Once you have received an event, it is expected that you will "ack" or "acknowle
 
 ### Unsubscribing from Events
 
-You may want to stop receiving events from a particular app path, but you don't want to close the channel altogether yet. Let's look at how to do that. Take a look at the example for subscribing.  We sent that message with `id: 2`. We will use that ID to cancel the relevant subscription:
+You may want to stop receiving events from a particular app path, but you don't want to close the channel altogether yet. Let's look at how to do that. Take a look at the example for subscribing. We sent that message with `id: 2`. We will use that ID to cancel the relevant subscription:
 
 ```javascript
 {
@@ -197,7 +200,7 @@ Scrying lets you see what an app has exposed at a particular path. It does not m
 
 It takes the form `{url}/~/scry/{app}{path}.{mark}`
 
- Let's get the base hash of our fakezod in the same way that Landscape does it.
+Let's get the base hash of our fakezod in the same way that Landscape does it.
 
 ```bash
 curl --header "Content-Type: application/json" \

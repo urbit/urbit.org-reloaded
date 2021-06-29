@@ -63,7 +63,7 @@
 }
 
 .markdown pre {
-  @apply p-8 bg-wall rounded-lg;
+  @apply p-8 bg-wall rounded-lg overflow-x-scroll;
 }
 
 .markdown code {
