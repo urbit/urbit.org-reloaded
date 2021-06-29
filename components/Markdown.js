@@ -2,6 +2,8 @@ import markdownStyles from "../styles/markdown.module.css";
 import unified from "unified";
 import parse from "remark-parse";
 import remark2react from "remark-react";
+import slug from "remark-slug";
+import heading from "remark-heading-id";
 
 function P({ children }) {
   return <p className="leading-snug">{children}</p>;
@@ -21,6 +23,9 @@ const options = {
     img: Img,
     // p: P,
   },
+  sanitize: {
+    clobberPrefix: "",
+  },
 };
 
 // Converts markdown strings into markdown HTML/React components
@@ -30,6 +35,8 @@ export default function Markdown({ post }) {
       {
         unified()
           .use(parse)
+          .use(slug)
+          .use(heading)
           .use(remark2react, options)
           .processSync(post.content).result
       }
