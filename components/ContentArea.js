@@ -1,6 +1,6 @@
 export default function ContentArea(props) {
   return (
-    <div className="w-full">
+    <div className="w-full min-w-0">
       <header className="flex justify-between items-center px-24 pt-12 pb-8">
         <div className="type-ui">Urbit Documentation</div>
         <button
