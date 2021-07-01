@@ -18,8 +18,15 @@ import SingleColumn from "../../components/SingleColumn";
 import NewsletterSignup from "../../components/NewletterSignup";
 import PostPreview from "../../components/PostPreview";
 import { name, contact } from "../../lib/constants";
+import markdownStyles from "../../styles/markdown.module.css";
 
-export default function Post({ post, nextPost, previousPost, toggleSearch }) {
+export default function Post({
+  post,
+  nextPost,
+  previousPost,
+  markdown,
+  toggleSearch,
+}) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
@@ -40,9 +47,9 @@ export default function Post({ post, nextPost, previousPost, toggleSearch }) {
             {formatDate(new Date(post.date))}
           </div>
         </section>
-        <article className="layout-wide">
-          <Markdown post={post} />
-        </article>
+        <div className={"layout-wide " + markdownStyles["markdown"]}>
+          <article dangerouslySetInnerHTML={{ __html: markdown }}></article>
+        </div>
         <section className="layout-narrow">
           <div className="measure">
             <h4 className="pb-6">
@@ -124,8 +131,10 @@ export async function getStaticProps({ params }) {
     "blog"
   );
 
+  const markdown = await Markdown({ post });
+
   return {
-    props: { post, nextPost, previousPost },
+    props: { post, markdown, nextPost, previousPost },
   };
 }
 

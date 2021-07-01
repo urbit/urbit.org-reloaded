@@ -3,6 +3,7 @@ import { useState } from "react";
 import { configure, GlobalHotKeys } from "react-hotkeys";
 import Search from "../components/Search";
 import "../styles/globals.css";
+import "../styles/prism.css";
 
 function MyApp({ Component, pageProps }) {
   const [showSearch, toggleSearch] = useState(false);

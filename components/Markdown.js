@@ -1,45 +1,45 @@
-import markdownStyles from "../styles/markdown.module.css";
-import unified from "unified";
-import parse from "remark-parse";
-import remark2react from "remark-react";
+import remark from "remark";
 import slug from "remark-slug";
 import heading from "remark-heading-id";
-
-function P({ children }) {
-  return <p className="leading-snug">{children}</p>;
-}
+import html from "remark-html";
+import prism from "remark-prism";
+import normalize from "mdurl/encode";
 
 // img is wrapped in figure so that images can be extra wide in the blog posts
-function Img({ src, children }) {
-  return (
-    <figure>
-      <img src={src}>{children}</img>
-    </figure>
-  );
+
+function Img(h, node) {
+  var props = { src: normalize(node.url), alt: node.alt };
+  if (node.title !== null && node.title !== undefined) {
+    props.title = node.title;
+  }
+  return {
+    type: "element",
+    tagName: "figure",
+    properties: {},
+    children: [
+      {
+        type: "element",
+        tagName: "img",
+        properties: props,
+      },
+    ],
+  };
 }
 
 const options = {
-  remarkReactComponents: {
-    img: Img,
-    // p: P,
-  },
-  sanitize: {
-    clobberPrefix: "",
+  handlers: {
+    image: Img,
   },
 };
 
 // Converts markdown strings into markdown HTML/React components
-export default function Markdown({ post }) {
-  return (
-    <div className={markdownStyles["markdown"]}>
-      {
-        unified()
-          .use(parse)
-          .use(slug)
-          .use(heading)
-          .use(remark2react, options)
-          .processSync(post.content).result
-      }
-    </div>
-  );
+export default async function Markdown({ post }) {
+  const result = await remark()
+    .use(html, options)
+    .use(prism)
+    .use(slug)
+    .use(heading)
+    .process(post.content);
+
+  return result.toString();
 }

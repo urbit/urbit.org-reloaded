@@ -62,11 +62,13 @@
   }
 }
 
-.markdown pre {
+.markdown pre,
+.markdown pre[class*="language-"] {
   @apply p-8 bg-wall rounded-lg;
 }
 
-.markdown code {
+.markdown code,
+.markdown code[class*="language-"] {
   @apply px-2 py-0.5 bg-wall rounded-lg;
 }
 

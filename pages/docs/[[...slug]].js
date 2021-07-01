@@ -8,6 +8,7 @@ import { getDocs, formatDate, buildPageTree, getPage } from "../../lib/lib";
 import Markdown from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
+import markdownStyles from "../../styles/markdown.module.css";
 
 const breadcrumbs = (posts, paths) => {
   const results = [
@@ -100,6 +101,7 @@ export default function DocsLayout({
   content,
   params,
   toggleSearch,
+  markdown,
 }) {
   return (
     <>
@@ -113,7 +115,9 @@ export default function DocsLayout({
           title={data.title}
           toggleSearch={() => toggleSearch(true)}
         >
-          <Markdown post={{ content: content }} />
+          <div className={markdownStyles["markdown"]}>
+            <article dangerouslySetInnerHTML={{ __html: markdown }}></article>
+          </div>
         </ContentArea>
       </div>
     </>
@@ -127,7 +131,9 @@ export async function getStaticProps({ params }) {
     join(process.cwd(), "content/docs", params.slug?.join("/") || "/")
   );
 
-  return { props: { posts, data, content, params } };
+  const markdown = await Markdown({ post: { content: content } });
+
+  return { props: { posts, data, markdown, params } };
 }
 
 export async function getStaticPaths() {
