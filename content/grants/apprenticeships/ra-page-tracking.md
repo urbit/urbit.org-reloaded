@@ -7,11 +7,11 @@ grant_category = ["App Dev: Arvo"]
 [extra]
 image = ""
 description = "Improve Page Tracking"
-reward = 1
+reward = 2
 mentor = "~silsyn-wathep"
 assignee = ""
 completed = false
-work_request_link = ""
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0039&prefill_Grant+Name=Runtime%20Apprenticeship%3A%20Improve%20Page%20Tracking"
 +++
 
 ### Improve Page Tracking
