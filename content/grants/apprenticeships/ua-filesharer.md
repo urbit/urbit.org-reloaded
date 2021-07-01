@@ -1,5 +1,5 @@
 +++
-title = "Apprenticeship: Filesharer"
+title = "[Closed] Userspace Apprenticeship: Filesharer"
 date = 2021-05-27
 [taxonomies]
 grant_type = ["apprenticeships"]
