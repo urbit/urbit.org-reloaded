@@ -19,6 +19,7 @@ import NewsletterSignup from "../../components/NewletterSignup";
 import PostPreview from "../../components/PostPreview";
 import { name, contact } from "../../lib/constants";
 import markdownStyles from "../../styles/markdown.module.css";
+import { decode } from "html-entities";
 
 export default function Grant({ post, nextPost, markdown, previousPost }) {
   const router = useRouter();
@@ -43,7 +44,9 @@ export default function Grant({ post, nextPost, markdown, previousPost }) {
           </div>
         </section>
         <div className={"layout-wide " + markdownStyles["markdown"]}>
-          <article dangerouslySetInnerHTML={{ __html: markdown }}></article>
+          <article
+            dangerouslySetInnerHTML={{ __html: decode(markdown) }}
+          ></article>
         </div>
         <section className="layout-narrow">
           <div className="measure">

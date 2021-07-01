@@ -9,6 +9,7 @@ import Markdown from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
 import markdownStyles from "../../styles/markdown.module.css";
+import { decode } from "html-entities";
 
 const breadcrumbs = (posts, paths) => {
   const results = [
@@ -98,7 +99,6 @@ const pageTree = (thisLink, tree, level = 0) => {
 export default function DocsLayout({
   posts,
   data,
-  content,
   params,
   toggleSearch,
   markdown,
@@ -116,7 +116,9 @@ export default function DocsLayout({
           toggleSearch={() => toggleSearch(true)}
         >
           <div className={markdownStyles["markdown"]}>
-            <article dangerouslySetInnerHTML={{ __html: markdown }}></article>
+            <article
+              dangerouslySetInnerHTML={{ __html: decode(markdown) }}
+            ></article>
           </div>
         </ContentArea>
       </div>

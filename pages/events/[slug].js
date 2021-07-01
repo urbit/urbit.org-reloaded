@@ -19,6 +19,7 @@ import NewsletterSignup from "../../components/NewletterSignup";
 import PostPreview from "../../components/PostPreview";
 import { name, contact } from "../../lib/constants";
 import markdownStyles from "../../styles/markdown.module.css";
+import { decode } from "html-entities";
 
 export default function Event({
   post,
@@ -63,7 +64,7 @@ export default function Event({
         <div className={"layout-wide " + markdownStyles["markdown"]}>
           <article
             className="flex flex-col items-center pt-12 w-full"
-            dangerouslySetInnerHTML={{ __html: markdown }}
+            dangerouslySetInnerHTML={{ __html: decode(markdown) }}
           ></article>
         </div>
         <section className="layout-narrow pt-24">
