@@ -1,6 +1,6 @@
 +++
 title = "Urbit <-> IRC Bridge"
-date = 2020-05-14
+date = 2021-05-14
 [taxonomies]
 grant_type = ["proposals"]
 grant_category = ["App Dev: Other"]
