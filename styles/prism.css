@@ -73,7 +73,8 @@ code[class*="language-"] {
   @apply text-red;
 }
 
-.token.function-name {
+.token.function-name,
+.token.function {
   @apply text-black;
 }
 
@@ -81,7 +82,6 @@ code[class*="language-"] {
 .token.attr-name,
 .token.string,
 .token.char,
-.token.function,
 .token.builtin,
 .token.inserted {
   @apply text-green;
