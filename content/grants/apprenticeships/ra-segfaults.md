@@ -7,7 +7,7 @@ grant_category = ["App Dev: Arvo"]
 [extra]
 image = ""
 description = "Segfaults"
-reward = 1
+reward = 2
 mentor = "~silsyn-wathep"
 assignee = ""
 completed = false

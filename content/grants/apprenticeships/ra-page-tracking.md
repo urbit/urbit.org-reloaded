@@ -7,7 +7,7 @@ grant_category = ["App Dev: Arvo"]
 [extra]
 image = ""
 description = "Improve Page Tracking"
-reward = 1
+reward = 2
 mentor = "~silsyn-wathep"
 assignee = ""
 completed = false
