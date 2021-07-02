@@ -14,7 +14,7 @@ export default function Blog({ posts, toggleSearch }) {
         <Header toggleSearch={() => toggleSearch(true)} />
         <section className="layout-wide">
           <div className="measure">
-            <h2 className="pb-16">FAQ</h2>
+            <h2 className="pb-16">Urbit Blog</h2>
             <p className="pb-6">
               Stories from the broader Urbit community, the Urbit Foundation,
               and the many people contributing to Urbit.
