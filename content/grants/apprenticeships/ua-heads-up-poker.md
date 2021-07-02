@@ -1,5 +1,5 @@
 +++
-title = "[Closed] Userspace Apprenticeship: Heads-Up Poker"
+title = "Userspace Apprenticeship: Heads-Up Poker"
 date = 2021-05-27
 [taxonomies]
 grant_type = ["apprenticeships"]
@@ -9,7 +9,7 @@ image = ""
 description = "A fun client app that would be a good way to get acquainted with Urbit's networking and p2p abilities."
 reward = 1
 mentor = "~timluc-miptev"
-assignee = ""
+assignee = "~bacwyl-samweg, ~hodzod-walrus"
 completed = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0021&prefill_Grant+Name=Heads-up%20poker"
 +++
