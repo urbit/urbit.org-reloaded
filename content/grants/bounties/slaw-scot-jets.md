@@ -11,7 +11,7 @@ reward = 1
 mentor = "~timluc-miptev"
 assignee = ""
 completed = false
-work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0037&prefill_Grant+Name=Tune%20slaw%2Fscot%20jets"
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0042&prefill_Grant+Name=Tune%20slaw%2Fscot%20jets"
 +++
 
 ## slaw/scot
