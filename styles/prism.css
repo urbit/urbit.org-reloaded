@@ -8,9 +8,9 @@ https://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+ja
 
 code[class*="language-"],
 pre[class*="language-"] {
-  color: black;
+  @apply text-gray;
   background: none;
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-family: "Source Code Pro", monospace;
   font-size: 1em;
   text-align: left;
   white-space: pre;
@@ -67,11 +67,14 @@ code[class*="language-"] {
 .token.tag,
 .token.boolean,
 .token.number,
-.token.function-name,
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: #c92c2c;
+  @apply text-red;
+}
+
+.token.function-name {
+  @apply text-black;
 }
 
 .token.selector,
@@ -81,22 +84,24 @@ code[class*="language-"] {
 .token.function,
 .token.builtin,
 .token.inserted {
-  color: #2f9c0a;
+  @apply text-green;
 }
 
 .token.operator,
 .token.entity,
 .token.url,
 .token.variable {
-  color: #a67f59;
-  background: rgba(255, 255, 255, 0.5);
+  @apply text-gray;
 }
 
 .token.atrule,
 .token.attr-value,
-.token.keyword,
 .token.class-name {
-  color: #1990b8;
+  @apply text-blue;
+}
+
+.token.keyword {
+  @apply text-purple;
 }
 
 .token.regex,

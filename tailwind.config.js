@@ -17,6 +17,8 @@ module.exports = {
       lightGreen: "rgba(0, 159, 101, 0.3)",
       washedGreen: "rgba(0, 159, 101, 0.05)",
       blue: "#219DFF",
+      purple: "rgba(157,82,255,0.8)",
+      red: "#ff4136",
     },
     fontFamily: {
       sans: ["Inter", "-apple-system", "sans-serif"],
