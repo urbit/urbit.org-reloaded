@@ -123,6 +123,13 @@ a:hover {
 
 .hero-image {
   transform: translateX(8%);
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 85%,
+      rgba(255, 255, 255, 1) 100%
+    ),
+    url("https://media.urbit.org/port.svg");
+  background-size: cover;
 }
 
 .measure {

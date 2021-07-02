@@ -48,7 +48,7 @@ export default function Home({ posts, events, openGrantsCount, toggleSearch }) {
               </button>
               <a className="type-ui text-gray">View on GitHub</a>
             </div>
-            <div className="bg-black w-full rounded-xl hero-image-height hero-image mt-8" />
+            <div className="w-full hero-image-height hero-image mt-8" />
           </div>
         </section>
 
