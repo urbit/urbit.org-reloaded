@@ -74,7 +74,7 @@ export default function Events({ pastEvents, currentEvents, toggleSearch }) {
     <Container>
       <SingleColumn>
         <Header toggleSearch={() => toggleSearch(true)} />
-        <section className="layout-wide">
+        <section className="layout-narrow">
           <div className="measure">
             <h2 className="pb-16">Urbit Events</h2>
             <p className="pb-6">
@@ -86,7 +86,7 @@ export default function Events({ pastEvents, currentEvents, toggleSearch }) {
             </p>
           </div>
         </section>
-        <section className="layout-wide">
+        <section className="layout-narrow">
           <div className="mb-8 table">
             <span className="bg-green text-white badge-lg">Coming Soon</span>
           </div>
@@ -95,7 +95,7 @@ export default function Events({ pastEvents, currentEvents, toggleSearch }) {
           })}
         </section>
 
-        <section className="layout-wide">
+        <section className="layout-narrow">
           <div className="mb-8 table">
             <span className="bg-wall text-gray badge-lg">Past Events</span>
           </div>

@@ -12,7 +12,7 @@ export default function Blog({ posts, toggleSearch }) {
     <Container>
       <SingleColumn>
         <Header toggleSearch={() => toggleSearch(true)} />
-        <section className="layout-wide">
+        <section className="layout-narrow">
           <div className="measure">
             <h2 className="pb-16">Urbit Blog</h2>
             <p className="pb-6">
@@ -25,7 +25,7 @@ export default function Blog({ posts, toggleSearch }) {
             </p>
           </div>
         </section>
-        <section className="layout-wide">
+        <section className="layout-narrow">
           {posts.map((post) => {
             return (
               <div key={post.slug} className="mb-24 cursor-pointer">
@@ -41,7 +41,7 @@ export default function Blog({ posts, toggleSearch }) {
                         />
                       ) : null
                     }
-                    <h2 className="mt-4">{post.title}</h2>
+                    <h3 className="mt-4">{post.title}</h3>
                     <div className="flex items-baseline">
                       {post.extra.author ? (
                         <div className="type-ui text-gray mt-4">

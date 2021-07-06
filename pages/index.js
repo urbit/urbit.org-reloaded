@@ -73,13 +73,15 @@ export default function Home({ posts, events, openGrantsCount, toggleSearch }) {
             </div>
             <div className="h-0 w-0 md:h-24 md:w-4 bg-lightGreen" />
             <div className="flex items-center flex-col p-4 w-full">
-              <h2 className="text-green">1M+</h2>
-              <h4 className="text-green text-center pt-2">USD Rewarded</h4>
+              <h2 className="text-green">400+</h2>
+              <h4 className="text-green text-center pt-2">
+                Different Contributors
+              </h4>
             </div>
             <div className="h-0 w-0 md:h-24 md:w-4 bg-lightGreen" />
             <div className="flex items-center flex-col p-4 w-full">
-              <h2 className="text-green">90+</h2>
-              <h4 className="text-green text-center pt-2">Grants completed</h4>
+              <h2 className="text-green">45+</h2>
+              <h4 className="text-green text-center pt-2">Active Projects</h4>
             </div>
           </div>
           <div className="measure py-12">
