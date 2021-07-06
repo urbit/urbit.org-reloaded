@@ -36,7 +36,7 @@ export default function Blog({ posts, toggleSearch }) {
                       post.extra.image ? (
                         <BackgroundImage
                           src={post.extra.image}
-                          style={{ height: "720px" }}
+                          style={{ height: "620px" }}
                           className="w-full rounded-lg"
                         />
                       ) : null

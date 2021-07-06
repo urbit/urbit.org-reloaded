@@ -23,7 +23,7 @@ function assignEventCard(event) {
     return (
       <BackgroundImage
         src={event.extra.image}
-        style={{ height: "720px" }}
+        style={{ height: "620px" }}
         className="w-full rounded-lg"
       />
     );
@@ -32,7 +32,7 @@ function assignEventCard(event) {
   return (
     <div
       className="w-full rounded-lg bg-wall"
-      style={{ height: "720px" }}
+      style={{ height: "620px" }}
     ></div>
   );
 }
