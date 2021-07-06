@@ -13,7 +13,7 @@ import { decode } from "html-entities";
 
 const breadcrumbs = (posts, paths) => {
   const results = [
-    <Link href="/">Urbit.org</Link>,
+    <Link href="/">Urbit</Link>,
     <span className="px-1">/</span>,
     <Link href="/docs">Documentation</Link>,
   ];
