@@ -43,7 +43,7 @@ function EventCard(props) {
       <Link href={`/events/${props.event.slug}`}>
         <div>
           {assignEventCard(props.event)}
-          <h2 className="mt-4">{props.event.title}</h2>
+          <h3 className="mt-4">{props.event.title}</h3>
           <div className="flex items-baseline">
             {props.event.extra.author ? (
               <div className="type-ui text-gray mt-4">

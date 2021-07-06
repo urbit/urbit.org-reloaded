@@ -10,7 +10,7 @@ export default function ContentArea(props) {
           }}
           className="button-sm bg-wall text-gray"
         >
-          Search Urbit.org<div className="ml-4 text-lightGray">⌘K</div>
+          Search<div className="ml-4 text-lightGray">⌘K</div>
         </button>
       </header>
       <div className="px-24 pb-24 pt-16 flex flex-col w-full max-h-screen h-screen overflow-y-scroll">

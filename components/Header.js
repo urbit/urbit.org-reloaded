@@ -99,7 +99,7 @@ export default function Header(props) {
             Events
           </ActiveLink>
           <button className="button-sm bg-wall text-gray">
-            Search Urbit.org<div className="ml-4 text-lightGray">⌘K</div>
+            Search<div className="ml-4 text-lightGray">⌘K</div>
           </button>
         </MenuTray>
         <button
