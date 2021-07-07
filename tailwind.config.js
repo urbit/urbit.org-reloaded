@@ -10,7 +10,7 @@ module.exports = {
       wall: "rgba(244, 243, 241, 1)",
       deepWall: "#E8E4DD",
       ultraDeepWall: "#32302D",
-      washedWall: "rgba(232, 228, 221, .8)",
+      washedWall: "rgba(240, 239, 236, .8)",
       yellow: "#FCDB63",
       midYellow: "rgba(255, 199, 0, 0.6)",
       lightYellow: "rgba(255, 199, 0, 0.3)",

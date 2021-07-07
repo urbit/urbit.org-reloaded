@@ -71,7 +71,7 @@ export default function Search(props) {
         >
           <div className="">
             <input
-              className="type-ui text-green bg-transparent py-2 px-4 outline-none relative w-full"
+              className="text-2xl font-medium text-green bg-transparent py-2 px-4 outline-none relative w-full"
               onChange={onChange}
               onFocus={onFocus}
               placeholder="Search..."
