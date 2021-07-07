@@ -21,7 +21,13 @@ import { name, contact } from "../../lib/constants";
 import markdownStyles from "../../styles/markdown.module.css";
 import { decode } from "html-entities";
 
-export default function Grant({ post, nextPost, markdown, previousPost }) {
+export default function Grant({
+  post,
+  nextPost,
+  markdown,
+  previousPost,
+  toggleSearch,
+}) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
@@ -30,7 +36,7 @@ export default function Grant({ post, nextPost, markdown, previousPost }) {
   return (
     <Container>
       <SingleColumn>
-        <Header />
+        <Header toggleSearch={() => toggleSearch(true)} />
         <section className="flex flex-col layout-wide">
           <h1>{post.title}</h1>
           {post.extra.author ? (

@@ -8,6 +8,9 @@ module.exports = {
       gray: "rgba(0, 0, 0, 0.6)",
       lightGray: "rgba(0, 0, 0, 0.2)",
       wall: "rgba(244, 243, 241, 1)",
+      deepWall: "#E8E4DD",
+      ultraDeepWall: "#32302D",
+      washedWall: "rgba(232, 228, 221, .8)",
       yellow: "#FCDB63",
       midYellow: "rgba(255, 199, 0, 0.6)",
       lightYellow: "rgba(255, 199, 0, 0.3)",
@@ -19,6 +22,7 @@ module.exports = {
       blue: "#219DFF",
       purple: "rgba(157,82,255,0.8)",
       red: "#ff4136",
+      transparent: "rgba(0,0,0,0)",
     },
     fontFamily: {
       sans: ["Inter", "-apple-system", "sans-serif"],

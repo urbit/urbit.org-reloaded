@@ -17,6 +17,7 @@ export default function Search(props) {
 
   const onChange = useCallback((event) => {
     const query = event.target.value;
+
     SetQuery(query);
     if (query.length) {
       fetch(searchEndpoint(query))
@@ -52,102 +53,117 @@ export default function Search(props) {
     SetQuery("");
   }, []);
 
-  return (
-    <div className="fixed w-screen h-screen bg-black bg-opacity-30 z-50 flex flex-col">
-      <div className="p-12 w-100 flex flex-col min-h-0">
-        <div className="relative flex flex-col" ref={searchRef}>
-          <input
-            className="bg-white type-ui text-green rounded-xl border-transparent p-2 outline-none relative"
-            onChange={onChange}
-            onFocus={onFocus}
-            placeholder="Search..."
-            type="text"
-            value={query}
-            autoFocus={true}
-          />
-          {query.length > 0 && (
-            <span
-              onClick={clear}
-              className="absolute right-3"
-              style={{ top: 13 }}
-            >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M0.39382 13.7045C-0.131273 14.2296 -0.131274 15.081 0.39382 15.6061C0.918913 16.1312 1.77026 16.1312 2.29535 15.6061L7.99999 9.90142L13.7047 15.6061C14.2297 16.1312 15.0811 16.1312 15.6062 15.6061C16.1313 15.081 16.1313 14.2296 15.6062 13.7046L9.90152 7.99989L15.6061 2.29535C16.1311 1.77026 16.1312 0.918913 15.6061 0.39382C15.081 -0.131273 14.2296 -0.131273 13.7045 0.39382L7.99999 6.09836L2.29548 0.393844C1.77038 -0.131249 0.919038 -0.131249 0.393945 0.393844C-0.131148 0.918937 -0.131148 1.77028 0.393945 2.29537L6.09846 7.99989L0.39382 13.7045Z"
-                  fill="black"
-                  fill-opacity="0.6"
-                />
-              </svg>
-            </span>
-          )}
-        </div>
+  // Locks document scrolling when search is open
+  if (typeof document !== "undefined") {
+    if (props.showSearch) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "visible";
+    }
+  }
+
+  if (props.showSearch) {
+    return (
+      <div className="fixed w-screen h-screen bg-washedWall z-50 flex flex-col items-center">
         <div
-          className={
-            "bg-white overflow-scroll min-h-0 rounded-xl border-transparent mt-2 " +
-            (query.length > 0 ? "" : "hidden")
-          }
+          className="relative my-32 flex flex-col max-w-screen-lg w-10/12 md:w-10/12 lg:w-8/12 xl:w-6/12 rounded-xl bg-white"
+          ref={searchRef}
         >
-          {active && glossaryResults.length > 0 && (
-            <ul>
-              {glossaryResults.map(({ name, link, desc, symbol }) => {
-                return (
-                  <div className="border-b border-gray">
-                    <p className="font-semibold text-sm pb-4 text-gray pl-3 pt-2">
-                      Glossary Result
-                    </p>
-                    <li key={link} className="cursor-pointer hover:bg-wall">
-                      <Link href={link} as={link}>
-                        <div className="font-semibold px-3">
+          <div className="">
+            <input
+              className="type-ui text-green bg-transparent py-2 px-4 outline-none relative w-full"
+              onChange={onChange}
+              onFocus={onFocus}
+              placeholder="Search..."
+              type="text"
+              value={query}
+              autoFocus={true}
+            />
+
+            <span
+              onClick={props.toggleSearch}
+              className="absolute right-2 top-2 cursor-pointer"
+            >
+              <p className="px-2 h-8 bg-wall flex items-center justify-center text-sm rounded">
+                ESC
+              </p>
+            </span>
+          </div>
+
+          <div
+            className={
+              "overflow-scroll min-h-0 pb-2" +
+              (query.length > 0 ? "" : "hidden")
+            }
+          >
+            {active &&
+            results.length === 0 &&
+            glossaryResults.length === 0 &&
+            query !== "" ? (
+              <div className="flex font-semibold text-sm p-3 py-8 w-full">
+                <p className="mr-2 text-gray">No Results found for</p>
+                <p className="font-semibold">"{query}"</p>
+              </div>
+            ) : null}
+            {active && glossaryResults.length > 0 ? (
+              <div>
+                <div className="flex font-semibold text-sm p-3 py-1 w-full bg-ultraDeepWall text-white">
+                  <p className="font-semibold text-sm">Glossary</p>
+                </div>
+
+                {glossaryResults.map(({ name, link, desc, symbol }) => {
+                  return (
+                    <Link href={link} as={link} key={link}>
+                      <div className="cursor-pointer hover:bg-wall">
+                        <div className="font-semibold p-3">
                           {symbol.length > 0 && (
-                            <code className="mr-1">{symbol}</code>
+                            <code className="mr-1 bg-wall rounded px-1 py-0.5">
+                              {symbol}
+                            </code>
                           )}
                           {name}
-                          <p className="font-normal text-base pt-1 pb-4">
-                            {desc}
-                          </p>
+                          <p className="font-normal text-base mt-1">{desc}</p>
                         </div>
-                      </Link>
-                    </li>
-                  </div>
-                );
-              })}
-            </ul>
-          )}
-          {active && results.length > 0 && (
-            <ul className="p-2">
-              <div>
-                <p className="font-semibold text-sm pb-4 text-gray">
-                  {results.length} results for "{query}"
-                </p>
-              </div>
-              {results
-                .filter((e) => e.parent !== "Glossary")
-                .map(({ title, slug, content, parent }) => {
-                  return (
-                    <li key={slug} className="cursor-pointer hover:bg-wall">
-                      <Link href={slug} as={slug}>
-                        <div>
-                          <p className="font-medium text-base">
-                            {parent} / {title}
-                          </p>
-                          <p className="text-base font-regular">{content}</p>
-                        </div>
-                      </Link>
-                    </li>
+                      </div>
+                    </Link>
                   );
                 })}
-            </ul>
-          )}
+              </div>
+            ) : null}
+            {active && results.length > 0 && (
+              <ul className="">
+                <div>
+                  <p className="font-semibold text-sm p-3 py-1 bg-ultraDeepWall text-white">
+                    {results.length} results for "{query}"
+                  </p>
+                </div>
+                {results
+                  .filter((e) => e.parent !== "Glossary")
+                  .map(({ title, slug, content, parent }) => {
+                    return (
+                      <li
+                        key={slug}
+                        className="cursor-pointer hover:bg-wall p-3"
+                      >
+                        <Link href={slug} as={slug}>
+                          <div>
+                            <p className="font-medium text-base">
+                              {parent} / {title}
+                            </p>
+                            <p className="text-base font-regular text-small text-gray">
+                              {content}
+                            </p>
+                          </div>
+                        </Link>
+                      </li>
+                    );
+                  })}
+              </ul>
+            )}
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
+  return null;
 }

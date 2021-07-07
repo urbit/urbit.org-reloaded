@@ -8,17 +8,26 @@ import "../styles/prism.css";
 function MyApp({ Component, pageProps }) {
   const [showSearch, toggleSearch] = useState(false);
 
-  const invertToggle = () => toggleSearch((state) => !state);
+  const invertToggle = (event) => {
+    if (event.preventDefault) {
+      event.preventDefault();
+    }
+    toggleSearch((state) => !state);
+  };
   const keyMap = { search: ["command+k", "ctrl+k", "esc"] };
-  const handlers = { search: invertToggle };
+  const handlers = { search: (event) => invertToggle(event) };
   configure({
     ignoreTags: [],
+    stopEventPropagationAfterHandling: true,
   });
 
   return (
     <>
       <GlobalHotKeys keyMap={keyMap} handlers={handlers} />
-      {showSearch && <Search toggleSearch={() => toggleSearch(false)} />}
+      <Search
+        showSearch={showSearch}
+        toggleSearch={() => toggleSearch(false)}
+      />
       <Component {...pageProps} toggleSearch={invertToggle} />
     </>
   );
