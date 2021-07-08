@@ -17,10 +17,6 @@ p a {
   @apply text-green;
 }
 
-/* * {
-  box-sizing: border-box;
-} */
-
 .layout-narrow {
   @apply w-full md:w-8/12 px-4 md:px-8 pb-20 md:pb-32 lg:pb-48;
 }
@@ -148,14 +144,64 @@ a:hover {
   @apply bg-wall;
 }
 
+:root {
+  --tray-time: 50ms;
+}
+
 .tray-menu-open {
   transform: translateX(0);
-  transition: transform 200ms;
+  transition: transform var(--tray-time);
 }
 
 .tray-menu-closed {
-  transform: translateX(100vw);
-  transition: transform 200ms;
+  transform: translateX(-110vw);
+  transition: transform var(--tray-time);
+}
+
+.tray-menu-width {
+  width: calc(100vw - 64px - 16px - 16px);
+}
+
+.tray-overlay-open {
+  opacity: 1;
+  transition: opacity var(--tray-time);
+}
+
+.tray-overlay-closed {
+  opacity: 0;
+  transition: opacity var(--tray-time);
+}
+
+.menu-open {
+  animation: hide var(--tray-time) linear;
+}
+
+.menu-closed {
+  animation: hide var(--tray-time) linear;
+}
+
+@keyframes show {
+  0% {
+    display: none;
+  }
+  1% {
+    display: block;
+  }
+  100% {
+    display: block;
+  }
+}
+
+@keyframes hide {
+  0% {
+    display: block;
+  }
+  99% {
+    display: block;
+  }
+  100% {
+    display: none;
+  }
 }
 
 .dot::before {

@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import classnames from "classnames";
 import path from "path";
-import { useLockBodyScroll } from "../lib/hooks";
 
 function ActiveLink({ children, href, className }) {
   const router = useRouter();
@@ -32,16 +31,35 @@ function MenuTray(props) {
     }
   }
 
-  const activeClasses = classnames({
+  // Slides the tray in or out from the left
+  const trayClasses = classnames({
     "tray-menu-open": props.isOpen,
     "tray-menu-closed": !props.isOpen,
   });
 
+  // Fades the background overlay in or out
+  const overlayClasses = classnames({
+    "tray-overlay-open": props.isOpen,
+    "tray-overlay-closed": !props.isOpen,
+  });
+
+  // Hides or shows the menu
+  const menuClasses = classnames({
+    "menu-open": props.isOpen,
+    "menu-closed": !props.isOpen,
+  });
+
   return (
-    <nav
-      className={`z-9 w-screen h-screen bg-wall flex top-0 left-0 flex-col p-4 pt-24 fixed ${activeClasses}`}
-    >
-      {props.children}
+    <nav className={`w-screen h-screen top-0 left-0 fixed ${menuClasses}`}>
+      <div
+        onClick={() => props.toggleTray(!props.isOpen)}
+        className={`bg-washedWhite w-screen h-screen ${overlayClasses}`}
+      />
+      <div
+        className={`fixed bg-wall h-screen top-0 left-0 flex flex-col p-4 pt-12 tray-menu-width ${trayClasses}`}
+      >
+        {props.children}
+      </div>
     </nav>
   );
 }
@@ -51,13 +69,8 @@ export default function Header(props) {
   const [isOpen, toggleTray] = useState(false);
   return (
     <header className="layout-wide flex justify-between items-center pt-12">
-      <div className="absolute z-10">
-        <Link href="/">
-          <a className="type-ui">Urbit</a>
-        </Link>
-      </div>
       <Link href="/">
-        <a className="type-ui text-white">Urbit</a>
+        <a className="type-ui">Urbit</a>
       </Link>
       {
         // Large screen header
@@ -86,9 +99,11 @@ export default function Header(props) {
       {
         // Small screen header
       }
-
       <div className="block md:hidden">
-        <MenuTray isOpen={isOpen}>
+        <MenuTray isOpen={isOpen} toggleTray={toggleTray}>
+          <Link href="/">
+            <a className="type-ui mb-12">Urbit</a>
+          </Link>
           <ActiveLink className="mr-5 type-h3" href="/docs">
             Docs
           </ActiveLink>
@@ -98,13 +113,13 @@ export default function Header(props) {
           <ActiveLink className="mr-5 type-h3" href="/events">
             Events
           </ActiveLink>
-          <button className="button-sm bg-wall text-gray">
-            Search<div className="ml-4 text-lightGray">⌘K</div>
+          <button className="fixed bottom-4 left-4 right-4 bg-white rounded-xl items-center justify-between flex px-4 h-16 type-ui text-gray">
+            Search...
           </button>
         </MenuTray>
         <button
           onClick={() => toggleTray(!isOpen)}
-          className="z-10 absolute right-4 top-8"
+          className="z-10 fixed bottom-4 right-4 w-16 h-16 bg-ultraDeepWall flex items-center justify-center rounded-full"
         >
           {isOpen ? (
             <svg
@@ -118,7 +133,7 @@ export default function Header(props) {
                 fill-rule="evenodd"
                 clip-rule="evenodd"
                 d="M0.39382 13.7045C-0.131273 14.2296 -0.131274 15.081 0.39382 15.6061C0.918913 16.1312 1.77026 16.1312 2.29535 15.6061L7.99999 9.90142L13.7047 15.6061C14.2297 16.1312 15.0811 16.1312 15.6062 15.6061C16.1313 15.081 16.1313 14.2296 15.6062 13.7046L9.90152 7.99989L15.6061 2.29535C16.1312 1.77026 16.1312 0.918913 15.6061 0.39382C15.081 -0.131273 14.2296 -0.131273 13.7045 0.39382L7.99999 6.09836L2.29548 0.393844C1.77038 -0.131249 0.919038 -0.13125 0.393945 0.393844C-0.131148 0.918937 -0.131148 1.77028 0.393945 2.29537L6.09846 7.99989L0.39382 13.7045Z"
-                fill="black"
+                fill="white"
               />
             </svg>
           ) : (
@@ -129,9 +144,9 @@ export default function Header(props) {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <rect width="16" height="3" rx="1.5" fill="black" />
-              <rect y="7" width="16" height="3" rx="1.5" fill="black" />
-              <rect y="14" width="16" height="3" rx="1.5" fill="black" />
+              <rect width="16" height="3" rx="1.5" fill="white" />
+              <rect y="7" width="16" height="3" rx="1.5" fill="white" />
+              <rect y="14" width="16" height="3" rx="1.5" fill="white" />
             </svg>
           )}
         </button>

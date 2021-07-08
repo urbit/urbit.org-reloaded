@@ -23,6 +23,7 @@ module.exports = {
       purple: "rgba(157,82,255,0.8)",
       red: "#ff4136",
       transparent: "rgba(0,0,0,0)",
+      washedWhite: "rgba(255,255,255, 0.5)",
     },
     fontFamily: {
       sans: ["Inter", "-apple-system", "sans-serif"],
