@@ -66,7 +66,7 @@ export default function Search(props) {
     return (
       <div className="fixed w-screen h-screen bg-washedWall z-50 flex flex-col items-center">
         <div
-          className="relative my-32 flex flex-col max-w-screen-lg w-10/12 md:w-10/12 lg:w-8/12 xl:w-6/12 rounded-xl bg-white"
+          className="relative my-32 flex flex-col max-w-screen-lg w-10/12 md:w-10/12 lg:w-8/12 xl:w-6/12 rounded-xl bg-white min-h-0"
           ref={searchRef}
         >
           <div className="">
