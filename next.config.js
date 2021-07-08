@@ -6,6 +6,10 @@ module.exports = {
 				fs: 'empty'
 			}
 		}
+    config.externals = {
+      ...config.externals,
+      canvas: "util"
+    }
 		return config
 	}
 }
