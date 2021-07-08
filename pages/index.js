@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Container from "../components/Container";
 import SingleColumn from "../components/SingleColumn";
 import Header from "../components/Header";
@@ -14,6 +14,37 @@ import { contact } from "../lib/constants";
 
 export default function Home({ posts, events, openGrantsCount, toggleSearch }) {
   const [tab, setTab] = useState(0);
+  const [heroButton, setHeroButton] = useState(<div />);
+
+  const detectOS = () => {
+    const agent = window.navigator.appVersion;
+    if (agent.includes("Win")) {
+      return (
+        <span className="button-lg type-ui mb-5 bg-ultraDeepWall text-white">
+          Coming soon for Windows
+        </span>
+      );
+    } else if (agent.includes("Mac")) {
+      return (
+        <a href="https://github.com/arthyn/port/releases/latest/download/Port.dmg">
+          <button className="button-lg type-ui mb-5 bg-green text-white">
+            Download For macOS
+          </button>
+        </a>
+      );
+    } else if (agent.includes("Linux")) {
+      return (
+        <code className="button-lg type-ui mb-5 bg-ultraDeepWall text-white">
+          sudo snap install port
+        </code>
+      );
+    }
+  };
+
+  useEffect(() => {
+    setHeroButton(detectOS());
+  }, []);
+
   return (
     <Container>
       <SingleColumn>
@@ -43,10 +74,13 @@ export default function Home({ posts, events, openGrantsCount, toggleSearch }) {
                 Getting into Urbit is now as simple as installing an app on your
                 computer.
               </p>
-              <button className="button-lg type-ui mb-5 bg-green text-white">
-                Download For Mac
-              </button>
-              <a className="type-ui text-gray">View on GitHub</a>
+              {heroButton}
+              <a
+                href="https://github.com/arthyn/port"
+                className="type-ui text-gray"
+              >
+                View on GitHub
+              </a>
             </div>
             <div className="w-full hero-image-height hero-image mt-8" />
           </div>
