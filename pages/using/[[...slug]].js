@@ -15,7 +15,7 @@ const breadcrumbs = (posts, paths) => {
   const results = [
     <Link href="/">Urbit</Link>,
     <span className="px-1">/</span>,
-    <Link href="/docs">Documentation</Link>,
+    <Link href="/using">Operator's Manual</Link>,
   ];
   let thisLink = "/docs";
   for (const path of paths) {
@@ -96,11 +96,11 @@ const pageTree = (thisLink, tree, level = 0) => {
   );
 };
 
-export default function DocsLayout({ posts, data, params, search, markdown }) {
+export default function UsingLayout({ posts, data, params, search, markdown }) {
   return (
     <>
       <Head>
-        <title>{data.title} / Documentation / Urbit.org</title>
+        <title>{data.title} / Operator's Manual / Urbit.org</title>
       </Head>
       <div className="flex w-screen h-screen min-h-screen w-screen">
         <Sidebar>{childPages("/docs", posts.children)}</Sidebar>
@@ -108,7 +108,7 @@ export default function DocsLayout({ posts, data, params, search, markdown }) {
           breadcrumbs={breadcrumbs(posts, params.slug?.slice(0, -1) || "")}
           title={data.title}
           search={search}
-          section="Urbit Documentation"
+          section={"Operator's Manual"}
         >
           <div className={markdownStyles["markdown"]}>
             <article
@@ -122,10 +122,10 @@ export default function DocsLayout({ posts, data, params, search, markdown }) {
 }
 
 export async function getStaticProps({ params }) {
-  const posts = buildPageTree(join(process.cwd(), "content/docs"), "weight");
+  const posts = buildPageTree(join(process.cwd(), "content/using"), "weight");
 
   const { data, content } = getPage(
-    join(process.cwd(), "content/docs", params.slug?.join("/") || "/")
+    join(process.cwd(), "content/using", params.slug?.join("/") || "/")
   );
 
   const markdown = await Markdown({ post: { content: content } });
@@ -134,7 +134,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const posts = buildPageTree(join(process.cwd(), "content/docs"), "weight");
+  const posts = buildPageTree(join(process.cwd(), "content/using"), "weight");
   const slugs = [];
 
   const allHrefs = (thisLink, tree) => {
@@ -148,7 +148,7 @@ export async function getStaticPaths() {
     });
   };
 
-  allHrefs("/docs", posts);
+  allHrefs("/using", posts);
 
   return {
     paths: slugs,
