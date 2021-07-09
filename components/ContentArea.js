@@ -6,7 +6,7 @@ export default function ContentArea(props) {
         <button
           onClick={(e) => {
             e.stopPropagation();
-            props.toggleSearch();
+            props.search.toggleSearch();
           }}
           className="button-sm bg-wall text-gray"
         >

@@ -26,7 +26,7 @@ export default function Grant({
   nextPost,
   markdown,
   previousPost,
-  toggleSearch,
+  search,
 }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
@@ -36,8 +36,8 @@ export default function Grant({
   return (
     <Container>
       <SingleColumn>
-        <Header toggleSearch={() => toggleSearch(true)} />
-        <section className="flex flex-col layout-wide">
+        <Header search={search} />
+        <section className="flex flex-col layout-narrow">
           <h1>{post.title}</h1>
           {post.extra.author ? (
             <div className="type-ui text-gray mt-4">{post.extra.author}</div>
@@ -49,7 +49,7 @@ export default function Grant({
             {formatDate(new Date(post.date))}
           </div>
         </section>
-        <div className={"layout-wide " + markdownStyles["markdown"]}>
+        <div className={"layout-narrow " + markdownStyles["markdown"]}>
           <article
             dangerouslySetInnerHTML={{ __html: decode(markdown) }}
           ></article>

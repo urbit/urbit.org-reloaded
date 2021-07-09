@@ -96,13 +96,7 @@ const pageTree = (thisLink, tree, level = 0) => {
   );
 };
 
-export default function DocsLayout({
-  posts,
-  data,
-  params,
-  toggleSearch,
-  markdown,
-}) {
+export default function DocsLayout({ posts, data, params, search, markdown }) {
   return (
     <>
       <Head>
@@ -113,7 +107,7 @@ export default function DocsLayout({
         <ContentArea
           breadcrumbs={breadcrumbs(posts, params.slug?.slice(0, -1) || "")}
           title={data.title}
-          toggleSearch={() => toggleSearch(true)}
+          search={search}
         >
           <div className={markdownStyles["markdown"]}>
             <article

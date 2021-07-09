@@ -145,7 +145,7 @@ a:hover {
 }
 
 :root {
-  --tray-time: 50ms;
+  --tray-time: 0ms;
 }
 
 .tray-menu-open {

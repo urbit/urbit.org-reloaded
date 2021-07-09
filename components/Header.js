@@ -67,6 +67,12 @@ function MenuTray(props) {
 // This is the header for the index page
 export default function Header(props) {
   const [isOpen, toggleTray] = useState(false);
+
+  const mobileSearchButtonClasses = classnames({
+    visible: isOpen,
+    invisible: !isOpen,
+  });
+
   return (
     <header className="layout-wide flex justify-between items-center pt-12">
       <Link href="/">
@@ -89,7 +95,7 @@ export default function Header(props) {
         <button
           onClick={(e) => {
             e.stopPropagation();
-            props.toggleSearch();
+            props.search.toggleSearch(e);
           }}
           className="button-sm bg-wall text-gray"
         >
@@ -113,10 +119,31 @@ export default function Header(props) {
           <ActiveLink className="mr-5 type-h3" href="/events">
             Events
           </ActiveLink>
-          <button className="fixed bottom-4 left-4 right-4 bg-white rounded-xl items-center justify-between flex px-4 h-16 type-ui text-gray">
-            Search...
-          </button>
         </MenuTray>
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            props.search.toggleSearch(e);
+          }}
+          className={`z-10 fixed bottom-24 right-6 w-12 h-12 bg-ultraDeepWall items-center justify-center rounded-full flex ${mobileSearchButtonClasses}`}
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="7" cy="7" r="5.5" stroke="white" stroke-width="3" />
+            <path
+              d="M11 11L14 14"
+              stroke="white"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+
         <button
           onClick={() => toggleTray(!isOpen)}
           className="z-10 fixed bottom-4 right-4 w-16 h-16 bg-ultraDeepWall flex items-center justify-center rounded-full"

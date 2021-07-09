@@ -64,7 +64,7 @@ export default function Grants({
   categories,
   types,
   featuredGrants,
-  toggleSearch,
+  search,
 }) {
   const [activeTags, setTags] = useState([]);
   const [activeTypes, setTypes] = useState(types);
@@ -92,7 +92,7 @@ export default function Grants({
   return (
     <Container>
       <SingleColumn>
-        <Header toggleSearch={() => toggleSearch(true)} />
+        <Header search={search} />
         {
           // Heading and introduction
         }

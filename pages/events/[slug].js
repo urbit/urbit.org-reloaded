@@ -26,7 +26,7 @@ export default function Event({
   nextPost,
   previousPost,
   markdown,
-  toggleSearch,
+  search,
 }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
@@ -35,8 +35,8 @@ export default function Event({
   return (
     <Container>
       <SingleColumn>
-        <Header toggleSearch={() => toggleSearch(true)} />
-        <section className="flex flex-col layout-wide pt-24">
+        <Header search={search} />
+        <section className="flex flex-col layout-narrow pt-24">
           <h1>{post.title}</h1>
           {post.extra.author ? (
             <div className="type-ui text-gray mt-4">{post.extra.author}</div>
@@ -48,7 +48,7 @@ export default function Event({
             {formatDate(new Date(post.date))}
           </div>
         </section>
-        <section className="flex layout-wide pt-24">
+        <section className="flex layout-narrow pt-24">
           {post.extra.youtube ? (
             <iframe
               className="rounded-xl"
@@ -61,7 +61,7 @@ export default function Event({
             ></iframe>
           ) : null}
         </section>
-        <div className={"layout-wide " + markdownStyles["markdown"]}>
+        <div className={"layout-narrow " + markdownStyles["markdown"]}>
           <article
             className="flex flex-col items-center pt-12 w-full"
             dangerouslySetInnerHTML={{ __html: decode(markdown) }}

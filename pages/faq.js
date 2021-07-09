@@ -8,11 +8,11 @@ import SingleColumn from "../components/SingleColumn";
 import BackgroundImage from "../components/BackgroundImage";
 import { getAllPosts, formatDate } from "../lib/lib";
 
-export default function Blog({ posts, toggleSearch }) {
+export default function Blog({ posts, search }) {
   return (
     <Container>
       <SingleColumn>
-        <Header toggleSearch={() => toggleSearch(true)} />
+        <Header search={search} />
         <section className="layout-wide">
           <div className="measure">
             <h2 className="pb-16">Urbit Blog</h2>
@@ -75,12 +75,12 @@ export default function Blog({ posts, toggleSearch }) {
 }
 
 export async function getStaticProps() {
-  const posts = getPostBySlug(
-    ["title", "slug", "date", "description", "extra"],
-    "blog"
-  );
+  // const posts = getPostBySlug(
+  //   ["title", "slug", "date", "description", "extra"],
+  //   "blog"
+  // );
 
   return {
-    props: { posts },
+    props: { posts: [] },
   };
 }

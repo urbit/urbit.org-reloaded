@@ -12,7 +12,7 @@ import PostPreview from "../components/PostPreview";
 import { getAllPosts, formatDate, getOpenGrantsCount } from "../lib/lib";
 import { contact } from "../lib/constants";
 
-export default function Home({ posts, events, openGrantsCount, toggleSearch }) {
+export default function Home({ posts, events, openGrantsCount, search }) {
   const [tab, setTab] = useState(0);
   const [heroButton, setHeroButton] = useState(<div />);
 
@@ -48,7 +48,7 @@ export default function Home({ posts, events, openGrantsCount, toggleSearch }) {
   return (
     <Container>
       <SingleColumn>
-        <Header toggleSearch={() => toggleSearch(true)} />
+        <Header search={search} />
 
         {
           // Hero Statement

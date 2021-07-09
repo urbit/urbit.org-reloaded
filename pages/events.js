@@ -69,11 +69,11 @@ function EventCard(props) {
   );
 }
 
-export default function Events({ pastEvents, currentEvents, toggleSearch }) {
+export default function Events({ pastEvents, currentEvents, search }) {
   return (
     <Container>
       <SingleColumn>
-        <Header toggleSearch={() => toggleSearch(true)} />
+        <Header search={search} />
         <section className="layout-narrow">
           <div className="measure">
             <h2 className="pb-16">Urbit Events</h2>

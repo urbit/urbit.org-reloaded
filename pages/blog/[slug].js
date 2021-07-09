@@ -26,7 +26,7 @@ export default function Post({
   nextPost,
   previousPost,
   markdown,
-  toggleSearch,
+  search,
 }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
@@ -35,8 +35,8 @@ export default function Post({
   return (
     <Container>
       <SingleColumn>
-        <Header toggleSearch={() => toggleSearch(true)} />
-        <section className="flex flex-col layout-wide">
+        <Header search={search} />
+        <section className="flex flex-col layout-narrow">
           <h1>{post.title}</h1>
           {post.extra.author ? (
             <div className="type-ui text-gray mt-4">{post.extra.author}</div>
@@ -48,7 +48,7 @@ export default function Post({
             {formatDate(new Date(post.date))}
           </div>
         </section>
-        <div className={"layout-wide " + markdownStyles["markdown"]}>
+        <div className={"layout-narrow " + markdownStyles["markdown"]}>
           <article
             dangerouslySetInnerHTML={{ __html: decode(markdown) }}
           ></article>

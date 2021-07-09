@@ -1,24 +1,50 @@
 import "tailwindcss/tailwind.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { configure, GlobalHotKeys } from "react-hotkeys";
 import Search from "../components/Search";
 import "../styles/globals.css";
 import "../styles/prism.css";
 
 function MyApp({ Component, pageProps }) {
-  const [showSearch, toggleSearch] = useState(false);
+  const [showSearch, setSearch] = useState(false);
 
-  const invertToggle = (event) => {
-    if (event.preventDefault) {
+  const closeSearch = (event) => {
+    if (event?.preventDefault) {
       event.preventDefault();
     }
-    toggleSearch((state) => !state);
+    setSearch(false);
   };
-  const keyMap = { search: ["command+k", "ctrl+k", "esc"] };
-  const handlers = { search: (event) => invertToggle(event) };
+
+  const openSearch = (event) => {
+    if (event?.preventDefault) {
+      event.preventDefault();
+    }
+    setSearch(true);
+  };
+
+  const toggleSearch = (event) => {
+    if (event?.preventDefault) {
+      event.preventDefault();
+    }
+    setSearch((state) => !state);
+  };
+
+  const keyMap = {
+    // openSearch: [],
+    closeSearch: ["esc"],
+    toggleSearch: ["command+k", "ctrl+k"],
+  };
+
+  const handlers = {
+    closeSearch: (event) => closeSearch(event),
+    openSearch: (event) => openSearch(event),
+    toggleSearch: (event) => toggleSearch(event),
+  };
+
   configure({
-    ignoreTags: [],
-    stopEventPropagationAfterHandling: true,
+    // ignoreTags: [],
+    ignoreTags: ["input", "select", "textarea"],
+    ignoreEventsCondition: function () {},
   });
 
   return (
@@ -26,9 +52,18 @@ function MyApp({ Component, pageProps }) {
       <GlobalHotKeys keyMap={keyMap} handlers={handlers} />
       <Search
         showSearch={showSearch}
-        toggleSearch={() => toggleSearch(false)}
+        toggleSearch={toggleSearch}
+        closeSearch={closeSearch}
+        openSearch={openSearch}
       />
-      <Component {...pageProps} toggleSearch={invertToggle} />
+      <Component
+        {...pageProps}
+        search={{
+          toggleSearch: toggleSearch,
+          closeSearch: closeSearch,
+          openSearch: openSearch,
+        }}
+      />
     </>
   );
 }

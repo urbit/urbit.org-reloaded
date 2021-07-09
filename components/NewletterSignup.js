@@ -7,7 +7,7 @@ export default function NewsletterSignup(props) {
       name="mc-embedded-subscribe-form"
       className="validate form max-w-screen-sm"
       target="_blank"
-      novalidate
+      noValidate
     >
       <div className="input-group" id="mc_embed_signup_scroll">
         <div className="mc-field-group w-full relative">

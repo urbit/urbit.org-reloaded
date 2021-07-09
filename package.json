@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "npm run cache-posts && next dev",
     "build": "npm run cache-posts && next build",
+    "export": "npm run cache-posts && next build && next export",
     "start": "next start",
     "prepare": "husky install",
     "cache-posts": "node lib/cache.js",
