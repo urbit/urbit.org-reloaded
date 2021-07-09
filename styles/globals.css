@@ -97,14 +97,9 @@ button {
   overflow: visible;
 }
 
-.button-sm:hover {
-  opacity: 0.66;
-}
-
-.button-lg:hover {
-  opacity: 0.66;
-}
-
+.button-sm:hover,
+.button-text:hover,
+.button-lg:hover,
 a:hover {
   opacity: 0.66;
 }

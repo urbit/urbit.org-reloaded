@@ -1,7 +1,7 @@
 export default function ContentArea(props) {
   return (
     <div className="w-full min-w-0 flex flex-col">
-      <header className="flex justify-between items-center px-24 pt-12 pb-8">
+      <header className="flex justify-between items-center px-4 md:px-12 lg:px-24 pt-12 pb-8">
         <div className="type-ui">{props.section}</div>
         <button
           onClick={(e) => {
@@ -13,7 +13,7 @@ export default function ContentArea(props) {
           Search<div className="ml-4 text-lightGray">⌘K</div>
         </button>
       </header>
-      <div className="px-24 pb-24 pt-16 flex flex-col w-full max-h-screen h-screen overflow-y-scroll">
+      <div className="px-4 md:px-12 lg:px-24 pb-24 pt-16 flex flex-col w-full max-h-screen h-screen overflow-y-scroll">
         <div className="type-ui text-lightGray">{props.breadcrumbs}</div>
         <h2 className="mb-16 mt-4">{props.title}</h2>
         {props.children}

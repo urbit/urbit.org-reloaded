@@ -30,7 +30,7 @@ const breadcrumbs = (posts, paths) => {
 };
 
 const childPages = (thisLink, children, level = 0) => (
-  <ul className="pl-1">
+  <ul className="pl-0">
     {Object.entries(children).map(([childSlug, child]) => (
       <li>{pageTree(join(thisLink, childSlug), child, level)}</li>
     ))}
@@ -69,7 +69,7 @@ const pageTree = (thisLink, tree, level = 0) => {
         <p className={`${headingItemClasses} cursor-pointer`}>{tree.title}</p>
       </span>
       <div className={activeClasses}>
-        <ul className={"pl-1"}>
+        <ul className={""}>
           {tree.pages.map(({ title, slug }) => {
             const href = join(thisLink, slug);
             const isSelected = router.asPath === href;
@@ -97,6 +97,8 @@ const pageTree = (thisLink, tree, level = 0) => {
 };
 
 export default function DocsLayout({ posts, data, params, search, markdown }) {
+  const [isOpen, toggleTray] = useState(false);
+
   return (
     <>
       <Head>
@@ -104,6 +106,7 @@ export default function DocsLayout({ posts, data, params, search, markdown }) {
       </Head>
       <div className="flex w-screen h-screen min-h-screen w-screen">
         <Sidebar>{childPages("/docs", posts.children)}</Sidebar>
+
         <ContentArea
           breadcrumbs={breadcrumbs(posts, params.slug?.slice(0, -1) || "")}
           title={data.title}
