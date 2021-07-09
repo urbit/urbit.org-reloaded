@@ -162,6 +162,10 @@ a:hover {
   width: calc(100vw - 64px - 16px - 16px);
 }
 
+.mobile-search-button-width {
+  width: calc(100vw - 64px - 16px - 16px - 16px - 16px);
+}
+
 .tray-overlay-open {
   opacity: 1;
   transition: opacity var(--tray-time);

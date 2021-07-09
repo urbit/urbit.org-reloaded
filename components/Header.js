@@ -50,13 +50,13 @@ function MenuTray(props) {
   });
 
   return (
-    <nav className={`w-screen h-screen top-0 left-0 fixed ${menuClasses}`}>
+    <nav className={`z-10 w-screen h-screen top-0 left-0 fixed ${menuClasses}`}>
       <div
         onClick={() => props.toggleTray(!props.isOpen)}
         className={`bg-washedWhite w-screen h-screen ${overlayClasses}`}
       />
       <div
-        className={`absolute bg-wall h-screen top-0 left-0 flex flex-col p-4 pt-12 tray-menu-width ${trayClasses}`}
+        className={`absolute bg-wall h-screen top-0 left-0 flex flex-col p-4 tray-menu-width ${trayClasses}`}
       >
         {props.children}
       </div>
@@ -102,43 +102,36 @@ export default function Header(props) {
           Search<div className="ml-4 text-lightGray">⌘K</div>
         </button>
       </nav>
+
+      {
+        // Small screen header
+      }
+      <MenuTray isOpen={isOpen} toggleTray={toggleTray}>
+        <Link href="/">
+          <a className="type-ui mb-12 mt-8">Urbit</a>
+        </Link>
+        <ActiveLink className="mr-5 mb-4 type-h3" href="/docs">
+          Docs
+        </ActiveLink>
+        <ActiveLink className="mr-5 mb-4 type-h3" href="/blog">
+          Blog
+        </ActiveLink>
+        <ActiveLink className="mr-5 mb-4 type-h3" href="/events">
+          Events
+        </ActiveLink>
+      </MenuTray>
+
       <button
         onClick={(e) => {
           e.stopPropagation();
           props.search.toggleSearch(e);
         }}
-        className="button-sm bg-wall text-gray md:hidden justify-self-end"
+        className={`z-10 fixed px-4 items-center justify-center type-ui rounded-xl h-16 bg-white text-gray left-4 right-4 bottom-4 mobile-search-button-width ${
+          isOpen ? "flex" : "hidden"
+        }`}
       >
-        Search<div className="ml-4 text-lightGray">⌘K</div>
+        Search
       </button>
-      {
-        // Small screen header
-      }
-
-      <MenuTray isOpen={isOpen} toggleTray={toggleTray}>
-        <Link href="/">
-          <a className="type-ui mb-12">Urbit</a>
-        </Link>
-        <ActiveLink className="mr-5 type-h3" href="/docs">
-          Docs
-        </ActiveLink>
-        <ActiveLink className="mr-5 type-h3" href="/blog">
-          Blog
-        </ActiveLink>
-        <ActiveLink className="mr-5 type-h3" href="/events">
-          Events
-        </ActiveLink>
-
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            props.search.toggleSearch(e);
-          }}
-          className="flex px-4 items-center justify-center type-ui rounded-xl h-16 bg-white text-gray absolute left-4 right-4 bottom-4"
-        >
-          Search
-        </button>
-      </MenuTray>
 
       <button
         onClick={() => toggleTray(!isOpen)}
