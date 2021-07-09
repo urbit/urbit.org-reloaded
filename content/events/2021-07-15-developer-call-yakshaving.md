@@ -10,7 +10,7 @@ time = "9:00 PDT"
 location = "Online Event" 
 image = "" 
 registration_url = "https://www.meetup.com/urbit-sf/events/279349114/" 
-description = "A look at ~littel-wolfer's Hoon development setup" 
+description = "A look at ~littel-wolfer\'s Hoon development setup" 
 youtube = "AG6IPaXbiiY"
 
 +++
