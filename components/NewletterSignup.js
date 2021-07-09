@@ -12,7 +12,7 @@ export default function NewsletterSignup(props) {
       <div className="input-group" id="mc_embed_signup_scroll">
         <div className="mc-field-group w-full relative">
           <input
-            className={`text-gray type-ui black border-${
+            className={`appearance-none text-gray type-ui black border-${
               props.color || "green"
             } border-4 px-3 w-full mb-2 h-16 rounded-xl`}
             type="email"
