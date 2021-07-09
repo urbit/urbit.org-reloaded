@@ -1,4 +1,5 @@
 import remark from "remark";
+import gfm from "remark-gfm";
 import slug from "remark-slug";
 import heading from "remark-heading-id";
 import html from "remark-html";
@@ -36,6 +37,7 @@ const options = {
 export default async function Markdown({ post }) {
   const result = await remark()
     .use(html, options)
+    .use(gfm)
     .use(remarkprism)
     .use(slug)
     .use(heading)
