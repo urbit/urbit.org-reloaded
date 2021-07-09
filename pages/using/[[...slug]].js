@@ -100,7 +100,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
   return (
     <>
       <Head>
-        <title>{data.title} / Operator's Manual / Urbit.org</title>
+        <title>{data.title} / Operator's Manual / urbit.org</title>
       </Head>
       <div className="flex w-screen h-screen min-h-screen w-screen">
         <Sidebar>{childPages("/docs", posts.children)}</Sidebar>
