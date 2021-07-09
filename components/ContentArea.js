@@ -2,7 +2,7 @@ export default function ContentArea(props) {
   return (
     <div className="w-full min-w-0 flex flex-col">
       <header className="flex justify-between items-center px-24 pt-12 pb-8">
-        <div className="type-ui">Urbit Documentation</div>
+        <div className="type-ui">{props.section}</div>
         <button
           onClick={(e) => {
             e.stopPropagation();
