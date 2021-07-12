@@ -44,9 +44,12 @@ export default function Header(props) {
         <ActiveLink className="mr-5 type-ui" href="/events">
           Events
         </ActiveLink>
-        <button className="mr-5 text-green type-ui button-text">
+        <ActiveLink
+          className="mr-5 text-green type-ui button-text"
+          href="/getting-started"
+        >
           Download Port
-        </button>
+        </ActiveLink>
         <button
           onClick={(e) => {
             e.stopPropagation();
