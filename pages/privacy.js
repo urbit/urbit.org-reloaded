@@ -7,11 +7,7 @@ export default function Post({ post, markdown, search }) {
 }
 
 export async function getStaticProps() {
-  const post = getPostBySlug(
-    "/terms-of-use",
-    ["title", "slug", "content"],
-    "/"
-  );
+  const post = getPostBySlug("/privacy", ["title", "slug", "content"], "/");
 
   const markdown = await Markdown({ post });
 
