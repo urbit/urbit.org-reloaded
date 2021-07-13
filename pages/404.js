@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Container from "../components/Container";
 import SingleColumn from "../components/SingleColumn";
 import Header from "../components/Header";
