@@ -3,7 +3,7 @@ import { name, contact } from "../../lib/constants";
 
 export default function () {
   return (
-    <section className="layout-narrow">
+    <Section narrow>
       <div className="measure">
         <h4 className="pb-6">
           If you’d like to follow our progress, we send monthly updates via
@@ -33,6 +33,6 @@ export default function () {
         Boot Urbit and join{" "}
         <code className="bg-wall p-2 rounded-lg">{contact.urbitCommunity}</code>
       </h4>
-    </section>
+    </Section>
   );
 }

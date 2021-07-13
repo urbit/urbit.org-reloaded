@@ -1,12 +1,13 @@
 import Link from "next/link";
 import SingleColumn from "./SingleColumn";
+import Section from "./Section";
 import { contact } from "../lib/constants";
 
 export default function Footer() {
   return (
-    <footer className="pt-16 md:pt-20 lg:pt-24 bg-wall w-full mt-48 flex justify-center">
+    <footer className="py-16 bg-wall w-full mt-48 flex justify-center">
       <SingleColumn>
-        <div className="flex layout-wide-short">
+        <Section short className="flex">
           <div className="w-1/3 flex flex-col flex-shrink">
             <h4 className="mb-8">Use Urbit</h4>
             <Link href="">
@@ -66,8 +67,8 @@ export default function Footer() {
               </div>
             </Link>
           </div>
-        </div>
-        <div className="flex layout-wide-short">
+        </Section>
+        <Section short className="flex">
           <div className="w-1/3 flex flex-col">
             <h4 className="mb-8">Develop</h4>
             <Link href="/docs">
@@ -122,30 +123,28 @@ export default function Footer() {
               </div>
             </Link>
           </div>
-        </div>
-        <div className="flex layout-wide-short">
+        </Section>
+        <Section short className="flex">
           <div className="w-1/3">
-            <Link href="">
+            <Link href="/privacy">
               <div>
                 <a className="type-sub text-gray">Privacy Policy</a>
               </div>
             </Link>
           </div>
           <div className="w-1/3">
-            <Link href="">
+            <Link href="/terms-of-service">
               <div>
                 <a className="type-sub text-gray">Terms of Service</a>
               </div>
             </Link>
           </div>
           <div className="w-1/3">
-            <Link href="">
-              <div>
-                <a className="type-sub text-gray">{contact.email}</a>
-              </div>
-            </Link>
+            <div>
+              <a className="type-sub text-gray">{"mailto:" + contact.email}</a>
+            </div>
           </div>
-        </div>
+        </Section>
       </SingleColumn>
     </footer>
   );

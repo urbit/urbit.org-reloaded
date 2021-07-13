@@ -23,12 +23,11 @@ function ActiveLink({ children, href, className }) {
   );
 }
 
-// This is the header for the index page
 export default function Header(props) {
   const [isOpen, toggleTray] = useState(false);
 
   return (
-    <header className="w-full md:w-10/12 flex flex-row justify-between items-center py-8 md:py-10 lg:py-12">
+    <header className="w-full px-4 md:px-8 md:w-10/12 flex flex-row justify-between items-center pt-8 md:pt-10 lg:pt-12 pb-10 md:pb-12 lg:pb-24">
       <Link href="/">
         <a className="type-ui">Urbit</a>
       </Link>

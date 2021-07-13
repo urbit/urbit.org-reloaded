@@ -63,7 +63,7 @@ export default function Grant({ post, markdown, search, similarGrants }) {
             ))}
           </div>
         </Section>
-        <Section className={markdownStyles["markdown"]}>
+        <Section narrow className={markdownStyles["markdown"]}>
           <article
             dangerouslySetInnerHTML={{ __html: decode(markdown) }}
           ></article>
@@ -72,7 +72,7 @@ export default function Grant({ post, markdown, search, similarGrants }) {
         <Section narrow className="flex flex-col">
           <h3 className="pb-8">Similar Grants</h3>
           {similarGrants.map((grant) => {
-            return <GrantPreview post={grant} />;
+            return <GrantPreview grant={grant} />;
           })}
         </Section>
       </SingleColumn>

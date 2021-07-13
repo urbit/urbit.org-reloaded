@@ -4,6 +4,7 @@ import Container from "./Container";
 import Header from "./Header";
 import Footer from "./Footer";
 import SingleColumn from "./SingleColumn";
+import Section from "./Section";
 import markdownStyles from "../styles/markdown.module.css";
 import { decode } from "html-entities";
 
@@ -16,14 +17,14 @@ export default function BasicPage({ post, markdown, search }) {
     <Container>
       <SingleColumn>
         <Header search={search} />
-        <section className="flex flex-col layout-narrow">
+        <Section narrow>
           <h1>{post.title}</h1>
-        </section>
-        <div className={"layout-narrow " + markdownStyles["markdown"]}>
+        </Section>
+        <Section narrow className={markdownStyles["markdown"]}>
           <article
             dangerouslySetInnerHTML={{ __html: decode(markdown) }}
           ></article>
-        </div>
+        </Section>
       </SingleColumn>
       <Footer />
     </Container>

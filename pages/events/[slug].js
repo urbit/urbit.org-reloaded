@@ -17,6 +17,7 @@ import BackgroundImage from "../../components/BackgroundImage";
 import SingleColumn from "../../components/SingleColumn";
 import NewsletterSignup from "../../components/NewletterSignup";
 import PostPreview from "../../components/PostPreview";
+import Section from "../../components/Section";
 import { name, contact } from "../../lib/constants";
 import markdownStyles from "../../styles/markdown.module.css";
 import { decode } from "html-entities";
@@ -36,7 +37,7 @@ export default function Event({
     <Container>
       <SingleColumn>
         <Header search={search} />
-        <section className="flex flex-col layout-narrow-heading pt-24">
+        <Section narrow short>
           <h1>{post.title}</h1>
           {post.extra.author ? (
             <div className="type-ui text-gray mt-4 md:mt-8 lg:mt-10">
@@ -49,8 +50,8 @@ export default function Event({
           <div className="type-ui text-gray mt-16">
             {formatDate(new Date(post.date))}
           </div>
-        </section>
-        <section className="flex layout-narrow pt-24">
+        </Section>
+        <Section narrow>
           {post.extra.youtube ? (
             <iframe
               className="rounded-xl"
@@ -62,14 +63,14 @@ export default function Event({
               allowfullscreen
             ></iframe>
           ) : null}
-        </section>
-        <div className={"layout-narrow " + markdownStyles["markdown"]}>
+        </Section>
+        <Section narrow className={markdownStyles["markdown"]}>
           <article
             className="flex flex-col items-center pt-12 w-full"
             dangerouslySetInnerHTML={{ __html: decode(markdown) }}
           ></article>
-        </div>
-        <section className="layout-narrow pt-24">
+        </Section>
+        <Section narrow>
           <div className="measure">
             <h4 className="pb-6">
               If you’d like to follow our progress, we send monthly updates via
@@ -101,8 +102,8 @@ export default function Event({
               {contact.urbitCommunity}
             </code>
           </h4>
-        </section>
-        <section className="layout-wide pt-24 flex">
+        </Section>
+        <Section wide>
           {previousPost === null ? (
             <div className={"w-1/2 mr-4"} />
           ) : (
@@ -121,7 +122,7 @@ export default function Event({
               className="ml-4 w-1/2"
             />
           )}
-        </section>
+        </Section>
       </SingleColumn>
       <Footer />
     </Container>

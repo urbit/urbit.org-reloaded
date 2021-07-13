@@ -17,22 +17,6 @@ p a {
   @apply text-green;
 }
 
-/* .layout-narrow {
-  @apply w-full md:w-8/12 px-4 md:px-8 py-10 md:py-12 lg:py-24;
-}
-
-.layout-wide {
-  @apply w-full md:w-10/12 px-4 md:px-8 py-10 md:py-12 lg:py-24;
-}
-
-.layout-narrow-heading {
-  @apply w-full md:w-8/12 px-4 md:px-8 py-8 md:py-10 lg:py-12;
-}
-
-.layout-wide-short {
-  @apply w-full md:w-10/12 px-4 md:px-8 py-8 md:py-10 lg:py-12;
-} */
-
 h1,
 .type-h1 {
   @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;

@@ -9,6 +9,7 @@ import Search from "../components/Search";
 import SingleColumn from "../components/SingleColumn";
 import BackgroundImage from "../components/BackgroundImage";
 import TabCarousel from "../components/TabCarousel";
+import Section from "../components/Section";
 import GrantPreview from "../components/GrantPreview";
 import {
   getAllPosts,
@@ -90,6 +91,8 @@ export default function Grants({
     );
   });
 
+  console.log("filteredPosts:", filteredPosts);
+
   return (
     <Container>
       <SingleColumn>
@@ -97,7 +100,7 @@ export default function Grants({
         {
           // Heading and introduction
         }
-        <section className="layout-wide">
+        <Section wide>
           <div className="measure pb-16">
             <h2 className="pb-16">Urbit Grants</h2>
             <p className="mb-8">
@@ -122,11 +125,11 @@ export default function Grants({
               — Urbit Community Member <pre>~radbur-sivmus</pre>
             </p>
           </div>
-        </section>
+        </Section>
         {
           // Featured Grants
         }
-        <section className="layout-wide">
+        <Section wide>
           <div className="measure pb-16">
             <h2 className="pb-16">Featured Grants</h2>
             <p className="mb-8">
@@ -151,23 +154,23 @@ export default function Grants({
               );
             })}
           </div>
-        </section>
+        </Section>
 
         {
           // Gift Grants
         }
-        <section className="layout-wide">
+        <Section wide>
           <div className="measure pb-16">
             <h2 className="pb-16">Gifts</h2>
             <p className="mb-8">
               Gifts are given post facto for exceptional contributions.
             </p>
           </div>
-        </section>
+        </Section>
         {
           // Find a Grant
         }
-        <section className="layout-wide">
+        <Section wide>
           <h2 className="pb-8">Find A Grant</h2>
           <h5 className="text-black font-semibold my-2">Work Programs</h5>
           <div className="flex flex-wrap items-center pb-2">
@@ -241,7 +244,7 @@ export default function Grants({
           {filteredPosts.map((post) => {
             return <GrantPreview grant={post} />;
           })}
-        </section>
+        </Section>
       </SingleColumn>
       <Footer />
     </Container>
