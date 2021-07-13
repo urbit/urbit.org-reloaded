@@ -91,10 +91,11 @@ export default function Grants({
     );
   });
 
-  console.log("filteredPosts:", filteredPosts);
-
   return (
     <Container>
+      <Head>
+        <title>Urbit • Grants</title>
+      </Head>
       <SingleColumn>
         <Header search={search} />
         {
@@ -102,7 +103,7 @@ export default function Grants({
         }
         <Section wide>
           <div className="measure pb-16">
-            <h2 className="pb-16">Urbit Grants</h2>
+            <h1 className="pb-16">Grants</h1>
             <p className="mb-8">
               Urbit is a community project. While anyone can contribute, we help
               focus development and reward exceptional contribution through our
@@ -122,7 +123,8 @@ export default function Grants({
               </i>
             </p>
             <p>
-              — Urbit Community Member <pre>~radbur-sivmus</pre>
+              — Urbit Community Member{" "}
+              <pre className="ml-6">~radbur-sivmus</pre>
             </p>
           </div>
         </Section>

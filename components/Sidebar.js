@@ -20,7 +20,7 @@ export default function Sidebar(props) {
 
       <div className="block md:hidden">
         <MenuTray isOpen={isOpen} toggleTray={toggleTray}>
-          <header className="flex flex-shrink-0 justify-between items-center pt-8 pb-8">
+          <header className="flex flex-shrink-0 justify-between items-center pb-8">
             <Link href="/">
               <a className="type-ui text-gray">Urbit</a>
             </Link>

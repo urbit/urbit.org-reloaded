@@ -7,6 +7,9 @@ import Section from "../components/Section";
 export default function NotFound(props) {
   return (
     <Container>
+      <Head>
+        <title>Urbit • 404</title>
+      </Head>
       <SingleColumn>
         <Header search={props.search} />
         <Section className="pt-48">

@@ -5,34 +5,36 @@ import { contact } from "../lib/constants";
 
 export default function Footer() {
   return (
-    <footer className="py-16 bg-wall w-full mt-48 flex justify-center">
+    <footer className="bg-wall w-full mt-48 flex justify-center">
       <SingleColumn>
-        <Section short className="flex">
-          <div className="w-1/3 flex flex-col flex-shrink">
-            <h4 className="mb-8">Use Urbit</h4>
-            <Link href="">
+        <Section short className="flex flex-row flex-wrap">
+          <div className="w-1/2 md:w-1/3 flex flex-col flex-shrink">
+            <h4 className="mt-16 mb-8">Use Urbit</h4>
+            <Link href="https://github.com/urbit/port/releases">
               <div>
                 <a className="type-sub text-gray">Urbit Client</a>
               </div>
             </Link>
-            <Link href="">
+            <Link href="https://github.com/urbit/urbit/releases">
               <div>
                 <a className="mt-2 type-sub text-gray">Urbit Binaries</a>
               </div>
             </Link>
-            <Link href="">
-              <div>
-                <a className="mt-2 type-sub text-gray">Urbit Apps</a>
-              </div>
-            </Link>
-            <Link href="">
+            {
+              //   <Link href="">
+              //   <div>
+              //     <a className="mt-2 type-sub text-gray">Urbit Apps</a>
+              //   </div>
+              // </Link>
+            }
+            <Link href="/getting-started/planet/#hosting-providers">
               <div>
                 <a className="mt-2 type-sub text-gray">Hosting Providers</a>
               </div>
             </Link>
           </div>
-          <div className="w-1/3 flex flex-col flex-shrink">
-            <h4 className="mb-8">About</h4>
+          <div className="w-1/2 md:w-1/3 flex flex-col flex-shrink">
+            <h4 className="mt-16 mb-8">About</h4>
             <Link href="/understanding-urbit">
               <div>
                 <a className="type-sub text-gray">What's Urbit?</a>
@@ -54,8 +56,8 @@ export default function Footer() {
               </div>
             </Link>
           </div>
-          <div className="w-1/3 flex flex-col flex-shrink">
-            <h4 className="mb-8">News</h4>
+          <div className="w-1/2 md:w-1/3 flex flex-col flex-shrink">
+            <h4 className="mt-16 mb-8">News</h4>
             <Link href="/blog">
               <div>
                 <a className="type-sub text-gray">Blog</a>
@@ -67,10 +69,9 @@ export default function Footer() {
               </div>
             </Link>
           </div>
-        </Section>
-        <Section short className="flex">
-          <div className="w-1/3 flex flex-col">
-            <h4 className="mb-8">Develop</h4>
+
+          <div className="w-1/2 md:w-1/3 flex flex-col">
+            <h4 className="mt-16 mb-8">Develop</h4>
             <Link href="/docs">
               <div>
                 <a className="type-sub text-gray">Documentation</a>
@@ -87,8 +88,8 @@ export default function Footer() {
               </div>
             </Link>
           </div>
-          <div className="w-1/3 flex flex-col">
-            <h4 className="mb-8">Contribute</h4>
+          <div className="w-1/2 md:w-1/3 flex flex-col">
+            <h4 className="mt-16 mb-8">Contribute</h4>
             <Link href="https://github.com/urbit/urbit/issues">
               <div>
                 <a className="type-sub text-gray">Issue Tracker</a>
@@ -100,8 +101,9 @@ export default function Footer() {
               </div>
             </Link>
           </div>
-          <div className="w-1/3 flex flex-col">
-            <h4 className="mb-8">Community</h4>
+
+          <div className="w-1/2 md:w-1/3 flex flex-col">
+            <h4 className="mt-16 mb-8">Community</h4>
             <Link href="https://groups.google.com/a/urbit.org/g/dev?pli=1">
               <div>
                 <a className="type-sub text-gray">Dev Mailing List</a>
@@ -124,24 +126,29 @@ export default function Footer() {
             </Link>
           </div>
         </Section>
-        <Section short className="flex">
-          <div className="w-1/3">
+        <Section className="flex flex-col md:flex-row">
+          <div className="md:w-1/3">
             <Link href="/privacy">
               <div>
                 <a className="type-sub text-gray">Privacy Policy</a>
               </div>
             </Link>
           </div>
-          <div className="w-1/3">
+          <div className="md:w-1/3">
             <Link href="/terms-of-service">
               <div>
                 <a className="type-sub text-gray">Terms of Service</a>
               </div>
             </Link>
           </div>
-          <div className="w-1/3">
+          <div className="md:w-1/3">
             <div>
-              <a className="type-sub text-gray">{"mailto:" + contact.email}</a>
+              <a
+                href={"mailto:" + contact.email}
+                className="type-sub text-gray"
+              >
+                {contact.email}
+              </a>
             </div>
           </div>
         </Section>

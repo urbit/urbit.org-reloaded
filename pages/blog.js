@@ -11,11 +11,14 @@ import { getAllPosts, formatDate } from "../lib/lib";
 export default function Blog({ posts, search }) {
   return (
     <Container>
+      <Head>
+        <title>Urbit • Blog</title>
+      </Head>
       <SingleColumn>
         <Header search={search} />
         <Section narrow>
           <div className="measure">
-            <h2 className="pb-16">Urbit Blog</h2>
+            <h1 className="pb-16">Blog</h1>
             <p className="pb-6">
               Stories from the broader Urbit community, the Urbit Foundation,
               and the many people contributing to Urbit.
@@ -37,8 +40,7 @@ export default function Blog({ posts, search }) {
                       post.extra.image ? (
                         <BackgroundImage
                           src={post.extra.image}
-                          style={{ height: "620px" }}
-                          className="w-full rounded-lg"
+                          className="w-full rounded-lg tile-height"
                         />
                       ) : null
                     }

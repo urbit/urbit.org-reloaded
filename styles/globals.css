@@ -63,6 +63,10 @@ button {
   border: none;
 }
 
+.tile-height {
+  height: 38rem;
+}
+
 .button-sm {
   @apply flex px-4 py-1 rounded-lg type-ui;
 }

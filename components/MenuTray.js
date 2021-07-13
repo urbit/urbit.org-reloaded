@@ -36,9 +36,11 @@ export default function MenuTray(props) {
         className={`bg-washedWhite w-screen h-screen ${overlayClasses}`}
       />
       <div
-        className={`absolute bg-wall h-screen top-0 left-0 p-4 tray-menu-width overflow-y-scroll ${trayClasses}`}
+        className={`absolute bg-wall h-screen top-0 left-0 tray-menu-width overflow-y-scroll ${trayClasses}`}
       >
-        <div className="flex flex-col">{props.children}</div>
+        <div className="flex flex-col px-4 md:px-8 pt-8 md:pt-10 lg:pt-12 pb-10 md:pb-12 lg:pb-24">
+          {props.children}
+        </div>
       </div>
     </nav>
   );

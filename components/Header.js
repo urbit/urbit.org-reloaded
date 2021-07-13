@@ -66,7 +66,7 @@ export default function Header(props) {
       }
       <MenuTray isOpen={isOpen} toggleTray={toggleTray}>
         <Link href="/">
-          <a className="type-ui mb-12 mt-8">Urbit</a>
+          <a className="type-ui mb-12">Urbit</a>
         </Link>
         <ActiveLink className="mr-5 mb-4 type-h3" href="/docs">
           Docs
@@ -76,6 +76,9 @@ export default function Header(props) {
         </ActiveLink>
         <ActiveLink className="mr-5 mb-4 type-h3" href="/events">
           Events
+        </ActiveLink>
+        <ActiveLink className="mr-5 mb-4 type-h3" href="/grants">
+          Grants
         </ActiveLink>
       </MenuTray>
 

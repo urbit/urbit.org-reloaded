@@ -66,7 +66,7 @@ export default function Event({
         </Section>
         <Section narrow className={markdownStyles["markdown"]}>
           <article
-            className="flex flex-col items-center pt-12 w-full"
+            className="pt-12 w-full"
             dangerouslySetInnerHTML={{ __html: decode(markdown) }}
           ></article>
         </Section>

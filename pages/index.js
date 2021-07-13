@@ -48,6 +48,9 @@ export default function Home({ posts, events, openGrantsCount, search }) {
 
   return (
     <Container>
+      <Head>
+        <title>Urbit</title>
+      </Head>
       <SingleColumn>
         <Header search={search} />
 
@@ -94,7 +97,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
         }
         <Section narrow>
           <div className="flex flex-col md:flex-row md:items-center items-start measure pb-12">
-            <h2 className="m-0 p-0 mr-4 md:mb-0 mb-4">Urbit Grants</h2>
+            <h2 className="m-0 p-0 mr-4 md:mb-0 mb-4">Grants</h2>
             <Link href="/grants">
               <a className="bg-green text-white badge-lg">
                 {openGrantsCount} Open

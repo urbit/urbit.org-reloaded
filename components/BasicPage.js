@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Head from "next/head";
 import ErrorPage from "../pages/404";
 import Container from "./Container";
 import Header from "./Header";
@@ -15,6 +16,9 @@ export default function BasicPage({ post, markdown, search }) {
   }
   return (
     <Container>
+      <Head>
+        <title>Urbit • {post.title}</title>
+      </Head>
       <SingleColumn>
         <Header search={search} />
         <Section narrow>
