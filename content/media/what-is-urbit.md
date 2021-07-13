@@ -5,6 +5,5 @@ description = "A quick video explainer of how Urbit works."
 [extra]
 youtube = "M04AKTCDavc"
 +++
-{{ youtube(id="M04AKTCDavc") }} 
 
 [What is Urbit?](https://www.youtube.com/watch?v=M04AKTCDavc)
