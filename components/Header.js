@@ -5,11 +5,10 @@ import classnames from "classnames";
 import path from "path";
 import MenuTray from "../components/MenuTray";
 import Section from "../components/Section";
+import { capitalize } from "../lib/lib";
 
-function ActiveLink({ children, href, className }) {
-  const router = useRouter();
-
-  const firstCrumb = router.asPath.split("/")[1];
+function ActiveLink({ children, href, className, currentPath }) {
+  const firstCrumb = currentPath.split("/")[1];
 
   const activeClassName = classnames({
     "text-black": "/" + firstCrumb === href,
@@ -26,25 +25,53 @@ function ActiveLink({ children, href, className }) {
 export default function Header(props) {
   const [isOpen, toggleTray] = useState(false);
 
+  const currentPath = useRouter().asPath;
+
+  const routeDepth = currentPath.split("/").length;
+
+  const firstCrumb = currentPath.split("/")[1];
+
   return (
     <header className="w-full px-4 md:px-8 md:w-10/12 flex flex-row justify-between items-center pt-8 md:pt-10 lg:pt-12 pb-10 md:pb-12 lg:pb-24">
-      <Link href="/">
-        <a className="type-ui">Urbit</a>
-      </Link>
+      <div>
+        <Link href="/">
+          <a className="type-ui">Urbit</a>
+        </Link>
+        {routeDepth > 2 ? (
+          <Link href={`/${firstCrumb}`}>
+            <a className="inline md:hidden type-ui text-gray ml-2">
+              {capitalize(firstCrumb)}
+            </a>
+          </Link>
+        ) : null}
+      </div>
       {
         // Large screen header
       }
       <nav className="items-center hidden md:flex">
-        <ActiveLink className="mr-5 type-ui" href="/docs">
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 type-ui"
+          href="/docs"
+        >
           Docs
         </ActiveLink>
-        <ActiveLink className="mr-5 type-ui" href="/blog">
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 type-ui"
+          href="/blog"
+        >
           Blog
         </ActiveLink>
-        <ActiveLink className="mr-5 type-ui" href="/events">
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 type-ui"
+          href="/events"
+        >
           Events
         </ActiveLink>
         <ActiveLink
+          currentPath={currentPath}
           className="mr-5 text-green type-ui button-text"
           href="/getting-started"
         >
@@ -68,16 +95,32 @@ export default function Header(props) {
         <Link href="/">
           <a className="type-ui mb-12">Urbit</a>
         </Link>
-        <ActiveLink className="mr-5 mb-4 type-h3" href="/docs">
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 mb-4 type-h3"
+          href="/docs"
+        >
           Docs
         </ActiveLink>
-        <ActiveLink className="mr-5 mb-4 type-h3" href="/blog">
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 mb-4 type-h3"
+          href="/blog"
+        >
           Blog
         </ActiveLink>
-        <ActiveLink className="mr-5 mb-4 type-h3" href="/events">
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 mb-4 type-h3"
+          href="/events"
+        >
           Events
         </ActiveLink>
-        <ActiveLink className="mr-5 mb-4 type-h3" href="/grants">
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 mb-4 type-h3"
+          href="/grants"
+        >
           Grants
         </ActiveLink>
       </MenuTray>

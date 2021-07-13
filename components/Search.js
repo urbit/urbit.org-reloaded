@@ -83,15 +83,15 @@ export default function Search(props) {
     return (
       <div
         onClick={props.closeSearch}
-        className="fixed w-screen h-screen bg-washedWall z-50 flex flex-col items-center"
+        className="fixed w-screen h-screen bg-washedWall z-50 flex flex-col items-center p-4"
       >
         <div
-          className="relative flex flex-col max-w-screen-lg w-12/12 m-4 md:my-32  md:w-10/12 lg:w-8/12 xl:w-6/12 rounded-xl bg-white min-h-0"
+          className="relative flex flex-col max-w-screen-lg md:my-32 w-full md:w-10/12 lg:w-8/12 xl:w-6/12 rounded-xl bg-white min-h-0"
           ref={searchRef}
         >
-          <div className="">
+          <div className="relative">
             <input
-              className="text-2xl font-medium text-green bg-transparent py-2 px-4 outline-none relative w-full"
+              className="text-lg md:text-xl lg:text-2xl font-medium text-green bg-transparent py-2 px-4 outline-none relative w-full"
               onChange={onChange}
               onFocus={onFocus}
               placeholder="Search..."
@@ -103,7 +103,7 @@ export default function Search(props) {
 
             <span
               onClick={props.toggleSearch}
-              className="absolute right-2.5 top-2.5 cursor-pointer"
+              className="absolute cursor-pointer right-1.5 top-1.5 md:right-2 md:top-2 lg:right-2.5 lg:top-2.5"
             >
               <p className="px-2 h-8 bg-wall flex items-center justify-center text-sm rounded">
                 ESC
