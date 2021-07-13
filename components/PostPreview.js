@@ -10,7 +10,7 @@ export default function PostPreview(props) {
       <Link href={`/blog/${props.post.slug}`} key={`post-${props.post.slug}`}>
         <div>
           <BackgroundImage
-            className="w-full h-80 rounded-lg"
+            className="w-full h-96 rounded-lg"
             src={props.post.extra.image || ""}
           />
           <p className="text-black mt-2">{props.post.title}</p>

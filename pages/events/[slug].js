@@ -16,7 +16,7 @@ import Footer from "../../components/Footer";
 import BackgroundImage from "../../components/BackgroundImage";
 import SingleColumn from "../../components/SingleColumn";
 import NewsletterSignup from "../../components/NewletterSignup";
-import PostPreview from "../../components/PostPreview";
+import EventPreview from "../../components/EventPreview";
 import Section from "../../components/Section";
 import { name, contact } from "../../lib/constants";
 import markdownStyles from "../../styles/markdown.module.css";
@@ -103,22 +103,22 @@ export default function Event({
             </code>
           </h4>
         </Section>
-        <Section wide>
+        <Section wide className="flex">
           {previousPost === null ? (
             <div className={"w-1/2 mr-4"} />
           ) : (
-            <PostPreview
-              title="Previous Post"
-              post={previousPost}
+            <EventPreview
+              title="Previous Event"
+              event={previousPost}
               className="mr-4 w-1/2"
             />
           )}
           {nextPost === null ? (
             <div className={"w-1/2 ml-4"} />
           ) : (
-            <PostPreview
-              title="Next Post"
-              post={nextPost}
+            <EventPreview
+              title="Next Event"
+              event={nextPost}
               className="ml-4 w-1/2"
             />
           )}

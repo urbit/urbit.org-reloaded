@@ -10,87 +10,31 @@ import Section from "../components/Section";
 import BackgroundImage from "../components/BackgroundImage";
 import { getAllPosts, formatDate } from "../lib/lib";
 
-// function assignEventCard(event) {
-//   if (event.extra.youtube) {
-//     return (
-//       <img
-//         src={`http://img.youtube.com/vi/${event.extra.youtube}/maxresdefault.jpg`}
-//         className="w-full rounded-lg h-auto w-full"
-//       />
-//     );
-//   }
-//
-//   if (event.extra.image) {
-//     return (
-//       <BackgroundImage
-//         src={event.extra.image}
-//         style={{ height: "620px" }}
-//         className="w-full rounded-lg"
-//       />
-//     );
-//   }
-//
-//   return (
-//     <div
-//       className="w-full rounded-lg bg-wall"
-//       style={{ height: "620px" }}
-//     ></div>
-//   );
-// }
-//
-// function EventCard(props) {
-//   return (
-//     <div key={props.event.slug} className="mb-24 cursor-pointer">
-//       <Link href={`/events/${props.event.slug}`}>
-//         <div>
-//           {assignEventCard(props.event)}
-//           <h3 className="mt-4">{props.event.title}</h3>
-//           <div className="flex items-baseline">
-//             {props.event.extra.author ? (
-//               <div className="type-ui text-gray mt-4">
-//                 {props.event.extra.author}
-//               </div>
-//             ) : null}
-//             {props.event.extra.author && post.extra.ship ? (
-//               <div className="mx-1 text-gray">•</div>
-//             ) : null}
-//             {props.event.extra.ship ? (
-//               <div className="type-ui text-gray font-mono">
-//                 {props.event.extra.ship}
-//               </div>
-//             ) : null}
-//           </div>
-//
-//           <div className="type-ui text-gray mt-2">
-//             {formatDate(new Date(props.event.date))} - {props.event.extra.time}
-//           </div>
-//         </div>
-//       </Link>
-//     </div>
-//   );
-// }
-
 function EventCard({ event }) {
+  // Event tiles have a 'dark mode' used when their background images are dark and white text is needed for legibility.
+  const grayText = event.extra?.dark ? "text-midWhite" : "text-gray";
+  const blackText = event.extra?.dark ? "text-white" : "text-black";
+
   return (
     <div
       key={event.slug}
-      className="mb-24 cursor-pointer bg-wall rounded-xl tile-height"
-      style={{ backgroundImage: event.extra?.image || "" }}
+      className="mb-24 cursor-pointer bg-wall rounded-xl tile-height bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${event.extra?.image})` || "" }}
     >
       <Link href={`/events/${event.slug}`}>
         <div className="flex flex-col p-8 justify-between items-between h-full relative">
           <div className="flex-grow-1 flex flex-col justify-center h-full">
-            <h3 className="mb-4">{event.title}</h3>
-            <h4 className="mt-4 type-gray">{event?.type}</h4>
+            <h3 className={`mb-4 ${blackText}`}>{event.title}</h3>
+            <h4 className={grayText}>{event?.type}</h4>
           </div>
           <div className="absolute left-8 bottom-8 w-full">
-            <p className="text-gray">{event.extra.host}</p>
-            <p className="text-gray">{event.extra.guests}</p>
+            <p className={grayText}>{event.extra.host}</p>
+            <p className={grayText}>{event.extra.guests}</p>
           </div>
           {event.extra.youtube ? (
             <a
               onClick={(e) => e.stopPropagation()}
-              className="absolute w-16 h-16 right-8 bottom-8 bg-white flex items-center justify-center rounded-full bg-cover bg-center bg-no-repeat"
+              className="absolute w-16 h-16 right-8 bottom-8 bg-white flex items-center justify-center rounded-full"
               target="_blank"
               href={`https://www.youtube.com/watch?v=${event.extra.youtube}`}
             >

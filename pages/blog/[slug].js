@@ -89,7 +89,7 @@ export default function Post({
             </code>
           </h4>
         </Section>
-        <Section className="flex">
+        <Section wide className="flex">
           {previousPost === null ? (
             <div className={"w-1/2 mr-4"} />
           ) : (

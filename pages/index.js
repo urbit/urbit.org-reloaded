@@ -10,6 +10,7 @@ import BackgroundImage from "../components/BackgroundImage";
 import TabCarousel from "../components/TabCarousel";
 import NewsletterSignup from "../components/NewletterSignup";
 import PostPreview from "../components/PostPreview";
+import EventPreview from "../components/EventPreview";
 import { getAllPosts, formatDate, getOpenGrantsCount } from "../lib/lib";
 import { contact } from "../lib/constants";
 
@@ -232,23 +233,23 @@ export default function Home({ posts, events, openGrantsCount, search }) {
               </div>
             </div>
             <div className="flex flex-wrap">
-              <PostPreview
-                post={events[0]}
+              <EventPreview
+                event={events[0]}
                 className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
                 key={events[0].slug}
               />
-              <PostPreview
-                post={events[1]}
+              <EventPreview
+                event={events[1]}
                 className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
                 key={events[1].slug}
               />
-              <PostPreview
-                post={events[3]}
+              <EventPreview
+                event={events[3]}
                 className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
                 key={events[3].slug}
               />
-              <PostPreview
-                post={events[4]}
+              <EventPreview
+                event={events[4]}
                 className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
                 key={events[4].slug}
               />
