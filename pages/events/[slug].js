@@ -36,10 +36,12 @@ export default function Event({
     <Container>
       <SingleColumn>
         <Header search={search} />
-        <section className="flex flex-col layout-narrow pt-24">
+        <section className="flex flex-col layout-narrow-heading pt-24">
           <h1>{post.title}</h1>
           {post.extra.author ? (
-            <div className="type-ui text-gray mt-4">{post.extra.author}</div>
+            <div className="type-ui text-gray mt-4 md:mt-8 lg:mt-10">
+              {post.extra.author}
+            </div>
           ) : null}
           {post.extra.ship ? (
             <div className="type-ui text-gray font-mono">{post.extra.ship}</div>

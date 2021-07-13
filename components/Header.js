@@ -4,6 +4,7 @@ import { useState } from "react";
 import classnames from "classnames";
 import path from "path";
 import MenuTray from "../components/MenuTray";
+import Section from "../components/Section";
 
 function ActiveLink({ children, href, className }) {
   const router = useRouter();
@@ -27,7 +28,7 @@ export default function Header(props) {
   const [isOpen, toggleTray] = useState(false);
 
   return (
-    <header className="layout-wide flex justify-between items-center pt-12">
+    <header className="w-full md:w-10/12 flex flex-row justify-between items-center py-8 md:py-10 lg:py-12">
       <Link href="/">
         <a className="type-ui">Urbit</a>
       </Link>

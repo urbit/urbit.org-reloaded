@@ -9,6 +9,7 @@ import Search from "../components/Search";
 import SingleColumn from "../components/SingleColumn";
 import BackgroundImage from "../components/BackgroundImage";
 import TabCarousel from "../components/TabCarousel";
+import GrantPreview from "../components/GrantPreview";
 import {
   getAllPosts,
   formatDate,
@@ -168,19 +169,27 @@ export default function Grants({
         }
         <section className="layout-wide">
           <h2 className="pb-8">Find A Grant</h2>
-          <div className="flex items-center measure pb-2">
+          <h5 className="text-black font-semibold my-2">Work Programs</h5>
+          <div className="flex flex-wrap items-center pb-2">
             <button
               onClick={() => {
                 setTab(0);
                 setTypes(types);
               }}
-              className={`badge-lg mr-2 ${
+              className={`badge-lg my-2 mr-2 ${
                 tab === 0 ? "text-white bg-black" : "text-gray bg-wall"
               }`}
             >
               All
             </button>
             {types.map((type, index) => {
+              const className = classnames({
+                "bg-blue text-white": tab === index + 1 && type === "Proposal",
+                "bg-green text-white":
+                  tab === index + 1 && type === "Apprenticeship",
+                "bg-yellow": tab === index + 1 && type === "Bounty",
+                "bg-wall text-gray": tab !== index + 1,
+              });
               return (
                 <button
                   onClick={() => {
@@ -188,82 +197,49 @@ export default function Grants({
                     setTab(index + 1);
                     setTypes([type]);
                   }}
-                  className={`badge-lg mr-2 ${
-                    tab === index + 1
-                      ? "text-white bg-black"
-                      : "text-gray bg-wall"
-                  }`}
+                  className={`badge-lg mr-2 ${className}`}
                 >
                   {type}
                 </button>
               );
             })}
           </div>
-
+          <h5 className="text-black font-semibold my-2">Work Categories</h5>
           <div className="flex flex-wrap mb-12">
             {categories.map((category) => {
               const isActive = activeTags.includes(category);
               const activeClasses = classnames({
                 "bg-green text-white": isActive,
-                "bg-wall text-black": !isActive,
+                "bg-wall text-gray": !isActive,
               });
               return (
                 <button
                   onClick={() => setTags(toggleTag(activeTags, category))}
-                  className={`${activeClasses} badge-sm m-1`}
+                  className={`${activeClasses} badge-sm mr-1 my-1`}
                 >
                   {category}
                 </button>
               );
             })}
           </div>
-
-          <div className="pb-8 flex">
-            <h4>
-              Showing {filteredPosts.length} grant
-              {filteredPosts.length === 1 ? "" : "s"}
-            </h4>
-            <button
-              className="ml-4"
-              onClick={() => setIncludeCompleted(!includeCompleted)}
-            >
-              {includeCompleted ? "Exclude Completed" : "Include Completed"}
-            </button>
-          </div>
-
+          {
+            <div className="pb-8 flex">
+              <h4>
+                Showing {filteredPosts.length} grant
+                {filteredPosts.length === 1 ? "" : "s"}
+              </h4>
+              {
+                // <button
+                //   className="ml-4"
+                //   onClick={() => setIncludeCompleted(!includeCompleted)}
+                // >
+                //   {includeCompleted ? "Exclude Completed" : "Include Completed"}
+                // </button>
+              }
+            </div>
+          }
           {filteredPosts.map((post) => {
-            return (
-              <div
-                key={post.slug}
-                className="mb-4 cursor-pointer bg-wall rounded-lg"
-              >
-                <Link href={`/grants/${post.slug}`}>
-                  <div className="p-8">
-                    <h3 className="type-ui mb-4">{post.title}</h3>
-                    <p className="mb-4">{post.extra.description}</p>
-                    <div className="flex w-full items-center justify-between">
-                      <p className="text-gray">
-                        <strong>Reward: </strong>
-                        {post.extra.reward} star
-                        {post.extra.reward === 1 ? "" : "s"}
-                      </p>
-                      <div className="flex items-center">
-                        {post.taxonomies.grant_type.map((category) => (
-                          <div className="bg-black text-wall badge-sm m-1">
-                            {category}
-                          </div>
-                        ))}
-                        {post.taxonomies.grant_category.map((category) => (
-                          <div className="bg-gray text-wall badge-sm m-1">
-                            {category}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            );
+            return <GrantPreview grant={post} />;
           })}
         </section>
       </SingleColumn>

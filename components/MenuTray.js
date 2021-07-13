@@ -2,6 +2,7 @@ import classnames from "classnames";
 
 export default function MenuTray(props) {
   // Locks document scrolling when menu is open
+
   if (typeof document !== "undefined") {
     if (props.isOpen) {
       document.body.style.overflow = "hidden";

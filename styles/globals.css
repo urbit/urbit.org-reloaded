@@ -17,13 +17,21 @@ p a {
   @apply text-green;
 }
 
-.layout-narrow {
-  @apply w-full md:w-8/12 px-4 md:px-8 pb-20 md:pb-32 lg:pb-48;
+/* .layout-narrow {
+  @apply w-full md:w-8/12 px-4 md:px-8 py-10 md:py-12 lg:py-24;
 }
 
 .layout-wide {
-  @apply w-full md:w-10/12 px-4 md:px-8 pb-20 md:pb-32 lg:pb-48;
+  @apply w-full md:w-10/12 px-4 md:px-8 py-10 md:py-12 lg:py-24;
 }
+
+.layout-narrow-heading {
+  @apply w-full md:w-8/12 px-4 md:px-8 py-8 md:py-10 lg:py-12;
+}
+
+.layout-wide-short {
+  @apply w-full md:w-10/12 px-4 md:px-8 py-8 md:py-10 lg:py-12;
+} */
 
 h1,
 .type-h1 {
@@ -80,7 +88,7 @@ button {
 }
 
 .badge-sm {
-  @apply flex type-ui-small px-2 lg:px-3 items-center justify-center h-8 md:h-10 rounded-full;
+  @apply flex type-ui-small px-3 lg:px-4 items-center justify-center h-8 md:h-10 rounded-full;
 }
 
 .badge-lg {

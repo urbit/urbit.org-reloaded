@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Search from "../components/Search";
 import SingleColumn from "../components/SingleColumn";
+import Section from "../components/Section";
 import BackgroundImage from "../components/BackgroundImage";
 import { getAllPosts, formatDate } from "../lib/lib";
 
@@ -74,7 +75,7 @@ export default function Events({ pastEvents, currentEvents, search }) {
     <Container>
       <SingleColumn>
         <Header search={search} />
-        <section className="layout-narrow">
+        <Section narrow>
           <div className="measure">
             <h2 className="pb-16">Urbit Events</h2>
             <p className="pb-6">
@@ -85,24 +86,24 @@ export default function Events({ pastEvents, currentEvents, search }) {
               new blog posts and events.
             </p>
           </div>
-        </section>
-        <section className="layout-narrow">
+        </Section>
+        <Section narrow>
           <div className="mb-8 table">
             <span className="bg-green text-white badge-lg">Coming Soon</span>
           </div>
           {currentEvents.map((post) => {
             return <EventCard event={post} />;
           })}
-        </section>
+        </Section>
 
-        <section className="layout-narrow">
+        <Section narrow>
           <div className="mb-8 table">
             <span className="bg-wall text-gray badge-lg">Past Events</span>
           </div>
           {pastEvents.map((post) => {
             return <EventCard event={post} />;
           })}
-        </section>
+        </Section>
       </SingleColumn>
       <Footer />
     </Container>

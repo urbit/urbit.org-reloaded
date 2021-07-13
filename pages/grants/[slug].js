@@ -2,12 +2,13 @@ import { useRouter } from "next/router";
 import {
   getPostBySlug,
   getAllPosts,
-  getNextPost,
-  getPreviousPost,
   formatDate,
+  getSimilarGrants,
 } from "../../lib/lib";
 import Head from "next/head";
 import Link from "next/link";
+import { decode } from "html-entities";
+import classnames from "classnames";
 import ErrorPage from "../404";
 import Container from "../../components/Container";
 import Markdown from "../../components/Markdown";
@@ -16,18 +17,12 @@ import Footer from "../../components/Footer";
 import BackgroundImage from "../../components/BackgroundImage";
 import SingleColumn from "../../components/SingleColumn";
 import NewsletterSignup from "../../components/NewletterSignup";
-import PostPreview from "../../components/PostPreview";
+import GrantPreview from "../../components/GrantPreview";
+import Section from "../../components/Section";
 import { name, contact } from "../../lib/constants";
 import markdownStyles from "../../styles/markdown.module.css";
-import { decode } from "html-entities";
 
-export default function Grant({
-  post,
-  nextPost,
-  markdown,
-  previousPost,
-  search,
-}) {
+export default function Grant({ post, markdown, search, similarGrants }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
@@ -37,7 +32,7 @@ export default function Grant({
     <Container>
       <SingleColumn>
         <Header search={search} />
-        <section className="flex flex-col layout-narrow">
+        <Section narrow short>
           <h1>{post.title}</h1>
           {post.extra.author ? (
             <div className="type-ui text-gray mt-4">{post.extra.author}</div>
@@ -45,36 +40,41 @@ export default function Grant({
           {post.extra.ship ? (
             <div className="type-ui text-gray font-mono">{post.extra.ship}</div>
           ) : null}
-          <div className="type-ui text-gray mt-8 md:mt-12 lg:mt-16">
+          <div className="type-ui text-gray mt-4 md:mt-8 lg:mt-10">
             {formatDate(new Date(post.date))}
           </div>
-        </section>
-        <div className={"layout-narrow " + markdownStyles["markdown"]}>
+          <div className="flex items-center flex-wrap mt-4 md:mt-8 lg:mt-10">
+            {post.taxonomies.grant_type.map((category) => {
+              const className = classnames({
+                "bg-blue text-white": category === "Proposal",
+                "bg-green text-white": category === "Apprenticeship",
+                "bg-yellow": category === "Bounty",
+              });
+              return (
+                <div className={`${className} badge-sm mr-1 my-1`}>
+                  {category}
+                </div>
+              );
+            })}
+            {post.taxonomies.grant_category.map((category) => (
+              <div className="bg-gray text-wall badge-sm mr-1 my-1">
+                {category}
+              </div>
+            ))}
+          </div>
+        </Section>
+        <Section className={markdownStyles["markdown"]}>
           <article
             dangerouslySetInnerHTML={{ __html: decode(markdown) }}
           ></article>
-        </div>
+        </Section>
 
-        <section className="layout-wide flex">
-          {previousPost === null ? (
-            <div className={"w-1/2 mr-4"} />
-          ) : (
-            <PostPreview
-              title="Previous Post"
-              post={previousPost}
-              className="mr-4 w-1/2"
-            />
-          )}
-          {nextPost === null ? (
-            <div className={"w-1/2 ml-4"} />
-          ) : (
-            <PostPreview
-              title="Next Post"
-              post={nextPost}
-              className="ml-4 w-1/2"
-            />
-          )}
-        </section>
+        <Section narrow className="flex flex-col">
+          <h3 className="pb-8">Similar Grants</h3>
+          {similarGrants.map((grant) => {
+            return <GrantPreview post={grant} />;
+          })}
+        </Section>
       </SingleColumn>
       <Footer />
     </Container>
@@ -83,30 +83,22 @@ export default function Grant({
 
 //
 export async function getStaticProps({ params }) {
-  const nextPost =
-    getNextPost(
-      params.slug,
-      ["title", "slug", "date", "description", "extra"],
-      "grants"
-    ) || null;
-
-  const previousPost =
-    getPreviousPost(
-      params.slug,
-      ["title", "slug", "date", "description", "extra"],
-      "grants"
-    ) || null;
-
   const post = getPostBySlug(
     params.slug,
-    ["title", "slug", "date", "description", "content", "extra"],
+    ["title", "slug", "date", "description", "content", "extra", "taxonomies"],
     "grants"
+  );
+
+  const similarGrants = getSimilarGrants(
+    post.taxonomies.grant_type,
+    post.taxonomies.grant_category,
+    4
   );
 
   const markdown = await Markdown({ post });
 
   return {
-    props: { post, markdown, nextPost, previousPost },
+    props: { post, markdown, similarGrants },
   };
 }
 

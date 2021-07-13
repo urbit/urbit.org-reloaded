@@ -15,6 +15,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import BackgroundImage from "../../components/BackgroundImage";
 import SingleColumn from "../../components/SingleColumn";
+import Section from "../../components/Section";
 import NewsletterSignup from "../../components/NewletterSignup";
 import PostPreview from "../../components/PostPreview";
 import { name, contact } from "../../lib/constants";
@@ -36,24 +37,26 @@ export default function Post({
     <Container>
       <SingleColumn>
         <Header search={search} />
-        <section className="flex flex-col layout-narrow">
+        <Section short narrow>
           <h1>{post.title}</h1>
           {post.extra.author ? (
-            <div className="type-ui text-gray mt-4">{post.extra.author}</div>
+            <div className="type-ui text-gray mt-4 md:mt-8 lg:mt-10">
+              {post.extra.author}
+            </div>
           ) : null}
           {post.extra.ship ? (
             <div className="type-ui text-gray font-mono">{post.extra.ship}</div>
           ) : null}
-          <div className="type-ui text-gray mt-8 md:mt-12 lg:mt-16">
+          <div className="type-ui text-gray mt-4 md:mt-8 lg:mt-10">
             {formatDate(new Date(post.date))}
           </div>
-        </section>
-        <div className={"layout-narrow " + markdownStyles["markdown"]}>
+        </Section>
+        <Section narrow className={markdownStyles["markdown"]}>
           <article
             dangerouslySetInnerHTML={{ __html: decode(markdown) }}
           ></article>
-        </div>
-        <section className="layout-narrow">
+        </Section>
+        <Section narrow>
           <div className="measure">
             <h4 className="pb-6">
               If you’d like to follow our progress, we send monthly updates via
@@ -85,8 +88,8 @@ export default function Post({
               {contact.urbitCommunity}
             </code>
           </h4>
-        </section>
-        <section className="layout-wide flex">
+        </Section>
+        <Section className="flex">
           {previousPost === null ? (
             <div className={"w-1/2 mr-4"} />
           ) : (
@@ -105,7 +108,7 @@ export default function Post({
               className="ml-4 w-1/2"
             />
           )}
-        </section>
+        </Section>
       </SingleColumn>
       <Footer />
     </Container>

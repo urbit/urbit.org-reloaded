@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SingleColumn from "../components/SingleColumn";
 import BackgroundImage from "../components/BackgroundImage";
+import Section from "../components/Section";
 import { getAllPosts, formatDate } from "../lib/lib";
 
 export default function Blog({ posts, search }) {
@@ -12,7 +13,7 @@ export default function Blog({ posts, search }) {
     <Container>
       <SingleColumn>
         <Header search={search} />
-        <section className="layout-narrow">
+        <Section narrow>
           <div className="measure">
             <h2 className="pb-16">Urbit Blog</h2>
             <p className="pb-6">
@@ -24,8 +25,8 @@ export default function Blog({ posts, search }) {
               new blog posts and events.
             </p>
           </div>
-        </section>
-        <section className="layout-narrow">
+        </Section>
+        <Section narrow>
           {posts.map((post) => {
             return (
               <div key={post.slug} className="mb-24 cursor-pointer">
@@ -66,7 +67,7 @@ export default function Blog({ posts, search }) {
               </div>
             );
           })}
-        </section>
+        </Section>
       </SingleColumn>
       <Footer />
     </Container>

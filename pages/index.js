@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Container from "../components/Container";
+import Section from "../components/Section";
 import SingleColumn from "../components/SingleColumn";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -53,16 +54,18 @@ export default function Home({ posts, events, openGrantsCount, search }) {
         {
           // Hero Statement
         }
-        <section className="layout-narrow">
-          <h1>A general-purpose,</h1>
-          <h1>peer-to-peer,</h1>
-          <h1>personal computing system.</h1>
-        </section>
+        <Section narrow>
+          <div>
+            <h1>A general-purpose,</h1>
+            <h1>peer-to-peer,</h1>
+            <h1>personal computing system.</h1>
+          </div>
+        </Section>
 
         {
           // Introducing Port
         }
-        <section className="layout-wide hidden md:flex">
+        <Section className="hidden md:flex">
           <div className="bg-wall w-11/12 hero-card-height rounded-3xl flex">
             <div className="pt-20 pl-12 w-7/12">
               <div className="pb-8">
@@ -84,12 +87,12 @@ export default function Home({ posts, events, openGrantsCount, search }) {
             </div>
             <div className="w-full hero-image-height hero-image mt-8" />
           </div>
-        </section>
+        </Section>
 
         {
           // Grants
         }
-        <section className="layout-narrow">
+        <Section narrow>
           <div className="flex flex-col md:flex-row md:items-center items-start measure pb-12">
             <h2 className="m-0 p-0 mr-4 md:mb-0 mb-4">Urbit Grants</h2>
             <Link href="/grants">
@@ -129,12 +132,12 @@ export default function Home({ posts, events, openGrantsCount, search }) {
               </Link>
             </div>
           </div>
-        </section>
+        </Section>
 
         {
           // Build on Urbit Developer CTA
         }
-        <section className="layout-narrow">
+        <Section narrow>
           <div className="measure">
             <h2 className="pb-12">Build on Urbit</h2>
             <h4 className="pb-12">
@@ -170,12 +173,12 @@ export default function Home({ posts, events, openGrantsCount, search }) {
               Read the Developer Docs
             </button>
           </div>
-        </section>
+        </Section>
 
         {
           // Blog and Events Combo Section
         }
-        <section className="layout-narrow">
+        <Section narrow>
           <div className="flex items-center measure pb-12">
             <button
               onClick={() => setTab(0)}
@@ -255,12 +258,12 @@ export default function Home({ posts, events, openGrantsCount, search }) {
               </div>
             </div>
           </TabCarousel>
-        </section>
+        </Section>
 
         {
           // Newsletter and social media
         }
-        <section className="layout-narrow">
+        <Section narrow>
           <div className="measure">
             <h2 className="m-0 p-0 mr-4 pb-12">Stay In Touch</h2>
             <p className="pb-6">
@@ -293,7 +296,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
               {contact.urbitCommunity}
             </code>
           </div>
-        </section>
+        </Section>
       </SingleColumn>
 
       <Footer />

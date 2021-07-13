@@ -12,6 +12,10 @@
   @apply pt-0 mt-0;
 }
 
+.markdown *:first-child figure {
+  @apply pt-0 mt-0;
+}
+
 .markdown p,
 .markdown ul,
 .markdown ol,
