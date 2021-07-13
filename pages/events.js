@@ -10,7 +10,7 @@ import Section from "../components/Section";
 import BackgroundImage from "../components/BackgroundImage";
 import { getAllPosts, formatDate } from "../lib/lib";
 
-function EventCard({ event }) {
+export function EventCard({ event, dir, className }) {
   // Event tiles have a 'dark mode' used when their background images are dark and white text is needed for legibility.
   const grayText = event.extra?.dark ? "text-midWhite" : "text-gray";
   const blackText = event.extra?.dark ? "text-white" : "text-black";
@@ -18,10 +18,10 @@ function EventCard({ event }) {
   return (
     <div
       key={event.slug}
-      className="mb-24 cursor-pointer bg-wall rounded-xl tile-height bg-cover bg-center bg-no-repeat"
+      className={`mb-24 cursor-pointer bg-wall rounded-xl tile-height bg-cover bg-center bg-no-repeat ${className}`}
       style={{ backgroundImage: `url(${event.extra?.image})` || "" }}
     >
-      <Link href={`/events/${event.slug}`}>
+      <Link href={`${dir ? dir : "/events/"}${event.slug}`}>
         <div className="flex flex-col p-8 justify-between items-between h-full relative">
           <div className="flex-grow-1 flex flex-col justify-center h-full">
             <h3 className={`mb-4 ${blackText}`}>{event.title}</h3>
