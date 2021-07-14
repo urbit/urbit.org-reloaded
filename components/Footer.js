@@ -68,6 +68,11 @@ export default function Footer() {
                 <a className="mt-2 type-sub text-gray">Events</a>
               </div>
             </Link>
+            <Link href="/updates">
+              <div>
+                <a className="mt-2 type-sub text-gray">Updates</a>
+              </div>
+            </Link>
           </div>
 
           <div className="w-1/2 md:w-1/3 flex flex-col">
