@@ -26,6 +26,7 @@ export default function Sidebar(props) {
             </Link>
           </header>
           {props.children}
+          <div className="pt-64" />
         </MenuTray>
         <button
           onClick={(e) => {

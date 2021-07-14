@@ -71,7 +71,9 @@ export default function UnderstandingLayout({
         <title>{data.title} / Understanding Urbit / urbit.org</title>
       </Head>
       <div className="flex w-screen h-screen min-h-screen w-screen">
-        <Sidebar>{childPages("/understanding-urbit", posts.pages)}</Sidebar>
+        <Sidebar search={search}>
+          {childPages("/understanding-urbit", posts.pages)}
+        </Sidebar>
         <ContentArea
           breadcrumbs={breadcrumbs(posts, params.slug?.slice(0, -1) || "")}
           title={data.title}

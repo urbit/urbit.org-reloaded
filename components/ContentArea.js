@@ -1,26 +1,41 @@
 export default function ContentArea(props) {
   return (
     <div className="w-full min-w-0 flex flex-col">
-      <header className="w-full px-4 md:px-8 md:w-10/12 flex flex-row justify-between items-center pt-8 md:pt-10 lg:pt-12 pb-10 md:pb-12 lg:pb-24">
-        <div className="type-ui">{props.section}</div>
-        {
-          //   <button
-          //   onClick={(e) => {
-          //     e.stopPropagation();
-          //     props.search.toggleSearch();
-          //   }}
-          //   className="button-sm bg-wall text-gray"
-          // >
-          //   Search<div className="ml-4 text-lightGray">⌘K</div>
-          // </button>
-        }
-      </header>
-      <div className="px-4 md:px-12 lg:px-24 pb-24 pt-16 flex flex-col w-full max-h-screen h-screen overflow-y-scroll">
-        <div className="type-ui text-lightGray">{props.breadcrumbs}</div>
-        <h2 className="mb-16 mt-4">{props.title}</h2>
+      <div className="px-4 md:px-12 lg:px-24 pb-24 pt-8 md:pt-10 lg:pt-16 flex flex-col w-full max-h-screen h-screen overflow-y-scroll">
+        <div className="flex justify-between w-full items-center">
+          <div className="type-ui text-gray">{props.breadcrumbs}</div>
+          <div className="hidden md:block">
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                props.search.toggleSearch();
+              }}
+              className="button-sm bg-wall text-gray"
+            >
+              Search<div className="ml-4 text-lightGray">⌘K</div>
+            </button>
+          </div>
+        </div>
+
+        <h2 className="mb-16 mt-24">{props.title}</h2>
         {props.children}
         <div className="pb-32" />
       </div>
     </div>
   );
 }
+
+// <header className="w-full px-4 md:px-8 md:w-10/12 flex flex-row justify-between items-center pt-8 md:pt-10 lg:pt-12 pb-12">
+// <div className="type-ui">{props.section}</div>
+// {
+//   //   <button
+//   //   onClick={(e) => {
+//   //     e.stopPropagation();
+//   //     props.search.toggleSearch();
+//   //   }}
+//   //   className="button-sm bg-wall text-gray"
+//   // >
+//   //   Search<div className="ml-4 text-lightGray">⌘K</div>
+//   // </button>
+// }
+// </header>

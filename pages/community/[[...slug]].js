@@ -66,7 +66,9 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
         <title>{data.title} / Community / urbit.org</title>
       </Head>
       <div className="flex w-screen h-screen min-h-screen w-screen">
-        <Sidebar>{childPages("/community", posts.pages)}</Sidebar>
+        <Sidebar search={search}>
+          {childPages("/community", posts.pages)}
+        </Sidebar>
         <ContentArea
           breadcrumbs={breadcrumbs(posts, params.slug?.slice(0, -1) || "")}
           title={data.title}

@@ -68,12 +68,16 @@
 
 .markdown pre,
 .markdown pre[class*="language-"] {
-  @apply p-8 bg-wall rounded-lg;
 }
 
 .markdown code,
 .markdown code[class*="language-"] {
-  @apply px-2 py-0.5 bg-wall rounded-lg;
+  @apply px-2 py-0.5 bg-wall rounded-md;
+}
+
+.markdown pre code,
+.markdown pre[class*="language-"] code {
+  @apply p-4 md:p-8 rounded-xl;
 }
 
 .markdown ul {

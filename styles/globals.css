@@ -185,7 +185,7 @@ a:hover {
   border-radius: 99px;
   content: "";
   position: absolute;
-  left: -1.25rem;
+  left: -0.75rem;
   top: 0.4rem;
   @apply bg-green;
 }

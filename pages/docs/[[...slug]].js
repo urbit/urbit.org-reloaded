@@ -105,7 +105,7 @@ export default function DocsLayout({ posts, data, params, search, markdown }) {
         <title>{data.title} / Documentation / urbit.org</title>
       </Head>
       <div className="flex w-screen h-screen min-h-screen w-screen">
-        <Sidebar>{childPages("/docs", posts.children)}</Sidebar>
+        <Sidebar search={search}>{childPages("/docs", posts.children)}</Sidebar>
 
         <ContentArea
           breadcrumbs={breadcrumbs(posts, params.slug?.slice(0, -1) || "")}
