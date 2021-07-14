@@ -15,54 +15,44 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import BackgroundImage from "../../components/BackgroundImage";
 import SingleColumn from "../../components/SingleColumn";
-import NewsletterSignup from "../../components/NewletterSignup";
-import EventPreview from "../../components/EventPreview";
 import Section from "../../components/Section";
+import NewsletterSignup from "../../components/NewletterSignup";
+import PostPreview from "../../components/PostPreview";
 import { name, contact } from "../../lib/constants";
 import markdownStyles from "../../styles/markdown.module.css";
 import { decode } from "html-entities";
 
-export default function Event({
+export default function Post({
   post,
   nextPost,
   previousPost,
   markdown,
   search,
 }) {
+  const router = useRouter();
+  if (!router.isFallback && !post?.slug) {
+    return <ErrorPage />;
+  }
   return (
     <Container>
       <SingleColumn>
         <Header search={search} />
-        <Section narrow short>
+        <Section short narrow>
           <h1>{post.title}</h1>
-          {post.extra.author ? (
+          {post.author ? (
             <div className="type-ui text-gray mt-4 md:mt-8 lg:mt-10">
-              {post.extra.author}
+              {post.author}
             </div>
           ) : null}
-          {post.extra.ship ? (
-            <div className="type-ui text-gray font-mono">{post.extra.ship}</div>
+          {post.ship ? (
+            <div className="type-ui text-gray font-mono">{post.ship}</div>
           ) : null}
-          <div className="type-ui text-gray mt-16">
+          <div className="type-ui text-gray mt-4 md:mt-8 lg:mt-10">
             {formatDate(new Date(post.date))}
           </div>
         </Section>
-        <Section short wide>
-          {post.extra.youtube ? (
-            <iframe
-              className="rounded-xl"
-              width="100%"
-              height="640px"
-              src={`https://www.youtube.com/embed/${post.extra.youtube}`}
-              frameBorder="0"
-              allow="encrypted-media"
-              allowfullscreen
-            ></iframe>
-          ) : null}
-        </Section>
         <Section narrow className={markdownStyles["markdown"]}>
           <article
-            className="pt-12 w-full"
             dangerouslySetInnerHTML={{ __html: decode(markdown) }}
           ></article>
         </Section>
@@ -100,24 +90,26 @@ export default function Event({
           </h4>
         </Section>
         <Section wide className="flex">
-          {previousPost === null ? (
-            <div className={"w-1/2 mr-4"} />
-          ) : (
-            <EventPreview
-              title="Previous Event"
-              event={previousPost}
-              className="mr-4 w-1/2"
-            />
-          )}
-          {nextPost === null ? (
-            <div className={"w-1/2 ml-4"} />
-          ) : (
-            <EventPreview
-              title="Next Event"
-              event={nextPost}
-              className="ml-4 w-1/2"
-            />
-          )}
+          {
+            // {previousPost === null ? (
+            //   <div className={"w-1/2 mr-4"} />
+            // ) : (
+            //   <PostPreview
+            //     title="Previous Post"
+            //     post={previousPost}
+            //     className="mr-4 w-1/2"
+            //   />
+            // )}
+            // {nextPost === null ? (
+            //   <div className={"w-1/2 ml-4"} />
+            // ) : (
+            //   <PostPreview
+            //     title="Next Post"
+            //     post={nextPost}
+            //     className="ml-4 w-1/2"
+            //   />
+            // )}
+          }
         </Section>
       </SingleColumn>
       <Footer />
@@ -130,21 +122,21 @@ export async function getStaticProps({ params }) {
   const nextPost =
     getNextPost(
       params.slug,
-      ["title", "slug", "date", "description", "extra"],
-      "events"
+      ["title", "slug", "date", "description"],
+      "updates"
     ) || null;
 
   const previousPost =
     getPreviousPost(
       params.slug,
-      ["title", "slug", "date", "description", "extra"],
-      "events"
+      ["title", "slug", "date", "description"],
+      "updates"
     ) || null;
 
   const post = getPostBySlug(
     params.slug,
-    ["title", "slug", "date", "description", "content", "extra"],
-    "events"
+    ["title", "slug", "date", "description", "content", "author", "ship"],
+    "updates"
   );
 
   const markdown = await Markdown({ post });
@@ -155,7 +147,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(["slug", "date"], "events");
+  const posts = getAllPosts(["slug", "date"], "updates");
 
   return {
     paths: posts.map((post) => {

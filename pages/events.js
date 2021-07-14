@@ -9,6 +9,7 @@ import SingleColumn from "../components/SingleColumn";
 import Section from "../components/Section";
 import BackgroundImage from "../components/BackgroundImage";
 import { getAllPosts, formatDate } from "../lib/lib";
+import { contact } from "../lib/constants";
 
 export function EventCard({ event, dir, className }) {
   // Event tiles have a 'dark mode' used when their background images are dark and white text is needed for legibility.
@@ -58,7 +59,7 @@ export function EventCard({ event, dir, className }) {
   );
 }
 
-export default function Events({ pastEvents, currentEvents, search }) {
+export default function Events({ pastEvents, comingSoon, search }) {
   return (
     <Container>
       <Head>
@@ -73,21 +74,25 @@ export default function Events({ pastEvents, currentEvents, search }) {
               Events of all kinds: In-person, Remote, and Recorded.
             </p>
             <p>
-              Subscribe to the Urbit Newsletter for regular updates, including
-              new blog posts and events.
+              <a href={contact.newsletter}>Subscribe</a> to the Urbit Newsletter
+              for regular updates, including new blog posts and events.
             </p>
           </div>
         </Section>
-        <Section narrow>
-          <div className="mb-8 table">
-            <span className="bg-green text-white badge-lg">Coming Soon</span>
-          </div>
-          {currentEvents.map((post) => {
-            return <EventCard event={post} />;
-          })}
-        </Section>
 
         <Section narrow>
+          {comingSoon.length > 0 ? (
+            <>
+              <div className="mb-8 table">
+                <span className="bg-green text-white badge-lg">
+                  Coming Soon
+                </span>
+              </div>
+              {comingSoon.map((post) => {
+                return <EventCard event={post} />;
+              })}
+            </>
+          ) : null}
           <div className="mb-8 table">
             <span className="bg-wall text-gray badge-lg">Past Events</span>
           </div>
@@ -106,9 +111,9 @@ export async function getStaticProps() {
 
   // NB Gavin: This logic can change based on how we want to separate past vs current events
   const pastEvents = posts.filter((post) => !post.extra.pinned);
-  const currentEvents = posts.filter((post) => post.extra.pinned);
+  const comingSoon = posts.filter((post) => post.extra.pinned);
 
   return {
-    props: { pastEvents, currentEvents },
+    props: { pastEvents, comingSoon },
   };
 }

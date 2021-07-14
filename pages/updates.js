@@ -13,13 +13,13 @@ export default function Blog({ posts, search }) {
   return (
     <Container>
       <Head>
-        <title>Urbit • Blog</title>
+        <title>Urbit • Updates</title>
       </Head>
       <SingleColumn>
         <Header search={search} />
         <Section narrow>
           <div className="measure">
-            <h1 className="pb-16">Blog</h1>
+            <h1 className="pb-16">Updates</h1>
             <p className="pb-6">
               Stories from the broader Urbit community, the Urbit Foundation,
               and the many people contributing to Urbit.
@@ -32,30 +32,22 @@ export default function Blog({ posts, search }) {
         </Section>
         <Section narrow>
           {posts.map((post) => {
+            console.log(post);
             return (
               <div key={post.slug} className="mb-24 cursor-pointer">
-                <Link href={`/blog/${post.slug}`}>
+                <Link href={`/updates/${post.slug}`}>
                   <div>
-                    {
-                      // Not all blog posts have images
-                      post.extra.image ? (
-                        <BackgroundImage
-                          src={post.extra.image}
-                          className="w-full rounded-lg tile-height"
-                        />
-                      ) : null
-                    }
                     <h3 className="mt-4">{post.title}</h3>
                     <div className="flex items-baseline">
-                      {post.extra.author ? (
+                      {post?.extra.author ? (
                         <div className="type-ui text-gray mt-4">
-                          {post.extra.author}
+                          {post?.extra.author}
                         </div>
                       ) : null}
-                      {post.extra.author && post.extra.ship ? (
+                      {post?.extra.author && post?.extra.ship ? (
                         <div className="mx-1 text-gray">•</div>
                       ) : null}
-                      {post.extra.ship ? (
+                      {post?.extra.ship ? (
                         <div className="type-ui text-gray font-mono">
                           {post.extra.ship}
                         </div>
@@ -80,7 +72,7 @@ export default function Blog({ posts, search }) {
 export async function getStaticProps() {
   const posts = getAllPosts(
     ["title", "slug", "date", "description", "extra"],
-    "blog"
+    "updates"
   );
 
   return {

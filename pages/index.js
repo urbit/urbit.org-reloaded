@@ -97,8 +97,8 @@ export default function Home({ posts, events, openGrantsCount, search }) {
           // Grants
         }
         <Section narrow>
-          <div className="flex flex-col md:flex-row md:items-center items-start measure pb-12">
-            <h2 className="m-0 p-0 mr-4 md:mb-0 mb-4">Grants</h2>
+          <div className="flex items-center pb-12">
+            <h2 className="m-0 p-0 mr-4">Grants</h2>
             <Link href="/grants">
               <a className="bg-green text-white badge-lg">
                 {openGrantsCount} Open
@@ -155,7 +155,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
             </p>
             <p className="pb-12">
               The entire OS is a{" "}
-              <Link href="">
+              <Link href="https://urbit.org/docs/nock/definition/">
                 <a>single pure function</a>
               </Link>{" "}
               that provides application developers with strong guarantees:
@@ -164,18 +164,20 @@ export default function Home({ posts, events, openGrantsCount, search }) {
             </p>
             <p className="pb-12">
               You can get started learning how to{" "}
-              <Link href="">
+              <Link href="https://urbit.org/docs/development/develop/">
                 <a>contribute to the project</a>
               </Link>
               , or view a variety of{" "}
-              <Link href="">
+              <Link href="https://github.com/urbit/awesome-urbit#http-apis-airlock">
                 <a>libraries</a>
               </Link>{" "}
               for building on Urbit using the languages you already know.
             </p>
-            <button className="button-lg type-ui text-white bg-black">
-              Read the Developer Docs
-            </button>
+            <Link href="/docs">
+              <button className="button-lg type-ui text-white bg-ultraDeepWall">
+                Read the Developer Docs
+              </button>
+            </Link>
           </div>
         </Section>
 
@@ -226,7 +228,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
               />
               <div>
                 <Link href="/blog">
-                  <button className="button-lg type-ui text-white bg-black">
+                  <button className="button-lg type-ui text-white bg-ultraDeepWall">
                     Read More
                   </button>
                 </Link>
@@ -255,7 +257,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
               />
               <div>
                 <Link href="/events">
-                  <button className="button-lg type-ui text-white bg-black">
+                  <button className="button-lg type-ui text-white bg-ultraDeepWall">
                     More Events
                   </button>
                 </Link>
@@ -296,7 +298,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
           </h4>
           <div className="mt-4 flex flex-wrap items-baseline">
             <h4 className="mr-2">Boot Urbit and join</h4>
-            <code className="bg-wall p-2 rounded-lg">
+            <code className="bg-wall p-2 mt-2 md:mt-0 rounded-lg">
               {contact.urbitCommunity}
             </code>
           </div>

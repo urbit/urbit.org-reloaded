@@ -43,7 +43,7 @@ h4,
 
 p,
 .type-p {
-  @apply text-base md:text-lg lg:text-xl;
+  @apply text-base md:text-lg lg:text-xl leading-relaxed;
 }
 
 .type-sub {
@@ -65,6 +65,10 @@ button {
 
 .tile-height {
   height: 38rem;
+}
+
+.preview-tile-height {
+  @apply h-96;
 }
 
 .button-sm {
