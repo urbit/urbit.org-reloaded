@@ -13,7 +13,7 @@ export default function NewsletterSignup(props) {
         <div className="mc-field-group w-full relative">
           <input
             className={`appearance-none outline-none text-gray type-ui black border-${
-              props.color || "green"
+              props.color || "black"
             } border-4 px-3 w-full mb-2 h-16 rounded-xl`}
             type="email"
             name="EMAIL"

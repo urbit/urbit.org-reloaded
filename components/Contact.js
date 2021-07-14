@@ -90,7 +90,7 @@ export default function Contact({ emphasize }) {
             {contact.urbitCommunity}
           </code>
           <button
-            className="rounded-r-lg px-4 bg-deepWall flex-1 flex justify-center items-center"
+            className="rounded-r-lg px-4 bg-wall ml-0.5 flex-1 flex justify-center items-center"
             onClick={() => copy()}
           >
             {buttonIcon}
