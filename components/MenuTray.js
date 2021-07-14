@@ -68,7 +68,7 @@ export default function MenuTray({ isOpen, setTray, search, children }) {
       </nav>
       <button
         onClick={() => setTray(!isOpen)}
-        className="z-10 fixed bottom-4 right-4 w-16 h-16 bg-ultraDeepWall flex items-center justify-center rounded-full"
+        className="z-10 fixed bottom-4 right-4 w-16 h-16 bg-ultraDeepWall flex items-center justify-center rounded-full md:hidden"
       >
         {isOpen ? (
           <svg
