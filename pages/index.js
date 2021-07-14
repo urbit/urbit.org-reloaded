@@ -8,7 +8,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import BackgroundImage from "../components/BackgroundImage";
 import TabCarousel from "../components/TabCarousel";
-import NewsletterSignup from "../components/NewletterSignup";
+import Contact from "../components/Contact";
 import PostPreview from "../components/PostPreview";
 import EventPreview from "../components/EventPreview";
 import { getAllPosts, formatDate, getOpenGrantsCount } from "../lib/lib";
@@ -270,38 +270,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
           // Newsletter and social media
         }
         <Section narrow>
-          <div className="measure">
-            <h2 className="m-0 p-0 mr-4 pb-12">Stay In Touch</h2>
-            <p className="pb-6">
-              We send monthly emails on system improvements, upcoming events,
-              and community spotlights.
-            </p>
-          </div>
-          <NewsletterSignup />
-          <h4 className="mt-12">
-            Follow us on{" "}
-            <a className="text-green" href={contact.twitter}>
-              Twitter
-            </a>
-          </h4>
-          <h4 className="mt-6">
-            Explore code on{" "}
-            <a className="text-green" href={contact.github}>
-              Github
-            </a>
-          </h4>
-          <h4 className="mt-6">
-            Ask questions in our{" "}
-            <a className="text-green" href={contact.discord}>
-              Discord
-            </a>
-          </h4>
-          <div className="mt-4 flex flex-wrap items-baseline">
-            <h4 className="mr-2">Boot Urbit and join</h4>
-            <code className="bg-wall p-2 mt-2 md:mt-0 rounded-lg">
-              {contact.urbitCommunity}
-            </code>
-          </div>
+          <Contact emphasize />
         </Section>
       </SingleColumn>
 

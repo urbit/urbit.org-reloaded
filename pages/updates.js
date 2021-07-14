@@ -32,7 +32,6 @@ export default function Blog({ posts, search }) {
         </Section>
         <Section narrow>
           {posts.map((post) => {
-            console.log(post);
             return (
               <div key={post.slug} className="mb-24 cursor-pointer">
                 <Link href={`/updates/${post.slug}`}>

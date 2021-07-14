@@ -16,7 +16,6 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import BackgroundImage from "../../components/BackgroundImage";
 import SingleColumn from "../../components/SingleColumn";
-import NewsletterSignup from "../../components/NewletterSignup";
 import GrantPreview from "../../components/GrantPreview";
 import Section from "../../components/Section";
 import { name, contact } from "../../lib/constants";
