@@ -5,7 +5,7 @@ date = 2021-07-15
 [extra] 
 pinned = false 
 host = "Josh Lehman (~wolref-podlex)"
-guests = "Jake Miller (~littel-wolfer)" 
+guests = "Jake Miller (~littel-wolfur)" 
 time = "9:00 PDT" 
 location = "Online Event" 
 image = "" 
