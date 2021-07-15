@@ -28,7 +28,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
       );
     } else if (agent.includes("Mac")) {
       return (
-        <a href="https://github.com/arthyn/port/releases/latest/download/Port.dmg">
+        <a href="https://github.com/urbit/port/releases/latest/download/Port.dmg">
           <button className="button-lg type-ui mb-5 bg-green text-white">
             Download For macOS
           </button>
@@ -83,7 +83,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
               </p>
               {heroButton}
               <a
-                href="https://github.com/arthyn/port"
+                href="https://github.com/urbit/port"
                 className="type-ui text-gray"
               >
                 View on GitHub
