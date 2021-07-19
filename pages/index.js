@@ -127,8 +127,9 @@ export default function Home({ posts, events, openGrantsCount, search }) {
           </div>
           <div className="measure py-12">
             <p className="pb-12">
-              We regularly give away address space to reward community
-              contributions, including education, promotion, and development.
+              We regularly grant address space to give motivated contributors
+              real ownership and authority over the network. Contributions
+              include education, promotion, and development efforts.
             </p>
             <div className="table">
               <Link href="/grants">
