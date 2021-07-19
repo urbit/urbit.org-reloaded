@@ -73,23 +73,38 @@ export default function Grants({
   const [includeCompleted, setIncludeCompleted] = useState(false);
   const [tab, setTab] = useState(0);
 
-  const filteredPosts = posts.filter((post) => {
+  const postsByCompletion = posts.filter((post) => {
+    return includeCompleted
+      ? true
+      : !post.extra.completed && post.extra.assignee === "";
+  });
+
+  const filteredPosts = postsByCompletion.filter((post) => {
     // Posts are returned if they match both the selected category and selected tags, or if the user has no category filters set.
-    const hasCategory = post.taxonomies.grant_category.some((r) =>
-      activeTags.includes(r)
+    const hasCategory = post.taxonomies.grant_category.some((category) =>
+      activeTags.includes(category)
     );
     const noTagsSelected = activeTags.length === 0;
-    const hasType = post.taxonomies.grant_type.some((r) =>
-      activeTypes.includes(r)
+    const hasType = post.taxonomies.grant_type.some((type) =>
+      activeTypes.includes(type)
     );
-    const matchesCompletionFilter = includeCompleted
-      ? true
-      : post.extra.completed === false;
 
-    return (
-      (hasCategory || noTagsSelected) && hasType && matchesCompletionFilter
-    );
+    return (hasCategory || noTagsSelected) && hasType;
   });
+
+  const allCount = postsByCompletion.length;
+
+  const counts = {
+    Bounty: postsByCompletion.filter((post) =>
+      post.taxonomies.grant_type.includes("Bounty")
+    ).length,
+    Apprenticeship: postsByCompletion.filter((post) =>
+      post.taxonomies.grant_type.includes("Apprenticeship")
+    ).length,
+    Proposal: postsByCompletion.filter((post) =>
+      post.taxonomies.grant_type.includes("Proposal")
+    ).length,
+  };
 
   return (
     <Container>
@@ -185,7 +200,7 @@ export default function Grants({
                 tab === 0 ? "text-white bg-black" : "text-gray bg-wall"
               }`}
             >
-              All
+              All <div className="opacity-50 ml-2">{allCount}</div>
             </button>
             {types.map((type, index) => {
               const className = classnames({
@@ -204,7 +219,7 @@ export default function Grants({
                   }}
                   className={`badge-lg mr-2 ${className}`}
                 >
-                  {type}
+                  {type} <div className="opacity-50 ml-2">{counts[type]}</div>
                 </button>
               );
             })}
@@ -228,19 +243,18 @@ export default function Grants({
             })}
           </div>
           {
-            <div className="pb-8 flex">
+            <div className="pb-8 flex items-center">
               <h4>
                 Showing {filteredPosts.length} grant
                 {filteredPosts.length === 1 ? "" : "s"}
               </h4>
-              {
-                // <button
-                //   className="ml-4"
-                //   onClick={() => setIncludeCompleted(!includeCompleted)}
-                // >
-                //   {includeCompleted ? "Exclude Completed" : "Include Completed"}
-                // </button>
-              }
+
+              <button
+                className="ml-4 badge-sm bg-black text-white"
+                onClick={() => setIncludeCompleted(!includeCompleted)}
+              >
+                {includeCompleted ? "Exclude Completed" : "Include Completed"}
+              </button>
             </div>
           }
           {filteredPosts.map((post) => {
