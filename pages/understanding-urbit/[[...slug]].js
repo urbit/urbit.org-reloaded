@@ -68,7 +68,7 @@ export default function UnderstandingLayout({
   return (
     <>
       <Head>
-        <title>{data.title} / Understanding Urbit / urbit.org</title>
+        <title>{data.title} • Understanding Urbit • urbit.org</title>
       </Head>
       <div className="flex w-screen h-screen min-h-screen w-screen">
         <Sidebar search={search}>

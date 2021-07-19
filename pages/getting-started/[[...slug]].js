@@ -63,7 +63,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
   return (
     <>
       <Head>
-        <title>{data.title} / Getting Started / urbit.org</title>
+        <title>{data.title} • Getting Started • urbit.org</title>
       </Head>
       <div className="flex w-screen h-screen min-h-screen w-screen">
         <Sidebar search={search}>

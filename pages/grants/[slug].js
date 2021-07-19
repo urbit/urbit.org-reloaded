@@ -29,6 +29,9 @@ export default function Grant({ post, markdown, search, similarGrants }) {
 
   return (
     <Container>
+      <Head>
+        <title>{post.title} • Grants • urbit.org</title>
+      </Head>
       <SingleColumn>
         <Header search={search} />
         <Section narrow short>

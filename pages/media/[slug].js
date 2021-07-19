@@ -6,6 +6,7 @@ import {
   getPreviousPost,
   formatDate,
 } from "../../lib/lib";
+import Head from "next/head";
 import ErrorPage from "../404";
 import Container from "../../components/Container";
 import Markdown from "../../components/Markdown";
@@ -26,6 +27,9 @@ export default function MediaPage({ post, markdown, search }) {
   }
   return (
     <Container>
+      <Head>
+        <title>{post.title} • Media • urbit.org</title>
+      </Head>
       <SingleColumn>
         <Header search={search} />
         <Section narrow short>

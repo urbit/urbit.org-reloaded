@@ -50,7 +50,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
   return (
     <Container>
       <Head>
-        <title>Urbit</title>
+        <title>urbit.org</title>
       </Head>
       <SingleColumn>
         <Header search={search} />
