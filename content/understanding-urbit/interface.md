@@ -62,7 +62,7 @@ When we look forward to what we can do with Landscape in the future, it’s hard
 
 Landscape is for everything else. Landscape is for actual two-way communication.
 
-![](https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png")
+![](https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png)
 
 Our desire to build a single place to work together isn’t driven just by convenience
 (although it is quite convenient). The way we see it, [real communities need to have real ownership over the spaces they inhabit](https://urbit.org/blog/urbit-is-for-communities/). When communities use industrial-grade, one-size-fits-all software they feel as sterile as the software they use. That world always felt a bit like living in a planned community. We’d rather live in the countryside.
