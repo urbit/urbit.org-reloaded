@@ -74,6 +74,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
           title={data.title}
           search={search}
           section={"Getting Started"}
+          narrow
         >
           <div className={markdownStyles["markdown"]}>
             <article
