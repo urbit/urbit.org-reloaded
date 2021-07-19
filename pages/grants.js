@@ -246,17 +246,17 @@ export default function Grants({
           </div>
           {
             <div className="pb-8 flex items-center">
-              <h4>
-                Showing {filteredPosts.length} grant
-                {filteredPosts.length === 1 ? "" : "s"}
-              </h4>
-
               <button
-                className="ml-4 badge-sm bg-black text-white"
+                className="mr-4 badge-sm bg-black text-white"
                 onClick={() => setIncludeCompleted(!includeCompleted)}
               >
                 {includeCompleted ? "Exclude Completed" : "Include Completed"}
               </button>
+
+              <h4>
+                Showing {filteredPosts.length} grant
+                {filteredPosts.length === 1 ? "" : "s"}
+              </h4>
             </div>
           }
           {filteredPosts.map((post) => {
