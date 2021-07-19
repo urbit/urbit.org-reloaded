@@ -20,7 +20,14 @@ export function EventCard({ event, dir, className }) {
     <div
       key={event.slug}
       className={`mb-24 cursor-pointer bg-wall rounded-xl tile-height bg-cover bg-center bg-no-repeat ${className}`}
-      style={{ backgroundImage: `url(${event.extra?.image})` || "" }}
+      style={{
+        backgroundImage:
+          `${
+            event.extra?.overlay
+              ? "linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),"
+              : ""
+          }url(${event.extra?.image})` || "",
+      }}
     >
       <Link href={`${dir ? dir : "/events/"}${event.slug}`}>
         <div className="flex flex-col p-8 justify-between items-between h-full relative">

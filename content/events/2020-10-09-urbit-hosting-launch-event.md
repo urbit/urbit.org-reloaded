@@ -9,9 +9,10 @@ location = "Online event"
 image = "https://secure.meetupstatic.com/photos/event/8/600_492480008.jpeg"
 registration_url = "https://www.meetup.com/urbit-sf/events/273439025/"
 youtube = "w3qKe_WZr50"
+dark = true
 +++
 
--------
+---
 
 We've been busy building, testing and refining — and now it's time to show off what we've been up to.
 
@@ -21,7 +22,7 @@ Since the OS 1 launch, back in April, we've been living on Urbit day to day. Urb
 
 Join the waitlist for hosting here: <a href="https://tlon.io/" class="linkified">https://tlon.io/</a>
 
-------
+---
 
 Got a group of friends who want to use Urbit together? We periodically give away blocks of planets and help people get set up. Apply for a community grant:<br/><a href="https://urbit.org/community/community-grants/" class="linkified">https://urbit.org/community/community-grants/</a>
 
@@ -29,4 +30,4 @@ Interested developing on Urbit? Hoon School is a community-run program to teach 
 
 Mostly, you can find us on Urbit in the Urbit Community group. But you can also follow along here:<br/><a href="https://urbit.org/blog/" class="linkified">https://urbit.org/blog/</a><br/><a href="https://twitter.com/urbit" class="linkified">https://twitter.com/urbit</a><br/><a href="https://github.com/urbit" class="linkified">https://github.com/urbit</a>
 
-And if you're still confused about what Urbit is, try these:<br/><a href="https://urbit.org/understanding-urbit/" class="linkified">https://urbit.org/understanding-urbit/</a> 
+And if you're still confused about what Urbit is, try these:<br/><a href="https://urbit.org/understanding-urbit/" class="linkified">https://urbit.org/understanding-urbit/</a>
