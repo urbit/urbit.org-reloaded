@@ -99,7 +99,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
         <Section narrow>
           <div className="flex items-center pb-12">
             <h2 className="m-0 p-0 mr-4">Grants</h2>
-            <Link href="/grants">
+            <Link href="/grants#find-a-grant">
               <a className="bg-green text-white badge-lg">
                 {openGrantsCount} Open
               </a>

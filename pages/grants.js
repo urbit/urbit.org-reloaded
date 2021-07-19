@@ -188,7 +188,9 @@ export default function Grants({
           // Find a Grant
         }
         <Section wide>
-          <h2 className="pb-8">Find A Grant</h2>
+          <h2 id="find-a-grant" className="pb-8">
+            Find A Grant
+          </h2>
           <h5 className="text-black font-semibold my-2">Work Programs</h5>
           <div className="flex flex-wrap items-center pb-2">
             <button
