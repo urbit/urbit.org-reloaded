@@ -7,7 +7,7 @@ export default function Sidebar(props) {
   return (
     <>
       <div className="hidden md:flex flex-col w-96 bg-wall max-h-screen h-screen">
-        <header className="flex flex-shrink-0 justify-between items-center pl-6 pt-12 pb-8">
+        <header className="flex flex-shrink-0 justify-between items-center pl-6 pt-12 mt-5 pb-8">
           <Link href="/">
             <a className="type-ui text-gray">Urbit</a>
           </Link>
