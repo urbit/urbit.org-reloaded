@@ -79,6 +79,7 @@ export default function UnderstandingLayout({
           title={data.title}
           search={search}
           section={"Understanding Urbit"}
+          narrow
         >
           <div className={markdownStyles["markdown"]}>
             <article
