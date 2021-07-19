@@ -20,8 +20,7 @@ Landscape is by no means the only possible interface for Urbit OS + Urbit ID, bu
 
 But we’ll get into that later. First, we’ll talk about why we built Landscape, where it is now, and where it’s going. Then we’ll cover a bit about other interface possibilities.
 
-
-<img class="" src="https://media.urbit.org/site/understanding-urbit/project-history/uu-osn-1.svg">
+![](https://media.urbit.org/site/understanding-urbit/project-history/uu-osn-1.svg)
 
 What problem is Landscape solving? Let’s start with the current situation when it comes to cloud services.
 
@@ -39,7 +38,7 @@ In March 2020 we shipped the first public version of Landscape, OS 1, to the net
 
 OS 1 is a minimal, multipurpose interface for bringing a group together to chat, share links, write and engage in discussion. OS 1 is free of any ads, tracking, or surveillance (as is the norm for anything built on Urbit). OS 1 is a stripped-down social utility designed for high-trust, direct communication and collaboration. OS 1 is the place for small communities to feel at home.
 
-<img class="ba" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-interface-3.png">
+![](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-interface-3.png)
 
 We built OS 1 for ourselves. We were sick of using centralized, mainstream software. We didn’t want to be stuck switching between bloated, monolithic services in order to keep in touch and move our work forward. We were done relying on some third party to take care of our community—so we exited to Urbit, and it feels good.
 
@@ -49,7 +48,7 @@ If you’re curious to get a complete overview of OS 1, check out [this post](ht
 
 Our target with OS 1 was to produce the [Nokia 3310](https://en.wikipedia.org/wiki/Nokia_3310) of cloud computers. Something bordering on simplistic, but still nice to use. We hit that target, but it’s just the first milestone. Let’s talk a bit about how Landscape grows and matures at a high level (for more specifics on the near-to-medium term, check out [the roadmap](https://urbit.org/understanding-urbit/roadmap/)).
 
-<img class="ba" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-interface-4.png">
+![](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-interface-4.png)
 
 Landscape has two basic building blocks: groups and modules. A group is exactly what it sounds like: one or more people. A module is sort of like an app without the data lock-in. A module is just a tool for getting something done, like ‘tasks’, ‘links’ or ‘votes’ that’s shared by a group.
 
@@ -63,9 +62,9 @@ When we look forward to what we can do with Landscape in the future, it’s hard
 
 Landscape is for everything else. Landscape is for actual two-way communication.
 
-<img class="ba" src="https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png">
+![](https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png")
 
 Our desire to build a single place to work together isn’t driven just by convenience
 (although it is quite convenient). The way we see it, [real communities need to have real ownership over the spaces they inhabit](https://urbit.org/blog/urbit-is-for-communities/). When communities use industrial-grade, one-size-fits-all software they feel as sterile as the software they use. That world always felt a bit like living in a planned community. We’d rather live in the countryside.
 
-We think Landscape can evolve into something even *more* powerful, cleaner, and more satisfying to use. Landscape is neither a social network nor productivity software. Landscape isn’t centrally controlled or passively surveilled. Landscape is something entirely new. It’s software that’s tailored to the people who use it, by the people who use it.
+We think Landscape can evolve into something even _more_ powerful, cleaner, and more satisfying to use. Landscape is neither a social network nor productivity software. Landscape isn’t centrally controlled or passively surveilled. Landscape is something entirely new. It’s software that’s tailored to the people who use it, by the people who use it.

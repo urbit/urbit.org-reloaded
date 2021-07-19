@@ -15,7 +15,7 @@ Today, Urbit is built and maintained by two companies, a community of contributo
 
 Let’s talk first about these individual groups within the Urbit community, then about the history of the project and how it came to be.
 
-<img class="ba" src="https://media.urbit.org/site/understanding-urbit/project-history/project-status-landscape-earth@2x.png">
+![](https://media.urbit.org/site/understanding-urbit/project-history/project-status-landscape-earth@2x.png)
 
 There are currently two independent companies that work on building Urbit full-time: [Tlon](https://tlon.io/) and [urbit.live](https://urbit.live/).
 
@@ -31,12 +31,9 @@ The community of contributors and core developers has been steadily contributing
 
 When the Urbit ID address space went on-chain in early 2019 there were about 2,000 star holders and 70 galaxy holders – that number has since grown steadily. For the most part, the best way to connect with them is through Urbit itself.
 
-<img class="ba"
-src="https://media.urbit.org/site/understanding-urbit/uu-people-history-2a.jpg"/>
+![](https://media.urbit.org/site/understanding-urbit/uu-people-history-2a.jpg)
 
-<img class="ba"
-src="https://media.urbit.org/site/understanding-urbit/uu-people-history-2c.jpg"
-/>
+![](https://media.urbit.org/site/understanding-urbit/uu-people-history-2c.jpg)
 
 Given how new and unusual Urbit is, it attracts a wide variety of interesting people — both technical and non-technical. The community is generally happy to talk to people about what Urbit is, what we’re up to, and where we’re going. The best way to get involved is to simply join the Urbit Community at `~bitbet-bolbel/urbit-community` — which our [setup instructions](/using/os/getting-started) can help you do.
 
@@ -44,7 +41,7 @@ For those interested in contributing there are some simple instructions on [GitH
 
 We also run a bi-monthly course called ‘Hoon School’ to teach people about the system. Hoon School is designed for anyone with the most basic technical skills — you don’t have to be an expert programmer. If you’re interested, you should [apply](/community/hoonschool). We accept everyone we can and only close the class when it gets too big.
 
-<img class="full w-100 mv4" src="https://media.urbit.org/site/understanding-urbit/project-history/history-4.svg"/>
+![](https://media.urbit.org/site/understanding-urbit/project-history/history-4.svg)
 
 At the beginning, Urbit was just a few people with the right combination of imagination and discipline to try to rebuild computing.
 
@@ -91,7 +88,7 @@ urbit.live gets going and starts selling Urbit IDs to the public.
 
 Tlon spends the year stabilizing Arvo and building OS 1.
 
-<img class="ba" src="https://media.urbit.org/site/understanding-urbit/uu-history-4.jpg"/>
+![](https://media.urbit.org/site/understanding-urbit/uu-history-4.jpg)
 
 Building Urbit is about building a future where technology doesn’t control us. Instead, we look forward to a future where technology is simpler, more reliable and less invasive.
 

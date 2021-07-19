@@ -9,13 +9,13 @@ hide_previous_title = "true"
 image = "https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-cards%402x.png"
 +++
 
-Assuming Urbit OS is simple enough for an ordinary user to own and operate, how do they log in? How do people identify one another on this new network? When people want to get data, files and messages to one another, how do they do it?  And how do we prevent spam?
+Assuming Urbit OS is simple enough for an ordinary user to own and operate, how do they log in? How do people identify one another on this new network? When people want to get data, files and messages to one another, how do they do it? And how do we prevent spam?
 
 Urbit ID is the answer to all these questions. Urbit ID is a decentralized addressing and public key infrastructure designed for Urbit OS.
 
 Let’s talk first about what an Urbit ID is and what it does. Then we’ll cover our design goals and how the system works overall.
 
-<img class="ba" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-cards%402x.png">
+![](https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-cards%402x.png)
 
 Your Urbit ID is a short, four-syllable name like `~ravmel-ropdyl` that you own with an eight-syllable master passkey like `~palfun-foslup-fallyn-balfus`. This name and key lets you log into Urbit OS, and it’s used to encrypt packets you send over the Urbit network. Soon it will also be a master key that allows holding and sending of Bitcoin and other cryptocurrencies. Your Urbit ID and passkey belong to you like any other cryptographic assets. No one can take them away from you (just make sure to store the key safely).
 
@@ -27,7 +27,7 @@ If you’re curious to see exactly how this system works, the code is of course 
 
 Since the Urbit ID registry is live and deployed you can even [look at the chain](https://github.com/urbit/azimuth#live-contracts).
 
-<img class="ba" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-paperwallet%402x.png">
+![](https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-paperwallet%402x.png)
 
 Each Urbit ID is really just a number. From that number we generate a pronounceable name and a visually identifiable sigil. `~dalwel-fadrun` is `3,509,632,436`, for example.
 
@@ -37,7 +37,7 @@ You can also call stars ‘infrastructure nodes’ and galaxies ‘governance no
 
 And that's it. It's a simple system. What's important is why it is the way it is. Let's take a look at that.
 
-<img class="full ba w-100 mv4" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-address-space-1.svg"/>
+![](https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-address-space-1.svg")
 
 At a high level, there are three important things to understand about the overall Urbit ID system design.
 
@@ -53,7 +53,7 @@ The Urbit ID sponsorship tree is not intended to be a social system in any way. 
 
 Your relationship with your sponsor should be sort of like your ISP or a utility provider: a passive, non-invasive relationship. If it isn’t to your liking, moving to a new sponsor is very easy.
 
-<img class="ba" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-sigils%402x.png">
+![](https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-sigils%402x.png)
 
 Urbit IDs are property, and we think of the entire registry of Urbit IDs as a vast territory of digital land.
 
@@ -61,7 +61,7 @@ The scarcity of Urbit ID address space gives it value and that in turn helps boo
 
 When we launched the Urbit ID system, in January of 2019, there were a couple thousand different star and galaxy holders acting as stewards of this digital land. Since then, that number has been steadily on the rise.
 
-<img class="ba" src="https://media.urbit.org/site/understanding-urbit/project-history/uu-id-5.jpg">
+![](https://media.urbit.org/site/understanding-urbit/project-history/uu-id-5.jpg)
 
 Ultimately, we want your Urbit ID to feel like a civilizational key. If your Urbit ID were a piece of hardware, you could tap it to unlock a door, swipe it to buy a coffee, and plug it into any computer to log in. Your Urbit ID should be a unique, beautiful object that’s both an address and a wallet. It’s a key to a secret club and the ticket to your digital life.
 
