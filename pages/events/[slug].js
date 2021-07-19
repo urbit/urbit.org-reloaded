@@ -31,6 +31,9 @@ export default function Event({
 }) {
   return (
     <Container>
+      <Head>
+        <title>{post.title} • Events • urbit.org</title>
+      </Head>
       <SingleColumn>
         <Header search={search} />
         <Section narrow short>

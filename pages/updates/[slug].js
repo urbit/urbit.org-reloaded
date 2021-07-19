@@ -35,6 +35,9 @@ export default function Post({
   }
   return (
     <Container>
+      <Head>
+        <title>{post.title} • Updates • urbit.org</title>
+      </Head>
       <SingleColumn>
         <Header search={search} />
         <Section short narrow>

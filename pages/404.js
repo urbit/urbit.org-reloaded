@@ -9,7 +9,7 @@ export default function NotFound(props) {
   return (
     <Container>
       <Head>
-        <title>Urbit • 404</title>
+        <title>404 • urbit.org</title>
       </Head>
       <SingleColumn>
         <Header search={props.search} />

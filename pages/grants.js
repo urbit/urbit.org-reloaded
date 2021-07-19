@@ -94,7 +94,7 @@ export default function Grants({
   return (
     <Container>
       <Head>
-        <title>Urbit • Grants</title>
+        <title>Grants • urbit.org</title>
       </Head>
       <SingleColumn>
         <Header search={search} />

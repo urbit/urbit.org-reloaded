@@ -102,7 +102,7 @@ export default function DocsLayout({ posts, data, params, search, markdown }) {
   return (
     <>
       <Head>
-        <title>{data.title} / Documentation / urbit.org</title>
+        <title>{data.title} • Documentation • urbit.org</title>
       </Head>
       <div className="flex w-screen h-screen min-h-screen w-screen">
         <Sidebar search={search}>{childPages("/docs", posts.children)}</Sidebar>

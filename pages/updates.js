@@ -13,7 +13,7 @@ export default function Blog({ posts, search }) {
   return (
     <Container>
       <Head>
-        <title>Urbit • Updates</title>
+        <title>Updates • urbit.org</title>
       </Head>
       <SingleColumn>
         <Header search={search} />

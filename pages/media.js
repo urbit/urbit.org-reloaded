@@ -11,7 +11,7 @@ export default function Media({ posts, search }) {
   return (
     <Container>
       <Head>
-        <title>Urbit • Media</title>
+        <title>Media • urbit.org</title>
       </Head>
       <SingleColumn>
         <Header search={search} />

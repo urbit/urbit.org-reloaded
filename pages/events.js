@@ -63,7 +63,7 @@ export default function Events({ pastEvents, comingSoon, search }) {
   return (
     <Container>
       <Head>
-        <title>Urbit • Events</title>
+        <title>Events • urbit.org</title>
       </Head>
       <SingleColumn>
         <Header search={search} />
