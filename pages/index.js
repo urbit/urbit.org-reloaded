@@ -60,9 +60,9 @@ export default function Home({ posts, events, openGrantsCount, search }) {
         }
         <Section narrow>
           <div>
-            <h1>A general-purpose,</h1>
-            <h1>peer-to-peer,</h1>
-            <h1>personal computing system.</h1>
+            <h1>A clean-slate OS</h1>
+            <h1>and network</h1>
+            <h1>for the 21st century.</h1>
           </div>
         </Section>
 
