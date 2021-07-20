@@ -263,6 +263,21 @@ export default function Grants({
             return <GrantPreview grant={post} />;
           })}
         </Section>
+        {/* Submit a proposal */}
+        <Section wide>
+          <h2 className="mb-16">Proposals</h2>
+          <p className="mb-8">
+            Contributors are also welcome to have their personal projects
+            considered as a proposal. If you'd like to propose a project for the
+            grants program, review our{" "}
+            <a href="/grant-submission-guide">submission guide</a>, and feel
+            free to submit your proposal{" "}
+            <a href="https://github.com/urbit/urbit.org/new/master?filename=/content/grants/project_name.md&value=%2B%2B%2B%0Atitle%20%3D%20%22%22%0Adate%20%3D%202021-01-01%0A%5Btaxonomies%5D%0Agrant_type%20%3D%20%5B%22Proposal%22%5D%0Agrant_category%20%3D%20%5B%22%22%5D%0A%5Bextra%5D%0Aimage%20%3D%20%22%22%0Adescription%20%3D%20%22%22%0Areward%20%3D%201%0Aassignee%20%3D%20%22nartes-fasrum%22%0Aid%20%3D%20%22636838408%22%0Acompleted%20%3D%20false%0Alink%20%3D%20%22%22%0A%2B%2B%2B%0A%0A%5BDescribe%20your%20project%20here.%5D%0A%0A%23%23%20Milestones%0A%0A%5BSeparate%20milestones%20for%20work%20here%20and%20proposed%20payment%20at%20each%20step.%5D">
+              using GitHub
+            </a>
+            .
+          </p>
+        </Section>
       </SingleColumn>
       <Footer />
     </Container>
