@@ -3,7 +3,7 @@ title = "Community Spotlight: The Portico"
 date = 2021-05-04
 description = "Interview with The Portico founder Josh Reagan"
 [extra]
-author = "~tirwyd-sarmes"
+author = "Matt"
 ship = "~tirwyd-sarmes"
 image = "https://media.urbit.org/site/posts/essays/orthodoxchurch.jpg"
 +++
