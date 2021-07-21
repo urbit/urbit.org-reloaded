@@ -26,7 +26,7 @@ export default function ContentArea(props) {
               <div className="pb-32" />
             </Section>
           ) : (
-            <div>
+            <div className="min-w-0">
               <h2 className="mb-16 mt-24">{props.title}</h2>
               {props.children}
               <div className="pb-32" />
