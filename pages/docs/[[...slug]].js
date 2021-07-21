@@ -97,16 +97,32 @@ const pageTree = (thisLink, tree, level = 0) => {
 };
 
 export default function DocsLayout({ posts, data, params, search, markdown }) {
-  const [isOpen, toggleTray] = useState(false);
-
+  const router = useRouter();
+  const isSelected = "/docs".includes(router.asPath);
+  const selectedClasses = classnames({
+    dot: isSelected,
+    "text-green": isSelected,
+    "text-black": !isSelected,
+  });
+  const rootClasses = "pl-0 text-base hover:text-green";
   return (
     <>
       <Head>
         <title>{data.title} • Documentation • urbit.org</title>
       </Head>
       <div className="flex w-screen h-screen min-h-screen w-screen">
-        <Sidebar search={search}>{childPages("/docs", posts.children)}</Sidebar>
-
+        <Sidebar search={search}>
+          <ul>
+            <li>
+              <Link href="/docs">
+                <a className={`relative ${selectedClasses} ${rootClasses}`}>
+                  Developer Documentation
+                </a>
+              </Link>
+            </li>
+          </ul>
+          {childPages("/docs", posts.children)}
+        </Sidebar>
         <ContentArea
           breadcrumbs={breadcrumbs(posts, params.slug?.slice(0, -1) || "")}
           title={data.title}
