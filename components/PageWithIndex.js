@@ -14,7 +14,7 @@ const TableOfContents = () => {
   const { nestedHeadings } = useHeadingsData();
   return (
     <nav
-      className="sticky min-h-0 h-screen overflow-y-scroll w-52 flex-shrink-0 pb-8"
+      className="sticky min-h-0 h-screen overflow-y-scroll w-52 flex-shrink-0 pb-8 hidden lg:block"
       style={{ top: 0 }}
     >
       <p>On this page</p>
@@ -94,7 +94,7 @@ export default function PageWithIndex({ post, markdown, search }) {
         <Section narrow>
           <div className="flex">
             <article
-              className={markdownStyles["markdown"] + " pr-16"}
+              className={markdownStyles["markdown"] + " pr-0 lg:pr-16"}
               dangerouslySetInnerHTML={{ __html: decode(markdown) }}
             ></article>
             <TableOfContents />
