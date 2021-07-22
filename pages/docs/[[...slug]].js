@@ -173,7 +173,7 @@ export default function DocsLayout({
             )}
           </div>
         </ContentArea>
-        <TableOfContents />
+        <TableOfContents key={params.slug.join("/")} />
       </div>
     </>
   );
