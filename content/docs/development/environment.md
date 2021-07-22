@@ -1,14 +1,14 @@
 +++
 title = "Environment Setup"
 description = "How to set up an environment for Urbit development."
-weight = 10
+weight = 11
 template = "doc.html"
 +++
 
 This guide covers best practices for preparing your environment to develop
 within the Urbit ecosystem.
 
-## Creating a development ship 
+## Creating a development ship
 
 To do work with Hoon, we recommended using a "fake" ship -- one that's not
 connected to the network.
@@ -24,8 +24,7 @@ with any valid Urbit ship-name.
 ```
 
 This should take a couple of minutes, during which you should see a block of boot
-messages, starting with the Urbit version number. 
-
+messages, starting with the Urbit version number.
 
 ## Hoon support in text editors
 
@@ -33,17 +32,20 @@ A variety of plugins have been built to provide support for the Hoon language in
 different text editors:
 
 #### Atom
+
 Atom is free and open-source and runs on all major operating systems. It is
 available [here](https://atom.io/). A package for Hoon support is maintained by
 Tlon and may be obtained using the package manager within the editor by
 searching for `Hoon`.
 
 #### Sublime Text
+
 Sublime Text is closed-source, but may be downloaded for free and there is no
 enforced time limit for evaluation. It runs on all major operating systems. It
 is available [here](https://www.sublimetext.com/).
 
 #### Visual Studio Code
+
 Visual Studio Code is free and open-source and runs on all major operating
 systems. It is available [here](https://code.visualstudio.com/). Hoon support
 may be acquired in the Extensions menu within the editor by searching for

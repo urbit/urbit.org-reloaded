@@ -4,7 +4,13 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import classnames from "classnames";
 import { join } from "path";
-import { getDocs, formatDate, buildPageTree, getPage } from "../../lib/lib";
+import {
+  getPreviousPost,
+  getNextPost,
+  buildPageTree,
+  getPage,
+} from "../../lib/lib";
+import Pagination from "../../components/Pagination";
 import Markdown from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
@@ -95,7 +101,15 @@ const pageTree = (thisLink, tree, level = 0) => {
   );
 };
 
-export default function DocsLayout({ posts, data, params, search, markdown }) {
+export default function DocsLayout({
+  posts,
+  data,
+  params,
+  search,
+  markdown,
+  previousPost,
+  nextPost,
+}) {
   const router = useRouter();
   const isSelected = "/docs".includes(router.asPath);
   const selectedClasses = classnames({
@@ -133,6 +147,30 @@ export default function DocsLayout({ posts, data, params, search, markdown }) {
               dangerouslySetInnerHTML={{ __html: decode(markdown) }}
             ></article>
           </div>
+          <div className="flex justify-between mt-16">
+            {previousPost === null ? (
+              <div className={""} />
+            ) : (
+              <Pagination
+                previous
+                title="Previous Post"
+                post={previousPost}
+                className=""
+                section={join("docs", params.slug?.slice(0, -1).join("/"))}
+              />
+            )}
+            {nextPost === null ? (
+              <div className={""} />
+            ) : (
+              <Pagination
+                next
+                title="Next Post"
+                post={nextPost}
+                className=""
+                section={join("docs", params.slug?.slice(0, -1).join("/"))}
+              />
+            )}
+          </div>
         </ContentArea>
       </div>
     </>
@@ -146,9 +184,25 @@ export async function getStaticProps({ params }) {
     join(process.cwd(), "content/docs", params.slug?.join("/") || "/")
   );
 
+  const previousPost =
+    getPreviousPost(
+      params.slug?.slice(-1).join("") || "docs",
+      ["title", "slug", "weight"],
+      join("docs", params.slug?.slice(0, -1).join("/") || "/"),
+      "weight"
+    ) || null;
+
+  const nextPost =
+    getNextPost(
+      params.slug?.slice(-1).join("") || "docs",
+      ["title", "slug", "weight"],
+      join("docs", params.slug?.slice(0, -1).join("/") || "/"),
+      "weight"
+    ) || null;
+
   const markdown = await Markdown({ post: { content: content } });
 
-  return { props: { posts, data, markdown, params } };
+  return { props: { posts, data, markdown, previousPost, nextPost, params } };
 }
 
 export async function getStaticPaths() {
