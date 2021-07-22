@@ -11,14 +11,14 @@ itself from over the network without downtime. The Arvo kernel proper is quite
 simple -- it's only about 600 lines of code, excluding its various modules.
 
 The Urbit transition function is implemented in Arvo. Upon being 'poked' by Vere
-with the pair of `<input event, state>`, Arvo directs the event to the
-appropriate OS module. The result of each Vere 'poke' is a pair of `<output
-events, new state>`. Events are typed, and each has an explicit call-stack
+with the pair of `&lt;input event, state>`, Arvo directs the event to the
+appropriate OS module. The result of each Vere 'poke' is a pair of
+`&lt;output events, new state>`. Events are typed, and each has an explicit call-stack
 structure indicating the event's source module in Arvo.
 
 For a more in-depth technical introduction, see [Arvo Overview](/docs/arvo/overview).
 
-Arvo modules are also called 'vanes'.  Arvo's vanes are:
+Arvo modules are also called 'vanes'. Arvo's vanes are:
 
 - [Ames](/docs/arvo/ames/ames): defines and implements Urbit's encrypted P2P network protocol, as well
   as Urbit's identity protocol.
@@ -30,4 +30,3 @@ Arvo modules are also called 'vanes'.  Arvo's vanes are:
 - [Gall](/docs/userspace/gall/gall): application sandbox and manager.
 - [Iris](/docs/arvo/iris/iris-api): HTTP client.
 - [Jael](/docs/arvo/jael/jael-api): Public and private key storage.
-
