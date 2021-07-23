@@ -4,6 +4,7 @@
 /install                                                                            /getting-started 301!
 /install/mac/latest                                                                 http://github.com/urbit/urbit/releases/latest/download/darwin.tgz
 /install/linux64/latest                                                             http://github.com/urbit/urbit/releases/latest/download/linux64.tgz
+/grants/apprenticehips                                                              /grants/apprenticeships 301!
 /using/install                                                                      /getting-started 301!
 /using/planet                                                                       /getting-started/planet 301!
 /using/develop                                                                      /docs/development/develop 301!
