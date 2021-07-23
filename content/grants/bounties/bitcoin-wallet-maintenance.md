@@ -21,7 +21,7 @@ maintenance is now passing back to the community via the Urbit Foundation.
 
 Our goal is to maintain this product at a high level of usability and also add
 significant features to it over time. We want usage to become ubiquitous and
-easy within Urbit, while integrating without outside wallets/signing devices and
+easy within Urbit, while integrating with outside wallets/signing devices and
 internal applications.
 
 If you have strong development skills and are looking to make an impact with
