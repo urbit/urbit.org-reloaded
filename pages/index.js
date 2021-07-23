@@ -218,14 +218,14 @@ export default function Home({ posts, events, openGrantsCount, search }) {
                 key={posts[1].slug}
               />
               <PostPreview
-                post={posts[3]}
+                post={posts[2]}
                 className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
-                key={posts[3].slug}
+                key={posts[2].slug}
               />
               <PostPreview
-                post={posts[4]}
+                post={posts[3]}
                 className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
-                key={posts[4].slug}
+                key={posts[3].slug}
               />
               <div>
                 <Link href="/blog">
@@ -247,14 +247,14 @@ export default function Home({ posts, events, openGrantsCount, search }) {
                 key={events[1].slug}
               />
               <EventPreview
-                event={events[3]}
+                event={events[2]}
                 className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
-                key={events[3].slug}
+                key={events[2].slug}
               />
               <EventPreview
-                event={events[4]}
+                event={events[3]}
                 className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
-                key={events[4].slug}
+                key={events[3].slug}
               />
               <div>
                 <Link href="/events">
