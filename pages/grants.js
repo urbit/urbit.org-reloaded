@@ -10,6 +10,7 @@ import SingleColumn from "../components/SingleColumn";
 import BackgroundImage from "../components/BackgroundImage";
 import TabCarousel from "../components/TabCarousel";
 import Section from "../components/Section";
+import PostPreview from "../components/PostPreview";
 import GrantPreview from "../components/GrantPreview";
 import {
   getAllPosts,
@@ -67,6 +68,7 @@ export default function Grants({
   types,
   featuredGrants,
   search,
+  gifts,
 }) {
   const [activeTags, setTags] = useState([]);
   const [activeTypes, setTypes] = useState(types);
@@ -177,11 +179,37 @@ export default function Grants({
           // Gift Grants
         }
         <Section wide>
-          <div className="measure pb-16">
+          <div className="pb-16">
             <h2 className="pb-16">Gifts</h2>
             <p className="mb-8">
-              Gifts are given post facto for exceptional contributions.
+              Gifts are given post-facto for exceptional contributions.
             </p>
+            <div className="flex flex-wrap">
+              <PostPreview
+                post={gifts[0]}
+                className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
+                key={gifts[0].slug}
+                section={gifts[0].section}
+              />
+              <PostPreview
+                post={gifts[1]}
+                className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
+                key={gifts[1].slug}
+                section={gifts[1].section}
+              />
+              <PostPreview
+                post={gifts[2]}
+                className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
+                key={gifts[2].slug}
+                section={gifts[2].section}
+              />
+              <PostPreview
+                post={gifts[3]}
+                className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
+                key={gifts[3].slug}
+                section={gifts[3].section}
+              />
+            </div>
           </div>
         </Section>
         {
@@ -291,6 +319,20 @@ export async function getStaticProps() {
     ["title", "slug", "date", "description", "extra", "taxonomies"],
     "grants"
   );
+  let gifts = getAllPosts(
+    ["title", "slug", "date", "description", "extra", "taxonomies"],
+    "blog"
+  );
+  gifts.map((e) => (e.section = "blog"));
+  let updates = getAllPosts(
+    ["title", "slug", "date", "description", "extra", "taxonomies"],
+    "updates"
+  );
+  updates.map((e) => (e.section = "updates"));
+  gifts.push(...updates);
+  gifts = gifts
+    .filter((e) => e?.taxonomies?.grant_type?.includes("Gift"))
+    .sort((a, b) => (a.date > b.date ? -1 : 1));
 
   // The layout expects exactly 3
   const featuredGrants = [
@@ -302,6 +344,6 @@ export async function getStaticProps() {
   );
 
   return {
-    props: { posts: posts, categories, types, featuredGrants },
+    props: { posts: posts, categories, types, featuredGrants, gifts },
   };
 }
