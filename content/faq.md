@@ -394,8 +394,6 @@ The standard library and naming is something we’ve discussed changing, and it 
 
 The right way to think about Hoon is as the ‘C of Urbit’. It’s a bare bones language that gets you pretty close to Nock. Eventually, we’ll probably implement more expressive languages that compile to Urbit. But for now, satisfy your curiosity and [sign up for Hooniversity](https://hooniversity.org/), a community led Hoon educational organization.
 
-Another option is to treat [Urbit as an API](@/docs/arvo/eyre/using-eyre.md), which allows one to use common languages such as Python and Javascript to build userspace programs. For now this option is not as powerful as Hoon, but there is still a lot that a developer without the time or inclination to learn Hoon can do.
-
 ### What is the point of Nock? {#why-nock}
 
 The primary technical reason it is difficult for the individual to run a personal server is that modern computing architectures are not deterministic. What solves a problem for one person is not guaranteed to work on another person's computer, even if they are using identical hardware. [Nock](@/docs/glossary/nock.md) solves this problem. It provides a single computing foundation for the whole network, so that difficult issues that arise when running a server need only to be solved once and the solution is guaranteed to work for everyone on the network.
