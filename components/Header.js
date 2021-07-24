@@ -75,7 +75,7 @@ export default function Header(props) {
           className="mr-5 text-green type-ui button-text"
           href="/getting-started"
         >
-          Download Port
+          Get Started
         </ActiveLink>
         <button
           onClick={(e) => {

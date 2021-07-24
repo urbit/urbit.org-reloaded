@@ -10,6 +10,16 @@ export default function Footer() {
         <Section short className="flex flex-row flex-wrap">
           <div className="w-1/2 md:w-1/3 flex flex-col flex-shrink">
             <h4 className="mt-16 mb-8">Use Urbit</h4>
+            <Link href="/getting-started">
+              <div>
+                <a className="type-sub text-gray">Getting Started</a>
+              </div>
+            </Link>
+            <Link href="/using">
+              <div>
+                <a className="type-sub text-gray">Operator's Manual</a>
+              </div>
+            </Link>
             <Link href="https://github.com/urbit/port/releases">
               <div>
                 <a className="type-sub text-gray">Urbit Client</a>
