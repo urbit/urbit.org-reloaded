@@ -91,7 +91,7 @@ export default function Header(props) {
       {
         // Small screen header
       }
-      <MenuTray isOpen={isOpen} setTray={setTray}>
+      <MenuTray isOpen={isOpen} setTray={setTray} search={props.search}>
         <Link href="/">
           <a className="type-ui mb-12">Urbit</a>
         </Link>

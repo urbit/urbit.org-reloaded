@@ -18,7 +18,7 @@ export default function Sidebar(props) {
         </div>
       </div>
 
-      <MenuTray isOpen={isOpen} setTray={setTray}>
+      <MenuTray isOpen={isOpen} setTray={setTray} search={props.search}>
         <header className="flex flex-shrink-0 justify-between items-center pb-8">
           <Link href="/">
             <a className="type-ui text-gray">Urbit</a>
