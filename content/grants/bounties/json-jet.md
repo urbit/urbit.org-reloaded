@@ -38,7 +38,7 @@ Completing this bounty will have an immediate impact on the perceived speed of t
 * Tlon engineer explanation/assistance as needed
 * Check-in with a Foundation director as needed
 * [Writing Jets Guide](https://urbit.org/docs/vere/jetting/)
-* [Unofficial Jets Tutorial](https://gist.github.com/sigilante/3f9d13423a48a3d71041c938691d1f33)
+* [Unofficial Jets Tutorial](https://gist.github.com/sigilante/31cc7941a41b51dca5db6692a756fd64)
 * [JSON Test Suite](https://github.com/nst/JSONTestSuite)
 
 ## Milestone: Completion, 1 star
