@@ -3,7 +3,8 @@ title = "Developer Call: Pressure and Protolith"
 date = 2021-03-18
 [extra]
 pinned = false
-host = "Urbit"
+host = "Josh Lehman (~wolref-podlex)"
+guests = "Matilde Park (~haddef-sigwen)"
 time = "09:00 PST"
 location = "Online event"
 image = ""
