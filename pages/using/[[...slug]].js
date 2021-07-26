@@ -50,10 +50,10 @@ const pageTree = (thisLink, tree, level = 0) => {
   });
 
   const headingItemClasses = classnames({
-    "pl-0 text-black text-base font-semibold hover:text-green leading-relaxed":
+    "pl-0 text-gray text-base font-semibold hover:text-green leading-relaxed":
       level === 0,
-    "pl-4 text-black text-base font-semibold hover:text-green": level === 1,
-    "pl-8 text-black text-base hover:text-green": level === 2,
+    "pl-4 text-gray text-base font-semibold hover:text-green": level === 1,
+    "pl-8 text-gray text-base hover:text-green": level === 2,
   });
 
   const pageItemClasses = classnames({

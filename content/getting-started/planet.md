@@ -1,5 +1,5 @@
 +++
-title = "Setting up your planet"
+title = "Setting up your urbit"
 weight = 1
 description = "Getting started with a permanent Urbit identity."
 +++
@@ -29,16 +29,15 @@ Current hosting providers are:
 - [Tlon Corporation](https://tlon.io): Tlon is the creator of Landscape and is primarily responsible for the creation and maintenance of the Urbit project itself.
 - [Get an Urbit ID](https://www.geturbitid.com/): Get an Urbit ID was the first hosting provider and is run by a member of the Urbit community.
 
-
 ### Choose to run your planet on your computer or on a cloud service
 
-Urbit must run on an existing computer somewhere.  Most users run their planet on their personal computer, but we recommend eventually using a cloud service (Digital Ocean, Linode, etc) because it allows your planet to be accessed from anywhere on multiple devices. Hosting your planet in the cloud also allows it to always be online and ready for automatic updates. You are welcome to run from your personal computer and switch to the cloud later...all without losing any data!
+Urbit must run on an existing computer somewhere. Most users run their planet on their personal computer, but we recommend eventually using a cloud service (Digital Ocean, Linode, etc) because it allows your planet to be accessed from anywhere on multiple devices. Hosting your planet in the cloud also allows it to always be online and ready for automatic updates. You are welcome to run from your personal computer and switch to the cloud later...all without losing any data!
 
 There is a guide for [hosting your planet on DigitalOcean](/using/running/hosting) and [hosting your planet on Linode](https://jeremytunnell.com/2021/01/09/how-to-install-urbit-on-a-linode-vps), but any cloud hosting service should work.
 
 ### Get your keyfile {#keyfile}
 
-If you received an email invite to Urbit, the master ticket should be a .pdf file in the passport folder inside the archive that you downloaded. **If you bought your planet or someone sent you one you probably do not have a master ticket, and you probably don't need one.  Do not issue a new master ticket unless you are sure you need to.**
+If you received an email invite to Urbit, the master ticket should be a .pdf file in the passport folder inside the archive that you downloaded. **If you bought your planet or someone sent you one you probably do not have a master ticket, and you probably don't need one. Do not issue a new master ticket unless you are sure you need to.**
 
 1. Connect to [Bridge](https://bridge.urbit.org). (Bridge is like an Urbit wallet)
 2. Enter the name of your planet and the associated master ticket if you have one. Click the "Metamask, Mnemonic, Hardware Wallet..." button if you don't have a master ticket.
@@ -121,7 +120,6 @@ use |ota %disable or |ota ~sponsor %kids to reset it
 ```
 
 If for some reason your sponsor (in this case, `~dopzod`) is not responding, read instructions on [escaping your sponsor](/using/id/using-bridge#escaping-your-sponsor).
-
 
 ## Next Steps
 

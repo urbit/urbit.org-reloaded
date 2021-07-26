@@ -30,7 +30,7 @@ const breadcrumbs = (posts, paths) => {
 };
 
 const childPages = (thisLink, children, level = 0) => (
-  <ul className="pl-1">
+  <ul className="pl-0">
     {children?.map((child) => (
       <li>{pageTree(join(thisLink, child.slug), child, level)}</li>
     ))}
@@ -43,7 +43,7 @@ const pageTree = (thisLink, tree, level = 0) => {
   const isThisPage = router.asPath === thisLink;
 
   const pageItemClasses = classnames({
-    "pl-4 text-black text-base hover:text-green": level === 0,
+    "pl-0 font-semibold text-gray text-base hover:text-green": level === 0,
     "pl-8 text-black text-base hover:text-green": level === 1,
     "pl-12 text-black text-base hover:text-green": level === 2,
     "dot relative": isThisPage,
@@ -60,6 +60,15 @@ const pageTree = (thisLink, tree, level = 0) => {
 };
 
 export default function UsingLayout({ posts, data, params, search, markdown }) {
+  const router = useRouter();
+  const isSelected = "/getting-started".includes(router.asPath);
+  const selectedClasses = classnames({
+    dot: isSelected,
+    "text-green": isSelected,
+    "text-gray": !isSelected,
+  });
+  const rootClasses = "pl-0 font-semibold text-base hover:text-green";
+
   return (
     <>
       <Head>
@@ -67,6 +76,15 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
       </Head>
       <div className="flex w-screen h-screen min-h-screen w-screen">
         <Sidebar search={search}>
+          <ul>
+            <li>
+              <Link href="/getting-started">
+                <a className={`relative ${selectedClasses} ${rootClasses}`}>
+                  Getting Started
+                </a>
+              </Link>
+            </li>
+          </ul>
           {childPages("/getting-started", posts.pages)}
         </Sidebar>
         <ContentArea
