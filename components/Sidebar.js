@@ -12,7 +12,7 @@ export default function Sidebar(props) {
             <a className="type-ui text-gray">Urbit</a>
           </Link>
         </header>
-        <div className="overflow-y-scroll p-6 pt-16">
+        <div className="overflow-y-auto p-6 pt-16">
           {props.children}
           <div className="pb-32" />
         </div>
