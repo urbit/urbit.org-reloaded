@@ -72,7 +72,7 @@ export default function UnderstandingLayout({
         <title>{data.title} • Understanding Urbit • urbit.org</title>
         {Meta(data)}
       </Head>
-      <div className="flex w-screen h-screen min-h-screen w-screen">
+      <div className="flex w-screen h-screen min-h-screen w-screen sidebar">
         <Sidebar search={search}>
           {childPages("/understanding-urbit", posts.pages)}
         </Sidebar>
@@ -81,7 +81,6 @@ export default function UnderstandingLayout({
           title={data.title}
           search={search}
           section={"Understanding Urbit"}
-          narrow
         >
           <div className={markdownStyles["markdown"]}>
             <article

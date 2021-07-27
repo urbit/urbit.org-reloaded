@@ -28,7 +28,7 @@ export default function PageWithIndex({ post, markdown, search }) {
           <h1>{post.title}</h1>
         </Section>
         <Section narrow>
-          <div className="flex">
+          <div className="flex sidebar">
             <article
               className={markdownStyles["markdown"] + " pr-0 lg:pr-16"}
               dangerouslySetInnerHTML={{ __html: decode(markdown) }}
