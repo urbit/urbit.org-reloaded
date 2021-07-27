@@ -1,10 +1,10 @@
 import Head from "next/head";
+import Meta from "../../components/Meta";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
 import classnames from "classnames";
 import { join } from "path";
-import { getDocs, formatDate, buildPageTree, getPage } from "../../lib/lib";
+import { buildPageTree, getPage } from "../../lib/lib";
 import Markdown from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
@@ -73,6 +73,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
     <>
       <Head>
         <title>{data.title} • Getting Started • urbit.org</title>
+        {Meta(data)}
       </Head>
       <div className="flex w-screen h-screen min-h-screen w-screen">
         <Sidebar search={search}>

@@ -1,13 +1,11 @@
 import Head from "next/head";
+import Meta from "../components/Meta";
 import Link from "next/link";
-import { useState } from "react";
 import Container from "../components/Container";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import Search from "../components/Search";
 import SingleColumn from "../components/SingleColumn";
 import Section from "../components/Section";
-import BackgroundImage from "../components/BackgroundImage";
 import { getAllPosts, formatDate } from "../lib/lib";
 import { contact } from "../lib/constants";
 
@@ -67,10 +65,15 @@ export function EventCard({ event, dir, className }) {
 }
 
 export default function Events({ pastEvents, comingSoon, search }) {
+  const post = {
+    title: "Events",
+    description: "In-person, remote, and recorded events about Urbit.",
+  };
   return (
     <Container>
       <Head>
         <title>Events • urbit.org</title>
+        {Meta(post)}
       </Head>
       <SingleColumn>
         <Header search={search} />

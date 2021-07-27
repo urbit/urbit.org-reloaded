@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Meta from "../../components/Meta";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
@@ -101,6 +102,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
     <>
       <Head>
         <title>{data.title} • Operator's Manual • urbit.org</title>
+        {Meta(data)}
       </Head>
       <div className="flex w-screen h-screen min-h-screen w-screen">
         <Sidebar search={search}>

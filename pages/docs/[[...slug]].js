@@ -10,6 +10,7 @@ import {
   buildPageTree,
   getPage,
 } from "../../lib/lib";
+import Meta from "../../components/Meta";
 import Pagination from "../../components/Pagination";
 import Markdown from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
@@ -123,6 +124,7 @@ export default function DocsLayout({
     <>
       <Head>
         <title>{data.title} • Documentation • urbit.org</title>
+        {Meta(data)}
       </Head>
       <div className="flex w-screen h-screen min-h-screen w-screen">
         <Sidebar search={search}>

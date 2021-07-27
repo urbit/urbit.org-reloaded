@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Meta from "../components/Meta";
 import Container from "../components/Container";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -8,10 +9,16 @@ import Section from "../components/Section";
 import { getAllPosts } from "../lib/lib";
 
 export default function Media({ posts, search }) {
+  const post = {
+    title: "Media",
+    description:
+      "A selection of external appearances by the Tlon Corporation and the Urbit Foundation.",
+  };
   return (
     <Container>
       <Head>
         <title>Media • urbit.org</title>
+        {Meta(post)}
       </Head>
       <SingleColumn>
         <Header search={search} />

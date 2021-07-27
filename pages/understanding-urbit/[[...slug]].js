@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Meta from "../../components/Meta";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import classnames from "classnames";
@@ -69,6 +70,7 @@ export default function UnderstandingLayout({
     <>
       <Head>
         <title>{data.title} • Understanding Urbit • urbit.org</title>
+        {Meta(data)}
       </Head>
       <div className="flex w-screen h-screen min-h-screen w-screen">
         <Sidebar search={search}>

@@ -1,12 +1,7 @@
 import { useRouter } from "next/router";
-import {
-  getPostBySlug,
-  getAllPosts,
-  getNextPost,
-  getPreviousPost,
-  formatDate,
-} from "../../lib/lib";
+import { getPostBySlug, getAllPosts, formatDate } from "../../lib/lib";
 import Head from "next/head";
+import Meta from "../../components/Meta";
 import ErrorPage from "../404";
 import Container from "../../components/Container";
 import Markdown from "../../components/Markdown";
@@ -14,9 +9,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import SingleColumn from "../../components/SingleColumn";
 import Contact from "../../components/Contact";
-import PostPreview from "../../components/PostPreview";
 import Section from "../../components/Section";
-import { contact } from "../../lib/constants";
 import markdownStyles from "../../styles/markdown.module.css";
 import { decode } from "html-entities";
 
@@ -29,6 +22,7 @@ export default function MediaPage({ post, markdown, search }) {
     <Container>
       <Head>
         <title>{post.title} • Media • urbit.org</title>
+        {Meta(post)}
       </Head>
       <SingleColumn>
         <Header search={search} />

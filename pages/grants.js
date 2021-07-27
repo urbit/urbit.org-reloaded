@@ -1,20 +1,17 @@
 import Head from "next/head";
+import Meta from "../components/Meta";
 import Link from "next/link";
 import { useState } from "react";
 import classnames from "classnames";
 import Container from "../components/Container";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import Search from "../components/Search";
 import SingleColumn from "../components/SingleColumn";
-import BackgroundImage from "../components/BackgroundImage";
-import TabCarousel from "../components/TabCarousel";
 import Section from "../components/Section";
 import PostPreview from "../components/PostPreview";
 import GrantPreview from "../components/GrantPreview";
 import {
   getAllPosts,
-  formatDate,
   getGrantsCategories,
   getGrantsTypes,
   getPostBySlug,
@@ -74,6 +71,10 @@ export default function Grants({
   const [activeTypes, setTypes] = useState(types);
   const [includeCompleted, setIncludeCompleted] = useState(false);
   const [tab, setTab] = useState(0);
+  const post = {
+    title: "Grants",
+    description: "Contribute to the Urbit project while earning address space.",
+  };
 
   const postsByCompletion = posts.filter((post) => {
     return includeCompleted
@@ -112,6 +113,7 @@ export default function Grants({
     <Container>
       <Head>
         <title>Grants • urbit.org</title>
+        {Meta(post)}
       </Head>
       <SingleColumn>
         <Header search={search} />

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Meta from "../components/Meta";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Container from "../components/Container";
@@ -51,6 +52,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
     <Container>
       <Head>
         <title>urbit.org</title>
+        {Meta()}
       </Head>
       <SingleColumn>
         <Header search={search} />

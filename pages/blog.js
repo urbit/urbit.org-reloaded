@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Meta from "../components/Meta";
 import Link from "next/link";
 import Container from "../components/Container";
 import Footer from "../components/Footer";
@@ -10,10 +11,16 @@ import { getAllPosts, formatDate } from "../lib/lib";
 import { contact } from "../lib/constants";
 
 export default function Blog({ posts, search }) {
+  const post = {
+    title: "Blog",
+    description:
+      "Stories from the broader Urbit community, the Urbit Foundation, and the many people contributing to Urbit.",
+  };
   return (
     <Container>
       <Head>
         <title>Blog • urbit.org</title>
+        {Meta(post)}
       </Head>
       <SingleColumn>
         <Header search={search} />

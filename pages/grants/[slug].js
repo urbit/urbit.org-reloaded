@@ -6,7 +6,7 @@ import {
   getSimilarGrants,
 } from "../../lib/lib";
 import Head from "next/head";
-import Link from "next/link";
+import Meta from "../../components/Meta";
 import { decode } from "html-entities";
 import classnames from "classnames";
 import ErrorPage from "../404";
@@ -14,11 +14,9 @@ import Container from "../../components/Container";
 import Markdown from "../../components/Markdown";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import BackgroundImage from "../../components/BackgroundImage";
 import SingleColumn from "../../components/SingleColumn";
 import GrantPreview from "../../components/GrantPreview";
 import Section from "../../components/Section";
-import { name, contact } from "../../lib/constants";
 import markdownStyles from "../../styles/markdown.module.css";
 
 export default function Grant({ post, markdown, search, similarGrants }) {
@@ -33,6 +31,7 @@ export default function Grant({ post, markdown, search, similarGrants }) {
     <Container>
       <Head>
         <title>{post.title} • Grants • urbit.org</title>
+        {Meta(post)}
       </Head>
       <SingleColumn>
         <Header search={search} />

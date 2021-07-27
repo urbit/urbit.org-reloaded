@@ -7,18 +7,15 @@ import {
   formatDate,
 } from "../../lib/lib";
 import Head from "next/head";
-import Link from "next/link";
-import ErrorPage from "../404";
+import Meta from "../../components/Meta";
 import Container from "../../components/Container";
 import Markdown from "../../components/Markdown";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import BackgroundImage from "../../components/BackgroundImage";
 import SingleColumn from "../../components/SingleColumn";
 import Contact from "../../components/Contact";
 import EventPreview from "../../components/EventPreview";
 import Section from "../../components/Section";
-import { name, contact } from "../../lib/constants";
 import markdownStyles from "../../styles/markdown.module.css";
 import { decode } from "html-entities";
 
@@ -33,6 +30,7 @@ export default function Event({
     <Container>
       <Head>
         <title>{post.title} • Events • urbit.org</title>
+        {Meta(post)}
       </Head>
       <SingleColumn>
         <Header search={search} />
