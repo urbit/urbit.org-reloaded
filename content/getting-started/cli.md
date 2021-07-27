@@ -11,7 +11,7 @@ If you're a power user, you can run the Urbit virtual machine directly using the
   <label for="macos">MacOS</label>
   <div class="tab">
 
-```sh
+```bash
 mkdir ~/urbit
 cd ~/urbit
 curl -JLO https://urbit.org/install/mac/latest
@@ -25,7 +25,7 @@ tar zxvf ./darwin.tgz --strip=1
   <label for="linux">Linux</label>
   <div class="tab">
 
-```sh
+```shell
 mkdir ~/urbit
 cd ~/urbit
 wget --content-disposition https://urbit.org/install/linux64/latest
@@ -35,7 +35,7 @@ tar zxvf ./linux64.tgz --strip=1
 
 Linux users may need to run this command in another terminal window to access your Urbit on port 80:
 
-```sh
+```shell
 sudo apt-get install libcap2-bin
 sudo setcap 'cap_net_bind_service=+ep' ~/urbit/urbit
 ```
@@ -177,19 +177,13 @@ A comet also comes with a long and fairly unmemorable name whereas a planet has 
     padding: .5rem;
     min-width: 70px;
     text-align: center;
-    border-width: 1px 0px 0px 1px;
-    border-style: solid;
     cursor: pointer;
-  }
-  .os label:last-of-type {
-    border-right-width: 1px;
   }
   .os input[type="radio"] {
     display: none;
   }
   .os .tab {
     display: none;
-    border: 1px solid;
     padding: 1rem;
     width: 100%;
     max-width: 100%;
@@ -202,6 +196,8 @@ A comet also comes with a long and fairly unmemorable name whereas a planet has 
   }
   .os input[type='radio']:checked + label {
     font-weight: bold;
+    background-color: rgba(244,243,241,1);
+    border-radius: 0.5em;
   }
   .os input[type='radio']:checked + label + .tab {
     display: block;

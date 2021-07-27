@@ -8,6 +8,7 @@ import { join } from "path";
 import { getDocs, formatDate, buildPageTree, getPage } from "../../lib/lib";
 import Markdown from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
+import { TableOfContents } from "../../components/TableOfContents";
 import Sidebar from "../../components/Sidebar";
 import markdownStyles from "../../styles/markdown.module.css";
 import { decode } from "html-entities";
@@ -113,7 +114,6 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
           title={data.title}
           search={search}
           section={"Operator's Manual"}
-          narrow
         >
           <div className={markdownStyles["markdown"]}>
             <article
@@ -121,6 +121,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
             ></article>
           </div>
         </ContentArea>
+        <TableOfContents key={params.slug?.join("/") || "using"} />
       </div>
     </>
   );
