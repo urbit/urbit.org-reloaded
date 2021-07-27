@@ -132,7 +132,7 @@ export default function DocsLayout({
             <li>
               <Link href="/docs">
                 <a className={`relative ${selectedClasses} ${rootClasses}`}>
-                  Developer Documentation
+                  Introduction
                 </a>
               </Link>
             </li>
