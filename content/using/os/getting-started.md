@@ -1,6 +1,6 @@
 +++
 title = "Getting Started"
-description = "How to operate your ship, including using your ship's filesystem and messaging applications, starting a moon, or requesting a DNS proxy."
+description = "How to operate your ship, including using your ship's filesystem and messaging applications, starting a moon, or requesting a DNS entry."
 template = "doc.html"
 weight = 1
 aliases = ["docs/using/messaging/", "docs/using/admin/"]
@@ -80,7 +80,7 @@ In the CLI, Urbit apps can process your input before you hit return. To see this
 
 `Ctrl-x` - Switches the prompt between running console apps
 
-`Ctrl-c` - Crash current event.  Processed at the Unix layer and prints a stack
+`Ctrl-c` - Crash current event. Processed at the Unix layer and prints a stack
 trace.
 
 `Ctrl-d` - From Chat or Dojo, stops your Urbit process.
@@ -116,6 +116,7 @@ If for some reason (for example, if your sponsor is out of date), you can switch
 If OTAs are not succeeding, or if you are on an version of Urbit before the `|ota` command was introduced, you can run `|merge %home (sein:title our now our) %kids, =gem %take-that`. **Note:** This will wipe out any custom changes to the base distribution.
 
 #### Additional OTA Troubleshooting
+
 Please check the Support Wiki for additional OTA troubleshooting, such as:
 [OTA 1.0.71 failed](https://github.com/urbit/support/wiki/OTA-1.0.71-failed),
 [Missing OTA](https://github.com/urbit/support/wiki/Missing-OTA),
@@ -125,13 +126,13 @@ and [No content shows in Links page after OTA](https://github.com/urbit/support/
 
 ### Landscape
 
-On startup Urbit tries to bind to `localhost:80`. If you're already running something on port `80` -- such as any other HTTP server, or another urbit -- you'll find the urbit that you just started on `8080`, `8081`, and so on. For planets only, we also proxy web domains through Urbit's own servers. Any planet `~your-urbit` is also at `your-urbit.arvo.network`, but only after you [set up DNS](#dns-proxying).
+On startup Urbit tries to bind to `localhost:80`. If you're already running something on port `80` -- such as any other HTTP server, or another urbit -- you'll find the urbit that you just started on `8080`, `8081`, and so on. For planets only, we also provide web domains through Urbit's own domain. Any planet `~your-urbit` is also at `your-urbit.arvo.network`, but only after you [set up DNS](#dns-setup).
 
 Once running, you can sign into Landscape, your ship’s web interface, from `http://localhost` or `https://your-urbit.arvo.network`. Since our HTTPS isn't audited / battle tested, we just call it "secure" HTTPS. You can find that on `8443`. Or `8444` (and so on) if you're already running something on `8443`.
 
 ### Moons {#moons}
 
-Planets can spawn moons, which are meant for connected devices: phones, smart TVs, digital thermostats. The basic idea is that your planet runs permanently in a data center somewhere, while moons run on all your devices.  Each planet can issue ~4 billion (`2^32`) moons.
+Planets can spawn moons, which are meant for connected devices: phones, smart TVs, digital thermostats. The basic idea is that your planet runs permanently in a data center somewhere, while moons run on all your devices. Each planet can issue ~4 billion (`2^32`) moons.
 
 To generate a random moon from your planet, run:
 
@@ -195,7 +196,6 @@ To cycle the keys of a moon without breaching, run:
 |moon-cycle-keys ~sampel-sipnym-wicdev-wisryt
 ```
 
-
 ### Escaping A Sponsor {#escape}
 
 To use the network as a planet or star, you must be sponsored by an active star
@@ -215,18 +215,17 @@ When this happens, back up any files you'd like to save, shut down your urbit, a
 ### Life and rift number
 
 You can check your ship's _life_ and _rift_ number by running `+keys our` in
-dojo. You can inspect another ship's life and rift number by running `+keys
-~sampel-palnet`. For information on what life and rift are, see [Life and Rift](/docs/azimuth/life-and-rift).
+dojo. You can inspect another ship's life and rift number by running `+keys ~sampel-palnet`. For information on what life and rift are, see [Life and Rift](/docs/azimuth/life-and-rift).
 
-## DNS proxying {#dns-proxying}
+## DNS setup {#dns-setup}
 
 We have a system that lets you request a domain name for your ship in the form of `ship.arvo.network`, where `ship` is your ship's name minus the `~`. This allows users to access their ships remotely using Landscape, our graphical web interface.
 
-Stars and planets follow the same process DNS proxying process, and galaxies have their own requirements. Moons and comets are not supported.
+Stars and planets follow the same process DNS request process, and galaxies have their own requirements. Moons and comets are not supported.
 
 ### Planets and Stars
 
-For a planet or star's DNS proxying request to be made and fulfilled, they must be hosting their ship someplace with a public IP address, and its HTTP server must be listening on port 80.
+For a planet or star's DNS request to be made and fulfilled, they must be hosting their ship someplace with a public IP address, and its HTTP server must be listening on port 80.
 
 To get `ship.arvo.network` on a planet or star, you must set up DNS routing with its parent ship by starting the `:dns` app.
 
@@ -272,7 +271,7 @@ Otherwise, `-dns-auto` works the same as `:dns|ip` does with stars and planets: 
 
 ### Ports
 
-The built-in logic for listening on port 80 is to try to bind to port 80; if it cannot, it tries 8080, then increments until it can bind a port. Port 80 is available to unprivileged process on recent version of macOS. Otherwise, the process needs to either be run as root, or be given special permission (CAP\_NET_BIND on Linux).
+The built-in logic for listening on port 80 is to try to bind to port 80; if it cannot, it tries 8080, then increments until it can bind a port. Port 80 is available to unprivileged process on recent version of macOS. Otherwise, the process needs to either be run as root, or be given special permission (CAP_NET_BIND on Linux).
 
 ### Hoon
 
@@ -334,4 +333,3 @@ Detailed message output will look something like this:
   to ~dopzod/urbit-help
 let's try selecting this message!
 ```
-

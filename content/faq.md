@@ -78,7 +78,7 @@ In addition to the three classes of identities mentioned above, there are two ot
 
 ### What is a `@p`? Why is my username generated for me? {#what-is-patp}
 
-A `@p` ([pronounced](/docs/hoon/hoon-school/hoon-syntax#reading-hoon-aloud) *pat-pee*) is a name like `~zod` or `~lodleb-ritrul` composed of pronounceable, three-letter phonemic elements like `zod`, `lod`, `leb`, `rit` and `rul`. Shorter names, such as `~zod` and `~marzod`, are assigned to [ship](/docs/glossary/ship)s with special duties on the [Arvo](#what-is-arvo) network galaxies and stars, respectively. Longer names like `~palfun-foslup` are identities for typical users.
+A `@p` ([pronounced](/docs/hoon/hoon-school/hoon-syntax#reading-hoon-aloud) _pat-pee_) is a name like `~zod` or `~lodleb-ritrul` composed of pronounceable, three-letter phonemic elements like `zod`, `lod`, `leb`, `rit` and `rul`. Shorter names, such as `~zod` and `~marzod`, are assigned to [ship](/docs/glossary/ship)s with special duties on the [Arvo](#what-is-arvo) network galaxies and stars, respectively. Longer names like `~palfun-foslup` are identities for typical users.
 
 These names map directly to a corresponding number in the Urbit ID address space. Galaxies occupy the 8-bit address space, so any galaxy is actually a number between zero and 255. Stars occupy the 16-bit address space, and planets occupy the 32-bit address space.
 
@@ -112,7 +112,7 @@ Urbit is designed to be as simple as possible. The sponsorship tree for Urbit ID
 
 This pattern exists because it’s a simple way to enforce the scarcity of addresses and build a friendly network. When a tier of the address space begins to be populated, we start populating the next tier down. When Urbit nears the limit of <span class="mono">2<sup>32</sup> (4B)</span> planets, we’ll figure out a way to populate the <span class="mono">2<sup>64</sup></span> moons. The galaxies that govern the Urbit ID contracts can always vote to upgrade them — and we expect that they will.
 
-The problem with populating the moons now is that <span class="mono">2<sup>64</sup></span> is a *really, really big* number. We’ll need some way of differentiating between humans and their devices (to prevent devices turning into rogue botnets). But that’s a hard problem, and we prefer to start with the simplest possible solution before solving hard problems. The current scheme works. Once we need to update it, we’ll figure it out.
+The problem with populating the moons now is that <span class="mono">2<sup>64</sup></span> is a _really, really big_ number. We’ll need some way of differentiating between humans and their devices (to prevent devices turning into rogue botnets). But that’s a hard problem, and we prefer to start with the simplest possible solution before solving hard problems. The current scheme works. Once we need to update it, we’ll figure it out.
 
 The number of addresses is in a sort of 'Goldilocks zone' for preventing spam. Too many addresses will result in them being very cheap and thus spammers can just acquire more once they get blocked. Too few addresses and they end up too expensive for the average user. The technical term for what the finite address space bestows upon the network is [Sybil resistance](https://en.wikipedia.org/wiki/Sybil_attack), a very important property for any decentralized network.
 
@@ -120,7 +120,23 @@ It’s also worth noting that, while there are almost 8B people on Earth, there 
 
 (For more background on why Urbit ID is the way it is, read [this](/understanding-urbit/urbit-id/).)
 
-## Urbit HD Wallet
+## Urbit Security
+
+### How secure is Urbit right now? {#how-secure-is-urbit}
+
+We consider some parts of Urbit to be secure, while other parts still need some work and external auditing. For technical details on Urbit's cryptosystems, see the [documentation](@/docs/system-overview/cryptography.md).
+
+[Urbit ID](#what-is-urbit-id) / [Azimuth](#what-is-azimuth), Urbit's identity layer, is live on the Ethereum blockchain and has been audited by Open Zeppelin, Blockchain at Berkeley, and Bloctrax.
+
+In late 2020, Urbit's [Ames](@/docs/glossary/ames.md) networking protocol was audited by [Leviathan Security](https://www.leviathansecurity.com/). You can read about this milestone [here](@/blog/security-and-continuity.md).
+
+The security of the runtime, [Vere](@/docs/vere/_index.md), has not yet been adequately assessed or systematically hardened.
+
+All communication on Urbit is end-to-end encrypted. However, the [event log](@/docs/glossary/eventlog.md) is not encrypted at rest but we plan to give users that option in the future.
+
+Tlon keeps a quantum computing expert on staff and understands that post-quantum cryptographic methods must be implemented sooner than later, since any data not already encrypted using these methods is at risk of being collected and decrypted once sufficiently powerful quantum computers exist. [NIST](https://www.nist.gov/) anticipates the release of their preliminary findings on [post-quantum cryptography standards](https://csrc.nist.gov/projects/post-quantum-cryptography) around the end of 2021, with full guidelines following in 2024. Tlon will develop a strategy for post-quantum encryption for Urbit following their recommendations.
+
+Thus, while Urbit is probably more secure and private than most digital communication channels, we cannot yet consider it impervious to a dedicated attacker. If you are a cybersecurity expert looking for work, please drop us a line at `apply@tlon.io`.
 
 ### What is the Urbit HD Wallet? {#urbit-hd-wallet}
 
@@ -171,11 +187,12 @@ The nature of decentralization is such that there is no authority that has the p
 
 Below we list some good practices for storing keys, strictest first. Higher-value assets should be secured with stricter measures.
 
-#### Security Tier 1: Cold storage*
+#### Security Tier 1: Cold storage\*
 
 Cold storage refers to any method in which secrets are stored in a way that is not accessible to any network. Cold-stored keys should only ever be generated offline.
 
 Cold storage media options:
+
 - Printing the secret on a piece of paper. However, paper wallets are vulnerable to various forms of physical damage, such as rot, water damage, smoke, or fire. Laminating the paper can mitigate some of these risks, but the lamination can potentially trap moisture. Make sure that you trust the printer; some have memory and network connections.
 - Storing the secret on a brand-new USB stick or hard drive that has never been connected to a networked machine.
 - Storing the secret on a hardware wallet like Ledger or Trezor.
@@ -266,14 +283,14 @@ Your sponsor, a star or galaxy that your ship is connected to, may send you new 
 
 Follow our guide on how to boot a ship [here](/getting-started/planet).
 
-Get on the [mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;id=be143888d2). Learn [Hoon](/docs/hoon/hoon-school/). Sign up for [Hooniversity](https://hooniversity.org/). [Make stuff](https://grants.urbit.org).
-
+Get on the [mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&id=be143888d2). Learn [Hoon](/docs/hoon/hoon-school/). Sign up for [Hooniversity](https://hooniversity.org/). [Make stuff](https://grants.urbit.org).
 
 ## Urbit Grants
 
 ### What are the different types of grants? {#grants-1}
 
 There are three ways to receive a [grant of stars](https://grants.urbit.org/) for your contribution to the Urbit ecosystem.
+
 - You can submit a **Proposal** if you’re interested in working on a project of your own creation for a number of stars that you pitch.
 - You can apply to claim a **Bounty.** Bounties are requests for work created by Tlon that are claimable by the public, with a predetermined number of stars as the reward.
 - The **Gifts** program, which is Tlon’s informal way of rewarding contributions that don’t fall into the above categories. There is no way to apply for a gift.
@@ -352,7 +369,7 @@ Here are a few important points from the bounty and proposal contracts:
 
 - **No employment relationship:** You agree that being approved for the grant or bounty does not imply any employment relationship with Tlon.
 
-- **Termination:** Either party (you or Tlon) can terminate the agreement on seven days' written notice. If that happens, you may be compensated *pro rata* for the amount of work you've completed, but this compensation is at the sole discretion of Tlon.
+- **Termination:** Either party (you or Tlon) can terminate the agreement on seven days' written notice. If that happens, you may be compensated _pro rata_ for the amount of work you've completed, but this compensation is at the sole discretion of Tlon.
 
 - **Governing law:** The agreement is governed by the laws of the State of California.
 

@@ -9,8 +9,8 @@ image = ""
 description = "Tlon is not Urbit; Urbit is owned by its community. So we want to decenter the Urbit brand into cities outside of San Francisco, and watch the community’s independent visions of the project take wing."
 reward = 1
 assignee = "~winter-paches, ~fonnyx-nopmer"
-id = "1740918704"
-completed = false
+id = ""
+completed = true
 link = ""
 +++
 
@@ -52,3 +52,9 @@ The first meetup is held, and a recording of that meetup's talk or presentation 
 
 1 stars
 The second meetup is held, and a recording of that meetup's talk or presentation is sent to grants@urbit.org.
+<<<<<<< HEAD:content/grants/host-two-urbit-meetups-8.md
+||||||| 7c8c4a5e:content/grants/bounties/host-two-urbit-meetups-8.md
+
+=======
+
+> > > > > > > master:content/grants/bounties/host-two-urbit-meetups-8.md

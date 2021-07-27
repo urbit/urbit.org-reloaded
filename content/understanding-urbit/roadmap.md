@@ -26,7 +26,7 @@ As Urbit matures, other killer digital environments may emerge—but Landscape i
 
 <br>
 
-![A Landscape](https://storage.googleapis.com/media.urbit.org/tlon/landscape.jpg)
+![A Landscape](https://storage.googleapis.com/media.urbit.org/tlon/landscape.png)
 
 Today, we pour all of our focus into making Landscape a comfortable place for digital communities to call home, starting with our own. This effort forces us to mature the entire stack, from the interpreter to the interface.
 

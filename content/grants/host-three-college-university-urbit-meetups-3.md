@@ -9,8 +9,8 @@ image = ""
 description = "Hold a meetup and presentation about Urbit."
 reward = 1
 assignee = "~sanlyt-modbyt"
-id = "372504274"
-completed = false
+id = ""
+completed = true
 link = ""
 +++
 
@@ -55,5 +55,11 @@ Check out our [guide](https://urbit.org/community/hosting-a-meetup/) to best pra
 
 ### Three meetups are held
 
+<<<<<<< HEAD:content/grants/host-three-college-university-urbit-meetups-3.md
 1 stars
 Your three meetups are held, and links to the presentations have been posted and sent to grants@urbit.org.
+||||||| 7c8c4a5e:content/grants/bounties/host-three-college-university-urbit-meetups-3.md
+
+=======
+
+> > > > > > > master:content/grants/bounties/host-three-college-university-urbit-meetups-3.md

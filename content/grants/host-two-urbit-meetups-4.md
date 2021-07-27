@@ -9,8 +9,8 @@ image = ""
 description = "Host two Urbit meetups in your city."
 reward = 1
 assignee = "~forfel-norfel"
-id = "1872089827"
-completed = false
+id = ""
+completed = true
 link = ""
 +++
 
@@ -52,3 +52,9 @@ The first meetup is held, and a recording of that meetup's talk or presentation 
 
 1 stars
 The second meetup is held, and a recording of that meetup's talk or presentation is sent to grants@urbit.org.
+<<<<<<< HEAD:content/grants/host-two-urbit-meetups-4.md
+||||||| 7c8c4a5e:content/grants/bounties/host-two-urbit-meetups-4.md
+
+=======
+
+> > > > > > > master:content/grants/bounties/host-two-urbit-meetups-4.md
