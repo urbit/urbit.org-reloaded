@@ -65,6 +65,7 @@ export default function Grants({
   types,
   featuredGrants,
   search,
+  giftPosts,
   gifts,
 }) {
   const [activeTags, setTags] = useState([]);
@@ -279,18 +280,31 @@ export default function Grants({
             <p className="mb-8">
               Gifts are given post-facto for exceptional contributions.
             </p>
+            {/* Uncomment once people added to content/gifts folder. */}
+            {/* {gifts.map((e) => {
+              return (
+                <div className="bg-wall rounded-xl p-4 my-8 flex justify-between">
+                <p className="font-semibold">
+                  {e.name}
+                </p>
+                <p>{e.planet}</p>
+                <p>{e.date}</p>
+                <a className="type-p" href={e.link}>Link</a>
+                </div>
+              )
+            })} */}
             <div className="flex flex-wrap">
               <PostPreview
-                post={gifts[0]}
+                post={giftPosts[0]}
                 className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
-                key={gifts[0].slug}
-                section={gifts[0].section}
+                key={giftPosts[0].slug}
+                section={giftPosts[0].section}
               />
               <PostPreview
-                post={gifts[1]}
+                post={giftPosts[1]}
                 className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
-                key={gifts[1].slug}
-                section={gifts[1].section}
+                key={giftPosts[1].slug}
+                section={giftPosts[1].section}
               />
             </div>
           </div>
@@ -308,20 +322,23 @@ export async function getStaticProps() {
     ["title", "slug", "date", "description", "extra", "taxonomies"],
     "grants"
   );
-  let gifts = getAllPosts(
+  // all the gift posts stuff can be removed once we migrate to gifts
+  let giftPosts = getAllPosts(
     ["title", "slug", "date", "description", "extra", "taxonomies"],
     "blog"
   );
-  gifts.map((e) => (e.section = "blog"));
+  giftPosts.map((e) => (e.section = "blog"));
   let updates = getAllPosts(
     ["title", "slug", "date", "description", "extra", "taxonomies"],
     "updates"
   );
   updates.map((e) => (e.section = "updates"));
-  gifts.push(...updates);
-  gifts = gifts
+  giftPosts.push(...updates);
+  giftPosts = giftPosts
     .filter((e) => e?.taxonomies?.grant_type?.includes("Gift"))
     .sort((a, b) => (a.date > b.date ? -1 : 1));
+
+  const gifts = getAllPosts(["name", "planet", "date", "link"], "gifts");
 
   // The layout expects exactly 3
   const featuredGrants = [
@@ -333,6 +350,13 @@ export async function getStaticProps() {
   );
 
   return {
-    props: { posts: posts, categories, types, featuredGrants, gifts },
+    props: {
+      posts: posts,
+      categories,
+      types,
+      featuredGrants,
+      giftPosts,
+      gifts,
+    },
   };
 }
