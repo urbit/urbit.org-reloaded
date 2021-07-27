@@ -37,7 +37,7 @@ You can also call stars ‘infrastructure nodes’ and galaxies ‘governance no
 
 And that's it. It's a simple system. What's important is why it is the way it is. Let's take a look at that.
 
-![](https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-address-space-1.svg")
+![](https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-address-space-1.svg)
 
 At a high level, there are three important things to understand about the overall Urbit ID system design.
 
