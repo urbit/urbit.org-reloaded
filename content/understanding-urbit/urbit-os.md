@@ -39,7 +39,7 @@ The entire Urbit OS stack, from programming language to applications, is upgrade
 
 Since Nock is a protocol for computing itself, any two nodes on the Urbit network can easily share data, communicate and connect their software. 20th century systems could never do this without a MEGACORP acting as the intermediary.
 
-![](https://media.urbit.org/site/understanding-urbit/network-os/urbit-os-diagram-apart.svg")
+![](https://media.urbit.org/site/understanding-urbit/network-os/urbit-os-diagram-apart.svg)
 
 On top of this tiny VM we built a self-hosting, purely functional programming language, a kernel written in that language and a set of kernel modules that serve all the needs of personal computing. Specifically: a filesystem, build system, application sandbox, secret storage, web server, terminal driver and a networking protocol.
 

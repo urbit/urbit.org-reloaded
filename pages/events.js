@@ -91,9 +91,7 @@ export default function Events({ pastEvents, comingSoon, search }) {
           {comingSoon.length > 0 ? (
             <>
               <div className="mb-8 table">
-                <span className="bg-green text-white badge-lg">
-                  Coming Soon
-                </span>
+                <h3 class="text-gray">Coming Soon</h3>
               </div>
               {comingSoon.map((post) => {
                 return <EventCard event={post} />;
@@ -101,7 +99,7 @@ export default function Events({ pastEvents, comingSoon, search }) {
             </>
           ) : null}
           <div className="mb-8 table">
-            <span className="bg-wall text-gray badge-lg">Past Events</span>
+            <h3 class="text-gray">Past Events</h3>
           </div>
           {pastEvents.map((post) => {
             return <EventCard event={post} />;
