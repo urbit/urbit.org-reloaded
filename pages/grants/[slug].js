@@ -26,6 +26,8 @@ export default function Grant({ post, markdown, search, similarGrants }) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
   }
+  const isOpen = !post?.extra?.completed && post?.extra?.assignee === "";
+  const canApply = isOpen && post?.extra?.work_request_link;
 
   return (
     <Container>
@@ -66,11 +68,17 @@ export default function Grant({ post, markdown, search, similarGrants }) {
           </div>
         </Section>
         <Section narrow className={markdownStyles["markdown"]}>
-          <article
-            dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-          ></article>
+          <article dangerouslySetInnerHTML={{ __html: decode(markdown) }} />
         </Section>
-
+        {canApply && (
+          <a
+            className="bg-green text-white badge-sm"
+            href={post?.extra?.work_request_link}
+            target="_blank"
+          >
+            Apply for this grant
+          </a>
+        )}
         <Section narrow className="flex flex-col">
           <h3 className="pb-8">Similar Grants</h3>
           {similarGrants.map((grant) => {
