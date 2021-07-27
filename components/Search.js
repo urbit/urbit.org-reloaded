@@ -168,7 +168,8 @@ export default function Search(props) {
                           <Link href={slug} as={slug}>
                             <div>
                               <p className="font-medium text-base">
-                                {parent} / {title}
+                                {parent !== "Content" ? `${parent} /` : ""}{" "}
+                                {title}
                               </p>
                               <p className="text-base font-regular text-small text-gray">
                                 {content}
