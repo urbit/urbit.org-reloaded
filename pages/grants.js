@@ -176,44 +176,6 @@ export default function Grants({
             })}
           </div>
         </Section>
-
-        {
-          // Gift Grants
-        }
-        <Section wide>
-          <div className="pb-16">
-            <h2 className="pb-16">Gifts</h2>
-            <p className="mb-8">
-              Gifts are given post-facto for exceptional contributions.
-            </p>
-            <div className="flex flex-wrap">
-              <PostPreview
-                post={gifts[0]}
-                className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
-                key={gifts[0].slug}
-                section={gifts[0].section}
-              />
-              <PostPreview
-                post={gifts[1]}
-                className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
-                key={gifts[1].slug}
-                section={gifts[1].section}
-              />
-              <PostPreview
-                post={gifts[2]}
-                className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
-                key={gifts[2].slug}
-                section={gifts[2].section}
-              />
-              <PostPreview
-                post={gifts[3]}
-                className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
-                key={gifts[3].slug}
-                section={gifts[3].section}
-              />
-            </div>
-          </div>
-        </Section>
         {
           // Find a Grant
         }
@@ -307,6 +269,31 @@ export default function Grants({
             </a>
             .
           </p>
+        </Section>
+        {
+          // Gift Grants
+        }
+        <Section wide>
+          <div className="pb-16">
+            <h2 className="pb-16">Gifts</h2>
+            <p className="mb-8">
+              Gifts are given post-facto for exceptional contributions.
+            </p>
+            <div className="flex flex-wrap">
+              <PostPreview
+                post={gifts[0]}
+                className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
+                key={gifts[0].slug}
+                section={gifts[0].section}
+              />
+              <PostPreview
+                post={gifts[1]}
+                className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
+                key={gifts[1].slug}
+                section={gifts[1].section}
+              />
+            </div>
+          </div>
         </Section>
       </SingleColumn>
       <Footer />
