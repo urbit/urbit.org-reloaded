@@ -4,6 +4,11 @@
   },
   "redirects": [
     {
+      "source": "/grants/(apprenticeships|proposals|bounties)/:page",
+      "destination": "/grants/:page",
+      "permanent": true
+    },
+    {
       "source": "/primer",
       "destination": "/understanding-urbit/",
       "permanent": true
