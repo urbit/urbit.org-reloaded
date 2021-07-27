@@ -1,12 +1,17 @@
 import { useState, useEffect, useRef } from "react";
 
-export const TableOfContents = () => {
+export const TableOfContents = ({ staticPosition }) => {
   const { nestedHeadings } = useHeadingsData();
   const [activeId, setActiveId] = useState();
   useIntersectionObserver(setActiveId);
   return (
     <nav
-      className="sticky min-h-0 overflow-y-scroll w-52 flex-shrink-0 pb-24 hidden lg:block"
+      className={
+        staticPosition
+          ? "static"
+          : "sticky" +
+            " min-h-0 overflow-y-scroll w-52 flex-shrink-0 pb-24 hidden lg:block"
+      }
       style={{ top: "8rem", height: "calc(100vh - 16rem)" }}
     >
       <Headings headings={nestedHeadings} activeId={activeId} />

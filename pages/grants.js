@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { TableOfContents } from "../components/TableOfContents";
 import Meta from "../components/Meta";
 import Link from "next/link";
 import { useState } from "react";
@@ -122,18 +123,21 @@ export default function Grants({
           // Heading and introduction
         }
         <Section wide>
-          <div className="measure pb-16">
-            <h1 className="pb-16">Grants</h1>
-            <p className="mb-8">
-              Urbit is a community project. While anyone can contribute, we help
-              focus development and reward exceptional contribution through our
-              grants program.
-            </p>
-            <p>
-              Contributors of all types have access to a wide variety of
-              resources while working on projects, including a supportive team
-              at urbit.org, Tlon developers, and community mentors.
-            </p>
+          <div className="flex flex-column justify-between pb-16">
+            <div className="pr-24">
+              <h1 className="pb-16">Grants</h1>
+              <p className="mb-8">
+                Urbit is a community project. While anyone can contribute, we
+                help focus development and reward exceptional contribution
+                through our grants program.
+              </p>
+              <p>
+                Contributors of all types have access to a wide variety of
+                resources while working on projects, including a supportive team
+                at urbit.org, Tlon developers, and community mentors.
+              </p>
+            </div>
+            <TableOfContents staticPosition />
           </div>
           <div className="p-8 bg-wall flex flex-col w-full rounded-lg space-y-4">
             <p>
@@ -153,7 +157,9 @@ export default function Grants({
         }
         <Section wide>
           <div className="measure pb-16">
-            <h2 className="pb-16">Featured Grants</h2>
+            <h2 className="pb-16" id="featured">
+              Featured Grants
+            </h2>
             <p className="mb-8">
               These grants should give you a general idea of what kind of work
               we reward:
@@ -258,7 +264,9 @@ export default function Grants({
         </Section>
         {/* Submit a proposal */}
         <Section wide>
-          <h2 className="mb-16">Proposals</h2>
+          <h2 className="mb-16" id="proposals">
+            Proposals
+          </h2>
           <p className="mb-8">
             Contributors are also welcome to have their personal projects
             considered as a proposal. If you'd like to propose a project for the
@@ -276,7 +284,9 @@ export default function Grants({
         }
         <Section wide>
           <div className="pb-16">
-            <h2 className="pb-16">Gifts</h2>
+            <h2 className="pb-16" id="gifts">
+              Gifts
+            </h2>
             <p className="mb-8">
               Gifts are given post-facto for exceptional contributions.
             </p>

@@ -19,7 +19,9 @@ export default function GrantPreview({ grant }) {
       <Link href={`/grants/${grant.slug}`}>
         <div className="p-8">
           <div className="flex items-center mb-4">
-            <h3 className="type-ui">{grant.title}</h3>
+            <h3 className="type-ui" id={grant.slug}>
+              {grant.title}
+            </h3>
             <div className={`bg-gray text-wall badge-sm ml-2`}>
               {isOpen ? "Open" : "Completed"}
             </div>
