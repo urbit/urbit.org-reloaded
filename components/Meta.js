@@ -20,6 +20,12 @@ export default function Meta(post) {
       <meta name="description" content={description} />
       <meta name="author" content={author} key="author" />
       <meta name="twitter:image" content={image} key="image" />
+      <link
+        rel="alternative"
+        type="application/rss+xml"
+        title="RSS"
+        href="/rss.xml"
+      />
     </>
   );
 }

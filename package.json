@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm run cache-posts && next dev",
-    "build": "npm run cache-posts && next build",
-    "export": "npm run cache-posts && next build && next export",
+    "dev": "npm run cache-posts && npm run rss && next dev",
+    "build": "npm run cache-posts && npm run rss && next build",
+    "export": "npm run cache-posts && npm run rss && next build && next export",
     "start": "next start",
     "prepare": "husky install",
     "cache-posts": "node lib/cache.js",
+    "rss": "node lib/rss.js",
     "postinstall": "patch-package"
   },
   "dependencies": {
@@ -17,6 +18,7 @@
     "autoprefixer": "^10.2.6",
     "classnames": "^2.3.1",
     "critters": "0.0.10",
+    "feed": "^4.2.2",
     "fuzzy-search": "^3.2.1",
     "gray-matter": "^4.0.3",
     "html-entities": "^2.3.2",
