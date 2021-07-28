@@ -92,7 +92,7 @@ This `task` is deprecated and does not perform any actions.
 
 Register moon keys or otherwise administer a moon.
 
-This is what is sent to Jael by `%hood` behind the scenes when you run `|moon`, `|moon-breach` or `|moon-cycle-keys`. The `ship` field is the moon's `@p`. The [$udiff:point](/docs/arvo/jael/data-types#udiff-point) will contain the bunt of an [$id:block](/docs/arvo/jael/data-types#id-block) (since moons aren't registered in Azimuth) and one of the `udiff` actions depending on what you want to do.
+This is what is sent to Jael by `%hood` behind the scenes when you run `|moon`, `|moon-breach` or `|moon-cycle-keys`. The `ship` field is the moon's `@p`. The [$udiff:point](/docs/arvo/jael/data-types#udiffpoint) will contain the bunt of an [$id:block](/docs/arvo/jael/data-types#idblock) (since moons aren't registered in Azimuth) and one of the `udiff` actions depending on what you want to do.
 
 ### Returns
 
