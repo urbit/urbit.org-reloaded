@@ -30,7 +30,7 @@ Here we'll look at a simple example of fetching a remote HTTP resource with Iris
 (pure:m !>(`@t`q.data.u.full-file.client-response.q.res))
 ```
 
-This thread takes a fully qualified URL in a `@t` as an argument. It will ask Iris to fetch the HTTP resource at the given URL by passing it a [%request task](@/docs/arvo/iris/tasks.md#request) containing an HTTP GET [$request:http](@/docs/arvo/eyre/data-types.md#request-http):
+This thread takes a fully qualified URL in a `@t` as an argument. It will ask Iris to fetch the HTTP resource at the given URL by passing it a [%request task](/docs/arvo/iris/tasks#request) containing an HTTP GET [$request:http](/docs/arvo/eyre/data-types#requesthttp):
 
 ```hoon
 =/  url=@t  (need !<((unit @t) arg))
@@ -58,7 +58,6 @@ Let's try it out:
         [key='cache-control' value='max-age=604800']
         [key='content-type' value='text/html; charset=UTF-8']
         [key='date' value='Thu, 24 Jun 2021 04:12:13 GMT']
-        [key='etag' value='"3147526947+ident"']
         [key='expires' value='Thu, 01 Jul 2021 04:12:13 GMT']
         [key='last-modified' value='Thu, 17 Oct 2019 07:18:26 GMT']
         [key='server' value='ECS (oxr/8328)']
