@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
-export const TableOfContents = ({ staticPosition }) => {
-  const { nestedHeadings } = useHeadingsData();
+export const TableOfContents = ({ staticPosition, noh3s }) => {
+  const { nestedHeadings } = useHeadingsData(noh3s);
   const [activeId, setActiveId] = useState();
   useIntersectionObserver(setActiveId);
   return (
@@ -36,11 +36,12 @@ const getNestedHeadings = (headingElements) => {
   return nestedHeadings;
 };
 
-const useHeadingsData = () => {
+const useHeadingsData = (noh3s) => {
   const [nestedHeadings, setNestedHeadings] = useState([]);
 
+  const query = noh3s ? "h2" : "h2, h3";
   useEffect(() => {
-    const headingElements = Array.from(document.querySelectorAll("h2, h3"));
+    const headingElements = Array.from(document.querySelectorAll(query));
 
     const newNestedHeadings = getNestedHeadings(headingElements);
     setNestedHeadings(newNestedHeadings);

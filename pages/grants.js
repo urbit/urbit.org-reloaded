@@ -137,7 +137,7 @@ export default function Grants({
                 at urbit.org, Tlon developers, and community mentors.
               </p>
             </div>
-            <TableOfContents staticPosition />
+            <TableOfContents staticPosition noh3s />
           </div>
           <div className="p-8 bg-wall flex flex-col w-full rounded-lg space-y-4">
             <p>
