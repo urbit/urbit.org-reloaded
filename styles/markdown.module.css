@@ -95,6 +95,10 @@
   @apply py-2 ml-6 text-base md:text-lg lg:text-xl;
 }
 
+.markdown a {
+  @apply text-green;
+}
+
 .markdown blockquote {
   @apply border-l-4 border-deepWall pl-6 italic;
 }
