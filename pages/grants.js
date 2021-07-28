@@ -124,7 +124,7 @@ export default function Grants({
         }
         <Section wide>
           <div className="flex flex-column justify-between pb-16">
-            <div className="pr-24">
+            <div>
               <h1 className="pb-16">Grants</h1>
               <p className="mb-8">
                 Urbit is a community project. While anyone can contribute, we
