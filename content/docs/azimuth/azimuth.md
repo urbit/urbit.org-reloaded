@@ -4,6 +4,7 @@ weight = 2
 template = "doc.html"
 aliases = ["/docs/learn/azimuth"]
 +++
+
 Azimuth is a general-purpose public-key infrastructure (PKI) on the Ethereum blockchain, used as a platform for _Urbit identities_. You need such an identity to use the Arvo network.
 
 The primary way to interact with Azimuth is through our [Bridge](https://github.com/urbit/bridge) application and the node libraries that it depends on, [azimuth-js](https://github.com/urbit/azimuth-js) and [urbit-key-generation](https://github.com/urbit/urbit-key-generation). Take a look at the source and play around, or see [Getting Started](/getting-started/).
@@ -42,7 +43,7 @@ Think of your master ticket like a very high-value password. The master ticket i
 
 ### Ownership Address
 
-An ownership address has all rights over the assets deeded to it. These rights are on-chain actions described and implemented in the Ecliptic, Azimuth's suite of governing smart-contracts.
+An ownership address has all rights over the assets deeded to it. These rights are on-chain actions described and implemented in [Ecliptic](@/docs/glossary/ecliptic.md), Azimuth's suite of governing smart-contracts.
 
 ### Proxies
 
@@ -55,8 +56,8 @@ Proxy addresses allow you to execute non-ownership related actions like spawning
 
 - **Voting Proxy**
 
-  Galaxies only. Galaxies are the part of the galactic senate, and this means
-  they can cast votes on new proposals including changes to the Ecliptic.
+  Galaxies only. Galaxies are the part of the [Galactic Senate](@/docs/glossary/senate.md), and this means
+  they can cast votes on new proposals including changes to Ecliptic.
 
 - **Spawn Proxy**
 
@@ -72,7 +73,7 @@ series of algorithms that ultimately generate your keys and the Ethereum address
 ![](https://media.urbit.org/fora/proposals/UP-8.jpg)
 
 First, your `@q` is converted into a numeric value `E` as an intermediary step
-by adding [salt](https://en.wikipedia.org/wiki/Salt_(cryptography)). Then by
+by adding [salt](<https://en.wikipedia.org/wiki/Salt_(cryptography)>). Then by
 adding additional salts, `E` is converted into a set of BIP39 seed phrases -
 these are 24 word mnemonic sequences used to generate Ethereum wallets. You end up
 with one seed phrase for each proxy associated with your ship, and these seed
@@ -88,15 +89,13 @@ generated.
 Most Ethereum tokens use the ERC-20 standard for smart contracts. Urbit identities
 are, however, essentially different from most Ethereum tokens, due to identities not
 being fungible. Since any two stars will handle social-networking realities in a
-different way, they will carry a different reputation. identities are to houses as
-tokens are to gold.
+different way, they will carry a different reputation.
 
 The ERC-721 standard, having been made specifically to provide a smart-contract
 interface for non-fungible assets, serves our needs well. This is the standard
 that we use for deeding Urbit identities.
 
-Identities, and all of their blockchain operations, are governed by the Ecliptic.
-The Ecliptic is an Ethereum smart-contract that governs identity state and the
+Identities, and all of their blockchain operations, are governed by Ecliptic. Ecliptic is an Ethereum smart-contract that governs identity state and the
 ownership, spawn, management, and voting rights affiliated with your identities.
 
 For the technical implementation details, take a look at Azimuth's

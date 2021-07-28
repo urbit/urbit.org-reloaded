@@ -12,7 +12,7 @@ contribute to. At a high level, you can:
 
 - [Build clients](#clients), which use Urbit as their back-end to store data and
   interact with the network
-- [Develop agents](#agents), or more precisely [*gall*
+- [Develop agents](#agents), or more precisely [_gall_
   agents](/docs/userspace/gall/gall), which are written in [Hoon](/docs/hoon/)
   and can best be thought of as microservices
 - [Contribute to Urbit's core](#core), which involves contributing to Urbit
@@ -49,7 +49,7 @@ To get started quickly with the language of your choice, see the list
 libraries that provide HTTP interfaces to Urbit [here](https://github.com/urbit/awesome-urbit#http-apis-airlock).
 
 To learn more about how to work with Urbit's HTTP interface, follow [this
-guide](/docs/arvo/eyre/using-eyre).
+guide](/docs/arvo/eyre/external-api-ref).
 
 Alternatively, command-line interface (CLI) applications can be built using a
 library called `shoe`, which you can learn more about

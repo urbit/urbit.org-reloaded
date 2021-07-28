@@ -12,14 +12,14 @@ welcome.
 This documentation provides a series of explainers, guides, tutorials and
 reference material for assisting you in developing on the Urbit platform, or
 contributing to the Urbit project. If you're looking for documentation on how to
-*use* your Urbit ship, see our [usage docs](/using/).
+_use_ your Urbit ship, see our [usage docs](/using/).
 
 ### [Development](/docs/development/)
 
 The Development section is recommended reading for developers interested in
 contributing to Urbit itself, or building apps on top of Urbit. It serves as a
 high-level orientation to how to set up a development environment, the various
-codebases that comprise the project, our grants program, and the precepts that
+codebases the project comprises, our grants program, and the precepts that
 drive the development of Urbit.
 
 ### [System Overview](/docs/system-overview/)

@@ -6,6 +6,7 @@ template = "sections/docs/chapters.html"
 aliases = ["/docs/learn/vere/"]
 insert_anchor_links = "right"
 +++
+
 The Nock runtime system, written in C.
 
 Keep reading if you're planning to work on the Urbit interpreter, you're a
@@ -15,7 +16,7 @@ you've seen the actual structs.
 ## [C runtime system](/docs/vere/runtime)
 
 The Urbit interpreter is built on a Nock runtime system written
-in C, `u3`.  This section is a relatively complete description.
+in C, `u3`. This section is a relatively complete description.
 
 ## [c3: C in Urbit](/docs/vere/c)
 
@@ -25,7 +26,7 @@ in Urbit.
 ## [u3: Land of nouns](/docs/vere/nouns)
 
 The division between `c3` and `u3` is that you could theoretically
-imagine using `c3` as just a generic C environment.  Anything to do
+imagine using `c3` as just a generic C environment. Anything to do
 with nouns is in `u3`.
 
 ## [u3: API overview by prefix](/docs/vere/api)
@@ -35,3 +36,7 @@ A walkthrough of each of the `u3` modules.
 ## [How to write a jet](/docs/vere/jetting)
 
 A jetting guide by for new Urbit developers.
+
+## [Cryptography](@/docs/vere/cryptography.md)
+
+References on the cryptography libraries utilized by jets.
