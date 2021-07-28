@@ -88,7 +88,7 @@ const pageTree = (thisLink, tree, level = 0) => {
               <li>
                 <Link href={href}>
                   <a
-                    className={`relative ${pageItemClasses} ${selectedClasses}`}
+                    className={`relative inline-block ${pageItemClasses} ${selectedClasses}`}
                   >
                     {title}
                   </a>
