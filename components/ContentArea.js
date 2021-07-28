@@ -1,6 +1,24 @@
 import Section from "./Section";
+import { useState, useEffect } from "react";
 
 export default function ContentArea(props) {
+  const [shortcut, setShortcut] = useState("");
+
+  const detectOS = () => {
+    const agent = window.navigator.appVersion;
+    if (agent.includes("Win")) {
+      return "Ctrl+K";
+    } else if (agent.includes("Mac")) {
+      return "⌘K";
+    } else if (agent.includes("Linux")) {
+      return "Ctrl+K";
+    }
+  };
+
+  useEffect(() => {
+    setShortcut(detectOS());
+  }, []);
+
   return (
     <div className="w-full min-w-0 flex flex-col">
       <div className="px-4 md:px-12 lg:px-24 pb-24 pt-8 md:pt-10 lg:pt-16 flex flex-col w-full max-h-screen h-screen overflow-y-scroll">
@@ -14,7 +32,7 @@ export default function ContentArea(props) {
               }}
               className="button-sm bg-wall text-gray"
             >
-              Search<div className="ml-4 text-lightGray">⌘K</div>
+              Search<div className="ml-4 text-lightGray">{shortcut}</div>
             </button>
           </div>
         </div>
