@@ -1,6 +1,6 @@
 export default function Meta(post) {
   const author = post?.extra?.author || "Urbit";
-  const title = `${post?.title} - ` || "";
+  const title = post?.title ? `${post.title} - ` : "";
   const description =
     post?.description || "Urbit is a personal server built from scratch.";
   const image =
