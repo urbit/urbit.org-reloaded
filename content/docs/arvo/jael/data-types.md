@@ -4,12 +4,7 @@ weight = 4
 template = "doc.html"
 +++
 
-Jael's section in `lull.hoon` contains three ancillary cores with their own type definitions as well as Jael's general types, so this reference is divided as follows:
-
-- [jael](#public-keys-result) - General structures.
-- [block:jael](#block) - Structures for Ethereum blocks.
-- [point:jael](#point) - Structures for points (Ship IDs in Azimuth).
-- [pki:jael](#pki) - Largely unused apart from [$oath:pki](#oath-pki).
+Jael's section in `lull.hoon` contains three ancillary cores with their own type definitions as well as Jael's general types.
 
 ### `$public-keys-result`
 
@@ -21,9 +16,9 @@ Jael's section in `lull.hoon` contains three ancillary cores with their own type
   ==
 ```
 
-This is what Jael gives (in a [%public-keys](@/docs/arvo/jael/tasks.md#public-keys) `gift`) to subcribers who are tracking public key information for a `set` of `ship`s.
+This is what Jael gives (in a [%public-keys](/docs/arvo/jael/tasks#public-keys) `gift`) to subcribers who are tracking public key information for a `set` of `ship`s.
 
-Typically the `%full` kind with a `map` of `ship`s to [$point:point](#point-point)s is given immediately upon subscription and contains all public key records for the ships in question. After the `%full`, a `%diff` (including a [$diff:point](#diff-point)) will be given whenever a change (such as the sponsor or pubkey) has occurred for one of the ships being tracked, and a `%breach` will be given whenever a continuity breach for a tracked ship occurs.
+Typically the `%full` kind with a `map` of `ship`s to [$point:point](#pointpoint)s is given immediately upon subscription and contains all public key records for the ships in question. After the `%full`, a `%diff` (including a [$diff:point](#diffpoint)) will be given whenever a change (such as the sponsor or pubkey) has occurred for one of the ships being tracked, and a `%breach` will be given whenever a continuity breach for a tracked ship occurs.
 
 ### `$seed`
 
@@ -49,7 +44,7 @@ Private boot parameters. The `who` field is the name of the ship, `lyf` is the `
 Ship initialisation parameters.
 
 - [$seed](#seed) contains the private boot parameters.
-- `spon` is a `list` of ships and their [$point](#point-point)s in the ship's sponsorship chain, all the way to the galaxy level.
+- `spon` is a `list` of ships and their [$point](#pointpoint)s in the ship's sponsorship chain, all the way to the galaxy level.
 - `czar` is a map from each galaxy's `@p` to its `rift`, `life`, and public key (`pass`).
 - `turf` is a `list` of DNS suffixes used for galaxies, which is `urbit.org` by default.
 - `bloq` is the number of the Ethereum block in which the ship registered its keys with the Azimuth smart contract.
@@ -119,7 +114,7 @@ Ethereum block number.
 +$  id  [=hash =number]
 ```
 
-Ethereum block identifier - contains both the [$hash:block](#hash-block) and [$number:block](#number-block).
+Ethereum block identifier - contains both the [$hash:block](#hashblock) and [$number:block](#numberblock).
 
 ### `$block:block`
 
@@ -127,7 +122,7 @@ Ethereum block identifier - contains both the [$hash:block](#hash-block) and [$n
 +$  block  [=id =parent=hash]
 ```
 
-A reference to an Ethereum block - contains the [$id:block](#id-block) and the [$hash:block](#hash-block) of its parent for ordering purposes.
+A reference to an Ethereum block - contains the [$id:block](#idblock) and the [$hash:block](#hashblock) of its parent for ordering purposes.
 
 ## point
 
@@ -160,7 +155,7 @@ An update to a ship's keys. The `life` is the key revision number, `crypt-suite`
 +$  diffs  (list diff)
 ```
 
-A list of invertible [$diff:point](#diff-point)s.
+A list of invertible [$diff:point](#diffpoint)s.
 
 ### `$diff:point`
 
@@ -175,7 +170,7 @@ A list of invertible [$diff:point](#diff-point)s.
 An invertible diff for public key (and related) changes to the state of an Azimuth point (ship ID).
 
 - `%rift` is a change to the `rift` (continuity breach number) that occurs when a ship undergoes a continuity breach.
-- `%keys` is a change to a ship's `life` and public key, specified in the [$key-update:point](#key-update-point).
+- `%keys` is a change to a ship's `life` and public key, specified in the [$key-update:point](#key-updatepoint).
 - `%spon` is a change to a ship's sponsor.
 
 The `from` and `to` field specify the old a new values respectively.
@@ -186,7 +181,7 @@ The `from` and `to` field specify the old a new values respectively.
 +$  udiffs  (list [=ship =udiff])
 ```
 
-A list of non-invertible [$udiff:point](#udiff-point)s.
+A list of non-invertible [$udiff:point](#udiffpoint)s.
 
 ### `$udiff:point`
 
@@ -202,18 +197,18 @@ A list of non-invertible [$udiff:point](#udiff-point)s.
 
 A non-invertible diff for public key (and related) changes to the state of an Azimuth point (ship ID).
 
-The [$id:block](#id-block) contains the block number and block hash of the Ethereum block in which the change occurred. The next part specifies what changed, where:
+The [$id:block](#idblock) contains the block number and block hash of the Ethereum block in which the change occurred. The next part specifies what changed, where:
 
 - `%rift` means the ship has undergone a continuity breach and therefore the `rift` (continuity revision number) has changed.
-- `%keys` means the ship's `life` (key revision number) has changed, the [$key-update:point](#key-update-point) contains the new `life` and pubkeys.
+- `%keys` means the ship's `life` (key revision number) has changed, the [$key-update:point](#key-updatepoint) contains the new `life` and pubkeys.
 - `%spon` means the ship's sponsor has changed.
 - `%disavow` means a previous Ethereum block has been disavowed.
 
-A `udiff:point` can be converted to a [$diff:point](#diff-point) with the `+udiff-to-diff:point` function.
+A `udiff:point` can be converted to a [$diff:point](#diffpoint) with the `+udiff-to-diff:point` function.
 
 ## pki
 
-This structure is mostly a holdover from prior versions of Jael and is unused apart from [$oath:pki](#oath-pki).
+This structure is mostly a holdover from prior versions of Jael and is unused apart from [$oath:pki](#oathpki).
 
 ### `$hand:pki`
 
