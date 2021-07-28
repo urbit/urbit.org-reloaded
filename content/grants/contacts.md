@@ -2,7 +2,7 @@
 title = "Userspace Apprenticeship: Contacts App"
 date = 2021-06-17
 [taxonomies]
-grant_type = ["Apprenticeships"]
+grant_type = ["Apprenticeship"]
 grant_category = ["App Dev", "Arvo"]
 [extra]
 image = ""
