@@ -72,7 +72,7 @@ button {
 }
 
 .button-sm {
-  @apply flex px-4 py-1 rounded-lg type-ui;
+  @apply table px-4 py-1 rounded-lg type-ui;
 }
 
 .button-lg {

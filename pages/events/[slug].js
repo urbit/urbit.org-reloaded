@@ -36,6 +36,7 @@ export default function Event({
         <Header search={search} />
         <Section narrow short>
           <h1>{post.title}</h1>
+
           {post.extra.author ? (
             <div className="type-ui text-gray mt-4 md:mt-8 lg:mt-10">
               {post.extra.author}
@@ -44,8 +45,19 @@ export default function Event({
           {post.extra.ship ? (
             <div className="type-ui text-gray font-mono">{post.extra.ship}</div>
           ) : null}
-          <div className="type-ui text-gray mt-16">
-            {formatDate(new Date(post.date))}
+
+          <div className="mt-16">
+            <p className="type-ui text-gray">
+              {formatDate(new Date(post.date))} {", " + post.extra.time}
+            </p>
+            {post.extra.registration_url && post.extra.pinned ? (
+              <a
+                className="button-sm bg-green text-white flex-0 mt-4"
+                href={post.extra.registration_url}
+              >
+                RSVP
+              </a>
+            ) : null}
           </div>
         </Section>
         <Section short wide>
