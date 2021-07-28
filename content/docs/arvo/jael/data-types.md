@@ -11,7 +11,7 @@ Jael's section in `lull.hoon` contains three ancillary cores with their own type
 - [point:jael](#point) - Structures for points (Ship IDs in Azimuth).
 - [pki:jael](#pki) - Largely unused apart from [$oath:pki](#oath-pki).
 
-## `$public-keys-result`
+### `$public-keys-result`
 
 ```hoon
 +$  public-keys-result
@@ -25,7 +25,7 @@ This is what Jael gives (in a [%public-keys](@/docs/arvo/jael/tasks.md#public-ke
 
 Typically the `%full` kind with a `map` of `ship`s to [$point:point](#point-point)s is given immediately upon subscription and contains all public key records for the ships in question. After the `%full`, a `%diff` (including a [$diff:point](#diff-point)) will be given whenever a change (such as the sponsor or pubkey) has occurred for one of the ships being tracked, and a `%breach` will be given whenever a continuity breach for a tracked ship occurs.
 
-## `$seed`
+### `$seed`
 
 ```hoon
 +$  seed  [who=ship lyf=life key=ring sig=(unit oath:pki)]
@@ -33,7 +33,7 @@ Typically the `%full` kind with a `map` of `ship`s to [$point:point](#point-poin
 
 Private boot parameters. The `who` field is the name of the ship, `lyf` is the `life` (key revision number), `key` is the private key and `sig` is the signature of the parent ship if it's a moon, and `~` otherwise.
 
-## `$dawn-event`
+### `$dawn-event`
 
 ```hoon
 +$  dawn-event
@@ -55,7 +55,7 @@ Ship initialisation parameters.
 - `bloq` is the number of the Ethereum block in which the ship registered its keys with the Azimuth smart contract.
 - `node` is the URL of the Ethereum node used to monitor Azimuth.
 
-## `$source`
+### `$source`
 
 ```hoon
 +$  source  (each ship term)
@@ -63,7 +63,7 @@ Ship initialisation parameters.
 
 Source of public key updates for Jael. If it's a `term` it's a Gall agent e.g `%azimuth-tracker`. If it's a `ship`, Jael will subscribe to that ship's Jael for updates - e.g. Jael will subscribe to the parent planet of moons for updates about the moons.
 
-## `$source-id`
+### `$source-id`
 
 ```hoon
 +$  source-id  @udsourceid
@@ -71,7 +71,7 @@ Source of public key updates for Jael. If it's a `term` it's a Gall agent e.g `%
 
 Numerical index for Jael to organise its `source`s. Jael assigns its `source-id`s sequentially, starting from `0`.
 
-## `$state-eth-node`
+### `$state-eth-node`
 
 ```hoon
 +$  state-eth-node  ::  node config + meta
@@ -93,11 +93,11 @@ Jael's data about `source`s for PKI updates about ships.
 - `ship-sources` is a `map` from `ship`s to `source-id`s and records where to get updates from for the ships in question. Typically these will map moons to their parent ships.
 - `ship-sources-reverse` is the same as `ship-sources` but in reverse.
 
-# block
+## block
 
 Structures for Ethereum blocks.
 
-## `$hash:block`
+### `$hash:block`
 
 ```hoon
 +$  hash  @uxblockhash
@@ -105,7 +105,7 @@ Structures for Ethereum blocks.
 
 Ethereum block hash.
 
-## `$number:block`
+### `$number:block`
 
 ```hoon
 +$  number  @udblocknumber
@@ -113,7 +113,7 @@ Ethereum block hash.
 
 Ethereum block number.
 
-## `$id:block`
+### `$id:block`
 
 ```hoon
 +$  id  [=hash =number]
@@ -121,7 +121,7 @@ Ethereum block number.
 
 Ethereum block identifier - contains both the [$hash:block](#hash-block) and [$number:block](#number-block).
 
-## `$block:block`
+### `$block:block`
 
 ```hoon
 +$  block  [=id =parent=hash]
@@ -129,11 +129,11 @@ Ethereum block identifier - contains both the [$hash:block](#hash-block) and [$n
 
 A reference to an Ethereum block - contains the [$id:block](#id-block) and the [$hash:block](#hash-block) of its parent for ordering purposes.
 
-# point
+## point
 
 Structures for points (Ship IDs in Azimuth).
 
-## `$point:point`
+### `$point:point`
 
 ```hoon
 +$  point
@@ -146,7 +146,7 @@ Structures for points (Ship IDs in Azimuth).
 
 Public key data for a particular ship. The `rift` is the current continuity breach number and `life` is the current key revision number. The `keys` `map` contains the public key (`pass`) for each `life` up to the current one. The `sponsor` is the current sponsor of the ship in question, if it has one.
 
-## `$key-update:point`
+### `$key-update:point`
 
 ```hoon
 +$  key-update  [=life crypto-suite=@ud =pass]
@@ -154,7 +154,7 @@ Public key data for a particular ship. The `rift` is the current continuity brea
 
 An update to a ship's keys. The `life` is the key revision number, `crypt-suite` is a version number for the cryptographic suite used for keys in Azimuth, and `pass` is the public key itself.
 
-## `$diffs:point`
+### `$diffs:point`
 
 ```hoon
 +$  diffs  (list diff)
@@ -162,7 +162,7 @@ An update to a ship's keys. The `life` is the key revision number, `crypt-suite`
 
 A list of invertible [$diff:point](#diff-point)s.
 
-## `$diff:point`
+### `$diff:point`
 
 ```hoon
 +$  diff
@@ -180,7 +180,7 @@ An invertible diff for public key (and related) changes to the state of an Azimu
 
 The `from` and `to` field specify the old a new values respectively.
 
-## `$udiffs:point`
+### `$udiffs:point`
 
 ```hoon
 +$  udiffs  (list [=ship =udiff])
@@ -188,7 +188,7 @@ The `from` and `to` field specify the old a new values respectively.
 
 A list of non-invertible [$udiff:point](#udiff-point)s.
 
-## `$udiff:point`
+### `$udiff:point`
 
 ```hoon
 +$  udiff
@@ -211,11 +211,11 @@ The [$id:block](#id-block) contains the block number and block hash of the Ether
 
 A `udiff:point` can be converted to a [$diff:point](#diff-point) with the `+udiff-to-diff:point` function.
 
-# pki
+## pki
 
 This structure is mostly a holdover from prior versions of Jael and is unused apart from [$oath:pki](#oath-pki).
 
-## `$hand:pki`
+### `$hand:pki`
 
 ```hoon
 +$  hand  @uvH
@@ -223,7 +223,7 @@ This structure is mostly a holdover from prior versions of Jael and is unused ap
 
 128-bit Hash.
 
-## `$mind:pki`
+### `$mind:pki`
 
 ```hoon
 +$  mind  [who=ship lyf=life]
@@ -231,7 +231,7 @@ This structure is mostly a holdover from prior versions of Jael and is unused ap
 
 Key identifier.
 
-## `$name:pki`
+### `$name:pki`
 
 ```hoon
 +$  name  (pair @ta @t)
@@ -239,7 +239,7 @@ Key identifier.
 
 Name in both ASCII and Unicode.
 
-## `$oath:pki`
+### `$oath:pki`
 
 ```hoon
 +$  oath  @
