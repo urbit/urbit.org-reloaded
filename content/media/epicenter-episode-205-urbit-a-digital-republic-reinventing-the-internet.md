@@ -8,6 +8,5 @@ author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"
 youtube = "DFeN-TKZor0"
 +++
-{{ youtube(id="DFeN-TKZor0") }} 
 
 [\#205 Galen Wolfe-Pauly: Urbit - A Digital Republic Reinventing the Internet](https://epicenter.tv/episode/205/)

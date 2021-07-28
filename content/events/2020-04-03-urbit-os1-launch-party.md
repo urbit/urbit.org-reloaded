@@ -1,4 +1,3 @@
-
 +++
 title = "Urbit OS1 Launch Party"
 date = 2020-04-03
@@ -10,6 +9,8 @@ location = "Online event"
 image = "https://secure.meetupstatic.com/photos/event/1/f/8/b/600_489548075.jpeg"
 registration_url = "https://www.meetup.com/urbit-sf/events/268519156/"
 youtube = "71ViyftPkGk"
+dark = true
+overlay = true
 +++
 
 Join us as we launch Urbit OS1!
@@ -26,7 +27,7 @@ Ready to launch OS1? Check out our install guide:
 
 [https://urbit.org/using/install/](https://urbit.org/using/install/)
 
-Want address space for your friends? Apply for an Urbit Community Grant: 
+Want address space for your friends? Apply for an Urbit Community Grant:
 
 [https://urbit.org/community/community-grants/](https://urbit.org/community/community-grants/)
 
@@ -44,4 +45,4 @@ Urbit Github: <a href="https://github.com/urbit" class="linkified">https://githu
 
 Still confused about what Urbit is?
 
-<a href="https://urbit.org/understanding-urbit/" class="linkified">https://urbit.org/understanding-urbit/</a> 
+<a href="https://urbit.org/understanding-urbit/" class="linkified">https://urbit.org/understanding-urbit/</a>

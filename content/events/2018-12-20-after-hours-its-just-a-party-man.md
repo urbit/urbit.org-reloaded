@@ -1,4 +1,3 @@
-
 +++
 title = "After hours: It's just a party, man"
 date = 2018-12-20

@@ -1,0 +1,103 @@
+.markdown {
+  /* @apply leading-relaxed; */
+  /* max-width: ; */
+  /* @apply w-full md:w-8/12 px-4 md:px-0 pb-20 md:pb-32 lg:pb-48; */
+}
+
+.markdown *:last-child {
+  @apply pb-0 mb-0;
+}
+
+.markdown *:first-child {
+  @apply pt-0 mt-0;
+}
+
+.markdown *:first-child figure {
+  @apply pt-0 mt-0;
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  @apply my-8;
+}
+
+.markdown h1 {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold mt-24 mb-12;
+}
+
+.markdown h2 {
+  @apply text-2xl md:text-3xl lg:text-4xl font-bold mt-16 mb-12;
+}
+
+.markdown h3 {
+  @apply text-lg md:text-xl lg:text-2xl font-semibold mt-8 mb-8;
+}
+
+.markdown h4 {
+  @apply text-base md:text-lg lg:text-xl font-semibold mt-4 mb-4;
+}
+
+.markdown p {
+  @apply text-base md:text-lg lg:text-xl leading-relaxed;
+}
+
+.markdown img {
+  width: 100%;
+  height: auto;
+  @apply rounded-lg;
+}
+
+.markdown figure {
+  position: relative;
+  @apply mt-12 mb-12 z-0;
+}
+
+.markdown figure {
+  width: 100%;
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .markdown figure {
+    width: 125%;
+    left: -12.5%;
+  }
+}
+
+.markdown pre,
+.markdown pre[class*="language-"] {
+}
+
+.markdown code,
+.markdown code[class*="language-"] {
+  @apply px-2 py-0.5 bg-wall rounded-md;
+}
+
+.markdown pre code,
+.markdown pre[class*="language-"] code {
+  @apply p-4 md:p-8 rounded-xl;
+}
+
+.markdown ul {
+  list-style: outside;
+  list-style-type: disc;
+}
+
+.markdown ol {
+  list-style: outside;
+  list-style-type: decimal;
+}
+
+.markdown li {
+  font-size: 20px;
+  @apply py-2 ml-6 text-base md:text-lg lg:text-xl;
+}
+
+.markdown blockquote {
+  @apply border-l-4 border-deepWall pl-6 italic;
+}
+.markdown blockquote cite {
+  @apply not-italic font-semibold;
+}

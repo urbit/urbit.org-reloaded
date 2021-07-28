@@ -1,4 +1,3 @@
-
 +++
 title = "Developer Call: Scaling Azimuth"
 date = 2021-03-04

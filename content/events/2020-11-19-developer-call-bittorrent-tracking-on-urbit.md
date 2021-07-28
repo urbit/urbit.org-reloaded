@@ -1,4 +1,3 @@
-
 +++
 title = "Developer Call: BitTorrent tracking on Urbit"
 date = 2020-11-19

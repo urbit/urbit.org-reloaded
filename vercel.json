@@ -1,5 +1,832 @@
 {
-   "github": {
-     "silent": true
-   }
- }
+  "github": {
+    "silent": true
+  },
+  "redirects": [
+    {
+      "source": "/grants/(apprenticeships|proposals|bounties)/:page",
+      "destination": "/grants/:page",
+      "permanent": true
+    },
+    {
+      "source": "/primer",
+      "destination": "/understanding-urbit/",
+      "permanent": true
+    },
+    {
+      "source": "/breach",
+      "destination": "/reset",
+      "permanent": true
+    },
+    {
+      "source": "/landscape",
+      "destination": "/docs/development/develop",
+      "permanent": true
+    },
+    {
+      "source": "/install",
+      "destination": "/getting-started",
+      "permanent": true
+    },
+    {
+      "source": "/install/mac/latest",
+      "destination": "http://github.com/urbit/urbit/releases/latest/download/darwin.tgz",
+      "permanent": true
+    },
+    {
+      "source": "/install/linux64/latest",
+      "destination": "http://github.com/urbit/urbit/releases/latest/download/linux64.tgz",
+      "permanent": true
+    },
+    {
+      "source": "/using/install",
+      "destination": "/getting-started",
+      "permanent": true
+    },
+    {
+      "source": "/using/planet",
+      "destination": "/getting-started/planet",
+      "permanent": true
+    },
+    {
+      "source": "/using/develop",
+      "destination": "/docs/development/develop",
+      "permanent": true
+    },
+    {
+      "source": "/using/integrating-api",
+      "destination": "/docs/arvo/eyre/using-eyre",
+      "permanent": true
+    },
+    {
+      "source": "/using/operations",
+      "destination": "/using",
+      "permanent": true
+    },
+    {
+      "source": "/using/operations/bridge",
+      "destination": "/using/id/using-bridge",
+      "permanent": true
+    },
+    {
+      "source": "/using/operations/hosting",
+      "destination": "/using/running/hosting",
+      "permanent": true
+    },
+    {
+      "source": "/using/operations/using-your-ship",
+      "destination": "/using/os/getting-started",
+      "permanent": true
+    },
+    {
+      "source": "/using/operations/stars-and-galaxies",
+      "destination": "/using/os/stars-and-galaxies",
+      "permanent": true
+    },
+    {
+      "source": "/using/operations/bridge-troubleshooting",
+      "destination": "/using/os/bridge-troubleshooting",
+      "permanent": true
+    },
+    {
+      "source": "/docs/getting-started/using-a-star",
+      "destination": "/using/os/stars-and-galaxies/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/bridge",
+      "destination": "/using/id/using-bridge/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/pki",
+      "destination": "/docs/system-overview/azimuth",
+      "permanent": true
+    },
+    {
+      "source": "/docs/getting-started/azimuth",
+      "destination": "/understanding-urbit/urbit-id",
+      "permanent": true
+    },
+    {
+      "source": "/docs/arvo/internals/",
+      "destination": "/docs/arvo/overview/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/vane-apis/airlock",
+      "destination": "/docs/arvo/eyre/using-eyre",
+      "permanent": true
+    },
+    {
+      "source": "/docs/introduction",
+      "destination": "/docs",
+      "permanent": true
+    },
+    {
+      "source": "/docs/getting-started",
+      "destination": "/getting-started",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/concepts/technical-overview",
+      "destination": "/docs/system-overview",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/ship-troubleshooting",
+      "destination": "/using/os/ship-troubleshooting",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/creating-an-invite-pool",
+      "destination": "/using/id/creating-an-invite-pool",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/guide-to-breaches/",
+      "destination": "/using/id/guide-to-breaches",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/arvo/arvo",
+      "destination": "/docs/arvo/overview",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/arvo/ames",
+      "destination": "/docs/arvo/ames/ames",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/vane-apis/ames",
+      "destination": "/docs/arvo/ames/ames-api",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/arvo/behn",
+      "destination": "/docs/arvo/behn/behn",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/vane-apis/behn",
+      "destination": "/docs/arvo/behn/behn-api",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/arvo/clay",
+      "destination": "/docs/arvo/clay/clay",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/arvo/dill",
+      "destination": "/docs/arvo/dill/dill",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/vane-apis/dill",
+      "destination": "/docs/arvo/dill/dill-api",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/arvo/eyre",
+      "destination": "/docs/arvo/eyre/eyre",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/arvo/gall",
+      "destination": "/docs/arvo/gall/gall",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/vane-apis/gall",
+      "destination": "/docs/arvo/gall/gall-api",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/vane-apis/iris",
+      "destination": "/docs/arvo/iris/iris-api",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/vane-apis/jael",
+      "destination": "/docs/arvo/jael/jael-api",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/arvo/move-trace",
+      "destination": "/docs/arvo/tutorials/move-trace",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/advanced-azimuth-tools",
+      "destination": "/docs/azimuth/advanced-azimuth-tools",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/aqua",
+      "destination": "/docs/hoon/guides/aqua",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/cli-tutorial",
+      "destination": "/docs/hoon/guides/cli-tutorial",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/parsing",
+      "destination": "/docs/hoon/guides/parsing",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/ackermann",
+      "destination": "/docs/hoon/hoon-school/ackermann",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/arms-and-cores",
+      "destination": "/docs/hoon/hoon-school/arms-and-cores",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/atoms-auras-and-simple-cell-types",
+      "destination": "/docs/hoon/hoon-school/atoms-auras-and-simple-cell-types",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/bank-account",
+      "destination": "/docs/hoon/hoon-school/bank-account",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/behn",
+      "destination": "/docs/hoon/hoon-school/behn",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/caesar",
+      "destination": "/docs/hoon/hoon-school/caesar",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/conditionals",
+      "destination": "/docs/hoon/hoon-school/conditionals",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/doors",
+      "destination": "/docs/hoon/hoon-school/doors",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/egg-timer",
+      "destination": "/docs/hoon/hoon-school/egg-timer",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/fibonacci",
+      "destination": "/docs/hoon/hoon-school/fibonacci",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/gall",
+      "destination": "/docs/hoon/hoon-school/gall",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/gates",
+      "destination": "/docs/hoon/hoon-school/gates",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/generators",
+      "destination": "/docs/hoon/hoon-school/generators",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/hoon-syntax",
+      "destination": "/docs/hoon/hoon-school/hoon-syntax",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/iron-polymorphism",
+      "destination": "/docs/hoon/hoon-school/iron-polymorphism",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/lead-polymorphism",
+      "destination": "/docs/hoon/hoon-school/lead-polymorphism",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/libraries",
+      "destination": "/docs/hoon/hoon-school/libraries",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/lists",
+      "destination": "/docs/hoon/hoon-school/lists",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/list-of-numbers",
+      "destination": "/docs/hoon/hoon-school/list-of-numbers",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/molds",
+      "destination": "/docs/hoon/hoon-school/molds",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/nouns",
+      "destination": "/docs/hoon/hoon-school/nouns",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/recursion",
+      "destination": "/docs/hoon/hoon-school/recursion",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/setup",
+      "destination": "/docs/hoon/hoon-school/setup",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/structures-and-complex-types",
+      "destination": "/docs/hoon/hoon-school/structures-and-complex-types",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/the-subject-and-its-legs",
+      "destination": "/docs/hoon/hoon-school/the-subject-and-its-legs",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/trees-sets-and-maps",
+      "destination": "/docs/hoon/hoon-school/trees-sets-and-maps",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/type-checking-and-type-inference",
+      "destination": "/docs/hoon/hoon-school/type-checking-and-type-inference",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/type-polymorphism",
+      "destination": "/docs/hoon/hoon-school/type-polymorphism",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/_index",
+      "destination": "/docs/hoon/hoon-school/_index",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/style",
+      "destination": "/docs/hoon/reference/style",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/hoon-expressions/advanced",
+      "destination": "/docs/hoon/reference/advanced",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/hoon-expressions/basic",
+      "destination": "/docs/hoon/reference/basic",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/cheat-sheet",
+      "destination": "/docs/hoon/reference/cheat-sheet",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-errors",
+      "destination": "/docs/hoon/reference/hoon-errors",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/hoon-expressions/irregular",
+      "destination": "/docs/hoon/reference/irregular",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/hoon-school/style",
+      "destination": "/docs/hoon/reference/style",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/hoon-expressions/limb/limb",
+      "destination": "/docs/hoon/reference/limbs/limb",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/hoon-expressions/rune/bar",
+      "destination": "/docs/hoon/reference/rune/bar",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/hoon-expressions/rune/buc",
+      "destination": "/docs/hoon/reference/rune/buc",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/hoon-expressions/rune/cen",
+      "destination": "/docs/hoon/reference/rune/cen",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/hoon-expressions/rune/col",
+      "destination": "/docs/hoon/reference/rune/col",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/hoon-expressions/rune/constants",
+      "destination": "/docs/hoon/reference/rune/constants",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/hoon-expressions/rune/dot",
+      "destination": "/docs/hoon/reference/rune/dot",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/hoon-expressions/rune/ket",
+      "destination": "/docs/hoon/reference/rune/ket",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/hoon-expressions/rune/lus",
+      "destination": "/docs/hoon/reference/rune/lus",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/hoon-expressions/rune/mic",
+      "destination": "/docs/hoon/reference/rune/mic",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/hoon-expressions/rune/sig",
+      "destination": "/docs/hoon/reference/rune/sig",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/hoon-expressions/rune/terminators",
+      "destination": "/docs/hoon/reference/rune/terminators",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/hoon-expressions/rune/tis",
+      "destination": "/docs/hoon/reference/rune/tis",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/hoon-expressions/rune/wut",
+      "destination": "/docs/hoon/reference/rune/wut",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/hoon-expressions/rune/zap",
+      "destination": "/docs/hoon/reference/rune/zap",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/hoon-expressions/rune/_index",
+      "destination": "/docs/hoon/reference/rune/_index",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/1a",
+      "destination": "/docs/hoon/reference/stdlib/1a",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/1b",
+      "destination": "/docs/hoon/reference/stdlib/1b",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/1c",
+      "destination": "/docs/hoon/reference/stdlib/1c",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/2a",
+      "destination": "/docs/hoon/reference/stdlib/2a",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/2b",
+      "destination": "/docs/hoon/reference/stdlib/2b",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/2c",
+      "destination": "/docs/hoon/reference/stdlib/2c",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/2d",
+      "destination": "/docs/hoon/reference/stdlib/2d",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/2e",
+      "destination": "/docs/hoon/reference/stdlib/2e",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/2f",
+      "destination": "/docs/hoon/reference/stdlib/2f",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/2g",
+      "destination": "/docs/hoon/reference/stdlib/2g",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/2h",
+      "destination": "/docs/hoon/reference/stdlib/2h",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/2i",
+      "destination": "/docs/hoon/reference/stdlib/2i",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/2j",
+      "destination": "/docs/hoon/reference/stdlib/2j",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/2k",
+      "destination": "/docs/hoon/reference/stdlib/2k",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/2l",
+      "destination": "/docs/hoon/reference/stdlib/2l",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/2m",
+      "destination": "/docs/hoon/reference/stdlib/2m",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/2n",
+      "destination": "/docs/hoon/reference/stdlib/2n",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/2o",
+      "destination": "/docs/hoon/reference/stdlib/2o",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/2p",
+      "destination": "/docs/hoon/reference/stdlib/2p",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/2q",
+      "destination": "/docs/hoon/reference/stdlib/2q",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/3a",
+      "destination": "/docs/hoon/reference/stdlib/3a",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/3b",
+      "destination": "/docs/hoon/reference/stdlib/3b",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/3c",
+      "destination": "/docs/hoon/reference/stdlib/3c",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/3d",
+      "destination": "/docs/hoon/reference/stdlib/3d",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/3e",
+      "destination": "/docs/hoon/reference/stdlib/3e",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/3f",
+      "destination": "/docs/hoon/reference/stdlib/3f",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/3g",
+      "destination": "/docs/hoon/reference/stdlib/3g",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/4a",
+      "destination": "/docs/hoon/reference/stdlib/4a",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/4b",
+      "destination": "/docs/hoon/reference/stdlib/4b",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/4c",
+      "destination": "/docs/hoon/reference/stdlib/4c",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/4d",
+      "destination": "/docs/hoon/reference/stdlib/4d",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/4e",
+      "destination": "/docs/hoon/reference/stdlib/4e",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/4f",
+      "destination": "/docs/hoon/reference/stdlib/4f",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/4g",
+      "destination": "/docs/hoon/reference/stdlib/4g",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/4h",
+      "destination": "/docs/hoon/reference/stdlib/4h",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/4i",
+      "destination": "/docs/hoon/reference/stdlib/4i",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/4j",
+      "destination": "/docs/hoon/reference/stdlib/4j",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/4k",
+      "destination": "/docs/hoon/reference/stdlib/4k",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/4l",
+      "destination": "/docs/hoon/reference/stdlib/4l",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/4m",
+      "destination": "/docs/hoon/reference/stdlib/4m",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/4n",
+      "destination": "/docs/hoon/reference/stdlib/4n",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/4o",
+      "destination": "/docs/hoon/reference/stdlib/4o",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/5a",
+      "destination": "/docs/hoon/reference/stdlib/5a",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/5b",
+      "destination": "/docs/hoon/reference/stdlib/5b",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/5c",
+      "destination": "/docs/hoon/reference/stdlib/5c",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/5d",
+      "destination": "/docs/hoon/reference/stdlib/5d",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/5e",
+      "destination": "/docs/hoon/reference/stdlib/5e",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/5f",
+      "destination": "/docs/hoon/reference/stdlib/5f",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/5g",
+      "destination": "/docs/hoon/reference/stdlib/5g",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/table-of-contents",
+      "destination": "/docs/hoon/reference/stdlib/table-of-contents",
+      "permanent": true
+    },
+    {
+      "source": "/docs/reference/library/_index",
+      "destination": "/docs/hoon/reference/stdlib/_index",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/concepts/arch",
+      "destination": "/docs/landscape/overview",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/hoon/graph",
+      "destination": "/docs/landscape/reference/graph-store",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/nock/definition",
+      "destination": "/docs/nock/definition",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/nock/example",
+      "destination": "/docs/nock/example",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/nock/explanation",
+      "destination": "/docs/nock/explanation",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/nock/implementations",
+      "destination": "/docs/nock/implementations",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/nock/_index",
+      "destination": "/docs/nock/_index",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/vere/api",
+      "destination": "/docs/vere/api",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/vere/c",
+      "destination": "/docs/vere/c",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/vere/jetting",
+      "destination": "/docs/vere/jetting",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/vere/nouns",
+      "destination": "/docs/vere/nouns",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/vere/runtime",
+      "destination": "/docs/vere/runtime",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/vere/_index",
+      "destination": "/docs/vere/_index",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/concepts/azimuth",
+      "destination": "/docs/azimuth/azimuth",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/advanced-azimuth-tools",
+      "destination": "/docs/azimuth/advanced-azimuth-tools",
+      "permanent": true
+    }
+  ]
+}

@@ -10,8 +10,8 @@ referentially transparent namespace. An easy way to think about it is like typed
 
 The most common way to use Clay is to mount a Clay node in a Unix directory. The mounted directory is always at the root of your pier directory.
 
-For more information on Clay, see the [Overview](@/docs/arvo/clay/clay.md), and
-additional usage information at [Using Clay](@/docs/arvo/clay/using.md). 
+For more information on Clay, see the [Overview](/docs/arvo/clay/clay), and
+additional usage information at [Using Clay](/docs/arvo/clay/using).
 
 ### Quickstart
 
@@ -19,7 +19,7 @@ This quick-start guide will walk you through some common commands. Follow along
 using your Dojo. When you get a `>=` message after entering a command, this means
 that the command was successful.
 
-A [`desk`](@/docs/glossary/desk.md) is something like an independently
+A [`desk`](/docs/glossary/desk) is something like an independently
 revision-controlled branch of your urbit's file-system. Your urbit's system
 files live in the `%home` `desk`.
 
@@ -291,7 +291,7 @@ Unmounts the Unix path `/generators`.
 Merges a source `desk` into a target `desk`.
 
 This can optionally include a [merge
-strategy](@/docs/arvo/clay/using.md#strategies):
+strategy](/docs/arvo/clay/using#strategies):
 
 ```
 |merge %target-desk ~source-ship %source-desk, =gem %strategy

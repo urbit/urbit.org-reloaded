@@ -1,4 +1,3 @@
-
 +++
 title = "Developer Call: Injecting External Services into Urbit"
 date = 2020-12-10

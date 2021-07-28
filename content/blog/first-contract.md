@@ -41,10 +41,10 @@ according to the governance rules we [detail below](#senate).
 
 ## Changelist {#changelist}
 
-The Galactic Senate is voting on the following changes to Ecliptic: 
+The Galactic Senate is voting on the following changes to Ecliptic:
 
-- Fixed ERC721 compatibility 
-- Self-modifying proxies 
+- Fixed ERC721 compatibility
+- Self-modifying proxies
 - Upgraded Claims contract
 
 ### Fixed ERC721 compatibility
@@ -116,16 +116,16 @@ driving force behind its development. We’d like to take this opportunity to
 spell out our perspective on where we’re at in that process. Here are some previous posts that are relevant, but please note that
 some of them are several years old and as such may not accurately reflect our
 current position, but still serve as useful historical markers. We hope to
-revisit and refresh these documents soon. 
+revisit and refresh these documents soon.
 
 - [2016.5.16 - Interim
-Constitution](@/blog/interim-constitution.md) 
+  Constitution](@/blog/interim-constitution.md)
 - [2016.5.16 - The
-Urbit Address Space](@/blog/the-urbit-address-space.md)
+  Urbit Address Space](@/blog/the-urbit-address-space.md)
 - [2016.6.24 - The DAO as a Lesson in Decentralized
-Governance](@/blog/the-dao-as-a-lesson-in-decentralized-governance.md)
+  Governance](@/blog/the-dao-as-a-lesson-in-decentralized-governance.md)
 - [2019.1.11 - Governance of
-urbit.org](@/blog/governance-of-urbit.md)
+  urbit.org](@/blog/governance-of-urbit.md)
 
 ### Galactic Senate
 
@@ -144,7 +144,7 @@ were to declare that [Azimuth is live](https://github.com/urbit/azimuth/pull/25)
 and that [Arvo is stable](https://github.com/urbit/azimuth/pull/24).
 
 ### Address space distribution
- 
+
 Perhaps the most informative measure of how decentralized Urbit is in terms of
 how many independent parties hold address space. By the very nature of Urbit, it
 is impossible to know this with great accuracy (a common feature of
@@ -201,7 +201,7 @@ the only corporation actively updating Urbit’s MIT-licensed open source
 software, namely [Vere](@/docs/glossary/vere.md) (the runtime),
 [Arvo](@/docs/glossary/arvo.md) (the kernel),
 [Landscape](@/docs/glossary/landscape.md) (the client), and
-[Bridge](@/docs/glossary/bridge.md) (the ID manager), unaffiliated individuals have been making enormous contributions to Urbit over the past couple of years via the [grants program](https://grants.urbit.org/history). Recent examples include the [Bitcoin node and wallet integration](https://github.com/urbit/urbit/pull/4940), [WebRTC integration](https://grants.urbit.org/proposals/21131866-webrtc-gall-agent-and-external-app), [Port, an Urbit installer and ship manager](https://github.com/arthyn/port), and [`|fuse`, an important primitive for 3rd party software distribution](https://github.com/urbit/urbit/pull/4820).  
+[Bridge](@/docs/glossary/bridge.md) (the ID manager), unaffiliated individuals have been making enormous contributions to Urbit over the past couple of years via the [grants program](https://grants.urbit.org/history). Recent examples include the [Bitcoin node and wallet integration](https://github.com/urbit/urbit/pull/4940), [WebRTC integration](https://grants.urbit.org/proposals/21131866-webrtc-gall-agent-and-external-app), [Port, an Urbit installer and ship manager](https://github.com/arthyn/port), and [`|fuse`, an important primitive for 3rd party software distribution](https://github.com/urbit/urbit/pull/4820).
 
 The only real power Tlon holds over Urbit is the ability to push [OTA
 updates](@/docs/glossary/ota-updates.md) via `~zod`, and suggest that people
@@ -290,4 +290,3 @@ governance in the future, so there is ample opportunity for the system to evolve
 in response to the will of the users. As always, it is important to keep in mind
 the unfinished nature of the Urbit of today and the still moldable clay of the
 Urbit of tomorrow⁠—nothing yet is set in stone.
-

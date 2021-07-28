@@ -10,7 +10,7 @@ image = "https://media.urbit.org/site/posts/essays/orthodoxchurch.jpg"
 
 ![](https://media.urbit.org/site/posts/essays/orthodoxchurch.jpg)
 
-*One of the most striking things about Urbit is the ideological diversity between communities. The Community Spotlight blog series will focus on various Urbit communities via interviews with founding members.*
+_One of the most striking things about Urbit is the ideological diversity between communities. The Community Spotlight blog series will focus on various Urbit communities via interviews with founding members._
 
 For the first week of the Community Spotlight series, I (~tirwyd-sarmes) will be speaking with Josh Reagan (~taglux-nidsep). Josh is the founder of The Portico, an Urbit community of Eastern Orthodox Christians.
 
@@ -26,13 +26,13 @@ I encourage you to take a look. Find The Portico at ~topnup-firber/the-portico.
 
 \-\-\-\-
 
-**Do you see any connection between Rod Dreher’s *The Benedict Option* and your community on Urbit? Dreher sees a need for American Christians to create self-sustaining communities outside of the mainstream to protect the Christian religion and culture.**
+**Do you see any connection between Rod Dreher’s _The Benedict Option_ and your community on Urbit? Dreher sees a need for American Christians to create self-sustaining communities outside of the mainstream to protect the Christian religion and culture.**
 
-It’s tough to say with certainty—I’ve never read *The Benedict Option*.
+It’s tough to say with certainty—I’ve never read _The Benedict Option_.
 
 A few years ago, while he was writing the book, I was a regular reader of Dreher’s blog. From his descriptions there, I was never clear about what exactly he was proposing. Much of his “clarification” came by way of metaphor: don’t “run for the hills”, but stop “shoring up the American imperium”. I didn’t read his book because I didn’t have much confidence that he would be especially precise or insightful.
 
-[There is an interesting review I’d recommend](https://handleshaus.wordpress.com/2020/10/06/review-of-rod-drehers-live-not-by-lies/), however, of his later book, *Live Not By Lies*. I believe it accurately characterizes the scale of the threat Christians will soon face in this country.
+[There is an interesting review I’d recommend](https://handleshaus.wordpress.com/2020/10/06/review-of-rod-drehers-live-not-by-lies/), however, of his later book, _Live Not By Lies_. I believe it accurately characterizes the scale of the threat Christians will soon face in this country.
 
 My upbringing was conservative Christian and self-consciously counter-cultural. I've inherited that understanding of what it means to be a Christian in an increasingly secular world. It comes naturally to me, so I find it obvious that Christians should form self-sustaining communities. But the details matter. What do such communities look like? How do we secure the freedom to pursue such communities? How do we sustain them, when myriad external forces seek to undermine them? How do we solve the long-term problem of the declining cultural importance of Christianity (which surely erodes the plausibility of our religion to many, even to some of those with sympathies toward it)?
 
@@ -62,7 +62,7 @@ None of these options is appealing. Tarski came up with a solution that mostly s
 
 Is Tarski’s definition of truth in a language the definitive solution for preserving truth, math, and logic? Perhaps not many philosophers think so, and there’s a massive literature in which logicians have attempted to improve on or extend his results.
 
-Sometimes people seem to think formal logic is an infallible gift from heaven that must always be right. Kant said in the *Critique of Pure Reason* that formal logic is essentially a completed field. In fact, [the logic of his day](https://en.wikipedia.org/wiki/Port-Royal_Logic) was an early-modern Cartesian variation of a medieval scholastic synthesis of ancient Stoic and Aristotelian logics. Roughly 100 years after Kant’s first critique was published, C. S. Peirce and Gottlob Frege independently discovered first-order mathematical logic as we know it today, inaugurating the greatest advance of logic since Aristotle. Kant was wrong.
+Sometimes people seem to think formal logic is an infallible gift from heaven that must always be right. Kant said in the _Critique of Pure Reason_ that formal logic is essentially a completed field. In fact, [the logic of his day](https://en.wikipedia.org/wiki/Port-Royal_Logic) was an early-modern Cartesian variation of a medieval scholastic synthesis of ancient Stoic and Aristotelian logics. Roughly 100 years after Kant’s first critique was published, C. S. Peirce and Gottlob Frege independently discovered first-order mathematical logic as we know it today, inaugurating the greatest advance of logic since Aristotle. Kant was wrong.
 
 Mathematical logic is a convenient, generally reliable, man-made tool that, when used carelessly in certain untamed domains, can lead one astray. Probably most people reading this are familiar with such puzzles as the Liar paradox. When one understands that logic is not a completed science, and perhaps never will be, there is less reason to worry about whether it can be used to nuke entire disciplines, like theology.
 
@@ -82,7 +82,7 @@ For many ancients, the term “λόγος” meant something like “divine prin
 
 We are told that all things come into being through the Logos (John 1:3), giving Him an intimate relationship to the whole of creation. He gives structure and order to all created things, and in His divinity He understands them as so structured and ordered. He is also sinless, perfectly holy, and good. In Christ we have a perfect unity of the knowledge of all truth and righteousness.
 
-Man was created in the image of God, which means that we bear a likeness to Christ. And we are commanded to realize that likeness with ever greater fidelity (Romans 8:29). The Church calls the pursuit of this likeness [“theosis”](https://en.wikipedia.org/wiki/Theosis_(Eastern_Christian_theology)).
+Man was created in the image of God, which means that we bear a likeness to Christ. And we are commanded to realize that likeness with ever greater fidelity (Romans 8:29). The Church calls the pursuit of this likeness [“theosis”](<https://en.wikipedia.org/wiki/Theosis_(Eastern_Christian_theology)>).
 
 Thus we have the explanation of all normativity, according to Orthodox Christianity. In moral matters we must take on the holiness of Christ. In epistemic matters we aspire to the wisdom and knowledge of Christ, which includes an understanding of the whole created order. Socially we (the community of believers, i.e. the Church) are called to be in ever greater communion with God, cooperating with His work just as the Son cooperates with the Father.
 

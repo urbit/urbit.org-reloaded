@@ -1,4 +1,3 @@
-
 +++
 title = "Developer Call: Graph Store"
 date = 2020-11-05

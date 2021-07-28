@@ -1,4 +1,3 @@
-
 +++
 title = "After hours: Ask Galen Anything"
 date = 2019-03-01
