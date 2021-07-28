@@ -122,8 +122,8 @@ export default function Grants({
         {
           // Heading and introduction
         }
-        <Section wide>
-          <div className="flex flex-column justify-between pb-16">
+        <Section wide short>
+          <div className="flex flex-column justify-between">
             <div>
               <h1 className="pb-16">Grants</h1>
               <p className="mb-8">
@@ -139,23 +139,11 @@ export default function Grants({
             </div>
             <TableOfContents staticPosition noh3s />
           </div>
-          <div className="p-8 bg-wall flex flex-col w-full rounded-lg space-y-4">
-            <p>
-              <i>
-                “I paid off my student loans through the Urbit grants program,
-                and had fun doing it!”
-              </i>
-            </p>
-            <p>
-              — Urbit Community Member{" "}
-              <pre className="ml-6">~radbur-sivmus</pre>
-            </p>
-          </div>
         </Section>
         {
           // Featured Grants
         }
-        <Section wide>
+        <Section wide short>
           <div className="measure pb-16">
             <h2 className="pb-16" id="featured">
               Featured Grants
