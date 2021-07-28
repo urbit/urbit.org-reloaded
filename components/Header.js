@@ -98,9 +98,10 @@ export default function Header(props) {
             e.stopPropagation();
             props.search.toggleSearch(e);
           }}
-          className="button-sm bg-wall text-gray"
+          className="bg-wall text-gray flex px-4 py-1 rounded-lg type-ui"
         >
-          Search<div className="ml-4 text-lightGray">{shortcut}</div>
+          <div>Search</div>
+          <div className="ml-4 text-lightGray">{shortcut}</div>
         </button>
       </nav>
 
