@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function EventPreview({ event, className, title }) {
+export default function EventPreview({ event, className, title, rsvp }) {
   // Event tiles have a 'dark mode' used when their background images are dark and white text is needed for legibility.
   const grayText = event.extra?.dark ? "text-midWhite" : "text-gray";
   const blackText = event.extra?.dark ? "text-white" : "text-black";
@@ -25,6 +25,16 @@ export default function EventPreview({ event, className, title }) {
                 {event.extra.guests}
               </p>
             </div>
+            {rsvp && event.extra.registration_url && event.extra.pinned ? (
+              <div className="absolute right-0 bottom-0 p-4">
+                <a
+                  className="button-sm bg-green text-white"
+                  href={event.extra.registration_url}
+                >
+                  RSVP
+                </a>
+              </div>
+            ) : null}
           </div>
         </Link>
       </div>

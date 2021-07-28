@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Meta from "../components/Meta";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Container from "../components/Container";
@@ -52,7 +51,6 @@ export default function Home({ posts, events, openGrantsCount, search }) {
     <Container>
       <Head>
         <title>urbit.org</title>
-        {Meta()}
       </Head>
       <SingleColumn>
         <Header search={search} />
@@ -185,88 +183,59 @@ export default function Home({ posts, events, openGrantsCount, search }) {
         </Section>
 
         {
-          // Blog and Events Combo Section
+          // Blog Posts
         }
         <Section narrow>
           <div className="flex items-center measure pb-12">
-            <button
-              onClick={() => setTab(0)}
-              className={`tab-button-lg mr-6 ${
-                tab === 0 ? "text-black" : "text-gray"
-              }`}
-            >
-              Blog
-            </button>
-            <button
-              onClick={() => setTab(1)}
-              className={`tab-button-lg ${
-                tab === 1 ? "text-black" : "text-gray"
-              }`}
-            >
-              Events
-            </button>
+            <h2>Blog</h2>
           </div>
 
-          <TabCarousel index={tab}>
-            <div className="flex flex-wrap">
-              <PostPreview
-                post={posts[0]}
-                className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
-                key={posts[0].slug}
-              />
-              <PostPreview
-                post={posts[1]}
-                className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
-                key={posts[1].slug}
-              />
-              <PostPreview
-                post={posts[2]}
-                className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
-                key={posts[2].slug}
-              />
-              <PostPreview
-                post={posts[3]}
-                className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
-                key={posts[3].slug}
-              />
-              <div>
-                <Link href="/blog">
-                  <button className="button-lg type-ui text-white bg-ultraDeepWall">
-                    Read More
-                  </button>
-                </Link>
-              </div>
-            </div>
-            <div className="flex flex-wrap">
-              <EventPreview
-                event={events[0]}
-                className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
-                key={events[0].slug}
-              />
-              <EventPreview
-                event={events[1]}
-                className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
-                key={events[1].slug}
-              />
-              <EventPreview
-                event={events[2]}
-                className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
-                key={events[2].slug}
-              />
-              <EventPreview
-                event={events[3]}
-                className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
-                key={events[3].slug}
-              />
-              <div>
-                <Link href="/events">
-                  <button className="button-lg type-ui text-white bg-ultraDeepWall">
-                    More Events
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </TabCarousel>
+          <div className="flex flex-wrap">
+            <PostPreview
+              post={posts[0]}
+              className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
+              key={posts[0].slug}
+            />
+            <PostPreview
+              post={posts[1]}
+              className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
+              key={posts[1].slug}
+            />
+          </div>
+          <Link href="/blog">
+            <button className="button-lg type-ui text-white bg-green">
+              See More
+            </button>
+          </Link>
+        </Section>
+
+        {
+          // Events Posts
+        }
+        <Section narrow>
+          <div className="flex items-center measure pb-12">
+            <h2>Events</h2>
+          </div>
+
+          <div className="flex flex-wrap">
+            <EventPreview
+              rsvp
+              event={events[0]}
+              className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
+              key={events[0].slug}
+            />
+            <EventPreview
+              rsvp
+              event={events[1]}
+              className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
+              key={events[1].slug}
+            />
+          </div>
+          <Link href="/docs">
+            <button className="button-lg type-ui text-white bg-ultraDeepWall">
+              More Events
+            </button>
+          </Link>
         </Section>
 
         {
