@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import classnames from "classnames";
 import path from "path";
 import MenuTray from "../components/MenuTray";
@@ -24,12 +24,28 @@ function ActiveLink({ children, href, className, currentPath }) {
 
 export default function Header(props) {
   const [isOpen, setTray] = useState(false);
+  const [shortcut, setShortcut] = useState("");
 
   const currentPath = useRouter().asPath;
 
   const routeDepth = currentPath.split("/").length;
 
   const firstCrumb = currentPath.split("/")[1];
+
+  const detectOS = () => {
+    const agent = window.navigator.appVersion;
+    if (agent.includes("Win")) {
+      return "Ctrl+K";
+    } else if (agent.includes("Mac")) {
+      return "⌘K";
+    } else if (agent.includes("Linux")) {
+      return "Ctrl+K";
+    }
+  };
+
+  useEffect(() => {
+    setShortcut(detectOS());
+  }, []);
 
   return (
     <header className="w-full px-4 md:px-8 md:w-10/12 flex flex-row justify-between items-center pt-8 md:pt-10 lg:pt-12 pb-10 md:pb-12 lg:pb-24">
@@ -85,7 +101,7 @@ export default function Header(props) {
           className="bg-wall text-gray flex px-4 py-1 rounded-lg type-ui"
         >
           <div>Search</div>
-          <div className="ml-4 text-lightGray">⌘K</div>
+          <div className="ml-4 text-lightGray">{shortcut}</div>
         </button>
       </nav>
 

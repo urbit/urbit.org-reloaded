@@ -36,7 +36,7 @@ const breadcrumbs = (posts, paths) => {
 };
 
 const childPages = (thisLink, children, level = 0) => (
-  <ul className="pl-1">
+  <ul>
     {children?.map((child) => (
       <li>{pageTree(join(thisLink, child.slug), child, level)}</li>
     ))}
@@ -74,6 +74,14 @@ export default function UnderstandingLayout({
   previousPost,
   nextPost,
 }) {
+  const router = useRouter();
+  const isSelected = "/understanding-urbit".includes(router.asPath);
+  const selectedClasses = classnames({
+    dot: isSelected,
+    "text-green": isSelected,
+    "text-black": !isSelected,
+  });
+  const rootClasses = "pl-4 text-base hover:text-green";
   return (
     <>
       <Head>
@@ -82,6 +90,15 @@ export default function UnderstandingLayout({
       </Head>
       <div className="flex w-screen h-screen min-h-screen w-screen sidebar">
         <Sidebar search={search}>
+          <ul>
+            <li>
+              <Link href="/understanding-urbit">
+                <a className={`relative ${selectedClasses} ${rootClasses}`}>
+                  Introduction
+                </a>
+              </Link>
+            </li>
+          </ul>
           {childPages("/understanding-urbit", posts.pages)}
         </Sidebar>
         <ContentArea
