@@ -14,7 +14,7 @@ The database of PKI information that Jael maintains is used by other vanes and a
 
 Jael has a few `task`s you can use to interact with it. In particular, its [%public-keys task](/docs/arvo/jael/tasks#public-keys) allows an agent or thread to subscribe for PKI updates for a `set` of `ship`s.
 
-## Documentation Sections
+## Sections
 
 [API Reference](/docs/arvo/jael/tasks) - The `task`s Jael takes and the `gift`s it returns.
 
