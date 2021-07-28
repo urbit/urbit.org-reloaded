@@ -12,7 +12,7 @@ export default function ContentArea(props) {
                 e.stopPropagation();
                 props.search.toggleSearch();
               }}
-              className="button-sm bg-wall text-gray"
+              className="bg-wall text-gray flex px-4 py-1 rounded-lg type-ui"
             >
               Search<div className="ml-4 text-lightGray">⌘K</div>
             </button>
