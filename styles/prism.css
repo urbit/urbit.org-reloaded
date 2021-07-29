@@ -8,7 +8,7 @@ https://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+ja
 
 code[class*="language-"],
 pre[class*="language-"] {
-  @apply text-gray;
+  @apply text-ultraDeepWall;
   background: none;
   font-family: "Source Code Pro", monospace;
   font-size: 1em;
