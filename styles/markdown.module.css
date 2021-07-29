@@ -75,6 +75,11 @@
   @apply px-2 py-0.5 bg-wall rounded-md;
 }
 
+.markdown a code,
+.markdown a code[class*="language-"] {
+  @apply bg-washedGreen;
+}
+
 .markdown pre code,
 .markdown pre[class*="language-"] code {
   @apply p-4 md:p-8 rounded-xl;

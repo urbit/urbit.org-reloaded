@@ -18,7 +18,7 @@ module.exports = {
       green: "rgba(0, 177, 113, 1)",
       midGreen: "rgba(0, 159, 101, 0.6)",
       lightGreen: "rgba(0, 159, 101, 0.3)",
-      washedGreen: "rgba(0, 159, 101, 0.05)",
+      washedGreen: "rgba(0, 159, 101, 0.1)",
       blue: "#219DFF",
       purple: "rgba(157,82,255,0.8)",
       red: "#ff4136",

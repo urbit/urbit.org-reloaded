@@ -21,8 +21,8 @@ export default function ContentArea(props) {
   }, []);
 
   return (
-    <div className="w-full min-w-0 flex flex-col">
-      <div className="px-4 md:px-12 lg:px-24 pb-24 pt-8 md:pt-10 lg:pt-16 flex flex-col w-full max-h-screen h-screen overflow-y-scroll">
+    <div className="w-full min-w-0 flex flex-col items-center">
+      <div className="px-4 md:px-12 lg:px-24 pb-24 pt-8 md:pt-10 lg:pt-16 flex flex-col w-full max-w-screen-xl max-h-screen h-screen overflow-y-scroll">
         <div className="flex justify-between w-full items-center flex-shrink-0">
           <div className="type-ui text-gray">{props.breadcrumbs}</div>
           <div className="hidden md:block">
@@ -31,7 +31,7 @@ export default function ContentArea(props) {
                 e.stopPropagation();
                 props.search.toggleSearch();
               }}
-              className="button-sm bg-wall text-gray"
+              className="bg-wall text-gray flex px-4 py-1 rounded-lg type-ui"
             >
               Search<div className="ml-4 text-lightGray">{shortcut}</div>
             </button>
