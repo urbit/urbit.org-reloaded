@@ -113,6 +113,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
           title={data.title}
           search={search}
           section={"Operator's Manual"}
+          params={params}
         >
           <div className={markdownStyles["markdown"]}>
             <article
