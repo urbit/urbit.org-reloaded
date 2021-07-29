@@ -8,7 +8,7 @@ export const TableOfContents = ({ staticPosition, noh3s }) => {
     <nav
       className={
         (staticPosition ? "static" : "sticky") +
-        " min-h-0 overflow-y-auto w-52 flex-shrink-0 pb-24 hidden lg:block"
+        " min-h-0 overflow-y-auto w-52 flex-shrink-0 pb-24 hidden lg:block pl-4"
       }
       style={{ top: "8rem", height: "calc(100vh - 16rem)" }}
     >

@@ -1,5 +1,6 @@
 import Section from "./Section";
 import { useState, useEffect } from "react";
+import { TableOfContents } from "./TableOfContents";
 
 export default function ContentArea(props) {
   const [shortcut, setShortcut] = useState("");
@@ -50,6 +51,9 @@ export default function ContentArea(props) {
               <div className="pb-32" />
             </div>
           )}
+          <TableOfContents
+            key={props.params.slug?.join("/") || Math.random()}
+          />
         </div>
       </div>
     </div>
