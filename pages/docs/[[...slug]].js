@@ -17,7 +17,6 @@ import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
 import markdownStyles from "../../styles/markdown.module.css";
 import { decode } from "html-entities";
-import { TableOfContents } from "../../components/TableOfContents";
 
 const breadcrumbs = (posts, paths) => {
   const results = [
@@ -88,7 +87,7 @@ const pageTree = (thisLink, tree, level = 0) => {
               <li>
                 <Link href={href}>
                   <a
-                    className={`relative ${pageItemClasses} ${selectedClasses}`}
+                    className={`relative inline-block ${pageItemClasses} ${selectedClasses}`}
                   >
                     {title}
                   </a>
@@ -144,6 +143,7 @@ export default function DocsLayout({
           title={data.title}
           search={search}
           section="Urbit Documentation"
+          params={params}
         >
           <div className={markdownStyles["markdown"]}>
             <article
@@ -175,7 +175,6 @@ export default function DocsLayout({
             )}
           </div>
         </ContentArea>
-        <TableOfContents key={params.slug?.join("/") || "docs"} />
       </div>
     </>
   );
