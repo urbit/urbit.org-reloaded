@@ -4,7 +4,7 @@ weight = 2
 template = "doc.html"
 +++
 
-Iris itself only has three structures defined in `lull.hoon`, but it also uses [$http](/docs/arvo/eyre/data-types#http) structures which are shared between Iris and Eyre. The `$http` structures are detailed in the [Eyre](/docs/arvo/eyre/data-types) Data Types documentation.
+Iris itself only has three structures defined in `lull.hoon`, but it also uses `$http` structures which are shared between Iris and Eyre. The `$http` structures are detailed in the [Eyre](/docs/arvo/eyre/data-types#http) Data Types documentation.
 
 ## `$client-response`
 
