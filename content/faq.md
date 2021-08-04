@@ -124,15 +124,15 @@ It’s also worth noting that, while there are almost 8B people on Earth, there 
 
 ### How secure is Urbit right now? {#how-secure-is-urbit}
 
-We consider some parts of Urbit to be secure, while other parts still need some work and external auditing. For technical details on Urbit's cryptosystems, see the [documentation](@/docs/system-overview/cryptography.md).
+We consider some parts of Urbit to be secure, while other parts still need some work and external auditing. For technical details on Urbit's cryptosystems, see the [documentation](/docs/system-overview/cryptography.md).
 
 [Urbit ID](#what-is-urbit-id) / [Azimuth](#what-is-azimuth), Urbit's identity layer, is live on the Ethereum blockchain and has been audited by Open Zeppelin, Blockchain at Berkeley, and Bloctrax.
 
-In late 2020, Urbit's [Ames](@/docs/glossary/ames.md) networking protocol was audited by [Leviathan Security](https://www.leviathansecurity.com/). You can read about this milestone [here](@/blog/security-and-continuity.md).
+In late 2020, Urbit's [Ames](/docs/glossary/ames.md) networking protocol was audited by [Leviathan Security](https://www.leviathansecurity.com/). You can read about this milestone [here](@/blog/security-and-continuity.md).
 
-The security of the runtime, [Vere](@/docs/vere/_index.md), has not yet been adequately assessed or systematically hardened.
+The security of the runtime, [Vere](/docs/vere/_index.md), has not yet been adequately assessed or systematically hardened.
 
-All communication on Urbit is end-to-end encrypted. However, the [event log](@/docs/glossary/eventlog.md) is not encrypted at rest but we plan to give users that option in the future.
+All communication on Urbit is end-to-end encrypted. However, the [event log](/docs/glossary/eventlog.md) is not encrypted at rest but we plan to give users that option in the future.
 
 Tlon keeps a quantum computing expert on staff and understands that post-quantum cryptographic methods must be implemented sooner than later, since any data not already encrypted using these methods is at risk of being collected and decrypted once sufficiently powerful quantum computers exist. [NIST](https://www.nist.gov/) anticipates the release of their preliminary findings on [post-quantum cryptography standards](https://csrc.nist.gov/projects/post-quantum-cryptography) around the end of 2021, with full guidelines following in 2024. Tlon will develop a strategy for post-quantum encryption for Urbit following their recommendations.
 

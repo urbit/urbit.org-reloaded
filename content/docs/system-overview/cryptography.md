@@ -119,6 +119,6 @@ Jael and utilized by Ames for end-to-end encrypted communication.
 The following pages contained more detailed information about the cryptography
 utilized by each of the system components.
 
-- [Ames](@/docs/arvo/ames/cryptography.md)
-- [Zuse](@/docs/arvo/reference/cryptography.md)
-- [Vere](@/docs/vere/cryptography.md)
+- [Ames](/docs/arvo/ames/cryptography.md)
+- [Zuse](/docs/arvo/reference/cryptography.md)
+- [Vere](/docs/vere/cryptography.md)
