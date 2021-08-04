@@ -128,7 +128,7 @@ We consider some parts of Urbit to be secure, while other parts still need some 
 
 [Urbit ID](#what-is-urbit-id) / [Azimuth](#what-is-azimuth), Urbit's identity layer, is live on the Ethereum blockchain and has been audited by Open Zeppelin, Blockchain at Berkeley, and Bloctrax.
 
-In late 2020, Urbit's [Ames](/docs/glossary/ames.md) networking protocol was audited by [Leviathan Security](https://www.leviathansecurity.com/). You can read about this milestone [here](@/blog/security-and-continuity.md).
+In late 2020, Urbit's [Ames](/docs/glossary/ames.md) networking protocol was audited by [Leviathan Security](https://www.leviathansecurity.com/). You can read about this milestone [here](/blog/security-and-continuity.md).
 
 The security of the runtime, [Vere](/docs/vere/_index.md), has not yet been adequately assessed or systematically hardened.
 

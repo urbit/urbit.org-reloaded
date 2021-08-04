@@ -119,13 +119,13 @@ current position, but still serve as useful historical markers. We hope to
 revisit and refresh these documents soon.
 
 - [2016.5.16 - Interim
-  Constitution](@/blog/interim-constitution.md)
+  Constitution](/blog/interim-constitution.md)
 - [2016.5.16 - The
-  Urbit Address Space](@/blog/the-urbit-address-space.md)
+  Urbit Address Space](/blog/the-urbit-address-space.md)
 - [2016.6.24 - The DAO as a Lesson in Decentralized
-  Governance](@/blog/the-dao-as-a-lesson-in-decentralized-governance.md)
+  Governance](/blog/the-dao-as-a-lesson-in-decentralized-governance.md)
 - [2019.1.11 - Governance of
-  urbit.org](@/blog/governance-of-urbit.md)
+  urbit.org](/blog/governance-of-urbit.md)
 
 ### Galactic Senate
 
@@ -138,7 +138,7 @@ proposals](/docs/glossary/upgrade.md). Thus far, all matters which the Senate
 has voted on have been document proposals. The [most recent
 vote](https://github.com/urbit/azimuth/pull/34) declared the Urbit network as
 (i) being secure (as confirmed by a [third party
-audit](@/blog/security-audit.md)) and (ii) having reached continuity (as in, no
+audit](/blog/security-audit.md)) and (ii) having reached continuity (as in, no
 further [network breaches](/docs/glossary/breach.md) are expected). Previous votes
 were to declare that [Azimuth is live](https://github.com/urbit/azimuth/pull/25)
 and that [Arvo is stable](https://github.com/urbit/azimuth/pull/24).
@@ -155,7 +155,7 @@ In the beginning, Urbit’s creator Curtis Yarvin was in possession of the entir
 address space - all 256 galaxies, and everything underneath it. A network of one
 is no network at all, and so over the last decade Urbit’s development has been
 primarily driven by selling or giving away these galaxies. On [June 1,
-2016](@/blog/the-urbit-address-space.md), the allocation was:
+2016](/blog/the-urbit-address-space.md), the allocation was:
 
 > 95, to the Tlon Corporation. 50, to urbit.org, the future community
 > foundation. 40, to Tlon employees and their family members (24 to Curtis, who
@@ -167,9 +167,9 @@ primarily driven by selling or giving away these galaxies. On [June 1,
 Since then, Tlon has sold a number of
 its galaxies to fund development and others have changed hands to the point
 that Tlon and urbit.org no longer possess a majority share of galaxies. In
-January 2019, [Curtis gave all of his galaxies](@/blog/a-founders-farewell.md) to
+January 2019, [Curtis gave all of his galaxies](/blog/a-founders-farewell.md) to
 Tlon when he left the project. In August 2020 we shared an update on the [known
-distribution of address space](@/blog/value-of-address-space-pt3.md), where
+distribution of address space](/blog/value-of-address-space-pt3.md), where
 Curtis’ galaxies are marked as Tlon’s “naked galaxies”. Shortly thereafter, Tlon
 disbursed its naked galaxies among the employees that wanted one who did not
 already possess one, thus removing Tlon and urbit.org’s controlling share of the
@@ -201,7 +201,7 @@ the only corporation actively updating Urbit’s MIT-licensed open source
 software, namely [Vere](/docs/glossary/vere.md) (the runtime),
 [Arvo](/docs/glossary/arvo.md) (the kernel),
 [Landscape](/docs/glossary/landscape.md) (the client), and
-[Bridge](@/docs/glossary/bridge.md) (the ID manager), unaffiliated individuals have been making enormous contributions to Urbit over the past couple of years via the [grants program](https://grants.urbit.org/history). Recent examples include the [Bitcoin node and wallet integration](https://github.com/urbit/urbit/pull/4940), [WebRTC integration](https://grants.urbit.org/proposals/21131866-webrtc-gall-agent-and-external-app), [Port, an Urbit installer and ship manager](https://github.com/arthyn/port), and [`|fuse`, an important primitive for 3rd party software distribution](https://github.com/urbit/urbit/pull/4820).
+[Bridge](/docs/glossary/bridge.md) (the ID manager), unaffiliated individuals have been making enormous contributions to Urbit over the past couple of years via the [grants program](https://grants.urbit.org/history). Recent examples include the [Bitcoin node and wallet integration](https://github.com/urbit/urbit/pull/4940), [WebRTC integration](https://grants.urbit.org/proposals/21131866-webrtc-gall-agent-and-external-app), [Port, an Urbit installer and ship manager](https://github.com/arthyn/port), and [`|fuse`, an important primitive for 3rd party software distribution](https://github.com/urbit/urbit/pull/4820).
 
 The only real power Tlon holds over Urbit is the ability to push [OTA
 updates](/docs/glossary/ota-updates.md) via `~zod`, and suggest that people
