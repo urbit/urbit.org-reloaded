@@ -39,7 +39,7 @@ A completed wallet should:
 - [Bitcoin Core SPV wallet reference](https://bitcoin.org/en/operating-modes-guide#simplified-payment-verification-spv)
 - [JS Library to interact with SPV wallet](https://github.com/bitcoinjs/bitcoinjs-lib)
 - [The Bridge repository](https://github.com/urbit/bridge)
-- [Urbit Wallet Reference](https://github.com/urbit/fora-posts/blob/master/proposals/posts/~2018.11.8..19.31.59..ba77~.md)
+- [Urbit Wallet Reference](https://github.com/urbit/fora-posts/blob/master/proposals/posts/~2018.11.8..19.31.59..ba77~)
 - [Urbit Wallet Key Generation](https://github.com/urbit/urbit-key-generation]
 - [BIP 32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)
 - [BIP 39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki)

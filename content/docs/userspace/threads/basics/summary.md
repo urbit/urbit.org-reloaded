@@ -11,7 +11,7 @@ Now here's a quick recap of the main points covered:
 ## Spider
 
 - is the gall agent that manages threads.
-- Details of interacting with threads via spider can be seen [here](../reference.md).
+- Details of interacting with threads via spider can be seen [here](../reference).
 
 ## Threads
 - are like transient gall agents

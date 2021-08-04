@@ -6,12 +6,12 @@ template = "doc.html"
 
 This is a summary of the cryptography functions found in `sys/zuse.hoon`, Arvo's
 standard library. This page currently only documents cryptographic functions
-directly utilized by [Ames](/docs/arvo/ames/ames.md). `zuse` also contains
+directly utilized by [Ames](/docs/arvo/ames/ames). `zuse` also contains
 cryptographic functions relevant to Ethereum such as the `+keccak:crypto` core,
 but they are currently undocumented.
 
-Documentation for [Insecure Hashing](/docs/hoon/reference/stdlib/2e.md) and the
-[SHA Hash Family](/docs/hoon/reference/stdlib/3d.md) is found in the Hoon standard
+Documentation for [Insecure Hashing](/docs/hoon/reference/stdlib/2e) and the
+[SHA Hash Family](/docs/hoon/reference/stdlib/3d) is found in the Hoon standard
 library reference.
 
 ## Summary
@@ -198,9 +198,9 @@ Diffie-Hellman](https://en.wikipedia.org/wiki/Elliptic-curve_Diffie%E2%80%93Hell
 key agreements as well as [Elliptic Curve Digital Signature
 Algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm).
 These functionalities are ultimately utilized by [`+crub:crypto`](#crub), the
-only cryptosuite which [Ames](/docs/arvo/ames/ames.md) makes use of.
+only cryptosuite which [Ames](/docs/arvo/ames/ames) makes use of.
 
-Most gates in `+ed:crypto` are [jetted](/docs/vere/jetting.md), meaning that an
+Most gates in `+ed:crypto` are [jetted](/docs/vere/jetting), meaning that an
 external reference library is utilized whenever these functions are called,
 rather than running in Nock natively. See the [Vere
 documentation](/docs/vere/cryptography.md#ed) for more information about the
