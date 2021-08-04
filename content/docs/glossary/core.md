@@ -6,7 +6,7 @@ template = "doc.html"
 category = "hoon-nock"
 +++
 
-A **core** is a cell of a [battery](../battery) and a [payload](../payload). It is a Hoon construct similar in use to Objects in Object Oriented programming languages.
+A **core** is a cell of a [battery](/docs/glossary/battery) and a [payload](/docs/glossary/payload). It is a Hoon construct similar in use to Objects in Object Oriented programming languages.
 
 ### Further Reading
 

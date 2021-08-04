@@ -6,11 +6,11 @@ template = "doc.html"
 category = "azimuth"
 +++
 
-**Voting** is a power available to [galaxies](../galaxy), in their capacities as
-members of the [Galactic Senate](../senate), through an [Azimuth](../azimuth)
+**Voting** is a power available to [galaxies](/docs/glossary/galaxy), in their capacities as
+members of the [Galactic Senate](/docs/glossary/senate), through an [Azimuth](/docs/glossary/azimuth)
 smart contract. Galaxies collectively make decisions about the governance of
-Azimuth and the [Arvo](../arvo) network by voting. There are two types of proposals that can be voted on:
-an [upgrade proposal](../upgrade) and a [document proposal](../docvote).
+Azimuth and the [Arvo](/docs/glossary/arvo) network by voting. There are two types of proposals that can be voted on:
+an [upgrade proposal](/docs/glossary/upgrade) and a [document proposal](/docs/glossary/docvote).
 
 A proposal is always a Yes/No vote. The vote concludes at the end of 30 days,
 or whenever an absolute majority is reached, whichever comes first. Assuming a
