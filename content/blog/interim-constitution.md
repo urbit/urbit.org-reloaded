@@ -28,7 +28,7 @@ may not incorporate any or all of the interim structures.
 
 ## Beliefs and principles
 
-See our document of [beliefs and principles](../beliefs-and-principles).
+See our document of [beliefs and principles](/blog/beliefs-and-principles).
 
 ## Governance structures
 
