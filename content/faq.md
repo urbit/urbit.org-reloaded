@@ -124,15 +124,15 @@ It’s also worth noting that, while there are almost 8B people on Earth, there 
 
 ### How secure is Urbit right now? {#how-secure-is-urbit}
 
-We consider some parts of Urbit to be secure, while other parts still need some work and external auditing. For technical details on Urbit's cryptosystems, see the [documentation](@/docs/system-overview/cryptography.md).
+We consider some parts of Urbit to be secure, while other parts still need some work and external auditing. For technical details on Urbit's cryptosystems, see the [documentation](/docs/system-overview/cryptography).
 
 [Urbit ID](#what-is-urbit-id) / [Azimuth](#what-is-azimuth), Urbit's identity layer, is live on the Ethereum blockchain and has been audited by Open Zeppelin, Blockchain at Berkeley, and Bloctrax.
 
-In late 2020, Urbit's [Ames](@/docs/glossary/ames.md) networking protocol was audited by [Leviathan Security](https://www.leviathansecurity.com/). You can read about this milestone [here](@/blog/security-and-continuity.md).
+In late 2020, Urbit's [Ames](/docs/glossary/ames) networking protocol was audited by [Leviathan Security](https://www.leviathansecurity.com/). You can read about this milestone [here](/blog/security-and-continuity).
 
-The security of the runtime, [Vere](@/docs/vere/_index.md), has not yet been adequately assessed or systematically hardened.
+The security of the runtime, [Vere](/docs/vere/), has not yet been adequately assessed or systematically hardened.
 
-All communication on Urbit is end-to-end encrypted. However, the [event log](@/docs/glossary/eventlog.md) is not encrypted at rest but we plan to give users that option in the future.
+All communication on Urbit is end-to-end encrypted. However, the [event log](/docs/glossary/eventlog) is not encrypted at rest but we plan to give users that option in the future.
 
 Tlon keeps a quantum computing expert on staff and understands that post-quantum cryptographic methods must be implemented sooner than later, since any data not already encrypted using these methods is at risk of being collected and decrypted once sufficiently powerful quantum computers exist. [NIST](https://www.nist.gov/) anticipates the release of their preliminary findings on [post-quantum cryptography standards](https://csrc.nist.gov/projects/post-quantum-cryptography) around the end of 2021, with full guidelines following in 2024. Tlon will develop a strategy for post-quantum encryption for Urbit following their recommendations.
 
@@ -142,7 +142,7 @@ Thus, while Urbit is probably more secure and private than most digital communic
 
 The [Urbit Hierarchical Deterministic (HD) Wallet](/docs/glossary/hdwallet) is a custom Ethereum wallet based on BIP39 and BIP44 – the same underlying technology used by wallet providers like Ledger, Trezor, Metamask, and MyEtherWallet. You can think of the Urbit HD wallet as a wallet of wallets, which lets you keep a single passphrase for all of your Urbit ID keys. Urbit ID uses multiple keys with different capabilities – a bit like permissions – so that you can keep the more valuable keys in cold storage while keeping less valuable keys, used in day-to-day operation, more easily accessible. If you're only operating a planet, you shouldn't have to worry about this: you can simply think of your "master ticket" as the password to your Urbit ID. If you're operating a star or galaxy, the Urbit HD Wallet allows you to implement a multi-tier key custody scheme.
 
-If you're interested, you can read the spec here: [Urbit HD Wallet Spec (UP 8)](https://github.com/urbit/proposals/blob/master/008-urbit-hd-wallet.md).
+If you're interested, you can read the spec here: [Urbit HD Wallet Spec (UP 8)](https://github.com/urbit/proposals/blob/master/008-urbit-hd-wallet).
 
 ### What is a master ticket? {#master-ticket}
 
@@ -167,7 +167,7 @@ An ownership address is an Ethereum address that owns one or more of your Urbit 
 
 All Ethereum key-pairs in the Urbit wallet system, including [proxies](/docs/glossary/proxies), are produced by 128-bit cryptographically random values called seeds. These seeds are the equivalent of the BIP39 mnemonic of an Ethereum wallet and are yours alone. An ownership key pair is derived from an ownership seed and, likewise, the various proxy key pairs are generated from their respective proxy seeds.
 
-For detailed information see the [Urbit HD Wallet Spec (UP 8)](https://github.com/urbit/proposals/blob/master/008-urbit-hd-wallet.md).
+For detailed information see the [Urbit HD Wallet Spec (UP 8)](https://github.com/urbit/proposals/blob/master/008-urbit-hd-wallet).
 
 ### What does it mean to “set public keys”? {#set-public-keys}
 

@@ -18,7 +18,7 @@ link = ""
 
 ## PoC and Prior Work
 
-The first 5 chapters of the course are complete in late draft form and can be found [here](https://github.com/timlucmiptev/gall-guide/blob/master/guide-docs/overview.md)
+The first 5 chapters of the course are complete in late draft form and can be found [here](https://github.com/timlucmiptev/gall-guide/blob/master/guide-docs/overview)
 
 My ["Nock for Everyday Coders" Guide](https://blog.timlucmiptev.space/part1.html) was the result of my exploring Nock on my own, and is probably the most detailed Nock reference available currently.
 

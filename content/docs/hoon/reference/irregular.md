@@ -204,7 +204,7 @@ Lets us adjust types without violating type constraints.
 
 ### `^:` ketcol
 
-[docs](@/docs/hoon/reference/rune/ket.md#ketcol) \\,
+[docs](/docs/hoon/reference/rune/ket#ketcol) \\,
 
 `[%ktcl p=spec]`: mold gate for type `p`.
 
@@ -224,7 +224,7 @@ Irregular: `` `p`q ``
 
 ### `^*` kettar
 
-[docs](@/docs/hoon/reference/rune/ket.md#kettar) \\\*
+[docs](/docs/hoon/reference/rune/ket#kettar) \\\*
 
 `[%kttr p=spec]`: produce bunt value of mold.
 
@@ -294,14 +294,14 @@ See [%sand](/docs/hoon/reference/rune/constants#warm) for other irregular defini
 
 ### Wings
 
-[docs](content/docs/hoon/reference/limbs/wing.md)
+[docs](content/docs/hoon/reference/limbs/wing)
 `[%wing p=(list limb)]`; a limb search path.
 `a.b` finds limb `a` within limb `b` ("var" `a` within "var" `b`).
 
 ### Printing stuff
 
-- `<a b c>` prints a [tape](../library/2q/#-tape).
-- `>a b c<` prints a [tank](../library/2q/#-tank).
+- `<a b c>` prints a [tape](/docs/hoon/reference/stdlib/2q/#-tape).
+- `>a b c<` prints a [tank](/docs/hoon/reference/stdlib/2q/#-tank).
 
 ## Commentary
 

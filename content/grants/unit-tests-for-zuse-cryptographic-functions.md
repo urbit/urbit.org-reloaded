@@ -32,7 +32,7 @@ Save the test files in the `tests/sys/zuse/crypto` directory in Arvo. Use the sa
 #### Resources
 
 - Read the [guide](https://github.com/urbit/urbit/blob/master/pkg/arvo/TESTING.udon) to writing unit tests in Hoon.
-- Read the guide to [contributing](https://github.com/urbit/urbit/blob/master/CONTRIBUTING.md).
+- Read the guide to [contributing](https://github.com/urbit/urbit/blob/master/CONTRIBUTING).
 - [Here](https://github.com/urbit/urbit/blob/alef2/pkg/arvo/tests/sys/zuse/ordered-map.hoon) is an example test file for the new Ames. Your tests should be similar to it.
 
 #### Contribution Guidelines
