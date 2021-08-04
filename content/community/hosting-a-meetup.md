@@ -8,7 +8,7 @@ hidenext = "true"
 hide_previous_title = "true"
 +++
 
-There are already [a few](../meetups) Urbit meetups that take place in cities around the United States. Want to start a meetup in your home town? Consider these best practices.
+There are already [a few](/community/meetups) Urbit meetups that take place in cities around the United States. Want to start a meetup in your home town? Consider these best practices.
 
 ### Create the Meetup Group Online
 

@@ -6,7 +6,7 @@ template = "doc.html"
 category = "hoon-nock"
 +++
 
-An **arm** is a Hoon expression encoded as a noun. You can find them as part of a [core](../core)
+An **arm** is a Hoon expression encoded as a noun. You can find them as part of a [core](/docs/glossary/core)
 
 ### Further Reading
 

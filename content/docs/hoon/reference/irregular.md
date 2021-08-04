@@ -300,8 +300,8 @@ See [%sand](/docs/hoon/reference/rune/constants#warm) for other irregular defini
 
 ### Printing stuff
 
-- `<a b c>` prints a [tape](../library/2q/#-tape).
-- `>a b c<` prints a [tank](../library/2q/#-tank).
+- `<a b c>` prints a [tape](/docs/hoon/reference/stdlib/2q/#-tape).
+- `>a b c<` prints a [tank](/docs/hoon/reference/stdlib/2q/#-tank).
 
 ## Commentary
 
