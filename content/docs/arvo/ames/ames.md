@@ -388,8 +388,7 @@ The packet has the following format:
    followed by the receiver `~worwel-sipnum`, followed by the origin `~`
    (denoting that the ship sending the packet is the origin). After this comes
    the payload.
- - The payload of this packet will be the `+jam` of the `content`, which is an
- encrypted fragment of the message `%watch /path/to/recipes`.
+ - The payload of this packet will be the `+jam` of the `content`, which is an encrypted fragment of the message `%watch /path/to/recipes`.
 
 `~zod` receives the packet and reads the body. It sees that it is not the
 intended recipient of the packet, and so gets ready to forward it to
