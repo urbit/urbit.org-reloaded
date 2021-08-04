@@ -130,7 +130,7 @@ We consider some parts of Urbit to be secure, while other parts still need some 
 
 In late 2020, Urbit's [Ames](/docs/glossary/ames) networking protocol was audited by [Leviathan Security](https://www.leviathansecurity.com/). You can read about this milestone [here](/blog/security-and-continuity).
 
-The security of the runtime, [Vere](/docs/vere/_index), has not yet been adequately assessed or systematically hardened.
+The security of the runtime, [Vere](/docs/vere/), has not yet been adequately assessed or systematically hardened.
 
 All communication on Urbit is end-to-end encrypted. However, the [event log](/docs/glossary/eventlog) is not encrypted at rest but we plan to give users that option in the future.
 
