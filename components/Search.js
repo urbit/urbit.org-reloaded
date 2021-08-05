@@ -1,9 +1,6 @@
 import { Component, createRef } from "react";
 import { glossary } from "../lib/glossary";
-import Link from "next/link";
 import { withRouter } from "next/router";
-import { configure, HotKeys } from "react-hotkeys";
-import classnames from "classnames";
 import Downshift from "downshift";
 
 class Search extends Component {
@@ -14,7 +11,7 @@ class Search extends Component {
     };
     this.searchEndpoint = this.searchEndpoint.bind(this);
     this.onInputValueChange = this.onInputValueChange.bind(this);
-    this.onChange = this.onChange.bind(this);
+    this.onSelect = this.onSelect.bind(this);
     this.glossarySearch = this.glossarySearch.bind(this);
   }
 
@@ -23,17 +20,12 @@ class Search extends Component {
   }
 
   glossarySearch(query) {
-    console.log(query);
     return glossary.filter((entry) => {
       return query.toLowerCase() === entry.name || entry.symbol === query;
     });
   }
 
-  onChange(item) {
-    if (item.link) {
-      window.location.href = item.link;
-    }
-
+  onSelect(item) {
     if (item.slug) {
       this.props.router.push(item.slug);
     }
@@ -74,14 +66,12 @@ class Search extends Component {
   render() {
     const { state, props } = this;
 
-    if (props.isOpen) {
+    if (props.showSearch) {
       return (
         <Downshift
-          onChange={(selection) => this.onChange(selection)}
+          onSelect={(selection) => this.onSelect(selection)}
           onInputValueChange={(event) => this.onInputValueChange(event)}
-          itemToString={(item) =>
-            item ? item.content.slug || item.content.link : ""
-          }
+          itemToString={(item) => (item ? item.slug : "")}
           defaultHighlightedIndex={0}
         >
           {({
@@ -95,7 +85,10 @@ class Search extends Component {
             selectedItem,
             getRootProps,
           }) => (
-            <div className="fixed w-screen h-screen bg-washedWall z-50 flex flex-col items-center p-4">
+            <div
+              onClick={(e) => props.closeSearch(e)}
+              className="fixed w-screen h-screen bg-washedWall z-50 flex flex-col items-center p-4"
+            >
               <div className="relative flex flex-col max-w-screen-lg md:my-32 w-full md:w-10/12 lg:w-8/12 xl:w-6/12 rounded-xl bg-white min-h-0 overflow-hidden">
                 <div
                   style={{ display: "inline-block" }}
@@ -104,7 +97,18 @@ class Search extends Component {
                   <input
                     autoFocus
                     className="text-lg md:text-xl lg:text-2xl font-medium text-green bg-transparent py-2 px-4 outline-none relative w-full"
-                    {...getInputProps()}
+                    placeholder="Search..."
+                    type="text"
+                    onClick={(e) => e.stopPropagation()}
+                    {...getInputProps({
+                      onKeyDown: (event) => {
+                        if (event.key === "Escape") {
+                          // Prevent Downshift's default 'Escape' behavior.
+                          event.nativeEvent.preventDownshiftDefault = true;
+                          this.props.closeSearch(event);
+                        }
+                      },
+                    })}
                   />
                 </div>
                 <ul {...getMenuProps()} className="overflow-y-scroll">
@@ -118,7 +122,7 @@ class Search extends Component {
                                 selected ? "bg-green" : ""
                               }`}
                               {...getItemProps({
-                                key: item.content.link + "-" + index,
+                                key: item.content.slug + "-" + index,
                                 index,
                                 item: item.content,
                                 selected: highlightedIndex === index,
