@@ -231,7 +231,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
               key={events[1].slug}
             />
           </div>
-          <Link href="/docs">
+          <Link href="/events">
             <button className="button-lg type-ui text-white bg-ultraDeepWall">
               More Events
             </button>
