@@ -4,6 +4,8 @@ weight = 5
 template = "doc.html"
 +++
 
+PR:  https://github.com/urbit/azimuth/pull/43
+
 This document provides technical detail on Azimuth's "Layer 2" scaling solution
 for Azimuth, known more formally as "naive rollups". We focus here primarily on the
 "Hoon smart contract" located at `/lib/naive.hoon` in your ship's pier, as well
@@ -101,6 +103,9 @@ Put together, these create a reduction in gas costs of at least 65x.
 
 ### One way trip
 
+NOTE: Depositing to L2 clears proxies to get a gas cost discount. It also zeroes
+out escapes, keys, and claims? I'm guessing these all still remain on L2 though.
+
 ## Interacting with L2
 
 Layer 2 affects all Azimuth points on the network, even if they are on layer 1. Here we
@@ -151,6 +156,8 @@ owner may then perform management proxy tasks on layer 2. Layer 1 actions are no
 longer accessible to a star whose ownership exists on layer 2.
 
 ### Galaxies
+
+Note: actually maybe galaxies can put their spawn proxy on layer 2?
 
 Galaxies may not have ownership, managment, spawn, or voting proxy on layer 2.
 They must remain entirely on layer 1. However, they are still eligible to
