@@ -9,7 +9,6 @@ import Meta from "../../components/Meta";
 import Markdown from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
-import markdownStyles from "../../styles/markdown.module.css";
 import { decode } from "html-entities";
 
 const breadcrumbs = (posts, paths) => {
@@ -78,7 +77,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
           section={"Community"}
           params={params}
         >
-          <div className={markdownStyles["markdown"]}>
+          <div className="markdown">
             <article
               dangerouslySetInnerHTML={{ __html: decode(markdown) }}
             ></article>

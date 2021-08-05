@@ -26,7 +26,7 @@ export default function BasicPage({ post, markdown, search }) {
         <Section narrow>
           <h1>{post.title}</h1>
         </Section>
-        <Section narrow className={markdownStyles["markdown"]}>
+        <Section narrow className="markdown">
           <article
             dangerouslySetInnerHTML={{ __html: decode(markdown) }}
           ></article>

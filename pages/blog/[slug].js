@@ -17,7 +17,6 @@ import SingleColumn from "../../components/SingleColumn";
 import Section from "../../components/Section";
 import Contact from "../../components/Contact";
 import PostPreview from "../../components/PostPreview";
-import markdownStyles from "../../styles/markdown.module.css";
 import { decode } from "html-entities";
 
 export default function Post({
@@ -53,7 +52,7 @@ export default function Post({
             {formatDate(new Date(post.date))}
           </div>
         </Section>
-        <Section narrow className={markdownStyles["markdown"]}>
+        <Section narrow className="markdown large-typescale">
           <article
             dangerouslySetInnerHTML={{ __html: decode(markdown) }}
           ></article>
