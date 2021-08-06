@@ -56,6 +56,6 @@ Iris does not return any `gift` in response to a `%cancel-request` `task`. You w
 [%receive id=@ud =http-event:http]
 ```
 
-Receives HTTP data from outside. This `task` is sent to Iris by the runtime, you would not used it manually.
+Receives HTTP data from outside. This `task` is sent to Iris by the runtime, you would not use it manually.
 
 The `id` is a sequential ID for the event and the [$http-event:http](/docs/arvo/eyre/data-types#http-eventhttp) contains the HTTP headers and data.
