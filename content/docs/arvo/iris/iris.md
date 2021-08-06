@@ -6,7 +6,7 @@ template = "doc.html"
 
 Iris is the HTTP client vane.
 
-Gall agents and Spider threads pass Iris HTTP requests, Iris makes the request to the specified URL, and finally returns the HTTP response back to the app or thread that requested it.
+Iris gets passed HTTP requests, makes the request to the specified URL, and returns the HTTP response.
 
 ## Sections
 
