@@ -29,7 +29,7 @@ export default function PageWithIndex({ post, markdown, search }) {
         <Section narrow>
           <div className="flex sidebar">
             <article
-              className={markdownStyles["markdown"] + " pr-0 lg:pr-16"}
+              className={"markdown pr-0 lg:pr-16"}
               dangerouslySetInnerHTML={{ __html: decode(markdown) }}
             ></article>
             <TableOfContents />
