@@ -7,7 +7,6 @@ import Header from "./Header";
 import Footer from "./Footer";
 import SingleColumn from "./SingleColumn";
 import Section from "./Section";
-import markdownStyles from "../styles/markdown.module.css";
 import { decode } from "html-entities";
 import { TableOfContents } from "./TableOfContents";
 
