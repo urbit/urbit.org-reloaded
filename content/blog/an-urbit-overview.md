@@ -201,11 +201,11 @@ with a small, fixed-price public presale of Urbit address space.  Join
 us and help make this future actually happen.
 
 To keep reading, learn more about [Urbit's address
-space](../the-urbit-address-space); share our vision of the Urbit user
-experience, from the [top down](../what-is-urbit-for) or the [bottom
-up](../magic); check out the [development roadmap](../roadmap);
-evaluate Urbit's [beliefs and principles](../beliefs-and-principles) or its
-[interim constitution](../interim-constitution).
+space](/blog/the-urbit-address-space); share our vision of the Urbit user
+experience, from the [top down](/blog/what-is-urbit-for) or the [bottom
+up](/blog/magic); check out the [development roadmap](/blog/roadmap);
+evaluate Urbit's [beliefs and principles](/blog/beliefs-and-principles) or its
+[interim constitution](/blog/interim-constitution).
 
 (For technical readers, check out our [documentation](https://urbit.org/docs/) or
 the [whitepaper](https://media.urbit.org/whitepaper.pdf)).

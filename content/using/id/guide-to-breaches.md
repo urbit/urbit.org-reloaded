@@ -20,7 +20,7 @@ has forgotten about it.
 
 Breaches often fix connectivity issues, but should only be used as a last
 resort. Before performing a breach, look at alternative fixes in the [Ship
-Troubleshooting](../ship-troubleshooting) guide. Also reach out for help in the
+Troubleshooting](/using/os/ship-troubleshooting) guide. Also reach out for help in the
 Help channel in the Urbit Community group `~bitbet-bolbel/urbit-community`, or,
 failing that, in the `#ship-starting-support` channel in our [Discord
 server](https://discord.gg/n9xhMdz) to see if there is another option.

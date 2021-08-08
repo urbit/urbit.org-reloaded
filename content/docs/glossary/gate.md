@@ -6,7 +6,7 @@ template = "doc.html"
 category = "hoon-nock"
 +++
 
-A **gate** is [core](../core) with one [arm](../arm) named $. They are often called Hoon Functions because they have many of the same properties of functions from other programming languages.
+A **gate** is [core](/docs/glossary/core) with one [arm](/docs/glossary/arm) named $. They are often called Hoon Functions because they have many of the same properties of functions from other programming languages.
 
 ### Further Reading
 

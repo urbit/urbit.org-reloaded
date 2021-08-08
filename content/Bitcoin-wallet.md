@@ -18,7 +18,7 @@ If you are interested in [being a provider](https://subject.network/posts/btc-wa
 
 ### Verify
 
-You should verify your version of this Bitcoin wallet. To do so, follow the instructions in the README in our [Github](https://github.com/urbit/urbit/blob/master/pkg/btc-wallet/README.md) repo.
+You should verify your version of this Bitcoin wallet. To do so, follow the instructions in the README in our [Github](https://github.com/urbit/urbit/blob/master/pkg/btc-wallet/README) repo.
 
 Instructions reproduced here:
 

@@ -15,9 +15,9 @@ image = "https://media.urbit.org/site/posts/essays/land3.jpg"
 <br>
 
 Recently, the [first upgrade](https://github.com/urbit/azimuth/pull/35) to the
-[Azimuth](@/docs/glossary/azimuth.md) smart contracts which make up Urbit ID was
-put up to an [upgrade proposal vote](@/docs/glossary/upgrade.md) by the
-[Galactic Senate](@/docs/glossary/senate.md). This vote is still open and will
+[Azimuth](/docs/glossary/azimuth) smart contracts which make up Urbit ID was
+put up to an [upgrade proposal vote](/docs/glossary/upgrade) by the
+[Galactic Senate](/docs/glossary/senate). This vote is still open and will
 last for 30 days (June 20th) or until an absolute majority is reached. We’d like
 to take this opportunity to discuss two things. [First](#changelist), what the
 proposed changes are, and [second](#senate), a review of how Urbit governance
@@ -25,16 +25,16 @@ works and where we’re at in the decentralization process.
 
 Before we dive into what the proposed changes are, let’s review what the Senate
 is actually capable of changing. Urbit ID is really two sets of smart contracts:
-Azimuth and [Ecliptic](@/docs/glossary/ecliptic.md). Azimuth is the data of the
+Azimuth and [Ecliptic](/docs/glossary/ecliptic). Azimuth is the data of the
 public key infrastructure - roughly, this is the list of
-[ships](@/docs/glossary/ship.md) and which Ethereum addresses own them, along
+[ships](/docs/glossary/ship) and which Ethereum addresses own them, along
 with other data such as networking keys and sponsorship status. The Senate has
 no ability to touch this data directly. This is in direct contrast to all
 existing centralized services, where your account is always at risk of being
 taken away from you. What the Senate can change is Ecliptic, which is the
 “business logic” that decides how you can interact with the data in Azimuth.
 These are mechanisms such as what powers various
-[proxies](@/docs/glossary/proxies.md) have, how stars/planets are released over
+[proxies](/docs/glossary/proxies) have, how stars/planets are released over
 time, and how sponsorship works. Put another way, the data and database format
 must remain the same, but the rules by which we interact with it may change
 according to the governance rules we [detail below](#senate).
@@ -119,27 +119,27 @@ current position, but still serve as useful historical markers. We hope to
 revisit and refresh these documents soon.
 
 - [2016.5.16 - Interim
-  Constitution](@/blog/interim-constitution.md)
+  Constitution](/blog/interim-constitution)
 - [2016.5.16 - The
-  Urbit Address Space](@/blog/the-urbit-address-space.md)
+  Urbit Address Space](/blog/the-urbit-address-space)
 - [2016.6.24 - The DAO as a Lesson in Decentralized
-  Governance](@/blog/the-dao-as-a-lesson-in-decentralized-governance.md)
+  Governance](/blog/the-dao-as-a-lesson-in-decentralized-governance)
 - [2019.1.11 - Governance of
-  urbit.org](@/blog/governance-of-urbit.md)
+  urbit.org](/blog/governance-of-urbit)
 
 ### Galactic Senate
 
-The Galactic Senate is composed of all [galaxy](@/docs/glossary/galaxy.md)
+The Galactic Senate is composed of all [galaxy](/docs/glossary/galaxy)
 holders, which at present consists of more than 100 individuals and a few
 organizations, including Tlon and the Urbit Foundation. Using the Azimuth
 voting contract, the Senate can present and vote on two kinds of proposals:
-[document proposals](@/docs/glossary/docvote.md) and [upgrade
-proposals](@/docs/glossary/upgrade.md). Thus far, all matters which the Senate
+[document proposals](/docs/glossary/docvote) and [upgrade
+proposals](/docs/glossary/upgrade). Thus far, all matters which the Senate
 has voted on have been document proposals. The [most recent
 vote](https://github.com/urbit/azimuth/pull/34) declared the Urbit network as
 (i) being secure (as confirmed by a [third party
-audit](@/blog/security-audit.md)) and (ii) having reached continuity (as in, no
-further [network breaches](@/docs/glossary/breach.md) are expected). Previous votes
+audit](/blog/security-audit)) and (ii) having reached continuity (as in, no
+further [network breaches](/docs/glossary/breach) are expected). Previous votes
 were to declare that [Azimuth is live](https://github.com/urbit/azimuth/pull/25)
 and that [Arvo is stable](https://github.com/urbit/azimuth/pull/24).
 
@@ -155,7 +155,7 @@ In the beginning, Urbit’s creator Curtis Yarvin was in possession of the entir
 address space - all 256 galaxies, and everything underneath it. A network of one
 is no network at all, and so over the last decade Urbit’s development has been
 primarily driven by selling or giving away these galaxies. On [June 1,
-2016](@/blog/the-urbit-address-space.md), the allocation was:
+2016](/blog/the-urbit-address-space), the allocation was:
 
 > 95, to the Tlon Corporation. 50, to urbit.org, the future community
 > foundation. 40, to Tlon employees and their family members (24 to Curtis, who
@@ -167,9 +167,9 @@ primarily driven by selling or giving away these galaxies. On [June 1,
 Since then, Tlon has sold a number of
 its galaxies to fund development and others have changed hands to the point
 that Tlon and urbit.org no longer possess a majority share of galaxies. In
-January 2019, [Curtis gave all of his galaxies](@/blog/a-founders-farewell.md) to
+January 2019, [Curtis gave all of his galaxies](/blog/a-founders-farewell) to
 Tlon when he left the project. In August 2020 we shared an update on the [known
-distribution of address space](@/blog/value-of-address-space-pt3.md), where
+distribution of address space](/blog/value-of-address-space-pt3), where
 Curtis’ galaxies are marked as Tlon’s “naked galaxies”. Shortly thereafter, Tlon
 disbursed its naked galaxies among the employees that wanted one who did not
 already possess one, thus removing Tlon and urbit.org’s controlling share of the
@@ -198,13 +198,13 @@ controlled by the users is now well underway.
 
 In the past, nearly all Urbit software was written by Tlon. While Tlon is still
 the only corporation actively updating Urbit’s MIT-licensed open source
-software, namely [Vere](@/docs/glossary/vere.md) (the runtime),
-[Arvo](@/docs/glossary/arvo.md) (the kernel),
-[Landscape](@/docs/glossary/landscape.md) (the client), and
-[Bridge](@/docs/glossary/bridge.md) (the ID manager), unaffiliated individuals have been making enormous contributions to Urbit over the past couple of years via the [grants program](https://grants.urbit.org/history). Recent examples include the [Bitcoin node and wallet integration](https://github.com/urbit/urbit/pull/4940), [WebRTC integration](https://grants.urbit.org/proposals/21131866-webrtc-gall-agent-and-external-app), [Port, an Urbit installer and ship manager](https://github.com/arthyn/port), and [`|fuse`, an important primitive for 3rd party software distribution](https://github.com/urbit/urbit/pull/4820).
+software, namely [Vere](/docs/glossary/vere) (the runtime),
+[Arvo](/docs/glossary/arvo) (the kernel),
+[Landscape](/docs/glossary/landscape) (the client), and
+[Bridge](/docs/glossary/bridge) (the ID manager), unaffiliated individuals have been making enormous contributions to Urbit over the past couple of years via the [grants program](https://grants.urbit.org/history). Recent examples include the [Bitcoin node and wallet integration](https://github.com/urbit/urbit/pull/4940), [WebRTC integration](https://grants.urbit.org/proposals/21131866-webrtc-gall-agent-and-external-app), [Port, an Urbit installer and ship manager](https://github.com/arthyn/port), and [`|fuse`, an important primitive for 3rd party software distribution](https://github.com/urbit/urbit/pull/4820).
 
 The only real power Tlon holds over Urbit is the ability to push [OTA
-updates](@/docs/glossary/ota-updates.md) via `~zod`, and suggest that people
+updates](/docs/glossary/ota-updates) via `~zod`, and suggest that people
 download our binaries. To the best of our knowledge, all extant galaxies
 retrieve their OTA updates from `~zod`, who forward it to their stars, who
 forward it to their planets. This software distribution route is merely a

@@ -16,7 +16,7 @@ An owner of a galaxy (or a delegate) can propose a new iteration of the contract
 
 In a similar process, document hashes can be proposed. While their off-chain documents can't be "technically enforced", this mechanism is useful for the Senate to record more abstract decisions.
 
-For off-chain process around proposals, as suggested by core developers, please see [senate.md](https://github.com/urbit/azimuth/blob/master/senate.md).
+For off-chain process around proposals, as suggested by core developers, please see [senate.md](https://github.com/urbit/azimuth/blob/master/senate).
 
 The group of core developers manages Urbit’s [GitHub repository](https://github.com/urbit/), which controls Arvo, Urbit’s operating system. Changes and upgrades are decided upon by consensus.
 

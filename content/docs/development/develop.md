@@ -35,7 +35,7 @@ an [interface](https://github.com/urbit/urbit/tree/master/pkg/interface) built
 with [React](https://reactjs.org).
 
 Additionally, you can [contribute to
-Landscape](https://github.com/urbit/urbit/blob/master/pkg/interface/CONTRIBUTING.md)
+Landscape](https://github.com/urbit/urbit/blob/master/pkg/interface/CONTRIBUTING)
 by tackling issues in its [issue
 tracker](https://github.com/urbit/landscape/issues) and/or running the
 [development stream](https://groups.google.com/a/urbit.org/g/dev/c/r2hv4ajCLwk).

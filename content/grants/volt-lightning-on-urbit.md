@@ -110,7 +110,7 @@ Private key/hot wallet management inside Urbit. This is needed to sign commitmen
 ### RFCs implemented
 
 We implement everything related to channels, HTLCs, and invoices. We leave out all the Lightning networking and routing elements.
-[RFCs located here](https://github.com/lightningnetwork/lightning-rfc/blob/master/00-introduction.md)
+[RFCs located here](https://github.com/lightningnetwork/lightning-rfc/blob/master/00-introduction)
 
 - RFC 02: channel opening, closing, HTLCs
 - RFC 03: commitment transactions
@@ -231,7 +231,7 @@ It is possible to re-balance channel liquidity (shifting more of the balance to 
 
 - The libraries and full node interface provided by the `btc-wallet` project will be useful for parsing formats like `bech32` and for querying the state of the blockchain to monitor for cheating.
 - [Urbit Bitcoin Wallet](https://github.com/timlucmiptev/btc-agents)
-- [Lightning RFC](https://github.com/lightningnetwork/lightning-rfc/blob/master/00-introduction.md)
+- [Lightning RFC](https://github.com/lightningnetwork/lightning-rfc/blob/master/00-introduction)
 - [lnd RPC API](https://api.lightning.community/)
 
 ## contributor requirements

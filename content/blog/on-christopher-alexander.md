@@ -56,7 +56,7 @@ That depends on who you ask.
 
 **Édouard (~fabled-faster)**
 
-> I enjoy telling people unfamiliar with Urbitand interface design with respect to Urbit, that the object of our work is essentially that of designing an environment &quot;like a piece of paper&quot;.
+> I enjoy telling people unfamiliar with Urbit and interface design with respect to Urbit, that the object of our work is essentially that of designing an environment &quot;like a piece of paper&quot;.
 >
 > Consider how paper as a constrained environment is one that yet can bear nearly any visual expression imaginable—apart from containing drawings or human-made marks, paper can be used to display photographs, paper can be multiplexed to form lenticular holograms, paper can be folded into a crane, etc.
 >
