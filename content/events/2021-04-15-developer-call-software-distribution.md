@@ -1,14 +1,16 @@
 +++
 title = "Developer Call: 3rd Party Software Distribution"
-date = 2021-04-15
-[extra]
-pinned = false
-host = "Josh Lehman (~wolref-podlex)"
-time = "09:00 PST"
+starts=1618488000
+ends=1618491600
+hosts = [
+      { name = "Josh Lehman', patp = "~wolref-podlex" }
+contributors = [
+	     { name = "Raghu", patp = "~sovmep-ripsum" },
+	     { name = " Philip Monk", patp = "~wicdev-wisryt" }
+]
 location = "Online Event"
-image = ""
+image=""
 registration_url = "https://www.meetup.com/urbit-sf/events/277474491/"
-guests = "Raghu (~sovmep-ripsum) and Philip Monk (~wicdev-wisryt)"
 description = "Some exciting work has been going on behind the scenes to provide the foundation for 3rd party software distribution."
 youtube = "XwICC6Its1E"
 +++

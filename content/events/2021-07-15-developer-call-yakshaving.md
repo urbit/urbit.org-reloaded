@@ -1,12 +1,14 @@
 +++
 
 title = "Developer Call: Urbit Yakshaving"
-date = 2021-07-15
-[extra] 
-pinned = false 
-host = "Josh Lehman (~wolref-podlex)"
-guests = "Jake Miller (~littel-wolfur)" 
-time = "9:00 PDT" 
+starts=1626350400
+ends=1626354000
+hosts = [
+      { name = "Josh Lehman", patp = "~wolref-podlex" }
+]      
+contributors = [
+	     { name = "Jake Miller", patp = "~littel-wolfur" }
+]	     
 location = "Online Event" 
 image = "" 
 registration_url = "https://www.meetup.com/urbit-sf/events/279349114/" 

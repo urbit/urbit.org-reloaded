@@ -1,11 +1,13 @@
 +++
 title = "Developer Call: Pressure and Protolith"
-date = 2021-03-18
-[extra]
-pinned = false
-host = "Josh Lehman (~wolref-podlex)"
-guests = "Matilde Park (~haddef-sigwen)"
-time = "09:00 PST"
+starts=1616068800
+ends=1614868200
+hosts = [
+      { name = "Josh Lehman", patp = "~wolref-podlex)" },
+]      
+contributors = [
+       { name = "Matilde Park", patp = "~haddef-sigwen" }
+]      
 location = "Online event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/276898246/"

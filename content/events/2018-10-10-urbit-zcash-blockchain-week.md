@@ -1,15 +1,15 @@
 +++
 title = "Urbit + Zcash: 'Blockchain Week'"
-date = 2018-10-10
-[extra]
-pinned = false
-host = "Urbit"
-time = "19:00 PST"
+starts=1539208800
+ends=1539219600
+hosts = [
+      { name = "Urbit" }
+]
+contributors=""
 location = "Urbit Office"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/255001807/"
-+++
-
+description = "
 We're all full and looking forward to seeing you tonight. After you check-in at the front door please come up to floor 2, room 222.
 
 ~Schedule
@@ -20,4 +20,5 @@ We're all full and looking forward to seeing you tonight. After you check-in at 
 
 8:30 - 9: Galen Wolfe-Pauly will tell you things about Urbit and our wallet
 
-9 - 10: Hangout 
+9 - 10: Hangout"
++++

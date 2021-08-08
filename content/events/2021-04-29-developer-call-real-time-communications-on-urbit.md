@@ -1,14 +1,16 @@
 +++
 title = "Developer Call: Real-Time Communication on Urbit"
-date = 2021-04-29
-[extra]
-pinned = false
-host = "Josh Lehman (~wolref-podlex)"
-time = "09:00 PST"
+starts=1619697600
+ends=1619701200
+hosts = [
+      { name = "Josh Lehman", patp = "~wolref-podlex" }
+]      
+contributors = [
+	     { name = "Edward Amsden", patp = "~ritpub-sipsyl" }
+]	     
 location = "Online Event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/277674273/"
-guests = "Edward Amsden (~ritpub-sipsyl)"
 description = "Video chat on Urbit? It's nearly here with WebRTC."
 youtube = "XFct6JZHPC0"
 +++

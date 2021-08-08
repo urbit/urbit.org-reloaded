@@ -1,12 +1,14 @@
 +++
 
 title = "Developer Call: The Urbit Runtime and its Future"
-date = 2021-07-01
-[extra] 
-pinned = false 
-host = "Ted Blackman (~rovnys-ricfer)"
-guests = "Joe Bryan (~master-morzod)" 
-time = "9:00 PDT" 
+starts=1625140800
+ends=1625144400
+hosts = [
+      { name = "Ted Blackman", patp = "~rovnys-ricfer" }
+]      
+contributors = [
+	     { name = "Joe Bryan", patp = "~master-morzod"}
+]	     
 location = "Online Event" 
 image = "" 
 registration_url = "https://www.meetup.com/urbit-sf/events/279137337/" 

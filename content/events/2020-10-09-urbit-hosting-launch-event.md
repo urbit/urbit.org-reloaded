@@ -1,18 +1,16 @@
 +++
 title = "Urbit Hosting Launch Event"
-date = 2020-10-09
-[extra]
-pinned = false
-host = "Urbit"
-time = "17:00 PST"
+starts=1602273600
+ends=1602280800
+hosts = [
+      { name = "Urbit" }
+]
+contributors =""
 location = "Online event"
 image = "https://secure.meetupstatic.com/photos/event/8/600_492480008.jpeg"
 registration_url = "https://www.meetup.com/urbit-sf/events/273439025/"
 youtube = "w3qKe_WZr50"
-dark = true
-+++
-
----
+description = "---
 
 We've been busy building, testing and refining — and now it's time to show off what we've been up to.
 
@@ -30,4 +28,5 @@ Interested developing on Urbit? Hoon School is a community-run program to teach 
 
 Mostly, you can find us on Urbit in the Urbit Community group. But you can also follow along here:<br/><a href="https://urbit.org/blog/" class="linkified">https://urbit.org/blog/</a><br/><a href="https://twitter.com/urbit" class="linkified">https://twitter.com/urbit</a><br/><a href="https://github.com/urbit" class="linkified">https://github.com/urbit</a>
 
-And if you're still confused about what Urbit is, try these:<br/><a href="https://urbit.org/understanding-urbit/" class="linkified">https://urbit.org/understanding-urbit/</a>
+And if you're still confused about what Urbit is, try these:<br/><a href="https://urbit.org/understanding-urbit/" class="linkified">https://urbit.org/understanding-urbit/</a>"
++++

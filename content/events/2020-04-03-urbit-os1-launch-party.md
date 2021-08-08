@@ -1,19 +1,16 @@
 +++
 title = "Urbit OS1 Launch Party"
-date = 2020-04-03
-[extra]
-pinned = false
-host = "Urbit"
-time = "19:00 PST"
+starts=1585951200
+ends=1585962000
+hosts = [
+      { name = "Urbit" }
+]
+contributors =""
 location = "Online event"
 image = "https://secure.meetupstatic.com/photos/event/1/f/8/b/600_489548075.jpeg"
 registration_url = "https://www.meetup.com/urbit-sf/events/268519156/"
 youtube = "71ViyftPkGk"
-dark = true
-overlay = true
-+++
-
-Join us as we launch Urbit OS1!
+description = "Join us as we launch Urbit OS1!
 
 The presentation will begin at 7pm Pacific.
 
@@ -45,4 +42,5 @@ Urbit Github: <a href="https://github.com/urbit" class="linkified">https://githu
 
 Still confused about what Urbit is?
 
-<a href="https://urbit.org/understanding-urbit/" class="linkified">https://urbit.org/understanding-urbit/</a>
+<a href="https://urbit.org/understanding-urbit/" class="linkified">https://urbit.org/understanding-urbit/</a>"
++++

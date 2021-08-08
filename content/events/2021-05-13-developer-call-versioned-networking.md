@@ -1,14 +1,16 @@
 +++
 title = "Developer Call: P2P Versioned Networking"
-date = 2021-05-13
-[extra]
-pinned = false
-host = "Josh Lehman (~wolref-podlex)"
-time = "16:00 PST"
+starts=1620932400
+ends=1620936000
+hosts = [
+      { name = "Josh Lehman", patp = "~wolref-podlex" }
+]      
+contributors = [
+	     { name = "Liam Fitzgerald", patp = "~hastuc-dibtux" }
+]	     
 location = "Online Event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/278052029/"
-guests = "Liam Fitzgerald (~hastuc-dibtux)"
 description = "Versioned Networking for Application Developers"
 youtube = "BhQ1vk4jGsk"
 +++
