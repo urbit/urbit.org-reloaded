@@ -112,6 +112,7 @@ export default function DocsLayout({
   nextPost,
 }) {
   const router = useRouter();
+
   const isSelected = "/docs".includes(router.asPath);
   const selectedClasses = classnames({
     dot: isSelected,

@@ -10,7 +10,7 @@ import Section from "../components/Section";
 import { getAllPosts, formatDate } from "../lib/lib";
 import { contact } from "../lib/constants";
 
-export default function Blog({ posts, search }) {
+export default function Updates({ posts, search }) {
   const post = {
     title: "Updates",
     description: "Missives from the Urbit Foundation.",
