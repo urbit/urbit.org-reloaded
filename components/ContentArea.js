@@ -1,5 +1,6 @@
 import Section from "./Section";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/router";
 import { TableOfContents } from "./TableOfContents";
 
 export default function ContentArea(props) {
@@ -20,9 +21,31 @@ export default function ContentArea(props) {
     setShortcut(detectOS());
   }, []);
 
+  const scrollBox = useRef();
+
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      if (scrollBox.current === null) return;
+      scrollBox.current.scrollTop = 0;
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+    // If the component is unmounted, unsubscribe
+    // from the event with the `off` method:
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChange);
+    };
+  }, []);
+
   return (
     <div className="w-full min-w-0 flex flex-col items-center">
-      <div className="px-4 md:px-12 lg:px-24 pb-24 pt-8 md:pt-10 lg:pt-16 flex flex-col w-full max-w-screen-xl max-h-screen h-screen overflow-y-scroll">
+      <div
+        ref={scrollBox}
+        className="px-4 md:px-12 lg:px-24 pb-24 pt-8 md:pt-10 lg:pt-16 flex flex-col w-full max-w-screen-xl max-h-screen h-screen overflow-y-scroll"
+      >
         <div className="flex justify-between w-full items-center flex-shrink-0">
           <div className="type-ui text-gray">{props.breadcrumbs}</div>
           <div className="hidden md:block">

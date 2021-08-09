@@ -17,7 +17,6 @@ import Footer from "../../components/Footer";
 import SingleColumn from "../../components/SingleColumn";
 import GrantPreview from "../../components/GrantPreview";
 import Section from "../../components/Section";
-import markdownStyles from "../../styles/markdown.module.css";
 
 export default function Grant({ post, markdown, search, similarGrants }) {
   const router = useRouter();
@@ -68,7 +67,7 @@ export default function Grant({ post, markdown, search, similarGrants }) {
             ))}
           </div>
         </Section>
-        <Section narrow className={markdownStyles["markdown"]}>
+        <Section narrow className="markdown large-typescale">
           <article dangerouslySetInnerHTML={{ __html: decode(markdown) }} />
         </Section>
         {canApply && (
