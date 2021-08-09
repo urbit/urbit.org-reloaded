@@ -63,7 +63,7 @@ export default function MediaPage({ post, markdown, search }) {
             ></iframe>
           ) : null}
         </Section>
-        <Section narrow className="markdown large-typescale">
+        <Section narrow className="markdown">
           <article
             className="pt-12 w-full"
             dangerouslySetInnerHTML={{ __html: decode(markdown) }}

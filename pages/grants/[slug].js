@@ -67,7 +67,7 @@ export default function Grant({ post, markdown, search, similarGrants }) {
             ))}
           </div>
         </Section>
-        <Section narrow className="markdown large-typescale">
+        <Section narrow className="markdown">
           <article dangerouslySetInnerHTML={{ __html: decode(markdown) }} />
         </Section>
         {canApply && (

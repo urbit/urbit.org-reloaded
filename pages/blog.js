@@ -40,7 +40,7 @@ export default function Blog({ posts, search }) {
         <Section narrow>
           {posts.map((post) => {
             return (
-              <div key={post.slug} className="mb-24 cursor-pointer">
+              <div key={post.slug} className="mb-20 cursor-pointer">
                 <Link href={`/blog/${post.slug}`}>
                   <div>
                     {
@@ -48,28 +48,24 @@ export default function Blog({ posts, search }) {
                       post.extra.image ? (
                         <BackgroundImage
                           src={post.extra.image}
-                          className="w-full rounded-lg tile-height"
+                          className="rounded-lg aspect-w-5 aspect-h-4"
                         />
                       ) : null
                     }
                     <h3 className="mt-4">{post.title}</h3>
-                    <div className="flex items-baseline">
+                    <div className="flex items-baseline mt-2">
                       {post.extra.author ? (
-                        <div className="type-ui text-gray mt-4">
+                        <div className="type-sub-bold mr-2">
                           {post.extra.author}
                         </div>
                       ) : null}
-                      {post.extra.author && post.extra.ship ? (
-                        <div className="mx-1 text-gray">•</div>
-                      ) : null}
                       {post.extra.ship ? (
-                        <div className="type-ui text-gray font-mono">
+                        <div className="type-sub-bold text-gray font-mono">
                           {post.extra.ship}
                         </div>
                       ) : null}
                     </div>
-
-                    <div className="type-ui text-gray mt-2">
+                    <div className="text-gray type-sub">
                       {formatDate(new Date(post.date))}
                     </div>
                   </div>

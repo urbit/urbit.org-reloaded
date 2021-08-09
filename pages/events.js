@@ -17,7 +17,7 @@ export function EventCard({ event, dir, className }) {
   return (
     <div
       key={event.slug}
-      className={`mb-24 cursor-pointer bg-wall rounded-xl tile-height bg-cover bg-center bg-no-repeat ${className}`}
+      className={`mb-24 cursor-pointer bg-wall rounded-xl h-96 bg-cover bg-center bg-no-repeat ${className}`}
       style={{
         backgroundImage:
           `${
