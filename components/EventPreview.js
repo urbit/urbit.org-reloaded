@@ -10,7 +10,7 @@ export default function EventPreview({ event, className, title, rsvp }) {
       {title ? <h3 className="mb-2">{title}</h3> : null}
       <div
         key={event.slug}
-        className={`bg-wall rounded-xl h-96 bg-cover bg-center bg-no-repeat`}
+        className={`bg-wall rounded-xl h-80 bg-cover bg-center bg-no-repeat`}
         style={{ backgroundImage: `url(${event.extra?.image})` || "" }}
       >
         <Link href={`/events/${event.slug}`}>
@@ -20,10 +20,8 @@ export default function EventPreview({ event, className, title, rsvp }) {
               <p className={grayText}>{event?.type}</p>
             </div>
             <div className="absolute p-4 left-0 bottom-0 w-full">
-              <p className={`${grayText} type-ui-small`}>{event.extra.host}</p>
-              <p className={`${grayText} type-ui-small`}>
-                {event.extra.guests}
-              </p>
+              <p className={`${grayText}`}>{event.extra.host}</p>
+              <p className={`${grayText}`}>{event.extra.guests}</p>
             </div>
             {rsvp && event.extra.registration_url && event.extra.pinned ? (
               <div className="absolute right-0 bottom-0 p-4">

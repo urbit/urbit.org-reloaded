@@ -146,7 +146,7 @@ export default function DocsLayout({
           section="Urbit Documentation"
           params={params}
         >
-          <div className="markdown">
+          <div className="markdown technical">
             <article
               dangerouslySetInnerHTML={{ __html: decode(markdown) }}
             ></article>

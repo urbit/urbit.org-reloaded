@@ -70,7 +70,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
           // Introducing Port
         }
         <Section className="hidden md:flex">
-          <div className="bg-wall w-11/12 hero-card-height rounded-3xl flex">
+          <div className="bg-wall w-11/12 port-hero-card-height rounded-3xl flex">
             <div className="pt-20 pl-12 w-7/12">
               <div className="pb-8">
                 <h2 className="p-0 m-0 pb-2">Introducing</h2>
@@ -89,7 +89,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
                 View on GitHub
               </a>
             </div>
-            <div className="w-full hero-image-height hero-image mt-8" />
+            <div className="w-full port-hero-image-height port-hero-image mt-8" />
           </div>
         </Section>
 
@@ -185,7 +185,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
         {
           // Blog Posts
         }
-        <Section narrow>
+        <Section>
           <div className="flex items-center measure pb-12">
             <h2>Blog</h2>
           </div>
@@ -212,7 +212,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
         {
           // Events Posts
         }
-        <Section narrow>
+        <Section>
           <div className="flex items-center measure pb-12">
             <h2>Events</h2>
           </div>

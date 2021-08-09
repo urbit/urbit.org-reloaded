@@ -40,19 +40,22 @@ export default function Post({
         <Header search={search} />
         <Section short narrow>
           <h1>{post.title}</h1>
-          {post.extra.author ? (
-            <div className="type-ui text-gray mt-4 md:mt-8 lg:mt-10">
-              {post.extra.author}
-            </div>
-          ) : null}
-          {post.extra.ship ? (
-            <div className="type-ui text-gray font-mono">{post.extra.ship}</div>
-          ) : null}
-          <div className="type-ui text-gray mt-4 md:mt-8 lg:mt-10">
+          <h3 className=" mt-6">{post.description}</h3>
+          <div className="flex items-baseline mt-6">
+            {post.extra.author ? (
+              <div className="type-sub-bold mr-2">{post.extra.author}</div>
+            ) : null}
+            {post.extra.ship ? (
+              <div className="type-sub-bold text-gray font-mono">
+                {post.extra.ship}
+              </div>
+            ) : null}
+          </div>
+          <div className="text-gray type-sub">
             {formatDate(new Date(post.date))}
           </div>
         </Section>
-        <Section narrow className="markdown large-typescale">
+        <Section short narrow className="markdown">
           <article
             dangerouslySetInnerHTML={{ __html: decode(markdown) }}
           ></article>

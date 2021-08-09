@@ -14,11 +14,26 @@ export default function PostPreview(props) {
       >
         <div>
           <BackgroundImage
-            className="w-full h-96 rounded-lg"
+            className="aspect-w-5 aspect-h-4 rounded-lg"
             src={props.post.extra.image || ""}
           />
-          <p className="text-black mt-2">{props.post.title}</p>
-          <p className="text-gray">{formatDate(new Date(props.post.date))}</p>
+
+          <h4 className="mt-2">{props.post.title}</h4>
+          <div className="flex items-baseline mt-1">
+            {props.post.extra.author ? (
+              <div className="type-sub-bold mr-2">
+                {props.post.extra.author}
+              </div>
+            ) : null}
+            {props.post.extra.ship ? (
+              <div className="type-sub-bold text-gray font-mono">
+                {props.post.extra.ship}
+              </div>
+            ) : null}
+          </div>
+          <div className="text-gray type-sub mt-1">
+            {formatDate(new Date(props.post.date))}
+          </div>
         </div>
       </Link>
     </div>
