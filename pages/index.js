@@ -73,8 +73,8 @@ export default function Home({ posts, events, openGrantsCount, search }) {
           <div className="bg-wall w-11/12 port-hero-card-height rounded-3xl flex">
             <div className="pt-20 pl-12 w-7/12">
               <div className="pb-8">
-                <h2 className="p-0 m-0 pb-2">Introducing</h2>
-                <h2 className="text-green p-0 m-0">Port</h2>
+                <h2 className="p-0 m-0 pb-2 leading-none">Introducing</h2>
+                <h2 className="text-green p-0 m-0 leading-none">Port</h2>
               </div>
               <h4 className="pb-8">The Urbit client, now in beta.</h4>
               <p className="pb-24">
