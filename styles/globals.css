@@ -74,9 +74,13 @@ code .type-code {
 
 /* Utils */
 
-/* .tile-height {
-  height: 32rem;
-} */
+.layout-narrow {
+  @apply w-full md:w-8/12 lg:w-6/12;
+}
+
+.layout {
+  @apply w-full md:w-10/12 lg:w-8/12;
+}
 
 .measure {
   max-width: 34em;
