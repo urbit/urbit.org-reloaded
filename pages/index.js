@@ -105,21 +105,21 @@ export default function Home({ posts, events, openGrantsCount, search }) {
               </a>
             </Link>
           </div>
-          <div className="flex flex-col md:flex-row w-full items-center bg-washedGreen px-8 py-8 rounded-xl">
+          <div className="flex flex-col md:flex-row w-full items-center md:items-start bg-washedGreen px-8 py-8 rounded-xl">
             <div className="flex items-center flex-col p-4 w-full">
               <h2 className="text-green">200+</h2>
               <h4 className="text-green text-center pt-2">
                 Urbit stars awarded
               </h4>
             </div>
-            <div className="h-0 w-0 md:h-24 md:w-4 bg-lightGreen" />
+            <div className="h-0 w-0 md:h-24 md:w-4 bg-lightGreen self-center" />
             <div className="flex items-center flex-col p-4 w-full">
               <h2 className="text-green">400+</h2>
               <h4 className="text-green text-center pt-2">
                 Different Contributors
               </h4>
             </div>
-            <div className="h-0 w-0 md:h-24 md:w-4 bg-lightGreen" />
+            <div className="h-0 w-0 md:h-24 md:w-4 bg-lightGreen self-center" />
             <div className="flex items-center flex-col p-4 w-full">
               <h2 className="text-green">45+</h2>
               <h4 className="text-green text-center pt-2">Active Projects</h4>
