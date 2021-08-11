@@ -19,7 +19,7 @@ If you run Windows, or just want to give it a shot without worrying about the gr
   <label for="port-macos">MacOS</label>
   <div class="tab">
     <p>To install <strong>Port</strong> on MacOS simply download and open the <code>.dmg</code> file.</p>
-    <a href="https://github.com/urbit/port/releases/latest/download/Port.dmg" class="badge-sm bg-green text-white" style="width: 12rem;">
+    <a href="https://github.com/urbit/port/releases/latest/download/Port.dmg" class="badge-sm bg-green-400 text-white" style="width: 12rem;">
       Download Port
     </a>
   </div>

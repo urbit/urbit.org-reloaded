@@ -38,21 +38,21 @@ export default function Updates({ posts, search }) {
                     <h3 className="mt-4">{post.title}</h3>
                     <div className="flex items-baseline">
                       {post?.extra.author ? (
-                        <div className="type-ui text-gray mt-4">
+                        <div className="type-ui text-wall-500 mt-4">
                           {post?.extra.author}
                         </div>
                       ) : null}
                       {post?.extra.author && post?.extra.ship ? (
-                        <div className="mx-1 text-gray">•</div>
+                        <div className="mx-1 text-wall-500">•</div>
                       ) : null}
                       {post?.extra.ship ? (
-                        <div className="type-ui text-gray font-mono">
+                        <div className="type-ui text-wall-500 font-mono">
                           {post.extra.ship}
                         </div>
                       ) : null}
                     </div>
 
-                    <div className="type-ui text-gray mt-2">
+                    <div className="type-ui text-wall-500 mt-2">
                       {formatDate(new Date(post.date))}
                     </div>
                   </div>

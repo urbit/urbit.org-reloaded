@@ -11,8 +11,8 @@ function ActiveLink({ children, href, className, currentPath }) {
   const firstCrumb = currentPath.split("/")[1];
 
   const activeClassName = classnames({
-    "text-black": "/" + firstCrumb === href,
-    "text-gray": "/" + firstCrumb !== href,
+    "text-wall-600": "/" + firstCrumb === href,
+    "text-wall-500": "/" + firstCrumb !== href,
   });
 
   return (
@@ -55,7 +55,7 @@ export default function Header(props) {
         </Link>
         {routeDepth > 2 ? (
           <Link href={`/${firstCrumb}`}>
-            <a className="inline md:hidden type-ui text-gray ml-2">
+            <a className="inline md:hidden type-ui text-wall-500 ml-2">
               {capitalize(firstCrumb)}
             </a>
           </Link>
@@ -88,7 +88,7 @@ export default function Header(props) {
         </ActiveLink>
         <ActiveLink
           currentPath={currentPath}
-          className="mr-5 text-green type-ui button-text"
+          className="mr-5 text-green-400 type-ui button-text"
           href="/getting-started"
         >
           Get Started
@@ -98,10 +98,10 @@ export default function Header(props) {
             e.stopPropagation();
             props.search.toggleSearch(e);
           }}
-          className="bg-wall text-gray flex px-4 py-1 rounded-lg type-ui"
+          className="bg-wall-100 text-wall-500 flex px-4 py-1 rounded-lg type-ui"
         >
           <div>Search</div>
-          <div className="ml-4 text-lightGray">{shortcut}</div>
+          <div className="ml-4 text-wall-400">{shortcut}</div>
         </button>
       </nav>
 

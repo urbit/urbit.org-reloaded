@@ -11,13 +11,13 @@ import { contact } from "../lib/constants";
 
 export function EventCard({ event, dir, className }) {
   // Event tiles have a 'dark mode' used when their background images are dark and white text is needed for legibility.
-  const grayText = event.extra?.dark ? "text-midWhite" : "text-gray";
-  const blackText = event.extra?.dark ? "text-white" : "text-black";
+  const grayText = event.extra?.dark ? "text-midWhite" : "text-wall-500";
+  const blackText = event.extra?.dark ? "text-white" : "text-wall-600";
 
   return (
     <div
       key={event.slug}
-      className={`mb-24 cursor-pointer bg-wall rounded-xl h-96 bg-cover bg-center bg-no-repeat ${className}`}
+      className={`mb-24 cursor-pointer bg-wall-100 rounded-xl h-96 bg-cover bg-center bg-no-repeat ${className}`}
       style={{
         backgroundImage:
           `${
@@ -94,7 +94,7 @@ export default function Events({ pastEvents, comingSoon, search }) {
           {comingSoon.length > 0 ? (
             <>
               <div className="mb-8 table">
-                <h3 className="text-gray">Coming Soon</h3>
+                <h3 className="text-wall-500">Coming Soon</h3>
               </div>
               {comingSoon.map((post) => {
                 return <EventCard event={post} />;
@@ -102,7 +102,7 @@ export default function Events({ pastEvents, comingSoon, search }) {
             </>
           ) : null}
           <div className="mb-8 table">
-            <h3 className="text-gray">Past Events</h3>
+            <h3 className="text-wall-500">Past Events</h3>
           </div>
           {pastEvents.map((post) => {
             return <EventCard event={post} />;

@@ -92,12 +92,12 @@
 
 .markdown code,
 .markdown code[class*="language-"] {
-  @apply px-2 py-0.5 bg-wall rounded-md;
+  @apply px-2 py-0.5 bg-wall-100 rounded-md;
 }
 
 .markdown a code,
 .markdown a code[class*="language-"] {
-  @apply bg-washedGreen text-green;
+  @apply bg-green-100 text-green-400;
 }
 
 .markdown pre code,
@@ -118,11 +118,11 @@
 .markdown li a,
 .markdown h3 a,
 .markdown h2 a {
-  @apply text-green;
+  @apply text-green-400;
 }
 
 .markdown blockquote {
-  @apply border-l-4 border-deepWall pl-6 italic;
+  @apply border-l-4 border-wall-500 pl-6 italic;
 }
 .markdown blockquote cite {
   @apply not-italic font-semibold;
@@ -141,14 +141,14 @@
   border-bottom-width: 2px;
   border-bottom-style: solid;
   padding: 8px !important;
-  @apply border-wall;
+  @apply border-wall-100;
 }
 
 .markdown table tr th:first-child,
 .markdown table tr td:first-child {
   border-left-width: 2px;
   border-left-style: solid;
-  @apply border-wall;
+  @apply border-wall-100;
 }
 
 .markdown table tr th {
@@ -157,7 +157,7 @@
   border-top-style: solid;
   text-align: left;
   vertical-align: middle;
-  @apply border-wall;
+  @apply border-wall-100;
 }
 
 /* top-left border-radius */

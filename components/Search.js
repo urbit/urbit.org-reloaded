@@ -96,7 +96,7 @@ class Search extends Component {
                 >
                   <input
                     autoFocus
-                    className="text-lg md:text-xl lg:text-2xl font-medium text-green bg-transparent py-2 px-4 outline-none relative w-full"
+                    className="text-lg md:text-xl lg:text-2xl font-medium text-green-400 bg-transparent py-2 px-4 outline-none relative w-full"
                     placeholder="Search..."
                     type="text"
                     onClick={(e) => e.stopPropagation()}
@@ -119,7 +119,7 @@ class Search extends Component {
                           return (
                             <li
                               className={`cursor-pointer flex text-left w-full ${
-                                selected ? "bg-green" : ""
+                                selected ? "bg-green-400" : ""
                               }`}
                               {...getItemProps({
                                 key: item.content.slug + "-" + index,
@@ -131,13 +131,15 @@ class Search extends Component {
                               <div className="font-semibold p-3">
                                 <p
                                   className={`text-base ${
-                                    selected ? "text-white" : "text-black"
+                                    selected ? "text-white" : "text-wall-600"
                                   }`}
                                 >
                                   {item.content.symbol.length > 0 && (
                                     <code
                                       className={`mr-1 rounded px-1 py-0.5 ${
-                                        selected ? "bg-washedWhite" : "bg-wall"
+                                        selected
+                                          ? "bg-washedWhite"
+                                          : "bg-wall-100"
                                       }`}
                                     >
                                       {item.content.symbol}
@@ -147,7 +149,7 @@ class Search extends Component {
                                 </p>
                                 <p
                                   className={`font-normal text-base mt-1 ${
-                                    selected ? "text-white" : "text-black"
+                                    selected ? "text-white" : "text-wall-600"
                                   }`}
                                 >
                                   {item.content.desc}
@@ -160,7 +162,7 @@ class Search extends Component {
                           return (
                             <li
                               className={`cursor-pointer flex text-left w-full ${
-                                selected ? "bg-green" : ""
+                                selected ? "bg-green-400" : ""
                               }`}
                               {...getItemProps({
                                 key: item.content.link + "-" + index,
@@ -172,7 +174,7 @@ class Search extends Component {
                               <div className="p-3">
                                 <p
                                   className={`font-medium text-base ${
-                                    selected ? "text-white" : "text-black"
+                                    selected ? "text-white" : "text-wall-600"
                                   }`}
                                 >
                                   {item.content.parent !== "Content"
@@ -182,7 +184,7 @@ class Search extends Component {
                                 </p>
                                 <p
                                   className={`text-base font-regular text-small ${
-                                    selected ? "text-midWhite" : "text-gray"
+                                    selected ? "text-midWhite" : "text-wall-500"
                                   }`}
                                 >
                                   {item.content.content}

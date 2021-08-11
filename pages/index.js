@@ -22,21 +22,21 @@ export default function Home({ posts, events, openGrantsCount, search }) {
     const agent = window.navigator.appVersion;
     if (agent.includes("Win")) {
       return (
-        <span className="button-lg type-ui mb-5 bg-ultraDeepWall text-white">
+        <span className="button-lg type-ui mb-5 bg-wall-600 text-white">
           Coming soon for Windows
         </span>
       );
     } else if (agent.includes("Mac")) {
       return (
         <a href="https://github.com/urbit/port/releases/latest/download/Port.dmg">
-          <button className="button-lg type-ui mb-5 bg-green text-white">
+          <button className="button-lg type-ui mb-5 bg-green-400 text-white">
             Download For macOS
           </button>
         </a>
       );
     } else if (agent.includes("Linux")) {
       return (
-        <code className="button-lg type-ui mb-5 bg-ultraDeepWall text-white">
+        <code className="button-lg type-ui mb-5 bg-wall-600 text-white">
           sudo snap install port
         </code>
       );
@@ -70,11 +70,11 @@ export default function Home({ posts, events, openGrantsCount, search }) {
           // Introducing Port
         }
         <Section className="hidden md:flex">
-          <div className="bg-wall w-11/12 port-hero-card-height rounded-3xl flex">
+          <div className="bg-wall-100 w-11/12 port-hero-card-height rounded-3xl flex">
             <div className="pt-20 pl-12 w-7/12">
               <div className="pb-8">
                 <h2 className="p-0 m-0 pb-2 leading-none">Introducing</h2>
-                <h2 className="text-green p-0 m-0 leading-none">Port</h2>
+                <h2 className="text-green-400 p-0 m-0 leading-none">Port</h2>
               </div>
               <h4 className="pb-8">The Urbit client, now in beta.</h4>
               <p className="pb-24">
@@ -84,7 +84,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
               {heroButton}
               <a
                 href="https://github.com/urbit/port"
-                className="type-ui text-gray"
+                className="type-ui text-wall-500"
               >
                 View on GitHub
               </a>
@@ -100,29 +100,31 @@ export default function Home({ posts, events, openGrantsCount, search }) {
           <div className="flex items-center pb-12">
             <h2 className="m-0 p-0 mr-4">Grants</h2>
             <Link href="/grants#find-a-grant">
-              <a className="bg-green text-white badge-lg">
+              <a className="bg-green-400 text-white badge-lg">
                 {openGrantsCount} Open
               </a>
             </Link>
           </div>
-          <div className="flex flex-col md:flex-row w-full items-center md:items-start bg-washedGreen px-8 py-8 rounded-xl">
+          <div className="flex flex-col md:flex-row w-full items-center md:items-start bg-green-100 px-8 py-8 rounded-xl">
             <div className="flex items-center flex-col p-4 w-full">
-              <h2 className="text-green">200+</h2>
-              <h4 className="text-green text-center pt-2">
+              <h2 className="text-green-400">200+</h2>
+              <h4 className="text-green-400 text-center pt-2">
                 Urbit stars awarded
               </h4>
             </div>
-            <div className="h-0 w-0 md:h-24 md:w-4 bg-lightGreen self-center" />
+            <div className="h-0 w-0 md:h-24 md:w-4 bg-green-200 self-center" />
             <div className="flex items-center flex-col p-4 w-full">
-              <h2 className="text-green">400+</h2>
-              <h4 className="text-green text-center pt-2">
+              <h2 className="text-green-400">400+</h2>
+              <h4 className="text-green-400 text-center pt-2">
                 Different Contributors
               </h4>
             </div>
-            <div className="h-0 w-0 md:h-24 md:w-4 bg-lightGreen self-center" />
+            <div className="h-0 w-0 md:h-24 md:w-4 bg-green-200 self-center" />
             <div className="flex items-center flex-col p-4 w-full">
-              <h2 className="text-green">45+</h2>
-              <h4 className="text-green text-center pt-2">Active Projects</h4>
+              <h2 className="text-green-400">45+</h2>
+              <h4 className="text-green-400 text-center pt-2">
+                Active Projects
+              </h4>
             </div>
           </div>
           <div className="measure py-12">
@@ -133,7 +135,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
             </p>
             <div className="table">
               <Link href="/grants">
-                <a className="button-lg bg-green text-white">View Grants</a>
+                <a className="button-lg bg-green-400 text-white">View Grants</a>
               </Link>
             </div>
           </div>
@@ -175,7 +177,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
               for building on Urbit using the languages you already know.
             </p>
             <Link href="/docs">
-              <button className="button-lg type-ui text-white bg-ultraDeepWall">
+              <button className="button-lg type-ui text-white bg-wall-600">
                 Read the Developer Docs
               </button>
             </Link>
@@ -203,7 +205,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
             />
           </div>
           <Link href="/blog">
-            <button className="button-lg type-ui text-white bg-green">
+            <button className="button-lg type-ui text-white bg-green-400">
               See More
             </button>
           </Link>
@@ -232,7 +234,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
             />
           </div>
           <Link href="/events">
-            <button className="button-lg type-ui text-white bg-ultraDeepWall">
+            <button className="button-lg type-ui text-white bg-wall-600">
               More Events
             </button>
           </Link>
