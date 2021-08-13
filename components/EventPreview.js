@@ -1,17 +1,17 @@
 import Link from "next/link";
 
-export default function EventPreview({ event, className, title, rsvp }) {
+export default function EventPreview({ event, className, rsvp }) {
   // Event tiles have a 'dark mode' used when their background images are dark and white text is needed for legibility.
   const grayText = event.extra?.dark ? "text-midWhite" : "text-gray";
   const blackText = event.extra?.dark ? "text-white" : "text-black";
 
   return (
     <div className={`cursor-pointer ${className}`}>
-      {title ? <h3 className="mb-2">{title}</h3> : null}
+      {event.title ? <h3 className="mb-2">{event.title}</h3> : null}
       <div
         key={event.slug}
         className={`bg-wall rounded-xl h-96 bg-cover bg-center bg-no-repeat`}
-        style={{ backgroundImage: `url(${event.extra?.image})` || "" }}
+        style={{ backgroundImage: `url(${event?.image})` || "" }}
       >
         <Link href={`/events/${event.slug}`}>
           <div className="flex flex-col p-4 justify-between items-between h-full relative">
@@ -20,16 +20,19 @@ export default function EventPreview({ event, className, title, rsvp }) {
               <p className={grayText}>{event?.type}</p>
             </div>
             <div className="absolute p-4 left-0 bottom-0 w-full">
-              <p className={`${grayText} type-ui-small`}>{event.extra.host}</p>
-              <p className={`${grayText} type-ui-small`}>
-                {event.extra.guests}
-              </p>
+              {event.hosts?.map((host) => (
+                <p className={`${grayText} type-ui-small`}>{host}</p>
+              ))}
+
+              {event.guests?.map((guest) => (
+                <p className={`${grayText} type-ui-small`}>{guest}</p>
+              ))}
             </div>
-            {rsvp && event.extra.registration_url && event.extra.pinned ? (
+            {rsvp && event.registration_url ? (
               <div className="absolute right-0 bottom-0 p-4">
                 <a
                   className="button-sm bg-green text-white"
-                  href={event.extra.registration_url}
+                  href={event.registration_url}
                 >
                   RSVP
                 </a>

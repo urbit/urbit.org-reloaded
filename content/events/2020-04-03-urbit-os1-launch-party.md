@@ -1,16 +1,16 @@
 +++
 title = "Urbit OS1 Launch Party"
-starts=1585951200
-ends=1585962000
-hosts = [
-      { name = "Urbit" }
-]
-contributors =""
+starts = "2020-04-03T15:00:00.000-07:00"
+ends = "2020-04-03T18:00:00.000-07:00"
+contributors = ""
 location = "Online event"
 image = "https://secure.meetupstatic.com/photos/event/1/f/8/b/600_489548075.jpeg"
 registration_url = "https://www.meetup.com/urbit-sf/events/268519156/"
 youtube = "71ViyftPkGk"
 description = "Join us as we launch Urbit OS1!"
+
+[[hosts]]
+name = "Urbit"
 +++
 
 The presentation will begin at 7pm Pacific.

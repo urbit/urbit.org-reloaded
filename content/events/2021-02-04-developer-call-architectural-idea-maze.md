@@ -1,16 +1,18 @@
 +++
 title = "Developer Call: Architectural Idea Maze"
-starts=1612443600
-ends=1612449000
-hosts = [
-      { name = "Lane R." },
-      { name = "Urbit" }
-]
-contributors =""
+starts = "2021-02-04T05:00:00.000-08:00"
+ends = "2021-02-04T06:30:00.000-08:00"
+contributors = ""
 location = "Online event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/275992798/"
 description = ""
+
+[[hosts]]
+name = "Lane R."
+
+[[hosts]]
+name = "Urbit"
 +++
 
 Tlon Engineer Philip Monk is interviewed by Poprox in an "Architectural Idea Maze" discussion, where Phil will discuss the choices made, and possibly more importantly, the choices _not_ made in the design of a component of Urbit. In this discussion, Phil will be focusing on subscriptions in all their forms throughout Urbit.

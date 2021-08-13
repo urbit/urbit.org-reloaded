@@ -1,17 +1,19 @@
 +++
 title = "Developer Call: Injecting External Services into Urbit"
-starts=1607605200
-ends=1607610600
-hosts = [
-      { name = "Lane R." },
-      { name = "Urbit" }
-]
-contributors =""
+starts = "2020-12-10T05:00:00.000-08:00"
+ends = "2020-12-10T06:30:00.000-08:00"
+contributors = ""
 location = "Online event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/275051926/"
 youtube = "LaWNHMmxQag"
 description = ""
+
+[[hosts]]
+name = "Lane R."
+
+[[hosts]]
+name = "Urbit"
 +++
 
 This call will feature a discussion by well-known developer in the Urbit community, ~timluc-miptev. ~timluc will be discussing the work he's been doing to provide access to a Bitcoin full node, which will enable Urbit ships to make Bitcoin payments to other ships. More generally, he'll be discussing the patterns that he's using to manage an Urbit ship's connection to externally-running infrastructure, and how access to that infrastructure can be provided to other Urbit nodes.

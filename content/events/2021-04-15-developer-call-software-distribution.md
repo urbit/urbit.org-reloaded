@@ -1,19 +1,24 @@
 +++
 title = "Developer Call: 3rd Party Software Distribution"
-starts=1618488000
-ends=1618491600
-hosts = [
-      { name = "Josh Lehman", patp = "~wolref-podlex" }
-]
-contributors = [
-	     { name = "Raghu", patp = "~sovmep-ripsum" },
-	     { name = " Philip Monk", patp = "~wicdev-wisryt" }
-]
+starts = "2021-04-15T05:00:00.000-07:00"
+ends = "2021-04-15T06:00:00.000-07:00"
 location = "Online Event"
-image=""
+image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/277474491/"
 description = "Some exciting work has been going on behind the scenes to provide the foundation for 3rd party software distribution."
 youtube = "XwICC6Its1E"
+
+[[hosts]]
+name = "Josh Lehman"
+patp = "~wolref-podlex"
+
+[[contributors]]
+name = "Raghu"
+patp = "~sovmep-ripsum"
+
+[[contributors]]
+name = " Philip Monk"
+patp = "~wicdev-wisryt"
 +++
 
 Some exciting work has been going on behind the scenes to provide the foundation for 3rd party software distribution. In this talk Phil (~wicdev-wisryt) and Raghu (~sovmep-ripsum) will discuss the work they've been doing to clay to provide "virtual desks"—an integral part of the infrastructure needed to have safe, generic software distribution.

@@ -1,16 +1,16 @@
 +++
 title = "After hours: Bootstrapping Urbit from the Ethereum blockchain"
-starts=1502492400
-ends=1502503200
+starts = "2017-08-11T16:00:00.000-07:00"
+ends = "2017-08-11T19:00:00.000-07:00"
 pinned = false
-hosts = [
-      { name = "Urbit" }
-]
-contributors =""
+contributors = ""
 location = "Urbit Office"
-image=""
+image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/242295411/"
 description = "This time we'll be opening up the office, opening up a few cold ones, and talking about Urbit + Ethereum."
+
+[[hosts]]
+name = "Urbit"
 +++
 
 One thing that's been keeping us busy over the past month is designing the relationship between Urbit and the Ethereum blockchain.  We'll present our current design for this (from ~8:30 - 9) for people to comment on and ask questions about.

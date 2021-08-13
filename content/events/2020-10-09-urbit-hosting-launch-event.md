@@ -1,16 +1,16 @@
 +++
 title = "Urbit Hosting Launch Event"
-starts=1602273600
-ends=1602280800
-hosts = [
-      { name = "Urbit" }
-]
-contributors =""
+starts = "2020-10-09T13:00:00.000-07:00"
+ends = "2020-10-09T15:00:00.000-07:00"
+contributors = ""
 location = "Online event"
 image = "https://secure.meetupstatic.com/photos/event/8/600_492480008.jpeg"
 registration_url = "https://www.meetup.com/urbit-sf/events/273439025/"
 youtube = "w3qKe_WZr50"
 description = ""
+
+[[hosts]]
+name = "Urbit"
 +++
 
 We've been busy building, testing and refining — and now it's time to show off what we've been up to.

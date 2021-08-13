@@ -1,18 +1,20 @@
 +++
 title = "Developer Call: P2P Versioned Networking"
-starts=1620932400
-ends=1620936000
-hosts = [
-      { name = "Josh Lehman", patp = "~wolref-podlex" }
-]      
-contributors = [
-	     { name = "Liam Fitzgerald", patp = "~hastuc-dibtux" }
-]	     
+starts = "2021-05-13T12:00:00.000-07:00"
+ends = "2021-05-13T13:00:00.000-07:00"
 location = "Online Event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/278052029/"
 description = "Versioned Networking for Application Developers"
 youtube = "BhQ1vk4jGsk"
+
+[[hosts]]
+name = "Josh Lehman"
+patp = "~wolref-podlex"
+
+[[contributors]]
+name = "Liam Fitzgerald"
+patp = "~hastuc-dibtux"
 +++
 
 Building solid networking infrastructure has been a major focus of the Urbit project since its inception. There's a lot going on under the hood

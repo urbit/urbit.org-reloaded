@@ -1,15 +1,15 @@
 +++
 title = "After hours: Designing robust human systems"
-starts=1509058800
-ends=1509069600
-hosts = [
-      { name = "Urbit" }
-]
-contributors =""
+starts = "2017-10-26T16:00:00.000-07:00"
+ends = "2017-10-26T19:00:00.000-07:00"
+contributors = ""
 location = "Urbit Office"
-image =""
+image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/244316080/"
 description = "The office will be open and the beer will be cold.  Come hang out and talk about all things Urbit and Urbit related.  Cryptoeconomics, protocols, architecture, Japanese poetry, ancient aqueducts.  You get the idea."
+
+[[hosts]]
+name = "Urbit"
 +++
 
 Galen is going to give a short (~20m) talk on designing robust human systems.  No code, no math, no time in the terminal.  This is a completely non-technical talk about design principles.  It was originally given at the IDEO Blueprint event a few weeks ago.

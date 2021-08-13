@@ -1,17 +1,19 @@
 +++
 title = "Developer Call: Graph Store"
-starts=1604581200
-ends=1604586600
-hosts = [
-      { name = "Lane R." },
-      { name = "Urbit" }
-]
-contributors =""	     
+starts = "2020-11-05T05:00:00.000-08:00"
+ends = "2020-11-05T06:30:00.000-08:00"
+contributors = ""
 location = "Online event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/274279522/"
 youtube = "E4DFuAZQ32Y"
 description = ""
+
+[[hosts]]
+name = "Lane R."
+
+[[hosts]]
+name = "Urbit"
 +++
 
 Developer calls are focused on the technologies that underpin Urbit, from the top of the stack to the very bottom. They’re an opportunity for the people developing and contributing to Urbit to share their knowledge and expertise, including things that typically don’t make it into the docs, such as how and why Urbit works the way it does.
