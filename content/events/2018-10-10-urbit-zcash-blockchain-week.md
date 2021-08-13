@@ -9,8 +9,8 @@ contributors=""
 location = "Urbit Office"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/255001807/"
-description = "
-We're all full and looking forward to seeing you tonight. After you check-in at the front door please come up to floor 2, room 222.
+description = "We're all full and looking forward to seeing you tonight. After you check-in at the front door please come up to floor 2, room 222."
++++
 
 ~Schedule
 
@@ -20,5 +20,4 @@ We're all full and looking forward to seeing you tonight. After you check-in at 
 
 8:30 - 9: Galen Wolfe-Pauly will tell you things about Urbit and our wallet
 
-9 - 10: Hangout"
-+++
+9 - 10: Hangout

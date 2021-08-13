@@ -3,7 +3,8 @@ title = "Developer Call: 3rd Party Software Distribution"
 starts=1618488000
 ends=1618491600
 hosts = [
-      { name = "Josh Lehman', patp = "~wolref-podlex" }
+      { name = "Josh Lehman", patp = "~wolref-podlex" }
+]
 contributors = [
 	     { name = "Raghu", patp = "~sovmep-ripsum" },
 	     { name = " Philip Monk", patp = "~wicdev-wisryt" }
@@ -21,7 +22,7 @@ Raghu is a software engineer at Hudson River Trading who is perhaps best known f
 
 As usual, there'll be an opportunity to jump on the call with us afterward to ask questions and hang out.
 
-## Resources 
+## Resources
 
 - [Original mailing list discussion of 3rd party software distribution](https://groups.google.com/a/urbit.org)
 - [ucal](https://github.com/taalhavras/ucal)

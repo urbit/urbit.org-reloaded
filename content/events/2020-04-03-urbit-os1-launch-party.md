@@ -10,7 +10,8 @@ location = "Online event"
 image = "https://secure.meetupstatic.com/photos/event/1/f/8/b/600_489548075.jpeg"
 registration_url = "https://www.meetup.com/urbit-sf/events/268519156/"
 youtube = "71ViyftPkGk"
-description = "Join us as we launch Urbit OS1!
+description = "Join us as we launch Urbit OS1!"
++++
 
 The presentation will begin at 7pm Pacific.
 
@@ -42,5 +43,4 @@ Urbit Github: <a href="https://github.com/urbit" class="linkified">https://githu
 
 Still confused about what Urbit is?
 
-<a href="https://urbit.org/understanding-urbit/" class="linkified">https://urbit.org/understanding-urbit/</a>"
-+++
+<a href="https://urbit.org/understanding-urbit/" class="linkified">https://urbit.org/understanding-urbit/</a>
