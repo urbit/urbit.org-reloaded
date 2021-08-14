@@ -46,12 +46,12 @@ export default function Post({
               <div className="type-sub-bold mr-2">{post.extra.author}</div>
             ) : null}
             {post.extra.ship ? (
-              <div className="type-sub-bold text-gray font-mono">
+              <div className="type-sub-bold text-wall-500 font-mono">
                 {post.extra.ship}
               </div>
             ) : null}
           </div>
-          <div className="text-gray type-sub">
+          <div className="text-wall-500 type-sub">
             {formatDate(new Date(post.date))}
           </div>
         </Section>

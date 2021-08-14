@@ -62,7 +62,9 @@ const Headings = ({ headings, activeId }) => (
             {heading.items.map((child) => (
               <li
                 key={child.id}
-                className={child.id === activeId ? "text-green" : "text-gray"}
+                className={
+                  child.id === activeId ? "text-green-400" : "text-wall-500"
+                }
               >
                 <a href={`#${child.id}`}>{child.title}</a>
               </li>

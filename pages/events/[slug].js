@@ -38,21 +38,23 @@ export default function Event({
           <h1>{post.title}</h1>
 
           {post.extra.author ? (
-            <div className="type-ui text-gray mt-4 md:mt-8 lg:mt-10">
+            <div className="type-ui text-wall-500 mt-4 md:mt-8 lg:mt-10">
               {post.extra.author}
             </div>
           ) : null}
           {post.extra.ship ? (
-            <div className="type-ui text-gray font-mono">{post.extra.ship}</div>
+            <div className="type-ui text-wall-500 font-mono">
+              {post.extra.ship}
+            </div>
           ) : null}
 
           <div className="mt-16">
-            <p className="type-ui text-gray">
+            <p className="type-ui text-wall-500">
               {formatDate(new Date(post.date))} {", " + post.extra.time}
             </p>
             {post.extra.registration_url && post.extra.pinned ? (
               <a
-                className="button-sm bg-green text-white flex-0 mt-4"
+                className="button-sm bg-green-400 text-white flex-0 mt-4"
                 href={post.extra.registration_url}
               >
                 RSVP

@@ -157,17 +157,17 @@ export default function Grants({
           </div>
           <div className="flex flex-wrap">
             <Link href="#find-a-grant">
-              <button className="button-lg bg-green text-white mr-2">
+              <button className="button-lg bg-green-400 text-white mr-2">
                 View Grants
               </button>
             </Link>
             <Link href="#proposals">
-              <button className="button-lg bg-blue text-white mr-2">
+              <button className="button-lg bg-blue-400 text-white mr-2">
                 Submit a Proposal
               </button>
             </Link>
             <Link href="#gifts">
-              <a className="button-lg bg-ultraDeepWall text-white mr-2">
+              <a className="button-lg bg-wall-600 text-white mr-2">
                 Recent Gifts
               </a>
             </Link>
@@ -190,9 +190,9 @@ export default function Grants({
             {featuredGrants.map((grant) => {
               return (
                 <Link href={"/grants/" + grant.slug}>
-                  <div className="p-8 bg-washedGreen rounded-lg w-full md:w-1/3 cursor-pointer">
+                  <div className="p-8 bg-green-100 rounded-lg w-full md:w-1/3 cursor-pointer">
                     <h4 className="pb-4">{grant.title}</h4>
-                    <p className="text-green pb-4">
+                    <p className="text-green-400 pb-4">
                       {grant.extra.reward} star
                       {grant.extra.reward === 1 ? "" : "s"}{" "}
                       {grant.extra.completed ? "awarded" : "pending"}
@@ -223,7 +223,7 @@ export default function Grants({
 
           <Link href="#find-a-grant">
             <button
-              className="button-lg bg-blue text-white mr-2"
+              className="button-lg bg-blue-400 text-white mr-2"
               onClick={() => {
                 setIncludeInProgress(true);
                 setIncludeCompleted(true);
@@ -247,7 +247,7 @@ export default function Grants({
             {/* Uncomment once people added to content/gifts folder. */}
             {/* {gifts.map((e) => {
               return (
-                <div className="bg-wall rounded-xl p-4 my-8 flex justify-between">
+                <div className="bg-wall-100 rounded-xl p-4 my-8 flex justify-between">
                 <p className="font-semibold">
                   {e.name}
                 </p>
@@ -278,7 +278,7 @@ export default function Grants({
           <h2 id="find-a-grant" className="pb-8">
             Find a Grant
           </h2>
-          <h5 className="text-black font-semibold my-2">Work Programs</h5>
+          <h5 className="text-wall-600 font-semibold my-2">Work Programs</h5>
           <div className="flex flex-wrap items-center pb-2">
             <button
               onClick={() => {
@@ -286,18 +286,19 @@ export default function Grants({
                 setTypes(types);
               }}
               className={`badge-lg my-2 mr-2 ${
-                tab === 0 ? "text-white bg-black" : "text-gray bg-wall"
+                tab === 0 ? "text-white bg-black" : "text-wall-500 bg-wall-100"
               }`}
             >
               All <div className="opacity-50 ml-2">{allCount}</div>
             </button>
             {types.map((type, index) => {
               const className = classnames({
-                "bg-blue text-white": tab === index + 1 && type === "Proposal",
-                "bg-green text-white":
+                "bg-blue-400 text-white":
+                  tab === index + 1 && type === "Proposal",
+                "bg-green-400 text-white":
                   tab === index + 1 && type === "Apprenticeship",
-                "bg-yellow": tab === index + 1 && type === "Bounty",
-                "bg-wall text-gray": tab !== index + 1,
+                "bg-yellow-300": tab === index + 1 && type === "Bounty",
+                "bg-wall-100 text-wall-500": tab !== index + 1,
               });
               return (
                 <button
@@ -313,13 +314,13 @@ export default function Grants({
               );
             })}
           </div>
-          <h5 className="text-black font-semibold my-2">Work Categories</h5>
+          <h5 className="text-wall-600 font-semibold my-2">Work Categories</h5>
           <div className="flex flex-wrap mb-12">
             {categories.map((category) => {
               const isActive = activeTags.includes(category);
               const activeClasses = classnames({
-                "bg-green text-white": isActive,
-                "bg-wall text-gray": !isActive,
+                "bg-green-400 text-white": isActive,
+                "bg-wall-100 text-wall-500": !isActive,
               });
               return (
                 <button

@@ -26,12 +26,12 @@ export default function PostPreview(props) {
               </div>
             ) : null}
             {props.post.extra.ship ? (
-              <div className="type-sub-bold text-gray font-mono">
+              <div className="type-sub-bold text-wall-500 font-mono">
                 {props.post.extra.ship}
               </div>
             ) : null}
           </div>
-          <div className="text-gray type-sub mt-1">
+          <div className="text-wall-500 type-sub mt-1">
             {formatDate(new Date(props.post.date))}
           </div>
         </div>

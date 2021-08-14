@@ -41,14 +41,14 @@ export default function Post({
         <Section short narrow>
           <h1>{post.title}</h1>
           {post.author ? (
-            <div className="type-ui text-gray mt-4 md:mt-8 lg:mt-10">
+            <div className="type-ui text-wall-500 mt-4 md:mt-8 lg:mt-10">
               {post.author}
             </div>
           ) : null}
           {post.ship ? (
-            <div className="type-ui text-gray font-mono">{post.ship}</div>
+            <div className="type-ui text-wall-500 font-mono">{post.ship}</div>
           ) : null}
-          <div className="type-ui text-gray mt-4 md:mt-8 lg:mt-10">
+          <div className="type-ui text-wall-500 mt-4 md:mt-8 lg:mt-10">
             {formatDate(new Date(post.date))}
           </div>
         </Section>
