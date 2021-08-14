@@ -26,6 +26,7 @@ class Search extends Component {
   }
 
   onSelect(item) {
+    console.log(item);
     if (item.slug) {
       this.props.router.push(item.slug);
     }
@@ -85,10 +86,11 @@ class Search extends Component {
             selectedItem,
             getRootProps,
           }) => (
-            <div
-              onClick={(e) => props.closeSearch(e)}
-              className="fixed w-screen h-screen bg-washedWall z-50 flex flex-col items-center p-4"
-            >
+            <div className="fixed w-screen h-screen z-50 flex flex-col items-center p-4">
+              <div
+                onClick={(event) => props.closeSearch(event)}
+                className="top-0 left-0 fixed w-screen h-screen bg-washedWall"
+              />
               <div className="relative flex flex-col max-w-screen-lg md:my-32 w-full md:w-10/12 lg:w-8/12 xl:w-6/12 rounded-xl bg-white min-h-0 overflow-hidden">
                 <div
                   style={{ display: "inline-block" }}
