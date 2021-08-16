@@ -1,10 +1,10 @@
 +++
-title = "Usage Docs"
+title = "Operator's Manual"
 sort_by = "weight"
 template = "sections/docs/chapters.html"
 +++
 
-Welcome to the usage documentation for the Urbit project. This documentation is
+Welcome to the Operator's Manual for the Urbit project. This documentation is
 maintained by [Tlon](https://tlon.io) and the Urbit community in a public
 [Github repository](https://github.com/urbit/urbit.org). Issues and
 contributions are welcome.
