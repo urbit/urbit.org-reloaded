@@ -20,7 +20,7 @@ companion to this document, and some segments are direct quotes or paraphrases, 
 
 ## Prerequisites
 
-The conceptual section titled [What is Arvo?](#what-is-arvo-) can be understood
+The conceptual section titled [What is Arvo?](#what-is-arvo) can be understood
 without knowing Hoon, the Urbit programming language. The technical section
 titled [The kernel](#the-kernel) will require Chapter One of the [Hoon
 tutorial](/docs/hoon/hoon-school/) for full understanding, and some
@@ -29,26 +29,6 @@ presume that the reader has read through the [Technical
 Overview](/docs/system-overview/).
 
 We also suggest to the reader to peruse the [glossary](/docs/glossary/) before diving into this article. It will provide the initial scaffolding that you will be able to gradually fill in as you read this article and go deeper into the alternate universe of computing that is Urbit.
-
-
-# Table of Contents
-
-- [What is Arvo?](#what-is-arvo)
-  * [An operating function](#an-operating-function)
-    + [Determinism](#determinism)
-    + [Event log](#event-log)
-  * [Solid state interpreter](#solid-state-interpreter)
-    + [Over-the-air updates](#over-the-air-updates)
-    + [ACID Database](#acid-database)
-    + [Single-level store](#single-level-store)
-    + [Non-preemptive](#non-preemptive)
-- [The kernel](#the-kernel)
-  * [Overall structure](#overall-structure)
-    + [Formal interface](#formal-interface)
-    + [Types](#types)
-    + [Arvo cores](#arvo-cores)
-  * [The state](#the-state)
-  * [Vanes](#vanes)
 
 # What is Arvo?
 
@@ -567,8 +547,8 @@ As of this writing, we have nine vanes, which each provide the following service
 - [Ford](/docs/arvo/ford/ford): a build system also utilized for marks
   (file types) and debugging.
 - [Gall](/docs/userspace/gall/gall): manages our userspace applications. `%gall` keeps state and manages subscribers.
-- `Iris`: an http client.
-- `Jael`: storage for Azimuth information.
+- [Iris](/docs/arvo/iris/iris): an http client.
+- [Jael](/docs/arvo/jael/jael): storage for Azimuth information.
 
 #### Applying your knowledge
 
