@@ -6,11 +6,12 @@ pinned = false
 host = "Urbit Foundation"
 time = "12:00pm PDT"
 location = "Online Event"
-image = "https://storage.googleapis.com/media.urbit.org/site/events/20210413-bitcoin-header.png"
+image = "https://media.urbit.org/site/events/bitcoin-launch-event.png"
 registration_url = "https://www.meetup.com/urbit-sf/events/276741426/"
 youtube = "_aRnfacZPto"
 guests = "Marty Bent"
 description = "Bitcoin is coming to Urbit! With the upcoming release of the Bitcoin Wallet, you will be able to pay Urbit ships directly with BTC."
+dark = true
 +++
 
 Bitcoin is coming to Urbit! With the upcoming release of the Bitcoin Wallet, you will be able to pay Urbit ships directly with BTC.

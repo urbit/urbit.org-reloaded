@@ -2,7 +2,7 @@
 title = "Translate key parts of Urbit.org into Spanish"
 date = 2021-03-20
 [taxonomies]
-grant_type = ["proposals"]
+grant_type = ["Proposal"]
 grant_category = ["Documentation"]
 [extra]
 image = ""
@@ -22,9 +22,7 @@ I am a fluent speaker with 20+ years of experience with the language and have li
 
 ## Milestones
 
-
 ### Translation of key site content
+
 1 stars
 Introduction, Urbit OS, Urbit ID, Interface, Roadmap: OS1-> OS N, People + History, and Install + Setup
-
-    

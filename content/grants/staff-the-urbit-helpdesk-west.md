@@ -2,7 +2,7 @@
 title = "Staff the Urbit Helpdesk, West"
 date = 2020-12-03
 [taxonomies]
-grant_type = ["bounties"]
+grant_type = ["Bounty"]
 grant_category = ["Community"]
 [extra]
 image = ""
@@ -23,6 +23,7 @@ Urbit is pretty novel, and newcomers are often confused by the many new concepts
 You will “staff the help desk,” which means watching our [Discord server](https://discord.gg/Mae2bk7) and the Help channel within Urbit Community for support requests. You’re expected to be online for at least **four hours** within the hours of 1600-0000 UTC (8am - 4pm PT), for five days a week over the course of a month.
 
 You’re expected to:
+
 - Help users boot ships
 - Recommend relevant resources
 - Troubleshoot errors users encounter using Urbit
@@ -42,16 +43,14 @@ It will help if you identify yourself periodically as a support resource so that
 
 ### Contribution Guidelines
 
-- Do not begin work until your request to claim this bounty is accepted.  
-- Claimant will be online and responsive, 4 hours daily, for 30 days  
+- Do not begin work until your request to claim this bounty is accepted.
+- Claimant will be online and responsive, 4 hours daily, for 30 days
 - It may be requested that staffers modify their hours to improve coverage of issues.
 - Estimated work: 2 - 4 hours per day
 
 ## Milestones
 
-
 ### Work Complete
+
 1 stars
 You've spent the last month helping out newcomers.
-
-    

@@ -2,7 +2,7 @@
 title = "Translate key parts of Urbit.org into German"
 date = 2021-01-19
 [taxonomies]
-grant_type = ["proposals"]
+grant_type = ["Proposal"]
 grant_category = ["Documentation"]
 [extra]
 image = ""
@@ -22,9 +22,7 @@ I am a native German speaker with a long history of speaking and writing English
 
 ## Milestones
 
-
 ### Translation of Key Website Content
+
 1 stars
 Introduction, Urbit OS, Urbit ID, Interface, Roadmap: OS1-> OS N, People + History, and Install + Setup
-
-    

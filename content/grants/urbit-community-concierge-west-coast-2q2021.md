@@ -2,7 +2,7 @@
 title = "Urbit Community Concierge - West Coast - 2Q2021"
 date = 2021-04-27
 [taxonomies]
-grant_type = ["bounties"]
+grant_type = ["Bounty"]
 grant_category = ["Community"]
 [extra]
 image = ""
@@ -27,9 +27,7 @@ Applicants should:
 
 ## Milestones
 
-
 ### Complete 240 hours concierge service
+
 1 stars
 Complete 12 weeks, 5 days/week, 4 hours/day concierge service during west coast hours
-
-    

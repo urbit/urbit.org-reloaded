@@ -1,4 +1,3 @@
-
 +++
 title = "Urbit + Zcash: 'Blockchain Week'"
 date = 2018-10-10

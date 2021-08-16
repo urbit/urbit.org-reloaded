@@ -2,7 +2,7 @@
 title = "Translate key parts of Urbit.org into Korean"
 date = 2021-01-30
 [taxonomies]
-grant_type = ["proposals"]
+grant_type = ["Proposal"]
 grant_category = ["Documentation"]
 [extra]
 image = ""
@@ -20,12 +20,9 @@ I am a native English speaker with a high level of competence in written Korean.
 
 At the current pace we are translating a little under 1000 words per week. The total amount to be translated is a little over 9000 words.
 
-
 ## Milestones
 
-
 ### Translation of Key Website Content
+
 1 stars
 Introduction, Urbit OS, Urbit ID, Interface, Roadmap: OS1-> OS N, People + History, and Install + Setup
-
-    

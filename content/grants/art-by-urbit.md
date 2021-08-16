@@ -2,7 +2,7 @@
 title = "Art by Urbit"
 date = 2020-08-27
 [taxonomies]
-grant_type = ["proposals"]
+grant_type = ["Proposal"]
 grant_category = ["Community"]
 [extra]
 image = ""
@@ -20,13 +20,9 @@ For those already homesteading Urbit, part of the regular digest will be a pair 
 
 I'm qualified to carry out this proposal as I have built a portfolio of prior Urbit-related art (available [here](https://twitter.com/nartesfasrum) ) and have prior experience building & deploying websites & social media promotional campaigns.
 
-
-
 ## Milestones
 
-
 ### Six months of regular digests
-1 stars
-As described - six months of regular monthly Art by Urbit digests, posted to the Art by Urbit website & promoted on social media. 
 
-    
+1 stars
+As described - six months of regular monthly Art by Urbit digests, posted to the Art by Urbit website & promoted on social media.

@@ -2,7 +2,7 @@
 title = "Open Street Maps Data Importation"
 date = 2020-07-09
 [taxonomies]
-grant_type = ["bounties"]
+grant_type = ["Bounty"]
 grant_category = ["Core Dev"]
 [extra]
 image = ""
@@ -19,9 +19,9 @@ Create a mapping tool which allows Open Street Maps data to be imported into Urb
 
 This grant should involve 2 major steps:
 
-1: Create a client which makes it possible for OSM data in multiple formats to be serialized into Urbit and converted into a Hoon data structure. 
+1: Create a client which makes it possible for OSM data in multiple formats to be serialized into Urbit and converted into a Hoon data structure.
 
-2: Create methods by which this data can be stored and queried in Urbit, then exported and rendered by at least two different common Javascript map rendering libraries. 
+2: Create methods by which this data can be stored and queried in Urbit, then exported and rendered by at least two different common Javascript map rendering libraries.
 
 Additionally, write a one-page explanation for your design choices in the readme. Also in the readme, write an explanation of you you might expect a user-facing app to take advantage of your backend.
 
@@ -36,18 +36,15 @@ Additionally, write a one-page explanation for your design choices in the readme
 
 - Do not begin work until your request to claim this bounty is accepted.
 - Submit your work as a separate github repo, and email grants@urbit.org.
-- Storage concerns: The entire OSM dataset is 40GB, so this client should be constructed so as to allow the manipulation of smaller sectors (corresponding to geographic regions) of data at any given time. The Urbit system has a memory + storage limit of 2GB. 
-- License: Make sure to read the above link carefully and credit OSM for the relevant data on any user-facing interface. 
+- Storage concerns: The entire OSM dataset is 40GB, so this client should be constructed so as to allow the manipulation of smaller sectors (corresponding to geographic regions) of data at any given time. The Urbit system has a memory + storage limit of 2GB.
+- License: Make sure to read the above link carefully and credit OSM for the relevant data on any user-facing interface.
 - When applying to work on the bounty, tell us a little about yourself and some projects you’ve worked on in the past.
 - You have 90 days from the time of approval to complete this bounty.
 - Successful completion of this bounty may result in an invitation to complete other API bounties.
 
-
 ## Milestones
 
-
 ### You are finished
+
 2 stars
 Your work has been approved.
-
-    

@@ -1,5 +1,5 @@
 +++
-title = "Installing Urbit using the command line"
+title = "Command line install"
 weight = 2
 description = "Installation instructions for power users."
 +++
@@ -11,20 +11,21 @@ If you're a power user, you can run the Urbit virtual machine directly using the
   <label for="macos">MacOS</label>
   <div class="tab">
 
-```sh
+```bash
 mkdir ~/urbit
 cd ~/urbit
 curl -JLO https://urbit.org/install/mac/latest
 tar zxvf ./darwin.tgz --strip=1
 ~/urbit/urbit
 ```
+
   </div>
 
   <input type="radio" id="linux" name="os">
   <label for="linux">Linux</label>
   <div class="tab">
 
-```sh
+```shell
 mkdir ~/urbit
 cd ~/urbit
 wget --content-disposition https://urbit.org/install/linux64/latest
@@ -34,10 +35,11 @@ tar zxvf ./linux64.tgz --strip=1
 
 Linux users may need to run this command in another terminal window to access your Urbit on port 80:
 
-```sh
+```shell
 sudo apt-get install libcap2-bin
 sudo setcap 'cap_net_bind_service=+ep' ~/urbit/urbit
 ```
+
 </div>
 
   <input type="radio" id="windows" name="os">
@@ -49,6 +51,7 @@ sudo setcap 'cap_net_bind_service=+ep' ~/urbit/urbit
 Urbit cannot run on Windows itself, but there is a convenient way to run Linux using the [Windows Subsystem for Linux 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install) on Windows 10. Install the Windows Subsystem for Linux 2 and open a Linux terminal in Windows, then follow the Linux installation instructions below. These instructions have been tested and verified for WSL 2 + Ubuntu 18.04 LTS, as demonstrated in `~sitful-hatred`'s step-by-step setup guide [here](https://subject.network/posts/urbit-wsl2/).
 
 For performance reasons, do not install Urbit in the mounted Windows volume, but install it in the Linux file system. For example, in your home directory, which can be navigated to by entering `cd ~`.
+
 </div>
 </div>
 
@@ -68,17 +71,17 @@ The **ID** is similar to a username and password on another site. The difference
 
 There are five kinds of Urbit IDs but to get started you only need to know about two: we call them **planets** and **comets**.
 
-***
+---
 
 **Planets** are scarce (this prevents spamming, among other things) and usually require a price to acquire. This is the recommended way to run Urbit, but it's a bit more involved.
 
 A planet name looks like `~sampel-palnet`.
 
-[Follow this guide](@/getting-started/planet.md) if you have already acquired a planet.
+[Follow this guide](/getting-started/planet) if you have already acquired a planet.
 
-[Find a planet to purchase](@/getting-started/planet.md#purchase)
+[Find a planet to purchase](/getting-started/planet#purchase)
 
-***
+---
 
 **Comets** are practically unlimited and free to acquire. At present, these are a great way to try out the network for free.
 
@@ -86,8 +89,7 @@ A comet name looks like `~dasres-ragnep-lislyt-ribpyl--mosnyx-bisdem-nidful-marz
 
 [Read more about Urbit ID here](/understanding-urbit/urbit-id)
 
-
-***
+---
 
 To boot a comet, go into the command line and run the following command from the `urbit` directory you created during [Urbit installation](#installing-urbit):
 
@@ -119,10 +121,10 @@ To start your comet up again, run the following from your `urbit` directory (not
 
 Urbit is an entirely new computer, so by default it drops you into the "dojo," which is its terminal. Like your current computer, it can be used to do just about anything if you know the right commands. You only need to know one command for now.
 
-At the moment, the most common way to use Urbit is through a web app named [Landscape](@/docs/glossary/landscape.md), which comes with Urbit. It runs in your browser and provides an interface to Urbit without using the terminal. You need to get the password, or `code`.
+At the moment, the most common way to use Urbit is through a web app named [Landscape](/docs/glossary/landscape), which comes with Urbit. It runs in your browser and provides an interface to Urbit without using the terminal. You need to get the password, or `code`.
 
 1. With your Urbit running, look for a line that says something like `http: live (insecure, public) on 80`. The number given is the port that your ship is using. It will probably be 80, but we're just making sure. (Don't worry about the "insecure, public" part — that just means you can access it from your own web browser. It doesn't give anyone else access.)
-2.  If the port given is `80`, simply type `localhost` into your browser's address bar. If the given port is a different number, such as `8080`, you would type `localhost:8080`. You'll be met with a login prompt.
+2. If the port given is `80`, simply type `localhost` into your browser's address bar. If the given port is a different number, such as `8080`, you would type `localhost:8080`. You'll be met with a login prompt.
 3. In the window where you found the port number, type `+code` and press return. Copy-paste the code that appears into the "Access Key" field in the browser, and press continue.
 4. Once in, take a look around and read the instructions on screen. If you ever get logged out, follow these instructions again.
 
@@ -153,7 +155,7 @@ use |ota %disable or |ota ~sponsor %kids to reset it
 
 The dojo is Urbit's command line. You can use it to control your ship, or to execute arbitrary code. Check out the links below for more information.
 
-- [Basic Operations](@/using/os/getting-started.md)
+- [Basic Operations](/using/os/getting-started)
 - [Basic Hoon](/docs/tutorials/hoon/hoon-school/setup)
 - [Glossary Entry](/docs/glossary/dojo)
 
@@ -163,8 +165,7 @@ You can continue using this comet indefinitely. There are currently few differen
 
 A comet also comes with a long and fairly unmemorable name whereas a planet has a short name and a "sigil" (avatar) associated with it that makes it more identifiable on the network. You may notice all this within the first few minutes of using Urbit.
 
-[To read instructions on how to purchase and use a planet, visit this page](@/getting-started/planet.md).
-
+[To read instructions on how to purchase and use a planet, visit this page](/getting-started/planet).
 
 <style>
   .os {
@@ -176,20 +177,14 @@ A comet also comes with a long and fairly unmemorable name whereas a planet has 
     padding: .5rem;
     min-width: 70px;
     text-align: center;
-    border-width: 1px 0px 0px 1px;
-    border-style: solid;
     cursor: pointer;
-  }
-  .os label:last-of-type {
-    border-right-width: 1px;
   }
   .os input[type="radio"] {
     display: none;
   }
   .os .tab {
     display: none;
-    border: 1px solid;
-    padding: 1rem;
+    margin-top: 1rem;
     width: 100%;
     max-width: 100%;
   }
@@ -201,6 +196,8 @@ A comet also comes with a long and fairly unmemorable name whereas a planet has 
   }
   .os input[type='radio']:checked + label {
     font-weight: bold;
+    background-color: rgba(244,243,241,1);
+    border-radius: 0.5em;
   }
   .os input[type='radio']:checked + label + .tab {
     display: block;

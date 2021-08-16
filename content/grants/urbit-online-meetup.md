@@ -2,7 +2,7 @@
 title = "Urbit online meetup."
 date = 2020-06-08
 [taxonomies]
-grant_type = ["proposals"]
+grant_type = ["Proposal"]
 grant_category = ["Community"]
 [extra]
 image = ""
@@ -22,9 +22,7 @@ Ultimately, it might be nice to move the community over to an Urbit group. The t
 
 ## Milestones
 
-
 ### Urbit Lecture
+
 1 stars
 The Urbit lecture, given by me, as described.
-
-    

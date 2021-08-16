@@ -1,4 +1,3 @@
-
 +++
 title = "Urbit IRL: Austin, TX"
 date = 2019-03-08

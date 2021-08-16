@@ -1,9 +1,9 @@
 +++
-title = "Apprenticeship: Invoice system"
+title = "Invoice system"
 date = 2021-05-27
 [taxonomies]
-grant_type = ["apprenticeships"]
-grant_category = ["App Dev: Arvo"]
+grant_type = ["Apprenticeship"]
+grant_category = ["App Dev", "Arvo"]
 [extra]
 image = ""
 description = "A system to request and record payments made and received."
@@ -19,12 +19,15 @@ A system to request and record payments made and received. Currently, Urbit ship
 This invoice system will be needed in Urbit at some point, and so this project has potential to be extended as a grants project in the future if an initial version works well.
 
 ### User Stories
+
 As a user, I can:
-* specify on-Urbit payment methods from which I will make or receive payments
-* request a specific payment amount from another user, specifying the method(s) that can be used for payment
-* tell a user that you've made a payment, with reference to some receipt that they can verify.
-* receive payments with app and time metadata
+
+- specify on-Urbit payment methods from which I will make or receive payments
+- request a specific payment amount from another user, specifying the method(s) that can be used for payment
+- tell a user that you've made a payment, with reference to some receipt that they can verify.
+- receive payments with app and time metadata
 
 As another application on a user's Urbit I can:
-* generate invoices to be sent to other users
-* query the invoice store to see which payments have been made for me
+
+- generate invoices to be sent to other users
+- query the invoice store to see which payments have been made for me

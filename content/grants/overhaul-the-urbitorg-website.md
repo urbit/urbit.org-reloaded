@@ -2,7 +2,7 @@
 title = "Overhaul the urbit.org website"
 date = 2021-02-19
 [taxonomies]
-grant_type = ["bounties"]
+grant_type = ["Bounty"]
 grant_category = ["Design"]
 [extra]
 image = ""
@@ -29,7 +29,7 @@ This bounty is concerned only with the first part.
 
 ## Phases
 
-We'll break the project into two phases—**design** and **implementation**. 
+We'll break the project into two phases—**design** and **implementation**.
 
 ### Design
 
@@ -39,18 +39,18 @@ Reworking urbit.org is a substantial undertaking and requires thoughtful plannin
 2. An **information architecture** that maps the flow of content such that the stories can be fulfilled.
 3. A set of **wireframes** that capture the navigational elements and content requirements in terms of the information architecture.
 
-It's expected that the design phase is completed within four weeks: one week for parts (1) and (2), two weeks for part (3), and an extra week for buffer. 
+It's expected that the design phase is completed within four weeks: one week for parts (1) and (2), two weeks for part (3), and an extra week for buffer.
 
 ### Implementation
 
 The path to implementation is necessarily dependent on the outcomes of the design phase, but we can make the following assumptions:
 
 - The implementation should be time-boxed to 3-4 weeks, which includes a week of QA.
-- The visual design should remain largely consistent with the current site. Modifications are permissible within the bounds of the [indigo](https://github.com/urbit/indigo-react) design system. 
+- The visual design should remain largely consistent with the current site. Modifications are permissible within the bounds of the [indigo](https://github.com/urbit/indigo-react) design system.
 
 ## Other Requirements
 
-- You will be expected to attend our regular Monday morning design meetings with work prepared for feedback (10AM PT, usually). 
+- You will be expected to attend our regular Monday morning design meetings with work prepared for feedback (10AM PT, usually).
 - Frequent communication with a group of stakeholders on the project
 
 ## Resources
@@ -60,14 +60,12 @@ The path to implementation is necessarily dependent on the outcomes of the desig
 
 ## Milestones
 
-
 ### Designs are complete
+
 2 stars
 Completion of the contents of the Design section above.
 
-
 ### Implementation is complete
+
 4 stars
 Completion of the contents of the Implementation section above.
-
-    

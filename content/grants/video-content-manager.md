@@ -2,13 +2,13 @@
 title = "Video Content Manager"
 date = 2021-02-10
 [taxonomies]
-grant_type = ["bounties"]
+grant_type = ["Bounty"]
 grant_category = ["Community"]
 [extra]
 image = ""
 description = "Keep your finger on the pulse of video content produced by the community, and ensure that it's made visible."
 reward = 3
-assignee = "~libmud-bonted"
+assignee = "~wolnyl-pasreg"
 id = "790269488"
 completed = false
 link = ""
@@ -24,14 +24,15 @@ A wealth of Urbit-centric content has been produced in the past several months, 
 - Organize content by type on YouTube, and possibly the Media page as well.
 - Regularly search for Urbit-related video content and rebroadcast it from Urbit channels (with explicit permission from creators/owners).
 - Upload audio-only content and add Urbit-related images as instructed by Tlon Design team.
-- Keep Tlon Comms team updated when new video content is uploaded, so they can signal-boost. 
-- Coordinate (or even produce) video content creation from the community. 
-- Use Youtube as a social network to promote Urbit; link Urbit videos in the comments of video content elsewhere on YT that talks about decentralized web/web3.0, data ownership, platform failures etc. 
+- Keep Tlon Comms team updated when new video content is uploaded, so they can signal-boost.
+- Coordinate (or even produce) video content creation from the community.
+- Use Youtube as a social network to promote Urbit; link Urbit videos in the comments of video content elsewhere on YT that talks about decentralized web/web3.0, data ownership, platform failures etc.
 
 ## Requirements
+
 - Good familiarity with video recording and editing software.
-- Previous record of participation in/knowledge of Urbit Community is a plus. 
-- Scrupulous about checking permissions/ownership of content. 
+- Previous record of participation in/knowledge of Urbit Community is a plus.
+- Scrupulous about checking permissions/ownership of content.
 
 ## Resources
 
@@ -41,19 +42,17 @@ A wealth of Urbit-centric content has been produced in the past several months, 
 
 ## Milestones
 
-
 ### Bring channels up-to-date
+
 1 stars
 Wrangle content from around the web (with creators' permission) and upload it to both channels. Provide organizational structure to content—on YouTube that's creating channels/playlists, on urbit.org it's up to you.
 
-
 ### Ongoing maintenance
+
 1 stars
 In the three months following the first month of work, keep an eye out for additional content and upload it as needed.
 
-
 ### Optional: Content creation/facilitation
+
 1 stars
 Either create or directly facilitate the creation of new video/audio content (and, of course, upload it).
-
-    

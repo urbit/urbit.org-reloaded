@@ -201,7 +201,7 @@ own real estate.
 Urbit was created by Curtis Yarvin, who has distributed the 256
 galaxies as follows (allocation as of June 1, 2016):
 
-95, to the [Tlon Corporation](../company).  50, to urbit.org, the future
+95, to the [Tlon Corporation](/blog/company).  50, to urbit.org, the future
 community foundation.  40, to Tlon employees and their family members
 (24 to Curtis, who started in 2002; 16 to everyone else, who started
 in 2014).  34, to outside investors in Tlon.  37, to 33 other

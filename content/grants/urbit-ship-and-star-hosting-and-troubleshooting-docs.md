@@ -2,7 +2,7 @@
 title = "Urbit Ship and Star Hosting and Troubleshooting Docs"
 date = 2020-08-19
 [taxonomies]
-grant_type = ["proposals"]
+grant_type = ["Proposal"]
 grant_category = ["Documentation"]
 [extra]
 image = ""
@@ -25,14 +25,12 @@ All of this will be done with an eye towards maintainability of the docs along w
 
 ## Milestones
 
-
 ### Add Ship Hosting To Official Urbit Docs
+
 1 stars
 The docs for running your Urbit ship in the cloud with best practices: (https://zalberico.com/essay/2020/06/06/urbit-on-the-cloud.html) will be added to the core Urbit.org documentation for users
 
-
 ### Star Hosting/Troubleshooting Docs
+
 1 stars
 Write up docs about the best way to host a star and ways to debug common issues/workflows. End result should be a document that explains how to go from star ownership to hosting and supporting planets
-
-    

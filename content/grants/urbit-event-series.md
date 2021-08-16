@@ -2,7 +2,7 @@
 title = "Urbit Event Series"
 date = 2020-10-11
 [taxonomies]
-grant_type = ["proposals"]
+grant_type = ["Proposal"]
 grant_category = ["Community"]
 [extra]
 image = ""
@@ -27,6 +27,7 @@ Grant requested: one star
 Additional required budget: None
 
 Deliverable: an introductory series of 3-4 developer calls for the Urbit community. Calls will happen weekly or biweekly and be hosted on Zoom or a similar platform. They can also be streamed to an Urbit channel, where community members can watch and post questions in real time. Each call will feature a different developer, invited to discuss a different part of the Urbit application stack, such as:
+
 - Building apps using store/hook/view
 - Graph store (Logan)
 - Lib hook
@@ -72,19 +73,17 @@ Scope of work: Act as project manager for the event. Consult with Tlon, communit
 
 ## Milestones
 
-
 ### Phase I: Developer calls
+
 1 stars
 An introductory series of 3-4 developer calls for the Urbit community. See Details for more information and scope of work.
 
-
 ### Phase II: Town Hall
+
 2 stars
 A one-off, 2-3 hour “town hall” event that will be appropriate for both a technical and a non-technical audience. See Details for more information and scope of work.
 
-
 ### Phase III: UrbitCon
+
 3 stars
 A daylong virtual summit, the first public Urbit conference. See Details for more information and scope of work.
-
-    

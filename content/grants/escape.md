@@ -2,8 +2,8 @@
 title = "Escape"
 date = 2019-12-04
 [taxonomies]
-grant_type = ["proposals"]
-grant_category = ["App Dev: Arvo"]
+grant_type = ["Proposal"]
+grant_category = ["App Dev", "Arvo"]
 [extra]
 image = ""
 description = "A reputation agent for Stars."
@@ -15,11 +15,11 @@ canceled = true
 link = ""
 +++
 
-"How much *Escape* does `~marzod` have?"
+"How much _Escape_ does `~marzod` have?"
 
 When a planet is newly booted into the Urbit Network there is a fundamental service that its sponsor needs to provide: peer discovery. In order to do this the sponsor needs to be up and running, with a stable internet connection. The Urbit Network is still young but there has been several instances where planets discovered that, right after a first boot, they can't communicate with anybody in the network due to their sponsor not been active.
 
-These planets need to quickly escape, that is, leave their sponsor star and find a new one that provides a good service. A simple way to assess the likelihood of the sponsor being a good actor in the network is to look at on-chain data from the Azimuth contract, in particular, *Escapes*. If a sponsor has a low Escape score (planets that leave), one could use this as a proxy and say that the sponsor will keep behaving in the same way as the past data indicates. More over, if a planet attracts more planets, that signals more strongly the good quality of the provided service.
+These planets need to quickly escape, that is, leave their sponsor star and find a new one that provides a good service. A simple way to assess the likelihood of the sponsor being a good actor in the network is to look at on-chain data from the Azimuth contract, in particular, _Escapes_. If a sponsor has a low Escape score (planets that leave), one could use this as a proxy and say that the sponsor will keep behaving in the same way as the past data indicates. More over, if a planet attracts more planets, that signals more strongly the good quality of the provided service.
 
 This proposal addresses this problem by using the Beta Reputation to create a Landscape app that will show the score of a planet's sponsor based on data from Azimuth, in particular the number of planets spawned, and the number of planets that have escaped. [The Beta Reputation](https://www.csee.umbc.edu/~msmith27/readings/public/josang-2002a.pdf) uses the Beta Distribution to calculate the score (e.g. successful/unsuccessful events over the total number of interactions) as the expected value of a probability distribution. More data available (high number of booted planets) will narrow down the confidence of the probability (if a star has only booted a planet that didn't escape, the confidence of that score `(1-0.67=33%)` is smaller than the one of a star that has booted 200 planets and only two have escaped `(1-0.87=13%)`)
 
@@ -33,14 +33,12 @@ With this is mind the Beta library (`/lib/beta.hoon`) can be used with any app t
 
 ## Milestones
 
-
 ### Gall Agent and Beta Reputation Library
+
 2 stars
 Delivery of the agent and library for the Beta reputation that's able to poke Azimuth for the Blockchain data, calculate the reputation score, and store it on the agent.
 
-
 ### Escape UI
+
 2 stars
 Delivery of the UI interface that will show the Reputation Score to the user, with the ability to search for specific sponsors and filter the results accordingly.
-
-    

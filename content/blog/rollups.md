@@ -15,14 +15,14 @@ gotten _expensive_. There are a large quantity of
 complicated and clever techniques each with their own trade-offs
 that are collectively referred to as "layer 2 solutions" (see [further
 resources](#resources) for more information about these). This is in contrast to
-the base computational layer of Ethereum called "layer 1", which is what constitutes most Ethereum usage and where [Urbit ID](@/docs/glossary/azimuth.md)’s smart contracts currently exist.
+the base computational layer of Ethereum called "layer 1", which is what constitutes most Ethereum usage and where [Urbit ID](/docs/glossary/azimuth)’s smart contracts currently exist.
 
-Tlon has always covered gas costs for Urbit ID up to a set limit, and this was easy a couple of years ago when the cost of transactions required to get a [planet](@/docs/glossary/planet.md) up and running came out to less than a dollar. Unfortunately the ongoing Ethereum gas crisis, along with the rising price of Ethereum itself, has made this impossible. We’ve seen gas costs to set up a planet as high as several hundred US dollars at time of writing!
+Tlon has always covered gas costs for Urbit ID up to a set limit, and this was easy a couple of years ago when the cost of transactions required to get a [planet](/docs/glossary/planet) up and running came out to less than a dollar. Unfortunately the ongoing Ethereum gas crisis, along with the rising price of Ethereum itself, has made this impossible. We’ve seen gas costs to set up a planet as high as several hundred US dollars at time of writing!
 
 In response to the gas crisis, Tlon has spent the last several months developing
 a simple, in-house layer 2 solution which we anticipate will reduce typical gas costs by 65x or more.
 
-This post is primarily a short non-technical explainer of the end-user experience of our solution aimed at planet and [star](@/docs/glossary/star.md) owners and those in the market for one, as well as a status update on where we're at in development. At [the end](#technical) we give some minimal technical details and resources to help you dig deeper should you wish. 
+This post is primarily a short non-technical explainer of the end-user experience of our solution aimed at planet and [star](/docs/glossary/star) owners and those in the market for one, as well as a status update on where we're at in development. At [the end](#technical) we give some minimal technical details and resources to help you dig deeper should you wish.
 This is also primarily aimed at those who currently self-host or plan to self-host their
 urbit. For anybody utilizing a hosted service, this matter will all be handled
 by your provider. There is a [separate section](#stars) addressed specifically at star owners, and another [section](#rollers) for those who wish to set up their urbit to accept and submit layer 2 transactions. We’d like to emphasize that this system is 100% opt-in—if you are satisfied with the current experience of Urbit ID, then nothing changes for you whatsoever.
@@ -37,7 +37,7 @@ of the back-end is approaching completion, and we are confident in a release bef
 Our layer 2 solution, designed primarily by Tlon lead engineer `~wicdev-wisryt`,
 is known as "naive rollups" and we will be using this term interchangeably with
 "layer 2"—though it is important to note that there are many layer 2 solutions
-utilized by projects other than Urbit. As we're avoiding technicality here, we’re focusing primarily on the advantages and disadvantages of utilizing our layer 2 solution, and how that affects the management of your [ship](@/docs/glossary/ship.md).
+utilized by projects other than Urbit. As we're avoiding technicality here, we’re focusing primarily on the advantages and disadvantages of utilizing our layer 2 solution, and how that affects the management of your [ship](/docs/glossary/ship).
 
 Very briefly, a rollup is a way to combine many transactions into one, and we
 are building infrastructure so that any Urbit ship may be utilized as a "roller". A
@@ -69,7 +69,7 @@ hours or even days for your transaction to clear. But the way we are saving on
 gas is essentially by "bundling" or "rolling up" many transactions into one, and
 submitting them as a single transaction. The more transactions in the rollup,
 the better the savings. This bundling is not the only factor at play here
-though—costs are reduced other ways, but this is a technical detail 
+though—costs are reduced other ways, but this is a technical detail
 [discussed later in this post](#technical). It is possible to use layer 2 to submit single
 transactions (and this will still save on gas costs!), so utilization of layer 2
 should not incur any delay over layer 1 when utilized in this fashion.
@@ -82,7 +82,7 @@ view Urbit ID as "digital land", and a few hours to acquire land, or waiting for
 your new personal computer to be delivered, is still lightning fast in
 comparison to the real world. We also have ideas on methods that will allow you to get on the network before the transfer has been confirmed, but that is outside of the scope of this article.
 
-Our layer 2 preserves the main value proposition of Urbit ID, which is that your ship 
+Our layer 2 preserves the main value proposition of Urbit ID, which is that your ship
 belongs to you forever, and that this is assured by very strong cryptographic methods and
 game-theoretic arguments comparable to the ones that exist on layer 1. We
 consider this principle to be uncompromisable, and maintaining ultimate
@@ -94,8 +94,8 @@ goes into greater detail in the [resources](#resources).
 
 The primary way one manages their Urbit ID, namely performing tasks such as
 transferring ships, setting networking keys, or setting
-[proxies](@/docs/glossary/proxies.md), is with a web interface called
-[Bridge](@/docs/glossary/bridge.md) found at
+[proxies](/docs/glossary/proxies), is with a web interface called
+[Bridge](/docs/glossary/bridge) found at
 [bridge.urbit.org](https://bridge.urbit.org). If you already own a planet,
 you've probably used Bridge before - perhaps only a single time.
 
@@ -109,7 +109,7 @@ choice of a roller to submit transactions to. Tlon's will be free for ordinary, 
 You could use your own ship for a fast single transaction for a little more gas. We expect that planet markets and stars may wish to set up their own rollers as well.
 
 Every planet has a sponsor star, which distributes [OTA
-updates](@/docs/glossary/ota-updates.md) to their sponsored planets and assists with peer discovery. Both layer 1 and layer 2 planets will be able to be
+updates](/docs/glossary/ota-updates) to their sponsored planets and assists with peer discovery. Both layer 1 and layer 2 planets will be able to be
 sponsored by either layer 1 or layer 2 stars, meaning that nothing will change
 in terms of how sponsorship works.
 
@@ -123,9 +123,9 @@ And that's it! If you'd like to know how things will be changing for
 ### Changes to stars {#stars}
 
 Both planets and stars will be able to move to layer 2.
-[Galaxies](@/docs/glossary/galaxy.md) must remain on layer 1 for technical
-reasons, and [moons](@/docs/glossary/moon.md) and
-[comets](@/docs/glossary/comet.md) never interacted with Ethereum anyways, so
+[Galaxies](/docs/glossary/galaxy) must remain on layer 1 for technical
+reasons, and [moons](/docs/glossary/moon) and
+[comets](/docs/glossary/comet) never interacted with Ethereum anyways, so
 they are completely out of the picture.
 
 Stars will be able to remain on layer 1 with no action required. For star owners
@@ -171,7 +171,7 @@ these factors to be included in the roller documentation.
 
 ### Changes to Azimuth
 
-[Azimuth](@/docs/glossary/azimuth.md) is the set of Ethereum smart contracts
+[Azimuth](/docs/glossary/azimuth) is the set of Ethereum smart contracts
 governing Urbit ID. They will require a few changes to accommodate the new
 system. Some of this has been implicit above, but to be clear, we will only be
 making a couple minor alterations:
@@ -191,20 +191,20 @@ Changes to the state of Urbit ID on layer 1 works as follows:
  2. The EVM calculates the resulting state transition and checks its validity, then updates the state.
  3. Your urbit downloads the new state from an Ethereum node.
  4. Your urbit makes the final decision on whether the new state is valid.
- 
+
 In practice, the fourth step is never used in layer 1. The primary change to our
 security model is that we are cutting out step 2 and beefing up step 4. Your
 ship will now perform validation of the transactions posted to the Ethereum
 blockchain, rather than the EVM.
 
-Since [Urbit OS](@/docs/glossary/arvo.md) is deterministic, and Hoon has some nice formal
-properties, it turns out to be a great language for writing smart contracts. Thus we are effectively swapping the Ethereum smart contract with a “Hoon smart contract” run locally on your ship. 
+Since [Urbit OS](/docs/glossary/arvo) is deterministic, and Hoon has some nice formal
+properties, it turns out to be a great language for writing smart contracts. Thus we are effectively swapping the Ethereum smart contract with a “Hoon smart contract” run locally on your ship.
 
 #### Further Resources {#resources}
 
 We want to keep this post brief and non-technical, so that's all we'll say about
 it for now. To find out more, you have a few directions to go on. We held a
-[Developer Call](@/events/2021-03-04-developer-call-scaling-azimuth.md) where
+[Developer Call](/events/2021-03-04-developer-call-scaling-azimuth) where
 `~wicdev-wisryt` outlines the design in much more technical detail, and also
 explains why we decided to utilize our own design rather than other known layer
 2 solutions such as [Optimistic

@@ -2,7 +2,7 @@
 title = "Unit tests for JSON parsing"
 date = 2019-11-15
 [taxonomies]
-grant_type = ["bounties"]
+grant_type = ["Bounty"]
 grant_category = ["Core Dev"]
 [extra]
 image = ""
@@ -28,22 +28,20 @@ Save the test files in the `/tests/sys/hoon` directory in Arvo. Use the same fra
 
 #### Resources
 
-* Read the [guide](https://github.com/urbit/urbit/blob/master/pkg/arvo/TESTING.udon) to writing unit tests in Hoon.
-* [Here](https://github.com/urbit/urbit/blob/alef2/pkg/arvo/tests/sys/zuse/ordered-map.hoon) is an example test file for the new Ames. Your tests should be similar to it.
+- Read the [guide](https://github.com/urbit/urbit/blob/master/pkg/arvo/TESTING.udon) to writing unit tests in Hoon.
+- [Here](https://github.com/urbit/urbit/blob/alef2/pkg/arvo/tests/sys/zuse/ordered-map.hoon) is an example test file for the new Ames. Your tests should be similar to it.
 
 #### Contribution Guidelines
 
-* You have 45 days from the time of approval to complete this bounty.
-* Do not begin work until your request to claim this bounty is accepted.
-* Your tests should be written as two files: one file for `+format` functions and one file for `+html` functions.
-* Write the appropriate number of unit tests per function. Some arms will only need one test, but some arms may or may not require more. An insufficient number of tests for arms may result in your submission being rejected.
-* Submit your tests as a PR to the [“urbit” repository](https://github.com/urbit/urbit). Your test file should be under `pkg/arvo/tests/sys/hoon` within the repository. Link this bounty in the PR’s description.
+- You have 45 days from the time of approval to complete this bounty.
+- Do not begin work until your request to claim this bounty is accepted.
+- Your tests should be written as two files: one file for `+format` functions and one file for `+html` functions.
+- Write the appropriate number of unit tests per function. Some arms will only need one test, but some arms may or may not require more. An insufficient number of tests for arms may result in your submission being rejected.
+- Submit your tests as a PR to the [“urbit” repository](https://github.com/urbit/urbit). Your test file should be under `pkg/arvo/tests/sys/hoon` within the repository. Link this bounty in the PR’s description.
 
 ## Milestones
 
-
 ### Test files are merged
+
 2 stars
 Your test files are accepted and merged on GitHub.
-
-    

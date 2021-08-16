@@ -2,8 +2,8 @@
 title = "Urbit API for Elixir"
 date = 2021-02-11
 [taxonomies]
-grant_type = ["proposals"]
-grant_category = ["App Dev: Other"]
+grant_type = ["Proposal"]
+grant_category = ["App Dev"]
 [extra]
 image = ""
 description = "A proposal to build an Urbit HTTP Api for the Elixir language, bringing to Urbit its state of the art concurrency capabilities."
@@ -20,19 +20,17 @@ I am a web developer fluent in Ruby, JS, and working mainly with elixir for the 
 
 ## Milestones
 
-
 ### Basic HTTP Interface
+
 1 stars
 Enabling a basic interface to send/receive json to a running Urbit ship.
 
-
 ### Graph Store
+
 1 stars
 Enabling full interactivity with the graph-store HTTP endpoints.
 
-
 ### Other Gall Apps
+
 1 stars
 Reach all available endpoints for other Gall apps such as hark-store, metadata-store, etc.
-
-    

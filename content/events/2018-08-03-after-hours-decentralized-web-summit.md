@@ -1,4 +1,3 @@
-
 +++
 title = "After hours 'decentralized web summit'"
 date = 2018-08-03
