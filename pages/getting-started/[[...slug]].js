@@ -43,11 +43,12 @@ const pageTree = (thisLink, tree, level = 0) => {
   const isThisPage = router.asPath === thisLink;
 
   const pageItemClasses = classnames({
-    "pl-0 font-semibold text-gray text-base hover:text-green": level === 0,
-    "pl-8 text-black text-base hover:text-green": level === 1,
-    "pl-12 text-black text-base hover:text-green": level === 2,
+    "pl-0 font-semibold text-wall-500 text-base hover:text-green-400":
+      level === 0,
+    "pl-8 text-wall-600 text-base hover:text-green-400": level === 1,
+    "pl-12 text-wall-600 text-base hover:text-green-400": level === 2,
     "dot relative": isThisPage,
-    "text-green": isThisPage,
+    "text-green-400": isThisPage,
   });
 
   return (
@@ -64,10 +65,10 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
   const isSelected = "/getting-started".includes(router.asPath);
   const selectedClasses = classnames({
     dot: isSelected,
-    "text-green": isSelected,
-    "text-gray": !isSelected,
+    "text-green-400": isSelected,
+    "text-wall-500": !isSelected,
   });
-  const rootClasses = "pl-0 font-semibold text-base hover:text-green";
+  const rootClasses = "pl-0 font-semibold text-base hover:text-green-400";
 
   return (
     <>

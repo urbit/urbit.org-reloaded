@@ -51,16 +51,17 @@ const pageTree = (thisLink, tree, level = 0) => {
   });
 
   const headingItemClasses = classnames({
-    "pl-0 text-gray text-base font-semibold hover:text-green leading-relaxed":
+    "pl-0 text-wall-500 text-base font-semibold hover:text-green-400 leading-relaxed":
       level === 0,
-    "pl-4 text-gray text-base font-semibold hover:text-green": level === 1,
-    "pl-8 text-gray text-base hover:text-green": level === 2,
+    "pl-4 text-wall-500 text-base font-semibold hover:text-green-400":
+      level === 1,
+    "pl-8 text-wall-500 text-base hover:text-green-400": level === 2,
   });
 
   const pageItemClasses = classnames({
-    "pl-4 text-black text-base hover:text-green": level === 0,
-    "pl-8 text-black text-base hover:text-green": level === 1,
-    "pl-12 text-black text-base hover:text-green": level === 2,
+    "pl-4 text-wall-600 text-base hover:text-green-400": level === 0,
+    "pl-8 text-wall-600 text-base hover:text-green-400": level === 1,
+    "pl-12 text-wall-600 text-base hover:text-green-400": level === 2,
     dot: isThisPage,
   });
 
@@ -76,7 +77,7 @@ const pageTree = (thisLink, tree, level = 0) => {
             const isSelected = router.asPath === href;
             const selectedClasses = classnames({
               dot: isSelected,
-              "text-green": isSelected,
+              "text-green-400": isSelected,
             });
             return (
               <li>

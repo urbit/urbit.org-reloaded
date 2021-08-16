@@ -29,14 +29,16 @@ export default function MediaPage({ post, markdown, search }) {
         <Section narrow short>
           <h1>{post.title}</h1>
           {post.extra.author ? (
-            <div className="type-ui text-gray mt-4 md:mt-8 lg:mt-10">
+            <div className="type-ui text-wall-500 mt-4 md:mt-8 lg:mt-10">
               {post.extra.author}
             </div>
           ) : null}
           {post.extra.ship ? (
-            <div className="type-ui text-gray font-mono">{post.extra.ship}</div>
+            <div className="type-ui text-wall-500 font-mono">
+              {post.extra.ship}
+            </div>
           ) : null}
-          <div className="type-ui text-gray mt-16">
+          <div className="type-ui text-wall-500 mt-16">
             {formatDate(new Date(post.date))}
           </div>
         </Section>

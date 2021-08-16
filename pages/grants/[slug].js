@@ -37,22 +37,24 @@ export default function Grant({ post, markdown, search, similarGrants }) {
         <Section narrow short>
           <h1>{post.title}</h1>
           {post.extra.assignee ? (
-            <div className="type-ui text-gray mt-4">
+            <div className="type-ui text-wall-500 mt-4">
               Grantee: {post.extra.assignee}
             </div>
           ) : null}
           {post.extra.ship ? (
-            <div className="type-ui text-gray font-mono">{post.extra.ship}</div>
+            <div className="type-ui text-wall-500 font-mono">
+              {post.extra.ship}
+            </div>
           ) : null}
-          <div className="type-ui text-gray mt-4 md:mt-8 lg:mt-10">
+          <div className="type-ui text-wall-500 mt-4 md:mt-8 lg:mt-10">
             {formatDate(new Date(post.date))}
           </div>
           <div className="flex items-center flex-wrap mt-4 md:mt-8 lg:mt-10">
             {post.taxonomies.grant_type.map((category) => {
               const className = classnames({
-                "bg-blue text-white": category === "Proposal",
-                "bg-green text-white": category === "Apprenticeship",
-                "bg-yellow": category === "Bounty",
+                "bg-blue-400 text-white": category === "Proposal",
+                "bg-green-400 text-white": category === "Apprenticeship",
+                "bg-yellow-300": category === "Bounty",
               });
               return (
                 <div className={`${className} badge-sm mr-1 my-1`}>
@@ -61,7 +63,7 @@ export default function Grant({ post, markdown, search, similarGrants }) {
               );
             })}
             {post.taxonomies.grant_category.map((category) => (
-              <div className="bg-gray text-wall badge-sm mr-1 my-1">
+              <div className="bg-wall-500 text-wall-100 badge-sm mr-1 my-1">
                 {category}
               </div>
             ))}
@@ -72,7 +74,7 @@ export default function Grant({ post, markdown, search, similarGrants }) {
         </Section>
         {canApply && (
           <a
-            className="bg-green text-white badge-sm"
+            className="bg-green-400 text-white badge-sm"
             href={post?.extra?.work_request_link}
             target="_blank"
           >

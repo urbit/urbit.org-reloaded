@@ -44,7 +44,7 @@ export default function MenuTray({ isOpen, setTray, search, children }) {
           className={`bg-washedWhite w-screen h-screen ${overlayClasses}`}
         />
         <div
-          className={`absolute bg-wall h-screen top-0 left-0 tray-menu-width overflow-y-scroll mb-24 ${trayClasses}`}
+          className={`absolute bg-wall-100 h-screen top-0 left-0 tray-menu-width overflow-y-scroll mb-24 ${trayClasses}`}
         >
           <div
             {...handlers}
@@ -59,7 +59,7 @@ export default function MenuTray({ isOpen, setTray, search, children }) {
             e.stopPropagation();
             search.toggleSearch(e);
           }}
-          className={`z-10 fixed px-4 items-center justify-center type-ui rounded-xl h-16 bg-white text-gray left-4 right-4 bottom-4 mobile-search-button-width ${
+          className={`z-10 fixed px-4 items-center justify-center type-ui rounded-xl h-16 bg-white text-wall-500 left-4 right-4 bottom-4 mobile-search-button-width ${
             isOpen ? "flex" : "hidden"
           }`}
         >
@@ -68,7 +68,7 @@ export default function MenuTray({ isOpen, setTray, search, children }) {
       </nav>
       <button
         onClick={() => setTray(!isOpen)}
-        className="z-10 fixed bottom-4 right-4 w-16 h-16 bg-ultraDeepWall flex items-center justify-center rounded-full md:hidden"
+        className="z-10 fixed bottom-4 right-4 w-16 h-16 bg-wall-600 flex items-center justify-center rounded-full md:hidden"
       >
         {isOpen ? (
           <svg

@@ -504,6 +504,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#rep' title="Assemble single"><code>++rep</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2i/#repby' title="Replace by product (map)"><code>++rep:by</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2h/#repin' title="Accumulate elements (set)"><code>++rep:in</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#rev' title="Reverse"><code>++rev</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rfat' title="(Undocumented)"><code>++rf:at</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2i/#ribby' title="Replace values with accumulator (map)"><code>++rib:by</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4c/#rigre' title="Wrap tape in / (tank)"><code>++rig:re</code></a>
@@ -918,6 +919,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#rap' title="Assemble nonzero"><code>++rap</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#rep' title="Assemble single"><code>++rep</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#rip' title="Disassemble"><code>++rip</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#rev' title="Reverse"><code>++rev</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#rsh' title="Rightshift"><code>++rsh</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#swp' title="Reverse block order"><code>++swp</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#xeb' title="Binary logarithm"><code>++xeb</code></a>

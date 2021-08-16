@@ -3,8 +3,8 @@ import { formatDateWithTime } from "../lib/lib";
 
 export default function EventPreview({ event, className, rsvp }) {
   // Event tiles have a 'dark mode' used when their background images are dark and white text is needed for legibility.
-  const grayText = event.extra?.dark ? "text-midWhite" : "text-gray";
-  const blackText = event.extra?.dark ? "text-white" : "text-black";
+  const grayText = event.extra?.dark ? "text-midWhite" : "text-wall-500";
+  const blackText = event.extra?.dark ? "text-white" : "text-wall-600";
 
   return (
     <div className={`cursor-pointer ${className}`}>

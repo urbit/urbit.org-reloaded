@@ -6,10 +6,10 @@ export default function Sidebar(props) {
   const [isOpen, setTray] = useState(false);
   return (
     <>
-      <div className="hidden md:flex flex-col w-96 bg-wall max-h-screen h-screen">
+      <div className="hidden md:flex flex-col w-96 bg-wall-100 max-h-screen h-screen">
         <header className="flex flex-shrink-0 justify-between items-center pl-6 pt-12 mt-5 pb-8">
           <Link href="/">
-            <a className="type-ui text-gray">Urbit</a>
+            <a className="type-ui text-wall-500">Urbit</a>
           </Link>
         </header>
         <div className="overflow-y-auto p-6 pt-16">
@@ -21,7 +21,7 @@ export default function Sidebar(props) {
       <MenuTray isOpen={isOpen} setTray={setTray} search={props.search}>
         <header className="flex flex-shrink-0 justify-between items-center pb-8">
           <Link href="/">
-            <a className="type-ui text-gray">Urbit</a>
+            <a className="type-ui text-wall-500">Urbit</a>
           </Link>
         </header>
         {props.children}

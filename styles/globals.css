@@ -9,6 +9,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  @apply text-wall-600;
 }
 
 a {
@@ -18,7 +19,7 @@ a {
 }
 
 p a {
-  @apply text-green;
+  @apply text-green-400 font-semibold;
 }
 
 button {
@@ -29,7 +30,7 @@ button {
 
 h1,
 .type-h1 {
-  @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-wall-600;
 }
 
 h2,
@@ -69,7 +70,7 @@ p,
 }
 
 code .type-code {
-  @apply bg-wall p-4 font-mono;
+  @apply bg-wall-100 p-4 font-mono;
 }
 
 /* Utils */
@@ -95,7 +96,7 @@ code .type-code {
 .bg-img {
   background-repeat: no-repeat;
   background-position: center center;
-  @apply bg-wall;
+  @apply bg-wall-100;
 }
 
 .button-sm {
@@ -190,7 +191,7 @@ a:hover {
   position: absolute;
   left: -0.75rem;
   top: 0.4rem;
-  @apply bg-green;
+  @apply bg-green-400;
 }
 
 .sidebar figure,

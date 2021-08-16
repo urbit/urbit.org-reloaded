@@ -53,8 +53,8 @@ export default function Contact({ emphasize }) {
       </svg>
     );
 
-  const linkText = emphasize ? "text-green" : "text-black";
-  const border = emphasize ? "green" : "black";
+  const linkText = emphasize ? "text-green-400" : "text-wall-600";
+  const border = emphasize ? "border-green-400" : "border-wall-600";
 
   return (
     <div>
@@ -65,32 +65,32 @@ export default function Contact({ emphasize }) {
         </h4>
       </div>
       <NewsletterSignup color={border} />
-      <h4 className="mt-12 text-gray">
+      <h4 className="mt-12 text-wall-500">
         Follow us on{" "}
         <a className={linkText} href={contact.twitter}>
           Twitter
         </a>
       </h4>
-      <h4 className="mt-6 text-gray">
+      <h4 className="mt-6 text-wall-500">
         Explore code on{" "}
         <a className={linkText} href={contact.github}>
           Github
         </a>
       </h4>
-      <h4 className="mt-6 text-gray">
+      <h4 className="mt-6 text-wall-500">
         Ask questions in our{" "}
         <a className={linkText} href={contact.discord}>
           Discord
         </a>
       </h4>
-      <h4 className="mt-6 text-gray flex items-baseline flex-wrap">
+      <h4 className="mt-6 text-wall-500 flex items-baseline flex-wrap">
         Boot Urbit and join{" "}
         <div className="md:ml-2 rounded-lg flex items-stretch">
-          <code className="rounded-l-lg px-2 md:px-4 py-2 bg-wall flex items-center h-full">
+          <code className="rounded-l-lg px-2 md:px-4 py-2 bg-wall-100 flex items-center h-full">
             {contact.urbitCommunity}
           </code>
           <button
-            className="rounded-r-lg px-4 bg-wall ml-0.5 flex-1 flex justify-center items-center"
+            className="rounded-r-lg px-4 bg-wall-100 ml-0.5 flex-1 flex justify-center items-center"
             onClick={() => copy()}
           >
             {buttonIcon}

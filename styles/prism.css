@@ -8,7 +8,7 @@ https://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+ja
 
 code[class*="language-"],
 pre[class*="language-"] {
-  @apply text-ultraDeepWall;
+  @apply text-wall-600;
   background: none;
   font-family: "Source Code Pro", monospace;
   font-size: 1em;
@@ -75,7 +75,7 @@ code[class*="language-"] {
 
 .token.function-name,
 .token.function {
-  @apply text-black;
+  @apply text-wall-600;
 }
 
 .token.selector,
@@ -84,20 +84,20 @@ code[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-  @apply text-green;
+  @apply text-green-400;
 }
 
 .token.operator,
 .token.entity,
 .token.url,
 .token.variable {
-  @apply text-gray;
+  @apply text-wall-500;
 }
 
 .token.atrule,
 .token.attr-value,
 .token.class-name {
-  @apply text-blue;
+  @apply text-blue-400;
 }
 
 .token.keyword {
