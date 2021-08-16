@@ -77,7 +77,3 @@ Or to install `snap` for your distribution, snapcraft provides [installation ins
 </style>
 
 If you'd like to have more direct control over the Urbit virtual machine, or are setting up Urbit on a cloud droplet, try [installation using the command line](/getting-started/cli).
-
-Once you're settled in, consider checking out the [Operator's Manual](/using)
-which provides guidance and reference material for operating your ship, as well
-as explanations for Urbit concepts everyone should eventually learn.
