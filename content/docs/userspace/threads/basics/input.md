@@ -15,24 +15,24 @@ When a thread is first started, spider will populate the `bowl` and provide it a
 For example, here's a thread that gets the time from the bowl, runs an IO-less function that takes one or two seconds to compute, and then gets the time again:
 
 ```hoon
- /-  spider
- /+  *strandio 
- =,  strand=strand:spider
- |% 
- ++  ackermann 
-   |=  [m=@ n=@] 
-   ?:  =(m 0)  +(n) 
-   ?:  =(n 0)  $(m (dec m), n 1) 
-   $(m (dec m), n $(n (dec n))) 
- -- 
- ^-  thread:spider
- |=  arg=vase
- =/  m  (strand ,vase)
- ^-  form:m 
- ;<  t1=@da  bind:m  get-time 
- =/  ack  (ackermann 3 8) 
- ;<  t2=@da  bind:m  get-time 
- (pure:m !>([t1 t2])) 
+/-  spider
+/+  *strandio 
+=,  strand=strand:spider
+|% 
+++  ackermann 
+  |=  [m=@ n=@] 
+  ?:  =(m 0)  +(n) 
+  ?:  =(n 0)  $(m (dec m), n 1) 
+  $(m (dec m), n $(n (dec n))) 
+-- 
+^-  thread:spider
+|=  arg=vase
+=/  m  (strand ,vase)
+^-  form:m 
+;<  t1=@da  bind:m  get-time 
+=/  ack  (ackermann 3 8) 
+;<  t2=@da  bind:m  get-time 
+(pure:m !>([t1 t2])) 
 ```
 
 Since it never does any IO, `t1` and `t2` are the same: `[~2021.3.17..07.47.39..e186 ~2021.3.17..07.47.39..e186]`. However, if we replace the ackermann function with a 2 second `sleep` from strandio:
