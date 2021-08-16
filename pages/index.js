@@ -70,11 +70,11 @@ export default function Home({ posts, events, openGrantsCount, search }) {
           // Introducing Port
         }
         <Section className="hidden md:flex">
-          <div className="bg-wall w-11/12 hero-card-height rounded-3xl flex">
+          <div className="bg-wall w-11/12 port-hero-card-height rounded-3xl flex">
             <div className="pt-20 pl-12 w-7/12">
               <div className="pb-8">
-                <h2 className="p-0 m-0 pb-2">Introducing</h2>
-                <h2 className="text-green p-0 m-0">Port</h2>
+                <h2 className="p-0 m-0 pb-2 leading-none">Introducing</h2>
+                <h2 className="text-green p-0 m-0 leading-none">Port</h2>
               </div>
               <h4 className="pb-8">The Urbit client, now in beta.</h4>
               <p className="pb-24">
@@ -89,7 +89,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
                 View on GitHub
               </a>
             </div>
-            <div className="w-full hero-image-height hero-image mt-8" />
+            <div className="w-full port-hero-image-height port-hero-image mt-8" />
           </div>
         </Section>
 
@@ -105,21 +105,21 @@ export default function Home({ posts, events, openGrantsCount, search }) {
               </a>
             </Link>
           </div>
-          <div className="flex flex-col md:flex-row w-full items-center bg-washedGreen px-8 py-8 rounded-xl">
+          <div className="flex flex-col md:flex-row w-full items-center md:items-start bg-washedGreen px-8 py-8 rounded-xl">
             <div className="flex items-center flex-col p-4 w-full">
               <h2 className="text-green">200+</h2>
               <h4 className="text-green text-center pt-2">
                 Urbit stars awarded
               </h4>
             </div>
-            <div className="h-0 w-0 md:h-24 md:w-4 bg-lightGreen" />
+            <div className="h-0 w-0 md:h-24 md:w-4 bg-lightGreen self-center" />
             <div className="flex items-center flex-col p-4 w-full">
               <h2 className="text-green">400+</h2>
               <h4 className="text-green text-center pt-2">
                 Different Contributors
               </h4>
             </div>
-            <div className="h-0 w-0 md:h-24 md:w-4 bg-lightGreen" />
+            <div className="h-0 w-0 md:h-24 md:w-4 bg-lightGreen self-center" />
             <div className="flex items-center flex-col p-4 w-full">
               <h2 className="text-green">45+</h2>
               <h4 className="text-green text-center pt-2">Active Projects</h4>
@@ -185,7 +185,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
         {
           // Blog Posts
         }
-        <Section narrow>
+        <Section>
           <div className="flex items-center measure pb-12">
             <h2>Blog</h2>
           </div>
@@ -212,7 +212,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
         {
           // Events Posts
         }
-        <Section narrow>
+        <Section>
           <div className="flex items-center measure pb-12">
             <h2>Events</h2>
           </div>
@@ -259,7 +259,10 @@ export async function getStaticProps() {
     "blog"
   );
 
-  const events = getAllPosts(["title", "slug", "date", "extra"], "events");
+  const events = getAllPosts(
+    ["title", "slug", "date", "guests", "hosts", "registration_url"],
+    "events"
+  );
 
   return {
     props: { posts, events, openGrantsCount },

@@ -1,12 +1,12 @@
 +++
 title = "Developer Call: Architectural Idea Maze"
-starts = "2021-02-04T05:00:00.000-08:00"
-ends = "2021-02-04T06:30:00.000-08:00"
+ends = "2021-02-04T18:30:00.000-08:00"
 contributors = ""
 location = "Online event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/275992798/"
 description = ""
+date = "2021-02-04T17:00:00.000-08:00"
 
 [[hosts]]
 name = "Lane R."

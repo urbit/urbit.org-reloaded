@@ -1,13 +1,13 @@
 +++
 title = "Developer Call: Scaling Azimuth"
-starts = "2021-03-04T05:00:00.000-08:00"
-ends = "2021-03-04T06:30:00.000-08:00"
+ends = "2021-03-04T18:30:00.000-08:00"
 contributors = ""
 location = "Online event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/276692816/"
 youtube = "CKuHXrdkIw0"
 description = ""
+date = "2021-03-04T17:00:00.000-08:00"
 
 [[hosts]]
 name = "Urbit"

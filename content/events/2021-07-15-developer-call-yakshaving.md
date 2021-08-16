@@ -1,12 +1,12 @@
 +++
 title = "Developer Call: Urbit Yakshaving"
-starts = "2021-07-15T05:00:00.000-07:00"
-ends = "2021-07-15T06:00:00.000-07:00"
+ends = "2021-07-15T18:00:00.000-07:00"
 location = "Online Event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/279349114/"
 description = "A look at ~littel-wolfer's Hoon development setup"
 youtube = "AG6IPaXbiiY"
+date = "2021-07-15T17:00:00.000-07:00"
 
 [[hosts]]
 name = "Josh Lehman"

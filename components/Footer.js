@@ -12,34 +12,34 @@ export default function Footer() {
             <h4 className="mt-16 mb-8">Use Urbit</h4>
             <Link href="/getting-started">
               <div>
-                <a className="type-sub text-gray">Getting Started</a>
+                <a className="type-bold text-gray">Getting Started</a>
               </div>
             </Link>
             <Link href="/using">
               <div>
-                <a className="type-sub text-gray">Operator's Manual</a>
+                <a className="type-bold text-gray">Operator's Manual</a>
               </div>
             </Link>
             <Link href="https://github.com/urbit/port/releases">
               <div>
-                <a className="type-sub text-gray">Urbit Client</a>
+                <a className="type-bold text-gray">Urbit Client</a>
               </div>
             </Link>
             <Link href="https://github.com/urbit/urbit/releases">
               <div>
-                <a className="mt-2 type-sub text-gray">Urbit Binaries</a>
+                <a className="mt-2 type-bold text-gray">Urbit Binaries</a>
               </div>
             </Link>
             {
               //   <Link href="">
               //   <div>
-              //     <a className="mt-2 type-sub text-gray">Urbit Apps</a>
+              //     <a className="mt-2 type-bold text-gray">Urbit Apps</a>
               //   </div>
               // </Link>
             }
             <Link href="/getting-started/planet/#hosting-providers">
               <div>
-                <a className="mt-2 type-sub text-gray">Hosting Providers</a>
+                <a className="mt-2 type-bold text-gray">Hosting Providers</a>
               </div>
             </Link>
           </div>
@@ -47,22 +47,22 @@ export default function Footer() {
             <h4 className="mt-16 mb-8">About</h4>
             <Link href="/understanding-urbit">
               <div>
-                <a className="type-sub text-gray">What's Urbit?</a>
+                <a className="type-bold text-gray">What's Urbit?</a>
               </div>
             </Link>
             <Link href="/understanding-urbit/urbit-id">
               <div>
-                <a className="mt-2 type-sub text-gray">Urbit ID</a>
+                <a className="mt-2 type-bold text-gray">Urbit ID</a>
               </div>
             </Link>
             <Link href="/understanding-urbit/urbit-os">
               <div>
-                <a className="mt-2 type-sub text-gray">Urbit OS</a>
+                <a className="mt-2 type-bold text-gray">Urbit OS</a>
               </div>
             </Link>
             <Link href="/faq">
               <div>
-                <a className="mt-2 type-sub text-gray">FAQ</a>
+                <a className="mt-2 type-bold text-gray">FAQ</a>
               </div>
             </Link>
           </div>
@@ -70,17 +70,17 @@ export default function Footer() {
             <h4 className="mt-16 mb-8">News</h4>
             <Link href="/blog">
               <div>
-                <a className="type-sub text-gray">Blog</a>
+                <a className="type-bold text-gray">Blog</a>
               </div>
             </Link>
             <Link href="/events">
               <div>
-                <a className="mt-2 type-sub text-gray">Events</a>
+                <a className="mt-2 type-bold text-gray">Events</a>
               </div>
             </Link>
             <Link href="/updates">
               <div>
-                <a className="mt-2 type-sub text-gray">Updates</a>
+                <a className="mt-2 type-bold text-gray">Updates</a>
               </div>
             </Link>
           </div>
@@ -89,17 +89,17 @@ export default function Footer() {
             <h4 className="mt-16 mb-8">Develop</h4>
             <Link href="/docs">
               <div>
-                <a className="type-sub text-gray">Documentation</a>
+                <a className="type-bold text-gray">Documentation</a>
               </div>
             </Link>
             <Link href="https://github.com/urbit">
               <div>
-                <a className="mt-2 type-sub text-gray">Github</a>
+                <a className="mt-2 type-bold text-gray">Github</a>
               </div>
             </Link>
             <Link href="https://github.com/urbit/awesome-urbit#http-apis-airlock">
               <div>
-                <a className="mt-2 type-sub text-gray">Airlock APIs</a>
+                <a className="mt-2 type-bold text-gray">Airlock APIs</a>
               </div>
             </Link>
           </div>
@@ -107,12 +107,12 @@ export default function Footer() {
             <h4 className="mt-16 mb-8">Contribute</h4>
             <Link href="https://github.com/urbit/urbit/issues">
               <div>
-                <a className="type-sub text-gray">Issue Tracker</a>
+                <a className="type-bold text-gray">Issue Tracker</a>
               </div>
             </Link>
             <Link href="/grants">
               <div>
-                <a className="mt-2 type-sub text-gray">Urbit Grants</a>
+                <a className="mt-2 type-bold text-gray">Urbit Grants</a>
               </div>
             </Link>
           </div>
@@ -121,22 +121,17 @@ export default function Footer() {
             <h4 className="mt-16 mb-8">Community</h4>
             <Link href="https://groups.google.com/a/urbit.org/g/dev?pli=1">
               <div>
-                <a className="type-sub text-gray">Dev Mailing List</a>
-              </div>
-            </Link>
-            <Link href="https://discord.gg/CfSKKaB2ep">
-              <div>
-                <a className="mt-2 type-sub text-gray">Support Discord</a>
+                <a className="type-bold text-gray">Dev Mailing List</a>
               </div>
             </Link>
             <Link href="https://github.com/urbit/azimuth">
               <div>
-                <a className="mt-2 type-sub text-gray">Governance</a>
+                <a className="mt-2 type-bold text-gray">Governance</a>
               </div>
             </Link>
             <Link href="https://twitter.com/urbit">
               <div>
-                <a className="mt-2 type-sub text-gray">Twitter</a>
+                <a className="mt-2 type-bold text-gray">Twitter</a>
               </div>
             </Link>
           </div>
@@ -145,14 +140,14 @@ export default function Footer() {
           <div className="md:w-1/3">
             <Link href="/privacy">
               <div>
-                <a className="type-sub text-gray">Privacy Policy</a>
+                <a className="type-bold text-gray">Privacy Policy</a>
               </div>
             </Link>
           </div>
           <div className="md:w-1/3">
             <Link href="/terms-of-service">
               <div>
-                <a className="type-sub text-gray">Terms of Service</a>
+                <a className="type-bold text-gray">Terms of Service</a>
               </div>
             </Link>
           </div>
@@ -160,7 +155,7 @@ export default function Footer() {
             <div>
               <a
                 href={"mailto:" + contact.email}
-                className="type-sub text-gray"
+                className="type-bold text-gray"
               >
                 {contact.email}
               </a>

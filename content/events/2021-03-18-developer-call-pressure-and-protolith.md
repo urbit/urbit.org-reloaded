@@ -1,12 +1,12 @@
 +++
 title = "Developer Call: Pressure and Protolith"
-starts = "2021-03-18T05:00:00.000-07:00"
-ends = "2021-03-04T06:30:00.000-08:00"
+ends = "2021-03-04T18:30:00.000-08:00"
 location = "Online event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/276898246/"
 description = "Matilde Park, Landscape team lead, talks about the distinctions between the Landscape product and basic Urbit development, and the significance of building Landscape for Tlon."
 youtube = "XjIDZQUZZtE"
+date = "2021-03-18T17:00:00.000-07:00"
 
 [[hosts]]
 name = "Josh Lehman"

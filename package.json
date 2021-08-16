@@ -15,9 +15,11 @@
   "dependencies": {
     "@iarna/toml": "^2.2.5",
     "@netlify/plugin-nextjs": "^3.4.2",
+    "@tailwindcss/aspect-ratio": "^0.2.1",
     "autoprefixer": "^10.2.6",
     "classnames": "^2.3.1",
     "critters": "0.0.10",
+    "downshift": "^6.1.5",
     "feed": "^4.2.2",
     "fuzzy-search": "^3.2.1",
     "gray-matter": "^4.0.3",
@@ -37,11 +39,11 @@
     "remark-slug": "^6.0.0",
     "tailwindcss": "^2.1.4",
     "toml": "^3.0.0",
+    "luxon": "^2.0.2",
     "unified": "^9.2.1"
   },
   "devDependencies": {
     "husky": "^6.0.0",
-    "luxon": "^2.0.2",
     "prettier": "^2.3.1",
     "pretty-quick": "^3.1.0"
   }

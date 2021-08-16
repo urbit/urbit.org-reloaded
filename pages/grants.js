@@ -141,7 +141,7 @@ export default function Grants({
         }
         <Section wide short>
           <div className="flex flex-column justify-between pb-16">
-            <div>
+            <div className="measure">
               <h1 className="pb-16">Grants</h1>
               <p className="mb-8">
                 Urbit is a community project. While anyone can contribute, we
@@ -209,7 +209,7 @@ export default function Grants({
           <h2 className="mb-16" id="proposals">
             Proposals
           </h2>
-          <p className="mb-8">
+          <p className="mb-8 measure">
             Contributors are also welcome to have their personal projects
             considered as a proposal. If you'd like to propose a project for the
             grants program, first review our

@@ -50,7 +50,7 @@ export default function Event({
             <p className="type-ui text-gray">
               {formatDate(new Date(post.date))} {", " + post.extra.time}
             </p>
-            {post.extra.registration_url && post.extra.pinned ? (
+            {post.registration_url && post.pinned ? (
               <a
                 className="button-sm bg-green text-white flex-0 mt-4"
                 href={post.extra.registration_url}

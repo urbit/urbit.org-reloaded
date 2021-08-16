@@ -1,12 +1,12 @@
 +++
 title = "Developer Call: 3rd Party Software Distribution"
-starts = "2021-04-15T05:00:00.000-07:00"
-ends = "2021-04-15T06:00:00.000-07:00"
+ends = "2021-04-15T18:00:00.000-07:00"
 location = "Online Event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/277474491/"
 description = "Some exciting work has been going on behind the scenes to provide the foundation for 3rd party software distribution."
 youtube = "XwICC6Its1E"
+date = "2021-04-15T17:00:00.000-07:00"
 
 [[hosts]]
 name = "Josh Lehman"

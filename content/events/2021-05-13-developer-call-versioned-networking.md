@@ -1,12 +1,12 @@
 +++
 title = "Developer Call: P2P Versioned Networking"
-starts = "2021-05-13T12:00:00.000-07:00"
-ends = "2021-05-13T13:00:00.000-07:00"
+ends = "2021-05-14T01:00:00.000-07:00"
 location = "Online Event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/278052029/"
 description = "Versioned Networking for Application Developers"
 youtube = "BhQ1vk4jGsk"
+date = "2021-05-14T00:00:00.000-07:00"
 
 [[hosts]]
 name = "Josh Lehman"

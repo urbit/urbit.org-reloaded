@@ -15,7 +15,7 @@ import Pagination from "../../components/Pagination";
 import Markdown from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
-import markdownStyles from "../../styles/markdown.module.css";
+
 import { decode } from "html-entities";
 
 const breadcrumbs = (posts, paths) => {
@@ -112,6 +112,7 @@ export default function DocsLayout({
   nextPost,
 }) {
   const router = useRouter();
+
   const isSelected = "/docs".includes(router.asPath);
   const selectedClasses = classnames({
     dot: isSelected,
@@ -145,7 +146,7 @@ export default function DocsLayout({
           section="Urbit Documentation"
           params={params}
         >
-          <div className={markdownStyles["markdown"]}>
+          <div className="markdown technical">
             <article
               dangerouslySetInnerHTML={{ __html: decode(markdown) }}
             ></article>

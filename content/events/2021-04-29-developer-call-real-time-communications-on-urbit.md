@@ -1,12 +1,12 @@
 +++
 title = "Developer Call: Real-Time Communication on Urbit"
-starts = "2021-04-29T05:00:00.000-07:00"
-ends = "2021-04-29T06:00:00.000-07:00"
+ends = "2021-04-29T18:00:00.000-07:00"
 location = "Online Event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/277674273/"
 description = "Video chat on Urbit? It's nearly here with WebRTC."
 youtube = "XFct6JZHPC0"
+date = "2021-04-29T17:00:00.000-07:00"
 
 [[hosts]]
 name = "Josh Lehman"

@@ -1,13 +1,13 @@
 +++
 title = "Developer Call: Injecting External Services into Urbit"
-starts = "2020-12-10T05:00:00.000-08:00"
-ends = "2020-12-10T06:30:00.000-08:00"
+ends = "2020-12-10T18:30:00.000-08:00"
 contributors = ""
 location = "Online event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/275051926/"
 youtube = "LaWNHMmxQag"
 description = ""
+date = "2020-12-10T17:00:00.000-08:00"
 
 [[hosts]]
 name = "Lane R."

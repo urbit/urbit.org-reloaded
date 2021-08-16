@@ -17,7 +17,7 @@ export function EventCard({ event, dir, className }) {
   return (
     <div
       key={event.slug}
-      className={`mb-24 cursor-pointer bg-wall rounded-xl tile-height bg-cover bg-center bg-no-repeat ${className}`}
+      className={`mb-24 cursor-pointer bg-wall rounded-xl h-96 bg-cover bg-center bg-no-repeat ${className}`}
       style={{
         backgroundImage:
           `${
@@ -94,7 +94,7 @@ export default function Events({ pastEvents, comingSoon, search }) {
           {comingSoon.length > 0 ? (
             <>
               <div className="mb-8 table">
-                <h3 class="text-gray">Coming Soon</h3>
+                <h3 className="text-gray">Coming Soon</h3>
               </div>
               {comingSoon.map((post) => {
                 return <EventCard event={post} />;
@@ -102,7 +102,7 @@ export default function Events({ pastEvents, comingSoon, search }) {
             </>
           ) : null}
           <div className="mb-8 table">
-            <h3 class="text-gray">Past Events</h3>
+            <h3 className="text-gray">Past Events</h3>
           </div>
           {pastEvents.map((post) => {
             return <EventCard event={post} />;

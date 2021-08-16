@@ -7,10 +7,6 @@ const { DateTime } = require("luxon");
 const dir = path.join(process.cwd(), "../content/events");
 
 const options = {
-  // engines: {
-  // 	toml: toml.parse.bind(toml),
-  // 	toml: toml.stringify.bind(toml),
-  // },
   engines: {
     toml: {
       parse: toml.parse.bind(toml),
@@ -29,11 +25,15 @@ fs.readdirSync(dir, { withFileTypes: true })
       options
     );
     // This uses your default system timezone, so if you are not in 'America/Los_Angeles' the output will be incorrect.
-    const starts = DateTime.fromSeconds(fileContents.data.starts).toISO();
-    const ends = DateTime.fromSeconds(fileContents.data.ends).toISO();
-
-    fileContents.data.starts = starts;
-    fileContents.data.ends = ends;
+    //     const starts = DateTime.fromSeconds(fileContents.data.starts).toISO();
+    //     const ends = DateTime.fromSeconds(fileContents.data.ends).toISO();
+    //
+    fileContents.data.date = DateTime.fromISO(fileContents.data.date).plus({
+      hours: 12,
+    });
+    fileContents.data.ends = DateTime.fromISO(fileContents.data.ends).plus({
+      hours: 12,
+    });
 
     const data = matter.stringify(
       fileContents.content,
@@ -41,5 +41,7 @@ fs.readdirSync(dir, { withFileTypes: true })
       options
     );
 
-    // fs.writeFileSync(path.join(dir, f.name), data);
+    console.log(data);
+
+    fs.writeFileSync(path.join(dir, f.name), data);
   });
