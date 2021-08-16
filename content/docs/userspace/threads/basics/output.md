@@ -4,7 +4,7 @@ weight = 4
 template = "doc.html"
 +++
 
-A strand produces a `[(list card) <response>]`. The first part is a list of cards to be sent off immediately, and `<response>` is one of:
+A strand produces a `[(list card) &lt;response>]`. The first part is a list of cards to be sent off immediately, and `&lt;response>` is one of:
 
 - `[%wait ~]`
 - `[%skip ~]`
