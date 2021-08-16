@@ -14,7 +14,7 @@ Most of Behn's `task`s are only used by the kernel or runtime. The two `task`s y
 [%born ~]
 ```
 
-Each time you start your Urbit, the Arvo kernel calls the `%born` task for Behn. When called, Behn gets the current time from Unix and updates its list of timers accordingly.
+Each time you start your urbit, the Arvo kernel calls the `%born` task for Behn. When called, Behn gets the current time from Unix and updates its list of timers accordingly.
 
 You would not use this `task` from userspace.
 
