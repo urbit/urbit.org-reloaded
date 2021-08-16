@@ -11,33 +11,7 @@ The various Clay scries are specified by a `care`, which is a single character c
 [~.~zod ~.home ~.~2021.4.26..02.29.03..d31b ~]
 ```
 
-## Contents
-
-- [%a](#a) - Build a `hoon` file.
-- [%b](#b) - Dynamic `mark`.
-- [%c](#c) - Dynamic `mark` conversion.
-- [%d](#d) - List `desk`s.
-- [%e](#e) - Static `mark`.
-- [%f](#f) - Static `mark` conversion.
-- [%p](#p) - File permissions.
-- [%r](#r) - Vase-wrapped file data.
-- [%s](#s) - Miscellaneous scries:
-    - [%yaki](#yaki) - `yaki:clay` of the specified commit.
-    - [%blob](#blob) - `blob:clay` of file.
-    - [%hash](#hash) - Content hash of the specified commit.
-    - [%cage](#cage) - `cage` of the data of a file.
-    - [%open](#open) - Compile prelude of file.
-    - [%late](#late) - Most recent `case` of `desk`.
-    - [%base](#base) - Mergebase of two `desk`s.
-- [%t](#t) - List files in directory.
-- [%u](#u) - Check for existence of file.
-- [%v](#v) - Desk state.
-- [%w](#w) - Revision number of the given `desk` `case`.
-- [%x](#x) - Raw data of file.
-- [%y](#y) - `arch` of a file or directory.
-- [%z](#z) - Content hash of a file or directory.
-
-## %a
+## %a - Build hoon.
 
 A scry with a `care` of `%a` will build a `hoon` file and return it as a `vase`.
 
@@ -47,7 +21,7 @@ Example:
 .^(vase %ca /===/lib/strandio/hoon)
 ```
 
-## %b
+## %b - Dyn. mark core.
 
 A scry with a `care` of `%b` will produce a `dais:clay` processed `mark` core for the specified `mark`. The `path` in the scry is a `mark`.
 
@@ -57,9 +31,9 @@ Example:
 .^(dais:clay %cb /===/txt)
 ```
 
-## %c
+## %c - Dyn. mark convert.
 
-A scry with a `care` of `%c` will produce a `tube:clay` dynamically typed `mark` conversion gate. The `path` specifies two `mark`s - *from* and *to*, like `/txt/noun`.
+A scry with a `care` of `%c` will produce a `tube:clay` dynamically typed `mark` conversion gate. The `path` specifies two `mark`s - _from_ and _to_, like `/txt/noun`.
 
 Example:
 
@@ -69,7 +43,7 @@ Example:
 [p=/text/plain q=[p=3 q=7.303.014]]
 ```
 
-## %d
+## %d - List desks.
 
 A scry with a `care` of `%d` will return a `(set desk)` of the `desk`s that exist on your ship.
 
@@ -80,19 +54,19 @@ Example:
 {%home %kids}
 ```
 
-## %e
+## %e - Static mark core.
 
-A scry with a `care` of `%e` will return a statically typed `nave:clay` `mark` core in a `vase`. The `path` in the scry specifies the `mark`.
+A scry with a `care` of `%e` will return a statically typed `nave:clay` `mark` core. The `path` in the scry specifies the `mark`. The type returned is a `(nave:clay {type} {diff})`, where `{type}` is the type the `mark` takes and `{diff}` is the type taken by the `mark` specified in `+form:grad`.
 
 Example:
 
 ```
-.^(vase %ce /===/noun)
+.^((nave:clay noun noun) %ce /===/noun)
 ```
 
-## %f
+## %f - Stat. mark convert.
 
-A scry with a `care` of `%f` will return a static `mark` conversion gate. The `path` specifies two `mark`s - *from* and *to*, like `/txt/mime`.
+A scry with a `care` of `%f` will return a static `mark` conversion gate. The `path` specifies two `mark`s - _from_ and _to_, like `/txt/mime`.
 
 ```
 > =a .^($-(text mime) %cf /===/txt/mime)
@@ -100,7 +74,7 @@ A scry with a `care` of `%f` will return a static `mark` conversion gate. The `p
 [p=/text/plain q=[p=3 q=7.303.014]]
 ```
 
-## %p
+## %p - File permissions.
 
 A scry with a `care` of `%p` will return the permissions of the file or directory in question. The type returned is a `[dict:clay dict:clay]` where the head is read permissions and the tail is write permissions.
 
@@ -113,7 +87,7 @@ Example:
 [[src=/ rul=[mod=%white who=[p={} q={}]]] src=/ rul=[mod=%white who=[p={} q={}]]]
 ```
 
-## %r
+## %r - File as vase.
 
 A scry with a `care` of `%r` will return the data of the given file wrapped in a `vase` or crash if it's a directory. It's basically just a vase-wrapped `%x` scry.
 
@@ -137,13 +111,13 @@ Examples:
 Crash!
 ```
 
-## %s
+## %s - Misc. scries.
 
 A scry with a `care` of `%s` is for miscellaneous internal and debug functions and is liable to change in the future.
 
 Rather than just a `path` to a file, the head of the `path` is tagged with one of `%yaki %blob %hash %cage %open %late %base` and the tail depends on which tag you use. We'll look at each in turn.
 
-### %yaki
+### %yaki - Commit.
 
 This will return the [yaki:clay](/docs/arvo/clay/data-types#yaki-clay-commit) of the specified commit. It takes a [tako:clay](/docs/arvo/clay/data-types#tako-clay-commit-reference).
 
@@ -168,7 +142,7 @@ Here we scry the [dome:clay](/docs/arvo/clay/data-types#dome-desk-data) for `/==
 ]
 ```
 
-### %blob
+### %blob - File blob.
 
 This will return the [blob:clay](/docs/arvo/clay/data-types#blob-clay-data) of some file. It takes a [lobe:clay](/docs/arvo/clay/data-types#lobe-clay-data-reference).
 
@@ -191,7 +165,7 @@ Here we grab the `lobe:clay` of `/gen/hood/hi/hoon` with a `%y` scry, then use i
 ]
 ```
 
-### %hash
+### %hash - Commit hash.
 
 This will return the `@uvI` content hash of the specified commit. It takes a `tako:clay`.
 
@@ -206,7 +180,7 @@ Here we grab the `dome:clay` for `/===` with a `%v` scry, get the latest `tako:c
 0v16.er7uq.oke4u.cru7u.nglu9.q3su7.6ub1o.bh4qk.r5uav.ut12d.5rdl5
 ```
 
-### %cage
+### %cage - File as cage.
 
 This will return a `cage` of the data of some file. It takes a `lobe:clay`.
 
@@ -228,11 +202,11 @@ Here we grab the `lobe:clay` of `/gen/hood/hi/hoon` with a `%y` scry, then use i
 ]
 ```
 
-### %open
+### %open - Build prelude.
 
 This is like a `%a` scry but it only compiles the prelude to the file, e.g. the Ford rune imports. Proper documentation for this will be done as part of Ford documentaton at a later date.
 
-### %late
+### %late - Latest case.
 
 This will return the most recent revision number of a `desk` that has been fully downloaded. The type it returns is a `cass:clay`. The `case` in the `beak` must be a revision number rather than a date. You can just provide a case of `1` since it returns the latest regardless. If we have nothing for the specified `desk`, this will just return the bunt of a `cass:clay` like `cass=[ud=0 da=~2000.1.1]`.
 
@@ -248,7 +222,7 @@ cass=[ud=50 da=~2021.4.22..10.38.50..57a8]
 cass=[ud=0 da=~2000.1.1]
 ```
 
-### %base
+### %base - Merge-base.
 
 This will return the mergebase (i.e. most recent common ancestor) between two `desk`s. The type it returns is a `(list tako:clay)`. The first `desk` will just be the one in the `beak` `path` prefix and the second will be specified like `/ship/desk` at the end of the scry `path`. If there is no common ancestor between the two `desk`s, this will just produce an empty `list`.
 
@@ -264,7 +238,7 @@ Examples:
 ~
 ```
 
-## %t
+## %t - List files.
 
 A scry with a `care` of `%t` will return a `(list path)` of all files in the given directory, or just a `(list path)` of the single file if it's a file. This is done recursively so will provide files in subdirectories as well. The paths will be fully qualified except for the `ship`, `desk` and `case`. If the directory or file specified does not exist, it will return an empty `list`.
 
@@ -292,7 +266,7 @@ Examples:
 ~
 ```
 
-## %u
+## %u - Check exists.
 
 A scry with a `care` of `%u` will return a `?` depending on whether the file exists. It will produce `%.n` if it's a directory or doesn't exist and will produce `%.y` if it's a file and exists.
 
@@ -313,7 +287,7 @@ Examples:
 %.n
 ```
 
-## %v
+## %v - Desk state.
 
 A scry with a care of `%v` will return the entire state of a `desk` as a `dome:clay`.
 
@@ -327,7 +301,7 @@ Example:
 
 Note: If you try printing this it will take forever and probably OOM your ship.
 
-## %w
+## %w - Revision number.
 
 A scry with a `care` of `%w` will return the revision number and date of a given `case`. The type returned is a `cass:clay` like `[ud=@ud da=@da]` where `ud` is the revision number and `da` is the date.
 
@@ -338,10 +312,9 @@ Example:
 [ud=2 da=~2021.4.13..19.12.49..3389]
 ```
 
-## %x
+## %x - Read file.
 
 A scry with a `care` of `%x` will return the raw data of a file as an `@` or crash if it's a directory.
-
 
 Examples:
 
@@ -360,7 +333,7 @@ Examples:
 Crash!
 ```
 
-## %y
+## %y - Read arch.
 
 A scry with a `care` of `%y` will return the `arch` of a file or directory.
 
@@ -401,7 +374,7 @@ Examples:
 [fil=~ dir={}]
 ```
 
-## %z
+## %z - Content hash.
 
 A scry with a `care` of `%z` will return the hash of a file or the recursive hash of a directory. If the file or directory doesn't exist it will return a null value.
 
