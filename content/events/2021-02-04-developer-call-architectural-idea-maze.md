@@ -1,4 +1,3 @@
-
 +++
 title = "Developer Call: Architectural Idea Maze"
 date = 2021-02-04

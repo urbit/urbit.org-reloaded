@@ -1,4 +1,3 @@
-
 +++
 title = "After hours: Fun with %arvo (the Urbit OS)"
 date = 2017-09-22

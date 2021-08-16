@@ -1,4 +1,3 @@
-
 +++
 title = "After hours: Designing robust human systems"
 date = 2017-10-26

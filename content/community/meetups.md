@@ -16,7 +16,7 @@ hide_next_title = "true"
 
 Turns out that getting Urbit fans together in one room is pretty fun. Here's an incomplete list of community-led Urbit IRL groups. These events are generally informal and very approachable – feel free to dive in.
 
-Interested in hosting an Urbit event of your own? Follow our [guide to meetup best-practices](../hosting-a-meetup). Send an email to [support@urbit.org](mailto:support@urbit.org) and we'll list your meetup on this page.
+Interested in hosting an Urbit event of your own? Follow our [guide to meetup best-practices](/community/hosting-a-meetup). Send an email to [support@urbit.org](mailto:support@urbit.org) and we'll list your meetup on this page.
 
 ### Asia
 

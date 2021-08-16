@@ -1,4 +1,3 @@
-
 +++
 title = "After hours: Visiting contributors"
 date = 2017-11-16

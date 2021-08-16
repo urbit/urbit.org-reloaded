@@ -1,4 +1,3 @@
-
 +++
 title = "After hours: Bootstrapping Urbit from the Ethereum blockchain"
 date = 2017-08-11
