@@ -8,31 +8,31 @@ template = "doc.html"
 
 - [Introduction](#introduction)
 - [%warp](#warp) - Read and Subscribe.
-   - [%sing](#sing) - Read a file or directory.
-   - [%next](#next) - Subscribe for the next change to a file or directory.
-   - [%mult](#mult) - Subscribe for the next change to a set of files and/or directories.
-   - [%many](#many) - Track changes to a `desk` for the specified range of revisions.
-   - [Cancel Subscription](#cancel-subscription)
+  - [%sing](#sing) - Read a file or directory.
+  - [%next](#next) - Subscribe for the next change to a file or directory.
+  - [%mult](#mult) - Subscribe for the next change to a set of files and/or directories.
+  - [%many](#many) - Track changes to a `desk` for the specified range of revisions.
+  - [Cancel Subscription](#cancel-subscription)
 - [%info](#info) - Write and Modify.
-   - [%ins](#ins) - Add a file.
-   - [%del](#del) - Delete a file.
-   - [%mut](#mut) - Change a file.
-   - [Multiple Changes](#multiple-changes) - Change multiple files.
+  - [%ins](#ins) - Add a file.
+  - [%del](#del) - Delete a file.
+  - [%mut](#mut) - Change a file.
+  - [Multiple Changes](#multiple-changes) - Change multiple files.
 - [Manage Mounts](#manage-mounts)
-   - [%boat](#boat) - List mounts.
-   - [%mont](#mont) - Mount something.
-   - [%ogre](#ogre) - Unmount something.
-   - [%dirk](#dirk) - Commit changes.
+  - [%boat](#boat) - List mounts.
+  - [%mont](#mont) - Mount something.
+  - [%ogre](#ogre) - Unmount something.
+  - [%dirk](#dirk) - Commit changes.
 - [Merge Desks](#merge-desks)
-   - [%merg](#merg)
+  - [%merg](#merg)
 - [Permissions](#permissions)
-   - [%perm](#perm) - Set file permissions.
-   - [%cred](#cred) - Add permission group.
-   - [%crew](#crew) - Get permission groups.
-   - [%crow](#crow) - Get group usage.
+  - [%perm](#perm) - Set file permissions.
+  - [%cred](#cred) - Add permission group.
+  - [%crew](#crew) - Get permission groups.
+  - [%crow](#crow) - Get group usage.
 - [Foreign Ships](#foreign-ships)
-   - [%warp](#warp-remote) - Read a file on a foreign ship.
-   - [%merg](#merg-remote) - Merge from a foreign `desk`.
+  - [%warp](#warp-remote) - Read a file on a foreign ship.
+  - [%merg](#merg-remote) - Merge from a foreign `desk`.
 
 # Introduction
 
@@ -63,12 +63,11 @@ Most examples will either use `|pass` to just send a `task` or the following thr
 
 # `%warp`
 
-See the [Read and Subscribe](/docs/arvo/clay/tasks#warp) section of the [API Reference](/docs/arvo/clay/tasks) document for general details.
+See the [Read and Subscribe](/docs/arvo/clay/tasks#warp---read-and-track) section of the [API Reference](/docs/arvo/clay/tasks) document for general details.
 
 ## `%sing`
 
 Here we'll look at reading files by passing Clay a `%warp` `task` with a `%sing` `rave` and receiving a `%writ` `gift` containing the data in response.
-
 
 Using the `send-task-take-gift.hoon` thread, let's try reading `gen/hood/hi.hoon`:
 
