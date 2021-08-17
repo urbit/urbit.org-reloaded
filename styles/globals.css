@@ -100,7 +100,7 @@ code .type-code {
 }
 
 .button-sm {
-  @apply flex-center px-3 h-8 rounded-lg type-ui;
+  @apply flex-center px-3 h-10 rounded-lg type-ui;
 }
 
 .button-lg {

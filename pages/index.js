@@ -262,7 +262,7 @@ export async function getStaticProps() {
   );
 
   const events = getAllPosts(
-    ["title", "slug", "date", "guests", "hosts", "registration_url"],
+    ["title", "slug", "date", "guests", "hosts", "registration_url", "ends"],
     "events"
   );
 

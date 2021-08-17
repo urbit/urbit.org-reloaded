@@ -1,23 +1,37 @@
 import Link from "next/link";
-import { formatDateWithTime } from "../lib/lib";
+import { DateTime } from "luxon";
+import {
+  generateDisplayDate,
+  generateRealtimeDate,
+  formatDate,
+  formatTime,
+} from "../lib/lib";
 
 export default function EventPreview({ event, className, rsvp }) {
   // Event tiles have a 'dark mode' used when their background images are dark and white text is needed for legibility.
   const grayText = event.extra?.dark ? "text-midWhite" : "text-wall-500";
   const blackText = event.extra?.dark ? "text-white" : "text-wall-600";
 
+  const starts = generateDisplayDate(event.date);
+  const ends = generateDisplayDate(event.ends);
+
+  const hasEnded = generateRealtimeDate(event.ends) > DateTime.now();
+
   return (
     <div className={`cursor-pointer ${className}`}>
       <div
         key={event.slug}
-        className={`bg-wall rounded-xl h-96 bg-cover bg-center bg-no-repeat`}
+        className={`bg-wall-100 rounded-xl h-80 bg-cover bg-center bg-no-repeat`}
         style={{ backgroundImage: `url(${event?.image})` || "" }}
       >
         <Link href={`/events/${event.slug}`}>
-          <div className="flex flex-col p-4 justify-between items-between h-full relative">
+          <div className="flex flex-col p-6 justify-between items-between h-full relative">
             <div className="flex-grow-1 flex flex-col justify-center h-full">
               <h4 className={`${blackText}`}>{event.title}</h4>
-              <p className={grayText}>{formatDateWithTime(event.date)}</p>
+              <p className={grayText}>{formatDate(starts)}</p>
+              <p className={grayText}>
+                {formatTime(starts)} to {formatTime(ends)}
+              </p>
             </div>
             <div className="absolute p-4 left-0 bottom-0 w-full">
               {event.hosts
@@ -61,10 +75,10 @@ export default function EventPreview({ event, className, rsvp }) {
                   ))
                 : null}
             </div>
-            {rsvp && event.registration_url ? (
+            {hasEnded && event.registration_url ? (
               <div className="absolute right-0 bottom-0 p-4">
                 <a
-                  className="button-sm bg-green text-white"
+                  className="button-sm bg-green-400 text-white"
                   href={event.registration_url}
                 >
                   RSVP

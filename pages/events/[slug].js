@@ -16,7 +16,6 @@ import SingleColumn from "../../components/SingleColumn";
 import Contact from "../../components/Contact";
 import EventPreview from "../../components/EventPreview";
 import Section from "../../components/Section";
-import markdownStyles from "../../styles/markdown.module.css";
 import { decode } from "html-entities";
 
 export default function Event({

@@ -28,12 +28,12 @@ fs.readdirSync(dir, { withFileTypes: true })
     //     const starts = DateTime.fromSeconds(fileContents.data.starts).toISO();
     //     const ends = DateTime.fromSeconds(fileContents.data.ends).toISO();
     //
-    fileContents.data.date = DateTime.fromISO(fileContents.data.date).plus({
-      hours: 12,
-    });
-    fileContents.data.ends = DateTime.fromISO(fileContents.data.ends).plus({
-      hours: 12,
-    });
+    // fileContents.data.date = DateTime.fromISO(fileContents.data.date).plus({
+    //   hours: 12,
+    // });
+    // fileContents.data.ends = DateTime.fromISO(fileContents.data.ends).plus({
+    //   hours: 12,
+    // });
 
     const data = matter.stringify(
       fileContents.content,
@@ -43,5 +43,5 @@ fs.readdirSync(dir, { withFileTypes: true })
 
     console.log(data);
 
-    fs.writeFileSync(path.join(dir, f.name), data);
+    // fs.writeFileSync(path.join(dir, f.name), data);
   });

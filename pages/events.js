@@ -118,8 +118,10 @@ export async function getStaticProps() {
   const posts = getAllPosts(["title", "slug", "date", "extra"], "events");
 
   // NB Gavin: This logic can change based on how we want to separate past vs current events
-  const pastEvents = posts.filter((post) => !post.extra.pinned);
-  const comingSoon = posts.filter((post) => post.extra.pinned);
+  // const pastEvents = posts.filter((post) => !post.extra.pinned);
+  // const comingSoon = posts.filter((post) => post.extra.pinned);
+  const pastEvents = posts;
+  const comingSoon = posts;
 
   return {
     props: { pastEvents, comingSoon },
