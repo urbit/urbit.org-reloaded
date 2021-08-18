@@ -12,7 +12,7 @@ date = "2021-04-29T17:00:00.000-07:00"
 name = "Josh Lehman"
 patp = "~wolref-podlex"
 
-[[contributors]]
+[[guests]]
 name = "Edward Amsden"
 patp = "~ritpub-sipsyl"
 +++

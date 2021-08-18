@@ -1,13 +1,13 @@
 +++
 title = "Developer Call: Graph Store"
 ends = "2020-11-05T18:30:00.000-08:00"
-contributors = ""
 location = "Online event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/274279522/"
 youtube = "E4DFuAZQ32Y"
 description = ""
 date = "2020-11-05T17:00:00.000-08:00"
+guests = ""
 
 [[hosts]]
 name = "Lane R."

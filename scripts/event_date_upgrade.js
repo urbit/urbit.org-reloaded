@@ -35,6 +35,9 @@ fs.readdirSync(dir, { withFileTypes: true })
     //   hours: 12,
     // });
 
+    fileContents.data.guests = fileContents.data.contributors;
+    delete fileContents.data.contributors;
+
     const data = matter.stringify(
       fileContents.content,
       fileContents.data,
@@ -43,5 +46,5 @@ fs.readdirSync(dir, { withFileTypes: true })
 
     console.log(data);
 
-    // fs.writeFileSync(path.join(dir, f.name), data);
+    fs.writeFileSync(path.join(dir, f.name), data);
   });

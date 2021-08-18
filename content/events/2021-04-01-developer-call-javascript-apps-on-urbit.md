@@ -12,7 +12,7 @@ date = "2021-04-01T17:00:00.000-07:00"
 name = "Mike Osborne"
 patp = "~taller-ravnut"
 
-[[contributors]]
+[[guests]]
 name = "Tyler Brown Cifu Shuster"
 patp = "~radbur-sivmus"
 +++

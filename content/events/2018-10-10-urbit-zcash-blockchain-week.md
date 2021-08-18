@@ -1,12 +1,12 @@
 +++
 title = "Urbit + Zcash: 'Blockchain Week'"
 ends = "2018-10-11T06:00:00.000-07:00"
-contributors = ""
 location = "Urbit Office"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/255001807/"
 description = "We're all full and looking forward to seeing you tonight. After you check-in at the front door please come up to floor 2, room 222."
 date = "2018-10-11T03:00:00.000-07:00"
+guests = ""
 
 [[hosts]]
 name = "Urbit"

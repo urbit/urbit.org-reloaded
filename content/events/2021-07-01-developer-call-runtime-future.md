@@ -12,7 +12,7 @@ date = "2021-07-01T17:00:00.000-07:00"
 name = "Ted Blackman"
 patp = "~rovnys-ricfer"
 
-[[contributors]]
+[[guests]]
 name = "Joe Bryan"
 patp = "~master-morzod"
 +++

@@ -193,16 +193,12 @@ export default function Home({ posts, events, openGrantsCount, search }) {
           </div>
 
           <div className="flex flex-wrap">
-            <PostPreview
-              post={posts[0]}
-              className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
-              key={posts[0].slug}
-            />
-            <PostPreview
-              post={posts[1]}
-              className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
-              key={posts[1].slug}
-            />
+            <div className="w-full md:w-1/2 pr-0 pb-8 md:pr-4">
+              <PostPreview post={posts[0]} key={posts[0].slug} />
+            </div>
+            <div className="w-full md:w-1/2 pl-0 pb-8 md:pl-4">
+              <PostPreview post={posts[1]} key={posts[1].slug} />
+            </div>
           </div>
           <Link href="/blog">
             <button className="button-lg type-ui text-white bg-green-400">
@@ -220,18 +216,12 @@ export default function Home({ posts, events, openGrantsCount, search }) {
           </div>
 
           <div className="flex flex-wrap">
-            <EventPreview
-              rsvp
-              event={events[0]}
-              className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
-              key={events[0].slug}
-            />
-            <EventPreview
-              rsvp
-              event={events[1]}
-              className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
-              key={events[1].slug}
-            />
+            <div className="w-full md:w-1/2 pr-0 pb-8 md:pr-4">
+              <EventPreview event={events[0]} key={events[0].slug} />
+            </div>
+            <div className="w-full md:w-1/2 pl-0 pb-8 md:pl-4">
+              <EventPreview event={events[1]} key={events[1].slug} />
+            </div>
           </div>
           <Link href="/events">
             <button className="button-lg type-ui text-white bg-wall-600">

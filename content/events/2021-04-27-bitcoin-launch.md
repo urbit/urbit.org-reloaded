@@ -11,7 +11,7 @@ date = "2021-04-27T20:00:00.000-07:00"
 [[hosts]]
 name = "Urbit Foundation"
 
-[[contributors]]
+[[guests]]
 name = "Marty Bent"
 +++
 
