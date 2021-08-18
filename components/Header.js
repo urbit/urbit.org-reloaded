@@ -93,6 +93,13 @@ export default function Header(props) {
         >
           Get Started
         </ActiveLink>
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 text-green-400 type-ui button-text"
+          href="/faq"
+        >
+          FAQ
+        </ActiveLink>
         <button
           onClick={(e) => {
             e.stopPropagation();
