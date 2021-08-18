@@ -15,14 +15,6 @@ Combining a deterministic operating system ([Urbit OS](#what-is-arvo) / Arvo) an
 
 The connected world anticipated by Urbit is a much friendlier one, much like the early Internet, where collegial discussion and collaboration was the norm. Problems that are unsolvable without large-scale political centralization in our current internet – data breaches, spam, fake reviews, malware-spreading, harassment – become tractable when individuals control their computing again. You have one login for everything. You own and control all of your software and all of your data by default. Software is designed around the friendships, families, communities, and organizations you're already a part of – not the other way around.
 
-### How secure is Urbit right now? {#how-secure-is-urbit}
-
-[Urbit ID](#what-is-urbit-id) / [Azimuth](#what-is-azimuth), Urbit's identity layer, is live on the Ethereum blockchain and has been audited by Open Zeppelin, Blockchain at Berkeley, and Bloctrax.
-
-In late 2020, Urbit's [Ames](/docs/glossary/ames) networking protocol was audited by [Leviathan Security](https://www.leviathansecurity.com/). You can read about this milestone [here](/blog/security-and-continuity).
-
-Looking to the future, Tlon has plans to begin working to make Urbit secure against attacks from quantum computers in 2021.
-
 ### How can I contribute to Urbit? {#contribute}
 
 We encourage outside contributors to become a part of the project. The best way to do this is to check out [Urbit](https://github.com/urbit) on GitHub, look at the pinned repositories, and check out our [Contributing](https://urbit.org/docs/getting-started/develop) guide. After you've gotten familiar with the system, feel free to open issues and make pull requests.
