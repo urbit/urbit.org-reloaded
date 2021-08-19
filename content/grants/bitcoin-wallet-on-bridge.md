@@ -1,9 +1,11 @@
 +++
 title = "Bitcoin Wallet on Bridge"
-date = 2019-12-09
+date = "2019-12-08"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["App Dev", "Azimuth"]
+grant_type = [ "Bounty" ]
+grant_category = [ "App Dev", "Azimuth" ]
+
 [extra]
 image = ""
 description = "Add Bitcoin support to the Bridge interface. "

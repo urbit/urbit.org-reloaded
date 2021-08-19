@@ -1,12 +1,14 @@
 +++
 title = "Login with Urbit ID"
-date = 2021-04-27
+date = "2021-04-26"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["App Dev: Other"]
+grant_type = [ "Proposal" ]
+grant_category = [ "App Dev: Other" ]
+
 [extra]
 image = ""
-description = "One of the killer pieces of missing functionality in the ecosystem is to seamlessly \"login\" to Urbit web apps at the click of a button."
+description = 'One of the killer pieces of missing functionality in the ecosystem is to seamlessly "login" to Urbit web apps at the click of a button.'
 reward = 8
 assignee = "dcSpark"
 id = ""

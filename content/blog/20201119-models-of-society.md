@@ -1,14 +1,15 @@
 +++
 title = "Models of Society"
 description = "Conversations compose society. What composes conversation — how do we digitize it in a way that enhances society without imposing upon it? How do we form this new medium, both to facilitate natural human behavior and to inspire the best of it?"
-date = 2020-11-19
+date = "2020-11-18"
+
 [extra]
 author = "Tyler Shuster"
 ship = "~radbur-sivmus"
 image = "https://media.urbit.org/site/posts/essays/cochno-stone.png"
 +++
 
-*I had used Facebook and Google for my entire adult life. I knew they were toxic but I didn't know why. For a few weeks I tried to create a website that would scrape data from Facebook’s API and push data back, puppetting it from my own server. But as I stared headlong into the ever-shifting darkness of the modern web, I despaired and abandoned my attempt. Less than a year later I heard about Urbit. Technically, it went way over my head&mdash;but socially I knew exactly what it was, what it always had to be, why it was a discovery and not an invention, a place and not a product. I've watched the settlers there for four years, only just now using the opportunity of the pandemic to swim to this new landscape and gaze upon this young nation, this digital city, this urbis ec bit. I do not work for Tlon. I just live here.*
+_I had used Facebook and Google for my entire adult life. I knew they were toxic but I didn't know why. For a few weeks I tried to create a website that would scrape data from Facebook’s API and push data back, puppetting it from my own server. But as I stared headlong into the ever-shifting darkness of the modern web, I despaired and abandoned my attempt. Less than a year later I heard about Urbit. Technically, it went way over my head&mdash;but socially I knew exactly what it was, what it always had to be, why it was a discovery and not an invention, a place and not a product. I've watched the settlers there for four years, only just now using the opportunity of the pandemic to swim to this new landscape and gaze upon this young nation, this digital city, this urbis ec bit. I do not work for Tlon. I just live here._
 
 <hr>
 
@@ -59,7 +60,6 @@ In theory, we would have a digital city with unique regions, public fora, and so
 
 ## Urbis ec Bit
 
-
 <br>
 
 ![View of Florence from San Miniato](https://media.urbit.org/site/posts/essays/view-of-florence.jpg)
@@ -74,4 +74,4 @@ The default tools work with messages in a few of the ways with which we've grown
 
 Similar to working undeveloped land, it takes a lot of hard work, which is why Urbit is not ready for mainstream adoption yet, and why I alluded to the idea of settlers in my opening paragraph. Traveling to the new world is not for everyone, but everyone is welcome.
 
-*How could one do other than submit to Tlön, to the minute and vast evidence of an orderly plant? It is useless to answer that reality is also orderly. Perhaps it is, but in accordance with divine laws&mdash;I translate: inhuman laws&mdash;which we never quite grasp. Tlön is surely a labyrinth, but it is a labyrinth devised by men, a labyrinth destined to be deciphered by men.*
+_How could one do other than submit to Tlön, to the minute and vast evidence of an orderly plant? It is useless to answer that reality is also orderly. Perhaps it is, but in accordance with divine laws&mdash;I translate: inhuman laws&mdash;which we never quite grasp. Tlön is surely a labyrinth, but it is a labyrinth devised by men, a labyrinth destined to be deciphered by men._

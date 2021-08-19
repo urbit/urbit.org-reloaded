@@ -1,9 +1,11 @@
 +++
 title = "﻿A Collaborative Web Mapping System for Urbit"
-date = 2020-09-03
+date = "2020-09-02"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["App Dev"]
+grant_type = [ "Proposal" ]
+grant_category = [ "App Dev" ]
+
 [extra]
 image = ""
 description = "Allow small scale spatial data to be stored and retrieved in Urbit, for use in landscape and external applications, and shared across ships."

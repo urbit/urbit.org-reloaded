@@ -1,9 +1,11 @@
 +++
 title = "Bitcoin Full Node Provider and Wallet"
-date = 2020-09-23
+date = "2020-09-22"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["App Dev", "Arvo"]
+grant_type = [ "Bounty" ]
+grant_category = [ "App Dev", "Arvo" ]
+
 [extra]
 image = ""
 description = "This bounty covers the creation of infrastructure (gall agents) required to enable a Bitcoin-based payments system from within Landscape."

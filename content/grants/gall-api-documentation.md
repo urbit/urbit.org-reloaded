@@ -1,9 +1,11 @@
 +++
 title = "Gall API documentation"
-date = 2019-07-22
+date = "2019-07-21"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["Documentation"]
+grant_type = [ "Bounty" ]
+grant_category = [ "Documentation" ]
+
 [extra]
 image = ""
 description = "Write reference documentation for using the API for developing Gall apps."

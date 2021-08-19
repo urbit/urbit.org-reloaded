@@ -1,9 +1,11 @@
 +++
 title = "Overhaul the urbit.org website"
-date = 2021-02-19
+date = "2021-02-18"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["Design"]
+grant_type = [ "Bounty" ]
+grant_category = [ "Design" ]
+
 [extra]
 image = ""
 description = "Rework urbit.org to encourage participation with the project."

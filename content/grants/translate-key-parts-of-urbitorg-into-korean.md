@@ -1,9 +1,11 @@
 +++
 title = "Translate key parts of Urbit.org into Korean"
-date = 2021-01-30
+date = "2021-01-29"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Documentation"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Documentation" ]
+
 [extra]
 image = ""
 description = "The content found on urbit.org/understanding-urbit/ and urbit.org/using/install/ is only in English. Translation will be helpful to Koreans."

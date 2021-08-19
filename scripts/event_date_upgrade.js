@@ -38,7 +38,8 @@ fs.readdirSync(dir, { withFileTypes: true })
     // fileContents.data.guests = fileContents.data.contributors;
     // delete fileContents.data.contributors;
 
-    fileContents.data.timezone = "America/Los_Angeles";
+    fileContents.data.starts = `${fileContents.data.date}`;
+    delete fileContents.data.date;
 
     const data = matter.stringify(
       fileContents.content,
@@ -48,5 +49,5 @@ fs.readdirSync(dir, { withFileTypes: true })
 
     console.log(data);
 
-    fs.writeFileSync(path.join(dir, f.name), data);
+    // fs.writeFileSync(path.join(dir, f.name), data);
   });

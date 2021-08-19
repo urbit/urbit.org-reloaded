@@ -1,9 +1,11 @@
 +++
 title = "Content Producer"
-date = 2021-07-08
+date = "2021-07-07"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Documentation"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Documentation" ]
+
 [extra]
 image = ""
 description = "Work with the content manager in producing content"

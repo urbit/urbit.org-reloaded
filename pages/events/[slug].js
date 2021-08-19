@@ -30,12 +30,12 @@ export default function Event({
   markdown,
   search,
 }) {
-  const starts = generateDisplayDate(event.date, event.timezone);
+  const starts = generateDisplayDate(event.starts, event.timezone);
   const ends = generateDisplayDate(event.ends, event.timezone);
 
   const hasEnded = generateRealtimeDate(event.ends) > DateTime.now();
   const happeningNow =
-    generateRealtimeDate(event.date) > DateTime.now() && !hasEnded;
+    generateRealtimeDate(event.starts) > DateTime.now() && !hasEnded;
 
   return (
     <Container>

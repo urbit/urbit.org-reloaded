@@ -1,9 +1,11 @@
 +++
 title = "Typescript Airlock Library"
-date = 2020-06-26
+date = "2020-06-25"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["Core Dev"]
+grant_type = [ "Bounty" ]
+grant_category = [ "Core Dev" ]
+
 [extra]
 image = ""
 description = "Create a library for the Typescript language to be used for Airlock, the API suite for outside communication with Urbit."

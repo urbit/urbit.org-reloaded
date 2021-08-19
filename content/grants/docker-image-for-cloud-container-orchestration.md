@@ -1,9 +1,11 @@
 +++
 title = "Docker image for cloud container orchestration"
-date = 2020-12-21
+date = "2020-12-20"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Dev Tool"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Dev Tool" ]
+
 [extra]
 image = ""
 description = "Nix infrastructure to generate Docker images for Urbit releases. Images would be suitable for cloud orchestration in e.g. Amazon ECS"

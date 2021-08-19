@@ -1,9 +1,11 @@
 +++
 title = "Urbian: a customized Linux distribution for Urbit appliances"
-date = 2020-10-06
+date = "2020-10-05"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Dev Tool"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Dev Tool" ]
+
 [extra]
 image = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Bromeliaceae20020312.JPG/640px-Bromeliaceae20020312.JPG"
 description = "A package for the generation of custom Linux images with Urbit running as service, for the backend of a turnkey Urbit appliance or IoT hub."

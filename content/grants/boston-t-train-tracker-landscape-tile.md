@@ -1,9 +1,11 @@
 +++
 title = "Boston T Train Tracker Landscape Tile"
-date = 2020-03-24
+date = "2020-03-23"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["App Dev", "Arvo"]
+grant_type = [ "Bounty" ]
+grant_category = [ "App Dev", "Arvo" ]
+
 [extra]
 image = ""
 description = "Create a landscape tile that tracks the Boston T train."

@@ -1,9 +1,11 @@
 +++
 title = "Udon syntax highlighter"
-date = 2019-07-19
+date = "2019-07-18"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["Dev Tool"]
+grant_type = [ "Bounty" ]
+grant_category = [ "Dev Tool" ]
+
 [extra]
 image = ""
 description = "Write a syntax highlighter for the Udon markup language."

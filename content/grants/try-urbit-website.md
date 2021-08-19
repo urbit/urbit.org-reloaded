@@ -1,9 +1,11 @@
 +++
 title = "Try Urbit Website"
-date = 2021-02-14
+date = "2021-02-13"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["App Dev"]
+grant_type = [ "Proposal" ]
+grant_category = [ "App Dev" ]
+
 [extra]
 image = ""
 description = "A website where prospective Martians can experience the Landscape interface without any technical chops."

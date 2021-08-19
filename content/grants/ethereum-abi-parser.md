@@ -1,9 +1,11 @@
 +++
 title = "Ethereum ABI Parser"
-date = 2020-03-10
+date = "2020-03-09"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["App Dev", "Arvo"]
+grant_type = [ "Bounty" ]
+grant_category = [ "App Dev", "Arvo" ]
+
 [extra]
 image = ""
 description = "Create a Gall app that takes the bytecode for a contract ABI."

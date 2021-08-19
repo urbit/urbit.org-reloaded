@@ -1,9 +1,11 @@
 +++
 title = "A book about Urbit"
-date = 2020-07-23
+date = "2020-07-22"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Community"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Community" ]
+
 [extra]
 image = ""
 description = "A short book about Urbit, on Urbit, including Urbit-centric sections about the wider world of computing"

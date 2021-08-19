@@ -113,11 +113,11 @@ code .type-code {
 }
 
 .badge-sm {
-  @apply flex-center type-ui-small px-2 lg:px-2 h-6 md:h-10 rounded-full;
+  @apply flex-center type-ui-small px-4 lg:px-4 h-8 md:h-8 rounded-full;
 }
 
 .badge-lg {
-  @apply flex-center type-ui px-4 lg:px-6 h-10 md:h-14 rounded-full;
+  @apply flex-center type-ui px-4 lg:px-8 h-10 md:h-12 rounded-full;
 }
 
 .button-sm:hover,

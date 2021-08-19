@@ -12,14 +12,14 @@ import EventPreview from "../components/EventPreview";
 import { ShowOrHide } from "../components/Snippets";
 import { contact } from "../lib/constants";
 import {
-  getAllPosts,
+  getAllEvents,
   generateDisplayDate,
   generateRealtimeDate,
   formatDate,
   formatTime,
 } from "../lib/lib";
 
-export default function Events({ posts, search }) {
+export default function Events({ events, search }) {
   const post = {
     title: "Events",
     description: "In-person, remote, and recorded events about Urbit.",
@@ -27,19 +27,19 @@ export default function Events({ posts, search }) {
 
   const now = DateTime.now();
 
-  const pastEvents = posts.filter((post) => {
-    const ends = generateRealtimeDate(post.ends);
+  const pastEvents = events.filter((event) => {
+    const ends = generateRealtimeDate(event.ends);
     return ends < now;
   });
 
-  const futureEvents = posts.filter((post) => {
-    const starts = generateRealtimeDate(post.date);
+  const futureEvents = events.filter((event) => {
+    const starts = generateRealtimeDate(event.date);
     return starts > now;
   });
 
-  const happeningNow = posts.filter((post) => {
-    const starts = generateRealtimeDate(post.date);
-    const ends = generateRealtimeDate(post.ends);
+  const happeningNow = events.filter((event) => {
+    const starts = generateRealtimeDate(event.date);
+    const ends = generateRealtimeDate(event.ends);
     return starts > DateTime.now() && ends < now;
   });
 
@@ -100,7 +100,7 @@ export default function Events({ posts, search }) {
 }
 
 export async function getStaticProps() {
-  const posts = getAllPosts(
+  const events = getAllEvents(
     [
       "title",
       "ends",
@@ -109,7 +109,7 @@ export async function getStaticProps() {
       "registration_url",
       "youtube",
       "description",
-      "date",
+      "starts",
       "hosts",
       "guests",
       "dark",
@@ -119,6 +119,6 @@ export async function getStaticProps() {
   );
 
   return {
-    props: { posts },
+    props: { events },
   };
 }

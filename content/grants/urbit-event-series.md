@@ -1,9 +1,11 @@
 +++
 title = "Urbit Event Series"
-date = 2020-10-11
+date = "2020-10-10"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Community"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Community" ]
+
 [extra]
 image = ""
 description = "A series of community-focused events to create a new knowledge base for urbit.org, and help new community members learn about Urbit"

@@ -11,7 +11,12 @@ import TabCarousel from "../components/TabCarousel";
 import Contact from "../components/Contact";
 import PostPreview from "../components/PostPreview";
 import EventPreview from "../components/EventPreview";
-import { getAllPosts, formatDate, getOpenGrantsCount } from "../lib/lib";
+import {
+  getAllPosts,
+  getAllEvents,
+  formatDate,
+  getOpenGrantsCount,
+} from "../lib/lib";
 import { contact } from "../lib/constants";
 
 export default function Home({ posts, events, openGrantsCount, search }) {
@@ -251,11 +256,11 @@ export async function getStaticProps() {
     "blog"
   );
 
-  const events = getAllPosts(
+  const events = getAllEvents(
     [
       "title",
       "slug",
-      "date",
+      "starts",
       "guests",
       "hosts",
       "registration_url",

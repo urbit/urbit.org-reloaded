@@ -1,7 +1,8 @@
 +++
 title = "Stable Arvo"
-date = 2019-11-20
+date = "2019-11-19"
 description = "This year we set out to get Arvo to a point that we can credibly call ‘stable.' "
+
 [extra]
 author = "Anthony Arroyo"
 ship = "~poldec-tonteg"
@@ -14,20 +15,19 @@ image = "https://media.urbit.org/site/posts/essays/stable-arvo.png"
 
 We want your Urbit to last forever. We want an ordinary Urbit user to never worry about their Urbit breaking, going away or failing unexpectedly. We don’t just want this — we think this is one of the most incredible things Urbit can actually deliver.
 
-In order to get closer to an Urbit that can last forever, we set for ourselves the goal of getting Arvo (the kernel of what we’ve been calling ‘Urbit OS’) to a point that we can credibly call ‘stable’ by the end of 2019. 
+In order to get closer to an Urbit that can last forever, we set for ourselves the goal of getting Arvo (the kernel of what we’ve been calling ‘Urbit OS’) to a point that we can credibly call ‘stable’ by the end of 2019.
 
-But what do we mean exactly by ‘stable’? For something meant to last far into the future, stability really means *resilience*. Arvo has to both run and upgrade itself without ever breaking or falling into an unrecoverable state. 
+But what do we mean exactly by ‘stable’? For something meant to last far into the future, stability really means _resilience_. Arvo has to both run and upgrade itself without ever breaking or falling into an unrecoverable state.
 
 Getting Arvo to this point doesn’t quite achieve the user-level goal we’re hoping to achieve. But if you’re comfortable doing a bit of system administration, Arvo itself should need almost no maintenance.
 
 To achieve stability in practice Arvo needs three things:
 
-- The Arvo network (Ames) has to be stable 
+- The Arvo network (Ames) has to be stable
 - Arvo can’t easily fall into an unrecoverable state
 - Arvo has to have a clear and formalized upgrade mechanic
 
 All of these are actively being worked on, and are mostly near completion. Let’s walk through them one by one.
-
 
 ### A new Ames
 
@@ -41,7 +41,6 @@ We’ve been working on that rewrite, codenamed Alef, for a few months now. Alef
 
 We expect to switch to Alef in a continuity breach (network reset) during this quarter. This will be a huge step toward resilience. A networking protocol we can trust to deliver updates is essential for a computer that will last a long time.
 
-
 ### Recoverability
 
 Another barrier to stability with existing Urbit is that a ship can, under specific conditions, fall into a terminal state. If part of your ship’s state relies on event in the future and this event crashes, then that part of the state can become unrecoverable. Consider, for example, an event that is set to be triggered by a timer. If this timer crashes, that event will never happen. This is a huge problem.
@@ -52,25 +51,24 @@ This architecture means that errors have to be considered not simply as an excep
 
 Deterministic errors are currently handled within the virtual interpreter, Mock, and result in a “bail: exit.” They can be handled “within” Arvo and are never written to the event log. The real difficulty lies with non-deterministic errors, specifically ones can potentially cause other events.
 
-An obvious case of causally-connected events is a timer; any code that sets a timer eventually suspends itself, waiting to be awoken. And yet, if the subsequent timer event were to crash, the state machine awaiting it would remain suspended, expecting a transition that can and will not 
+An obvious case of causally-connected events is a timer; any code that sets a timer eventually suspends itself, waiting to be awoken. And yet, if the subsequent timer event were to crash, the state machine awaiting it would remain suspended, expecting a transition that can and will not
 occur.
 
-We believe that we have a general scheme that accounts for both classes of error. We’ve formalized this and will use it going forward to avoid falling into inconsistent states. 
+We believe that we have a general scheme that accounts for both classes of error. We’ve formalized this and will use it going forward to avoid falling into inconsistent states.
 
 Our solution to this problem is simple: if Arvo or one of its vanes crashes while processing an event, the fact of the failed event itself becomes a new event. The runtime injects an error notification in the event log, named, as is befitting of a failed event: %crud.
 
 In the case of a failed timer event, the error notification is routed back to the code that set the timer and communicates the following: you were expecting to be woken up, but, when you were, you crashed. The code in question could then consider the logical operation of which the timer was a part to have failed, or perhaps it could try again. In any case, it must not crash when handling the error notification, and it must not continue to expect to be woken up.
 
-This quarter, building on previous work, we’ve built on the %crud pattern and mapped the protocols between the vanes and between arvo and vere. This allows us to make sure that %cruds are all handled (so as to avoid the crash discussed above) and, in future iterations of the vanes, know what conditions need to be accommodated to avoid introducing regressions. 
+This quarter, building on previous work, we’ve built on the %crud pattern and mapped the protocols between the vanes and between arvo and vere. This allows us to make sure that %cruds are all handled (so as to avoid the crash discussed above) and, in future iterations of the vanes, know what conditions need to be accommodated to avoid introducing regressions.
 
 By adopting this pattern and virtualizing userspace, we can make completely sure that code running in the kernel or an app can’t cause your ship to get into an inconsistent state.
 
-
 ### Telescoping Kelvins
 
-Finally, in order for a ship to reliably receive and apply upgrades, we need to formalize and enforce a versioning scheme inside the system. 
+Finally, in order for a ship to reliably receive and apply upgrades, we need to formalize and enforce a versioning scheme inside the system.
 
-Most software simply increases its version number on each release. Nock (our VM spec) and Hoon, on the other hand, uses kelvin versioning. Kelvin versioning doesn’t infinitely increase version numbers. Instead, we decrease the version number on each significant change in the hope that our software will eventually not need to change at all. Infrastructure, if it’s going to be truly reliable, should eventually reach absolute zero. 
+Most software simply increases its version number on each release. Nock (our VM spec) and Hoon, on the other hand, uses kelvin versioning. Kelvin versioning doesn’t infinitely increase version numbers. Instead, we decrease the version number on each significant change in the hope that our software will eventually not need to change at all. Infrastructure, if it’s going to be truly reliable, should eventually reach absolute zero.
 
 Nock is already nearly frozen at 4K. A change to Nock is a major event.
 
@@ -84,7 +82,7 @@ The mechanism for the kernel is pretty simple. In short, we’ll enforce that ev
 
 The versioning scheme between the runtime and Arvo is similarly straightforward. We’ll build in an affordance for notifying the user if we need them to manually upgrade the interpreter. This ensures that API changes between interpreter and kernel can always be non-breaking. Someday interpreter changes can be done over the air (like your browser downloading its own upgrades), but we’re not there yet.
 
-What’s important about these two things is that they let us take continuity seriously. "Continuity" or "permanence" is arguably Urbit's killer feature: you start your ship, it just works, forever. Back it up on a USB drive, throw it in a drawer for forty years, and upon reconnecting to the network in 2059 (and pulling down all the updates you've missed) you're back in the game. 
+What’s important about these two things is that they let us take continuity seriously. "Continuity" or "permanence" is arguably Urbit's killer feature: you start your ship, it just works, forever. Back it up on a USB drive, throw it in a drawer for forty years, and upon reconnecting to the network in 2059 (and pulling down all the updates you've missed) you're back in the game.
 
 With the recent 0.9.0 release we’ve gotten to the point where we can make almost all our upgrades over the air. Even the language is now upgradeable over the wire.
 

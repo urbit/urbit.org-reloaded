@@ -6,9 +6,9 @@ image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/274279522/"
 youtube = "E4DFuAZQ32Y"
 description = ""
-date = "2020-11-05T17:00:00.000-08:00"
 guests = ""
 timezone = "America/Los_Angeles"
+starts = "2020-11-05T17:00:00.000-08:00"
 
 [[hosts]]
 name = "Lane R."

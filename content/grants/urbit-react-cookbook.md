@@ -1,9 +1,11 @@
 +++
 title = "Urbit React Cookbook"
-date = 2021-04-10
+date = "2021-04-09"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["App Dev"]
+grant_type = [ "Proposal" ]
+grant_category = [ "App Dev" ]
+
 [extra]
 image = ""
 description = "Provide concrete examples of React UI driven by @urbit/http-api to quickly start building on top of Urbit"

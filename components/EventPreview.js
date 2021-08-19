@@ -14,13 +14,13 @@ export default function EventPreview({ event, className, big }) {
   const grayText = event?.dark ? "text-midWhite" : "text-wall-400";
   const blackText = event?.dark ? "text-white" : "text-wall-600";
 
-  const starts = generateDisplayDate(event.date, event.timezone);
+  const starts = generateDisplayDate(event.starts, event.timezone);
   const ends = generateDisplayDate(event.ends, event.timezone);
 
   const inFuture = generateRealtimeDate(starts) > DateTime.now();
 
   const happeningNow =
-    generateRealtimeDate(event.date) > DateTime.now() && !inFuture;
+    generateRealtimeDate(event.starts) > DateTime.now() && !inFuture;
 
   return (
     <div className={`cursor-pointer aspect-w-5 aspect-h-4 ${className}`}>
@@ -54,17 +54,15 @@ export default function EventPreview({ event, className, big }) {
                 <p className={blackText + " type-sub"}>
                   <b>{"Hosted by "}</b>
                   <ReadableList>
-                    {event.hosts?.map((host, index) => {
-                      return (
-                        <Person
-                          key={`${host.name}-${host.patp}`}
-                          nameClassNames={blackText}
-                          patpClassNames={blackText}
-                          name={host.name}
-                          patp={host.patp}
-                        />
-                      );
-                    })}
+                    {event.hosts?.map((host, index) => (
+                      <Person
+                        key={`${host.name}-${host.patp}`}
+                        nameClassNames={blackText}
+                        patpClassNames={blackText}
+                        name={host.name}
+                        patp={host.patp}
+                      />
+                    ))}
                   </ReadableList>
                 </p>
               </ShowOrHide>

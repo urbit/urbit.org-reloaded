@@ -4,6 +4,7 @@ import { formatDate, generateDisplayDate } from "../lib/lib";
 
 export default function PostPreview(props) {
   const section = props?.section ? props.section : "blog";
+
   const date = generateDisplayDate(props.post.date);
   return (
     <div className={`cursor-pointer ${props.className}`}>

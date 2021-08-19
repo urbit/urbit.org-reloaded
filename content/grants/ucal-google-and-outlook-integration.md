@@ -1,9 +1,11 @@
 +++
 title = "ucal Google and Outlook Integration"
-date = 2021-05-13
+date = "2021-05-12"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["App Dev", "Arvo"]
+grant_type = [ "Bounty" ]
+grant_category = [ "App Dev", "Arvo" ]
+
 [extra]
 image = ""
 description = "Extend the Urbit Calendar (ucal) to integrate with other calendaring systems."

@@ -1,9 +1,11 @@
 +++
 title = "Verifying Urbit ID on Keybase"
-date = 2020-02-19
+date = "2020-02-18"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["App Dev", "Arvo"]
+grant_type = [ "Bounty" ]
+grant_category = [ "App Dev", "Arvo" ]
+
 [extra]
 image = ""
 description = "Create a Gall app that links Urbit identities with Keybase."

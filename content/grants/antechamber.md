@@ -1,9 +1,11 @@
 +++
 title = "Antechamber"
-date = 2020-11-17
+date = "2020-11-16"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["App Dev"]
+grant_type = [ "Bounty" ]
+grant_category = [ "App Dev" ]
+
 [extra]
 image = ""
 description = "Antechamber is an initiative to provide a group within Landscape that is restricted to only galaxies and delegates of galaxies."

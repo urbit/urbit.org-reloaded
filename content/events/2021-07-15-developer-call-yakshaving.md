@@ -6,8 +6,8 @@ image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/279349114/"
 description = "A look at ~littel-wolfer's Hoon development setup"
 youtube = "AG6IPaXbiiY"
-date = "2021-07-15T17:00"
 timezone = "America/Los_Angeles"
+starts = "2021-07-15T17:00"
 
 [[hosts]]
 name = "Josh Lehman"

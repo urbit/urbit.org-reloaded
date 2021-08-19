@@ -1,9 +1,11 @@
 +++
 title = "Urbit online meetup."
-date = 2020-06-08
+date = "2020-06-07"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Community"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Community" ]
+
 [extra]
 image = ""
 description = "I teach a Python class online. Many students would be interested in learning about Urbit too. I'd give a lecture and help them host planets."

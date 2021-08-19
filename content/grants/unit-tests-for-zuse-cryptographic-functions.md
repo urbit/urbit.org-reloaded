@@ -1,9 +1,11 @@
 +++
 title = "Unit tests for Zuse cryptographic functions"
-date = 2019-07-25
+date = "2019-07-24"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["Dev Tool"]
+grant_type = [ "Bounty" ]
+grant_category = [ "Dev Tool" ]
+
 [extra]
 image = ""
 description = "Write unit tests for cryptographic functions of the Zuse library."

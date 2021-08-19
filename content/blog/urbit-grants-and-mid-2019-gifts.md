@@ -1,11 +1,16 @@
 +++
 title = "Urbit Grants and mid-2019 Gifts"
-date = 2019-06-10
+date = "2019-06-09"
 description = "Announcing an upcoming Urbit grants program and star gifts for Mid-2019."
-aliases = ["/posts/essays/urbit-grants-and-mid-2019-gifts", "/posts/urbit-grants-and-mid-2019-gifts"]
+aliases = [
+  "/posts/essays/urbit-grants-and-mid-2019-gifts",
+  "/posts/urbit-grants-and-mid-2019-gifts"
+]
+
 [taxonomies]
-grant_type = ["Gift"]
-grant_category = []
+grant_type = [ "Gift" ]
+grant_category = [ ]
+
 [extra]
 author = "Galen Wolfe-Pauly + Alex Matzner"
 ship = "~ravmel-ropdyl + ~mignyt-mogseb"

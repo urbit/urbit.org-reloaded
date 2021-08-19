@@ -1,9 +1,11 @@
 +++
 title = "Links in Urbit Reference Docs"
-date = 2020-06-16
+date = "2020-06-15"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Documentation"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Documentation" ]
+
 [extra]
 image = ""
 description = "Add links to our reference doc pages so that people can easily discover new concepts"

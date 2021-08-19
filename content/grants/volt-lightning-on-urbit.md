@@ -1,9 +1,11 @@
 +++
 title = "volt: Lightning on Urbit"
-date = 2021-04-02
+date = "2021-04-01"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["App Dev", "Arvo"]
+grant_type = [ "Bounty" ]
+grant_category = [ "App Dev", "Arvo" ]
+
 [extra]
 image = ""
 description = "An Urbit-native Lightning client and integration with `lnd` on 'provider' ships."

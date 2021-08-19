@@ -6,8 +6,8 @@ image = "https://media.urbit.org/site/events/bitcoin-launch-event.png"
 registration_url = "https://www.meetup.com/urbit-sf/events/276741426/"
 youtube = "_aRnfacZPto"
 description = "Bitcoin is coming to Urbit! With the upcoming release of the Bitcoin Wallet, you will be able to pay Urbit ships directly with BTC."
-date = "2021-04-27T20:00:00.000-07:00"
 timezone = "America/Los_Angeles"
+starts = "2021-04-27T20:00:00.000-07:00"
 
 [[hosts]]
 name = "Urbit Foundation"

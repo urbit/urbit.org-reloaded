@@ -6,8 +6,8 @@ image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/277261928/"
 description = "In this talk, Tyler Brown Cifu Shuster (~radbur-sivmus) explains how to use Javascript tools to develop a client for Urbit."
 youtube = "avLSSdb2VLM"
-date = "2021-04-01T17:00:00.000-07:00"
 timezone = "America/Los_Angeles"
+starts = "2021-04-01T17:00:00.000-07:00"
 
 [[hosts]]
 name = "Mike Osborne"

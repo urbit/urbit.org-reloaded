@@ -1,9 +1,11 @@
 +++
 title = "Network Explorer: Data Pipeline and HTTP API"
-date = 2021-03-12
+date = "2021-03-11"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["App Dev: Other"]
+grant_type = [ "Bounty" ]
+grant_category = [ "App Dev: Other" ]
+
 [extra]
 image = ""
 description = "Build a public, open HTTP API for exploring metrics about the Urbit network."

@@ -381,22 +381,22 @@ export async function getStaticProps() {
     "grants"
   );
   // all the gift posts stuff can be removed once we migrate to gifts
-  let giftPosts = getAllPosts(
-    ["title", "slug", "date", "description", "extra", "taxonomies"],
-    "blog"
-  );
-  giftPosts.map((e) => (e.section = "blog"));
+  // let giftPosts = getAllPosts(
+  //   ["title", "slug", "date", "description", "extra", "taxonomies"],
+  //   "blog"
+  // );
+  // giftPosts.map((e) => (e.section = "blog"));
   let updates = getAllPosts(
     ["title", "slug", "date", "description", "extra", "taxonomies"],
     "updates"
   );
-  updates.map((e) => (e.section = "updates"));
-  giftPosts.push(...updates);
-  giftPosts = giftPosts
-    .filter((e) => e?.taxonomies?.grant_type?.includes("Gift"))
-    .sort((a, b) => (a.date > b.date ? -1 : 1));
+  // updates.map((e) => (e.section = "updates"));
+  // giftPosts.push(...updates);
+  // giftPosts = giftPosts
+  //   .filter((e) => e?.taxonomies?.grant_type?.includes("Gift"))
+  //   .sort((a, b) => (a.date > b.date ? -1 : 1));
 
-  const gifts = getAllPosts(["name", "planet", "date", "link"], "gifts");
+  // const gifts = getAllPosts(["name", "planet", "date", "link"], "gifts");
 
   // The layout expects exactly 3
   const featuredGrants = [
@@ -407,6 +407,23 @@ export async function getStaticProps() {
     getPostBySlug(slug, ["title", "slug", "date", "extra"], "grants")
   );
 
+  // Layout expects exactly 2
+  // const giftPosts = [
+  //   "2021-06-16-update",
+  //   "gifts-q3-2020",
+  // ].map((slug) =>
+  //   getPostBySlug(slug, ["title", "slug", "date", "extra"], "blog")
+  // );
+
+  const giftPosts = [
+    getPostBySlug(
+      "2021-06-16-update",
+      ["title", "slug", "date", "extra"],
+      "updates"
+    ),
+    getPostBySlug("gifts-q3-2020", ["title", "slug", "date", "extra"], "blog"),
+  ];
+
   return {
     props: {
       posts: posts,
@@ -414,7 +431,7 @@ export async function getStaticProps() {
       types,
       featuredGrants,
       giftPosts,
-      gifts,
+      gifts: [],
     },
   };
 }

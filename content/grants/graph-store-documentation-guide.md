@@ -1,9 +1,11 @@
 +++
 title = "Graph Store Documentation Guide"
-date = 2021-02-13
+date = "2021-02-12"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Documentation"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Documentation" ]
+
 [extra]
 image = ""
 description = "Explainer, tutorial, and cookbook for `graph-store`"

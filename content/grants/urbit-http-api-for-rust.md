@@ -1,9 +1,11 @@
 +++
 title = "Urbit HTTP API for Rust"
-date = 2020-12-16
+date = "2020-12-15"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["App Dev"]
+grant_type = [ "Proposal" ]
+grant_category = [ "App Dev" ]
+
 [extra]
 image = ""
 description = "This proposal seeks to create an API to interact with an Urbit ship over HTTP written in Rust."

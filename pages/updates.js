@@ -7,7 +7,7 @@ import Header from "../components/Header";
 import SingleColumn from "../components/SingleColumn";
 import BackgroundImage from "../components/BackgroundImage";
 import Section from "../components/Section";
-import { getAllPosts, formatDate } from "../lib/lib";
+import { getAllPosts, formatDate, generateDisplayDate } from "../lib/lib";
 import { contact } from "../lib/constants";
 
 export default function Updates({ posts, search }) {
@@ -31,6 +31,7 @@ export default function Updates({ posts, search }) {
         </Section>
         <Section narrow>
           {posts.map((post) => {
+            const date = generateDisplayDate(post.date);
             return (
               <div key={post.slug} className="mb-24 cursor-pointer">
                 <Link href={`/updates/${post.slug}`}>
@@ -53,7 +54,7 @@ export default function Updates({ posts, search }) {
                     </div>
 
                     <div className="type-ui text-wall-500 mt-2">
-                      {formatDate(new Date(post.date))}
+                      {formatDate(date)}
                     </div>
                   </div>
                 </Link>
