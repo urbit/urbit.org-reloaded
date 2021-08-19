@@ -8,6 +8,7 @@ registration_url = "https://www.meetup.com/urbit-sf/events/242295411/"
 description = "This time we'll be opening up the office, opening up a few cold ones, and talking about Urbit + Ethereum."
 date = "2017-08-12T04:00:00.000-07:00"
 guests = ""
+timezone = "America/Los_Angeles"
 
 [[hosts]]
 name = "Urbit"

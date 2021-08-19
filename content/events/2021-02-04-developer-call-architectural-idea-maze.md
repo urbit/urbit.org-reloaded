@@ -7,6 +7,7 @@ registration_url = "https://www.meetup.com/urbit-sf/events/275992798/"
 description = ""
 date = "2021-02-04T17:00:00.000-08:00"
 guests = ""
+timezone = "America/Los_Angeles"
 
 [[hosts]]
 name = "Lane R."

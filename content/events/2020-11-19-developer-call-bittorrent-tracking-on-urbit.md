@@ -8,6 +8,7 @@ youtube = "cvx2UV6TJ5I"
 description = "Developer calls are focused on the technologies that underpin Urbit, from the top of the stack to the very bottom. They’re an opportunity for the people developing and contributing to Urbit to share their knowledge and expertise, including things that typically don’t make it into the docs, such as how and why Urbit works the way it does."
 date = "2020-11-19T17:00:00.000-08:00"
 guests = ""
+timezone = "America/Los_Angeles"
 
 [[hosts]]
 name = "Lane R."

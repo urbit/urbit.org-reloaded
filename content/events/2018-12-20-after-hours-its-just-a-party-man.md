@@ -7,6 +7,7 @@ registration_url = "https://www.meetup.com/urbit-sf/events/256732938/"
 description = "We had a busy and productive 2018. This time around, we're just going to play music and relax."
 date = "2018-12-21T03:00:00.000-08:00"
 guests = ""
+timezone = "America/Los_Angeles"
 
 [[hosts]]
 name = "Urbit"

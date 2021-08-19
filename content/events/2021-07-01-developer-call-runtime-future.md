@@ -7,6 +7,7 @@ registration_url = "https://www.meetup.com/urbit-sf/events/279137337/"
 description = "The current and future thinking about the Urbit runtime"
 youtube = "z0grAh_yhE8"
 date = "2021-07-01T17:00:00.000-07:00"
+timezone = "America/Los_Angeles"
 
 [[hosts]]
 name = "Ted Blackman"

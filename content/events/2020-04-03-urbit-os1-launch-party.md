@@ -8,6 +8,7 @@ youtube = "71ViyftPkGk"
 description = "Join us as we launch Urbit OS1!"
 date = "2020-04-04T03:00:00.000-07:00"
 guests = ""
+timezone = "America/Los_Angeles"
 
 [[hosts]]
 name = "Urbit"

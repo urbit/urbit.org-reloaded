@@ -7,6 +7,7 @@ registration_url = "https://www.meetup.com/urbit-sf/events/276898246/"
 description = "Matilde Park, Landscape team lead, talks about the distinctions between the Landscape product and basic Urbit development, and the significance of building Landscape for Tlon."
 youtube = "XjIDZQUZZtE"
 date = "2021-03-18T17:00:00.000-07:00"
+timezone = "America/Los_Angeles"
 
 [[hosts]]
 name = "Josh Lehman"

@@ -7,6 +7,7 @@ registration_url = "https://www.meetup.com/urbit-sf/events/244316080/"
 description = "The office will be open and the beer will be cold.  Come hang out and talk about all things Urbit and Urbit related.  Cryptoeconomics, protocols, architecture, Japanese poetry, ancient aqueducts.  You get the idea."
 date = "2017-10-27T04:00:00.000-07:00"
 guests = ""
+timezone = "America/Los_Angeles"
 
 [[hosts]]
 name = "Urbit"

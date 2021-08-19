@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import { DateTime } from "luxon";
 import {
   getPostBySlug,
   getAllPosts,
@@ -7,6 +8,7 @@ import {
   formatDate,
   formatTime,
   generateDisplayDate,
+  generateRealtimeDate,
 } from "../../lib/lib";
 import Head from "next/head";
 import Meta from "../../components/Meta";
@@ -28,8 +30,12 @@ export default function Event({
   markdown,
   search,
 }) {
-  const starts = generateDisplayDate(event.date);
-  const ends = generateDisplayDate(event.ends);
+  const starts = generateDisplayDate(event.date, event.timezone);
+  const ends = generateDisplayDate(event.ends, event.timezone);
+
+  const hasEnded = generateRealtimeDate(event.ends) > DateTime.now();
+  const happeningNow =
+    generateRealtimeDate(event.date) > DateTime.now() && !hasEnded;
 
   return (
     <Container>
@@ -42,32 +48,57 @@ export default function Event({
         <Section narrow short>
           <h1>{event.title}</h1>
           <h3 className="mt-6">{event.description}</h3>
-          <p className="text-wall-400 mt-6">{formatDate(starts)}</p>
-          <p className="text-wall-400">
+          <p className="text-wall-600 mt-6">{formatDate(starts)}</p>
+          <p className="text-wall-600">
             {formatTime(starts)}
-            <ShowOrHide
-              condition={typeof event.ends !== "undefined"}
-            >{` to ${formatTime(ends)}`}</ShowOrHide>
+            <ShowOrHide condition={typeof event.ends !== "undefined"}>
+              {` to ${formatTime(ends)}`}
+              {" " + starts.toFormat("ZZZZ")}
+            </ShowOrHide>
           </p>
-          <h4>{`Host${event.hosts.length > 1 ? "s" : ""}`}</h4>
-          <p>
-            <ReadableList>
-              {event.hosts.map((host) => (
-                <Person person={host} />
-              ))}
-            </ReadableList>
-          </p>
-          {event.guests ? (
-            <>
-              <h4>{`With Guest${event.hosts.length > 1 ? "s" : ""}`}</h4>
+          <div className="mt-6">
+            <ShowOrHide condition={event.hosts}>
               <p>
+                {"Hosted by "}
                 <ReadableList>
-                  {event.guests.map((guest) => (
-                    <Person person={guest} />
+                  {event.hosts?.map((host, index) => {
+                    return (
+                      <Person
+                        key={`${host.name}-${host.patp}`}
+                        name={host.name}
+                        patp={host.patp}
+                      />
+                    );
+                  })}
+                </ReadableList>
+              </p>
+            </ShowOrHide>
+            <ShowOrHide condition={event.guests}>
+              <p>
+                {event.guests?.length > 1 ? "With guest " : "With guest "}
+                <ReadableList>
+                  {event.guests?.map((guest, index) => (
+                    <Person
+                      key={`${guest.name}-${guest.patp}`}
+                      name={guest.name}
+                      patp={guest.patp}
+                    />
                   ))}
                 </ReadableList>
               </p>
-            </>
+            </ShowOrHide>
+          </div>
+          {hasEnded && event.registration_url ? (
+            <div className="table mt-6">
+              <a
+                className="button-sm bg-green-400 text-white"
+                href={event.registration_url}
+                onClick={(e) => e.stopPropagation()}
+                target="_blank"
+              >
+                RSVP
+              </a>
+            </div>
           ) : null}
         </Section>
         <Section short wide>
@@ -79,7 +110,7 @@ export default function Event({
               src={`https://www.youtube.com/embed/${event.youtube}`}
               frameBorder="0"
               allow="encrypted-media"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           ) : null}
         </Section>
@@ -132,6 +163,7 @@ export async function getStaticProps({ params }) {
         "hosts",
         "guests",
         "dark",
+        "timezone",
       ],
       "events"
     ) || null;
@@ -152,6 +184,7 @@ export async function getStaticProps({ params }) {
         "hosts",
         "guests",
         "dark",
+        "timezone",
       ],
       "events"
     ) || null;
@@ -172,6 +205,7 @@ export async function getStaticProps({ params }) {
       "guests",
       "content",
       "dark",
+      "timezone",
     ],
     "events"
   );

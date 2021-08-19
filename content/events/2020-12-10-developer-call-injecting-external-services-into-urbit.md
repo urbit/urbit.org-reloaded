@@ -8,6 +8,7 @@ youtube = "LaWNHMmxQag"
 description = ""
 date = "2020-12-10T17:00:00.000-08:00"
 guests = ""
+timezone = "America/Los_Angeles"
 
 [[hosts]]
 name = "Lane R."

@@ -7,6 +7,7 @@ registration_url = "https://www.meetup.com/urbit-sf/events/278052029/"
 description = "Versioned Networking for Application Developers"
 youtube = "BhQ1vk4jGsk"
 date = "2021-05-14T00:00:00.000-07:00"
+timezone = "America/Los_Angeles"
 
 [[hosts]]
 name = "Josh Lehman"

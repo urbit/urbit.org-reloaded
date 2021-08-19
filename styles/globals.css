@@ -18,6 +18,11 @@ a {
   cursor: pointer;
 }
 
+b,
+strong {
+  @apply font-semibold;
+}
+
 p a {
   @apply text-green-400 font-semibold;
 }

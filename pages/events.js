@@ -36,6 +36,7 @@ export default function Events({ posts, search }) {
     const starts = generateRealtimeDate(post.date);
     return starts > now;
   });
+
   const happeningNow = posts.filter((post) => {
     const starts = generateRealtimeDate(post.date);
     const ends = generateRealtimeDate(post.ends);

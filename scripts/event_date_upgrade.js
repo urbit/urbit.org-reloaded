@@ -35,8 +35,10 @@ fs.readdirSync(dir, { withFileTypes: true })
     //   hours: 12,
     // });
 
-    fileContents.data.guests = fileContents.data.contributors;
-    delete fileContents.data.contributors;
+    // fileContents.data.guests = fileContents.data.contributors;
+    // delete fileContents.data.contributors;
+
+    fileContents.data.timezone = "America/Los_Angeles";
 
     const data = matter.stringify(
       fileContents.content,

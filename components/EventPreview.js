@@ -6,6 +6,7 @@ import {
   generateRealtimeDate,
   formatDate,
   formatTime,
+  formatTimeZone,
 } from "../lib/lib";
 
 export default function EventPreview({ event, className, big }) {
@@ -13,12 +14,13 @@ export default function EventPreview({ event, className, big }) {
   const grayText = event?.dark ? "text-midWhite" : "text-wall-400";
   const blackText = event?.dark ? "text-white" : "text-wall-600";
 
-  const starts = generateDisplayDate(event.date);
-  const ends = generateDisplayDate(event.ends);
+  const starts = generateDisplayDate(event.date, event.timezone);
+  const ends = generateDisplayDate(event.ends, event.timezone);
 
-  const hasEnded = generateRealtimeDate(event.ends) > DateTime.now();
+  const inFuture = generateRealtimeDate(starts) > DateTime.now();
+
   const happeningNow =
-    generateRealtimeDate(event.date) > DateTime.now() && !hasEnded;
+    generateRealtimeDate(event.date) > DateTime.now() && !inFuture;
 
   return (
     <div className={`cursor-pointer aspect-w-5 aspect-h-4 ${className}`}>
@@ -43,46 +45,51 @@ export default function EventPreview({ event, className, big }) {
                 {typeof event.ends !== "undefined"
                   ? ` to ${formatTime(ends)}`
                   : null}
+                {" " + formatTimeZone(starts)}
               </p>
             </div>
 
-            <div className="absolute p-4 left-0 bottom-0 w-full">
+            <div className="absolute p-6 left-0 bottom-0 w-full pr-32">
               <ShowOrHide condition={event.hosts}>
-                <p className={`type-sub-bold ${blackText}`}>
-                  {event.hosts
-                    ? event.hosts.length > 1
-                      ? "Hosts"
-                      : "Host"
-                    : null}
-                </p>
-              </ShowOrHide>
-              <ShowOrHide condition={event.hosts}>
-                <ReadableList>
-                  {event.hosts?.map((host, index) => (
-                    <Person person={host} />
-                  ))}
-                </ReadableList>
-              </ShowOrHide>
-              <ShowOrHide condition={event.guests}>
-                <p className={`type-sub-bold pt-2 ${blackText}`}>
-                  {event.guests
-                    ? event.guests.length > 1
-                      ? "With guests"
-                      : "With guest"
-                    : null}
+                <p className={blackText + " type-sub"}>
+                  <b>{"Hosted by "}</b>
+                  <ReadableList>
+                    {event.hosts?.map((host, index) => {
+                      return (
+                        <Person
+                          key={`${host.name}-${host.patp}`}
+                          nameClassNames={blackText}
+                          patpClassNames={blackText}
+                          name={host.name}
+                          patp={host.patp}
+                        />
+                      );
+                    })}
+                  </ReadableList>
                 </p>
               </ShowOrHide>
               <ShowOrHide condition={event.guests}>
-                <ReadableList>
-                  {event.guests?.map((guest, index) => (
-                    <Person person={guest} />
-                  ))}
-                </ReadableList>
+                <p className={blackText + " type-sub"}>
+                  <b>
+                    {event.guests?.length > 1 ? "With guests " : "With guest "}
+                  </b>
+                  <ReadableList>
+                    {event.guests?.map((guest, index) => (
+                      <Person
+                        key={`${guest.name}-${guest.patp}`}
+                        nameClassNames={blackText}
+                        patpClassNames={blackText}
+                        name={guest.name}
+                        patp={guest.patp}
+                      />
+                    ))}
+                  </ReadableList>
+                </p>
               </ShowOrHide>
             </div>
 
-            {hasEnded && event.registration_url ? (
-              <div className="absolute right-0 bottom-0 p-4">
+            {inFuture && event.registration_url ? (
+              <div className="absolute right-0 bottom-0 p-6">
                 <a
                   className="button-sm bg-green-400 text-white"
                   href={event.registration_url}
@@ -93,7 +100,7 @@ export default function EventPreview({ event, className, big }) {
                 </a>
               </div>
             ) : event.youtube ? (
-              <div className="absolute right-0 bottom-0 p-4">
+              <div className="absolute right-0 bottom-0 p-6">
                 <a
                   className="button-sm bg-wall-600 text-white"
                   href={`https://www.youtube.com/watch?v=${event.youtube}`}
