@@ -6,9 +6,9 @@ grant_type = ["Proposal"]
 grant_category = ["App Dev: Other"]
 [extra]
 image = ""
-description = "Bring Automatic Speech Recognition to Urbitn"
+description = "Bring Automatic Speech Recognition to Urbit"
 reward = 2
-assignee = "~hosted-fornec"
+assignee = "~hosted-fornet"
 grant_id = "P0053"
 completed = false
 link = ""
@@ -58,7 +58,7 @@ My expectation is that usage of ASR on the Urbit network will remain low for som
 
 ## About Me
 
-My education is in chemistry and physics. For the past year or so I've been working as a backend engineer at a small SF Bay Area startup whose main focus is ASR, alson known as Speech To Text (STT). In that time I've contributed infrastructure, ML, and fundamental ASR projects to the company.
+My education is in chemistry and physics. For the past year or so I've been working as a backend engineer at a small SF Bay Area startup whose main focus is ASR, also known as Speech To Text (STT). In that time I've contributed infrastructure, ML, and fundamental ASR projects to the company.
 
 In addition, I've recently been working on an [Urbit apprenticeship](https://github.com/hosted-fornet/crunch) under the supervision of ~timluc-miptev.
 
@@ -66,12 +66,12 @@ In addition, I've recently been working on an [Urbit apprenticeship](https://git
 
 ### Milestone 1: Complete Backend Development
 
-Estimated time to complete:
+Estimated completion date: 30 Sep 2021
 
 Payment: 1 Star
 
 ### Milestone 2: Complete Frontend Demo
 
-Estimated time to complete:
+Estimated completion date: 15 October 2021
 
 Payment: 1 Star
