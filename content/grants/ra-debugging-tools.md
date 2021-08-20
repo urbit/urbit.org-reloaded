@@ -9,7 +9,7 @@ image = ""
 description = "Debugging Tools"
 reward = 2
 mentor = "~master-morzod"
-assignee = "Brad Bettis, Dane Bettis"
+assignee = "~nosmes-sibwyx, ~topfet-parmed"
 completed = false
 work_request_link = ""
 +++
