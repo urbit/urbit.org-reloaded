@@ -33,12 +33,12 @@ export default function Events({ events, search }) {
   });
 
   const futureEvents = events.filter((event) => {
-    const starts = generateRealtimeDate(event.date);
+    const starts = generateRealtimeDate(event.starts);
     return starts > now;
   });
 
   const happeningNow = events.filter((event) => {
-    const starts = generateRealtimeDate(event.date);
+    const starts = generateRealtimeDate(event.starts);
     const ends = generateRealtimeDate(event.ends);
     return starts > DateTime.now() && ends < now;
   });

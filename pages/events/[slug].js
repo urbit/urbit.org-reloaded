@@ -130,14 +130,16 @@ export default function Event({
             <div className={"w-1/2 mr-4"} />
           ) : (
             <div className="mr-4 w-1/2">
-              <EventPreview title="Previous Event" event={previousEvent} />
+              <h3 className="mb-2">Next Event</h3>
+              <EventPreview event={previousEvent} />
             </div>
           )}
           {nextEvent === null ? (
             <div className={"w-1/2 ml-4"} />
           ) : (
             <div className="mr-4 w-1/2">
-              <EventPreview title="Next Event" event={nextEvent} />
+              <h3 className="mb-2">Previous Event</h3>
+              <EventPreview event={nextEvent} />
             </div>
           )}
         </Section>
