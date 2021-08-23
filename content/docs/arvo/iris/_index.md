@@ -10,13 +10,13 @@ insert_anchor_links = "right"
 
 A brief overbview of Iris, Urbit's HTTP client vane.
 
-## [Data Types](/docs/arvo/iris/data-types)
-
-Reference documentation of the data types used by Iris.
-
 ## [API Reference](/docs/arvo/eyre/tasks)
 
 The `task`s Iris takes and the `gift`s it returns.
+
+## [Data Types](/docs/arvo/iris/data-types)
+
+Reference documentation of the data types used by Iris.
 
 ## [Example](/docs/arvo/iris/example)
 

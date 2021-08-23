@@ -1,6 +1,6 @@
 +++
 title = "Data Types"
-weight = 2
+weight = 3
 template = "doc.html"
 +++
 
