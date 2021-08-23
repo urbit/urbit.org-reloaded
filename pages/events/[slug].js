@@ -7,6 +7,7 @@ import {
   getPreviousPost,
   formatDate,
   formatTime,
+  formatTimeZone,
   generateDisplayDate,
   generateRealtimeDate,
 } from "../../lib/lib";
@@ -33,9 +34,10 @@ export default function Event({
   const starts = generateDisplayDate(event.starts, event.timezone);
   const ends = generateDisplayDate(event.ends, event.timezone);
 
-  const hasEnded = generateRealtimeDate(event.ends) > DateTime.now();
+  const inFuture = generateRealtimeDate(starts) > DateTime.now();
+
   const happeningNow =
-    generateRealtimeDate(event.starts) > DateTime.now() && !hasEnded;
+    generateRealtimeDate(event.starts) > DateTime.now() && !inFuture;
 
   return (
     <Container>
@@ -53,7 +55,7 @@ export default function Event({
             {formatTime(starts)}
             <ShowOrHide condition={typeof event.ends !== "undefined"}>
               {` to ${formatTime(ends)}`}
-              {" " + starts.toFormat("ZZZZ")}
+              {" " + formatTimeZone(ends)}
             </ShowOrHide>
           </p>
           <div className="mt-6">
@@ -88,7 +90,7 @@ export default function Event({
               </p>
             </ShowOrHide>
           </div>
-          {hasEnded && event.registration_url ? (
+          {inFuture && event.registration_url ? (
             <div className="table mt-6">
               <a
                 className="button-sm bg-green-400 text-white"
@@ -159,7 +161,7 @@ export async function getStaticProps({ params }) {
         "registration_url",
         "youtube",
         "description",
-        "date",
+        "starts",
         "hosts",
         "guests",
         "dark",
@@ -180,7 +182,7 @@ export async function getStaticProps({ params }) {
         "registration_url",
         "youtube",
         "description",
-        "date",
+        "starts",
         "hosts",
         "guests",
         "dark",
@@ -199,7 +201,7 @@ export async function getStaticProps({ params }) {
       "registration_url",
       "youtube",
       "description",
-      "date",
+      "starts",
       "hosts",
       "slug",
       "guests",

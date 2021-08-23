@@ -47,7 +47,5 @@ fs.readdirSync(dir, { withFileTypes: true })
       options
     );
 
-    console.log(data);
-
     // fs.writeFileSync(path.join(dir, f.name), data);
   });
