@@ -18,11 +18,11 @@ Hosting your Urbit means that your Urbit is always on and available. All that is
 
 The downside is that running your own server can be a complex and difficult process. Third-party hosting allows an expert to do that work for you. The hosting provider gets paid, and you get 24/7 access to your ship.
 
-UrbitHost is one of the latest [hosting providers](https://subject.network/planet-sales/). As of now, it is one of the fastest and easiest ways onto the network. You pay the fee, and you get sent a link that you use to access Landscape. It&#39;s that easy.
+[UrbitHost](https://urbithost.com) is one of the latest [hosting providers](https://subject.network/planet-sales/) to enter the market. As of now, it is one of the fastest and easiest ways onto the network. You pay the fee, and you get sent a link that you use to access Landscape. It&#39;s that easy.
 
 At least, it&#39;s that easy for the end user. For the guy running the operations, ~lavlyn-litmeg, it can be quite a complex operation. I sat down with him to find out about what it&#39;s like being a commercial developer on Urbit. We also talked about technology, the developer ecosystem, and the future of Urbit.
 
-If you want to get in touch you can reach him at ~lavlyn-litmeg, the ~sardys/uh group, or urbithost.com.
+If you want to get in touch you can reach him at ~lavlyn-litmeg, the ~sardys/uh group, or [urbithost.com](https://urbithost.com).
 
 ----
 
