@@ -43,6 +43,14 @@
   @apply py-2 ml-6 text-lg;
 }
 
+.markdown hr {
+  @apply my-16 border-t-2 border-wall-300;
+}
+
+.markdown iframe {
+  min-height: 512px;
+}
+
 /* Technical Typography */
 
 .markdown.technical h1 {
@@ -122,7 +130,7 @@
 }
 
 .markdown blockquote {
-  @apply border-l-4 border-wall-500 pl-6 italic;
+  @apply border-l-4 border-wall-300 pl-6 italic;
 }
 .markdown blockquote cite {
   @apply not-italic font-semibold;
