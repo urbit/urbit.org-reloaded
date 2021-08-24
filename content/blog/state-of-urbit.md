@@ -30,7 +30,7 @@ This is a hilariously ambitious thing to try to do, we know. This is what makes 
 
 Our first step was simply to build a prototype, then to refine it into something that could plausibly work. Then, most recently, take that plausible prototype and build a user experience we liked enough to depend on it from day-to-day.
 
-In the last eighteen months we&#39;ve done exactly that. We depend on Urbit day-to-day and have shipped a tool that has become a home for numerous cultures and communities who are invested in moving the system forward. We first called that tool OS1 but now it&#39;s known as Landscape.
+In the last eighteen months we&#39;ve done exactly that. We depend on Urbit day-to-day and have shipped a tool that has become a home for numerous cultures and communities who are invested in moving the system forward. We first called that tool OS 1 but now it&#39;s known as Landscape.
 
 First, let&#39;s talk about the general arc of OS 1 → Landscape, both the successes and challenges. Then we&#39;ll talk about our next step, which is to create an independent and community supported software ecosystem.
 
@@ -48,7 +48,7 @@ Urbit is a decentralized network but Landscape is for re-centralizing your commu
 
 This combination of a flexible unified interface on a decentralized platform you can trust feels really good.
 
-When OS1 was first released, it was slow, buggy, and frustrating—but we loved it and wanted it to be better. We spent the next nine months making sweeping changes to take it from releasable prototype to pretty-nice first version. We rewrote the frontend completely, massively improved the performance of Urbit OS itself, and overhauled the interface. It was an enormous collective effort.
+When OS 1 was first released, it was slow, buggy, and frustrating—but we loved it and wanted it to be better. We spent the next nine months making sweeping changes to take it from releasable prototype to pretty-nice first version. We rewrote the frontend completely, massively improved the performance of Urbit OS itself, and overhauled the interface. It was an enormous collective effort.
 
 By the end of 2020 we had renamed OS 1 to Landscape and the user experience was far better. We [announced our hosting service](https://www.youtube.com/watch?v=w3qKe\_WZr50) and onboarded close friends to help us test the system. I [wrote a little]([https://tlon.io/news/landscape-now/](https://tlon.io/news/landscape-now/)) about using Landscape from day-to-day around that time.
 
