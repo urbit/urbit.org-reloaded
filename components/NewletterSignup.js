@@ -12,8 +12,8 @@ export default function NewsletterSignup(props) {
       <div className="input-group" id="mc_embed_signup_scroll">
         <div className="mc-field-group w-full relative">
           <input
-            className={`appearance-none outline-none text-wall-500 type-ui black border-${
-              props.color || "black"
+            className={`appearance-none outline-none text-wall-500 type-ui black ${
+              props.color || "border-wall-600"
             } border-4 px-3 w-full mb-2 h-16 rounded-xl`}
             type="email"
             name="EMAIL"
