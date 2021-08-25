@@ -14,7 +14,7 @@ completed = false
 link = ""
 +++
 
-## Note-take 3000 (working title)
+## Note-taker 3000 (working title)
 
 ## Purpose
 
