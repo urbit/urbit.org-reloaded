@@ -1,6 +1,6 @@
 +++
 title = "An Interview with UrbitHost"
-date = 2021-08-19
+date = "2021-08-19"
 description = "Interview with the founder of UrbitHost ~lavlyn-litmeg"
 [extra]
 author = "Matt"
@@ -24,7 +24,7 @@ At least, it&#39;s that easy for the end user. For the guy running the operation
 
 If you want to get in touch you can reach him at ~lavlyn-litmeg, the ~sardys/uh group, or [urbithost.com](https://urbithost.com).
 
-----
+---
 
 **Tell us a bit about yourself and your history with Urbit?**
 

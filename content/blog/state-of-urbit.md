@@ -1,6 +1,6 @@
 +++
 title = "State of Urbit"
-date = 2021-08-24
+date = "2021-08-24"
 description = "A year in review"
 [extra]
 author = "Galen Wolfe-Pauly"
@@ -12,7 +12,7 @@ image = "https://media.urbit.org/site/posts/essays/cities-6.jpg"
 
 In the past year, as Urbit has become more reliable and easier to use, we find that we&#39;re spending almost all of our time on the network. We&#39;ve disappeared into the system we&#39;ve been building, and it&#39;s a pleasure to be on Urbit. There&#39;s nowhere else we&#39;d rather be.
 
-If you&#39;re on the network with us you can see the system being built and getting better in real time. Bug fixes and new features appear on your ship constantly. The community is actively planning the future of the system *using the system itself*. At Tlon, we have the unparalleled pleasure of working on the system, _on the system_. This feels great, but for those of you who aren&#39;t on the network, it can look as if we&#39;ve disappeared.
+If you&#39;re on the network with us you can see the system being built and getting better in real time. Bug fixes and new features appear on your ship constantly. The community is actively planning the future of the system _using the system itself_. At Tlon, we have the unparalleled pleasure of working on the system, _on the system_. This feels great, but for those of you who aren&#39;t on the network, it can look as if we&#39;ve disappeared.
 
 Right now, Urbit is not for my non-technical friends. But everyone can tell that mainstream apps are getting worse and most feel a desire for change. We want Urbit to be as easy to use as a conventional service. Or, at least as easy to use as Signal. And we&#39;re getting pretty close to that.
 
@@ -50,13 +50,13 @@ This combination of a flexible unified interface on a decentralized platform you
 
 When OS 1 was first released, it was slow, buggy, and frustrating—but we loved it and wanted it to be better. We spent the next nine months making sweeping changes to take it from releasable prototype to pretty-nice first version. We rewrote the frontend completely, massively improved the performance of Urbit OS itself, and overhauled the interface. It was an enormous collective effort.
 
-By the end of 2020 we had renamed OS 1 to Landscape and the user experience was far better. We [announced our hosting service](https://www.youtube.com/watch?v=w3qKe\_WZr50) and onboarded close friends to help us test the system. I [wrote a little]([https://tlon.io/news/landscape-now/](https://tlon.io/news/landscape-now/)) about using Landscape from day-to-day around that time.
+By the end of 2020 we had renamed OS 1 to Landscape and the user experience was far better. We [announced our hosting service](https://www.youtube.com/watch?v=w3qKe_WZr50) and onboarded close friends to help us test the system. I [wrote a little](<[https://tlon.io/news/landscape-now/](https://tlon.io/news/landscape-now/)>) about using Landscape from day-to-day around that time.
 
 Landscape wasn&#39;t just a useful tool for us, but it was something that other communities were starting to use in earnest. It seemed like Landscape could be a great place for people to grow new private communities, so long as we could onboard new users effectively. Hosting is a huge piece of the puzzle, since we need non-technical people to be able to use this wonderful platform as easily as its mainstream competitors.
 
 At this point (early this year), we encountered some pretty serious hurdles.
 
-To use Urbit, you need an Urbit ID. Each one of these is an NFT (something that no one cared about when we first launched Urbit ID). The basic idea is that an ID should cost something so that they aren&#39;t used abusively. But, in late 2020 the combination of a crypto bull market and congestion on the Ethereum network caused the transaction fee for buying an Urbit ID to increase from ~$1-2 to ~$100. An Urbit ID should cost *something*, but \&gt;$100 is too much of a barrier for entry. We knew that this could happen and started researching solutions late last year, ultimately deciding to [implement a solution ourselves](https://urbit.org/blog/rollups/).
+To use Urbit, you need an Urbit ID. Each one of these is an NFT (something that no one cared about when we first launched Urbit ID). The basic idea is that an ID should cost something so that they aren&#39;t used abusively. But, in late 2020 the combination of a crypto bull market and congestion on the Ethereum network caused the transaction fee for buying an Urbit ID to increase from ~$1-2 to ~$100. An Urbit ID should cost _something_, but \&gt;$100 is too much of a barrier for entry. We knew that this could happen and started researching solutions late last year, ultimately deciding to [implement a solution ourselves](https://urbit.org/blog/rollups/).
 
 The tough part about having an identity verified on the blockchain is that you become vulnerable to unpredictable volatility. We saw a period of painfully high prices, followed by a dip, followed by another stretch of extremely high prices. We opted to continue releasing Landscape updates and moving the system forward despite the fact that it became prohibitively expensive to onboard people. Luckily, our solution to this problem should go live this summer, and will reduce the cost of onboarding about 60x. The best part is that it is a permanent solution so we&#39;ll never have to face this problem again.
 
@@ -78,7 +78,7 @@ Landscape is great, but in the long run Urbit is meant to be a platform for anyo
 
 Grid is a holistic interface for interacting with your Urbit node. Landscape, as it&#39;s known today, will become one of many apps that can be launched. Perhaps most importantly, Grid will have peer-to-peer software distribution over the network. This means you can, as a developer, build something, let a friend sync it over the network, and never have to run a dedicated distribution server. Or, as an everyday user, you can run software on your private Urbit node without the developer ever being involved.
 
-Urbit isn&#39;t an OS in the traditional sense—it&#39;s an &#39;overlay&#39; OS. It has to run on top of something else. But Urbit *is* an OS in the sense that it&#39;s general-purpose. And our goal in building interfaces for Urbit is to deliver that feeling of openness and flexibility to the user. Grid is a major step toward that goal.
+Urbit isn&#39;t an OS in the traditional sense—it&#39;s an &#39;overlay&#39; OS. It has to run on top of something else. But Urbit _is_ an OS in the sense that it&#39;s general-purpose. And our goal in building interfaces for Urbit is to deliver that feeling of openness and flexibility to the user. Grid is a major step toward that goal.
 
 Not only should a community own their communication tools, they should be able to run and host their own cloud software. They shouldn&#39;t need to rely on providers to store their data, run the application, and determine how their digital life will function.
 
