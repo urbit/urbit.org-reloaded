@@ -1,8 +1,12 @@
 +++
 title = "Azimuth is On-Chain"
-date = 2019-01-14
+date = "2019-01-13"
 description = "The Urbit address space, now called Azimuth, is on the blockchain. And too many other things to fit into a single post."
-aliases = ["/posts/essays/azimuth-is-on-chain", "/posts/azimuth-is-on-chain"]
+aliases = [
+  "/posts/essays/azimuth-is-on-chain",
+  "/posts/azimuth-is-on-chain"
+]
+
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"
@@ -64,7 +68,7 @@ So, how do you get an Azimuth point? We've left that question unanswered intenti
 
 Arvo boots from Ethereum, is no longer embarrassingly slow, and has a brand new build system. [Our documentation](https://urbit.org/docs/learn/arvo/hoon) has also improved quite a lot. Hoon, Arvo's programming language, has had a lot of work done to its type system and compiler. We built new tooling for generating static sites (you're probably reading this on one right now) that are much, much faster and easier to use.
 
-It's tough to talk about the progress we've made on Arvo without writing a long technical post. We'll save that for later. In a way, what's remarkable about Arvo is that it has become *less* remarkable. It's more stable, faster, and the code quality has improved.
+It's tough to talk about the progress we've made on Arvo without writing a long technical post. We'll save that for later. In a way, what's remarkable about Arvo is that it has become _less_ remarkable. It's more stable, faster, and the code quality has improved.
 
 There's plenty of work to do, though. Should you be building on top of Arvo? Probably not yet. The kernel and kernel modules are really where the work still lies. We build things on top of Arvo, and in doing so it's pretty clear that the system can be better. Clay (the filesystem) and Gall (the application model) are due for a rewrite. A complete rewrite of the web server, Eyre is almost finished.
 

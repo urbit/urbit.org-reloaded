@@ -1,9 +1,11 @@
 +++
 title = "Analytics Script"
-date = 2021-05-12
+date = "2021-05-11"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["App Dev"]
+grant_type = [ "Bounty" ]
+grant_category = [ "App Dev" ]
+
 [extra]
 image = ""
 description = "Write a generator that exports chat data into a CSV."

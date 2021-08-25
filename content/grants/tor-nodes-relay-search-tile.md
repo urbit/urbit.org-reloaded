@@ -1,9 +1,11 @@
 +++
 title = "Tor Nodes Relay Search Tile"
-date = 2020-03-31
+date = "2020-03-30"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["App Dev", "Arvo"]
+grant_type = [ "Bounty" ]
+grant_category = [ "App Dev", "Arvo" ]
+
 [extra]
 image = ""
 description = "An Urbit-native Tor search-tool."

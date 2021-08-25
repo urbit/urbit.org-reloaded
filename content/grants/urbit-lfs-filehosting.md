@@ -1,9 +1,11 @@
 +++
 title = "Urbit LFS - filehosting"
-date = 2021-03-11
+date = "2021-03-10"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["App Dev"]
+grant_type = [ "Proposal" ]
+grant_category = [ "App Dev" ]
+
 [extra]
 image = ""
 description = "Share large files"

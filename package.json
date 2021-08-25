@@ -39,6 +39,7 @@
     "remark-slug": "^6.0.0",
     "tailwindcss": "^2.1.4",
     "toml": "^3.0.0",
+    "luxon": "^2.0.2",
     "unified": "^9.2.1"
   },
   "devDependencies": {

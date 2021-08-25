@@ -1,9 +1,11 @@
 +++
 title = "Display ETH Data"
-date = 2020-01-31
+date = "2020-01-30"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["App Dev", "Arvo"]
+grant_type = [ "Bounty" ]
+grant_category = [ "App Dev", "Arvo" ]
+
 [extra]
 image = ""
 description = "The Urbit identity system uses a suite of Ethereum contracts as its PKI. As such, a lot of Ethereum-related functionality is available within the system."

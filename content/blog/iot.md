@@ -1,7 +1,8 @@
 +++
 title = "Lunar Urbit and the Internet of Things"
-date = 2021-04-30
+date = "2021-04-29"
 description = "Potential future use cases of moons for industry and consumers"
+
 [extra]
 author = "Jonathan Paprocki"
 ship = "~datnut-pollen"
@@ -441,8 +442,8 @@ microtransactions. On Mars, this task will be trivial, and is merely a stone's
 throw away from a vast and undiscovered universe of other possibilities unlocked
 by SSI networks.
 
-
-[^0]: Of course, all moon names have four words, not three. What the fourth word
+[^0]:
+    Of course, all moon names have four words, not three. What the fourth word
     needs to be for only three words to display is a matter of Urbit lore that
     is more fun to discover yourself than have it told to you, so we won't spoil
     it here.

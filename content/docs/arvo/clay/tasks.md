@@ -4,7 +4,7 @@ weight = 6
 template = "doc.html"
 +++
 
-This document details all the `task`s you're likely to use to interact with Clay, as well as the `gift`s you'll receive in response. Each section has a corresponding practical example in the [Examples](/docs/arvo/clay/examples) document. Many of the types referenced are detailed in the [Data Types](/docs/arvo/clay/data-types) document. It may also be useful to look at the `++  clay` section of `/sys/lull.hoon` in Arvo where these `task`s, `gift`s and data structures are defined.
+This document details all the `task`s you're likely to use to interact with Clay, as well as the `gift`s you'll receive in response. Each section has a corresponding practical example in the [Examples](/docs/arvo/clay/examples) document. Many of the types referenced are detailed in the [Data Types](/docs/arvo/clay/data-types) document. It may also be useful to look at the `++ clay` section of `/sys/lull.hoon` in Arvo where these `task`s, `gift`s and data structures are defined.
 
 The focus of this document is on interacting with Clay from userspace applications and threads, so it doesn't delve into the internal mechanics of Clay from a kernel development perspective.
 

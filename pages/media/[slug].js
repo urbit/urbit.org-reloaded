@@ -1,5 +1,10 @@
 import { useRouter } from "next/router";
-import { getPostBySlug, getAllPosts, formatDate } from "../../lib/lib";
+import {
+  getPostBySlug,
+  getAllPosts,
+  formatDate,
+  generateDisplayDate,
+} from "../../lib/lib";
 import Head from "next/head";
 import Meta from "../../components/Meta";
 import ErrorPage from "../404";
@@ -18,6 +23,7 @@ export default function MediaPage({ post, markdown, search }) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
   }
+  const date = generateDisplayDate(post.date);
   return (
     <Container>
       <Head>
@@ -38,9 +44,7 @@ export default function MediaPage({ post, markdown, search }) {
               {post.extra.ship}
             </div>
           ) : null}
-          <div className="type-ui text-wall-500 mt-16">
-            {formatDate(new Date(post.date))}
-          </div>
+          <div className="type-ui text-wall-500 mt-16">{formatDate(date)}</div>
         </Section>
         <Section narrow>
           {post.extra.youtube ? (

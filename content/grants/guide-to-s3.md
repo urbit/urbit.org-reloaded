@@ -1,9 +1,11 @@
 +++
 title = "Guide to S3"
-date = 2021-03-18
+date = "2021-03-17"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Documentation"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Documentation" ]
+
 [extra]
 image = ""
 description = "Contribute an easy-to-follow guide on self-hosting an S3 storage solution for use with Urbit to urbit.org."

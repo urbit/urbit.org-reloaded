@@ -1,9 +1,11 @@
 +++
 title = "Staff the Urbit Help Desk (1)"
-date = 2020-02-19
+date = "2020-02-18"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["Community"]
+grant_type = [ "Bounty" ]
+grant_category = [ "Community" ]
+
 [extra]
 image = ""
 description = "Help Urbit users with their various problems."

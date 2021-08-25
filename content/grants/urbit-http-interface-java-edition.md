@@ -1,9 +1,11 @@
 +++
 title = "Urbit HTTP Interface — Java Edition"
-date = 2020-10-20
+date = "2020-10-19"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Core Dev"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Core Dev" ]
+
 [extra]
 image = ""
 description = "This proposal seeks to implement an HTTP interface to an Urbit instance in Java, and also seeks to build various related tooling."

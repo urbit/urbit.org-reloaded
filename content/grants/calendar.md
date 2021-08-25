@@ -1,9 +1,11 @@
 +++
 title = "Calendar"
-date = 2020-05-19
+date = "2020-05-18"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["App Dev", "Arvo"]
+grant_type = [ "Proposal" ]
+grant_category = [ "App Dev", "Arvo" ]
+
 [extra]
 image = ""
 description = "An Arvo calendar agent based on the iCalendar spec."

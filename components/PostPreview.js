@@ -1,9 +1,11 @@
 import Link from "next/link";
 import BackgroundImage from "./BackgroundImage";
-import { formatDate } from "../lib/lib";
+import { formatDate, generateDisplayDate } from "../lib/lib";
 
 export default function PostPreview(props) {
   const section = props?.section ? props.section : "blog";
+
+  const date = generateDisplayDate(props.post.date);
   return (
     <div className={`cursor-pointer ${props.className}`}>
       {props.title ? <h3 className="mb-2">{props.title}</h3> : null}
@@ -31,9 +33,7 @@ export default function PostPreview(props) {
               </div>
             ) : null}
           </div>
-          <div className="text-wall-500 type-sub mt-1">
-            {formatDate(new Date(props.post.date))}
-          </div>
+          <div className="text-wall-500 type-sub mt-1">{formatDate(date)}</div>
         </div>
       </Link>
     </div>

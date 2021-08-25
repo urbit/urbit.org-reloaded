@@ -119,9 +119,7 @@ the larval stage in more detail in the [larval stage](#larval-stage-core) sectio
 
 More information on the structure of the Arvo event log and the Arvo state is given in the section on [the kernel](#the-kernel).
 
-
-
-##  Solid state interpreter
+## Solid state interpreter
 
 Arvo is a _solid state interpreter_. In this section we describe what is meant
 by this new term, and how this behavior derives from the fact that Arvo is an [ACID database](#acid-database) and a [single-level store](#single-level-store).
@@ -144,7 +142,6 @@ stateful packet transceiver. Imagine
 it as a chip. Plug this chip into power and network; packets go in and
 out, sometimes changing its state. The chip never loses data and has
 no concept of a reboot; every packet is an [ACID transaction](#acid-database).
-
 
 ### Over-the-air updates
 
@@ -174,22 +171,22 @@ In order to dismantle the client-server model and build a peer-to-peer internet,
 
 Database theory studies in precise terms the possible properties of anything that could be considered to be a database. In this context, Arvo has the properties of an [ACID database](https://en.wikipedia.org/wiki/ACID), and the Ames network could be thought of as network of such databases. ACID stands for _atomicity_, _consistency_, _isolation_, and _durability_. We review here how Arvo satisfies these properties.
 
- - Atomicity: Events in Arvo are _atomic_, meaning that they either succeed completely or fail completely. In other words, there are no transient periods in which something like a power failure will leave the operating system in an invalid state. When an event occurs in Arvo, e.g. [the kernel](#the-kernel) is `poke`d, the effects of an event are computed, the event is [persisted](https://en.wikipedia.org/wiki/Persistence_(computer_science)) by writing it to the event log, and only then are the actual effects applied.
+- Atomicity: Events in Arvo are _atomic_, meaning that they either succeed completely or fail completely. In other words, there are no transient periods in which something like a power failure will leave the operating system in an invalid state. When an event occurs in Arvo, e.g. [the kernel](#the-kernel) is `poke`d, the effects of an event are computed, the event is [persisted](<https://en.wikipedia.org/wiki/Persistence_(computer_science)>) by writing it to the event log, and only then are the actual effects applied.
 
- - Consistency: Every possible update to the database puts it into another valid state. Given that Arvo is purely functional, this is easier to accomplish than it would be in an imperative setting.
+- Consistency: Every possible update to the database puts it into another valid state. Given that Arvo is purely functional, this is easier to accomplish than it would be in an imperative setting.
 
- - Isolation: Transactions in databases often happen concurrently, and isolation
-   ensures that the transactions occur as if they were performed sequentially,
-   making it so that their effects are isolated from one another. Arvo ensures
-   this simply by the fact that it only ever performs events sequentially. While
-   Arvo
-   transactions are sequential and performed by the daemon, persistence and effect application are performed
-   in parallel by the worker; see [worker and
-   daemon](/docs/vere/) for more detail.
+- Isolation: Transactions in databases often happen concurrently, and isolation
+  ensures that the transactions occur as if they were performed sequentially,
+  making it so that their effects are isolated from one another. Arvo ensures
+  this simply by the fact that it only ever performs events sequentially. While
+  Arvo
+  transactions are sequential and performed by the daemon, persistence and effect application are performed
+  in parallel by the worker; see [worker and
+  daemon](/docs/vere/) for more detail.
 
- - Durability: Completed transactions will survive permanently. In other words,
-   since the event log is stored on disk, if power is lost you are guaranteed
-   that no transactions will be reversed.
+- Durability: Completed transactions will survive permanently. In other words,
+  since the event log is stored on disk, if power is lost you are guaranteed
+  that no transactions will be reversed.
 
 It is easy to think that "completed transaction will survive permanently"
 along with "the state of Arvo is pure function of its event log" implies that
@@ -219,10 +216,8 @@ This is known as
 [non-preemptive](https://en.wikipedia.org/wiki/Cooperative_multitasking) or
 cooperative multitasking.
 
-
 > Parts of the remainder of this document are out of date as of 2020.07.20, please use information here with
 > caution. This message will be removed once it is up to date.
-
 
 # The kernel
 
@@ -237,12 +232,13 @@ which applies many of the concepts covered below.
 ## Overall structure
 
 `arvo.hoon` contains five top level cores as well as a "formal interface" consisting of a single [gate](/docs/glossary/gate/) that implements the transition function. They are nested with the `=<` and `=>` runes like so, where items lower on the list are contained within items higher on the list:
- + Types
- + Section 3bE Arvo Core
- + Implementation core
- + Structural interface core, or adult core
- + Larval stage core
- + Formal interface
+
+- Types
+- Section 3bE Arvo Core
+- Implementation core
+- Structural interface core, or adult core
+- Larval stage core
+- Formal interface
 
 See [Section 1.7](/docs/hoon/hoon-school/arms-and-cores) of the Hoon tutorial for further explanation of what is meant here by "nesting". We now describe the functionality of each of these components.
 
@@ -310,7 +306,6 @@ current time to the screen. When Dill produces this, the last path in the `duct`
 initial element of the empty span, so this is routed to Unix, which applies the effects.
 
 This is a call stack, with a crucial feature: the stack is a first-class citizen. You can respond over a `duct` zero, one, or many times. You can save `duct`s for later use. There are definitely parallels to Scheme-style continuations, but simpler and with more structure.
-
 
 #### `wire`
 
@@ -419,31 +414,31 @@ described within the current type system. Then the `wire` here is the default Un
 
 A short summary of the purpose of each these arms are as follows:
 
- - `+poke` is the transition function that `move`s Arvo from one state to the
-   next. It is the most fundamental arm in the entire system. It is a typed
-   transactional message that is processed at most once. If the `+poke` causes
-   Arvo to send an message over [Ames](/docs/arvo/ames/ames) Ames
-   guarantees that the message will be delivered exactly once. This is sometimes said
-   to be impossible, and it is for standard operating systems, but that is not the case for single-level stores engaged in
-   a permanent session, as is the case among Arvo ships.
- - `+peek` is an arm used for inspecting things outside of the kernel. It grants
-   read-only access to `scry` Arvo's global referentially transparent namespace.
-   It takes in a `path` and returns a `unit (unit)`. If the product is `~`, the
-   path is unknown and its value cannot be produced synchronously. If its
-   product is `[~ ~]` the `path` is known to be unbound and can never become
-   bound. Otherwise the product is a `mark` and a noun.
- - `+wish` is a function that takes in a core and then parses and compiles it
-   with the standard library, `zuse`. It is useful from the outside if you ever
-   want to run code within. One particular way in which it is used is by the
-   runtime to read out the version of `zuse` so that it knows if it is
-   compatible with this particular version of the kernel.
- - `+load` is used when upgrading the kernel. It is only ever called by Arvo
-   itself, never by the runtime. If upgrading to a kernel where types are
-   compatible, `+load` is used, otherwise `+come` is used.
- - `+come` is used when the new kernel has incompatible types, but ultimately
- reduces to a series of `+load` calls.
+- `+poke` is the transition function that `move`s Arvo from one state to the
+  next. It is the most fundamental arm in the entire system. It is a typed
+  transactional message that is processed at most once. If the `+poke` causes
+  Arvo to send an message over [Ames](/docs/arvo/ames/ames) Ames
+  guarantees that the message will be delivered exactly once. This is sometimes said
+  to be impossible, and it is for standard operating systems, but that is not the case for single-level stores engaged in
+  a permanent session, as is the case among Arvo ships.
+- `+peek` is an arm used for inspecting things outside of the kernel. It grants
+  read-only access to `scry` Arvo's global referentially transparent namespace.
+  It takes in a `path` and returns a `unit (unit)`. If the product is `~`, the
+  path is unknown and its value cannot be produced synchronously. If its
+  product is `[~ ~]` the `path` is known to be unbound and can never become
+  bound. Otherwise the product is a `mark` and a noun.
+- `+wish` is a function that takes in a core and then parses and compiles it
+  with the standard library, `zuse`. It is useful from the outside if you ever
+  want to run code within. One particular way in which it is used is by the
+  runtime to read out the version of `zuse` so that it knows if it is
+  compatible with this particular version of the kernel.
+- `+load` is used when upgrading the kernel. It is only ever called by Arvo
+  itself, never by the runtime. If upgrading to a kernel where types are
+  compatible, `+load` is used, otherwise `+come` is used.
+- `+come` is used when the new kernel has incompatible types, but ultimately
+  reduces to a series of `+load` calls.
 
- The [Section 3bE core](#section-3be-core) does not follow this pattern.
+The [Section 3bE core](#section-3be-core) does not follow this pattern.
 
 #### Section 3bE core
 
@@ -461,10 +456,10 @@ This core could be thought of as the primary "adult core" - the one that is in o
 
 This core is in use only during the larval stage of Arvo, which is after the Arvo kernel has compiled itself but before it has "broken symmetry" by acquiring identity and entropy, the point at which the larval stage has concluded. We call this breaking symmetry because prior to this point, every Urbit is completely identical. The larval stage performs the following steps in order:
 
- + The standard library, `zuse`, is installed.
- + Entropy is added
- + Identity is added
- + Metamorph into the next stage of Arvo
+- The standard library, `zuse`, is installed.
+- Entropy is added
+- Identity is added
+- Metamorph into the next stage of Arvo
 
 Once the larval stage has passed its functionality will never be used again.
 
@@ -497,6 +492,7 @@ Let's investigate the state piece by piece.
 ```hoon
 =/  pit=vase  !>(..is)                                  ::
 ```
+
 This `vase` is part of the state but does not get directly migrated when `+poke`
 is called. `!>(..is)` consists of the code in `arvo.hoon` written above this core contained in
 a `vase`. Thus this part of the state changes only when that code changes in an
@@ -506,6 +502,7 @@ update.
 =/  vil=vile  (viol p.pit)                              ::  cached reflexives
 
 ```
+
 This is a cache of specific types that are of fundamental importance to Arvo -
 namely `type`s, `duct`s, `path`s, and `vase`s. This is kept because it is
 unnecessarily wasteful to recompile these fundamental types on a regular basis.
@@ -519,6 +516,7 @@ Again, this part of the state is never updated directly by `+poke`.
         vanes=(list [label=@tas =vane])                 ::  modules
     ==
 ```
+
 This is where the real state of the Arvo kernel is kept. `lac` detemines whether
 Arvo's output is verbose, which can be set using the `|verb` command in the
 dojo. `eny` is the current entropy. `our` is the ship, which is permanently
@@ -527,7 +525,6 @@ is of course the list of vanes, which have their own internal states.
 
 As you can see, the state of Arvo itself is quite simple. Its primary role is that of
 a traffic cop, and most of the interesting part of the state lies in `vanes`.
-
 
 ## Vanes
 

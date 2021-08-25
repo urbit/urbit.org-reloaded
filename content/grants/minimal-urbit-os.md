@@ -1,9 +1,11 @@
 +++
 title = "Minimal Urbit OS"
-date = 2021-01-20
+date = "2021-01-19"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Core Dev"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Core Dev" ]
+
 [extra]
 image = ""
 description = "A Linux based host OS with only the essentials needed to run Urbit, designed to help the process of getting Urbit running on bare metal"

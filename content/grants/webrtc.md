@@ -1,9 +1,11 @@
 +++
 title = "WebRTC Gall Agent and External App"
-date = 2021-01-12
+date = "2021-01-11"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["App Dev: Other"]
+grant_type = [ "Proposal" ]
+grant_category = [ "App Dev: Other" ]
+
 [extra]
 image = ""
 description = "Add WebRTC support to Urbit, including call/stream setup and teardown messaging and ICE/STUN/TURN advertisement and authentication."

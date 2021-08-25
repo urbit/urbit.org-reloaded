@@ -1,12 +1,17 @@
 +++
 title = "Governance of urbit.org"
-date = 2019-01-11
+date = "2019-01-10"
 description = "Stewardship of the Urbit Project."
-aliases = ["/posts/essays/governance-of-urbit", "/posts/governance-of-urbit"]
+aliases = [
+  "/posts/essays/governance-of-urbit",
+  "/posts/governance-of-urbit"
+]
+
 [extra]
 author = "Erik Newton"
 ship = "~patnes-rigtyn"
 +++
+
 ![](https://storage.googleapis.com/media.urbit.org/site/governance-1.svg)
 
 ## Summary

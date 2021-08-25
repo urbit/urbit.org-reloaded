@@ -1,8 +1,12 @@
 +++
 title = "Landscape: A Portrait"
-date = 2019-09-03
+date = "2019-09-02"
 description = "On the latest Urbit user interface, and the interfaces to come."
-aliases = ["/posts/essays/landscape-a-portrait/", "/posts/landscape-a-portrait"]
+aliases = [
+  "/posts/essays/landscape-a-portrait/",
+  "/posts/landscape-a-portrait"
+]
+
 [extra]
 author = "Matilde Park"
 ship = "~haddef-sigwen"
@@ -28,7 +32,7 @@ Urbit has been in “research mode” for most of its history, but the system ha
 
 Urbit’s kernel is graduating from its rebellious period, however its _userspace_ has remained embryonic for most of its history. The project of building an application model has been restarted and rescoped into _aspects_ that could weather the chaotic growth of the kernel, but it would never quite serve as an interface to the entire operating system. Due to one of our latest vane refactors, it’s becoming possible to start that work in earnest.
 
-Alongside the latest release of Landscape came the rewrite of the [`%eyre`](https://urbit.org/docs/learn/arvo/eyre/) vane, which serves a ship’s files and applications over HTTP. Among the improvements came the decision to move from serving from one ‘/web’ folder by default to an application-specific endpoint. 
+Alongside the latest release of Landscape came the rewrite of the [`%eyre`](https://urbit.org/docs/learn/arvo/eyre/) vane, which serves a ship’s files and applications over HTTP. Among the improvements came the decision to move from serving from one ‘/web’ folder by default to an application-specific endpoint.
 
 That is, a Hoon application, upon being started, now tells Eyre it wants to serve _these files_ at _this endpoint_ over HTTP and Eyre facilitates that.
 
@@ -50,9 +54,9 @@ All of this is fantastic news; and while Landscape-oriented userspace developmen
 
 Among the inspirations for our team are [the tales of Andy Hertzfeld](https://www.folklore.org/StoryView.py?project=Macintosh&story=Were_Not_Hackers!.txt), working on the Macintosh, and ongoing [discussions](http://doc.cat-v.org/plan_9/4th_edition/papers/812/) and [decisions](https://research.swtch.com/help.pdf) that went into Plan 9 from Bell Labs. (Sometimes, for fun, we also watch videos about [the Xerox Alto](https://www.youtube.com/watch?v=tngrLvyiNEI).)
 
-These inspirations share that their creators were dealing with really primordial stuff – the font of human-computer interface had really just sprung and they were _seeing things no one had seen before_ because they _had to_. 
+These inspirations share that their creators were dealing with really primordial stuff – the font of human-computer interface had really just sprung and they were _seeing things no one had seen before_ because they _had to_.
 
-Doing that now, after a lifetime of reflexive familiarity with the dominant solutions – from Apple’s macOS to Google’s Material Design – we have to do the work of _unseeing_. By engaging with what it was like to see for the first time, we get closer to seeing with fresh eyes. We work to avoid implicitly categorising the new territory as simply, well, comparative to the old one. 
+Doing that now, after a lifetime of reflexive familiarity with the dominant solutions – from Apple’s macOS to Google’s Material Design – we have to do the work of _unseeing_. By engaging with what it was like to see for the first time, we get closer to seeing with fresh eyes. We work to avoid implicitly categorising the new territory as simply, well, comparative to the old one.
 
 So, while it’s not the same to simply _read_ these dialogues, it can get us pretty close.
 
@@ -66,7 +70,7 @@ So what do we think that new platform needs from its interface?
 
 - **Landscape, and all of Urbit’s future interfaces, need a way to easily organise around _cohorts_ of ships, or _groups_,** with shared applications or files and a socially-oriented computing experience in turn — [something always in the vision](https://urbit.org/posts/azimuth-is-on-chain/#aegean), but not quite implemented yet.
 
-- Lastly, **Landscape, and all of Urbit’s future interfaces, need a userspace-specific, software design pattern** to integrate all of this: access to the file system, permissioning shared sets of files, and tying it together, an underlying representation of both data and interface amongst many computers. 
+- Lastly, **Landscape, and all of Urbit’s future interfaces, need a userspace-specific, software design pattern** to integrate all of this: access to the file system, permissioning shared sets of files, and tying it together, an underlying representation of both data and interface amongst many computers.
 
 No more siloed input/output in applications on a ‘timeshared computer’ with your redundant data always belonging to someone else.
 

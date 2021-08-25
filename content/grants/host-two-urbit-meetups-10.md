@@ -1,9 +1,11 @@
 +++
 title = "Host Two Urbit Meetups (10)"
-date = 2019-11-26
+date = "2019-11-25"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["Community"]
+grant_type = [ "Bounty" ]
+grant_category = [ "Community" ]
+
 [extra]
 image = ""
 description = "Tlon is not Urbit; Urbit is owned by its community. So we want to decenter the Urbit brand into cities outside of San Francisco, and watch the community’s independent visions of the project take wing."

@@ -1,9 +1,11 @@
 +++
 title = "Art by Urbit"
-date = 2020-08-27
+date = "2020-08-26"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Community"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Community" ]
+
 [extra]
 image = ""
 description = "Art by Urbit will provide a monthly digest of art produced by & for Urbit, on a publicly available website & social media presence."

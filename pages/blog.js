@@ -7,7 +7,7 @@ import Header from "../components/Header";
 import SingleColumn from "../components/SingleColumn";
 import BackgroundImage from "../components/BackgroundImage";
 import Section from "../components/Section";
-import { getAllPosts, formatDate } from "../lib/lib";
+import { getAllPosts, formatDate, generateDisplayDate } from "../lib/lib";
 import { contact } from "../lib/constants";
 
 export default function Blog({ posts, search }) {
@@ -39,6 +39,7 @@ export default function Blog({ posts, search }) {
         </Section>
         <Section narrow>
           {posts.map((post) => {
+            const date = generateDisplayDate(post.date);
             return (
               <div key={post.slug} className="mb-20 cursor-pointer">
                 <Link href={`/blog/${post.slug}`}>
@@ -66,7 +67,7 @@ export default function Blog({ posts, search }) {
                       ) : null}
                     </div>
                     <div className="text-wall-500 type-sub">
-                      {formatDate(new Date(post.date))}
+                      {formatDate(date)}
                     </div>
                   </div>
                 </Link>

@@ -1,7 +1,8 @@
 +++
 title = "Metaphase"
-date = 2020-12-09
+date = "2020-12-08"
 description = "On the upcoming and foregoing Landscape lifecycles, and other forms of mitosis across the Urbit project."
+
 [extra]
 author = "Matilde Park"
 ship = "~haddef-sigwen"

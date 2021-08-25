@@ -1,11 +1,12 @@
 +++
 title = "Platform Decay, Decentralized Marketplaces, and Urbit"
-date = 2020-05-08
+date = "2020-05-07"
 description = "Urbit is calm computing. Calm commerce follows naturally. "
+
 [extra]
 author = "Nicholas Simmons"
 ship = "~simfur-ritwed"
-image ="https://media.urbit.org/site/posts/essays/platform-decay-preview.png"
+image = "https://media.urbit.org/site/posts/essays/platform-decay-preview.png"
 +++
 
 <br>
@@ -36,7 +37,7 @@ Even more subtle and worrying effects come when e-commerce platforms realize tha
 
 The manufacturing of consumer desire in this way feels creepy. It’s frustrating to have your tastes dictated to you by whoever has the biggest ad spend. It also spells the end of small business on the Internet—you can spend years mastering knowledge of a profitable niche, but if Amazon profiles your customers and decides they’re more likely to spend their money on the latest Pixar DVD, your listings will be shoved below the fold. Pixar paid for placement and you didn’t; the Pixar ad placement deal made a splash in the quarterly report, your fees didn’t. In cultural terms, this threatens to create a winner-take-all situation that will prevent new and niche artists and thinkers from gaining attention at the expense of explicitly placed, ‘premium’ content.
 
-Again, this is all accelerated by the way that ad sales function; platforms like broadly popular content and products because the larger number of customers searching for and purchasing them creates more granular data and increased opportunities for micro-targeting ads. This incentive leads to the increasing invisibility of long-tail, niche content or products whose appeal has less to do with lowest-common-denominator addictive virality, whether it’s the repair manual for your ‘85 Toyota or a copy of Plato’s *Republic*. It also accelerates the stampede toward a ‘sharing’ and ‘renting’ economy; when ad impressions are a sizable part of company revenue, forcing customers to return to ad-infested platforms to continue renting objects or content, rather than making one-time purchases, is a no-brainer.
+Again, this is all accelerated by the way that ad sales function; platforms like broadly popular content and products because the larger number of customers searching for and purchasing them creates more granular data and increased opportunities for micro-targeting ads. This incentive leads to the increasing invisibility of long-tail, niche content or products whose appeal has less to do with lowest-common-denominator addictive virality, whether it’s the repair manual for your ‘85 Toyota or a copy of Plato’s _Republic_. It also accelerates the stampede toward a ‘sharing’ and ‘renting’ economy; when ad impressions are a sizable part of company revenue, forcing customers to return to ad-infested platforms to continue renting objects or content, rather than making one-time purchases, is a no-brainer.
 
 There’s a nightmare scenario here, a kind of hybrid, zombie brainchild of Jean Baudrillard’s concerns about the simulation of common meaning and Peter Thiel’s arguments about the stealthy hollowing-out of industrial capacity. In this nightmare future, financial and legal regulation strangle the viability of anything like a real industry, and we’re left with a handful of incumbent platforms which have concluded that the smartest move is to just sell vaporware ‘content,’ collectible bobbleheads, and sugar water. The supposed niche of any platform business is academic at this level; Amazon, Spotify, and Patreon are simply machines for converting user attention into the highest-margin purchases possible. The ‘high-velocity trash economy’ (h/t Pierre Rochard) increasingly shows itself as a network of funnels by which insider prognostications about government and central bank policy are turned into profits, with the illusion of productive activity serving only as window dressing. This deforming process extends all the way down to the vagaries of the consumer economy. If there is no financial reason for available consumer offerings to be anything we actually need, they can and will be deprecated and displaced; useful goods and services will be sidelined by literal trash that has the ‘financial’ logic of maintaining an unbroken, upward metric by virtue of direct parasitism upon the human brainstem.
 

@@ -1,9 +1,11 @@
 +++
 title = "Tune slaw/scot Jets"
-date = 2021-06-17
+date = "2021-06-16"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["Core Dev"]
+grant_type = [ "Bounty" ]
+grant_category = [ "Core Dev" ]
+
 [extra]
 image = ""
 description = "Tune slaw/scot jets for better perfomance."

@@ -1,9 +1,11 @@
 +++
 title = "Userspace Apprenticeship: Heads-Up Poker"
-date = 2021-05-27
+date = "2021-05-26"
+
 [taxonomies]
-grant_type = ["Apprenticeship"]
-grant_category = ["App Dev", "Arvo"]
+grant_type = [ "Apprenticeship" ]
+grant_category = [ "App Dev", "Arvo" ]
+
 [extra]
 image = ""
 description = "A fun client app that would be a good way to get acquainted with Urbit's networking and p2p abilities."

@@ -1,7 +1,8 @@
 +++
 title = "What is Urbit?"
-date = 2017-05-15
+date = "2017-05-14"
 description = "A quick video explainer of how Urbit works."
+
 [extra]
 youtube = "M04AKTCDavc"
 +++

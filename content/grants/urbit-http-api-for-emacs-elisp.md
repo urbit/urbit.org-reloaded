@@ -1,9 +1,11 @@
 +++
 title = "Urbit HTTP API for Emacs (elisp)"
-date = 2021-01-18
+date = "2021-01-17"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Dev Tool"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Dev Tool" ]
+
 [extra]
 image = ""
 description = "Connecting Urbit with Emacs would enable all sorts of cool and creative apps. I'd love to be able to chat without leaving my editor."

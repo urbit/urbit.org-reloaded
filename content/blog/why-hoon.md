@@ -1,7 +1,8 @@
 +++
 title = "Why Hoon?"
-date = 2019-11-14
+date = "2019-11-13"
 description = "The promise of Urbit lies in its reimagination of the digital world using components that are as constrained and limited as possible."
+
 [extra]
 author = "Ted Blackman"
 ship = "~rovnys-ricfer"
@@ -19,6 +20,7 @@ sense.
 
 In particular, the problems Hoon solves that aren't solved by other
 functional languages are:
+
 - Compile and run other code in a typesafe manner at full speed,
 - Typesafe metaprogramming, and
 - Hot code reload and online data migration.
@@ -143,7 +145,7 @@ Hoon and Nock have several unusual properties:
   the runtime has a matching jet, it will use that instead of the Nock
   implementation. Nock isn't as slow as you might think, especially
   considering it's a minimal, dynamic, axiomatic language.
-<br/><br/>
+  <br/><br/>
   This arrangement has the deeper implication that all code written in
   Nock is best considered as a specification for a program, which can be
   executed directly but might never run at all due to being jetted.

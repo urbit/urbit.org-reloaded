@@ -1,7 +1,8 @@
 +++
 title = "Azimuth’s First Contract Upgrade"
-date = 2021-06-05
+date = "2021-06-04"
 description = "Galactic Senate makes first concrete action"
+
 [extra]
 author = "Jonathan Paprocki and Mark"
 ship = "~datnut-pollen and ~palfun-foslup"

@@ -1,7 +1,8 @@
 +++
 title = "Security and Continuity"
 description = "An update on our primary infrastructure milestones for 2020."
-date = 2020-12-01
+date = "2020-11-30"
+
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"
@@ -19,7 +20,6 @@ Since the year is coming close to an end, and this year’s vote is on the horiz
 For this year, we committed to completing two things: passing a third-party security audit of our networking protocol (Ames) and getting Urbit OS (both Arvo and the interpreter) to the point where we can reasonably expect the Urbit network to continue without any hard forks (which we call ‘breaches’). A world with no network breaches is one where the network should be able to run indefinitely without any interruption. We also call this ‘continuity’.
 
 We’ve been steadily making progress on these two fronts, and I’m happy to report both are nearly complete. We’ll walk through some of the details here and then follow up in another post soon to report on how the final work turned out.
-
 
 ## Ames Audit
 
@@ -41,17 +41,15 @@ The good thing about an audit scoped in this way is that we can trust the protoc
 
 As of the end of November 2020, the audit is very nearly complete, and we’ve handled all the important issues that were brought up. We’ll post the results and talk about our mitigation strategies in a future writeup.
 
-
 ## Continuity
 
 Urbit is designed to last a long time. What’s the use of a personal computer if it’s gonna disappear along with all the data you put in it? Ideally, you can put your Urbit on a USB stick, forget about it for ten years and have it work again when you plug it in. It’ll need to update for a while, but once our work on continuity is complete, your urbit should be able to upgrade itself through ten years of updates, all over the air.
 
-While Urbit is designed to upgrade seamlessly over the network we have occasionally run into issues that have caused us to reboot the entire network. Most of the time this is when some incompatibility between the interpreter and the kernel means we have to force everyone to do a hard reset to ensure compatibility between the two. Our current work on continuity addresses this. Soon, your urbit will tell you when your interpreter needs to be upgraded. At first this won’t  be that different from an application notifying you to download an update. Eventually, we think we can make this a lot smoother.
+While Urbit is designed to upgrade seamlessly over the network we have occasionally run into issues that have caused us to reboot the entire network. Most of the time this is when some incompatibility between the interpreter and the kernel means we have to force everyone to do a hard reset to ensure compatibility between the two. Our current work on continuity addresses this. Soon, your urbit will tell you when your interpreter needs to be upgraded. At first this won’t be that different from an application notifying you to download an update. Eventually, we think we can make this a lot smoother.
 
 A network reboot isn’t the only way that we can break continuity. Urbit is a general-purpose computer — which means you’re free to attempt to destroy it. If, for any reason, you do manage to screw the system up we want you to be able to get your data out and effectively reset continuity on a single node. We built the affordance for that a while ago, but before the end of the year we’ll also distribute tooling to migrate userspace data between hard resets.
 
 The combination of version negotiation and data migration should afford us the ability to run the network indefinitely into the future. Unfortunately, to get this change in, we’ll need to reset the network. We’re optimistic that this will be the last time we ever do it. And, given our data migration tooling, this breach won’t involve losing data.
-
 
 ## Status + conclusion
 

@@ -1,9 +1,11 @@
 +++
 title = "Urbit Feed Aggregator"
-date = 2021-07-16
+date = "2021-07-15"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["App Dev: Other"]
+grant_type = [ "Proposal" ]
+grant_category = [ "App Dev: Other" ]
+
 [extra]
 image = ""
 description = "A feed aggregation application"

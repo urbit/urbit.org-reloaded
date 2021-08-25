@@ -1,9 +1,11 @@
 +++
 title = "Llelogram"
-date = 2020-07-29
+date = "2020-07-28"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["App Dev", "Arvo"]
+grant_type = [ "Proposal" ]
+grant_category = [ "App Dev", "Arvo" ]
+
 [extra]
 image = ""
 description = "Towards creating a political-econometric of federal legislation people can read as easily as a stock ticker: Llelogram"

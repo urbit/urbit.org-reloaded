@@ -1,11 +1,12 @@
 +++
 title = "The Understanding Urbit Podcast"
-date = 2020-04-03
+date = "2020-04-02"
 description = "An interview-based podcast series about the Urbit project, as told by those working on it."
+
 [extra]
 author = "Arthur Falls"
 ship = "~satsyt-sogleb"
-image ="https://media.urbit.org/site/posts/essays/uu-podcast.png"
+image = "https://media.urbit.org/site/posts/essays/uu-podcast.png"
 +++
 
 <br>

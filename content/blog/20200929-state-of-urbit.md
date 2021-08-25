@@ -1,11 +1,12 @@
 +++
 title = "Late 2020 Progress Update: OS 1 -> OS 1.N"
-date = 2020-09-29
+date = "2020-09-28"
 description = "When we announced OS 1, in April, we started to disappear into Urbit. Since then, we’ve been living on Urbit like we never have before."
+
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"
-image ="https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-1.jpg"
+image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-1.jpg"
 +++
 
 <br>
@@ -16,7 +17,7 @@ image ="https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-o
 
 When we announced OS 1, in April, we started to disappear into Urbit. Since then, we’ve been living on Urbit like we never have before. This has been our goal for years: to mature the system we’re building by becoming its first committed users. We knew that critical step toward Urbit’s maturity was being able to depend on it ourselves, but the system itself had to mature to the point that we could do that practically.
 
-We’ve done this in fits and starts. We’ve *tried* and failed a few times over the years. We’ve always *used* Urbit to some extent, but we’ve never *relied* on it. These past six months have been different. I can’t tell whether it was out of sheer determination and commitment, or that the system was just genuinely ‘there’. Either way, both Tlon and the Urbit Community genuinely live on Urbit now.
+We’ve done this in fits and starts. We’ve _tried_ and failed a few times over the years. We’ve always _used_ Urbit to some extent, but we’ve never _relied_ on it. These past six months have been different. I can’t tell whether it was out of sheer determination and commitment, or that the system was just genuinely ‘there’. Either way, both Tlon and the Urbit Community genuinely live on Urbit now.
 
 In a way, our ability to use Urbit day to day doesn’t make sense. When we shipped OS 1, it was full of holes. There were serious performance, stability, and reliability issues. Plenty of people showed up and thought, ‘I don’t understand why you think this is useful.’ But, it was good enough that we wanted to use it. And since we wanted to use it, we put our energy into making it better like we hadn’t ever before. Being able to use a system that you can really trust is a wonderful feeling. It’s Computing Without Compromises.
 
@@ -25,7 +26,6 @@ All of the sudden, it’s Fall. We never found the time to name any of our relea
 The tl;dr is that Urbit is much faster, more reliable, and nicer to use than it was six months ago. Things have gotten much better, across the board. We threw ourselves into OS 1 admittedly underprepared, but we’ve learned a lot and matured the system a lot along the way.
 
 Anyway, let’s walk through the details. We’ll talk about our infrastructure and interface work independently, since that’s how we organize things internally. Then we’ll talk a bit about what’s going on on the network.
-
 
 ### Infrastructure
 
@@ -43,7 +43,6 @@ We also rewrote a large part of our runtime in Haskell and made overall progress
 
 The network is stable, fast, and safe from day to day. We’re pretty confident it can grow quite a bit without serious issues. When we shipped OS 1 we really weren’t sure what we could handle. Now we’re standing on much more solid ground.
 
-
 ### Interface
 
 ![](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-3.jpg)
@@ -60,7 +59,6 @@ Those two are by far the most significant, but there’s so much more. We [rewro
 
 And I almost forgot [Leap](https://github.com/urbit/urbit/pull/3231): an omnibox for navigating around OS 1 with the keyboard. We have plans to make Leap much more powerful — but it’s a great first start toward making OS 1 keyboard accessible. I almost exclusively use [Leap](https://upload.wikimedia.org/wikipedia/commons/0/06/Canon_Cat_keyboard.jpg) to get around OS 1 these days.
 
-
 ### Community + network
 
 ![Fishing Village](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-5.png)
@@ -70,7 +68,6 @@ Our primary goal with OS 1 was to get both Tlon and the Urbit Community living e
 Getting onto Urbit is still relatively challenging. By the standards of software you run yourself, it’s not so bad at all. But by comparison to ordinary consumer software, it’s way too hard. Tlon is [working on that](https://tlon.io) — but these last six months have been only for the brave. That is, those that want to host their own nodes.
 
 Turns out, there are plenty of people who are up for running Urbit themselves and quite a few small communities have sprouted around the network. Overall the network has a fun, cozy feeling. It’s nice.
-
 
 ### What’s next
 
