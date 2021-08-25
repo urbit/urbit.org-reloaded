@@ -135,7 +135,7 @@ If either the sponsor or sponsee are on layer 2, then sponsorship actions must
 occur on layer 2. The only exception to this is detaching. A sponsor on layer 1
 may perform a layer 1 detach action on a layer 2 sponsee, and this will result
 in the sponsee having no sponsor on layer 1, and layer 2 as well if they were
-the sponsor on layer 2. This is necessary for logical reasons, but it also
+the sponsor on layer 2. This is necessary to simplify the logic, but it also
 guarantees that there is no hard requirement to ever utilize layer 2. Without
 this exception, sponsors with sponsees that move to layer 2 would be forced to
 detach them as a layer 2 action if they wanted to cease sponsorship.
@@ -253,10 +253,6 @@ L2-detach A1 | *   | *   | *   | A1  | -> | *   | *   | *   | ~
 L2-detach A1 | *   | *   | *   | A2  | -> | *   | *   | *   | A2
 L2-detach A1 | *   | *   | *   | ~   | -> | *   | *   | *   | ~
 ```
-
-## Processing L1 transactions
-
-## Processing L2 batches
 
 ## Aggregators
 
