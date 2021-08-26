@@ -9,7 +9,7 @@ each `task` that Ames can be `%pass`ed, and which `gift`(s) Ames can `%give` in 
 
 Some `task`s appear to have more than one arm associated to them, e.g. there are
 four `+on-hear` arms. We denote this where it occurs, but always refer to the
-`on-hear:event-core` arm.
+`+on-hear:event-core` arm.
 
 Ames `task`s can be naturally divided into two categories: messaging tasks and
 system/lifecycle tasks.
