@@ -1,6 +1,6 @@
 +++
 title = "Urbit Notes"
-date = 2021-08-25
+date = "2021-08-25"
 [taxonomies]
 grant_type = ["Proposal"]
 grant_category = ["App Dev: Other"]
@@ -14,7 +14,7 @@ completed = false
 link = ""
 +++
 
-## Note-take 3000 (working title)
+## Note-taker 3000 (working title)
 
 ## Purpose
 
