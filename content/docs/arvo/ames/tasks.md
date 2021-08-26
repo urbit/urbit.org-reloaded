@@ -26,7 +26,7 @@ system/lifecycle tasks.
 
 This `task` only ever originates from Unix. It does the initial processing of a packet, namely by passing the raw packet information to `+decode-packet` which deserializes the packet and giving that data and the origin of the packet to `+on-hear-packet`, which begins the transformation of the packet into a new event in the form of a `+event-core`.
 
-There are multiple `+on-hear` arms in `ames.hoon`. Here we refer to `on-hear:event-core`, as that is the one called by a `%hear` `task`. The other ones are used primarily for ack and nack processing, or receiving message fragments.
+There are multiple `+on-hear` arms in `ames.hoon`. Here we refer to `+on-hear:event-core`, as that is the one called by a `%hear` `task`. The other ones are used primarily for ack and nack processing, or receiving message fragments.
 
 `%hear` takes in a [$blob](/docs/arvo/ames/data-types#blob), which is essentially a large atom (around 1kB or less) that is the raw data of the message, and a [$lane](/docs/arvo/ames/data-types#lane), which is the origin of the message (typically an IP address).
 
