@@ -20,7 +20,7 @@ Opaque atomic transport address to or from Unix. For Ames over UDP, it will enco
 +$  verb  ?(%snd %rcv %odd %msg %ges %for %rot)
 ```
 
-Verbosity flag for Ames.
+Verbosity flag for Ames. Use with `|ames-verb %flag1 %flag2 ...` and turn off with `|ames-verb`.
 
 - `%snd` - Sending packets.
 - `%rcv` - Receiving packets.
