@@ -61,7 +61,7 @@ unresponsive peer's urbit address.
 `%jilt` stops tracking a potentially unresponsive peer that was previously being
 tracked as a result of the [%heed](#heed) `task`.
 
-There are two `+on-jilt` arms, this `task` utilizes `on-hear:event-core`.
+There are two `+on-jilt` arms, this `task` utilizes `+on-hear:event-core`.
 
 The `ship` field specifies the peer we want to stop tracking.
 
