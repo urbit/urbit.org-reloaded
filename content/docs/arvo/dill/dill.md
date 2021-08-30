@@ -4,21 +4,15 @@ weight = 1
 template = "doc.html"
 aliases = ["/docs/learn/arvo/dill/"]
 +++
-Our terminal driver.
 
-Unix sends keyboard events to `%dill` from either the console or telnet,
-and `%dill` produces terminal output. The only app that should directly
-talk to `%dill` is the terminal app. Command-line apps are run by,
-receive input from, and produce output to, the `%shell` app, which is
-controlled by `%terminal`, which talks to `%dill`, which talks to unix.
-Clay also uses `%dill` directly to print out the filesystem change
-events, but this is questionable behavior.
+The terminal driver vane.
 
-`%dill` has two main components. First, it controls the terminal on a
-very basic, event-by-event level. This includes keeping track of things
-like the dimensions of the terminal, the prompt type (plain text or
-password), which duct to produce effects on, and so forth. Second, it
-handles terminal events, keystroke by keystroke. Most characters are
-simply pushed onto the buffer and blitted to the screen, but some
-characters, including control-modified keys, arrow keys, etc. require
-special handling. Most of the readline functionality is in `%dill`.
+Unix sends keyboard events and the like to Dill, and Dill produces terminal output. Other vanes interact with Dill by passing it [task](/docs/arvo/dill/tasks)s to do things like print error messages. For userspace applications on the other hand, one wouldn't typically deal with Dill directly. Rather, the `%hood` agent's `drum` module acts as an intermediary session handler for CLI applications in userspace. To help write CLI apps there's two convenient libraries, `shoe` and `sole`, and a [tutorial](/docs/hoon/guides/cli-tutorial) for how to use them.
+
+## Sections
+
+[API Reference](/docs/arvo/dill/tasks) - The `task`s Dill takes and the `gift`s it returns.
+
+[Scry Reference](/docs/arvo/dill/scry) - The scry endpoints of Dill.
+
+[Data Types](/docs/arvo/dill/data-types) - Reference documentation of the data types used by Jael.
