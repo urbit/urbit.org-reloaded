@@ -126,11 +126,6 @@ export default function Footer() {
                 <a className="type-bold text-wall-500">Dev Mailing List</a>
               </div>
             </Link>
-            <Link href="https://discord.gg/CfSKKaB2ep">
-              <div>
-                <a className="mt-2 type-bold text-wall-500">Support Discord</a>
-              </div>
-            </Link>
             <Link href="https://github.com/urbit/azimuth">
               <div>
                 <a className="mt-2 type-bold text-wall-500">Governance</a>
