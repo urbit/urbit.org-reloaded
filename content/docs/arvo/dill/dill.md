@@ -15,4 +15,4 @@ Unix sends keyboard events and the like to Dill, and Dill produces terminal outp
 
 [Scry Reference](/docs/arvo/dill/scry) - The scry endpoints of Dill.
 
-[Data Types](/docs/arvo/dill/data-types) - Reference documentation of the data types used by Jael.
+[Data Types](/docs/arvo/dill/data-types) - Reference documentation of the data types used by Dill.
