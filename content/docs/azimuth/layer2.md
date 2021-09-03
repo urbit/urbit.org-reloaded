@@ -123,7 +123,8 @@ can also perform a subset of layer 2 actions - namely the ones related to
 sponsorship.
 
 For a complete list of what layer 2 actions each ship rank, layer, and proxy can
-perform, see [Layer 2 Actions](/docs/azimuth/l2-actions).
+perform, see [Layer 2 Actions](/docs/azimuth/l2-actions). For an explicit
+description of the byte format of Layer 2 Ethereum transaction, see [Bytestring format](/docs/azimuth/bytestring).
 
 ### Sponsorship
 
