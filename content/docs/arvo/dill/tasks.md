@@ -152,7 +152,7 @@ Dill returns no `gift` in response to a `%hail` `task`.
 
 Produce memory report.
 
-When Dill receives a `%heft` `task` it passes arvo a `%whey` `waif` to obtain a memory report and prints it to the terminal.
+When Dill receives a `%heft` `task` it passes Arvo a `%whey` `waif` to obtain a memory report and prints it to the terminal.
 
 #### Returns
 
