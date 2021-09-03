@@ -60,7 +60,7 @@ This `task` would not be used from userspace.
 
 #### Returns
 
-Dill returns no `gift` in response to a `%boot` `task`, but it will pass the wrapped `%dawn` or `%fake` `task` to Jael.
+Dill returns no `gift` in response to a `%boot` `task`, but it will `%pass` the wrapped `%dawn` or `%fake` `task` to Jael.
 
 ## `%crop`
 
