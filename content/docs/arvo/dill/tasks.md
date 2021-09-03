@@ -52,7 +52,7 @@ Dill returns no `gift` in response to a `%blew` `task`.
 [%boot lit=? p=*]
 ```
 
-This `task` is used only once, when Arvo first enters the [adult stage](/docs/arvo/overview#structural-interface-core). Dill is technically the first vane to be activated, via the `%boot` `task`, which then sends Jael (considered the "true" first vane) the `%dawn` or `%fake` `task` wrapped in the `%boot`. Jael then goes on to call `%init` `task`s for other vanes (including Dill).
+This `task` is used only once, when Arvo first enters the [adult stage](/docs/arvo/overview#structural-interface-core). Dill is technically the first vane to be activated, via the `%boot` `task`, which then sends Jael (considered the "true" first vane) the `%dawn` or `%fake` `task` wrapped in the `%boot` `task`. Jael then goes on to call `%init` `task`s for other vanes (including Dill).
 
 `lit` specifies whether to boot in lite mode. `p` is either a [%dawn](/docs/arvo/jael/data-types#dawn) or [%fake](/docs/arvo/jael/tasks#fake) `task:jael`. `%dawn` is for an ordinary boot and `%fake` is for booting a fake ship.
 
