@@ -18,7 +18,7 @@ The runtime sends a `%belt` `task` to Dill whenever there is input in the termin
 
 The [$belt](/docs/arvo/dill/data-types#belt) in `p` contains the input such as which key was pressed.
 
-Dill will convert the `$belt` into a [$dill-belt](/docs/arvo/dill/data-types#dill-belt) and `%poke` the session handler (typically `%drum`) with it.
+Dill will convert the `$belt` into a [$dill-belt](/docs/arvo/dill/data-types#dill-belt) and `%poke` the session handler (typically `drum`) with it.
 
 This `task` would not typically be used from userspace.
 
@@ -38,7 +38,7 @@ The runtime passes Dill a `%blew` `task` whenever the terminal is resized.
 
 The [$blew](/docs/arvo/dill/data-types#blew) specifies the new dimensions.
 
-Dill will convert the `$blew` into a `%rez` [$dill-belt](/docs/arvo/dill/data-types#dill-belt) and `%poke` the session handler (typically `%drum`) with it.
+Dill will convert the `$blew` into a `%rez` [$dill-belt](/docs/arvo/dill/data-types#dill-belt) and `%poke` the session handler (typically `drum`) with it.
 
 This `task` would not typically be used from userspace.
 
@@ -96,9 +96,9 @@ Dill does not return a `gift` in response to a `%crud` `task`.
 [%flee session=~]
 ```
 
-Unwatch session.
+Unwatch a session to which you've previously subscribed with [%view](#view).
 
-The ability to specify a session is not yet implemented in Dill, so `session` is always `~` and instead Dill determines the session to unwatch by the `duct` the request came from.
+The ability to specify a session is not yet implemented in Dill, so `session` is always `~` and it's always the default session.
 
 #### Returns
 
@@ -136,7 +136,7 @@ This `task` is not used.
 
 Refresh.
 
-Dill converts a `%hail` `task` into a `%hey` [$dill-belt](/docs/arvo/dill/data-types#dill-belt) and `%poke`s the session handler (typically `%drum`) with it to handle the refresh.
+Dill converts a `%hail` `task` into a `%hey` [$dill-belt](/docs/arvo/dill/data-types#dill-belt) and `%poke`s the session handler (typically `drum`) with it to handle the refresh.
 
 This `task` would not be used from userspace.
 
@@ -184,9 +184,7 @@ This `task` is not used.
 [%init ~]
 ```
 
-This `task` is called only once, when Arvo first enters the [adult
-stage](/docs/arvo/overview#structural-interface-core). It performs
-initial setup for Dill, such as setting the width of the console.
+This `task` is called only once, when Arvo first enters the [adult stage](/docs/arvo/overview#structural-interface-core). It performs initial setup for Dill, such as setting the width of the console.
 
 Note that this is not actually the first `task` passed to Dill - see [%boot](#%boot).
 
@@ -272,11 +270,17 @@ Dill does not return a `gift` in response to a `%text` `task`, but it does give 
 
 Watch session.
 
-The ability to specify a session is not yet implemented in Dill, so `session` is always `~` and instead Dill determines the session to watch by the `duct` the request came from.
+A `%view` `task` subscribes for a copy of all `%blit`s which Dill sends to the Unix terminal. This `task` is used by the `%herm` app so it can convert the `$blit`s to JSON and mirror the Unix terminal in the web terminal.
+
+The ability to specify a session is not yet implemented in Dill, so `session` is always `~` and it's always the default session.
 
 #### Returns
 
-Dill does not return a `gift` in response to a `%view` `task`.
+Dill will `%give` a copy of all `%blit`s it sends to the Unix terminal. A `%blit` `gift` is:
+
+```hoon
+[%blit p=(list blit)]
+```
 
 ## `%trim`
 
