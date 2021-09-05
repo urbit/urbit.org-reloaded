@@ -46,7 +46,7 @@ Gall agents can expose scry endpoints with any `care`, but most commonly they'll
 
 "Endpoint" refers to a specific scry path in a vane or agent. They will sometimes informally be noted in documentation or source comments like `/x/foo/bar/baz` or maybe just `/foo/bar/baz`. The first part of the former example is the `care`, then the rest is the `path` portion as noted in the diagram earlier.
 
-If an agent's scry endpoints don't have formal documentation, you may need to refer to the `+on-peek` arm in its source code to determine its endpoints. While there's no exact pattern that's consistent across different agents, the general pattern will be some intial tests and conversions followed by a `?+` rune, whose cases will typically correspond to the endpoints. The `+on-peek` arm always return a `(unit (unit cage))` (a `cage` is a cell of `[mark vase]`), so each endpoint will typically finish by composing such a structure.
+If an agent's scry endpoints don't have formal documentation, you may need to refer to the `+on-peek` arm in its source code to determine its endpoints. While there's no exact pattern that's consistent across different agents, the general pattern will be some initial tests and conversions followed by a `?+` rune, whose cases will typically correspond to the endpoints. The `+on-peek` arm always return a `(unit (unit cage))` (a `cage` is a cell of `[mark vase]`), so each endpoint will typically finish by composing such a structure.
 
 Here's an example from the `+on-peek` arm of `%graph-store`:
 
