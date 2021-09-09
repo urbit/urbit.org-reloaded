@@ -5,10 +5,10 @@ description = "An interview with the founder of Holdersland"
 [extra]
 author = "Matt"
 ship = "~tirwyd-sarmes"
-image = "https://media.urbit.org/site/posts/essays/hl_soundcloud.jpeg"
+image = "https://media.urbit.org/site/posts/essays/haleek_sigil.jpg"
 +++
 
-![](https://media.urbit.org/site/posts/essays/hl_soundcloud.jpeg)
+![](https://media.urbit.org/site/posts/essays/haleek_sigil.jpg)
 
 *Check out the Holdersland x Urbit collection: [holders.land/urbit](https://holders.land/urbit)*
 
