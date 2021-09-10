@@ -98,7 +98,7 @@ Dill does not return a `gift` in response to a `%crud` `task`.
 
 Unwatch a session to which you've previously subscribed with [%view](#view).
 
-The ability to specify a session is not yet implemented in Dill, so `session` is always `~` and it's always the default session.
+The ability to specify a session is not yet implemented in Dill, so `session` is always `~`, the default session.
 
 #### Returns
 
