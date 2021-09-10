@@ -38,7 +38,7 @@ The runtime passes Dill a `%blew` `task` whenever the terminal is resized.
 
 The [$blew](/docs/arvo/dill/data-types#blew) specifies the new dimensions.
 
-Dill will convert the `$blew` into a `%rez` [$dill-belt](/docs/arvo/dill/data-types#dill-belt) and `%poke` the session handler (typically `drum`) with it.
+Dill will convert the `$blew` into a `%rez` [$dill-belt](/docs/arvo/dill/data-types#dill-belt) and `%poke`s the session handler (typically `drum`) with it.
 
 This `task` would not typically be used from userspace.
 
