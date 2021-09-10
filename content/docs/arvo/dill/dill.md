@@ -11,7 +11,7 @@ Keyboard events and the like from Unix are received by Dill as [%belt](/docs/arv
 
 ## Kernelspace
 
-For technical reasons, Dill performs a handful of system tasks related to booting a ship and some memory operations. Aside from those, other Vanes mostly just pass Dill [tasks](/docs/arvo/dill/tasks) to print error messages and the like in the terminal.
+For technical reasons, Dill performs a handful of system tasks related to booting a ship and some memory operations. Aside from those, other Vanes mostly just pass Dill [tasks](/docs/arvo/dill/tasks) to print error messages and the like to the terminal.
 
 ## Userspace
 
