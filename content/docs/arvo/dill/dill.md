@@ -15,7 +15,7 @@ For technical reasons, Dill performs a handful of system tasks related to bootin
 
 ## Userspace
 
-Unlike in kernalspace, userspace applications are unlikely to `%pass` Dill `task`s directly. Instead, Dill looks at things in terms of sessions. A session is a pipeline between a client and a handler, where:
+Unlike in kernelspace, userspace applications are unlikely to `%pass` Dill `task`s directly. Instead, Dill looks at things in terms of sessions. A session is a pipeline between a client and a handler, where:
 
 - The client is an external input source and output sink; a terminal with with dimensions and so forth.
 - The handler is an application in Urbit that interprets input, maybe does something with it, maybe produces output to be displayed in the client, etc.
