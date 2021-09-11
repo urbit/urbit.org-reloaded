@@ -288,8 +288,7 @@ Dill will `%give` a copy of all `%blit`s for the default session. A `%blit` `gif
 [%trim p=@ud]
 ```
 
-`%trim` is a common vane `task` used to reduce memory usage. However, it does
-nothing for Dill.
+`%trim` is a common vane `task` used to reduce memory usage. It does nothing for Dill because Dill only keeps a minimal necessary state.
 
 #### Returns
 
