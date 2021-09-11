@@ -276,7 +276,7 @@ The ability to specify a session is not yet implemented in Dill, so `session` is
 
 #### Returns
 
-Dill will `%give` a copy of all `%blit`s it sends to the Unix terminal. A `%blit` `gift` is:
+Dill will `%give` a copy of all `%blit`s for the default session. A `%blit` `gift` is:
 
 ```hoon
 [%blit p=(list blit)]
