@@ -34,8 +34,8 @@ May either be a [$bolt](#bolt) or one of:
 
 - `%mod` - Modifier (Ctrl, Meta or Hyper) plus [key].
 - `%txt` - A series of characters
-- `%ctl` - Ctrl+[key]
-- `%met` - Meta+[key]
+- `%ctl` - Ctrl+[key], deprecated in favour of `%mod`.
+- `%met` - Meta+[key], deprecated in favour of `%mod`.
 
 ## `$bolt`
 
