@@ -270,7 +270,7 @@ Dill does not return a `gift` in response to a `%text` `task`, but it does give 
 
 Watch session.
 
-A `%view` `task` subscribes for a copy of all `%blit`s which Dill sends to the Unix terminal. This `task` is used by the `%herm` app so it can convert the `$blit`s to JSON and mirror the Unix terminal in the web terminal.
+A `%view` `task` subscribes for a copy of all `%blit` `gift`s which Dill `%give`s for the default session. This `task` is used by the `%herm` app so it can convert the `$blit`s to JSON and render them in the web terminal.
 
 The ability to specify a session is not yet implemented in Dill, so `session` is always `~` and it's always the default session.
 
