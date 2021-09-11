@@ -78,7 +78,7 @@ Either a single simple character or one of:
 
 Terminal client output.
 
-A `$blit` is given to the runtime by Dill in a [%blit](/docs/arvo/dill/tasks#blit) `task` when it wants to print some text, clear the screen, go _ding_ or what have you.
+A `$blit` is given to the terminal client by Dill in a `%blit` `gift` when it wants to print some text, clear the screen, go _ding_ or what have you.
 
 This is only used between Dill and the terminal client, a [$dill-blit](#dill-blit) is used instead between Arvo and Dill.
 
