@@ -57,7 +57,7 @@ Either a single simple character or one of:
 - `%aro` - Arrow keys.
 - `%bac` - Backspace key.
 - `%del` - Delete key.
-- `%hit` - Mouse click - `r` is row and `c` is column.
+- `%hit` - Mouse click - `r` is row and `c` is column. Note these are zero-indexed, with `[0 0]` being the _bottom left_ corner.
 - `%ret` - Return (Enter) key.
 
 ## `$blit`
