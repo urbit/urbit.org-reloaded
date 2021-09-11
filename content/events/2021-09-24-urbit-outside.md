@@ -1,7 +1,7 @@
 +++
 title = "Urbit Outside"
 starts = "2021-09-24T15:00:00"
-ends = "2021-10-17T19:00:00"
+ends = "2021-09-24T19:00:00"
 timezone = "America/Los_Angeles"
 location = "Sibley Staging Area, 6800 Skyline Blvd. Oakland, CA"
 image = "https://secure.meetupstatic.com/photos/event/3/0/5/7/clean_498732375.jpeg"
