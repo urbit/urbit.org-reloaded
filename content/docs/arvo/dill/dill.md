@@ -7,7 +7,7 @@ aliases = ["/docs/learn/arvo/dill/"]
 
 The terminal driver vane.
 
-Keyboard events and the like from Unix are received by Dill as [%belt](/docs/arvo/dill/tasks#belt) `task`s, and Dill sends [%blit](/docs/arvo/dill/tasks#blit) `gift`s back to the runtime to be displayed in the Unix terminal. The manner of interacting with Dill differs depending on whether you're in userspace or kernelspace, as we'll explore below.
+Keyboard events and the like from Unix are received by Dill as [%belt](/docs/arvo/dill/tasks#belt) `task`s, and Dill sends `%blit` `gift`s containing [$blit](/docs/arvo/dill/data-types#blit)s back to the runtime to be displayed in the Unix terminal. The manner of interacting with Dill differs depending on whether you're in userspace or kernelspace, as we'll explore below.
 
 ## Kernelspace
 
