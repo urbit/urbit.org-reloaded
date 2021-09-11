@@ -26,9 +26,9 @@ Terminal dimension; `p` is columns, `q` is rows. This structure is passed to Dil
   ==  ==
 ```
 
-Terminal input.
+Terminal client input.
 
-A `$belt` is passed to Dill in a [%belt](/docs/arvo/dill/tasks#belt) `task` by the runtime whenever there is input, such as a user typing in the console. This is the old `$belt` and is only used by the runtime, the new [$dill-belt](#dill-belt) is what is used between Dill and userspace.
+A `$belt` is passed to Dill in a [%belt](/docs/arvo/dill/tasks#belt) `task` by the runtime whenever there is input, such as a user typing in the console. This is only used between the terminal client and Dill, a [$dill-belt](#dill-belt) is used between Dill and Arvo.
 
 May either be a [$bolt](#bolt) or one of:
 
@@ -76,11 +76,11 @@ Either a single simple character or one of:
   ==
 ```
 
-Terminal output.
+Terminal client output.
 
 A `$blit` is given to the runtime by Dill in a [%blit](/docs/arvo/dill/tasks#blit) `task` when it wants to print some text, clear the screen, go _ding_ or what have you.
 
-This is the old `$blit` which is only used between Dill and the runtime, the new [$dill-blit](#dill-blit) is used instead between userspace and Dill.
+This is only used between Dill and the terminal client, a [$dill-blit](#dill-blit) is used instead between Arvo and Dill.
 
 A `$blit` is one of:
 
@@ -112,9 +112,9 @@ A `$blit` is one of:
   ==
 ```
 
-Terminal input, new version of [$belt](#belt).
+Terminal input for Arvo.
 
-While `$belt` is used between the runtime and Dill, `$dill-belt` is used between Dill and userspace.
+While [$belt](#belt) is used between the terminal client and Dill, `$dill-belt` is used between Dill and Arvo.
 
 a `$dill-belt` is one of:
 
@@ -149,9 +149,9 @@ a `$dill-belt` is one of:
   ==
 ```
 
-Terminal output, new version of [$blit](#blit).
+Terminal output from Arvo.
 
-While `$blit` is used between Dill and the runtime, `$dill-blit` is used between userspace and Dill.
+While [$blit](#blit) is used between Dill and the terminal client, `$dill-blit` is used between Arvo and Dill.
 
 A `$dill-blit` is one of:
 
