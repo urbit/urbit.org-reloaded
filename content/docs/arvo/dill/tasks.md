@@ -272,7 +272,7 @@ Watch session.
 
 A `%view` `task` subscribes for a copy of all `%blit` `gift`s which Dill `%give`s for the default session. This `task` is used by the `%herm` app so it can convert the `$blit`s to JSON and render them in the web terminal.
 
-The ability to specify a session is not yet implemented in Dill, so `session` is always `~` and it's always the default session.
+The ability to specify a session is not yet implemented in Dill, so `session` is always `~`, the default session.
 
 #### Returns
 
