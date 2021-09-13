@@ -43,20 +43,7 @@ export default async function Markdown({ post }) {
     })
     .use(slug)
     .use(heading)
-    .process(post.content)
-    .then(
-      (file) => {
-        // console.error(reporter(file))
-
-        // console.log(String(file))
-        return file.toString();
-      },
-      (error) => {
-        // Handle your error here!
-        console.log("error", error);
-        throw error;
-      }
-    );
+    .process(post.content);
 
   return result.toString();
 }
