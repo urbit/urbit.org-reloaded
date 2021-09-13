@@ -423,11 +423,11 @@ Regular: **running**.
 
 ### `=*` "tistar"
 
-`[%tstr p=term q=hoon r=hoon]`: define an alias.
+`[%tstr p=term q=hoon r=hoon]`: define a deferred expression.
 
 ##### Produces
 
-`r`, compiled with a subject in which `p` is an alias for `q`.
+`r`, compiled with a subject in which `p` is a deferred expression for `q`.
 
 ##### Syntax
 
@@ -435,11 +435,13 @@ Regular: **3-fixed**.
 
 ##### Discussion
 
-The difference between aliasing and pinning is that pinning changes the subject,
-but for aliasing the subject noun stays the same. This allows you to "write"
-through it to the original subject axis. The alias'd expression, `q`,
-is recorded in the type information of `p`. `q` is calculated every time you use
-the `p` alias.
+`=*` assigns a name to an expression that will be evaluated in each place the
+name is dereferenced. This allows you to "write" through it to the original
+subject `axis`. `q` is recorded in the type information of `p`, and `q` is
+calculated every time you use `p`.
+
+This rune has some similarities with macros, and some similarities with aliases,
+but it is not really either.
 
 ##### Examples
 
