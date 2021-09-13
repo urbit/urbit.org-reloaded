@@ -6,11 +6,9 @@ timezone = "America/Los_Angeles"
 location = "https://www.youtube.com/watch?v=UScbZ6n7H-4"
 image = "https://secure.meetupstatic.com/photos/event/3/5/f/3/600_498733811.jpeg"
 registration_url = "https://www.meetup.com/urbit-sf/events/280697973/"
-description = "Urbit but outside"
+description = "Discussion of Layer 2 Architecture and Implentation"
 dark = true
 +++
-
-![](https://secure.meetupstatic.com/photos/event/3/5/f/3/600_498733811.jpeg)
 
 ETH Gas prices are too high! The growth of Urbit has been greatly hampered this year by the cost of activating planets. Join Philip Monk (~wicdev-wisryt) and the entire L2 team as they present the work completed to date to implement Layer 2 naive rollups. Come see a demo of the new Bridge front end, first migrating a star and spawning some planets, then activating a planet, all on L2.
 
