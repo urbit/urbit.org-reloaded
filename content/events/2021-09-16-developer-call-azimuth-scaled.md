@@ -40,13 +40,6 @@ patp = "~fabnev-hinmur"
 
 +++
 
-ETH Gas prices are too high! The growth of Urbit has been greatly hampered this year by the cost of activating planets. Join Philip Monk (~wicdev-wisryt) and the entire L2 team as they present the work completed to date to implement Layer 2 naive rollups. Come see a demo of the new Bridge front end, first migrating a star and spawning some planets, then activating a planet, all on L2.
+ETH Gas prices are too high! The growth of Urbit has been greatly hampered this year by the cost of activating planets. Join Philip Monk (`~wicdev-wisryt`) and the entire L2 team as they present the work completed to date to implement Layer 2 naive rollups. Come see a demo of the new Bridge front end, first migrating a star and spawning some planets, then activating a planet, all on L2.
 
-Host: Philip Monk, Tlon, CTO (~wicdev-wisryt)
-Guests:
-Jimmy Young, Tlon, Design (~fallyn-balfus)
-Jose Cisneros, Tlon, Infrastructure (~norsyr-torryn)
-Tom Holford, Contributor, UI (~datder-sonnet)
-Mark, Tlon, Infrastructure (~palfun-foslup)
-Poprox, Tlon, Infrastructure (~datnut-pollen)
-Will Galebach, Contributor, UI (~fabnev-hinmur)
+This call will be a great opportunity for galaxy owners to get their questions answered for the upcoming vote on Layer 2 implementation. It will also be good for anyone in the community that wants a comprehensive look at how naive rollups will work to bring down planet activation costs. If you're technically inclined, be sure to check out [Philip's walkthrough](https://www.youtube.com/watch?v=lQdqCwYIBoU) of the naive rollup code ahead of time so you can ask questions.
