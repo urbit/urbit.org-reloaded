@@ -6,8 +6,8 @@ timezone = "America/Los_Angeles"
 location = "Online Event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/280697973/"
-description = "Discussion of Layer 2 Architecture and Implentation"
-dark = true
+description = "Discussion of Layer 2 Architecture and Implementation"
+dark = false
 youtube = "UScbZ6n7H-4"
 
 [[hosts]]
@@ -19,23 +19,23 @@ name = "Jimmy Young"
 patp = "~fallyn-balfus"
 
 [[guests]]
-name = "Jose Cisneros"
+name = " Jose Cisneros"
 patp = "~norsyr-torryn"
 
 [[guests]]
-name = "Tom Holford"
+name = " Tom Holford"
 patp = "~datder-sonnet"
 
 [[guests]]
-name = "Mark"
+name = " Mark"
 patp = "~palfun-foslup"
 
 [[guests]]
-name = "Poprox"
+name = " Poprox"
 patp = "~datnut-pollen"
 
 [[guests]]
-name = "Will Galebach"
+name = " Will Galebach"
 patp = "~fabnev-hinmur"
 
 
