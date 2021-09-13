@@ -7,7 +7,6 @@ location = "Online Event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/280697973/"
 description = "Discussion of Layer 2 Architecture and Implementation"
-dark = true
 youtube = "UScbZ6n7H-4"
 
 [[hosts]]
