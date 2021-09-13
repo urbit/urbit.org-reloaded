@@ -59,6 +59,8 @@ For transparency we have the following open questions and will dive deeper to re
 
 - How should the TradingView chart API be paid for?
 
+## Milestones
+
 ### Milestone 1 - Bot designed, tested and deployed
 
 Expected completion:
@@ -79,7 +81,7 @@ Because Federated Learning intersects with privacy and security concerns, I feel
 
 I will absolutely not address any of the above questions in this work, though I am happy to suggest avenues of inquiry for how one might address them :) But nonetheless, no one in the Urbit community seems to have broached the topic of Federated Learning yet, so I think there is a strong value proposition in having me produce essentially a "prototype" of a Federated Learning capability, which can be extended later to address the above concerns, and which will help to start the conversation about privacy-preserving ML on Urbit.
 
-### Milestone 7 - A prototypical example of privacy-preserving ML with Federated Learning on Urbit
+### Milestone 2 - A prototypical example of privacy-preserving ML with Federated Learning on Urbit
 
 Expected completion: Feb 2022
 
