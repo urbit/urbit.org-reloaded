@@ -4,11 +4,11 @@ starts = "2021-09-16T09:00:00"
 ends = "2021-09-16T10:00:00"
 timezone = "America/Los_Angeles"
 location = "Online Event"
-image = "https://secure.meetupstatic.com/photos/event/3/5/f/3/600_498733811.jpeg"
+image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/280697973/"
 description = "Discussion of Layer 2 Architecture and Implentation"
 dark = true
-youtube = UScbZ6n7H-4
+youtube = "UScbZ6n7H-4"
 
 [[hosts]]
 name = "Philip Monk"
