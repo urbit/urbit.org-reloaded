@@ -50,8 +50,6 @@ export default function Events({ events, search }) {
       return -1;
     });
 
-  console.log(futureEvents);
-
   const happeningNow = events.filter((event) => {
     const starts = generateRealtimeDate(event.starts);
     const ends = generateRealtimeDate(event.ends);
