@@ -1,5 +1,5 @@
 +++
-title = "﻿A Collaborative Web Mapping System for Urbit"
+title = "A Collaborative Web Mapping System for Urbit"
 date = "2020-09-02"
 
 [taxonomies]
