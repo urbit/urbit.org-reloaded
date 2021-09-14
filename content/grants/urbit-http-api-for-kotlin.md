@@ -13,6 +13,7 @@ reward = 3
 assignee = "@nrtxrmnd"
 id = "865786150"
 completed = false
+canceled = true
 link = ""
 +++
 

@@ -10,9 +10,10 @@ grant_category = [ "App Dev" ]
 image = ""
 description = "A website where prospective Martians can experience the Landscape interface without any technical chops."
 reward = 2
-assignee = "mikeosborne"
+assignee = "~taller-ravnut"
 id = "1413934727"
 completed = false
+canceled = true
 link = ""
 +++
 

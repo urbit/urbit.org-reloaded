@@ -13,6 +13,7 @@ reward = 6
 assignee = "~radbur-sivmus"
 id = "246698762"
 completed = false
+canceled = false
 link = ""
 +++
 

@@ -12,7 +12,8 @@ description = "Provide concierge service assisting new users in the Urbit Commun
 reward = 1
 assignee = "~sibhul-soctul"
 id = "1693084001"
-completed = false
+completed = true
+canceled = false
 link = ""
 +++
 

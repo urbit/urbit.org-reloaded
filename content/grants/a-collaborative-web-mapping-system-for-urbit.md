@@ -13,6 +13,7 @@ reward = 4
 assignee = "Lumphead"
 id = "634393623"
 completed = false
+canceled = false
 link = ""
 +++
 

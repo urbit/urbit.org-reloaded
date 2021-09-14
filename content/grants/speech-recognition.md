@@ -11,6 +11,7 @@ reward = 2
 assignee = "~hosted-fornet"
 grant_id = "P0053"
 completed = false
+canceled = false
 link = ""
 +++
 

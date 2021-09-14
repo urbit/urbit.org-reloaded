@@ -13,6 +13,7 @@ reward = 6
 assignee = "~naplet-hildec"
 id = "1751024973"
 completed = false
+canceled = false
 link = ""
 +++
 

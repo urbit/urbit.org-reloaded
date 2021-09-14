@@ -13,6 +13,7 @@ reward = 8
 assignee = "~ritpub-sipsyl"
 id = ""
 completed = false
+canceled = false
 link = ""
 +++
 

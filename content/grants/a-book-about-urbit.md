@@ -13,6 +13,7 @@ reward = 12
 assignee = "librex-dozryc"
 id = "1590647060"
 completed = false
+canceled = false
 link = ""
 +++
 

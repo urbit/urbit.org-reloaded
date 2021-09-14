@@ -12,7 +12,7 @@ description = "Implement a basic text search in groups channels"
 reward = 2
 assignee = "@nrtxrmnd"
 id = "835369230"
-completed = false
+completed = true
 link = ""
 +++
 

@@ -12,7 +12,8 @@ description = "Add links to our reference doc pages so that people can easily di
 reward = 1
 assignee = "alecbrick"
 id = "45608361"
-completed = false
+completed = true
+canceled = false
 link = ""
 +++
 
