@@ -65,3 +65,20 @@ A casual overview of the naive rollups system can be found on the
 are encouraged to read our Layer 2 documentation, starting with the [Layer 2
 Overview](/docs/azimuth/layer2).
 
+## Other resources
+
+### [Urbit HD Wallet](/docs/azimuth/hd-wallet)
+
+Azimuth has its own optional hierarchical deterministic wallet system, sometimes
+referred to as a "master ticket".
+
+### [Life and Rift](/docs/azimuth/azimuth)
+
+An explanation of how Azimuth keeps track of the most recent set of networking
+keys necessary to communicate with a ship.
+
+### [Advanced Azimuth Tools](/docs/azimuth/advanced-azimuth-tools)
+
+Expert-level tooling for generating, signing, and sending Azimuth-related
+transactions from within Urbit itself.
+
