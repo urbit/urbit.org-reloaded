@@ -43,18 +43,9 @@ Urbit IDs come in three classes: galaxies, stars, and planets. The length of an 
 
 Planets are intended for everyday use by individuals, and there are 4.3 billion of them (two to the 32nd power). Stars and galaxies, on the other hand, are meant to act as network infrastructure: on the [Urbit OS](#what-is-arvo) network they provide routing and are responsible for distributing software updates.
 
-### Why is is currently expensive to acquire a planet? {#gas-prices}
+### How can I spend less to get a planet? {#gas-prices}
 
-For the latest on this topic, see our recent blog post: [The Gang Solves the Gas Crisis](/blog/rollups).
-
-As of early 2021, if you try to acquire a planet from a market, you will likely encounter an enormous "gas price" fee. Ethereum is going through some growing pains, and this is an issue for every
-smart contract on the network. This fee is unrelated to Urbit specifically, rather it results from how Ethereum transactions are paid for. The gas fee does not go to the person selling you the planet, nor to the market, nor to anybody associated with Urbit - it goes to the "miners" processing all Ethereum transactions.
-
-Tlon is aggressively pursuing a solution we call "naive rollups" which we predict to reduce gas costs by a factor of at least 100. We cannot give a precise estimate on when this will be complete, but it is top priority and this solution was chosen in part for the speed with which it can be implemented without sacrificing security. If you'd like to know more, we recommend watching this [Developer Call](https://www.youtube.com/watch?v=CKuHXrdkIw0) with `~wicdev-wisryt`.
-
-In the meantime, we recommend either using the network as a [comet](/docs/glossary/comet), or signing up with a [hosting provider](#why-hosting), which includes a free planet.
-
-We understand that this is an enormous frustration, and will keep this section updated as we get closer to resolving it.
+Using Ethereum has become much more expensive since Urbit ID first launched. To rectify this, Tlon has created a system referred to as [naive rollups](/docs/glossary/rollups), or "layer 2". By reducing the size of transactions, batching them together, and moving computation off-chain to your urbit, it is now possible to perform Urbit ID transactions free of charge and without any prior knowledge of blockchains, cryptocurrency, or Ethereum. This is easily done using [Bridge](/docs/glossary/bridge), our web interface for managing your Urbit ID.
 
 ### What is Azimuth? {#what-is-azimuth}
 
