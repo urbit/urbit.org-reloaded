@@ -14,6 +14,11 @@ what allows you to truly own your identity.
 This document discusses what Urbit ID is, how it's built, and why it's been
 built that way at a high level.
 
+### [Proxies](/using/id/proxies)
+
+You may designate other Ethereum addresses as [proxies](/docs/glossary/proxies)
+for your Urbit ID, which are capable of a reduced subset of Urbit ID actions.
+
 ### [Using Bridge](/using/id/using-bridge)
 
 A guide to using [Bridge](https://bridge.urbit.org), our tool for managing your
@@ -44,6 +49,6 @@ aimed at developers, see the [Azimuth documentation](/docs/azimuth).
 
 A guide to how to utilize Bridge to interact with Layer 2.
 
-### [Layer 2 Star Proxies](/using/id/l2-star) 
+### [Layer 2 Stars](/using/id/l2-star) 
 
 A summary of the different options available to stars and their proxies on layer 2.

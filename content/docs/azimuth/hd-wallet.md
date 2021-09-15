@@ -41,25 +41,11 @@ smart-contracts.
 
 ### Proxies
 
-Proxy addresses allow you to execute non-ownership related actions like spawning
-child identities, voting, and setting networking keys without jeopardizing the
-keys you've designated with ownership rights. Setting proxy rights is optional,
-but it is recommended for on-chain actions you will execute more frequently.
-
-- **Management Proxy**
-
-  Can configure or set Arvo networking keys and conduct sponsorship related
-  operations.
-
-- **Voting Proxy**
-
-  Galaxies only. Galaxies are the part of the [Galactic
-  Senate](/docs/glossary/senate), and this means they can cast votes on new
-  proposals including changes to Ecliptic.
-
-- **Spawn Proxy**
-
-  For stars and galaxies only. Can create new child identities.
+Each permanent Urbit ID can designate one or more
+[proxies](/docs/using/id/proxies), which are Ethereum addresses capable of a
+limited subset of Urbit ID transactions, such as spawning planets or rotating
+keys. The HD wallet automatically generates additional addresses utilized as
+proxies according to what is appropriate for your Urbit ID.
 
 ### HD wallet generation
 

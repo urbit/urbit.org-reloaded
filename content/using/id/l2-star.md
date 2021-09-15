@@ -1,10 +1,11 @@
 +++
-title = "Layer 2 Star Proxies"
+title = "Layer 2 Stars"
 weight = 60
 template = "doc.html"
 +++
 
-This is a brief summary of proxy options for stars on layer 2.
+This is a brief summary of the three possible options for star owners with
+respect to use of [layer 2](/docs/glossary/rollups).
 
 ## One-way trip
 
