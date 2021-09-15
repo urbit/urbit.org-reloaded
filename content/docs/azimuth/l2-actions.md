@@ -18,11 +18,12 @@ transferring ownership to layer 2.
 
 ### Moving a pre-existing ship to L2
 
-In order to move your ship from layer 1 to layer 2, you use
-[Bridge](/docs/glossary/bridge) to transfer ownership of your ship to the
-address `0x1111111111111111111111111111111111111111` TODO: Presumably this is
-surfaced in the UI in Bridge, and one doesn't need to know the address. Probably
-this should just be a link to the Operator's Manual.
+In order to move your ship from layer 1 to layer 2, transfer ownership of your
+ship to the address `0x1111111111111111111111111111111111111111`. The easiest
+way to accomplish this is using [Bridge](/docs/glossary/bridge) (TODO link to L2
+Bridge guide), but Urbit-native CLI tools to accomplish this are available as
+well (link). The Azimuth smart contracts interpret any ship at this address as
+being on Layer 2.
 
 ### Dominion
 

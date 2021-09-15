@@ -1,6 +1,6 @@
 +++
 title = "Bytestring Format"
-weight = 7
+weight = 8
 template = "doc.html"
 +++
 
@@ -134,7 +134,7 @@ Each of these actions have the same argument - an Ethereum address:
 1 bit: padding
 ```
 
-### Unsigned transactions
+### Unsigned transactions {#unsigned}
 
 An unsigned transaction is an atom consisting of the concatentation of an Ethereum signed
 message header, an Urbit ID header, a chain ID, a nonce, and an action. This has the following format:
@@ -158,10 +158,13 @@ each cell (which are `octs`) in the arguments that follow is the number of block
 in this scenario) of each entry, with the tail being the actual data. The reason
 to use `octs` rather than just atoms is to account for padding.
 
-`len` is the length in bytes of everything following it except the signature.
-`chain-t` is the chain ID, which is to distinguish between e.g. the Ethereum
-test net and main net, to ensure that transaction used in one cannot be
-rebroadcast on the other.
+`len` is the length measured in bytes of everything following it except the
+signature. `chain-t` is the chain ID, which is to distinguish between e.g. the
+Ethereum test net and main net, to ensure that transaction used in one cannot be
+rebroadcast on the other (see
+[EIP-155](https://eips.ethereum.org/EIPS/eip-155)). We note that `len` and
+`chain-t` are both ASCII decimals (`@t` in Hoon), while `nonce` and `action` are
+`@ud`s.
 
 Again we emphasize that unsigned transactions are _not_ what is submitted in a
 batch - an action and a signature are. A ship submitting a layer 2 transaction
@@ -172,8 +175,10 @@ the additional data to the action and verifies the signature against that.
 
 ### Signature
 
-The signature is a 65-byte ECDSA signature. The precise format of the signature depends
-on which wallet was used to sign it. Layer 2 supports all major signature
-formats, including Metamask, Trezor, Ledger, and others. Signatures in batches
-are got by signing an unsigned transaction.
+The signature is a 65-byte ECDSA signature as described in
+[EIP-191](https://eips.ethereum.org/EIPS/eip-191) and is compatible with
+`personal_sign`. The precise format of the signature depends on which wallet was
+used to sign it. Layer 2 supports all major signature formats, including
+Metamask, Trezor, Ledger, and others. Signatures in batches are obtained by signing
+an [unsigned transaction](#unsigned).
 

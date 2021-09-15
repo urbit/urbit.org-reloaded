@@ -4,7 +4,7 @@ weight = 5
 template = "doc.html"
 +++
 
-This document provides technical detail on Azimuth's "Layer 2" scaling solution
+This document provides technical details on Azimuth's "Layer 2" scaling solution
 for Azimuth, known more formally as "naive rollups". We focus here primarily on the
 "Hoon smart contract" located at `/lib/naive.hoon` in your ship's pier, as well
 as other proximal topis.
@@ -17,7 +17,8 @@ This is not intended for everyday users who only wish to know how
 to either transfer their ship to layer 2 or perform layer 2 actions. For that,
 see ((bridge documentation yet to be written)). For a casual overview of the
 rationale and functionality of layer 2, please see this [blog
-post](/blog/rollups).
+post](/blog/rollups). For more information on how Azimuth works more generally,
+including interactions with Bridge and Ethereum, see the page on [Azimuth data flow](/docs/azimuth/l2-flow).
 
 This page is also not where to find instruction on how to run your own "aggregator"/"roller".
 Documentation for this process is forthcoming. However, this page does contain
@@ -50,7 +51,7 @@ By default, step four always succeeds. It has always been possible in theory for
 your urbit to dispute what it read on Ethereum, but there has never been any
 reason to do so.
 
-### Layer 2
+### Layer 2 {#layer-2}
 
 Layer 1 still functions identically today as it did before naive rollups. Naive
 rollups work via the following process.
@@ -104,9 +105,12 @@ They are:
     duplicate information such as which smart contract the transactions are
     intended for.
     
-Put together, these create a reduction in gas costs of at least 65x. This is
-true even for batches of L2 transactions that contain only a single transaction.
-Thus there is reason to use one's own ship as an aggregator.
+Put together, these create a reduction in gas costs of at least 65x when adding
+a transaction to a sufficiently large batch (approximately 30 or more
+transactions). A single transaction submitted as a batch is approximately 5x
+cheaper, while 10 transaction submitted as a batch is approximately 30x cheaper.
+Thus using one's own ship to submit a single-transaction batch is still a
+cost-saving measure.
 
 ### One way trip
 
@@ -139,7 +143,8 @@ in the sponsee having no sponsor on layer 1, and layer 2 as well if they were
 the sponsor on layer 2. This is necessary to simplify the logic, but it also
 guarantees that there is no hard requirement to ever utilize layer 2. Without
 this exception, sponsors with sponsees that move to layer 2 would be forced to
-detach them as a layer 2 action if they wanted to cease sponsorship.
+detach them as a layer 2 action if they wanted to cease sponsorship. This would
+also have an unacceptable impact on ships owned by [smart contracts](#smart-contracts).
 
 If both sponsor and sponsee are on layer 1 then sponsorship actions may occur on
 either layer. As long as all sponsorship actions betweeen the two parties occur
@@ -152,6 +157,12 @@ sponsees are mixing layer 1 and layer 2 actions. In the [Sponsorship state
 transitions](#sponsorship-state-transitions) section below, we give a table that
 shows how the sponsor and escape status of a ship changes according to which
 actions are taken.
+
+### Smart contracts {#smart-contracts}
+
+Smart contracts are unable to own layer 2 ships, and thus cannot sign layer 2
+transactions. This creates a hard requirement that layer 1 ships be allowed to
+perform a layer 1 detach operation on a layer 2 ships.
 
 ## Azimuth state
 
@@ -194,6 +205,9 @@ state held on your ship (Layer 2 Azimuth state) claims that the sponsor of
 `~sampel-palnet` is `~dopzod`. Under this circumstance, this would mean that the
 sponsor of `~sampel-palnet` was `~marzod` before `~sampel-palnet` was deposited
 to layer 2, and thus the Azimuth PKI on Ethereum will forever reflect this.
+
+For more information on how Azimuth state is handled, including how this
+integrates with Bridge and Ethereum, see [Azimuth data flow](/docs/azimuth/l2-flow).
 
 ### Sponsorship state transitions
 
@@ -312,7 +326,8 @@ immediately creates problems, and the seller's reputation would be tarnished.
 Due to the expense or effort needed to acquire a star, this seems an unlikely
 scenario as the reward is much less than the cost. Nonetheless, buyers should
 always make an effort to purchase from a reputable star, as is the case with all
-transactions in life.
+transactions in life. If you want to be absolutely sure that you've received the
+planet, just wait for the batch to be sent and confirmed.
 
 Multi-keyfiles were possible before layer 2, but as the cost of configuring keys
 was comparable to the cost of buying a planet, they were not practical.

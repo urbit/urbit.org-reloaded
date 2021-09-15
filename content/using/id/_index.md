@@ -31,3 +31,19 @@ network.
 ### [Guide to Breaches](/using/id/guide-to-breaches)
 
 What to do when things go very wrong and you need to start over.
+
+## Layer 2
+
+In 2021, [naive rollups](/blog/rollups) were introduced to reduce the cost of
+working with Urbit ID and the friction associated with using Ethereum and
+cryptocurrency. We have written a series of short guides intended to educate
+users of how these changes affect them. For more comprehensive documentation
+aimed at developers, see the [Azimuth documentation](/docs/azimuth).
+
+### Layer 2 Bridge Guide
+
+A guide to how to utilize Bridge to interact with Layer 2.
+
+### [Layer 2 Star Proxies](/using/id/l2-star) 
+
+A summary of the different options available to stars and their proxies on layer 2.
