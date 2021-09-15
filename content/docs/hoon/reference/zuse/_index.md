@@ -8,6 +8,8 @@ insert_anchor_links = "right"
 
 Documentation for the `zuse.hoon` library.
 
+[Table of Contents](/docs/hoon/reference/zuse/table-of-contents)
+
 ### 2d: Formatting functions
 
 [2d(1-5): To JSON, Wains](/docs/hoon/reference/zuse/2d_1-5)
