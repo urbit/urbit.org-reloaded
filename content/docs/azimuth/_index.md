@@ -11,7 +11,7 @@ insert_anchor_links = "right"
 
 An overview of the Ethereum-based public key infrastructure utilized by Urbit.
 
-### [Urbit HD Wallet](/docs/azimuth/hd-wallet)
+### [Urbit HD Wallet](/docs/azimuth/hdwallet)
 
 Azimuth has its own optional hierarchical deterministic wallet system, sometimes
 referred to as a "master ticket".

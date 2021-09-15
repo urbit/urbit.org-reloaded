@@ -6,7 +6,12 @@ template = "doc.html"
 category = "azimuth"
 +++
 
-**Proxies** are Ethereum addresses in the [Urbit HD Wallet](/docs/glossary/hdwallet) system that have limited powers. They are lower-powered "siblings" of the ownership key, which has the sole power to transfer the assigned Urbit identity. Using [Bridge](/docs/glossary/bridge), you can change the Ethereum addresses used for your proxies.
+**Proxies** are Ethereum addresses in the [Urbit ID](/docs/glossary/azimuth)
+system that have limited powers. They are lower-powered "siblings" of the
+ownership key, which has the sole power to transfer the assigned Urbit identity.
+Using [Bridge](/docs/glossary/bridge), you can change the Ethereum addresses
+used for your proxies. If you use the [Urbit HD
+wallet](/docs/glossary/hdwallet), your proxies have already been set.
 
 There are three types of proxy.
 
