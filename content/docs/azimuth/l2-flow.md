@@ -8,8 +8,7 @@ This document summarizes the various components involved with Azimuth and
 how they communicate with each other. This also constitutes an explanation for
 how Urbit implements the data flow of naive rollups.
 
-The following diagram illustrates the high-level structure of Azimuth as seen
-from the perspective of Urbit.
+The following diagram illustrates the high-level structure of Azimuth.
 
 ![High level overview](https://media.urbit.org/docs/layer2/l2-high.svg)
 
@@ -21,27 +20,37 @@ them to a roller via an HTTP API.
 
 ## Azimuth
 
-Azimuth is a set of smart contracts that exists on Ethereum that defines the
-state and logic of the PKI. With the advent of naive rollups, this has also come
-to include the set of components used for dealing with the PKI within Urbit. The
-following sections outline what each component is responsible for and how it
-communicates with the others.
+Azimuth was originally defined as a set of smart contracts on Ethereum that
+defines the state and business logic of the PKI for layer 1. With the advent of
+naive rollups, this has also come to include the set of components used for
+dealing with the PKI within Urbit, as now the complete PKI state is stored
+offchain. The following sections outline what each component is responsible for
+and how it communicates with the others.
 
 ![Azimuth overview](https://media.urbit.org/docs/layer2/l2-azimuth.svg)
 
-As seen in the above diagram, there are three Gall agents responsible for
-managing the PKI state: `azimuth.hoon`, `aggregator.hoon`, and `aggregator-rpc.hoon`.
+The Gall agents involved with Azimuth are summarized as follows:
+ - [`%azimuth`](#azimuth) - obtains and holds PKI state.
+ - [`%azimuth-rpc`](#azimuth-rpc) - JSON RPC-API for `%azimuth`
+ - [`%eth-watcher`](#eth-watcher) - Ethereum event log collector.
+ - [`%aggregator`](#aggregator) - submits batches of L2 transactions to Ethereum.
+ - [`%aggregator-rpc`](#aggregator-rpc) - JSON RPC-API for `%aggregator`.
+ 
+The transaction processing library is [`/lib/naive.hoon`](#naive).
+ 
+### Gall agents
 
-### `azimuth.hoon`
+#### `%azimuth` {#azimuth}
 
-`/app/azimuth.hoon` is a Gall agent and thread handler responsible for keeping
-track of the PKI state, and exposing that data via scries.
+`%azimuth`, located at `/app/azimuth.hoon`, is a Gall agent and thread handler
+responsible for finding Azimuth transactions gathered by `%eth-watcher`,
+keeping track of the PKI state, and exposing that data via scries.
 
-The following diagram illustrates `azimuth.hoon`'s role in the system.
+The following diagram illustrates `%azimuth`'s role in the system.
 
 ![Azimuth components](https://media.urbit.org/docs/layer2/l2-azimuth-azimuth.svg)
 
-The state held in `azimuth.hoon` is the following.
+The state held by `%azimuth` is the following.
 
 ```hoon
 ++  app-state
@@ -73,12 +82,67 @@ Scries can be inferred from the `+on-peek` arm:
   ==
 ```
 
-### `eth-watcher.hoon`
+#### `%azimuth-rpc` {#azimuth-rpc}
 
-`/app/eth-watcher.hoon` is responsible for listening to an Ethereum node and
-collecting Azimuth related transactions. It sends collected transactions to
-`+on-agent` in `azimuth.hoon`, which then obtains the resulting PKI transitions
-from them using `naive.hoon`.
+`%azimuth-rpc`, located at `app/azimuth-rpc.hoon`, is a JSON RPC-API for getting
+`point` and `dns` data from the Azimuth PKI state kept by `%azimuth`.
+
+#### `%eth-watcher` {#eth-watcher}
+
+`%eth-watcher`, located at `/app/eth-watcher.hoon`, is responsible for listening
+to an Ethereum node and collecting event logs from it. It is general-purpose and
+not particular to Azimuth. It sends collected transactions to `+on-agent` in
+`%azimuth`, which then obtains the resulting PKI transitions by passing them through
+[`naive.hoon`](#naive).
+
+#### `%aggregator` {#aggregator}
+
+`%aggregator`, stored at `/app/aggregator.hoon`, is a Gall agent responsible for
+collecting and submitting batches of layer 2 transactions to the Ethereum
+blockchain. This app is also called the roller. Among other things, it keeps
+track of a list of pending transactions to be sent, transactions it has sent
+that are awaiting confirmation, history of transactions sent organized by
+Ethereum address, and when the next batch of transactions will be sent.
+
+![Aggregator](https://media.urbit.org/docs/layer2/l2-aggregator.svg)
+
+`%aggregator` has a number of scries available, intended primarily to
+display data to the end user in Bridge. They can be inferred from the `+on-peek`
+arm:
+
+```hoon
+  ++  on-peek
+    |=  =path
+    ^-  (unit (unit cage))
+    |^
+    ?+  path  ~
+      [%x %pending ~]       ``noun+!>(pending)
+      [%x %pending @ ~]     (pending-by i.t.t.path)
+      [%x %tx @ %status ~]  (status i.t.t.path)
+      [%x %history @ ~]     (history i.t.t.path)
+      [%x %nonce @ @ ~]     (nonce i.t.t.path i.t.t.t.path)
+      [%x %spawned @ ~]     (spawned i.t.t.path)
+      [%x %next-batch ~]    ``atom+!>(next-batch)
+      [%x %point @ ~]       (point i.t.t.path)
+      [%x %points @ ~]      (points i.t.t.path)
+      [%x %config ~]        config
+      [%x %chain-id ~]      ``atom+!>(chain-id)
+    ==
+```
+
+This app is not responsible for communicating with Bridge via HTTP. Instead, that is
+handled by `aggregator-rpc.hoon`. The scries are also communicated to Bridge via
+`aggregator-rpc.hoon`.
+
+#### `%aggregator-rpc`
+
+`%aggregator-rpc`, stored at `/app/aggregator-rpc.hoon`, is a very simple Gall app responsible for receiving HTTP RPC-API
+calls, typically sent from other Urbit ID users via Bridge. It then translates
+these API calls from JSON to a format understood by `%aggregator` and
+forwards them. This app
+does not keep any state - its only purpose is to act as an intermediary between
+Bridge and `%aggregator`. See [here](/docs/azimuth/layer2-api) for more
+information on the JSON RPC-API.
 
 ### `naive.hoon` {#naive}
 
@@ -89,16 +153,16 @@ which handles state transitions caused by both layer 1 and layer 2 transactions.
 A high-level overview of how `naive.hoon` functions can be found
 [here](/docs/azimuth/layer2#layer-2).
 
-A `verifier` is a gate of the form
+A `verifier` is any gate of the form
 
 ```hoon
 +$  verifier  $-([dat=octs v=@ r=@ s=@] (unit address))
 ```
 
-It runs the keccak hash function on `dat` to verify that `dat` is data signed by
-the ECDSA signature given by the `[v r s]` tuple, according to the format for
-signed transactions outlined in the [bytestring
-format](/docs/azimuth/bytestring) documentation.
+The `verifier` in use by `naive.hoon` runs the keccak hash function on `dat` to
+verify that `dat` is data signed by the ECDSA signature given by the `[v r s]`
+tuple, according to the format for signed transactions outlined in the
+[bytestring format](/docs/azimuth/bytestring) documentation.
 
 `chain-id` is the ID used by the Ethereum blockchain, which is `1337`. See [bytestring
 format](/docs/azimuth/bytestring) for more information.
@@ -150,53 +214,4 @@ standard](https://eips.ethereum.org/EIPS/eip-721).
 
 `dns` is a list of DNS entries associated to galaxy IP addresses. At present, this
 is always `~['urbit.org' 'urbit.org' 'urbit.org']`.
-
-### `aggregator.hoon`
-
-`/app/aggregator.hoon` is a Gall agent responsible for collecting and submitting batches of
-layer 2 transactions to the Ethereum blockchain. This app is also called the
-roller. Among other things, it keeps track of a list of pending transactions to
-be sent, transactions it has sent that are awaiting confirmation, history of
-transactions sent organized by Ethereum address, and when the next batch of
-transactions will be sent.
-
-![Aggregator](https://media.urbit.org/docs/layer2/l2-aggregator.svg)
-
-`aggregator.hoon` has a number of scries available, intended primarily to
-display data to the end user in Bridge. They can be inferred from the `+on-peek`
-arm:
-
-```hoon
-  ++  on-peek
-    |=  =path
-    ^-  (unit (unit cage))
-    |^
-    ?+  path  ~
-      [%x %pending ~]       ``noun+!>(pending)
-      [%x %pending @ ~]     (pending-by i.t.t.path)
-      [%x %tx @ %status ~]  (status i.t.t.path)
-      [%x %history @ ~]     (history i.t.t.path)
-      [%x %nonce @ @ ~]     (nonce i.t.t.path i.t.t.t.path)
-      [%x %spawned @ ~]     (spawned i.t.t.path)
-      [%x %next-batch ~]    ``atom+!>(next-batch)
-      [%x %point @ ~]       (point i.t.t.path)
-      [%x %points @ ~]      (points i.t.t.path)
-      [%x %config ~]        config
-      [%x %chain-id ~]      ``atom+!>(chain-id)
-    ==
-```
-
-This app is not responsible for communicating with Bridge via HTTP. Instead, that is
-handled by `aggregator-rpc.hoon`. The scries are also communicated to Bridge via
-`aggregator-rpc.hoon`.
-
-### `aggregator-rpc.hoon`
-
-`/app/aggregator-rpc.hoon` is a very simple Gall app responsible for receiving HTTP RPC-API
-calls, typically sent from other Urbit ID users via Bridge. It then translates
-these API calls from JSON to a format understood by `aggregator.hoon` and
-forwards them. This app
-does not keep any state - its only purpose is to act as an intermediary between
-Bridge and `aggregator.hoon`. See [here](/docs/azimuth/layer2-api) for more
-information on the JSON RPC-API.
 
