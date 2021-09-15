@@ -56,10 +56,10 @@ Here's an example from the `+on-peek` arm of `%graph-store`:
 !>(`update:store`[now.bowl [%keys ~(key by graphs)]])
 ```
 
-The case in the beginning says it takes a `%x` `care` and has a `path` of `/keys`. Additionally, it returns data with a `mark` of `%graph-update-2`. Assuming we wanted the `%graph-update-2` `mark` converted to a `%noun` `mark`, our scry would be composed along the lines of:
+The case in the beginning says it takes a `%x` `care` and has a `path` of `/keys`. Additionally, it returns data with a `mark` of `%graph-update-2`. Assuming we wanted the `%graph-update-2` `mark` converted to a `%json` `mark`, our scry would be composed along the lines of:
 
 ```hoon
-.^(update:graph-store %gx /(scot %p our)/graph-store/(scot %da now)/keys/noun)
+.^(update:graph-store %gx /(scot %p our)/graph-store/(scot %da now)/keys/json)
 ```
 
 ### Web scries
