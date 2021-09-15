@@ -26,7 +26,7 @@ There are plans for Dill to support multiple independent sessions (i.e. independ
 
 While `drum` talks with Dill in `$dill-belt`s and `$dill-blit`s, it talks to CLI apps with `$sole-action`s and `$sole-event`s, which are defined in the `sole` library. For more information on the `sole` library and the related `shoe` library, and for information on how to build CLI apps, you can refer to the [CLI app tutorial](/docs/hoon/guides/cli-tutorial).
 
-To give a basic idea of how keyboard events flow through these systems and produce terminal output, here's a diagram showing the messages in pseudo-hoon:
+To give a basic idea of how keyboard events flow through these systems and produce terminal output, here's a diagram showing the messages in pseudo-Hoon:
 
 ![Dill userspace diagram](https://media.urbit.org/docs/arvo/dill/dill-userspace.svg)
 
