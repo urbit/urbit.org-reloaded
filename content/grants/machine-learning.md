@@ -1,6 +1,6 @@
 +++
 title = "Urbit Supervised Machine Learning Library"
-date = 2021-08-25
+date = "2021-08-25"
 [taxonomies]
 grant_type = ["Proposal"]
 grant_category = ["App Dev: Other"]
