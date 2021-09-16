@@ -14,19 +14,19 @@ The relationship between these types and functions look like this:
 
 ![json diagram](https://media.urbit.org/docs/json-diagram.svg)
 
-Note this diagram is a simplification - the `+dejs:format` and `+enjs:format` collections in particular are tools to be used in writing conversion functions rather than simply being used by themselves, but it demonstrates the basic relationships. Additionally, it would be less common to perform the printing/parsing directly - this would typically be handled implicitly by Eyre, though it may be necessary if one is requesting external JSON data via the web client vane Iris.
+Note this diagram is a simplification - the `+dejs:format` and `+enjs:format` collections in particular are tools to be used in writing conversion functions rather than simply being used by themselves, but it demonstrates the basic relationships. Additionally, it would be less common to perform the printing/parsing manually - this would typically be handled automatically by Eyre, though it may be necessary if one is requesting external JSON data via the web client vane Iris.
 
 ### In practice
 
 A typical Gall agent will have a number of structures defined in a file in the `/sur` directory. These will define the type of data it expects to be `%poke`ed with, the type of data it will `%give` to subscribers, and the type of data its scry endpoints produce.
 
-If the agent is expected to only interact with local agents or agents on remote ships over Ames, it may just take and produce its structures with a `%noun` `mark`. If, however, it needs to talk to a web interface of some kind, it usually must take and produce `$json` data with a `%json` mark.
+If the agent only interacts with local agents or remote agents over Ames, it may just take and produce a `%noun` `mark`. If, however, it needs to talk to a web interface of some kind, it usually must take and produce `$json` data with a `%json` mark.
 
-It may be the case that its dealings with a web interface are totally distinct from its dealings with other agents. If so, the agent could just have separate scry endpoints, poke handling code, etc, that just directly take and produce `$json` data with a `%json` mark. In such a case one can include `$json` encoding/decoding functions directly in the agent or associated libraries, using the general techniques demonstrated in the [$json encoding and decoding example](#json-encoding-and-decoding-example) section below.
+Sometimes an agent's interactions with a web interface are totally distinct from its interactions with other agents. If so, the agent could just have separate scry endpoints, poke handling code, etc, that just directly take and produce `$json` data with a `%json` mark. In such a case, one can include `$json` encoding/decoding functions directly in the agent or associated libraries, using the general techniques demonstrated in the [$json encoding and decoding example](#json-encoding-and-decoding-example) section below.
 
-If, on the other hand, one wants to be able to use the same basic structures in requests and responses, and the same code to deal with them, whether from the web or within Urbit, a different approach is necessary. Rather than taking or producing either `%noun` or `%json` marked data, custom `mark` files can be created for the relevant structures, which specify conversion methods for both `%noun` and `%json` marked data.
+If, on the other hand, one wants a unified interface, whether interacting with a web client or within Urbit, a different approach is necessary. Rather than taking or producing either `%noun` or `%json` marked data, custom `mark` files can be created which specify conversion methods for both `%noun` and `%json` marked data.
 
-With this approach, an agent would take and/or produce data with some `mark` like `%my-custom-mark`. Then, when the agent is queried from a web client or must produce data for a subscribed web client, the webserver vane Eyre can automatically convert `%my-custom-mark` to `%json` or vice versa. Otherwise, when interacting within Urbit, it can deal with its ordinary data types. This approach is used by `%graph-store` with its `%graph-update-2` mark, for example, and a number of other agents.
+With this approach, an agent would take and/or produce data with some `mark` like `%my-custom-mark`. Then, when the agent must interact with a web client, the webserver vane Eyre can automatically convert `%my-custom-mark` to `%json` or vice versa. Otherwise, if interacting within Urbit, it can deal with its ordinary data types. This approach is used by `%graph-store` with its `%graph-update-2` mark, for example, and a number of other agents.
 
 For details of creating a `mark` file for this purpose, the [mark file example](#mark-file-example) section below walks through a practical example.
 
@@ -56,7 +56,7 @@ The correspondence of `$json` to JSON types is fairly self-evident, but here's a
 | Array     | `[%a p=(list json)]`   | `["foo",123]`             | `[%a p=~[[%s p='foo'] [%n p=~.123]]]`                        |
 | Object    | `[%o p=(map @t json)]` | `{"foo":"xyz","bar":123}` | `[%o p={[p='bar' q=[%n p=~.123]] [p='foo' q=[%s p='xyz']]}]` |
 
-Since the `$json` `%o` object and `%a` array types may themselves contain any `$json`, you can see how JSON structures of arbitrary complexity can be represented. Note the `%n` number type is a `@ta` rather than something like a `@ud` that one might expect. This is because JSON's number type may be either an integer or floating point, so it's left as a `knot` which can then be parsed to a `@ud` or `@rd` with the appropriate [+dejs:format](/docs/hoon/reference/zuse/2d_6) function.
+Since the `$json` `%o` object and `%a` array types may themselves contain any `$json`, one can see how JSON structures of arbitrary complexity can be represented. Note the `%n` number type is a `@ta` rather than something like a `@ud` that one might expect. This is because JSON's number type may be either an integer or floating point, so it's left as a `knot` which can then be parsed to a `@ud` or `@rd` with the appropriate [+dejs:format](/docs/hoon/reference/zuse/2d_6) function.
 
 ## `$json` encoding and decoding example
 
