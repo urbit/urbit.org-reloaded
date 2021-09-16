@@ -21,8 +21,16 @@ import SingleColumn from "../../components/SingleColumn";
 import Contact from "../../components/Contact";
 import EventPreview from "../../components/EventPreview";
 import Section from "../../components/Section";
-import { Person, ReadableList, ShowOrHide } from "../../components/Snippets";
+import TwoUp from "../../components/TwoUp";
+
+import {
+  Person,
+  ReadableList,
+  ShowOrHide,
+  DateRange,
+} from "../../components/Snippets";
 import { decode } from "html-entities";
+import { eventKeys } from "../../lib/constants";
 
 export default function Event({
   event,
@@ -50,17 +58,11 @@ export default function Event({
         <Section narrow short>
           <h1>{event.title}</h1>
           <h3 className="mt-6">{event.description}</h3>
-          <p className="text-wall-600 mt-6">{formatDate(starts)}</p>
-          <p className="text-wall-600">
-            {formatTime(starts)}
-            <ShowOrHide condition={typeof event.ends !== "undefined"}>
-              {` to ${formatTime(ends)}`}
-              {" " + formatTimeZone(ends)}
-            </ShowOrHide>
-          </p>
-          <div className="mt-6">
+          <p className="mt-6">{event.location}</p>
+          <DateRange starts={starts} ends={ends} className="text-wall-400" />
+          <div>
             <ShowOrHide condition={event.hosts}>
-              <p>
+              <p className="mt-6">
                 {"Hosted by "}
                 <ReadableList>
                   {event.hosts?.map((host, index) => {
@@ -103,8 +105,9 @@ export default function Event({
             </div>
           ) : null}
         </Section>
-        <Section short wide>
-          {event.youtube ? (
+
+        {event.youtube ? (
+          <Section short wide>
             <iframe
               className="rounded-xl"
               width="100%"
@@ -114,8 +117,9 @@ export default function Event({
               allow="encrypted-media"
               allowFullScreen
             ></iframe>
-          ) : null}
-        </Section>
+          </Section>
+        ) : null}
+
         <Section short narrow className="markdown">
           <article
             className="pt-12 w-full"
@@ -126,22 +130,21 @@ export default function Event({
           <Contact />
         </Section>
         <Section wide className="flex">
-          {previousEvent === null ? (
-            <div className={"w-1/2 mr-4"} />
-          ) : (
-            <div className="mr-4 w-1/2">
-              <h3 className="mb-2">Next Event</h3>
-              <EventPreview event={previousEvent} />
-            </div>
-          )}
-          {nextEvent === null ? (
-            <div className={"w-1/2 ml-4"} />
-          ) : (
-            <div className="mr-4 w-1/2">
-              <h3 className="mb-2">Previous Event</h3>
-              <EventPreview event={nextEvent} />
-            </div>
-          )}
+          <TwoUp>
+            {previousEvent ? (
+              <div>
+                <h3 className="mb-2">Next Event</h3>
+                <EventPreview event={previousEvent} />
+              </div>
+            ) : null}
+
+            {nextEvent ? (
+              <div>
+                <h3 className="mb-2">Previous Event</h3>
+                <EventPreview event={nextEvent} />
+              </div>
+            ) : null}
+          </TwoUp>
         </Section>
       </SingleColumn>
       <Footer />
@@ -151,68 +154,12 @@ export default function Event({
 
 //
 export async function getStaticProps({ params }) {
-  const nextEvent =
-    getNextPost(
-      params.slug,
-      [
-        "title",
-        "slug",
-        "ends",
-        "location",
-        "image",
-        "registration_url",
-        "youtube",
-        "description",
-        "starts",
-        "hosts",
-        "guests",
-        "dark",
-        "timezone",
-      ],
-      "events"
-    ) || null;
+  const nextEvent = getNextPost(params.slug, eventKeys, "events") || null;
 
   const previousEvent =
-    getPreviousPost(
-      params.slug,
-      [
-        "title",
-        "slug",
-        "ends",
-        "location",
-        "image",
-        "registration_url",
-        "youtube",
-        "description",
-        "starts",
-        "hosts",
-        "guests",
-        "dark",
-        "timezone",
-      ],
-      "events"
-    ) || null;
+    getPreviousPost(params.slug, eventKeys, "events") || null;
 
-  const event = getPostBySlug(
-    params.slug,
-    [
-      "title",
-      "ends",
-      "location",
-      "image",
-      "registration_url",
-      "youtube",
-      "description",
-      "starts",
-      "hosts",
-      "slug",
-      "guests",
-      "content",
-      "dark",
-      "timezone",
-    ],
-    "events"
-  );
+  const event = getPostBySlug(params.slug, eventKeys, "events");
 
   const markdown = await Markdown({ post: event });
 

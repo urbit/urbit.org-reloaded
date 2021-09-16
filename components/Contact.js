@@ -79,13 +79,7 @@ export default function Contact({ emphasize }) {
           Github
         </a>
       </h4>
-      <h4 className="mt-6 text-wall-500">
-        Ask questions in our{" "}
-        <a className={linkText} href={contact.discord}>
-          Discord
-        </a>
-      </h4>
-      <h4 className="mt-6 text-wall-500 flex items-baseline flex-wrap">
+      <h4 className="mt-4 text-wall-500 flex items-baseline flex-wrap">
         Boot Urbit and join{" "}
         <div className="md:ml-2 rounded-lg flex items-stretch">
           <code
