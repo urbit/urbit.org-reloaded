@@ -83,49 +83,16 @@ export default function EventPreview({ event, className, big }) {
               } flex-col h-full`}
             >
               <h3 className={`${blackText} mb-2`}>{event.title}</h3>
-              <p className={`${blackText} mb-2`}>{event.location}</p>
+              <p className={blackText + ""}>{event.description}</p>
+            </div>
+
+            <div className="absolute p-6 left-0 bottom-0 w-full pr-32">
+              <p className={`${blackText} type-sub mb-1`}>{event.location}</p>
               <DateRange
                 starts={starts}
                 ends={ends}
                 className={`${grayText} type-sub`}
               />
-            </div>
-
-            <div className="absolute p-6 left-0 bottom-0 w-full pr-32">
-              <ShowOrHide condition={event.hosts}>
-                <p className={blackText + " type-sub"}>
-                  <b>{"Hosted by "}</b>
-                  <ReadableList>
-                    {event.hosts?.map((host, index) => (
-                      <Person
-                        key={`${host.name}-${host.patp}`}
-                        nameClassNames={blackText}
-                        patpClassNames={blackText}
-                        name={host.name}
-                        patp={host.patp}
-                      />
-                    ))}
-                  </ReadableList>
-                </p>
-              </ShowOrHide>
-              <ShowOrHide condition={event.guests}>
-                <p className={blackText + " type-sub"}>
-                  <b>
-                    {event.guests?.length > 1 ? "With guests " : "With guest "}
-                  </b>
-                  <ReadableList>
-                    {event.guests?.map((guest, index) => (
-                      <Person
-                        key={`${guest.name}-${guest.patp}`}
-                        nameClassNames={blackText}
-                        patpClassNames={blackText}
-                        name={guest.name}
-                        patp={guest.patp}
-                      />
-                    ))}
-                  </ReadableList>
-                </p>
-              </ShowOrHide>
             </div>
 
             {inFuture && event.registration_url ? (
