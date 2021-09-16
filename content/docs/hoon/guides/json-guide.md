@@ -12,7 +12,7 @@ Since one typically wants `$json` data converted to some other `noun` structure 
 
 The relationship between these types and functions look like this:
 
-![json diagram](https://m.tinnus-napbus.xyz/pub/json-diagram.svg)
+![json diagram](https://media.urbit.org/docs/json-diagram.svg)
 
 Note this diagram is a simplification - the `+dejs:format` and `+enjs:format` collections in particular are tools to be used in writing conversion functions rather than simply being used by themselves, but it demonstrates the basic relationships. Additionally, it would be less common to perform the printing/parsing directly - this would typically be handled implicitly by Eyre, though it may be necessary if one is requesting external JSON data via the web client vane Iris.
 
