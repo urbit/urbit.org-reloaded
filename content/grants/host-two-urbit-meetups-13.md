@@ -12,8 +12,7 @@ description = "Urbit needs champions! The Urbit Foundation is looking for commun
 reward = 1
 assignee = ""
 id = ""
-work_request_link = "
-https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0083&prefill_Grant+Name=Host%20Two%20Urbit%20Meetups%20%2813%29"
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0083&prefill_Grant+Name=Host%20Two%20Urbit%20Meetups%20%2813%29"
 completed = false
 canceled = false
 link = ""
