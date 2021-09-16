@@ -6,27 +6,36 @@ template = "doc.html"
 
 If one is working on a Gall agent with any kind of web interface, it's likely one will encounter the problem of converting Hoon data structures to JSON and vice versa. This is what we'll look at in this document.
 
-Urbit represents JSON data with the `$json` structure defined in `lull.hoon`. You can refer to the [json type](#the-json-type) section below for details. Since JSON data on the web is typically encoded in text, Urbit has two functions in `zuse.hoon` - [+en-json:html](/docs/hoon/reference/zuse/2e_2-3#en-jsonhtml) for printing `$json` to a text-encoded form, and [+de-json:html](/docs/hoon/reference/zuse/2e_2-3#de-jsonhtml) for parsing text-encoded JSON to a `$json` structure.
+Urbit represents JSON data with the `$json` structure (defined in `lull.hoon`). You can refer to the [json type](#the-json-type) section below for details.
 
-Since one typically wants `$json` data converted to some other `noun` structure or vice versa, Urbit has three collections of functions for this purpose, also in `zuse.hoon`. The first is [+enjs:format](/docs/hoon/reference/zuse/2d_1-5#enjsformat), which contains functions for converting various atoms and structures to `$json`. The second is [+dejs:format](/docs/hoon/reference/zuse/2d_6#dejsformat), which contains many JSON "reparsers" for converting `$json` data to atoms and other structures. The third is [+dejs-soft:format](/docs/hoon/reference/zuse/2d_7#dejs-softformat), which is largely the same as `+dejs:format` except its reparsers produce `unit`s which are null upon failure rather than simply crashing.
+JSON data on the web is encoded in text, so Urbit has two functions in `zuse.hoon` for dealing with this:
+
+- [+en-json:html](/docs/hoon/reference/zuse/2e_2-3#en-jsonhtml) - For printing `$json` to a text-encoded form.
+- [+de-json:html](/docs/hoon/reference/zuse/2e_2-3#de-jsonhtml) - For parsing text-encoded JSON to a `$json` structure.
+
+One typically wants `$json` data converted to some other `noun` structure or vice versa, so Urbit has three collections of functions for this purpose, also in `zuse.hoon`:
+
+- [+enjs:format](/docs/hoon/reference/zuse/2d_1-5#enjsformat) - Functions for converting various atoms and structures to `$json`.
+- [+dejs:format](/docs/hoon/reference/zuse/2d_6#dejsformat) - Many "reparsers" for converting `$json` data to atoms and other structures.
+- [+dejs-soft:format](/docs/hoon/reference/zuse/2d_7#dejs-softformat) - Largely the same as `+dejs:format` except its reparsers produce `unit`s which are null upon failure rather than simply crashing.
 
 The relationship between these types and functions look like this:
 
 ![json diagram](https://media.urbit.org/docs/json-diagram.svg)
 
-Note this diagram is a simplification - the `+dejs:format` and `+enjs:format` collections in particular are tools to be used in writing conversion functions rather than simply being used by themselves, but it demonstrates the basic relationships. Additionally, it would be less common to perform the printing/parsing manually - this would typically be handled automatically by Eyre, though it may be necessary if one is requesting external JSON data via the web client vane Iris.
+Note this diagram is a simplification - the `+dejs:format` and `+enjs:format` collections in particular are tools to be used in writing conversion functions rather than simply being used by themselves, but it demonstrates the basic relationships. Additionally, it is less common to do printing/parsing manually - this would typically be handled automatically by Eyre, though it may be necessary if one is retrieving JSON data via the web client vane Iris.
 
 ### In practice
 
 A typical Gall agent will have a number of structures defined in a file in the `/sur` directory. These will define the type of data it expects to be `%poke`ed with, the type of data it will `%give` to subscribers, and the type of data its scry endpoints produce.
 
-If the agent only interacts with local agents or remote agents over Ames, it may just take and produce a `%noun` `mark`. If, however, it needs to talk to a web interface of some kind, it usually must take and produce `$json` data with a `%json` mark.
+If the agent only interacts with other agents within Urbit (local or remote), it may just use a `%noun` `mark`. If, however, it needs to talk to a web interface of some kind, it usually must handle `$json` data with a `%json` mark.
 
-Sometimes an agent's interactions with a web interface are totally distinct from its interactions with other agents. If so, the agent could just have separate scry endpoints, poke handling code, etc, that just directly take and produce `$json` data with a `%json` mark. In such a case, one can include `$json` encoding/decoding functions directly in the agent or associated libraries, using the general techniques demonstrated in the [$json encoding and decoding example](#json-encoding-and-decoding-example) section below.
+Sometimes an agent's interactions with a web interface are totally distinct from its interactions with other agents. If so, the agent could just have separate scry endpoints, poke handlers, etc, that just directly deal with `$json` data with a `%json` mark. In such a case, one can include `$json` encoding/decoding functions directly in the agent or associated libraries, using the general techniques demonstrated in the [$json encoding and decoding example](#json-encoding-and-decoding-example) section below.
 
-If, on the other hand, one wants a unified interface, whether interacting with a web client or within Urbit, a different approach is necessary. Rather than taking or producing either `%noun` or `%json` marked data, custom `mark` files can be created which specify conversion methods for both `%noun` and `%json` marked data.
+If, on the other hand, one wants a unified interface (whether interacting with a web client or within Urbit), a different approach is necessary. Rather than taking or producing either `%noun` or `%json` marked data, custom `mark` files can be created which specify conversion methods for both `%noun` and `%json` marked data.
 
-With this approach, an agent would take and/or produce data with some `mark` like `%my-custom-mark`. Then, when the agent must interact with a web client, the webserver vane Eyre can automatically convert `%my-custom-mark` to `%json` or vice versa. Otherwise, if interacting within Urbit, it can deal with its ordinary data types. This approach is used by `%graph-store` with its `%graph-update-2` mark, for example, and a number of other agents.
+With this approach, an agent would take and/or produce data with some `mark` like `%my-custom-mark`. Then, when the agent must interact with a web client, the webserver vane Eyre can automatically convert `%my-custom-mark` to `%json` or vice versa. This way the agent only ever has to handle the `%my-custom-mark` data. This approach is used by `%graph-store` with its `%graph-update-2` mark, for example, and a number of other agents.
 
 For details of creating a `mark` file for this purpose, the [mark file example](#mark-file-example) section below walks through a practical example.
 
