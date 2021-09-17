@@ -299,7 +299,7 @@ Let's quickly create a `$json` object to work with:
 ]
 ```
 
-We'll also build our library so we can use its types from the Dojo:
+We'll also build our library so we can use its types from the dojo:
 
 ```
 > =user-lib -build-file %/lib/json-test/hoon
