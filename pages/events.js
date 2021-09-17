@@ -34,10 +34,21 @@ export default function Events({ events, search }) {
     return ends < now;
   });
 
-  const futureEvents = events.filter((event) => {
-    const starts = generateRealtimeDate(event.starts);
-    return starts > now;
-  });
+  const futureEvents = events
+    .filter((event) => {
+      const starts = generateRealtimeDate(event.starts);
+      return starts > now;
+    })
+    .sort((a, b) => {
+      const aStarts = generateRealtimeDate(a.starts).ts;
+      const bStarts = generateRealtimeDate(b.starts).ts;
+      if (aStarts > bStarts) {
+        return 1;
+      } else if (aStarts === bStarts) {
+        return 0;
+      }
+      return -1;
+    });
 
   const happeningNow = events.filter((event) => {
     const starts = generateRealtimeDate(event.starts);

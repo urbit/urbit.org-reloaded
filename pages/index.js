@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
+import { DateTime } from "luxon";
 
 import Container from "../components/Container";
 import Section from "../components/Section";
@@ -18,6 +19,7 @@ import {
   getAllEvents,
   formatDate,
   getOpenGrantsCount,
+  generateRealtimeDate,
 } from "../lib/lib";
 import { contact, eventKeys } from "../lib/constants";
 import { useLocalStorage } from "../lib/hooks";
@@ -299,7 +301,23 @@ export async function getStaticProps() {
     "blog"
   );
 
-  const events = getAllEvents(eventKeys, "events");
+  const now = DateTime.now();
+
+  const events = getAllEvents(eventKeys, "events")
+    .filter((event) => {
+      const starts = generateRealtimeDate(event.starts);
+      return starts > now;
+    })
+    .sort((a, b) => {
+      const aStarts = generateRealtimeDate(a.starts).ts;
+      const bStarts = generateRealtimeDate(b.starts).ts;
+      if (aStarts > bStarts) {
+        return 1;
+      } else if (aStarts === bStarts) {
+        return 0;
+      }
+      return -1;
+    });
 
   return {
     props: { posts, events, openGrantsCount },
