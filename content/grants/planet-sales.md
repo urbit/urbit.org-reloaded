@@ -11,6 +11,7 @@ reward = 6
 assignee = "~tacryt-socryp"
 grant_id = "P0071"
 completed = false
+canceled = false
 link = ""
 +++
 

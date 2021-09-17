@@ -13,6 +13,7 @@ reward = 3
 assignee = "~mocrux-nomdep"
 id = "1120978319"
 completed = false
+canceled = false
 link = ""
 +++
 

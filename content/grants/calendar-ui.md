@@ -13,6 +13,7 @@ reward = 2
 assignee = "finled-bansel"
 id = "1555464949"
 completed = false
+canceled = true
 link = ""
 +++
 

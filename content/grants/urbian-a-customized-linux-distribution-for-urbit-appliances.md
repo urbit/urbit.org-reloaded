@@ -13,6 +13,7 @@ reward = 2
 assignee = "~botter-nidnul"
 id = "337545546"
 completed = false
+canceled = false
 link = ""
 +++
 

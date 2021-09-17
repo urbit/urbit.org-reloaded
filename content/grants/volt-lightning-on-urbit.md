@@ -12,6 +12,7 @@ description = "An Urbit-native Lightning client and integration with `lnd` on 'p
 reward = 7
 assignee = "~martyr-binbex, ~dasrun-fadben"
 completed = false
+canceled = false
 link = ""
 +++
 

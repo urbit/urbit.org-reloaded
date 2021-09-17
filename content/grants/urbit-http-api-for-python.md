@@ -13,6 +13,7 @@ reward = 1
 assignee = "novbyr-miclux"
 id = "P0029"
 completed = false
+canceled = false
 link = ""
 +++
 
