@@ -29,9 +29,9 @@ Note this diagram is a simplification - the `+dejs:format` and `+enjs:format` co
 
 A typical Gall agent will have a number of structures defined in a file in the `/sur` directory. These will define the type of data it expects to be `%poke`ed with, the type of data it will `%give` to subscribers, and the type of data its scry endpoints produce.
 
-If the agent only interacts with other agents within Urbit (local or remote), it may just use a `%noun` `mark`. If, however, it needs to talk to a web interface of some kind, it usually must handle `$json` data with a `%json` mark.
+If the agent only interacts with other agents inside Urbit, it may just use a `%noun` `mark`. If, however, it needs to talk to a web interface of some kind, it usually must handle `$json` data with a `%json` mark.
 
-Sometimes an agent's interactions with a web interface are totally distinct from its interactions with other agents. If so, the agent could just have separate scry endpoints, poke handlers, etc, that just directly deal with `$json` data with a `%json` mark. In such a case, one can include `$json` encoding/decoding functions directly in the agent or associated libraries, using the general techniques demonstrated in the [$json encoding and decoding example](#json-encoding-and-decoding-example) section below.
+Sometimes an agent's interactions with a web interface are totally distinct from its interactions with other agents. If so, the agent could just have separate scry endpoints, poke handlers, etc, that directly deal with `$json` data with a `%json` mark. In such a case, one can include `$json` encoding/decoding functions directly in the agent or associated libraries, using the general techniques demonstrated in the [$json encoding and decoding example](#json-encoding-and-decoding-example) section below.
 
 If, on the other hand, one wants a unified interface (whether interacting with a web client or within Urbit), a different approach is necessary. Rather than taking or producing either `%noun` or `%json` marked data, custom `mark` files can be created which specify conversion methods for both `%noun` and `%json` marked data.
 
