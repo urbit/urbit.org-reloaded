@@ -272,7 +272,7 @@ The [Marks section](/docs/arvo/clay/marks/marks) of the Clay documentation cover
 
 In brief, a mark file contains a `door` with three arms. The door's sample type is the type of the data in question - in our case the `$user` structure. The `+grab` arm contains methods for converting _to_ our mark, and the `+grow` arm contains methods for converting _from_ our mark. The `+noun` arms are mandatory, and then we've added `+json` arms which respectively call the `+from-js` and `+to-js` functions from our `json-test.hoon` library. The final `+grad` arm defines various revision control functions, in our case we've delegated these to the `%noun` mark.
 
-From this mark file, Clay can build mark conversion `gate`s between the `%json` mark and our `%user` mark, allowing the conversion of `$json` data to a `$user` structure and vice versa.
+From this mark file, Clay can build mark conversion gates between the `%json` mark and our `%user` mark, allowing the conversion of `$json` data to a `$user` structure and vice versa.
 
 ### Try it out
 
