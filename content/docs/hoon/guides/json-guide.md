@@ -311,7 +311,7 @@ Now we can ask Clay to build a mark conversion gate from a `%json` mark to our `
 > =json-to-user .^($-(json user:user-lib) %cf /===/json/user)
 ```
 
-Let's try convert our `$json` to a `$user` structure with our new mark conversion gate:
+Let's try converting our `$json` to a `$user` structure with our new mark conversion gate:
 
 ```
 > =usr (json-to-user jon)
