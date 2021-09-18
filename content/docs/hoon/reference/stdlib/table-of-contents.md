@@ -90,7 +90,8 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2q/#char' title="Character"><code>++char</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#chum' title="Jet hint information"><code>++chum</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#cit' title="Octal digit"><code>++cit</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#clap' title="Apply function to two units"><code>++clap</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#clap' title="Combine two units with function"><code>++clap</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#clef' title="Compose two units with function"><code>++clef</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3a/#cmpsi' title="Compare (signed integer)"><code>++cmp:si</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#co' title="Literal rendering engine"><code>++co</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#coil' title="Tuple of core information"><code>++coil</code></a>
@@ -201,6 +202,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#find' title="First index in list"><code>++find</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4c/#fitre' title="Fit on one line test"><code>++fit:re</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#flifl' title="Flip sign"><code>++fli:fl</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#flit' title="Make filter"><code>++flit</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#flop' title="Reverse list"><code>++flop</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#fmaff' title="Fused multiplyadd (IEEE float)"><code>++fma:ff</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#fmafl' title="Fused multiplyadd"><code>++fma:fl</code></a>
@@ -281,6 +283,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2f/#hor' title="Horizontal hash order"><code>++hor</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3c/#horyo' title="Seconds in hour"><code>++hor:yo</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#hufab' title="Parse two phonetic pairs"><code>++huf:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#hunt' title="Select between two units by a rule"><code>++hunt</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#hyfab' title="Parse 8 phonetic bytes"><code>++hyf:ab</code></a>
 
 ### i
@@ -643,6 +646,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4m/#stab' title="Parse cord to path"><code>++stab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#stag' title="Add label"><code>++stag</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#star' title="Produce list of matches"><code>++star</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/1c/#step' title="Atom size or offset, in bloqs"><code>++step</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#stet' title="Add faces to rangeparser pairs in list"><code>++stet</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#stew' title="Switch by first"><code>++stew</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#stir' title="Parse repeatedly"><code>++stir</code></a>
@@ -844,6 +848,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1c/#pair' title="Mold of pair of types"><code>++pair</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1c/#pole' title="Mold generator of faceless list"><code>++pole</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1c/#quip' title="Mold generator (tuple of list and type)"><code>++quip</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/1c/#step' title="Atom size or offset, in bloqs"><code>++step</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1c/#trap' title="Core with one arm $"><code>++trap</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1c/#tree' title="Mold generator (tree)"><code>++tree</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1c/#trel' title="Mold generator (tuple of three types)"><code>++trel</code></a>
@@ -855,9 +860,12 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#bind' title="Nonunit function to unit, producing unit"><code>++bind</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#bond' title="Replace null"><code>++bond</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#both' title="Group unit values into pair"><code>++both</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#clap' title="Apply function to two units"><code>++clap</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#clap' title="Combine two units with function"><code>++clap</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#clef' title="Compose two units with function"><code>++clef</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#drop' title="Unit to list"><code>++drop</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#fall' title="Give unit a default value"><code>++fall</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#flit' title="Make filter"><code>++flit</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#hunt' title="Select between two units by a rule"><code>++hunt</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#lift' title="Curried bind"><code>++lift</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#mate' title="Choose"><code>++mate</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#need' title="Unwrap unit"><code>++need</code></a>
