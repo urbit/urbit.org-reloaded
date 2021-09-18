@@ -44,6 +44,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 
 ### b
 
+<a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#bake' title="Convert wet gate to dry gate"><code>++bake</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2k/#balto' title="Balance queue"><code>++bal:to</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#bar' title="Parse | (bar)"><code>++bar</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#bas' title="Parse \ (bas)"><code>++bas</code></a>
@@ -498,6 +499,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3d/#rawog' title="Random bits"><code>++raw:og</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3d/#rawsog' title="Random bits continuation"><code>++raws:og</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4c/#re' title="Prettyprinting engine (tank)"><code>++re</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#rear' title="Last item in list"><code>++rear</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#rearco' title="Prepend and render atom as tape"><code>++rear:co</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#reap' title="Replicate (list)"><code>++reap</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#reel' title="Right fold (list)"><code>++reel</code></a>
@@ -570,6 +572,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#ser' title="Parse ] (ser)"><code>++ser</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2o/#set' title="Mold generator (set)"><code>++set</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#sevab' title="Parse nonzero base 32 digit"><code>++sev:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#sew' title="Stitch one atom into another"><code>++sew</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#sewab' title="Parse nonzero base 64 digit"><code>++sew:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#sexab' title="Parse nonzero hexadecimal digit"><code>++sex:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4e/#sfix' title="Discard second rule"><code>++sfix</code></a>
@@ -618,6 +621,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4m/#smyt' title="Render path as tank"><code>++smyt</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#snag' title="Produce element at specific index (list)"><code>++snag</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2m/#snagnl' title="Produce element from list at specific nullterminated noun"><code>++snag:nl</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#snip' title="Drop tail off list"><code>++snip</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#snoc' title="Append noun to list"><code>++snoc</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#so' title="Coin parser engine"><code>++so</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2n/#soft' title="Maybe remold"><code>++soft</code></a>
@@ -873,6 +877,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 
 ### 2b: list logic
 
+<a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#bake' title="Convert wet gate to dry gate"><code>++bake</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#fand' title="All indices in list"><code>++fand</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#find' title="First index in list"><code>++find</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#flop' title="Reverse list"><code>++flop</code></a>
@@ -894,6 +899,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#skip' title="Produce list of elements failing boolean gate"><code>++skip</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#slag' title="Produce all elements from index in list"><code>++slag</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#snag' title="Produce element at specific index (list)"><code>++snag</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#snip' title="Drop tail off list"><code>++snip</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#snoc' title="Append noun to list"><code>++snoc</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#sort' title="Quicksort (list)"><code>++sort</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#spin' title="Gate to list (with state)"><code>++spin</code></a>
@@ -929,6 +935,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#rip' title="Disassemble"><code>++rip</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#rev' title="Reverse"><code>++rev</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#rsh' title="Rightshift"><code>++rsh</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#sew' title="Stitch one atom into another"><code>++sew</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#swp' title="Reverse block order"><code>++swp</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#xeb' title="Binary logarithm"><code>++xeb</code></a>
 
