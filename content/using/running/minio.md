@@ -1,5 +1,5 @@
 +++
-title = "Self-hosting S3 Storage"
+title = "Self-hosting S3 Storage with MinIO"
 description = "How to set up and self-host MinIO S3 storage"
 template = "doc.html"
 weight = 2
@@ -7,7 +7,7 @@ weight = 2
 hidetitle = "true"
 +++
 
-Adding [S3](https://aws.amazon.com/s3/) storage to Urbit unlocks some great new features, such as the ability to post media to chats and upload custom avatars. This is a guide to self-hosting [MinIO](https://min.io), an S3 compatible block storage solution.
+Adding [S3](https://aws.amazon.com/s3/) storage to Urbit unlocks some great new features, such as the ability to upload & post your own media to chats straight from your own machine, and upload custom avatars. This is a guide to self-hosting [MinIO](https://min.io), an S3 compatible block storage solution.
 
 You can read more about S3 in [Configuring S3 Storage](/using/os/s3).
 
@@ -39,110 +39,76 @@ Once Docker is installed, we can install and run MinIO by following the steps [h
 You should only need to run a single command, along the lines of:
 
 ```
-docker run -d -p 9000:9000 \
+docker run -d \
+  -p 9000:9000 \
+  -p 9001:9001 \
   --name minio-urbit \
   -v /mnt/data:/data \
-  -e "MINIO_ACCESS_KEY=<access_key>" \
-  -e "MINIO_SECRET_KEY=<secret_key>" \
-  -e "MINIO_DOMAIN=s3.example.com" \
-  minio/minio server /data
+  -e "MINIO_ROOT_USER=<username>" \
+  -e "MINIO_ROOT_PASSWORD=<password>" \
+  -e "MINIO_DOMAIN=example.com" \
+  minio/minio server /data --console-address ":9001"
 ```
 
-`/mnt/data` is the path where your uploaded data will be stored on your host machine - you can change this as necessary.
+Ports 9000 and 9001 are exposed to give access to the MinIO admin interface and MinIO S3 admin respectively. `/mnt/data` is the path where your uploaded data will be stored on your host machine — you can change this as necessary.
 
-Be sure to add the `MINIO_DOMAIN` environment variable; this tells MinIO to accept virtual host style URLs (`BUCKET.s3.example.com` rather than `s3.example.com/BUCKET`), which are required for compatibility with Urbit.
+Be sure to add the `MINIO_DOMAIN` environment variable; this tells MinIO to accept virtual host style URLs (`BUCKET.example.com` rather than `example.com/BUCKET`), which are required for compatibility with Urbit.
 
-Your access key and secret key can be anything of your choosing — make sure they're secure! ~ribben-donnyl recommended a handy tool called [minio-keygen](https://github.com/iwittkau/minio-keygen) that will generate secure keys for you. You could also use your `@p` and `+code` for an easy to remember solution.
+Your username and password can be anything of your choosing — make sure they're secure! You could use your `@p` and `+code` for an easy to remember solution, or even just generate some random alphanumeric strings using a Unix tool, e.g.
+
+```
+tr -dc A-Z0-9 </dev/urandom | head -c 24 ; echo ''
+```
 
 ### Create DNS records
 
 Now, you'll need to point your own domain at your MinIO installation. Via your domain's DNS settings (usually configured on the registrar you bought your domain through), create two `A` records:
 
-- `s3`.example.com, and
-- `*.s3`.example.com
+- `s3.example.com`, and
+- `BUCKET.example.com` where BUCKET is a bucket name of your choosing — 'media' or 'uploads' are good examples
 
-Both should point at the IP address of your host machine. If you are hosting on your own hardware, this could require port-forwarding via your router so that your host machine is reachable from outside of your home network.
-
-It's important that you create both records — without the wildcard, you'll be able to access your S3 web interface but not upload/download content from any buckets you create.
+Both should point at the IP address of your host machine. If you are hosting on your own hardware, this could require port-forwarding via your router so that your host machine is reachable from outside of your home network, and possibly using a dynamic DNS service to update your DNS records if your home IP is not static.
 
 DNS records can take a little while to propagate, so don't worry if you type your new URL into your browser and don't see anything yet.
 
-### Configure a TLS certificate
+_Note: if you plan to create multiple buckets, you will need a DNS record for each. Alternatively you can use a wildcard domain record, but for use with Urbit only one bucket is needed._
 
-Next, you need to aquire a TLS certificate from Let's Encrypt. TLS ensures that all traffic to and from your S3 installation is encrypted, and is required for your installation to work with Urbit.
+### Set up the reverse proxy
 
-The EFF Certbot tool is the easiest way to get a certificate, and [this page](https://certbot.eff.org/instructions) will tell you how to install it depending on your requirements. Select **NGINX** and your operating system for the correct guide.
+Setting up a reverse proxy in front of MinIO allows us to configure domain names and TLS. In this guide we use caddy, an incredibly simple web server. If you have experience with other web servers, you are also able to use those in place of caddy.
 
-Once Certbot is installed, you can generate a certificate with the following command:
+To install caddy, follow the instructions [here](https://caddyserver.com/docs/install).
 
-```
-sudo certbot --server https://acme-v02.api.letsencrypt.org/directory \
-  -d *.s3.example.com \
-  -d s3.example.com \
-  --manual --preferred-challenges dns-01 certonly
-```
-
-After answering a few questions, you will be prompted with a DNS challenge to prove that you own the domains you are creating certificates for. After successfully completing the DNS challenge, your certificate files will be generated and Certbot will print the paths at which they are located. Take note of these for the next step.
-
-Let's Encrypt certificates expire after 90 days, so don't forget to renew them. You should receive an email (to the address you entered when creating the certs) before they are due to expire. To renew, simply repeat the process listed above.
-
-### Install NGINX
-
-Install the NGINX web server and place the following config file at `/etc/nginx/sites-enabled/s3.example.com`. NGINX will act as a proxy to MinIO, allowing us to use our domain and enable TLS.
+Caddy handles TLS automatically, so we don't need to worry about setting that up. All we need to do is create a Caddyfile that looks something like this:
 
 ```
-server {
-    listen 443 ssl;
-    server_name *.s3.example.com;
-
-    ignore_invalid_headers off;
-    client_max_body_size 0;
-    proxy_buffering off;
-
-    ssl_certificate /etc/letsencrypt/live/s3.example.com/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/s3.example.com/privkey.pem;
-    include /etc/letsencrypt/options-ssl-nginx.conf;
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
-
-    location / {
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-        proxy_set_header Host $http_host;
-
-        proxy_pass http://localhost:9000;
-    }
+s3.example.com {
+  reverse_proxy localhost:9001 {
+    header_up X-Forwarded-Host {host}
+    header_up Host {host}
+  }
 }
-
-server {
-    listen 80;
-    server_name *.s3.example.com;
-
-    if ($host = *.s3.example.com) {
-        return 301 https://$host$request_uri;
-    }
-
-    return 404;
+BUCKET.example.com {
+  reverse_proxy localhost:9000 {
+    header_up X-Forwarded-Host {host}
+    header_up Host {host}
+  }
 }
 ```
 
-Update your `server_name` values, ensure that the paths to your certificate files are correct, and change your `proxy_pass` value if you are running MinIO on a different port.
-
-You can test your configuration with `nginx -t`. Any errors will be printed so that you can rectify them.
-
-Restart NGINX to apply the new configuration.
+Remember to replace BUCKET with your chosen bucket name, and then run `caddy start` in the same directory as the Caddyfile.
 
 ### Create an S3 bucket
 
-Navigate to your root MinIO endpoint (`https://s3.example.com`) in a browser and sign in using the access key and secret key you entered in step 1.
+Navigate to your MinIO admin endpoint (`https://s3.example.com`) in a browser and sign in using the username and password you entered in step 1.
 
-Create a new bucket with the plus button in the bottom right-hand corner of the interface. In the list of buckets on the left hand side of the interface, you should see an option to change the policy to read/write.
+Choose 'buckets' from the left-hand menu, and then 'create bucket' at the top of the page. Enter your bucket name (this MUST match the name in your DNS record, e.g. 'media').
 
 ### Configure your ship
 
-Head over to Landscape and enter your root MinIO endpoint (with protocol) in the S3 settings, e.g. `https://s3.example.com`. Enter your access key and secret, and then enter the name of the bucket you created in the previous step.
+Head over to Landscape and navigate to the S3 storage setup page at System preferences > Remote Storage, and enter your domain (with protocol) under endpoint, e.g. `https://example.com`. Enter your username and password from step 1 under access key and secret, and then enter the name of the bucket. When the bucket name is combined with the endpoint, you get your bucket URL e.g. `https://media.example.com`.
 
-You can also configure these settings through Dojo as shown [here](/using/os/s3).
+You can also configure these settings through dojo as shown [here](/using/os/s3).
 
 ### That's it!
 
@@ -153,24 +119,25 @@ You should now be able to upload content using your self-hosted MinIO installati
 Landscape chat will fail silently if it cannot connect to your S3 endpoint to upload media. To get an idea of what's going wrong, open the network tab of your browser dev tools, and observe the request when you try and upload media. You should see a failed request, hopefully with an error code or reason for failure.
 
 - If you see a `mixed-content` error, this means that not every part of the set up is using TLS. Most browsers will refuse to load non-HTTPS content from a secure page.
-- If you see a `502 Bad Gateway` error, NGINX is unable to reach your MinIO installation. Check MinIO is running and your `proxy_pass` URL is correct.
-- If you get a `Permission denied` error, it's likely that your bucket endpoint is incorrect. Ensure your NGINX config includes the `proxy_set_header` options, and that you passed the `MINIO_DOMAIN` variable when running MinIO - otherwise it will default to using the path URL format, which Urbit does not support.
+- If you see a `502 Bad Gateway` error, caddy is unable to reach your MinIO installation. Check MinIO is running and your `reverse_proxy` URLs are correct.
+- If you get a `Permission denied` error, it's likely that your bucket endpoint is incorrect. Ensure your Caddyfile includes the `header_up` options, and that you passed the `MINIO_DOMAIN` variable when running MinIO - otherwise it will default to using the path URL format, which Urbit does not support.
 
 A good way to test your setup is to `curl` your S3 bucket endpoint (not your root S3 endpoint) and see what response you get. For example, if we have a bucket named 'media':
 
 ```
-curl https://media.s3.example.com
+curl https://media.example.com
 ```
 
 You should get an XML response listing the contents of your bucket.
 
 ## Running MinIO and Urbit on the same machine
 
-You may wonder how it's possible to run Urbit alongside our MinIO/NGINX set up if they both need ports 80/443. The answer is to proxy Urbit through NGINX, exactly the same way as MinIO. You can create as many config files in `/etc/nginx/sites-enabled` as you need, and NGINX will direct requests to the relevant one by comparing `server_name` values.
+You may wonder how it's possible to run Urbit alongside our MinIO set up if they both need ports 80/443. The answer is to proxy Urbit through caddy, exactly the same way as MinIO. You can create as many directives in your Caddyfile as needed, each pointing to a different port.
 
-For example, you could have 2 domains pointing to 2 separate NGINX configs:
+For example, you could have 3 domains:
 
-- `ship-name.example.com` - proxy to port 8080 where Urbit is running, and
-- `s3.example.com` - proxy to port 9000 where MinIO is running
+- `ship-name.example.com` - proxy to port 8080 where Urbit is running,
+- `s3.example.com` - proxy to port 9001 where your MinIO admin is running, and
+- `media.example.com` - proxy to port 9000 where your MinIO bucket is accessible
 
-Currently, there is no way to specify the HTTP port Landscape runs on, but if 80 is not available at start-up it will try 8080 next. So start NGINX first, and when you boot your ship it should detect that port 80 is in use and use 8080 instead.
+Currently, there is no way to specify the HTTP port Landscape runs on, but if 80 is not available at start-up it will try 8080 next. So start caddy first, and when you boot your ship it should detect that port 80 is in use and use 8080 instead.
