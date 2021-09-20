@@ -9,11 +9,7 @@ ship = "~patnes-rigtyn + ~ravmel-ropdyl"
 image = "https://media.urbit.org/site/posts/essays/value-of-address-space-pt2.jpg"
 +++
 
-<br>
-
-<img class="ba" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2.jpg">
-
-<br>
+![](https://media.urbit.org/site/posts/essays/value-of-address-space-pt2.jpg)
 
 _This is the second in a series of three posts on Urbit address space. See also [part 1](https://urbit.org/blog/value-of-address-space-pt1/) and [part 3](https://urbit.org/blog/value-of-address-space-pt3/)._
 
@@ -25,11 +21,7 @@ Value and price are distinct concepts that often get conflated. In our view, Urb
 
 256 galaxies, ~65,000 stars, ~4B planets.
 
-<br>
-
-<img class="ba w-100" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2a.svg">
-
-<br>
+![](https://media.urbit.org/site/posts/essays/value-of-address-space-pt2a.svg)
 
 A foundational design principle of the Urbit network is that the address space is limited. This rarity helps qualify Urbit as a [collectible](https://nakamotoinstitute.org/shelling-out/), and thus creates a non-zero acquisition cost for an address. This cost discourages abuses like spam and bot-net attacks. Traditionally, these attacks are made with quasi-unlimited access to IP addresses. The unit economics of acquiring planets for these nefarious purposes is a strong deterrent.
 
@@ -65,31 +57,21 @@ Utility is only one component of a value calculation. To further develop the inq
 
 Urbit IDs are individually represented by non-fungible ERC-721 tokens, and can therefore be sold by any platform that supports this token standard. Currently there are three known Urbit-exclusive sales platforms and one generalized ERC-721 platform that list Urbit IDs. Prices for stars and planets are readily available. Volume is low, as no effort has been made to promote the fact of availability, yet the number of [total transactions](https://azimuth.network/stats/events.txt) has increased steadily since the network was launched to Ethereum in 2019, even absent public messaging.
 
-<br>
-<img class="" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2-tps.svg">
-<br>
+![](https://media.urbit.org/site/posts/essays/value-of-address-space-pt2-tps.svg)
 
-<br>
-<img class="" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2-tss.svg">
-<br>
+![](https://media.urbit.org/site/posts/essays/value-of-address-space-pt2-tss.svg)
 
 Buying non-fungible tokens like Urbit IDs is rather different than trading quasi-fungible tokens like Bitcoin (even setting aside the issue of volume). Each Urbit ID is unique, and so they tend to be purchased by end users for their specific characteristics, rather than generically. As an example, the planet `~parret-barret` sold for about $1,000 at a time when most planets were selling for $10-20, perhaps due to its rhyming name. Planets with circular sigils also often sell for significantly more than other planets — we’re not entirely sure why this is the case.
 
 ## Planet Sales
 
-<br>
-<img class="" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2e-price-eth.svg">
-<br>
+![](https://media.urbit.org/site/posts/essays/value-of-address-space-pt2e-price-eth.svg)
 
-<br>
-<img class="" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2e-price-btc.svg">
-<br>
+![](https://media.urbit.org/site/posts/essays/value-of-address-space-pt2e-price-btc.svg)
 
 ## Star Sales
 
-<br>
-<img class="w-100" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2e-price-btc-usd.svg">
-<br>
+![](https://media.urbit.org/site/posts/essays/value-of-address-space-pt2e-price-btc-usd.svg)
 
 This ID-specific trading pattern is generally appropriate in our view: Urbit ID isn’t designed to be rapidly traded at high volume. Urbit is more like a house than a fungible good like a currency.
 
@@ -97,11 +79,7 @@ For the time being buying and selling of Urbit IDs happens through auctions on s
 
 Strictly speaking, liquidity is a measure of the degree to which a given asset will change in value due to a given transaction. In that sense, Urbit address space is likely fairly illiquid. But liquidity can’t be properly understood without volume. As noted above, the volume of transactions on the network has been steadily increasing since inception, and yet the price has remained fairly constant. This seems to indicate a healthy ratio.
 
-<br>
-
-<img class="ba w-100" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2b.svg">
-
-<br>
+![](https://media.urbit.org/site/posts/essays/value-of-address-space-pt2b.svg)
 
 A further impact on liquidity and volume is that of available supply. At present, the majority of Urbit address space is locked by smart contracts. These lockups began to release at varying linear rates in January 2019. All address space will be completely unlocked and tradeable by January 2025. Eventually as both understanding and demand increase, we anticipate that planets will find an equilibrium price, and stars will be repriced accordingly.
 
