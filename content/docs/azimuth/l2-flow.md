@@ -10,7 +10,7 @@ how Urbit implements the data flow of naive rollups.
 
 The following diagram illustrates the high-level structure of Azimuth.
 
-![High level overview](https://media.urbit.org/docs/layer2/l2-high.svg)
+![High level overview](https://media.urbit.org/docs/layer2/l2-high.png)
 
 ## Bridge
 
@@ -27,14 +27,12 @@ dealing with the PKI within Urbit, as now the complete PKI state is stored
 offchain. The following sections outline what each component is responsible for
 and how it communicates with the others.
 
-![Azimuth overview](https://media.urbit.org/docs/layer2/l2-azimuth.svg)
-
 The Gall agents involved with Azimuth are summarized as follows:
  - [`%azimuth`](#azimuth) - obtains and holds PKI state.
  - [`%azimuth-rpc`](#azimuth-rpc) - JSON RPC-API for `%azimuth`
  - [`%eth-watcher`](#eth-watcher) - Ethereum event log collector.
- - [`%aggregator`](#aggregator) - submits batches of L2 transactions to Ethereum.
- - [`%aggregator-rpc`](#aggregator-rpc) - JSON RPC-API for `%aggregator`.
+ - [`%roller`](#roller) - submits batches of L2 transactions to Ethereum.
+ - [`%roller-rpc`](#roller-rpc) - JSON RPC-API for `%roller`.
  
 The transaction processing library is [`/lib/naive.hoon`](#naive).
  
@@ -46,7 +44,7 @@ The transaction processing library is [`/lib/naive.hoon`](#naive).
 responsible for finding Azimuth transactions gathered by `%eth-watcher`,
 keeping track of the PKI state, and exposing that data via scries.
 
-The following diagram illustrates `%azimuth`'s role in the system.
+The following diagram illustrates `%azimuth`'s and `%eth-watcher`'s role in the system.
 
 ![Azimuth components](https://media.urbit.org/docs/layer2/l2-azimuth-azimuth.svg)
 
@@ -95,18 +93,21 @@ not particular to Azimuth. It sends collected transactions to `+on-agent` in
 `%azimuth`, which then obtains the resulting PKI transitions by passing them through
 [`naive.hoon`](#naive).
 
-#### `%aggregator` {#aggregator}
+#### `%roller` {#roller}
 
-`%aggregator`, stored at `/app/aggregator.hoon`, is a Gall agent responsible for
+`%roller`, stored at `/app/roller.hoon`, is a Gall agent responsible for
 collecting and submitting batches of layer 2 transactions to the Ethereum
-blockchain. This app is also called the roller. Among other things, it keeps
+blockchain.  Among other things, it keeps
 track of a list of pending transactions to be sent, transactions it has sent
 that are awaiting confirmation, history of transactions sent organized by
 Ethereum address, and when the next batch of transactions will be sent.
 
-![Aggregator](https://media.urbit.org/docs/layer2/l2-aggregator.svg)
+The relationship between the roller and other agents is outlined in the
+following diagram.
 
-`%aggregator` has a number of scries available, intended primarily to
+![Roller](https://media.urbit.org/docs/layer2/roller-agents.png)
+
+`%roller` has a number of scries available, intended primarily to
 display data to the end user in Bridge. They can be inferred from the `+on-peek`
 arm:
 
@@ -131,17 +132,17 @@ arm:
 ```
 
 This app is not responsible for communicating with Bridge via HTTP. Instead, that is
-handled by `aggregator-rpc.hoon`. The scries are also communicated to Bridge via
-`aggregator-rpc.hoon`.
+handled by `roller-rpc.hoon`. The scries are also communicated to Bridge via
+`roller-rpc.hoon`.
 
-#### `%aggregator-rpc`
+#### `%roller-rpc`
 
-`%aggregator-rpc`, stored at `/app/aggregator-rpc.hoon`, is a very simple Gall app responsible for receiving HTTP RPC-API
+`%roller-rpc`, stored at `/app/roller-rpc.hoon`, is a very simple Gall app responsible for receiving HTTP RPC-API
 calls, typically sent from other Urbit ID users via Bridge. It then translates
-these API calls from JSON to a format understood by `%aggregator` and
+these API calls from JSON to a format understood by `%roller` and
 forwards them. This app
 does not keep any state - its only purpose is to act as an intermediary between
-Bridge and `%aggregator`. See [here](/docs/azimuth/layer2-api) for more
+Bridge and `%roller`. See [here](/docs/azimuth/layer2-api) for more
 information on the JSON RPC-API.
 
 ### `naive.hoon` {#naive}

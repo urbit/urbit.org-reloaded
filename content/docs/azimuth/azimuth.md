@@ -14,6 +14,7 @@ The primary way to interact with Azimuth is through
 on, [azimuth-js](https://github.com/urbit/azimuth-js) and
 [urbit-key-generation](https://github.com/urbit/urbit-key-generation). Take a
 look at the source and play around, or see [Getting Started](/getting-started/).
+TODO: Add links to layer 2 libraries once they're merged.
 
 ## Arvo vs. Azimuth
 
@@ -51,14 +52,15 @@ In 2021, Tlon introduced a new system to Azimuth intended to reduce gas costs
 for working with Urbit ID and friction associated with using cryptocurrency in
 general called **naive rollups**, often referred to as **layer 2**. This system
 allows batches of Azimuth transactions to be submitted together as a single
-transaction using an urbit node known as a "roller". The PKI state transitions
+transaction using an Urbit node known as a "roller". The PKI state transitions
 resulting from these transactions are computed locally by your urbit rather than
 by the [Ethereum Virtual Machine](https://ethereum.org/en/developers/docs/evm/).
 
 Due to the dramatically reduced cost, Tlon offers their own roller that is free
 for ordinary public use. This enables new users to get started with a permanent
 Azimuth identity without any prior knowledge of Ethereum, cryptocurrency, or
-blockchains.
+blockchains. However, anybody can run a roller, and even using your own ship as
+a roller to submit single transactions results in significant savings.
 
 A casual overview of the naive rollups system can be found on the
 [blog](/blog/rollups) as well as the Pilot's Manual (insert link). Developers
@@ -69,16 +71,16 @@ Overview](/docs/azimuth/layer2).
 
 ### [Urbit HD Wallet](/docs/azimuth/hd-wallet)
 
-Azimuth has its own optional hierarchical deterministic wallet system, sometimes
+Azimuth has its own optional hierarchical deterministic wallet system, often
 referred to as a "master ticket".
 
 ### [Life and Rift](/docs/azimuth/azimuth)
 
-An explanation of how Azimuth keeps track of the most recent set of networking
-keys necessary to communicate with a ship.
+An explanation of how Azimuth indexes networking keys and breaches to keep track
+of the most recent set of networking keys necessary to communicate with a ship.
 
 ### [Advanced Azimuth Tools](/docs/azimuth/advanced-azimuth-tools)
 
-Expert-level tooling for generating, signing, and sending Azimuth-related
+Expert-level tooling for generating, signing, and sending layer 1 Azimuth-related
 transactions from within Urbit itself.
 

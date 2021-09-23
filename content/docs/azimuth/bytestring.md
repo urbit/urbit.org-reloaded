@@ -4,13 +4,13 @@ weight = 8
 template = "doc.html"
 +++
 
-This document gives the bytestring format for Layer 2 transactions and batches.
+This document gives the bytestring format for layer 2 transactions and batches.
 
 [Recall](/docs/azimuth/layer2.md) that a layer 2 transaction is a compact
 representation of an Azimuth action whose format will be given below, along with
 a 65-byte ECDSA signature. A `batch` is an atom that is a concatenation of one or more
 layer 2 transactions. This atom is what is posted on the Ethereum blockchain by
-an aggregator. We remark that multiple transactions from a single ship in a
+a roller. We remark that multiple transactions from a single ship in a
 given batch each need their own signature, since data such as the nonce are not
 included in the data but are derived from the signature. Thus a ship cannot
 generate multiple transactions and generate a single signature for all of them -
@@ -20,7 +20,7 @@ a different signature is needed for each transaction.
 
 We describe the byte format of a `batch` and its components in the following.
 
-### Batch
+### Batches {#batch}
 
 A `batch` is an atom that is the concatenation of several raw transactions, which
 are themselves atoms. `naive.hoon` starts reading the `batch` from the end and
@@ -48,7 +48,7 @@ ID, and header to a given action and uses that to verify the corresponding
 signature, rather than just the action itself. This reduces the number of bytes
 in the batch, making transactions cheaper.
 
-### Actions
+### Actions {#actions}
 
 The hex format of an action as they appear in a `batch` is as
 follows. They are parsed by the `+parse-tx` arm in `naive.hoon`.
@@ -156,7 +156,7 @@ Here `+cad` is a gate that concatenates atoms given in `octs` (`(pair @ud @)`) f
 argument `3` is a `bloq` size meaning `2^3=8` bits (one byte), and the head of
 each cell (which are `octs`) in the arguments that follow is the number of blocks (number of bytes
 in this scenario) of each entry, with the tail being the actual data. The reason
-to use `octs` rather than just atoms is to account for padding.
+to use `octs` rather than just atoms is to account for leading zeroes.
 
 `len` is the length measured in bytes of everything following it except the
 signature. `chain-t` is the chain ID, which is to distinguish between e.g. the
@@ -168,12 +168,12 @@ rebroadcast on the other (see
 
 Again we emphasize that unsigned transactions are _not_ what is submitted in a
 batch - an action and a signature are. A ship submitting a layer 2 transaction
-to an aggregator signs an unsigned transaction and this signature is included
+to a roller signs an unsigned transaction and this signature is included
 along with the action, which does not include the additional data listed above.
 When a ship determines whether or not a given layer 2 action is valid, it adds
 the additional data to the action and verifies the signature against that.
 
-### Signature
+### Signatures {#signatures}
 
 The signature is a 65-byte ECDSA signature as described in
 [EIP-191](https://eips.ethereum.org/EIPS/eip-191) and is compatible with
