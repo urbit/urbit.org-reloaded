@@ -1,6 +1,6 @@
 +++
 title = "Proxies"
-weight = 3
+weight = 8
 template = "doc.html"
 +++
 
@@ -32,8 +32,6 @@ address to be the management proxy.
 
   For stars and galaxies only. Can create new child identities.
  
-- **Transfer proxy**
-  
 - **Voting proxy**
 
   Galaxies only. Galaxies are the part of the [Galactic
