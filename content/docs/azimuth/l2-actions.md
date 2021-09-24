@@ -39,8 +39,10 @@ detail what this means in each case in the following.
 
 #### `%l1` planets
 
-*Permitted layer 2 actions:* owner: `%escape`, `%cancel-escape`. management
-proxy: `%escape`, `%cancel-escape`. transfer proxy: none.
+*Permitted layer 2 actions:* 
+ - owner: `%escape`, `%cancel-escape`
+ - management proxy: `%escape`, `%cancel-escape`
+ - transfer proxy: none
 
 A planet in dominion `%l1` is said to exist on layer 1, which is the default
 state for all planets prior to the introduction of naive rollups. In addition to
@@ -55,10 +57,12 @@ the layer 2 deposit address.
 
 #### `%l2` planets
 
-*Permitted layer 2 actions:* owner: `%transfer-point`, `%configure-keys`,
-`%escape`, `%cancel-escape`, `%set-management-proxy`, `%set-transfer-proxy`.
-management proxy: `%configure-keys`, `%escape`, `%cancel-escape`,
-`%set-management-proxy`. transfer proxy: `%transfer-point`, `%set-transfer-proxy`.
+*Permitted layer 2 actions:*
+ - owner: `%transfer-point`, `%configure-keys`,
+`%escape`, `%cancel-escape`, `%set-management-proxy`, `%set-transfer-proxy`
+ - management proxy: `%configure-keys`, `%escape`, `%cancel-escape`,
+`%set-management-proxy`
+ - transfer proxy: `%transfer-point`, `%set-transfer-proxy`
 
 A planet in dominion `%l2` is said to exist on layer 2. A planet may be on layer
 2 either by previously being a layer 1 planet deposited to the layer 2 address,
@@ -74,9 +78,13 @@ cannot move to layer 1.
 
 #### `%l1` stars
 
-*Permitted layer 2 actions:* owner: `%escape`, `%cancel-escape`, `%adopt`,
-`%reject`, `%detach`. management proxy: `%escape`, `%cancel-escape`, `%adopt`,
-`%reject`, `%detach`. spawn proxy: none. transfer proxy: none.
+*Permitted layer 2 actions:*
+ - owner: `%escape`, `%cancel-escape`, `%adopt`,
+`%reject`, `%detach`
+ - management proxy: `%escape`, `%cancel-escape`, `%adopt`,
+`%reject`, `%detach`
+ - spawn proxy: none
+ - transfer proxy: none
 
 A star in dominion `%l1` is said to exist on layer 1, which is the default state
 for all stars prior to the introduction of naive rollups. In addition to the
@@ -89,10 +97,14 @@ to the layer 2 deposit address. Both actions are irreversible.
 
 #### `%spawn` stars
 
-*Permitted layer 2 actions:* owner: `%escape`, `%cancel-escape`, `%adopt`,
-`%reject`, `%detach`, `%spawn`, `%set-spawn-proxy`. management proxy: `%escape`,
-`%cancel-escape`, `%adopt`, `%reject`, `%detach`. spawn proxy: `%spawn`,
-`%set-spawn-proxy`. transfer proxy: none.
+*Permitted layer 2 actions:*
+ - owner: `%escape`, `%cancel-escape`, `%adopt`,
+`%reject`, `%detach`, `%spawn`, `%set-spawn-proxy`
+ - management proxy: `%escape`,
+`%cancel-escape`, `%adopt`, `%reject`, `%detach`
+ - spawn proxy: `%spawn`,
+`%set-spawn-proxy`
+ - transfer proxy: none
 
 A star in dominion `%spawn` is said to exist on layer 1.
 
@@ -107,12 +119,15 @@ irreversible - the only further change to dominion permitted is moving to `%l2`.
 
 #### `%l2` stars
 
-*Permitted layer 2 actions:* owner: `%transfer-point`, `%spawn`, `%configure-keys`, `%escape`,
+*Permitted layer 2 actions:*
+ - owner: `%transfer-point`, `%spawn`, `%configure-keys`, `%escape`,
 `%cancel-escape`, `%adopt`, `%reject`, `%detach`, `%set-management-proxy`,
-`%set-spawn-proxy`,`%set-transfer-proxy`. management proxy: `%escape`,
+`%set-spawn-proxy`,`%set-transfer-proxy`
+ - management proxy: `%escape`,
 `%cancel-escape`, `%adopt`, `%reject`, `%detach`, `%configure-keys`,
-`%set-management-proxy`. spawn proxy: `%spawn`, `%set-spawn-proxy`. transfer
-proxy: `%transfer-point`, `%set-transfer-proxy`.
+`%set-management-proxy`
+ - spawn proxy: `%spawn`, `%set-spawn-proxy`
+ - transfer proxy: `%transfer-point`, `%set-transfer-proxy`
 
 A star in dominion `%l2` is said to exist on layer 2. A star may exist on layer
 2 by being deposited to the layer 2 deposit address from layer 1, or by being
@@ -126,9 +141,12 @@ A star in dominion `%l2` cannot perform any layer 1 actions.
 
 #### `%l1` galaxies
 
-*Permitted layer 2 actions:* owner: `%adopt`, `%reject`, `%detach`. management
-proxy: `%adopt`, `%reject`, `%detach`. spawn proxy: none. transfer proxy: none.
-voting proxy: none.
+*Permitted layer 2 actions:*
+ - owner: `%adopt`, `%reject`, `%detach`
+ - management proxy: `%adopt`, `%reject`, `%detach`
+ - spawn proxy: none
+ - transfer proxy: none
+ - voting proxy: none.
 
 A galaxy in dominion `%l1` is said to exist on layer 1, which is the default state
 for all galaxies prior to the introduction of naive rollups. In addition to the
@@ -147,9 +165,13 @@ on sponsorship status.
 
 #### `%spawn` galaxies
 
-*Permitted layer 2 actions:* owner: `%adopt`, `%reject`, `%detach`, `%spawn`,
-`%set-spawn-proxy`. management proxy: `%adopt`, `%reject`, `%detach`. spawn
-proxy: `%spawn`, `%set-spawn-proxy`. transfer proxy: none. voting proxy: none.
+*Permitted layer 2 actions:*
+ - owner: `%adopt`, `%reject`, `%detach`, `%spawn`,
+`%set-spawn-proxy`
+ - management proxy: `%adopt`, `%reject`, `%detach`
+ - spawn proxy: `%spawn`, `%set-spawn-proxy`
+ - transfer proxy: none
+ - voting proxy: none
 
 Galaxies may either remain on layer 1, or, similar to stars, they may
 deposit their spawn proxy to layer 2. They cannot move their ownership,
