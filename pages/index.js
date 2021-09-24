@@ -91,7 +91,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
     if (isBannerOpen) {
       return (
         <Banner
-          href="http://assembly.urbit.org/"
+          href="https://twitter.com/zodisok"
           dismiss={() => setBanner(false)}
         >
           <p className="text-blue-400 font-semibold hover:opacity-70">{`-> New network update coming soon. Follow along @zodisok.`}</p>
