@@ -304,23 +304,7 @@ export async function getStaticProps() {
     "blog"
   );
 
-  const now = DateTime.now();
-
-  const events = getAllEvents(eventKeys, "events")
-    .filter((event) => {
-      const starts = generateRealtimeDate(event.starts);
-      return starts > now;
-    })
-    .sort((a, b) => {
-      const aStarts = generateRealtimeDate(a.starts).ts;
-      const bStarts = generateRealtimeDate(b.starts).ts;
-      if (aStarts > bStarts) {
-        return 1;
-      } else if (aStarts === bStarts) {
-        return 0;
-      }
-      return -1;
-    });
+  const events = getAllEvents(eventKeys, "events");
 
   return {
     props: { posts, events, openGrantsCount },
