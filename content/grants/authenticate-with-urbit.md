@@ -29,8 +29,8 @@ Instead we will be using the user’s running ship to authenticate them over the
 
 ## Milestones
 
-### Milestone 1 - Develop and deploy app
+### Milestone 1 - A gall application named %hermes which allows external applications to authenticate user identities
 
-Expected Completion:
+Expected Completion: Mid-October 2021
 
 Payment: 1 star
