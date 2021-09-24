@@ -26,15 +26,15 @@ import { useLocalStorage } from "../lib/hooks";
 
 const Banner = ({ children, isOpen, href, dismiss }) => {
   return (
-    <div className="w-full flex justify-center bg-green-100">
+    <div className="w-full flex justify-center bg-blue-100">
       <SingleColumn>
         <div className="w-full layout">
           <div className="w-full  flex justify-between items-center px-4 md:px-8 py-4">
-            <a href={href} target="_blank">
+            <a href={href} target="_blank" className="text-blue-400">
               {children}
             </a>
             <button
-              className="type-ui w-6 h-6 bg-green-400 flex items-center justify-center rounded-full text-white hover:opacity-70"
+              className="type-ui w-6 h-6 bg-blue-400 flex items-center justify-center rounded-full text-white hover:opacity-70"
               onClick={(e) => {
                 e.stopPropagation();
                 dismiss();
@@ -88,10 +88,10 @@ export default function Home({ posts, events, openGrantsCount, search }) {
     if (isBannerOpen) {
       return (
         <Banner
-          href="http://assembly.urbit.org/"
+          href="https://twitter.com/zodisok"
           dismiss={() => setBanner(false)}
         >
-          <p className="text-green-400 font-semibold hover:opacity-70">{`-> Software Distribution is now Live`}</p>
+          <p className="text-green-400 font-semibold hover:opacity-70">{`PSA: New network update coming soon. Follow along @zodisok`}</p>
         </Banner>
       );
     } else {
