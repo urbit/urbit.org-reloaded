@@ -26,15 +26,15 @@ import { useLocalStorage } from "../lib/hooks";
 
 const Banner = ({ children, isOpen, href, dismiss }) => {
   return (
-    <div className="w-full flex justify-center bg-green-100">
+    <div className="w-full flex justify-center bg-blue-100">
       <SingleColumn>
         <div className="w-full layout">
-          <div className="w-full  flex justify-between items-center px-4 md:px-8 py-4">
+          <div className="w-full flex justify-between items-center px-4 md:px-8 py-4">
             <a href={href} target="_blank">
               {children}
             </a>
             <button
-              className="type-ui w-6 h-6 bg-green-400 flex items-center justify-center rounded-full text-white hover:opacity-70"
+              className="type-ui w-6 h-6 bg-blue-400 flex items-center justify-center rounded-full text-white hover:opacity-70"
               onClick={(e) => {
                 e.stopPropagation();
                 dismiss();
@@ -52,7 +52,10 @@ const Banner = ({ children, isOpen, href, dismiss }) => {
 export default function Home({ posts, events, openGrantsCount, search }) {
   const [heroButton, setHeroButton] = useState(<div />);
   const [bannerElement, setBannerElement] = useState(null);
-  const [isBannerOpen, setBanner] = useLocalStorage("isBannerOpen", true);
+  const [isBannerOpen, setBanner] = useLocalStorage(
+    "urbit-banner-softdist",
+    true
+  );
 
   const selectDownloadButton = () => {
     const agent = window.navigator.appVersion;
@@ -88,10 +91,10 @@ export default function Home({ posts, events, openGrantsCount, search }) {
     if (isBannerOpen) {
       return (
         <Banner
-          href="http://assembly.urbit.org/"
+          href="https://twitter.com/zodisok"
           dismiss={() => setBanner(false)}
         >
-          <p className="text-green-400 font-semibold hover:opacity-70">{`-> Join us October 15-17 for Assembly`}</p>
+          <p className="text-blue-400 font-semibold hover:opacity-70">{`-> New network update coming soon. Follow along @zodisok.`}</p>
         </Banner>
       );
     } else {
@@ -301,23 +304,7 @@ export async function getStaticProps() {
     "blog"
   );
 
-  const now = DateTime.now();
-
-  const events = getAllEvents(eventKeys, "events")
-    .filter((event) => {
-      const starts = generateRealtimeDate(event.starts);
-      return starts > now;
-    })
-    .sort((a, b) => {
-      const aStarts = generateRealtimeDate(a.starts).ts;
-      const bStarts = generateRealtimeDate(b.starts).ts;
-      if (aStarts > bStarts) {
-        return 1;
-      } else if (aStarts === bStarts) {
-        return 0;
-      }
-      return -1;
-    });
+  const events = getAllEvents(eventKeys, "events");
 
   return {
     props: { posts, events, openGrantsCount },
