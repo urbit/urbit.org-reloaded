@@ -8,7 +8,7 @@ grant_category = ["App Dev: Other"]
 image = ""
 description = "Exernal service/websites can verify that a user is who they say they are"
 reward = 1
-assignee = "~mocrux-momdep"
+assignee = "dcSpark"
 grant_id = "P0081"
 completed = false
 canceled = false
@@ -29,8 +29,8 @@ Instead we will be using the user’s running ship to authenticate them over the
 
 ## Milestones
 
-### Milestone 1 - Develop and deploy app
+### Milestone 1 - A gall application named %hermes which allows external applications to authenticate user identities
 
-Expected Completion:
+Expected Completion: Mid-October 2021
 
 Payment: 1 star
