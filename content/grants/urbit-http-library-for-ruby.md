@@ -13,6 +13,7 @@ reward = 3
 assignee = "~winter-paches"
 id = "227255220"
 completed = false
+canceled = true
 link = ""
 +++
 

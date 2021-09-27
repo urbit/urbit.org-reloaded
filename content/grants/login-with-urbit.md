@@ -13,6 +13,7 @@ reward = 8
 assignee = "dcSpark"
 id = ""
 completed = false
+canceled = false
 link = ""
 +++
 

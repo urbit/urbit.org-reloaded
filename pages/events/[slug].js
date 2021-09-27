@@ -78,8 +78,8 @@ export default function Event({
               </p>
             </ShowOrHide>
             <ShowOrHide condition={event.guests}>
-              <p>
-                {event.guests?.length > 1 ? "With guest " : "With guest "}
+              <p className="mt-6">
+                {event.guests?.length > 1 ? "With guests " : "With guest "}
                 <ReadableList>
                   {event.guests?.map((guest, index) => (
                     <Person

@@ -13,6 +13,7 @@ reward = 10
 assignee = "~rabsef-bicrym"
 id = "1372696624"
 completed = false
+canceled = false
 link = ""
 +++
 

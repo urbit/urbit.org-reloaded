@@ -13,6 +13,7 @@ reward = 5
 assignee = "Christopher King"
 id = "1101665172"
 completed = false
+canceled = true
 link = ""
 +++
 

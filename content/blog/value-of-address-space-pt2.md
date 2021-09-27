@@ -9,11 +9,7 @@ ship = "~patnes-rigtyn + ~ravmel-ropdyl"
 image = "https://media.urbit.org/site/posts/essays/value-of-address-space-pt2.jpg"
 +++
 
-<br>
-
-<img class="ba" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2.jpg">
-
-<br>
+![](https://media.urbit.org/site/posts/essays/value-of-address-space-pt2.jpg)
 
 _This is the second in a series of three posts on Urbit address space. See also [part 1](https://urbit.org/blog/value-of-address-space-pt1/) and [part 3](https://urbit.org/blog/value-of-address-space-pt3/)._
 
@@ -25,21 +21,17 @@ Value and price are distinct concepts that often get conflated. In our view, Urb
 
 256 galaxies, ~65,000 stars, ~4B planets.
 
-<br>
-
-<img class="ba w-100" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2a.svg">
-
-<br>
+![](https://media.urbit.org/site/posts/essays/value-of-address-space-pt2a.svg)
 
 A foundational design principle of the Urbit network is that the address space is limited. This rarity helps qualify Urbit as a [collectible](https://nakamotoinstitute.org/shelling-out/), and thus creates a non-zero acquisition cost for an address. This cost discourages abuses like spam and bot-net attacks. Traditionally, these attacks are made with quasi-unlimited access to IP addresses. The unit economics of acquiring planets for these nefarious purposes is a strong deterrent.
 
-There are 256 galaxies on the network. Each galaxy is initialized with ownership of 256 stars. Galaxies act as root nodes for peer discovery and packet routing within the Urbit network, and they are each also entitled to vote on updates to the smart contracts which govern the network. To date, galaxies trade primarily on OTC (over the counter) desks, and rarely appear on the open market.
+There are 256 galaxies on the network. Each galaxy is initialized with ownership of 255 stars. Galaxies act as root nodes for peer discovery and packet routing within the Urbit network, and they are each also entitled to vote on updates to the smart contracts which govern the network. To date, galaxies trade primarily on OTC (over the counter) desks, and rarely appear on the open market.
 
-There are 65,536 total stars on the network. In turn, each star is initialized with ownership of 65,536 planets. Stars currently trade on platforms independent of Tlon, such as [urbit.live](https://urbit.live/) and [opensea.io](https://opensea.io/). The current price range can easily be ascertained on those sites, but as of the time of this writing, stars are selling at a price that greatly discounts their planet holdings.
+There are 65,280 total stars on the network. In turn, each star is initialized with ownership of 65,535 planets. Stars currently trade on platforms independent of Tlon, such as [urbit.live](https://urbit.live/) and [opensea.io](https://opensea.io/). The current price range can easily be ascertained on those sites, but as of the time of this writing, stars are selling at a price that greatly discounts their planet holdings.
 
 One would expect that in an efficient market the relative pricing of stars on one hand, and planets on the other hand would eventually align (so to speak). This may come to pass as the Urbit community increases education about Urbit, and as additional planet sellers and hosting providers enter the space.
 
-Finally, there are 4,294,967,296 (or 2<sup>32</sup>) planets on the network. Planets currently trade largely in a range of $10 to $15. We expect planet prices to fluctuate from provider to provider as described in the previous post, based on the quality of services various providers offer. That said, it's worth noting that the cost to configure addresses for distribution is fairly static and this may act as something of a lower bound.
+Finally, there are 4,294,901,760 (or ~2<sup>32</sup>) planets on the network. Planets currently trade largely in a range of $10 to $15. We expect planet prices to fluctuate from provider to provider as described in the previous post, based on the quality of services various providers offer. That said, it's worth noting that the cost to configure addresses for distribution is fairly static and this may act as something of a lower bound.
 
 That said, we also anticipate that planet prices will be abstracted away from most purchasers, and will be included in bundled annual packages of hosting and data routing services. For this reason, infrastructure service providers (i.e. hosting providers) will likely be the best positioned parties to capture value from planet distribution.
 
@@ -65,31 +57,21 @@ Utility is only one component of a value calculation. To further develop the inq
 
 Urbit IDs are individually represented by non-fungible ERC-721 tokens, and can therefore be sold by any platform that supports this token standard. Currently there are three known Urbit-exclusive sales platforms and one generalized ERC-721 platform that list Urbit IDs. Prices for stars and planets are readily available. Volume is low, as no effort has been made to promote the fact of availability, yet the number of [total transactions](https://azimuth.network/stats/events.txt) has increased steadily since the network was launched to Ethereum in 2019, even absent public messaging.
 
-<br>
-<img class="" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2-tps.svg">
-<br>
+![](https://media.urbit.org/site/posts/essays/value-of-address-space-pt2-tps.svg)
 
-<br>
-<img class="" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2-tss.svg">
-<br>
+![](https://media.urbit.org/site/posts/essays/value-of-address-space-pt2-tss.svg)
 
 Buying non-fungible tokens like Urbit IDs is rather different than trading quasi-fungible tokens like Bitcoin (even setting aside the issue of volume). Each Urbit ID is unique, and so they tend to be purchased by end users for their specific characteristics, rather than generically. As an example, the planet `~parret-barret` sold for about $1,000 at a time when most planets were selling for $10-20, perhaps due to its rhyming name. Planets with circular sigils also often sell for significantly more than other planets — we’re not entirely sure why this is the case.
 
 ## Planet Sales
 
-<br>
-<img class="" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2e-price-eth.svg">
-<br>
+![](https://media.urbit.org/site/posts/essays/value-of-address-space-pt2e-price-eth.svg)
 
-<br>
-<img class="" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2e-price-btc.svg">
-<br>
+![](https://media.urbit.org/site/posts/essays/value-of-address-space-pt2e-price-btc.svg)
 
 ## Star Sales
 
-<br>
-<img class="w-100" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2e-price-btc-usd.svg">
-<br>
+![](https://media.urbit.org/site/posts/essays/value-of-address-space-pt2e-price-btc-usd.svg)
 
 This ID-specific trading pattern is generally appropriate in our view: Urbit ID isn’t designed to be rapidly traded at high volume. Urbit is more like a house than a fungible good like a currency.
 
@@ -97,11 +79,7 @@ For the time being buying and selling of Urbit IDs happens through auctions on s
 
 Strictly speaking, liquidity is a measure of the degree to which a given asset will change in value due to a given transaction. In that sense, Urbit address space is likely fairly illiquid. But liquidity can’t be properly understood without volume. As noted above, the volume of transactions on the network has been steadily increasing since inception, and yet the price has remained fairly constant. This seems to indicate a healthy ratio.
 
-<br>
-
-<img class="ba w-100" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2b.svg">
-
-<br>
+![](https://media.urbit.org/site/posts/essays/value-of-address-space-pt2b.svg)
 
 A further impact on liquidity and volume is that of available supply. At present, the majority of Urbit address space is locked by smart contracts. These lockups began to release at varying linear rates in January 2019. All address space will be completely unlocked and tradeable by January 2025. Eventually as both understanding and demand increase, we anticipate that planets will find an equilibrium price, and stars will be repriced accordingly.
 

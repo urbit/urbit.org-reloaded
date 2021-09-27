@@ -13,6 +13,7 @@ reward = 1
 assignee = "~sibped-dabdul, 홍송이"
 id = "1921641407"
 completed = false
+canceled = false
 link = ""
 +++
 

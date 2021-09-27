@@ -13,6 +13,7 @@ reward = 3
 assignee = "~witfyl-ravped"
 id = "1312404336"
 completed = false
+canceled = false
 link = ""
 +++
 

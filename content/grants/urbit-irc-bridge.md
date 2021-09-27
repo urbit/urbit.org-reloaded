@@ -13,6 +13,7 @@ reward = 1
 assignee = "~fitnub-basbud"
 id = ""
 completed = false
+canceled = false
 link = ""
 +++
 
