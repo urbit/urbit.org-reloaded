@@ -1,8 +1,8 @@
-.markdown *:last-child {
+.markdown *:last-child:not(pre) {
   @apply pb-0 mb-0;
 }
 
-.markdown *:first-child {
+.markdown *:first-child:not(pre) {
   @apply pt-0 mt-0;
 }
 
@@ -108,9 +108,13 @@
   @apply bg-green-100 text-green-400;
 }
 
+.markdown pre {
+  @apply block p-4 bg-wall-100 rounded-md;
+}
+
 .markdown pre code,
 .markdown pre[class*="language-"] code {
-  @apply p-4 md:p-8 rounded-xl;
+  @apply p-0 bg-transparent;
 }
 
 .markdown ul {
