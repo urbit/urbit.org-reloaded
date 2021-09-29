@@ -109,11 +109,11 @@
 }
 
 .markdown pre {
-  @apply block p-4 bg-wall-100 rounded-md;
+  @apply block p-4 bg-wall-100 rounded-md overflow-x-auto;
 }
 
-.markdown pre code,
-.markdown pre[class*="language-"] code {
+.markdown pre > code,
+.markdown pre[class*="language-"] > code {
   @apply p-0 bg-transparent;
 }
 
