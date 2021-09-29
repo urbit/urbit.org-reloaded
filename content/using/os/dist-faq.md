@@ -1,0 +1,81 @@
++++
+title = "Software Distribution FAQ"
+template = "doc.html"
+weight = 9
++++
+
+This document concerns the September 2021 release of the software distribution OTA, codenamed "Grid." It is current as of 2021-09-29 at 7:45 AM PST.
+
+## Changes
+
+**How do I get back to Landscape to see my DMs?**
+
+What was formerly called "Landscape" is now the Groups app. You can access DMs and groups via the "Groups" tile.
+
+**Where did my app tiles in Landscape go?**
+
+For apps ported to software distribution, tiles will be shown in the home screen.
+
+If you're already running non-Tlon apps, those apps will stop running, but the state will be preserved.
+
+If the developer provides a version of the app over software distribution and you install it, the new app will migrate the old state.
+
+**What's the base hash?**
+
+After this OTA there is a base hash _per app desk_:
+
+| Software     | Desk       | Base Hash |
+| ------------ | ---------- | --------- |
+| Arvo/OS      | %base      | TK        |
+| Home Screen  | %garden    | TK        |
+| Groups       | %landscape | TK        |
+| BTC Wallet   | %bitcoin   | TK        |
+| Web Terminal | %webterm   | TK        |
+
+**How do I see the base hashes for my ship?**
+
+The `+trouble` generator is now an alias for `+vats`.
+Running either one will show the base hashes for every installed app desk.
+
+Clicking the settings icon on the top left of the home screen provides an 'About' choice.
+Selecting this will bring up an app info widget for the system app, which will show the base hash of the `%garden` desk.
+
+Selecting the menu icon in the top right of an application tile provides an 'App Info' choice.
+Selecting this will bring up an app info widget for the selected application, which will show its desk name and the base hash of its desk.
+
+Groups (formerly Landscape) will no longer show a base hash within the app.
+
+## Troubleshooting
+
+**The OTA is taking a long time.**
+
+This is expected and unfortunately unavoidable.
+Your ship will be unresponsive for several minutes, possibly up to half an hour.
+This is normal.
+
+Technical note: this is because OTAs are run as a single Arvo event which must compile the OTA and run migrations.
+
+**I saw crashes and stack traces during the OTA.**
+
+Some stack traces are expected. The `%goad` and `%publish` apps will not be present in the OTA,
+and Clay will complain about not being able to build them. You will also see some Clay `read-at-aeon-fail` errors.
+
+If the OTA succeeds it will not end on a stack trace and you will have a working dojo prompt.
+
+**I haven't gotten the OTA yet and I can't post in some groups or DM some people.**
+
+This OTA includes breaking changes to `%graph-store` which stores and shares messages, notebooks, and collections.
+Ships with the OTA will not be able to communicate over graph store with ships without the OTA.
+
+**I have gotten the OTA and I can't post in some groups or DM some people.**
+
+See above. Once your peers receive the OTA, you will be able to communicate again.
+
+**Can I still `|hi` between pre and post OTA ships?**
+
+`|hi` will continue to work between pre and post OTA ships.
+
+**Can I still use `|ota` to select my OTA provider?**
+
+`|ota` will continue to work on ships without the OTA, even if their OTA provider is running the OTA.
+After the OTA, the `|ota` command is removed and is replaced by the `|install` command.
