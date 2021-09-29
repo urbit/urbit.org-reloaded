@@ -219,7 +219,7 @@ export default function Grants({
           <p className="mb-8 measure">
             Contributors are also welcome to have their personal projects
             considered as a proposal. If you'd like to propose a project for the
-            grants program, first review our
+            grants program, first review our 
             <a href="/grant-submission-guide">submission guide</a>, and feel
             free to{" "}
             <a href="https://airtable.com/shrCi54rEDxgSZr3z">
