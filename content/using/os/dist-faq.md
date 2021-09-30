@@ -10,7 +10,7 @@ This document concerns the September 2021 release of the software distribution O
 
 **How do I know the OTA succeeded?`**
 
-Run `+trouble` or `+vats`.
+Run `+trouble`.
 You should see entries for five desks: `%bitcoin`, `%base`, `%landscape`, `%webterm`, and `%garden`.
 
 **How do I get back to Landscape to see my DMs?**
