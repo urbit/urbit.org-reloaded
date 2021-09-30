@@ -4,7 +4,7 @@ template = "doc.html"
 weight = 9
 +++
 
-This document concerns the September 2021 release of the software distribution OTA, codenamed "Grid." It is current as of 2021-09-29 at 11:07 PM EST.
+This document concerns the September 2021 release of the software distribution OTA, codenamed "Grid." It is current as of 2021-09-30 at 01:03 AM EST.
 
 ## Changes
 
@@ -34,9 +34,9 @@ The table lists the suffixes (last 5 characters) of the %cz hashes.
 
 | Software     | Desk       | %cz Hash  |
 | ------------ | ---------- | --------- |
-| Arvo/OS      | %base      | `288fd`   |
+| Arvo/OS      | %base      | `36cdn`   |
 | Home Screen  | %garden    | `7ai82`   |
-| Groups       | %landscape | `eoafs`   |
+| Groups       | %landscape | `e4jfn`   |
 | BTC Wallet   | %bitcoin   | `8kkfo`   |
 | Web Terminal | %webterm   | `b2pme`   |
 
