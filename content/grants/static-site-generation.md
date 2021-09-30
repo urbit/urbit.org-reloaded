@@ -41,44 +41,22 @@ The third common use case we will build is rendering a listing of all blog posts
 4. He then clicks “Serve Page”, and his Publish Notebook is now rendered into static HTML and served at /justinblog.
 5. He then goes to the Groups app and finds his Justin Blog. He writes a new article, and publishes it, then edits one of his existing articles and publishes it. He sees the latest state reflected on his new static site.
 
-## Milestones
-
-Milestone 1 - Gall agent developed
-
-Estimated completion:
-
-Payment: 3 stars
-
-Build agent that has the build pipelines specified and watches for graph-store updates.
-
-Milestone 2 - HTML Template Examples
-
-Estimated completion:
-
-Payment: 1 star
-
-Build out the two rich HTML templates for Publish notebook data specified above in “use cases”
-
-Milestone 3 - Grid Tile Development
-
-Estimated completion:
-
-Payment: 1 star
-
-Build out a tile in Grid for managing these web blogs.
-
-Architecture:
-One Gall agent: %static-blog
+### Architecture: One Gall agent - %static-blog
 
 ++on-init: On initial load, tells file-server that it wants to serve a webpage at /static-blog, and subscribes to /updates on %graph-store
+
 ++on-load: n/a
+
 ++on-poke: Receives pokes which allow one to A) associate a particular graph with a particular mark that will convert that graph to a static webpage, B) dissociate them once associated, C) serve a set of static webpages at a path to the public web, D) stop serving a set of static webpages at a path.
+
 ++on-watch: Subscribe to the state of the application
+
 ++on-peek: Read out the files of a particular static site, read out the set of associations
 
-Future Directions:
+### Future Directions:
 
 - More marks can be built out that wrap the Sail generated from the graph-store -> html conversion and inject calls-to-action, payment links, and other forms of plugin content using Ford marks as a build pipeline
+
 - Other graph types can and should eventually be able to converted to static sites as well.
 
 ## Milestones
