@@ -139,10 +139,10 @@ dojo:
 |merge %home (sein:title our now our) %kids, =gem %take-that
 ```
 
-This will start the upgrade. Note that on a galaxy, star, or planet, you should run
+This will start the upgrade. Note that on a galaxy, star, or planet, you should also run
 
 ```
 |merge %kids (sein:title our now our) %kids, =gem %only-that
 ```
 
-to make sure OTAs go our to your sponsored ships (stars, planets, or moons).
+to make sure OTAs go out to your sponsored ships (stars, planets, or moons).
