@@ -34,11 +34,13 @@ The table lists the suffixes (last 5 characters) of the %cz hashes.
 
 | Software     | Desk       | %cz Hash  |
 | ------------ | ---------- | --------- |
-| Arvo/OS      | %base      | `36cdn`   |
+| Arvo/OS      | %base      | `krdh3`   |
 | Home Screen  | %garden    | `7ai82`   |
-| Groups       | %landscape | `e4jfn`   |
+| Groups       | %landscape | `m1nt8`   |
 | BTC Wallet   | %bitcoin   | `8kkfo`   |
 | Web Terminal | %webterm   | `b2pme`   |
+
+
 
 Run `+trouble` to see these hashes.
 
