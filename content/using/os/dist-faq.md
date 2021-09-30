@@ -87,3 +87,45 @@ See above. Once your peers receive the OTA, you will be able to communicate agai
 
 `|ota` will continue to work on ships without the OTA, even if their OTA provider is running the OTA.
 After the OTA, the `|ota` command is removed and is replaced by the `|install` command.
+
+**The OTA failed for me with `%error-validating`.**
+
+Tlon is aware of [this issue](https://github.com/urbit/urbit/issues/5271) and is working on a fix.
+
+The error will print near the bottom of the output from the failed OTA, and will be similar to:
+
+```
+[ %error-validating
+  /backup/ship/~littel-wolfur/vim/~2020.12.11..06.50.27..c12d/graph-update
+]
+[ %validate-page-fail
+  /backup/ship/~littel-wolfur/vim/~2020.12.11..06.50.27..c12d/graph-update
+  %from
+  %graph-update
+]
+```
+
+This is caused by some leftover backup files from a previous migration for which Clay no longer has marks.
+
+As a workaround: you can remove these files and retry the OTA:
+
+dojo:
+
+```
+|unmount %home`
+|mount /=home=`
+```
+
+bash:
+
+```bash
+rm -r your-ship/home/backup`
+```
+
+dojo:
+
+```
+|commit %home
+|ota (sein:title our now our) %kids
+```
+
