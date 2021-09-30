@@ -69,8 +69,6 @@ Technical note: this is because OTAs are run as a single Arvo event which must c
 Some stack traces are expected. The `%goad` and `%publish` apps will not be present in the OTA,
 and Clay will complain about not being able to build them. You will also see some Clay `read-at-aeon-fail` errors.
 
-If the OTA succeeds it will not end on a stack trace and you will have a working dojo prompt.
-
 **I haven't gotten the OTA yet and I can't post in some groups or DM some people.**
 
 This OTA includes breaking changes to `%graph-store` which stores and shares messages, notebooks, and collections.
