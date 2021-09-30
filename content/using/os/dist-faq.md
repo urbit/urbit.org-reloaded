@@ -34,9 +34,9 @@ The table lists the suffixes (last 5 characters) of the %cz hashes.
 
 | Software     | Desk       | %cz Hash  |
 | ------------ | ---------- | --------- |
-| Arvo/OS      | %base      | `288fd`   |
+| Arvo/OS      | %base      | `36cdn`   |
 | Home Screen  | %garden    | `7ai82`   |
-| Groups       | %landscape | `eoafs`   |
+| Groups       | %landscape | `e4jfn`   |
 | BTC Wallet   | %bitcoin   | `8kkfo`   |
 | Web Terminal | %webterm   | `b2pme`   |
 
