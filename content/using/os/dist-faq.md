@@ -79,6 +79,18 @@ Ships with the OTA will not be able to communicate over graph store with ships w
 
 See above. Once your peers receive the OTA, you will be able to communicate again.
 
+Your sponsor or your sponsor's sponsor also might have only gotten the first OTA
+but not the latest one, if either of them are not Tlon stars/galaxies. Try
+installing from one of Tlon's stars with
+
+```
+|install ~binzod %base
+|install ~binzod %garden
+|install ~binzod %landscape
+|install ~binzod %webterm
+|install ~binzod %bitcoin
+```
+
 **Can I still `|hi` between pre and post OTA ships?**
 
 `|hi` will continue to work between pre and post OTA ships.
