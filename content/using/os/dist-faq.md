@@ -129,3 +129,20 @@ dojo:
 |ota (sein:title our now our) %kids
 ```
 
+**The OTA failed for me with `%mate-conflict`**
+
+You can instruct Clay to simply override the contents of the relevant files with the version from your sponsor:
+
+dojo:
+
+```
+|merge %home (sein:title our now our) %kids, =gem %take-that
+```
+
+This will start the upgrade. Note that on a galaxy, star, or planet, you should run
+
+```
+|merge %kids (sein:title our now our) %kids, =gem %only-that
+```
+
+to make sure OTAs go our to your sponsored ships (stars, planets, or moons).
