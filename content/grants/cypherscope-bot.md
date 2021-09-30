@@ -63,31 +63,15 @@ For transparency we have the following open questions and will dive deeper to re
 
 Milestone 1: Bot prototype + Moon deployment
 
-Estimated completion: 1 week
+Estimated completion: 2 week
 
 Payment: 1 star
 
 Create chatbot that responds to incoming messages in the format of "c {ticker} {time interval}" and return a chart image with relevant financial data. The bot should fetch data for any asset supported by TradingView API, such as stocks, crypto, forex, or metals. Deploy this prototype bot to a Moon.
 
-### Milestone 2: Ensure customers can add Cypher bot to their chats with ease.
-
-Estimated completion: 1 week
-
-Payment: 1 star
-
 Modify the chatbot framework we're using so that our Moon reacts when it is added to a new chat. When added, the bot displays a welcome message + menu. Add "c help" command for a full list of the bot's features. Ensure improper inputs like "c nonexistentTicker" returns a helpful error message.
 
-### Milestone 3: Add tests
-
-Estimated completion: 1 week
-
-Payment: 1 star
-
-Add unit tests for command parsing, AWS, and image rendering logic.
-
-The following might be out of this contract's scope.
-
-### Milestone 4: Add paid tier to pay for S3 bucket
+### Milestone 2: Accept payments
 
 Estimated completion: 2 weeks
 
