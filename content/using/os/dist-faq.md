@@ -8,6 +8,11 @@ This document concerns the September 2021 release of the software distribution O
 
 ## Changes
 
+**How do I know the OTA succeeded?`**
+
+Run `+trouble` or `+vats`.
+You should see entries for five desks: `%bitcoin`, `%base`, `%landscape`, `%webterm`, and `%garden`.
+
 **How do I get back to Landscape to see my DMs?**
 
 What was formerly called "Landscape" is now the Groups app. You can access DMs and groups via the "Groups" tile.
@@ -24,13 +29,17 @@ If the developer provides a version of the app over software distribution and yo
 
 After this OTA there is a base hash _per app desk_:
 
-| Software     | Desk       | Base Hash |
+However, this may differ from ship to ship for now, so instead check the %cz hash.
+
+| Software     | Desk       | %cz Hash  |
 | ------------ | ---------- | --------- |
-| Arvo/OS      | %base      | TK        |
-| Home Screen  | %garden    | TK        |
-| Groups       | %landscape | TK        |
-| BTC Wallet   | %bitcoin   | TK        |
-| Web Terminal | %webterm   | TK        |
+| Arvo/OS      | %base      | `288fd`   |
+| Home Screen  | %garden    | `7ai82`   |
+| Groups       | %landscape | `eoafs`   |
+| BTC Wallet   | %bitcoin   | `8kkfo`   |
+| Web Terminal | %webterm   | `b2pme`   |
+
+Run `+vats` or `+trouble` to see these hashes.
 
 **How do I see the base hashes for my ship?**
 
