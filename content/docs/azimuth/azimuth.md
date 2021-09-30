@@ -35,7 +35,8 @@ which Ethereum addresses own which Urbit ID's as well as the public keys needed
 to communicate with those ID's. All identity-related operations, such as
 transfers, are governed by Azimuth. Azimuth isn't built strictly for Arvo -- the
 smart contracts on Ethereum are sufficient to be used as a generalized identity
-system for other projects.
+system for other projects. Azimuth is considered to be the technical
+nomenclature for the PKI, while Urbit ID is the common nomenclature.
 
 These otherwise-parallel systems meet when you want to connect to the Arvo
 network. Your Arvo personal server, called your _ship_, needs to be able to
@@ -45,6 +46,43 @@ form of a keyfile, derived from your identity, that you use to start your ship.
 A metaphor might help illustrate the relationship between these two systems: the
 Arvo network is the neighborhood that you live in; Azimuth is the bank vault
 that stores the deed to your house.
+
+## Smart contracts
+
+Azimuth consists of the following smart contracts:
+
+ - [Azimuth.eth](https://etherscan.io/address/azimuth.eth)
+   `0x223c067f8cf28ae173ee5cafea60ca44c335fecb`: contains all on-chain state for
+   Azimuth. Most notably, ownership and public keys. Can't be modified directly,
+   you must use the Ecliptic.
+ - [Ecliptic.eth](https://etherscan.io/address/ecliptic.eth):
+   `0x9ef27de616154FF8B38893C59522b69c7Ba8A81c ` is used as an interface for
+   interacting with your points on-chain. Allows you to configure keys, transfer
+   ownership, etc.
+ - [Polls](https://etherscan.io/address/0x7fecab617c868bb5996d99d95200d2fa708218e4):
+   `0x7fecab617c868bb5996d99d95200d2fa708218e4` registers votes by the Galactic
+   Senate on proposals. These can be either static documents or Ecliptic
+   upgrades.
+ - [Linear Star
+   Release](https://etherscan.io/address/0x86cd9cd0992f04231751e3761de45cecea5d1801):
+   facilitates the release of blocks of stars to their owners over a period of
+   time.
+ - [Conditional Star
+   Release](https://etherscan.io/address/0x8c241098c3d3498fe1261421633fd57986d74aea):
+   `0x8c241098c3d3498fe1261421633fd57986d74aea` facilitates the release of
+   blocks of stars to their owners based on milestones.
+ - [Claims](https://etherscan.io/address/0xe7e7f69b34d7d9bd8d61fb22c33b22708947971a):
+   `0xe7e7f69b34d7d9bd8d61fb22c33b22708947971a` allows point owners to make
+   claims about (for example) their identity, and associate that with their
+   point.
+ - [Censures](https://etherscan.io/address/0x325f68d32bdee6ed86e7235ff2480e2a433d6189):
+   `0x325f68d32bdee6ed86e7235ff2480e2a433d6189` simple reputation management,
+   allowing galaxies and stars to flag points for negative reputation.
+ - [Delegated
+   Sending](https://etherscan.io/address/0xf6b461fe1ad4bd2ce25b23fe0aff2ac19b3dfa76):
+   enables network-effect like distributing of planets.
+   
+ Walkthroughs of some of the smart contracts are linked to [below](#other).
 
 ## Naive rollups
 
@@ -67,7 +105,17 @@ A casual overview of the naive rollups system can be found on the
 are encouraged to read our Layer 2 documentation, starting with the [Layer 2
 Overview](/docs/azimuth/layer2).
 
-## Other resources
+## Other resources {#other}
+
+### [Azimuth.eth](/docs/azimuth/azimuth-eth)
+
+A description of the `azimuth.eth` smart contract, which is the data store for
+Azimuth.
+
+### [Ecliptic.eth](/docs/azimuth/ecliptic)
+
+A description of the `ecliptic.eth` smart contract, which is the business logic
+for `azimuth.eth`. This includes an overview of all function calls available.
 
 ### [Urbit HD Wallet](/docs/azimuth/hd-wallet)
 
