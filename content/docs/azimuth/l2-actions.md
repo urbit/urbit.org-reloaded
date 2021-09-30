@@ -5,9 +5,9 @@ template = "doc.html"
 +++
 
 There are a total of eleven layer 2 actions, each corresponding to a familiar
-layer 1 action: `%transfer-point`, `%spawn`, `%configure-keys`, `%escape`,
-`%cancel-escape`, `%adopt`, `%reject`, `%detach`, `%set-management-proxy`,
-`%set-spawn-proxy`, and `%set-transfer-proxy`.
+[layer 1 action](/docs/azimuth/contract#ecliptic): `%transfer-point`, `%spawn`,
+`%configure-keys`, `%escape`, `%cancel-escape`, `%adopt`, `%reject`, `%detach`,
+`%set-management-proxy`, `%set-spawn-proxy`, and `%set-transfer-proxy`.
 
 Once a ship moves to layer 2, the owner will still utilize the same private keys
 they used before the transfer to perform Azimuth actions. This includes the ownership
