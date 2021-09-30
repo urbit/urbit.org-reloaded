@@ -30,6 +30,7 @@ If the developer provides a version of the app over software distribution and yo
 After this OTA there is a base hash _per app desk_:
 
 However, this may differ from ship to ship for now, so instead check the %cz hash.
+The table lists the suffixes (last 5 characters) of the %cz hashes.
 
 | Software     | Desk       | %cz Hash  |
 | ------------ | ---------- | --------- |
@@ -39,7 +40,7 @@ However, this may differ from ship to ship for now, so instead check the %cz has
 | BTC Wallet   | %bitcoin   | `8kkfo`   |
 | Web Terminal | %webterm   | `b2pme`   |
 
-Run `+vats` or `+trouble` to see these hashes.
+Run `+trouble` to see these hashes.
 
 **How do I see the base hashes for my ship?**
 
