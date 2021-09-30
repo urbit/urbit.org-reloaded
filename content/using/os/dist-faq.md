@@ -4,7 +4,7 @@ template = "doc.html"
 weight = 9
 +++
 
-This document concerns the September 2021 release of the software distribution OTA, codenamed "Grid." It is current as of 2021-09-29 at 11:07 PM EST.
+This document concerns the September 2021 release of the software distribution OTA, codenamed "Grid." It is current as of 2021-09-30 at 01:03 AM EST.
 
 ## Changes
 
