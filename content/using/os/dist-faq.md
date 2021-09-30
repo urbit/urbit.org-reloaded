@@ -112,14 +112,14 @@ As a workaround: you can remove these files and retry the OTA:
 dojo:
 
 ```
-|unmount %home`
-|mount /=home=`
+|unmount %home
+|mount /=home=
 ```
 
 bash:
 
 ```bash
-rm -r your-ship/home/backup`
+rm -r your-ship/home/backup
 ```
 
 dojo:
