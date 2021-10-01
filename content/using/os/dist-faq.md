@@ -84,11 +84,11 @@ but not the latest one, if either of them are not Tlon stars/galaxies. Try
 installing from one of Tlon's stars with
 
 ```
-|install ~binzod %base
-|install ~binzod %garden
-|install ~binzod %landscape
-|install ~binzod %webterm
-|install ~binzod %bitcoin
+|install ~litzod %kids, =local %base
+|install ~litzod %garden
+|install ~litzod %landscape
+|install ~litzod %webterm
+|install ~litzod %bitcoin
 ```
 
 **Can I still `|hi` between pre and post OTA ships?**
