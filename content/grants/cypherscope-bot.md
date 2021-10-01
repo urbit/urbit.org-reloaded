@@ -7,7 +7,7 @@ grant_category = ["App Dev: Other"]
 [extra]
 image = ""
 description = "On-demand financial charts chat bot"
-reward = 1
+reward = 2
 assignee = "~mitten-dapper, ~ristyc-ridwyx"
 grant_id = "P0068"
 completed = false
