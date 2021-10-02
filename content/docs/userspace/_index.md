@@ -28,3 +28,6 @@ Resources on threads - monadic functions useful for complex IO.
 
 Resources on Graph Store, a non-relational database specialized for social media applications.
 
+## [Distribution](/docs/userspace/dist/dist)
+
+Resources on distribution and management of desks/apps.
