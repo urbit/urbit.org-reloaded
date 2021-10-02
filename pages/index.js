@@ -26,7 +26,7 @@ import { useLocalStorage } from "../lib/hooks";
 
 const Banner = ({ children, isOpen, href, dismiss }) => {
   return (
-    <div className="w-full flex justify-center bg-blue-100">
+    <div className="w-full flex justify-center bg-green-100">
       <SingleColumn>
         <div className="w-full layout">
           <div className="w-full flex justify-between items-center px-4 md:px-8 py-4">
@@ -34,7 +34,7 @@ const Banner = ({ children, isOpen, href, dismiss }) => {
               {children}
             </a>
             <button
-              className="type-ui w-6 h-6 bg-blue-400 flex items-center justify-center rounded-full text-white hover:opacity-70"
+              className="type-ui w-6 h-6 bg-green-400 flex items-center justify-center rounded-full text-white hover:opacity-70"
               onClick={(e) => {
                 e.stopPropagation();
                 dismiss();
@@ -91,10 +91,10 @@ export default function Home({ posts, events, openGrantsCount, search }) {
     if (isBannerOpen) {
       return (
         <Banner
-          href="https://twitter.com/zodisok"
+          href="https://assembly.urbit.org"
           dismiss={() => setBanner(false)}
         >
-          <p className="text-blue-400 font-semibold hover:opacity-70">{`-> New network update coming soon. Follow along @zodisok.`}</p>
+          <p className="text-green-400 font-semibold hover:opacity-70">{`-> Network update is live. Learn more at Assembly 2021`}</p>
         </Banner>
       );
     } else {
