@@ -161,7 +161,7 @@ The `docket: awaiting manual glob for %hello desk` message is because our `desk.
 
 If we open a browser now, navigate to `http://localhost:8080` and login with the default fakezod code `lidlut-tabwed-pillex-ridrup`, we'll see our tile's appeared but it says "installing" with a spinner due to the missing glob:
 
-![Installing Tile](https://m.tinnus-napbus.xyz/pub/local-install-1.png)
+![Installing Tile](https://media.urbit.org/docs/userspace/dist/local-install-1.png)
 
 ## Create files for glob
 
@@ -225,17 +225,17 @@ Our `hello-glob` folder should now look like this:
 
 We can now create a glob from the directory. To do so, navigate to `http://localhost:8080/docket/upload` in the browser. This will bring up the `%docket` app's [Globulator](/docs/userspace/dist/glob#globulator) tool:
 
-![Globulator](https://m.tinnus-napbus.xyz/pub/globulator.png)
+![Globulator](https://media.urbit.org/docs/userspace/dist/globulator.png)
 
 Simply select the `hello` desk from the drop-down, click `Choose file` and select the `hello-glob` folder in the the file browser, then hit `glob!`.
 
 Now if we return to our ship's homescreen, we should see the tile looks as we specified in the docket file:
 
-![Installed Tile](https://m.tinnus-napbus.xyz/pub/local-install-2.png)
+![Installed Tile](https://media.urbit.org/docs/userspace/dist/local-install-2.png)
 
 And if we click on the tile, it'll load the `index.html` in our glob:
 
-![Hello World!](https://m.tinnus-napbus.xyz/pub/local-install-3.png)
+![Hello World!](https://media.urbit.org/docs/userspace/dist/local-install-3.png)
 
 Our app is working!
 
@@ -266,16 +266,16 @@ At the time of writing, we must manually request the published apps on a given s
 
 Now in the browser, navigate to `http://localhost:8081` and login with `~bus`'s code `riddec-bicrym-ridlev-pocsef`. Next, type `~zod/` in the search bar, and it should pop up a list of `~zod`'s published apps, which in this case is our `Hello` app:
 
-![Remote install search](https://m.tinnus-napbus.xyz/pub/remote-install-1.png)
+![Remote install search](https://media.urbit.org/docs/userspace/dist/remote-install-1.png)
 
 When we click on the app, it'll show some of the information from the clauses in the docket file:
 
-![Remote app info](https://m.tinnus-napbus.xyz/pub/remote-install-2.png)
+![Remote app info](https://media.urbit.org/docs/userspace/dist/remote-install-2.png)
 
 Click `Get App` and it'll ask as if we want to install it:
 
-![Remote app install](https://m.tinnus-napbus.xyz/pub/remote-install-3.png)
+![Remote app install](https://media.urbit.org/docs/userspace/dist/remote-install-3.png)
 
 Finally, click `Get "Hello"` and it'll be installed as a tile on `~bus` which can then be opened:
 
-![Remote app finished](https://m.tinnus-napbus.xyz/pub/remote-install-4.png)
+![Remote app finished](https://media.urbit.org/docs/userspace/dist/remote-install-4.png)
