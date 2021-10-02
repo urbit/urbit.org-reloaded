@@ -94,7 +94,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
           href="https://assembly.urbit.org"
           dismiss={() => setBanner(false)}
         >
-          <p className="text-green-400 font-semibold hover:opacity-70">{`-> Network update is live. Learn more at Assembly 2021`}</p>
+          <p className="text-green-400 font-semibold hover:opacity-70">{`-> Network update is live. Learn more at Assembly 2021.`}</p>
         </Banner>
       );
     } else {
