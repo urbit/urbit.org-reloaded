@@ -94,7 +94,7 @@ characters prepended with `~.` like:
 
 A [`term`](/docs/hoon/reference/stdlib/2q#term) has an aura of
 `@tas`, and is a subset of a [`knot`](#knot). It only allows lower-case letters,
-numbers, and hyphens. Additionally, the first character cannot be a hyphen. This
+numbers, and hyphens. Additionally, the first character cannot be a hyphen or number. This
 is a very restricted text atom, and is intended for naming data structures and
 the like.
 
