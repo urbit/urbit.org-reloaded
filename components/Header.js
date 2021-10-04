@@ -77,7 +77,7 @@ export default function Header(props) {
           className="mr-5 type-ui"
           href="/using"
         >
-          Operator's Manual
+          Manual
         </ActiveLink>
         <ActiveLink
           currentPath={currentPath}
