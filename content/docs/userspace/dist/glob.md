@@ -98,5 +98,5 @@ glob-0v1.7vpqa.r8pn5.6t0s1.rhc7r.5e9vo.glob
 This file can be uploaded to your webserver and the `desk.docket-0` file of the desk you're publishing can be updated with:
 
 ```hoon
-glob-ames+['https://s3.example.com/glob-0v1.7vpqa.r8pn5.6t0s1.rhc7r.5e9vo.glob' 0v1.7vpqa.r8pn5.6t0s1.rhc7r.5e9vo]
+glob-http+['https://s3.example.com/glob-0v1.7vpqa.r8pn5.6t0s1.rhc7r.5e9vo.glob' 0v1.7vpqa.r8pn5.6t0s1.rhc7r.5e9vo]
 ```
