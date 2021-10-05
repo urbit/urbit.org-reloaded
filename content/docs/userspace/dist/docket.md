@@ -96,7 +96,7 @@ info+'A Bitcoin Wallet that lets you send and receive Bitcoin directly to and fr
 
 _required_
 
-The `%color` field specifies the color of the app tile in hexadecimal `RRGGBB` color-code format.
+The `%color` field specifies the color of the app tile as an `@ux`-formatted hex value.
 
 #### Type
 
