@@ -12,7 +12,7 @@ description = "A series of community-focused events to create a new knowledge ba
 reward = 6
 assignee = "~naplet-hildec"
 id = "1751024973"
-completed = false
+completed = true
 canceled = false
 link = ""
 +++
