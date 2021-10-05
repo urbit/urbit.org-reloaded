@@ -249,6 +249,8 @@ The final step is publishing our desk with the `%treaty` agent so others can ins
 >=
 ```
 
+Note: For desks without a docket file (and therefore without a tile and glob), treaty can't be used. Instead you can make the desk public with `|public %desk-name`.
+
 ## Remote install
 
 Let's spin up another fake ship so we can try install it:
@@ -264,6 +266,8 @@ At the time of writing, we must manually request the published apps on a given s
 > :treaty|ally ~zod
 >=
 ```
+
+Note: For desks without a docket files (and therefore without a tile and glob), treaty can't be used. Instead remote users can install it from the dojo with `|install ~our-ship %desk-name`.
 
 Now in the browser, navigate to `http://localhost:8081` and login with `~bus`'s code `riddec-bicrym-ridlev-pocsef`. Next, type `~zod/` in the search bar, and it should pop up a list of `~zod`'s published apps, which in this case is our `Hello` app:
 
