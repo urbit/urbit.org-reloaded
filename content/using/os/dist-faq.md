@@ -4,7 +4,7 @@ template = "doc.html"
 weight = 9
 +++
 
-This document concerns the September 2021 release of the software distribution OTA, codenamed "Grid." It is current as of 2021-09-30 at 01:03 AM EST.
+This document concerns the September 2021 release of the software distribution OTA, codenamed "Grid." It is current as of 2021-10-01 at 05:52 AM EST.
 
 ## Changes
 
@@ -34,11 +34,13 @@ The table lists the suffixes (last 5 characters) of the %cz hashes.
 
 | Software     | Desk       | %cz Hash  |
 | ------------ | ---------- | --------- |
-| Arvo/OS      | %base      | `36cdn`   |
+| Arvo/OS      | %base      | `krdh3`   |
 | Home Screen  | %garden    | `7ai82`   |
-| Groups       | %landscape | `e4jfn`   |
+| Groups       | %landscape | `m1nt8`   |
 | BTC Wallet   | %bitcoin   | `8kkfo`   |
 | Web Terminal | %webterm   | `b2pme`   |
+
+
 
 Run `+trouble` to see these hashes.
 
@@ -79,6 +81,18 @@ Ships with the OTA will not be able to communicate over graph store with ships w
 
 See above. Once your peers receive the OTA, you will be able to communicate again.
 
+Your sponsor or your sponsor's sponsor also might have only gotten the first OTA
+but not the latest one, if either of them are not Tlon stars/galaxies. Try
+installing from one of Tlon's stars with
+
+```
+|install ~litzod %kids, =local %base
+|install ~litzod %garden
+|install ~litzod %landscape
+|install ~litzod %webterm
+|install ~litzod %bitcoin
+```
+
 **Can I still `|hi` between pre and post OTA ships?**
 
 `|hi` will continue to work between pre and post OTA ships.
@@ -87,3 +101,62 @@ See above. Once your peers receive the OTA, you will be able to communicate agai
 
 `|ota` will continue to work on ships without the OTA, even if their OTA provider is running the OTA.
 After the OTA, the `|ota` command is removed and is replaced by the `|install` command.
+
+**The OTA failed for me with `%error-validating`.**
+
+Tlon is aware of [this issue](https://github.com/urbit/urbit/issues/5271) and is working on a fix.
+
+The error will print near the bottom of the output from the failed OTA, and will be similar to:
+
+```
+[ %error-validating
+  /backup/ship/~littel-wolfur/vim/~2020.12.11..06.50.27..c12d/graph-update
+]
+[ %validate-page-fail
+  /backup/ship/~littel-wolfur/vim/~2020.12.11..06.50.27..c12d/graph-update
+  %from
+  %graph-update
+]
+```
+
+This is caused by some leftover backup files from a previous migration for which Clay no longer has marks.
+
+As a workaround: you can remove these files and retry the OTA:
+
+dojo:
+
+```
+|unmount %home
+|mount /=home=
+```
+
+bash:
+
+```bash
+rm -r your-ship/home/backup
+```
+
+dojo:
+
+```
+|commit %home
+|ota (sein:title our now our) %kids
+```
+
+**The OTA failed for me with `%mate-conflict`**
+
+You can instruct Clay to simply override the contents of the relevant files with the version from your sponsor:
+
+dojo:
+
+```
+|merge %home (sein:title our now our) %kids, =gem %take-that
+```
+
+This will start the upgrade. Note that on a galaxy, star, or planet, you should also run
+
+```
+|merge %kids (sein:title our now our) %kids, =gem %only-that
+```
+
+to make sure OTAs go out to your sponsored ships (stars, planets, or moons).
