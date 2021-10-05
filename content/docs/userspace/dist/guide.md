@@ -31,6 +31,7 @@ To make the creation of a new desk easier, `base-dev` and `garden-dev` contain s
 Let's create a new `hello` desk:
 
 ```
+[user@host pkg]$ mkdir hello
 [user@host pkg]$ ./symbolic-merge.sh base-dev hello
 [user@host pkg]$ ./symbolic-merge.sh garden-dev hello
 [user@host pkg]$ cd hello
@@ -136,16 +137,16 @@ Now, back in the Unix terminal, we should see the new desk mounted:
 hello
 ```
 
-Currently it's just a clone of the `%base` desk, so let's just delete it entirely:
+Currently it's just a clone of the `%base` desk, so let's delete its contents:
 
 ```
-[user@host zod]$ rm -r hello
+[user@host zod]$ rm -r hello/*
 ```
 
-Next, we'll copy in the `hello` desk we created earlier. We must use `cp -LR` to resolve all the symlinks:
+Next, we'll copy in the contents of the `hello` desk we created earlier. We must use `cp -LR` to resolve all the symlinks:
 
 ```
-[user@host zod]$ cp -LR ~/urbit-git/pkg/hello hello
+[user@host zod]$ cp -LR ~/urbit-git/pkg/hello/* hello/
 ```
 
 Back in the dojo we can commit the changes and install the desk:
