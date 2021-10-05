@@ -145,7 +145,7 @@ desk
 
 Install a desk, starting its agents and listening for updates.
 
-If it's a remote desk we don't already have, it will be fetched. The agents started will be those specified in the `desk.bill` manifest. If it has a docket file, its tile will be added to the homescreen and its glob fetched.
+If it's a remote desk we don't already have, it will be fetched. The agents started will be those specified in the `desk.bill` manifest. If it has a docket file, its tile will be added to the homescreen and its glob fetched. If we already have the desk, the source for updates will be switched to the ship specified.
 
 It takes a `ship` and `desk` as its mandatory arguments. The desk may be installed with a different name specified in the optional `local` argument.
 
