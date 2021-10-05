@@ -76,7 +76,7 @@ In this example we're not adding any agents, so we'll simply omit the `desk.bill
 The final file we need is `desk.docket-0`. This one's more complicated, so we'll open it in our preferred text editor:
 
 ```
-[user@host hello]$ vim desk.docket-0
+[user@host hello]$ nano desk.docket-0
 ```
 
 In the text editor, we'll add the following:
@@ -185,7 +185,7 @@ We'll now create the files for the glob. We'll use a very simple static HTML pag
 We've grabbed an image to use in our "Hello world!" page. The next thing we need to add is an `index.html` file in the root of the folder. The `index.html` file is mandatory; it's what will be loaded when the app's tile is clicked. Let's open our preferred editor and create it:
 
 ```
-[user@host hello-glob]$ vim index.html
+[user@host hello-glob]$ nano index.html
 ```
 
 In the editor, paste in the following HTML and save it:
