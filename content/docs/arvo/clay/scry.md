@@ -8,7 +8,7 @@ The various Clay scries are specified by a `care`, which is a single character c
 
 ```
 > /===
-[~.~zod ~.home ~.~2021.4.26..02.29.03..d31b ~]
+[~.~zod ~.base ~.~2021.4.26..02.29.03..d31b ~]
 ```
 
 ## %a - Build hoon.
@@ -51,7 +51,7 @@ Example:
 
 ```
 > .^((set desk) %cd /===)
-{%home %kids}
+{%bitcoin %base %landscape %webterm %garden}
 ```
 
 ## %e - Static mark core.
@@ -213,12 +213,12 @@ This will return the most recent revision number of a `desk` that has been fully
 Example:
 
 ```
-> .^(=cass:clay %cs /(scot %p (sein:title our now our))/kids/1/late)
+> .^(=cass:clay %cs /(scot %p (sein:title our now our))/base/1/late)
 cass=[ud=50 da=~2021.4.22..10.38.50..57a8]
 ```
 
 ```
-> .^(=cass:clay %cs /~sampel/kids/1/late)
+> .^(=cass:clay %cs /~sampel/base/1/late)
 cass=[ud=0 da=~2000.1.1]
 ```
 
@@ -229,12 +229,12 @@ This will return the mergebase (i.e. most recent common ancestor) between two `d
 Examples:
 
 ```
-> .^((list tako:clay) %cs /===/base/(scot %p (sein:title our now our))/kids)
+> .^((list tako:clay) %cs /===/base/(scot %p (sein:title our now our))/base)
 ~[102.787.244.596.033.419.950.995.540.301.493.841.569.518.772.322.508.085.465.561.801.703.148.627.263.473]
 ```
 
 ```
-> .^((list tako:clay) %cs /===/base/~sampel/kids)
+> .^((list tako:clay) %cs /===/base/~sampel/base)
 ~
 ```
 

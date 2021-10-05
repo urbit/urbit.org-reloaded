@@ -4,21 +4,20 @@ weight = 2
 template = "doc.html"
 +++
 
-Clay is the primary filesystem for the [Arvo](/docs/arvo/overview) operating system,
-which is the [core](/docs/glossary/core/) of an urbit. The architecture of Clay is
-intrinsically connected with Arvo, but for this section we assume no knowledge of
-either Arvo or Urbit. We will point out only those features of
-Arvo that are necessary for an understanding of Clay, and we will
-do so only when they arise.
+Clay is the primary filesystem for the [Arvo](/docs/arvo/overview)
+operating system, which is the [core](/docs/glossary/core/) of an
+urbit. The architecture of Clay is intrinsically connected with Arvo,
+but for this section we assume no knowledge of either Arvo or Urbit.
+We will point out only those features of Arvo that are necessary for
+an understanding of Clay, and we will do so only when they arise.
 
 The first relevant feature of Arvo is that it is a deterministic
-system where input and output are defined as a series of events
-and effects. The state of Arvo is simply a pure function of its event
-log. None of the effects from an event are emitted until the
-event is entered in the log and persisted, either to disk or
-another trusted source of persistence, such as a Kafka cluster.
-Consequently, Arvo is a single-level store: everything in its
-state is persistent.
+system where input and output are defined as a series of events and
+effects. The state of Arvo is simply a pure function of its event log.
+None of the effects from an event are emitted until the event is
+entered in the log and persisted, either to disk or another trusted
+source of persistence, such as a Kafka cluster. Consequently, Arvo is
+a single-level store: everything in its state is persistent.
 
 In a more traditional OS, everything in RAM can be erased at any
 time by power failure, and is always erased on reboot. Thus, a
@@ -47,25 +46,25 @@ it supports typed data and is referentially transparent.
 
 ### Revision Control
 
-Every urbit has one or more `desk`s, which are independently
-revision-controlled branches. Each `desk` contains its own `mark`
+Every urbit has one or more desks, which are independently
+revision-controlled branches. Each desk contains its own `mark`
 definitions, apps, and so forth.
 
-Traditionally, an urbit has at least a `%home` `desk` and `%kids` `desk`. The
-`%home` `desk` has all the system software from the distribution, along with your
-personal files. The `%home` `desk` is a fork of the `%kids` desk of whichever ship
-you download [OTAs](/docs/glossary/ota-updates) from - typically your sponsor,
-but theoretically may be any ship. You will also find references to a `%base`
-`desk` - which is not a real `desk`, rather it just a hash associated to the
-`desk` from which your `%home` `desk` was forked.
+Traditionally, an Urbit ship has at least a `%base` desk, and usually
+`%garden` and `%landscape` desks. The `%base` desk has the kernel and
+base system software. The `%garden` desk has software pertaining to
+the home screen. The `%landscape` desk contains software for the
+Groups app. The `%base` desk is a fork of the `%base` desk of
+whichever ship you download system updates from - typically your
+sponsor, but theoretically may be any ship.
 
-A `desk` is a series of numbered commits, the most recent of which
-represents the current state of the `desk`. A commit is composed of
+A desk is a series of numbered commits, the most recent of which
+represents the current state of the desk. A commit is composed of
 (1) an absolute time when it was created, (2) a list of zero or
 more parents, and (3) a map from paths to data.
 
 Most commits have exactly one parent, but the initial commit on a
-`desk` may have zero parents, and merge commits have more than one
+desk may have zero parents, and merge commits have more than one
 parent.
 
 The non-metadata is stored as a `map` of `path`s to data. It's
@@ -88,10 +87,10 @@ only on the data within and not on whether or not it's stored
 directly, so we may on occasion rearrange the contents of the
 blob store for performance reasons.
 
-Recall that a `desk` is a series of numbered commits. Not every
-commit in a `desk` must be numbered. For example, if the base `desk`
-has had 50 commits since home was forked from it, then a merge
-from base to home will only add a single revision number to home,
+Recall that a desk is a series of numbered commits. Not every
+commit in a desk must be numbered. For example, if the `%base` desk
+has had 50 commits since `%foo` was forked from it, then a merge
+from `%base` to `%foo` will only add a single revision number to home,
 although the full commit history will be accessible by traversing
 the parentage of the individual commits.
 
@@ -104,15 +103,15 @@ There are three ways to refer to particular commits in the
 revision history. Firstly, one can use the revision number.
 Secondly, one can use any absolute time between the one numbered
 commit and the next (inclusive of the first, exclusive of the
-second). Thirdly, every `desk` has a `map` of labels to revision
+second). Thirdly, every desk has a `map` of labels to revision
 numbers. These labels may be used to refer to specific commits.
 
 Additionally, Clay is a global filesystem, so data on other urbits
 is easily accessible the same way as data on our local urbit. In
-general, the path to a particular revision of a `desk` is
+general, the path to a particular revision of a desk is
 `/~urbit-name/desk-name/revision`. Thus, to get `/try/readme/md`
-from revision 5 of the home `desk` on `~sampel-sipnym`, we refer to
-`/~sampel-sipnym/home/5/try/readme/md`. Clay's namespace is thus
+from revision 5 of the `%base` desk on `~sampel-sipnym`, we refer to
+`/~sampel-sipnym/base/5/try/readme/md`. Clay's namespace is thus
 global and referentially transparent.
 
 ### A Typed Filesystem
