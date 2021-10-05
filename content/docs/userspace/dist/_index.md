@@ -12,13 +12,13 @@ Developer documentation for desk/app distribution and management.
 
 An overview of desk/app distribution and management.
 
-## [Glob](/docs/userspace/dist/glob)
-
-Documentation of `glob`s (client bundles).
-
 ## [Docket Files](/docs/userspace/dist/docket)
 
 Documentation of `desk.docket` files.
+
+## [Glob](/docs/userspace/dist/glob)
+
+Documentation of `glob`s (client bundles).
 
 ## [Guide](/docs/userspace/dist/guide)
 
