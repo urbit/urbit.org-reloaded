@@ -55,7 +55,7 @@ That's the basic flow for upgrading the kernel. However, some kernel updates als
 
 Kiln, part of the system app `%hood` in the `%base` desk, manages desk installations, including the `%base` desk. It can install an app in two ways: a local install, sourced from a desk on the user's machine, or a remote install, which downloads a desk from another ship. Both are performed using the same generator, `|install`.
 
-A remote install syncs an upstream desk into a local desk by performing a merge into the local desk whenever the upstream desk changes. Anything live — agents, marks, etc. — is sourced from the local desk.
+A remote install syncs an upstream desk into a local desk by performing a merge into the local desk whenever the upstream desk changes.
 
 The Kelvin update problem is especially thorny for remote installs, which are the most common. By default, a planet has its `%base` desk synced from its sponsor's `%kids` desk, and it will typically have app desks synced from their publishers' ships.
 
