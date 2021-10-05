@@ -39,7 +39,7 @@ Below is a thread which will take a `@dr` as its argument and `%pass`es Behn a `
 (pure:m !>(~))
 ```
 
-Save the thread to `/ted/wait.hoon` and `|commit %home`. Then we can try running the thread with a `@dr` of `~s2`:
+Save the thread to `/ted/wait.hoon` and `|commit %base`. Then we can try running the thread with a `@dr` of `~s2`:
 
 ```
 > -wait ~s2
@@ -84,7 +84,7 @@ Below is a variation on the [%wake](#wake) thread. It takes a `@dr` as its argum
 (pure:m !>(~))
 ```
 
-Save the above thread to `/ted/rest.hoon`, and `|commit %home`. Let's try run it with an argument of `~s2`:
+Save the above thread to `/ted/rest.hoon`, and `|commit %base`. Let's try run it with an argument of `~s2`:
 
 ```
 > -rest ~s2
