@@ -13,7 +13,7 @@ Note that some old generators have been replaced:
 - `|fade` - Replaced with [`|nuke`](#nuke).
 - `|doze` - Replaced with [`|rein`](#rein) or [`|suspend`](#suspend).
 - `|wake` - Replaced with [`|rein`](#rein) or [`|revive`](#revive).
-- `+trouble` - This still exists but is deprecated by [`+vats`](#vats).
+- `+trouble` - This still exists but is deprecated, and is now an alias for [`+vats`](#vats).
 
 ---
 
