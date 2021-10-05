@@ -91,42 +91,12 @@ desk
 #### Example
 
 ```
-> +agents %landscape
-status: running   %notify
-status: running   %group-store
-status: running   %metadata-store
-status: running   %graph-push-hook
-status: running   %group-view
-status: running   %hark-graph-hook
-status: running   %hark-group-hook
-status: archived  %chat-cli
-status: running   %metadata-pull-hook
-status: running   %contact-pull-hook
-status: running   %contact-push-hook
-status: running   %invite-hook
-status: running   %contact-view
-status: running   %invite-view
-status: running   %s3-store
-status: running   %contact-store
-status: running   %clock
-status: running   %group-pull-hook
-status: running   %launch
-status: running   %metadata-push-hook
-status: running   %group-push-hook
-status: running   %graph-pull-hook
-status: running   %weather
-status: running   %dm-hook
-status: running   %sane
-status: running   %contact-hook
-status: running   %invite-store
-status: running   %graph-store
-status: running   %metadata-hook
-status: running   %chat-view
-status: running   %observe-hook
-status: running   %hark-invite-hook
-status: running   %chat-hook
-status: running   %hark-chat-hook
-status: running   %chat-store
+> +agents %garden
+status: running   %hark-system-hook
+status: running   %treaty
+status: running   %docket
+status: running   %settings-store
+status: running   %hark-store
 ```
 
 ---
