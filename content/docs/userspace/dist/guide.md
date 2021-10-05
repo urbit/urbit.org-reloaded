@@ -26,7 +26,7 @@ bitcoin   ent           ge-additions  hs    libaes_siv  urbit
 
 Each desk defines its own `mark`s, in its `/mar` folder. There are no longer shared system marks that all userspace code knows, nor common libraries in `/lib` or `/sur`. Each desk is completely self-contained. This means any new desk will need a number of base files.
 
-To make the creation of a new desk easier, `base-dev` and `garden-dev` contain symlinks to all `/sur`, `/lib` and `mark` files necessary for interacting with the `%base` and `%garden` desks respectively. These dev desks can be copied and merged with the `symbolic-merge.sh` included.
+To make the creation of a new desk easier, `base-dev` and `garden-dev` contain symlinks to all `/sur`, `/lib` and `/mar` files necessary for interacting with the `%base` and `%garden` desks respectively. These dev desks can be copied and merged with the `symbolic-merge.sh` included.
 
 Let's create a new `hello` desk:
 
