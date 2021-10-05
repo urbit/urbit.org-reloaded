@@ -29,8 +29,8 @@ Fields:
 - `base hash` - The merge base (common ancestor) between the desk and its upstream source.
 - `%cz hash` - The hash of the desk.
 - `app status` - May be `suspended` or `running`.
-- `force on` - Whether the desk has been force-started.
-- `force off` - Whether the desk has been force-stopped.
+- `force on` - The set of agents on the desk which have been manually started despite not being on the `desk.bill` manifest.
+- `force off` - The set of agents on the desk which have been manually stopped despite being on the `desk.bill` manifest.
 - `publishing ship` - The original publisher if the source ship is republishing the desk.
 - `updates` - May be `local`, `tracking` or `paused`. Local means it will receive updates via commits on the local ship. Tracking means it will receive updates from the `source ship`. Paused means it will not receive updates.
 - `source desk` - The desk on the `source ship`.
@@ -175,7 +175,7 @@ ship desk, =local desk
 
 Uninstall a desk, suspending its agents and ignoring updates.
 
-The specified desk will be retained in Clay, but its agents will all be stopped and have their states archived like [`|suspend`](#suspend).
+The specified desk will be retained in Clay, but its agents will all be stopped and have their states archived like [`|suspend`](#suspend). This is the reverse of [`|install`](#install).
 
 Note that this will not remove the tile or glob from the homescreen, so if the desk has a tile it should be uninstalled with the "Remove App" button in the tile's hamburger menu.
 
