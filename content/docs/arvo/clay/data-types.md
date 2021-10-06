@@ -68,7 +68,6 @@ to th pier) and `beam` is a domestic Clay directory.
 
 `pud` is an update that's waiting on a kernel upgrade.
 
-
 #### `$room`, filesystem per domestic ship
 
 ```hoon
@@ -93,8 +92,7 @@ set of `desk`s on this ship, mapped to their `desk` state.
 +$  desk  @tas
 ```
 
-This is the name of a branch of the filesystem. The default `desk`s are `%home`
-and `%kids`. More may be created by simply referencing them. `desk`s have
+This is the name of a branch of the filesystem. The default `desk`s are `%base`, `%garden`, `%landscape`, `%webterm` and `%bitcoin`. Desks have
 independent histories and states, and they may be
 [merged](/docs/arvo/clay/using#merging) into each other.
 
@@ -167,7 +165,6 @@ Like a `rave` but with provisions to store current versions for `%next` and `%ma
 Generally used when we store a request in our state somewhere. This is so that
 we can determine whether new versions actually affect the path we're subscribed to.
 
-
 #### `$mood:clay`, single subscription request
 
 ```hoon
@@ -193,7 +190,6 @@ any of its children.
 ```hoon
   +$  care  ?(%a %b %c %d %e %f %p %r %s %t %u %v %w %x %y %z)  ::  clay submode
 ```
-
 
 This specifies what type of information is requested in a subscription
 or a scry.
@@ -258,7 +254,6 @@ contents while `q.fil` is the data itself.
 this is empty. The keys are the names of the children and the values
 are, recursively, the nodes themselves.
 
-
 ### `$arch`, shallow filesystem node
 
 ```hoon
@@ -275,6 +270,7 @@ those directories.
 The child directories are given by a `map` to null rather than a `set` so that the
 ordering of the `map` will be the same as it is for an `axal`, allowing
 efficient conversion for when the heavier node is needed.
+
 ```hoon
 ++  axal
   |$  [item]
@@ -399,7 +395,6 @@ is all the subscribers from our ship to the foreign `desk`.
 
 `regs` are `(map path rule)`, and so `per` is a `map` of read permissions by
 `path` and `pew` is a `map` of write permissions by `path`.
-
 
 #### `$rind`, foreign request manager
 
@@ -547,7 +542,6 @@ blob, and `r` is the delta.
 `%direct` is the case where we simply have the data directly. `q` is the data.
 These almost always come from the creation of a file.
 
-
 #### `+urge`, list change
 
 ```hoon
@@ -685,4 +679,3 @@ commit itself.
 revision number, whichever is smaller.
 
 `lar` is the set of new commits, and `bar` is the set of new content.
-

@@ -63,9 +63,18 @@ Regular: **1-fixed**.
 
 ##### Discussion
 
-A mold is an idempotent gate that is guaranteed to produce a noun of that type.  If an input value isn't of the correct type, the bunt value of that type is returned.  (See `^*`.)
+A mold is an idempotent gate that is guaranteed to produce a noun of that type.
+If an input value isn't of the correct type, the bunt value of that type is
+returned. (See `^*`.)
 
-`^:` is used to produce a gate that is much like a mold, except that instead of producing a bunt value when the input value is of the wrong type, it crashes.
+`^:` is used to produce a gate that is much like a mold, except that instead of
+producing a bunt value when the input value is of the wrong type, it crashes.
+
+One may expect that `^:(path /foo)` would result in a syntax error since `^:`
+only takes one child, but instead it will parse as `=<  ^  %:(path /foo)`. Since
+`:` is the irregular syntax for `=<` this is is parsed as "get `^` (i.e. the
+mold for cells) from a subject of `(path /foo)`", with `:` being the irregular
+syntax for `=<`.
 
 ##### Examples
 

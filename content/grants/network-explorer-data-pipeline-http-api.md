@@ -10,10 +10,10 @@ grant_category = [ "App Dev" ]
 image = ""
 description = "Build a public, open HTTP API for exploring metrics about the Urbit network."
 reward = 5
-assignee = "Christopher King"
+assignee = "~dinleb-rambep"
 id = "1101665172"
 completed = false
-canceled = true
+canceled = false
 link = ""
 +++
 

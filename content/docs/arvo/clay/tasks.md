@@ -108,7 +108,7 @@ This subscribes to all changes to a `desk` for the specified range of `case`s. N
 If the `track` is `%.y` it will just return a `%writ` like:
 
 ```hoon
-[%writ p=[~ [p=[p=%w q=[%ud p=256] r=%home] q=/ r=[p=%null q=[#t/@n q=0]]]]]
+[%writ p=[~ [p=[p=%w q=[%ud p=256] r=%base] q=/ r=[p=%null q=[#t/@n q=0]]]]]
 ```
 
 ...that merely informs you of a change. If you want the actual data you'll have to request it separately.
@@ -494,7 +494,7 @@ Note that if you're reading a whole `desk` or directory, all subfolders and file
 
 To merge a foreign `desk` into a local one, you just send Clay a `%merg` `task` (as you would for a local merge) and specify the foreign ship in the `her` field. For details on making such requests, see the [Merge Desks](#merge-desks) section.
 
-The foreign ship will respond only if correct permissions have been set. See the [Permissions](#permissions) section for details. By default, a ship's `%kids` desk is set to be publicly readable, so unless permissions have been manually modified, you should be able to merge from any `%kids` `desk`.
+The foreign ship will respond only if correct permissions have been set. See the [Permissions](#permissions) section for details.
 
 Note that all subfolders and individual files within the `desk` must permit your reading in order for the merge to succeed. If even one file does not permit you reading it, the remote ship will not respond to the request at all.
 
