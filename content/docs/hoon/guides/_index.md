@@ -11,3 +11,5 @@ insert_anchor_links = "right"
 ## [CLI Apps](/docs/hoon/guides/cli-tutorial)
 
 ## [Parsing](/docs/hoon/guides/parsing)
+
+## [Strings](/docs/hoon/guides/strings)
