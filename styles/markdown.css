@@ -109,15 +109,6 @@
   @apply bg-green-100 text-green-400;
 }
 
-/* .markdown pre {
-  
-} */
-
-/* .markdown pre code,
-.markdown pre[class*="language-"] code {
-  @apply p-0 bg-transparent;
-} */
-
 .markdown ul {
   list-style: outside;
   list-style-type: disc;
