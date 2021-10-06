@@ -1,5 +1,5 @@
 +++
-title = "Market Interface Specification"
+title = "Wrapped star interface"
 date = "2021-06-22"
 
 [taxonomies]
@@ -8,7 +8,7 @@ grant_category = [ "App Dev: Other" ]
 
 [extra]
 image = ""
-description = "Market Interface Specification"
+description = "Implement the app interface for swapping stars for wrapped stars."
 reward = 5
 assignee = "~fabnev-hinmur"
 id = ""
@@ -26,7 +26,7 @@ Neither Tlon nor the Urbit Foundation are responsible for writing or deploying t
 
 - Funding of audits to ensure that there are no security vulnerabilities in the contracts.
 
-This document outlines the scope of work to build the interface that will live on urbit.org.
+This document outlines the scope of work to build the interface.
 
 ## Timeline
 
@@ -49,8 +49,8 @@ September 1: Deploy interface on urbit.org
 ## Resources
 
 [Smart Contracts on GitHub](https://github.com/ransonhobbes/stardust)
-
-[Figma Designs](https://www.figma.com/file/q3BmgjWVaJ2cMlMY7hcDqS/market.urbit.org?node-id=0%3A1)
+- [Figma Designs](https://www.figma.com/file/q3BmgjWVaJ2cMlMY7hcDqS/market.urbit.org?node-id=0%3A1)
+- [Original mailing list post from aforementioned community members](https://groups.google.com/a/urbit.org/g/dev/c/EQVU2-GKo04)
 
 ## Milestones
 
