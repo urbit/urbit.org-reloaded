@@ -5,8 +5,7 @@ template = "doc.html"
 +++
 
 This document discusses hoon's two main string types: `cord`s (as well as its
-subsets `knot` and `term`) and `tape`s. Cords are strings encoded in atoms, and
-tapes are strings encoded as lists of single characters. The focus of this
+subsets `knot` and `term`) and `tape`s. The focus of this
 document is on their basic properties, syntax and the most common text-related
 functions you'll regularly encounter. In particular, it discusses conversions
 and the encoding/decoding of atom auras in strings.
@@ -19,14 +18,41 @@ discussed in this document.
 There are a good deal more text manipulation functions than are discussed here.
 See the [Further Reading](#further-reading) section for details.
 
-## text atoms
+## `tape`s vs. text atoms
+
+As mentioned, urbit mainly deals with two kinds of strings: `tape`s and
+`cord`/`knot`/`term`s. The former is a list of individual UTF-8 characters.
+The latter three encode UTF-8 strings in a single atom.
+
+Cords may contain any UTF-8 characters, while `knot`s and `term`s only allow a
+smaller subset. Each of these are discussed below in the [Text
+atoms](#text-atoms) section.
+
+Text atoms like `cord`s are more efficient to store and move around. They are
+also more efficient to manipulate with simple bitwise operations. Their downside
+is that UTF-8 characters vary in their byte-length. ASCII characters are all
+8-bit, but others can occupy up to four bytes. Accounting for this variation in
+character size can complicate otherwise simple functions. Tapes, on the other
+hand, don't have this problem because each character is a separate item in the
+list, regardless of it byte-length. This fact makes it much easier to process
+tapes in non-trivial ways with simple list functions.
+
+In light of this, a general rule of thumb is to use cords for simple things like
+storing chat messages or exchanging them over the network. If text requires
+complex processing on the other hand, it is generally easier with tapes. Note
+there _are_ cord manipulation functions in the standard library, so you needn't
+always convert cords to tapes for processing, it just depends on the case.
+
+Next we'll look at these different types of strings in more detail.
+
+## Text atoms
 
 ### `cord`
 
-A [`cord`](/docs/hoon/reference/stdlib/2q#cord) has an aura of
-`@t`. It denotes UTF-8 text encoded in an atom, little-endian. That is, the
-first character in the text is the least-significant byte. A cord may contain
-any UTF-8 characters, there are no restrictions.
+A [`cord`](/docs/hoon/reference/stdlib/2q#cord) has an aura of `@t`. It denotes
+UTF-8 text encoded in an atom, little-endian. That is, the first character in
+the text is the least-significant byte. A cord may contain any UTF-8 characters,
+there are no restrictions.
 
 The `hoon` syntax for a cord is some text wrapped in single-quotes like:
 
@@ -78,10 +104,10 @@ This will be parsed to:
 
 ### `knot`
 
-A [`knot`](/docs/hoon/reference/stdlib/2q#knot) has an aura of
-`@ta`, and is a subset of a [`cord`](#cord). It allows lower-case letters,
-numbers, and four special characters: Hyphen, tilde, underscore and period. Its
-restricted set of characters is intended to be URL-safe.
+A [`knot`](/docs/hoon/reference/stdlib/2q#knot) has an aura of `@ta`, and is a
+subset of a [`cord`](#cord). It allows lower-case letters, numbers, and four
+special characters: Hyphen, tilde, underscore and period. Its restricted set of
+characters is intended to be URL-safe.
 
 The `hoon` syntax for a knot is a string containing any of the aforementioned
 characters prepended with `~.` like:
@@ -92,11 +118,11 @@ characters prepended with `~.` like:
 
 ### `term`
 
-A [`term`](/docs/hoon/reference/stdlib/2q#term) has an aura of
-`@tas`, and is a subset of a [`knot`](#knot). It only allows lower-case letters,
-numbers, and hyphens. Additionally, the first character cannot be a hyphen or number. This
-is a very restricted text atom, and is intended for naming data structures and
-the like.
+A [`term`](/docs/hoon/reference/stdlib/2q#term) has an aura of `@tas`, and is a
+subset of a [`knot`](#knot). It only allows lower-case letters, numbers, and
+hyphens. Additionally, the first character cannot be a hyphen or number. This is
+a very restricted text atom, and is intended for naming data structures and the
+like.
 
 The `hoon` syntax for a term is a string conforming to the prior description,
 prepended with a `%` like:
@@ -489,12 +515,15 @@ Finally, `+stab` parses a cord containing a path to a `path`. For example:
 
 - [Parsing](/docs/hoon/guides/parsing) - A guide to writing fully-fledged
   functional parsers in hoon.
+
 - [Auras](/docs/hoon/reference/auras) - Details of auras in hoon.
 
 - [stdlib 2b: List logic](/docs/hoon/reference/stdlib/2b) - Standard library
   functions for manipulating lists, which are useful for dealing with tapes.
+
 - [stdlib 2q: Molds and Mold-builders](/docs/hoon/reference/stdlib/2q) - Several
   text types are defined in this section of the standard library.
+
 - [stdlib 4b: Text processing](/docs/hoon/reference/stdlib/4b) - Standard
   library functions for manipulating and converting tapes and strings.
 
