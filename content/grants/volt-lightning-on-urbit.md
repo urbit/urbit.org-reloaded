@@ -253,31 +253,60 @@ It is possible to re-balance channel liquidity (shifting more of the balance to 
 
 ## Milestones
 
-### transaction/invoice RFCs
+### Milestone 1 - transaction/invoice RFCs
 
-2 stars
+Payment: 2 stars
 
 - Implement RFCs 2, 3 and 11 from BOLT.
 - Create the libs and types that further stages will depend on
 
-### on-chain transaction RFC
+### Milestone 2 - on-chain transaction RFC
 
-2 stars
+Payment: 2 stars
 
 - implement RFC 5, on-chain transaction handling
 - test that channels can be opened and closed in the manner described there
 
-### provider libraries
+### Milestone 3 - provider libraries
 
-1 stars
+Payment: 1 star
 
 - implement the `volt` provider that will talk to `lnd`
 - create any configuration files needed to start `lnd` locally
 
-### `volt` agent and cleanup
+### Milestone 4 - `volt` agent and cleanup
 
-2 stars
+Payment: 2 stars
 
 - create the Gall agent to manage transactions
 - connect it to the provider libs
 - use the RFC libs to wire up all on-chain transactions
+
+### Milestone 5 - Create Signing Agent
+
+Payment: 1 star
+
+The milestone is to create a signing agent that can be run either on the same host as the rest of the volt system or one of it's moons. The goal of this agent is to separate the key material from the rest of the system while providing signing and key-generation functionality. The agent will make use of the existing BIP-32 implementation and expose a set API calls similar to those of popular hardware wallets, albeit reduced to what is essential for the purposes of volt.
+
+The agent will support the following core calls as %poke's:
+
+- %new-wallet
+  Only accessible from the host ship: generate a new wallet and give back the
+  seed, which can be rendered using the BIP-39 mnemonic.
+
+- %get-public-key
+  Give the public key for a given BIP-32 path.
+
+- %sign-digest
+  Sign a message digest using the key at a given BIP-32 path.
+
+Potential additional convenience calls, if the remainder of the volt project demands:
+
+- %get-address
+  A public key is generated using a given BIP-32 path and an address is computed from the resulting key.
+
+- %sign-message
+  The message is hashed with dsha256 and then signed with the private key at a given BIP-32 path.
+
+- %verify-message
+  Verify a signed message using the public key at a given BIP-32 path.
