@@ -30,28 +30,5 @@ transactions from within Urbit itself.
 
 Documentation of the technical details of naive rollups, our Layer 2 solution
 for the reduction of Urbit ID gas prices and friction associated with the usage
-of cryptocurrency.
+of cryptocurrency, can be found [here](/docs/azimuth/l2).
 
-### [Layer 2 Overview](/docs/azimuth/layer-2)
-
-A high-level technical description of the functionality of the naive rollups
-"Hoon smart contract" and associated apps, such as Bridge and the roller.
-
-### [Layer 2 Actions](/docs/azimuth/l2/l2-actions)
-
-An exhaustive list of what Azimuth actions can be performed for any given tuple
-`(ship rank, layer 2 status)`.
-
-### [Data Flow]
-
-Diagrams and explanations of how data flows between Bridge and the various
-components inside Urbit involved with layer 2.
-
-### [Bytestrings](/docs/azimuth/l2/bytestring)
-
-The bytestring format for layer 2 transactions and batches.
-
-### [Roller HTTP RPC API](/docs/azimuth/l2/layer2-api)
-
-Documentation on the HTTP RPC API used for Urbit to communicate with Bridge to
-manage layer 2 transactions.
