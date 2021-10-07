@@ -20,7 +20,7 @@ A high-level technical description of the functionality of the naive rollups
 An exhaustive list of what Azimuth actions can be performed for any given tuple
 `(ship rank, layer 2 status)`.
 
-### [Data Flow](/docs/azimuth/l2/l2-flow)
+### [Data Flow](/docs/azimuth/flow)
 
 Diagrams and explanations of how data flows between Bridge and the various
 components inside Urbit involved with layer 2.

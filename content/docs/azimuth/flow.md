@@ -14,7 +14,7 @@ The following diagram illustrates the high-level structure of Azimuth.
 
 ## Bridge
 
-The primary way in which users interact with Layer 2 is via Bridge. Bridge is
+The primary way in which users interact with Azimuth is via Bridge. Bridge is
 responsible for collecting transactions from users, signing them, and forwarding
 them to a roller via an HTTP API.
 
@@ -102,7 +102,8 @@ collecting and submitting batches of layer 2 transactions to the Ethereum
 blockchain.  Among other things, it keeps
 track of a list of pending transactions to be sent, transactions it has sent
 that are awaiting confirmation, history of transactions sent organized by
-Ethereum address, and when the next batch of transactions will be sent.
+Ethereum address, and when the next batch of transactions will be sent. See also
+[Rollers](/docs/azimuth/l2/roller) for more information on the roller.
 
 The relationship between the roller and other agents is outlined in the
 following diagram.
@@ -170,7 +171,9 @@ tuple, according to the format for signed transactions outlined in the
 `chain-id` is the ID used by the Ethereum blockchain, which is `1337`. See [bytestring
 format](/docs/azimuth/l2/bytestring) for more information.
 
-`state` is the current state of the PKI:
+`state` is the current state of the PKI. This is structured similarly to the
+state held in [Azimuth.eth](/docs/azimuth/azimuth-eth), but will differ in
+general since `state` takes into account layer 2 transactions as well.
 
 ```hoon
 +$  state
@@ -207,7 +210,7 @@ format](/docs/azimuth/l2/bytestring) for more information.
 +$  operators  (jug address address)
 ```
 `points` should be self-explanatory if you are already familiar with the
-structure of Urbit ID. The only new addition is `dominion`, which is a record of
+structure of [Azimuth.eth](/docs/azimuth/azimuth-eth). The only new addition is `dominion`, which is a record of
 whether a ship is on layer 1, layer 2, or layer 1 with a layer 2 spawn proxy.
 See [Layer 2 actions](/docs/azimuth/l2/l2-actions) for an overview of how
 `dominion` determines the actions available to a ship.

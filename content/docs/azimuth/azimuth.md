@@ -30,7 +30,7 @@ with a system of scarce and immutable identities.
 **Azimuth** is the public-key infrastructure built to be a system of scarce and
 immutable identities. It consists of a suite of [smart contracts on the Ethereum
 blockchain](https://github.com/urbit/azimuth) as well as [several
-apps](/docs/azimuth/l2/l2-flow) run locally on your urbit. Togeter, they determine
+apps](/docs/azimuth/flow) run locally on your urbit. Togeter, they determine
 which Ethereum addresses own which Urbit ID's as well as the public keys needed
 to communicate with those ID's. All identity-related operations, such as
 transfers, are governed by Azimuth. Azimuth isn't built strictly for Arvo -- the
@@ -116,6 +116,11 @@ Azimuth.
 
 A description of the `ecliptic.eth` smart contract, which is the business logic
 for `azimuth.eth`. This includes an overview of all function calls available.
+
+### [Data Flow](/docs/azimuth/flow)
+
+Diagrams and explanations of how data flows between Bridge and the various
+components inside Urbit involved with layer 2.
 
 ### [Urbit HD Wallet](/docs/azimuth/hd-wallet)
 

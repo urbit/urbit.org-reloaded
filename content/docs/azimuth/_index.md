@@ -11,6 +11,11 @@ insert_anchor_links = "right"
 
 An overview of the Ethereum-based public key infrastructure utilized by Urbit.
 
+### [Data Flow](/docs/azimuth/flow)
+
+Diagrams and explanations of how data flows between Bridge and the various
+components inside Urbit involved with layer 2.
+
 ### [Urbit HD Wallet](/docs/azimuth/hdwallet)
 
 Azimuth has its own optional hierarchical deterministic wallet system, sometimes
