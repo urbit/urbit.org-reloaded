@@ -11,7 +11,7 @@ A planet is a permanent Urbit identity. Like all Urbit identities, they can neve
 There are a few ways to get your own planet:
 
 - Getting an invitation from a friend (or stranger).
-- Purchasing a planet, including hosting, from a [hosting provider](#hosting-providers) such as [geturbitid.com](https://www.geturbitid.com/).
+- Purchasing a planet, including hosting, from a [hosting provider](#hosting-providers).
 - Manually setting up and hosting a planet purchased from a third party such as [urbit.live](https://urbit.live), [OpenSea](https://opensea.io), [planet.market](https://planet.market/), [urbit.me](https://urbit.me), [urth systems](https://urth.systems/), or [Urbit Marketplace](https://urbitmarketplace.com/).
 
 Note that when you buy a planet, you should ensure with the provider that your parent star is operating. If you need to escape a non-operational star, see [Escaping A Sponsor](/using/id/using-bridge#escaping-your-sponsor).
@@ -26,8 +26,10 @@ Using hosting does mean that you're trusting your provider with your data, but s
 
 Current hosting providers are:
 
-- [Tlon Corporation](https://tlon.io): Tlon is the creator of Landscape and is primarily responsible for the creation and maintenance of the Urbit project itself.
-- [Get an Urbit ID](https://www.geturbitid.com/): Get an Urbit ID was the first hosting provider and is run by a member of the Urbit community.
+- [escape pod store](https://www.escapepod.store/)
+- [Third Earth](https://third.earth/)
+- [Tlon Corporation](https://tlon.io)
+- [UrbitHost](https://urbithost.com)
 
 ### Choose to run your planet on your computer or on a cloud service
 

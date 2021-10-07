@@ -360,7 +360,7 @@ AST:
 
 ##### Semantics
 
-A `%*` expression evaluates some arbitrary Hoon expression, `b`, and then resolves a wing of of that result, with changes.  `a` is the wing to be resolved, and one or more changes is defined by the subexpressions after `b`.
+A `%*` expression evaluates some arbitrary Hoon expression, `b`, and then resolves a wing of that result, with changes.  `a` is the wing to be resolved, and one or more changes is defined by the subexpressions after `b`.
 
 ##### Expands to
 

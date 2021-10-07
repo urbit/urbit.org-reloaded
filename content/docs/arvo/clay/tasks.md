@@ -4,7 +4,7 @@ weight = 6
 template = "doc.html"
 +++
 
-This document details all the `task`s you're likely to use to interact with Clay, as well as the `gift`s you'll receive in response. Each section has a corresponding practical example in the [Examples](/docs/arvo/clay/examples) document. Many of the types referenced are detailed in the [Data Types](/docs/arvo/clay/data-types) document. It may also be useful to look at the `++  clay` section of `/sys/lull.hoon` in Arvo where these `task`s, `gift`s and data structures are defined.
+This document details all the `task`s you're likely to use to interact with Clay, as well as the `gift`s you'll receive in response. Each section has a corresponding practical example in the [Examples](/docs/arvo/clay/examples) document. Many of the types referenced are detailed in the [Data Types](/docs/arvo/clay/data-types) document. It may also be useful to look at the `++ clay` section of `/sys/lull.hoon` in Arvo where these `task`s, `gift`s and data structures are defined.
 
 The focus of this document is on interacting with Clay from userspace applications and threads, so it doesn't delve into the internal mechanics of Clay from a kernel development perspective.
 
@@ -108,7 +108,7 @@ This subscribes to all changes to a `desk` for the specified range of `case`s. N
 If the `track` is `%.y` it will just return a `%writ` like:
 
 ```hoon
-[%writ p=[~ [p=[p=%w q=[%ud p=256] r=%home] q=/ r=[p=%null q=[#t/@n q=0]]]]]
+[%writ p=[~ [p=[p=%w q=[%ud p=256] r=%base] q=/ r=[p=%null q=[#t/@n q=0]]]]]
 ```
 
 ...that merely informs you of a change. If you want the actual data you'll have to request it separately.
@@ -494,7 +494,7 @@ Note that if you're reading a whole `desk` or directory, all subfolders and file
 
 To merge a foreign `desk` into a local one, you just send Clay a `%merg` `task` (as you would for a local merge) and specify the foreign ship in the `her` field. For details on making such requests, see the [Merge Desks](#merge-desks) section.
 
-The foreign ship will respond only if correct permissions have been set. See the [Permissions](#permissions) section for details. By default, a ship's `%kids` desk is set to be publicly readable, so unless permissions have been manually modified, you should be able to merge from any `%kids` `desk`.
+The foreign ship will respond only if correct permissions have been set. See the [Permissions](#permissions) section for details.
 
 Note that all subfolders and individual files within the `desk` must permit your reading in order for the merge to succeed. If even one file does not permit you reading it, the remote ship will not respond to the request at all.
 

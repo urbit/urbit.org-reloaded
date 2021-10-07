@@ -5,6 +5,7 @@ import {
   getNextPost,
   getPreviousPost,
   formatDate,
+  generateDisplayDate,
 } from "../../lib/lib";
 import Head from "next/head";
 import Meta from "../../components/Meta";
@@ -30,6 +31,7 @@ export default function Post({
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
   }
+  const date = generateDisplayDate(post.date);
   return (
     <Container>
       <Head>
@@ -49,7 +51,7 @@ export default function Post({
             <div className="type-ui text-wall-500 font-mono">{post.ship}</div>
           ) : null}
           <div className="type-ui text-wall-500 mt-4 md:mt-8 lg:mt-10">
-            {formatDate(new Date(post.date))}
+            {formatDate(date)}
           </div>
         </Section>
         <Section narrow className="markdown">

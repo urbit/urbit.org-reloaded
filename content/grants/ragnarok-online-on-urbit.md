@@ -1,9 +1,11 @@
 +++
 title = "Ragnarok Online on Urbit"
-date = 2019-08-30
+date = "2019-08-29"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["App Dev"]
+grant_type = [ "Proposal" ]
+grant_category = [ "App Dev" ]
+
 [extra]
 image = ""
 description = "Landscape app that supports registering an urbit ID with an RO server, exposing various account management actions and guild / channel chats"

@@ -1,9 +1,11 @@
 +++
 title = "Bitcoin Node JSON RPC API (Part 1)"
-date = 2019-11-15
+date = "2019-11-14"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["App Dev", "Arvo"]
+grant_type = [ "Bounty" ]
+grant_category = [ "App Dev", "Arvo" ]
+
 [extra]
 image = ""
 description = "Write a Remote Procedure Call library for a Bitcoin Gall app -- part one."

@@ -1,9 +1,11 @@
 +++
 title = "Host Two Urbit Meetups (11)"
-date = 2021-02-07
+date = "2021-02-06"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["Community"]
+grant_type = [ "Bounty" ]
+grant_category = [ "Community" ]
+
 [extra]
 image = ""
 description = "Urbit needs champions! The Urbit Foundation is looking for community members to host local or online meetups to spread the word."

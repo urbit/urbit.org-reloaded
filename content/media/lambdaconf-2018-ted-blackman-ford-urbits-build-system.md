@@ -1,8 +1,11 @@
 +++
 title = "LambdaConf 2018: Ted Blackman - Ford: Urbit's Build System"
-date = 2018-12-20
+date = "2018-12-19"
 description = "Ted presents a technical overview of Ford, Urbit's build system, at LambdaConf 2018."
-aliases = ["/posts/lambdaconf-2018-ted-blackman-ford-urbits-build-system/"]
+aliases = [
+  "/posts/lambdaconf-2018-ted-blackman-ford-urbits-build-system/"
+]
+
 [extra]
 author = "Ted Blackman"
 ship = "~rovnys-ricfer"

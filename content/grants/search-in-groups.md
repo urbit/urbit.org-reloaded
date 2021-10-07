@@ -1,16 +1,18 @@
 +++
 title = "Search in groups"
-date = 2021-02-25
+date = "2021-02-24"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["App Dev"]
+grant_type = [ "Proposal" ]
+grant_category = [ "App Dev" ]
+
 [extra]
 image = ""
 description = "Implement a basic text search in groups channels"
 reward = 2
 assignee = "@nrtxrmnd"
 id = "835369230"
-completed = false
+completed = true
 link = ""
 +++
 

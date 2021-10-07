@@ -26,7 +26,6 @@ class Search extends Component {
   }
 
   onSelect(item) {
-    console.log(item);
     if (item.slug) {
       this.props.router.push(item.slug);
     }

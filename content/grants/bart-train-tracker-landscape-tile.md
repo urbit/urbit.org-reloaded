@@ -1,9 +1,11 @@
 +++
 title = "BART Train Tracker Landscape Tile"
-date = 2020-03-05
+date = "2020-03-04"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["App Dev", "Arvo"]
+grant_type = [ "Bounty" ]
+grant_category = [ "App Dev", "Arvo" ]
+
 [extra]
 image = ""
 description = "A backend for a BART client on Urbit."

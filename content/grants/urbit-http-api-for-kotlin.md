@@ -1,9 +1,11 @@
 +++
 title = "Urbit HTTP API for Kotlin"
-date = 2020-10-27
+date = "2020-10-26"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["App Dev"]
+grant_type = [ "Proposal" ]
+grant_category = [ "App Dev" ]
+
 [extra]
 image = ""
 description = "Write an urbit HTTP API (aka Airlock) for Kotlin."
@@ -11,6 +13,7 @@ reward = 3
 assignee = "@nrtxrmnd"
 id = "865786150"
 completed = false
+canceled = true
 link = ""
 +++
 

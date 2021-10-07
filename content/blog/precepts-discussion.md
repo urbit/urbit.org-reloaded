@@ -1,11 +1,12 @@
 +++
 title = "Precepts: Discussion"
-date = 2020-03-18
+date = "2020-03-17"
 description = "The precepts aren’t arguments. We discuss and justify them here."
+
 [extra]
 author = "Philip Monk"
 ship = "~wicdev-wisryt"
-image ="https://media.urbit.org/site/posts/essays/discuss-01.jpg"
+image = "https://media.urbit.org/site/posts/essays/discuss-01.jpg"
 +++
 
 <br>
@@ -86,7 +87,7 @@ Some examples of things that are objectively quite simple but subjectively hard 
   more obvious in retrospect than it does on first glance.
 
 - Any language that induces a moment where you exclaim to yourself,
-  "This is true programming!  Everyone should program this way, it's so
+  "This is true programming! Everyone should program this way, it's so
   obviously better!". People say that often about Lisp, Haskell,
   Prolog, and Smalltalk. Nobody ever said that about C, Java,
   Javascript, or Python. And yet, which ones are easier to learn?
@@ -240,7 +241,7 @@ strong guarantees on top of something with weak guarantees — for
 example, delivery guarantees on top of an unreliable transport protocol.
 In that case, you are sure of the underlying system, it's just that what
 you're sure of is that you can't rely on it delivering packets in order
-or at all. So, you formalize what you *are* sure of, which is that it
+or at all. So, you formalize what you _are_ sure of, which is that it
 will eventually get your packets through if you keep sending them
 forever. And that's something you can build on.
 
@@ -364,7 +365,7 @@ There are some principles that aren't obviously better than the alternatives, bu
 
 > B1: Always ack a dupe; never ack an ack.
 >
->   It's okay to ack a nack as long as you never nack a nack.
+> It's okay to ack a nack as long as you never nack a nack.
 
 This is a simple rule, and if you follow it you get various guarantees for free. For example, sending a message will always cause up to a constant number of additional messages to be sent by direct or indirect causality (other than application-level code), so you never have to worry about accidentally causing a loop.
 
@@ -423,21 +424,21 @@ Better to define rules in a more powerful language. This allows you to follow A6
 Good code is the result of people approaching the act of engineering with the right attitude.
 
 > C1: Code courageously.
- 
- If you avoid changing a section of code for fear of awakening the
- demons therein, you are living in fear. If you stay in the
- comfortable confines of the small section of the code you wrote or
- know well, you will never write legendary code. All code was
- written by humans and can be mastered by humans.
- 
- It's natural to feel fear of code; however, you must act as though
- you are able to master and change any part of it. To code
- courageously is to walk into any abyss, bring light, and make it
- right.
+
+If you avoid changing a section of code for fear of awakening the
+demons therein, you are living in fear. If you stay in the
+comfortable confines of the small section of the code you wrote or
+know well, you will never write legendary code. All code was
+written by humans and can be mastered by humans.
+
+It's natural to feel fear of code; however, you must act as though
+you are able to master and change any part of it. To code
+courageously is to walk into any abyss, bring light, and make it
+right.
 
 The unix/internet stack is a giant ball of mud. It's so big that when you're standing on it, it looks like a bog, and it's not clear that there is a bottom to it. You know there must be, but it doesn't matter because you learned long ago that the best solution is to not dig too deep. Build a strong structure by spreading out your weight and using strong construction materials. If there's something useful deep in the mud, it's probably not worth diving in to pull it out. That's dangerous and prone to failure, and you know many people who have gotten stuck down there.
 
-This is an appropriate reaction to the unix/internet stack. It's also self-perpetuating. The bog is filled — even *composed* of — countless predecessors who did that same thing. If you ever find yourself on solid ground, protect that with your life. Learn how it works and how to use it well. Then build a strong structure on top of that. Don't let it decompose into a layer of mud.
+This is an appropriate reaction to the unix/internet stack. It's also self-perpetuating. The bog is filled — even _composed_ of — countless predecessors who did that same thing. If you ever find yourself on solid ground, protect that with your life. Learn how it works and how to use it well. Then build a strong structure on top of that. Don't let it decompose into a layer of mud.
 
 Urbit is small enough that, while there's definitely some construction-related dirt and muck covering it, the solid metallic core is not very deep — not more than waist deep in most places. The feeling of always being in contact with the bottom is very different than flailing about in a bog.
 
@@ -451,11 +452,11 @@ follow conventions, and fire anyone who won't. Anything that can
 be solved by discipline is not a real problem.
 
 > "To him who knows to do good and does not do it, to him it is
-sin."
+> sin."
 
 Preserving the property of solid ground requires perpetual discipline. Once lost, it's often impossible to reacquire. Don't compromise your standards.
 
-Call people out when they're being lazy. And when someone calls you out, recognize it and fix it. Sometimes it's just a question on a code review — "why did you do it this way?"  Upon reflection, you determine that you did it that way because you couldn't be bothered to do it right. Maybe that was a reasonable choice at the time you were coding so you wouldn't be distracted, but if it's been called out in a code review, now's the time to fix it, not make excuses.
+Call people out when they're being lazy. And when someone calls you out, recognize it and fix it. Sometimes it's just a question on a code review — "why did you do it this way?" Upon reflection, you determine that you did it that way because you couldn't be bothered to do it right. Maybe that was a reasonable choice at the time you were coding so you wouldn't be distracted, but if it's been called out in a code review, now's the time to fix it, not make excuses.
 
 > C3: When a smart person makes an obviously stupid suggestion, before
 > responding take a full 60 seconds to envision how you would implement
@@ -464,7 +465,7 @@ Call people out when they're being lazy. And when someone calls you out, recogni
 Once you've determined that someone understands a situation well, if they earnestly make a suggestion that you haven't thought of, or that you immediately dismissed as impractical, stop and consciously consider it. This is one of the best ways of countering the natural echo chamber
 of your own mind.
 
-This is also one of the best ways to build stuff correctly. Very often, you will be tempted to cut a corner, and someone will point out that it should be done correctly. You should consider why you immediately rejected it. Was it because you were afraid of the relevant piece of code?  If so, you should learn more about that code to determine if it's actually a good idea. Did you reject it because you felt it would distract you from working on what you thought was more important?
+This is also one of the best ways to build stuff correctly. Very often, you will be tempted to cut a corner, and someone will point out that it should be done correctly. You should consider why you immediately rejected it. Was it because you were afraid of the relevant piece of code? If so, you should learn more about that code to determine if it's actually a good idea. Did you reject it because you felt it would distract you from working on what you thought was more important?
 Consider carefully whether this particular piece of technical debt is worth taking on. It's worth 60 seconds of thinking about how you could solve it correctly right now — often it would be quite easy to do correctly and you'd be paying interest on the incorrectness for a long time.
 
 <br>
@@ -541,7 +542,7 @@ Some of these are strongly affected by workflows. We can't force a developer to 
 
 One of the primary inputs to code navigability is how much of it you can have on your screen. Code that is too wide limits the number of columns of code. Some people keep only one column on their screen, so they don't see a problem with long lines of code. The most efficient navigation is to already be there (i.e. to only have to move your eyes). If you only have one column of code open, you can only be in one place, which eliminates the best form of navigation.
 
-Dually, code that is too narrow limits the number of lines you can have on a screen (this isn't a separate precept simply because we've never had to tell someone to write *wider* code). This suggests there is some happy medium. This is dependent on the language, but in Hoon we've
+Dually, code that is too narrow limits the number of lines you can have on a screen (this isn't a separate precept simply because we've never had to tell someone to write _wider_ code). This suggests there is some happy medium. This is dependent on the language, but in Hoon we've
 found that up to 55 columns is a pretty good number for most code. However, there are plenty of legitimate reasons to go a bit longer than that. 70 columns is rare, but not surprising. There is essentially never a reason to extend beyond 80 columns.
 
 > E2: Tabs aren't real.
@@ -553,6 +554,7 @@ There can be good reason for inconsistency in some areas, but not in
 code formatting, which is such an intensely communicative action.
 
 > E3: A text file is a series of lines, each ending with a newline
+
       character.
 
 There are several competing definitions of text files, but most commonly-used software uses this one. It's simple and consistent.
@@ -581,9 +583,9 @@ However, cache invalidation and naming things are genuinely hard because they mu
 context.
 
 You shouldn't solve hard problems if you don't need to, so don't name anything you don't have to. Giving unique names to things is tiring, and it reduces readability. A consistent pattern for naming things makes it easy to keep track of what is what and reduces the number of
-decisions you must make. 
+decisions you must make.
 
-Examples: 
+Examples:
 
 - If the only difference between three things is that they're not the
   same, consider naming them `thing-1`, `thing-2`, and `thing-3`.
@@ -632,43 +634,43 @@ This is the most important passage in all that has ever been written
 about Urbit:
 
 > What is Martian code actually like? There are two possibilities.
-> 
+>
 > One: since Earth code is fifty years old, and Martian code is fifty
 > million years old, Martian code has been evolving into a big ball of mud
 > for a million times longer than Earth software. (And two million times
 > longer than Windows.)
-> 
-> This hypothesis strikes me as possible, but implausible. Since the *big
-> ball of mud* expands indefinitely, Martian code would therefore be so
+>
+> This hypothesis strikes me as possible, but implausible. Since the _big
+> ball of mud_ expands indefinitely, Martian code would therefore be so
 > large and horrible that, despite its underground installed base, the
 > server room bulged into space like a termite mound, intercepting
 > low-flying asteroids and stinking up the solar system all the way to
 > Pluto. Our latest space telescopes would surely have detected this
 > abominable structure - if not, in fact, collided with it.
-> 
+>
 > Two: therefore, at some point in Martian history, some abject fsck of a
-> Martian code-monkey must have said: *fsck* this entire fscking ball of
-> mud. For *lo*, its defects cannot be summarized; for they exceed the
+> Martian code-monkey must have said: _fsck_ this entire fscking ball of
+> mud. For _lo_, its defects cannot be summarized; for they exceed the
 > global supply of bullet points; for numerous as the fishes in the sea,
 > like the fishes in the sea they fsck, making more little fscking fishes.
-> For lo, it is *fscked*, and a big ball of mud. And there is only one thing
-> to do with it: *obliterate* the trunk, *fire* the developers, and hire a
-> whole new fscking *army* of Martian code-monkeys to rewrite the *entire
-> fscking thing*.
-> 
-> This is such an obvious and essential response to the *big ball of mud*
+> For lo, it is _fscked_, and a big ball of mud. And there is only one thing
+> to do with it: _obliterate_ the trunk, _fire_ the developers, and hire a
+> whole new fscking _army_ of Martian code-monkeys to rewrite the _entire
+> fscking thing_.
+>
+> This is such an obvious and essential response to the _big ball of mud_
 > pattern that, despite the fact that we know nothing about Mars, we can
 > deduce that it must have happened on Mars. Probably several times.
 > Probably several hundred. For each of these attempts but the last, of
-> course, the result was either (a) abject failure, (b) another *big ball
-> of mud*, or (c) both.
-> 
+> course, the result was either (a) abject failure, (b) another _big ball
+> of mud_, or (c) both.
+>
 > But the last, by definition, succeeded. This is the crucial inference we
 > can draw about Mars: since the Martians had 50 million years to try, in
 > the end they must have succeeded. The result: Martian code, as we know
-> it today. Not enormous and horrible — *tiny and diamond-perfect*.
+> it today. Not enormous and horrible — _tiny and diamond-perfect_.
 > Moreover, because it is tiny and diamond-perfect, it is perfectly stable
-> and never changes or decays. It neither is a *big ball of mud*, nor tends
+> and never changes or decays. It neither is a _big ball of mud_, nor tends
 > to become one. It has achieved its final, permanent and excellent state.
 
 We don't know that Urbit will achieve this final form, but Urbit is an attempt to make progress in that direction. Any software that isn't a candidate for "tiny and diamond-perfect" is either a prototype or scaffolding.
@@ -692,17 +694,17 @@ acceptable. If you depend on a piece of source code to be kept forever, copied a
 Another way to look at this is to say that anything that wouldn't work on a spaceship is architecturally flawed. Maybe it requires many sequential round-trips to a central server because it doesn't have all the relevant information. See discussion of A7.
 
 > F3: If it's owned by someone else, it isn't yours.
-> 
+>
 > F4: If it's managed by someone else and you can't change who that is, it
 > isn't yours.
-> 
+>
 > F5: If it's not yours, it isn't permanent.
-> 
+>
 > F6: If it's not permanent, it isn't real.
 
 Nobody is as aligned with your values as you are. If you don't control the software, then you can't guarantee you'll always have access to it. Whoever does control the software may destroy it, move away, or simply revoke your access to it.
 
-Control has some nuance. If it's physically controlled by a company and you can't get your data and the software that makes it useful, you definitely don't have control. If you have physical control of it, you do have control. But if you're hosting the data and software on a commodity cloud server, you still mostly have control of it. Your privacy has been reduced, sure. However, as long as you keep regular backups of the data and software, if the hosting provider disappears you just need to find another host, or host it yourself. Any particular host is likely to disappear, but the situation where *every* host disappears and you can't even host it yourself is much less likely. Brands are mortal, commodities are not.
+Control has some nuance. If it's physically controlled by a company and you can't get your data and the software that makes it useful, you definitely don't have control. If you have physical control of it, you do have control. But if you're hosting the data and software on a commodity cloud server, you still mostly have control of it. Your privacy has been reduced, sure. However, as long as you keep regular backups of the data and software, if the hosting provider disappears you just need to find another host, or host it yourself. Any particular host is likely to disappear, but the situation where _every_ host disappears and you can't even host it yourself is much less likely. Brands are mortal, commodities are not.
 
 Some branded hosts allow you to download a zip file of your data. This gives you a little more control over your data, but it's much closer to "no control" than "total control". This is because your online world is data plus code, and without the code that makes it useful, data is only good for scrapbooking. The scrapbook will remind you of the good old days, but you won't be able to live them again.
 

@@ -30,3 +30,7 @@ To learn more about Tailwind CSS, take a look at the docs:
 ## Deployment
 
 WIP
+
+## Upgrades
+
+The `/scripts` contains scripts used to programmatically upgrade site content data.

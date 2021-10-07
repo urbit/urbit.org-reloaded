@@ -1,7 +1,8 @@
 +++
 title = "Eliza"
-date = 2021-02-23
+date = "2021-02-22"
 description = "Building things, even Calm™ things, makes noise."
+
 [extra]
 author = "Christian Langalis"
 ship = "~pindet-timmut"
@@ -42,7 +43,7 @@ The sum of Urbit's architectural design is a new online economics: a way to fina
 
 We all know the basic MEGACORP business model: offer a free service (to suckers who don't own a server), secretly mine the data they generate on the (addictive) platform, then sell targeted ads to advertisers. This model will not survive Urbit. The ubiquitous personal server changes the economic equation. You used to 'pay' for an experience with your time and data. On Urbit, once you purchase core internet infrastructure, it's yours.
 
-So, can Urbit meaningfully curtail our world's appetite for data? We'll see. Post-enlightenment society runs on instrumental reason, right down to the last byte. Marketers will always want a fresh dataset. However, when the goods are on your Urbit, you can at least demand the respect you deserve. Long term, we expect a transparent market for data, not an opaque "agreement".  An analytics company wants to track everything you see and do on Urbit? They better be paying well.
+So, can Urbit meaningfully curtail our world's appetite for data? We'll see. Post-enlightenment society runs on instrumental reason, right down to the last byte. Marketers will always want a fresh dataset. However, when the goods are on your Urbit, you can at least demand the respect you deserve. Long term, we expect a transparent market for data, not an opaque "agreement". An analytics company wants to track everything you see and do on Urbit? They better be paying well.
 
 Eliza doesn't pay respondents. Her collection is a charity to Urbit's developers. (We're also still busy enabling payments on Urbit with the Bitcoin wallet.) However, her presence is not a term of service either. In a few years, by the nth time some smart aleck uses Eliza's chatbot code and conjures 'Zalexa' to attempt an intrusion upon your Calm™, we will see the economics of Urbit's architecture suddenly vivify. Blacklists, reputation systems, and, eventually, even data markets, all Urbit primitives envisioned long ago, will become real. We won't need Zoogle to underwrite a spam filter for the entire internet; the scarcity of Urbit address space, in tandem with a true web-of-trust, handles that.
 

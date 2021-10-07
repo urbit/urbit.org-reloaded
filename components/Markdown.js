@@ -38,7 +38,9 @@ export default async function Markdown({ post }) {
   const result = await remark()
     .use(html, options)
     .use(gfm)
-    .use(remarkprism)
+    .use(remarkprism, {
+      plugins: ["show-invisibles"],
+    })
     .use(slug)
     .use(heading)
     .process(post.content);

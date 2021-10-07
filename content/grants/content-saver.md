@@ -1,9 +1,11 @@
 +++
 title = "Content Saver"
-date = 2020-03-20
+date = "2020-03-19"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["App Dev", "Arvo"]
+grant_type = [ "Bounty" ]
+grant_category = [ "App Dev", "Arvo" ]
+
 [extra]
 image = ""
 description = "Extract and save content from HTML."

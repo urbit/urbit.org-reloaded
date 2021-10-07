@@ -1,9 +1,11 @@
 +++
 title = "Hoon 001: Learner efficiency and early-learner resources"
-date = 2020-02-10
+date = "2020-02-09"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Documentation"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Documentation" ]
+
 [extra]
 image = ""
 description = "Create Hoon learning resources catered to learner efficiency, with orienting materials for Hoon & coding, learning examples, videos."

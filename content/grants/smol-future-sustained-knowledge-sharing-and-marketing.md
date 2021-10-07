@@ -1,9 +1,11 @@
 +++
 title = "-=[smol future]=- Sustained Knowledge Sharing and Marketing"
-date = 2021-01-15
+date = "2021-01-14"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Community"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Community" ]
+
 [extra]
 image = ""
 description = "Create sustained documentation and marketing efforts that will support and encourage new users to run Urbit on their own RPi devices."

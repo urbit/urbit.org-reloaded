@@ -1,7 +1,8 @@
 +++
 title = "Urbit Events Series"
 description = "These events are an opportunity for Urbit contributors to share real-time updates that don’t make it into this blog, and for the community to get to know the contributors (and one another)."
-date = 2020-10-30
+date = "2020-10-29"
+
 [extra]
 description = "These events are an opportunity for Urbit contributors to share real-time updates that don’t make it into this blog, and for the community to get to know the contributors (and one another)."
 author = "Lane Rettig"
@@ -15,7 +16,7 @@ image = "https://media.urbit.org/site/posts/essays/bau.jpg"
 
 <br>
 
-*TL;DR: Urbit is launching a series of community events, the first of which is a developer call taking place on Thursday, November 5 at 9am PT. [Sign up here](https://www.meetup.com/urbit-sf/events/274279522/), and read on for all of the details.*
+_TL;DR: Urbit is launching a series of community events, the first of which is a developer call taking place on Thursday, November 5 at 9am PT. [Sign up here](https://www.meetup.com/urbit-sf/events/274279522/), and read on for all of the details._
 
 --
 
@@ -53,4 +54,4 @@ Tlon could no longer catalog the Urbit community even if it wanted to. This is a
 
 --
 
-*Sign up to attend [the first event](https://www.meetup.com/urbit-sf/), and join the channels called “Events Series” on Landscape in the Urbit Community group to get involved.*
+_Sign up to attend [the first event](https://www.meetup.com/urbit-sf/), and join the channels called “Events Series” on Landscape in the Urbit Community group to get involved._

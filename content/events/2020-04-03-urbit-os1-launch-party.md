@@ -1,19 +1,18 @@
 +++
 title = "Urbit OS1 Launch Party"
-date = 2020-04-03
-[extra]
-pinned = false
-host = "Urbit"
-time = "19:00 PST"
+ends = "2020-04-04T06:00:00.000-07:00"
 location = "Online event"
 image = "https://secure.meetupstatic.com/photos/event/1/f/8/b/600_489548075.jpeg"
 registration_url = "https://www.meetup.com/urbit-sf/events/268519156/"
 youtube = "71ViyftPkGk"
-dark = true
-overlay = true
-+++
+description = "Join us as we launch Urbit OS1!"
+guests = ""
+timezone = "America/Los_Angeles"
+starts = "2020-04-04T03:00:00.000-07:00"
 
-Join us as we launch Urbit OS1!
+[[hosts]]
+name = "Urbit"
++++
 
 The presentation will begin at 7pm Pacific.
 

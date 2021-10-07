@@ -1,7 +1,8 @@
 +++
 title = "Input and Output in Hoon"
 description = "Let's talk about IO in Urbit."
-date = 2020-12-16
+date = "2020-12-15"
+
 [extra]
 author = "Philip Monk"
 ship = "~wicdev-wisryt"
@@ -13,7 +14,6 @@ image = "https://media.urbit.org/site/posts/essays/zion-canyon-1.jpg"
 ![canyon](https://media.urbit.org/site/posts/essays/zion-canyon-1.jpg)
 
 <br>
-
 
 Let's talk about IO in Urbit. I won't say much about how events and effects are processed by the runtime; it suffices to note that the runtime is a normal Unix program which (1) listens for various events, (2) passes them to Arvo (Urbit OS), and (3) processes the effects produced by Arvo. Instead, I’ll focus on how IO works from the perspective of Hoon programs, like Arvo or apps running on Arvo. But first, let's review IO paradigms in other languages.
 
@@ -35,7 +35,7 @@ For readability, intermediate variables would be a good idea, but nothing stops 
 
 ### Monadic IO
 
-Languages that use explicit monads for IO (such as Haskell) perform IO by running IO behind a bind operation, which I'll notate with `<-`. Thus, while you can't put IO *anywhere*, the general structure is a sequence of IO operations.
+Languages that use explicit monads for IO (such as Haskell) perform IO by running IO behind a bind operation, which I'll notate with `<-`. Thus, while you can't put IO _anywhere_, the general structure is a sequence of IO operations.
 
     fileName <- cliInput()
     url <- readFile(fileName)

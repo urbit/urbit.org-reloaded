@@ -21,9 +21,7 @@ has forgotten about it.
 Breaches often fix connectivity issues, but should only be used as a last
 resort. Before performing a breach, look at alternative fixes in the [Ship
 Troubleshooting](/using/os/ship-troubleshooting) guide. Also reach out for help in the
-Help channel in the Urbit Community group `~bitbet-bolbel/urbit-community`, or,
-failing that, in the `#ship-starting-support` channel in our [Discord
-server](https://discord.gg/n9xhMdz) to see if there is another option.
+Help channel in the Urbit Community group `~bitbet-bolbel/urbit-community` to see if there is another option.
 Connectivity issues are typically related to a bug, and you may be able to help
 us fix it by emailing us at `support@urbit.org`.
 

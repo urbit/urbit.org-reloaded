@@ -1,9 +1,11 @@
 +++
 title = "ucal Google and Outlook Integration"
-date = 2021-05-13
+date = "2021-05-12"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["App Dev", "Arvo"]
+grant_type = [ "Bounty" ]
+grant_category = [ "App Dev", "Arvo" ]
+
 [extra]
 image = ""
 description = "Extend the Urbit Calendar (ucal) to integrate with other calendaring systems."
@@ -11,6 +13,7 @@ reward = 2
 assignee = ""
 id = ""
 completed = false
+canceled = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0014&prefill_Grant+Name=ucal%20Google%20and%20Outlook%20Integration"
 +++
 

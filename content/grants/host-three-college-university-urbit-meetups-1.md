@@ -1,9 +1,11 @@
 +++
 title = "Host Three College/University Urbit Meetups (1)"
-date = 2020-03-02
+date = "2020-03-01"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["Community"]
+grant_type = [ "Bounty" ]
+grant_category = [ "Community" ]
+
 [extra]
 image = ""
 description = "Hold a meetup and presentation about Urbit."

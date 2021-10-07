@@ -1,14 +1,16 @@
 +++
 title = "Creating Sigils"
-date = 2020-02-04
+date = "2020-02-03"
 description = "The origin and design process informing Urbit's generative user avatar system, Sigils."
+
 [extra]
 author = "Gavin Atkinson"
 ship = "~ridlur-figbud"
-image ="https://media.urbit.org/site/posts/essays/sigils3.png"
+image = "https://media.urbit.org/site/posts/essays/sigils3.png"
 +++
 
 <!-- ![](https://media.urbit.org/site/blog-9.jpg) -->
+
 ![](https://media.urbit.org/site/posts/essays/sigils0-v3.png)
 
 One of the basic building blocks of Urbit is Urbit ID, our naming and identity system. Your Urbit ID is a short, recognizable name that’s also a network address for your Urbit OS instance. (You can find a complete, high level description of Urbit ID [here](https://urbit.org/understanding-urbit/urbit-id/).)
@@ -33,13 +35,13 @@ So we started by collecting influences.
 
 <iframe class="arena-iframe" width="100%" src="https://www.are.na/tlon/seal-zp3irwad52y/embed"></iframe>
 
-The ‘chop’ or [seal](https://en.wikipedia.org/wiki/Seal_(East_Asia)) is conceptually pretty close to what we wanted to get to.
+The ‘chop’ or [seal](<https://en.wikipedia.org/wiki/Seal_(East_Asia)>) is conceptually pretty close to what we wanted to get to.
 
 <br /><br />
 
 <iframe class="arena-iframe" width="100%" src="https://www.are.na/tlon/kamon/embed"></iframe>
 
-[Kamon](https://en.wikipedia.org/wiki/Mon_(emblem)) are even closer — especially since they have very little visual complexity.
+[Kamon](<https://en.wikipedia.org/wiki/Mon_(emblem)>) are even closer — especially since they have very little visual complexity.
 
 <br /><br />
 
@@ -67,11 +69,11 @@ Another influence: international maritime signal flags. We like these not only b
 
 You can see the whole collection of our visual research [here](https://www.are.na/tlon/2019-sigils-research).
 
-Ultimately, we didn’t specifically draw on any of these influences very consciously. The goal of visual research is to get a sense of the territory, what has been tried, and what works. We think these threads of prior work are evident in the final result — you can *feel* them, but it’s tough to point to them individually.
+Ultimately, we didn’t specifically draw on any of these influences very consciously. The goal of visual research is to get a sense of the territory, what has been tried, and what works. We think these threads of prior work are evident in the final result — you can _feel_ them, but it’s tough to point to them individually.
 
 ## What’s in a name?
 
-> *“Lev’s sigil appeared, strobing, as Netherton was getting out of the cab in Henrietta Street. “Yes?” Netherton asked.”*
+> _“Lev’s sigil appeared, strobing, as Netherton was getting out of the cab in Henrietta Street. “Yes?” Netherton asked.”_
 >
 > <cite>— William Gibson, The Peripheral</cite>
 
@@ -79,7 +81,7 @@ Before we get to how we worked through the problem of actually designing these t
 
 We went through so many names for these things. Crest, symbol, seal, tag, pictograph, stamp, emblem, signet, icon, glyph, holomark, visage, radigy, pattern, the list goes on for an incredibly (embarrassingly) long time. We argued about this, we went back and forth about it.
 
-Sigil won, ultimately, because of the way that it’s personified in William Gibson’s *The Peripheral*. In the far future, characters talk to each other by some kind of telepresence. When a call comes in from someone else, they first appear as a ‘sigil.’ It’s a strange word, but we were imagining a similar use-case.
+Sigil won, ultimately, because of the way that it’s personified in William Gibson’s _The Peripheral_. In the far future, characters talk to each other by some kind of telepresence. When a call comes in from someone else, they first appear as a ‘sigil.’ It’s a strange word, but we were imagining a similar use-case.
 
 While we can’t point to any specific parts of our visual research that reappear directly, sigil is lovingly borrowed.
 

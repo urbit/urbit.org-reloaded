@@ -1,9 +1,11 @@
 +++
 title = "Userspace Apprenticeship: Contacts App"
-date = 2021-06-17
+date = "2021-06-16"
+
 [taxonomies]
-grant_type = ["Apprenticeship"]
-grant_category = ["App Dev", "Arvo"]
+grant_type = [ "Apprenticeship" ]
+grant_category = [ "App Dev", "Arvo" ]
+
 [extra]
 image = ""
 description = "Contact Management App"
@@ -11,6 +13,7 @@ reward = 1
 mentor = "~timluc-miptev"
 assignee = ""
 completed = false
+canceled = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0034&prefill_Grant+Name=Contacts%20App"
 +++
 

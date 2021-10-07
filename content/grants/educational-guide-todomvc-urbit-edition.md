@@ -1,9 +1,11 @@
 +++
 title = "Educational Guide: TodoMVC, Urbit Edition"
-date = 2021-01-05
+date = "2021-01-04"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["Documentation"]
+grant_type = [ "Bounty" ]
+grant_category = [ "Documentation" ]
+
 [extra]
 image = ""
 description = "The goal of this bounty is to create a series of guides that can instruct a newcomer to Urbit as to how to go about creating a full-stack application from scratch."
@@ -11,6 +13,7 @@ reward = 10
 assignee = "~rabsef-bicrym"
 id = "1372696624"
 completed = false
+canceled = false
 link = ""
 +++
 

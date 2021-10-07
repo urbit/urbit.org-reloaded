@@ -1,7 +1,8 @@
 +++
 title = "On Christopher Alexander"
-date = 2021-07-20
+date = "2021-07-19"
 description = "An overview of his writing and relevance"
+
 [extra]
 author = "Matt"
 ship = "~tirwyd-sarmes"

@@ -1,11 +1,12 @@
 +++
 title = "Ford Fusion"
-date = 2020-07-15
+date = "2020-07-14"
 description = "Ford Fusion was an overhaul of Urbit's over-the-air upgrade process and a rewrite of its build system. The new update system corrects a few long-standing bugs with the previous one, and the new build system is simpler, smaller (by around 5,000 lines), and easier to manage."
+
 [extra]
 author = "Ted Blackman"
 ship = "~rovnys-ricfer"
-image ="https://media.urbit.org/site/posts/essays/ford-fusion.png"
+image = "https://media.urbit.org/site/posts/essays/ford-fusion.png"
 +++
 
 <br>
@@ -26,13 +27,14 @@ Urbit isn't exactly a traditional operating system, so the comparison is somewha
 itself in the general case, not just some special cases.
 
 Ford Fusion has fixed the major upgrade issues of the past by guaranteeing three properties that in retrospect are obvious requirements, but, like much of Urbit, took many years and rewrites to identify as such:
+
 - Atomic: the update should complete or fail in one transaction. If it
   fails, the system shouldn't get stuck.
 - Self-contained: there must be no implicit dependencies or hysteresis
   (dependence on previous system states) when building the new software
   from source.
 - Ordered: updates must be monotonically sequenced from the system's
-  lowest layer to highest. 
+  lowest layer to highest.
 
 Let’s walk through them one by one.
 
@@ -42,9 +44,9 @@ In previous versions of Urbit, updates failed atomicity by deferring parts of th
 
 We've learned that asynchronicity is an entropic state. A system will tend toward more asynchronicity over time unless effort is put into keeping it synchronous. [As Jonathan Blow has noted](https://youtu.be/pW-SOdj4Kkk?t=2547), the language server protocol has turned every editor plugin into a distributed system, since now it has to communicate asynchronously with the main editor process.
 
-Consider an update system that took multiple Arvo events to complete.  An ad-hoc higher-level transaction system would need to be built to roll back the effects of the first few events in case of failure. It’s important for various parts of the system to be able to emit effects on upgrade; since those effects would need to be rolled back if a later event in this upgrade fails, the system would need to maintain a queue of those events and only apply them once all the other upgrade events have completed.
+Consider an update system that took multiple Arvo events to complete. An ad-hoc higher-level transaction system would need to be built to roll back the effects of the first few events in case of failure. It’s important for various parts of the system to be able to emit effects on upgrade; since those effects would need to be rolled back if a later event in this upgrade fails, the system would need to maintain a queue of those events and only apply them once all the other upgrade events have completed.
 
-Note that the asynchronicity has now spread. Some effects that would normally be guaranteed to be processed synchronously might now be asynchronous.  Entropy has begun to take hold, chipping away at the set of invariants the system is capable of guaranteeing.
+Note that the asynchronicity has now spread. Some effects that would normally be guaranteed to be processed synchronously might now be asynchronous. Entropy has begun to take hold, chipping away at the set of invariants the system is capable of guaranteeing.
 
 This observation is not purely theoretical. False modularity was the cause of internal asynchronicity in Clay where it had to wait for responses in a complex dance with Ford, which was another vane (Arvo kernel module); moving Ford into Clay allowed function calls that were synchronous from Clay’s perspective, which allowed further simplifications, culminating in about a twenty percent reduction of source code size of the Arvo kernelspace.
 
@@ -79,17 +81,17 @@ Emerging from this underworld required making a number of changes to the Arvo ke
 
 These are the layers of the stack that update themselves on the fly, from lowest to highest:
 
-+ hoon: the hoon language definition and compiler, defined in `/sys/hoon/hoon`
-+ arvo: the arvo kernel proper and related type definitions, in `/sys/arvo/hoon`
-+ zuse: the standard library, in `/sys/zuse/hoon`
-+ vanes: arvo kernel modules, including clay itself, in folder `/sys/vane`
-+ userspace: apps, marks, ancillary source code like libraries, and user data
+- hoon: the hoon language definition and compiler, defined in `/sys/hoon/hoon`
+- arvo: the arvo kernel proper and related type definitions, in `/sys/arvo/hoon`
+- zuse: the standard library, in `/sys/zuse/hoon`
+- vanes: arvo kernel modules, including clay itself, in folder `/sys/vane`
+- userspace: apps, marks, ancillary source code like libraries, and user data
 
 An update to one layer necessitates a reload of all layers above it; e.g. a change to Zuse should trigger updates to the vanes and userspace. Conversely, an update to a higher layer should not cause a spurious reload of lower layers, which should not be affected by the change; for example, an update to just userspace should not cause any reloads of system code.
 
-Clay is responsible for enforcing the layering of updates. An update to a module is triggered when an attempt is made to commit a change to Clay that affects one or more files needed to build the module. For example, if the 'foo' agent's source, defined in `/app/foo/hoon`, imports the 'bar' library from `/lib/bar/hoon`, then a modification to `/lib/bar/hoon` triggers an update to the 'foo' agent.  All vanes and userspace files depend on Zuse, which depends on the Arvo and Hoon sources, so a change to the Hoon, Arvo, or Zuse sources will trigger updates to all vanes and userspace files.
+Clay is responsible for enforcing the layering of updates. An update to a module is triggered when an attempt is made to commit a change to Clay that affects one or more files needed to build the module. For example, if the 'foo' agent's source, defined in `/app/foo/hoon`, imports the 'bar' library from `/lib/bar/hoon`, then a modification to `/lib/bar/hoon` triggers an update to the 'foo' agent. All vanes and userspace files depend on Zuse, which depends on the Arvo and Hoon sources, so a change to the Hoon, Arvo, or Zuse sources will trigger updates to all vanes and userspace files.
 
-When asked to perform a commit, Clay determines which layers need to be updated based on which files have changed and which modules depend on those files. For now, all running programs load their source from the `%home` desk, so only changes to `%home` trigger stateful updates. Files in other desks can be built, but not installed into the system.  This might be relaxed in the future.
+When asked to perform a commit, Clay determines which layers need to be updated based on which files have changed and which modules depend on those files. For now, all running programs load their source from the `%home` desk, so only changes to `%home` trigger stateful updates. Files in other desks can be built, but not installed into the system. This might be relaxed in the future.
 
 The process of updating varies by layer. The Hoon and Zuse layers are stateless, so their newly rebuilt cores (Nock executables) must be stored (somewhere in the system’s Nock tree, in memory; remember, Urbit is a single-level store), but they have no state that would need to be migrated. The Arvo kernel, vanes, and userspace agents are all live, stateful programs, so in order to update one of those, the system must extract the state from the old program, pass that data into the newly built program, then discard the old program and store the new one. Arvo and agent state injection routines can emit effects, but vane updates cannot.
 
@@ -130,7 +132,7 @@ When Gall receives a newly rebuilt agent from Clay, it calls the gate produced b
 It is a bit counterintuitive that an app reload failure could prevent a kernel update. The reason is that we don't want the system to update itself into a broken state. An Urbit can be rendered practically unusable by the presence of broken agents, even if the kernel hasn't lost integrity,
 so it's kinder to the user not to break their agents by installing an incompatible kernel update. This also puts virtuous pressure on kernel developers not to "break userspace", the importance of which has been insisted on for decades by Linus Torvalds, among others.
 
-If an agent does crash a commit event that included a kernel update, the attempted commit is now trivially rolled back, and the system can deliver an error message to the user.  This does not leave the system in an inconsistent or stuck state, so the user could modify the failing agent and try the kernel update again later.  Supporting better workflows for keeping third-party agents up-to-date will be an important aspect of Urbit’s upcoming software distribution work.
+If an agent does crash a commit event that included a kernel update, the attempted commit is now trivially rolled back, and the system can deliver an error message to the user. This does not leave the system in an inconsistent or stuck state, so the user could modify the failing agent and try the kernel update again later. Supporting better workflows for keeping third-party agents up-to-date will be an important aspect of Urbit’s upcoming software distribution work.
 
 ## Ford Build Semantics
 
@@ -146,7 +148,7 @@ Clay exposes file builds into the scry namespace with `%ca`: as an example, `.^(
 
 #### Mark Builds
 
-A mark build produces a `$dais` mark-interface core. It first performs a file build on the Hoon file in `/mar` that defines the mark core, then it does some metaprogramming to make the operations more convenient to use.  If the raw mark core delegated revision control operations to another mark core, the mark build will also load the delegate mark core and resolve the result into the `$dais`.
+A mark build produces a `$dais` mark-interface core. It first performs a file build on the Hoon file in `/mar` that defines the mark core, then it does some metaprogramming to make the operations more convenient to use. If the raw mark core delegated revision control operations to another mark core, the mark build will also load the delegate mark core and resolve the result into the `$dais`.
 
 Clay exposes mark builds into the scry namespace with `%cb`: as an example, `.^(dais:clay %cb /~zod/home/3/mar/foo/hoon)` builds a `$dais` for the `%foo` mark.
 
@@ -154,15 +156,14 @@ Clay exposes mark builds into the scry namespace with `%cb`: as an example, `.^(
 
 A cast build produces a `$tube`: a gate that takes a value of one mark as input and converts it to a valid value of another mark or crashes. To convert from mark `%foo` to mark `%bar`, Clay tries the following operations, in order:
 
-+ direct grow from `%foo`
-+ direct grab from `%bar`
-+ indirect jump from `%foo` through `%qux`
-+ indirect grab from `%bar` through `%qux`
+- direct grow from `%foo`
+- direct grab from `%bar`
+- indirect jump from `%foo` through `%qux`
+- indirect grab from `%bar` through `%qux`
 
 The `%foo` mark can “grow to” `%bar` by providing an arm in its `+grow` core named `+bar`. `%bar` can convert from `%foo` using a `+foo` arm in its `+grab` core. `%foo` can also chain a conversion through an intermediary using an arm in its `+jump` core, and `%bar` can specify an “indirect grab” by having a `+grab` arm produce a delegate mark instead of directly defining a conversion gate.
 
-Clay exposes cast builds into the scry namespace with `%cc`: as an example, `.^(tube:clay %cc
-/~zod/home/3/foo/bar)` builds a `$tube` conversion gate from `%foo` to `%bar`.
+Clay exposes cast builds into the scry namespace with `%cc`: as an example, `.^(tube:clay %cc /~zod/home/3/foo/bar)` builds a `$tube` conversion gate from `%foo` to `%bar`.
 
 ### Ford Runes
 
@@ -207,8 +208,7 @@ A valid userspace hoon file must contain a nonempty list of hoons (hoon source e
 
 Urbit still needs to make better use of desks other than `%home` and the development process should be adjusted given the tighter coupling between source code and kernel and tighter criteria for accepting an update.
 
-This work also hopefully provides a good foundation of a package management and software distribution system for Urbit. As `~wicdev-wisryt` has said, a user should be able to run `|install
-~norsyr-torryn/canvas` to load and build remote source. No one should experience dependency hell on Urbit, but we're not there yet.
+This work also hopefully provides a good foundation of a package management and software distribution system for Urbit. As `~wicdev-wisryt` has said, a user should be able to run `|install ~norsyr-torryn/canvas` to load and build remote source. No one should experience dependency hell on Urbit, but we're not there yet.
 
 At least now, building a desk has no dependencies, other than a Ford with a compatible Hoon compiler. No decisions have been made on this yet, but
 Ford might get moved to inside the desk, possibly by making Zuse callable. This could allow a desk to expose a Nock interface in addition to a typed Hoon interface, which could even let a desk be used as a "pill" bootloader.
@@ -221,6 +221,6 @@ In early 2020, `~master-morzod` suggested moving Ford into Clay to reduce asynch
 
 The first time I rewrote Ford, it took me six months, with help from `~littel-ponnys`, and it weighed in at 6,000 lines of code. The second time, in late 2018, took a few weeks. The third time, in January 2020, took a week. I wrote `+ford` in Ford Fusion in one long day, and it’s about 500 lines of synchronous, functional code.
 
-It has taken me two or three years to understand this problem as well as I do, and I expect there are parts of it I still don’t understand. The code itself isn’t the issue; it’s finding the right answer to ontological and teleological questions. What *is* Ford? What will it be in a hundred years? I’m confident Ford Fusion is more similar than its predecessor to the Ford of 2120, because it’s smaller, more functional, and easier to understand and administer.
+It has taken me two or three years to understand this problem as well as I do, and I expect there are parts of it I still don’t understand. The code itself isn’t the issue; it’s finding the right answer to ontological and teleological questions. What _is_ Ford? What will it be in a hundred years? I’m confident Ford Fusion is more similar than its predecessor to the Ford of 2120, because it’s smaller, more functional, and easier to understand and administer.
 
 As an engineering discipline and organizational practice, working on a system intended to be frozen yields surprising simplifications like this every so often. Urbit is now reaching the point where we’re starting to see more of the obsidian edges of the frozen future system emerge from the lava.

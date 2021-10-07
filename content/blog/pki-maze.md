@@ -1,7 +1,8 @@
 +++
 title = "Designing a Permanent Personal Identity"
-date = 2019-11-27
+date = "2019-11-26"
 description = "A public key infrastructure (PKI) is a system for binding a set of keys to a name. Sometimes a small amount of metadata is included."
+
 [extra]
 author = "Philip Monk"
 ship = "~wicdev-wisryt"
@@ -40,7 +41,7 @@ However, Urbit is yours and it's forever. Trusting central registries jeopardize
 
 Some argue that blockchain is only good for money. This is myopic and is generally based on the experience that its most valuable application so far has been money. However, blockchain is a cryptographic primitive to do what was previously impossible: prove that one message was signed before another without a central party. Blockchain was discovered by someone trying to create digital money, and he needed that primitive, but that doesn't mean that's all it's good for.
 
-Thus, we store our PKI data on a blockchain for our second kind of name: planets. A planet is a 32-bit address which has key information stored on the blockchain.[^2]  The owner of a planet may broadcast new PKI data by adding it to the blockchain. Any later messages by the old keys will be rejected, and everyone on the network will listen to the blockchain for key data. Thus, we have global consistency, permanence, and self sovereignty. We know of no other solution that can provide these properties.
+Thus, we store our PKI data on a blockchain for our second kind of name: planets. A planet is a 32-bit address which has key information stored on the blockchain.[^2] The owner of a planet may broadcast new PKI data by adding it to the blockchain. Any later messages by the old keys will be rejected, and everyone on the network will listen to the blockchain for key data. Thus, we have global consistency, permanence, and self sovereignty. We know of no other solution that can provide these properties.
 
 However, while small individually, the aggregate PKI data for all nodes on the network may become very large. This is not an issue for comets because nobody needs to store comet keys except for those which they're talking with, and even those can be garbage-collected and re-requested and verified. For planets, there is a canonical set of keys, and somebody must store that. There are about 2<sup>32</sup>, or 4 billion planets. If the PKI data is about 100 bytes for each planet, this is about 400 GB of data. This may be more than most users wish to store, but it's small enough that it would be very cheap for someone to host this data for many users[^3].
 
@@ -62,13 +63,8 @@ To create a sane network, we require global consistency for all our names. There
 
 Fancifully, comets are wayward celestial bodies that are great for testing and miscellaneous low-value things that won't last for long. Planets are where you can build a home and shape it into anything you want it to be. People can always find your planet; it's not going anywhere. Moons are useful for special purposes, like storage, heavy industry, and anything else you might want to do off-planet.[^4]
 
-
 [^0]: Or the equivalent with a hierarchical key structure. In practice, you want to have a master key which signs a junior key for everyday use. You use the master key to rotate the junior key.
-
 [^1]: More strictly: it proves that he didn't mine it after the other blocks currently on the Bitcoin blockchain. It only gives an ordering within the chain, not a literal timestamp.
-
 [^2]: In addition to planets, there are stars and galaxies. From a PKI perspective they're treated exactly like planets, but on the network they provide infrastructure services like routing.
-
 [^3]: In practice, this will likely be an included service by your sponsoring star. It could be a separate service, but it will be very cheap because it's a commodity and the "cost of production" is very cheap. At any rate, it should never rise above the capital cost of a 400GB hard drive.
-
 [^4]: To extend the metaphor, stars are a neighborhood to live in -- they're easier for other planets to see, so when they want to send you a message they look for your star first. If they don't even know where your star is, they can certainly find your star's galaxy, and that will be enough to locate the star. Of course, if your star is not providing satisfactory service, you can take your planet and move to another star.

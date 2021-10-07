@@ -38,11 +38,8 @@ large, so here's some links to its various high-level components
 ### Content
 
 - [urbit.org](https://github.com/urbit/urbit.org): the source for the urbit.org
-  website.
-- [docs](https://github.com/urbit/docs): the source for the documentation that
-  you're currently reading.
-  - _Note:_ the documentation is loaded into the
-    [urbit.org](https://github.com/urbit/urbit.org) repo as a submodule.
+  website and documentation.
+
 
 ### Community
 

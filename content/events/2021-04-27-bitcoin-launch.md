@@ -1,17 +1,19 @@
 +++
 title = "Bitcoin Launch"
-date = 2021-04-27
-[extra]
-pinned = false
-host = "Urbit Foundation"
-time = "12:00pm PDT"
+ends = "2021-04-27T21:30:00.000-07:00"
 location = "Online Event"
 image = "https://media.urbit.org/site/events/bitcoin-launch-event.png"
 registration_url = "https://www.meetup.com/urbit-sf/events/276741426/"
 youtube = "_aRnfacZPto"
-guests = "Marty Bent"
 description = "Bitcoin is coming to Urbit! With the upcoming release of the Bitcoin Wallet, you will be able to pay Urbit ships directly with BTC."
-dark = true
+timezone = "America/Los_Angeles"
+starts = "2021-04-27T20:00:00.000-07:00"
+
+[[hosts]]
+name = "Urbit Foundation"
+
+[[guests]]
+name = "Marty Bent"
 +++
 
 Bitcoin is coming to Urbit! With the upcoming release of the Bitcoin Wallet, you will be able to pay Urbit ships directly with BTC.

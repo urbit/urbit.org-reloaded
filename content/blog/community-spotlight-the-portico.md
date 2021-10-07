@@ -1,7 +1,8 @@
 +++
 title = "Community Spotlight: The Portico"
-date = 2021-05-04
+date = "2021-05-03"
 description = "Interview with The Portico founder Josh Reagan"
+
 [extra]
 author = "Matt"
 ship = "~tirwyd-sarmes"
