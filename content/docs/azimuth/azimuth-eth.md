@@ -12,7 +12,9 @@ for the contract containing the business logic for this ledger. `Azimuth.eth`
 cannot be modified directly by [galaxy vote](/docs/glossary/upgrade) - they are
 only eligible to modify the Ecliptic.
 
-The general state of Azimuth is given as follows.
+## Global state
+
+The global state of Azimuth is given as follows.
 
 ```
   //  points: per point, general network-relevant point state
@@ -38,7 +40,11 @@ The general state of Azimuth is given as follows.
 Urbit ID's are formalized as [ERC-721 non-fungible
 tokens](https://eips.ethereum.org/EIPS/eip-721) and are indexed by a number
 between `0` and `2^32-1`, or `uint32`. There are two data structures associated to a given
-`uint32`: a `Point` and a `Deed`. A `Point` contains data about networking keys
+`uint32`: a `Point` and a `Deed`.
+
+## `Point`s {#points}
+
+A `Point` contains data about networking keys
 and sponsorship status, arranged in the following `struct`:
 
 ```
@@ -95,6 +101,8 @@ and sponsorship status, arranged in the following `struct`:
   }
 ```
 
+## `Deed`s {#deeds}
+
 The owner of an Urbit ID may also set several [proxies](/docs/using/id/proxies)
 by modifying their `Deed`:
 
@@ -125,6 +133,8 @@ struct Deed
     address transferProxy;
   }
 ```
+
+## Other state
 
 Finally, each Ethereum address may set for itself a number of `operators`,
 as defined and required by the ERC-721 standard. These are for third party

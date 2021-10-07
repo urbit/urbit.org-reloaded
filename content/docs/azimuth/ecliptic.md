@@ -10,6 +10,18 @@ vote](/docs/glossary/upgrade). This determines things such as what the various
 proxies are capable of, how keys are changed, or verifying that a request is
 valid.
 
+Ecliptic uses external contracts such as
+[Azimuth.eth](/docs/azimuth/azimuth-eth) and
+[Polls](https://github.com/urbit/azimuth/blob/master/contracts/Polls.sol) for
+data storage so that it can easily be replaced incase the logic needs to be
+changed without affecting the data. These data contracts are owned by the
+Ecliptic contract, and this ownership is passed to the new Ecliptic contract
+whenever it is replaced. Thus it is advised for clients to not store Ecliptic's
+contract address directly, but instead ask the Azimuth.eth contract for its
+`owner` attribute to ensure that transactions are sent to the latest Ecliptic
+contract. Alternatively, the ENS name `ecliptic.eth` will always resolve to the
+latest Ecliptic.
+
 You can read about [Urbit's first
 upgrade](https://github.com/urbit/azimuth/pull/35) to Ecliptic, which occurred
 in the summer of 2021, [here](https://urbit.org/blog/first-contract). The
@@ -17,10 +29,16 @@ in the summer of 2021, [here](https://urbit.org/blog/first-contract). The
 and consisted of several small modifications to ready the PKI for the
 introduction of naive rollups.
 
+Ecliptic implements the [ERC-721](https://eips.ethereum.org/EIPS/eip-721)
+interface for non-fungible tokens, as well as the
+[ERC-165](https://eips.ethereum.org/EIPS/eip-165) standard for interface
+detection.
+
 There are currently [28 functions](#write) which may be called to write to
 the Ecliptic, and [17 functions](#read) to read data from the Ecliptic. Many of these
 have a corresponding [layer 2 action](/docs/azimuth/l2-actions), and/or can be
-performed using [Bridge](/using/id/using-bridge). We note these facts where applicable.
+performed using [Bridge](/using/id/using-bridge). We note these facts where
+applicable. 
 
 ## Write functions {#write}
 
@@ -29,133 +47,384 @@ data to Ethereum. These can be called using
 [Etherscan](https://etherscan.io/address/ecliptic.eth#writeContract), but
 the most common functions may be called from within Bridge.
 
-### `startDocumentPoll`
+We only document here the write functions specific to Ecliptic and not the
+standard functions that are part of the ERC-721 or ERC-165 interfaces.
 
-#### Accepts
+### `Point`s interface
 
-`uint8 _galaxy, bytes32 _proposal`
+These functions are available to each owner of a
+[`Point`](/docs/azimuth/azimuth-eth#points), and a subset of them are available
+to its [proxies](#proxies). All of these actions may be performed from Bridge.
 
-#### Action
+#### `configureKeys`
 
-Starts a [document poll](/docs/glossary/docvote). Galaxies only. `_galaxy` is
-the calling galaxy, and `_proposal` is a keccak-256 hash of any arbitrary
+```
+    function configureKeys(uint32 _point,
+                           bytes32 _encryptionKey,
+                           bytes32 _authenticationKey,
+                           uint32 _cryptoSuiteVersion,
+                           bool _discontinuous)
+```
+
+Configure `_point` with network public keys `_encryptionKey`, `_authenticationKey`,
+and corresponding `_cryptoSuiteVersion`, incrementing the `Point`'s continuity
+number if needed.
+
+Corresponds to the layer 2 `%configure-keys` action.
+
+#### `spawn`
+
+```
+    function spawn(uint32 _point, address _target)
+```
+
+Spawn `_point`, then either give, or allow `_target` to take, ownership of `_point`.
+
+If `_target` is the `:msg.sender`, `_target` owns the `_point` right away.
+otherwise, `_target` becomes the transfer proxy of `_point`.
+
+Requirements:
+ - `_point` must not be active
+ - `_point` must not be a planet with a galaxy prefix
+ - `_point`'s prefix must be linked and under its spawn limit
+ - `:msg.sender` must be either the owner of `_point`'s prefix, or an authorized spawn proxy for it
+
+Corresponds to the layer 2 `%spawn` action.
+
+#### `transferPoint`
+
+```
+    function transferPoint(uint32 _point, address _target, bool _reset)
+```
+
+Transfer `_point` to `_target`, clearing all permissions
+data and keys if `_reset` is true
+
+Note: the `_reset` flag is useful when transferring the point to
+a recipient who doesn't trust the previous owner.
+
+Requirements:
+ - `:msg.sender` must be either `_point`'s current owner, authorized to transfer
+   `_point`, or authorized to transfer the current owner's points (as in ERC721's operator)
+ - `_target` must not be the zero address.
+ 
+Corresponds to the layer 2 `%transfer-point` action. 
+
+#### `escape`
+
+```
+    function escape(uint32 _point, uint32 _sponsor)
+```
+
+Request escape as `_point` to `_sponsor`.
+
+If an escape request is already active, this overwrites the existing request.
+
+Requirements:
+ - `:msg.sender` must be the owner or manager of `_point`,
+ - `_point` must be able to escape to `_sponsor` as per to `canEscapeTo()`
+ 
+ Corresponds to the layer 2 `%escape` action.
+ 
+#### `cancelEscape`
+
+```
+    function cancelEscape(uint32 _point)
+```
+
+Cancel the currently set escape for `_point`.
+
+Corresponds to the layer 2 `%cancel-escape` action.
+
+#### `adopt`
+
+```
+    function adopt(uint32 _point)
+```
+
+As the relevant sponsor, accept the `_point`.
+
+Requirements:
+ - `:msg.sender` must be the owner or management proxy
+    of `_point`'s requested sponsor
+    
+Corresponds to the layer 2 `%adopt` action.
+
+#### `reject`
+
+```
+    function reject(uint32 _point)
+```
+
+As the relevant sponsor, deny the `_point`'s `adopt` request.
+
+Requirements:
+ - `:msg.sender` must be the owner or management proxy
+    of `_point`'s requested sponsor
+
+Corresponds to the layer 2 `%reject` action.
+
+#### `detach`
+
+```
+    function detach(uint32 _point)
+```
+
+As the `_sponsor`, stop sponsoring the `_point`.
+
+Requirements:
+ - `:msg.sender` must be the owner or management proxy
+    of `_point`'s current sponsor
+    
+Corresponds to the layer 2 `%detach` action.
+
+Unlike all other layer 1 actions, layer 1 sponsors may use a layer 1 `detach` on
+a layer 2 sponsee. See the [Layer 2](/docs/azimuth/layer2#sponsorship) section
+for more detail.
+
+### Proxy management {#proxies}
+
+These functions are used to manage the various
+[proxies](/docs/using/id/proxies). All of these actions may be performed from Bridge.
+
+#### `setManagementProxy`
+
+```
+    function setManagementProxy(uint32 _point, address _manager)
+```
+
+Configure the management proxy for `_point`.
+
+The management proxy may perform "reversible" operations on
+behalf of the owner. This includes public key configuration and
+operations relating to sponsorship.
+
+Requirements:
+ - `:msg.sender` must be either `_point`'s current owner or the management proxy.
+
+Corresponds to the layer 2 `%set-management-proxy` action.
+
+#### `setSpawnProxy`
+
+```
+    function setSpawnProxy(uint16 _prefix, address _spawnProxy)
+```
+
+Give `_spawnProxy` the right to spawn points with the prefix `_prefix` using the
+`spawn` function.
+
+Requirements:
+ - `:msg.sender` must be either `_point`'s current owner or the spawn proxy.
+
+Corresponds to the layer 2 `%set-spawn-proxy` action.
+
+#### `setVotingProxy`
+
+```
+    function setVotingProxy(uint8 _galaxy, address _voter)
+```
+
+Configure the voting proxy for `_galaxy`.
+
+The voting proxy is allowed to start polls and cast votes on the point's behalf.
+
+Requirements:
+ - `:msg.sender` must be either `_point`'s current owner or the voting proxy.
+
+There is no corresponding layer 2 action since voting must occur on layer 1.
+
+#### `setTransferProxy`
+
+```
+    function setTransferProxy(uint32 _point, address _transferProxy)
+```
+
+Give `_transferProxy` the right to transfer `_point`.
+
+Requirements:
+ - `:msg.sender` must be either `_point`'s current owner, an operator for the
+   current owner, or the transfer proxy.
+
+Corresponds to the layer 2 `%set-transfer-proxy` action.
+
+### Poll actions
+
+Most of these are functions only available to galaxies. They are related to
+[voting](/docs/glossary/voting). As voting does not occur on layer 2, there are
+no corresponding layer 2 actions for poll actions.
+
+Upgrade and document polls last for 30 days, or once a majority is achieved,
+whichever comes first. If a majority (129) of yes or no votes is achieved, the
+final vote cast in favor of the winning option also triggers `updateUpgradePoll`
+or `updateDocumentPoll` as appropriate. Otherwise, if a quorum of 64 votes is
+achieved, with a majority voting for yes, and the 30 day voting period has
+expired, then _any_ Ethereum address may call `updateUpgradePoll` or
+`updateDocumentPoll` as appropriate.
+
+#### `startUpgradePoll`
+
+```
+    function startUpgradePoll(uint8 _galaxy, EclipticBase _proposal)
+```
+
+As `_galaxy`, start a poll for the Ecliptic upgrade `_proposal`.
+
+Requirements:
+ - `:msg.sender` must be the owner or voting proxy of `_galaxy`,
+ - the `_proposal` must expect to be upgraded from this specific
+   contract, as indicated by its `previousEcliptic` attribute.
+   
+This action must be performed manually - it is not available in Bridge.
+
+#### `startDocumentPoll`
+
+```
+    function startDocumentPoll(uint8 _galaxy, bytes32 _proposal)
+```
+
+As `_galaxy`, start a poll for the `_proposal`. Document polls last for 30 days,
+or once a majority is achieved, whichever comes first.
+
+The `_proposal` argument is the keccak-256 hash of any arbitrary
 document or string of text.
 
-### `detach`
+This action must be performed manually - it is not available in Bridge.
 
-A sponsor may call this on a sponsee to set `hasSponsor` for their `Point` to
-`false`.
+#### `castUpgradeVote`
 
+```
+    function castUpgradeVote(uint8 _galaxy,
+                              EclipticBase _proposal,
+                              bool _vote)
+```
 
-### `approve`
+As `_galaxy`, cast a `_vote` on the Ecliptic upgrade `_proposal`.
 
-### `updateDocumentPoll`
+`_vote` is true when in favor of the proposal, false otherwise.
 
-### `onUpgrade`
+This action may be performed from Bridge.
 
-### `transferPoint`
+#### `castDocumentVote`
 
-### `transferFrom`
+```
+    function castDocumentVote(uint8 _galaxy, bytes32 _proposal, bool _vote)
+```
 
-### `createGalaxy`
+As `_galaxy`, cast a `_vote` on the `_proposal`.
 
-### `setTransferProxy`
+`_vote` is true when in favor of the proposal, false otherwise.
 
-Sets the `transferProxy` for a `Point`. This action may only be performed by the
-owner of the `Point` or their transfer proxy.
+This action may be performed from Bridge.
 
-This action is performed by Bridge when transferring a point from one address to
-another. This makes transferring into a two-step process in order to reduce the
-likelihood of accidental transfer. 
+#### `updateUpgradePoll`
 
-Corresponds to `%set-transfer-proxy` on layer 2.
+```
+    function updateUpgradePoll(EclipticBase _proposal)
+```
 
-### `safeTransferFrom`
+Check whether the `_proposal` has achieved majority, upgrading to it if it has.
+Any Ethereum address may call this function.
 
-### `configureKeys`
+This action eiher occurs as part of a vote that achieves a majority, or must be
+performed manually. It is not available in Bridge.
 
-### `castUpgradeVote`
+#### `updateDocumentPoll`
 
-### `updateUpgradePoll`
+```
+    function updateDocumentPoll(bytes32 _proposal)
+```
 
-### `castDocumentVote`
+Check whether the `_proposal` has achieved majority. Any Ethereum address may
+call this function.
 
-### `renounceOwnership`
+### Contract owner operations
 
-Renounces ownership of the Ecliptic contract. This leaves the contract with no
-owner, and thus it would no longer possible to call functions with the
-`onlyOwner` modifier. This action may only be performed by the owner of
-Ecliptic.
+The following functions may only be performed by the owner of the contract.
+There are only two such functions, one of which is to spawn galaxies. As all
+galaxies have already been spawned, it is no longer of any use. Thus only
+`setDnsDomains` is relevant today. 
 
-### `setManagementProxy`
+#### `createGalaxy`
 
-Sets the `managementProxy` for a `Point`. This action may only be performed by the
-owner of the `Point` or their management proxy.
+```
+    function createGalaxy(uint8 _galaxy, address _target)
+```
 
-This action may be performed using Bridge.
+Grant `_target` ownership of the `_galaxy` and register it for voting. Galaxies
+are given by a `uint8`, and since all 256 galaxies have already been spawned,
+this function has no valid arguments.
 
-Corresponds to `%set-management-proxy` on layer 2.
+#### `setDnsDomains`
 
-### `startUpgradePoll`
+```
+    function setDnsDomains(string _primary, string _secondary, string _tertiary)
+```
 
-### `spawn`
+Sets 3 DNS domains by which galaxy IP addresses may be looked up as part of the
+bootstrap process to get on the network. Currently, all three domains are `urbit.org`.
 
-### `setApprovalForAll`
+In the future, this function should probably be parameterized as a per-galaxy
+setting, so that each galaxy may set its own domain.
 
-### `setVotingProxy`
+## Read functions {#read}
 
-Sets the `votingProxy` for a `Point`. This action may only be performed by
-galaxies, by either their owner or their voting proxy.
+Here we briefly describe each function in the Ecliptic which allows one to read
+data from the contract. These can be called using
+[Etherscan](https://etherscan.io/address/ecliptic.eth#readContract).
 
-This action may be performed using Bridge.
+We only document here the read functions specific to Ecliptic and not the
+standard functions that are part of the ERC-721 or ERC-165 interfaces.
 
-This action does exist on layer 2 as `%set-voting-proxy`, however since galaxies
-cannot be deposited to layer 2 they cannot set a layer 2 voting proxy.
+#### `depositAddress`
 
-### `setSpawnProxy`
+This returns the deposit address for [layer 2](/docs/azimuth/layer2), which is
+`0x1111111111111111111111111111111111111111`. Ships sent to this address are
+controlled on layer 2 instead of via Ecliptic.
 
-Sets the `spawnProxy` for a `Point`. This action may only be performed by stars and
-galaxies, by either their owner or their spawn proxy.
+#### `canEscapeTo`
 
-This action may be performed using Bridge.
+```
+    function canEscapeTo(uint32 _point, uint32 _sponsor)
+```
 
-Corresponds to `%set-spawn-proxy` on layer 2.
+Returns a `bool` that is true if `_point` could try to escape to `_sponsor`.
 
-### `safeTransferFrom`
+#### `azimuth`
 
-### `setDnsDomains`
+Returns the address of the [Azimuth.eth](/docs/azimuth/azimuth-eth) contract: `0x223c067f8cf28ae173ee5cafea60ca44c335fecb`.
 
-Sets `dnsDomains`. This may only be done by the owner of the contract. This may
-not be done using Bridge and has no corresponding action on layer 2.
+#### `claims`
 
-### `reject`
+Returns the address of the
+[Claims](https://etherscan.io/address/0xe7e7f69b34d7d9bd8d61fb22c33b22708947971a)
+contract: `0x1df4ea30e0b1359c9692a161c5f30cd1a6b64ebf`.
 
-### `escape`
+#### `polls`
 
-Sets `escapeRequested` to `true` and `escapeRequestedTo` to a given `uint32`
-indexing a `Point`. This action may only be performed by planets and stars, by
-either the owner of the `Point` or their management proxy.
+Returns the address of the
+[Polls](https://etherscan.io/address/0x7fecab617c868bb5996d99d95200d2fa708218e4)
+contract: `0x7fecab617c868bb5996d99d95200d2fa708218e4`.
 
-This action may be performed in Bridge.
+#### `previousEcliptic`
 
-Corresponds to `%escape` on layer 2.
+Returns the address of the previous Ecliptic address.
 
-### `adopt`
+#### `getSpawnLimit`
 
-Corresponds to `%adopt` on layer 2. 
+```
+    function getSpawnLimit(uint32 _point, uint256 _time)
+```
 
-This action may be performed using Bridge.
+Returns a `uint32` that is the total number of children the `_point` is allowed
+to spawn at `_time`.
 
-Allows a potential sponsor to accept a `setEscapeRequest` from a potential
-sponsee. Planets may only be adopted by stars, and stars may only be adopted by
-galaxies.
+There is no limit for galaxies. Instead, for most galaxies, all stars have
+already been spawned and placed into one of the lockup contracts: [Linear Star
+Release](https://etherscan.io/address/0x86cd9cd0992f04231751e3761de45cecea5d1801)
+and [Conditional Star
+Release](https://etherscan.io/address/0x8c241098c3d3498fe1261421633fd57986d74aea).
 
-### `cancelEscape`
-
-### `transferOwnership`
-
-Transfers ownership of the Ecliptic contract to a new owner. This may only be
-performed by the owner of the contract, and is not available in Bridge or layer 2.
-
-
+Beginning in 2019, stars may spawn at most 1024 planets. This limit doubles for
+every subsequent year. However, this limit is not currently implemented on
+[Layer 2](/docs/azimuth/layer2).
 
