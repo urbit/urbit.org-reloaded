@@ -18,7 +18,7 @@ to either transfer their ship to layer 2 or perform layer 2 actions. For that,
 see ((bridge documentation yet to be written)). For a casual overview of the
 rationale and functionality of layer 2, please see this [blog
 post](/blog/rollups). For more information on how Azimuth works more generally,
-including interactions with Bridge and Ethereum, see the page on [Azimuth data flow](/docs/azimuth/l2-flow).
+including interactions with Bridge and Ethereum, see the page on [Azimuth data flow](/docs/azimuth/l2/l2-flow).
 
 This page is also not where to find instruction on how to run your own "aggregator"/"roller".
 Documentation for this process is forthcoming. However, this page does contain
@@ -127,8 +127,8 @@ can also perform a subset of layer 2 actions - namely the ones related to
 sponsorship.
 
 For a complete list of what layer 2 actions each ship rank, layer, and proxy can
-perform, see [Layer 2 Actions](/docs/azimuth/l2-actions). For an explicit
-description of the byte format of Layer 2 Ethereum transaction, see [Bytestring format](/docs/azimuth/bytestring).
+perform, see [Layer 2 Actions](/docs/azimuth/l2/l2-actions). For an explicit
+description of the byte format of Layer 2 Ethereum transaction, see [Bytestring format](/docs/azimuth/l2/bytestring).
 
 ### Sponsorship {#sponsorship}
 
@@ -207,7 +207,7 @@ sponsor of `~sampel-palnet` was `~marzod` before `~sampel-palnet` was deposited
 to layer 2, and thus the Azimuth PKI on Ethereum will forever reflect this.
 
 For more information on how Azimuth state is handled, including how this
-integrates with Bridge and Ethereum, see [Azimuth data flow](/docs/azimuth/l2-flow).
+integrates with Bridge and Ethereum, see [Azimuth data flow](/docs/azimuth/l2/l2-flow).
 
 ### Sponsorship state transitions
 

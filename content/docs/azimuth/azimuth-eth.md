@@ -149,8 +149,8 @@ able to set its own domain name and so we do not expect this to remain the case
 forever.
 
 All data in this ledger is stored and processed locally on your ship by the
-[`%azimuth` Gall agent](/docs/azimuth/l2-flow#azimuth), including [layer
-2](/docs/azimuth/layer2) data. Because state transitions resulting from layer 2
+[`%azimuth` Gall agent](/docs/azimuth/l2/l2-flow#azimuth), including [layer
+2](/docs/azimuth/l2/layer2) data. Because state transitions resulting from layer 2
 transactions are not included in this ledger, in general the local store will
 differ from what is kept in Azimuth.eth.
 

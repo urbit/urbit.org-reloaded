@@ -6,7 +6,7 @@ template = "doc.html"
 
 This document gives the bytestring format for layer 2 transactions and batches.
 
-[Recall](/docs/azimuth/layer2.md) that a layer 2 transaction is a compact
+[Recall](/docs/azimuth/l2/layer2.md) that a layer 2 transaction is a compact
 representation of an Azimuth action whose format will be given below, along with
 a 65-byte ECDSA signature. A `batch` is an atom that is a concatenation of one or more
 layer 2 transactions. This atom is what is posted on the Ethereum blockchain by

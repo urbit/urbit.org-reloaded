@@ -48,7 +48,7 @@ A planet in dominion `%l1` is said to exist on layer 1, which is the default
 state for all planets prior to the introduction of naive rollups. In addition to
 the ordinary layer 1 Azimuth actions a planet can perform, they may also choose to
 `%escape` or `%cancel-escape` on layer 2 using either their ownership key or
-[management proxy](/docs/glossary/proxies). See the [layer 2 sponsorship](/docs/azimuth/layer2#sponsorship)
+[management proxy](/docs/glossary/proxies). See the [layer 2 sponsorship](/docs/azimuth/l2/layer2#sponsorship)
 section for more information on layer 1 ships performing layer 2
 sponsorship actions.
 

@@ -144,7 +144,7 @@ calls, typically sent from other Urbit ID users via Bridge. It then translates
 these API calls from JSON to a format understood by `%roller` and
 forwards them. This app
 does not keep any state - its only purpose is to act as an intermediary between
-Bridge and `%roller`. See [here](/docs/azimuth/layer2-api) for more
+Bridge and `%roller`. See [here](/docs/azimuth/l2/layer2-api) for more
 information on the JSON RPC-API.
 
 ### `naive.hoon` {#naive}
@@ -154,7 +154,7 @@ information on the JSON RPC-API.
 transition function which updates the state of the PKI stored in `azimuth.hoon`
 which handles state transitions caused by both layer 1 and layer 2 transactions.
 A high-level overview of how `naive.hoon` functions can be found
-[here](/docs/azimuth/layer2#layer-2).
+[here](/docs/azimuth/l2/layer2#layer-2).
 
 A `verifier` is any gate of the form
 
@@ -165,10 +165,10 @@ A `verifier` is any gate of the form
 The `verifier` in use by `naive.hoon` runs the keccak hash function on `dat` to
 verify that `dat` is data signed by the ECDSA signature given by the `[v r s]`
 tuple, according to the format for signed transactions outlined in the
-[bytestring format](/docs/azimuth/bytestring) documentation.
+[bytestring format](/docs/azimuth/l2/bytestring) documentation.
 
 `chain-id` is the ID used by the Ethereum blockchain, which is `1337`. See [bytestring
-format](/docs/azimuth/bytestring) for more information.
+format](/docs/azimuth/l2/bytestring) for more information.
 
 `state` is the current state of the PKI:
 
@@ -209,7 +209,7 @@ format](/docs/azimuth/bytestring) for more information.
 `points` should be self-explanatory if you are already familiar with the
 structure of Urbit ID. The only new addition is `dominion`, which is a record of
 whether a ship is on layer 1, layer 2, or layer 1 with a layer 2 spawn proxy.
-See [Layer 2 actions](/docs/azimuth/l2-actions) for an overview of how
+See [Layer 2 actions](/docs/azimuth/l2/l2-actions) for an overview of how
 `dominion` determines the actions available to a ship.
 
 `operators` already existed on layer 1 and are defined as a part of the [ERC-721

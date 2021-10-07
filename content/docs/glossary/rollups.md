@@ -26,5 +26,5 @@ blockchains.
 - [The Gang Solves the Gas Crisis](/blog/rollups): A casual overview of how
 naive rollups works.
 - Pilot's Guide to layer 2 : insert link
-- [Layer 2 Overview](/docs/azimuth/layer2): where developers should go to learn
+- [Layer 2 Overview](/docs/azimuth/l2/layer2): where developers should go to learn
 about the technical details of naive rollups.

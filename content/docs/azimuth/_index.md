@@ -37,7 +37,7 @@ of cryptocurrency.
 A high-level technical description of the functionality of the naive rollups
 "Hoon smart contract" and associated apps, such as Bridge and the roller.
 
-### [Layer 2 Actions](/docs/azimuth/l2-actions)
+### [Layer 2 Actions](/docs/azimuth/l2/l2-actions)
 
 An exhaustive list of what Azimuth actions can be performed for any given tuple
 `(ship rank, layer 2 status)`.
@@ -47,11 +47,11 @@ An exhaustive list of what Azimuth actions can be performed for any given tuple
 Diagrams and explanations of how data flows between Bridge and the various
 components inside Urbit involved with layer 2.
 
-### [Bytestrings](/docs/azimuth/bytestring)
+### [Bytestrings](/docs/azimuth/l2/bytestring)
 
 The bytestring format for layer 2 transactions and batches.
 
-### [Roller HTTP RPC API](/docs/azimuth/layer2-api)
+### [Roller HTTP RPC API](/docs/azimuth/l2/layer2-api)
 
 Documentation on the HTTP RPC API used for Urbit to communicate with Bridge to
 manage layer 2 transactions.

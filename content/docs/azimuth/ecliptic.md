@@ -36,7 +36,7 @@ detection.
 
 There are currently [28 functions](#write) which may be called to write to
 the Ecliptic, and [17 functions](#read) to read data from the Ecliptic. Many of these
-have a corresponding [layer 2 action](/docs/azimuth/l2-actions), and/or can be
+have a corresponding [layer 2 action](/docs/azimuth/l2/l2-actions), and/or can be
 performed using [Bridge](/using/id/using-bridge). We note these facts where
 applicable. 
 
@@ -179,7 +179,7 @@ Requirements:
 Corresponds to the layer 2 `%detach` action.
 
 Unlike all other layer 1 actions, layer 1 sponsors may use a layer 1 `detach` on
-a layer 2 sponsee. See the [Layer 2](/docs/azimuth/layer2#sponsorship) section
+a layer 2 sponsee. See the [Layer 2](/docs/azimuth/l2/layer2#sponsorship) section
 for more detail.
 
 ### Proxy management {#proxies}
@@ -377,7 +377,7 @@ standard functions that are part of the ERC-721 or ERC-165 interfaces.
 
 #### `depositAddress`
 
-This returns the deposit address for [layer 2](/docs/azimuth/layer2), which is
+This returns the deposit address for [layer 2](/docs/azimuth/l2/layer2), which is
 `0x1111111111111111111111111111111111111111`. Ships sent to this address are
 controlled on layer 2 instead of via Ecliptic.
 
@@ -426,5 +426,5 @@ Release](https://etherscan.io/address/0x8c241098c3d3498fe1261421633fd57986d74aea
 
 Beginning in 2019, stars may spawn at most 1024 planets. This limit doubles for
 every subsequent year. However, this limit is not currently implemented on
-[Layer 2](/docs/azimuth/layer2).
+[Layer 2](/docs/azimuth/l2/layer2).
 

@@ -30,7 +30,7 @@ with a system of scarce and immutable identities.
 **Azimuth** is the public-key infrastructure built to be a system of scarce and
 immutable identities. It consists of a suite of [smart contracts on the Ethereum
 blockchain](https://github.com/urbit/azimuth) as well as [several
-apps](/docs/azimuth/l2-flow) run locally on your urbit. Togeter, they determine
+apps](/docs/azimuth/l2/l2-flow) run locally on your urbit. Togeter, they determine
 which Ethereum addresses own which Urbit ID's as well as the public keys needed
 to communicate with those ID's. All identity-related operations, such as
 transfers, are governed by Azimuth. Azimuth isn't built strictly for Arvo -- the
@@ -103,7 +103,7 @@ a roller to submit single transactions results in significant savings.
 A casual overview of the naive rollups system can be found on the
 [blog](/blog/rollups) as well as the Pilot's Manual (insert link). Developers
 are encouraged to read our Layer 2 documentation, starting with the [Layer 2
-Overview](/docs/azimuth/layer2).
+Overview](/docs/azimuth/l2/layer2).
 
 ## Other resources {#other}
 
