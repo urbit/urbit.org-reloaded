@@ -61,20 +61,20 @@ The third common use case we will build is rendering a listing of all blog posts
 
 ## Milestones
 
-### Milestone 1: Gall Agent Development
+### Milestone 1 - Build Agent
 
-Payment: 1 Star
+Payment: 3 stars
 
-Complete planet-market, a simple Gall agent for keeping track of layer 2 invite codes. Write a REST API for interacting with the planet-market agent using HTTP.
+Build agent that has the build pipelines specified and watches for graph-store updates.
 
-### Milestone 2: Web Interface
+### Milestone 2 - HTML Templates
 
-Payment: 1 Star
+Payment: 1 star
 
-Make a simple web interface through which someone can get free layer 2 invite codes using the REST API if they have a password.
+Build out the two rich HTML templates for Publish notebook data specified above in “use cases”.
 
-### Milestone 3: Port and Tirrel Payment Processor Integration
+### Milestone 3 - Grid Tile
 
-Payment: 4 stars
+Payment: 1 star
 
-Integrate the above example web interface with Tirrel’s processor such that rather than giving away free planets, the web interface allows for sale of planets for USD. Add the ability to purchase invite codes. Update Port to accept an invite code, generate a passport, and boot a planet using keyfile.
+Build out a tile in Grid for managing these web blogs.
