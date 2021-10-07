@@ -95,7 +95,7 @@ export default function Header(props) {
         </ActiveLink>
         <ActiveLink
           currentPath={currentPath}
-          className="mr-5 text-green-400 type-ui button-text"
+          className="mr-5 type-ui"
           href="/faq"
         >
           FAQ
