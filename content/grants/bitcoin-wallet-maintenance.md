@@ -1,9 +1,11 @@
 +++
 title = "Bitcoin Wallet Maintenance"
-date = 2021-06-17
+date = "2021-06-16"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["App Dev", "Arvo"]
+grant_type = [ "Bounty" ]
+grant_category = [ "App Dev", "Arvo" ]
+
 [extra]
 image = ""
 description = "Help us maintain the Bitcoin Wallet."

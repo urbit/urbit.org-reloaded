@@ -79,32 +79,32 @@ across the page.
 With one child:
 
 ```hoon
-  !:
-  a
+!:
+a
 ```
 
 With two:
 
 ```hoon
-  =+  a
-  b
+=+  a
+b
 ```
 
 With three:
 
 ```hoon
-  ?:  a
-    b
-  c
+?:  a
+  b
+c
 ```
 
 With four (the maximum rune fanout):
 
 ```hoon
-  :^    a
-      b
-    c
-  d
+:^    a
+    b
+  c
+d
 ```
 
 It is sometimes acceptable to not backstep -- especially in tuple
@@ -118,21 +118,21 @@ they can’t self-terminate. They are terminated by a `==` marker.
 The sequence, or its variable part, is indented and vertical:
 
 ```hoon
-  :*  a
-      b
-      c
-  ==
+:*  a
+    b
+    c
+==
 ```
 
 Another representation wastes a line, but saves an indent. Use
 this only for very long sequences:
 
 ```hoon
-  :*
-    a
-    b
-    c
-  ==
+:*
+  a
+  b
+  c
+==
 ```
 
 Some variable sequences are sequences of pairs; some of these
@@ -143,29 +143,29 @@ looks better for this particular code.
 Kingside format:
 
 ```hoon
-  ?+  x      default
-    %foo     99
-    %foobar  ?:  y
-               42
-             (add 2 2)
-    37       36
-  ==
+?+  x      default
+  %foo     99
+  %foobar  ?:  y
+             42
+           (add 2 2)
+  37       36
+==
 ```
 
 Queenside format:
 
 ```hoon
-  ?+    x
-    default
-  ::
-      %foo
-    99
-  ::
-      %foobar
-    ?:  y
-      42
-    (add 2 2)
-  ==
+?+    x
+  default
+::
+    %foo
+  99
+::
+    %foobar
+  ?:  y
+    42
+  (add 2 2)
+==
 ```
 
 The queenside format is more useful when the tails are bigger.
@@ -176,13 +176,13 @@ We sometimes end up with multiple terminators on separate lines,
 two or more spaces apart. These lines can be collapsed:
 
 ```hoon
-  ?+  x      default
-    %foo     99
-    37       36
-    %foobar  ?-  y
-               %moo  9
-               %bar  10
-  ==         ==
+?+  x      default
+  %foo     99
+  37       36
+  %foobar  ?-  y
+             %moo  9
+             %bar  10
+==         ==
 ```
 
 ## General naming style
@@ -220,25 +220,25 @@ Hoon suggests “breathing comments.” There should always be an
 empty comment line between a comment and the line **below** it:
 
 ```hoon
-    ::  look, code
-    ::
-    this.is.code
-    ::  we are going to need more code
-    ::
-    this.is.more.code
+::  look, code
+::
+this.is.code
+::  we are going to need more code
+::
+this.is.more.code
 ```
 
 Sometimes dense code does need air on both sides. Also
 legitimate:
 
 ```hoon
-    ::  look, code
-    ::
-    this.is.code
-    ::
-    ::  we are going to need more code
-    ::
-    this.is.more.code
+::  look, code
+::
+this.is.code
+::
+::  we are going to need more code
+::
+this.is.more.code
 ```
 
 But air on both sides is needed less often than you may think.
@@ -257,15 +257,15 @@ In older code you’ll also see attempts to produce large, visually
 salient geometries as separators, like:
 
 ```
-  ::
-  ::::
-  ::
+::
+::::
+::
 ```
 
 or
 
 ```
-  ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ```
 
 Please don’t do this in new code. Normal conventions should be
@@ -300,14 +300,14 @@ then an udon body with paragraphs broken by empty lines, indented
 four spaces, in ASCII mixed case:
 
 ```hoon
-  ::  $foo: the definition of a foo
-  ::
-  ::    The source of the word “foo” is lost in history. Some
-  ::    think it comes from the WWII military term “FUBAR,”
-  ::    in which “UBAR” stands for “up beyond all retrieval.”
-  ::
-  ::    Somehow “FUBAR” became “foobar.”  The rest is history.
-  ::
+::  $foo: the definition of a foo
+::
+::    The source of the word “foo” is lost in history. Some
+::    think it comes from the WWII military term “FUBAR,”
+::    in which “UBAR” stands for “up beyond all retrieval.”
+::
+::    Somehow “FUBAR” became “foobar.”  The rest is history.
+::
 ```
 
 The point is: sometimes we want to see a deep explanation;
@@ -321,9 +321,9 @@ A feature headline is `::`, then two spaces, then a qualified
 location, then `:`, then a freeform string. Like:
 
 ```hoon
-  ::  $foo: a the definition of a foo
-  ::
-  +$  foo  [head=@ tail=^]
+::  $foo: a the definition of a foo
+::
++$  foo  [head=@ tail=^]
 ```
 
 We find the feature `$foo` relative to the current location and
@@ -337,9 +337,9 @@ Product comments describe the product of the expression below.
 The headline is a string in parentheses:
 
 ```hoon
-  ::  (a very strange $foo indeed)
-  ::
-  make:a:strange:foo
+::  (a very strange $foo indeed)
+::
+make:a:strange:foo
 ```
 
 ### Flow comments and legends
@@ -364,15 +364,15 @@ make it … `[%wtcl if=hoon then=hoon else=hoon]`. Then we
 could write flow comments as follows:
 
 ```hoon
-    ?:  ::  if, it is winter
-        ::
-        is-winter
-      ::  then, why not rome?
-      ::
-      visit-italy
-    ::  else, amsterdam is nice in the summer
+?:  ::  if, it is winter
     ::
-    visit-holland
+    is-winter
+  ::  then, why not rome?
+  ::
+  visit-italy
+::  else, amsterdam is nice in the summer
+::
+visit-holland
 ```
 
 The headline of a flow comment uses a **legend**: the name of
@@ -392,35 +392,35 @@ Sometimes, just for cosmetic reasons, we like to raise the
 comment on the first leg of a rune up above the parent:
 
 ```hoon
-    ::  if, it is winter
-    ::
-    ?:  is-winter
-      ::  then, why not rome?
-      ::
-      visit-italy
-    ::  else, amsterdam is nice in the summer
-    ::
-    visit-holland
+::  if, it is winter
+::
+?:  is-winter
+  ::  then, why not rome?
+  ::
+  visit-italy
+::  else, amsterdam is nice in the summer
+::
+visit-holland
 ```
 
 This can make flow comments collide, as in “else, if,” below:
 
 ```hoon
-    ::  if, it is winter
-    ::
-    ?:  is-winter
-      ::  then, why not rome?
-      ::
-      visit-italy
-    ::  else, if, sprechen sie deutsch?
-    ::
-    ?:  speak-german
-      ::  then, maybe berlin?
-      ::
-      visit-berlin
-    ::  else, everyone in amsterdam speaks english
-    ::
-    visit-holland
+::  if, it is winter
+::
+?:  is-winter
+  ::  then, why not rome?
+  ::
+  visit-italy
+::  else, if, sprechen sie deutsch?
+::
+?:  speak-german
+  ::  then, maybe berlin?
+  ::
+  visit-berlin
+::  else, everyone in amsterdam speaks english
+::
+visit-holland
 ```
 
 #### Flow comments, traces, and interpolation

@@ -1,6 +1,6 @@
 +++
 title = "Cryptography"
-weight = 5
+weight = 2
 template = "doc.html"
 +++
 
@@ -34,7 +34,7 @@ Algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algori
 is used for authentication
 
 The encrypted payload of each packet is a `$shut-packet`, which is the `+jam` of
-a cell with the `bone`, message number, and message fragment or ack (see
+a cell with the [$bone](/docs/arvo/ames/data-types#bone), message number, and message fragment or ack (see
 [Ames](/docs/arvo/ames/ames) for more information on packet structure). The
 message fragment is signed using the authentication key. It is encrypted using
 [`+en:crub:crypto`](/docs/arvo/reference/cryptography#en) found in
@@ -43,7 +43,7 @@ message fragment is signed using the authentication key. It is encrypted using
 ## Diffie-Hellman key exchange {#key-exchange}
 
 For each foreign ship a given ship has communicated with, `$ames-state` contains a
-`$peer-state`, inside which the `$symmetric-key` (an atom which nests under
+[$peer-state](/docs/arvo/ames/data-types#peer-state), inside which the [$symmetric-key](/docs/arvo/ames/data-types#symmetric-key) (an atom which nests under
 `@uw`) is utilized for encrypting all Ames packets shared between the two ships.
 The `symmetric-key` is derived using [`+shar:ed:crypto`](/docs/arvo/reference/cryptography#ed) found in `sys/zuse.hoon`,
 which is an arm utilized for generating the symmetric key for elliptic curve

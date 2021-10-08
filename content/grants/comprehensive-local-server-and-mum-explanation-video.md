@@ -1,16 +1,19 @@
 +++
 title = "Comprehensive local, server and mum explanation video"
-date = 2021-01-31
+date = "2021-01-30"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Community"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Community" ]
+
 [extra]
 image = ""
 description = "Series of three videos:1) Purchase planet, install and run on a local machine2) nginx setup3) Explaining Urbit to my tech illiterate mum "
 reward = 1
-assignee = "mislyr-midnyt"
+assignee = "mislyr-misnyt"
 id = "2020133197"
 completed = false
+canceled = false
 link = ""
 +++
 

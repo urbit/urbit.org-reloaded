@@ -1,9 +1,11 @@
 +++
 title = "Urbit HTTP Library for Ruby"
-date = 2020-11-05
+date = "2020-11-04"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Dev Tool"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Dev Tool" ]
+
 [extra]
 image = ""
 description = "Create a Ruby language HTTP library to connect to Urbit."
@@ -11,6 +13,7 @@ reward = 3
 assignee = "~winter-paches"
 id = "227255220"
 completed = false
+canceled = true
 link = ""
 +++
 

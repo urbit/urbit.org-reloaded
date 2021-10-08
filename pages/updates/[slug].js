@@ -5,6 +5,7 @@ import {
   getNextPost,
   getPreviousPost,
   formatDate,
+  generateDisplayDate,
 } from "../../lib/lib";
 import Head from "next/head";
 import Meta from "../../components/Meta";
@@ -16,7 +17,7 @@ import Footer from "../../components/Footer";
 import SingleColumn from "../../components/SingleColumn";
 import Section from "../../components/Section";
 import Contact from "../../components/Contact";
-import markdownStyles from "../../styles/markdown.module.css";
+
 import { decode } from "html-entities";
 
 export default function Post({
@@ -30,6 +31,7 @@ export default function Post({
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
   }
+  const date = generateDisplayDate(post.date);
   return (
     <Container>
       <Head>
@@ -41,18 +43,18 @@ export default function Post({
         <Section short narrow>
           <h1>{post.title}</h1>
           {post.author ? (
-            <div className="type-ui text-gray mt-4 md:mt-8 lg:mt-10">
+            <div className="type-ui text-wall-500 mt-4 md:mt-8 lg:mt-10">
               {post.author}
             </div>
           ) : null}
           {post.ship ? (
-            <div className="type-ui text-gray font-mono">{post.ship}</div>
+            <div className="type-ui text-wall-500 font-mono">{post.ship}</div>
           ) : null}
-          <div className="type-ui text-gray mt-4 md:mt-8 lg:mt-10">
-            {formatDate(new Date(post.date))}
+          <div className="type-ui text-wall-500 mt-4 md:mt-8 lg:mt-10">
+            {formatDate(date)}
           </div>
         </Section>
-        <Section narrow className={markdownStyles["markdown"]}>
+        <Section narrow className="markdown">
           <article
             dangerouslySetInnerHTML={{ __html: decode(markdown) }}
           ></article>

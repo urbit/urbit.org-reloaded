@@ -1,7 +1,8 @@
 +++
 title = "Aesthetic Culture #1"
 description = "One of the most exciting things about Urbit is the aesthetic and design around it, developed partly by Tlon (through the design of Urbit itself) and partly by the community (by producing great Urbit art)."
-date = 2020-11-12
+date = "2020-11-11"
+
 [extra]
 description = "One of the most exciting things about Urbit is the aesthetic and design around it, developed partly by Tlon (through the design of Urbit itself) and partly by the community (by producing great Urbit art)."
 author = "Nikolai Mallett"
@@ -15,7 +16,7 @@ image = "https://media.urbit.org/site/posts/essays/help-the-environment.jpg"
 
 <br>
 
-*This post is the first in a series of digests centered on art produced within and about Urbit by a member of the community, ~nartes-fasrum. Monthly digests will be available within the Urbit Community group in Landscape, and will occasionally be compiled here on the blog to give you a sneak peek at some of what’s happening on the network. Enjoy! ~wolref-podlex*
+_This post is the first in a series of digests centered on art produced within and about Urbit by a member of the community, ~nartes-fasrum. Monthly digests will be available within the Urbit Community group in Landscape, and will occasionally be compiled here on the blog to give you a sneak peek at some of what’s happening on the network. Enjoy! ~wolref-podlex_
 
 One of the most exciting things about Urbit is the aesthetic and design around it, developed partly by Tlon (through the design of Urbit itself) and partly by the community (by producing great Urbit art). As the community grows, it creates more art, and we have the opportunity to showcase some of the pieces we love. These works can draw curious new users in, and they give existing users ways to communicate their excitement to friends.
 

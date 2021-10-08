@@ -15,14 +15,6 @@ Combining a deterministic operating system ([Urbit OS](#what-is-arvo) / Arvo) an
 
 The connected world anticipated by Urbit is a much friendlier one, much like the early Internet, where collegial discussion and collaboration was the norm. Problems that are unsolvable without large-scale political centralization in our current internet – data breaches, spam, fake reviews, malware-spreading, harassment – become tractable when individuals control their computing again. You have one login for everything. You own and control all of your software and all of your data by default. Software is designed around the friendships, families, communities, and organizations you're already a part of – not the other way around.
 
-### How secure is Urbit right now? {#how-secure-is-urbit}
-
-[Urbit ID](#what-is-urbit-id) / [Azimuth](#what-is-azimuth), Urbit's identity layer, is live on the Ethereum blockchain and has been audited by Open Zeppelin, Blockchain at Berkeley, and Bloctrax.
-
-In late 2020, Urbit's [Ames](/docs/glossary/ames) networking protocol was audited by [Leviathan Security](https://www.leviathansecurity.com/). You can read about this milestone [here](/blog/security-and-continuity).
-
-Looking to the future, Tlon has plans to begin working to make Urbit secure against attacks from quantum computers in 2021.
-
 ### How can I contribute to Urbit? {#contribute}
 
 We encourage outside contributors to become a part of the project. The best way to do this is to check out [Urbit](https://github.com/urbit) on GitHub, look at the pinned repositories, and check out our [Contributing](https://urbit.org/docs/getting-started/develop) guide. After you've gotten familiar with the system, feel free to open issues and make pull requests.
@@ -125,53 +117,6 @@ Linear release is the simplest: your stars will be released linearly over a peri
 
 Conditional release is a bit more complicated. If your stars are in conditional lockup, they're likely divided over three so-called tranches. Each of these unlocks only after a unique condition is met. Since it's difficult to verify things about the real world using smart contracts, the [Galactic Senate](/docs/glossary/senate) verifies that they've been met. Once the Senate marks a condition for a tranche as cleared, it starts releasing linearly over the period of a year.
 
-## Urbit OS
-
-### What is Urbit OS? {#what-is-arvo}
-
-Urbit OS, also called [Arvo](/docs/glossary/arvo), is our functional and deterministic software stack. Arvo is written in [Hoon](/docs/glossary/hoon), our purely functional programming language, which compiles to [Nock](/docs/glossary/nock), a compact bytecode language.
-
-Instances of Urbit OS, called '[ships](/docs/glossary/ship)', communicate as peers on what we refer to as “the [Ames](/docs/glossary/ames) network.” Using Urbit ID, Urbit OS ships can prove their identities to one another.
-
-### What is unique about Urbit OS / Arvo? {#what-is-unique-about-arvo}
-
-[Arvo](/docs/glossary/arvo) is different from other operating systems in many ways. One notable way is that it is completely deterministic. Processing in the system happens in a unique way: when an event happens, a transition function takes that event and the old state of Arvo, and produces an effect and a new state of Arvo. To visualize:
-
-`[event, old state] -> [effects, new state]`
-
-All events are logged to disk, so you can always restore the system to a previous point in time.
-
-### How is Urbit OS / Arvo connected to Ethereum? {#arvo-ethereum}
-
-When an [Arvo](/docs/glossary/arvo) ship (instance) is started for the first time you must use a "[keyfile](/docs/glossary/keyfile)" containing the private keys for your identity's networking keys. Urbit ID uses the Ethereum blockchain as its decentralized ledger.
-
-See our [Getting Started](/getting-started/planet) guide to learn how to get your ship onto the Urbit OS / [Ames](/docs/glossary/ames) network.
-
-### Will the Urbit OS network survive if Ethereum dies? {#if-ethereum-dies}
-
-Yes. It would be annoying, but Urbit ID / [Azimuth](/docs/glossary/azimuth) could be ported to another decentralized ledger, or hosted on Urbit OS / [Arvo](/docs/glossary/arvo) itself.
-
-### How do I install Urbit OS? {#install-urbit-os}
-
-Check out our guides [here](/getting-started/).
-
-### How do I use Urbit OS? {#use-urbit-os}
-
-The [Using](/using/os/getting-started) section of the documentation will help you out.
-
-### How do over-the-air updates work? {#over-the-air-updates}
-
-Your sponsor, a star or galaxy that your ship is connected to, may send you new source code for your system. When you receive new source code from your sponsor, your system recompiles itself using that code, performs any necessary data migrations, and keeps running. Ideally this happens seamlessly without the user even noticing, although there is sometimes a slowdown while rebuilding the system from source.
-
-### What is Landscape? {#what-is-landscape}
-
-[Landscape](/docs/glossary/landscape) is an experimental Urbit OS web interface that includes social functions such as chat and publishing. You can access Landscape by navigating to `http://localhost:PORT`, where PORT is typically 80, 8080, or 8081 (check your boot messages).
-
-### I have an Urbit ID, now what? {#now-what}
-
-Follow our guide on how to boot a ship [here](/getting-started/planet).
-
-Get on the [mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&id=be143888d2). Learn [Hoon](/docs/hoon/hoon-school/). Sign up for [Hooniversity](https://hooniversity.org/). [Make stuff](https://grants.urbit.org).
 
 ### How secure is Urbit right now? {#how-secure-is-urbit}
 
@@ -307,7 +252,7 @@ The standard library and naming is something we’ve discussed changing, and it 
 
 The right way to think about Hoon is as the ‘C of Urbit’. It’s a bare bones language that gets you pretty close to Nock. Eventually, we’ll probably implement more expressive languages that compile to Urbit. But for now, satisfy your curiosity and [sign up for Hooniversity](https://hooniversity.org/), a community led Hoon educational organization.
 
-Another option is to treat [Urbit as an API](/docs/arvo/eyre/using-eyre), which allows one to use common languages such as Python and Javascript to build userspace programs. For now this option is not as powerful as Hoon, but there is still a lot that a developer without the time or inclination to learn Hoon can do.
+Another option is to treat [Urbit as an API](/docs/arvo/eyre/external-api-ref), which allows one to use common languages such as Python and Javascript to build userspace programs. For now this option is not as powerful as Hoon, but there is still a lot that a developer without the time or inclination to learn Hoon can do.
 
 ### What is the point of Nock? {#why-nock}
 

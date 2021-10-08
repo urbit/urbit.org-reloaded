@@ -1,11 +1,12 @@
 +++
 title = "Infrastructural"
-date = 2020-04-10
+date = "2020-04-09"
 description = "A reflection–meditation on OS 1’s initial form development, and the attitude we brought to bear in designing it."
+
 [extra]
 author = "É. Urcades"
 ship = "~fabled-faster"
-image ="https://media.urbit.org/site/posts/essays/infrastructural-2.jpg"
+image = "https://media.urbit.org/site/posts/essays/infrastructural-2.jpg"
 +++
 
 <br>
@@ -26,9 +27,9 @@ This post serves as a reflection–meditation on OS 1’s initial form developme
 
 ## Products
 
-Urbit’s interfaces, and the process by which we build them, are resolutely not projections of the world’s current conception of digital design—that of mass digital product design. Products are sold, bought, and discarded as they are in their physical sense. Digital products are slotted into the [vending machines](https://urcad.es/writing/personal-computer-vending-machine/) we call our phones and are mass produced as candy is produced. Candy is *essentially* free, and contemporary digital products are *absolutely* free of cost. If you’re reading this, you probably already have a good idea of what free corporate digital products mean for your privacy.
+Urbit’s interfaces, and the process by which we build them, are resolutely not projections of the world’s current conception of digital design—that of mass digital product design. Products are sold, bought, and discarded as they are in their physical sense. Digital products are slotted into the [vending machines](https://urcad.es/writing/personal-computer-vending-machine/) we call our phones and are mass produced as candy is produced. Candy is _essentially_ free, and contemporary digital products are _absolutely_ free of cost. If you’re reading this, you probably already have a good idea of what free corporate digital products mean for your privacy.
 
-Urbit is distinctly *not* free (as in freely offered as a service via a corporate entity), and your urbit is distinctly *not* a product. As we trace over the interfaces we design with our cursors, we’re not building a product, we’re not selling a product, we’re not painting a product, and we’re certainly not decorating a product.
+Urbit is distinctly _not_ free (as in freely offered as a service via a corporate entity), and your urbit is distinctly _not_ a product. As we trace over the interfaces we design with our cursors, we’re not building a product, we’re not selling a product, we’re not painting a product, and we’re certainly not decorating a product.
 
 Here at Tlon, we’re assembling thoughtful infrastructure you can spend your life using, learning, and extending. We’re attempting to assemble spaces you can one day pass on to friends, close collaborators, or possibly your grandchildren. We are resolute in our practice and stay our hands to the greatest degree possible as a result of this mindset.
 
@@ -40,17 +41,17 @@ OS 1, while incremental in its initial expression from OS 0, serves to outline o
 
 **Beautiful infrastructure is a gravitational force**. Even if you can’t feel it or directly experience it, well-designed infrastructure is a cohering force. One is grounded with respect to the infrastructure they live alongside.
 
-**Beautiful infrastructure is like a [shell](https://en.wikipedia.org/wiki/Shell)**. Well-considered infrastructural projects provide durable, generalized, reusable, and most importantly, *self-designed* containers around otherwise formless flows of information.
+**Beautiful infrastructure is like a [shell](https://en.wikipedia.org/wiki/Shell)**. Well-considered infrastructural projects provide durable, generalized, reusable, and most importantly, _self-designed_ containers around otherwise formless flows of information.
 The current state of mass software design has gotten many of the “reusable” elements of design down pat, but these structures are optimized to pump ads and information into your brain, algorithmically-sorted-linear-feed style.
 In Urbit, I can take the conceptual container of "temporal linearity" and use this to shape communication data as I see fit. I should be able to shape once-linear communication and cast it into a nodal communication model: My DM is now a MUD.
 
 Truly beautiful infrastructure undergirds the daily exchanges people actually care about—I don’t drink plumbing, I drink the water it carries and protects.
 
-Another way of thinking about “Infrastructure” (here defined loosely as “the *truly* essential structures that allow society at varying scales to operate”) is to think about it in terms of interpersonal support structure.
+Another way of thinking about “Infrastructure” (here defined loosely as “the _truly_ essential structures that allow society at varying scales to operate”) is to think about it in terms of interpersonal support structure.
 
 We deeply hope that Urbit can form a support structure for you and your community.
 
-These self-evident statements underlie the core problems we sought to address in designing a userspace for OS 1: How do we design an *actually* personal digital infrastructure? What does infrastructure look like when shared with immediate friends? With a cooperative organization? How can we impress upon Urbit's earliest adopters that once they've obtained an Urbit ID, their computer is at that moment *literally* entirely theirs?
+These self-evident statements underlie the core problems we sought to address in designing a userspace for OS 1: How do we design an _actually_ personal digital infrastructure? What does infrastructure look like when shared with immediate friends? With a cooperative organization? How can we impress upon Urbit's earliest adopters that once they've obtained an Urbit ID, their computer is at that moment _literally_ entirely theirs?
 
 <br>
 
@@ -62,7 +63,7 @@ These self-evident statements underlie the core problems we sought to address in
 
 OS 1 was optimized from an interface design standpoint to ensure that a new inhabitant viscerally felt like there was a “space to inhabit”, or a “canvas to be painted”, or a set of simple and fundamental digital structures they could arrange to make their computer their own.
 
-Counterintuitively, designing around this notion of a "rich blank slate” required OS 1 to be designed in a manner that *almost* results in it feeling incomplete, or on the verge of appearing deeply unremarkable.
+Counterintuitively, designing around this notion of a "rich blank slate” required OS 1 to be designed in a manner that _almost_ results in it feeling incomplete, or on the verge of appearing deeply unremarkable.
 
 A few key design decisions emphasized the above gestalt we sought to express:
 

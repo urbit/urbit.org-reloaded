@@ -106,12 +106,19 @@ export default function Grants({
       activeTags.includes(category)
     );
 
+    const notCanceled = !post.extra.canceled;
+
     const noTagsSelected = activeTags.length === 0;
     const hasType = post.taxonomies.grant_type.some((type) =>
       activeTypes.includes(type)
     );
 
-    return (hasCategory || noTagsSelected) && byStatus(post) && hasType;
+    return (
+      (hasCategory || noTagsSelected) &&
+      byStatus(post) &&
+      hasType &&
+      notCanceled
+    );
   });
 
   const allCount = postsByStatus.length;
@@ -141,7 +148,7 @@ export default function Grants({
         }
         <Section wide short>
           <div className="flex flex-column justify-between pb-16">
-            <div>
+            <div className="measure">
               <h1 className="pb-16">Grants</h1>
               <p className="mb-8">
                 Urbit is a community project. While anyone can contribute, we
@@ -157,17 +164,17 @@ export default function Grants({
           </div>
           <div className="flex flex-wrap">
             <Link href="#find-a-grant">
-              <button className="button-lg bg-green text-white mr-2">
+              <button className="button-lg bg-green-400 text-white mr-2">
                 View Grants
               </button>
             </Link>
             <Link href="#proposals">
-              <button className="button-lg bg-blue text-white mr-2">
+              <button className="button-lg bg-blue-400 text-white mr-2">
                 Submit a Proposal
               </button>
             </Link>
             <Link href="#gifts">
-              <a className="button-lg bg-ultraDeepWall text-white mr-2">
+              <a className="button-lg bg-wall-600 text-white mr-2">
                 Recent Gifts
               </a>
             </Link>
@@ -190,9 +197,9 @@ export default function Grants({
             {featuredGrants.map((grant) => {
               return (
                 <Link href={"/grants/" + grant.slug}>
-                  <div className="p-8 bg-washedGreen rounded-lg w-full md:w-1/3 cursor-pointer">
+                  <div className="p-8 bg-green-100 rounded-lg w-full md:w-1/3 cursor-pointer">
                     <h4 className="pb-4">{grant.title}</h4>
-                    <p className="text-green pb-4">
+                    <p className="text-green-400 pb-4">
                       {grant.extra.reward} star
                       {grant.extra.reward === 1 ? "" : "s"}{" "}
                       {grant.extra.completed ? "awarded" : "pending"}
@@ -209,10 +216,10 @@ export default function Grants({
           <h2 className="mb-16" id="proposals">
             Proposals
           </h2>
-          <p className="mb-8">
+          <p className="mb-8 measure">
             Contributors are also welcome to have their personal projects
             considered as a proposal. If you'd like to propose a project for the
-            grants program, first review our
+            grants program, first review our 
             <a href="/grant-submission-guide">submission guide</a>, and feel
             free to{" "}
             <a href="https://airtable.com/shrCi54rEDxgSZr3z">
@@ -223,7 +230,7 @@ export default function Grants({
 
           <Link href="#find-a-grant">
             <button
-              className="button-lg bg-blue text-white mr-2"
+              className="button-lg bg-blue-400 text-white mr-2"
               onClick={() => {
                 setIncludeInProgress(true);
                 setIncludeCompleted(true);
@@ -247,7 +254,7 @@ export default function Grants({
             {/* Uncomment once people added to content/gifts folder. */}
             {/* {gifts.map((e) => {
               return (
-                <div className="bg-wall rounded-xl p-4 my-8 flex justify-between">
+                <div className="bg-wall-100 rounded-xl p-4 my-8 flex justify-between">
                 <p className="font-semibold">
                   {e.name}
                 </p>
@@ -262,13 +269,13 @@ export default function Grants({
                 post={giftPosts[0]}
                 className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
                 key={giftPosts[0].slug}
-                section={giftPosts[0].section}
+                section="updates"
               />
               <PostPreview
                 post={giftPosts[1]}
                 className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
                 key={giftPosts[1].slug}
-                section={giftPosts[1].section}
+                section="blog"
               />
             </div>
           </div>
@@ -278,7 +285,7 @@ export default function Grants({
           <h2 id="find-a-grant" className="pb-8">
             Find a Grant
           </h2>
-          <h5 className="text-black font-semibold my-2">Work Programs</h5>
+          <h5 className="text-wall-600 font-semibold my-2">Work Programs</h5>
           <div className="flex flex-wrap items-center pb-2">
             <button
               onClick={() => {
@@ -286,18 +293,19 @@ export default function Grants({
                 setTypes(types);
               }}
               className={`badge-lg my-2 mr-2 ${
-                tab === 0 ? "text-white bg-black" : "text-gray bg-wall"
+                tab === 0 ? "text-white bg-black" : "text-wall-500 bg-wall-100"
               }`}
             >
               All <div className="opacity-50 ml-2">{allCount}</div>
             </button>
             {types.map((type, index) => {
               const className = classnames({
-                "bg-blue text-white": tab === index + 1 && type === "Proposal",
-                "bg-green text-white":
+                "bg-blue-400 text-white":
+                  tab === index + 1 && type === "Proposal",
+                "bg-green-400 text-white":
                   tab === index + 1 && type === "Apprenticeship",
-                "bg-yellow": tab === index + 1 && type === "Bounty",
-                "bg-wall text-gray": tab !== index + 1,
+                "bg-yellow-300": tab === index + 1 && type === "Bounty",
+                "bg-wall-100 text-wall-500": tab !== index + 1,
               });
               return (
                 <button
@@ -313,13 +321,13 @@ export default function Grants({
               );
             })}
           </div>
-          <h5 className="text-black font-semibold my-2">Work Categories</h5>
+          <h5 className="text-wall-600 font-semibold my-2">Work Categories</h5>
           <div className="flex flex-wrap mb-12">
             {categories.map((category) => {
               const isActive = activeTags.includes(category);
               const activeClasses = classnames({
-                "bg-green text-white": isActive,
-                "bg-wall text-gray": !isActive,
+                "bg-green-400 text-white": isActive,
+                "bg-wall-100 text-wall-500": !isActive,
               });
               return (
                 <button
@@ -380,22 +388,22 @@ export async function getStaticProps() {
     "grants"
   );
   // all the gift posts stuff can be removed once we migrate to gifts
-  let giftPosts = getAllPosts(
-    ["title", "slug", "date", "description", "extra", "taxonomies"],
-    "blog"
-  );
-  giftPosts.map((e) => (e.section = "blog"));
+  // let giftPosts = getAllPosts(
+  //   ["title", "slug", "date", "description", "extra", "taxonomies"],
+  //   "blog"
+  // );
+  // giftPosts.map((e) => (e.section = "blog"));
   let updates = getAllPosts(
     ["title", "slug", "date", "description", "extra", "taxonomies"],
     "updates"
   );
-  updates.map((e) => (e.section = "updates"));
-  giftPosts.push(...updates);
-  giftPosts = giftPosts
-    .filter((e) => e?.taxonomies?.grant_type?.includes("Gift"))
-    .sort((a, b) => (a.date > b.date ? -1 : 1));
+  // updates.map((e) => (e.section = "updates"));
+  // giftPosts.push(...updates);
+  // giftPosts = giftPosts
+  //   .filter((e) => e?.taxonomies?.grant_type?.includes("Gift"))
+  //   .sort((a, b) => (a.date > b.date ? -1 : 1));
 
-  const gifts = getAllPosts(["name", "planet", "date", "link"], "gifts");
+  // const gifts = getAllPosts(["name", "planet", "date", "link"], "gifts");
 
   // The layout expects exactly 3
   const featuredGrants = [
@@ -406,6 +414,23 @@ export async function getStaticProps() {
     getPostBySlug(slug, ["title", "slug", "date", "extra"], "grants")
   );
 
+  // Layout expects exactly 2
+  // const giftPosts = [
+  //   "2021-06-16-update",
+  //   "gifts-q3-2020",
+  // ].map((slug) =>
+  //   getPostBySlug(slug, ["title", "slug", "date", "extra"], "blog")
+  // );
+
+  const giftPosts = [
+    getPostBySlug(
+      "2021-06-16-update",
+      ["title", "slug", "date", "extra"],
+      "updates"
+    ),
+    getPostBySlug("gifts-q3-2020", ["title", "slug", "date", "extra"], "blog"),
+  ];
+
   return {
     props: {
       posts: posts,
@@ -413,7 +438,7 @@ export async function getStaticProps() {
       types,
       featuredGrants,
       giftPosts,
-      gifts,
+      gifts: [],
     },
   };
 }

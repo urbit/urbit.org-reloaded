@@ -1,9 +1,11 @@
 +++
 title = "Filesharer"
-date = 2021-05-27
+date = "2021-05-26"
+
 [taxonomies]
-grant_type = ["Apprenticeship"]
-grant_category = ["App Dev", "Arvo"]
+grant_type = [ "Apprenticeship" ]
+grant_category = [ "App Dev", "Arvo" ]
+
 [extra]
 image = ""
 description = "An application that allows peers to upload files to managed storage, either on or off Urbit, and share files with each other."

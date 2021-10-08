@@ -1,13 +1,20 @@
 +++
 title = "Bootstrapping Urbit from Ethereum"
-date = 2017-09-20
+date = "2017-09-19"
 description = "We've decided to launch Urbit's constitution as a system of Ethereum contracts."
-aliases = ["/posts/essays/bootstrapping-urbit-from-ethereum", "/posts/bootstrapping-urbit-from-ethereum", "/blog/2017.9.20-bootstrapping-urbit-from-ethereum/", "/blog/2017.9-eth/"]
+aliases = [
+  "/posts/essays/bootstrapping-urbit-from-ethereum",
+  "/posts/bootstrapping-urbit-from-ethereum",
+  "/blog/2017.9.20-bootstrapping-urbit-from-ethereum/",
+  "/blog/2017.9-eth/"
+]
+
 [extra]
 author = "Curtis Yarvin + Galen Wolfe-Pauly"
 ship = "~sorreg-namtyv + ~ravmel-ropdyl"
 +++
-*TL;DR:*
+
+_TL;DR:_
 
 We've decided to launch Urbit's constitution as a system of Ethereum contracts.
 
@@ -19,49 +26,49 @@ auction stars, and stars to distribute planets.
 ## A bit of background
 
 One thing we realized after the last sale was, 'oh hey, the network has been up
-for about a year.'  Not bad!  It wasn't that long ago that we were rebooting the
-universe every few weeks.  We still have plenty of work to do — but Urbit has
+for about a year.' Not bad! It wasn't that long ago that we were rebooting the
+universe every few weeks. We still have plenty of work to do — but Urbit has
 matured to the point where public ownership of the network really should be
 cryptographically real.
 
 But even when the servers stay up, Urbit is still a testnet and remains
-centralized in practice.  We (Tlon) retain the ability to reset the network keys
-at any time.  This just isn't very 2017.
+centralized in practice. We (Tlon) retain the ability to reset the network keys
+at any time. This just isn't very 2017.
 
 In theory, Urbit doesn't need a blockchain, because real estate moves slowly.
 In digital real estate, as opposed to digital currency, a low-friction,
 zero-trust solution to the double-spend problem isn't an economic necessity.
 
-In practice, though, we have a hard chicken-egg problem.  In the current design,
+In practice, though, we have a hard chicken-egg problem. In the current design,
 the key you use to secure your urbit is the same key that you use to sign your
-network packets.  Abstractly, this is the right design -- you want one
+network packets. Abstractly, this is the right design -- you want one
 definition of who owns an identity.
 
 But concretely, since Urbit keys are valuable, you don't want to put them in an
-operating system that isn't generally recognized as systematically secure.  It's
-hard to achieve this status while you're a testnet.  So the virtuous cycle never
+operating system that isn't generally recognized as systematically secure. It's
+hard to achieve this status while you're a testnet. So the virtuous cycle never
 gets started.
 
 Moving the Urbit land registry to Ethereum is an easy and obvious solution to
-this problem.  If your urbit is owned by an offline Ethereum key, there's now a
-mature ecosystem for protecting this property.  And its security doesn't depend
+this problem. If your urbit is owned by an offline Ethereum key, there's now a
+mature ecosystem for protecting this property. And its security doesn't depend
 on the security of Urbit. So, we realized, maybe Urbit actually does need a
-blockchain for its land registry.  While the system matures, we can bootstrap
+blockchain for its land registry. While the system matures, we can bootstrap
 off of Ethereum, without changing the design of the Urbit cryptosystem.
 
 And best of all, you can get your Urbit star or planet entirely through the
 blockchain, without interacting with any centralized database or payment
-mechanism.  So we're really living in 2017.
+mechanism. So we're really living in 2017.
 
 Sounds good, right?
 
-It does sound good.  Although, as usual, we care about making things that *work*
-above all else.  So, rather than a 'announcing the Urbit token sale' post, this
-is going to get fairly technical.  We want to start the discussion about how
-this change is going to work, and how it's going to get implemented.  We'll save
+It does sound good. Although, as usual, we care about making things that _work_
+above all else. So, rather than a 'announcing the Urbit token sale' post, this
+is going to get fairly technical. We want to start the discussion about how
+this change is going to work, and how it's going to get implemented. We'll save
 the hype for later.
 
-First, we'll walk through the costs and benefits of using Ethereum.  Then,
+First, we'll walk through the costs and benefits of using Ethereum. Then,
 we'll refresh our memories on how the Urbit address space works, and finally
 we'll walk through some of the details of how we plan on implementing this.
 We've thought quite thoroughly about these things, but public criticism is
@@ -214,7 +221,7 @@ Following Ethereum best practice, we'll use separate storage and logic
 contracts. The logic contract is stateless, and can upgrade itself without
 replacing the storage contracts.
 
-We'll walk through how we have designed these contracts in detail here.  You can
+We'll walk through how we have designed these contracts in detail here. You can
 also view our in-progress source at the
 [`urbit/azimuth` GitHub repo](https://github.com/urbit/azimuth).
 

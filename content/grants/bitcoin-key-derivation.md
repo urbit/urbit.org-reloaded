@@ -1,9 +1,11 @@
 +++
 title = "Bitcoin Key Derivation"
-date = 2020-10-02
+date = "2020-10-01"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["App Dev"]
+grant_type = [ "Bounty" ]
+grant_category = [ "App Dev" ]
+
 [extra]
 image = ""
 description = "The Urbit HD Wallet allows for many different keys to be generated from a single master ticket. Your task is to use this mechanism to generate Bitcoin keys and expose ways of interacting with them."

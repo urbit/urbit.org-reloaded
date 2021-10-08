@@ -4,7 +4,7 @@ weight = 4
 template = "doc.html"
 +++
 
-A strand produces a `[(list card) <response>]`. The first part is a list of cards to be sent off immediately, and `<response>` is one of:
+A strand produces a `[(list card) &lt;response>]`. The first part is a list of cards to be sent off immediately, and `&lt;response>` is one of:
 
 - `[%wait ~]`
 - `[%skip ~]`
@@ -16,7 +16,7 @@ So, for example, if you feed `2 2` into the following function:
 
 ```hoon
   |=  [a=@ud b=@ud]
-  =/  m  (strand ,vase) 
+  =/  m  (strand ,vase)
   ^-  form:m
   =/  res  !>(`@ud`(add a b))
   (pure:m res)
@@ -36,12 +36,12 @@ Since a strand is a function from the previously discussed `strand-input` to the
 So this is a valid thread:
 
 ```hoon
-/-  spider 
-=,  strand=strand:spider 
-^-  thread:spider 
-|=  arg=vase 
-=/  m  (strand ,vase) 
-^-  form:m 
+/-  spider
+=,  strand=strand:spider
+^-  thread:spider
+|=  arg=vase
+=/  m  (strand ,vase)
+^-  form:m
 |=  strand-input:strand
 [~ %done arg]
 ```
@@ -49,8 +49,8 @@ So this is a valid thread:
 As is this:
 
 ```hoon
-/-  spider 
-=,  strand=strand:spider 
+/-  spider
+=,  strand=strand:spider
 |%
 ++  my-function
   =/  m  (strand ,@t)
@@ -58,9 +58,9 @@ As is this:
   |=  strand-input:strand
   [~ %done 'foo']
 --
-^-  thread:spider 
-|=  arg=vase 
-=/  m  (strand ,vase) 
+^-  thread:spider
+|=  arg=vase
+=/  m  (strand ,vase)
 ^-  form:m
 ;<  msg=@t  bind:m  my-function
 (pure:m !>(msg))
@@ -69,12 +69,12 @@ As is this:
 As is this:
 
 ```hoon
-/-  spider 
-=,  strand=strand:spider 
-^-  thread:spider 
-|=  arg=vase 
-=/  m  (strand ,vase) 
-^-  form:m 
+/-  spider
+=,  strand=strand:spider
+^-  thread:spider
+|=  arg=vase
+=/  m  (strand ,vase)
+^-  form:m
 |=  strand-input:strand
 =/  umsg  !<  (unit @tas)  arg
 ?~  umsg

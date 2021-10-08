@@ -1,16 +1,19 @@
 +++
-title = "WebRTC Gall Agent and external app"
-date = 2021-01-08
+title = "WebRTC Gall Agent and External App"
+date = "2021-01-11"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["App Dev"]
+grant_type = [ "Proposal" ]
+grant_category = [ "App Dev: Other" ]
+
 [extra]
 image = ""
 description = "Add WebRTC support to Urbit, including call/stream setup and teardown messaging and ICE/STUN/TURN advertisement and authentication."
 reward = 8
-assignee = "Edward Amsden ~ritpub-sipsyl"
-id = "21131866"
+assignee = "~ritpub-sipsyl"
+id = ""
 completed = false
+canceled = false
 link = ""
 +++
 
@@ -28,7 +31,7 @@ This creates a natural synergy with URbit, as Urbit provides a hierarchical peer
 
 ### WebRTC Gall Agent
 
-This will serve as the _signalling_ channel for Urbit WebRTC applications. WebRTC requires an out-of-band channel (in standard usage usually implemented as an HTTP REST API) which can receive connectivity information from peers and distribute it to peers.
+This will serve as the signalling channel for Urbit WebRTC applications. WebRTC requires an out-of-band channel (in standard usage usually implemented as an HTTP REST API) which can receive connectivity information from peers and distribute it to peers.
 
 ### WebRTC calling app
 
@@ -38,7 +41,7 @@ This would be an external (probably in-browser) app which would provide the init
 - making n-way media conference calls
 - streaming media from one peer to many
 
-### ICE/STUN/Turn advertising
+## ICE/STUN/Turn advertising
 
 A separate Gall agent would initially allow stars to advertise ICE and STUN servers for use by sponsored planets and their moons. WebRTC depends on ICE and STUN to allow NATed and firewalled peers to negotiate peer-to-peer connections.
 
@@ -46,31 +49,28 @@ The last milestone would be to add TURN advertising with authentication to this 
 
 ## Beyond
 
-The proposer would eventually like to see media streas themselves propagated via Urbit. To achieve this, however,
-it would be necessary to:
+The proposer would eventually like to see media streas themselves propagated via Urbit. To achieve this, however, it would be necessary to:
 
 - Create a performant method (likely a vane) for passing network messages which are not retained in the event log
-- Significantly improve Urbit's NAT traversal and firewall hole-punching abilities to match the state of the art.
-  (this has been discussed with, among others, ~ritfed-tabrg and ~wolref-podlex).
+- Significantly improve Urbit's NAT traversal and firewall hole-punching abilities to match the state of the art. (this has been discussed with, among others, ~ritfed-tabrg and ~wolref-podlex).
 
 ## Team
 
-Edward Amsden ~ritpub-sipsyl is a vertan software developer and principal of Black River Software. He has spent the last 5+ years working on industrial IoT solutions in Haskell as a contractor for Plow Technologies.
+E
+dward Amsden (~ritpub-sipsyl) is a vertan software developer and principal of Black River Software. He has spent the last 5+ years working on industrial IoT solutions in Haskell as a contractor for Plow Technologies.
 
 ## References
 
-[Mozilla Developer Network WebRTC walkthrough](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
-[Dealing with connectivity](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity)
+[Mozilla Developer Network WebRTC walkthrough Dealing with connectivity](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
 
 ## Milestones
 
 ### Gall agents (WebRTC, ICE/STUN)
 
 2 stars
-A Gall agent which handles exchanging SDP messages for WebRTC applications
-Another Gall agent which handles advertising ICE and STUN servers from stars to planets
+A Gall agent which handles exchanging SDP messages for WebRTC applications Another Gall agent which handles advertising ICE and STUN servers from stars to planets
 
-### Standalone WebRTC-via-Urbit app
+### Standalone WebRTC-via-Urbit-app
 
 4 stars
 Urbit app running in browser and hosted/interfaced via Eyre which provides the three categories of calling functionality described in the body of the proposal

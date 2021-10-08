@@ -1,9 +1,11 @@
 +++
 title = "Nuck Jet"
-date = 2021-06-17
+date = "2021-06-16"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["Core Dev"]
+grant_type = [ "Bounty" ]
+grant_category = [ "Core Dev" ]
+
 [extra]
 image = ""
 description = "Create new high performance string parser jet."
@@ -11,6 +13,7 @@ reward = 1
 mentor = "~timluc-miptev"
 assignee = ""
 completed = false
+canceled = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0035&prefill_Grant+Name=Nuck%20Jet"
 +++
 

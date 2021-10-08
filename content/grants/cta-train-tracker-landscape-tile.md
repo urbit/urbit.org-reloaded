@@ -1,9 +1,11 @@
 +++
 title = "CTA Train Tracker Landscape Tile"
-date = 2020-03-18
+date = "2020-03-17"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["App Dev"]
+grant_type = [ "Bounty" ]
+grant_category = [ "App Dev" ]
+
 [extra]
 image = ""
 description = "Build an app to track the schedule of the Chicago Transit Authority."

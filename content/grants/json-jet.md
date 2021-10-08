@@ -1,16 +1,19 @@
 +++
 title = "JSON Parsing/Serialization Jet"
-date = 2021-06-17
+date = "2021-06-16"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["Core Dev"]
+grant_type = [ "Bounty" ]
+grant_category = [ "Core Dev" ]
+
 [extra]
 image = ""
 description = "Create high performance JSON parsing/serializing jet."
 reward = 1
 mentor = "~timluc-miptev"
-assignee = ""
+assignee = "~finmep-lanteb"
 completed = false
+canceled = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0036&prefill_Grant+Name=JSON%20Parsing%2FSerialization%20Jet"
 +++
 

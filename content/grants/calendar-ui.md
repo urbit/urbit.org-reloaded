@@ -1,9 +1,11 @@
 +++
 title = "Calendar UI"
-date = 2020-07-16
+date = "2020-07-15"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["App Dev", "Arvo"]
+grant_type = [ "Proposal" ]
+grant_category = [ "App Dev", "Arvo" ]
+
 [extra]
 image = ""
 description = "Build a Landscape-native calendar UI"
@@ -11,6 +13,7 @@ reward = 2
 assignee = "finled-bansel"
 id = "1555464949"
 completed = false
+canceled = true
 link = ""
 +++
 

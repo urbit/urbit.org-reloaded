@@ -1,7 +1,8 @@
 +++
 title = "After the Machine War"
 description = "The date is January 1, 2050. The place, New York City. The vibe...subdued."
-date = 2021-03-15
+date = "2021-03-14"
+
 [extra]
 author = "Simon Kovacs"
 ship = "~bacbec-lormur"
@@ -13,7 +14,6 @@ image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/berlin
 ![berlin-wall](https://storage.googleapis.com/media.urbit.org/site/posts/essays/berlin-wall.jpeg)
 
 <br>
-
 
 > The following fictional passage, from a book being written in an Urbit Group called “the Aleph,” sketches out a dismal future for the human race. As an item of speculative fiction, the piece is not what one might call original. Anyone could have come up with these ideas. In fact, several already have. The Matrix is an obvious antecedent. Vonnegut isn’t far behind either. And the treacly humanism lodged beneath the bitter humor resembles nothing so much as the work of that beau monde satirist, George Saunders.
 >

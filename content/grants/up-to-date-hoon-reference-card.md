@@ -1,9 +1,11 @@
 +++
 title = "Up-to-date Hoon reference card"
-date = 2020-03-15
+date = "2020-03-14"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Documentation"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Documentation" ]
+
 [extra]
 image = ""
 description = "I have made an up-to-date version of the Urbit Hoon reference card and will maintain it.https://github.com/natareo/hooncard"

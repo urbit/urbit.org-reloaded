@@ -1,8 +1,12 @@
 +++
 title = "A Founder's Farewell"
-date = 2019-01-14
+date = "2019-01-13"
 description = "My goal was always to fire myself at the first possible opportunity. I'm super happy to reach it."
-aliases = ["/posts/essays/a-founders-farewell", "/posts/a-founders-farewell"]
+aliases = [
+  "/posts/essays/a-founders-farewell",
+  "/posts/a-founders-farewell"
+]
+
 [extra]
 author = "Curtis Yarvin"
 ship = "~sorreg-namtyv"
@@ -29,7 +33,7 @@ ceased to be mine and became the world's. Urbit works; its PKI
 is on the Ethereum mainnet; it's open source; in every way,
 technical, legal, and mathematical, it is the world's.
 
-(What _is_ Urbit?  Please read the [primer](/primer).)
+(What _is_ Urbit? Please read the [primer](/primer).)
 
 Let's talk about: why I've left; the state of Tlon; and the state
 of Urbit. If there's any time left, we'll read some poetry.
@@ -68,7 +72,7 @@ nothing ever built before.
 
 Urbit in 2013 had roughly the same feature set as Slack in 2013,
 but less polished, and decentralized. It was pretty buggy and
-slow.  But had we put all our resources into debugging and
+slow. But had we put all our resources into debugging and
 optimization, it would not have taken five years.
 
 My instinct was always that Urbit's delivery schedule should be
@@ -88,7 +92,7 @@ As seen from the 2019 Urbit, this is very lame indeed.
 The conventional wisdom is to ship your embarrassing "MVP." For
 several reasons, Urbit occupies a unique strategic position.
 Urbit just isn't relevant until Urbit is, if not perfect,
-uniformly excellent. It can't just work.  It has to work right.
+uniformly excellent. It can't just work. It has to work right.
 Urbit has to be amazing – which is hardly a useless discipline.
 
 I still did not think it would take five years to make Urbit
@@ -121,7 +125,7 @@ not even the best engineer on the project; I just got here first.
 This codebase is very young and very general; there is a lot of
 fun left to be had with it; others deserve to have that fun.
 
-I have no successor as "BDFL."  Technical leadership passes to
+I have no successor as "BDFL." Technical leadership passes to
 Tlon as a company. Urbit is open source and anyone may play, but
 anyone who wants to catch up to Tlon still has a lot to learn.
 Not that that should stop them!
@@ -143,7 +147,7 @@ The startup is the least worst. I'd do it again.
 
 A normal startup lifecycle (Tlon actually got into YC, but
 declined – this was either cool or lame) looks nothing like a
-normal system-software lifecycle. Nor is Urbit normal.  But
+normal system-software lifecycle. Nor is Urbit normal. But
 while Silicon Valley is absurd, it still fits Marianne Moore's
 line: "with a perfect contempt for it, one discovers that there
 is in it after all a place for the genuine."
@@ -175,7 +179,7 @@ is not for lack of talent-hours. Imagine a bazaar creating a
 feature film, and you'll get the picture. (And Fuchsia seems
 like a fairly traditional OS.)
 
-Why is creative work so hard for bazaars?  We could take this as
+Why is creative work so hard for bazaars? We could take this as
 an axiom – but it's worth understanding.
 
 The path from concept to product is an annealing process. Your
@@ -204,7 +208,7 @@ now, and hard problems. Unless you postpone anything that isn't
 a hard but solvable problem, your gas will never turn into steel.
 There are lots and lots and lots of ways to go nowhere fast.
 
-Somehow it's 2019. Urbit is hot iron under the hammer.  It is
+Somehow it's 2019. Urbit is hot iron under the hammer. It is
 solid, but not yet hard. It has shape, but can yet be shaped.
 It is done, but ought to be finished. It is a sword; you don't
 want to get stabbed with it; it is not Excalibur, the blade to
@@ -259,8 +263,8 @@ others know better. When we transitioned from Nock 5 to Nock 4,
 all I contributed was a suggestion. The same for our Ethereum
 address collection, which our customers absolutely loved.
 
-Who's responsible for growing and maintaining this team?  Who's
-the stone at at the top of the pyramid?  Not me: if you gave me a
+Who's responsible for growing and maintaining this team? Who's
+the stone at at the top of the pyramid? Not me: if you gave me a
 goat to feed, the goat would die. The stone that holds the arch
 together is Tlon's CEO and my cofounder, Galen Wolfe-Pauly.
 
@@ -297,8 +301,8 @@ words that might otherwise go unsaid.
 ### Urbit, a level and neutral platform
 
 Urbit's distribution and sponsorship hierarchy of galaxies,
-stars and planets is *not* designed as a political structure,
-or even a social structure.  The actual social layer is in
+stars and planets is _not_ designed as a political structure,
+or even a social structure. The actual social layer is in
 userspace -- one layer up.
 
 Socially and politically, Urbit is a flat network of planets.
@@ -334,10 +338,10 @@ less than half). The rest are held by third parties – all of
 whom have either much more, or much less, than they deserve.
 
 But although the distribution of Urbit space was thoroughly
-unfair, it was always _honest_ and never _corrupt_.  Everyone
+unfair, it was always _honest_ and never _corrupt_. Everyone
 who has galaxies or stars did _something_ for Urbit. Some gave a
 lot of money, some gave a little; some contributed a lot of code,
-some just showed up. We paid a lawyer by bartering a pair.  A
+some just showed up. We paid a lawyer by bartering a pair. A
 bunch went to contest winners who solved a trivial Nock problem
 in 2010.
 
@@ -347,14 +351,14 @@ often had to be in the right place at the right time. This is
 another problem with life that we can't fix.
 
 Every real system of property is unfair. Who deserves to own
-Manhattan?  Who does own it?  If property be not unfair – if it
+Manhattan? Who does own it? If property be not unfair – if it
 is not the result of respecting past accidents – it is not
 property at all, but something else. I certainly would not do it
 this haphazardly again, but the outcome is no tragedy.
 
 When you live in Manhattan, you simply don't worry about who
-owns it or why; and nor does it matter. Are they Jews?  Muslims?
-Christians?  Communists?  Italians?  You don't care and you don't
+owns it or why; and nor does it matter. Are they Jews? Muslims?
+Christians? Communists? Italians? You don't care and you don't
 have to. You know it's basically random and probably unfair.
 Randomness, even blatant unfairness, creates a kind of neutral,
 peaceful, even promising urban anonymity.
@@ -401,7 +405,7 @@ Turing Award – my money is definitely on Raph at this point.
 You can even go and read my Usenix '93 paper on ASLR-secured
 RPC, which won Best Student Paper and has like 50 citations.
 
-Well. That whole scene is a bad trip, kids.  Avoid it.  Also, if
+Well. That whole scene is a bad trip, kids. Avoid it. Also, if
 you start out as Rimbaud, you might end up as Lebowski. On the
 other hand, to have any excuse for boiling the ocean, you do have
 to make some serious CS problems just go away. Here are three.
@@ -436,13 +440,13 @@ transactions.
 
 This means you can't write a command protocol where your commands
 get executed exactly once. You can only choose "at least once"
-or "at most once."  This problem is as ridiculous and frustrating
+or "at most once." This problem is as ridiculous and frustrating
 as it sounds.
 
 You can address it in three ways: (a) make all your commands
 formally idempotent, so that repeating them has no additional
 effect; (b) insert a layer of stateful middleware — a message
-queue; (c) be fine with "almost always once."  Guess which
+queue; (c) be fine with "almost always once." Guess which
 approach is most popular?
 
 Your Urbit ship has one permanent brain. Its acks are end-to-end
@@ -453,14 +457,14 @@ queue. And every message is executed once.
 #### Dependencies
 
 20th-century languages are all at least vaguely based on a
-formalism from the '30s called the "lambda calculus."  The
+formalism from the '30s called the "lambda calculus." The
 fundamental operation in lambda calculus is variable reduction
 from name to value. So lambda languages all have a symbol table
 or environment which binds names to values.
 
 Modern build systems assemble large programs out of small files
 by reusing this symbol table for global function names, a process
-called "linking."  Unfortunately, linking causes a problem known
+called "linking." Unfortunately, linking causes a problem known
 as "dependency hell," involving baffling, unpredictable upgrade
 failures. The fundamental problem is the "diamond dependency" —
 when a build requires two different versions of one symbol.
@@ -517,7 +521,7 @@ demands "space-rated" code that documents every variable and
 every line – and almost none of the codebase is space-rated.
 
 Urbit's internal opacity persists for two reasons, one good and
-one bad. The bad reason is just laziness.  The good reason is
+one bad. The bad reason is just laziness. The good reason is
 justified fear of _premature explanation_, which like premature
 optimization ruins the annealing process.
 
@@ -542,7 +546,7 @@ in a box for 50 years, or 100, or 500, and when you turn it on
 in a modern interpreter it will upgrade itself and work fine.
 
 There aren't any significant structural obstacles to each of
-these milestones. But we can't claim them yet.  We haven't
+these milestones. But we can't claim them yet. We haven't
 really even worried about them. This is another triage case:
 in this case, the issue is _premature reliability_.
 
@@ -564,10 +568,10 @@ computer obviously suggests.
 
 Instead, Urbit today is built more the Unix way (if not the
 Windows way). It has separate subsystems for tracking and
-updating these three kinds of data. This was my design.  Like
+updating these three kinds of data. This was my design. Like
 Urbit's opacity or impermanence, this was always obviously lame.
 
-Why do it the lame way?  Because, before understanding the union
+Why do it the lame way? Because, before understanding the union
 of these problems, we had to understand each problem by itself.
 We didn't – not even close.
 
@@ -587,17 +591,17 @@ ahead, and falling down an impossible rathole.
 
 ## Further reading
 
-What will I do personally?  I'll spend more time with my kids.
+What will I do personally? I'll spend more time with my kids.
 I'll finish reading my 1911 Britannica – I am only on the B's.
 I have no other long-term plans.
 
 But I won't be back to Urbit. I am leaving not just the project
 but the field – no less than Satoshi, or Everett, or Rimbaud.
-Will Satoshi weigh in on the next Bitcoin Cash fork?  Did Rimbaud
-fly back from Ethiopia for his book-release tour?  (Did anyone
-want him back?)  It's not so bad to be a middle-aged Rimbaud.
+Will Satoshi weigh in on the next Bitcoin Cash fork? Did Rimbaud
+fly back from Ethiopia for his book-release tour? (Did anyone
+want him back?) It's not so bad to be a middle-aged Rimbaud.
 
-Is there more to say?  Of course, but not in prose. Read
+Is there more to say? Of course, but not in prose. Read
 Bunting's _Chomei at Toyama_ and _Notes on a Fly-Leaf_; Cavafy's
 _Il Gran Rifiuto_, Keeley & Sherrard translation; Canto XV of the
 Inferno, Pinsky translation. You might learn something.

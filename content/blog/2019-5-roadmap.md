@@ -1,8 +1,9 @@
 +++
 title = "~2019.5 Roadmap"
-date = 2019-05-16
+date = "2019-05-15"
 description = "Where we are and where we're going as of mid-2019."
-aliases = ["/posts/essays/2019-5-roadmap", "/posts/2019-5-roadmap"]
+aliases = [ "/posts/essays/2019-5-roadmap", "/posts/2019-5-roadmap" ]
+
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"
@@ -29,7 +30,7 @@ It’s true. Azimuth is operational, secure, and well tested. It’s a pretty co
 
 So the question is why haven’t we told the world about it?
 
-I tend to think that in order for a technology to succeed it has to not only be an important technical innovation, it also has to be easy to understand as a product. And that’s our answer: we’ve undersold Azimuth because we want it to be easier to understand by *using*, not just by reading the code. Azimuth is quite an elegant piece of technology — but that doesn’t matter until it has a great user experience to match.
+I tend to think that in order for a technology to succeed it has to not only be an important technical innovation, it also has to be easy to understand as a product. And that’s our answer: we’ve undersold Azimuth because we want it to be easier to understand by _using_, not just by reading the code. Azimuth is quite an elegant piece of technology — but that doesn’t matter until it has a great user experience to match.
 
 That’s why, in the near term, we’re focused on building on top of Azimuth ourselves. We can’t ask others to go down roads if we haven’t already been down them.
 

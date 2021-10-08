@@ -1,11 +1,12 @@
 +++
 title = "Introducing OS 1"
-date = 2020-04-30
+date = "2020-04-29"
 description = "OS 1 is somewhere between ‘productivity software’ and a ‘social network’. We think it’s the beginning of an altogether new breed of social computing."
+
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"
-image ="https://media.urbit.org/site/posts/essays/intro-os1-landscape.png"
+image = "https://media.urbit.org/site/posts/essays/intro-os1-landscape.png"
 +++
 
 <br>
@@ -110,7 +111,7 @@ OS 1 is a first step down the road back to a system that’s simple, durable, an
 
 One really critical thing about OS 1 is the pattern of ‘groups sharing modules’. This pattern makes it perfectly clear how a virtual computer can outcompete a bunch of different services. As the collection of modules in OS 1 → N grows, we make it easier for others to contribute modules, and we increase the flexibility of connecting modules our system quickly outruns the messy, disconnected world we’re currently stuck in.
 
-OS 1 isn’t mature enough to be *easy* for outside contributors to add modules — but it is [open source](https://github.com/urbit/urbit), and anyone is welcome to tinker and experiment with modifying it. We run a [grants program](https://grants.urbit.org/) to reward contributors for improving any part of Urbit OS. As the system matures we expect this program to expand and accelerate.
+OS 1 isn’t mature enough to be _easy_ for outside contributors to add modules — but it is [open source](https://github.com/urbit/urbit), and anyone is welcome to tinker and experiment with modifying it. We run a [grants program](https://grants.urbit.org/) to reward contributors for improving any part of Urbit OS. As the system matures we expect this program to expand and accelerate.
 
 ## Looking ahead
 

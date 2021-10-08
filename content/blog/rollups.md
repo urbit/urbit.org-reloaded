@@ -1,7 +1,8 @@
 +++
 title = "The Gang Solves the Gas Crisis"
-date = 2021-05-14
+date = "2021-05-13"
 description = "How we're making Urbit ID affordable again"
+
 [extra]
 author = "Jonathan Paprocki"
 ship = "~datnut-pollen"
@@ -175,10 +176,11 @@ these factors to be included in the roller documentation.
 governing Urbit ID. They will require a few changes to accommodate the new
 system. Some of this has been implicit above, but to be clear, we will only be
 making a couple minor alterations:
- - Once a star's spawn proxy is set to the layer 2 address, it can't be switched
-   back, and they can no longer spawn layer 1 planets.
- - Galaxies and their proxies cannot be deposited to layer 2.
-Some other minor details are yet to be worked out, but again, nothing will change for those who wish to remain on layer 1.
+
+- Once a star's spawn proxy is set to the layer 2 address, it can't be switched
+  back, and they can no longer spawn layer 1 planets.
+- Galaxies and their proxies cannot be deposited to layer 2.
+  Some other minor details are yet to be worked out, but again, nothing will change for those who wish to remain on layer 1.
 
 ### Technical details {#technical}
 
@@ -187,10 +189,11 @@ What's really going on behind the scenes here? Briefly, only the data of the Urb
 In layer 1, the [Ethereum Virtual Machine (EVM)](https://ethereum.org/en/developers/docs/evm/) guarantees the validity of state transitions, while for layer 2 transactions, each Urbit node guarantees the validity of the state transitions.
 
 Changes to the state of Urbit ID on layer 1 works as follows:
- 1. A transaction is posted to the Ethereum blockchain.
- 2. The EVM calculates the resulting state transition and checks its validity, then updates the state.
- 3. Your urbit downloads the new state from an Ethereum node.
- 4. Your urbit makes the final decision on whether the new state is valid.
+
+1.  A transaction is posted to the Ethereum blockchain.
+2.  The EVM calculates the resulting state transition and checks its validity, then updates the state.
+3.  Your urbit downloads the new state from an Ethereum node.
+4.  Your urbit makes the final decision on whether the new state is valid.
 
 In practice, the fourth step is never used in layer 1. The primary change to our
 security model is that we are cutting out step 2 and beefing up step 4. Your
@@ -217,4 +220,3 @@ post on the `urbit-dev` mailing list. Lastly, the primary working branch on
 Github for the Urbit side of naive rollups is
 [here](https://github.com/urbit/urbit/tree/philip/naive), though it is not the
 only place code is accumulating.
-

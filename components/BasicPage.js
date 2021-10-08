@@ -7,7 +7,6 @@ import Header from "./Header";
 import Footer from "./Footer";
 import SingleColumn from "./SingleColumn";
 import Section from "./Section";
-import markdownStyles from "../styles/markdown.module.css";
 import { decode } from "html-entities";
 
 export default function BasicPage({ post, markdown, search }) {
@@ -26,7 +25,7 @@ export default function BasicPage({ post, markdown, search }) {
         <Section narrow>
           <h1>{post.title}</h1>
         </Section>
-        <Section narrow className={markdownStyles["markdown"]}>
+        <Section narrow className="markdown">
           <article
             dangerouslySetInnerHTML={{ __html: decode(markdown) }}
           ></article>

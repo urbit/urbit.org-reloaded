@@ -1,9 +1,11 @@
 +++
 title = "Urbit HTTP API for Python"
-date = 2021-06-22
+date = "2021-06-21"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["App Dev: Other"]
+grant_type = [ "Proposal" ]
+grant_category = [ "App Dev: Other" ]
+
 [extra]
 image = ""
 description = "Write an Urbit HTTP API (aka airlock) for Python"
@@ -11,6 +13,7 @@ reward = 1
 assignee = "novbyr-miclux"
 id = "P0029"
 completed = false
+canceled = false
 link = ""
 +++
 

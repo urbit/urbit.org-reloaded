@@ -1,9 +1,11 @@
 +++
 title = "Go Airlock Library"
-date = 2020-06-25
+date = "2020-06-24"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["Core Dev"]
+grant_type = [ "Bounty" ]
+grant_category = [ "Core Dev" ]
+
 [extra]
 image = ""
 description = "Create a library for the Go language to be used for Airlock, the protocols for interfacing with Urbit."

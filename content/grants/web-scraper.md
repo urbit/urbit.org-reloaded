@@ -1,9 +1,11 @@
 +++
 title = "Web Scraper"
-date = 2020-02-07
+date = "2020-02-06"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["App Dev", "Arvo"]
+grant_type = [ "Bounty" ]
+grant_category = [ "App Dev", "Arvo" ]
+
 [extra]
 image = ""
 description = "It is often useful for archival purposes to pull down an entire website, however many sites have a complex network of pages that would be difficult to download one at a time."

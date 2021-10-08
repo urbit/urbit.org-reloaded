@@ -1,9 +1,11 @@
 +++
 title = "Urbit <-> IRC Bridge"
-date = 2021-05-14
+date = "2021-05-13"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["App Dev: Other"]
+grant_type = [ "Proposal" ]
+grant_category = [ "App Dev: Other" ]
+
 [extra]
 image = ""
 description = "Create a bot that that will relay messages between Urbit chatrooms and IRC rooms, allowing users to communicate on a singular platform."
@@ -11,6 +13,7 @@ reward = 1
 assignee = "~fitnub-basbud"
 id = ""
 completed = false
+canceled = false
 link = ""
 +++
 

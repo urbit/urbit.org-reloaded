@@ -1,16 +1,19 @@
 +++
 title = "Urbit Community Concierge - East Coast"
-date = 2021-02-10
+date = "2021-02-09"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["Community"]
+grant_type = [ "Bounty" ]
+grant_category = [ "Community" ]
+
 [extra]
 image = ""
 description = "Provide concierge service assisting new users in the Urbit Community Group"
 reward = 1
 assignee = "tocrex"
 id = "928966814"
-completed = false
+completed = true
+canceled = false
 link = ""
 +++
 

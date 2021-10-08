@@ -1,9 +1,11 @@
 +++
 title = "Translate key parts of Urbit.org into German"
-date = 2021-01-19
+date = "2021-01-18"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Documentation"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Documentation" ]
+
 [extra]
 image = ""
 description = "Introduction, Urbit OS, Urbit ID, Interface, Roadmap: OS1-> OS N, People + History, and Install + Setup (analog to Korean translation)"
@@ -11,6 +13,7 @@ reward = 1
 assignee = "~hocdep-labtel"
 id = "1163466965"
 completed = false
+canceled = false
 link = ""
 +++
 

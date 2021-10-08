@@ -1,42 +1,81 @@
 import Head from "next/head";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
+import { DateTime } from "luxon";
+
 import Container from "../components/Container";
 import Section from "../components/Section";
 import SingleColumn from "../components/SingleColumn";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import BackgroundImage from "../components/BackgroundImage";
-import TabCarousel from "../components/TabCarousel";
 import Contact from "../components/Contact";
 import PostPreview from "../components/PostPreview";
 import EventPreview from "../components/EventPreview";
-import { getAllPosts, formatDate, getOpenGrantsCount } from "../lib/lib";
-import { contact } from "../lib/constants";
+import Cross from "../components/icons/Cross";
+import TwoUp from "../components/TwoUp";
+import {
+  getAllPosts,
+  getAllEvents,
+  formatDate,
+  getOpenGrantsCount,
+  generateRealtimeDate,
+} from "../lib/lib";
+import { contact, eventKeys } from "../lib/constants";
+import { useLocalStorage } from "../lib/hooks";
+
+const Banner = ({ children, isOpen, href, dismiss }) => {
+  return (
+    <div className="w-full flex justify-center bg-green-100">
+      <SingleColumn>
+        <div className="w-full layout">
+          <div className="w-full flex justify-between items-center px-4 md:px-8 py-4">
+            <a href={href} target="_blank">
+              {children}
+            </a>
+            <button
+              className="type-ui w-6 h-6 bg-green-400 flex items-center justify-center rounded-full text-white hover:opacity-70"
+              onClick={(e) => {
+                e.stopPropagation();
+                dismiss();
+              }}
+            >
+              <Cross width="10" height="10" fill="#E5F7F1" />
+            </button>
+          </div>
+        </div>
+      </SingleColumn>
+    </div>
+  );
+};
 
 export default function Home({ posts, events, openGrantsCount, search }) {
-  const [tab, setTab] = useState(0);
   const [heroButton, setHeroButton] = useState(<div />);
+  const [bannerElement, setBannerElement] = useState(null);
+  const [isBannerOpen, setBanner] = useLocalStorage(
+    "urbit-banner-softdist",
+    true
+  );
 
-  const detectOS = () => {
+  const selectDownloadButton = () => {
     const agent = window.navigator.appVersion;
     if (agent.includes("Win")) {
       return (
-        <span className="button-lg type-ui mb-5 bg-ultraDeepWall text-white">
+        <span className="button-lg type-ui mb-5 bg-wall-600 text-white">
           Coming soon for Windows
         </span>
       );
     } else if (agent.includes("Mac")) {
       return (
         <a href="https://github.com/urbit/port/releases/latest/download/Port.dmg">
-          <button className="button-lg type-ui mb-5 bg-green text-white">
+          <button className="button-lg type-ui mb-5 bg-green-400 text-white">
             Download For macOS
           </button>
         </a>
       );
     } else if (agent.includes("Linux")) {
       return (
-        <code className="button-lg type-ui mb-5 bg-ultraDeepWall text-white">
+        <code className="button-lg type-ui mb-5 bg-wall-600 text-white">
           sudo snap install port
         </code>
       );
@@ -44,17 +83,37 @@ export default function Home({ posts, events, openGrantsCount, search }) {
   };
 
   useEffect(() => {
-    setHeroButton(detectOS());
+    setHeroButton(selectDownloadButton());
   }, []);
+
+  // Use this pattern when depending on client-side state or conditions like localStorage, user OS or geolocation.
+  const selectBanner = (isBannerOpen) => {
+    if (isBannerOpen) {
+      return (
+        <Banner
+          href="https://assembly.urbit.org"
+          dismiss={() => setBanner(false)}
+        >
+          <p className="text-green-400 font-semibold hover:opacity-70">{`-> Network update is live. Learn more at Assembly 2021.`}</p>
+        </Banner>
+      );
+    } else {
+      return null;
+    }
+  };
+
+  useEffect(() => {
+    setBannerElement(selectBanner(isBannerOpen));
+  }, [isBannerOpen]);
 
   return (
     <Container>
       <Head>
         <title>urbit.org</title>
       </Head>
+      {bannerElement}
       <SingleColumn>
         <Header search={search} />
-
         {
           // Hero Statement
         }
@@ -70,11 +129,11 @@ export default function Home({ posts, events, openGrantsCount, search }) {
           // Introducing Port
         }
         <Section className="hidden md:flex">
-          <div className="bg-wall w-11/12 hero-card-height rounded-3xl flex">
+          <div className="bg-wall-100 w-11/12 port-hero-card-height rounded-3xl flex">
             <div className="pt-20 pl-12 w-7/12">
               <div className="pb-8">
-                <h2 className="p-0 m-0 pb-2">Introducing</h2>
-                <h2 className="text-green p-0 m-0">Port</h2>
+                <h2 className="p-0 m-0 pb-2 leading-none">Introducing</h2>
+                <h2 className="text-green-400 p-0 m-0 leading-none">Port</h2>
               </div>
               <h4 className="pb-8">The Urbit client, now in beta.</h4>
               <p className="pb-24">
@@ -84,12 +143,12 @@ export default function Home({ posts, events, openGrantsCount, search }) {
               {heroButton}
               <a
                 href="https://github.com/urbit/port"
-                className="type-ui text-gray"
+                className="type-ui text-wall-500"
               >
                 View on GitHub
               </a>
             </div>
-            <div className="w-full hero-image-height hero-image mt-8" />
+            <div className="w-full port-hero-image-height port-hero-image mt-8" />
           </div>
         </Section>
 
@@ -100,29 +159,31 @@ export default function Home({ posts, events, openGrantsCount, search }) {
           <div className="flex items-center pb-12">
             <h2 className="m-0 p-0 mr-4">Grants</h2>
             <Link href="/grants#find-a-grant">
-              <a className="bg-green text-white badge-lg">
+              <a className="bg-green-400 text-white badge-lg">
                 {openGrantsCount} Open
               </a>
             </Link>
           </div>
-          <div className="flex flex-col md:flex-row w-full items-center bg-washedGreen px-8 py-8 rounded-xl">
+          <div className="flex flex-col md:flex-row w-full items-center md:items-start bg-green-100 px-8 py-8 rounded-xl">
             <div className="flex items-center flex-col p-4 w-full">
-              <h2 className="text-green">200+</h2>
-              <h4 className="text-green text-center pt-2">
+              <h2 className="text-green-400">200+</h2>
+              <h4 className="text-green-400 text-center pt-2">
                 Urbit stars awarded
               </h4>
             </div>
-            <div className="h-0 w-0 md:h-24 md:w-4 bg-lightGreen" />
+            <div className="h-0 w-0 md:h-24 md:w-4 bg-green-200 self-center" />
             <div className="flex items-center flex-col p-4 w-full">
-              <h2 className="text-green">400+</h2>
-              <h4 className="text-green text-center pt-2">
+              <h2 className="text-green-400">400+</h2>
+              <h4 className="text-green-400 text-center pt-2">
                 Different Contributors
               </h4>
             </div>
-            <div className="h-0 w-0 md:h-24 md:w-4 bg-lightGreen" />
+            <div className="h-0 w-0 md:h-24 md:w-4 bg-green-200 self-center" />
             <div className="flex items-center flex-col p-4 w-full">
-              <h2 className="text-green">45+</h2>
-              <h4 className="text-green text-center pt-2">Active Projects</h4>
+              <h2 className="text-green-400">45+</h2>
+              <h4 className="text-green-400 text-center pt-2">
+                Active Projects
+              </h4>
             </div>
           </div>
           <div className="measure py-12">
@@ -133,7 +194,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
             </p>
             <div className="table">
               <Link href="/grants">
-                <a className="button-lg bg-green text-white">View Grants</a>
+                <a className="button-lg bg-green-400 text-white">View Grants</a>
               </Link>
             </div>
           </div>
@@ -175,7 +236,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
               for building on Urbit using the languages you already know.
             </p>
             <Link href="/docs">
-              <button className="button-lg type-ui text-white bg-ultraDeepWall">
+              <button className="button-lg type-ui text-white bg-wall-600">
                 Read the Developer Docs
               </button>
             </Link>
@@ -185,25 +246,18 @@ export default function Home({ posts, events, openGrantsCount, search }) {
         {
           // Blog Posts
         }
-        <Section narrow>
+        <Section>
           <div className="flex items-center measure pb-12">
             <h2>Blog</h2>
           </div>
 
-          <div className="flex flex-wrap">
-            <PostPreview
-              post={posts[0]}
-              className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
-              key={posts[0].slug}
-            />
-            <PostPreview
-              post={posts[1]}
-              className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
-              key={posts[1].slug}
-            />
-          </div>
+          <TwoUp>
+            <PostPreview post={posts[0]} key={posts[0].slug} />
+            <PostPreview post={posts[1]} key={posts[1].slug} />
+          </TwoUp>
+
           <Link href="/blog">
-            <button className="button-lg type-ui text-white bg-green">
+            <button className="button-lg type-ui text-white bg-green-400">
               See More
             </button>
           </Link>
@@ -212,27 +266,18 @@ export default function Home({ posts, events, openGrantsCount, search }) {
         {
           // Events Posts
         }
-        <Section narrow>
+        <Section>
           <div className="flex items-center measure pb-12">
             <h2>Events</h2>
           </div>
 
-          <div className="flex flex-wrap">
-            <EventPreview
-              rsvp
-              event={events[0]}
-              className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
-              key={events[0].slug}
-            />
-            <EventPreview
-              rsvp
-              event={events[1]}
-              className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
-              key={events[1].slug}
-            />
-          </div>
-          <Link href="/docs">
-            <button className="button-lg type-ui text-white bg-ultraDeepWall">
+          <TwoUp>
+            <EventPreview event={events[0]} key={events[0].slug} />
+            <EventPreview event={events[1]} key={events[1].slug} />
+          </TwoUp>
+
+          <Link href="/events">
+            <button className="button-lg type-ui text-white bg-wall-600">
               More Events
             </button>
           </Link>
@@ -259,7 +304,7 @@ export async function getStaticProps() {
     "blog"
   );
 
-  const events = getAllPosts(["title", "slug", "date", "extra"], "events");
+  const events = getAllEvents(eventKeys, "events");
 
   return {
     props: { posts, events, openGrantsCount },

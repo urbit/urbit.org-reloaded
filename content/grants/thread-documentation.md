@@ -1,9 +1,11 @@
 +++
 title = "Thread Documentation"
-date = 2021-02-18
+date = "2021-02-17"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["Documentation"]
+grant_type = [ "Bounty" ]
+grant_category = [ "Documentation" ]
+
 [extra]
 image = ""
 description = "Document, explain, and give simple howtos for the usage patterns of threads in the Dojo and Gall agents."

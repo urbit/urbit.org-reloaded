@@ -1,5 +1,10 @@
 import { useRouter } from "next/router";
-import { getPostBySlug, getAllPosts, formatDate } from "../../lib/lib";
+import {
+  getPostBySlug,
+  getAllPosts,
+  formatDate,
+  generateDisplayDate,
+} from "../../lib/lib";
 import Head from "next/head";
 import Meta from "../../components/Meta";
 import ErrorPage from "../404";
@@ -10,7 +15,7 @@ import Footer from "../../components/Footer";
 import SingleColumn from "../../components/SingleColumn";
 import Contact from "../../components/Contact";
 import Section from "../../components/Section";
-import markdownStyles from "../../styles/markdown.module.css";
+
 import { decode } from "html-entities";
 
 export default function MediaPage({ post, markdown, search }) {
@@ -18,6 +23,7 @@ export default function MediaPage({ post, markdown, search }) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
   }
+  const date = generateDisplayDate(post.date);
   return (
     <Container>
       <Head>
@@ -29,16 +35,16 @@ export default function MediaPage({ post, markdown, search }) {
         <Section narrow short>
           <h1>{post.title}</h1>
           {post.extra.author ? (
-            <div className="type-ui text-gray mt-4 md:mt-8 lg:mt-10">
+            <div className="type-ui text-wall-500 mt-4 md:mt-8 lg:mt-10">
               {post.extra.author}
             </div>
           ) : null}
           {post.extra.ship ? (
-            <div className="type-ui text-gray font-mono">{post.extra.ship}</div>
+            <div className="type-ui text-wall-500 font-mono">
+              {post.extra.ship}
+            </div>
           ) : null}
-          <div className="type-ui text-gray mt-16">
-            {formatDate(new Date(post.date))}
-          </div>
+          <div className="type-ui text-wall-500 mt-16">{formatDate(date)}</div>
         </Section>
         <Section narrow>
           {post.extra.youtube ? (
@@ -63,7 +69,7 @@ export default function MediaPage({ post, markdown, search }) {
             ></iframe>
           ) : null}
         </Section>
-        <Section narrow className={markdownStyles["markdown"]}>
+        <Section narrow className="markdown">
           <article
             className="pt-12 w-full"
             dangerouslySetInnerHTML={{ __html: decode(markdown) }}
