@@ -33,7 +33,9 @@ The interface to this project will be provided as a “Mailer” tile which has 
 
 One gall agent: %mailer
 
-++on-init: On initial load, tells file-server that it wants to serve a webpage at /mailer
+++on-init
+
+On initial load, tells file-server that it wants to serve a webpage at /mailer
 
 ++on-poke
 
@@ -55,9 +57,9 @@ Receives commands that allow the following:
 - read out the keys of all existing mailing lists (and their associated publish notebooks)
 - read out the SendGrid account details
 
-### Milestones
+## Milestones
 
-## Milestone 1 - Basic %mailer app and templates
+### Milestone 1 - Basic %mailer app and templates
 
 Expected completion:
 
@@ -67,7 +69,7 @@ Payment: 1 star
 
 - A number of mark converters that implement email templates for notebook posts.
 
-## Milestone 2 - Delivery of the frontend
+### Milestone 2 - Delivery of the frontend
 
 Estimated completion:
 
