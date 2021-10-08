@@ -1,6 +1,6 @@
 +++
 title = "Life and Rift"
-weight = 3
+weight = 8
 template = "doc.html"
 +++
 

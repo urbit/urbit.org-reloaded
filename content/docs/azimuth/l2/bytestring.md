@@ -1,5 +1,5 @@
 +++
-title = "Bytestring Format"
+title = "Transaction Format"
 weight = 8
 template = "doc.html"
 +++
