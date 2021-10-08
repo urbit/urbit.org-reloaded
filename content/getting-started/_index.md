@@ -6,38 +6,15 @@ page_template = "page_indiced.html"
 template = "getting-started/index.html"
 +++
 
-If you want to jump right in and try out Urbit with a free, disposible ID called a **Comet**, you can download the desktop client [**Port**](#get-port). Once installed, start it up and hit the `Start without an ID` button. It'll take a few minutes to spin up the new Comet, then click `Launch Ship into Urbit` and you'll be at the login screen. Click on `Copy Access Key` at the bottom-left, paste it into the `Access Key` field, and hit `Continue`. You'll now be at your ship's home screen and ready to explore Urbit. You can also have a look at the [Next Steps](#next-steps) section below to help you get going.
+If you want to jump right in and try out Urbit with a free, disposible ID called a **Comet**, you can download the desktop app [**Port**](#port). Once installed, start it up and hit the `Start without an ID` button. It'll take a few minutes to spin up the new Comet, then click `Launch Ship into Urbit` and you'll be at the login screen. Click on `Copy Access Key` at the bottom-left, paste it into the `Access Key` field, and hit `Continue`. You'll now be at your ship's home screen and ready to explore Urbit. You can also have a look at the [Next Steps](#next-steps) section below to help you get going.
 
-If want to get a permanent Urbit ID called a **Planet**, have a look at the [Get a planet](#get-a-planet) section below.
+If you want to get a permanent Urbit ID called a **Planet**, have a look at the [Get a planet](#get-a-planet) section below.
 
 If you have a **Planet** and want some help getting it up and running the first time, see the [Setting up your urbit](#setting-up-your-urbit) guide.
 
 If you want to use a **Planet** without worrying about the gritty bits, you may want to consider a [hosting provider](#hosting-providers).
 
-If you're technically proficient and would like greater control over the Urbit virtual machine than is possible with [Port](#get-port), or are setting up Urbit on a cloud droplet, try [installation using the command line](/getting-started/cli).
-
-## Get a planet
-
-There are a few ways to get your own planet:
-
-- Getting an invitation from a friend (or stranger).
-- Purchasing a planet, including hosting, from a [hosting provider](#hosting-providers).
-- Manually setting up and hosting a planet purchased from a third party such as [urbit.live](https://urbit.live), [OpenSea](https://opensea.io), [planet.market](https://planet.market/), [urbit.me](https://urbit.me), [urth systems](https://urth.systems/), or [Urbit Marketplace](https://urbitmarketplace.com/).
-
-## Hosting Providers {#hosting-providers}
-
-Hosting providers will often sell you a planet and run it for you. This option is very simple but will probably cost a regular fee.
-
-Urbit is designed to be portable. This means that if you sign up for hosting now but later want to leave your hosting provider and run your Urbit yourself, you should be able to work with them to obtain all of your data and boot your planet back up without losing anything.
-
-Using hosting does mean that you're trusting your provider with your data, but so long as you have your planet, you'll always own your identity.
-
-Current hosting providers are:
-
-- [escape pod store](https://www.escapepod.store/)
-- [Third Earth](https://third.earth/)
-- [Tlon Corporation](https://tlon.io)
-- [UrbitHost](https://urbithost.com)
+If you're technically proficient and would like greater control over the Urbit virtual machine than is possible with [Port](#port), or are setting up Urbit on a cloud droplet, try [installation using the command line](/getting-started/cli).
 
 ## Get Port {#port}
 
@@ -65,6 +42,18 @@ sudo snap install port
 
 Or to install `snap` for your distribution, snapcraft provides [installation instructions](https://snapcraft.io/docs/installing-snapd).
 
+  </div>
+
+  <input type="radio" id="port-windows" name="port-os">
+  <label for="port-windows">Windows</label>
+  <div class="tab">
+    <p>To install <strong>Port</strong> on Windows simply download and open the <code>.exe</code> file.</p>
+    <a href="https://github.com/urbit/port/releases/latest/download/port-1.4.0.Setup.exe" class="badge-sm bg-green-400 text-white" style="width: 12rem;">
+      Download Port
+    </a>
+    <p><small>
+    Note: The Windows version is newly released and is not yet code signed so you will have to click through a prompt warning you about running it. If you simply click <code>more info</code> -> <code>run anyway</code> it will run.
+    </small></p>
   </div>
 </div>
 
@@ -104,6 +93,29 @@ Or to install `snap` for your distribution, snapcraft provides [installation ins
     display: block;
 }
 </style>
+
+## Get a planet
+
+There are a few ways to get your own planet:
+
+- Getting an invitation from a friend (or stranger).
+- Purchasing a planet, including hosting, from a [hosting provider](#hosting-providers).
+- Manually setting up and hosting a planet purchased from a third party such as [urbit.live](https://urbit.live), [OpenSea](https://opensea.io), [planet.market](https://planet.market/), [urbit.me](https://urbit.me), [urth systems](https://urth.systems/), or [Urbit Marketplace](https://urbitmarketplace.com/).
+
+## Hosting Providers {#hosting-providers}
+
+Hosting providers will often sell you a planet and run it for you. This option is very simple but will probably cost a regular fee.
+
+Urbit is designed to be portable. This means that if you sign up for hosting now but later want to leave your hosting provider and run your Urbit yourself, you should be able to work with them to obtain all of your data and boot your planet back up without losing anything.
+
+Using hosting does mean that you're trusting your provider with your data, but so long as you have your planet, you'll always own your identity.
+
+Current hosting providers are:
+
+- [escape pod store](https://www.escapepod.store/)
+- [Third Earth](https://third.earth/)
+- [Tlon Corporation](https://tlon.io)
+- [UrbitHost](https://urbithost.com)
 
 ## Next steps
 
