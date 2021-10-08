@@ -26,7 +26,7 @@ The bytestring format for layer 2 transactions and batches.
 
 ### [Rollers](/docs/azimuth/l2/roller)
 
-How rollers work, including how to set up your own.
+How rollers work.
 
 ### [Roller HTTP RPC API](/docs/azimuth/l2/layer2-api)
 

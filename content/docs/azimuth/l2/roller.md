@@ -4,10 +4,10 @@ weight = 9
 template = "doc.html"
 +++
 
-Here we outline how the naive rollup rollers work, and what to do if you wish to
-set up your own roller. This page is only a quick summary - the majority of the
-technical documentation for the roller and API is
-[here](https://documenter.getpostman.com/view/16338962/Tzm3nx7x#).
+Here we outline how the naive rollup rollers work. This page is only a quick
+summary - the majority of the technical documentation for the roller and API is
+[here](https://documenter.getpostman.com/view/16338962/Tzm3nx7x#), with a quick
+summary [here](/docs/azimuth/l2/layer2-api).
 
 ## Overview
 
