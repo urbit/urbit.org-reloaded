@@ -116,7 +116,7 @@ color+0xf9.8e40
 
 _exactly one of either this, [glob-ames](#glob-ames) or [site](#site) is required_
 
-The `%glob-http` field specifies the URL and hash of the app's [glob](/docs/userspace/distribution/glob) if it is distributed via HTTP.
+The `%glob-http` field specifies the URL and hash of the app's [glob](/docs/userspace/dist/glob) if it is distributed via HTTP.
 
 #### Type
 
@@ -136,7 +136,7 @@ glob-http+['https://example.com/glob-0v1.s0me.h4sh.glob' 0v1.s0me.h4sh]
 
 _exactly one of either this, [glob-http](#glob-http) or [site](#site) is required_
 
-The `%glob-ames` field specifies the ship and hash of the app's [glob](/docs/userspace/distribution/glob) if it is distributed from a ship over Ames. If the glob will be distributed from our ship, the hash can initially be `0v0` as it will be overwritten with the hash produced by the [Globulator](/docs/userspace/distribution/glob#globulator).
+The `%glob-ames` field specifies the ship and hash of the app's [glob](/docs/userspace/dist/glob) if it is distributed from a ship over Ames. If the glob will be distributed from our ship, the hash can initially be `0v0` as it will be overwritten with the hash produced by the [Globulator](/docs/userspace/dist/glob#globulator).
 
 #### Type
 
@@ -156,7 +156,7 @@ glob-ames+[~zod 0v0]
 
 _exactly one of either this, [glob-ames](#glob-ames) or [glob-http](#glob-http) is required_
 
-It's possible for an app to handle HTTP requests from the client directly rather than with a separate [glob](/docs/userspace/distribution/glob). In that case, the `%site` field specifies the `path` of the Eyre endpoint the app will bind. If `%site` is used, clicking the app's tile will simply open a new tab with a GET request to the specified Eyre endpoint.
+It's possible for an app to handle HTTP requests from the client directly rather than with a separate [glob](/docs/userspace/dist/glob). In that case, the `%site` field specifies the `path` of the Eyre endpoint the app will bind. If `%site` is used, clicking the app's tile will simply open a new tab with a GET request to the specified Eyre endpoint.
 
 For more information on direct HTTP handling with a Gall agent or generator, see the [Eyre Internal API Reference](/docs/arvo/eyre/tasks) documentation.
 
