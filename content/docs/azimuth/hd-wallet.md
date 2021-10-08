@@ -127,10 +127,11 @@ address live on a "cold" wallet that never touches an internet-connected
 computer, and the various proxies on a "hot" wallet that is permitted to connect
 to internet-connected devices. This could be accomplished with multiple hardware
 wallets, a combination of paper and hardware wallet, a hardware cold wallet and
-Metamask hot wallet, etc.
+Metamask hot wallet, etc. See the [User Manual](/using/id/hd-wallet) for
+concrete suggestions on security practices.
 
 One tool useful for this setup is `claz`, located at `app/claz.hoon`. `claz` is
 used for making and signing Bridge transactions from an offline computer. A
-guide to using `claz` is forthcoming.
+guide to using `claz` is available [here](/docs/azimuth/advanced-azimuth-tools).
 
 
