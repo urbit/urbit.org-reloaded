@@ -1,9 +1,11 @@
 +++
 title = "Unit tests for pure algorithms"
-date = 2019-07-25
+date = "2019-07-24"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["Core Dev"]
+grant_type = [ "Bounty" ]
+grant_category = [ "Core Dev" ]
+
 [extra]
 image = ""
 description = "Write unit tests for +in, +by, +to, and +diff."

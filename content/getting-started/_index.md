@@ -6,11 +6,17 @@ page_template = "page_indiced.html"
 template = "getting-started/index.html"
 +++
 
-If you use Mac or Linux and just want to jump in, you can download **Port** and install it to run Urbit for you and get going right away. You can also set up Urbit using the command line.
+If you want to jump right in and try out Urbit with a free, disposible ID called a **Comet**, you can download the desktop app [**Port**](#port). Once installed, start it up and hit the `Start without an ID` button. It'll take a few minutes to spin up the new Comet, then click `Launch Ship into Urbit` and you'll be at the login screen. Click on `Copy Access Key` at the bottom-left, paste it into the `Access Key` field, and hit `Continue`. You'll now be at your ship's home screen and ready to explore Urbit. You can also have a look at the [Next Steps](#next-steps) section below to help you get going.
 
-If you run Windows, or just want to give it a shot without worrying about the gritty bits, you may want to consider a [hosting provider](/getting-started/planet#hosting-providers), though Windows instructions are provided [for power users](/getting-started/cli).
+If you want to get a permanent Urbit ID called a **Planet**, have a look at the [Get a planet](#get-a-planet) section below.
 
-### Get Port {#port}
+If you have a **Planet** and want some help getting it up and running the first time, see the [Setting up your urbit](#setting-up-your-urbit) guide.
+
+If you want to use a **Planet** without worrying about the gritty bits, you may want to consider a [hosting provider](#hosting-providers).
+
+If you're technically proficient and would like greater control over the Urbit virtual machine than is possible with [Port](#port), or are setting up Urbit on a cloud droplet, try [installation using the command line](/getting-started/cli).
+
+## Get Port {#port}
 
 **Port** is a desktop GUI application that allows you to spin up, access, and manage your Urbit ships without any knowledge of the command line or Urbit binary.
 
@@ -19,7 +25,7 @@ If you run Windows, or just want to give it a shot without worrying about the gr
   <label for="port-macos">MacOS</label>
   <div class="tab">
     <p>To install <strong>Port</strong> on MacOS simply download and open the <code>.dmg</code> file.</p>
-    <a href="https://github.com/urbit/port/releases/latest/download/Port.dmg" class="badge-sm bg-green text-white" style="width: 12rem;">
+    <a href="https://github.com/urbit/port/releases/latest/download/Port.dmg" class="badge-sm bg-green-400 text-white" style="width: 12rem;">
       Download Port
     </a>
   </div>
@@ -36,6 +42,18 @@ sudo snap install port
 
 Or to install `snap` for your distribution, snapcraft provides [installation instructions](https://snapcraft.io/docs/installing-snapd).
 
+  </div>
+
+  <input type="radio" id="port-windows" name="port-os">
+  <label for="port-windows">Windows</label>
+  <div class="tab">
+    <p>To install <strong>Port</strong> on Windows simply download and open the <code>.exe</code> file.</p>
+    <a href="https://github.com/urbit/port/releases/latest/download/port-1.4.0.Setup.exe" class="badge-sm bg-green-400 text-white" style="width: 12rem;">
+      Download Port
+    </a>
+    <p><small>
+    Note: The Windows version is newly released and is not yet code signed so you will have to click through a prompt warning you about running it. If you simply click <code>more info</code> -> <code>run anyway</code> it will run.
+    </small></p>
   </div>
 </div>
 
@@ -76,4 +94,36 @@ Or to install `snap` for your distribution, snapcraft provides [installation ins
 }
 </style>
 
-If you'd like to have more direct control over the Urbit virtual machine, or are setting up Urbit on a cloud droplet, try [installation using the command line](/getting-started/cli).
+## Get a planet
+
+There are a few ways to get your own planet:
+
+- Getting an invitation from a friend (or stranger).
+- Purchasing a planet, including hosting, from a [hosting provider](#hosting-providers).
+- Manually setting up and hosting a planet purchased from a third party such as [urbit.live](https://urbit.live), [OpenSea](https://opensea.io), [planet.market](https://planet.market/), [urbit.me](https://urbit.me), [urth systems](https://urth.systems/), or [Urbit Marketplace](https://urbitmarketplace.com/).
+
+## Hosting Providers {#hosting-providers}
+
+Hosting providers will often sell you a planet and run it for you. This option is very simple but will probably cost a regular fee.
+
+Urbit is designed to be portable. This means that if you sign up for hosting now but later want to leave your hosting provider and run your Urbit yourself, you should be able to work with them to obtain all of your data and boot your planet back up without losing anything.
+
+Using hosting does mean that you're trusting your provider with your data, but so long as you have your planet, you'll always own your identity.
+
+Current hosting providers are:
+
+- [escape pod store](https://www.escapepod.store/)
+- [Third Earth](https://third.earth/)
+- [Tlon Corporation](https://tlon.io)
+- [UrbitHost](https://urbithost.com)
+
+## Next steps
+
+Once you've got your ship up and running, you might like to join the official Urbit Community group and say hello. Just click on the `Groups` app and it will open Urbit's communications suite. In Groups, hit `Join Group` and enter `~bitbet-bolbel/urbit-community`. Once joined, a new tile for the group will appear on the Groups home screen. Open that, click on the `General` channel in the sidebar, and hit `Join Channel`. It'll take a couple of minutes to download the chat history, then you'll be able to post a message.
+
+If you haven't already done so, we recommend spending a few minutes reading
+[Understanding Urbit](/understanding-urbit) to get acquainted with the project.
+Then once you've been become acquainted with your ship and explored the network
+for awhile, consider checking out the [User's Manual](/using) which provides
+guidance and reference material for operating your ship, as well as explanations
+for Urbit concepts everyone should eventually learn.

@@ -15,7 +15,7 @@ import Pagination from "../../components/Pagination";
 import Markdown from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
-import markdownStyles from "../../styles/markdown.module.css";
+
 import { decode } from "html-entities";
 
 const breadcrumbs = (posts, paths) => {
@@ -57,16 +57,17 @@ const pageTree = (thisLink, tree, level = 0) => {
   });
 
   const headingItemClasses = classnames({
-    "pl-0 text-black text-base font-semibold hover:text-green leading-relaxed":
+    "pl-0 text-wall-600 text-base font-semibold hover:text-green-400 leading-relaxed":
       level === 0,
-    "pl-4 text-black text-base font-semibold hover:text-green": level === 1,
-    "pl-8 text-black text-base hover:text-green": level === 2,
+    "pl-4 text-wall-600 text-base font-semibold hover:text-green-400":
+      level === 1,
+    "pl-8 text-wall-600 text-base hover:text-green-400": level === 2,
   });
 
   const pageItemClasses = classnames({
-    "pl-4 text-black text-base hover:text-green": level === 0,
-    "pl-8 text-black text-base hover:text-green": level === 1,
-    "pl-12 text-black text-base hover:text-green": level === 2,
+    "pl-4 text-wall-600 text-base hover:text-green-400": level === 0,
+    "pl-8 text-wall-600 text-base hover:text-green-400": level === 1,
+    "pl-12 text-wall-600 text-base hover:text-green-400": level === 2,
   });
 
   return (
@@ -81,7 +82,7 @@ const pageTree = (thisLink, tree, level = 0) => {
             const isSelected = router.asPath === href;
             const selectedClasses = classnames({
               dot: isSelected,
-              "text-green": isSelected,
+              "text-green-400": isSelected,
             });
             return (
               <li>
@@ -112,13 +113,14 @@ export default function DocsLayout({
   nextPost,
 }) {
   const router = useRouter();
+
   const isSelected = "/docs".includes(router.asPath);
   const selectedClasses = classnames({
     dot: isSelected,
-    "text-green": isSelected,
-    "text-black": !isSelected,
+    "text-green-400": isSelected,
+    "text-wall-600": !isSelected,
   });
-  const rootClasses = "pl-0 text-base hover:text-green";
+  const rootClasses = "pl-0 text-base hover:text-green-400";
   return (
     <>
       <Head>
@@ -145,7 +147,7 @@ export default function DocsLayout({
           section="Urbit Documentation"
           params={params}
         >
-          <div className={markdownStyles["markdown"]}>
+          <div className="markdown technical">
             <article
               dangerouslySetInnerHTML={{ __html: decode(markdown) }}
             ></article>

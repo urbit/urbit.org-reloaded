@@ -1,16 +1,19 @@
 +++
 title = "Cross-Platform Desktop Urbit App"
-date = 2021-02-23
+date = "2021-02-22"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["App Dev"]
+grant_type = [ "Proposal" ]
+grant_category = [ "App Dev" ]
+
 [extra]
 image = ""
 description = "A native app that makes running Urbit near friction-less for everyone."
 reward = 10
 assignee = "nocsyx-lassul"
 id = "740109059"
-completed = false
+completed = true
+canceled = false
 link = ""
 +++
 

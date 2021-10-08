@@ -1,7 +1,8 @@
 +++
 title = "Interplanetary Commerce"
-date = 2021-04-09
+date = "2021-04-08"
 description = "OS-level commercial primitives."
+
 [extra]
 author = "Christian Langalis"
 ship = "~pindet-timmut"
@@ -22,15 +23,15 @@ Things only accelerate from here. Our next objective, to integrate Lightning Net
 
 ## Being Paid
 
->And there is all the difference in the world between paying and being paid. The act of paying is perhaps the most uncomfortable infliction that the two orchard thieves entailed upon us. But being paid,—what will compare with it? 
+> And there is all the difference in the world between paying and being paid. The act of paying is perhaps the most uncomfortable infliction that the two orchard thieves entailed upon us. But being paid,—what will compare with it?
 >
-><cite>Herman Melville</cite>
+> <cite>Herman Melville</cite>
 
 However, a good wallet is only half the equation for a holistic P2P commercial experience. Interfaces for selling goods and services is the other half. While we don’t part with our Bitcoin [easily](https://nakamotoinstitute.org/mempool/everyones-a-scammer/), two initial markets appear logical and attractive: content and Urbit-native services.
 
 First, digital cottage industry, the “creator economy”, is blossoming. Streaming, podcasting, and writing on platforms like Youtube, Patreon, and Substack has been big business [lately](https://otherlife.co/barbarians-past-the-gate/). What fintech did to “unbundle the banks", we will now do to media monopolies and their centralized distribution platforms. With the introduction of Urbit payments, you can syndicate, distribute, and monetize your media on Urbit. By selling access to a private group containing content, digital creatives can begin doing this today.
 
-Second, Urbit-native [service providers](https://urbit.org/blog/providers/) are now operating at scale. Companies offering Urbit hosting, onboarding, Urbit IDs, and software now communicate with their customers directly on the network. A basic set of commercial tools will make their processes more efficient.  Storefront interfaces, paywalls, CRM, and reputation tools will replace the ad-hoc assemblages they currently use.
+Second, Urbit-native [service providers](https://urbit.org/blog/providers/) are now operating at scale. Companies offering Urbit hosting, onboarding, Urbit IDs, and software now communicate with their customers directly on the network. A basic set of commercial tools will make their processes more efficient. Storefront interfaces, paywalls, CRM, and reputation tools will replace the ad-hoc assemblages they currently use.
 
 The Urbit Foundation is soliciting contributors to this project through Urbit Grants. If you’re interested in working on any of these components [send us a proposal](https://grants.urbit.org/create).
 

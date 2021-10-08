@@ -1,9 +1,11 @@
 +++
 title = "Matrix(Riot.im) bridge/bot"
-date = 2020-11-05
+date = "2020-11-04"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Community"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Community" ]
+
 [extra]
 image = ""
 description = "This would be a python bot to connect urbit to any Matrix server. It would act as a bridge, mirroring messages between the two platforms."

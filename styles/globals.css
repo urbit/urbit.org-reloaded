@@ -1,130 +1,92 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Code+Pro:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Code+Pro:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --tray-time: 0ms;
+}
 
 html,
 body {
   padding: 0;
   margin: 0;
+  /* Make all text wall-600 by default */
+  @apply text-wall-600;
 }
 
+/* Reset a tags */
 a {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
 }
 
+/* Links in p tags should be green */
 p a {
-  @apply text-green;
+  @apply text-green-400 font-semibold;
 }
+
+/* Reduce b and strong tag weight default */
+b,
+strong {
+  @apply font-semibold;
+}
+
+/* Typography */
 
 h1,
 .type-h1 {
-  @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
+  @apply text-4xl lg:text-5xl font-extrabold leading-tight text-wall-600;
 }
 
 h2,
 .type-h2 {
-  @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
+  @apply text-3xl lg:text-4xl font-bold leading-tight;
 }
 
 h3,
 .type-h3 {
-  @apply text-xl md:text-2xl lg:text-3xl font-bold;
+  @apply text-xl font-semibold;
 }
 
 h4,
 .type-ui {
-  @apply text-base md:text-lg lg:text-xl font-semibold;
+  @apply text-lg font-semibold;
 }
 
-.type-ui-small {
-  @apply text-sm lg:text-base font-medium;
+h5,
+.type-h5,
+.type-bold {
+  @apply text-base font-semibold leading-relaxed;
 }
 
 p,
 .type-p {
-  @apply text-base md:text-lg lg:text-xl leading-relaxed;
+  @apply text-base leading-relaxed;
 }
 
 .type-sub {
-  @apply text-sm lg:text-base font-semibold;
+  @apply text-sm;
 }
 
-caption,
-.type-caption {
-  @apply text-sm lg:text-base font-medium block text-left;
+.type-sub-bold {
+  @apply text-sm font-semibold;
 }
 
 code .type-code {
-  @apply bg-wall p-4 font-mono;
+  @apply bg-wall-100 p-4 font-mono;
 }
 
-button {
-  border: none;
+/* Utils */
+
+.layout-narrow {
+  @apply w-full md:w-8/12 lg:w-6/12;
 }
 
-.tile-height {
-  height: 38rem;
-}
-
-.preview-tile-height {
-  @apply h-96;
-}
-
-.button-sm {
-  @apply table px-4 py-1 rounded-lg type-ui;
-}
-
-.button-lg {
-  @apply flex px-4 lg:px-6 py-2 rounded-xl h-12 md:h-16 flex-center type-ui;
-}
-
-.badge-sm {
-  @apply flex type-ui-small px-3 lg:px-4 items-center justify-center h-8 md:h-10 rounded-full;
-}
-
-.badge-lg {
-  @apply flex type-ui px-4 lg:px-6 items-center justify-center h-10 md:h-14 rounded-full;
-}
-
-.tab-button-lg {
-  @apply type-h2 h-16;
-  overflow: visible;
-}
-
-.tab-button-sm {
-  @apply type-ui h-12;
-  overflow: visible;
-}
-
-.button-sm:hover,
-.button-text:hover,
-.button-lg:hover,
-a:hover {
-  opacity: 0.66;
-}
-
-.hero-card-height {
-  height: 750px;
-}
-
-.hero-image-height {
-  height: 686px;
-}
-
-.hero-image {
-  transform: translateX(8%);
-  background-image: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0) 85%,
-      rgba(255, 255, 255, 1) 100%
-    ),
-    url("https://media.urbit.org/port.svg");
-  background-size: cover;
+.layout {
+  @apply w-full md:w-10/12 lg:w-8/12;
 }
 
 .measure {
-  max-width: 34rem;
+  max-width: 34em;
 }
 
 .flex-center {
@@ -136,11 +98,51 @@ a:hover {
 .bg-img {
   background-repeat: no-repeat;
   background-position: center center;
-  @apply bg-wall;
+  @apply bg-wall-100;
 }
 
-:root {
-  --tray-time: 0ms;
+.button-sm {
+  @apply flex-center px-3 h-10 rounded-lg type-ui;
+}
+
+.button-lg {
+  @apply flex-center px-6 py-1 rounded-xl h-14 type-ui;
+}
+
+.badge-sm {
+  @apply flex-center text-base font-medium px-3 h-8 rounded-full;
+}
+
+.badge-lg {
+  @apply flex-center type-ui px-5 h-12 rounded-full;
+}
+
+.button-sm:hover,
+.button-text:hover,
+.button-lg:hover,
+a:hover {
+  opacity: 0.66;
+}
+
+/* BEM Classes - Use sparingly */
+
+.port-hero-card-height {
+  height: 36em;
+}
+
+.port-hero-image-height {
+  height: 32em;
+}
+
+.port-hero-image {
+  transform: translateX(8%);
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 85%,
+      rgba(255, 255, 255, 1) 100%
+    ),
+    url("https://media.urbit.org/port.svg");
+  background-size: cover;
 }
 
 .tray-menu-open {
@@ -154,11 +156,11 @@ a:hover {
 }
 
 .tray-menu-width {
-  width: calc(100vw - 64px - 16px - 16px);
+  width: calc(100vw - 4rem - 1rem - 1rem);
 }
 
 .mobile-search-button-width {
-  width: calc(100vw - 64px - 16px - 16px - 16px - 16px);
+  width: calc(100vw - 4rem - 1rem - 1rem - 1rem - 1rem);
 }
 
 .tray-overlay-open {
@@ -191,7 +193,7 @@ a:hover {
   position: absolute;
   left: -0.75rem;
   top: 0.4rem;
-  @apply bg-green;
+  @apply bg-green-400;
 }
 
 .sidebar figure,

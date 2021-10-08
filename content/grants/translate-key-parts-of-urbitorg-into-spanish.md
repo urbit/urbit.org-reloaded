@@ -1,9 +1,11 @@
 +++
 title = "Translate key parts of Urbit.org into Spanish"
-date = 2021-03-20
+date = "2021-03-19"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Documentation"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Documentation" ]
+
 [extra]
 image = ""
 description = "Help the Urbit community grow internationally by translating key resources, guides, and documentation to Spanish."
@@ -11,6 +13,7 @@ reward = 1
 assignee = "Tom Holford"
 id = "446864346"
 completed = false
+canceled = false
 link = ""
 +++
 

@@ -7,10 +7,10 @@ import Header from "../components/Header";
 import SingleColumn from "../components/SingleColumn";
 import BackgroundImage from "../components/BackgroundImage";
 import Section from "../components/Section";
-import { getAllPosts, formatDate } from "../lib/lib";
+import { getAllPosts, formatDate, generateDisplayDate } from "../lib/lib";
 import { contact } from "../lib/constants";
 
-export default function Blog({ posts, search }) {
+export default function Updates({ posts, search }) {
   const post = {
     title: "Updates",
     description: "Missives from the Urbit Foundation.",
@@ -31,6 +31,7 @@ export default function Blog({ posts, search }) {
         </Section>
         <Section narrow>
           {posts.map((post) => {
+            const date = generateDisplayDate(post.date);
             return (
               <div key={post.slug} className="mb-24 cursor-pointer">
                 <Link href={`/updates/${post.slug}`}>
@@ -38,22 +39,22 @@ export default function Blog({ posts, search }) {
                     <h3 className="mt-4">{post.title}</h3>
                     <div className="flex items-baseline">
                       {post?.extra.author ? (
-                        <div className="type-ui text-gray mt-4">
+                        <div className="type-ui text-wall-500 mt-4">
                           {post?.extra.author}
                         </div>
                       ) : null}
                       {post?.extra.author && post?.extra.ship ? (
-                        <div className="mx-1 text-gray">•</div>
+                        <div className="mx-1 text-wall-500">•</div>
                       ) : null}
                       {post?.extra.ship ? (
-                        <div className="type-ui text-gray font-mono">
+                        <div className="type-ui text-wall-500 font-mono">
                           {post.extra.ship}
                         </div>
                       ) : null}
                     </div>
 
-                    <div className="type-ui text-gray mt-2">
-                      {formatDate(new Date(post.date))}
+                    <div className="type-ui text-wall-500 mt-2">
+                      {formatDate(date)}
                     </div>
                   </div>
                 </Link>

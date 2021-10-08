@@ -1,15 +1,18 @@
 +++
 title = "Bridge UI/UX Revamp for Layer 2"
-date = 2021-06-01
+date = "2021-05-31"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["Azimuth"]
+grant_type = [ "Bounty" ]
+grant_category = [ "Azimuth" ]
+
 [extra]
 image = ""
 description = "Our Layer 2 scaling solution is nearing completion, and the Bridge UI/UX needs to be refactored to take it into account."
 reward = 5
 assignee = "~datder-sonnet"
 completed = false
+canceled = false
 link = ""
 +++
 

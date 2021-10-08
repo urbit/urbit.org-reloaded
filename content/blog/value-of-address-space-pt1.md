@@ -1,20 +1,17 @@
 +++
 title = "The Value of Urbit Address Space (1 of 3)"
-date = 2020-04-07
+date = "2020-04-06"
 description = "An expansion of our position on Urbit's address space value."
+
 [extra]
 author = "Erik Newton + Galen Wolfe-Pauly"
 ship = "~patnes-rigtyn + ~ravmel-ropdyl"
-image ="https://media.urbit.org/site/posts/essays/value-of-address-space-pt1.jpg"
+image = "https://media.urbit.org/site/posts/essays/value-of-address-space-pt1.jpg"
 +++
 
-<br>
+![](https://media.urbit.org/site/posts/essays/value-of-address-space-pt1.jpg)
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt1.jpg">
-
-<br>
-
-*This is the first in a series of three posts on Urbit address space. See also [part 2](https://urbit.org/blog/value-of-address-space-pt2/) and [part 3](https://urbit.org/blog/value-of-address-space-pt3/).*
+_This is the first in a series of three posts on Urbit address space. See also [part 2](https://urbit.org/blog/value-of-address-space-pt2/) and [part 3](https://urbit.org/blog/value-of-address-space-pt3/)._
 
 ## Part One – What/why, a history, and some analogies
 
@@ -84,7 +81,7 @@ So how did these ~4B names get initialized and distributed? Urbit address space 
 
 Now that the system is up and running, Urbit address space has steadily become more distributed. This arguably follows the distribution patterns of the Bitcoin UTXO set, and even historical distribution patterns of physical land.
 
-Let’s take a look at how  this came to be.
+Let’s take a look at how this came to be.
 
 Urbit was originally an experimental personal project. The original Urbit address space registry was just a text file in the source code at that time. At the very beginning, all of the address space was owned by Curtis — its creator — and it was all pretty much worthless. In the years leading up to 2013, Curtis gave away galaxies to anyone who would help or contribute to the project, and to several people who were simply in the right place at the right time.
 
@@ -96,7 +93,7 @@ It was then decided that a public key infrastructure was the most logical way to
 
 ## Analogues and the intrinsic value of address space
 
-We’ve often said that Urbit address space, particularly stars and galaxies, have intrinsic value that should be understood beyond simply the price of the planets they contain. Another way of putting this is that, because stars and galaxies are infrastructure nodes, they’re uniquely positioned to generate cash flow from activities on the network beyond simply selling their planets. 
+We’ve often said that Urbit address space, particularly stars and galaxies, have intrinsic value that should be understood beyond simply the price of the planets they contain. Another way of putting this is that, because stars and galaxies are infrastructure nodes, they’re uniquely positioned to generate cash flow from activities on the network beyond simply selling their planets.
 
 This cash flow won't likely come from passive activity, but from actively working to develop businesses located on stars and galaxies. Let’s dig a bit deeper into these activities through the lens of some analogues to the existing world.
 

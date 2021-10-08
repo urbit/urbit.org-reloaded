@@ -1,8 +1,9 @@
 +++
 title = "Urbit and the Not-So-Dark Future of the Internet"
-date = 2017-04-12
+date = "2017-04-11"
 description = "Isaac Simpson's high-level introduction to Urbit."
-aliases = ["/posts/urbit-and-the-not-so-dark-future-of-the-internet/"]
+aliases = [ "/posts/urbit-and-the-not-so-dark-future-of-the-internet/" ]
+
 [extra]
 author = "Isaac Simpson"
 +++

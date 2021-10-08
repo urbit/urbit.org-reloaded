@@ -1,9 +1,11 @@
 +++
 title = "The Complete Guide to Gall and Landscape"
-date = 2020-06-22
+date = "2020-06-21"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Documentation"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Documentation" ]
+
 [extra]
 image = ""
 description = "A full text and video course on every aspect of creating Gall and Landscape apps. Students will create their own full application to finish."

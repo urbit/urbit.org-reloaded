@@ -1,9 +1,11 @@
 +++
 title = "Urbit Explainer Video"
-date = 2020-09-13
+date = "2020-09-12"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Community"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Community" ]
+
 [extra]
 image = ""
 description = "We want to make a short animated video that introduces Urbit to a wider audience."
@@ -11,6 +13,7 @@ reward = 2
 assignee = "~rivpyl-sidfyl, ~minder-folden"
 id = "1350087489"
 completed = true
+canceled = false
 link = ""
 +++
 

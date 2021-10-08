@@ -1,9 +1,11 @@
 +++
 title = "Open Street Maps Data Importation"
-date = 2020-07-09
+date = "2020-07-08"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["Core Dev"]
+grant_type = [ "Bounty" ]
+grant_category = [ "Core Dev" ]
+
 [extra]
 image = ""
 description = "reate a mapping tool which allows Open Street Maps data to be imported into Urbit."

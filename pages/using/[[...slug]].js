@@ -9,14 +9,14 @@ import { getDocs, formatDate, buildPageTree, getPage } from "../../lib/lib";
 import Markdown from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
-import markdownStyles from "../../styles/markdown.module.css";
+
 import { decode } from "html-entities";
 
 const breadcrumbs = (posts, paths) => {
   const results = [
     <Link href="/">Urbit</Link>,
     <span className="px-1">/</span>,
-    <Link href="/using">Operator's Manual</Link>,
+    <Link href="/using">User's Manual</Link>,
   ];
   let thisLink = "/using";
   for (const path of paths) {
@@ -51,16 +51,17 @@ const pageTree = (thisLink, tree, level = 0) => {
   });
 
   const headingItemClasses = classnames({
-    "pl-0 text-gray text-base font-semibold hover:text-green leading-relaxed":
+    "pl-0 text-wall-500 text-base font-semibold hover:text-green-400 leading-relaxed":
       level === 0,
-    "pl-4 text-gray text-base font-semibold hover:text-green": level === 1,
-    "pl-8 text-gray text-base hover:text-green": level === 2,
+    "pl-4 text-wall-500 text-base font-semibold hover:text-green-400":
+      level === 1,
+    "pl-8 text-wall-500 text-base hover:text-green-400": level === 2,
   });
 
   const pageItemClasses = classnames({
-    "pl-4 text-black text-base hover:text-green": level === 0,
-    "pl-8 text-black text-base hover:text-green": level === 1,
-    "pl-12 text-black text-base hover:text-green": level === 2,
+    "pl-4 text-wall-600 text-base hover:text-green-400": level === 0,
+    "pl-8 text-wall-600 text-base hover:text-green-400": level === 1,
+    "pl-12 text-wall-600 text-base hover:text-green-400": level === 2,
     dot: isThisPage,
   });
 
@@ -76,7 +77,7 @@ const pageTree = (thisLink, tree, level = 0) => {
             const isSelected = router.asPath === href;
             const selectedClasses = classnames({
               dot: isSelected,
-              "text-green": isSelected,
+              "text-green-400": isSelected,
             });
             return (
               <li>
@@ -101,7 +102,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
   return (
     <>
       <Head>
-        <title>{data.title} • Operator's Manual • urbit.org</title>
+        <title>{data.title} • User's Manual • urbit.org</title>
         {Meta(data)}
       </Head>
       <div className="flex w-screen h-screen min-h-screen w-screen sidebar">
@@ -112,10 +113,10 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
           breadcrumbs={breadcrumbs(posts, params.slug?.slice(0, -1) || "")}
           title={data.title}
           search={search}
-          section={"Operator's Manual"}
+          section={"User's Manual"}
           params={params}
         >
-          <div className={markdownStyles["markdown"]}>
+          <div className="markdown">
             <article
               dangerouslySetInnerHTML={{ __html: decode(markdown) }}
             ></article>

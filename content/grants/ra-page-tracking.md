@@ -1,9 +1,11 @@
 +++
 title = "Runtime Apprenticeship: Improve Page Tracking"
-date = 2021-06-24
+date = "2021-06-23"
+
 [taxonomies]
-grant_type = ["Apprenticeship"]
-grant_category = ["App Dev", "Arvo"]
+grant_type = [ "Apprenticeship" ]
+grant_category = [ "App Dev", "Arvo" ]
+
 [extra]
 image = ""
 description = "Improve Page Tracking"

@@ -6,7 +6,7 @@ template = "sections/docs.html"
 
 Welcome to the developer documentation for the Urbit project. This documentation
 is maintained by [Tlon](https://tlon.io) and the Urbit community in a public
-[Github repository](https://github.com/urbit/docs). Issues and contributions are
+[Github repository](https://github.com/urbit/urbit.org/tree/master/content/docs). Issues and contributions are
 welcome.
 
 This documentation provides a series of explainers, guides, tutorials and

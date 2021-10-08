@@ -1,9 +1,11 @@
 +++
 title = "Unit tests for JSON parsing"
-date = 2019-11-15
+date = "2019-11-14"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["Core Dev"]
+grant_type = [ "Bounty" ]
+grant_category = [ "Core Dev" ]
+
 [extra]
 image = ""
 description = "Write unit tests for JSON-parsing arms of the zuse.hoon standard library."

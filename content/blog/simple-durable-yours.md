@@ -1,17 +1,15 @@
 +++
 title = "Simple, Durable, Yours"
-date = 2019-10-17
+date = "2019-10-16"
 description = "We built Urbit from scratch to be a system that’s simple, durable, and yours. Everything that computing today is not — but should be."
-[extra]
+extra = { }
 +++
 
 We live in a world dense with digital services. We see the world through them, we depend on them completely, and they’re not going away. They’re only becoming more ubiquitous.
 
 But computers are a mess.
 
-
 <img class="ba mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/simple-durable-yours/simple-durable-yours-notifications.svg">
-
 
 We spend all our time switching between services, juggling logins and different interfaces. And once we’re logged in, the services we use harvest our data, spy on us, and often shut down with little warning.
 

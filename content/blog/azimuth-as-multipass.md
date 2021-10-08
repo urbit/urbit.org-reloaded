@@ -1,8 +1,12 @@
 +++
 title = "Azimuth as Multipass"
-date = 2019-05-16
+date = "2019-05-15"
 description = "What if everyone had a single 'civilizational key'?"
-aliases = ["/posts/essays/azimuth-as-multipass/", "/posts/azimuth-as-multipass"]
+aliases = [
+  "/posts/essays/azimuth-as-multipass/",
+  "/posts/azimuth-as-multipass"
+]
+
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"
@@ -28,4 +32,3 @@ If you’re someone who’s worried about getting kidnapped, just use a child id
 Perhaps part of how we ended up in the world we’re in is that we didn’t have something like Azimuth to begin with. Today, it’s backwards: everyone has an address on the network, but no one has an identity.
 
 We think everyone needs an identity that can hold money and have packets routed to it. Start there, and it’s quite fun to imagine where you end up. A civilized digital society might even be possible after all.
-

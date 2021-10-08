@@ -1,11 +1,12 @@
 +++
 title = "Tools of Our Own"
-date = 2020-05-13
+date = "2020-05-12"
 description = "What is a digital environment? What does it mean to shape your own digital environment?"
+
 [extra]
 author = "Matilde Park"
 ship = "~haddef-sigwen"
-image ="https://media.urbit.org/site/posts/essays/tools-of-our-own-1.png"
+image = "https://media.urbit.org/site/posts/essays/tools-of-our-own-1.png"
 +++
 
 <br>
@@ -18,7 +19,7 @@ image ="https://media.urbit.org/site/posts/essays/tools-of-our-own-1.png"
 >
 > <cite>Ivan Illich, <em>Tools for Conviviality</em></cite>
 
-One of the recent ways we've come to describe the mission of the Urbit project is to give communities [the power to shape, or evolve, their digital environments](https://urbit.org/blog/urbit-is-for-communities/). Of course, like many of our definitions, it requires some background to really contextualize the claim. When I describe this particular statement to people, they often ask, "What does that *mean*, though? What is a digital environment, and why would I need Urbit to do it?"
+One of the recent ways we've come to describe the mission of the Urbit project is to give communities [the power to shape, or evolve, their digital environments](https://urbit.org/blog/urbit-is-for-communities/). Of course, like many of our definitions, it requires some background to really contextualize the claim. When I describe this particular statement to people, they often ask, "What does that _mean_, though? What is a digital environment, and why would I need Urbit to do it?"
 
 After all, we think of our slate of tools as our entire toolbox. This makes sense for physical tools. And for a lot of people in the real world (at least, I think), their tools remain physical notebooks and paper. I, however, left those tools behind ages ago, and found myself in a world that used my habits, my memory, to loosely organize a wide array of online tools, that were themselves shaped according to the values of their creators.
 
@@ -50,7 +51,7 @@ But this is crazy: for decades, an aspect of the Internet stack that necessitate
 
 And for productivity tools—for the personal activities we do every day—the same problem ultimately applies. Either you wrangle more and more single-use "products" into a framework, wrangling combinatorial explosion, or you punt the problem to the user's brain, remembering the relation between tools.
 
-This is why hybrid products are born *and* why massive enterprises are shifting toward subscription models for office software. With the [clearnet](https://en.wikipedia.org/wiki/Clearnet_(networking)), using our own computers for everyday tasks that extend outside themselves is not easy. It's way easier to sign into an enterprise's server farm for your persistent data storage and manipulation. In 2020, the prefab parts for the exoskeleton only come in "left arm, right leg" pairs, or you can just give up and plug straight into SkyNet.
+This is why hybrid products are born _and_ why massive enterprises are shifting toward subscription models for office software. With the [clearnet](<https://en.wikipedia.org/wiki/Clearnet_(networking)>), using our own computers for everyday tasks that extend outside themselves is not easy. It's way easier to sign into an enterprise's server farm for your persistent data storage and manipulation. In 2020, the prefab parts for the exoskeleton only come in "left arm, right leg" pairs, or you can just give up and plug straight into SkyNet.
 
 <br>
 

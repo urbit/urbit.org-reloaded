@@ -1,10 +1,15 @@
 import { useRouter } from "next/router";
+import { DateTime } from "luxon";
 import {
   getPostBySlug,
   getAllPosts,
   getNextPost,
   getPreviousPost,
   formatDate,
+  formatTime,
+  formatTimeZone,
+  generateDisplayDate,
+  generateRealtimeDate,
 } from "../../lib/lib";
 import Head from "next/head";
 import Meta from "../../components/Meta";
@@ -16,64 +21,106 @@ import SingleColumn from "../../components/SingleColumn";
 import Contact from "../../components/Contact";
 import EventPreview from "../../components/EventPreview";
 import Section from "../../components/Section";
-import markdownStyles from "../../styles/markdown.module.css";
+import TwoUp from "../../components/TwoUp";
+
+import {
+  Person,
+  ReadableList,
+  ShowOrHide,
+  DateRange,
+} from "../../components/Snippets";
 import { decode } from "html-entities";
+import { eventKeys } from "../../lib/constants";
 
 export default function Event({
-  post,
-  nextPost,
-  previousPost,
+  event,
+  nextEvent,
+  previousEvent,
   markdown,
   search,
 }) {
+  const starts = generateDisplayDate(event.starts, event.timezone);
+  const ends = generateDisplayDate(event.ends, event.timezone);
+
+  const inFuture = generateRealtimeDate(starts) > DateTime.now();
+
+  const happeningNow =
+    generateRealtimeDate(event.starts) > DateTime.now() && !inFuture;
+
   return (
     <Container>
       <Head>
-        <title>{post.title} • Events • urbit.org</title>
-        {Meta(post)}
+        <title>{event.title} • Events • urbit.org</title>
+        {Meta(event)}
       </Head>
       <SingleColumn>
         <Header search={search} />
         <Section narrow short>
-          <h1>{post.title}</h1>
-
-          {post.extra.author ? (
-            <div className="type-ui text-gray mt-4 md:mt-8 lg:mt-10">
-              {post.extra.author}
-            </div>
-          ) : null}
-          {post.extra.ship ? (
-            <div className="type-ui text-gray font-mono">{post.extra.ship}</div>
-          ) : null}
-
-          <div className="mt-16">
-            <p className="type-ui text-gray">
-              {formatDate(new Date(post.date))} {", " + post.extra.time}
-            </p>
-            {post.extra.registration_url && post.extra.pinned ? (
+          <h1>{event.title}</h1>
+          <h3 className="mt-6">{event.description}</h3>
+          <p className="mt-6">{event.location}</p>
+          <DateRange starts={starts} ends={ends} className="text-wall-400" />
+          <div>
+            <ShowOrHide condition={event.hosts}>
+              <p className="mt-6">
+                {"Hosted by "}
+                <ReadableList>
+                  {event.hosts?.map((host, index) => {
+                    return (
+                      <Person
+                        key={`${host.name}-${host.patp}`}
+                        name={host.name}
+                        patp={host.patp}
+                      />
+                    );
+                  })}
+                </ReadableList>
+              </p>
+            </ShowOrHide>
+            <ShowOrHide condition={event.guests}>
+              <p className="mt-6">
+                {event.guests?.length > 1 ? "With guests " : "With guest "}
+                <ReadableList>
+                  {event.guests?.map((guest, index) => (
+                    <Person
+                      key={`${guest.name}-${guest.patp}`}
+                      name={guest.name}
+                      patp={guest.patp}
+                    />
+                  ))}
+                </ReadableList>
+              </p>
+            </ShowOrHide>
+          </div>
+          {inFuture && event.registration_url ? (
+            <div className="table mt-6">
               <a
-                className="button-sm bg-green text-white flex-0 mt-4"
-                href={post.extra.registration_url}
+                className="button-sm bg-green-400 text-white"
+                href={event.registration_url}
+                onClick={(e) => e.stopPropagation()}
+                target="_blank"
               >
                 RSVP
               </a>
-            ) : null}
-          </div>
+            </div>
+          ) : null}
         </Section>
-        <Section short wide>
-          {post.extra.youtube ? (
+
+        {event.youtube ? (
+          <Section short wide>
             <iframe
               className="rounded-xl"
               width="100%"
               height="640px"
-              src={`https://www.youtube.com/embed/${post.extra.youtube}`}
+              src={`https://www.youtube.com/embed/${event.youtube}`}
               frameBorder="0"
               allow="encrypted-media"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
-          ) : null}
-        </Section>
-        <Section narrow className={markdownStyles["markdown"]}>
+          </Section>
+        ) : null}
+
+        <Section short narrow className="markdown">
           <article
             className="pt-12 w-full"
             dangerouslySetInnerHTML={{ __html: decode(markdown) }}
@@ -83,24 +130,21 @@ export default function Event({
           <Contact />
         </Section>
         <Section wide className="flex">
-          {previousPost === null ? (
-            <div className={"w-1/2 mr-4"} />
-          ) : (
-            <EventPreview
-              title="Previous Event"
-              event={previousPost}
-              className="mr-4 w-1/2"
-            />
-          )}
-          {nextPost === null ? (
-            <div className={"w-1/2 ml-4"} />
-          ) : (
-            <EventPreview
-              title="Next Event"
-              event={nextPost}
-              className="ml-4 w-1/2"
-            />
-          )}
+          <TwoUp>
+            {previousEvent ? (
+              <div>
+                <h3 className="mb-2">Next Event</h3>
+                <EventPreview event={previousEvent} />
+              </div>
+            ) : null}
+
+            {nextEvent ? (
+              <div>
+                <h3 className="mb-2">Previous Event</h3>
+                <EventPreview event={nextEvent} />
+              </div>
+            ) : null}
+          </TwoUp>
         </Section>
       </SingleColumn>
       <Footer />
@@ -110,41 +154,28 @@ export default function Event({
 
 //
 export async function getStaticProps({ params }) {
-  const nextPost =
-    getNextPost(
-      params.slug,
-      ["title", "slug", "date", "description", "extra"],
-      "events"
-    ) || null;
+  const nextEvent = getNextPost(params.slug, eventKeys, "events") || null;
 
-  const previousPost =
-    getPreviousPost(
-      params.slug,
-      ["title", "slug", "date", "description", "extra"],
-      "events"
-    ) || null;
+  const previousEvent =
+    getPreviousPost(params.slug, eventKeys, "events") || null;
 
-  const post = getPostBySlug(
-    params.slug,
-    ["title", "slug", "date", "description", "content", "extra"],
-    "events"
-  );
+  const event = getPostBySlug(params.slug, eventKeys, "events");
 
-  const markdown = await Markdown({ post });
+  const markdown = await Markdown({ post: event });
 
   return {
-    props: { post, markdown, nextPost, previousPost },
+    props: { event, markdown, nextEvent, previousEvent },
   };
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(["slug", "date"], "events");
+  const events = getAllPosts(["slug", "date"], "events");
 
   return {
-    paths: posts.map((post) => {
+    paths: events.map((event) => {
       return {
         params: {
-          slug: post.slug,
+          slug: event.slug,
         },
       };
     }),

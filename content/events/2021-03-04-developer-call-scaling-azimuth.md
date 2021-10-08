@@ -1,14 +1,17 @@
 +++
 title = "Developer Call: Scaling Azimuth"
-date = 2021-03-04
-[extra]
-pinned = false
-host = "Urbit"
-time = "09:00 PST"
+ends = "2021-03-04T18:30:00.000-08:00"
 location = "Online event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/276692816/"
 youtube = "CKuHXrdkIw0"
+description = ""
+guests = ""
+timezone = "America/Los_Angeles"
+starts = "2021-03-04T17:00:00.000-08:00"
+
+[[hosts]]
+name = "Urbit"
 +++
 
 Urbit engineer Philip Monk will be discussing the solution space to scaling Azimuth, the infrastructure for Urbit ID that's built on Ethereum.
@@ -19,4 +22,4 @@ Phil has been doing a ton of research for the past few months on different appro
 
 As usual, this talk will feature a presentation, a Q&amp;A period and a follow-up video call that anyone from the audience can join.
 
-See you there! 
+See you there!

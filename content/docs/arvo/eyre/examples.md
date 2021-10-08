@@ -309,9 +309,9 @@ Note that this example does a lot of things manually for demonstrative purposes.
 Save the above to `/app/eyre-agent.hoon`. Commit it:
 
 ```
-> |commit %home
+> |commit %base
 >=
-+ /~zod/home/2/app/eyre-agent/hoon
++ /~zod/base/2/app/eyre-agent/hoon
 ```
 
 ...and start it:
@@ -320,7 +320,7 @@ Save the above to `/app/eyre-agent.hoon`. Commit it:
 > |start %eyre-agent
 >=
 gall: loading %eyre-agent
-activated app home/eyre-agent
+activated app base/eyre-agent
 [unlinked from [p=~zod q=%eyre-agent]]
 ```
 
@@ -430,7 +430,7 @@ Here we'll look at running a generator via Eyre. Eyre doesn't have a mediated JS
 
 You can refer to the [%serve](/docs/arvo/eyre/tasks#serve) section of the [Internal API Reference](/docs/arvo/eyre/tasks) document for relevant details.
 
-Here's a very simple generator that will just echo back the body of the request (if available) along with the current datetime. You can save it in the `/gen` directory and `|commit %home`.
+Here's a very simple generator that will just echo back the body of the request (if available) along with the current datetime. You can save it in the `/gen` directory and `|commit %base`.
 
 Note that this example does some things manually for demonstrative purposes. In practice you'd likely want to use a library like `/lib/server.hoon` to cut down on boilerplate code.
 
@@ -478,7 +478,7 @@ The [$binding](/docs/arvo/eyre/data-types#binding) specifies the site and URL pa
 Let's bind our generator to the `/mygen` URL path with the `|pass` command in the dojo:
 
 ```
-|pass [%e [%serve `/mygen %home /gen/eyre-gen/hoon ~]]
+|pass [%e [%serve `/mygen %base /gen/eyre-gen/hoon ~]]
 ```
 
 Note that Eyre responds with a `%bound` `gift` to indicate whether the binding succeeded but `|pass` doesn't take such responses so it's not shown.

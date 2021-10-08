@@ -1,9 +1,11 @@
 +++
 title = "Urbit API for Elixir"
-date = 2021-02-11
+date = "2021-02-10"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["App Dev"]
+grant_type = [ "Proposal" ]
+grant_category = [ "App Dev" ]
+
 [extra]
 image = ""
 description = "A proposal to build an Urbit HTTP Api for the Elixir language, bringing to Urbit its state of the art concurrency capabilities."

@@ -7,7 +7,6 @@ import Header from "./Header";
 import Footer from "./Footer";
 import SingleColumn from "./SingleColumn";
 import Section from "./Section";
-import markdownStyles from "../styles/markdown.module.css";
 import { decode } from "html-entities";
 import { TableOfContents } from "./TableOfContents";
 
@@ -30,7 +29,7 @@ export default function PageWithIndex({ post, markdown, search }) {
         <Section narrow>
           <div className="flex sidebar">
             <article
-              className={markdownStyles["markdown"] + " pr-0 lg:pr-16"}
+              className={"markdown pr-0 lg:pr-16"}
               dangerouslySetInnerHTML={{ __html: decode(markdown) }}
             ></article>
             <TableOfContents />

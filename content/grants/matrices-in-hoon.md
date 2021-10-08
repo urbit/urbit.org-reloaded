@@ -1,16 +1,18 @@
 +++
 title = "Matrices in Hoon"
-date = 2020-02-21
+date = "2020-02-20"
+
 [taxonomies]
-grant_type = ["Bounty"]
-grant_category = ["Core Dev"]
+grant_type = [ "Bounty" ]
+grant_category = [ "Core Dev" ]
+
 [extra]
 image = ""
 description = "Add array types to Hoon."
 reward = 5
 assignee = "N E Davis"
 id = "611660914"
-completed = false
+completed = true
 link = ""
 +++
 

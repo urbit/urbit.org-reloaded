@@ -1,7 +1,8 @@
 +++
 title = "Your Last Computer"
-date = 2019-10-17
+date = "2019-10-16"
 description = "Your Urbit is a simpler computer, a quieter computer, a more private computer. We want it to feel predictable, safe, and reliable — things only a complete, sealed system can do. This, we hope, can get us a world where technology keeps us connected, but doesn’t dominate our lives."
+
 [extra]
 image = "https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png"
 +++
@@ -9,7 +10,6 @@ image = "https://media.urbit.org/site/understanding-urbit/your-last-computer/you
 This whole ‘simple, durable, yours’ thing may sound good, but what does it add up to? What does it feel like?
 
 First, let’s talk about what it should feel like in the future.
-
 
 <img class="mv5 w-100" src="https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png">
 

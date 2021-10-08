@@ -196,7 +196,7 @@ The syntax difference is that a test for equality takes two subexpressions, and 
 ##### Produces
 
 `q`, if `p` is greater than or equal to the Hoon kelvin version.
-(Versions count down; the current version is 141.)
+(Versions count down; the current version is 140.)
 
 ##### Syntax
 

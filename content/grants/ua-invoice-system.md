@@ -1,9 +1,11 @@
 +++
 title = "Invoice system"
-date = 2021-05-27
+date = "2021-05-26"
+
 [taxonomies]
-grant_type = ["Apprenticeship"]
-grant_category = ["App Dev", "Arvo"]
+grant_type = [ "Apprenticeship" ]
+grant_category = [ "App Dev", "Arvo" ]
+
 [extra]
 image = ""
 description = "A system to request and record payments made and received."

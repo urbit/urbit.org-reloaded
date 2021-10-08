@@ -1,9 +1,11 @@
 +++
 title = "Urbit Ship and Star Hosting and Troubleshooting Docs"
-date = 2020-08-19
+date = "2020-08-18"
+
 [taxonomies]
-grant_type = ["Proposal"]
-grant_category = ["Documentation"]
+grant_type = [ "Proposal" ]
+grant_category = [ "Documentation" ]
+
 [extra]
 image = ""
 description = "User docs for ship/star owners around best practices for hosting"

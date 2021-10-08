@@ -14,7 +14,7 @@ import Markdown from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
 import Pagination from "../../components/Pagination";
-import markdownStyles from "../../styles/markdown.module.css";
+
 import { decode } from "html-entities";
 
 const breadcrumbs = (posts, paths) => {
@@ -49,11 +49,11 @@ const pageTree = (thisLink, tree, level = 0) => {
   const isThisPage = router.asPath === thisLink;
 
   const pageItemClasses = classnames({
-    "pl-4 text-black text-base hover:text-green": level === 0,
-    "pl-8 text-black text-base hover:text-green": level === 1,
-    "pl-12 text-black text-base hover:text-green": level === 2,
+    "pl-4 text-wall-600 text-base hover:text-green-400": level === 0,
+    "pl-8 text-wall-600 text-base hover:text-green-400": level === 1,
+    "pl-12 text-wall-600 text-base hover:text-green-400": level === 2,
     "dot relative": isThisPage,
-    "text-green": isThisPage,
+    "text-green-400": isThisPage,
   });
 
   return (
@@ -78,10 +78,10 @@ export default function UnderstandingLayout({
   const isSelected = "/understanding-urbit".includes(router.asPath);
   const selectedClasses = classnames({
     dot: isSelected,
-    "text-green": isSelected,
-    "text-black": !isSelected,
+    "text-green-400": isSelected,
+    "text-wall-600": !isSelected,
   });
-  const rootClasses = "pl-4 text-base hover:text-green";
+  const rootClasses = "pl-4 text-base hover:text-green-400";
   return (
     <>
       <Head>
@@ -108,7 +108,7 @@ export default function UnderstandingLayout({
           section={"Understanding Urbit"}
           params={params}
         >
-          <div className={markdownStyles["markdown"]}>
+          <div className="markdown">
             <article
               dangerouslySetInnerHTML={{ __html: decode(markdown) }}
             ></article>
