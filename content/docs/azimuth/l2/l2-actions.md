@@ -5,7 +5,7 @@ template = "doc.html"
 +++
 
 There are a total of eleven layer 2 actions, each corresponding to a familiar
-[layer 1 action](/docs/azimuth/contract#ecliptic): `%transfer-point`, `%spawn`,
+[layer 1 action](/docs/azimuth/ecliptic): `%transfer-point`, `%spawn`,
 `%configure-keys`, `%escape`, `%cancel-escape`, `%adopt`, `%reject`, `%detach`,
 `%set-management-proxy`, `%set-spawn-proxy`, and `%set-transfer-proxy`.
 
