@@ -77,7 +77,7 @@ Here's a simple thread with a couple of `strandio` functions:
 (pure:m !>([s t]))
 ```
 
-Save it as `/ted/mythread.hoon`, `|commit` it and run it with `-mythread`. You should see something like:
+Save it as `/ted/mythread.hoon` of `%base`, `|commit` it and run it with `-mythread`. You should see something like:
 
 ```
 > -mythread

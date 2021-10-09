@@ -87,7 +87,7 @@ To begin, you'll need to spin up a ship (typically a fake ship) and `|mount` a d
 
 With the desk mounted, add the folder to be globbed to the root of the desk in Unix. It's imporant it's in the root because the `%make-glob` thread will only strip the first level of the folder heirarchy.
 
-Next, `|commit` the files to the desk and change directory in the dojo to the `%garden` desk with `=dir /=garden=`. Then, run `-make-glob %the-desk /folder-name`, where `%the-desk` is the desk containing the folder to be globbed and `/folder-name` is its name.
+Next, `|commit` the files to the desk, then run `-garden!make-glob %the-desk /folder-name`, where `%the-desk` is the desk containing the folder to be globbed and `/folder-name` is its name.
 
 On Unix, if you look in `/path/to/pier/.urb/put`, you'll now see a file which looks like:
 

@@ -34,7 +34,7 @@ Here's a simple example of a thread that starts another thread:
 (pure:m !>(~))
 ```
 
-Save `parent.hoon` and `child.hoon` in `/ted`, `|commit %home` and run `-parent`. You should see something like:
+Save `parent.hoon` and `child.hoon` in `/ted` of the `%base` desk, `|commit %base` and run `-parent`. You should see something like:
 
 ```
 foo
@@ -74,7 +74,7 @@ If we want to actually get the result of the thread we started, it's slightly mo
 ;<  ~             bind:m  %-  poke-our
                           :*  %spider
                               %spider-start
-                              !>([`tid.bowl `tid %child !>(~)])
+                              !>([`tid.bowl `tid byk.bowl %child !>(~)])
                           ==
 ;<  =cage         bind:m  (take-fact /awaiting/[tid])
 ;<  ~             bind:m  (take-kick /awaiting/[tid])
@@ -130,14 +130,15 @@ We pre-emptively subscribe for the result. Spider sends the result at `/thread-r
 ;<  ~             bind:m  %-  poke-our
                           :*  %spider
                               %spider-start
-                              !>([`tid.bowl `tid %child !>(~)])
+                              !>([`tid.bowl byk.bowl `tid %child !>(~)])
                           ==
 ```
 
-Spider takes a poke with a mark %spider-start and a vase containing `[parent=(unit tid) use=(unit tid) file=term =vase]` to start a thread, where:
+Spider takes a poke with a mark %spider-start and a vase containing `[parent=(unit tid) use=(unit tid) =beak file=term =vase]` to start a thread, where:
 
 - `parent` is an optional parent thread. In this case we say the parent is our tid. Specifying a parent means the child will be killed if the parent ends.
 - `use` is the thread ID for the thread we're creating
+- `beak` is a `[p=ship q=desk r=case]` triple which specifies the desk and revision containing the thread we want to run. In this case we just use `byk.bowl`.
 - `file` is the filename of the thread we want to start
 - `vase` is the vase it will be given as an argument when it's started
 
@@ -180,7 +181,7 @@ Finally we test whether the thread produced a `%thread-done` or a `%thread-fail`
 ;<  ~             bind:m  %-  poke-our
                           :*  %spider
                               %spider-start
-                              !>([`tid.bowl `tid %child !>(~)])
+                              !>([`tid.bowl byk.bowl `tid %child !>(~)])
                           ==
 ;<  ~             bind:m  (sleep ~s5)
 %-  (slog leaf+"Stopping child thread..." ~)
