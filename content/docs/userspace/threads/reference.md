@@ -25,14 +25,14 @@ Where:
         [%ud p=@ud]      ::  number
     ==
   ```
-  You'll almost always just want the current revision, so you can specify the `case` as `da+now.bowl`.
+  You'll almost always just want the current revision, so you can specify the `case` as `da+now.bowl`. If the thread is on the same desk as the agent, you can also just use `byk.bowl` for the `beak`.
 - `file` - name of the thread file in `/ted`. For example, if the thread you want to start is `/ted/foo/hoon` you'd specify `%foo`.
 - `vase` - `vase` to be given to the thread when it's started. Can be whatever or just `!>(~)` if it doesn't need any args.
 
 #### Example
 
 ```hoon
-[%pass /some-path %agent [our.bowl %spider] %poke %spider-start !>([~ `tid [our.bowl %base da+now.bowl] %foo !>(~)])]
+[%pass /some-path %agent [our.bowl %spider] %poke %spider-start !>([~ `tid byk.bowl %foo !>(~)])]
 ```
 
 ## Stop thread
