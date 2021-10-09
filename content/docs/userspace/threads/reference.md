@@ -10,20 +10,29 @@ Poke `spider` with mark `%spider-start` and a vase containing `start-args`:
 
 ```hoon
 +$  start-args
-  [parent=(unit tid) use=(unit tid) file=term =vase]
+  [parent=(unit tid) use=(unit tid) =beak file=term =vase]
 ```
 
 Where:
 
 - `parent` - optional `tid` of parent thread if the thread is a child. If specified, the child thread will be killed with the parent thread ends.
 - `use` - `tid` (thread ID) to give the new thread. Can be generated with something like `(scot %ta (cat 3 'my-agent_' (scot %uv (sham eny))))`. However you do it, make sure it's unique.
+- `beak` - A `$beak` is a triple of `[p=ship q=desk r=case]`. `p` is always our ship, `q` is the desk which contains the thread we want to run. `r` is a `case`, which specifies a desk revision and is a tagged union of:
+  ```hoon
+  +$  case
+    $%  [%da p=@da]      ::  date
+        [%tas p=@tas]    ::  label
+        [%ud p=@ud]      ::  number
+    ==
+  ```
+  You'll almost always just want the current revision, so you can specify the `case` as `da+now.bowl`.
 - `file` - name of the thread file in `/ted`. For example, if the thread you want to start is `/ted/foo/hoon` you'd specify `%foo`.
 - `vase` - `vase` to be given to the thread when it's started. Can be whatever or just `!>(~)` if it doesn't need any args.
 
 #### Example
 
 ```hoon
-[%pass /some-path %agent [our.bowl %spider] %poke %spider-start !>([~ `tid %foo !>(~)])]
+[%pass /some-path %agent [our.bowl %spider] %poke %spider-start !>([~ `tid [our.bowl %base da+now.bowl] %foo !>(~)])]
 ```
 
 ## Stop thread
