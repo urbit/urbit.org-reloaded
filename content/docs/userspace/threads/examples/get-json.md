@@ -75,7 +75,7 @@ Here's a simple thread that will:
 (pure:m !>(~))
 ```
 
-Save it as `/ted/latest-hash.hoon`, `|commit %home` and run it with `-latest-hash`. You should see something like:
+Save it as `/ted/latest-hash.hoon` of the `%base` desk, `|commit %base` and run it with `-latest-hash`. You should see something like:
 
 ```
 > -latest-hash
