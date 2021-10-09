@@ -29,7 +29,7 @@ Here's an example of a barebones gall agent that just starts a thread:
         (pair term term)
       =/  tid  `@ta`(cat 3 'thread_' (scot %uv (sham eny.bowl)))
       =/  ta-now  `@ta`(scot %da now.bowl)
-      =/  start-args  [~ `tid p.q.vase !>(q.q.vase)]
+      =/  start-args  [~ `tid byk.bowl p.q.vase !>(q.q.vase)]
       :_  this
       :~
         [%pass /thread/[ta-now] %agent [our.bowl %spider] %poke %spider-start !>(start-args)]
@@ -76,7 +76,7 @@ And here's a minimal thread to test it with:
 ==
 ```
 
-Save them as `/app/thread-starter.hoon` and `/ted/test-thread.hoon` respectively, `|commit %home`, and start the app with `|start %thread-starter`.
+Save them as `/app/thread-starter.hoon` and `/ted/test-thread.hoon` respectively in the `%base` desk, `|commit %base`, and start the app with `|rein %base [& %thread-starter]`.
 
 Now you can poke it with a pair of thread name and argument like:
 
@@ -116,7 +116,7 @@ We can ignore the input logic, here's the important part:
 ```hoon
 =/  tid  `@ta`(cat 3 'thread_' (scot %uv (sham eny.bowl)))
 =/  ta-now  `@ta`(scot %da now.bowl)
-=/  start-args  [~ `tid p.q.vase !>(q.q.vase)]
+=/  start-args  [~ `tid byk.bowl p.q.vase !>(q.q.vase)]
 :_  this
 :~
   [%pass /thread/[ta-now] %agent [our.bowl %spider] %poke %spider-start !>(start-args)]
