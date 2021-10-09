@@ -68,7 +68,7 @@ Here's an example of a thread that subscribes to `graph-store` for updates and n
 (pure:m !>(~))
 ```
 
-Save it in `/ted`, `|commit %home`, and run it with `-chat-watch`. Now try typing some messages in the chat and you should see them printed like:
+Save it in `/ted`, `|commit %base`, and run it with `-chat-watch`. Now try typing some messages in the chat and you should see them printed like:
 
 ```
 ~zod/test-8488: [~zod] x
@@ -103,7 +103,7 @@ Once this is done, main-loop will just call the same function again which will a
 
 To try the same input against multiple function you must use another `strandio` function `handle`. Handle converts a `%skip` into a `[fail %ignore ~]`. When `main-loop` sees a `[fail %ignore ~]` it tries the next function in its list with the same input.
 
-Here are two files: `tester.hoon` and `tested.hoon`. Save them both to `/ted`, `|commit %home` and run `-tester`. You should see:
+Here are two files: `tester.hoon` and `tested.hoon`. Save them both to `/ted` in the `%base` desk, `|commit %base` and run `-tester`. You should see:
 
 ```
 > -tester

@@ -45,7 +45,7 @@ Here's an example of a thread that scries ames for the IP address & port of a sh
 
 **Note:** Pretty useless on a fake ship.
 
-Save as `ted/get-ip.hoon`, `|commit %home`, and run it with `-get-ip ~bitbet-bolbel`. You should see something like:
+Save as `ted/get-ip.hoon` in the `%base` desk, `|commit %base`, and run it with `-get-ip ~bitbet-bolbel`. You should see something like:
 
 ```
 34.83.113.220:60659

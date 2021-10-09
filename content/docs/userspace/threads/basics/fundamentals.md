@@ -15,23 +15,22 @@ Threads are managed by the gall agent called `spider`.
 
 ## Thread location
 
-Threads live in the `ted` directory of your desk:
+Threads live in the `ted` directory of each desk. For example, in a desk named `%sandbox`:
 
 ```
-%
+%sandbox
 ├──app
 ├──gen
 ├──lib
 ├──mar
 ├──sur
-├──sys
 └──ted <-
    ├──foo
    │  └──bar.hoon
    └──baz.hoon
 ```
 
-From the dojo, `ted/baz.hoon` can be run with `-baz`, and `ted/foo/bar.hoon` with `-foo-bar`.
+From the dojo, `ted/baz.hoon` can be run with `-sandbox!baz`, and `ted/foo/bar.hoon` with `-sandbox!foo-bar`. Threads in the `%base` desk can just be run like `-foo`, but all others must have the format `-desk!thread`.
 
 **NOTE:** When the dojo sees the `-` prefix it automatically handles creating a thread ID, composing the argument, poking the `spider` gall agent and subscribing for the result. Running a thread from another context (eg. a gall agent) requires doing these things explicitly and is outside the scope of this particular tutorial.
 
@@ -57,7 +56,7 @@ That is, a gate which takes a `vase` and returns the `form` of a `strand` that p
 
 ![thread diagram](https://storage.googleapis.com/media.urbit.org/site/thread-diagram.png "diagram of a thread")
 
-This is because threads typically do a bunch of I/O so it can't just immediately produce a result and end. Instead the strand will get some input, produce output, get some new input, produce new output, and so forth, until they eventually produce a `%done` with the actual final result. 
+This is because threads typically do a bunch of I/O so it can't just immediately produce a result and end. Instead the strand will get some input, produce output, get some new input, produce new output, and so forth, until they eventually produce a `%done` with the actual final result.
 
 ## Strands
 
@@ -66,9 +65,10 @@ Strands are the building blocks of threads. A thread will typically compose mult
 A strand is a function of `strand-input:strand -> output:strand` and is defined in `/lib/strand/hoon`. You can see the details of `strand-input` [here](https://github.com/urbit/urbit/blob/master/pkg/arvo/lib/strand.hoon#L2-L21) and `output:strand` [here](https://github.com/urbit/urbit/blob/master/pkg/arvo/lib/strand.hoon#L23-L48). At this stage you don't need to know the nitty-gritty but it's helpful to have a quick look through. We'll discuss these things in more detail later.
 
 A strand is a core that has three important arms:
+
 - `form` - the mold of the strand
 - `pure` - produces a strand that does nothing except return a value
-- `bind` - monadic bind, like `then` in javascript promises 
+- `bind` - monadic bind, like `then` in javascript promises
 
 We'll discuss each of these arms later.
 
@@ -81,7 +81,7 @@ Strands are conventionally given the face `m` like:
 ...
 ```
 
-**NOTE:** a comma prefix as in `,vase` is the irregular form of `^:` which is a gate that returns the sample value if it's of the correct type, but crashes otherwise. 
+**NOTE:** a comma prefix as in `,vase` is the irregular form of `^:` which is a gate that returns the sample value if it's of the correct type, but crashes otherwise.
 
 ## Form and Pure
 
@@ -104,19 +104,18 @@ We'll cover `bind` later.
 ## A trivial thread
 
 ```hoon
-/-  spider 
-=,  strand=strand:spider 
-^-  thread:spider 
-|=  arg=vase 
-=/  m  (strand ,vase) 
-^-  form:m 
+/-  spider
+=,  strand=strand:spider
+^-  thread:spider
+|=  arg=vase
+=/  m  (strand ,vase)
+^-  form:m
 (pure:m arg)
 ```
 
 The above code is a simple thread that just returns its argument, and it's a good boilerplate to start from.
 
 Save the above code as a file in `ted/mythread.hoon` and `|commit` it. Run it with `-mythread 'foo'`, you should see the following:
-
 
 ```
 > -mythread 'foo'
@@ -130,8 +129,8 @@ Save the above code as a file in `ted/mythread.hoon` and `|commit` it. Run it wi
 We'll go through it line-by line.
 
 ```hoon
-/-  spider 
-=,  strand=strand:spider 
+/-  spider
+=,  strand=strand:spider
 ```
 
 First we import `/sur/spider/hoon` which includes `/lib/strand/hoon` and give give the latter the face `strand` for convenience.
@@ -155,7 +154,7 @@ We create a gate that takes a vase, the first part of the previously mentioned t
 Inside the gate we create our `strand` specialised to produce a `vase` and give it the canonical face `m`.
 
 ```hoon
-^-  form:m 
+^-  form:m
 ```
 
 We cast the output to `form` - the mold of the strand we created.
