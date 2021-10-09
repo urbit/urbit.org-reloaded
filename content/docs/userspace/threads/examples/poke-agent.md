@@ -47,7 +47,7 @@ Here's a thread that lets you post a message to a chat in graph-store:
 (pure:m !>(~))
 ```
 
-Save it in `/ted`, `|commit`, and run it like:
+Save it in `/ted` of the `%base` desk, `|commit %base`, and run it like:
 
 ```
 -post-msg [~zod %foo-9955] 'some message'
