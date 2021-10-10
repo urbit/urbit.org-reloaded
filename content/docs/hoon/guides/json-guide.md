@@ -297,7 +297,7 @@ Let's try it:
 
 The [`+ou`](/docs/hoon/reference/zuse/2d_6#oudejsformat) function decodes a `$json` object to an n-tuple using the matching functions in a key-function list. Additionally, it lets you set some key-value pairs in an object as optional and others as mandatory. The mandatory ones crash if they're missing and the optional ones are replaced with a given noun.
 
-`+ou` is different to other `+dejs` functions - the functions it takes are `$-((unit json) grub)` rather than the usuall `$-(json grub)` of most `+dejs` functions. There are only two `+dejs` functions that fit this - [`+un`](/docs/hoon/reference/zuse/2d_6#undejsformat) and [`+uf`](/docs/hoon/reference/zuse/2d_6#ufdejsformat). These are intended to be used with `+ou` - you would wrap each function in the key-function list of `+ou` with either `+un` or `+uf`.
+`+ou` is different to other `+dejs` functions - the functions it takes are `$-((unit json) grub)` rather than the usual `$-(json grub)` of most `+dejs` functions. There are only two `+dejs` functions that fit this - [`+un`](/docs/hoon/reference/zuse/2d_6#undejsformat) and [`+uf`](/docs/hoon/reference/zuse/2d_6#ufdejsformat). These are intended to be used with `+ou` - you would wrap each function in the key-function list of `+ou` with either `+un` or `+uf`.
 
 `+un` crashes if its argument is `~`. `+ou` gives functions a `~` if the matching key-value pair is missing in the `$json` object, so `+un` crashes if the key-value pair is missing. Therefore, `+un` lets you set key-value pairs as mandatory.
 
