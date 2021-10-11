@@ -79,7 +79,7 @@ A planet name looks like `~sampel-palnet`.
 
 [Follow this guide](/getting-started/planet) if you have already acquired a planet.
 
-[Find a planet to purchase](/getting-started/planet#purchase)
+[Find a planet to purchase](/getting-started#get-a-planet)
 
 ---
 
@@ -91,7 +91,7 @@ A comet name looks like `~dasres-ragnep-lislyt-ribpyl--mosnyx-bisdem-nidful-marz
 
 ---
 
-To boot a comet, go into the command line and run the following command from the `urbit` directory you created during [Urbit installation](#installing-urbit):
+To boot a comet, go into the command line and run the following command from the `urbit` directory you created during [Urbit installation](#os).
 
 ```sh
 ~/urbit/urbit -c mycomet
@@ -100,10 +100,9 @@ To boot a comet, go into the command line and run the following command from the
 It may take a while to load the comet (probably only take a few minutes, but it could take longer). This comes along with it being free. When it's done you'll some messages ending like this:
 
 ```
-ames: on localhost, UDP 31337.
-http: live (insecure, public) on 8080
-http: live ("secure", public) on 8443
-http: live (insecure, loopback) on 12321
+ames: live on 31337
+http: web interface live on http://localhost:8080
+http: loopback live on http://localhost:12321
 ~sampel_marzod:dojo>
 ```
 
@@ -117,38 +116,30 @@ To start your comet up again, run the following from your `urbit` directory (not
 ~/urbit/urbit mycomet
 ```
 
-### Using Landscape
+### Using the web interface
 
 Urbit is an entirely new computer, so by default it drops you into the "dojo," which is its terminal. Like your current computer, it can be used to do just about anything if you know the right commands. You only need to know one command for now.
 
-At the moment, the most common way to use Urbit is through a web app named [Landscape](/docs/glossary/landscape), which comes with Urbit. It runs in your browser and provides an interface to Urbit without using the terminal. You need to get the password, or `code`.
+At the moment, the most common way to use Urbit is by launching apps like Groups (a communications suite) from the web interface homescreen. The web interface allows you to use your ship without touching the terminal. You just need to get the password, or `code`, from the terminal.
 
-1. With your Urbit running, look for a line that says something like `http: live (insecure, public) on 80`. The number given is the port that your ship is using. It will probably be 80, but we're just making sure. (Don't worry about the "insecure, public" part — that just means you can access it from your own web browser. It doesn't give anyone else access.)
+1. With your Urbit running, look for a line that says something like `http: web interface live on http://localhost:8080`. The number given is the port that your ship is using. It will most likely be 80 or 8080, but we're just making sure.
 2. If the port given is `80`, simply type `localhost` into your browser's address bar. If the given port is a different number, such as `8080`, you would type `localhost:8080`. You'll be met with a login prompt.
 3. In the window where you found the port number, type `+code` and press return. Copy-paste the code that appears into the "Access Key" field in the browser, and press continue.
-4. Once in, take a look around and read the instructions on screen. If you ever get logged out, follow these instructions again.
+4. Once in, take a look around and try launching an app like Groups.
 
 ## Next Steps
 
 ### Updating your comet {#updating}
 
-The Urbit application comes with a recent release of the Urbit OS, but automatic updates ("over the air") can be enabled so new binaries aren't necessary for each update. Planets have automatic updates enabled by default, but this is not the case for comets. Many comets are used only once and thrown away, so it would be wasteful to update every single comet as soon as it boots. If you plan to use your comet for more than a quick test, you'll probably want to ensure you're running the latest version of the OS.
+Urbit comes with a recent release of the Urbit OS, but automatic updates of the `%base` desk (which contains the kernel of the OS) are not enabled by default for Comets. Many comets are used only once and thrown away, so it would be wasteful to update every single comet as soon as it boots. If you plan to use your comet for more than a quick test, you'll probably want to ensure you're running the latest version of the OS.
 
-You can enable updates for your comet by typing `|ota (sein:title our now our) %kids` into Dojo and pressing Enter.
+You can enable updates for your comet by typing `|install (sein:title our now our) %kids, =local %base` into Dojo and pressing Enter.
 
 ```
-> |ota (sein:title our now our) %kids
+> |install (sein:title our now our) %kids, =local %base
 >=
-```
-
-If you want to make sure you'll get updates, you can check by typing `|ota` with no arguments:
-
-```
-~sampel_marzod:dojo> |ota
-OTAs enabled from %kids on ~marzod
-use |ota %disable or |ota ~sponsor %kids to reset it
-> |ota
->=
+kiln: activated install into %base from [~samzod %kids]
+kiln: downloading update for %base from [~samzod %kids]
 ```
 
 ### Read More about the Dojo {#the-dojo}
@@ -165,7 +156,7 @@ You can continue using this comet indefinitely. There are currently few differen
 
 A comet also comes with a long and fairly unmemorable name whereas a planet has a short name and a "sigil" (avatar) associated with it that makes it more identifiable on the network. You may notice all this within the first few minutes of using Urbit.
 
-[To read instructions on how to purchase and use a planet, visit this page](/getting-started/planet).
+[For details of how to purchase a planet, visit this page](/getting-started#get-a-planet).
 
 <style>
   .os {
