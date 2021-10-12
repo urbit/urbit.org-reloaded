@@ -77,7 +77,9 @@ Run system commands from `:hood`, like `reload`, using `|`:
 
 Generators are short Hoon scripts, saved as `.hoon` files in the `/gen`
 directory. Many Dojo commands exist in the form of generators. The syntax for
-running a generator is `+genname` for a generator saved as `genname.hoon`.
+running a generator is `+genname` for a generator saved as `genname.hoon` in the
+`%base` desk. For generators on other desks, you can use the syntax
+`+desk!genname`.
 
 #### `+cat`
 
@@ -96,25 +98,8 @@ arguments.
 ~your-urbit:dojo> +code
 ```
 
-You can change your code to a new randomly generated one by entering `|code
-%reset`. Please note that this will prevent [Bridge](/docs/glossary/bridge)
+You can change your code to a new randomly generated one by entering `|code %reset`. Please note that this will prevent [Bridge](/docs/glossary/bridge)
 from being able to derive your code in the future.
-
-#### `+curl`
-
-Retrieves data from a URL. Accepts a `tape`. Similar to Unix `curl`.
-
-```
-~your-urbit:dojo> +curl "http://nyt.com"
-```
-
-#### `+hello`
-
-Just prints the argument. Accepts a `@ta`.
-
-```
-~your-urbit:dojo> +hello 'mars'
-```
 
 #### `+ls`
 
@@ -122,34 +107,18 @@ Similar to Unix `ls`. Accepts a path.
 
 ```
 ~your-urbit:dojo> +ls %/gen
-~your-urbit:dojo> +ls /~talsur-todres/home/2/gen/program
+~your-urbit:dojo> +ls /~talsur-todres/base/2/gen/program
 ```
 
 #### `+solid`
 
-Compile the current state of the kernel and output a
-noun. Usually downloaded to a file in unix. No arguments.
+Compile the current state of the kernel and output a noun. Usually downloaded to
+a file in unix. This generator takes a series of desks to include as its
+argument. The first desk must be the base desk that contains the Arvo kernel,
+standard library and related files - typically `%base`.
 
 ```
-~your-urbit:dojo> .urbit/pill +solid
-```
-
-#### `+test`
-
-Testrunner. Can test multiple generators at once, conventionally ones
-in the `/test` folder. Takes a path.
-
-```
-~your-urbit:dojo> +test /lib
-```
-
-#### `+ticket`
-
-Generate a ticket for an urbit ship. Takes an urbit name (`@p`).
-
-
-```
-~your-urbit:dojo> +ticket ~talsur-todres-your-urbit
+~your-urbit:dojo> .urbit/pill +solid %base %garden %landscape %webterm %bitcoin
 ```
 
 #### `+tree`
@@ -171,11 +140,13 @@ an urbit name (`@p`) and a string (`tape`, which is text wrapped with double-quo
 ~your-urbit:dojo> |hi ~binzod "you there?"
 ```
 
-`|link` / `|unlink` - Link / unlink a remote app. Accepts an
-Urbit name and an app name.
+`|link` / `|unlink` - Link / unlink a CLI app - may or may not be remote.
+Accepts an optional ship name and a mandatory app name.
 
 ```
 ~your-urbit:dojo> |link ~talsur-todres %octo
+
+~your-urbit:dojo> |link %chat-cli
 ```
 
 `|mass` - Prints the current memory usage of all the kernel modules.
@@ -185,23 +156,11 @@ No arguments.
 ~your-urbit:dojo> |mass
 ```
 
-`|reload` - Reloads a kernel module (vane) from source. Accepts any
+`|breload` - Reloads a kernel module (vane) from source. Accepts any
 number of vane names.
 
 ```
-~your-urbit:dojo> |reload %clay %eyre
-```
-
-`|reset` - Reloads `hoon.hoon` and all modules. No arguments.
-
-```
-~your-urbit:dojo> |reset
-```
-
-`|start` - Starts an app. Accepts an app name.
-
-```
-~your-urbit:dojo> |start %curl
+~your-urbit:dojo> |breload %clay %eyre
 ```
 
 ---
@@ -324,6 +283,9 @@ the code needed to log into your ship remotely.
 fintyr-haldet-fassev-solhex
 ```
 
+Generators on desks other than `%base` can be run with the syntax
+`+desk!generator`.
+
 ### Variables
 
 You can use `=` to set an environment variable in Dojo, but there are
@@ -339,36 +301,6 @@ Current working `%clay` desk and revision. Read / write.
 ~your-urbit:dojo> =dir %/gen
 ~your-urbit:dojo> +ls %
 404/hoon docs/ dojo/hoon lib/ listen/hoon md static/udon talk/ testing/udon tree/main/ unmark/ womb/
-```
-
-#### `lib`
-
-Current set of libraries (`/lib`) in your environment. Can be set
-with `/+`. Read / write.
-
-**Examples:**
-
-```
-~your-urbit:dojo> /+  number-to-words
-```
-Now we can use arms from lib/number-to-words.hoon
-```
-~your-urbit:dojo> (to-words:eng-us:number-to-words 123.456)
-```
-
-#### `sur`
-
-Current set of structures (`/sur`) in your environment. Can be set
-with `/-`. Read / write.
-
-**Examples:**
-
-```
-~your-urbit:dojo> /-  sole
-```
-Now we can use arms in sur/sole.hoon.
-```
-~your-urbit:dojo> `sole-effect:sole`[%bel ~]
 ```
 
 #### `now`
@@ -401,9 +333,7 @@ The current urbit ship. Read-only.
 
 ```
 ~your-urbit:dojo> eny
-\/0vnt.d474o.gpahj.jcf3o.448fh.2lamb.82ljm.8ol8u.b02vi.mrvvp.b7et2.knb7m.l8he\/
-  8.8qb9s.drm36.77n9b.a0qst.30g03.l5lb5.nvsbc.v39tn
-\/
+0v27k.n4atp.fovm6.f7ggm.jdkn5.elct5.11tna.4qtid.g4so7.a1h6g.grp7u.qml4i.0ed1v.sl0r0.97d4b.6aepr.6v6qm.ls5ve.60kgb.j6521.2fqcb
 ```
 
 ### Troubleshooting

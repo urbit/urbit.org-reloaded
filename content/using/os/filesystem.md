@@ -8,7 +8,8 @@ Urbit has its own revision-controlled filesystem, Clay. Clay is a typed, global,
 referentially transparent namespace. An easy way to think about it is like typed
 `git`.
 
-The most common way to use Clay is to mount a Clay node in a Unix directory. The mounted directory is always at the root of your pier directory.
+The most common way to use Clay is to mount a Clay node in a Unix directory. The
+mounted directory is always at the root of your pier directory.
 
 For more information on Clay, see the [Overview](/docs/arvo/clay/clay), and
 additional usage information at [Using Clay](/docs/arvo/clay/using).
@@ -21,32 +22,24 @@ that the command was successful.
 
 A [`desk`](/docs/glossary/desk) is something like an independently
 revision-controlled branch of your urbit's file-system. Your urbit's system
-files live in the `%home` `desk`.
+files live in the `%base` desk.
 
 It's important to note that whenever you want to sync changes from your Unix
 directory to your ship, you must use the `|commit %desk` command, where `%desk`
 is the `desk` that you'd like to sync to.
 
 When developing it's a good idea to use a separate `desk`. Create a `%sandbox`
-`desk` based on the `%home` `desk`:
+`desk` based on the `%base` `desk` (`our` produces your ship name):
 
 ```
-~zod:dojo> |merge %sandbox ~zod %home
+~zod:dojo> |merge %sandbox our %base
 ```
 
-Running `our` produces your ship-name, meaning that you can run the following
-command instead of typing out the entire thing. This is especially useful for
-comets due to their very long names.
+Most of the time we want to use Clay from Unix. Mount the entire contents of
+your `%sandbox` desk to Unix:
 
 ```
-~zod:dojo> |merge %sandbox our %home
-```
-
-Most of the time we want to use Clay from Unix.  Mount the entire contents of
-your `sandbox` desk to Unix:
-
-```
-~zod:dojo> |mount /=sandbox=
+~zod:dojo> |mount %sandbox
 ```
 
 To explore the filesystem from inside Urbit `+ls` and `+cat` are useful. `+ls`
@@ -93,19 +86,18 @@ and other basic tasks familiar to novice users of the Unix terminal.
 
 #### Paths
 
-A path in Clay is a list of URL-safe text, restricted to the characters `[a
-z]`,`[0 9]`, `.`, `-`, `_`, and `~`. This path is a list of strings each
+A path in Clay is a list of URL-safe text, restricted to the characters `[a z]`,`[0 9]`, `.`, `-`, `_`, and `~`. This path is a list of strings each
 prepended by `/`. In other words, paths are expressed as `/foo/bar/baz`. File
 extensions are separated from file names with `/`, not `.`. Extensions are
 syntactically identical to subdirectories, except that they must terminate the
 path.
 
 Paths begin with three strings indicating the ship, desk, and revision, and
-might look like `/~dozbud-namsep/home/11`.
+might look like `/~dozbud-namsep/base/11`.
 
 The first component is `ship`, which is, as you might guess, the name of
 an Urbit ship. The second component is `desk`, which is a workspace meant to
-contain other directories; the default `desk` is `%home`. The third component is
+contain other directories; the default `desk` is `%base`. The third component is
 the revision, which represents version information in various ways: date and time;
 a version sequence, which is a value incremented by one whenever a file on the
 given `desk` is modified; or an arbitrary plaintext label.
@@ -113,22 +105,23 @@ given `desk` is modified; or an arbitrary plaintext label.
 You can find what your current ship, desk, and revision is at any given moment by
 typing `%` in the Dojo and looking at the first three results. This will display
 as a cell rather than a path, like
+
 ```
-[~.~zod ~.home ~.~2021.3.19..16.11.20..0c60]
+[~.~zod ~.base ~.~2021.3.19..16.11.20..0c60]
 ```
+
 Here we see that the revision consists of the date, time, and a short hash.
 
 We use this format because, unlike the current internet, the Urbit network uses a
 global namespace. That means that a file named `example.hoon` in the `/gen`
-directory on the `%home` desk of your ship `~lodleb-ritrul` would have a
+directory on the `%base` desk of your ship `~lodleb-ritrul` would have a
 universal address to anyone else on the network:
-`/~lodleb-ritrul/home/186/gen/example/hoon`. That, of
+`/~lodleb-ritrul/base/186/gen/example/hoon`. That, of
 course, doesn't mean that everyone on the network has privileges to access that
 path. But given the revision-controlled and immutable nature of Urbit, this
 means that if the file requested is available, it will always be the same. This
 means that if an Urbit is serving a webpage, that exact version will always be
 retrievable (assuming you have access to it).
-
 
 #### Relative paths
 
@@ -198,7 +191,7 @@ address hierarchy – which, if you recall, is just a `list` – the above comma
 works!
 
 We can do the same thing between desks. If `%sandbox` has been merged with
-`%home`, the following command will produce the same results as the above
+`%base`, the following command will produce the same results as the above
 command.
 
 ```
@@ -206,16 +199,16 @@ command.
 ```
 
 Most commonly this is used to avoid having to know the current revision
-number in the `dojo`: `/~lodleb-ritrul/home/~2021.3.19..16.11.20..0c60/gen/example/hoon`
+number in the `dojo`: `/~lodleb-ritrul/base/~2021.3.19..16.11.20..0c60/gen/example/hoon`
 
 #### Changing directories
 
 Change the working directory with `=dir`. It's our equivalent of the Unix `cd`.
 
-For example, the syntax to navigate to `/home/gen/ask` is:
+For example, the syntax to navigate to `/base/gen/ask` is:
 
 ```
-~sampel-palnet:dojo> =dir /=home=/gen/ask
+~sampel-palnet:dojo> =dir /=base=/gen/ask
 ```
 
 This command will turn your prompt into something like this:
@@ -225,7 +218,7 @@ This command will turn your prompt into something like this:
 ```
 
 Using `=dir` without anything else uses the null path, which returns you to
-your home desk.
+your base desk.
 
 ```
 ~sampel-palnet:dojo/=/=/~2021.3.19..16.11.20..0c60/gen/ask> =dir
@@ -263,24 +256,18 @@ Mounts `%/gen` to `/generators` inside your pier directory.
 #### Unmount
 
 ```
-|unmount [clay-path || Unix-name]
+|unmount %mount-point
 ```
 
-Unmount the path or name from Unix.
+Unmount the the mount point from Unix.
 
 **Examples:**
 
 ```
-|unmount %/gen
+|unmount %foo
 ```
 
-Unmounts the Clay path `%/gen` from whatever name it was mounted as.
-
-```
-|unmount %generators
-```
-
-Unmounts the Unix path `/generators`.
+Unmounts the Unix path `/foo`.
 
 #### Merge
 
@@ -318,22 +305,18 @@ Merge the `%examples` `desk` from `~waxbex-ribmex`
 
 Merge `/=home=` into `%home-work` using merge strategy `%fine`.
 
-
 #### Sync
 
 ```
 |sync %target-desk ~source-ship %target-desk
 ```
 
-Subscribe to continuous updates from remote `desk` on local `desk`. Non-comet
-urbits have `|sync %home ~sponsor %kids` automatically set up (where `~sponsor`
-is the planet that issued a moon, the star that issued a planet, or the galaxy
-that issued a star).
+Subscribe to continuous updates from remote `desk` on local `desk`.
 
 **Examples:**
 
 ```
-|sync %home-local ~dozbud %home
+|sync %foo ~dozbud %kids
 ```
 
 #### Unsync
@@ -348,9 +331,8 @@ match original `|sync` command.
 Example:
 
 ```
-|unsync %home-local ~dozbud %home
+|unsync %foo ~dozbud %kids
 ```
-
 
 ### Manipulation
 
@@ -371,7 +353,7 @@ Similar to Unix `ls`. `+ls` takes a single `path`.
 Produces a list of names at the `path`.
 
 ```
-~sampel-palnet:dojo> +cat %/our/home/gen/curl/hoon
+~sampel-palnet:dojo> +cat %/our/base/gen/curl/hoon
 ```
 
 #### `|rm`
