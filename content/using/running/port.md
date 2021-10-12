@@ -9,7 +9,6 @@ your Urbit ships without any knowledge of the command line or Urbit binary.
 
 ## Features
 
-- Automatic port forwarding with NAT-PMP.
 - Boot a new comet, planet, moon or star.
 - Import an existing pier
 - Use a ship via its web interface.
