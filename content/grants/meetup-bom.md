@@ -53,7 +53,7 @@ Fundamentally, the Urbit meetups are a market and sales exercise. Now, the purpo
 
 I regularly construct marketing and sales enablement materials for global technology companies for audiences of varied technical expertise and modes of processing (i.e. central vs peripheral processing). As someone who has seen the inner workings of these companies, I understand both their operational/technical shortcomings, as well as the foundational flaws in their marketing and sales practices. I can help the Urbit Foundation navigate this challenge as the Urbit story expands to more messengers and ensure Urbit does not fall victim to the same PR, corp comms, bland enablement content that it so far has avoided in things like the urbit.org documentation and blog posts.
 
-## Milestones:
+## Milestones
 
 ### Milestone 1 - Phase 1 - Marketing Asset Package
 
@@ -83,9 +83,9 @@ Expected completion: March 31, 2022
 
 Payment: 1 star
 
-        - Regular solicitation of assets created by past and present meetup bounty hunters, templatization and usage documentation where appropriate.
-        - Troubleshooting use of existing assets with present bounty hunters depending on file formats, template issues, or other hurdles
-        - Presumably hosted in a Github repository, although other options exist if desired including managing a Figma project so that editing tools aren't cost prohibitive for bounty hunters.
+- Regular solicitation of assets created by past and present meetup bounty hunters, templatization and usage documentation where appropriate.
+- Troubleshooting use of existing assets with present bounty hunters depending on file formats, template issues, or other hurdles
+- Presumably hosted in a Github repository, although other options exist if desired including managing a Figma project so that editing tools aren't cost prohibitive for bounty hunters.
 
 ### Milestone 4 - Phase 3.2 - Q2 collation and packaging of new assets
 
@@ -93,9 +93,9 @@ Expected completion: June 30, 2022
 
 Payment: 1 star
 
-        - Regular solicitation of assets created by past and present meetup bounty hunters, templatization and usage documentation where appropriate.
-        - Troubleshooting use of existing assets with present bounty hunters depending on file formats, template issues, or other hurdles
-        - Presumably hosted in a Github repository, although other options exist if desired including managing a Figma project so that editing tools aren't cost prohibitive for bounty hunters.
+- Regular solicitation of assets created by past and present meetup bounty hunters, templatization and usage documentation where appropriate.
+- Troubleshooting use of existing assets with present bounty hunters depending on file formats, template issues, or other hurdles
+- Presumably hosted in a Github repository, although other options exist if desired including managing a Figma project so that editing tools aren't cost prohibitive for bounty hunters.
 
 ### Milestone 5 - Phase 3.3 - Q3 collation and packaging of new assets
 
@@ -103,9 +103,9 @@ Expected completion: September 30, 2022
 
 Payment: 1 star
 
-        - Regular solicitation of assets created by past and present meetup bounty hunters, templatization and usage documentation where appropriate.
-        - Troubleshooting use of existing assets with present bounty hunters depending on file formats, template issues, or other hurdles
-        - Presumably hosted in a Github repository, although other options exist if desired including managing a Figma project so that editing tools aren't cost prohibitive for bounty hunters.
+- Regular solicitation of assets created by past and present meetup bounty hunters, templatization and usage documentation where appropriate.
+- Troubleshooting use of existing assets with present bounty hunters depending on file formats, template issues, or other hurdles
+- Presumably hosted in a Github repository, although other options exist if desired including managing a Figma project so that editing tools aren't cost prohibitive for bounty hunters.
 
 ### Milestone 6 - Phase 3.4 - Q4 collation and packaging of new assets
 
@@ -113,6 +113,6 @@ Expected completion: December 31, 2022
 
 Payment: 1 star
 
-        - Regular solicitation of assets created by past and present meetup bounty hunters, templatization and usage documentation where appropriate.
-        - Troubleshooting use of existing assets with present bounty hunters depending on file formats, template issues, or other hurdles
-        - Presumably hosted in a Github repository, although other options exist if desired including managing a Figma project so that editing tools aren't cost prohibitive for bounty hunters.
+- Regular solicitation of assets created by past and present meetup bounty hunters, templatization and usage documentation where appropriate.
+- Troubleshooting use of existing assets with present bounty hunters depending on file formats, template issues, or other hurdles
+- Presumably hosted in a Github repository, although other options exist if desired including managing a Figma project so that editing tools aren't cost prohibitive for bounty hunters.
