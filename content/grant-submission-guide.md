@@ -18,7 +18,7 @@ integration, or the [Urbit Large File Storage](/grants/urbit-lfs-filehosting) pr
 
 Proposal types include:
 
-- Core Development - kernal or runtime development
+- Core Development - kernel or runtime development
 - Application Development - userspace development of specific applications
 - Developer Tools - Libraries, APIs, unit tests, etc.
 - Design Work - design work for the urbit.org website
