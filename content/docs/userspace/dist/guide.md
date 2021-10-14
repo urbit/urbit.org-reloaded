@@ -260,16 +260,9 @@ Let's spin up another fake ship so we can try install it:
 [user@host fake]$ urbit -F bus
 ```
 
-At the time of writing, we must manually request the published apps on a given ship from the dojo. This will likely change in the future but for now we must run the following on `~bus` before we can search for apps on `~zod` from the homescreen:
+Note: For desks without a docket file (and therefore without a tile and glob), users cannot install them through the web interface. Instead remote users can install it from the dojo with `|install ~our-ship %desk-name`.
 
-```
-> :treaty|ally ~zod
->=
-```
-
-Note: For desks without a docket files (and therefore without a tile and glob), treaty can't be used. Instead remote users can install it from the dojo with `|install ~our-ship %desk-name`.
-
-Now in the browser, navigate to `http://localhost:8081` and login with `~bus`'s code `riddec-bicrym-ridlev-pocsef`. Next, type `~zod/` in the search bar, and it should pop up a list of `~zod`'s published apps, which in this case is our `Hello` app:
+In the browser, navigate to `http://localhost:8081` and login with `~bus`'s code `riddec-bicrym-ridlev-pocsef`. Next, type `~zod/` in the search bar, and it should pop up a list of `~zod`'s published apps, which in this case is our `Hello` app:
 
 ![Remote install search](https://media.urbit.org/docs/userspace/dist/remote-install-1.png)
 
