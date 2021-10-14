@@ -67,7 +67,9 @@ You asked Dojo to evaluate `17` and it echoed the number back at you. This value
 
 Generators are the most straightforward way to write Hoon programs. They are a concept in Arvo, and involve saving Hoon code in a `.hoon` text file. While they aren't strictly part of the Hoon language, we'll be dealing with generators throughout this tutorial.
 
-The simplest type of generator is the **naked generator**. All naked generators are `gates`: functions that take an argument and produce an output. Before creating a generator you need to [mount](/getting-started/) your `desk` to Unix. To create a generator, all you need to do is write a `gate` and put it into a file in the `/home/gen/` directory of your ship as a `.hoon` file. (Assuming you've already mounted with `|mount /=home=`.) After this, you need to run `|commit %home` in Dojo and the new file will be recognized by your ship. To run a generator named `mygen.hoon`, you would type `+mygen <argument>` in your ship's Dojo.
+The simplest type of generator is the **naked generator**. All naked generators are `gates`: functions that take an argument and produce an output. To create a generator, all you need to do is write a `gate`, save it in a `.hoon` file, and add it to the `/gen` directory of a desk on your ship.
+
+To be able to add files easily, you'll need to mount a desk to the Unix filesystem. We'll use the `%base` desk in this case, but you might like to use a different one if you're not on a fake ship. To mount `%base`, just run `|mount %base` in the dojo. If you look in your [pier](/glossary/pier), you should now see a `base` folder. Once you've added the `.hoon` file in `base/gen/`, you'll need to run `|commit %base` in the dojo so the new file is recognised by your ship. To run a generator named `mygen.hoon`, you would type `+mygen <argument>` in your ship's dojo. If you added it to a desk other than `%base`, you can run `+desk!mygen <argument>` where `desk` is the desk you put it in.
 
 If this doesn't make sense yet, that's okay. In the [next lesson](/docs/hoon/hoon-school/list-of-numbers), we will walk you through an example `gate` that is run as a generator.
 
@@ -84,12 +86,15 @@ If you are brand new to programming, don't think too much about which editor to 
 These editors are easy to use for first-time coders.
 
 #### Atom
+
 Atom is free and open-source and runs on all major operating systems. It is available [here](https://atom.io/). A package for Hoon support is maintained by Tlon and may be obtained using the package manager within the editor by searching for `Hoon`.
 
 #### Sublime
+
 Sublime is closed-source, but may be downloaded for free and there is no enforced time limit for evaluation. It runs on all major operating systems. It is available [here](https://www.sublimetext.com/).
 
 #### Visual Studio Code
+
 Visual Studio Code is free and open-source and runs on all major operating systems. It is available [here](https://code.visualstudio.com/). Hoon support may be acquired in the Extensions menu within the editor by searching for `Hoon`.
 
 ### Advanced text editors
