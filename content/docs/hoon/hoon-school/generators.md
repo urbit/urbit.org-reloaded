@@ -16,9 +16,8 @@ There are three kinds of generators: naked, `%say`, and `%ask`. There also used 
 ### Naked Generators
 
 A naked generator is simply a `gate`; that is, it is an anonymous function that
-takes a `sample` (argument) and produces a [noun](/docs/glossary/noun/). All you need to do is write a
-`gate` and put it into a file in the `/gen` directory. Let's take a look at a
-very simple one:
+takes a `sample` (argument) and produces a [noun](/docs/glossary/noun/). All you
+need to do is write a `gate` and put it into a file in the `/gen` directory of a desk on your ship. Let's take a look at a very simple one:
 
 ```hoon
 |=  a=*
@@ -26,7 +25,8 @@ a
 ```
 
 This generator takes one argument of any noun and produces it without any
-changes. Once you put this into a file named `echo.hoon` in the `/gen` directory, you must make your ship recognize the change by inputting `|commit %home` in the dojo. You can then run it from the dojo:
+changes. Put this into a file named `echo.hoon` in the `/gen` directory of your
+`%base` desk. You must make your ship recognize the change by inputting `|commit %base` in the dojo. You can then run it from the dojo:
 
 ```
 > +echo 42
@@ -64,7 +64,7 @@ generator to see something more familiar:
 ```
 
 Now let's create a generator with two arguments instead of one. Save the code
-below as `add.hoon` in the `/gen` directory.
+below as `add.hoon` in the `/gen` directory of your `%base` desk.
 
 ```hoon
 |=  [a=@ud b=@ud]
@@ -104,7 +104,7 @@ So, more formally, a `%say` generator is a `cell`. The head of that cell is the
 output data and the `mark` describing that data.
 
 Below is an example of a `%say` generator. Save it to `add.hoon` in the `/gen`
-directory.
+directory of your `%base` desk.
 
 ```hoon
 :-  %say
@@ -133,7 +133,7 @@ Recall that the rune `:-` produces a cell, with the first following expression
 as its head and the second following expression as its tail.
 
 The expression above creates a cell with `%say` as the head. The tail is
-the `|=  *` expression on the line that follows.
+the `|= *` expression on the line that follows.
 
 ```hoon
 |=  *
@@ -141,10 +141,10 @@ the `|=  *` expression on the line that follows.
 (add 40 2)
 ```
 
-`|=  *` constructs a [gate](/docs/glossary/gate/) that takes a noun. This [gate](/docs/glossary/gate/) will itself produce a
+`|= *` constructs a [gate](/docs/glossary/gate/) that takes a noun. This [gate](/docs/glossary/gate/) will itself produce a
 `cask`, which is cell formed by the prepending `:-`. The head of that `cask` is
 `%noun` and the tail is the rest of the program, `(add 40 2)`. The tail of the
-`cask`  will be our actual data produced by the body of the program: in this
+`cask` will be our actual data produced by the body of the program: in this
 case, just adding 40 and 2 together.
 
 #### `%say` generators with arguments
@@ -216,7 +216,7 @@ second part, besides its position:
 ```
 
 Let's look at an example that uses all three parts. Save the code below in a
-file called `dice.hoon` in your `/gen` directory.
+file called `dice.hoon` in the `/gen` directory of your `%base` desk.
 
 ```hoon
 :-  %say
@@ -311,7 +311,7 @@ to explain how this kind of generator works.
 ##### `%ask` example
 
 The code below is an `%ask` generator that checks if the user inputs "blue" when
-prompted. Save it as `axe.hoon` in `/gen`.
+prompted. Save it as `axe.hoon` in the `/gen` directory of your `%base` desk.
 
 ```hoon
 /-  sole
@@ -379,7 +379,7 @@ This code might be familiar. Just as with their `%say` cousins, `%ask`
 generators need to produce a `cell`, the head of which specifies what kind of
 generator we are running.
 
-With `|=  *`, we create a gate and ignore the standard arguments we are given,
+With `|= *`, we create a gate and ignore the standard arguments we are given,
 because we're not using them.
 
 ```hoon
@@ -434,7 +434,6 @@ use to prompt the user. In the case of our example, we use `"color: "`.
 **`produce`** is used to construct the output of the generator. In our example,
 we produce a `tang`.
 
-
 ```hoon
 |=  t=tape
 ```
@@ -458,4 +457,4 @@ This is a [known issue](https://github.com/urbit/arvo/issues/840) to be resolved
 
 ## Conclusion
 
-You've now reached the end of Chapter 1 of the Hoon tutorial.  Ideally you should have a fair understanding of the fundamental concepts of subject-oriented programming: limbs, legs, faces, wings, arms, cores, gates, and [doors](/docs/glossary/door/).  If you can master these concepts you should have little or no trouble learning to write substantial Hoon programs.
+You've now reached the end of Chapter 1 of the Hoon tutorial. Ideally you should have a fair understanding of the fundamental concepts of subject-oriented programming: limbs, legs, faces, wings, arms, cores, gates, and [doors](/docs/glossary/door/). If you can master these concepts you should have little or no trouble learning to write substantial Hoon programs.
