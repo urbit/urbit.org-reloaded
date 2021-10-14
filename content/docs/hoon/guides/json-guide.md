@@ -337,7 +337,7 @@ dojo: hoon expression failed
 
 ## `mark` file example
 
-Here's a simple `mark` file for the `$user` structure we created in the [previous section](#json-encoding-and-decoding-example). It imports the [json-test.hoon](#json-testhoon) library we created and saved in our `%base` desk's `/lib` directory.
+Here's a simple `mark` file for the `$user` structure we created in the [first example](#json-encoding-and-decoding-example). It imports the [json-test.hoon](#json-testhoon) library we created and saved in our `%base` desk's `/lib` directory.
 
 #### `user.hoon`
 
