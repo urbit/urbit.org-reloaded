@@ -112,7 +112,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
       <Head>
         <title>urbit.org</title>
       </Head>
-      {bannerElement}
+      {/* {bannerElement} */}
       <SingleColumn>
         <Header search={search} />
         {
