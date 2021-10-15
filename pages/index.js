@@ -130,8 +130,8 @@ export default function Home({ posts, events, openGrantsCount, search }) {
           // Introducing Port
         }
         <Section>
-          <div className="bg-wall-100 w-11/12 p-12 rounded-3xl flex flex-col md:flex-row">
-            <div className="md:w-6/12 w-full">
+          <div className="bg-wall-100 w-full p-8 md:p-12 rounded-3xl flex flex-col md:flex-row">
+            <div className="md:w-6/12 w-full md:mr-6">
               <h2 className="pb-4">Developer Guides</h2>
               <h4 className="pb-4">Get on Urbit with these guides.</h4>
               <p>
@@ -140,11 +140,12 @@ export default function Home({ posts, events, openGrantsCount, search }) {
                 running asap.
               </p>
             </div>
-            <div className="pt-8 md:pt-24 md:w-6/12 w-full">
+            <div className="pt-8 md:pt-20 md:w-6/12 w-full md:ml-6">
               <BubbleLink
                 href="https://developers.urbit.org"
                 title="Developer’s Guide"
                 target="_blank"
+                className="md:h-16"
                 caption="Want to build? Learn more here."
               >
                 <img
@@ -155,7 +156,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
               </BubbleLink>
               <BubbleLink
                 href="https://operators.urbit.org"
-                className="mt-4"
+                className="mt-4 md:h-16"
                 target="_blank"
                 title="Operator’s Guide"
                 caption="Guides for Urbit Operators and Community Leaders."
@@ -168,10 +169,23 @@ export default function Home({ posts, events, openGrantsCount, search }) {
               </BubbleLink>
               <BubbleLink
                 href="https://network.urbit.org/"
-                className="mt-4"
+                className="mt-4 md:h-16"
                 target="_blank"
                 title="Network Explorer"
                 caption="View on-chain Urbit activity in real-time."
+              >
+                <img
+                  alt="Marketplace logo"
+                  className="max-w-none w-12 h-12 rounded-full"
+                  src="/images/star-market-logo.png"
+                />
+              </BubbleLink>
+              <BubbleLink
+                href="https://star.market/"
+                className="mt-4 md:h-16"
+                target="_blank"
+                title="Star Market"
+                caption="Exchange Stars and WSTR."
               >
                 <img
                   alt="Marketplace logo"
