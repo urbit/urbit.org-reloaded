@@ -148,7 +148,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
                 title="Developer’s Guide"
                 target="_blank"
                 className="md:h-16"
-                caption="Star building on Urbit today."
+                caption="Start building on Urbit today."
               >
                 <img
                   alt="Marketplace logo"
