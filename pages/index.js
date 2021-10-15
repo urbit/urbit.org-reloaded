@@ -145,7 +145,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
             <div className="pt-8 md:pt-20 md:w-6/12 w-full md:ml-6">
               <BubbleLink
                 href="https://developers.urbit.org"
-                title="Developer’s Guide"
+                title="Developers"
                 target="_blank"
                 className="md:h-16"
                 caption="Start building on Urbit today."
