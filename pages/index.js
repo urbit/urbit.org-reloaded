@@ -14,6 +14,7 @@ import PostPreview from "../components/PostPreview";
 import EventPreview from "../components/EventPreview";
 import Cross from "../components/icons/Cross";
 import TwoUp from "../components/TwoUp";
+import BubbleLink from "../components/BubbleLink";
 import {
   getAllPosts,
   getAllEvents,
@@ -128,27 +129,57 @@ export default function Home({ posts, events, openGrantsCount, search }) {
         {
           // Introducing Port
         }
-        <Section className="hidden md:flex">
-          <div className="bg-wall-100 w-11/12 port-hero-card-height rounded-3xl flex">
-            <div className="pt-20 pl-12 w-7/12">
-              <div className="pb-8">
-                <h2 className="p-0 m-0 pb-2 leading-none">Introducing</h2>
-                <h2 className="text-green-400 p-0 m-0 leading-none">Port</h2>
-              </div>
-              <h4 className="pb-8">The Urbit client, now in beta.</h4>
-              <p className="pb-24">
-                Getting into Urbit is now as simple as installing an app on your
-                computer.
+        <Section>
+          <div className="bg-wall-100 w-11/12 p-12 rounded-3xl flex flex-col md:flex-row">
+            <div className="md:w-6/12 w-full">
+              <h2 className="pb-4">Developer Guides</h2>
+              <h4 className="pb-4">Get on Urbit with these guides.</h4>
+              <p>
+                Urbit is for everyone, but sometimes it is easy to get lost in
+                this universe. Follow these tailored guides to get up and
+                running asap.
               </p>
-              {heroButton}
-              <a
-                href="https://github.com/urbit/port"
-                className="type-ui text-wall-500"
-              >
-                View on GitHub
-              </a>
             </div>
-            <div className="w-full port-hero-image-height port-hero-image mt-8" />
+            <div className="pt-8 md:pt-24 md:w-6/12 w-full">
+              <BubbleLink
+                href="https://developers.urbit.org"
+                title="Developer’s Guide"
+                target="_blank"
+                caption="Want to build? Learn more here."
+              >
+                <img
+                  alt="Marketplace logo"
+                  className="max-w-none w-12 h-12 rounded-full"
+                  src="/images/star-market-logo.png"
+                />
+              </BubbleLink>
+              <BubbleLink
+                href="https://operators.urbit.org"
+                className="mt-4"
+                target="_blank"
+                title="Operator’s Guide"
+                caption="Guides for Urbit Operators and Community Leaders."
+              >
+                <img
+                  alt="Marketplace logo"
+                  className="max-w-none w-12 h-12 rounded-full"
+                  src="/images/star-market-logo.png"
+                />
+              </BubbleLink>
+              <BubbleLink
+                href="https://network.urbit.org/"
+                className="mt-4"
+                target="_blank"
+                title="Network Explorer"
+                caption="View on-chain Urbit activity in real-time."
+              >
+                <img
+                  alt="Marketplace logo"
+                  className="max-w-none w-12 h-12 rounded-full"
+                  src="/images/star-market-logo.png"
+                />
+              </BubbleLink>
+            </div>
           </div>
         </Section>
 
