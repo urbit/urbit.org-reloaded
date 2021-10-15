@@ -132,12 +132,14 @@ export default function Home({ posts, events, openGrantsCount, search }) {
         <Section>
           <div className="bg-wall-100 w-full p-8 md:p-12 rounded-3xl flex flex-col md:flex-row">
             <div className="md:w-6/12 w-full md:mr-6">
-              <h2 className="pb-4">Developer Guides</h2>
-              <h4 className="pb-4">Get on Urbit with these guides.</h4>
+              <h2 className="pb-4">New at Urbit</h2>
+              <h4 className="pb-4">
+                Get on Urbit with these guides or swap a star for WSTR.
+              </h4>
               <p>
                 Urbit is for everyone, but sometimes it is easy to get lost in
-                this universe. Follow these tailored guides to get up and
-                running asap.
+                this universe. Follow these links to contribute to the network
+                through developing, operating, exploring, or exchanging.
               </p>
             </div>
             <div className="pt-8 md:pt-20 md:w-6/12 w-full md:ml-6">
@@ -146,7 +148,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
                 title="Developer’s Guide"
                 target="_blank"
                 className="md:h-16"
-                caption="Want to build? Learn more here."
+                caption="Star building on Urbit today."
               >
                 <img
                   alt="Marketplace logo"
@@ -159,7 +161,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
                 className="mt-4 md:h-16"
                 target="_blank"
                 title="Operator’s Guide"
-                caption="Guides for Urbit Operators and Community Leaders."
+                caption="Own a star? Own a galaxy? Purchasing one? This is for you."
               >
                 <img
                   alt="Marketplace logo"
