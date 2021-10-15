@@ -151,7 +151,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
                 <img
                   alt="Marketplace logo"
                   className="max-w-none w-12 h-12 rounded-full"
-                  src="/images/star-market-logo.png"
+                  src="/images/developers-guide-logo.png"
                 />
               </BubbleLink>
               <BubbleLink
@@ -164,7 +164,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
                 <img
                   alt="Marketplace logo"
                   className="max-w-none w-12 h-12 rounded-full"
-                  src="/images/star-market-logo.png"
+                  src="/images/operators-guide-logo.png"
                 />
               </BubbleLink>
               <BubbleLink
@@ -177,7 +177,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
                 <img
                   alt="Marketplace logo"
                   className="max-w-none w-12 h-12 rounded-full"
-                  src="/images/star-market-logo.png"
+                  src="/images/network-explorer-logo.png"
                 />
               </BubbleLink>
               <BubbleLink
