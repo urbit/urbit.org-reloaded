@@ -99,7 +99,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3a/#cmpsi' title="Compare (signed integer)"><code>++cmp:si</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#co' title="Literal rendering engine"><code>++co</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#coil' title="Tuple of core information"><code>++coil</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#coin' title="Nounliteral syntax cases"><code>++coin</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#coin' title="Nounliteral syntax cases"><code>+$coin</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#col' title="Parse : (col)"><code>++col</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#cold' title="Replace with constant"><code>++cold</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#com' title="Parse , (com)"><code>++com</code></a>
@@ -138,7 +138,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2i/#digby' title="Address of key (map)"><code>++dig:by</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2h/#digin' title="Address of a in set"><code>++dig:in</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#dimag' title="Parse decimal number"><code>++dim:ag</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#dime' title="Auraatom pair"><code>++dime</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#dime' title="Auraatom pair"><code>+$dime</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4c/#dinre' title="(Undocumented)"><code>++din:re</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2d/#dis' title="Binary AND (atoms)"><code>++dis</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#dit' title="Decimal digit"><code>++dit</code></a>
@@ -172,7 +172,8 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#eadfl' title="Exact add"><code>++ead:fl</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1c/#each' title="Mold of fork between two types"><code>++each</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#easy' title="Always parse"><code>++easy</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#edge' title="Parsing location metadata"><code>++edge</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#edge' title="Parsing location metadata"><code>+$edge</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#effob' title="murmur3-based pseudorandom function"><code>++eff:ob</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3a/#egcd' title="Extended Euclidean algorithm"><code>++egcd</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#emnfl' title="Minimum exponent"><code>++emn:fl</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#emufl' title="Exact multiply"><code>++emu:fl</code></a>
@@ -200,9 +201,12 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#fas' title="Parse / (fas)"><code>++fas</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#fe' title="Modulo bloq"><code>++fe</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#fedag' title="Parse @p"><code>++fed:ag</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#feenob' title="Conceal structure v2"><code>++feen:ob</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#fendob' title="Restore structure v2"><code>++fend:ob</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#ficeob' title="Feistellike cipher"><code>++fice:ob</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#feob' title="Internal function to +fee"><code>++fe:ob</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#feeob' title="Feistel cipher Fe in B&R (2002)"><code>++fee:ob</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#feenob' title="Reverse +fee"><code>++feen:ob</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#feinob' title="Conceal structure v3"><code>++fein:ob</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#feisob' title="Four-round generalised Feistel cipher over the domain [0, 2^32 - 2^16 - 1]"><code>++feis:ob</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#fenob' title="Reverse +fe"><code>++fen:ob</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#fil' title="Fill bloqstream"><code>++fil</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#find' title="First index in list"><code>++find</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4c/#fitre' title="Fit on one line test"><code>++fit:re</code></a>
@@ -224,6 +228,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3a/#frasi' title="Divide (signed integer)"><code>++fra:si</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#full' title="Parse to end"><code>++full</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#funk' title="Add to tape"><code>++funk</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#fyndob' title="Restore structure v3"><code>++fynd:ob</code></a>
 
 ### g
 
@@ -272,7 +277,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 
 ### h
 
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#hair' title="Parsing line and column"><code>++hair</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#hair' title="Parsing line and column"><code>+$hair</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2i/#hasby' title="Key existence check (map)"><code>++has:by</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2h/#hasin' title="Key existence check (set)"><code>++has:in</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2j/#hasju' title="Check contents (jug)"><code>++has:ju</code></a>
@@ -420,7 +425,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 
 ### n
 
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#nail' title="Location, remainder of parsed text"><code>++nail</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#nail' title="Location, remainder of parsed text"><code>+$nail</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2k/#napto' title="Remove head of queue"><code>++nap:to</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#ne' title="Digit rendering engine"><code>++ne</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#nedfl' title="Require float"><code>++ned:fl</code></a>
@@ -461,7 +466,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#pevab' title="Parse <=5 in base 32"><code>++pev:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#pewab' title="Parse <= 5 in base 64"><code>++pew:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4e/#pfix' title="Discard first rule"><code>++pfix</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#pint' title="Parsing range"><code>++pint</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#pint' title="Parsing range"><code>+$pint</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#pivab' title="Parse 5 digits in base 32"><code>++piv:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#piwab' title="Parse 5 digits in base 64"><code>++piw:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4e/#plug' title="Parse to tuple"><code>++plug</code></a>
@@ -535,11 +540,10 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2p/#rub' title="Lengthdecode"><code>++rub</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rubat' title="(Undocumented)"><code>++rub:at</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rudat' title="(Undocumented)"><code>++rud:at</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#rule' title="Parsing rule (match this with _)"><code>++rule</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#rule' title="Parsing rule (match this with _)"><code>+$rule</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rumat' title="(Undocumented)"><code>++rum:at</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2i/#runby' title="Transform values (map)"><code>++run:by</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2h/#runin' title="Apply gate to set"><code>++run:in</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#rundob' title="Reverse single Feistellike"><code>++rund:ob</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#runt' title="Prepend n times"><code>++runt</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rupat' title="(Undocumented)"><code>++rup:at</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4g/#rush' title="Parse or null"><code>++rush</code></a>
@@ -547,7 +551,6 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2i/#rutby' title="Transform nodes (map)"><code>++rut:by</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#ruvat' title="(Undocumented)"><code>++ruv:at</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#ruxat' title="(Undocumented)"><code>++rux:at</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#ryndob' title="Reverse Feistellike cipher"><code>++rynd:ob</code></a>
 
 ### s
 
@@ -642,7 +645,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#spdfl' title="Produce smallest denormalized float"><code>++spd:fl</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#spin' title="Gate to list (with state)"><code>++spin</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#spnfl' title="Produce smallest normal float"><code>++spn:fl</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#spot' title="Stack trace line"><code>++spot</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#spot' title="Stack trace line"><code>+$spot</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4m/#spud' title="Render path as tape"><code>++spud</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#spun' title="Gate to list (with state)"><code>++spun</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2g/#sqt' title="Compute square root with remainder"><code>++sqt</code></a>
@@ -702,7 +705,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#tec' title="Parse ` (tec)"><code>++tec</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#tedab' title="Parse decimal number with <= 3 digits"><code>++ted:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#teff' title="UTF8 length"><code>++teff</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#teilob' title="Reverse Feistellike cipher"><code>++teil:ob</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#tailob' title="Reverse +feis"><code>++tail:ob</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2q/#term' title="Hoon constant"><code>+$term</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2n/#test' title="Test for equality"><code>++test</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#tidab' title="Parse 3 decimal digits"><code>++tid:ab</code></a>
@@ -721,8 +724,8 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#toirs' title="Round singleprecision float to nearest signed integer"><code>++toi:rs</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#toirq' title="Round quadprecision float to nearest signed integer"><code>++toi:rq</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#tojfl' title="Round unsigned and signed integer to float"><code>++toj:fl</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#tone' title="Nock result (error report)"><code>++tone</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#toon' title="Nock result (stack trace)"><code>++toon</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#tone' title="Nock result (error report)"><code>+$tone</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#toon' title="Nock result (stack trace)"><code>+$toon</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2k/#topto' title="Produce head of queue"><code>++top:to</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4a/#tospo' title="Fetch prefix"><code>++tos:po</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#tosrh' title="Convert halfprecision float to singleprecision float"><code>++tos:rh</code></a>
@@ -1372,14 +1375,16 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 ### 3f: scrambling
 
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#ob' title="Reversible scrambling v2"><code>++ob</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#feenob' title="Conceal structure v2"><code>++feen:ob</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#fendob' title="Restore structure v2"><code>++fend:ob</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#ficeob' title="Feistellike cipher"><code>++fice:ob</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#feinob' title="Conceal structure v3"><code>++fein:ob</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#fyndob' title="Restore structure v3"><code>++fynd:ob</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#feisob' title="Four-round generalised Feistel cipher over the domain [0, 2^32 - 2^16 - 1]"><code>++feis:ob</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#rakuob' title="Key list"><code>++raku:ob</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#rundob' title="Reverse single Feistellike"><code>++rund:ob</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#ryndob' title="Reverse Feistellike cipher"><code>++rynd:ob</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#teilob' title="Reverse Feistellike cipher"><code>++teil:ob</code></a>
-
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#tailob' title="Reverse +feis"><code>++tail:ob</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#feeob' title="Feistel cipher Fe in B&R (2002)"><code>++fee:ob</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#feenob' title="Reverse +fee"><code>++feen:ob</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#feob' title="Internal function to +fee"><code>++fe:ob</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#fenob' title="Reverse +fe"><code>++fen:ob</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#effob' title="murmur3-based pseudorandom function"><code>++eff:ob</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#un' title="Reversible scrambling"><code>++un</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#wredun' title="Restore structure"><code>++wred:un</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#wrenun' title="Conceal structure"><code>++wren:un</code></a>
@@ -1392,17 +1397,17 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 
 ### 3g: molds and mold builders
 
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#coin' title="Nounliteral syntax cases"><code>++coin</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#dime' title="Auraatom pair"><code>++dime</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#edge' title="Parsing location metadata"><code>++edge</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#hair' title="Parsing line and column"><code>++hair</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#coin' title="Nounliteral syntax cases"><code>+$coin</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#dime' title="Auraatom pair"><code>+$dime</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#edge' title="Parsing location metadata"><code>+$edge</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#hair' title="Parsing line and column"><code>+$hair</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#like' title="Generic edge"><code>++like</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#nail' title="Location, remainder of parsed text"><code>++nail</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#pint' title="Parsing range"><code>++pint</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#rule' title="Parsing rule (match this with _)"><code>++rule</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#spot' title="Stack trace line"><code>++spot</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#tone' title="Nock result (error report)"><code>++tone</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#toon' title="Nock result (stack trace)"><code>++toon</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#nail' title="Location, remainder of parsed text"><code>+$nail</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#pint' title="Parsing range"><code>+$pint</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#rule' title="Parsing rule (match this with _)"><code>+$rule</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#spot' title="Stack trace line"><code>+$spot</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#tone' title="Nock result (error report)"><code>+$tone</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#toon' title="Nock result (stack trace)"><code>+$toon</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#wonk' title="Product from edge"><code>++wonk</code></a>
 
 ### 4a: exotic bases
@@ -1716,7 +1721,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#span' title="ASCII atom"><code>++span</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tiki' title="(Undocumented)"><code>++tiki</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#toga' title="Tree of faces"><code>++toga</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tone'><code>++tone</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tone'><code>+$tone</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tuna' title="XML template tree"><code>++tuna</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tusk' title="List of expressions"><code>++tusk</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tyke' title="List of 'maybe' hoons"><code>++tyke</code></a>
