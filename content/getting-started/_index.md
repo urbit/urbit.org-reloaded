@@ -10,7 +10,7 @@ If you want to jump right in and try out Urbit with a free, disposible ID called
 
 If you want to get a permanent Urbit ID called a **Planet**, have a look at the [Get a planet](#get-a-planet) section below.
 
-If you have a **Planet** and want some help getting it up and running the first time, see the [Setting up your urbit](#setting-up-your-urbit) guide.
+If you have a **Planet** and want some help getting it up and running the first time, see the [Setting up your urbit](/getting-started/planet) guide.
 
 If you want to use a **Planet** without worrying about the gritty bits, you may want to consider a [hosting provider](#hosting-providers).
 
