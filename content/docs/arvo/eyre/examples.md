@@ -198,7 +198,7 @@ Server: urbit/vere-1.5
 set-cookie: urbauth-~zod=0v1.1pseu.tq7hs.hps2t.ltaf1.tmqjm; Path=/; Max-Age=604800
 content-type: text/html
 
-<html><head><title>404 Not Found</title></head><body><h1>Not Found</h1><p>There was an error while handling the request for /foo/bar/baz.json.</p><code>no scry result</code></body></html>
+&lt;html>&lt;head>&lt;title>404 Not Found&lt;/title>&lt;/head>&lt;body>&lt;h1>Not Found&lt;/h1>&lt;p>There was an error while handling the request for /foo/bar/baz.json.&lt;/p>&lt;code>no scry result&lt;/code>&lt;/body>&lt;/html>
 ```
 
 ## Direct HTTP Handling With Gall Agents
@@ -244,7 +244,7 @@ Note that this example does a lot of things manually for demonstrative purposes.
     ~&  [mark req]
     ?+    method.request.q.req
       =/  data=octs
-        (as-octs:mimes:html '<h1>405 Method Not Allowed</h1>')
+        (as-octs:mimes:html '&lt;h1>405 Method Not Allowed&lt;/h1>')
       =/  content-length=@t
         (crip ((d-co:co 1) p.data))
       =/  =response-header:http
@@ -262,7 +262,7 @@ Note that this example does a lot of things manually for demonstrative purposes.
     ::
         %'GET'
       =/  data=octs
-        (as-octs:mimes:html '<h1>Hello, World!</h1>')
+        (as-octs:mimes:html '&lt;h1>Hello, World!&lt;/h1>')
       =/  content-length=@t
         (crip ((d-co:co 1) p.data))
       =/  =response-header:http
@@ -309,9 +309,9 @@ Note that this example does a lot of things manually for demonstrative purposes.
 Save the above to `/app/eyre-agent.hoon`. Commit it:
 
 ```
-> |commit %base
+> |commit %home
 >=
-+ /~zod/base/2/app/eyre-agent/hoon
++ /~zod/home/2/app/eyre-agent/hoon
 ```
 
 ...and start it:
@@ -320,7 +320,7 @@ Save the above to `/app/eyre-agent.hoon`. Commit it:
 > |start %eyre-agent
 >=
 gall: loading %eyre-agent
-activated app base/eyre-agent
+activated app home/eyre-agent
 [unlinked from [p=~zod q=%eyre-agent]]
 ```
 
@@ -368,7 +368,7 @@ Content-Type: text/html
 Content-Length: 22
 transfer-encoding: chunked
 
-<h1>Hello, World!</h1>%
+&lt;h1>Hello, World!&lt;/h1>%
 ```
 
 ...which has succeed! This is because the `+on-poke` arm tests for http GET requests and responds with `Hello, World!` when it sees one:
@@ -376,7 +376,7 @@ transfer-encoding: chunked
 ```hoon
   %'GET'
 =/  data=octs
-  (as-octs:mimes:html '<h1>Hello, World!</h1>')
+  (as-octs:mimes:html '&lt;h1>Hello, World!&lt;/h1>')
 =/  content-length=@t
   (crip ((d-co:co 1) p.data))
 =/  =response-header:http
@@ -430,7 +430,7 @@ Here we'll look at running a generator via Eyre. Eyre doesn't have a mediated JS
 
 You can refer to the [%serve](/docs/arvo/eyre/tasks#serve) section of the [Internal API Reference](/docs/arvo/eyre/tasks) document for relevant details.
 
-Here's a very simple generator that will just echo back the body of the request (if available) along with the current datetime. You can save it in the `/gen` directory and `|commit %base`.
+Here's a very simple generator that will just echo back the body of the request (if available) along with the current datetime. You can save it in the `/gen` directory and `|commit %home`.
 
 Note that this example does some things manually for demonstrative purposes. In practice you'd likely want to use a library like `/lib/server.hoon` to cut down on boilerplate code.
 
@@ -478,7 +478,7 @@ The [$binding](/docs/arvo/eyre/data-types#binding) specifies the site and URL pa
 Let's bind our generator to the `/mygen` URL path with the `|pass` command in the dojo:
 
 ```
-|pass [%e [%serve `/mygen %base /gen/eyre-gen/hoon ~]]
+|pass [%e [%serve `/mygen %home /gen/eyre-gen/hoon ~]]
 ```
 
 Note that Eyre responds with a `%bound` `gift` to indicate whether the binding succeeded but `|pass` doesn't take such responses so it's not shown.
