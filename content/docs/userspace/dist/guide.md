@@ -191,23 +191,10 @@ We've grabbed an image to use in our "Hello world!" page. The next thing we need
 In the editor, paste in the following HTML and save it:
 
 ```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      div {
-        text-align: center;
-      }
-    </style>
-  </head>
-  <title>Hello World</title>
-  <body>
-    <div>
-      <h1>Hello World!</h1>
-      <img src="img/pot.svg" alt="pot" width="219" height="196" />
-    </div>
-  </body>
-</html>
+&lt;!DOCTYPE html> &lt;html> &lt;head> &lt;style> div { text-align: center; }
+&lt;/style> &lt;/head> &lt;title>Hello World&lt;/title> &lt;body> &lt;div>
+&lt;h1>Hello World!&lt;/h1> &lt;img src="img/pot.svg" alt="pot" width="219"
+height="196" /> &lt;/div> &lt;/body> &lt;/html>
 ```
 
 Our `hello-glob` folder should now look like this:
