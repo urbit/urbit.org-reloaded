@@ -14,7 +14,7 @@ assignee = ""
 id = ""
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0083&prefill_Grant+Name=Host%20Two%20Urbit%20Meetups%20%2815%29"
 completed = false
-canceled = false
+canceled = true
 link = ""
 
 +++
