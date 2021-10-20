@@ -157,7 +157,7 @@ tl;dr -- `;+` converts a `manx` to a `marl`.
 
 `;+` is a Sail rune.  Sail is a part of Hoon used for creating and operating on nouns that represent XML nodes.  With the appropriate rendering pipeline, a Sail document can be used to generate a static website.
 
-In Sail a single XML node is represented by a `manx`.  A single `<p>` node `manx` can be produced in the following way:
+In Sail a single XML node is represented by a `manx`.  A single <code>&lt;p&gt;</code> node `manx` can be produced in the following way:
 
 ```
 > ;p: This will be rendered as an XML node.
