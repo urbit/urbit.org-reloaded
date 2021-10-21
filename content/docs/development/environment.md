@@ -10,7 +10,7 @@ within the Urbit ecosystem.
 
 ## Creating a development ship
 
-To do work with Hoon, we recommended using a "fake" ship -- one that's not
+To do work with Hoon, we recommended using a "fake" ship — one that's not
 connected to the network.
 
 Because such a ship has no presence on the network, you don't need an Azimuth
