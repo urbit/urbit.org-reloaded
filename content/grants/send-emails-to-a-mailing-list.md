@@ -7,7 +7,7 @@ grant_category = ["App Dev: Other"]
 [extra]
 image = ""
 description = "An agent that works with SendGrid, to be used for sending subscriber content to a mailing list."
-reward = 7
+reward = 4
 assignee = "~novlud-padtyv"
 grant_id = "P0082"
 completed = false
