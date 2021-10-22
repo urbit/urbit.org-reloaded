@@ -447,3 +447,5 @@ Usually (though not in all cases) these mark conversions will be performed impli
 [The External API Reference section of the Eyre documentation](/docs/arvo/eyre/external-api-ref) - Details of the webserver vane Eyre's external API.
 
 [The Iris documentation](/docs/arvo/iris/iris) - Details of the web client vane Iris, which may be used to fetch external JSON data among other things.
+
+[Strings Guide](/docs/hoon/guides/strings) - Atom printing functions like `+scot` will often be useful for JSON encoding - see the [Encoding in Text](/docs/hoon/guides/strings#encoding-in-text) section for usage.
