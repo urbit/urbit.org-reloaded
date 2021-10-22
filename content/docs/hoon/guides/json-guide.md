@@ -241,7 +241,7 @@ There are dozens of different functions in [`+dejs:format`](/docs/hoon/reference
 
 ## More `+dejs`
 
-We looked at the commonly used `+ot` function in the [first example](#converting-from-json), now let's look at a couple more common `+dejs` object functions.
+We looked at the commonly used `+ot` function in the [first example](#converting-from-json), now let's look at a couple more common `+dejs` functions.
 
 ### `+of`
 
@@ -329,6 +329,64 @@ Let's try it:
 > +ou-test (need (de-json:html '{"foo":"hello"}'))
 [%key 'bar']
 dojo: hoon expression failed
+```
+
+### `+su`
+
+The [`+su`](/docs/hoon/reference/zuse/2d_6#sudejsformat) function parses a string with the given parsing `rule`. Hoon's functional parsing library is very powerful and lets you create arbitrarily complex parsers. JSON will often have data types encoded in strings, so this function can be very useful. The writing of parsers is outside the scope of this guide, but you can see the [Parsing Guide](/docs/hoon/guides/parsing) and sections 4e to 4j of the standard library documentation for details.
+
+Here are some simple examples of using `+su` to parse strings:
+
+```
+> `@ux`((su:dejs:format hex) s+'deadbeef1337f00D')
+0xdead.beef.1337.f00d
+
+> `(list @)`((su:dejs:format (most lus dem)) s+'1+2+3+4')
+~[1 2 3 4]
+
+> `@ub`((su:dejs:format ven) s+'+>-<->+<+')
+0b11.1000.1101
+```
+
+Here's a more complex parser that will parse a GUID like `824e7749-4eac-9c00-db16-4cb816cd6f19` to a `@ux`:
+
+#### `su-test.hoon`
+
+```hoon
+|=  jon=json
+^-  @ux
+%.  jon
+%-  su:dejs:format
+%+  cook
+|=  parts=(list [step @])
+^-  @ux
+(can 3 (flop parts))
+;~  plug
+  (stag 4 ;~(sfix (bass 16 (stun 8^8 six:ab)) hep))
+  (stag 2 ;~(sfix qix:ab hep))
+  (stag 2 ;~(sfix qix:ab hep))
+  (stag 2 ;~(sfix qix:ab hep))
+  (stag 6 (bass 16 (stun 12^12 six:ab)))
+  (easy ~)
+==
+```
+
+Save it in the `/gen` directory of the `%base` desk and `|commit` it. We can then try it with:
+
+```
+> +su-test s+'5323a61d-0c26-d8fa-2b73-18cdca805fd8'
+0x5323.a61d.0c26.d8fa.2b73.18cd.ca80.5fd8
+```
+
+If we delete the last character it'll no longer be a valid GUID and the parsing will fail:
+
+```
+> +su-test s+'5323a61d-0c26-d8fa-2b73-18cdca805fd'
+/gen/su-test/hoon:<[2 1].[16 3]>
+/gen/su-test/hoon:<[3 1].[16 3]>
+{1 36}
+syntax error
+dojo: naked generator failure
 ```
 
 ## `mark` file example
@@ -449,3 +507,5 @@ Usually (though not in all cases) these mark conversions will be performed impli
 [The Iris documentation](/docs/arvo/iris/iris) - Details of the web client vane Iris, which may be used to fetch external JSON data among other things.
 
 [Strings Guide](/docs/hoon/guides/strings) - Atom printing functions like `+scot` will often be useful for JSON encoding - see the [Encoding in Text](/docs/hoon/guides/strings#encoding-in-text) section for usage.
+
+[Parsing Guide](/docs/hoon/guides/parsing) - Learn how to write functional parsers in hoon which can be used with `+su`.
