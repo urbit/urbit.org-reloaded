@@ -101,9 +101,7 @@ Let's have a look at a practical example. Here's a core with three arms. It has 
   --
 ++  from-js
   =,  dejs:format
-  |=  jon=json
-  ^-  user
-  %.  jon
+  ^-  $-(json user)
   %-  ot
   :~
     [%username so]
@@ -217,9 +215,7 @@ Here's our arm that converts `$json` to our `$user` structure:
 ```hoon
 ++  from-js
   =,  dejs:format
-  |=  jon=json
-  ^-  user
-  %.  jon
+  ^-  $-(json user)
   %-  ot
   :~
     [%username so]
@@ -366,12 +362,12 @@ From this mark file, Clay can build mark conversion gates between the `%json` ma
 
 ### Try it out
 
-First, we'll save the code above as `user.hoon` in the `/mar` directory our of `%home` desk:
+First, we'll save the code above as `user.hoon` in the `/mar` directory our of `%base` desk:
 
 ```
-> |commit %home
+> |commit %base
 >=
-+ /~zod/home/9/mar/user/hoon
++ /~zod/base/9/mar/user/hoon
 ```
 
 Let's quickly create a `$json` object to work with:
