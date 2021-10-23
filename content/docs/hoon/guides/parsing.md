@@ -9,6 +9,8 @@ knowledge of parsing is required, and we will explain the basic structure of how
 parsing works in a purely functional language such as Hoon before moving on to
 how it is implemented in Hoon.
 
+**Note:** For JSON printing/parsing and encoding/decoding, see the [JSON Guide](/docs/hoon/guides/json-guide).
+
 ## What is parsing? {#what-is-parsing}
 
 A program which takes a raw sequence of characters as an input and produces a data
@@ -42,20 +44,24 @@ the parsing routine on the string `"1"` and looks for an integer, and so it
 returns the integer `1`. However, taking into account what was said above about
 parsers returning the unparsed portion of the string as well, we should
 represent this return as a tuple. So we should expect something like this:
+
 ```
 > (parse "1" integer)
 [1 ""]
 > (parse "123" integer)
 [1 "23"]
 ```
+
 What if we wish to parse the rest of the string? We would need to apply the
 `parse` function again:
+
 ```
 > (parse (parse "123" integer) integer)
 [12 "3"]
 > (parse (parse (parse "123" integer) integer) integer)
 [123 ""]
 ```
+
 So we see that we can parse strings larger than one character by stringing
 together parsing functions for single characters. Thus in addition to parsing
 functions for single input characters, we want _parser combinators_ that
@@ -75,15 +81,14 @@ are quite a few), but ought to be
 sufficient to get started with parsing in Hoon and be equipped to discover the
 remainder yourself.
 
-
 ## Basic types
 
 In this section we discuss the types most commonly used for Hoon parsers. In short:
 
- - A `hair` is the position in the text the parser is at,
- - A `nail` is parser input,
- - An `edge` is parser output,
- - A `rule` is a parser.
+- A `hair` is the position in the text the parser is at,
+- A `nail` is parser input,
+- An `edge` is parser output,
+- A `rule` is a parser.
 
 ### `hair`
 
@@ -102,6 +107,7 @@ is in case it hits something unexpected during parsing.
 ```hoon
 ++  nail  [p=hair q=tape]
 ```
+
 We recall from our [discussion above](#what-is-parsing) that parsing functions must keep
 track of both what has been parsed and what has yet to be parsed. Thus a `nail`
 consists of both a `hair`, giving the line and column up to which the input
@@ -122,6 +128,7 @@ what has theoretically already been parsed up to that point.
 ```hoon
 ++  edge  [p=hair q=(unit [p=* q=nail])]
 ```
+
 An `edge` is the output of a parser. If parsing succeeded, `p` is the location
 of the original input `tape `up to which the text has been parsed. If parsing
 failed, `p` will be the first `hair` at which parsing failed.
@@ -136,6 +143,7 @@ of what is to be parsed. If `q` is not null, `p` and `p.q.q` are identical.
 ```hoon
 ++  rule  _|:($:nail $:edge)
 ```
+
 A `rule` is a gate which takes in a `nail` and returns an `edge` - in other
 words, a parser.
 
@@ -160,6 +168,7 @@ of the input `nail`.
 > edg
 [p=[p=1 q=2] q=[~ [p='a' q=[p=[p=1 q=2] q="bc"]]]]
 ```
+
 We note that `p.edg` is `[p=1 q=2]`, indicating that the next character to be
 parsed is in line 1, column 2. `q.edg` is not null, indicating that parsing
 succeeded. `p.q.edg` is `'a'`, which is the result of the parse. `p.q.q.edg` is the same as `p.edg`, which is always the case for
@@ -167,11 +176,13 @@ succeeded. `p.q.edg` is `'a'`, which is the result of the parse. `p.q.q.edg` is 
 `q.q.edg` is `"bc"`, which is the part of the input `tape` that has yet to be parsed.
 
 Now let's see what happens when parsing fails.
+
 ```
 > =edg ((just 'b') [[1 1] "abc"])
 > edg
 [p=[p=1 q=1] q=~]
 ```
+
 Now we have that `p.edg` is the same as the input `hair`, `[1 1]`, meaning the
 parser has not advanced since parsing failed. `q.edg` is null, indicating that
 parsing has failed.
@@ -186,11 +197,13 @@ produces a `rule` that attempts to match that `cord` against the beginning of
 the input.
 
 Let's see what happens when we successfully parse the entire input `tape`.
+
 ```
 > =edg ((jest 'abc') [[1 1] "abc"])
 > edg
 [p=[p=1 q=4] q=[~ [p='abc' q=[p=[p=1 q=4] q=""]]]]
 ```
+
 `p.edg` is `[p=1 q=4]`, indicating that the next character to be parsed is at
 line 1, column 4. Of course, this does not exist since the input `tape` was only
 3 characters long, so this actually indicates that the entire `tape` has been
@@ -199,21 +212,25 @@ successfully parsed (since the `hair` does not advance in the case of failure).
 remains to be parsed.
 
 What happens if we only match some of the input `tape`?
+
 ```
 > =edg ((jest 'ab') [[1 1] "abc"])
 > edg
 [p=[p=1 q=3] q=[~ [p='ab' q=[p=[p=1 q=3] q="c"]]]]
 ```
+
 Now we have that the result, `p.q.edg`, is `'ab'`, while the remainder `q.q.q.edg`
 is `"c"`. So `+jest` has successfully parsed the first two characters, while the
 last character remains. Furthermore, we still have the information that the
 remaining character was in line 1 column 3 from `p.edg` and `p.q.q.edg`.
 
 What happens when `+jest` fails?
+
 ```
 > ((jest 'bc') [[1 1] "abc"])
 [p=[p=1 q=1] q=~]
 ```
+
 Despite the fact that `'bc'` appears in `"abc"`, because it was not at the
 beginning the parse failed. We will see in [parser
 combinators](#parser-combinators) how to modify this `rule` so that it
@@ -237,6 +254,7 @@ replaces the parsing result with `cus`.
 
 Here we see that `p.q` of the `edge` returned by the `rule` created with `+cold`
 is `%foo`.
+
 ```
 > ((cold %foo (just 'a')) [[1 1] "abc"])
 [p=[p=1 q=2] q=[~ u=[p=%foo q=[p=[p=1 q=2] q="bc"]]]]
@@ -246,14 +264,12 @@ One common scenario where `+cold` sees play is when writing [command line
 interface (CLI) apps](/docs/hoon/guides/cli-tutorial). We usher the
 reader there to find an example where `+cold` is used.
 
-
 ### `+knee`
 
 Another important function in the parser builder library is `+knee`, used for building
 recursive parsers. We delay discussion of `+knee` to the
 [section below](#recursive-parsers) as more context is needed to explain it
 properly.
-
 
 ## Outside callers
 
@@ -295,7 +311,6 @@ For additional information including additional examples see [4g: Parsing (Outsi
 For the remainder of this tutorial we will make use of `+scan` so that we do not
 need to deal directly with `nail`s except where it is ilustrative to do so.
 
-
 ### Parsing atoms
 
 [Recall](/docs/hoon/hoon-school/lists) that `cord`s are atoms with the aura
@@ -312,7 +327,6 @@ The standard library provides a number of gates that take a `rule` and
 produce a new modified `rule` according to some process. We call these _parser modifiers_. These are
 documented among the [parser builders](/docs/hoon/reference/stdlib/4f).
 
-
 ### `+ifix`
 
 `+ifix` modifies a `rule` so that it matches that `rule` only when it is
@@ -322,10 +336,10 @@ surrounded on both sides by text that matches a pair of `rule`s, which is discar
 > (scan "(42)" (ifix [pal par] (jest '42')))
 '42'
 ```
+
 `+pal` and `+par` are shorthand for `(just '(')` and `(just ')')`, respectively. All
 ASCII glyphs have counterparts of this sort, documented
 [here](/docs/hoon/reference/stdlib/4h).
-
 
 ### `+star` {#star}
 
@@ -343,7 +357,9 @@ We can use `+star` to get the rest of the `tape`:
 > ((star (just 'a')) [[1 1] "aaa"])
 [p=[p=1 q=4] q=[~ [p=[i='a' t=<|a a|>] q=[p=[p=1 q=4] q=""]]]]
 ```
+
 and we note that the parsing ceases when it fails.
+
 ```
 > ((star (just 'a')) [[1 1] "aaab"])
 [p=[p=1 q=4] q=[~ [p=[i='a' t=<|a a|>] q=[p=[p=1 q=4] q="b"]]]]
@@ -358,9 +374,11 @@ combinators](/docs/hoon/reference/stdlib/4e). First we introduce a few
 combinators, then we examine more closely how `;~` is used to chain them together.
 
 The syntax to combine `rule`s is
+
 ```hoon
 ;~(combinator rule1 rule2 ... ruleN)
 ```
+
 The `rule`s are composed together using the combinator as an
 intermediate function, which takes product of a `rule` (an `edge`) and a `rule` and turns
 it into a sample (a `nail`) for the next `rule` to handle. We elaborate on this
@@ -409,41 +427,45 @@ take this opportunity to think about it carefully.
 The `rule` created by `;~(combinator [list rule])` may be understood
 inductively. To do this, let's consider the base case where our `[list rule]` has only a
 single entry.
+
 ```
 > (scan "star" ;~(plug (jest 'star')))
 'star'
 ```
+
 Our output is identical to that given by `scan "star" (jest 'star')`. This is to
 be expected. The combinator `+plug` is specifically used for chaining together
 `rule`s in the `[list rule]`, but if there is only one `rule`, there is nothing
 to chain. Thus, swapping out `+plug` for another combinator makes no difference here:
+
 ```
 > (scan "star" ;~(pose (jest 'star')))
 'star'
 > (scan "star" ;~((glue com) (jest 'star')))
 'star'
 ```
+
 `;~` and the combinator only begin to play a role once the `[list rule]` has at
 least two elements. So let's look at an example done with `+plug`, the simplest
 combinator.
+
 ```
 > (scan "star" ;~(plug (jest 'st') (jest 'ar')))
 ['st' 'ar']
 ```
+
 Our return suggests that we first parsed `"star"` with the `rule` `(jest 'st')` and passed
-the resulting `edge` to `(jest 'ar')` - in other words, we called `+plug` on `(jest
-'st')` and the `edge` returned once it had been used to parse `"star"`. Thus
+the resulting `edge` to `(jest 'ar')` - in other words, we called `+plug` on `(jest 'st')` and the `edge` returned once it had been used to parse `"star"`. Thus
 `+plug` was the glue that allowed us to join the two `rule`s, and `;~` performed
 the gluing operation. And so, swapping `+plug` for `+pose` results in a crash,
 which clues us into the fact that the combinator now has an effect since there
 is more than one `rule`.
+
 ```
 > (scan "star" ;~(pose (jest 'st') (jest 'ar')))
 {1 3}
 syntax error
 ```
-
-
 
 ## Parsing numbers
 
@@ -461,15 +483,19 @@ for parsing decimal numbers.
 ## Recursive parsers
 
 Naively attempting to write a recursive `rule`, i.e. like
+
 ```
 > |-(;~(pose den ;~(pose $ (easy ~))))
 ```
+
 results in an error.
+
 ```
 -find.,.+6
 -find.,.+6
 rest-loop
 ```
+
 Thus some special sauce is required, the `+knee` function.
 
 `+knee` takes in a noun that is the default value of the parser, typically given
@@ -494,7 +520,6 @@ the parser to improve performance. In [parsing arithmetic
 expressions](#parsing-arithmetic-expressions) we will be writing a recursive
 parser making use of `+knee` and `~+` throughout.
 
-
 # Parsing arithmetic expressions
 
 In this section we will be applying what we have learned to write a parser for
@@ -514,6 +539,7 @@ for arithmetic expressions informally.
 First lets look at the code we're going to use, and then dive into explaining
 it. If you'd like to follow along, save the following as `expr-parse.hoon` in
 your `gen/` folder.
+
 ```hoon
 ::  expr-parse: parse arithmetic expressions
 ::
@@ -544,9 +570,10 @@ your `gen/` folder.
 ```
 
 Informally, the grammar here is:
- - A factor is either an integer or an expression surrounded by parentheses.
- - A term is either a factor or a factor times a term.
- - An expression is either a term or a term plus an expression.
+
+- A factor is either an integer or an expression surrounded by parentheses.
+- A term is either a factor or a factor times a term.
+- An expression is either a term or a term plus an expression.
 
 ### Factors, terms, and expressions
 
@@ -568,8 +595,7 @@ for expressions.
 A _factor_ is either a decimal number or an expression surrounded by parentheses. Put
 into Hoon terms, a decimal number is parsed by the `rule` `+dem` and an
 expression is parsed by removing the surrounding parentheses and then passing
-the result to the expression parser arm `+expr`, given by the `rule` `(ifix [pal
-par] expr)`. Since we want to parse our expression with one or the other, we
+the result to the expression parser arm `+expr`, given by the `rule` `(ifix [pal par] expr)`. Since we want to parse our expression with one or the other, we
 chain these two `rule`s together using the monadic applicator rune `;~` along
 with `+pose`, which says to try each rule in succession until one of them works.
 
@@ -578,6 +604,7 @@ recursive rule. Thus we need to make use of `+knee`. The first argument for
 `+knee` is `*@ud`, since our final answer should be a `@ud`.
 
 Then follows the definition of the gate utilized by `+knee`:
+
 ```hoon
   |.  ~+
   ;~  pose
@@ -585,6 +612,7 @@ Then follows the definition of the gate utilized by `+knee`:
     (ifix [pal par] expr)
   ==
 ```
+
 `~+` is used to cache the parser, so that it does not need to be computed over
 and over again. Then it follows the `rule` we described above.
 
@@ -614,7 +642,6 @@ accomplish this:
 
 The rest of the `+expr` arm is structured just like how `+factor` is, and for
 the same reasons.
-
 
 #### Parsing terms
 
