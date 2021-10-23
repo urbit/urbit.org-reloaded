@@ -26,6 +26,6 @@ The scry endpoints of Eyre.
 
 Reference documentation of the various data types used by Eyre.
 
-## [Examples](/docs/arvo/eyre/examples)
+## [Guide](/docs/arvo/eyre/guide)
 
 Practical examples of the different ways of using Eyre.
