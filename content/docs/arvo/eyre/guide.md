@@ -1,16 +1,22 @@
 +++
-title = "Examples"
+title = "Guide"
 weight = 6
 template = "doc.html"
 +++
 
-This documents contains practical examples of the various ways of interacting with Eyre.
+This document walks through practical examples of the various ways of interacting with Eyre. The [Basic](#basic) sections goes over the common methods of interacting through Eyre from an HTTP client, and the [Advanced](#advanced) section explains how to handle HTTP directly with generators and Gall agents.
 
 General documentation of the `task`s and methods described here are available in the [External API Reference](/docs/arvo/eyre/external-api-ref) document and the [Internal API Reference](/docs/arvo/eyre/tasks) document.
 
-## Authenticating
+## Basic
 
-In most cases we must obtain a valid session cookie by [authenticating](/docs/arvo/eyre/external-api-ref#authentication) with our web login code (which can be obtained by running `+code` in the dojo) before we can use Eyre's interfaces (such as the channel system or scry interface).
+Eyre's channel system is the typical way of interacting with Gall agents from an HTTP client. It provides a simple JSON API for actions like pokes, watches, etc, and an SSE event stream for subscription updates. Additionally, Eyre has a scry interface so you can retrieve data in a more ad-hoc manner. These examples use `curl` to be more language agnostic and to show the nitty-gritty details. In practice you'd probably use an "airlock" library (like [http-api](https://github.com/urbit/urbit/tree/master/pkg/npm/http-api) for Javascript) which abstracts things like ack'ing events, incrementing event IDs, manually composing the JSON for actions, etc.
+
+It's advisable to have a read through the [External API Reference](/docs/arvo/eyre/external-api-ref) before going through these examples.
+
+### Authenticating
+
+You must have a valid session cookie in order to use Eyre's interfaces (such as the channel system or scry interface). If your HTTP client is served from your ship, your browser will automatically add the session cookie it obtained upon login, so there's no need to worry about authentication in practice. If your client does not run in the browser or is not served by your ship, [authenticating](/docs/arvo/eyre/external-api-ref#authentication) with your web login code (which can be obtained by running `+code` in the dojo) is necessary.
 
 Here we'll try authenticating with the default fakezod code.
 
@@ -32,7 +38,7 @@ set-cookie: urbauth-~zod=0v3.j2062.1prp1.qne4e.goq3h.ksudm; Path=/; Max-Age=6048
 
 The `urbauth-....` cookie can be now be included in subsequent requests (e.g. to the channel system) by providing it in a Cookie HTTP header.
 
-## Using The Channel System
+### Using Channels
 
 Here we'll look at a practical example of Eyre's channel system. You can refer to the [Channels](/docs/arvo/eyre/external-api-ref#channels) section of the [External API Reference](/docs/arvo/eyre/external-api-ref) document for relevant details.
 
@@ -147,7 +153,7 @@ curl --header "Content-Type: application/json" \
 
 With our channel deleted, we can now close the connection on the client side.
 
-## Scrying
+### Scrying
 
 Here we'll look at performing scries through Eyre. You can refer to the [Scry](/docs/arvo/eyre/external-api-ref#scry) section of the [External API Reference](/docs/arvo/eyre/external-api-ref) document for relevant details.
 
@@ -201,9 +207,13 @@ content-type: text/html
 &lt;html>&lt;head>&lt;title>404 Not Found&lt;/title>&lt;/head>&lt;body>&lt;h1>Not Found&lt;/h1>&lt;p>There was an error while handling the request for /foo/bar/baz.json.&lt;/p>&lt;code>no scry result&lt;/code>&lt;/body>&lt;/html>
 ```
 
-## Direct HTTP Handling With Gall Agents
+## Advanced
 
-In many cases you'll just want to interact with Gall agents through the JSON API of the channel system, but it's also possible to bypass all that and just deal with HTTP requests directly. Here we'll take a look at how that practically works.
+Rather than using things like Eyre's channel system described in the [Basic](#basic) section, it's possible to handle HTTP requests directly in Gall agents or generators. This is useful if you want to implement a custom API or work with `sail` to dynamically compose HTML inside an agent.
+
+### Agents: Direct HTTP
+
+Here we'll look at handling HTTP requests directly in Gall agents rather than using Eyre's channel system.
 
 You can refer to the [%connect](/docs/arvo/eyre/tasks#connect) section of the [Internal API Reference](/docs/arvo/eyre/tasks) document for relevant details.
 
@@ -309,19 +319,15 @@ Note that this example does a lot of things manually for demonstrative purposes.
 Save the above to `/app/eyre-agent.hoon`. Commit it:
 
 ```
-> |commit %home
+> |commit %base
 >=
-+ /~zod/home/2/app/eyre-agent/hoon
++ /~zod/base/2/app/eyre-agent/hoon
 ```
 
 ...and start it:
 
 ```
-> |start %eyre-agent
->=
-gall: loading %eyre-agent
-activated app home/eyre-agent
-[unlinked from [p=~zod q=%eyre-agent]]
+> |rein %base [& %eyre-agent]
 ```
 
 Now, first we need to bind a URL to our app. In the `++ on-poke` arm, our agent will send a [%connect](/docs/arvo/eyre/tasks#connect) `task` to Eyre when poked with `%bind`:
@@ -424,13 +430,13 @@ Eyre subscribed to /http-response/~.eyre_0v3.1knjk.l544e.5uds6.fn9l2.f8929.
 
 This is a very rudimentary app but it demonstrates the basic mechanics of dealing with HTTP requests and serving responses.
 
-## Generators
+### Generators
 
 Here we'll look at running a generator via Eyre. Eyre doesn't have a mediated JSON API for generators, instead it just passes through the HTTP request and returns the HTTP response composed by the generator.
 
 You can refer to the [%serve](/docs/arvo/eyre/tasks#serve) section of the [Internal API Reference](/docs/arvo/eyre/tasks) document for relevant details.
 
-Here's a very simple generator that will just echo back the body of the request (if available) along with the current datetime. You can save it in the `/gen` directory and `|commit %home`.
+Here's a very simple generator that will just echo back the body of the request (if available) along with the current datetime. You can save it in the `/gen` directory and `|commit %base`.
 
 Note that this example does some things manually for demonstrative purposes. In practice you'd likely want to use a library like `/lib/server.hoon` to cut down on boilerplate code.
 
@@ -478,7 +484,7 @@ The [$binding](/docs/arvo/eyre/data-types#binding) specifies the site and URL pa
 Let's bind our generator to the `/mygen` URL path with the `|pass` command in the dojo:
 
 ```
-|pass [%e [%serve `/mygen %home /gen/eyre-gen/hoon ~]]
+|pass [%e [%serve `/mygen %base /gen/eyre-gen/hoon ~]]
 ```
 
 Note that Eyre responds with a `%bound` `gift` to indicate whether the binding succeeded but `|pass` doesn't take such responses so it's not shown.
