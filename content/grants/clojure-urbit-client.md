@@ -6,7 +6,7 @@ grant_type = ["Proposal"]
 grant_category = ["App Dev - Other"]
 [extra]
 image = ""
-description = "Urbit client baasd on the Clojure programming language"
+description = "Urbit client for the Clojure programming language"
 reward = 3
 assignee = "~sorted-falnyd"
 id = ""
