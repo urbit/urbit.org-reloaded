@@ -16,7 +16,7 @@ Landscape applications, and is considered to be best used for social data.
 
 `resource` is a pair of ship and term which is where the graph is hosted and the name of the resource. Every graph is it's own resource.
 
-`marked-graph` is a pair of `graph` and `(unit mark)`. The semantics of a graph are defined by the mark. This is just for validating the structure of the graph. 
+`marked-graph` is a pair of `graph` and `(unit mark)`. The semantics of a graph are defined by the mark. This is just for validating the structure of the graph.
 
 `graph` is a `mop`, a mold builder for order map, of an atom and a `node`.
 
@@ -34,7 +34,6 @@ Landscape applications, and is considered to be best used for social data.
       =signatures
   ==
 ```
-
 
 Most of these elements are self explanatory.
 
@@ -84,76 +83,76 @@ Below is an excerpt of `sur/graph-store.hoon` at the time of writing, showing th
   ==
 ```
 
-
 ## Pokes
 
 Graph Store can be poked with a `graph-update`, which can:
- - add and remove a graph
- 
- `[%add-graph =resource =graph mark=(unit mark)]`
- 
- `[%remove-graph =resource]`
- 
- - add and remove a node to a graph
- 
- `[%add-nodes =resource nodes=(map index node)]`
 
- `[%remove-nodes =resource indices=(set index)]`
- 
- - add and remove signatures
- 
- `[%add-signatures =uid =signatures]`
- 
- `[%remove-signatures =uid =signatures]`
- 
- - add and remove tags
- 
- `[%add-tag =term =resource]`
- 
- `[%remove-tag =term =resource]`
- 
- - archive and unarchive a graph
- 
- `[%archive-graph =resource]`
- 
- `[%unarchive-graph =resource]`
+- add and remove a graph
+
+`[%add-graph =resource =graph mark=(unit mark)]`
+
+`[%remove-graph =resource]`
+
+- add and remove a node to a graph
+
+`[%add-nodes =resource nodes=(map index node)]`
+
+`[%remove-nodes =resource indices=(set index)]`
+
+- add and remove signatures
+
+`[%add-signatures =uid =signatures]`
+
+`[%remove-signatures =uid =signatures]`
+
+- add and remove tags
+
+`[%add-tag =term =resource]`
+
+`[%remove-tag =term =resource]`
+
+- archive and unarchive a graph
+
+`[%archive-graph =resource]`
+
+`[%unarchive-graph =resource]`
 
 ## Scries
 
 What follows is a summary of the scrys available in graph-store
 
 - Fetch keys
- `[%x %keys ~]`
+  `[%x %keys ~]`
 
 - Fetch tags
- `[%x %tags ~]`
- 
+  `[%x %tags ~]`
+
 - Fetch tag queries
- `[%x %tag-queries ~]`
+  `[%x %tag-queries ~]`
 
 - Fetch a specific graph by resource
- `[%x %graph @ @ ~]`
- 
+  `[%x %graph @ @ ~]`
+
 - Archive a specific graph by resource
- `[%x %archive @ @ ~]`
- 
+  `[%x %archive @ @ ~]`
+
 - Fetch a subset of the graph by resource and start and end indices
- `[%x %graph-subset @ @ @ @ ~]`
+  `[%x %graph-subset @ @ @ @ ~]`
 
 - Select a node from a graph by resource and index
- `[%x %node @ @ @ *]`
- 
+  `[%x %node @ @ @ *]`
+
 - Fetch a subset of the children of a node by resource, index, and start and end indices
- `[%x %node-children-subset @ @ @ @ @ *]`
- 
+  `[%x %node-children-subset @ @ @ @ @ *]`
+
 - Fetch a subset of the update log by resource and start and end indices
- `[%x %update-log-subset @ @ @ @ ~]`
- 
+  `[%x %update-log-subset @ @ @ @ ~]`
+
 - Fetch the update log by resource
- `[%x %update-log @ @ ~]`
- 
+  `[%x %update-log @ @ ~]`
+
 - Fetch the time of the last entry of the update log
- `﻿﻿[%x %peek-update-log @ @ ~]`
+  ` [%x %peek-update-log @ @ ~]`
 
 ## Marks
 
