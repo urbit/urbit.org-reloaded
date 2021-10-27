@@ -243,3 +243,4 @@ Briefly,
 - `update-logs` is where graph-store stores the update-log that backs each graph, keyed by resource <!-- refrence to advanced section talking about how this is the source of truth -->
 - `archive` is where graph-store stores archived graphs. these are graphs which can no longer have updates run against them. <!-- this nuance should also be present in the advanced info -->
 
+For more information on these types, please take a look at the (data structure overview)[/docs/userspace/graph-store/data-structure-overview.md].
