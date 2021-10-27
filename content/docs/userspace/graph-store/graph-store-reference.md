@@ -4,30 +4,6 @@ weight = 3
 template = "doc.html"
 +++
 
-## Data types
-
-`graphs` is a map of `resource` to `marked-graph`
-
-`resource` is a pair of ship and term which is where the graph is hosted and the name of the resource. Every graph is it's own resource.
-
-`marked-graph` is a pair of `graph` and `(unit mark)`. The semantics of a graph are defined by the mark. This is just for validating the structure of the graph.
-
-`graph` is a `mop`, a mold builder for order map, of an atom and a `node`.
-
-`node` is a pair of `post` and `children`.
-
-`post` is defined in `sur/post`. It contains:
-
-```hoon
-+$  post
-  $:  author=ship
-      =index
-      time-sent=time
-      contents=(list content)
-      hash=(unit hash)
-      =signatures
-  ==
-```
 
 ## Pokes
 
@@ -121,3 +97,5 @@ What follows is a summary of the scrys available in graph-store
   `/x/graph/[ship]/[name]/node/depth-first/[count]/[start]`
 
 ## Agent State
+
+The agent holds 
