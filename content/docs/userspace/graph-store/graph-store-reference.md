@@ -1,6 +1,6 @@
 +++
 title = "Graph Store - Reference"
-weight = 3
+weight = 5
 template = "doc.html"
 +++
 
