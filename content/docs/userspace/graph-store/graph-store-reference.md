@@ -223,19 +223,6 @@ Returns a subset of a node's children, with or without descendants, optionally f
 * Output Type: `update:store` `%add-nodes`
 
 
-### Fetch a specific graph by resource
-
-<!-- todo should we even document this -->
-
-Note: this is equivalent to `/x/graph/[ship]/[name]`
-
-* Path: `/x/archive/[ship]/[name]`
-* Inputs:
-  * `[ship]` - The ship of the resource. `ship`
-  * `[name]` - The name of the resource. `@tas`
-* Output Type: `graph-update`, `[%add-graph]`
-
-
 ## Agent State
 
 The following is the definition of the agent state, known as `network`.
