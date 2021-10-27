@@ -238,4 +238,21 @@ Note: this is equivalent to `/x/graph/[ship]/[name]`
 
 ## Agent State
 
-The agent holds 
+The following is the definition of the agent state, known as `network`.
+
+```hoon
++$  network
+  $:  =graphs
+      =tag-queries
+      =update-logs
+      archive=graphs
+      ~
+  ==
+```
+
+Briefly,
+- `graphs` represents all graphs that graph store is aware of an is storing data about.
+- `tag-queries` is how graph store implements its tagging system, and uses it to keep track of associations between tags and the respective index.
+- `update-logs` is where graph-store stores the update-log that backs each graph, keyed by resource <!-- refrence to advanced section talking about how this is the source of truth -->
+- `archive` is where graph-store stores archived graphs. these are graphs which can no longer have updates run against them. <!-- this nuance should also be present in the advanced info -->
+
