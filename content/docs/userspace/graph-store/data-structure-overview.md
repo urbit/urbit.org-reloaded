@@ -142,6 +142,9 @@ The parts of a `post` that are actually hashed to obtain a value of type the ear
 
 Here's `sur/graph-store.hoon`
 
+<details>
+<summary>Code Listing (Click To Expand)</summary>
+
 ```hoon
 +$  graph         ((mop atom node) gth)
 +$  marked-graph  [p=graph q=(unit mark)]
@@ -214,7 +217,10 @@ Here's `sur/graph-store.hoon`
 ::
 ```
 
+</details>
+
 ### Graph, Node, and Related Objects
+
 ```hoon
 +$  graph         ((mop atom node) gth)
 +$  marked-graph  [p=graph q=(unit mark)]
