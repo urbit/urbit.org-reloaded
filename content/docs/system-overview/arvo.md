@@ -27,6 +27,6 @@ Arvo modules are also called 'vanes'. Arvo's vanes are:
   Also includes our typed functional build system.
 - [Dill](/docs/arvo/dill/dill): terminal driver.
 - [Eyre](/docs/arvo/eyre/eyre): HTTP server.
-- [Gall](/docs/userspace/gall/gall): application sandbox and manager.
+- [Gall](/docs/arvo/gall/gall): application sandbox and manager.
 - [Iris](/docs/arvo/iris/iris-api): HTTP client.
 - [Jael](/docs/arvo/jael/jael-api): Public and private key storage.
