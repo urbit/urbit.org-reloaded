@@ -245,6 +245,7 @@ A tar `*` entry represents any value and if an event shows a transition
 from `*` to `*` that means that value is not altered by the transition. The
 transitions marked with `!!` are prohibited by the layer 1 Azimuth smart
 contract and thus never occur. `A1` and `A2` represent two distinct ships.
+
 ```
 Event        | E_1 | E_2 | S_1 | S_2 | -> | E_1 | E_2 | S_1 | S_2
 L1-escape A1 | *   | *   | *   | *   | -> | A1  | A1  | *   | *
@@ -268,6 +269,29 @@ L2-detach A1 | *   | *   | *   | A1  | -> | *   | *   | *   | ~
 L2-detach A1 | *   | *   | *   | A2  | -> | *   | *   | *   | A2
 L2-detach A1 | *   | *   | *   | ~   | -> | *   | *   | *   | ~
 ```
+
+| **Event**    | **E_1** | **E_2** | **S_1** | **S_2** | **->** | **E_1** | **E_2** | **S_1** | **S_2** |
+|--------------|---------|---------|---------|---------|--------|---------|---------|---------|---------|
+| L1-escape A1 | *       | *       | *       | *       | ->     | A1      | A1      | *       | *       |
+| L1-cancel A1 | ~       | *       | *       | *       | ->     | !!      | !!      | !!      | !!      |
+| L1-cancel A1 | A1      | *       | *       | *       | ->     | ~       | ~       | *       | *       |
+| L1-adopt A1  | A1      | *       | *       | *       | ->     | ~       | ~       | A1      | A2      |
+| L1-adopt A1  | ~       | *       | *       | *       | ->     | !!      | !!      | !!      | !!      |
+| L1-adopt A1  | A2      | *       | *       | *       | ->     | !!      | !!      | !!      | !!      |
+| L1-detach A1 | *       | *       | A1      | A1      | ->     | *       | *       | ~       | ~       |
+| L1-detach A1 | *       | *       | A1      | A2      | ->     | *       | *       | ~       | A2      |
+| L1-detach A1 | *       | *       | A1      | ~       | ->     | *       | *       | ~       | ~       |
+| L2-escape A1 | *       | *       | *       | *       | ->     | *       | A1      | *       | *       |
+| L2-cancel A1 | *       | *       | *       | *       | ->     | *       | ~       | *       | *       |
+| L2-adopt A1  | *       | A1      | *       | *       | ->     | *       | ~       | *       | A1      |
+| L2-adopt A1  | *       | A2      | *       | *       | ->     | *       | A2      | *       | *       |
+| L2-adopt A1  | *       | ~       | *       | *       | ->     | *       | ~       | *       | *       |
+| L2-reject A1 | *       | A1      | *       | *       | ->     | *       | ~       | *       | *       |
+| L2-reject A1 | *       | A2      | *       | *       | ->     | *       | A2      | *       | *       |
+| L2-reject A1 | *       | ~       | *       | *       | ->     | *       | ~       | *       | *       |
+| L2-detach A1 | *       | *       | *       | A1      | ->     | *       | *       | *       | ~       |
+| L2-detach A1 | *       | *       | *       | A2      | ->     | *       | *       | *       | A2      |
+| L2-detach A1 | *       | *       | *       | ~       | ->     | *       | *       | *       | ~       |
 
 ## Aggregators
 
