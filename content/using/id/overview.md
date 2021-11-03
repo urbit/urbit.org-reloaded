@@ -94,13 +94,14 @@ the owner may sell their property to multiple people and there would be no way
 to determine who is the new owner. With the land registry, all you need to do is
 ask the registry which sale happened first, and that's the one that counts.
 
+<a name="1"></a>
 Again, Urbit is yours and it's forever. Trusting central registries
 jeopardizes both. The keen reader will notice that the problem of determining
 which key rotation happened first is exactly the double-spend problem that
 Satoshi solved with his proof of work algorithm for Bitcoin. His first block
 famously includes a newspaper headline to prove he didn't mine the block before
 that date. In a beautiful duality, his own algorithm proves that he didn't mine
-it after that date.[^1]
+it after that date.<sup><a href="#f1">[1]</a></sup>
 
 Some argue that blockchain is only good for money. This is myopic and is
 generally based on the experience that its most valuable application so far has
@@ -120,6 +121,7 @@ on the network will listen to the blockchain for key data. Thus, we have global
 consistency, permanence, and self sovereignty. We know of no other solution
 that can provide these properties.
 
+<a name="3"></a>
 While small individually, the aggregate PKI data for all nodes on the
 network may become very large. This is not an issue for comets because nobody
 needs to store comet keys except for those which they're talking with, and even
@@ -128,7 +130,7 @@ is a canonical set of keys, and somebody must store that. There are about
 2<sup>32</sup>, or 4 billion planets. If the PKI data is about 100 bytes for
 each planet, this is about 400 GB of data. This may be more than most users wish
 to store, but it's small enough that it would be very cheap for someone to host
-this data for many users[^3].
+this data for many users<sup><a href="#f3">[3]</a></sup>.
 
 This information is currently stored directly on the Ethereum 1.0 blockchain,
 but as is well understood in blockchain circles this approach will not scale
