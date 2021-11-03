@@ -26,7 +26,7 @@ If you're interested, you can read the spec here: [Urbit HD Wallet Spec (UP
 
 ### What is a master ticket? {#master-ticket}
 
-The "master ticket" is the entropy seed from which your other Urbit ID keys are
+The "master ticket" is the cryptographic seed from which your other Urbit ID keys are
 derived. It should be treated like a master password: **you should never share
 it with anyone, and you must store it very securely (see our practices below).**
 This ticket is used to derive the Ethereum wallet that holds your ownership

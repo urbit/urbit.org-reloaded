@@ -81,9 +81,9 @@ a message is signed after another by including the signature of the first in the
 second. This is equivalent to reading out a newspaper headline to prove a
 message was recorded after a given day.
 
-However, the problem of proving one message was sent before any later ones
+The problem of proving that one message was sent before any later ones
 inverts the problem. You can solve this with newspapers by placing the message
-in the text of the newspaper. However, while reading a newspaper requires no
+in the text of the newspaper. While reading a newspaper requires no
 central party, writing one does. For a long time, this sort of message was
 always handled by a central party. SSL revocations are managed by a few central
 parties. When you buy property, it's not sufficient to have the previous owner
@@ -92,7 +92,7 @@ the owner may sell their property to multiple people and there would be no way
 to determine who is the new owner. With the land registry, all you need to do is
 ask the registry which sale happened first, and that's the one that counts.
 
-However, Urbit is yours and it's forever. Trusting central registries
+Again, Urbit is yours and it's forever. Trusting central registries
 jeopardizes both. The keen reader will notice that the problem of determining
 which key rotation happened first is exactly the double-spend problem that
 Satoshi solved with his proof of work algorithm for Bitcoin. His first block
@@ -102,11 +102,11 @@ it after that date.[^1]
 
 Some argue that blockchain is only good for money. This is myopic and is
 generally based on the experience that its most valuable application so far has
-been money. However, blockchain is a cryptographic primitive to do what was
-previously impossible: prove that one message was signed before another without
-a central party. Blockchain was discovered by someone trying to create digital
-money, and he needed that primitive, but that doesn't mean that's all it's good
-for.
+been money. The deeper problem that the blockchain cryptographic primitive
+allows one to solve a previously impossible task: prove that one message was
+signed before another without a central party. Blockchain was discovered by
+someone trying to create digital money, and he needed that primitive, but that
+doesn't mean that's all it's good for.
 
 Thus, we store our PKI data on a blockchain for our second kind of name:
 [planets](/docs/glossary/planet). A planet is a 32-bit address which has key information stored on the
@@ -116,7 +116,7 @@ everyone on the network will listen to the blockchain for key data. Thus, we
 have global consistency, permanence, and self sovereignty. We know of no other
 solution that can provide these properties.
 
-However, while small individually, the aggregate PKI data for all nodes on the
+While small individually, the aggregate PKI data for all nodes on the
 network may become very large. This is not an issue for comets because nobody
 needs to store comet keys except for those which they're talking with, and even
 those can be garbage-collected and re-requested and verified. For planets, there
@@ -136,7 +136,7 @@ state locally, dramatically reducing gas costs to the point that Tlon offers a
 free-to-use public "roller" which aggregates transactions and submits them as a
 batch.
 
-However, 4 billion is not enough addresses for every device on the planet today,
+Of course, 4 billion is not enough addresses for every device on the planet today,
 much less in a few decades. So, we apply our maxim of re-examining our choices
 at each level for each use case. Examining the idea maze above, we cannot use
 the blockchain option for everything since the data is too big. However, it's
@@ -150,7 +150,7 @@ for its own moons, and anyone who needs to talk to your moons can ask you for
 the keys.
 
 This is the sense in which moons are true ships: they're permanent names and you
-own them completely, as long as you own the planet. However, they're not
+own them completely, as long as you own the planet. But they're not
 independent ships — their keys can always be revoked by their planet.
 
 To create a sane network, we require global consistency for all our names. There

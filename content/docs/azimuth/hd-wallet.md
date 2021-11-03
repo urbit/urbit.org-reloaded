@@ -28,7 +28,7 @@ their own individual Ethereum key-pairs.
 
 Think of your master ticket like a very high-value password. The master ticket
 is the secret code from which all of your other keys are derived. Technically,
-your master ticket is seed entropy. You should never share it with anyone, and
+your master ticket is a cryptographic seed. You should never share it with anyone, and
 store it very securely. This ticket can derive all of your other keys: your
 ownership key and all of the related proxies.
 
