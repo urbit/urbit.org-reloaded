@@ -281,8 +281,7 @@ Tlon has set up our own roller that is free to use by the community. Using
 Bridge, a ship may submit X transactions to Tlon's roller per Y period free of
 charge. Tlon's roller submits on a regular schedule: a submission occurs when a
 total of A layer 2 transactions have been submitted to it since the the previous
-submitted Ethereum transaction, or every Z time, whichever occurs first. (this
-should probably go in the operations manual)
+submitted Ethereum transaction, or every Z time, whichever occurs first.
 
 There are no security risks in utilizing an aggregator. The transactions you
 submit to it are signed with your private key, and so if an aggregator alters
@@ -290,8 +289,6 @@ them the signature will no longer match and `naive.hoon` will reject it as an
 invalid transaction. The worst an aggregator can do is not submit your transaction.
 
 ## Multi-keyfiles
-
-Maybe this section goes in operating manual?
 
 As part of the layer 2 upgrade, Tlon has expanded the role of
 [keyfiles](/docs/glossary/keyfile). One of our goals with layer 2 was to reduce
