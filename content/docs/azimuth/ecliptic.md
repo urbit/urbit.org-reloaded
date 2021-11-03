@@ -5,31 +5,31 @@ template = "doc.html"
 +++
 
 [Ecliptic.eth](https://etherscan.io/address/ecliptic.eth) holds the business
-logic for the ledger kept by Azimuth.eth. It may be modified by [galaxy
+logic for the ledger kept by `Azimuth.eth`. It may be modified by [galaxy
 vote](/docs/glossary/upgrade). This determines things such as what the various
 proxies are capable of, how keys are changed, or verifying that a request is
 valid.
 
-Ecliptic uses external contracts such as
+`Ecliptic.eth` uses external contracts such as
 [Azimuth.eth](/docs/azimuth/azimuth-eth) and
 [Polls](https://github.com/urbit/azimuth/blob/master/contracts/Polls.sol) for
 data storage so that it can easily be replaced in case the logic needs to be
-changed without affecting the data. These data contracts are owned by the
-Ecliptic contract, and this ownership is passed to the new Ecliptic contract
+changed without affecting the data. These data contracts are owned by
+`Ecliptic.eth`, and this ownership is passed to the new Ecliptic contract
 whenever it is replaced. Thus it is advised for clients to not store Ecliptic's
-contract address directly, but instead ask the Azimuth.eth contract for its
+contract address directly, but instead ask the `Azimuth.eth` contract for its
 `owner` attribute to ensure that transactions are sent to the latest Ecliptic
-contract. Alternatively, the ENS name `ecliptic.eth` will always resolve to the
-latest Ecliptic.
+contract. Alternatively, the [ENS](https://ens.domains/) name `Ecliptic.eth`
+will always resolve to the latest Ecliptic.
 
 You can read about [Urbit's first
 upgrade](https://github.com/urbit/azimuth/pull/35) to Ecliptic, which occurred
 in the summer of 2021, [here](https://urbit.org/blog/first-contract). The
 [second](https://github.com/urbit/azimuth/pull/43) occurred later in the year
 and consisted of several small modifications to ready the PKI for the
-introduction of naive rollups.
+introduction of [naive rollups](/docs/azimuth/l2/layer2).
 
-Ecliptic implements the [ERC-721](https://eips.ethereum.org/EIPS/eip-721)
+`Ecliptic.eth` implements the [ERC-721](https://eips.ethereum.org/EIPS/eip-721)
 interface for non-fungible tokens, as well as the
 [ERC-165](https://eips.ethereum.org/EIPS/eip-165) standard for interface
 detection.
@@ -42,12 +42,12 @@ applicable.
 
 ## Write functions {#write}
 
-Here we briefly describe each function in the Ecliptic which allows one to write
+Here we briefly describe each function in `Ecliptic.eth` which allows one to write
 data to Ethereum. These can be called using
 [Etherscan](https://etherscan.io/address/ecliptic.eth#writeContract), but
 the most common functions may be called from within Bridge.
 
-We only document here the write functions specific to Ecliptic and not the
+We only document here the write functions specific to `Ecliptic.eth` and not the
 standard functions that are part of the ERC-721 or ERC-165 interfaces.
 
 ### `Point`s interface
@@ -66,9 +66,11 @@ to its [proxies](#proxies). All of these actions may be performed from Bridge.
                            bool _discontinuous)
 ```
 
-Configure `_point` with network public keys `_encryptionKey`, `_authenticationKey`,
-and corresponding `_cryptoSuiteVersion`, incrementing the `Point`'s continuity
-number if needed.
+Configure `_point` with network public keys `_encryptionKey`,
+`_authenticationKey`, and corresponding `_cryptoSuiteVersion`, incrementing the
+`Point`'s [`keyRevisionNumber`](/docs/azimuth/azimuth-eth#points) if the keys
+have changed and `continuityNumber` number if `_discontinuous` is set to true
+(see [Life and Rift](/docs/azimuth/life-and-rift)).
 
 Corresponds to the layer 2 `%configure-keys` action.
 
@@ -97,15 +99,17 @@ Corresponds to the layer 2 `%spawn` action.
     function transferPoint(uint32 _point, address _target, bool _reset)
 ```
 
-Transfer `_point` to `_target`, clearing all permissions
-data and keys if `_reset` is true
-
-Note: the `_reset` flag is useful when transferring the point to
-a recipient who doesn't trust the previous owner.
+Transfer `_point` to `_target`, clearing all permissions data and keys if
+`_reset` is true. `_reset` set to makes this transaction a
+[breach](/using/id/guide-to-breaches), and thus this action increments the
+[`continuityNumber`](/docs/azimuth/azimuth-eth#points) of `_point`, and usually
+the `keyRevisionNumber` as well (see [Life and
+Rift](/docs/azimuth/life-and-rift)).
 
 Requirements:
  - `:msg.sender` must be either `_point`'s current owner, authorized to transfer
-   `_point`, or authorized to transfer the current owner's points (as in ERC721's operator)
+   `_point`, or authorized to transfer the current owner's points (i.e. is
+   listed as an ERC-721 operator in [`operators`](/docs/azimuth/azimuth-eth#other)).
  - `_target` must not be the zero address.
  
 Corresponds to the layer 2 `%transfer-point` action. 
@@ -179,8 +183,10 @@ Requirements:
 Corresponds to the layer 2 `%detach` action.
 
 Unlike all other layer 1 actions, layer 1 sponsors may use a layer 1 `detach` on
-a layer 2 sponsee. See the [Layer 2](/docs/azimuth/l2/layer2#sponsorship) section
-for more detail.
+a layer 2 sponsee. See the [Layer 2](/docs/azimuth/l2/layer2#sponsorship)
+section for more detail. The detach action available in Bridge is a layer 2
+action, so a layer 1 detach must be done
+[manually](https://etherscan.io/address/ecliptic.eth#writeContract).
 
 ### Proxy management {#proxies}
 
@@ -337,6 +343,9 @@ performed manually. It is not available in Bridge.
 Check whether the `_proposal` has achieved majority. Any Ethereum address may
 call this function.
 
+This action eiher occurs as part of a vote that achieves a majority, or must be
+performed manually. It is not available in Bridge.
+
 ### Contract owner operations
 
 The following functions may only be performed by the owner of the contract.
@@ -362,9 +371,6 @@ this function has no valid arguments.
 
 Sets 3 DNS domains by which galaxy IP addresses may be looked up as part of the
 bootstrap process to get on the network. Currently, all three domains are `urbit.org`.
-
-In the future, this function should probably be parameterized as a per-galaxy
-setting, so that each galaxy may set its own domain.
 
 ## Read functions {#read}
 
@@ -424,7 +430,7 @@ Release](https://etherscan.io/address/0x86cd9cd0992f04231751e3761de45cecea5d1801
 and [Conditional Star
 Release](https://etherscan.io/address/0x8c241098c3d3498fe1261421633fd57986d74aea).
 
-Beginning in 2019, stars may spawn at most 1024 planets. This limit doubles for
-every subsequent year. However, this limit is not currently implemented on
-[Layer 2](/docs/azimuth/l2/layer2).
+Beginning in 2019, stars may spawn at most 1024 planets. This limit doubles
+every subsequent year until the maximum is reached. However, this limit is not
+currently implemented on [Layer 2](/docs/azimuth/l2/layer2).
 
