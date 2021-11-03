@@ -164,7 +164,7 @@ Smart contracts are unable to own layer 2 ships, and thus cannot sign layer 2
 transactions. This creates a hard requirement that layer 1 ships be allowed to
 perform a layer 1 detach operation on a layer 2 ships.
 
-## Azimuth state
+## Azimuth state {#state}
 
 The introduction of layer 2 presents additional complication in understanding
 Azimuth state. In order to be precise we define the following terminology:
