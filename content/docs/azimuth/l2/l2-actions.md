@@ -8,6 +8,8 @@ There are a total of eleven layer 2 actions, each corresponding to a familiar
 [layer 1 action](/docs/azimuth/ecliptic): `%transfer-point`, `%spawn`,
 `%configure-keys`, `%escape`, `%cancel-escape`, `%adopt`, `%reject`, `%detach`,
 `%set-management-proxy`, `%set-spawn-proxy`, and `%set-transfer-proxy`.
+Descriptions of what these actions do may be found by searching for them at
+[Azimuth.eth](/docs/azimuth/azimuth-eth).
 
 Once a ship moves to layer 2, the owner will still utilize the same private keys
 they used before the transfer to perform Azimuth actions. This includes the ownership
@@ -20,9 +22,8 @@ transferring ownership to layer 2.
 
 In order to move your ship from layer 1 to layer 2, transfer ownership of your
 ship to the address `0x1111111111111111111111111111111111111111`. The easiest
-way to accomplish this is using [Bridge](/docs/glossary/bridge), but Urbit-native CLI tools to accomplish this are available as
-well (link). The Azimuth smart contracts interpret any ship at this address as
-being on Layer 2.
+way to accomplish this is using [Bridge](/docs/glossary/bridge). The Azimuth
+smart contracts interpret any ship at this address as being on layer 2.
 
 ### Dominion
 
