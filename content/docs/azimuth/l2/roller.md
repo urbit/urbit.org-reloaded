@@ -58,7 +58,8 @@ Once a roll has been submitted to an Ethereum node, there is a waiting period
 before a miner includes it in a block.
 
 During this waiting period, the roller applies the submitted batch to the
-locally held Azimuth state to get a predicted state. This is used for..... (TODO)
+locally held Azimuth state to get a predicted state. This predicted state is
+presented to the user in Bridge, such as to show which points a given address owns.
 
 ### Timer
 
