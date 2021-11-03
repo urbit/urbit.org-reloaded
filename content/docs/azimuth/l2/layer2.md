@@ -7,7 +7,7 @@ template = "doc.html"
 This document provides technical details on Azimuth's "Layer 2" scaling solution
 for Azimuth, known more formally as "naive rollups". We focus here primarily on the
 "Hoon smart contract" located at `/lib/naive.hoon` in your ship's pier, as well
-as other proximal topis.
+as other proximal topics.
 
 This is intended for developers that desire a deeper understanding of how this
 protocol works, how secure it is, and how to extract data from layer 2 to obtain

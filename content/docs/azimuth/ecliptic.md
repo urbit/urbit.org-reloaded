@@ -13,7 +13,7 @@ valid.
 Ecliptic uses external contracts such as
 [Azimuth.eth](/docs/azimuth/azimuth-eth) and
 [Polls](https://github.com/urbit/azimuth/blob/master/contracts/Polls.sol) for
-data storage so that it can easily be replaced incase the logic needs to be
+data storage so that it can easily be replaced in case the logic needs to be
 changed without affecting the data. These data contracts are owned by the
 Ecliptic contract, and this ownership is passed to the new Ecliptic contract
 whenever it is replaced. Thus it is advised for clients to not store Ecliptic's
@@ -58,7 +58,7 @@ to its [proxies](#proxies). All of these actions may be performed from Bridge.
 
 #### `configureKeys`
 
-```
+```solidity
     function configureKeys(uint32 _point,
                            bytes32 _encryptionKey,
                            bytes32 _authenticationKey,
@@ -74,7 +74,7 @@ Corresponds to the layer 2 `%configure-keys` action.
 
 #### `spawn`
 
-```
+```solidity
     function spawn(uint32 _point, address _target)
 ```
 
@@ -93,7 +93,7 @@ Corresponds to the layer 2 `%spawn` action.
 
 #### `transferPoint`
 
-```
+```solidity
     function transferPoint(uint32 _point, address _target, bool _reset)
 ```
 
@@ -112,7 +112,7 @@ Corresponds to the layer 2 `%transfer-point` action.
 
 #### `escape`
 
-```
+```solidity
     function escape(uint32 _point, uint32 _sponsor)
 ```
 
@@ -128,7 +128,7 @@ Requirements:
  
 #### `cancelEscape`
 
-```
+```solidity
     function cancelEscape(uint32 _point)
 ```
 
@@ -138,7 +138,7 @@ Corresponds to the layer 2 `%cancel-escape` action.
 
 #### `adopt`
 
-```
+```solidity
     function adopt(uint32 _point)
 ```
 
@@ -152,7 +152,7 @@ Corresponds to the layer 2 `%adopt` action.
 
 #### `reject`
 
-```
+```solidity
     function reject(uint32 _point)
 ```
 
@@ -166,7 +166,7 @@ Corresponds to the layer 2 `%reject` action.
 
 #### `detach`
 
-```
+```solidity
     function detach(uint32 _point)
 ```
 
@@ -189,7 +189,7 @@ These functions are used to manage the various
 
 #### `setManagementProxy`
 
-```
+```solidity
     function setManagementProxy(uint32 _point, address _manager)
 ```
 
@@ -206,7 +206,7 @@ Corresponds to the layer 2 `%set-management-proxy` action.
 
 #### `setSpawnProxy`
 
-```
+```solidity
     function setSpawnProxy(uint16 _prefix, address _spawnProxy)
 ```
 
@@ -220,7 +220,7 @@ Corresponds to the layer 2 `%set-spawn-proxy` action.
 
 #### `setVotingProxy`
 
-```
+```solidity
     function setVotingProxy(uint8 _galaxy, address _voter)
 ```
 
@@ -235,7 +235,7 @@ There is no corresponding layer 2 action since voting must occur on layer 1.
 
 #### `setTransferProxy`
 
-```
+```solidity
     function setTransferProxy(uint32 _point, address _transferProxy)
 ```
 
@@ -263,7 +263,7 @@ expired, then _any_ Ethereum address may call `updateUpgradePoll` or
 
 #### `startUpgradePoll`
 
-```
+```solidity
     function startUpgradePoll(uint8 _galaxy, EclipticBase _proposal)
 ```
 
@@ -278,7 +278,7 @@ This action must be performed manually - it is not available in Bridge.
 
 #### `startDocumentPoll`
 
-```
+```solidity
     function startDocumentPoll(uint8 _galaxy, bytes32 _proposal)
 ```
 
@@ -292,7 +292,7 @@ This action must be performed manually - it is not available in Bridge.
 
 #### `castUpgradeVote`
 
-```
+```solidity
     function castUpgradeVote(uint8 _galaxy,
                               EclipticBase _proposal,
                               bool _vote)
@@ -306,7 +306,7 @@ This action may be performed from Bridge.
 
 #### `castDocumentVote`
 
-```
+```solidity
     function castDocumentVote(uint8 _galaxy, bytes32 _proposal, bool _vote)
 ```
 
@@ -318,7 +318,7 @@ This action may be performed from Bridge.
 
 #### `updateUpgradePoll`
 
-```
+```solidity
     function updateUpgradePoll(EclipticBase _proposal)
 ```
 
@@ -330,7 +330,7 @@ performed manually. It is not available in Bridge.
 
 #### `updateDocumentPoll`
 
-```
+```solidity
     function updateDocumentPoll(bytes32 _proposal)
 ```
 
@@ -346,7 +346,7 @@ galaxies have already been spawned, it is no longer of any use. Thus only
 
 #### `createGalaxy`
 
-```
+```solidity
     function createGalaxy(uint8 _galaxy, address _target)
 ```
 
@@ -356,7 +356,7 @@ this function has no valid arguments.
 
 #### `setDnsDomains`
 
-```
+```solidity
     function setDnsDomains(string _primary, string _secondary, string _tertiary)
 ```
 
@@ -383,7 +383,7 @@ controlled on layer 2 instead of via Ecliptic.
 
 #### `canEscapeTo`
 
-```
+```solidity
     function canEscapeTo(uint32 _point, uint32 _sponsor)
 ```
 
@@ -411,7 +411,7 @@ Returns the address of the previous Ecliptic address.
 
 #### `getSpawnLimit`
 
-```
+```solidity
     function getSpawnLimit(uint32 _point, uint256 _time)
 ```
 

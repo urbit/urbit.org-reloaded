@@ -54,11 +54,13 @@ However, Urbit is yours and it's forever. You shouldn't have to change your name
 every time you change your keys. So, we go back and take the other choice as well: you
 must be able to change your keys.
 
+<a name="0"></a>
 To change keys, you must sign a message with the old keys revoking them and
-supplying the new ones[^0]. The question is what happens if the old keys also
-sign a second set of new keys. This could happen if an attacker obtained your
-old keys after the fact. This is important because one of the reasons to be able
-to change your keys is to invalidate the old ones so that they have no power.
+supplying the new ones<sup><a href="#f0">[0]</a></sup>. The question
+is what happens if the old keys also sign a second set of new keys. This could
+happen if an attacker obtained your old keys after the fact. This is important
+because one of the reasons to be able to change your keys is to invalidate the
+old ones so that they have no power.
 
 We have two options again: the PKI may be globally consistent or not. To be
 globally consistent means that if you believe a name is bound to a set of keys,
@@ -108,13 +110,15 @@ signed before another without a central party. Blockchain was discovered by
 someone trying to create digital money, and he needed that primitive, but that
 doesn't mean that's all it's good for.
 
+<a name="2"></a>
 Thus, we store our PKI data on a blockchain for our second kind of name:
-[planets](/docs/glossary/planet). A planet is a 32-bit address which has key information stored on the
-blockchain.[^2] The owner of a planet may broadcast new PKI data by adding it to
-the blockchain. Any later messages by the old keys will be rejected, and
-everyone on the network will listen to the blockchain for key data. Thus, we
-have global consistency, permanence, and self sovereignty. We know of no other
-solution that can provide these properties.
+[planets](/docs/glossary/planet). A planet is a 32-bit address which has key
+information stored on the blockchain.<sup><a href="#f2">[2]</a></sup>
+The owner of a planet may broadcast new PKI data by adding it to the
+blockchain. Any later messages by the old keys will be rejected, and everyone
+on the network will listen to the blockchain for key data. Thus, we have global
+consistency, permanence, and self sovereignty. We know of no other solution
+that can provide these properties.
 
 While small individually, the aggregate PKI data for all nodes on the
 network may become very large. This is not an issue for comets because nobody
@@ -162,34 +166,36 @@ are three other properties; pick any two:
 
 - Moons are permanent, not self sovereign, and plentiful.
 
+<a name="4"></a>
 Fancifully, comets are wayward celestial bodies that are great for testing and
 miscellaneous low-value things that won't last for long. Planets are where you
 can build a home and shape it into anything you want it to be. People can always
 find your planet; it's not going anywhere. Moons are useful for special
 purposes, like storage, heavy industry, and anything else you might want to do
-off-planet.[^4]
+off-planet.<sup><a href="#f4">[4]</a></sup>
 
 
-[^0]: Or the equivalent with a hierarchical key structure. In practice, you want
-    to have a master key which signs a junior key for everyday use. You use the
-    master key to rotate the junior key.
+<a name="f0" href="#0">[0]</a>: Or the equivalent with a hierarchical key
+structure. In practice, you want to have a master key which signs a junior key
+for everyday use. You use the master key to rotate the junior key.
 
-[^1]: More strictly: it proves that he didn't mine it after the other blocks
-    currently on the Bitcoin blockchain. It only gives an ordering within the
-    chain, not a literal timestamp.
+<a name="f1" href="#1">[1]</a>: More strictly: it proves that he didn't mine it
+after the other blocks currently on the Bitcoin blockchain. It only gives an
+ordering within the chain, not a literal timestamp.
 
-[^2]: In addition to planets, there are stars and galaxies. From a PKI
-    perspective they're treated exactly like planets, but on the network they
-    provide infrastructure services like routing.
+<a name="f2" href="#2">[2]</a>: In addition to planets, there are stars and
+galaxies. From a PKI perspective they're treated exactly like planets, but on
+the network they provide infrastructure services like routing.
 
-[^3]: In practice, this will likely be an included service by your sponsoring
-    star. It could be a separate service, but it will be very cheap because it's
-    a commodity and the "cost of production" is very cheap. At any rate, it
-    should never rise above the capital cost of a 400GB hard drive.
+<a name="f3" href="#3">[3]</a>: In practice, this will likely be an included
+service by your sponsoring star. It could be a separate service, but it will be
+very cheap because it's a commodity and the "cost of production" is very cheap.
+At any rate, it should never rise above the capital cost of a 400GB hard drive.
 
-[^4]: To extend the metaphor, stars are a neighborhood to live in -- they're
-    easier for other planets to see, so when they want to send you a message
-    they look for your star first. If they don't even know where your star is,
-    they can certainly find your star's galaxy, and that will be enough to
-    locate the star. Of course, if your star is not providing satisfactory
-    service, you can take your planet and move to another star.
+<a name="f4" href="#4">[4]</a>: To extend the metaphor, stars are a
+neighborhood to live in -- they're easier for other planets to see, so when
+they want to send you a message they look for your star first. If they don't
+even know where your star is, they can certainly find your star's galaxy, and
+that will be enough to locate the star. Of course, if your star is not
+providing satisfactory service, you can take your planet and move to another
+star.

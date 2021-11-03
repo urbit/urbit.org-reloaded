@@ -93,7 +93,7 @@ not particular to Azimuth. It sends collected transactions to `+on-agent` in
 `%azimuth`, which then obtains the resulting PKI transitions by passing them through
 [`naive.hoon`](#naive).
 
-![Eth-watcher](https://media.urbit.org/docs/layer2/roller-agents.png)
+[![Eth-watcher](https://media.urbit.org/docs/layer2/roller-agents.png)](https://media.urbit.org/docs/layer2/roller-agents.png)
 
 #### `%roller` {#roller}
 
