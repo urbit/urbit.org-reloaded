@@ -18,7 +18,7 @@ look at the source and play around, or see [Getting Started](/getting-started/).
 ## Arvo vs. Azimuth
 
 Urbit is a project, not a single computer system. It has multiple components:
-Arvo, the operating system; and Azimuth, the identity system. Let's compare
+Arvo, the operating system, and Azimuth, the identity system. Let's compare
 them.
 
 **Arvo** is an operating system that provides the software for a personal
@@ -81,13 +81,13 @@ Azimuth consists of the following smart contracts:
    Sending](https://etherscan.io/address/0xf6b461fe1ad4bd2ce25b23fe0aff2ac19b3dfa76):
    enables network-effect like distributing of planets.
    
- Walkthroughs of some of the smart contracts are linked to [below](#other).
+Walkthroughs of some of the smart contracts are linked to [below](#other).
 
 ## Naive rollups
 
 In 2021, Tlon introduced a new system to Azimuth intended to reduce gas costs
 for working with Urbit ID and friction associated with using cryptocurrency in
-general called **naive rollups**, often referred to as **layer 2**. This system
+general called **naive rollups**, often referred to as **layer 2** or L2. This system
 allows batches of Azimuth transactions to be submitted together as a single
 transaction using an Urbit node known as a "roller". The PKI state transitions
 resulting from these transactions are computed locally by your urbit rather than
@@ -100,9 +100,8 @@ blockchains. However, anybody can run a roller, and even using your own ship as
 a roller to submit single transactions results in significant savings.
 
 A casual overview of the naive rollups system can be found on the
-[blog](/blog/rollups). Developers
-are encouraged to read our Layer 2 documentation, starting with the [Layer 2
-Overview](/docs/azimuth/l2/layer2).
+[blog](/blog/rollups). Developers are encouraged to read our Layer 2
+documentation, starting with the [Layer 2 Overview](/docs/azimuth/l2/layer2).
 
 ## Other resources {#other}
 
@@ -114,7 +113,7 @@ referred to as a "master ticket".
 ### [Data Flow](/docs/azimuth/flow)
 
 Diagrams and explanations of how data flows between Bridge and the various
-components inside Urbit involved with layer 2.
+components inside Urbit involved with Azimuth and L2.
 
 ### [Azimuth.eth](/docs/azimuth/azimuth-eth)
 
@@ -128,11 +127,12 @@ for `azimuth.eth`. This includes an overview of all function calls available.
 
 ### [Advanced Azimuth Tools](/docs/azimuth/advanced-azimuth-tools)
 
-Expert-level tooling for generating, signing, and sending layer 1 Azimuth-related
+Expert-level tooling for generating, signing, and sending layer 1 Azimuth
 transactions from within Urbit itself.
 
 ### [Life and Rift](/docs/azimuth/azimuth)
 
-An explanation of how Azimuth indexes networking keys and breaches to keep track
-of the most recent set of networking keys necessary to communicate with a ship.
+An explanation of how Azimuth indexes networking keys revisions and breaches to
+keep track of the most recent set of networking keys necessary to communicate
+with a ship.
 

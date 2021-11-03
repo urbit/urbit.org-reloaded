@@ -365,27 +365,29 @@ guaranteed as the Azimuth Ethereum smart contracts.
 
 ### Arvo is deterministic
 
-Crucial to the functionality of Ethereum smart contracts is they work the same
-way every time since the Ethereum Virtual Machine is determinsistic. Similarly,
-as the state of Arvo is evolved via [a single pure function](/docs/arvo/overview#an-operating-function), Urbit is
-deterministic as well. This property makes it well-suited for cases where side
-effects are unacceptable such as smart contracts, and thus `naive.hoon` is
-worthy of the name "Hoon smart contract".
+Crucial to the functionality of Ethereum smart contracts is that they work the
+same way every time since the Ethereum Virtual Machine is deterministic.
+Similarly, as the state of Arvo is evolved via [a single pure
+function](/docs/arvo/overview#an-operating-function), Arvo is deterministic as
+well. This property makes it well-suited for cases where side effects are
+unacceptable such as smart contracts, and thus `naive.hoon` is worthy of the
+name "Hoon smart contract".
 
 ### Restricted standard library
 
 A standard security practice is to reduce the surface area of attack to be as
 minimal as possible. One common source of exploits among all programming
-languages are issues with the standard library of functions, and this often
-leads to there being multiple implementations of standard library functions for
+languages are issues with the standard library of functions, and this is one factor
+that leads to the existence of multiple implementations of standard library functions for
 a given programming language. For instance, `glibc` is the most widely used
 standard library for the C programming language, but sheer size gives a large
 surface area in which to find exploits. Thus, other standard libraries have been
 written such as `musl` that are much smaller, and some argue to be more secure
-at least partially due to fewer lines of code. Hoon is not yet popular to have
+at least partially due to fewer lines of code. Hoon is not yet popular enough to have
 multiple standard library implementations, but `naive.hoon` shucks the usual
-standard library and so its subjects contains only the exact standard library
-functions needed for it to function (`/lib/std.hoon`).
+standard library and so its subject contains only the exact standard library
+functions needed for it to function. This library is known as `tiny` and is
+found at `/lib/tiny.hoon`.
 
 ### Unit tests
 
