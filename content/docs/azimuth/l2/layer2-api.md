@@ -10,5 +10,5 @@ documented how to perform these API calls yourself if you are so inclined. These
 
 The set of API calls available is summarized in the following diagram.
 
-![JSON RPC-API](https://media.urbit.org/docs/layer2/l2-json-rpc.svg)
+[![JSON RPC-API](https://media.urbit.org/docs/layer2/l2-json-rpc.svg)](https://media.urbit.org/docs/layer2/l2-json-rpc.svg)
 

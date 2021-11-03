@@ -14,7 +14,7 @@ summary [here](/docs/azimuth/l2/layer2-api).
 The following diagram illustrates the most important parts of the plumbing
 present in the roller.
 
-![Roller internals](https://media.urbit.org/docs/layer2/roller-internal.png)
+[![Roller internals](https://media.urbit.org/docs/layer2/roller-internal.png)](https://media.urbit.org/docs/layer2/roller-internal.png)
 
 We elaborate on the components of this diagram below.
 

@@ -5,7 +5,7 @@ template = "doc.html"
 category = "azimuth"
 +++
 
-**Naive rollups**, also referred to as **layer 2**, is an upgrade to the
+**Naive rollups**, also referred to as **layer 2**, is an upgrade to
 [Azimuth](/docs/glossary/azimuth) implemented in 2021 that reduces Ethereum gas
 costs associated with Urbit ID transactions and friction associated with using
 cryptocurrency in general.

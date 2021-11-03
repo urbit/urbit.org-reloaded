@@ -10,7 +10,7 @@ how Urbit implements the data flow of naive rollups.
 
 The following diagram illustrates the high-level structure of Azimuth.
 
-![High level overview](https://media.urbit.org/docs/layer2/l2-high.png)
+[![High level overview](https://media.urbit.org/docs/layer2/l2-high.png)](https://media.urbit.org/docs/layer2/l2-high.png)
 
 ## Bridge
 
@@ -108,7 +108,7 @@ Ethereum address, and when the next batch of transactions will be sent. See also
 The relationship between the roller and other agents is outlined in the
 following diagram.
 
-![Roller](https://media.urbit.org/docs/layer2/roller-agents.png)
+[![Roller](https://media.urbit.org/docs/layer2/roller-agents.png)](https://media.urbit.org/docs/layer2/roller-agents.png)
 
 `%roller` has a number of scries available, intended primarily to
 display data to the end user in Bridge. They can be inferred from the `+on-peek`

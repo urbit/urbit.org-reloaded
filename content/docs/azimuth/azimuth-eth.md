@@ -16,7 +16,7 @@ only eligible to modify the Ecliptic.
 
 The global state of Azimuth is given as follows.
 
-```
+```solidity
   //  points: per point, general network-relevant point state
   //
   mapping(uint32 => Point) public points;
@@ -47,7 +47,7 @@ between `0` and `2^32-1`, or `uint32`. There are two data structures associated 
 A `Point` contains data about networking keys
 and sponsorship status, arranged in the following `struct`:
 
-```
+```solidity
   struct Point
   {
     //  encryptionKey: (curve25519) encryption public key, or 0 for none
@@ -106,7 +106,7 @@ and sponsorship status, arranged in the following `struct`:
 The owner of an Urbit ID may also set several [proxies](/docs/using/id/proxies)
 by modifying their `Deed`:
 
-```
+```solidity
 struct Deed
   {
     //  owner: address that owns this point
