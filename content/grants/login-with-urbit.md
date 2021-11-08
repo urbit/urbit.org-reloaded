@@ -9,10 +9,10 @@ grant_category = [ "App Dev: Other" ]
 [extra]
 image = ""
 description = 'One of the killer pieces of missing functionality in the ecosystem is to seamlessly "login" to Urbit web apps at the click of a button.'
-reward = 8
+reward = 7
 assignee = "dcSpark"
 id = ""
-completed = false
+completed = true
 canceled = false
 link = ""
 +++
@@ -83,9 +83,3 @@ Estimated Date: 08/11/2021
 
 Give the extension interface a major revamp from merely being dev-usable to well polished and offering new users a great experience.
 
-### Firefox Support
-
-1 STAR
-Estimated Date: 08/25/2021
-
-Implement Login With Urbit extension for Firefox.
