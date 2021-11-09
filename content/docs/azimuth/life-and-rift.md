@@ -1,6 +1,6 @@
 +++
 title = "Life and Rift"
-weight = 3
+weight = 8
 template = "doc.html"
 +++
 
@@ -13,10 +13,12 @@ and [Jael](/docs/arvo/jael/jael-api) to ensure that communication between
 ships is always done with the most recent set of networking keys, and that
 networking state is appropriately reset when a breach has occurred.
 
-Every ship begins with a `life` and `rift` of 0. For
-galaxies, stars, and planets, these values are stored in the Azimuth PKI, while
-for moons, these values are stored by their parent. Comets cannot change their
-networking keys, nor can they breach, and so their `life` and `rift` are always 0.
+Every ship begins with a `life` and `rift` of 0. For galaxies, stars, and
+planets, these values are stored in the [Azimuth
+PKI](/docs/azimuth/azimuth-eth#points) as `keyRevisionNumber` and
+`continuityNumber`, while for moons, these values are stored by their parent.
+Comets cannot change their networking keys, nor can they breach, and so their
+`life` and `rift` are always 0.
 
 You can check your current `life` and `rift` number by running the `+keys our`
 generator in dojo. You can inspect another ship's `life` and `rift` by running

@@ -2,7 +2,7 @@
 title = "Using Bridge"
 template = "doc.html"
 description = "How to use Bridge to interact with Azimuth and manage your Urbit ID."
-weight = 10
+weight = 7
 aliases = ["/docs/getting-started/using-bridge/"]
 +++
 
