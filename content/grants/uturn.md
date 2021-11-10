@@ -1,6 +1,6 @@
 +++
 title = "UTurn"
-date = 2021-10-28
+date = "2021-10-28"
 [taxonomies]
 grant_type = ["Proposal"]
 grant_category = ["App Dev"]
@@ -21,6 +21,9 @@ We need a way for a ship operator to easily run coturn (an open source TURN serv
 
 
 ## Deliverables
+
+Expected completion: 4-5 weeks
+Payment: 1 star
 
 ### coturn docker container
 coturn has an official Docker container. Create a new container from the official one with easy customization so that ship operators can drop it in a container service and go.
