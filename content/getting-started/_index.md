@@ -48,7 +48,7 @@ Or to install `snap` for your distribution, snapcraft provides [installation ins
   <label for="port-windows">Windows</label>
   <div class="tab">
     <p>To install <strong>Port</strong> on Windows simply download and open the <code>.exe</code> file.</p>
-    <a href="https://github.com/urbit/port/releases/latest/download/port-1.4.0.Setup.exe" class="badge-sm bg-green-400 text-white" style="width: 12rem;">
+    <a href="https://github.com/urbit/port/releases/latest/download/PortSetup.exe" class="badge-sm bg-green-400 text-white" style="width: 12rem;">
       Download Port
     </a>
     <p><small>
