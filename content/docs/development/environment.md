@@ -197,7 +197,7 @@ compatible. You can copy it across from the `%base` desk, or just run the
 following in the terminal from within the desk directory:
 
 ```sh
-echo "[%zuse 420]" > sys.kelvin
+echo "[%zuse 419]" > sys.kelvin
 ```
 
 The other `mark` files can just be copied across from the `%base` desk.
