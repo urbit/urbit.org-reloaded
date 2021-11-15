@@ -267,7 +267,7 @@ and copy the actual files.
 Now you can just add a `sys.kelvin` file:
 
 ```
-echo "[%zuse 420]" > mydesk/sys.kelvin
+echo "[%zuse 419]" > mydesk/sys.kelvin
 ```
 
 And you'll be able to mount the desk with `|commit %mydesk`.
