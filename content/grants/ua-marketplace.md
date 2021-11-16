@@ -12,7 +12,7 @@ description = "A marketplace in which users can post items for sale and browse g
 reward = 1
 mentor = "~timluc-miptev"
 assignee = ""
-completed = false
+completed = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0018&prefill_Grant+Name=Marketplace"
 +++
 
