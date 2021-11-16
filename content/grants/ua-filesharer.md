@@ -12,7 +12,7 @@ description = "An application that allows peers to upload files to managed stora
 reward = 1
 mentor = "~timluc-miptev"
 assignee = ""
-completed = false
+completed = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0022&prefill_Grant+Name=Filesharer"
 +++
 
