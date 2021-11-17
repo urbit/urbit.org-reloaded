@@ -16,7 +16,6 @@ As of this year, this application suite has arrived at a point where we’re
 confident both in how all the parts fit together, and confident in the
 individual parts.
 
-
 ## What is Landscape Intended to Be?
 
 Landscape is a single suite of userspace applications built to run on top of
@@ -28,16 +27,14 @@ making Landscape itself more extensible for user-developers in late 2021.
 Landscape is specifically a social suite of applications, meant to enable
 communication and socializing in many forms.
 
-
 ## What is Landscape technically composed of?
 
 Landscape is composed of two primary parts: its backend, which runs as a suite of userspace applications (also known as Gall agents), and its frontend interface, which runs as a single-page web application. Both the backend and the frontend may be decomposed into their constituent parts for further understanding.
 
-
 ### Backend
 
 The Landscape backend is implemented as a collection of long-running
-microservices known as [Gall agents](/docs/userspace/gall/gall). They can be divided into the following,
+microservices known as [Gall agents](/docs/arvo/gall/gall). They can be divided into the following,
 though this is a simplification:
 
 - **Graph**: handles storing messages / posts in a non-relational database
@@ -55,7 +52,6 @@ two main categories: [stores](#stores) and [hooks](#hooks). To simply describe
 the separation of responsibilities, stores are dumb databases (models in MVC)
 and hooks are for processing data (controllers in MVC).
 
-
 ### Stores {#stores}
 
 Concisely defined, a store is a dumb database. It does not send outgoing pokes,
@@ -71,11 +67,10 @@ modules. Examples include:
 and
 [invite-store](https://github.com/urbit/urbit/blob/ac096d85ae847fcfe8786b51039c92c69abc006e/pkg/arvo/app/invite-store.hoon).
 
-
 ### Hooks {#hooks}
 
 A hook is a more loosely-defined agent that performs business logic. It should
-only keep track of a minimal amount of state (*e.g.* active subscriptions). Hooks
+only keep track of a minimal amount of state (_e.g._ active subscriptions). Hooks
 are used for a variety of purposes in the system, but there are a few important
 hook patterns to be aware of:
 
@@ -105,7 +100,6 @@ received.
 
 The poke-proxy-hook conditionally forwards a poke from a foreign ship to a store
 on the local ship if the foreign ship has permission to do so.
-
 
 ### Major Components
 
@@ -170,23 +164,20 @@ be thought of as a database join between the `%group-store` and the
 `%graph-store`, as it provides bidirectional indices for querying all of the
 graphs that a group has, or which group a particular graph is associated with.
 
-
 #### Contacts
 
 Contacts are your address book. Individual ships (people) you talk to may have a
- nickname, a profile picture, or a colored sigil background that helps you
- identify them in groups, chatrooms, blogs, and collections.
-
+nickname, a profile picture, or a colored sigil background that helps you
+identify them in groups, chatrooms, blogs, and collections.
 
 #### Invites
 
 Invites is a simple subsystem that allows you to send all the details of a given
-resource (*e.g.* graph or group) to some other ship so that they may join it if
+resource (_e.g._ graph or group) to some other ship so that they may join it if
 they desire to. Invite acceptance is handled with threads that listen to the
 `%invite-store` using the `%observe-hook` and invite sending is handled with the
 `%invite-hook`, which allows any ship to send you an invite without any
 permissions involved.
-
 
 #### Hark
 

@@ -1,6 +1,6 @@
 +++
 title = "API Reference"
-weight = 10
+weight = 3
 template = "doc.html"
 +++
 
@@ -296,7 +296,7 @@ List of cards and new agent
 
 Expose state for saving.
 
-This arm is called immediately before the agent is upgraded.  It packages the
+This arm is called immediately before the agent is upgraded. It packages the
 permament state of the agent in a vase for the next version of the agent.
 Unlike most handlers, this cannot produce effects. It is not a gate and has no input.
 
@@ -319,7 +319,7 @@ Unlike most handlers, this cannot produce effects. It is not a gate and has no i
 
 Application upgrade.
 
-This arm is called immediately after the agent is upgraded.  It receives
+This arm is called immediately after the agent is upgraded. It receives
 a vase of the state of the previously-running version of the agent, obtained
 from `+on-save`, which allows it to cleanly upgrade from the old agent.
 
@@ -362,7 +362,7 @@ List of cards and new agent
 
 Handle application poke.
 
-This arm is called when the agent is "poked".  The input is a cage, so
+This arm is called when the agent is "poked". The input is a cage, so
 it's a pair of a mark and a dynamic vase.
 
 #### Accepts
@@ -445,16 +445,16 @@ List of cards and new agent.
 Handle new subscriber.
 
 This arm is called when a program wants to subscribe to the agent on a
-particular path.  The agent may or may not need to perform setup steps
-to intialize the subscription.  It may produce a `%give`
+particular path. The agent may or may not need to perform setup steps
+to intialize the subscription. It may produce a `%give`
 `%subscription-result` to the subscriber to get it up to date, but after
 this event is complete, it cannot give further updates to a specific
-subscriber.  It must give all further updates to all subscribers on a
+subscriber. It must give all further updates to all subscribers on a
 specific path.
 
 If this arm crashes, then the subscription is immediately terminated.
 More specifcally, it never started -- the subscriber will receive a
-negative `%watch-ack`.  You may also produce an explicit `%kick` to
+negative `%watch-ack`. You may also produce an explicit `%kick` to
 close the subscription without crashing -- for example, you could
 produce a single update followed by a `%kick`.
 
@@ -501,11 +501,11 @@ Handle unsubscribe.
 
 This arm is called when a program becomes unsubscribed to you.
 Subscriptions may close because the subscriber intentionally
-unsubscribed, but they also could be closed by an intermediary.  For
+unsubscribed, but they also could be closed by an intermediary. For
 example, if a subscription is from another ship which is currently
 unreachable, Ames may choose to close the subscription to avoid queueing
-updates indefinitely.  If the program crashes while processing an
-update, this may also generate an unsubscription.  You should consider
+updates indefinitely. If the program crashes while processing an
+update, this may also generate an unsubscription. You should consider
 subscriptions to be closable at any time.
 
 #### Accepts
@@ -540,8 +540,8 @@ List of cards and new agent.
 Handle scry request.
 
 This arm is called when a program reads from the agent's "scry"
-namespace, which should be referentially transparent.  Unlike most
-handlers, this cannot perform IO, and it cannot change the state.  All
+namespace, which should be referentially transparent. Unlike most
+handlers, this cannot perform IO, and it cannot change the state. All
 it can do is produce a piece of data to the caller, or not.
 
 #### Accepts
@@ -568,8 +568,8 @@ The path being scryed for.
 ```
 
 If this arm produces `[~ ~ data]`, then `data` is the value at the the
-given path.  If it produces `[~ ~]`, then there is no data at the given
-path and never will be.  If it produces `~`, then we don't know yet whether
+given path. If it produces `[~ ~]`, then there is no data at the given
+path and never will be. If it produces `~`, then we don't know yet whether
 there is or will be data at the given path. The head of the path is known as the
 `care`. Requests with a care of `%x` should return a vase that matches or is
 convertible to the mark at the end of the scry request. This mark is not
@@ -625,8 +625,8 @@ Handle `%pass` card
 This arm is called to handle responses to `%pass` cards to other agents.
 It will be one of the following types of response:
 
-- `%poke-ack`: acknowledgment (positive or negative) of a poke.  If the
-  value is `~`, then the poke succeeded.  If the value is `[~ tang]`,
+- `%poke-ack`: acknowledgment (positive or negative) of a poke. If the
+  value is `~`, then the poke succeeded. If the value is `[~ tang]`,
   then the poke failed, and a printable explanation (eg a stack trace)
   is given in the `tang`.
 
@@ -716,7 +716,7 @@ This arm is called to handle responses for `%pass` cards to vanes.
 `wire` is the wire from the `++gift` that triggered `++on-arvo`.
 
 `sign` is the response from the vane. The list of possible responses from the
-vanes is statically defined in sys/zuse.hoon (grep for `++  sign-arvo`).
+vanes is statically defined in sys/zuse.hoon (grep for `++ sign-arvo`).
 
 #### Returns
 
@@ -761,9 +761,9 @@ List of cards and new agent.
 Handle error.
 
 If an error happens in `+on-poke`, the crash report goes into the
-`%poke-ack` response.  Similarly, if an error happens in
+`%poke-ack` response. Similarly, if an error happens in
 `+on-subscription`, the crash report goes into the `%watch-ack`
-response.  If a crash happens in any of the other handlers, the report
+response. If a crash happens in any of the other handlers, the report
 is passed into this arm.
 
 #### Accepts
@@ -821,9 +821,9 @@ subscription content for all subscribers on a given path.
 ```
 
 `(list path)` is a list of the paths to send the update on. If no path is
- given, then the update is only given to the program that instigated the
- request. Typical use of this mode is in `+on-watch` to give an initial update
- to a new subscriber to get them up to date.
+given, then the update is only given to the program that instigated the
+request. Typical use of this mode is in `+on-watch` to give an initial update
+to a new subscriber to get them up to date.
 
 `cage` is a cage of the subscription update.
 
@@ -938,7 +938,7 @@ This note is given to subscribe to an application at a path
 
 Unsubscribe from an application.
 
-  This note is passed to unsubscribe from an application. It should be passed on
+This note is passed to unsubscribe from an application. It should be passed on
 the same wire that the corresponding `%watch` note for the subscription was
 passed on.
 

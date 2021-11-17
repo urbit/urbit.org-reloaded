@@ -36,11 +36,11 @@ Eyre is our HTTP server. Unix sends HTTP messages to `%eyre`, and `%eyre` produc
 
 Ford is our build system. It handles resources and publishing.
 
-## [Gall](/docs/arvo/gall/overview)
+## [Gall](/docs/arvo/gall/gall)
 
 Gall is the vane for controlling userspace apps.
 
-## [Iris](/docs/arvo/iris/iris-api)
+## [Iris](/docs/arvo/iris/iris)
 
 Iris is our HTTP client.
 
@@ -51,5 +51,3 @@ Explanations of design decisions that are pervasive throughout Arvo.
 ## [Tutorials](/docs/arvo/tutorials/)
 
 Walkthroughs that teach you more about how Arvo works.
-
-

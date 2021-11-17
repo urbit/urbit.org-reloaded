@@ -4,6 +4,7 @@ weight = 1
 template = "doc.html"
 aliases = ["/docs/learn/arvo/ames/"]
 +++
+
 Our networking protocol.
 
 Ames is the name of both our network and the vane that communicates
@@ -11,7 +12,7 @@ over it. When Unix receives a packet over the correct UDP port, it pipes
 it straight into Ames for handling. Also, all packets sent over the
 Ames network are sent by the Ames vane. Apps and vanes may use
 Ames to directly send messages to other ships. In general, apps use
-[Gall](/docs/userspace/gall/gall) and [Clay](/docs/arvo/clay/clay)
+[Gall](/docs/arvo/gall/gall) and [Clay](/docs/arvo/clay/clay)
 to communicate with other ships rather than using Ames
 directly, but this isn't a requirement. Of course, Gall and Clay use
 Ames behind the scenes to communicate across the network. Jael is the only other
@@ -25,32 +26,33 @@ protocol itself, including how to route incoming packets to the correct
 vane or app, is defined in Ames.
 
 ## Technical Overview
+
 This section summarizes the design of Ames. Beyond this section are deeper
 elaborations on the concepts presented here.
 
 Ames extends [Arvo's](/docs/arvo/overview) `%pass`/`%give` `move` semantics across the network.
 
 Ames receives packets as Arvo events and emits packets as Arvo
-effects.  The runtime is responsible for transferring the bytes in
+effects. The runtime is responsible for transferring the bytes in
 an Ames packet across a physical network to another ship.
 
 The runtime tells Ames which physical address a packet came from,
-represented as an opaque atom.  Ames can emit a packet effect to
+represented as an opaque atom. Ames can emit a packet effect to
 one of those opaque atoms or to the Urbit address of a galaxy
 (root node), which the runtime is responsible for translating to a
-physical address.  One runtime implementation sends UDP packets
+physical address. One runtime implementation sends UDP packets
 using IPv4 addresses for ships and DNS lookups for galaxies, but
 other implementations may overlay over other kinds of networks.
 
-A local vane can pass Ames a `%plea` request message.  Ames
+A local vane can pass Ames a `%plea` request message. Ames
 transmits the message over the wire to the peer ship's Ames, which
 passes the message to the destination vane.
 
 Once the peer has processed the `%plea` message, it sends a
 message-acknowledgment packet over the wire back to the local
-Ames.  This "ack" can either be positive to indicate the request was
+Ames. This "ack" can either be positive to indicate the request was
 processed, or negative to indicate the request failed, in which
-case it's called a "nack".  (Don't confuse Ames nacks with TCP
+case it's called a "nack". (Don't confuse Ames nacks with TCP
 nacks, which are a different concept).
 
 When the local Ames receives either a positive message-ack or a
@@ -60,11 +62,11 @@ requested the original `%plea` message be sent.
 
 A local vane can give Ames zero or more `%boon` response messages in
 response to a `%plea`, on the same duct that Ames used to pass the
-`%plea` to the vane.  Ames transmits a `%boon` over the wire to the
+`%plea` to the vane. Ames transmits a `%boon` over the wire to the
 peer's Ames, which gives it to the destination vane on the same
 duct the vane had used to pass the original `%plea` to Ames.
 
-`%boon` messages are acked automatically by the receiver Ames.  They
+`%boon` messages are acked automatically by the receiver Ames. They
 cannot be nacked, and Ames only uses the ack internally, without
 notifying the client vane that gave Ames the `%boon`.
 
@@ -74,15 +76,15 @@ indicating the `%boon` was missed.
 
 `%plea` messages can be nacked, in which case the peer will send
 both a message-nack packet and a naxplanation message, which is
-sent in a way that does not interfere with normal operation.  The
+sent in a way that does not interfere with normal operation. The
 naxplanation is sent as a full Ames message, instead of just a
 packet, because the contained error information can be arbitrarily
-large.  A naxplanation can only give rise to a positive ack --
+large. A naxplanation can only give rise to a positive ack --
 never ack an ack, and never nack a naxplanation.
 
 Ames guarantees a total ordering of messages within a "flow",
 identified in other vanes by a duct and over the wire by a `bone`:
-an opaque number.  Each flow has a FIFO (first-in-first-out) queue of `%plea` requests
+an opaque number. Each flow has a FIFO (first-in-first-out) queue of `%plea` requests
 from the requesting ship to the responding ship and a FIFO queue
 of `%boon`'s in the other direction.
 
@@ -94,23 +96,23 @@ destination vane.
 
 Ames encrypts every message using symmetric-key encryption by
 performing an elliptic curve Diffie-Hellman using our private key
-and the public key of the peer.  For ships in the Jael PKI
+and the public key of the peer. For ships in the Jael PKI
 (public-key infrastructure), Ames looks up the peer's public key
-from Jael.  Comets (128-bit ephemeral addresses) are not
+from Jael. Comets (128-bit ephemeral addresses) are not
 cryptographic assets and must self-attest over Ames by sending a
 single self-signed packet containing their public key.
 
 When a peer suffers a continuity breach, Ames removes all
-messaging state related to it.  Ames does not guarantee that all
-messages will be fully delivered to the now-stale peer.  From
+messaging state related to it. Ames does not guarantee that all
+messages will be fully delivered to the now-stale peer. From
 Ames's perspective, the newly restarted peer is a new ship.
 Ames's guarantees are not maintained across a breach.
 
 A vane can pass Ames a `%heed` `$task` to request Ames track a peer's
-responsiveness.  If our `%boon`'s to it start backing up locally,
+responsiveness. If our `%boon`'s to it start backing up locally,
 Ames will give a `%clog` back to the requesting vane containing the
-unresponsive peer's urbit address.  This interaction does not use
-ducts as unique keys.  Stop tracking a peer by sending Ames a
+unresponsive peer's urbit address. This interaction does not use
+ducts as unique keys. Stop tracking a peer by sending Ames a
 `%jilt` `$task`.
 
 Debug output can be adjusted using `%sift` and `%spew` `$task`'s.
@@ -128,46 +130,46 @@ There is a 32-bit header followed by a variable width body.
 
 The 32-bit header is given by the following data, presented in order:
 
- - 3 bits: reserved
- - 1 bit: is this Ames? (i.e. not using a different protocol, such as the
-   planned remote scry protocol)
- - 3 bits: Ames protocol version (currently 0)
- - 2 bits: sender address size
- - 2 bits: receiver address size
- - 20 bits: checksum (truncated insecure hash of the body, done with
-   [`+mug`](/docs/hoon/reference/stdlib/2e#mug)
- - 1 bit: is this relayed? (if set, `origin` will be present in the body)
+- 3 bits: reserved
+- 1 bit: is this Ames? (i.e. not using a different protocol, such as the
+  planned remote scry protocol)
+- 3 bits: Ames protocol version (currently 0)
+- 2 bits: sender address size
+- 2 bits: receiver address size
+- 20 bits: checksum (truncated insecure hash of the body, done with
+  [`+mug`](/docs/hoon/reference/stdlib/2e#mug)
+- 1 bit: is this relayed? (if set, `origin` will be present in the body)
 
- Every packet sent between ships is encrypted except for self-signed attestation packets from 128-bit comets.
+Every packet sent between ships is encrypted except for self-signed attestation packets from 128-bit comets.
 
 #### Body
 
 The body is of variable length and consists of the following parts in this
 order:
 
- - 4 bits: sender life (mod 16)
- - 4 bits: receiver life (mod 16)
- - variable: sender address
- - variable: receiver address
- - 48 bits: (optional) 48-bit `origin`
- - 128 bits: `SIV`
- - 16 bits: ciphertext size
- - variable: ciphertext
+- 4 bits: sender life (mod 16)
+- 4 bits: receiver life (mod 16)
+- variable: sender address
+- variable: receiver address
+- 48 bits: (optional) 48-bit `origin`
+- 128 bits: `SIV`
+- 16 bits: ciphertext size
+- variable: ciphertext
 
- `origin` is the IP and port of the original sender if the packet was proxied
- through a relay.
- 
- `SIV` is a "synthetic initialization vector" as defined in AES-256 SIV, the encryption
- algorithm utilized to encrypt Ames packets (see the page on [Ames
- cryptography](/docs/arvo/ames/cryptography)). It is formed from the
- following noun: `~[sender=@p receiver=@p sender-life=@ receiver-life=@]` (see
- [Life and Rift](/docs/azimuth/life-and-rift) for information on what `life`
- is). As this data is in Azimuth, it is not explicitly sent over the wire. Thus
- the mod 16 sender and receiver life in the first 8 bits are only for quick
- filtering of honest packets sent to or from a stale life.
- 
- The ciphertext is formed by `+jam`ming a `$shut-packet` and then encrypting
- using [`+en:sivc:aes:crypto`](/docs/arvo/reference/cryptography#en).
+`origin` is the IP and port of the original sender if the packet was proxied
+through a relay.
+
+`SIV` is a "synthetic initialization vector" as defined in AES-256 SIV, the encryption
+algorithm utilized to encrypt Ames packets (see the page on [Ames
+cryptography](/docs/arvo/ames/cryptography)). It is formed from the
+following noun: `~[sender=@p receiver=@p sender-life=@ receiver-life=@]` (see
+[Life and Rift](/docs/azimuth/life-and-rift) for information on what `life`
+is). As this data is in Azimuth, it is not explicitly sent over the wire. Thus
+the mod 16 sender and receiver life in the first 8 bits are only for quick
+filtering of honest packets sent to or from a stale life.
+
+The ciphertext is formed by `+jam`ming a `$shut-packet` and then encrypting
+using [`+en:sivc:aes:crypto`](/docs/arvo/reference/cryptography#en).
 
 ### Packeting
 
@@ -187,9 +189,7 @@ eventually get through, and when the other side gets them it can put them in the
 correct order. If Ames doesn't get an ack on a packet then it will resend it
 until it does. The logic for determining how many packets to send or re-send at what time is performed by an Ames-specific variant of TCP's "NewReno" congestion control algorithm.
 
-As each packet in a message is received, Ames decrypts it and stores the message fragment.  Once it's received every packet for a message, Ames concatenates the fragments back into a single large atom and uses `+cue` to deserialize that back into the original message noun.
-
-
+As each packet in a message is received, Ames decrypts it and stores the message fragment. Once it's received every packet for a message, Ames concatenates the fragments back into a single large atom and uses `+cue` to deserialize that back into the original message noun.
 
 ### Acks and Nacks
 
@@ -221,7 +221,6 @@ Thus a message-level ack must be received before the next message on the flow
 can begin. The full story is more complicated than this; see the section on
 [flows](#flows).
 
-
 #### Nacks
 
 A nack indicates a negative acknowledgement to a `%plea`, meaning that the
@@ -248,9 +247,11 @@ the receiver will never both perform a `%plea` and return a naxplanation.
 
 A fragment ack's contents (before encryption) are a pure function of the
 following noun:
+
 ```hoon
 [our-life her-life bone message-num fragment-num]
 ```
+
 This means all re-sends of an ack packet will be bitwise identical to each other, unless one of the peers changes its encryption keys.
 
 Each datum in this noun is an atom with the aura `@ud` or an aura that nests
@@ -269,10 +270,10 @@ A message (n)ack is a different kind of ack that is obtained by encrypting the
 ```hoon
 [our-life her-life bone message-num ok=? lag=@dr]
 ```
+
 `ok` is a flag that is set to `%.y` for a message ack and `%.n` for a message
 nack. In the future, `lag` will be used to
 describe the time it took to process a message, but for now it is always zero.
-
 
 ### Flows
 
@@ -300,10 +301,10 @@ We give an example of such a partition. Let flow 12 be a flow between `~bacbel-t
 `~bacbel-tagfeg` as the `%plea` sender. Then bones 12-15 are associated with the
 flow, and the types of packets for each bone are:
 
- - bone 12, `%plea`s and acks to `~worwel-sipnum`,
- - bone 13, `%boon`s and (n)acks to `~bacbel-tagfeg`,
- - bone 14, acks of naxplanations to `~worwel-sipnum`,
- - bone 15, naxplanations to `~bacbel-tagfeg`.
+- bone 12, `%plea`s and acks to `~worwel-sipnum`,
+- bone 13, `%boon`s and (n)acks to `~bacbel-tagfeg`,
+- bone 14, acks of naxplanations to `~worwel-sipnum`,
+- bone 15, naxplanations to `~bacbel-tagfeg`.
 
 Each bone is handled separately by congestion control, and this is one reason
 for their segregation. For example, say a two-packet `%plea` is sent on bone 12,
@@ -379,16 +380,17 @@ private key and the public key of `~worwel-sipnum`, obtained via Jael. Then
 `~bacbel-tagfeb` sends a packet addressed to `~worwel-sipnum` to `~zod`.
 
 The packet has the following format:
- - The standard Ames header described in [header](#header), where the checksum
-   is the `+mug` of the body, and the sender and receiver ship types are `01`,
-   denoting that the sender and receiver are planets. The "is this relayed?" bit
-   is set to 0 since this is the first hop on the packet route.
- - The body of this packet will be the life of `~bacbel-tagfeg` mod 16, followed
-   by the life of `~worwel-sipnum` mod 16, followed by `~bacbel-tagfeg`,
-   followed by the receiver `~worwel-sipnum`, followed by the origin `~`
-   (denoting that the ship sending the packet is the origin). After this comes
-   the payload.
- - The payload of this packet will be the `+jam` of the `content`, which is an encrypted fragment of the message `%watch /path/to/recipes`.
+
+- The standard Ames header described in [header](#header), where the checksum
+  is the `+mug` of the body, and the sender and receiver ship types are `01`,
+  denoting that the sender and receiver are planets. The "is this relayed?" bit
+  is set to 0 since this is the first hop on the packet route.
+- The body of this packet will be the life of `~bacbel-tagfeg` mod 16, followed
+  by the life of `~worwel-sipnum` mod 16, followed by `~bacbel-tagfeg`,
+  followed by the receiver `~worwel-sipnum`, followed by the origin `~`
+  (denoting that the ship sending the packet is the origin). After this comes
+  the payload.
+- The payload of this packet will be the `+jam` of the `content`, which is an encrypted fragment of the message `%watch /path/to/recipes`.
 
 `~zod` receives the packet and reads the body. It sees that it is not the
 intended recipient of the packet, and so gets ready to forward it to
@@ -398,8 +400,7 @@ with the new mug. Since the packet is being relayed, `~zod` flips the "is it
 relayed?" bit to `%.y`. `~zod` then forwards the packet to `~worwel-sipnum`.
 
 In order to decrypt the packet, `~worwel-sipnum` will need to calculate the
-associated data vector utilized by SIV, which consists of `~[sender=@p
-receiver=@p sender-life=@ receiver-life=@]`. It then passes that along with the
+associated data vector utilized by SIV, which consists of `~[sender=@p receiver=@p sender-life=@ receiver-life=@]`. It then passes that along with the
 SIV and ciphertext to the decryption function, and receives the unencrypted
 packet as a return.
 
@@ -463,4 +464,3 @@ hands it off the the Unix network interface to be sent.
 Now the receiving King is handed a UDP packet by Unix. The King removes the UDP
 wrapper, `+jam`s the `lane` on which it heard the packet, and delivers the packet
 to the Ames vane as an atom by copying the bytes it heard on the UDP port.
-

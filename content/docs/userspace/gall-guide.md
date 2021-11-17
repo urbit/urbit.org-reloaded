@@ -1,5 +1,5 @@
 +++
-title = "Tutorial"
+title = "Gall Guide"
 weight = 5
 template = "doc.html"
 +++

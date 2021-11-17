@@ -13,7 +13,7 @@ is not perfectly adhered to - sometimes you may find structure definitions in
 `/lib`, for example.
 
 - `/app` contains userspace applications, i.e. [Gall
-  agents](/docs/userspace/gall/gall).
+  agents](/docs/arvo/gall/gall).
 - `/gen` contains generators. Many applications make use of generators, but also
   each generator in this folder may be run from dojo using `+`. For example,
   `/gen/foo/hoon` in the `%base` desk is run with `+foo`. Generators on desks

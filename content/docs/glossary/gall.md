@@ -14,4 +14,5 @@ Gall is located at `/home/sys/vane/gall.hoon` within Arvo.
 
 - [The Hoon Tutorial](/docs/hoon/hoon-school/): Our guide to learning the Hoon programming language that will give you the foundation necessary for app development.
   - [Lesson 2.7: Gall](/docs/hoon/hoon-school/gall): A Hoon Tutorial lesson that explains how to write a simple Gall app.
-- [The Gall tutorial](/docs/userspace/gall/gall): A technical guide to the Gall vane.
+- [Gall vane documentation](/docs/arvo/gall/gall): Documentation of the Gall vane.
+- [Gall Guide](/docs/userspace/gall-guide): A tutorial for writing Gall agents.
