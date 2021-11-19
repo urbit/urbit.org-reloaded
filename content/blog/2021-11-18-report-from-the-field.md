@@ -60,7 +60,7 @@ star.market
 
 We’ve always used the address space to fund our work as one of the primary Urbit developers. As Urbit has become more useful, and address space has become more expensive, it’s more and more difficult for others to do this. The community saw the need for developers to easily use their granted address space to fund their work and a higher resolution for the Foundation to fund contributions to Urbit.
 
-This is what star.market and the WSTR project are for. WSTR is an ERC-20 token that is backed 1:1 by ERC-721 Urbit stars. Unlike a star, a WSTR token can be fractionally divided, allowing for a broader distribution of ownership of Urbit. WSTR was built by the community over the past couple of months with no involvement from Tlon. Tlon did, eventually, help to put together star.market—the interface for interacting with the WSTR contracts safely and securely.
+This is what [star.market](https://star.market/) and the WSTR project are for. WSTR is an ERC-20 token that is backed 1:1 by ERC-721 Urbit stars. Unlike a star, a WSTR token can be fractionally divided, allowing for a broader distribution of ownership of Urbit. WSTR was built by the community over the past couple of months with no involvement from Tlon. Tlon did, eventually, help to put together star.market—the interface for interacting with the WSTR contracts safely and securely.
 
 I’ve come to think that WSTR can be a powerful tool for funding new Urbit projects. I’m excited to see what both our early community of developers and operators can do with it, as well as the nascent Urbit Foundation.
 
