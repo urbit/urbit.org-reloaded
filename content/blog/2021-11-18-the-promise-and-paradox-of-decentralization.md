@@ -5,10 +5,10 @@ description = "Is centralization just a natural tendency of all networks? Are we
 [extra]
 author = ""
 ship = "~lableg-tadrex"
-image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/promise-of-decentralization.JPG"
+image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/ux-centralization.JPG"
 +++
 
-![Presentation](https://storage.googleapis.com/media.urbit.org/site/posts/essays/promise-of-decentralization.JPG)
+![Presentation](https://storage.googleapis.com/media.urbit.org/site/posts/essays/ux-centralization.JPG)
 
 Every so often, a platform will do something outrageous—changing its terms of use, kicking off API partners, restricting [the content category it was built on](https://www.theverge.com/2018/12/3/18123752/tumblr-adult-content-porn-ban-date-explicit-changes-why-safe-mode), banning Donald Trump, failing to ban Donald Trump, etc.—and we'll all realize we're utterly dependent on centralized entities that can make arbitrary and unaccountable decisions. Sure, you can build your own minimal Facebook or Twitter clone, if you really want, but can you build your own Cloudflare? How about your own payment network? If your company does something legal in your country but banned in America, and the US decides to sanction you, which leads to local banks cutting you off because they can't survive without access to the dollar, are you going to build your own reserve currency? Your own Taiwan Semiconductor Manufacturing Co. or ASML?
 
