@@ -1,6 +1,6 @@
 +++
 title = "The Promise and Paradox of Decentralization"
-date = "2021-11-18"
+date = "2021-11-17"
 description = "Is centralization just a natural tendency of all networks? Are we destined to have a 'decentralization sandwich?'"
 [extra]
 author = ""

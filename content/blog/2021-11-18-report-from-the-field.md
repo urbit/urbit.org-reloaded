@@ -1,7 +1,7 @@
 +++
 title = "Report from the field: Assembly 2021"
 date = "2021-11-18"
-description = "The system builds the community and the community builds the system.'"
+description = "The system builds the community and the community builds the system."
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"
@@ -22,7 +22,7 @@ I’ve run many of our Urbit events this way because I think it puts people at e
 
 I’ll try to abide by the Chatham rule in this post which is why no one is named specifically.
 
-![image](https://storage.googleapis.com/media.urbit.org/site/posts/essays/anime-tv.JPG)
+![secret society shirt](https://storage.googleapis.com/media.urbit.org/site/posts/essays/secret-society-shirt.JPG)
 
 New world energy -
 
@@ -52,7 +52,7 @@ The most important thing that we shipped just before Assembly is the ability to 
 
 For their friend, the experience is incredibly nice. You can simply send someone a link and they can install the app and run it themselves, on their own urbit, right away. The whole thing is peer-to-peer, of course. There’s no app store, no vetting process. It’s networked software like it’s supposed to be: people computing together freely.
 
-We’ve been saying for years that we want people to build on top of Urbit and we always meant it. Now it’s possible in a way it never has been before. To check it out, watch [this segment](https://www.youtube.com/watch?v=MA8sqFi8Bd8) from Assembly, or [Ed’s demo].
+We’ve been saying for years that we want people to build on top of Urbit and we always meant it. Now it’s possible in a way it never has been before. To check it out, watch [this segment](https://www.youtube.com/watch?v=MA8sqFi8Bd8) from Assembly.
 
 Software distribution can get better in _a lot_ of ways, and we’re continuing to work on it. But it’s live, and people are experimenting with it already. There’s Chess, there’s Pokur, there are video calls (although they’re still a little buggy). Everyone seems to love ‘pals’ and ‘zone’—but you’ll have to get on the network to check those out.
 
