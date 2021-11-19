@@ -22,7 +22,7 @@ We need a way for a ship operator to easily run coturn (an open source TURN serv
 
 ## Deliverables
 
-Expected completion: 4-5 weeks
+Expected completion: 31 Dec 2021
 Payment: 1 star
 
 ### coturn docker container
