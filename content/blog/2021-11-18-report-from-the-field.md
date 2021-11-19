@@ -73,7 +73,7 @@ To this end we recently launched:
 
 [developers.urbit.org](https://developers.urbit.org/) has an overhauled program for learning about Urbit as a system and beginning to develop on top of it.
 
-[newtork.urbit.org](https://network.urbit.org/) allows anyone to explore the network. View galaxy transfers or how many planets a star has spawned.
+[network.urbit.org](https://network.urbit.org/) allows anyone to explore the network. View galaxy transfers or how many planets a star has spawned.
 
 We’ve got a lot more planned in this area of work in the coming months, and these three sites are a great start.
 
