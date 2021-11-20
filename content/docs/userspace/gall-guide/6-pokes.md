@@ -13,20 +13,21 @@ take - a `%poke-ack`.
 
 Whenever something tries to poke your agent, Gall calls your agent's `on-poke`
 arm and give it the `cage` from the poke as its sample. The `on-poke` arm will
-contain a gate that takes a `cage` and produces a `(quip card _this)` like so:
+produce a `(quip card _this)`. Here's how it would typically begin:
 
 ```hoon
-|=  [=mark =vase]
-^-  (quip card _this)
-...
+++  on-poke
+  |=  [=mark =vase]
+  ^-  (quip card _this)
+  ...
 ```
 
-The sample of the gate is typically specified as a cell of `mark` and `vase`
+The sample of the gate is usually specified as a cell of `mark` and `vase`
 rather than just `cage`, simply because it's easier to work with.
 
 Typically, you'd first test the `mark` with something like a
 [wutlus](/docs/hoon/reference/rune/wut#-wutlus) `?+` expression, passing
-unexpected `mark`s to `%default-agent`, which just crashes. We'll look at custom
+unexpected `mark`s to `default-agent`, which just crashes. We'll look at custom
 `mark`s in a subsequent lesson, but the basic patten looks like:
 
 ```hoon
@@ -37,7 +38,8 @@ unexpected `mark`s to `%default-agent`, which just crashes. We'll look at custom
 ==
 ```
 
-After testing the `mark`, you'd typically extract the `vase` to the expected type, and then apply whatever logic you need. For example:
+After testing the `mark`, you'd usually extract the `vase` to the expected type,
+and then apply whatever logic you need. For example:
 
 ```hoon
 =/  action  !<(some-type vase)
@@ -63,7 +65,7 @@ stack trace of the crash.
 
 As a result, you do not need to explicitly send a `%poke-ack`. Instead, you
 would design your agent to handle only what you expect and crash in all other
-cases. You can crash by passing the `cage` to `%default-agent`, or just with a
+cases. You can crash by passing the `cage` to `default-agent`, or just with a
 `!!`. In the latter case, if you want to add an error message to the stack
 trace, you can do so like:
 
@@ -94,7 +96,7 @@ try to pass actual data by encoding it in the nack `tang`.
 An agent can send pokes to other agents by producing [`%poke`
 `card`s](/docs/userspace/gall-guide/5-cards#pokes). Any agent arm apart from
 `on-peek` and `on-save` can produce such `card`s. The arms would typically
-produce `card`(s) like so:
+produce the `(quip card _this)` like so:
 
 ```hoon
 :_  this
@@ -118,9 +120,10 @@ it came in on and the `%poke-ack` itself in a `sign:agent:gall`. Your `on-agent`
 arm would therefore begin like so:
 
 ```hoon
-|=  [=wire =sign:agent:gall]
-^-  (quip card _this)
-...
+++  on-agent
+  |=  [=wire =sign:agent:gall]
+  ^-  (quip card _this)
+  ...
 ```
 
 A `sign:agent:gall` (henceforth just `sign`) is defined in `lull.hoon` as:
@@ -137,11 +140,13 @@ A `sign:agent:gall` (henceforth just `sign`) is defined in `lull.hoon` as:
 It's basically the same as a [`gift`](/docs/userspace/gall-guide/5-cards#give),
 but incoming instead of outgoing.
 
-The simplest way to handle a `%poke-ack` by passing it to `%default-agent`'s
+The simplest way to handle a `%poke-ack` by passing it to `default-agent`'s
 `on-agent` arm, which will just print an error message to the terminal if it's a
-nack and otherwise do nothing. Sometimes, though, you'll want your agent to do
-something different depending on whether the poke failed or succeeded (and
-therefore whether it's a nack or an ack). In that case, you'd typically first test the `wire` so you can tell what the `%poke-ack` was for. You might do something like:
+nack, and otherwise do nothing. Sometimes you'll want your agent to do something
+different depending on whether the poke failed or succeeded (and therefore
+whether it's a nack or an ack). In that case, you'd typically first test the
+`wire` so you can tell what the `%poke-ack` was for. You might do something
+like:
 
 ```hoon
 ?+  wire  (on-agent:def wire sign)
@@ -166,12 +171,12 @@ Then, you can tell whether it's an ack or a nack by testing whether the `(unit t
 ...(what to do if the poke failed)...
 ```
 
-Finally, you can produce any `card`s and modified agent state as appropriate and
-return the `(quip card _this)`.
+Finally, you can produce the `(quip card _this)`.
 
 ## Example
 
-We're going to look at a couple of agents, to demonstrate both sending and receiving pokes. Here's the first, an agent that receives pokes:
+We're going to look at a couple of agents to demonstrate both sending and
+receiving pokes. Here's the first, an agent that receives pokes:
 
 ### `pokeme.hoon`
 
@@ -229,7 +234,7 @@ We're going to look at a couple of agents, to demonstrate both sending and recei
 ```
 
 This is a very simple agent that just has `val`, a number, in its state. It will
-take pokes that either increment or decrement the number in its state. Here's its `on-poke` arm:
+take pokes that either increment or decrement `val`. Here's its `on-poke` arm:
 
 ```hoon
 ++  on-poke
@@ -256,7 +261,8 @@ with `val` incremented. If it's `%dec`, it produces `this` with `val`
 decremented, or crashes if `val` is already zero.
 
 Let's try it out. Save the agent above as `/app/pokeme.hoon` in the `%base` desk
-and `|commit %base`. Then, start it up with `|rein %base [& %pokeme]`. We can check its initial state with `dbug`:
+and `|commit %base`. Then, start it up with `|rein %base [& %pokeme]`. We can
+check its initial state with `dbug`:
 
 ```
 >   0
@@ -270,14 +276,17 @@ Next, we'll try poking it. The dojo lets you poke agents with the following synt
 :agent-name &some-mark ['some' 'noun']
 ```
 
-If the `mark` part is omitted, it'll just default to `%noun`. Since our agent only takes a `%noun` mark, we can skip that. The rest will be packed in a vase by the dojo and delivered as a poke, so we can do:
+If the `mark` part is omitted, it'll just default to `%noun`. Since our agent
+only takes a `%noun` mark, we can skip that. The rest will be packed in a vase
+by the dojo and delivered as a poke, so we can do:
 
 ```
 > :pokeme %inc
 >=
 ```
 
-If we now look at the state with `dbug`, we'll see the poke was successful and it's been incremented:
+If we now look at the state with `dbug`, we'll see the poke was successful and
+it's been incremented:
 
 ```
 >   1
@@ -295,7 +304,8 @@ Let's try decrement:
 >=
 ```
 
-As you can see, it's back at zero. If we try again, we'll see it fails, and the dojo will print the `tang` in the `%poke-ack` nack:
+As you can see, it's back at zero. If we try again, we'll see it fails, and the
+dojo will print the `tang` in the `%poke-ack` nack:
 
 ```
 > :pokeme %dec
@@ -420,9 +430,9 @@ Here's the `on-poke` arm:
 ```
 
 It's similar to `%pokeme`, except it sends two `%poke` `card`s to `%pokeme` for
-each case. The `%inc` pokes specify a `wire` of `/inc`, and the `%dec` pokes
-specify a `wire` of `/dec`, so we can differentiate the responses. It also has
-the following `on-agent`:
+each case, rather than modifying its own state. The `%inc` pokes specify a
+`wire` of `/inc`, and the `%dec` pokes specify a `wire` of `/dec`, so we can
+differentiate the responses. It also has the following `on-agent`:
 
 ```hoon
 ++  on-agent
@@ -452,7 +462,8 @@ the following `on-agent`:
 `on-agent` tests the `wire`, checks if it's a `%poke-ack`, and then prints to
 the terminal whether it succeeded or failed.
 
-Save this agent to `/app/pokeit.hoon` on the `%base` desk, `|commit %base`, and start it with `|rein %base [& %pokeme] [& %pokeit]`.
+Save this agent to `/app/pokeit.hoon` on the `%base` desk, `|commit %base`, and
+start it with `|rein %base [& %pokeme] [& %pokeit]`.
 
 Let's try it out:
 
@@ -473,7 +484,8 @@ It could tell they were increments because the `%poke-ack`s came back on the
 >=
 ```
 
-Let's try decrementing `%pokeme` so it's an odd number, and then try a `%dec` via `%pokeit`:
+Let's try decrementing `%pokeme` so it's an odd number, and then try a `%dec`
+via `%pokeit`:
 
 ```
 > :pokeme %dec
@@ -502,10 +514,10 @@ took `val` to zero, and the second crashed trying to decrement below zero.
 
 ## Exercises
 
-- Run through the [Example](#example) yourself on a fake ship if you've not done
+- Run through the [example](#example) yourself on a fake ship if you've not done
   so already.
 - Have a look at the `on-agent` arm of `/lib/default-agent.hoon` to see how
-  `%default-agent` handles incoming `sign`s.
+  `default-agent` handles incoming `sign`s.
 - Try modifying the `%pokeme` agent with another action of your choice (in
   addition to `%inc` and `%dec`).
 - Try modifying the `%pokeit` agent to send your new type of poke to `%pokeme`,
