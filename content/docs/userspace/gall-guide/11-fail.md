@@ -11,7 +11,7 @@ In this lesson we'll cover the last agent arm we haven't touched on yet:
 
 When crashes or errors occur in certain cases, Gall passes them to an agent's
 `on-fail` arm for handling. This arm is very seldom used, almost all agents
-leave it for `%default-agent` to handle, which just prints the error message to
+leave it for `default-agent` to handle, which just prints the error message to
 the terminal. While you're unlikely to use this arm, we'll briefly go over its
 behavior for completeness.
 
@@ -65,7 +65,7 @@ is to define an alias of `hc` for a "helper core" like:
 A helper core is a separate core composed into the subject of the agent core,
 containing useful functions for use by the agent arms. Such a helper core would
 typically contain functions that would only ever be used internally by the
-agent - more general functions would typically be included in a separate `/lib`
+agent - more general functions would usually be included in a separate `/lib`
 library and imported with a [faslus](/docs/arvo/ford/ford#ford-runes) (`/+`)
 rune.
 
@@ -109,7 +109,8 @@ would look like:
 --
 ```
 
-Back in the lustar virtual arm of the agent core, we give it an alias of `hc` and call it like so:
+Back in the lustar virtual arm of the agent core, we give it an alias of `hc`
+and call it like so:
 
 ```hoon
 hc  ~(. +>  bowl)
