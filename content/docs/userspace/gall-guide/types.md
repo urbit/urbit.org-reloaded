@@ -1,6 +1,6 @@
 +++
 title = "Appendix: Types"
-weight = 60
+weight = 65
 template = "doc.html"
 +++
 
@@ -198,7 +198,11 @@ The type of a wire is formally defined as:
 ```
 
 So, a `wire` is just a [`path`](#path), type-wise they're exactly the same. The
-reason there's a separate `wire` type is just to differentiate their purpose. A `wire` is a path for responses to requests an agent initiates. If you subscribe to the `path` `/some/path` on another agent, you also specify `/some/wire`. Then, when that agent sends out updates to subscribers of `/some/path`, your agent receives them on `/some/wire`.
+reason there's a separate `wire` type is just to differentiate their purpose. A
+`wire` is a path for responses to requests an agent initiates. If you subscribe
+to the `path` `/some/path` on another agent, you also specify `/some/wire`.
+Then, when that agent sends out updates to subscribers of `/some/path`, your
+agent receives them on `/some/wire`.
 
 The `wire` is specified in the second argument of a `%pass` `card`. It's used
 for anything you can `%pass`, such as `%poke`s, `%watch`es, and `%arvo` notes.
