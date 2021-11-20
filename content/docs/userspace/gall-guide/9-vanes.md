@@ -45,7 +45,8 @@ briefly recap it here. The type of the card is as follows:
 [%pass path %arvo note-arvo]
 ```
 
-The `path` will just be the `wire` you want the response to arrive on. The `note-arvo` is the following union:
+The `path` will just be the `wire` you want the response to arrive on. The
+`note-arvo` is the following union:
 
 ```hoon
 +$  note-arvo
@@ -77,7 +78,7 @@ desk.
 ## Receiving a vane gift
 
 Once a `task` has been sent to a vane, any `gift`s the vane sends back in
-response will arrive in the `on-arvo` arm of your agent core. The `on-arvo` arm
+response will arrive in the `on-arvo` arm of your agent. The `on-arvo` arm
 exclusively handles such vane `gift`s. The `gift`s will arrive in a `sign-arvo`,
 along with the `wire` specified in the original request. The `on-arvo` arm
 produces a `(quip card _this)` like usual, so it would look like:
@@ -89,7 +90,7 @@ produces a `(quip card _this)` like usual, so it would look like:
   .....
 ```
 
-A `sign-arvo` is the following structure:
+A `sign-arvo` is the following structure, defined in `lull.hoon`:
 
 ```hoon
 +$  sign-arvo
@@ -265,7 +266,7 @@ After approximately five seconds, we see the timer fired successfully:
 
 - Each vane has an API composed of `task`s it takes and `gift`s it produces.
 - Each vane's `task`s and `gift`s are defined in `lull.hoon`
-- Each vane's section of the [Arvo documentation](/docs/arvo/overview) include
+- Each vane's section of the [Arvo documentation](/docs/arvo/overview) includes
   an API reference that explains its `task`s and `gift`s, as well as an Examples
   section demonstrating their usage.
 - Vane `task`s can be sent to vanes by `%pass`ing them an `%arvo` `card`.
