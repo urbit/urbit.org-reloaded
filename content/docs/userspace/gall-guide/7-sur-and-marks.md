@@ -18,9 +18,9 @@ very simple union in the `vase` for incoming pokes:
 =/  action  !<(?(%inc %dec) vase)
 ```
 
-A real Gall agent, however, is likely to have a more complicated API. The most
-common approach is to define a head-tagged union of all possible poke types the
-agent will accept, and another for all possible updates it might send out to
+A real Gall agent is likely to have a more complicated API. The most common
+approach is to define a head-tagged union of all possible poke types the agent
+will accept, and another for all possible updates it might send out to
 subscribers. Rather than defining these types in the agent itself, you would
 typically define them in a separate core saved in the `/sur` directory of the
 desk. The `/sur` directory is short for "**s**truct**ur**es", and is the
@@ -28,8 +28,8 @@ canonical location for userspace type definitions.
 
 With this approach, your agent can simply import the structure file and make use
 of its types. Additionally, if someone else wants to write an agent that
-interfaces with yours, they can simply include your structure file in their own
-desk and easily interface with your agent's API.
+interfaces with yours, they can include your structure file in their own desk
+and easily interact with your agent's API.
 
 #### Example
 
@@ -126,9 +126,9 @@ Let's break this down a bit. Firstly, our `on-poke` arm includes a
 core with a `$` arm that's computed immediately. We extract the `vase` to the
 `action:todo` type and immediately pass it to the `handle-poke` arm of the core
 created with the barket. This `handle-poke` arm tests what kind of `action` it's
-received by checking its head, updates the state, and also sends an update to
-subscribers, as appropriate. Don't worry too much about the `%give` `card` for
-now - we'll cover subscriptions in the next lesson.
+received by checking its head. It then updates the state, and also sends an
+update to subscribers, as appropriate. Don't worry too much about the `%give`
+`card` for now - we'll cover subscriptions in the next lesson.
 
 Notice that the `handle-poke` arm produces a `(quip card _state)` rather than
 `(quip card _this)`. The call to `handle-poke` is also part of the following
@@ -168,7 +168,9 @@ what such `mark`s represent, or considered writing custom ones.
 
 Formally, marks are file types in the Clay filesystem. They correspond to mark
 files in the `/mar` directory of a desk. The `%noun` mark, for example,
-corresponds to the `/mar/noun.hoon` file. Mark files define the actual hoon data type for the file (e.g. a `*` noun for the `%noun` mark), but they also specify some extra things:
+corresponds to the `/mar/noun.hoon` file. Mark files define the actual hoon data
+type for the file (e.g. a `*` noun for the `%noun` mark), but they also specify
+some extra things:
 
 - Methods for converting between the mark in question and other marks.
 - Revision control functions like patching, diffing, merging, etc.
@@ -176,14 +178,14 @@ corresponds to the `/mar/noun.hoon` file. Mark files define the actual hoon data
 Aside from their use by Clay for storing files in the filesystem, they're also
 used extensively for exchanging data with the outside world, and for exchanging
 data between Gall agents. When data comes in from a remote ship, destined for a
-particular Gall agent, it will be validated by the local mark file in `/mar`
-which corresponds to its `mark` before being delivered to the agent. If the
-remote data has no corresponding mark in `/mar` or it fails validation, it will
-crash before it touches the agent.
+particular Gall agent, it will be validated by the mark file in `/mar` that
+corresponds to its `mark` before being delivered to the agent. If the remote
+data has no corresponding mark in `/mar` or it fails validation, it will crash
+before it touches the agent.
 
-A mark file is a `door` with three arms. The door's sample is the data type that
-particular mark will handle. For example, the sample of the `%noun` mark is just
-`non=*`, since it handles any noun. The three arms are as follows:
+A mark file is a `door` with three arms. The door's sample is the data type the
+mark will handle. For example, the sample of the `%noun` mark is just `non=*`,
+since it handles any noun. The three arms are as follows:
 
 - `grab`: Methods for converting _to_ our mark _from_ other marks.
 - `grow`: Methods for converting _from_ our mark _to_ other marks.
@@ -192,16 +194,16 @@ particular mark will handle. For example, the sample of the `%noun` mark is just
 In the context of Gall agents, you'll likely just use marks for sending and
 receiving data, and not for actually storing files in Clay. Therefore, it's
 unlikely you'll need to write custom revision control functions in the `grad`
-arm for marks you use in your agent. Instead, you can simply delegate `grad`
-functions to another mark - typically `%noun`. If you want to learn more about
-writing such `grad` functions, you can refer to the [Marks
-Guide](/docs/arvo/clay/marks/marks) in the Clay vane documentation, which is
-much more comprehensive, but it's not necessary for our purposes here.
+arm. Instead, you can simply delegate `grad` functions to another mark -
+typically `%noun`. If you want to learn more about writing such `grad`
+functions, you can refer to the [Marks Guide](/docs/arvo/clay/marks/marks) in
+the Clay vane documentation, which is much more comprehensive, but it's not
+necessary for our purposes here.
 
 #### Example
 
 Here's a very simple mark file for the `action` structure we created in the
-[previous section](sur):
+[previous section](#sur):
 
 ```hoon
 /-  todo
@@ -231,10 +233,10 @@ it will handle. Now let's consider the arms:
 - `grow`: This handles conversion methods _from_ our mark. Like `grab`, it
   contains a core with arm names corresponding to other marks. Here we've also
   only added an arm for a `%noun` mark. In this case, `action` data will come in
-  as the sample of our `door`, and the `noun` arm simply returns its, since it's
+  as the sample of our `door`, and the `noun` arm simply returns it, since it's
   already a noun (as everything is in Hoon).
 - `grad`: This is the revision control arm, and as you can see we've simply
-  delegated such functions to the `%noun` mark.
+  delegated it to the `%noun` mark.
 
 This mark file could be saved as `/mar/todo/action.hoon`, and then the `on-poke`
 arm in the previous example could test for it instead of `%noun` like so:
@@ -249,7 +251,7 @@ arm in the previous example could test for it instead of `%noun` like so:
 ```
 
 Note how `%todo-action` will be resolved to `/mar/todo/action.hoon` - the hyphen
-will be interpreted as `/` if there's not already `/mar/todo-action.hoon`.
+will be interpreted as `/` if there's not already a `/mar/todo-action.hoon`.
 
 This simple mark file isn't all that useful. Typically, you'd add `json` arms to
 `grow` and `grab`, which allow your data to be converted to and from JSON, and
@@ -270,10 +272,9 @@ pokes are actually coming from - our example agents would accept data from
 anywhere, including random foreign ships. We'll now have a look at how to handle
 such permission checks.
 
-The `bowl` provided as the sample of an agent core includes a couple of useful
-fields: `our` and `src`. The `our` field just contains the `@p` of the local
-ship. The `src` field contains the `@p` of the ship from which the event
-originated.
+The `bowl` includes a couple of useful fields: `our` and `src`. The `our` field
+just contains the `@p` of the local ship. The `src` field contains the `@p` of
+the ship from which the event originated.
 
 When messages come in over Ames from other ships on the network, they're
 encrypted with our ship's public keys and signed by the ship which sent them.
@@ -338,7 +339,8 @@ Mark files:
 - A `mark` like `%foo` corresponds to a file in `/mar` like `/mar/foo.hoon`
 - Marks are file types in Clay, but are also used for passing data between
   agents as well as for external data generally.
-- A mark file is a `door` with a sample of the data type it handles and three arms: `grab`, `grow` and `grad`.
+- A mark file is a `door` with a sample of the data type it handles and three
+  arms: `grab`, `grow` and `grad`.
 - `grab` and `grow` each contain a core with arm names corresponding to other marks.
 - `grab` and `grow` define functions for converting to and from our mark,
   respectively.
