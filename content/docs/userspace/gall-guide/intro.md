@@ -50,7 +50,7 @@ functions of the previous state and the input event.
 
 #### Lessons
 
-1. [Prologue](/docs/userspace/gall-guide/1-arvo) - This lesson provides an
+1. [Arvo](/docs/userspace/gall-guide/1-arvo) - This lesson provides an
    overview of the Arvo operating system, and some other useful background
    information.
 2. [The Agent Core](/docs/userspace/gall-guide/2-agent) - This lesson goes over

@@ -1,5 +1,5 @@
 +++
-title = "1. Prologue"
+title = "1. Arvo"
 weight = 5
 template = "doc.html"
 +++
@@ -295,4 +295,7 @@ described here cover the majority of cases.
 Before proceeding with the Gall Guide, you'll need to have an appropriate text
 editor installed and configured, and know how to work with a fake ship for
 development. Best practices are described in the [environment setup
-guide](/docs/development/environment).
+guide](/docs/development/environment). Example agents and other code throughout
+this guide will just be committed to the `%base` desk of a fake ship, but it's a
+good idea to have a read through that guide for when you begin work on your own
+apps.
