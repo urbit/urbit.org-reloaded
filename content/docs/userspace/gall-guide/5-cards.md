@@ -85,7 +85,9 @@ The type of the next field is a `note:agent:gall` (henceforth just `note`), whic
   [below](#task).
 - An `%arvo` `note` is a request to a vane. We'll discuss such requests
   [below](#note-arvo).
-- A `%pyre` `note` is XX TODO
+- A `%pyre` `note` is used to abort an event. It's mostly used internally by
+  Kiln, it's unlikely you'd use it in your own agent. The `tang` contains an
+  error message.
 
 ### `task`
 
@@ -114,10 +116,9 @@ These can be divided into two categories:
   card](#pass).
 - `%watch-as`: This is the same as `%watch`, except Gall will convert updates to
   the given `mark` before delivering them to your agent.
-- `%leave`: Unsubscribe from something to which you previously subscribed. The
-  subscription to cancel is determined by the `wire` at the beginning of the
-  [`pass` card](#pass) rather than the subscription `path`, so its argument is
-  just `~`.
+- `%leave`: Unsubscribe. The subscription to cancel is determined by the `wire`
+  at the beginning of the [`pass` card](#pass) rather than the subscription
+  `path`, so its argument is just `~`.
 
 **Examples**
 
@@ -134,9 +135,8 @@ Unlike subscriptions, these are just one-off messages.
 
 A `%poke` contains a `cage` of some data. A `cage` is a cell of `[mark vase]`.
 The `mark` is just a `@tas` like `%foo`, and corresponds to a mark file in the
-`/mar` directory. We'll cover marks in detail later, but you can refer to the
-[`mark`](/docs/userspace/gall-guide/types#mark) entry in the type reference for
-further details. The `vase` contains the actual data you're sending.
+`/mar` directory. We'll cover marks in greater detail later. The `vase` contains
+the actual data you're sending.
 
 The `%poke-as` task is the same as `%poke` except Gall will convert the `cage`
 to the `mark` you specify before sending it off.
@@ -189,9 +189,8 @@ section in the [Arvo documentation](/docs/arvo/arvo).
 
 The purpose of a `%give` card is to respond to a request made by another agent
 or vane. More specifically, it's either for acknowledging a request, or for
-sending out updates to subscribers (which are technically in response to their
-initial subscription request, however long ago it may have been). This is in
-contrast to a [`%pass`](#give) card, which is essentially unsolicited.
+sending out updates to subscribers. This is in contrast to a [`%pass`](#give)
+card, which is essentially unsolicited.
 
 A `%give` card contains a `gift:agent:gall` (henceforth just `gift`), which is
 defined in `lull.hoon` as:
@@ -213,8 +212,9 @@ These can be divided into two categories:
 request respectively. If the `(unit tang)` is null, it's an ack - a positive
 acknowledgement. If the `(unit tang)` is non-null, it's a nack - a negative
 acknowledgement, and the `tang` contains an error message. Gall automatically
-sends a nack with a traceback if your agent crashes while processing the
-request, and automatically sends an ack if it does not. Therefore, you would not explicitly produce a `%watch-ack` or `%poke-ack` gift.
+sends a nack with a stack trace if your agent crashes while processing the
+request, and automatically sends an ack if it does not. Therefore, you would not
+explicitly produce a `%watch-ack` or `%poke-ack` gift.
 
 #### Examples
 
@@ -226,17 +226,16 @@ request, and automatically sends an ack if it does not. Therefore, you would not
 ### Subscriptions
 
 `%fact` and `%kick` are both sent out to existing subscribers - entities that
-have previously successfully `%watch`ed a path on your ship.
+have previously `%watch`ed a path on your ship.
 
-A `%kick` gift takes a list of `path`s, which are subscription paths, and a
-`(unit ship)`, which is the ship to kick from those paths. If the `unit` is
-null, all subscribers are kicked from the specified paths. Note that sometimes
-Gall can produce `%kick` gifts without your agent explicitly sending a card, due
-to networking conditions. Therefore, you should not assume `%kick`s you receive
-are intentional, and should try resubscribing by default.
+A `%kick` gift takes a list of subscription `path`s. and a `(unit ship)`, which
+is the ship to kick from those paths. If the `unit` is null, all subscribers are
+kicked from the specified paths. Note that sometimes Gall can produce `%kick`
+gifts without your agent explicitly sending a card, due to networking
+conditions.
 
-`%fact` gifts are how updates are sent out to subscribers. The `paths` field is
-a list of subscription paths - all subscribers of the specified `path`s will
+`%fact`s are how updates are sent out to subscribers. The `paths` field is a
+list of subscription paths - all subscribers of the specified `path`s will
 receive the `%fact`. The `cage` is the data itself - a cell of a `mark` and a
 `vase`.
 
