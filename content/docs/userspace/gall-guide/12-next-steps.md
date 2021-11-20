@@ -1,6 +1,6 @@
 +++
 title = "12. Next Steps"
-weight = 55
+weight = 60
 template = "doc.html"
 +++
 
@@ -10,8 +10,8 @@ to start writing your own agent.
 The one thing we haven't touched on is front-end development and integration,
 Eyre's HTTP API for communicating with agents from the web, and dealing with
 JSON data. A second part to the Gall Guide is coming soon, and will focus
-exclusively on these aspects. In the mean time though, you can refer to the
-following documents for help writing a web front-end for your app:
+exclusively on those aspects. In the mean time, you can refer to the following
+documents for help writing a web front-end for your app:
 
 - [Eyre's external API reference](/docs/arvo/eyre/external-api-ref) - This
   explains Eyre's HTTP API, through which a browser or other HTTP client can
