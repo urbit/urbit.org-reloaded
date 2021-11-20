@@ -4,6 +4,8 @@ weight = 10
 template = "doc.html"
 +++
 
+In this lesson we'll look at the basic type and structure of a Gall agent.
+
 A Gall agent is a `door` with exactly ten arms. Each arm is responsible for
 handling certain kinds of events that Gall feeds in to the agent. A `door` is
 just a `core` with a sample - it's made with the
@@ -67,13 +69,13 @@ documentation](/docs/arvo/gall/data-types#bowl).
 
 If you've worked through [Hoon School](/docs/hoon/hoon-school/intro), you may
 recall that a core is a cell of `[battery payload]`. The battery is the core
-itself compiled into nock, and the payload is the subject which it operates on.
+itself compiled to nock, and the payload is the subject which it operates on.
 
 For an agent, the payload will at least contain the bowl, the usual standard
-library functions, and the **state** of the agent. If your agent were for an
-address book app, it might keep a `map` of ships to address book entries. It
-might add entries, delete entries, and modify entries. This address book `map`
-would be part of the state stored in the payload.
+library functions, and the **state** of the agent. For example, if your agent
+were for an address book app, it might keep a `map` of ships to address book
+entries. It might add entries, delete entries, and modify entries. This address
+book `map` would be part of the state stored in the payload.
 
 ## Transition function
 
@@ -81,8 +83,8 @@ If you recall from the prologue, the whole Arvo operating system works on the
 basis of a simple transition function `(event, oldState) -> (effects, newState)`. Gall agents also function the same way. Eight of an agent's ten arms
 produce the same thing, a cell of:
 
-- Head: A list of effects called `card`s (which we'll discuss later).
-- Tail: A new agent core, possibly with a modified payload.
+- **Head**: A list of effects called `card`s (which we'll discuss later).
+- **Tail**: A new agent core, possibly with a modified payload.
 
 It goes something like this:
 
@@ -107,7 +109,7 @@ rejected.
 What this means is that you can intentionally design your agent to crash in
 cases it can't handle. For example, if a poke comes in with an unexpected
 `mark`, it crashes. If a permission check fails, it crashes. This is quite
-different to many programs written in procedural languages, which must handle
+different to most programs written in procedural languages, which must handle
 all exceptions to avoid crashing.
 
 ## Example
@@ -143,7 +145,7 @@ Secondly, you'll notice some of the arms return:
 ```
 
 A backtick at the beginning is an irregular syntax meaning "prepend with null",
-so for example in the dojo:
+so for example, in the dojo:
 
 ```
 > `50
@@ -276,8 +278,6 @@ If we again examine our agent core's payload by looking at the tail of
 ```
 
 ## Summary
-
-The key takeways are:
 
 - A Gall agent is a `door` with ten arms and a sample of `bowl:gall`.
 - Each of the ten arms handle different kinds of events - Gall calls the
