@@ -21,20 +21,20 @@ Let's look at each in more detail:
 
 ### `default-agent`
 
-The `%default-agent` library contains a basic agent with sane default behaviours
+The `default-agent` library contains a basic agent with sane default behaviours
 for each arm. In some cases it just crashes and prints an error message to the
 terminal, and in others it succeeds but does nothing. It has two primary uses:
 
 - For any agent arms you don't need, you can just have them call the matching
-  function in `%default-agent`, rather than having to manually handle events on
+  function in `default-agent`, rather than having to manually handle events on
   those arms.
 - A common pattern in an agent is to switch on the input of an arm with
   [wutlus](/docs/hoon/reference/rune/wut#-wutlus) (`?+`) runes or maybe
   [wutcol](/docs/hoon/reference/rune/wut#wutcol) (`?:`) runes. For any
-  unexpected input, you can just pass it to the relevant arm of `%default-agent`
+  unexpected input, you can just pass it to the relevant arm of `default-agent`
   rather than handling it manually.
 
-The `%default-agent` library lives in `/lib/default-agent/hoon` of the `%base`
+The `default-agent` library lives in `/lib/default-agent/hoon` of the `%base`
 desk, and you would typically include a copy in any new desk you created. It's
 imported at the beginning of an agent with the
 [faslus](/docs/arvo/ford/ford#ford-runes) (`/+`) rune.
@@ -50,7 +50,7 @@ typical agent core. Usually you would define an alias for it in a virtual arm
 
 ### `dbug`
 
-The `%dbug` library lets you inspect the state and `bowl` of your agent from the
+The `dbug` library lets you inspect the state and `bowl` of your agent from the
 dojo. It includes an `agent:dbug` function which wraps your whole `agent:gall`
 `door`, adding its extra debugging functionality while transparently passing
 events to your agent for handling like usual.
@@ -116,9 +116,9 @@ A virtual arm in an agent might look something like this:
 
 `this`, `def` and `hc` are the aliases, and next to each one is the hoon
 expresion it's aliasing. Notice that unlike most things that take _n_ arguments,
-a virtual arm is not terminated with a `==`. You can define as many
-aliases as you like. The three in this example are conventional ones you'd
-likely use in most agents you write. Their purposes are:
+a virtual arm is not terminated with a `==`. You can define as many aliases as
+you like. The three in this example are conventional ones you'd use in most
+agents you write. Their purposes are:
 
 ```hoon
 this  .
@@ -132,9 +132,8 @@ agent core.
 def  ~(. (default-agent this %.n) bowl)
 ```
 
-This sets up the `%default-agent` library we [described
-above](#default-agent), so you can easily call its arms like `on-poke:def`,
-`on-agent:def`, etc.
+This sets up the `default-agent` library we [described above](#default-agent),
+so you can easily call its arms like `on-poke:def`, `on-agent:def`, etc.
 
 ```hoon
 hc  ~(. +> bowl)
@@ -145,7 +144,7 @@ helper cores later, so don't worry about this for now.
 
 ## Additional cores
 
-While Gall expects a single 10-arm agent core, it's still possible to include
+While Gall expects a single 10-arm agent core, it's possible to include
 additional cores by composing them into the subject of the agent core itself.
 The contents of these cores will then be available to arms of the agent core.
 
@@ -157,9 +156,9 @@ expression, which means you can just butt separate cores up against one another
 and they'll all still get composed.
 
 You can add as many extra cores as you'd like before the agent core, but
-typically you'd just add one containing structure definitions for the agent's
-state, as well as any other useful structures. We'll look at the state in more
-detail in the next lesson.
+typically you'd just add one containing type definitions for the agent's state,
+as well as any other useful structures. We'll look at the state in more detail
+in the next lesson.
 
 ## Example
 
@@ -197,9 +196,9 @@ into the subject of our agent so they're available for use. You can read more
 about Ford runes in the [Ford section of the vane
 documenation](/docs/arvo/ford/ford#ford-runes).
 
-Next, we've added an extra core. Notive how it's not explicitly composed, since
-the build system will do that for use. In this case we've just added a single
-`card` arm, which just makes it simpler to reference the `card:agent:gall` type.
+Next, we've added an extra core. Notice how it's not explicitly composed, since
+the build system will do that for us. In this case we've just added a single
+`card` arm, which makes it simpler to reference the `card:agent:gall` type.
 
 After that core, we call `agent:dbug` with our whole agent core as its argument.
 This allows us to use the `dbug` features described earlier.
@@ -213,7 +212,7 @@ of aliases:
 ```
 
 In most of the arms, you see we've been able to replace the dummy code with
-simple calls to the corresponding arms of `%default-agent`, which we set up and
+simple calls to the corresponding arms of `default-agent`, which we set up and
 aliased as `def` in the virtual arm. We've also replaced the old `..on-init`
 with our alias `this` in the `on-init` arm as an example - it makes things a bit
 simpler.
@@ -264,14 +263,14 @@ idea of its basic usage.
 The key takeaways are:
 
 - Libraries can be imported with `/+`.
-- `%default-agent` is a library that provides default behaviours for Gall agent
+- `default-agent` is a library that provides default behaviours for Gall agent
   arms.
-- `%dbug` is a library that lets you inspect the state and `bowl` of an agent
+- `dbug` is a library that lets you inspect the state and `bowl` of an agent
   from the dojo, with the `+dbug` generator.
 - Convenient aliases for hoon expressions can be defined in a virtual arm with
   the [lustar](/docs/hoon/reference/rune/lus#-lustar) (`+*`) rune.
 - `this` is a conventional alias for the agent core itself.
-- `def` is a conventional alias for accessing arms in the `%default-agent`
+- `def` is a conventional alias for accessing arms in the `default-agent`
   library.
 - Extra cores can be composed into the subject of the agent core. The
   composition is done implicitly by the build system. Typically we'd include one
@@ -280,14 +279,14 @@ The key takeaways are:
 
 ## Exercises
 
-- Run through the [Example](#example) yourself on a fake ship if you've not done
+- Run through the [example](#example) yourself on a fake ship if you've not done
   so already.
 - Have a read through the [Ford rune
   documentation](/docs/arvo/ford/ford#ford-runes) for details about importing
   libraries, structures and other things.
 - Try the `+dbug` generator out on some other agents, like `:settings-store +dbug`, `:btc-wallet +dbug`, etc, and try some of its options [described
   above](#dbug).
-- Have a quick look over the source of the `%default-agent` library, locate at
+- Have a quick look over the source of the `default-agent` library, located at
   `/lib/default-agent.hoon` in the `%base` desk. We've not yet covered what the
   different arms do but it's still useful to get a general idea, and you'll
   likely want to refer back to it later.
