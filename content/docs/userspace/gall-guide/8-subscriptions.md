@@ -106,9 +106,9 @@ need to do is produce `card`s with `%fact`s in them:
 ==
 ```
 
-The `(list path)` in the `%fact` specifies which subscription `path`s to which
-the `%fact` should be sent. All subscribers of all `path`s specified will
-receive the `%fact`. Any agent arm which produces a `(quip card _this)` can send
+The `(list path)` in the `%fact` specifies which subscription `path`s the
+`%fact` should be sent on. All subscribers of all `path`s specified will receive
+the `%fact`. Any agent arm which produces a `(quip card _this)` can send
 `%fact`s to subscribers. Most often they will be produced in the `on-poke` arm,
 since new data will often be added in `poke`s.
 
@@ -129,13 +129,13 @@ from, and the `(unit ship)` specifies which ship to kick. The `(unit ship)` can 
 
 In this case, all subscribers to the specified `path`s will be kicked.
 
-Note that `%kick`s are not exclusively sent by the agent itself - Gall can also
-automatically kick subscribers under certain network conditions. Because of
-this, `%kick`s are not typically interpreted as intentional, and the usual
-behavior for a kicked agent is to try and resubscribe. Therefore, if you want to
-disallow a particular subscriber, your agent's `on-watch` arm should reject
-further subscription requests from them - your agent should not just `%kick`
-them and call it a day.
+Note that `%kick`s are not exclusively sent by the agent itself - Gall itself
+can also kick subscribers under certain network conditions. Because of this,
+`%kick`s are not assumed to be intentional, and the usual behavior is for a
+kicked agent to try and resubscribe. Therefore, if you want to disallow a
+particular subscriber, your agent's `on-watch` arm should reject further
+subscription requests from them - your agent should not just `%kick` them and
+call it a day.
 
 ## Outgoing subscriptions
 
@@ -148,17 +148,20 @@ it: Subscribing to other agents. This is done by `%pass`ing the target agent a
 ```
 
 If yor agent's subscription request is successful, updates will come in to your
-agent's `on-agent` arm on the `wire` (`/some/wire` in this example) specified.
+agent's `on-agent` arm on the `wire` specified (`/some/wire` in this example).
 The `wire` can be anything you like - its purpose is for your agent to figure
 out which subscription the updates are for. The `[ship term]` pair specifies the
 ship and agent you're trying to subscribe to, and the final `path` (`/some/path`
-in this example) is the subscription path to which you want to to subscribe - a
-`path` the target agent has defined in its `on-watch` arm.
+in this example) is the path you want to subscribe to - a `path` the target
+agent has defined in its `on-watch` arm.
 
 Gall will deliver the `card` to the target agent and call that agent's
 `on-watch` arm, which will process the request [as described
 above](#incoming-subscription-requests), accept or reject it, and send back
-either a positive or negative `%watch-ack`. The `%watch-ack` will come back in to your agent's `on-agent` arm in a `sign`, along with the `wire` you specified (`/some/wire` in this example):
+either a positive or negative `%watch-ack`. The `%watch-ack` will come back in
+to your agent's `on-agent` arm in a `sign`, along with the `wire` you specified
+(`/some/wire` in this example). Recall in the lesson on pokes, the `on-agent`
+arm starts with:
 
 ```hoon
 ++  on-agent
@@ -173,15 +176,11 @@ The `sign` will be of the following format:
 [%watch-ack p=(unit tang)]
 ```
 
-How you want to handle the `%watch-ack` really depends on the particular agent. In the simplest case, you can just pass it to the `on-agent` arm of `%default-agent`:
-
-```hoon
-++  on-agent  on-agent:def
-```
-
-`%default-agent` will just accept it and do nothing apart from printing the
-error in the `%watch-ack` `tang` if it's a nack. You shouldn't have your agent
-crash on a `%watch-ack` - even if it's a nack your agent should process it
+How you want to handle the `%watch-ack` really depends on the particular agent.
+In the simplest case, you can just pass it to the `on-agent` arm of
+`default-agent`, which will just accept it and do nothing apart from printing
+the error in the `%watch-ack` `tang` if it's a nack. You shouldn't have your
+agent crash on a `%watch-ack` - even if it's a nack your agent should process it
 successfully. If you wanted to apply some additional logic on receipt of the
 `%watch-ack`, you'd typically first test the `wire`, then test whether it's a
 `%watch-ack`, then test whether it's an ack or a nack and do whatever's
@@ -213,10 +212,9 @@ an error message fed into the `on-fail` arm of your agent.
 ## Receiving updates
 
 Assuming the `%watch` succeeded, your agent will now begin receiving any
-`%fact`s the agent to which you've subscribed publishes on the path to which
-you've subscribed. These `%fact`s will also come in to your agent's `on-agent`
-arm in a `sign`, just like the initial `%watch-ack`. The `%fact` `sign` will
-have the following format:
+`%fact`s the other agent publishes on the path to which you've subscribed. These
+`%fact`s will also come in to your agent's `on-agent` arm in a `sign`, just like
+the initial `%watch-ack`. The `%fact` `sign` will have the following format:
 
 ```hoon
 [%fact =cage]
@@ -606,7 +604,8 @@ currently exists, getting the new subscriber up to date.
 ```
 
 This is the subscriber agent. Since it's just for demonstrative purposes, it has
-no state and just prints updates it receives. In practice it would probably keep the `tasks` map it receives in its own state, and then update it as it receives new
+no state and just prints updates it receives. In practice it would keep the
+`tasks` map it receives in its own state, and then update it as it receives new
 `%fact`s.
 
 The `on-poke` arm is fairly simple - it accepts two pokes, to either `[%sub ~some-ship]` or `[%unsub ~some-ship]`.
@@ -618,7 +617,10 @@ failed, as well as printing a message when it gets kicked. When it receives a
 
 ### Trying it out
 
-We're going to try this between two different ships. The first ship will be the usual fakezod. We'll add both `mark` files, the `/sur` file, and the `todo.hoon` agent to the `%base` desk of our fakezod, putting them in the following directories:
+We're going to try this between two different ships. The first ship will be the
+usual fakezod. We'll add both `mark` files, the `/sur` file, and the `todo.hoon`
+agent to the `%base` desk of our fakezod, putting them in the following
+directories:
 
 ```
 base
@@ -644,7 +646,8 @@ Now we need to spin up another fake ship. We'll use `~nut` in this example:
 urbit -F nut
 ```
 
-Once it's booted, we can `|mount %base` and then add just the `update.hoon` mark file, the `/sur` file, and the `todo-watcher.hoon` agent like so:
+Once it's booted, we can `|mount %base` and then add just the `update.hoon` mark
+file, the `/sur` file, and the `todo-watcher.hoon` agent like so:
 
 ```
 base
@@ -827,8 +830,9 @@ was rejected because `~nut` is no longer in `friends`:
 
 ## Exercises
 
-- Have a look at the [Strings Guide](/docs/hoon/guides/strings) if you're
+- Have a look at the [Strings Guide](/docs/hoon/guides/strings) if you're not
   already familiar with decoding/encoding atoms in strings.
-- Try running through the [Example](#example) yourself, if you've not done so already.
+- Try running through the [example](#example) yourself, if you've not done so
+  already.
 - Try modifying `%todo-watcher` to recording the data it receives in its state,
   rather than simply printing it to the terminal.
