@@ -34,7 +34,8 @@ of data produced by the endpoint. There are a handful of exceptions to this:
 
 #### `%d`
 
-A scry to Gall with a `%d` `care` and no `path` will produce the `desk` in which the specified agent resides. For example:
+A scry to Gall with a `%d` `care` and no `path` will produce the `desk` in which
+the specified agent resides. For example:
 
 ```
 > .^(desk %gd /=hark-store=)
@@ -61,7 +62,8 @@ agents on that desk and their status. For example:
 
 #### `%u`
 
-A scry to Gall with a `%u` `care` and no `path` will check whether or not the specified agent is installed and running:
+A scry to Gall with a `%u` `care` and no `path` will check whether or not the
+specified agent is installed and running:
 
 ```
 > .^(? %gu /=btc-wallet=)
@@ -119,7 +121,9 @@ The `on-peek` arm, therefore, begins like so:
   ....
 ```
 
-Typically, you'd handle the `path` similarly to `on-watch`, as we discussed in the lesson on subscriptions. You'd use something like a wutlus expression to test the type of the `path`, defining your scry endpoints like so:
+Typically, you'd handle the `path` similarly to `on-watch`, as we discussed in
+the lesson on subscriptions. You'd use something like a wutlus expression to
+test the type of the `path`, defining your scry endpoints like so:
 
 ```hoon
 ?+    path  (on-peek:def path)
