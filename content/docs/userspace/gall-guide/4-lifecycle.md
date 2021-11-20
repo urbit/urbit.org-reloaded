@@ -4,25 +4,25 @@ weight = 20
 template = "doc.html"
 +++
 
-In the last lesson we look at some useful bits and pieces that are used as
-boilerplate in most agents. Now we're going to get into the guts of how agents
-work, and start looking at what the agent arms do. The first thing we'll look at
-is the agent's state, and the three arms for managing it: `on-init`, `on-save`,
-and `on-load`. These arms handle what we call an agent's "lifecycle".
+In the last lesson we look at a couple of useful things used as boilerplate in
+most agents. Now we're going to get into the guts of how agents work, and start
+looking at what the agent arms do. The first thing we'll look at is the agent's
+state, and the three arms for managing it: `on-init`, `on-save`, and `on-load`.
+These arms handle what we call an agent's "lifecycle".
 
 ## Lifecycle
 
 An agent's lifecycle starts when it's first installed. At this point, the
-agent's `on-init` arm is called. This is the _only_ time its `on-init` arm is
-ever called - its purpose is just to initialize the agent. The `on-init` arm
-might be very simple and just set an initial value for the state, or even do
-nothing at all and return the agent core exactly as-is. It may also be more
-complicated, and perform some [scries](/docs/arvo/concepts/scry) to obtain extra
-data or check that another agent is also installed. It might send off some
-`card`s to other agents or vanes to do things like load data in to the
-`%settings-store` agent, bind an Eyre endpoint, or anything else. It all depends
-on the needs of a particular agent. If `on-init` fails for whatever reason, the
-agent installation will fail and be aborted.
+agent's `on-init` arm is called. This is the _only_ time `on-init` is ever
+called - its purpose is just to initialize the agent. The `on-init` arm might be
+very simple and just set an initial value for the state, or even do nothing at
+all and return the agent core exactly as-is. It may also be more complicated,
+and perform some [scries](/docs/arvo/concepts/scry) to obtain extra data or
+check that another agent is also installed. It might send off some `card`s to
+other agents or vanes to do things like load data in to the `%settings-store`
+agent, bind an Eyre endpoint, or anything else. It all depends on the needs of
+your particular application. If `on-init` fails for whatever reason, the agent
+installation will fail and be aborted.
 
 Once initialized, an agent will just go on doing its thing - processing events,
 updating its state, producing effects, etc. At some point, you'll likely want to
@@ -33,10 +33,9 @@ so you commit a modified version of the file to Clay. When this happens, three t
 - The agent's `on-save` arm is called, which packs the agent's state in a `vase`
   and exports it.
 - The new version of the agent is built and loaded into Gall.
-- The previously exported `vase` containing the old state is passed to the
-  `on-load` arm of the newly built agent. The `on-load` arm will process it,
-  convert it to the new version of the state if necessary, and load it back
-  into the state of the agent.
+- The previously exported `vase` is passed to the `on-load` arm of the newly
+  built agent. The `on-load` arm will process it, convert it to the new version
+  of the state if necessary, and load it back into the state of the agent.
 
 A `vase` is just a cell of `[type-of-the-noun the-noun]` - it's used extensively
 for sending data between agents, vanes and ships. A vase is made with the
@@ -63,9 +62,9 @@ the type of the agent's state. In principle, we could make it as simple as this:
 
 However, when you update your agent as described in the [Lifecycle](#lifecycle)
 section, you may want to change the type of the state itself. This means
-`on-load` might find different data types in the vase it receives, depending on
-the situation. Over time, as you make further changes to the type of the state,
-this becomes quite complicated.
+`on-load` might find old versions of the state in the `vase` it receives. Over
+time, as you make further changes to the type of the state, this becomes quite
+complicated.
 
 For example, if you were creating an agent for a To-Do task management app, your
 tasks might initially have a simple `?` to specify whether they're complete or
@@ -86,10 +85,12 @@ The conventional way to keep this managable is to have _versioned states_. The
 first version of the state would typically be called `state-0`, and its head
 would be tagged with `%0`. Then, when you change the state's type in an update,
 you'd add a new structure called `state-1` and tag its head with `%1`. The next
-would then be `state-2`, and so on. In addition to each of those individual
-state versions, you'd also define a structure called `versioned-state`, which
-just contains a union of all the possible states. This way, the vase `on-load`
-receives can be unpacked to a `versioned-state` type, and then a
+would then be `state-2`, and so on.
+
+In addition to each of those individual state versions, you'd also define a
+structure called `versioned-state`, which just contains a union of all the
+possible states. This way, the vase `on-load` receives can be unpacked to a
+`versioned-state` type, and then a
 [wuthep](/docs/hoon/reference/rune/wut#--wuthep) (`?-`) expression can switch on
 the head (`%0`, `%1`, `%2`, etc) and process each one appropriately.
 
@@ -141,11 +142,13 @@ then on the arms of our agent will just modify it.
 ## State management arms
 
 We've described the basic lifecycle process and the purpose of each state
-management arm. Now let's give an overview of each arm separately.
+management arm. Now let's look at each arm in detail:
 
 ### `on-init`
 
-This arm takes no argument, and produces a `(quip card _this)`. It's called exactly once, when the agent is first installed, and its purpose is to initialize the agent.
+This arm takes no argument, and produces a `(quip card _this)`. It's called
+exactly once, when the agent is first installed. Its purpose is to initialize
+the agent.
 
 `(quip a b)` is equivalent to `[(list a) b]`, see the [types
 reference](/docs/userspace/gall-guide/types#quip) for details.
@@ -177,12 +180,12 @@ suspended or an app is uninstalled, so that the state can be restored when it's
 resumed or reinstalled.
 
 The state is packed in a vase with the
-[zapgar](/docs/hoon/reference/rune/zap#-zapgar) (`!>`) rune like `!>(state)`.
+[zapgar](/docs/hoon/reference/rune/zap#-zapgar) (`!>`) rune, like `!>(state)`.
 
 ### `on-load`
 
 This arm takes a `vase` and produces a `(quip card _this)`. Its purpose is to
-import an agent state previously exported with [`on-save`](#on-save). Typically
+import a state previously exported with [`on-save`](#on-save). Typically
 you'd have used a [versioned state](#versioned-state-type) as described above,
 so this arm would test which state version the imported data has, convert data
 from an old version to the new version if necessary, and load it into the
@@ -251,9 +254,9 @@ state core:
 
 In `state-0` we've defined the structure of our state, which is just a `@ud`.
 We've tagged the head with a `%0` constant representing the version number, so
-`on-load` can easily test the version of data. In `versioned-state` we've
-created a union and just added our `state-0` type. We've added an extra `card`
-arm as well, just so we can use `card` as a type, rather than the unweildy
+`on-load` can easily test the state version. In `versioned-state` we've created
+a union and just added our `state-0` type. We've added an extra `card` arm as
+well, just so we can use `card` as a type, rather than the unweildy
 `card:agent:gall`.
 
 After that core, we have the usual `agent:dbug` call, and then we have this:
@@ -307,13 +310,11 @@ Finally, we have `on-load`:
 ```
 
 It takes in the old state in a `vase`, then unpacks it to the `versioned-state`
-type we defined earlier in our state definition core. We then test its head for
-the version, and load it back into the state of our agent if it matches. This
-test is a bit redundant at this stage since we only have one state version, but
-you'll soon see the purpose of it.
+type we defined earlier. We test its head for the version, and load it back into
+the state of our agent if it matches. This test is a bit redundant at this stage
+since we only have one state version, but you'll soon see the purpose of it.
 
-You can save it as `app/lifecycle.hoon` in the `%base` desk and `|commit %base`.
-Then, run `|rein %base [& %lifecycle]` to start it.
+You can save it as `/app/lifecycle.hoon` in the `%base` desk and `|commit %base`. Then, run `|rein %base [& %lifecycle]` to start it.
 
 Let's try inspecting our state with `dbug`:
 
@@ -331,7 +332,9 @@ Let's try inspecting our state with `dbug`:
 >=
 ```
 
-Next, we're going to modify our agent and change the structure of the state so we can test out the upgrade process. Here's a modified version, which you can save in `app/lifecycle.hoon` and `|commit %base`:
+Next, we're going to modify our agent and change the structure of the state so
+we can test out the upgrade process. Here's a modified version, which you can
+again save in `/app/lifecycle.hoon` and `|commit %base`:
 
 ```hoon
 /+  default-agent, dbug
@@ -425,11 +428,11 @@ this new version of the agent, it would be, so we still need to update it.
 
 We've updated the wuthep expression with a new case that handles our new state
 type, and for the old state type we've added a function that converts it to the
-new type - in this case by just duplicating `val` and changing the head-tag from
-`%0` to `%1`. This is an extremely simple state type transition function, but it
-would likely be more complicated for an agent with real functionality.
+new type - in this case by duplicating `val` and changing the head-tag from `%0`
+to `%1`. This is an extremely simple state type transition function - it would
+likely be more complicated for an agent with real functionality.
 
-Let's now use `dbug` to check out state has successfully been updated to the new
+Let's now use `dbug` to check our state has successfully been updated to the new
 type:
 
 ```
@@ -439,8 +442,6 @@ type:
 ```
 
 ## Summary
-
-The key takeways are:
 
 - The app lifecycle rougly consists of initialization, state export, upgrade,
   state import and state version transition.
@@ -462,12 +463,12 @@ The key takeways are:
 
 ## Exercises
 
-- Run through the [Example](#example) yourself on a fake ship if you've not done
+- Run through the [example](#example) yourself on a fake ship if you've not done
   so already.
 - Have a look at the [`vase` entry in the type
   reference](/docs/userspace/gall-guide/types#vase).
 - Have a look at the [`quip` entry in the type
   reference](/docs/userspace/gall-guide/types#quip).
-- Try modifying the second version of the agent in the [Example](#example)
+- Try modifying the second version of the agent in the [example](#example)
   section, adding a third state version. Include functions in the wuthep
   expression in `on-load` to convert old versions to your new state type.
