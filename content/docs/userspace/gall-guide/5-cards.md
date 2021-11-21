@@ -250,7 +250,7 @@ receive the `%fact`. The `cage` is the data itself - a cell of a `mark` and a
 
 Here's a diagram that summarizes the different kinds of `card`s:
 
-[![card diagram](https://m.tinnus-napbus.xyz/pub/card-diagram.svg)](https://m.tinnus-napbus.xyz/pub/card-diagram.svg)
+[![card diagram](https://media.urbit.org/docs/userspace/gall-guide/card-diagram.svg)](https://media.urbit.org/docs/userspace/gall-guide/card-diagram.svg)
 
 ## Exercises
 

@@ -82,7 +82,7 @@ and its eight vanes. Userspace is primarily Gall agents, generators, threads,
 front-ends, and all of their related files in Clay. The distinction looks
 something like this:
 
-[![kernelspace/userspace diagram](https://m.tinnus-napbus.xyz/pub/gall/kernelspace-userspace-diagram.svg)](https://m.tinnus-napbus.xyz/pub/gall/kernelspace-userspace-diagram.svg)
+[![kernelspace/userspace diagram](https://media.urbit.org/docs/userspace/gall-guide/kernelspace-userspace-diagram.svg)](https://media.urbit.org/docs/userspace/gall-guide/kernelspace-userspace-diagram.svg)
 
 By and large, Gall _is_ the userspace vane - the majority of userspace is either
 Gall agents, or things used by Gall agents. Apart from the agents themselves,
@@ -275,7 +275,7 @@ There are also two basic things to interact with: Vanes, and other agents.
 Here's a simplified diagram of the ways an agent can interact with other parts
 of the system:
 
-![api diagram](https://m.tinnus-napbus.xyz/pub/api-diagram.svg)
+![api diagram](https://media.urbit.org/docs/userspace/gall-guide/api-diagram.svg)
 
 Things like `on-poke` are arms of the agent core. Don't worry about their
 meaning for now, we'll discuss them in detail later in the guide.
