@@ -17,7 +17,7 @@ The connected world anticipated by Urbit is a much friendlier one, much like the
 
 ### How can I contribute to Urbit? {#contribute}
 
-We encourage outside contributors to become a part of the project. The best way to do this is to check out [Urbit](https://github.com/urbit) on GitHub, look at the pinned repositories, and check out our [Contributing](https://urbit.org/docs/getting-started/develop) guide. After you've gotten familiar with the system, feel free to open issues and make pull requests.
+We encourage outside contributors to become a part of the project. The best way to do this is to check out [Urbit](https://github.com/urbit) on GitHub, look at the pinned repositories, and check out our [Contributing](/docs/development/develop) guide. After you've gotten familiar with the system, feel free to open issues and make pull requests.
 
 ### Who is building Urbit? {#who-builds-urbit}
 
