@@ -12,7 +12,7 @@ description = "Provide concrete examples of React UI driven by @urbit/http-api t
 reward = 3
 assignee = "~witfyl-ravped"
 id = "1312404336"
-completed = false
+completed = true
 canceled = false
 link = ""
 +++
