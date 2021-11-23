@@ -46,28 +46,26 @@ docker run -d \
   -v /mnt/data:/data \
   -e "MINIO_ROOT_USER=<username>" \
   -e "MINIO_ROOT_PASSWORD=<password>" \
-  -e "MINIO_DOMAIN=example.com" \
+  -e "MINIO_DOMAIN=s3.example.com" \
+  -e "MINIO_SERVER_URL=https://s3.example.com" \
   minio/minio server /data --console-address ":9001"
 ```
 
-Ports 9000 and 9001 are exposed to give access to the MinIO admin interface and MinIO S3 admin respectively. `/mnt/data` is the path where your uploaded data will be stored on your host machine — you can change this as necessary.
+Ports 9000 and 9001 are exposed to give access to the MinIO S3 interface and MinIO web admin respectively. `/mnt/data` is the path where your uploaded data will be stored on your host machine — you can change this as necessary.
 
-Be sure to add the `MINIO_DOMAIN` environment variable; this tells MinIO to accept virtual host style URLs (`BUCKET.example.com` rather than `example.com/BUCKET`), which are required for compatibility with Urbit.
+Be sure to add the `MINIO_DOMAIN` environment variable; this tells MinIO to accept virtual host style URLs (`BUCKET.s3.example.com` rather than `s3.example.com/BUCKET`), which are required for compatibility with Urbit.
 
-Your username and password can be anything of your choosing — make sure they're secure! You could use your `@p` and `+code` for an easy to remember solution, or even just generate some random alphanumeric strings using a Unix tool, e.g.
-
-```
-tr -dc A-Z0-9 </dev/urandom | head -c 24 ; echo ''
-```
+Your username and password can be anything of your choosing — make sure they're secure! Your username must be at least 4 characters long and your password at least 8 characters long.
 
 ### Create DNS records
 
-Now, you'll need to point your own domain at your MinIO installation. Via your domain's DNS settings (usually configured on the registrar you bought your domain through), create two `A` records:
+Now, you'll need to point your own domain at your MinIO installation. Via your domain's DNS settings (usually configured on the registrar you bought your domain through), create three `A` records:
 
-- `s3.example.com`, and
+- `s3.example.com`,
+- `console.s3.example.com`, and
 - `BUCKET.example.com` where BUCKET is a bucket name of your choosing — 'media' or 'uploads' are good examples
 
-Both should point at the IP address of your host machine. If you are hosting on your own hardware, this could require port-forwarding via your router so that your host machine is reachable from outside of your home network, and possibly using a dynamic DNS service to update your DNS records if your home IP is not static.
+All 3 should point at the IP address of your host machine. If you are hosting on your own hardware, this could require port-forwarding via your router so that your host machine is reachable from outside of your home network, and possibly using a dynamic DNS service to update your DNS records if your home IP is not static.
 
 DNS records can take a little while to propagate, so don't worry if you type your new URL into your browser and don't see anything yet.
 
@@ -82,17 +80,11 @@ To install caddy, follow the instructions [here](https://caddyserver.com/docs/in
 Caddy handles TLS automatically, so we don't need to worry about setting that up. All we need to do is create a Caddyfile that looks something like this:
 
 ```
-s3.example.com {
-  reverse_proxy localhost:9001 {
-    header_up X-Forwarded-Host {host}
-    header_up Host {host}
-  }
+console.s3.example.com {
+  reverse_proxy localhost:9001
 }
-BUCKET.example.com {
-  reverse_proxy localhost:9000 {
-    header_up X-Forwarded-Host {host}
-    header_up Host {host}
-  }
+s3.example.com BUCKET.s3.example.com {
+  reverse_proxy localhost:9000
 }
 ```
 
@@ -100,13 +92,15 @@ Remember to replace BUCKET with your chosen bucket name, and then run `caddy sta
 
 ### Create an S3 bucket
 
-Navigate to your MinIO admin endpoint (`https://s3.example.com`) in a browser and sign in using the username and password you entered in step 1.
+Navigate to your MinIO admin endpoint (`https://console.s3.example.com`) in a browser and sign in using the username and password you entered in step 1.
 
 Choose 'buckets' from the left-hand menu, and then 'create bucket' at the top of the page. Enter your bucket name (this MUST match the name in your DNS record, e.g. 'media').
 
+Then, you need to ensure your bucket is readable to the public, so that others can see your uploaded media. To do this, click 'manage' on your newly created bucket, and then navigate to 'access rules'. Click 'add access rule', enter `*` as the prefix and set access to `readonly`.
+
 ### Configure your ship
 
-Head over to Landscape and navigate to the S3 storage setup page at System preferences > Remote Storage, and enter your domain (with protocol) under endpoint, e.g. `https://example.com`. Enter your username and password from step 1 under access key and secret, and then enter the name of the bucket. When the bucket name is combined with the endpoint, you get your bucket URL e.g. `https://media.example.com`.
+Head over to Landscape and navigate to the S3 storage setup page at System preferences > Remote Storage, and enter your domain (with protocol) under endpoint, e.g. `https://s3.example.com`. Enter your username and password from step 1 under access key and secret, and then enter the name of the bucket. When the bucket name is combined with the endpoint, you get your bucket URL e.g. `https://media.s3.example.com`.
 
 You can also configure these settings through dojo as shown [here](/using/os/s3).
 
@@ -114,18 +108,20 @@ You can also configure these settings through dojo as shown [here](/using/os/s3)
 
 You should now be able to upload content using your self-hosted MinIO installation.
 
+Once your S3 config is added, you should see a paperclip icon next to the message input in your chats. Media can be uploaded and posted by clicking here.
+
 ## Troubleshooting
 
 Landscape chat will fail silently if it cannot connect to your S3 endpoint to upload media. To get an idea of what's going wrong, open the network tab of your browser dev tools, and observe the request when you try and upload media. You should see a failed request, hopefully with an error code or reason for failure.
 
 - If you see a `mixed-content` error, this means that not every part of the set up is using TLS. Most browsers will refuse to load non-HTTPS content from a secure page.
 - If you see a `502 Bad Gateway` error, caddy is unable to reach your MinIO installation. Check MinIO is running and your `reverse_proxy` URLs are correct.
-- If you get a `Permission denied` error, it's likely that your bucket endpoint is incorrect. Ensure your Caddyfile includes the `header_up` options, and that you passed the `MINIO_DOMAIN` variable when running MinIO - otherwise it will default to using the path URL format, which Urbit does not support.
+- If you get a `Permission denied` error, it's likely that your bucket endpoint is incorrect. Ensure that you passed the `MINIO_DOMAIN` variable when running MinIO - otherwise it will default to using the path URL format, which Urbit does not support.
 
 A good way to test your setup is to `curl` your S3 bucket endpoint (not your root S3 endpoint) and see what response you get. For example, if we have a bucket named 'media':
 
 ```
-curl https://media.example.com
+curl https://media.s3.example.com
 ```
 
 You should get an XML response listing the contents of your bucket.
@@ -137,7 +133,9 @@ You may wonder how it's possible to run Urbit alongside our MinIO set up if they
 For example, you could have 3 domains:
 
 - `ship-name.example.com` - proxy to port 8080 where Urbit is running,
-- `s3.example.com` - proxy to port 9001 where your MinIO admin is running, and
-- `media.example.com` - proxy to port 9000 where your MinIO bucket is accessible
+- `console.s3.example.com` - proxy to port 9001 where your MinIO admin is running, and
+- `media.s3.example.com` - proxy to port 9000 where your MinIO bucket is accessible
 
-Currently, there is no way to specify the HTTP port Landscape runs on, but if 80 is not available at start-up it will try 8080 next. So start caddy first, and when you boot your ship it should detect that port 80 is in use and use 8080 instead.
+Currently, there is no way to specify the HTTP port Landscape runs on (unless you are running the `urbit-king` binary), but if 80 is not available at start-up it will try 8080 next. So start caddy first, and when you boot your ship it should detect that port 80 is in use and use 8080 instead.
+
+If you are running the `urbit-king` binary, then you can specify the HTTP port with the `--http-port` option.
