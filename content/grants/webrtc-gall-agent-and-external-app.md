@@ -12,7 +12,7 @@ description = "Add WebRTC support to Urbit, including call/stream setup and tear
 reward = 8
 assignee = "~ritpub-sipsyl"
 id = ""
-completed = false
+completed = true
 canceled = false
 link = ""
 +++
