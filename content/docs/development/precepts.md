@@ -135,7 +135,7 @@ We’ll start with a brief description of many principles, then we’ll go into 
 
 <img class="ba" src="https://media.urbit.org/site/posts/essays/pre-03.jpg">
 
-### B: Specific Design
+### B: Specific Design {#specific}
 
 1) Always ack a dupe; never ack an ack.
 
