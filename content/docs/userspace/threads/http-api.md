@@ -9,10 +9,10 @@ Spider has an Eyre binding which allows threads to be run externally via [authen
 Spider is bound to the `/spider` URL path, and expects the requested URL to look like:
 
 ```
-http{s}://{host}/spider/{inputMark}/{threadName}/{outputMark}
+http{s}://{host}/spider/{desk}/{inputMark}/{threadName}/{outputMark}
 ```
 
-The `inputMark` is the `mark` the thread takes. The `threadName` is the name of the thread, e.g. `foo` for `/ted/foo/hoon`. The `outputMark` is the `mark` the thread produces. You may also include a file extension though it doesn't have an effect.
+The `desk` is the desk in which the thread resides. The `inputMark` is the `mark` the thread takes. The `threadName` is the name of the thread, e.g. `foo` for `/ted/foo/hoon`. The `outputMark` is the `mark` the thread produces. You may also include a file extension though it doesn't have an effect.
 
 When Spider receives an HTTP request, the following steps happen:
 
@@ -30,7 +30,7 @@ Thus, it's important to understand that the original HTTP request and final HTTP
 
 Here we'll look at running Spider threads through Eyre.
 
-Here's an extremely simple thread that takes a `vase` of `(unit json)` and just returns the `json` in a new `vase`. You can save it in `/ted` and `|commit %home`:
+Here's an extremely simple thread that takes a `vase` of `(unit json)` and just returns the `json` in a new `vase`. You can save it in `/ted` and `|commit %base`:
 
 `eyre-thread.hoon`
 
@@ -46,16 +46,16 @@ Here's an extremely simple thread that takes a `vase` of `(unit json)` and just 
 (pure:m !>(json))
 ```
 
-First we must obtain a session cookie by [authenticating](/docs/arvo/eyre/examples#authenticating).
+First we must obtain a session cookie by [authenticating](/docs/arvo/eyre/guide#authenticating).
 
-Now we can try and run our thread. Spider is bound to the `/spider` URL path, and expects the rest of the path to be `/{inputMark}/{thread}/{outputMark}`. Our `{thread}` is called `eyre-thread`, and both its `{inputMark}` and `{outputMark}` are `json`, so our URL path will be `/spider/json/eyre-agent/json`. Our request will be an HTTP POST request and the body will be some `json`, in this case `[{"foo": "bar"}]`:
+Now we can try and run our thread. Spider is bound to the `/spider` URL path, and expects the rest of the path to be `/{desk}/{inputMark}/{thread}/{outputMark}`. Our `{thread}` is called `eyre-thread` and is in the `%base` `{desk}`. Both its `{inputMark}` and `{outputMark}` are `json`. Therefore, our URL path will be `/spider/base/json/eyre-agent/json`. Our request will be an HTTP POST request and the body will be some `json`, in this case `[{"foo": "bar"}]`:
 
 ```
 curl -i --header "Content-Type: application/json" \
         --cookie "urbauth-~zod=0v6.h6t4q.2tkui.oeaqu.nihh9.i0qv6" \
         --request POST \
         --data '[{"foo": "bar"}]' \
-        http://localhost:8080/spider/json/eyre-thread/json
+        http://localhost:8080/spider/base/json/eyre-thread/json
 ```
 
 Spider will run the thread and the result will be returned through Eyre in the body of an HTTP response with a 200 status code:

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
+import { DateTime } from "luxon";
 
 import Container from "../components/Container";
 import Section from "../components/Section";
@@ -13,11 +14,13 @@ import PostPreview from "../components/PostPreview";
 import EventPreview from "../components/EventPreview";
 import Cross from "../components/icons/Cross";
 import TwoUp from "../components/TwoUp";
+import BubbleLink from "../components/BubbleLink";
 import {
   getAllPosts,
   getAllEvents,
   formatDate,
   getOpenGrantsCount,
+  generateRealtimeDate,
 } from "../lib/lib";
 import { contact, eventKeys } from "../lib/constants";
 import { useLocalStorage } from "../lib/hooks";
@@ -27,7 +30,7 @@ const Banner = ({ children, isOpen, href, dismiss }) => {
     <div className="w-full flex justify-center bg-green-100">
       <SingleColumn>
         <div className="w-full layout">
-          <div className="w-full  flex justify-between items-center px-4 md:px-8 py-4">
+          <div className="w-full flex justify-between items-center px-4 md:px-8 py-4">
             <a href={href} target="_blank">
               {children}
             </a>
@@ -50,7 +53,10 @@ const Banner = ({ children, isOpen, href, dismiss }) => {
 export default function Home({ posts, events, openGrantsCount, search }) {
   const [heroButton, setHeroButton] = useState(<div />);
   const [bannerElement, setBannerElement] = useState(null);
-  const [isBannerOpen, setBanner] = useLocalStorage("isBannerOpen", true);
+  const [isBannerOpen, setBanner] = useLocalStorage(
+    "urbit-banner-softdist",
+    true
+  );
 
   const selectDownloadButton = () => {
     const agent = window.navigator.appVersion;
@@ -86,10 +92,10 @@ export default function Home({ posts, events, openGrantsCount, search }) {
     if (isBannerOpen) {
       return (
         <Banner
-          href="http://assembly.urbit.org/"
+          href="https://assembly.urbit.org"
           dismiss={() => setBanner(false)}
         >
-          <p className="text-green-400 font-semibold hover:opacity-70">{`-> Join us October 15-17 for Assembly`}</p>
+          <p className="text-green-400 font-semibold hover:opacity-70">{`-> Network update is live. Learn more at Assembly 2021.`}</p>
         </Banner>
       );
     } else {
@@ -106,7 +112,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
       <Head>
         <title>urbit.org</title>
       </Head>
-      {bannerElement}
+      {/* {bannerElement} */}
       <SingleColumn>
         <Header search={search} />
         {
@@ -123,27 +129,73 @@ export default function Home({ posts, events, openGrantsCount, search }) {
         {
           // Introducing Port
         }
-        <Section className="hidden md:flex">
-          <div className="bg-wall-100 w-11/12 port-hero-card-height rounded-3xl flex">
-            <div className="pt-20 pl-12 w-7/12">
-              <div className="pb-8">
-                <h2 className="p-0 m-0 pb-2 leading-none">Introducing</h2>
-                <h2 className="text-green-400 p-0 m-0 leading-none">Port</h2>
-              </div>
-              <h4 className="pb-8">The Urbit client, now in beta.</h4>
-              <p className="pb-24">
-                Getting into Urbit is now as simple as installing an app on your
-                computer.
+        <Section>
+          <div className="bg-wall-100 w-full p-8 md:p-12 rounded-3xl flex flex-col md:flex-row">
+            <div className="md:w-6/12 w-full md:mr-6">
+              <h2 className="pb-4">New at Urbit</h2>
+              <h4 className="pb-4">
+                Get on Urbit with these guides or swap a star for WSTR.
+              </h4>
+              <p>
+                Urbit is for everyone, but sometimes it is easy to get lost in
+                this universe. Follow these links to contribute to the network
+                through developing, operating, exploring, or exchanging.
               </p>
-              {heroButton}
-              <a
-                href="https://github.com/urbit/port"
-                className="type-ui text-wall-500"
-              >
-                View on GitHub
-              </a>
             </div>
-            <div className="w-full port-hero-image-height port-hero-image mt-8" />
+            <div className="pt-8 md:pt-20 md:w-6/12 w-full md:ml-6">
+              <BubbleLink
+                href="https://developers.urbit.org"
+                title="Developers"
+                target="_blank"
+                className="md:h-16"
+                caption="Start building on Urbit today."
+              >
+                <img
+                  alt="Marketplace logo"
+                  className="max-w-none w-12 h-12 rounded-full"
+                  src="/images/developers-guide-logo.png"
+                />
+              </BubbleLink>
+              <BubbleLink
+                href="https://operators.urbit.org"
+                className="mt-4 md:h-16"
+                target="_blank"
+                title="Operator’s Guide"
+                caption="Own a star or galaxy? Purchasing one? This is for you."
+              >
+                <img
+                  alt="Marketplace logo"
+                  className="max-w-none w-12 h-12 rounded-full"
+                  src="/images/operators-guide-logo.png"
+                />
+              </BubbleLink>
+              <BubbleLink
+                href="https://network.urbit.org/"
+                className="mt-4 md:h-16"
+                target="_blank"
+                title="Network Explorer"
+                caption="View on-chain Urbit activity in real-time."
+              >
+                <img
+                  alt="Marketplace logo"
+                  className="max-w-none w-12 h-12 rounded-full"
+                  src="/images/network-explorer-logo.png"
+                />
+              </BubbleLink>
+              <BubbleLink
+                href="https://star.market/"
+                className="mt-4 md:h-16"
+                target="_blank"
+                title="Star Market"
+                caption="Exchange Stars and WSTR."
+              >
+                <img
+                  alt="Marketplace logo"
+                  className="max-w-none w-12 h-12 rounded-full"
+                  src="/images/star-market-logo.png"
+                />
+              </BubbleLink>
+            </div>
           </div>
         </Section>
 

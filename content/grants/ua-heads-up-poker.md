@@ -12,7 +12,7 @@ description = "A fun client app that would be a good way to get acquainted with 
 reward = 1
 mentor = "~timluc-miptev"
 assignee = "~bacwyl-samweg, ~hodzod-walrus"
-completed = false
+completed = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0021&prefill_Grant+Name=Heads-up%20poker"
 +++
 

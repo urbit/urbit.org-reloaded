@@ -12,6 +12,7 @@ description = "Our Layer 2 scaling solution is nearing completion, and the Bridg
 reward = 5
 assignee = "~datder-sonnet"
 completed = false
+canceled = false
 link = ""
 +++
 

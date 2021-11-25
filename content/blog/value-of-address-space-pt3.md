@@ -11,9 +11,7 @@ image = "https://media.urbit.org/site/posts/essays/value-of-address-space-pt3.jp
 
 <br>
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt3.jpg">
-
-<br>
+![](https://media.urbit.org/site/posts/essays/value-of-address-space-pt3.jpg)
 
 _This is the third in a series of three posts on Urbit address space. See also [part 1](https://urbit.org/blog/value-of-address-space-pt1/) and [part 2](https://urbit.org/blog/value-of-address-space-pt2/)._
 
@@ -53,13 +51,9 @@ A locked star is held in a contract and can neither be booted nor issue planets.
 
 In practice, the only Urbit IDs that are ‘locked’ are stars. A galaxy that is said to be locked is simply a galaxy whose stars are currently held by a lockup contract. A locked galaxy can be transferred (i.e. sold or simply moved to a new key) and booted (importantly, any galaxy—booted or not—can vote), but it can’t issue stars until the lockup contract expires.
 
-<br>
-<img class="ba" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt3-graph1.png">
-<br>
+![Star Unlocking Schedule](https://media.urbit.org/site/posts/essays/value-of-address-space-pt3-graph1.png)
 
-<br>
-<img class="ba" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt3-graph2.png">
-<br>
+![Total Urbit IDs Spawned and Activated](https://media.urbit.org/site/posts/essays/value-of-address-space-pt3-graph2.png)
 
 These lockups all began to release at varying linear rates in January 2019 (specifically on Tue Jan 08 23:34:41 2019 UTC).
 
@@ -78,9 +72,7 @@ Spawning Limits –
 
 Unlocked stars are further gated by the number of planets they’re able to spawn. Every unlocked star was immediately able to spawn 1024 planets from the moment Urbit went live on the blockchain in January 2019—we wanted everyone to be able to invite some friends to their communities right away. From that date forward, the spawnable amount doubles every year (365 days), maxing out at 65,535 spawnable planets after 6 years.
 
-<br>
-<img class="ba" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt3-graph3.png">
-<br>
+![Total Spawnable Planets and Spawnable Planets per Star](https://media.urbit.org/site/posts/essays/value-of-address-space-pt3-graph3.png)
 
 When we layer the spawning limits over the various lockup contracts, we find that all Urbit address space is both unlocked and spawnable by January 9, 2025.
 
@@ -92,9 +84,7 @@ We consider the opacity of our understanding about transactions on the network t
 
 The chart below is an estimate (as of January 2020) based on our general understanding of how galaxies are distributed. Much of this is anecdotal, and it’s largely based on the very few transactions we’ve observed within the galaxy table since Urbit went on chain in 2019. This chart should therefore be understood as incomplete, and an estimate only.
 
-<br>
-<img class="ba" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt3-graph4.png">
-<br>
+![Estimated Galaxy Distribution](https://media.urbit.org/site/posts/essays/value-of-address-space-pt3-graph4.png)
 
 Address space distribution is best understood in terms of galaxies and stars independently, as they’re distinct assets. The chart above only illustrates galaxy distribution, but describes Tlon’s “naked” galaxy holdings, which are galaxies empty of their stars. These galaxies are empty because the stars they once contained have been distributed, primarily to Tlon contractors, employees, and to certain private buyers.
 

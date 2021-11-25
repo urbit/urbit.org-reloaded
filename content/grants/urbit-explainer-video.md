@@ -13,6 +13,7 @@ reward = 2
 assignee = "~rivpyl-sidfyl, ~minder-folden"
 id = "1350087489"
 completed = true
+canceled = false
 link = ""
 +++
 

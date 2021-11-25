@@ -17,7 +17,7 @@ The connected world anticipated by Urbit is a much friendlier one, much like the
 
 ### How can I contribute to Urbit? {#contribute}
 
-We encourage outside contributors to become a part of the project. The best way to do this is to check out [Urbit](https://github.com/urbit) on GitHub, look at the pinned repositories, and check out our [Contributing](https://urbit.org/docs/getting-started/develop) guide. After you've gotten familiar with the system, feel free to open issues and make pull requests.
+We encourage outside contributors to become a part of the project. The best way to do this is to check out [Urbit](https://github.com/urbit) on GitHub, look at the pinned repositories, and check out our [Contributing](/docs/development/develop) guide. After you've gotten familiar with the system, feel free to open issues and make pull requests.
 
 ### Who is building Urbit? {#who-builds-urbit}
 
@@ -35,18 +35,9 @@ Urbit IDs come in three classes: galaxies, stars, and planets. The length of an 
 
 Planets are intended for everyday use by individuals, and there are 4.3 billion of them (two to the 32nd power). Stars and galaxies, on the other hand, are meant to act as network infrastructure: on the [Urbit OS](#what-is-arvo) network they provide routing and are responsible for distributing software updates.
 
-### Why is is currently expensive to acquire a planet? {#gas-prices}
+### How can I spend less to get a planet? {#gas-prices}
 
-For the latest on this topic, see our recent blog post: [The Gang Solves the Gas Crisis](/blog/rollups).
-
-As of early 2021, if you try to acquire a planet from a market, you will likely encounter an enormous "gas price" fee. Ethereum is going through some growing pains, and this is an issue for every
-smart contract on the network. This fee is unrelated to Urbit specifically, rather it results from how Ethereum transactions are paid for. The gas fee does not go to the person selling you the planet, nor to the market, nor to anybody associated with Urbit - it goes to the "miners" processing all Ethereum transactions.
-
-Tlon is aggressively pursuing a solution we call "naive rollups" which we predict to reduce gas costs by a factor of at least 100. We cannot give a precise estimate on when this will be complete, but it is top priority and this solution was chosen in part for the speed with which it can be implemented without sacrificing security. If you'd like to know more, we recommend watching this [Developer Call](https://www.youtube.com/watch?v=CKuHXrdkIw0) with `~wicdev-wisryt`.
-
-In the meantime, we recommend either using the network as a [comet](/docs/glossary/comet), or signing up with a [hosting provider](#why-hosting), which includes a free planet.
-
-We understand that this is an enormous frustration, and will keep this section updated as we get closer to resolving it.
+Using Ethereum has become much more expensive since Urbit ID first launched. To rectify this, Tlon has created a system referred to as [naive rollups](/docs/glossary/rollups), or "layer 2". By reducing the size of transactions, batching them together, and moving computation off-chain to your urbit, it is now possible to perform Urbit ID transactions free of charge and without any prior knowledge of blockchains, cryptocurrency, or Ethereum. This is easily done using [Bridge](/docs/glossary/bridge), our web interface for managing your Urbit ID.
 
 ### What is Azimuth? {#what-is-azimuth}
 
@@ -112,56 +103,20 @@ It’s also worth noting that, while there are almost 8B people on Earth, there 
 
 (For more background on why Urbit ID is the way it is, read [this](/understanding-urbit/urbit-id/).)
 
-## Urbit OS
+### I have a galaxy or star with lockup conditions. How does this work? {#lockup-conditions}
 
-### What is Urbit OS? {#what-is-arvo}
+There are two kinds of release schemes for locked up assets: linear and conditional.
 
-Urbit OS, also called [Arvo](/docs/glossary/arvo), is our functional and deterministic software stack. Arvo is written in [Hoon](/docs/glossary/hoon), our purely functional programming language, which compiles to [Nock](/docs/glossary/nock), a compact bytecode language.
+In either scheme, you start out being able to take one star out of lockup, regardless of the terms set around the lockup as a whole. This way, you get to participate with a star right away. Go do something cool!
 
-Instances of Urbit OS, called '[ships](/docs/glossary/ship)', communicate as peers on what we refer to as “the [Ames](/docs/glossary/ames) network.” Using Urbit ID, Urbit OS ships can prove their identities to one another.
+If your lockup involved a [galaxy](/docs/glossary/galaxy), all of its [stars](/docs/glossary/star) will be locked up, but you will have immediate, lock-free control of the galaxy. You will likely need it to use that star.
 
-### What is unique about Urbit OS / Arvo? {#what-is-unique-about-arvo}
+Note that the "releasing" of stars just means that they become available for you to claim. They don't automatically get transferred to you; you have to withdraw them from the appropriate lockup contract.
 
-[Arvo](/docs/glossary/arvo) is different from other operating systems in many ways. One notable way is that it is completely deterministic. Processing in the system happens in a unique way: when an event happens, a transition function takes that event and the old state of Arvo, and produces an effect and a new state of Arvo. To visualize:
+Linear release is the simplest: your stars will be released linearly over a period of time. Most often this is a period of four years. If you have four stars in lockup, that means you will be able to withdraw one star per year. In many cases, there is also an initial windup period which has to pass before linear releasing begins, typically one year. Since Azimuth launched in January 2019, the linear release will begin in January 2020.
 
-`[event, old state] -> [effects, new state]`
+Conditional release is a bit more complicated. If your stars are in conditional lockup, they're likely divided over three so-called tranches. Each of these unlocks only after a unique condition is met. Since it's difficult to verify things about the real world using smart contracts, the [Galactic Senate](/docs/glossary/senate) verifies that they've been met. Once the Senate marks a condition for a tranche as cleared, it starts releasing linearly over the period of a year.
 
-All events are logged to disk, so you can always restore the system to a previous point in time.
-
-### How is Urbit OS / Arvo connected to Ethereum? {#arvo-ethereum}
-
-When an [Arvo](/docs/glossary/arvo) ship (instance) is started for the first time you must use a "[keyfile](/docs/glossary/keyfile)" containing the private keys for your identity's networking keys. Urbit ID uses the Ethereum blockchain as its decentralized ledger.
-
-See our [Getting Started](/getting-started/planet) guide to learn how to get your ship onto the Urbit OS / [Ames](/docs/glossary/ames) network.
-
-### Will the Urbit OS network survive if Ethereum dies? {#if-ethereum-dies}
-
-Yes. It would be annoying, but Urbit ID / [Azimuth](/docs/glossary/azimuth) could be ported to another decentralized ledger, or hosted on Urbit OS / [Arvo](/docs/glossary/arvo) itself.
-
-### How do I install Urbit OS? {#install-urbit-os}
-
-Check out our guides [here](/getting-started/).
-
-### How do I use Urbit OS? {#use-urbit-os}
-
-The [Using](/using/os/getting-started) section of the documentation will help you out.
-
-### How do over-the-air updates work? {#over-the-air-updates}
-
-Your sponsor, a star or galaxy that your ship is connected to, may send you new source code for your system. When you receive new source code from your sponsor, your system recompiles itself using that code, performs any necessary data migrations, and keeps running. Ideally this happens seamlessly without the user even noticing, although there is sometimes a slowdown while rebuilding the system from source.
-
-### What is Landscape? {#what-is-landscape}
-
-[Landscape](/docs/glossary/landscape) is an experimental Urbit OS web interface that includes social functions such as chat and publishing. You can access Landscape by navigating to `http://localhost:PORT`, where PORT is typically 80, 8080, or 8081 (check your boot messages).
-
-### I have an Urbit ID, now what? {#now-what}
-
-Follow our guide on how to boot a ship [here](/getting-started/planet).
-
-Get on the [mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&id=be143888d2). Learn [Hoon](/docs/hoon/hoon-school/). Sign up for [Hooniversity](https://hooniversity.org/). [Make stuff](https://grants.urbit.org).
-
-
-## Urbit Security
 
 ### How secure is Urbit right now? {#how-secure-is-urbit}
 
@@ -178,106 +133,6 @@ All communication on Urbit is end-to-end encrypted. However, the [event log](/do
 Tlon keeps a quantum computing expert on staff and understands that post-quantum cryptographic methods must be implemented sooner than later, since any data not already encrypted using these methods is at risk of being collected and decrypted once sufficiently powerful quantum computers exist. [NIST](https://www.nist.gov/) anticipates the release of their preliminary findings on [post-quantum cryptography standards](https://csrc.nist.gov/projects/post-quantum-cryptography) around the end of 2021, with full guidelines following in 2024. Tlon will develop a strategy for post-quantum encryption for Urbit following their recommendations.
 
 Thus, while Urbit is probably more secure and private than most digital communication channels, we cannot yet consider it impervious to a dedicated attacker. If you are a cybersecurity expert looking for work, please drop us a line at `apply@tlon.io`.
-
-### What is the Urbit HD Wallet? {#urbit-hd-wallet}
-
-The [Urbit Hierarchical Deterministic (HD) Wallet](/docs/glossary/hdwallet) is a custom Ethereum wallet based on BIP39 and BIP44 – the same underlying technology used by wallet providers like Ledger, Trezor, Metamask, and MyEtherWallet. You can think of the Urbit HD wallet as a wallet of wallets, which lets you keep a single passphrase for all of your Urbit ID keys. Urbit ID uses multiple keys with different capabilities – a bit like permissions – so that you can keep the more valuable keys in cold storage while keeping less valuable keys, used in day-to-day operation, more easily accessible. If you're only operating a planet, you shouldn't have to worry about this: you can simply think of your "master ticket" as the password to your Urbit ID. If you're operating a star or galaxy, the Urbit HD Wallet allows you to implement a multi-tier key custody scheme.
-
-If you're interested, you can read the spec here: [Urbit HD Wallet Spec (UP 8)](https://github.com/urbit/proposals/blob/master/008-urbit-hd-wallet).
-
-### What is a master ticket? {#master-ticket}
-
-The "master ticket" is the entropy seed from which your other Urbit ID keys are derived. It should be treated like a master password: **you should never share it with anyone, and you must store it very securely (see our practices below).** This ticket is used to derive the Ethereum wallet that holds your ownership keys, your [Urbit OS](#what-is-arvo) key – used to boot your Urbit – and the other keys associated with your identity. You’ll have a master ticket if you used the Urbit Wallet Generator or claimed a [ship](/docs/glossary/ship) on our hosted version of Bridge.
-
-If you're operating a planet, you can use your master ticket to authenticate with Bridge.
-
-### What is an ownership address? {#ownership-address}
-
-An ownership address is an Ethereum address that owns one or more of your Urbit IDs. The Urbit Wallet Generator creates one [Urbit HD Wallet](/docs/glossary/hdwallet) and associated addresses for each of your identities. Using the ownership key associated with your ownership address, you can transfer identities to other people, meaning that it’s very important to store securely.
-
-### What are proxies? {#proxies}
-
-[Proxies](/docs/glossary/proxies) are seeds derived from your master ticket used to generate sub-wallets, which in turn are used to generate keys that have the ability to execute different Urbit ID functions associated with your Urbit identity. Proxies generally have more restricted capabilities than your ownership seed. These capabilities include spawning child identities, voting, and setting networking keys.
-
-- Transfer proxy: Can transfer your identity to another Ethereum address.
-- Spawn Proxy: For [stars](/docs/glossary/star) and [galaxies](/docs/glossary/galaxy) only. Can create new child identities.
-- Management Proxy: Can configure or set networking keys and conduct sponsorship related operations.
-- Voting Proxy: [Galaxies](/docs/glossary/galaxy) only. Galaxies are the part of the [galactic senate](/docs/glossary/senate), which means they can cast votes on new proposals including changes to the "[Ecliptic](/docs/glossary/ecliptic)" contract, which defines the operations of [Azimuth](/docs/glossary/azimuth).
-
-### What are seeds? {#seeds}
-
-All Ethereum key-pairs in the Urbit wallet system, including [proxies](/docs/glossary/proxies), are produced by 128-bit cryptographically random values called seeds. These seeds are the equivalent of the BIP39 mnemonic of an Ethereum wallet and are yours alone. An ownership key pair is derived from an ownership seed and, likewise, the various proxy key pairs are generated from their respective proxy seeds.
-
-For detailed information see the [Urbit HD Wallet Spec (UP 8)](https://github.com/urbit/proposals/blob/master/008-urbit-hd-wallet).
-
-### What does it mean to “set public keys”? {#set-public-keys}
-
-This means registering the public keys of your identity's encryption and authentication key pairs (together known as "networking keys") with Urbit ID / [Azimuth](/docs/glossary/azimuth), so that others can discover them. The corresponding private keys can then be used to, for example, run a [ship](/docs/glossary/ship) on the [Urbit OS](#what-is-arvo) network.
-
-You want to reset these keys if they are compromised, or if your ship has sunk. This is of little practical significance today, but resetting your networking keys resets your relationship with other ships on the network.
-
-### What do I do if I want to own multiple identities? {#multiple-points}
-
-We recommend using different HD Wallets for each identity. You are able to assign any number of identities to a single Ethereum address, however, since they are just ERC-721 tokens.
-
-### How should I take care of my Urbit HD Wallet? {#custody}
-
-Urbit IDs have accompanying security realities that must be taken seriously. The responsibility for keeping cryptographic assets safe rests fully with the party that owns them.
-
-The nature of decentralization is such that there is no authority that has the power to restore any lost or stolen wallet. Neither can anyone force you to follow good security practices. At most, they can give you recommendations. **Remember:** if critical items, such as your ownership key, are lost or compromised, your assets are likely gone forever.
-
-Below we list some good practices for storing keys, strictest first. Higher-value assets should be secured with stricter measures.
-
-#### Security Tier 1: Cold storage\*
-
-Cold storage refers to any method in which secrets are stored in a way that is not accessible to any network. Cold-stored keys should only ever be generated offline.
-
-Cold storage media options:
-
-- Printing the secret on a piece of paper. However, paper wallets are vulnerable to various forms of physical damage, such as rot, water damage, smoke, or fire. Laminating the paper can mitigate some of these risks, but the lamination can potentially trap moisture. Make sure that you trust the printer; some have memory and network connections.
-- Storing the secret on a brand-new USB stick or hard drive that has never been connected to a networked machine.
-- Storing the secret on a hardware wallet like Ledger or Trezor.
-- Engraving the secret on a strip of stainless steel. This medium is resistant to both water and fire damage.
-
-Places to store your cold-storage media:
-
-- A hidden safe in your home
-- A safe-deposit box at a bank
-
-It’s a good idea to store your keys redundantly; for example, on both a USB stick and a piece of paper in the safe, in case one of those methods fails. If you deem a key to be valuable enough, you can **shard** it into thirds (or other splits) and store each third in secure, geographically distributed locations. Urbit HD wallets for galaxies automatically provide a 3-way sharded master ticket.
-
-#### Security Tier 2: Hardware wallet or paper wallet
-
-A hardware wallet is a digital storage device that’s purpose-built to store cryptographic secrets. They are unaffected by typical key-stealing malware and have built-in security mechanisms that other digital devices lack. Do your research and make sure that you are buying an authentic device manufactured by trustworthy, technically competent security experts with a good reputation. Trezor and Ledger are two popular brands of hardware wallets.
-
-A "paper wallet" is a physical medium printed or engraved with a secret. These are resistent to network attacks, but the downside is that the secret must be entered into a computer by hand, exposing the user to attacks from malware and eavesdroppers.
-
-#### Security Tier 3: On your computer
-
-This tier includes any method where secrets are stored on an everyday computing platform. Some such methods are:
-
-- Encrypted PDFs containing a secret on your desktop’s drive
-- Storing secrets on a cloud account protected by multi-factor authentication
-- Storing secrets in a password manager
-
-This method is risky for a number of reasons. Networked computers can contain malware. Computers that see common use are also prone to crashes and data loss. Storing secrets on cloud accounts mitigates the risk of data destruction, but it exposes a much larger attack surface to malicious actors.
-
-For all of these reasons, if you use Tier 3 methods, use them only for the storage of low-value secrets.
-
-### I have a galaxy or star with lockup conditions. How does this work? {#lockup-conditions}
-
-There are two kinds of release schemes for locked up assets: linear and conditional.
-
-In either scheme, you start out being able to take one star out of lockup, regardless of the terms set around the lockup as a whole. This way, you get to participate with a star right away. Go do something cool!
-
-If your lockup involved a [galaxy](/docs/glossary/galaxy), all of its [stars](/docs/glossary/star) will be locked up, but you will have immediate, lock-free control of the galaxy. You will likely need it to use that star.
-
-Note that the "releasing" of stars just means that they become available for you to claim. They don't automatically get transferred to you; you have to withdraw them from the appropriate lockup contract.
-
-Linear release is the simplest: your stars will be released linearly over a period of time. Most often this is a period of four years. If you have four stars in lockup, that means you will be able to withdraw one star per year. In many cases, there is also an initial windup period which has to pass before linear releasing begins, typically one year. Since Azimuth launched in January 2019, the linear release will begin in January 2020.
-
-Conditional release is a bit more complicated. If your stars are in conditional lockup, they're likely divided over three so-called tranches. Each of these unlocks only after a unique condition is met. Since it's difficult to verify things about the real world using smart contracts, the [Galactic Senate](/docs/glossary/senate) verifies that they've been met. Once the Senate marks a condition for a tranche as cleared, it starts releasing linearly over the period of a year.
-
 
 ## Urbit Grants
 

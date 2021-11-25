@@ -7,36 +7,31 @@ aliases = ["/docs/byte/0/", "/docs/byte", "/docs/learn/hoon/hoon-tutorial/"]
 insert_anchor_links = "right"
 +++
 
-This series is designed to teach you Hoon without assuming you have an extensive
-programming background. In fact, you should be able to follow much of it even if
-you have no programming experience at all, though of course experience helps. We
-strongly encourage you to try out all the examples of each lesson. These lessons
-are meant for the beginner, but they aren't meant to be skimmed. Each lesson
-falls into one of two categories: **readings**, which are prose-heavy
-explanations of Hoon fundamentals, and **walkthroughs**, which are line-by-line
-explanations of example programs. Walkthroughs are found between readings,
-offering a practical implementation of the concepts taught in the reading
-before.
-
-If you're curious about why Urbit is written in this new language, we recommend
-reading the [Hoon overview](/docs/hoon/overview) that covers the high-level
-design decisions behind the language.
-
-Chapter 1 introduces and explains the fundamental concepts you need in order to
-understand Hoon's semantics.
-
-Hoon is a "subject-oriented" programming language &mdash; every expression of
-Hoon is evaluated relative to a **subject**. The subject is a piece of data that
-represents the environment, or the context, of an expression. After reading
-Chapter 1 you should understand what the subject is and how to refer to its
-various parts. In this chapter you'll also learn about
-**[cores](/docs/glossary/core/)**, which are an important data structure in
-Hoon. Once you get the hang of [cores](/docs/glossary/core/) you'll be able to
-write your own functions in Hoon.
-
-Chapter 2 covers the type system, writing basic apps, and the workings of the
-Arvo kernel.
-
-You should also consider enrolling in Hooniversity, a regularly held
-community-run course which follows along the Hoon School curriculum and may be
-found at [Hooniversity](https://hooniversity.org/).
+- [1.1 Introduction](https://urbit.org/docs/hoon/hoon-school/intro)
+- [1.1.1 Walkthrough: List of Numbers](https://urbit.org/docs/hoon/hoon-school/list-of-numbers)
+- [1.2 Nouns](https://urbit.org/docs/hoon/hoon-school/nouns)
+- [1.3 Hoon Syntax](https://urbit.org/docs/hoon/hoon-school/hoon-syntax)
+- [1.3.1 Walkthrough: Conditionals](https://urbit.org/docs/hoon/hoon-school/conditionals)
+- [1.4 Gates (Hoon Functions)](https://urbit.org/docs/hoon/hoon-school/gates)
+- [1.4.1 Walkthrough: Recursion](https://urbit.org/docs/hoon/hoon-school/recursion)
+- [1.5 Lists](https://urbit.org/docs/hoon/hoon-school/lists)
+- [1.5.1 Walkthrough: Fibonacci Sequence](https://urbit.org/docs/hoon/hoon-school/fibonacci)
+- [1.6 The Subject and Its Legs](https://urbit.org/docs/hoon/hoon-school/the-subject-and-its-legs)
+- [1.6.1 Walkthrough: Ackermann Function](https://urbit.org/docs/hoon/hoon-school/ackermann)
+- [1.7 Arms and Cores](https://urbit.org/docs/hoon/hoon-school/arms-and-cores)
+- [1.7.1 Walkthrough: Caesar Cipher](https://urbit.org/docs/hoon/hoon-school/caesar)
+- [1.8 Doors](https://urbit.org/docs/hoon/hoon-school/doors)
+- [1.8.1 Bank Account](https://urbit.org/docs/hoon/hoon-school/bank-account)
+- [1.9 Generators](https://urbit.org/docs/hoon/hoon-school/generators)
+- [2.1 Atoms, Auras, and Simple Cell Types](https://urbit.org/docs/hoon/hoon-school/atoms-auras-and-simple-cell-types)
+- [2.2 Type Checking and Type Inference](https://urbit.org/docs/hoon/hoon-school/type-checking-and-type-inference)
+- [2.3 Structures and Complex Types](https://urbit.org/docs/hoon/hoon-school/structures-and-complex-types)
+- [2.3.1 Walkthrough: Libraries](https://urbit.org/docs/hoon/hoon-school/libraries)
+- [2.3.2 Molds](https://urbit.org/docs/hoon/hoon-school/molds)
+- [2.4 Standard Library: Trees, Sets, and Maps](https://urbit.org/docs/hoon/hoon-school/trees-sets-and-maps)
+- [2.5 Type Polymorphism](https://urbit.org/docs/hoon/hoon-school/type-polymorphism)
+- [2.5.1 Walkthrough: Iron Polymorphism and Wet Polymorphism](https://urbit.org/docs/hoon/hoon-school/iron-polymorphism)
+- [2.5.2 Walkthrough: Lead Polymorphism](https://urbit.org/docs/hoon/hoon-school/lead-polymorphism)
+- [2.6 Behn](https://urbit.org/docs/hoon/hoon-school/behn)
+- [2.7 Gall](https://urbit.org/docs/hoon/hoon-school/gall)
+- [2.7.1 Gall Walkthrough: Egg Timer](https://urbit.org/docs/hoon/hoon-school/egg-timer)

@@ -4,6 +4,7 @@ import {
   ShowOrHide,
   ReadableList,
   Person,
+  Name,
   DateRange,
 } from "../components/Snippets";
 import {
@@ -13,6 +14,42 @@ import {
   formatTime,
   formatTimeZone,
 } from "../lib/lib";
+
+// JAL(2021.9.13) Couldn't quite get this to work properly. There's a trailing
+// "and"
+//
+// function GuestList({ guests, textClass }) {
+
+//   const renderGuests = guests?.length > 2 ? guests?.slice(0,2) : guests;
+//   const noRenderGuestsCount = guests?.slice(2).length;
+
+//   return (
+//     <p className={textClass + " type-sub"}>
+//       <b>
+//         {renderGuests?.length > 1 ? "With guests " : "With guest "}
+//       </b>
+//       <ReadableList>
+//         {renderGuests?.map((guest, index) => (
+//           <>
+//             <Person
+//               key={`${guest.name}-${guest.patp}`}
+//               nameClassNames={textClass}
+//               patpClassNames={textClass}
+//               name={guest.name}
+//               patp={guest.patp}
+//             />
+//           {renderGuests?.length > 1 ? <span>, </span> : <></>}
+//           </>
+//         ))}
+//        {noRenderGuestsCount > 1 ?
+//          <Name>{noRenderGuestsCount} more </Name>
+//         :
+//          <></>
+//         }
+//       </ReadableList>
+//     </p>
+//   );
+// }
 
 export default function EventPreview({ event, className, big }) {
   // Event tiles have a 'dark mode' used when their background images are dark and white text is needed for legibility.
@@ -46,49 +83,16 @@ export default function EventPreview({ event, className, big }) {
               } flex-col h-full`}
             >
               <h3 className={`${blackText} mb-2`}>{event.title}</h3>
-              <p className={`${blackText} mb-2`}>{event.location}</p>
+              <p className={blackText + ""}>{event.description}</p>
+            </div>
+
+            <div className="absolute p-6 left-0 bottom-0 w-full pr-32">
+              <p className={`${blackText} type-sub mb-1`}>{event.location}</p>
               <DateRange
                 starts={starts}
                 ends={ends}
                 className={`${grayText} type-sub`}
               />
-            </div>
-
-            <div className="absolute p-6 left-0 bottom-0 w-full pr-32">
-              <ShowOrHide condition={event.hosts}>
-                <p className={blackText + " type-sub"}>
-                  <b>{"Hosted by "}</b>
-                  <ReadableList>
-                    {event.hosts?.map((host, index) => (
-                      <Person
-                        key={`${host.name}-${host.patp}`}
-                        nameClassNames={blackText}
-                        patpClassNames={blackText}
-                        name={host.name}
-                        patp={host.patp}
-                      />
-                    ))}
-                  </ReadableList>
-                </p>
-              </ShowOrHide>
-              <ShowOrHide condition={event.guests}>
-                <p className={blackText + " type-sub"}>
-                  <b>
-                    {event.guests?.length > 1 ? "With guests " : "With guest "}
-                  </b>
-                  <ReadableList>
-                    {event.guests?.map((guest, index) => (
-                      <Person
-                        key={`${guest.name}-${guest.patp}`}
-                        nameClassNames={blackText}
-                        patpClassNames={blackText}
-                        name={guest.name}
-                        patp={guest.patp}
-                      />
-                    ))}
-                  </ReadableList>
-                </p>
-              </ShowOrHide>
             </div>
 
             {inFuture && event.registration_url ? (

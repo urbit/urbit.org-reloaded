@@ -42,7 +42,7 @@ Taking a fact from an agent, arvo or whatever is easy. First you subscribe using
 (pure:m !>(~))
 ```
 
-Create a chat on your fake zod if you don't have one already, then save it in `/ted`, `|commit %home`, and run `-print-msg`. Next, type some message in your chat and you'll see it printed in the dojo.
+Create a chat on your fake zod if you don't have one already, then save the thread in `/ted` on the `%base` desk, `|commit %base`, and run `-print-msg`. Next, type some message in your chat and you'll see it printed in the dojo.
 
 ### Analysis
 

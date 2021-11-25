@@ -6,7 +6,7 @@ template = "doc.html"
 
 This document details all the `task`s you're likely to use to interact with Eyre, as well as the `gift`s you'll receive in response.
 
-The primary way of interacting with Eyre is from the outside with HTTP requests. As a result, most of its `task`s are only used internally and you're unlikely to need to deal with them directly. The ones you may want to use in certain cases are [%connect](#connect), [%serve](#serve), [%disconnect](#disconnect), [%approve-origin](#approve-origin) and [%reject-origin](#reject-origin), and they are also demonstrated in the [Examples](/docs/arvo/eyre/examples) document. The rest are just documented for completeness.
+The primary way of interacting with Eyre is from the outside with HTTP requests. As a result, most of its `task`s are only used internally and you're unlikely to need to deal with them directly. The ones you may want to use in certain cases are [%connect](#connect), [%serve](#serve), [%disconnect](#disconnect), [%approve-origin](#approve-origin) and [%reject-origin](#reject-origin), and they are also demonstrated in the [Guide](/docs/arvo/eyre/guide) document. The rest are just documented for completeness.
 
 Many of the types referenced are detailed in the [Data Types](/docs/arvo/eyre/data-types) document. It may also be useful to look at the `+eyre` section of `/sys/lull.hoon` in Arvo where these `task`s, `gift`s and data structures are defined.
 
@@ -110,7 +110,7 @@ The `accepted` field says whether the binding succeeded and the `binding` is the
 
 #### Example
 
-See the [Direct HTTP Handling With Gall Agents](/docs/arvo/eyre/examples#direct-http-handling-with-gall-agents) section of the [Examples](/docs/arvo/eyre/examples) document for an example.
+See the [Agents: Direct HTTP](/docs/arvo/eyre/guide#agents-direct-http) section of the [Guide](/docs/arvo/eyre/guide) document for an example.
 
 ## `%serve`
 
@@ -146,7 +146,7 @@ Eyre will return a `%bound` `gift` as described at the end of the [%connect](#co
 
 #### Example
 
-See the [Generators](/docs/arvo/eyre/examples#generators) section of the [Examples](/docs/arvo/eyre/examples) document for an example.
+See the [Generators](/docs/arvo/eyre/guide#generators) section of the [Guide](/docs/arvo/eyre/guide) document for an example.
 
 ## `%disconnect`
 
@@ -192,7 +192,7 @@ Eyre returns no `gift` in response to a `%approve-origin` `task`.
 
 #### Example
 
-See the [Managing CORS Origins](/docs/arvo/eyre/examples#managing-cors-origins) section of the [Examples](/docs/arvo/eyre/examples) document for an example.
+See the [Managing CORS Origins](/docs/arvo/eyre/guide#managing-cors-origins) section of the [Guide](/docs/arvo/eyre/guide) document for an example.
 
 ## `%reject-origin`
 
@@ -210,4 +210,4 @@ Eyre returns no `gift` in response to a `%reject-origin` `task`.
 
 #### Example
 
-See the [Managing CORS Origins](/docs/arvo/eyre/examples#managing-cors-origins) section of the [Examples](/docs/arvo/eyre/examples) document for an example.
+See the [Managing CORS Origins](/docs/arvo/eyre/guide#managing-cors-origins) section of the [Guide](/docs/arvo/eyre/guide) document for an example.

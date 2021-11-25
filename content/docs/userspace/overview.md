@@ -6,9 +6,14 @@ template = "doc.html"
 
 Urbit's userspace is managed by Arvo's Gall vane.
 
-## [Gall](/docs/userspace/gall/gall)
+## [Gall Guide](/docs/userspace/gall-guide)
 
-Resources on Gall which manages userspace applications.
+Learn how to develop Gall agents.
+
+## [Graph Store](/docs/userspace/graph-store)
+
+Resources on Graph Store - the graph database utilized for many Landscape
+applications and oriented for social media in general.
 
 ## [Landscape](/docs/userspace/landscape/)
 

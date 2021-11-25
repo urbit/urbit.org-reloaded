@@ -13,6 +13,7 @@ reward = 4
 assignee = "tabnus-fondeg"
 id = "1736585775"
 completed = false
+canceled = true
 link = ""
 +++
 

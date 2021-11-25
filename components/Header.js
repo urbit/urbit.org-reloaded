@@ -75,6 +75,13 @@ export default function Header(props) {
         <ActiveLink
           currentPath={currentPath}
           className="mr-5 type-ui"
+          href="/using"
+        >
+          Manual
+        </ActiveLink>
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 type-ui"
           href="/blog"
         >
           Blog
@@ -92,6 +99,13 @@ export default function Header(props) {
           href="/getting-started"
         >
           Get Started
+        </ActiveLink>
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 type-ui"
+          href="/faq"
+        >
+          FAQ
         </ActiveLink>
         <button
           onClick={(e) => {

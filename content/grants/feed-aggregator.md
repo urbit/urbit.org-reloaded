@@ -13,6 +13,7 @@ reward = 5
 assignee = "~mirtyl-wacdec"
 grant_id = "P0043"
 completed = false
+canceled = false
 link = ""
 +++
 

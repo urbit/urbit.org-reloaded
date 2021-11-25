@@ -13,6 +13,7 @@ reward = 3
 assignee = "~winduc-dozser"
 id = "1206158911"
 completed = false
+canceled = true
 link = ""
 +++
 

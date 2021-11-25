@@ -5,14 +5,13 @@
 /.pnp
 .pnp.js
 
-/public
-
 # testing
 /coverage
 
 # next.js
 /.next/
 /out/
+.next
 
 # production
 /build
@@ -38,3 +37,5 @@ yarn-error.log*
 
 # editors
 /.nova/
+
+yarn.lock

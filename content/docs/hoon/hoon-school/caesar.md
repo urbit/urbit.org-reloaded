@@ -27,7 +27,7 @@ information. Implementing it in a program is just a fun exercise.
 Below is a generator that performs a Caesar cipher on a tape. This example
 isn't the most compact implementation of such a cipher in Hoon, but it
 demonstrates important principles that more laconic code would not. Save it as
-`caesar.hoon` in your `/gen` directory.
+`caesar.hoon` in the `/gen` directory of your `%base` desk.
 
 ```hoon
 !:
@@ -131,7 +131,7 @@ itself before reading the explanation.
 The `!:` in the first line of the above code enables a full stack trace in the
 event of an error.
 
-`|=  [msg=tape steps=@ud]` creates a [gate](/docs/glossary/gate/) that takes a cell. The head of this cell
+`|= [msg=tape steps=@ud]` creates a [gate](/docs/glossary/gate/) that takes a cell. The head of this cell
 is a `tape`, which is a string type that's a list of `cord`s. Tapes are represented
 as text surrounded by double-quotes, such as this: `"a tape"`. We give this input
 tape the face `msg`. The tail of our cell is a `@ud` -- an unsigned decimal [atom](/docs/glossary/atom/)
@@ -141,7 +141,7 @@ tape the face `msg`. The tail of our cell is a `@ud` -- an unsigned decimal [ato
 second child expression as the subject. In this case, we evaluate the
 expressions in the code chunk below against the [core](/docs/glossary/core/) declared later, which
 allows us reference the core's contained [arms](/docs/glossary/arm/) before they are defined. Without
-`=<`, we would need to put the code chunk below at the bottom of our program.  In Hoon, as previously
+`=<`, we would need to put the code chunk below at the bottom of our program. In Hoon, as previously
 stated, we always want to keep the longer code towards the bottom of our programs - `=<` helps us do that.
 
 ```hoon
@@ -150,19 +150,19 @@ stated, we always want to keep the longer code towards the bottom of our program
 (unshift msg steps)
 ```
 
-`=.  msg  (cass msg)` changes the input string `msg` to lowercases. `=.` changes
+`=. msg (cass msg)` changes the input string `msg` to lowercases. `=.` changes
 the leg of the subject to something else. In our case, the leg to be changed is
 `msg`, and the thing to replace it is `(cass msg)`. `cass` is a standard-library
 gate that converts uppercase letters to lowercase.
 
-`:-  (shift msg steps)` and `(unshift msg steps)` simply composes a
+`:- (shift msg steps)` and `(unshift msg steps)` simply composes a
 cell of a right-shifted cipher and a left-shifted cipher of our original message.
 We will see how this is done using the core described below, but this is the final
 output of our generator.
 
 `|%` creates a `core`, the second child of `=<`. Everything after `|%` is part of that
 second child `core`, and will be used as the subject of the first child of `=<`, described
-above.  The various parts, or `arm`s, of the `core` are denoted by `++` beneath it, for
+above. The various parts, or `arm`s, of the `core` are denoted by `++` beneath it, for
 instance:
 
 ```hoon
@@ -174,21 +174,21 @@ instance:
 ```
 
 The `rotation` arm takes takes a specified number of characters off of a tape and
-puts them on the end of the tape.  We're going to use this to create our shifted alphabet,
+puts them on the end of the tape. We're going to use this to create our shifted alphabet,
 based on the number of `steps` given as an argument to our gate.
 
-`|=  [my-alphabet=tape my-steps=@ud]` creates a gate that takes two arguments: `my-alphabet`, a `tape`,
+`|= [my-alphabet=tape my-steps=@ud]` creates a gate that takes two arguments: `my-alphabet`, a `tape`,
 and `my-steps`, a `@ud`.
 
-`=/  length=@ud  (lent my-alphabet)` stores the length of `my-alphabet` to make the following
+`=/ length=@ud (lent my-alphabet)` stores the length of `my-alphabet` to make the following
 code a little clearer.
 
 `trim` is a a gate from the standard library that splits a tape at into two
-parts at a specified position. So `=+  (trim (mod my-steps length) my-alphabet)` splits the
+parts at a specified position. So `=+ (trim (mod my-steps length) my-alphabet)` splits the
 tape `my-alphabet` into two parts, `p` and `q`, which are now directly available in the subject.
 We call the modulus operation `mod` to make sure that the point at which we split our `tape` is
 a valid point inside of `my-alphabet` even if `my-steps` is greater than `length`, the length of
-`my-alphabet`.  Try trim in the dojo:
+`my-alphabet`. Try trim in the dojo:
 
 ```
 > (trim 2 "abcdefg")
@@ -221,42 +221,42 @@ A `map` is a type equivalent to a dictionary in other languages: it's a data str
 associates a key with a value. If, for example, we wanted to have an association
 between `a` and 1 and `b` and 2, we could use a `map`.
 
-`|=  [a=tape b=tape]` builds a gate that takes two tapes, `a` and `b`, as its
+`|= [a=tape b=tape]` builds a gate that takes two tapes, `a` and `b`, as its
 sample.
 
-`^-  (map @t @t)` casts the gate to a `map` with a `cord` (or `@t`) key and a `cord`
+`^- (map @t @t)` casts the gate to a `map` with a `cord` (or `@t`) key and a `cord`
 value.
 
 You might wonder, if our gate in this arm takes `tape`s, why then are we producing
 a map of `cord` keys and values?
 
-As we discussed earlier, a `tape` is a list of `cord`s.  In this case what we are going to do
+As we discussed earlier, a `tape` is a list of `cord`s. In this case what we are going to do
 is map a single element of a `tape` (either our alphabet or shifted-alphabet) to an element of
-a different `tape` (either our shifted-alphabet or our alphabet).  This pair will therefore be
-a pair of `cord`s.  When we go to use this `map` to convert our incoming `msg`, we will take
+a different `tape` (either our shifted-alphabet or our alphabet). This pair will therefore be
+a pair of `cord`s. When we go to use this `map` to convert our incoming `msg`, we will take
 each element (`cord`) of our `msg` `tape`, use it as a `key` when accessing our `map` and get
 the corresponding `value` from that position in the `map`. This is how we're going to encode
 or decode our `msg` `tape`.
 
-`=|  chart=(map @t @t)` adds a [noun](/docs/glossary/noun/) to the subject with the default value of
+`=| chart=(map @t @t)` adds a [noun](/docs/glossary/noun/) to the subject with the default value of
 the `(map @t @t)` type, and gives that noun the face `chart`.
 
-`?.  =((lent key-position) (lent value-result))` checks if the two `tape`s are the same length. If not,
-the program crashes with an error message of `%uneven-lengths`, using `|~  %uneven-lengths  !!`.
+`?. =((lent key-position) (lent value-result))` checks if the two `tape`s are the same length. If not,
+the program crashes with an error message of `%uneven-lengths`, using `|~ %uneven-lengths !!`.
 
 If the two `tape`s are of the same length, we continue on to create a trap.
 `|-` creates a [trap](/docs/glossary/trap/), a gate that is called immediately.
 
-`?:  |(?=(~ key-position) ?=(~ value-result))` checks if either `tape` is empty. If this is true, the
+`?: |(?=(~ key-position) ?=(~ value-result))` checks if either `tape` is empty. If this is true, the
 `map-maker` arm is finished and can return `chart`, the `map` that we have been
 creating.
 
 If the above test finds that the `tape`s are not empty, we trigger a recursion
 that constructs our `map`: `$(chart (~(put by chart) i.a i.b), a t.a, b t.b)`.
 This code recursively adds an entry in our `map` where the head of the `tape` `a`
-maps to the value of the head of `tape` `b` with  `~(put by chart)`, our calling
+maps to the value of the head of `tape` `b` with `~(put by chart)`, our calling
 of the `put` arm of the `by` map-engine core (note that `~(<wing> <door> <sample>`) is
-a shorthand for `%~  <wing>  <door>  <sample>` (see the [Calls % ('cen')](/docs/hoon/reference/rune/cen#censig)
+a shorthand for `%~ <wing> <door> <sample>` (see the [Calls % ('cen')](/docs/hoon/reference/rune/cen#censig)
 documentation for more information). The recursion also "consumes"
 those heads with every iteration by changing `a` and `b` to their tails using `a t.a, b t.b`.
 
@@ -271,7 +271,7 @@ first.
       (~(put by (map-maker key-position value-result)) ' ' ' ')
 ```
 
-`|=  [key-position=tape value-result=tape]` creates a gate that takes two `tapes`.
+`|= [key-position=tape value-result=tape]` creates a gate that takes two `tapes`.
 
 We use the `put` arm of the `by` core on the next line, giving it a `map` produced
 by the `map-maker` arm that we created before as its sample. This adds an entry to the
@@ -300,12 +300,12 @@ that we can use to encode and decode messages.
 In both cases, we create a gate that accepts a `@ud` named `steps`.
 
 In `encoder`:
-`=/  value-tape=tape  (rotation alpha steps)` creates a `value-tape` noun by calling `rotation`
+`=/ value-tape=tape (rotation alpha steps)` creates a `value-tape` noun by calling `rotation`
 on `alpha`. `alpha` is our arm which contains a `tape` of the entire alphabet. The
 `value-tape` will be the list of `value`s in our `map`.
 
 In `decoder`:
-`=/  key-tape  (rotation alpha steps)` does the same work, but when passed to `space-adder`
+`=/ key-tape (rotation alpha steps)` does the same work, but when passed to `space-adder`
 it will be the list of `key`s in our `map`.
 
 `(space-adder alpha value-tape)`, for `encoder`, and `(space-adder key-tape alpha)`, for

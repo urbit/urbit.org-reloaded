@@ -19,8 +19,8 @@ would be:
 
 Let's implement a factorial calculator in Hoon. To do so, we'll write a
 recursive `gate` (Hoon's equivalent of a function) to perform the relevant
-computation. Save the code below as `factorial.hoon` in your ship's `/gen`
-directory.
+computation. Save the code below as `factorial.hoon` in the `/gen` directory of
+the `%base` desk on your ship.
 
 ```hoon
 |=  n=@ud
@@ -185,11 +185,10 @@ skips the first match of a name.
 ### Exercises
 
 1. Write a recursive gate that produces the first _n_
-[Fibonacci numbers](https://en.wikipedia.org/wiki/Fibonacci_number)
+   [Fibonacci numbers](https://en.wikipedia.org/wiki/Fibonacci_number)
 
 2. Write a recursive gate that produces a list of moves to solve the
-[Tower of Hanoi problem](https://en.wikipedia.org/wiki/Tower_of_Hanoi).
-Disks are stacked on a pole by decreasing order of size. Move all of the
-disks from one pole to another with a third pole as a spare, moving one
-disc at a time, without putting a larger disk on top of a smaller disk.
-
+   [Tower of Hanoi problem](https://en.wikipedia.org/wiki/Tower_of_Hanoi).
+   Disks are stacked on a pole by decreasing order of size. Move all of the
+   disks from one pole to another with a third pole as a spare, moving one
+   disc at a time, without putting a larger disk on top of a smaller disk.

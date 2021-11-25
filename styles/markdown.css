@@ -96,21 +96,17 @@
 
 .markdown pre,
 .markdown pre[class*="language-"] {
+  @apply block p-4 bg-wall-100 rounded-lg overflow-x-auto;
 }
 
 .markdown code,
 .markdown code[class*="language-"] {
-  @apply px-2 py-0.5 bg-wall-100 rounded-md;
+  @apply px-2 py-0.5 bg-wall-100 rounded-lg;
 }
 
 .markdown a code,
 .markdown a code[class*="language-"] {
   @apply bg-green-100 text-green-400;
-}
-
-.markdown pre code,
-.markdown pre[class*="language-"] code {
-  @apply p-4 md:p-8 rounded-xl;
 }
 
 .markdown ul {

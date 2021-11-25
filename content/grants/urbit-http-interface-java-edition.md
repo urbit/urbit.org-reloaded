@@ -13,6 +13,7 @@ reward = 3
 assignee = "~sipfyn-pidmex"
 id = "288224550"
 completed = false
+canceled = true
 link = ""
 +++
 

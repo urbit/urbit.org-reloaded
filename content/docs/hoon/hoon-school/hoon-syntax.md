@@ -254,7 +254,7 @@ The irregular form of the `.=` rune is just `=( )`:
 %.y
 ```
 
-The examples above have another irregular form: `(add 11 11)`. This is the irregular form of `%+`, which calls a [gate](/docs/glossary/gate/) (i.e., a Hoon function) with two arguments for the sample.
+The examples above contain another irregular form: `(add 11 11)`. This is the irregular form of `%+`, which calls a [gate](/docs/glossary/gate/) (i.e., a Hoon function) with two arguments for the sample.
 
 ```
 > %+  add  11  11

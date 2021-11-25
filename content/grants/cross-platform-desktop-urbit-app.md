@@ -12,7 +12,8 @@ description = "A native app that makes running Urbit near friction-less for ever
 reward = 10
 assignee = "nocsyx-lassul"
 id = "740109059"
-completed = false
+completed = true
+canceled = false
 link = ""
 +++
 

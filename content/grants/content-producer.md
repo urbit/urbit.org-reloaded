@@ -13,6 +13,7 @@ reward = 3
 assignee = "~sitful-hatred"
 id = ""
 completed = false
+canceled = false
 link = ""
 +++
 

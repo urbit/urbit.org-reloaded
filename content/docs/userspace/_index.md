@@ -12,9 +12,9 @@ Urbit's userspace is managed by Arvo's Gall vane.
 
 An overview of userspace in Urbit.
 
-## [Gall](/docs/userspace/gall/gall)
+## [Gall Guide](/docs/userspace/gall-guide)
 
-Resources on Gall which manages userspace applications.
+Learn how to develop Gall agents.
 
 ## [Landscape](/docs/userspace/landscape/)
 
@@ -28,3 +28,6 @@ Resources on threads - monadic functions useful for complex IO.
 
 Resources on Graph Store, a non-relational database specialized for social media applications.
 
+## [Distribution](/docs/userspace/dist/dist)
+
+Resources on distribution and management of desks/apps.

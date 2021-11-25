@@ -32,7 +32,7 @@ Here we'll look at subscribing to private key updates from Jael. We'll use a thr
 (pure:m !>(~))
 ```
 
-Save the above thread in the `/ted` directory of your `%home` desk and `|commit %home`.
+Save the above thread in the `/ted` directory of your `%base` desk and `|commit %base`.
 
 Now let's run the thread:
 
@@ -106,7 +106,7 @@ Here's a thread that performs these actions:
 
 Note this example was performed on a comet as a fake ship won't have the required information in Jael.
 
-Save the above thread in the `/ted` directory and `|commit %home`. The thread takes a `ship` as an argument, so we'll try to subscribe to pubkey updates for `~dopzod`. Let's run the thread:
+Save the above thread in the `/ted` directory and `|commit %base`. The thread takes a `ship` as an argument, so we'll try to subscribe to pubkey updates for `~dopzod`. Let's run the thread:
 
 ```
 > -sub-pub ~dopzod
@@ -197,7 +197,7 @@ Here's a simple thread that'll pass Jael a `%turf` `task`, take the `%turf` `gif
 (pure:m !>(~))
 ```
 
-Save in in the `/ted` directory of your ship and `|commit %home`. Next, let's try running it:
+Save in in the `/ted` directory of your ship and `|commit %base`. Next, let's try running it:
 
 ```
 > -turf

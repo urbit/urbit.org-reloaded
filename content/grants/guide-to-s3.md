@@ -13,6 +13,7 @@ reward = 1
 assignee = "~tomnyr-tirsyr"
 id = ""
 completed = false
+canceled = false
 link = ""
 +++
 

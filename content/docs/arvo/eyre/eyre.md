@@ -18,7 +18,7 @@ Eyre's channel system is the primary way of interacting with Gall agents from ou
 
 The channel system is designed to be extremely simple with just a handful of `action` and `response` JSON objects to deal. Essentially it's a thin layer on top of the underlying Gall agent interface. You can poke agents, subscribe for updates, etc, just like you would from within Urbit.
 
-Detailed documentation of the channel system's JSON API is provided in the [External API Reference](/docs/arvo/eyre/external-api-ref) document with corresponding examples in the [Examples](/docs/arvo/eyre/examples#using-the-channel-system) document.
+Detailed documentation of the channel system's JSON API is provided in the [External API Reference](/docs/arvo/eyre/external-api-ref) document with corresponding examples in the [Guide](/docs/arvo/eyre/guide#using-the-channel-system) document.
 
 ## Scrying
 
@@ -34,19 +34,19 @@ Spider (the Gall agent that manages threads) has an Eyre binding that allows you
 
 Generators, which are like Hoon scripts, can also be used through Eyre. Rather than having a predefined JSON API, they instead handle HTTP requests and return HTTP responses directly, and are therefore a more complex case that you're less likely to use.
 
-Their usage is explained in the [%serve](/docs/arvo/eyre/tasks#serve) section of the [Internal API Reference](/docs/arvo/eyre/tasks) documentation and a practical example is provided in the [Generators](/docs/arvo/eyre/examples#generators) section of the [Examples](/docs/arvo/eyre/examples) document.
+Their usage is explained in the [%serve](/docs/arvo/eyre/tasks#serve) section of the [Internal API Reference](/docs/arvo/eyre/tasks) documentation and a practical example is provided in the [Generators](/docs/arvo/eyre/guide#generators) section of the [Guide](/docs/arvo/eyre/guide) document.
 
 ## Direct HTTP Handling With Gall Agents
 
 As well as the [Channel System](#the-channel-system) and [Scries](#scrying), it's also possible for Gall agents to deal directly with HTTP requests. This method is much more complicated than the channel system so you're unlikely to use it unless you want to build a custom HTTP-based API or something like that.
 
-This method is explained in the [%connect](/docs/arvo/eyre/tasks#connect) section of the [Internal API Reference](/docs/arvo/eyre/tasks) document and a detailed example is provided in the [Direct HTTP Handling With Gall Agents](/docs/arvo/eyre/examples#direct-http-handling-with-gall-agents) section of the [Examples](/docs/arvo/eyre/examples) document.
+This method is explained in the [%connect](/docs/arvo/eyre/tasks#connect) section of the [Internal API Reference](/docs/arvo/eyre/tasks) document and a detailed example is provided in the [Agents: Direct HTTP](/docs/arvo/eyre/guide#agents-direct-http) section of the [Guide](/docs/arvo/eyre/guide) document.
 
 ## Cross-Origin Resource Sharing
 
 Eyre supports both simple [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) requests and OPTIONS preflight requests. It has a CORS registry with three categories - `approved`, `rejected` and `requests`. Eyre will respond positively for origins in its `approved` list and negatively for all others. Eyre will add origins in requests that it doesn't have in either its `approved` or `rejected` lists to its `requests` list. Eyre always allows all methods and headers over CORS.
 
-There are three generators - `+cors-registry`, `|cors-approve`, and `|cors-reject` to view, approve, and deny origins respectively from the dojo. Eyre also has [tasks](/docs/arvo/eyre/tasks) to [approve](/docs/arvo/eyre/tasks#approve-origin) and [reject](/docs/arvo/eyre/tasks#reject-origin) origins programmatically, and a number of [scry endpoints](/docs/arvo/eyre/scry) to query them. Examples are also included in the [Managing CORS Origins](/docs/arvo/eyre/examples#managing-cors-origins) section of the Examples document.
+There are three generators - `+cors-registry`, `|cors-approve`, and `|cors-reject` to view, approve, and deny origins respectively from the dojo. Eyre also has [tasks](/docs/arvo/eyre/tasks) to [approve](/docs/arvo/eyre/tasks#approve-origin) and [reject](/docs/arvo/eyre/tasks#reject-origin) origins programmatically, and a number of [scry endpoints](/docs/arvo/eyre/scry) to query them. Examples are also included in the [Managing CORS Origins](/docs/arvo/eyre/guide#managing-cors-origins) section of the Guide document.
 
 ## Sections
 
@@ -58,4 +58,4 @@ There are three generators - `+cors-registry`, `|cors-approve`, and `|cors-rejec
 
 [Data Types](/docs/arvo/eyre/data-types) - Reference documentation of the various data types used by Eyre.
 
-[Examples](/docs/arvo/eyre/examples) - Practical examples of the different ways of using Eyre.
+[Guide](/docs/arvo/eyre/guide) - Practical examples of the different ways of using Eyre.

@@ -13,6 +13,7 @@ reward = 1
 assignee = "nartes-fasrum"
 id = "636838408"
 completed = false
+canceled = false
 link = ""
 +++
 

@@ -9,11 +9,7 @@ ship = "~patnes-rigtyn + ~ravmel-ropdyl"
 image = "https://media.urbit.org/site/posts/essays/value-of-address-space-pt1.jpg"
 +++
 
-<br>
-
-<img class="ba" src="https://media.urbit.org/site/posts/essays/value-of-address-space-pt1.jpg">
-
-<br>
+![](https://media.urbit.org/site/posts/essays/value-of-address-space-pt1.jpg)
 
 _This is the first in a series of three posts on Urbit address space. See also [part 2](https://urbit.org/blog/value-of-address-space-pt2/) and [part 3](https://urbit.org/blog/value-of-address-space-pt3/)._
 

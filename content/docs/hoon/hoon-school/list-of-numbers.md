@@ -20,7 +20,7 @@ Below is a simple Hoon program that takes a single number `n` from the user as i
 $(count (add 1 count))                                  ::  8
 ```
 
-As we mentioned in the previous lesson, the easiest way to use such a program is to run it as a _generator_. Mount your desk `|mount %` (if you didn't do it before), saving a file in the `/home/gen` directory of your ship and commiting these changes `|commit %home` allows you to run it from your ship's Dojo (command line) as a generator. Save the above code there as `list.hoon`. Now you can run it in the Dojo with the command below (remember, without the `>`):
+As we mentioned in the previous lesson, the easiest way to use such a program is to run it as a _generator_. Mount your `%base` desk with `|mount %base` (if you didn't do it before), saving a file in the `base/gen` directory of your ship and commiting these changes `|commit %base` allows you to run it from your ship's Dojo (command line) as a generator. Save the above code there as `list.hoon`. Now you can run it in the Dojo with the command below (remember, without the `>`):
 
 `> +list 5`
 
@@ -89,7 +89,7 @@ In this case, the rune specifies that our gate's output must be `(list @)` -- th
 
 `?:` is a rune that evaluates whether its first child is `true` or `false`. If that child is `true`, the program branches to the second child. If it's `false`, it branches to the third child. `?:` takes three children.
 
-`=(end count)` checks if the user's input equals to the `count` value that we're incrementing to build the list. If these values are equal, we want to end the program, because our list has been built out to where it needs to be. Note that this expression is, in fact, a rune expression, just written a different way than you've seen so far. `=(end count)` is an _irregular form_ of `.=  end  count`, different in looks but identical in operation. `.=` is a rune that checks for the equality of its two children, and produces a `true` or `false` based on what it finds.
+`=(end count)` checks if the user's input equals to the `count` value that we're incrementing to build the list. If these values are equal, we want to end the program, because our list has been built out to where it needs to be. Note that this expression is, in fact, a rune expression, just written a different way than you've seen so far. `=(end count)` is an _irregular form_ of `.= end count`, different in looks but identical in operation. `.=` is a rune that checks for the equality of its two children, and produces a `true` or `false` based on what it finds.
 
 `~` simply represents the `null` value. The program branches here if on line 5 it finds that `end` equals `count`. Lists in Hoon always end with `~`, so we need this to be the last thing we put in our list.
 
@@ -97,7 +97,7 @@ In this case, the rune specifies that our gate's output must be `(list @)` -- th
 
 `:-` is a rune that creates a **cell**, an ordered pair of two values, such as `[1 2]`. It takes two children.
 
-In our case, `:-  count` creates a cell out of whatever value is stored in `count`, and then with the product of line 8.
+In our case, `:- count` creates a cell out of whatever value is stored in `count`, and then with the product of line 8.
 
 ## Line 8
 

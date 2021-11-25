@@ -45,7 +45,7 @@ Arvo is designed to avoid the usual state of complex event networks: event spagh
 
 Unlike any other popular operating system, it is possible for a single human to understand every aspect of Arvo due to its compact size. The entire Urbit stack is around 30,000 lines of code, while the Arvo kernel is only about 1,000 lines of code. We strive for a small codebase because the difficulty in administering a system is roughly proportional to the size of its code base.
 
-## An operating function
+## An operating function {#operating-function}
 
 Arvo is the world's first _purely functional_ operating system, and as such it may reasonably be called an _operating function_. The importance of understanding this design choice and its relevance to the overarching goal cannot be understated. If you knew only a single thing about Arvo, let it be this.
 
@@ -543,7 +543,7 @@ As of this writing, we have nine vanes, which each provide the following service
 - [Eyre](/docs/arvo/eyre/eyre): an http server. Unix sends http messages to `%eyre`, and `%eyre` produces http messages in response.
 - [Ford](/docs/arvo/ford/ford): a build system also utilized for marks
   (file types) and debugging.
-- [Gall](/docs/userspace/gall/gall): manages our userspace applications. `%gall` keeps state and manages subscribers.
+- [Gall](/docs/arvo/gall/gall): manages our userspace applications. `%gall` keeps state and manages subscribers.
 - [Iris](/docs/arvo/iris/iris): an http client.
 - [Jael](/docs/arvo/jael/jael): storage for Azimuth information.
 
