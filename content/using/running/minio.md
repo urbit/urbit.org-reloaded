@@ -63,7 +63,7 @@ Now, you'll need to point your own domain at your MinIO installation. Via your d
 
 - `s3.example.com`,
 - `console.s3.example.com`, and
-- `BUCKET.example.com` where BUCKET is a bucket name of your choosing — 'media' or 'uploads' are good examples
+- `BUCKET.s3.example.com` where BUCKET is a bucket name of your choosing — 'media' or 'uploads' are good examples
 
 All 3 should point at the IP address of your host machine. If you are hosting on your own hardware, this could require port-forwarding via your router so that your host machine is reachable from outside of your home network, and possibly using a dynamic DNS service to update your DNS records if your home IP is not static.
 
