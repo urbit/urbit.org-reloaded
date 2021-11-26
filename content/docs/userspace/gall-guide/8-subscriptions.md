@@ -163,7 +163,7 @@ it: Subscribing to other agents. This is done by `%pass`ing the target agent a
 [%pass /some/wire %agent [~some-ship %some-agent] %watch /some/path]
 ```
 
-If yor agent's subscription request is successful, updates will come in to your
+If your agent's subscription request is successful, updates will come in to your
 agent's `on-agent` arm on the `wire` specified (`/some/wire` in this example).
 The `wire` can be anything you like - its purpose is for your agent to figure
 out which subscription the updates are for. The `[ship term]` pair specifies the
@@ -228,7 +228,7 @@ an error message fed into the `on-fail` arm of your agent.
 ## Receiving updates
 
 Assuming the `%watch` succeeded, your agent will now begin receiving any
-`%fact`s the other agent publishes on the path to which you've subscribed. These
+`%fact`s the other agent publishes on the `path` to which you've subscribed. These
 `%fact`s will also come in to your agent's `on-agent` arm in a `sign`, just like
 the initial `%watch-ack`. The `%fact` `sign` will have the following format:
 
@@ -238,7 +238,7 @@ the initial `%watch-ack`. The `%fact` `sign` will have the following format:
 
 You would typically handle such `%fact`s in the following manner: Test the
 `wire`, test whether the `sign` is a `%fact`, test the `mark` in the `cage`,
-extract the data from the `vase` in the `cage`, and apply your logic. For example:
+extract the data from the `vase` in the `cage`, and apply your logic. Again, route on `wire` before `sign` is one of the [Precepts](/docs/development/precepts#specifics). For example:
 
 ```hoon
 ++  on-agent
@@ -263,7 +263,7 @@ The `on-agent` arm produces a `(quip card _this)`, so you can produce new
 
 ## Getting kicked
 
-For whatever reason, the agent you're `%watch`ing might what to kick your agent
+For whatever reason, the agent you're `%watch`ing might want to kick your agent
 from a `path` to which it's suscribed, ending your subscription and ceasing to
 send your agent `%fact`s. To do this, it will send your agent a `%kick` card [as
 described above](#kicking-subscribers). The `%kick` will come in to your agent's
@@ -538,6 +538,8 @@ currently exists, getting the new subscriber up to date.
 
 ### Subscriber
 
+#### `/app/todo-watcher.hoon`
+
 ```hoon
 /-  todo
 /+  default-agent, dbug
@@ -620,7 +622,7 @@ currently exists, getting the new subscriber up to date.
 ```
 
 This is the subscriber agent. Since it's just for demonstrative purposes, it has
-no state and just prints updates it receives. In practice it would keep the
+no state and just prints the updates it receives. In practice it would keep the
 `tasks` map it receives in its own state, and then update it as it receives new
 `%fact`s.
 
