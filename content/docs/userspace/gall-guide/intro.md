@@ -28,7 +28,7 @@ It's not too far off to think of an agent as simply a database with
 developer-defined logic. But an agent is significantly less constrained than a
 database. Databases are usually tightly constrained in one or more ways because
 they need to provide certain guarantees (like atomicity) or optimizations (like
-indexes). Urbit is a single-level store, so atomicity comes for free. Many
+indexes). Arvo is a [single-level store](/docs/arvo/overview#single-level-store), so atomicity comes for free. Many
 applications don't use databases because they need relational indices; rather,
 they use them for their guarantees around persistence. Some do need the indices,
 though, and it's not hard to imagine an agent which provides a SQL-like
@@ -36,7 +36,7 @@ interface.
 
 On the other hand, an agent is also a lot like what many systems call a
 "service". An agent is permanent and addressable -- a running program can talk
-to an agent just by naming it. An agent can perform IO, unlike most databases.
+to an agent just by naming it. An agent can perform [IO](/blog/io-in-hoon), unlike most databases.
 This is a critical part of an agent: it performs IO along the same transaction
 boundaries as changes to its state, so if an effect happens, you know that the
 associated state change has happened.
