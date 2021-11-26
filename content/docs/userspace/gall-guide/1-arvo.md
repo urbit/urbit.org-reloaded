@@ -52,7 +52,7 @@ Here's a brief summary of each of the vanes:
 - **Dill**: Terminal driver vane. You would not typically interact with Dill
   directly; printing messages to the terminal is usually done with hinting runes
   and functions rather than tasks to Dill, and CLI apps are mediated by a
-  sub-module of the Hood system agent called Drum. CLI apps will not be touched
+  sub-module of the `%hood` system agent called `%drum`. CLI apps will not be touched
   on in this guide, but there's a separate [CLI
   Apps](/docs/hoon/guides/cli-tutorial) guide which covers them if you're
   interested.
