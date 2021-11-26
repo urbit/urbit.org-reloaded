@@ -381,7 +381,7 @@ rather that updating its own state, it sends two pokes to `%pokeme`, so
 ++  on-agent
   |=  [=wire =sign:agent:gall]
   ^-  (quip card _this)
-  ?+    wire  (on-agent wire sign)
+  ?+    wire  (on-agent:def wire sign)
       [%inc ~]
     ?.  ?=(%poke-ack -.sign)
       (on-agent wire sign)
