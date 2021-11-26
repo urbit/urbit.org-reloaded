@@ -144,7 +144,7 @@ The simplest way to handle a `%poke-ack` by passing it to `default-agent`'s
 `on-agent` arm, which will just print an error message to the terminal if it's a
 nack, and otherwise do nothing. Sometimes you'll want your agent to do something
 different depending on whether the poke failed or succeeded (and therefore
-whether it's a nack or an ack). In that case, you'd typically first test the
+whether it's a nack or an ack). As stated in the [Precepts](/docs/development/precepts#specifics): "Route on wire before sign, never sign before wire.". Thus we first test the
 `wire` so you can tell what the `%poke-ack` was for. You might do something
 like:
 
@@ -384,7 +384,7 @@ rather that updating its own state, it sends two pokes to `%pokeme`, so
   ?+    wire  (on-agent:def wire sign)
       [%inc ~]
     ?.  ?=(%poke-ack -.sign)
-      (on-agent wire sign)
+      (on-agent:def wire sign)
     ?~  p.sign
       %-  (slog '%pokeit: Increment poke succeeded!' ~)
       `this
@@ -393,7 +393,7 @@ rather that updating its own state, it sends two pokes to `%pokeme`, so
   ::
       [%dec ~]
     ?.  ?=(%poke-ack -.sign)
-      (on-agent wire sign)
+      (on-agent:def wire sign)
     ?~  p.sign
       %-  (slog '%pokeit: Decrement poke succeeded!' ~)
       `this
