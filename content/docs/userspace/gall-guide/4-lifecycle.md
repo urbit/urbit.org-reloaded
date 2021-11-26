@@ -320,7 +320,7 @@ Let's try inspecting our state with `dbug`:
 
 ```
 >   [%0 val=42]
-> :state-test +dbug
+> :lifecycle +dbug
 >=
 ```
 
@@ -328,7 +328,7 @@ Let's try inspecting our state with `dbug`:
 
 ```
 >   42
-> :state-test +dbug [%state %val]
+> :lifecycle +dbug [%state %val]
 >=
 ```
 

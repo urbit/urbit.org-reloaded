@@ -232,6 +232,8 @@ to `on-arvo`, on the `wire` we specified (`/timers`). Here's the `on-arvo` arm:
   ==
 ```
 
+We remark that, just like in the case of agent-agent communication, `gift`s from Arvo are also routed `wire` before `sign-arvo`.
+
 First we check the `wire` is `/timers`, and then we check the `sign-arvo` begins
 with `[%behn %wake ....]`. Behn's `%wake` gift has the following format:
 

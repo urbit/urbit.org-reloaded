@@ -79,7 +79,7 @@ specified agent is installed and running:
 A scry to Gall with a `%x` `care` will be passed to the agent for handling. Gall
 handles `%x` specially, and expects an extra field at the end of the `path` that
 specifies the `mark` to return. Gall will take the data produced by the
-specified endpoint and try convert it to the given mark, crashing if the mark
+specified endpoint and try to convert it to the given mark, crashing if the mark
 conversion fails. The extra field specifying the mark is not passed through to
 the agent itself. Here's a couple of examples:
 
@@ -112,7 +112,7 @@ all, and interprets `[~ ~]` to mean the endpoint exists but the requested data
 does not. In either case the dotket expression which initiated the scry will
 crash. The `cage` will contain the actual data to return.
 
-The `on-peek` arm, therefore, begins like so:
+An ordinary `on-peek` arm, therefore, begins like so:
 
 ```hoon
 ++  on-peek
@@ -123,7 +123,7 @@ The `on-peek` arm, therefore, begins like so:
 
 Typically, you'd handle the `path` similarly to `on-watch`, as we discussed in
 the lesson on subscriptions. You'd use something like a wutlus expression to
-test the type of the `path`, defining your scry endpoints like so:
+test the value of the `path`, defining your scry endpoints like so:
 
 ```hoon
 ?+    path  (on-peek:def path)
@@ -334,10 +334,10 @@ crash!
 - Scries can only be performed on the local ship, not on remote ships.
 - Gall scries with an agent name in the `desk` field will be passed to that
   agent's `on-peek` arm for handling.
-- Gall scries with a `%x` `care` take a `mark` at the end of the scry path,
-  telling gall to convert the data returned by the scry endpoint to the mark
+- Gall scries with a `%x` `care` take a `mark` at the end of the scry `path`,
+  telling Gall to convert the data returned by the scry endpoint to the mark
   specified.
-- The `on-peek` arm takes a `path` with the `care` in the head and the path part
+- The `on-peek` arm takes a `path` with the `care` in the head and the `path` part
   of the scry in the tail, like `/x/some/path`.
 - The `on-peek` arm produces a `(unit (unit cage))`. The outer `unit` is null if
   the scry endpoint does not exist, and the inner `unit` is null if the data

@@ -183,7 +183,7 @@ corresponds to its `mark` before being delivered to the agent. If the remote
 data has no corresponding mark in `/mar` or it fails validation, it will crash
 before it touches the agent.
 
-A mark file is a `door` with three arms. The door's sample is the data type the
+A mark file is a door with exactly three arms. The door's sample is the data type the
 mark will handle. For example, the sample of the `%noun` mark is just `non=*`,
 since it handles any noun. The three arms are as follows:
 
@@ -221,10 +221,10 @@ Here's a very simple mark file for the `action` structure we created in the
 ```
 
 We've imported the `/sur/todo.hoon` structure library from the previous section,
-and we've defined the sample of the `door` as `=action:todo`, since that's what
+and we've defined the sample of the door as `=action:todo`, since that's what
 it will handle. Now let's consider the arms:
 
-- `grab`: This handles convertion methods _to_ our mark. It contains a core with
+- `grab`: This handles conversion methods _to_ our mark. It contains a core with
   arm names corresponding to other marks. In this case, it can only convert from
   a `noun` mark, so that's the core's only arm. The `noun` arm simply calls the
   `action` structure from our structure library. This is called "clamming" or
@@ -233,7 +233,7 @@ it will handle. Now let's consider the arms:
 - `grow`: This handles conversion methods _from_ our mark. Like `grab`, it
   contains a core with arm names corresponding to other marks. Here we've also
   only added an arm for a `%noun` mark. In this case, `action` data will come in
-  as the sample of our `door`, and the `noun` arm simply returns it, since it's
+  as the sample of our door, and the `noun` arm simply returns it, since it's
   already a noun (as everything is in Hoon).
 - `grad`: This is the revision control arm, and as you can see we've simply
   delegated it to the `%noun` mark.
@@ -277,9 +277,9 @@ just contains the `@p` of the local ship. The `src` field contains the `@p` of
 the ship from which the event originated.
 
 When messages come in over Ames from other ships on the network, they're
-encrypted with our ship's public keys and signed by the ship which sent them.
+[encrypted](/docs/arvo/ames/cryptography) with our ship's public keys and signed by the ship which sent them.
 The Ames vane decrypts and verifies the messages using keys in the Jael vane,
-which are obtained from the Azimuth Ethereum contract where Urbit ID ownership
+which are obtained from the [Azimuth Ethereum contract](/docs/azimuth/azimuth-eth) and [Layer 2 data](/docs/azimuth/l2/layer2) where Urbit ID ownership
 and keys are recorded. This means the originating `@p` of all messages are
 cryptographically validated before being passed on to Gall, so the `@p`
 specified in the `src` field of the `bowl` can be trusted to be correct, and
@@ -328,10 +328,10 @@ Type definitions:
 - An agent's type definitions live in the `/sur` directory of a desk.
 - The `/sur` file is a core, typically containing a number of lusbuc (`+$`)
   arms.
-- `/sur` files can be imported with the fashep (`/-`) Ford rune at the beginning
+- `/sur` files are imported with the fashep (`/-`) Ford rune at the beginning
   of a file.
 - Agent API types, for pokes and updates to subscribers, are commonly defined as
-  head-tagged unions.
+  head-tagged unions such as `[%foo bar=baz]`.
 
 Mark files:
 
@@ -339,7 +339,7 @@ Mark files:
 - A `mark` like `%foo` corresponds to a file in `/mar` like `/mar/foo.hoon`
 - Marks are file types in Clay, but are also used for passing data between
   agents as well as for external data generally.
-- A mark file is a `door` with a sample of the data type it handles and three
+- A mark file is a door with a sample of the data type it handles and exactly three
   arms: `grab`, `grow` and `grad`.
 - `grab` and `grow` each contain a core with arm names corresponding to other marks.
 - `grab` and `grow` define functions for converting to and from our mark,

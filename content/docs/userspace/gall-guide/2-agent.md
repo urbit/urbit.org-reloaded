@@ -6,9 +6,9 @@ template = "doc.html"
 
 In this lesson we'll look at the basic type and structure of a Gall agent.
 
-A Gall agent is a `door` with exactly ten arms. Each arm is responsible for
-handling certain kinds of events that Gall feeds in to the agent. A `door` is
-just a `core` with a sample - it's made with the
+A Gall agent is a [door](/docs/glossary/door) with exactly ten [arms](/docs/glossary/arm). Each arm is responsible for
+handling certain kinds of events that Gall feeds in to the agent. A door is
+just a [core](/docs/glossary/core) with a sample - it's made with the
 [barcab](/docs/hoon/reference/rune/bar#_-barcab) rune (`|_`) instead of the
 usual [barcen](/docs/hoon/reference/rune/bar#-barcen) rune (`|%`).
 
@@ -58,7 +58,7 @@ These two arms handle responses to requests our agent previously initiated.
 
 ## Bowl
 
-The sample of the `door` is a `bowl:gall`. Every time an event triggers the
+The sample of a Gall agent door is always a `bowl:gall`. Every time an event triggers the
 agent, Gall populates the bowl with things like the current date-time, entropy,
 subscription information, which ship the request came from, etc, so that all the
 arms of the agent have access to that data. For the exact structure and contents
@@ -69,9 +69,9 @@ documentation](/docs/arvo/gall/data-types#bowl).
 
 If you've worked through [Hoon School](/docs/hoon/hoon-school/intro), you may
 recall that a core is a cell of `[battery payload]`. The battery is the core
-itself compiled to nock, and the payload is the subject which it operates on.
+itself compiled to Nock, and the payload is the subject which it operates on.
 
-For an agent, the payload will at least contain the bowl, the usual standard
+For an agent, the payload will at least contain the bowl, the usual Hoon and `zuse` standard
 library functions, and the **state** of the agent. For example, if your agent
 were for an address book app, it might keep a `map` of ships to address book
 entries. It might add entries, delete entries, and modify entries. This address
@@ -135,7 +135,7 @@ This is just a dummy agent that does absolutely nothing - it has no state and
 rejects all messages by crashing. We'll get to what each of the arms do later.
 For now, we'll just consider a few particular points.
 
-Firstly, note its structure - it's a `door` (created with `|_`) with a sample of
+Firstly, note its structure - it's a door (created with `|_`) with a sample of
 `bowl:gall` and the ten arms described earlier.
 
 Secondly, you'll notice some of the arms return:
@@ -195,7 +195,7 @@ Now, let's have a look:
 The dojo pretty-prints cores with a format of `number-of-arms.hash`. You can see
 the head of `skeleton` is `10.fxw` - that's the battery of the core, our 10-arm
 agent. If we try printing the head of `skeleton` we'll see it's a whole lot of
-compiled `nock`:
+compiled Nock:
 
 ```
 > -.skeleton
@@ -279,7 +279,7 @@ If we again examine our agent core's payload by looking at the tail of
 
 ## Summary
 
-- A Gall agent is a `door` with ten arms and a sample of `bowl:gall`.
+- A Gall agent is a door with exactly ten specific arms and a sample of `bowl:gall`.
 - Each of the ten arms handle different kinds of events - Gall calls the
   appropriate arm for the kind event it receives.
 - The ten arms fit roughly into five categories:

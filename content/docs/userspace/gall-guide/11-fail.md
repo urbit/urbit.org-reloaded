@@ -49,18 +49,20 @@ include a message of "subscribe wire not unique", as well as the agent name, the
 `wire`, the target ship and the target agent.
 
 How you might handle these cases (if you wanted to manually handle them) depends
-on the logic of your particular agent.
+on the purpose of your particular agent.
 
 ## Helper core
 
 Back in the lesson on lustar virtual arms, we briefly mentioned a common pattern
-is to define an alias of `hc` for a "helper core" like:
+is to define a deferred expression for a helper core named `hc` like:
 
 ```hoon
 +*  this  .
     def   ~(. (default-agent this %.n) bowl)
     hc    ~(. +> bowl)
 ```
+
+The name `do` is also used frequently besides `hc`.
 
 A helper core is a separate core composed into the subject of the agent core,
 containing useful functions for use by the agent arms. Such a helper core would
@@ -90,14 +92,14 @@ rune directly above the agent core like:
 =<
 |_  =bowl:gall
 +*  this      .
-    def   ~(. (default-agent this %|) bowl)
+    def   ~(. (default-agent this %.n) bowl)
     hc    ~(. +> bowl)
 ++  on-init
 .....
 ```
 
 We can then add the helper core below the agent core. The helper core is most
-typically a `door` like the agent core, also with the `bowl` as its sample. This
+typically a door like the agent core, also with the `bowl` as its sample. This
 is just so any functions you define in it have ready access to the `bowl`. It
 would look like:
 
@@ -109,7 +111,7 @@ would look like:
 --
 ```
 
-Back in the lustar virtual arm of the agent core, we give it an alias of `hc`
+Back in the lustar virtual arm of the agent core, we give it a deferred expression name of `hc`
 and call it like so:
 
 ```hoon
@@ -134,6 +136,6 @@ like `(some-function:hc ....)`.
   of the agent core.
 - Helper cores are typically placed below the agent core, and composed with a
   tisgal (`=<`) rune.
-- The helper core is typically a `door` with the `bowl` as a sample.
-- The helper core is typically given an alias of `hc` in the lustar virtual arm
+- The helper core is typically a door with the `bowl` as a sample.
+- The helper core is typically given a name of `hc` or `do` in the lustar virtual arm
   of the agent core.

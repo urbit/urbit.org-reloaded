@@ -86,7 +86,7 @@ The type of the next field is a `note:agent:gall` (henceforth just `note`), whic
 - An `%arvo` `note` is a request to a vane. We'll discuss such requests
   [below](#note-arvo).
 - A `%pyre` `note` is used to abort an event. It's mostly used internally by
-  Kiln, it's unlikely you'd use it in your own agent. The `tang` contains an
+  `kiln` (a submodule of `%hood`), it's unlikely you'd use it in your own agent. The `tang` contains an
   error message.
 
 ### `task`
@@ -135,11 +135,11 @@ Unlike subscriptions, these are just one-off messages.
 
 A `%poke` contains a `cage` of some data. A `cage` is a cell of `[mark vase]`.
 The `mark` is just a `@tas` like `%foo`, and corresponds to a mark file in the
-`/mar` directory. We'll cover marks in greater detail later. The `vase` contains
+`/mar` directory. We'll cover `mark`s in greater detail later. The `vase` contains
 the actual data you're sending.
 
-The `%poke-as` task is the same as `%poke` except Gall will convert the `cage`
-to the `mark` you specify before sending it off.
+The `%poke-as` task is the same as `%poke` except Gall will convert the `mark`
+in the `cage` to the `mark` you specify before sending it off.
 
 **Examples**
 

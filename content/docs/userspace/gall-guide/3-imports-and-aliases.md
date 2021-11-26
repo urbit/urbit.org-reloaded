@@ -40,11 +40,11 @@ imported at the beginning of an agent with the
 [faslus](/docs/arvo/ford/ford#ford-runes) (`/+`) rune.
 
 The library is a wet gate which takes two arguments: `agent` and `help`. The
-first is your agent core itself, and the second is a `?`. If `help` is `%.y`, it
-will crash in all cases. If `help` is `%.n`, it will use its defaults. You would
+first is your agent core itself, and the second is a `?`. If `help` is `%.y` (equivalently, `%&`), it
+will crash in all cases. If `help` is `%.n` (equivalently, `%|`), it will use its defaults. You would
 almost always have `help` as `%.n`.
 
-The wet gate returns a `agent:gall` `door` with a sample of `bowl:gall` - a
+The wet gate returns a `agent:gall` door with a sample of `bowl:gall` - a
 typical agent core. Usually you would define an alias for it in a virtual arm
 ([explained below](#virtual-arms)) so it's simple to call.
 
@@ -52,7 +52,7 @@ typical agent core. Usually you would define an alias for it in a virtual arm
 
 The `dbug` library lets you inspect the state and `bowl` of your agent from the
 dojo. It includes an `agent:dbug` function which wraps your whole `agent:gall`
-`door`, adding its extra debugging functionality while transparently passing
+door, adding its extra debugging functionality while transparently passing
 events to your agent for handling like usual.
 
 To use it, you just import `dbug` with a
@@ -92,21 +92,21 @@ if you include a scry endpoint with a path of `/x/dbug/state`, it will use that
 instead.
 
 We haven't yet covered some of the concepts described here, so don't worry if
-you don't fully understand `%dbug`'s functionality - you can refer back here
+you don't fully understand `dbug`'s functionality - you can refer back here
 later.
 
 ## Virtual arms
 
 An agent core must have exactly ten arms. However, there's a special kind of
 "virtual arm" that can be added without actually increasing the core's arm
-count. A virtual arm is created with the
+count, since it really just adds code to the other arms in the core. A virtual arm is created with the
 [lustar](/docs/hoon/reference/rune/lus#-lustar) (`+*`) rune, and its purpose is
-to define _aliases_. It takes a list of pairs of names (aliases) and hoon
-expressions. When compiled, the aliases defined in the virtual arm are
+to define _deferred expressions_. It takes a list of pairs of names and Hoon
+expressions. When compiled, the deferred expressions defined in the virtual arm are
 implicitly inserted at the beginning of every other arm of the core, so they all
-have access to them.
+have access to them. Each time a name in a `+*` is called, the associated Hoon is evaluated in its place, similar to lazy evaluation except it is re-evaluated whenever needed. See the [tistar](/docs/hoon/reference/rune/tis#-tistar) reference for more information on deferred expressions.
 
-A virtual arm in an agent might look something like this:
+A virtual arm in an agent often looks something like this:
 
 ```hoon
 +*  this  .
@@ -114,8 +114,8 @@ A virtual arm in an agent might look something like this:
     hc    ~(. +> bowl)
 ```
 
-`this`, `def` and `hc` are the aliases, and next to each one is the hoon
-expresion it's aliasing. Notice that unlike most things that take _n_ arguments,
+`this`, `def` and `hc` are the deferred expressions, and next to each one is the Hoon
+expression it evaluates whenever called. Notice that unlike most things that take _n_ arguments,
 a virtual arm is not terminated with a `==`. You can define as many aliases as
 you like. The three in this example are conventional ones you'd use in most
 agents you write. Their purposes are:
@@ -203,8 +203,8 @@ the build system will do that for us. In this case we've just added a single
 After that core, we call `agent:dbug` with our whole agent core as its argument.
 This allows us to use the `dbug` features described earlier.
 
-Inside our agent `door`, we've added an extra virtual arm and defined a couple
-of aliases:
+Inside our agent door, we've added an extra virtual arm and defined a couple
+deferred expressions:
 
 ```hoon
 +*  this  .
@@ -212,9 +212,9 @@ of aliases:
 ```
 
 In most of the arms, you see we've been able to replace the dummy code with
-simple calls to the corresponding arms of `default-agent`, which we set up and
-aliased as `def` in the virtual arm. We've also replaced the old `..on-init`
-with our alias `this` in the `on-init` arm as an example - it makes things a bit
+simple calls to the corresponding arms of `default-agent`, which we set up as a deferred
+expression named `def` in the virtual arm. We've also replaced the old `..on-init`
+with our deferred expression named `this` in the `on-init` arm as an example - it makes things a bit
 simpler.
 
 You can save the code above in `/app/skeleton.hoon` of your `%base` desk like
@@ -262,15 +262,15 @@ idea of its basic usage.
 
 The key takeaways are:
 
-- Libraries can be imported with `/+`.
-- `default-agent` is a library that provides default behaviours for Gall agent
+- Libraries are imported with `/+`.
+- `default-agent` is a library that provides default behaviors for Gall agent
   arms.
 - `dbug` is a library that lets you inspect the state and `bowl` of an agent
   from the dojo, with the `+dbug` generator.
-- Convenient aliases for hoon expressions can be defined in a virtual arm with
+- Convenient deferred expressions for Hoon expressions can be defined in a virtual arm with
   the [lustar](/docs/hoon/reference/rune/lus#-lustar) (`+*`) rune.
-- `this` is a conventional alias for the agent core itself.
-- `def` is a conventional alias for accessing arms in the `default-agent`
+- `this` is a conventional deferred expression name for the agent core itself.
+- `def` is a conventional deferred expression name for accessing arms in the `default-agent`
   library.
 - Extra cores can be composed into the subject of the agent core. The
   composition is done implicitly by the build system. Typically we'd include one

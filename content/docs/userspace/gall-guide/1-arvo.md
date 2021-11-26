@@ -66,7 +66,7 @@ Here's a brief summary of each of the vanes:
 
 - **Iris**: Web client vane. If you want your agent to query external web APIs and
   the like, it's done via Iris. Oftentimes web API interactions are
-  spun out into [Threads](/docs/userspace/threads/overview) to avoid
+  spun out into [threads](/docs/userspace/threads/overview) to avoid
   complicating the Gall agent itself, so a Gall agent would not necessary deal
   with Iris directly, even if it made use of external APIs.
 - **Jael**: Key infrastructure vane. Jael keeps track of PKI data for your ship and
@@ -183,7 +183,7 @@ desk
 
 - `app`: Gall agents.
 - `gen`: Generators.
-- `lib`: Libraries - these would typically be imported with the `/+` Ford rune.
+- `lib`: Libraries - these are imported with the `/+` Ford rune.
 - `mar`: `mark` files, which are filetype definitions.
 - `sur`: Structures - these typically contain type definitions and structures,
   and would be imported with the `/-` Ford rune.
@@ -217,7 +217,7 @@ sys
 ```
 
 - `arvo.hoon`: Source code for Arvo itself.
-- `hoon.hoon`: Hoon standard library.
+- `hoon.hoon`: Hoon standard library and compiler.
 - `lull.hoon`: Mostly structures and type definitions for interacting with
   vanes.
 - `vane`: This directory contains the source code for each of the vanes.
@@ -246,18 +246,18 @@ all have these libraries available to them in their subject.
 You should now have a general idea of the different parts of Arvo, but how does
 a Gall agent interact with these things?
 
-There are two basic ways of interacting with other parts of the system: By
+There are two basic ways of interacting with other parts of the system: by
 scrying them, and by passing them messages and receiving messages in response.
-There are also two basic things to interact with: Vanes, and other agents.
+There are also two basic things to interact with: vanes, and other agents.
 
 - Scries: The scry system allows you to access the state of other agents and
   vanes in a read-only fashion. Scries can be performed from any context with
   the dotket (`.^`) rune. Each vane has "scry endpoints" which define what you
   can read, and these are comprehensively documented in the Scry Reference of
   each vane's section of the [Arvo documentation](/docs/arvo/overview). Agents
-  can also define scry endpoints in the `+on-peek` arm of their agent core.
-  Scries can only be done on the local ship, it is not yet possible to perform
-  scries over the network. There is a separate [guide to
+ define scry endpoints in the `+on-peek` arm of their agent core.
+  Scries can only be done on the local ship; it is not yet possible to perform
+  scries over the network (but this functionality is planned for the future). There is a separate [guide to
   scries](/docs/arvo/concepts/scry) which you might like to read through for
   more details.
 - Messages:
@@ -265,10 +265,10 @@ There are also two basic things to interact with: Vanes, and other agents.
     respond with in its respective section of `lull.hoon`. These might do all
     manner of things, depending on the vane. For example, Iris might fetch an
     external HTTP resource for you, Clay might read or build a specified file,
-    etc. The tasks and gifts of each vane are comprehensively documented in the
+    etc. The `task`s and `gift`s of each vane are comprehensively documented in the
     API Reference of each vane's section of the [Arvo
     documentation](/docs/arvo/overview).
-  - Agents: These can be `%poke`d with some data, and can also be `%watch`ed,
+  - Agents: These can be `%poke`d with some data, which is a request to perform a single action. They can also be `%watch`ed,
     which means to subscribe for updates. We'll discuss these in detail later in
     the guide.
 
@@ -283,8 +283,8 @@ meaning for now, we'll discuss them in detail later in the guide.
 Inter-agent messaging can occur over the network, so you can interact with
 agents on other ships as well as local ones. You can only talk to local vanes,
 but some vanes like Clay are able to make requests to other ships on your
-behalf. Note this summary is simplified - vanes don't just talk in tasks and
-gifts in all cases. For example, requests from HTTP clients through Eyre (the
+behalf. Note this summary is simplified - vanes don't just talk in `task`s and
+`gift`s in all cases. For example, requests from HTTP clients through Eyre (the
 webserver vane) behave more like those from agents than vanes, and a couple of
 other vanes also have some different behaviours. Agent interactions are also a
 little more complicated, and we'll discuss that later, but the basic patterns

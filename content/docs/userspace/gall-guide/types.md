@@ -58,7 +58,7 @@ dojo:
 ```
 
 You would typically use `!>` as part of a [`cage`](#cage) when you're
-constructing a `card` like a poke or a `%fact` gift to be sent off.
+constructing a `card` like a poke or a `%fact` `gift` to be sent off.
 
 ### Extract data from `vase`
 
@@ -90,7 +90,7 @@ Now let's try asking for a `@p` rather than `@t`:
 nest-fail
 ```
 
-As you can see, it will crash if the type does not exactly match. Note that
+As you can see, it will crash if the type does not nest. Note that
 rather than using `!<`, you can also just clam the tail of the vase like:
 
 ```
@@ -156,7 +156,7 @@ a Gall agent, a `path` is most commonly a subscription path - you might
 subscribe for updates to `/foo/bar` on another agent, or another agent might
 subscribe to `/baz` on your agent.
 
-A `path` might just be a series of fixed elements like `/foo/bar`, but some
+A `path` might just be a series of fixed `@ta` like `/foo/bar`, but some
 elements might also be variable and encode atom auras, or some other format. For
 example, you might like to include a date in the path like
 `/updates/~2021.10.31..07.24.27..db68`. Other agents might create the path by
