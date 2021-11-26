@@ -455,24 +455,39 @@ This is a very simple mark file for the `update` type.
     ?-    -.action
         %add
       :_  state(tasks (~(put by tasks) now.bowl [name.action %.n]))
-      :~  [%give %fact ~[/updates] %todo-update !>(`update:todo`[%add now.bowl name.action])]
+      :~  :*  %give  %fact  ~[/updates]  %todo-update
+              !>(`update:todo`[%add now.bowl name.action])
+          ==
       ==
     ::
-        %del
+         %del
       :_  state(tasks (~(del by tasks) id.action))
-      :~  [%give %fact ~[/updates] %todo-update !>(`update:todo`action)]
+      :~  :*  %give  %fact  ~[/updates]  %todo-update
+              !>(`update:todo`action)
+          ==
       ==
     ::
         %toggle
-      :_  state(tasks (~(jab by tasks) id.action |=(=task:todo task(done !done.task))))
-      :~  [%give %fact ~[/updates] %todo-update !>(`update:todo`action)]
+      :_  %=  state
+            tasks  %+  ~(jab by tasks)
+                     id.action
+                   |=(=task:todo task(done !done.task))
+          ==
+      :~  :*  %give  %fact  ~[/updates]  %todo-update
+              !>(`update:todo`action)
+          ==
       ==
     ::
         %rename
-      :_  state(tasks (~(jab by tasks) id.action |=(=task:todo task(name name.action))))
-      :~  [%give %fact ~[/updates] %todo-update !>(`update:todo`action)]
+      :_  %=  state
+            tasks  %+  ~(jab by tasks)
+                     id.action
+                   |=(=task:todo task(name name.action))
+          ==
+      :~  :*  %give  %fact  ~[/updates]  %todo-update
+              !>(`update:todo`action)
+          ==
       ==
-    ::
         %allow
       `state(friends (~(put in friends) who.action))
     ::

@@ -88,34 +88,61 @@ manner:
 ```hoon
 ++  on-poke
   |=  [=mark =vase]
-  |^  ^-  (quip card _this)
+  ^-  (quip card _this)
+  |^
+  ?>  =(src.bowl our.bowl)
   ?+    mark  (on-poke:def mark vase)
-      %noun
+      %todo-action
     =^  cards  state
       (handle-poke !<(action:todo vase))
     [cards this]
+  ==
+  ::
   ++  handle-poke
     |=  =action:todo
     ^-  (quip card _state)
     ?-    -.action
         %add
       :_  state(tasks (~(put by tasks) now.bowl [name.action %.n]))
-      :~  [%give %fact ~[/updates] %noun !>(`update:todo`[%add now.bowl name.action])]
+      :~  :*  %give  %fact  ~[/updates]  %todo-update
+              !>(`update:todo`[%add now.bowl name.action])
+          ==
       ==
     ::
-        %del
+         %del
       :_  state(tasks (~(del by tasks) id.action))
-      :~  [%give %fact ~[/updates] %noun !>(`update:todo`action)]
+      :~  :*  %give  %fact  ~[/updates]  %todo-update
+              !>(`update:todo`action)
+          ==
       ==
     ::
         %toggle
-      :_  state(tasks (~(jab by tasks) id.action |=(=task task(done !done.task))))
-      :~  [%give %fact ~[/updates] %noun !>(`update:todo`action)]
+      :_  %=  state
+            tasks  %+  ~(jab by tasks)
+                     id.action
+                   |=(=task:todo task(done !done.task))
+          ==
+      :~  :*  %give  %fact  ~[/updates]  %todo-update
+              !>(`update:todo`action)
+          ==
       ==
     ::
         %rename
-      :_  state(tasks (~(jab by tasks) id.action |=(=task task(name name.action))))
-      :~  [%give %fact ~[/updates] %noun !>(`update:todo`action)]
+      :_  %=  state
+            tasks  %+  ~(jab by tasks)
+                     id.action
+                   |=(=task:todo task(name name.action))
+          ==
+      :~  :*  %give  %fact  ~[/updates]  %todo-update
+              !>(`update:todo`action)
+          ==
+      ==
+        %allow
+      `state(friends (~(put in friends) who.action))
+    ::
+        %kick
+      :_  state(friends (~(del in friends) who.action))
+      :~  [%give %kick ~[/updates] `who.action]
       ==
     ==
   --
