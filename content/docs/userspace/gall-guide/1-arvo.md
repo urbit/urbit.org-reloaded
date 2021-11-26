@@ -6,7 +6,7 @@ template = "doc.html"
 
 This document is a prologue to the Gall guide. If you've worked though [Hoon
 School](/docs/hoon/hoon-school/intro) (or have otherwise learned the basics of
-hoon), you'll likely be familiar with generators, but not with all the other
+Hoon), you'll likely be familiar with generators, but not with all the other
 parts of the Arvo operating system or the way it fits together. We'll go over
 the basic details here so you're better oriented to learn Gall agent
 development. We'll not go into the internal workings of the kernel much, but
