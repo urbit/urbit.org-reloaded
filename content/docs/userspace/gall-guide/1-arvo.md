@@ -24,7 +24,7 @@ executed by the runtime environment and virtual machine
 [Iris](/docs/arvo/iris/iris), and [Jael](/docs/arvo/jael/jael).
 
 Arvo itself has its own small codebase in `/sys/arvo.hoon` which primarily
-implements the transition function `(State, Event) -> (State, Effects)` for
+implements the [transition function](/docs/arvo/overview#operating-function) `(State, Event) -> (State, Effects)` for
 events injected by the runtime. It also handles inter-vane messaging, the
 [scry](/docs/arvo/concepts/scry) system, and a couple of other things. Most of
 the heavy lifting is done by the vanes themselves - Arvo itself typically just
