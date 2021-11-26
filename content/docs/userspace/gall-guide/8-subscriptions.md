@@ -87,7 +87,7 @@ response, which is either an ack (positive acknowledgement) or a nack (negative
 acknowledgement). The `(unit tang)` in the `%watch-ack` will be null if
 processing succeeded, and non-null if it crashed, with a stack trace in the
 `tang`. Like with `poke-ack`s, you don't need to explicitly send a
-`%watch-ack` - Gall will do it implicitly.
+`%watch-ack` - Gall will do it automatically.
 
 As well as sending a `%watch-ack`, Gall will also record the subscription in the
 `sup` field of the `bowl`, if it succeeded. Then, when you send updates out to
