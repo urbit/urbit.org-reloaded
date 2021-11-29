@@ -441,7 +441,8 @@ This is a very simple mark file for the `update` type.
   ==
 ++  on-poke
   |=  [=mark =vase]
-  |^  ^-  (quip card _this)
+  ^-  (quip card _this)
+  |^
   ?>  =(src.bowl our.bowl)
   ?+    mark  (on-poke:def mark vase)
       %todo-action
