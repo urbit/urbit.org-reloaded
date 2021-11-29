@@ -300,9 +300,11 @@ pokes are actually coming from - our example agents would accept data from
 anywhere, including random foreign ships. We'll now have a look at how to handle
 such permission checks.
 
-The `bowl` includes a couple of useful fields: `our` and `src`. The `our` field
-just contains the `@p` of the local ship. The `src` field contains the `@p` of
-the ship from which the event originated.
+Back in [lesson 2](/docs/userspace/gall-guide/2-agent#bowl) we discussed the
+[bowl](/docs/arvo/gall/data-types#bowl). The `bowl` includes a couple of useful
+fields: `our` and `src`. The `our` field just contains the `@p` of the local
+ship. The `src` field contains the `@p` of the ship from which the event
+originated, and is updated for every new event.
 
 When messages come in over Ames from other ships on the network, they're
 [encrypted](/docs/arvo/ames/cryptography) with our ship's public keys and signed by the ship which sent them.
