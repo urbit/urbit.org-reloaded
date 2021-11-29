@@ -224,6 +224,10 @@ sys
 - `zuse.hoon`: This is an extra utility library. It mostly contains
   cryptographic functions and functions for dealing with web data like JSON.
 
+The chain of dependency for the core kernel files is `hoon.hoon` -> `arvo.hoon`
+-> `lull.hoon` -> `zuse.hoon`. For more information, see the [Filesystem
+Hierarchy](/docs/arvo/reference/filesystem) documentation.
+
 In addition to the directories discussed, there's a handful of special files a
 desk might contain. All of them live in the root of the desk, and all are
 optional in the general case, except for `sys.kelvin`.
@@ -255,7 +259,7 @@ There are also two basic things to interact with: vanes, and other agents.
   the dotket (`.^`) rune. Each vane has "scry endpoints" which define what you
   can read, and these are comprehensively documented in the Scry Reference of
   each vane's section of the [Arvo documentation](/docs/arvo/overview). Agents
- define scry endpoints in the `+on-peek` arm of their agent core.
+  define scry endpoints in the `+on-peek` arm of their agent core.
   Scries can only be done on the local ship; it is not yet possible to perform
   scries over the network (but this functionality is planned for the future). There is a separate [guide to
   scries](/docs/arvo/concepts/scry) which you might like to read through for
