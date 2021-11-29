@@ -23,6 +23,9 @@ encoded in certain elements of the path, and then decoding it to an atom of that
 aura. These paths can therefore be as simple or complex as you need for your
 particular application.
 
+For a deeper explanation of subscription mechanics in Arvo, you can refer to
+Arvo's [Subscriptions](/docs/arvo/concepts/subscriptions) section.
+
 ## Incoming subscriptions
 
 Subscription requests from other entities arrive in your agent's `on-watch` arm.
