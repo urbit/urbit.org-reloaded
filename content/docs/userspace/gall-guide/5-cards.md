@@ -208,13 +208,13 @@ These can be divided into two categories:
 
 ### Acknowledgements
 
-`%watch-ack` and `%poke-ack` are sent in response to a `%watch` or `%poke`
-request respectively. If the `(unit tang)` is null, it's an ack - a positive
-acknowledgement. If the `(unit tang)` is non-null, it's a nack - a negative
-acknowledgement, and the `tang` contains an error message. Gall automatically
-sends a nack with a stack trace if your agent crashes while processing the
-request, and automatically sends an ack if it does not. Therefore, you would not
-explicitly produce a `%watch-ack` or `%poke-ack` gift.
+`%watch-ack` is sent in response to a `%watch` or `%watch-as` request, and
+`%poke-ack` is sent in response to a `%poke` or `%poke-as` request. If the
+`(unit tang)` is null, it's an ack - a positive acknowledgement. If the `(unit tang)` is non-null, it's a nack - a negative acknowledgement, and the `tang`
+contains an error message. Gall automatically sends a nack with a stack trace if
+your agent crashes while processing the request, and automatically sends an ack
+if it does not. Therefore, you would not explicitly produce a `%watch-ack` or
+`%poke-ack` gift.
 
 #### Examples
 
