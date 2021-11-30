@@ -213,7 +213,7 @@ therefore return path, in a call stack called a
 produced by agents into such `move`s behind the scenes. A detailed understanding
 of this system is not necessary to write Gall agents, but if you're interested
 it's comprehensively documented in the [Arvo
-overview](/docs/arvo/overview#move).
+overview](/docs/arvo/overview).
 
 For agents, the `wire` is specified in the second argument of a `%pass` `card`.
 It's used for anything you can `%pass`, such as `%poke`s, `%watch`es, and
