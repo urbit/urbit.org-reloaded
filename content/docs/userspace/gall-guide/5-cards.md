@@ -122,11 +122,7 @@ These can be divided into two categories:
 
 **Examples**
 
-```hoon
-[%pass /some/wire %agent [~some-ship %some-agent] %watch /some/path]
-[%pass /some/wire %agent [~some-ship %some-agent] %watch-as %some-mark /some/path]
-[%pass /some/wire %agent [~some-ship %some-agent] %leave ~]
-```
+![subscription card examples](https://media.urbit.org/docs/userspace/gall-guide/sub-cards.svg)
 
 #### Pokes
 
@@ -143,10 +139,7 @@ in the `cage` to the `mark` you specify before sending it off.
 
 **Examples**
 
-```hoon
-[%pass /some/wire %agent [~some-ship %some-agent] %poke %some-mark !>('some data')]
-[%pass /some/wire %agent [~some-ship %some-agent] %poke-as %mark-to-use %some-mark !>('some-data')]
-```
+![poke card examples](https://media.urbit.org/docs/userspace/gall-guide/poke-cards.svg)
 
 ### `note-arvo`
 
@@ -176,10 +169,7 @@ section in the [Arvo documentation](/docs/arvo/arvo).
 
 #### Examples
 
-```hoon
-[%pass /some/wire %arvo %b %wait (add ~m1 now.bowl)]
-[%pass /some/wire %arvo %e %connect /some/url/path %some-agent]
-```
+![arvo card examples](https://media.urbit.org/docs/userspace/gall-guide/arvo-cards.svg)
 
 ## `%give`
 
@@ -218,10 +208,7 @@ if it does not. Therefore, you would not explicitly produce a `%watch-ack` or
 
 #### Examples
 
-```hoon
-[%give %watch-ack `~[leaf+"foo" leaf+"bar"]]
-[%give %poke-ack `~[leaf+"foo" leaf+"bar"]]
-```
+![ack card examples](https://media.urbit.org/docs/userspace/gall-guide/ack-cards.svg)
 
 ### Subscriptions
 
@@ -241,10 +228,7 @@ receive the `%fact`. The `cage` is the data itself - a cell of a `mark` and a
 
 #### Examples
 
-```hoon
-[%give %fact ~[/some/path /another] %some-mark !>('some data')]
-[%give %kick ~[/some/path /another] `~some-ship]
-```
+![gift card examples](https://media.urbit.org/docs/userspace/gall-guide/gift-cards.svg)
 
 ## Summary
 
