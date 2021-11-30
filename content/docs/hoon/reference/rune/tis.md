@@ -421,7 +421,7 @@ Regular: **running**.
 3
 ```
 
-### `=*` "tistar"
+### `=*` "tistar" {#tistar}
 
 `[%tstr p=term q=hoon r=hoon]`: define a deferred expression.
 
