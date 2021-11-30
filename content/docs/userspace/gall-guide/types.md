@@ -150,11 +150,13 @@ for details), so a `path` is just a list of text. Rather than having to write
 `[~.foo ~.bar ~.baz ~]` though, it has its own syntax which looks like
 `/foo/bar/baz`.
 
-A `path` is just a general type used for several different purposes throughout
-Arvo. Its elements have no inherent significance, it depends on the context. In
-a Gall agent, a `path` is most commonly a subscription path - you might
-subscribe for updates to `/foo/bar` on another agent, or another agent might
-subscribe to `/baz` on your agent.
+A `path` is similar to a filesystem path in Unix, giving data a location in a
+nested hierarchy. In Arvo though, they're not only used for files, but are a
+more general type used for several different purposes. Its elements have no
+inherent significance, it depends on the context. In a Gall agent, a `path` is
+most commonly a subscription path - you might subscribe for updates to
+`/foo/bar` on another agent, or another agent might subscribe to `/baz` on your
+agent.
 
 A `path` might just be a series of fixed `@ta` like `/foo/bar`, but some
 elements might also be variable and encode atom auras, or some other format. For
