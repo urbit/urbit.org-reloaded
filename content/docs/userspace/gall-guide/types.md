@@ -206,9 +206,18 @@ to the `path` `/some/path` on another agent, you also specify `/some/wire`.
 Then, when that agent sends out updates to subscribers of `/some/path`, your
 agent receives them on `/some/wire`.
 
-The `wire` is specified in the second argument of a `%pass` `card`. It's used
-for anything you can `%pass`, such as `%poke`s, `%watch`es, and `%arvo` notes.
-For example:
+More formally, `wire`s are used by Arvo to represent an event cause, and
+therefore return path, in a call stack called a
+[`duct`](/docs/arvo/overview#duct). Inter-vane communications happen over
+`duct`s as [`move`](/docs/arvo/overview#moves)s, and Gall converts the `card`s
+produced by agents into such `move`s behind the scenes. A detailed understanding
+of this system is not necessary to write Gall agents, but if you're interested
+it's comprehensively documented in the [Arvo
+overview](/docs/arvo/overview#move).
+
+For agents, the `wire` is specified in the second argument of a `%pass` `card`.
+It's used for anything you can `%pass`, such as `%poke`s, `%watch`es, and
+`%arvo` notes. For example:
 
 ```hoon
 [%pass /this/is/wire %agent [~zod %foobar] %watch /this/is/path]
