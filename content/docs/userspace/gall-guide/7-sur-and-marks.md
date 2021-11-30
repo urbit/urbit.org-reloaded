@@ -182,7 +182,7 @@ reasons. Firstly, it's not ideal to be passing around the entire `this` agent
 core - it's much tidier just passing around the `state`, until you actually want
 to return it to Gall. Secondly, It's much easier to read when the poke handling
 logic is separated into its own arm. This is a fairly simple example but if your
-agent is more complex, handling multiple `mark`s and containing additional logic
+agent is more complex, handling multiple marks and containing additional logic
 before it gets to the actual contents of the `vase`, structuring things this way
 can be useful.
 
@@ -206,9 +206,9 @@ some extra things:
 Aside from their use by Clay for storing files in the filesystem, they're also
 used extensively for exchanging data with the outside world, and for exchanging
 data between Gall agents. When data comes in from a remote ship, destined for a
-particular Gall agent, it will be validated by the mark file in `/mar` that
-corresponds to its `mark` before being delivered to the agent. If the remote
-data has no corresponding mark in `/mar` or it fails validation, it will crash
+particular Gall agent, it will be validated by the file in `/mar` that
+corresponds to its mark before being delivered to the agent. If the remote data
+has no corresponding mark file in `/mar` or it fails validation, it will crash
 before it touches the agent.
 
 A mark file is a door with exactly three arms. The door's sample is the data type the
@@ -366,7 +366,7 @@ Type definitions:
 Mark files:
 
 - Mark files live in the `/mar` directory of a desk.
-- A `mark` like `%foo` corresponds to a file in `/mar` like `/mar/foo.hoon`
+- A mark like `%foo` corresponds to a file in `/mar` like `/mar/foo.hoon`
 - Marks are file types in Clay, but are also used for passing data between
   agents as well as for external data generally.
 - A mark file is a door with a sample of the data type it handles and exactly three
