@@ -67,7 +67,7 @@ You should see something like this as the output:
 The `cage` in the `riot` of the `%writ` contains the file's data due to our use of an `%x` `care`. It needn't be `%x` though. If we change it to `%u`, for example, we'll get a `?` `cage` instead:
 
 ```
-> -send-task-take-gift [%warp our %base ~ %sing %x da+now /gen/hood/hi/hoon]
+> -send-task-take-gift [%warp our %base ~ %sing %u da+now /gen/hood/hi/hoon]
 [ %writ
     p
   [ ~
