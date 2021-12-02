@@ -5,7 +5,11 @@ weight = 1
 description = "Urbit Security Audits"
 +++
 
-This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits This is a blurb about Urbit Security Audits.
+Confidence and trust are fundamental to Urbit's ethos. The strength of our smart contract protocols are regularly scrutinized for potential vulnerabilities and enhanced when weaknesses are identified.
+
+To that end, we continue to maintain a robust security protocol. Our smart contracts are generally healthy and secure, but the process of auditing is never fully complete. As our ecosystem evolves, our security protocols evolve with it.
+
+Since transparency is an integral feature of trust, we've made our security audits publicly available. Please refer to the below documents for a more thorough analysis.
 
 ### Security Audits
 
