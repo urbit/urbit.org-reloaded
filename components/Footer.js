@@ -62,6 +62,11 @@ export default function Footer() {
                 <a className="mt-2 type-bold text-wall-500">Urbit OS</a>
               </div>
             </Link>
+            <Link href="/audits">
+              <div>
+                <a className="mt-2 type-bold text-wall-500">Security Audits</a>
+              </div>
+            </Link>
             <Link href="/faq">
               <div>
                 <a className="mt-2 type-bold text-wall-500">FAQ</a>
