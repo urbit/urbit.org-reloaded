@@ -73,8 +73,9 @@ and it will pretty-print its state, like:
 The generator also has a few useful optional arguments:
 
 - `%bowl`: Print the agent's bowl.
-- `[%state %some-face]`: Print the part of your agent's state that has a face of
-  `some-face`.
+- `[%state 'some code']`: Evaluate some code with the agent's state as its
+  subject and print the result. The most common case is `[%state %some-face]`,
+  which will print the contents of the wing with the given face.
 - `[%incoming ...]`: Print details of the matching incoming subscription, one
   of:
   - `[%incoming %ship ~some-ship]`
@@ -88,8 +89,8 @@ The generator also has a few useful optional arguments:
   - `[outgoing %term %agent-name]`
 
 By default it will retrieve your agent's state by using its `on-save` arm, but
-if your app implements a scry endpoint with a path of `/x/dbug/state`, it will use that
-instead.
+if your app implements a scry endpoint with a path of `/x/dbug/state`, it will
+use that instead.
 
 We haven't yet covered some of the concepts described here, so don't worry if
 you don't fully understand `dbug`'s functionality - you can refer back here
