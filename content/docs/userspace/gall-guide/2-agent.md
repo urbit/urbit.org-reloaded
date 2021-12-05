@@ -43,8 +43,7 @@ These two arms handle responses to requests our agent previously initiated.
 
 - `on-agent`: Handles request acknowledgements and subscription updates from
   other agents.
-- `on-arvo`: Handles subscription updates, request acknowledgements, and
-  responses from vanes.
+- `on-arvo`: Handles responses from vanes.
 
 ### Scry handler
 
