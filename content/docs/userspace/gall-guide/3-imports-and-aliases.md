@@ -112,14 +112,13 @@ A virtual arm in an agent often looks something like this:
 ```hoon
 +*  this  .
     def   ~(. (default-agent this %.n) bowl)
-    hc    ~(. +> bowl)
 ```
 
-`this`, `def` and `hc` are the deferred expressions, and next to each one is the Hoon
-expression it evaluates whenever called. Notice that unlike most things that take _n_ arguments,
-a virtual arm is not terminated with a `==`. You can define as many aliases as
-you like. The three in this example are conventional ones you'd use in most
-agents you write. Their purposes are:
+`this` and `def` are the deferred expressions, and next to each one is the Hoon
+expression it evaluates whenever called. Notice that unlike most things that
+take _n_ arguments, a virtual arm is not terminated with a `==`. You can define
+as many aliases as you like. The two in this example are conventional ones you'd
+use in most agents you write. Their purposes are:
 
 ```hoon
 this  .
@@ -135,13 +134,6 @@ def  ~(. (default-agent this %.n) bowl)
 
 This sets up the `default-agent` library we [described above](#default-agent),
 so you can easily call its arms like `on-poke:def`, `on-agent:def`, etc.
-
-```hoon
-hc  ~(. +> bowl)
-```
-
-This makes it easier to call a function in a _helper core_. We'll introduce
-helper cores later, so don't worry about this for now.
 
 ## Additional cores
 
