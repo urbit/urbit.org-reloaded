@@ -96,17 +96,19 @@ there's also:
   When you do something like `:dojo|wipe` in the dojo, you're actually running
   the `/gen/dojo/wipe.hoon` generator and poking the `%dojo` agent with its
   output.
-- **Threads**: These are kind of like mini transient Gall agents, and are managed by
-  the `%spider` agent. They can be used as mere scripts like generators, but
-  their main purpose is for performing complex IO. For example, suppose you need
-  to query some external web API, then with the data in its response you make
-  another API call, and then another, before finally having the data you need.
-  If one of the API calls fails, your Gall agent is potentially left in a
-  strange intermediary state. Instead, you can put all the IO logic in a
-  separate thread which is completely atomic. That way the Gall agent only has
-  to deal with the two conditions of success or failure. Writing threads is
-  covered in a [separate guide](/docs/userspace/threads/basics/fundamentals),
-  which you might like to work through after completing the Gall Guide.
+- **Threads**: While generators are for strictly synchronous operations, threads
+  make it easy to implement sequences of asynchronous operations. Threads are
+  managed by the `%spider` agent. They can be used as mere scripts like
+  generators, but their main purpose is for performing complex IO. For example,
+  suppose you need to query some external web API, then with the data in its
+  response you make another API call, and then another, before finally having
+  the data you need. If one of the API calls fails, your Gall agent is
+  potentially left in a strange intermediary state. Instead, you can put all the
+  IO logic in a separate thread which is completely atomic. That way the Gall
+  agent only has to deal with the two conditions of success or failure. Writing
+  threads is covered in a [separate
+  guide](/docs/userspace/threads/basics/fundamentals), which you might like to
+  work through after completing the Gall Guide.
 
 - **Front-end**: Web UIs. It's possible for Gall agents to handle HTTP requests
   directly and dynamically produce responses, but it's also possible to have a
