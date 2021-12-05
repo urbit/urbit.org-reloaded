@@ -133,9 +133,8 @@ from `%json` to the mark your agent expects.
 
 ## `quip`
 
-`(quip a b)` is equivalent to `[(list a) b]`, it's just a more convenient way to
-specify it. Most arms of an agent return a `(quip card _this)`, which is a list
-of effects and a new state.
+`quip` is a mold-builder. A `(quip a b)` is equivalent to `[(list a) b]`, it's
+just a more convenient way to specify it. Most arms of an agent return a `(quip card _this)`, which is a list of effects and a new state.
 
 ## `path`
 
