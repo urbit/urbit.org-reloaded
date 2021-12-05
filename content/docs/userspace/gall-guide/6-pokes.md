@@ -56,12 +56,10 @@ but just to give you an idea of a typical pattern: An agent for a chat app might
 take new messages as pokes, add them to the list of messages in its state, and
 send out the new messages to subscribed chat participants as `gift`s.
 
-As discussed [in the previous
-lesson](/docs/userspace/gall-guide/5-cards#acknowledgements), Gall will
-automatically send a `%poke-ack` `gift` back to wherever the poke came from. The
-`%poke-ack` will be a nack if your agent crashed while processing the poke, and
-an ack otherwise. If it's a nack, the `tang` in the `%poke-ack` will contain a
-stack trace of the crash.
+As discussed in the previous lesson, Gall will automatically send a `%poke-ack`
+`gift` back to wherever the poke came from. The `%poke-ack` will be a nack if
+your agent crashed while processing the poke, and an ack otherwise. If it's a
+nack, the `tang` in the `%poke-ack` will contain a stack trace of the crash.
 
 As a result, you do not need to explicitly send a `%poke-ack`. Instead, you
 would design your agent to handle only what you expect and crash in all other
