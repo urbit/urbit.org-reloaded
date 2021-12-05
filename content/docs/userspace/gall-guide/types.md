@@ -185,7 +185,7 @@ above, you can also insert text you're previously stored with `=/` or what have
 you, simply by enclosing them in brackets. For example, in the dojo:
 
 ```
-> =const 'bar'
+> =const ~.bar
 > `path`/foo/[const]/baz
 /foo/bar/baz
 ```
