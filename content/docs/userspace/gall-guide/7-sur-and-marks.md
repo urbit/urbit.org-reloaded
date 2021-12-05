@@ -285,9 +285,9 @@ will be interpreted as `/` if there's not already a `/mar/todo-action.hoon`.
 This simple mark file isn't all that useful. Typically, you'd add `json` arms to
 `grow` and `grab`, which allow your data to be converted to and from JSON, and
 therefore allow your agent to communicate with a web front-end. Front-ends,
-JSON, and Eyre's APIs which facilitate such communications will be covered in
-part two of the Gall guide. For now though, it's still useful to use marks and
-understand how they work.
+JSON, and Eyre's APIs which facilitate such communications will be covered in a
+forthcoming part two of the Gall guide. For now though, it's still useful to use
+marks and understand how they work.
 
 One further note on marks - while data from remote ships must have a matching
 mark file in `/mar`, it's possible to exchange data between local agents with
