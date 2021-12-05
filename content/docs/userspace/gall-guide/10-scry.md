@@ -18,9 +18,10 @@ This is in contrast to passing around `card`s, which aren't read-only and which
 can only be produced when evaluation of the arm is complete, and for which any
 response will come back separately.
 
-Technically, Arvo only lets you scry vanes. When you scry a Gall agent, you
-actually scry Gall itself, which interprets the request, runs it on the
-specified agent, and then returns the result. Scries are performed with the
+Most of the time, scry requests are handled by Arvo, which routes the request to
+the appropriate vane. When you scry a Gall agent you actually scry Gall itself.
+Gall interprets the request, runs it on the specified agent, and then returns
+the result. Scries are performed with the
 [dotket](/docs/hoon/reference/rune/dot#-dotket) (`.^`) rune. Here's a summary of
 their format:
 
