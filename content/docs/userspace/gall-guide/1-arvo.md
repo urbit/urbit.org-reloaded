@@ -231,10 +231,9 @@ Hierarchy](/docs/arvo/reference/filesystem) documentation.
 
 In addition to the directories discussed, there's a handful of special files a
 desk might contain. All of them live in the root of the desk, and all are
-optional in the general case, except for `sys.kelvin`.
+optional in the general case, except for `sys.kelvin`, which is mandatory.
 
 - `sys.kelvin`: Specifies the kernel version with which the desk is compatible.
-  This is the only mandatory file in a desk.
 - `desk.bill`: Specifies Gall agents to be auto-started upon desk installation.
 - `desk.ship`: If the desk is being republished, the original publisher can be
   specified here.
