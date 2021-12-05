@@ -6,11 +6,11 @@ template = "doc.html"
 
 This document explains a few of the types commonly used in Gall agents. In
 addition to these, the [Data Types](/docs/arvo/gall/data-types) section of the
-Gall vane documentation is a useful reference. In particular, the
-[`bitt`](/docs/arvo/gall/data-types#bitt),
-[`boat`](/docs/arvo/gall/data-types#boat) and
-[`bowl`](/docs/arvo/gall/data-types#bowl) entries, as well as the whole
-[`agent`](/docs/arvo/gall/data-types#agent) subsection.
+Gall vane documentation is a useful reference. In particular, the whole
+[`agent`](/docs/arvo/gall/data-types#agent) subsection, as well as
+[`bowl`](/docs/arvo/gall/data-types#bowl),
+[`boat`](/docs/arvo/gall/data-types#boat), and
+[`bitt`](/docs/arvo/gall/data-types#bitt).
 
 ## `vase`
 
