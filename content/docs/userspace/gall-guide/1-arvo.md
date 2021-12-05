@@ -50,13 +50,13 @@ Here's a brief summary of each of the vanes:
   unless you specifically wanted to read and write files.
 
 - **Dill**: Terminal driver vane. You would not typically interact with Dill
-  directly; printing messages to the terminal is usually done with hinting runes
+  directly; printing debug messages to the terminal is usually done with hinting runes
   and functions rather than tasks to Dill, and CLI apps are mediated by a
   sub-module of the `%hood` system agent called `%drum`. CLI apps will not be touched
   on in this guide, but there's a separate [CLI
   Apps](/docs/hoon/guides/cli-tutorial) guide which covers them if you're
   interested.
-- **Eyre**: Webserver vane. App front-ends are served via Eyre. It's possible to
+- **Eyre**: Webserver vane. App web front-ends are served via Eyre. It's possible to
   handle HTTP requests directly in a Gall agent (see the [Eyre
   Guide](/docs/arvo/eyre/guide) for details), but usually you'd just serve a
   front-end [glob](/docs/userspace/dist/glob) via the `%docket` agent, so you'd
@@ -104,13 +104,13 @@ there's also:
   If one of the API calls fails, your Gall agent is potentially left in a
   strange intermediary state. Instead, you can put all the IO logic in a
   separate thread which is completely atomic. That way the Gall agent only has
-  to deal with the two conditions of success or failure. Writing threads are
+  to deal with the two conditions of success or failure. Writing threads is
   covered in a [separate guide](/docs/userspace/threads/basics/fundamentals),
   which you might like to work through after completing the Gall Guide.
 
 - **Front-end**: Web UIs. It's possible for Gall agents to handle HTTP requests
-  directly and dynamically produce responses, but it's more typical to have a
-  separate [glob](/docs/userspace/dist/glob) of HTML, CSS, Javascript, images,
+  directly and dynamically produce responses, but it's also possible to have a
+  static [glob](/docs/userspace/dist/glob) of HTML, CSS, Javascript, images,
   etc, which are served to the client like an ordinary web app. Such front-end
   files are typically managed by the `%docket` agent which serves them via Eyre.
   The [software distribution guide](/docs/userspace/dist/guide) covers this in
@@ -151,7 +151,7 @@ some of these features in more detail later in the guide.
 ## Desk Anatomy
 
 The fundamental unit in Clay is a desk. Desks are kind of like git repositories.
-Urbit includes a few default desks: `%base`, `%garden`, `%landscape`, `%webterm`
+By default, new urbits come with the following desks included: `%base`, `%garden`, `%landscape`, `%webterm`
 and `%bitcoin`.
 
 - `%base` - This desk contains the kernel as well as some core agents and utilities.
@@ -166,8 +166,7 @@ upstream that sponsored ships (moons in the case of a planet, planets in the
 case of a star) sync their `%base` desk from. Any third-party apps you've
 installed will also have their own desks.
 
-Each desk will typically have a few default directories. The directories are as
-follows:
+Desks are typically assumed to store their files according to the following directory structure:
 
 ```
 desk
@@ -176,7 +175,7 @@ desk
 ├── lib
 ├── mar
 ├── sur
-├── sys  <- on %base desk only
+├── sys
 ├── ted
 └── tests
 ```
@@ -190,7 +189,7 @@ desk
 - `sys`: Kernel files and standard library. Only the `%base` desk has this
   directory, it's omitted entirely in all other desks.
 - `ted`: Threads.
-- `tests`: Unit tests, to be run by the `%test` thread. This is often omitted.
+- `tests`: Unit tests, to be run by the `%test` thread. This is often omitted in distributed desks.
 
 This directory hierarchy is not strictly enforced, but most tools expect things
 to be in their right place. Any of these folders can be omitted if they'd
@@ -251,7 +250,7 @@ You should now have a general idea of the different parts of Arvo, but how does
 a Gall agent interact with these things?
 
 There are two basic ways of interacting with other parts of the system: by
-scrying them, and by passing them messages and receiving messages in response.
+scrying into them, and by passing them messages and receiving messages in response.
 There are also two basic things to interact with: vanes, and other agents.
 
 - Scries: The scry system allows you to access the state of other agents and
