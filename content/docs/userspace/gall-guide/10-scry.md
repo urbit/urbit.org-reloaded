@@ -316,9 +316,9 @@ And finally, the `/x/get/[ship]` endpoint:
 'baz'
 ```
 
-We'll now try scrying for a ship that doesn't exist in the map. Note that the
-resulting crash will wipe the dojo's subject, so don't try this if you've got
-anything pinned there that you want to keep.
+We'll now try scrying for a ship that doesn't exist in the map. Note that due to
+a bug at the time of writing, the resulting crash will wipe the dojo's subject,
+so don't try this if you've got anything pinned there that you want to keep.
 
 ```
 ~zod:dojo> .^(@t %gx /=peeker=/get/~nes/noun)
