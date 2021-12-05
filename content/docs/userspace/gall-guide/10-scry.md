@@ -147,7 +147,7 @@ If it requires a more complex expression to retrieve or compose the data, you
 can do something like:
 
 ```hoon
-:-  ~  :-  ~  :-  %some-mark
+:^  ~  ~  %some-mark
 !>  ^-  some-type
 :+  'foo'
   'bar'
