@@ -24,8 +24,8 @@ approach is to define a head-tagged union of all possible poke types the agent
 will accept, and another for all possible updates it might send out to
 subscribers. Rather than defining these types in the agent itself, you would
 typically define them in a separate core saved in the `/sur` directory of the
-desk. The `/sur` directory is short for "**s**truct**ur**es", and is the
-canonical location for userspace type definitions.
+desk. The `/sur` directory is the canonical location for userspace type
+definitions.
 
 With this approach, your agent can simply import the structures file and make use
 of its types. Additionally, if someone else wants to write an agent that
@@ -392,8 +392,8 @@ Permissions:
   of the `bowl` with the `@p`.
 - Permissions are most commonly enforced with wutgar (`?>`) and wutgal (`?<`)
   assertions in the relevant agent arms.
-- Messages can be restricted to the local ship with `?>  =(src.bowl our.bowl)` or to
-  its moons as well with `?>  (team:title our.bowl src.bowl)`.
+- Messages can be restricted to the local ship with `?> =(src.bowl our.bowl)` or to
+  its moons as well with `?> (team:title our.bowl src.bowl)`.
 - There are many other ways to handle permissions, it just depends on the needs
   of the particular agent.
 
