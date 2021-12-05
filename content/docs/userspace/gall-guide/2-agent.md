@@ -32,7 +32,7 @@ These arms are primarily for initializing and upgrading an agent.
 These arms handle requests initiated by outside entities, e.g. other agents,
 HTTP requests from the front-end, etc.
 
-- `on-poke`: Handles any calls that aren't subscriptions, i.e. one-time actions.
+- `on-poke`: Handles one-off requests, actions, etc.
 - `on-watch`: Handles subscription requests from other entities.
 - `on-leave`: Handles unsubscribe notifications from other, previously subscribed
   entities.
