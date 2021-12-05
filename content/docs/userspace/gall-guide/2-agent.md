@@ -51,8 +51,7 @@ These two arms handle responses to requests our agent previously initiated.
 
 ### Failure handler
 
-- `on-fail`: Handles certain kinds of crash reports from Gall. Most agents don't
-  make use of this arm and just leave it with a basic default.
+- `on-fail`: Handles certain kinds of crash reports from Gall.
 
 ## Bowl
 
