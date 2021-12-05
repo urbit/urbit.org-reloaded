@@ -151,12 +151,11 @@ so for example, in the dojo:
 [~ 50]
 ```
 
-The next part has a dot-dot-arm syntax, which means "the parent core of the
-specified arm". Since we've specified the arm as `on-init`, its parent is our
-whole agent. In the [transition function](#transition-function) section we
-mentioned that most arms return a list of effects called `card`s and a new agent
-core. Since an empty list is `~`, we've created a cell that fits that
-description.
+The next part has `..on-init`, which means "the subject of the `on-init` arm".
+The subject of the `on-init` arm is our whole agent. In the [transition
+function](#transition-function) section we mentioned that most arms return a
+list of effects called `card`s and a new agent core. Since an empty list is `~`,
+we've created a cell that fits that description.
 
 Let's examine our agent. In the dojo of a fake ship, mount the `%base` desk with
 `|mount %base`. On the Unix side, navigate to `/path/to/fake/ship/base`, and save
