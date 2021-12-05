@@ -28,7 +28,7 @@ A `wind` is defined in `arvo.hoon` as:
 ```hoon
 ++  wind
   |$  [a b]
-  $%  [%pass p=path q=a]
+  $%  [%pass p=wire q=a]
       [%slip p=a]
       [%give p=b]
   ==
@@ -38,7 +38,7 @@ Gall will not accept a `%slip`, so we can ignore that. A `card`, then, is one
 of:
 
 ```hoon
-[%pass path note]
+[%pass wire note]
 [%give gift]
 ```
 
@@ -55,18 +55,13 @@ task, or what have you, to another agent or vane. A `%pass` card is a request
 your agent _initiates_. This is in contrast to a [`%give`](#give) card, which is
 sent in _response_ to another agent or vane.
 
-The type of the first field in a `%pass` card is a `path`. A `path` is just a
+The type of the first field in a `%pass` card is a `wire`. A `wire` is just a
 list of `@ta`, with a syntax of `/foo/bar/baz`. When you `%pass` something to an
-agent or vane, this field specifies the `wire` on which the response should
-arrive. A `wire` has the exact same type as a `path` (`/foo/bar/baz`), the
-`wire`/`path` distinction is merely to differentiate their uses. When the agent
-or vane responds to your request, your agent will see the `wire` as well as the
-response itself. Your agent can then check the `wire` and maybe do different
-things depending on its content. Both the
-[`wire`](/docs/userspace/gall-guide/types#wire) and
-[`path`](/docs/userspace/gall-guide/types#path) types are are covered in the
-[types reference](/docs/userspace/gall-guide/types). We'll show how `wire`s are
-practically used later on.
+agent or vane, the response will come back on the `wire` you specify here. Your
+agent can then check the `wire` and maybe do different things depending on its
+content. The [`wire`](/docs/userspace/gall-guide/types#wire) type is covered in
+the [types reference](/docs/userspace/gall-guide/types). We'll show how `wire`s
+are practically used later on.
 
 The type of the next field is a `note:agent:gall` (henceforth just `note`), which
 `lull.hoon` defines as:
@@ -103,7 +98,14 @@ A `task:agent:gall` (henceforth just `task`) is defined in `lull.hoon` as:
   ==
 ```
 
-These can be divided into two categories:
+Note a few of these include a `path` field. The `path` type is exactly the same
+as a `wire` - a list of `@ta` with a syntax of `/foo/bar/baz`. The reason for
+the `wire`/`path` distinction is just to indicate their separate purposes. While
+a `wire` is for _responses_, a `path` is for _requests_. The
+[`path`](/docs/userspace/gall-guide/types#path) type is also covered in the
+[types reference](/docs/userspace/gall-guide/types).
+
+The kinds of `task`s can be divided into two categories:
 
 #### Subscriptions
 
