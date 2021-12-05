@@ -34,14 +34,14 @@ HTTP requests from the front-end, etc.
 
 - `on-poke`: Handles any calls that aren't subscriptions, i.e. one-time actions.
 - `on-watch`: Handles subscription requests from other entities.
-- `on-leave`: Handles unsubscribe requests from other, currently subscribed
+- `on-leave`: Handles unsubscribe notifications from other, previously subscribed
   entities.
 
 ### Response handlers
 
 These two arms handle responses to requests our agent previously initiated.
 
-- `on-agent`: Handles subscription updates and request acknowledgements from
+- `on-agent`: Handles request acknowledgements and subscription updates from
   other agents.
 - `on-arvo`: Handles subscription updates, request acknowledgements, and
   responses from vanes.
@@ -58,7 +58,7 @@ These two arms handle responses to requests our agent previously initiated.
 ## Bowl
 
 The sample of a Gall agent door is always a `bowl:gall`. Every time an event triggers the
-agent, Gall populates the bowl with things like the current date-time, entropy,
+agent, Gall populates the bowl with things like the current date-time, fresh entropy,
 subscription information, which ship the request came from, etc, so that all the
 arms of the agent have access to that data. For the exact structure and contents
 of the bowl, have a read through [its entry in the Gall vane types

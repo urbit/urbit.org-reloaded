@@ -18,10 +18,8 @@ target its paths. An agent can kick subscribers from its paths, and subscribers
 can unsubscribe from any paths.
 
 The subscription paths an agent defines can be simple and fixed like
-`/foo/bar/baz`. They can also be dynamic, taking data of a particular atom aura
-encoded in certain elements of the path, and then decoding it to an atom of that
-aura. These paths can therefore be as simple or complex as you need for your
-particular application.
+`/foo/bar/baz`. They can also be dynamic, containing data of a particular atom aura
+encoded in certain elements of the path. These paths can therefore be as simple or complex as you need for your particular application.
 
 For a deeper explanation of subscription mechanics in Arvo, you can refer to
 Arvo's [Subscriptions](/docs/arvo/concepts/subscriptions) section.
@@ -101,7 +99,7 @@ Updates to subscribers would usually be sent from other arms, but there's one
 special case for `on-watch` which is very useful. Normally updates can only be
 sent to all subscribers of a particular path - you can't target a specific
 subscriber. There's one exception to this: In `on-watch`, when there's a new
-subscription, you can send a `%fact` back with a null `(list path)`, and it'll
+subscription, you can send a `%fact` back with an empty `(list path)`, and it'll
 only go to the new subscriber. This is most useful when you want to give the
 subscriber some initial state, which you otherwise couldn't do without sending
 it to everyone. It might look something like this:
@@ -169,7 +167,7 @@ it: Subscribing to other agents. This is done by `%pass`ing the target agent a
 If your agent's subscription request is successful, updates will come in to your
 agent's `on-agent` arm on the `wire` specified (`/some/wire` in this example).
 The `wire` can be anything you like - its purpose is for your agent to figure
-out which subscription the updates are for. The `[ship term]` pair specifies the
+out which subscription the updates came from. The `[ship term]` pair specifies the
 ship and agent you're trying to subscribe to, and the final `path` (`/some/path`
 in this example) is the path you want to subscribe to - a `path` the target
 agent has defined in its `on-watch` arm.
@@ -241,7 +239,7 @@ the initial `%watch-ack`. The `%fact` `sign` will have the following format:
 
 You would typically handle such `%fact`s in the following manner: Test the
 `wire`, test whether the `sign` is a `%fact`, test the `mark` in the `cage`,
-extract the data from the `vase` in the `cage`, and apply your logic. Again, route on `wire` before `sign` is one of the [Precepts](/docs/development/precepts#specifics). For example:
+extract the data from the `vase` in the `cage`, and apply your logic. Again, routing on `wire` before `sign` is one of the [Precepts](/docs/development/precepts#specifics). For example:
 
 ```hoon
 ++  on-agent

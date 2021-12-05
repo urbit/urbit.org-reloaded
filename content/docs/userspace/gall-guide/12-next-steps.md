@@ -7,7 +7,7 @@ template = "doc.html"
 We've now covered all the arms of a Gall agent, and everything you need to know
 to start writing your own agent.
 
-The one thing we haven't touched on is front-end development and integration,
+The things haven't touched on yet are front-end development and integration,
 Eyre's HTTP API for communicating with agents from the web, and dealing with
 JSON data. A second part to the Gall Guide is coming soon, and will focus
 exclusively on those aspects. In the mean time, you can refer to the following

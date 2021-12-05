@@ -6,7 +6,7 @@ template = "doc.html"
 
 In this lesson we'll look at sending and receiving one-off messages called
 `%poke`s. We'll look at the `on-poke` agent arm which handles incoming pokes.
-We'll also introduce the `on-agent` arm, and look at one kind of response it can
+We'll also introduce the `on-agent` arm, and look at the one kind of response it can
 take - a `%poke-ack`.
 
 ## Receiving a poke
@@ -106,8 +106,8 @@ produce the `(quip card _this)` like so:
 
 The [colcab](/docs/hoon/reference/rune/col#_-colcab) (`:_`) rune makes an
 inverted cell, it's just `:-` but with the head and tail swapped. We use colcab
-to produce the `(quip card _this)` because the list of cards is typically
-"heavier" than the new agent core expression (`this`), so it makes it more
+to produce the `(quip card _this)` because the list of cards is "heavier"
+here than the new agent core expression (`this`), so it makes it more
 readable.
 
 ### Receiving the `%poke-ack`
@@ -144,7 +144,9 @@ The simplest way to handle a `%poke-ack` by passing it to `default-agent`'s
 `on-agent` arm, which will just print an error message to the terminal if it's a
 nack, and otherwise do nothing. Sometimes you'll want your agent to do something
 different depending on whether the poke failed or succeeded (and therefore
-whether it's a nack or an ack). As stated in the [Precepts](/docs/development/precepts#specifics): "Route on wire before sign, never sign before wire.". Thus we first test the
+whether it's a nack or an ack).
+
+As stated in the [Precepts](/docs/development/precepts#specifics): "Route on wire before sign, never sign before wire.". Thus we first test the
 `wire` so you can tell what the `%poke-ack` was for. You might do something
 like:
 
@@ -216,7 +218,8 @@ receiving pokes. Here's the first, an agent that receives pokes:
       %noun
     =/  action  !<(?(%inc %dec) vase)
     ?-    action
-        %inc  `this(val +(val))
+      %inc  `this(val +(val))
+    ::
         %dec
       ?:  =(0 val)
         ~|  "Can't decrement - already zero!"
@@ -324,7 +327,7 @@ dojo: app poke failed
 ### `pokeit.hoon`
 
 Here's a second agent. It takes a poke of `%inc` or `%dec` like before, but
-rather that updating its own state, it sends two pokes to `%pokeme`, so
+rather than updating its own state, it sends two pokes to `%pokeme`, so
 `%pokeme`'s state will be incremented or decremented by two.
 
 ```hoon
@@ -368,6 +371,7 @@ rather that updating its own state, it sends two pokes to `%pokeme`, so
       :~  [%pass /inc %agent [our.bowl %pokeme] %poke %noun !>(%inc)]
           [%pass /inc %agent [our.bowl %pokeme] %poke %noun !>(%inc)]
       ==
+    ::
         %dec
       :_  this
       :~  [%pass /dec %agent [our.bowl %pokeme] %poke %noun !>(%dec)]
@@ -476,7 +480,7 @@ Let's try it out:
 
 `%pokeit` has received positive `%poke-ack`s, which means both pokes succeeded.
 It could tell they were increments because the `%poke-ack`s came back on the
-`/inc` path we specified. We can check the state of `%pokeme` to confirm:
+`/inc` wire we specified. We can check the state of `%pokeme` to confirm:
 
 ```
 >   2

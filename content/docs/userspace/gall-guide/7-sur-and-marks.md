@@ -27,10 +27,10 @@ typically define them in a separate core saved in the `/sur` directory of the
 desk. The `/sur` directory is short for "**s**truct**ur**es", and is the
 canonical location for userspace type definitions.
 
-With this approach, your agent can simply import the structure file and make use
+With this approach, your agent can simply import the structures file and make use
 of its types. Additionally, if someone else wants to write an agent that
 interfaces with yours, they can include your structure file in their own desk
-and easily interact with your agent's API.
+to interact with your agent's API in a type-safe way.
 
 #### Example
 
@@ -138,6 +138,7 @@ manner:
               !>(`update:todo`action)
           ==
       ==
+    ::
         %allow
       `state(friends (~(put in friends) who.action))
     ::
@@ -312,8 +313,8 @@ The Ames vane decrypts and verifies the messages using keys in the Jael vane,
 which are obtained from the [Azimuth Ethereum contract](/docs/azimuth/azimuth-eth) and [Layer 2 data](/docs/azimuth/l2/layer2) where Urbit ID ownership
 and keys are recorded. This means the originating `@p` of all messages are
 cryptographically validated before being passed on to Gall, so the `@p`
-specified in the `src` field of the `bowl` can be trusted to be correct, and
-checking permissions are very simple.
+specified in the `src` field of the `bowl` can be trusted to be correct, which
+makes checking permissions very simple.
 
 You're free to use whatever logic you want for this, but the most common way is
 to use [wutgar](/docs/hoon/reference/rune/wut#-wutgar) (`?>`) and
@@ -391,8 +392,8 @@ Permissions:
   of the `bowl` with the `@p`.
 - Permissions are most commonly enforced with wutgar (`?>`) and wutgal (`?<`)
   assertions in the relevant agent arms.
-- Messages can be restricted to the local ship with `=(src.bowl our.bowl)` or to
-  its moons as well with `(team:title our.bowl src.bowl)`.
+- Messages can be restricted to the local ship with `?>  =(src.bowl our.bowl)` or to
+  its moons as well with `?>  (team:title our.bowl src.bowl)`.
 - There are many other ways to handle permissions, it just depends on the needs
   of the particular agent.
 

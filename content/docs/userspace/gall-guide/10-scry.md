@@ -11,7 +11,7 @@ rune documentation](/docs/hoon/reference/rune/dot#-dotket).
 
 ## Scrying
 
-Scries are purely read-only requests to vanes and agents which can be initiated
+Scries are read-only requests to vanes and agents which can be initiated
 from anywhere in any code, during its evaluation. If successful, the requested
 data is returned immediately to that point in the code, otherwise it crashes.
 This is in contrast to passing around `card`s, which aren't read-only and which
@@ -26,7 +26,7 @@ their format:
 
 ![scry summary diagram](https://media.urbit.org/docs/arvo/scry-diagram-v2.svg)
 
-A note on `care`s: Cares are most fully exploited by Clay, where they specify
+A note on `care`s: Cares are most carefully implemented by Clay, where they specify
 submodules and have tightly defined behaviors. For Gall agents, most of these
 don't have any special behavior, and are just used to indicate the general kind
 of data produced by the endpoint. There are a handful of exceptions to this:
@@ -166,7 +166,7 @@ requested data. In such cases, you can just produce a cell of `[~ ~]` for the
 for the dotket expression which initiated the scry. In some cases you may want
 that, but in other cases you may not, so instead you could wrap the data inside
 the `vase` in a `unit` and have _that_ be null instead. It all depends on the
-needs of your particular application.
+needs of your particular application and its clients.
 
 ## Example
 

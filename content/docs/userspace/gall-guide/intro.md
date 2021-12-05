@@ -43,8 +43,8 @@ associated state change has happened.
 
 But the best way to think about an agent is as a state machine. Like a state
 machine, any input could happen at any time, and it must react coherently to
-that input. Output (effects) and the next state of the machine are both pure
-functions of the previous state and the input event.
+that input. Output (effects) and the next state of the machine are a pure
+function of the previous state and the input event.
 
 ## Table of Contents
 

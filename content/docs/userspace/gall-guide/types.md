@@ -159,7 +159,7 @@ most commonly a subscription path - you might subscribe for updates to
 agent.
 
 A `path` might just be a series of fixed `@ta` like `/foo/bar`, but some
-elements might also be variable and encode atom auras, or some other format. For
+elements might also be variable and include encoded atoms, or some other datum. For
 example, you might like to include a date in the path like
 `/updates/~2021.10.31..07.24.27..db68`. Other agents might create the path by
 doing something like:
@@ -171,7 +171,7 @@ doing something like:
 Then, when you get a subscription request, you might do something like:
 
 ```hoon
-?+    path  (on-watch:def path)
+?+    path  !!
     [%updates @ ~]
   =/  date=@da  (slav %da i.t.path)
   ...(rest of code)...

@@ -4,7 +4,7 @@ weight = 20
 template = "doc.html"
 +++
 
-In the last lesson we look at a couple of useful things used as boilerplate in
+In the last lesson we looked at a couple of useful things used as boilerplate in
 most agents. Now we're going to get into the guts of how agents work, and start
 looking at what the agent arms do. The first thing we'll look at is the agent's
 state, and the three arms for managing it: `on-init`, `on-save`, and `on-load`.
@@ -28,7 +28,7 @@ Once initialized, an agent will just go on doing its thing - processing events,
 updating its state, producing effects, etc. At some point, you'll likely want to
 push an update for your agent. Maybe it's a bug fix, maybe you want to add extra
 features. Whatever the reason, you need to change the source code of your agent,
-so you commit a modified version of the file to Clay. When this happens, three things happen:
+so you commit a modified version of the file to Clay. When the commit completes, Gall updates the app as follows:
 
 - The agent's `on-save` arm is called, which packs the agent's state in a `vase`
   and exports it.
@@ -426,13 +426,13 @@ this new version of the agent, it would be, so we still need to update it.
   ==
 ```
 
-We've updated the wuthep expression with a new case that handles our new state
+We've updated the `?-` expression with a new case that handles our new state
 type, and for the old state type we've added a function that converts it to the
 new type - in this case by duplicating `val` and changing the head-tag from `%0`
 to `%1`. This is an extremely simple state type transition function - it would
 likely be more complicated for an agent with real functionality.
 
-Let's now use `dbug` to check our state has successfully been updated to the new
+Let's now use `dbug` to confirm our state has successfully been updated to the new
 type:
 
 ```
@@ -447,10 +447,10 @@ type:
   state import and state version transition.
 - This is managed by three arms: `on-init`, `on-save` and `on-load`.
 - `on-init` initializes the agent and is called when it's first installed.
-- `on-save` exports the agent's state and is usually called during upgrade or
+- `on-save` exports the agent's state and is called during upgrade or
   when an app is suspended.
-- `on-load` imports an agent's state and is usually called during upgrade or
-  when an app is unsuspended. It typically also handles converting data from old
+- `on-load` imports an agent's state and is called during upgrade or
+  when an app is unsuspended. It also handles converting data from old
   state versions to new state versions.
 - The type of an agent's state is typically defined in a separate core.
 - The state type is typically versioned, with a new type definition for each
