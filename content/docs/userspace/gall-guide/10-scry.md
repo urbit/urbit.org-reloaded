@@ -191,12 +191,15 @@ Here's a simple example agent with three scry endpoints:
 |_  =bowl:gall
 +*  this  .
     def   ~(. (default-agent this %.n) bowl)
+::
 ++  on-init
   ^-  (quip card _this)
   `this
+::
 ++  on-save
   ^-  vase
   !>(state)
+::
 ++  on-load
   |=  old-state=vase
   ^-  (quip card _this)
@@ -204,6 +207,7 @@ Here's a simple example agent with three scry endpoints:
   ?-  -.old
     %0  `this(state old)
   ==
+::
 ++  on-poke
   |=  [=mark =vase]
   ^-  (quip card _this)
@@ -212,8 +216,10 @@ Here's a simple example agent with three scry endpoints:
       %noun
     `this(data (~(put by data) !<([@p @t] vase)))
   ==
+::
 ++  on-watch  on-watch:def
 ++  on-leave  on-leave:def
+::
 ++  on-peek
   |=  =path
   ^-  (unit (unit cage))
@@ -231,6 +237,7 @@ Here's a simple example agent with three scry endpoints:
       [~ ~]
     ``noun+!>(`@t`u.maybe-res)
   ==
+::
 ++  on-agent  on-agent:def
 ++  on-arvo   on-arvo:def
 ++  on-fail   on-fail:def
