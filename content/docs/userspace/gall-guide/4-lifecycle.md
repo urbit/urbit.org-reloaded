@@ -216,12 +216,15 @@ Here's a new agent to demonstrate the concepts we've discussed here:
 |_  =bowl:gall
 +*  this  .
     def   ~(. (default-agent this %.n) bowl)
+::
 ++  on-init
   ^-  (quip card _this)
   `this(val 42)
+::
 ++  on-save
   ^-  vase
   !>(state)
+::
 ++  on-load
   |=  old-state=vase
   ^-  (quip card _this)
@@ -229,6 +232,7 @@ Here's a new agent to demonstrate the concepts we've discussed here:
   ?-  -.old
     %0  `this(state old)
   ==
+::
 ++  on-poke   on-poke:def
 ++  on-watch  on-watch:def
 ++  on-leave  on-leave:def
@@ -354,12 +358,15 @@ again save in `/app/lifecycle.hoon` and `|commit %base`:
 |_  =bowl:gall
 +*  this  .
     def   ~(. (default-agent this %.n) bowl)
+::
 ++  on-init
   ^-  (quip card _this)
   `this(val [27 32])
+::
 ++  on-save
   ^-  vase
   !>(state)
+::
 ++  on-load
   |=  old-state=vase
   ^-  (quip card _this)
@@ -368,6 +375,7 @@ again save in `/app/lifecycle.hoon` and `|commit %base`:
     %1  `this(state old)
     %0  `this(state 1+[val.old val.old])
   ==
+::
 ++  on-poke   on-poke:def
 ++  on-watch  on-watch:def
 ++  on-leave  on-leave:def
