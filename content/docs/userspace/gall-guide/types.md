@@ -14,10 +14,11 @@ Gall vane documentation is a useful reference. In particular, the whole
 
 ## `vase`
 
-Urbit needs to be able to send typed data between vanes and agents, as well as
-over the network to other ships. While cell structures can easily be validated,
-atom auras cannot. To solve this problem, Urbit wraps such data in a vase before
-sending it. Vases are used extensively - almost all data your agent will send
+Vases are used to encapsulate _dynamically typed_ data - they let typed data be
+moved around in contexts where you can't know the type ahead of time, and
+therefore can't have a _static_ type.
+
+Vases are used extensively - almost all data your agent will send
 and received is wrapped in a vase.
 
 A vase is just a cell with data in the tail and the type of the data in the
