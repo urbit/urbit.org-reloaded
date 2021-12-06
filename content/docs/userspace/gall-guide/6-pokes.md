@@ -196,12 +196,15 @@ receiving pokes. Here's the first, an agent that receives pokes:
 |_  =bowl:gall
 +*  this  .
     def   ~(. (default-agent this %.n) bowl)
+::
 ++  on-init
   ^-  (quip card _this)
   `this
+::
 ++  on-save
   ^-  vase
   !>(state)
+::
 ++  on-load
   |=  old-state=vase
   ^-  (quip card _this)
@@ -209,6 +212,7 @@ receiving pokes. Here's the first, an agent that receives pokes:
   ?-  -.old
     %0  `this(state old)
   ==
+::
 ++  on-poke
   |=  [=mark =vase]
   ^-  (quip card _this)
@@ -225,6 +229,7 @@ receiving pokes. Here's the first, an agent that receives pokes:
       `this(val (dec val))
     ==
   ==
+::
 ++  on-watch  on-watch:def
 ++  on-leave  on-leave:def
 ++  on-peek   on-peek:def
@@ -344,12 +349,15 @@ rather than updating its own state, it sends two pokes to `%pokeme`, so
 |_  =bowl:gall
 +*  this  .
     def   ~(. (default-agent this %.n) bowl)
+::
 ++  on-init
   ^-  (quip card _this)
   `this
+::
 ++  on-save
   ^-  vase
   !>(state)
+::
 ++  on-load
   |=  old-state=vase
   ^-  (quip card _this)
@@ -357,6 +365,7 @@ rather than updating its own state, it sends two pokes to `%pokeme`, so
   ?-  -.old
     %0  `this(state old)
   ==
+::
 ++  on-poke
   |=  [=mark =vase]
   ^-  (quip card _this)
@@ -377,9 +386,11 @@ rather than updating its own state, it sends two pokes to `%pokeme`, so
       ==
     ==
   ==
+::
 ++  on-watch  on-watch:def
 ++  on-leave  on-leave:def
 ++  on-peek   on-peek:def
+::
 ++  on-agent
   |=  [=wire =sign:agent:gall]
   ^-  (quip card _this)
@@ -402,6 +413,7 @@ rather than updating its own state, it sends two pokes to `%pokeme`, so
     %-  (slog '%pokeit: Decrement poke failed!' ~)
     `this
   ==
+::
 ++  on-arvo   on-arvo:def
 ++  on-fail   on-fail:def
 --
