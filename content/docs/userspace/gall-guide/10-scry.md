@@ -11,12 +11,10 @@ rune documentation](/docs/hoon/reference/rune/dot#-dotket).
 
 ## Scrying
 
-Scries are read-only requests to vanes and agents which can be initiated
-from anywhere in any code, during its evaluation. If successful, the requested
-data is returned immediately to that point in the code, otherwise it crashes.
-This is in contrast to passing around `card`s, which aren't read-only and which
-can only be produced when evaluation of the arm is complete, and for which any
-response will come back separately.
+A scry is a read-only request to Arvo's global namespace. Vanes and agents
+define _scry endpoints_ which allow data to be requested from their states. The
+endpoints can process the data in any way before returning it, but they cannot
+alter the actual state - scries can only read, not modify.
 
 Most of the time, scry requests are handled by Arvo, which routes the request to
 the appropriate vane. When you scry a Gall agent you actually scry Gall itself.
