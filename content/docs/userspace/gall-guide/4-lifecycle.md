@@ -37,8 +37,8 @@ so you commit a modified version of the file to Clay. When the commit completes,
   built agent. The `on-load` arm will process it, convert it to the new version
   of the state if necessary, and load it back into the state of the agent.
 
-A `vase` is just a cell of `[type-of-the-noun the-noun]` - it's used extensively
-for sending data between agents, vanes and ships. A vase is made with the
+A `vase` is just a cell of `[type-of-the-noun the-noun]`. Most data an agent
+sends or receives will be encapsulated in a vase. A vase is made with the
 [zapgar](/docs/hoon/reference/rune/zap#-zapgar) (`!>`) rune like
 `!>(some-data)`, and unpacked with the
 [zapgal](/docs/hoon/reference/rune/zap#-zapgal) (`!<`) rune like
