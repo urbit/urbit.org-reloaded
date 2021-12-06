@@ -124,11 +124,10 @@ and call it like so:
 hc  ~(. +>  bowl)
 ```
 
-The composition will put the helper core in the tail of the tail of the agent
-core's subject, so we use a [censig](/docs/hoon/reference/rune/cen#-censig)
-expression to call `+>` of the subject (`.`) with the `bowl` as its sample.
-After that, any agent arms can make use of helper core functions by calling them
-like `(some-function:hc ....)`.
+To get to the helper core we composed from within the door, we use a
+[censig](/docs/hoon/reference/rune/cen#-censig) expression to call `+>` of the
+subject (`.`) with the `bowl` as its sample. After that, any agent arms can make
+use of helper core functions by calling them like `(some-function:hc ....)`.
 
 ## Summary
 
