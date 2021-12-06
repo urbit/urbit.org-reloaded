@@ -433,12 +433,15 @@ This is a very simple mark file for the `update` type.
 |_  =bowl:gall
 +*  this  .
     def   ~(. (default-agent this %.n) bowl)
+::
 ++  on-init
   ^-  (quip card _this)
   `this
+::
 ++  on-save
   ^-  vase
   !>(state)
+::
 ++  on-load
   |=  old-state=vase
   ^-  (quip card _this)
@@ -446,6 +449,7 @@ This is a very simple mark file for the `update` type.
   ?-  -.old
     %0  `this(state old)
   ==
+::
 ++  on-poke
   |=  [=mark =vase]
   ^-  (quip card _this)
@@ -505,6 +509,7 @@ This is a very simple mark file for the `update` type.
       ==
     ==
   --
+::
 ++  on-watch
   |=  =path
   ^-  (quip card _this)
@@ -515,6 +520,7 @@ This is a very simple mark file for the `update` type.
     :~  [%give %fact ~ %todo-update !>(`update:todo`initial+tasks)]
     ==
   ==
+::
 ++  on-leave  on-leave:def
 ++  on-peek   on-peek:def
 ++  on-agent  on-agent:def
@@ -580,12 +586,15 @@ currently exists, getting the new subscriber up to date.
 |_  =bowl:gall
 +*  this  .
     def   ~(. (default-agent this %.n) bowl)
+::
 ++  on-init
   ^-  (quip card _this)
   `this
+::
 ++  on-save
   ^-  vase
   !>(state)
+::
 ++  on-load
   |=  old-state=vase
   ^-  (quip card _this)
@@ -593,6 +602,7 @@ currently exists, getting the new subscriber up to date.
   ?-  -.old
     %0  `this(state old)
   ==
+::
 ++  on-poke
   |=  [=mark =vase]
   ^-  (quip card _this)
@@ -611,9 +621,11 @@ currently exists, getting the new subscriber up to date.
       ==
     ==
   ==
+::
 ++  on-watch  on-watch:def
 ++  on-leave  on-leave:def
 ++  on-peek   on-peek:def
+::
 ++  on-agent
   |=  [=wire =sign:agent:gall]
   ^-  (quip card _this)
@@ -639,6 +651,7 @@ currently exists, getting the new subscriber up to date.
       ==
     ==
   ==
+::
 ++  on-arvo   on-arvo:def
 ++  on-fail   on-fail:def
 --
