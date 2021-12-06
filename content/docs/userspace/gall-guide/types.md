@@ -124,13 +124,9 @@ documentation](/docs/arvo/clay/marks/marks).
 A `cage` is a cell of a [`mark`](#mark) and a [`vase`](#vase), like `[%foo !>('bar')]`. The data in the vase should match the data type of the specified
 mark.
 
-Most data sent between agents, either locally or over the network, will be in a
-cage. When data comes in, Gall will validate the data in the vase with the given
-mark. Additionally, the data may be converted to a different mark if appropriate
-conversion routines exist in the mark file. This is most commonly done when
-talking to a web front-end via Eyre's channel system - outgoing data will be
-automatically converted to a `%json` mark and incoming data will be converted
-from `%json` to the mark your agent expects.
+Most data an agent sends will be in a `cage`, and most data it receives will
+arrive in a `cage`. The `mark` may be used to validate or convert the data in
+the `vase`, depending on the context.
 
 ## `quip`
 
