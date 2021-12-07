@@ -466,6 +466,8 @@ This is a very simple mark file for the `update` type.
     ^-  (quip card _state)
     ?-    -.action
         %add
+      ?:  (~(has by tasks) now.bowl)
+        $(now.bowl (add now.bowl ~s0..0001))
       :_  state(tasks (~(put by tasks) now.bowl [name.action %.n]))
       :~  :*  %give  %fact  ~[/updates]  %todo-update
               !>(`update:todo`[%add now.bowl name.action])
@@ -542,7 +544,22 @@ in `on-poke` with:
 ?>  =(src.bowl our.bowl)
 ```
 
-Let's look at `on-watch`:
+Additionally, you might notice the `%add` case in `handle-poke` begins with the
+following:
+
+```hoon
+?:  (~(has by tasks) now.bowl)
+  $(now.bowl (add now.bowl ~s0..0001))
+```
+
+Back in lesson two, we mentioned that the bowl is only repopulated when there's
+a new Arvo event, so simultaneous messages from a local agent or web client
+would be processed with the same bowl. Since we're using `now.bowl` for the task
+ID, this means multiple `%add` actions could collide. To handle this case, we
+check if there's already an entry in the `tasks` map with the current date-time,
+and if there is, we increase the time by a fraction of a second and try again.
+
+Let's now look at `on-watch`:
 
 ```hoon
 ++  on-watch

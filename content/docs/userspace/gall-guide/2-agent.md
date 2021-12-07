@@ -62,6 +62,13 @@ arms of the agent have access to that data. For the exact structure and contents
 of the bowl, have a read through [its entry in the Gall vane types
 documentation](/docs/arvo/gall/data-types#bowl).
 
+One important thing to note is that the bowl is only repopulated when there's a
+new Arvo event. If a local agent or web client were to send multiple
+messages to your agent at the same time, these would all arrive in the same
+event. This means if your agent depended on a unique date-time or entropy to
+process each message, you could run into problems if your agent doesn't account
+for this possibility.
+
 ## State
 
 If you've worked through [Hoon School](/docs/hoon/hoon-school/intro), you may
