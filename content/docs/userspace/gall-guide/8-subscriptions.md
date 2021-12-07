@@ -480,25 +480,23 @@ This is a very simple mark file for the `update` type.
       ==
     ::
         %toggle
-      :_  %=  state
-            tasks  %+  ~(jab by tasks)
-                     id.action
-                   |=(=task:todo task(done !done.task))
-          ==
-      :~  :*  %give  %fact  ~[/updates]  %todo-update
+      :-  :~  :*  %give  %fact  ~[/updates]  %todo-update
               !>(`update:todo`action)
-          ==
+          ==  ==
+      %=  state
+        tasks  %+  ~(jab by tasks)
+                 id.action
+               |=(=task:todo task(done !done.task))
       ==
     ::
         %rename
-      :_  %=  state
-            tasks  %+  ~(jab by tasks)
-                     id.action
-                   |=(=task:todo task(name name.action))
-          ==
-      :~  :*  %give  %fact  ~[/updates]  %todo-update
+      :-  :~  :*  %give  %fact  ~[/updates]  %todo-update
               !>(`update:todo`action)
-          ==
+          ==  ==
+      %=  state
+        tasks  %+  ~(jab by tasks)
+                 id.action
+               |=(=task:todo task(name name.action))
       ==
         %allow
       `state(friends (~(put in friends) who.action))
