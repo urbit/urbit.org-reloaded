@@ -472,7 +472,7 @@ This is a very simple mark file for the `update` type.
           ==
       ==
     ::
-         %del
+        %del
       :_  state(tasks (~(del by tasks) id.action))
       :~  :*  %give  %fact  ~[/updates]  %todo-update
               !>(`update:todo`action)
