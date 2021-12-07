@@ -118,6 +118,11 @@ When you later update your agent with a new state version, you'd change it to:
 --
 ```
 
+Another reason for versioning the state type is that there may be cases where
+the state type doesn't change, but you still want to apply special transition
+logic for an old state during upgrade. For example, you may need to reprocess
+the data for a new feature or to fix a bug.
+
 ## Adding the state
 
 Along with a core defining the type of the state, we also need to actually add
