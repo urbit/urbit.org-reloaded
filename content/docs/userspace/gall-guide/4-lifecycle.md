@@ -62,30 +62,30 @@ the type of the agent's state. In principle, we could make it as simple as this:
 
 However, when you update your agent as described in the [Lifecycle](#lifecycle)
 section, you may want to change the type of the state itself. This means
-`on-load` might find old versions of the state in the `vase` it receives. Over
-time, as you make further changes to the type of the state, this becomes quite
-complicated.
+`on-load` might find different versions of the state in the `vase` it receives,
+and it might not be able to distinguish between them.
 
 For example, if you were creating an agent for a To-Do task management app, your
-tasks might initially have a simple `?` to specify whether they're complete or
-not. Something like:
+tasks might initially have a `?(%todo %done)` union to specify whether they're
+complete or not. Something like:
 
 ```hoon
-(map task=@t done=?)
+(map task=@t status=?(%todo %done))
 ```
 
 At some point, you might want to add a third status to represent "in progress",
-which might involve changing `done` to a tagged union like:
+which might involve changing `status` like:
 
 ```hoon
 (map title=@t status=?(%todo %done %work))
 ```
 
-The conventional way to keep this managable is to have _versioned states_. The
-first version of the state would typically be called `state-0`, and its head
-would be tagged with `%0`. Then, when you change the state's type in an update,
-you'd add a new structure called `state-1` and tag its head with `%1`. The next
-would then be `state-2`, and so on.
+The conventional way to keep this managable and reliably differentiate possible
+state types is to have _versioned states_. The first version of the state would
+typically be called `state-0`, and its head would be tagged with `%0`. Then,
+when you change the state's type in an update, you'd add a new structure called
+`state-1` and tag its head with `%1`. The next would then be `state-2`, and so
+on.
 
 In addition to each of those individual state versions, you'd also define a
 structure called `versioned-state`, which just contains a union of all the
@@ -101,7 +101,7 @@ For example, your state definition core might initially look like:
 +$  versioned-state
   $%  state-0
   ==
-+$  state-0  [%0 tasks=(map title=@t done=?)]
++$  state-0  [%0 tasks=(map title=@t status=?(%todo %done))]
 --
 ```
 
@@ -113,7 +113,7 @@ When you later update your agent with a new state version, you'd change it to:
   $%  state-0
       state-1
   ==
-+$  state-0  [%0 tasks=(map title=@t done=?)]
++$  state-0  [%0 tasks=(map title=@t status=?(%todo %done))]
 +$  state-1  [%1 tasks=(map title=@t status=?(%todo %done %work))]
 --
 ```
