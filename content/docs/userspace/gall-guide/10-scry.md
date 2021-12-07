@@ -106,10 +106,10 @@ example, a scry of `.^(update:store %gx /=graph-store=/keys/noun)` will come
 into the `on-peek` arm of `%graph-store` as `/x/keys`.
 
 The `on-peek` arm produces a `(unit (unit cage))`. The reason for the double
-`unit` is that Arvo interprets `~` to mean the scry endpoint doesn't exist at
-all, and interprets `[~ ~]` to mean the endpoint exists but the requested data
-does not. In either case the dotket expression which initiated the scry will
-crash. The `cage` will contain the actual data to return.
+`unit` is that Arvo interprets `~` to mean the scry path couldn't be resolved,
+and interprets `[~ ~]` to means it resolved to nothing. In either case the
+dotket expression which initiated the scry will crash. The `cage` will contain
+the actual data to return.
 
 An ordinary `on-peek` arm, therefore, begins like so:
 
