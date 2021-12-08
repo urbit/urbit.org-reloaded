@@ -9,38 +9,39 @@ template = "doc.html"
 
 Graph Store can be poked with a `graph-update`, which can:
 
-- add and remove a graph
+### Add and remove a graph
 
-`[%add-graph =resource =graph mark=(unit mark) overwrite=?]`
+- `[%add-graph =resource =graph mark=(unit mark) overwrite=?]`
 
-`[%remove-graph =resource]`
+- `[%remove-graph =resource]`
 
-- add and remove a node to a graph
+### Add and remove a node
 
-`[%add-nodes =resource nodes=(map index node)]`
+- `[%add-nodes =resource nodes=(map index node)]`
 
-`[%remove-posts =resource indices=(set index)]`
+- `[%remove-posts =resource indices=(set index)]`
 
-- add and remove signatures
+### Add and remove signatures
 
-`[%add-signatures =uid =signatures]`
+- `[%add-signatures =uid =signatures]`
 
-`[%remove-signatures =uid =signatures]`
+- `[%remove-signatures =uid =signatures]`
 
-- add and remove tags
+### Add and remove tags
 
-`[%add-tag =term =uid]`
+- `[%add-tag =term =uid]`
 
-`[%remove-tag =term =uid]`
+- `[%remove-tag =term =uid]`
 
-- archive and unarchive a graph
+### Archive and unarchive a graph
 
-`[%archive-graph =resource]`
+- `[%archive-graph =resource]`
 
-`[%unarchive-graph =resource]`
+- `[%unarchive-graph =resource]`
 
-- manually process an update log on a resource
-  `[%run-updates =resource =update-log]`
+### Manually process an update log on a resource
+
+- `[%run-updates =resource =update-log]`
 
 ## Scries
 
