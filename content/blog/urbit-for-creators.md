@@ -8,7 +8,6 @@ ship = "~librex-dozryc"
 image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/creators%20blog%20.JPG"
 +++
 
-https://storage.googleapis.com/media.urbit.org/site/posts/essays/creators%20blog%20.JPG
 
 Urbit is for Creators
 ~librex-dozryc
