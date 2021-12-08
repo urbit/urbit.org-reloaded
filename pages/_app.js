@@ -2,7 +2,6 @@ import "tailwindcss/tailwind.css";
 import { useState, useEffect } from "react";
 import { configure, GlobalHotKeys } from "react-hotkeys";
 import { init } from "@socialgouv/matomo-next";
-
 import Search from "../components/Search";
 import "../styles/globals.css";
 import "../styles/markdown.css";
