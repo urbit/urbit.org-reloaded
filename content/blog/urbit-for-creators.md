@@ -5,10 +5,10 @@ description = "Urbit is for creators who are ready to wake up from this bad drea
 [extra]
 author = "Noah Kumin"
 ship = "~librex-dozryc"
-image = ""
+image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/creators%20blog%20.JPG"
 +++
 
-[image]
+https://storage.googleapis.com/media.urbit.org/site/posts/essays/creators%20blog%20.JPG
 
 Urbit is for Creators
 ~librex-dozryc
@@ -18,9 +18,6 @@ It’s no secret that there are huge problems with the way content is distribute
 This product is selling very well, and it has seeped its way fully into the world of content creation, or what might once have been called the arts. Although it’s not so widely publicized, [Tik Tok basically runs the popular music industry at this point](https://www.browndailyherald.com/article/2021/09/for-better-or-worse-tiktok-is-driving-the-music-industry). Meanwhile, platforms like Spotify or YouTube filter what we see by deprecating the “long tails” of content. That is, if you’re searching for a tune on Spotify, it brings Spotify more profit, on average, to design a search feature that will automatically bring you to the most popular songs, even if you were really looking for less popular ones. The same goes for books, which are now purchased mostly according to the algorithm, and not according to what a person might stumble upon in a bookshop. (The upshot: expect more [cookbooks from Snoop Dogg](https://www.nytimes.com/2021/04/18/books/book-sales-publishing-pandemic-coronavirus.html), and fewer titles from authors who are not already celebrities.) Products such as Tik Tok, Spotify, YouTube, and Amazon like for you to think that they’re mere distributors of content. But actually they’re *producers*, and they’re producing the smarmy, anodyne style that has homogenized the globe.
 
 Urbit is for creators who are ready to wake up from this bad dream. 
-
-
-[image]
 
 The vibe of today’s internet applications—manipulative, erratic, overcomplicated, overbearing, and highly detrimental to society—is in contrast to the mechanics of the creator economy itself, which can actually be blissfully simple. In 2008 Kevin Kelley made famous the concept of “[1000 true fans](https://kk.org/thetechnium/1000-true-fans/).” That is, to make a living as a creator, you only need 1,000 fans who are interested enough to buy whatever you produce. Even $6.00 or $7.00 a month from such true fans is a boon for a creator—assuming not too much of that cash gets taken away by middlemen, and that fans can discover work from outside the corporate monoculture in the first place.
 
