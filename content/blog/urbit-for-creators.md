@@ -1,5 +1,5 @@
 +++
-title = "Urbit is for Creators"
+title = "Urbit Is for Creators"
 date = "2021-12-09"
 description = "Urbit is for creators who are ready to wake up from this bad dream."
 [extra]
