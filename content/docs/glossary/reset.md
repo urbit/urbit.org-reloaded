@@ -13,8 +13,8 @@ first time.
 
 Factory resets are always initiated by the user, frequently in response to a
 connectivity error. The easiest way to do this is with [Bridge](/docs/glossary/bridge).
-There are two types of factory resets: changing networking keys, and changing
-the Urbit ID ownership address.
+The option to perform a factory reset is given when changing the networking keys,
+and when transferring the Urbit ID to a new ownership address.
 
 Historically, there were also "network resets", which happened when a major
 Arvo revision that could not be implemented via an [OTA update](/docs/glossary/ota-updates)
