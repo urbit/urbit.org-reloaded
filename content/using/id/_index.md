@@ -38,7 +38,7 @@ How to resolve common issues in Bridge.
 If you own a star, invite pools allow your friends to invite others onto the
 network.
 
-### [Guide to Breaches](/using/id/guide-to-breaches)
+### [Guide to Resets](/using/id/guide-to-resets)
 
 What to do when things go very wrong and you need to start over.
 

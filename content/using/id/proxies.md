@@ -25,7 +25,7 @@ address to be the management proxy.
 - **Management proxy**
 
   Can configure or set Arvo networking keys,
-  [breach](/docs/using/id/guide-to-breaches), and conduct sponsorship related
+  [factory reset](/docs/using/id/guide-to-resets), and conduct sponsorship related
   operations. Planets, stars, and galaxies may all set a management proxy.
   
 - **Spawn proxy**
