@@ -5,9 +5,10 @@ description = "Urbit is for creators who are ready to wake up from this bad drea
 [extra]
 author = "Noah Kumin"
 ship = "~librex-dozryc"
-image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/creators%20blog%20.JPG"
+image = "!(https://storage.googleapis.com/media.urbit.org/site/posts/essays/romi%20creators%20blog.jpeg)"
 +++
 
+!(https://storage.googleapis.com/media.urbit.org/site/posts/essays/romi%20creators%20blog.jpeg)
 
 Urbit is for Creators
 ~librex-dozryc
@@ -29,7 +30,6 @@ Urbit is a peer-to-peer network designed to serve as simple, durable neutral inf
 Urbit has already seen several communities get excited about the ways Urbit could help them fulfill their goals. Here are just a few examples:
 
 
-
 [HOLDERSLAND](https://twitter.com/holdersland), founded by Haleek Maul, a musician, music label owner, and NFT creator based in Barbados. Maul recently [sold](https://urbit.holders.land) a set of customized Urbit NFT artwork, which came bundled with actual Urbit IDs.
 
 [Other Life](https://www.otherlife.co), a community of philosophers and creators founded by the entrepreneurial Justin Murphy.
@@ -41,7 +41,6 @@ The Stack, an entertaining and informative podcast with a decidedly Urbit flavor
 [Wet Brain](https://www.patreon.com/wetbrain), a numinous, post-everything New York podcast, hosted by Honor and Walt.
 
 Internet Weirdness Task Force, which has no legacy internet site to link to, so you’ll just have to get on Urbit to scope it out.
-
 
 
 Over the last ten years, we’ve already had a taste of what blockchains can do: they’re great so far for distributing a financial ledger so that payments are no longer centralized. But for online communities to go truly peer-to-peer and escape the grip of corporations, they’re going to need something like Urbit. As HOLDERSLAND founder Haleek Maul [puts it](https://urbit.org/blog/haleek-maul-interview) in a recent Q&A, decentralized technologies like blockchain or Urbit “allow . . . new financial relationships and funding structures to emerge. Rather than have a few people contribute $20k, you can have hundreds of people contribute $100.” In such a system, recording artists no longer need to hunt for a deal from sharky impresarios; their communities can comprise both the talent *and* the executives. They no longer need to pay fealty to streaming services; they can sell their wares peer-to-peer, with the old-fashioned connoisseurship of a cool record shop, except that this record shop is available to anyone across the globe.
