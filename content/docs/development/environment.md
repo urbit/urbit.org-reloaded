@@ -311,3 +311,17 @@ And then just commit it in the dojo:
 
 If you're [using dev desks](#using-dev-desks) as a base, it's best to keep those
 files separate from your own code.
+
+### Syncing repos
+
+A useful pattern is to work from a git repo and sync your work with the pier of
+a fake ship. An easy way to do this is with the following command:
+
+```
+watch rsync -zr --delete /working/repo/desk/* /path/to/fake/zod/mydesk
+```
+
+Here `/working/repo/desk` is the folder that has the proper desk structure
+outlined above, and `/path/to/fake/zod/mydesk` is the desk you wish to copy the
+contents of the working repo to. From here, you can edit from the working repo
+and perform git commands there, while testing your changes on the fake ship.
