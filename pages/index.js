@@ -161,7 +161,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
                 className="mt-4 md:h-16"
                 target="_blank"
                 title="Operator’s Guide"
-                caption="Own a star or galaxy? Purchasing one? This is for you."
+                caption="Own a star or galaxy? This is for you."
               >
                 <img
                   alt="Marketplace logo"
@@ -205,11 +205,11 @@ export default function Home({ posts, events, openGrantsCount, search }) {
         <Section narrow>
           <div className="flex items-center pb-12">
             <h2 className="m-0 p-0 mr-4">Grants</h2>
-            <Link href="/grants#find-a-grant">
-              <a className="bg-green-400 text-white badge-lg">
-                {openGrantsCount} Open
-              </a>
-            </Link>
+            {/* <Link href="/grants/proposals"> */}
+            {/*   <a className="bg-green-400 text-white badge-lg"> */}
+            {/*     {openGrantsCount} Open */}
+            {/*   </a> */}
+            {/* </Link> */}
           </div>
           <div className="flex flex-col md:flex-row w-full items-center md:items-start bg-green-100 px-8 py-8 rounded-xl">
             <div className="flex items-center flex-col p-4 w-full">
@@ -236,12 +236,18 @@ export default function Home({ posts, events, openGrantsCount, search }) {
           <div className="measure py-12">
             <p className="pb-12">
               We regularly grant address space to give motivated contributors
-              real ownership and authority over the network. Contributions
-              include education, promotion, and development efforts.
+              real ownership and authority over the network.
             </p>
-            <div className="table">
+            <div className="flex flex-wrap">
               <Link href="/grants">
-                <a className="button-lg bg-green-400 text-white">View Grants</a>
+                <a className="button-lg bg-green-400 text-white mr-2 mb-8">
+                  View Grants
+                </a>
+              </Link>
+              <Link href="/grants/proposals">
+                <button className="button-lg bg-blue-400 text-white">
+                  Submit a Proposal
+                </button>
               </Link>
             </div>
           </div>

@@ -39,8 +39,7 @@ If you will be keeping your ship at the same Ethereum ownership address and
 would like to perform a reset, follow the steps below.
 
 - Go to [bridge.urbit.org](https://bridge.urbit.org) and log into your identity.
-- Click on `OS: Urbit OS Settings` at the bottom, then click `Reset Networking
-  Keys`.
+- Click on `OS: Urbit OS Settings` at the bottom, then click `Reset Networking Keys`.
 - Check the `Breach Continuity` box. Click `Reset Networking Keys`, and then
   click `Send Transaction` and wait for the progress bar to appear.
 - Download your new keyfile following these instructions: [Generate your

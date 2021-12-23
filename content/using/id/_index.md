@@ -54,6 +54,6 @@ aimed at developers, see the [Azimuth documentation](/docs/azimuth).
 
 A guide to how to utilize Bridge to interact with Layer 2. XX TODO
 
-### [Layer 2 Stars](/using/id/l2-star) 
+### [Layer 2 Stars](/using/id/l2-star)
 
 A summary of the different options available to stars and their proxies on layer 2.

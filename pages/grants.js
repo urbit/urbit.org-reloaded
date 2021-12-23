@@ -2,6 +2,7 @@ import Head from "next/head";
 import { TableOfContents } from "../components/TableOfContents";
 import Meta from "../components/Meta";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import classnames from "classnames";
 import Container from "../components/Container";
@@ -11,6 +12,7 @@ import SingleColumn from "../components/SingleColumn";
 import Section from "../components/Section";
 import PostPreview from "../components/PostPreview";
 import GrantPreview from "../components/GrantPreview";
+import JoinGroup from "../components/JoinGroup";
 import {
   getAllPosts,
   getGrantsCategories,
@@ -69,19 +71,31 @@ export default function Grants({
   giftPosts,
   gifts,
 }) {
+  const router = useRouter();
   const [activeTags, setTags] = useState([]);
   const [activeTypes, setTypes] = useState(types);
-  const [includeOpen, setIncludeOpen] = useState(true);
-  const [includeCompleted, setIncludeCompleted] = useState(false);
-  const [includeInProgress, setIncludeInProgress] = useState(false);
-  const [tab, setTab] = useState(0);
+  const includeOpen = router.query.open === "true";
+  const includeCompleted = router.query.completed === "true";
+  const programFilter = router.query.program;
   const post = {
     title: "Grants",
     description: "Contribute to the Urbit project while earning address space.",
   };
 
+  let includeInProgress = router.query.wip === "true";
+
+  if (
+    router.query.open === undefined &&
+    router.query.completed === undefined &&
+    router.query.wip === undefined
+  ) {
+    includeInProgress = true;
+  }
+
   const annotatedPosts = posts.map((post) => {
-    if (post.extra.completed) {
+    if (post.extra.canceled) {
+      return { ...post, status: "canceled" };
+    } else if (post.extra.completed) {
       return { ...post, status: "completed" };
     } else if (post.extra.assignee && post.extra.assignee.length > 0) {
       return { ...post, status: "wip" };
@@ -144,174 +158,201 @@ export default function Grants({
       <SingleColumn>
         <Header search={search} />
         {
-          // Heading and introduction
+          // Heading and Introduction
         }
-        <Section wide short>
+        <Section wide>
           <div className="flex flex-column justify-between pb-16">
             <div className="measure">
               <h1 className="pb-16">Grants</h1>
-              <p className="mb-8">
-                Urbit is a community project. While anyone can contribute, we
-                help focus development and reward exceptional contribution
-                through our grants program.
+              <p className="mb-8 lead">
+                The Urbit Foundation's Grants program is one of our primary
+                mechanisms for distributing address space to the creators and
+                builders out there that help Urbit to succeed.
               </p>
-              <p>
-                Contributors of all types have access to a wide variety of
-                resources while working on projects, including a supportive team
-                at urbit.org, Tlon developers, and community mentors.
+              <p className="lead mb-8">
+                Read on to learn more about the various types of grants we
+                issue, get started on your own grant, and view past and present
+                grants that have been funded.
               </p>
             </div>
           </div>
           <div className="flex flex-wrap">
-            <Link href="#find-a-grant">
-              <button className="button-lg bg-green-400 text-white mr-2">
+            <Link href="#grant-types">
+              <button className="button-lg bg-blue-400 text-white mr-2">
+                Learn More
+              </button>
+            </Link>
+            <Link href="#join-community">
+              <button className="button-lg bg-black text-white mr-2">
+                Join the Community
+              </button>
+            </Link>
+            <Link href="#view-grants">
+              <button className="button-lg bg-wall-400 text-white mr-2">
                 View Grants
               </button>
-            </Link>
-            <Link href="#proposals">
-              <button className="button-lg bg-blue-400 text-white mr-2">
-                Submit a Proposal
-              </button>
-            </Link>
-            <Link href="#gifts">
-              <a className="button-lg bg-wall-600 text-white mr-2">
-                Recent Gifts
-              </a>
             </Link>
           </div>
         </Section>
         {
-          // Featured Grants
+          // Grants Programs
         }
         <Section wide short>
-          <div className="measure pb-16">
-            <h2 className="pb-16" id="featured">
-              Featured Grants
-            </h2>
-            <p className="mb-8">
-              These grants should give you a general idea of what kind of work
-              we reward:
-            </p>
-          </div>
-          <div className="flex flex-col md:flex-row md:space-x-4 md:space-y-0 space-y-4 space-x-0">
-            {featuredGrants.map((grant) => {
-              return (
-                <Link href={"/grants/" + grant.slug}>
-                  <div className="p-8 bg-green-100 rounded-lg w-full md:w-1/3 cursor-pointer">
-                    <h4 className="pb-4">{grant.title}</h4>
-                    <p className="text-green-400 pb-4">
-                      {grant.extra.reward} star
-                      {grant.extra.reward === 1 ? "" : "s"}{" "}
-                      {grant.extra.completed ? "awarded" : "pending"}
-                    </p>
-                    <p>{grant.extra.description}</p>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </Section>
-        {/* Submit a proposal */}
-        <Section wide>
-          <h2 className="mb-16" id="proposals">
-            Proposals
-          </h2>
-          <p className="mb-8 measure">
-            Contributors are also welcome to have their personal projects
-            considered as a proposal. If you'd like to propose a project for the
-            grants program, first review our 
-            <a href="/grant-submission-guide">submission guide</a>, and feel
-            free to{" "}
-            <a href="https://airtable.com/shrCi54rEDxgSZr3z">
-              submit your proposal
-            </a>
-            .
-          </p>
+          <div className="flex flex-column justify-between pb-12">
+            <div className="measure">
+              <h2 id="grant-types" className="pb-12">
+                Grant types
+              </h2>
+              <p className="mb-8">
+                The Urbit Foundation provides three different kinds of grants.
+                No matter what kind of grant you're working on, you'll receive
+                lots of support from the Foundation and a helpful, enthusiastic
+                community.
+              </p>
+              <p className="mb-4">
+                <b>Proposals</b> are for receiving funding for your project
+                &mdash; we fund all kinds projects, not strictly technical ones,
+                so don't hesitate to pitch your idea!
+              </p>
+              <Link href="/grants/proposals">
+                <button className="button-sm bg-blue-400 text-white mr-2 mb-8">
+                  Submit a Proposal
+                </button>
+              </Link>
 
-          <Link href="#find-a-grant">
-            <button
-              className="button-lg bg-blue-400 text-white mr-2"
-              onClick={() => {
-                setIncludeInProgress(true);
-                setIncludeCompleted(true);
-                setTab(1);
-                setTypes(["Proposal"]);
-              }}
-            >
-              View Proposals
-            </button>
-          </Link>
-        </Section>
-        {/* Gift Grants */}
-        <Section wide>
-          <div className="pb-16">
-            <h2 className="pb-16" id="gifts">
-              Gifts
-            </h2>
-            <p className="mb-8">
-              Gifts are given post-facto for exceptional contributions.
-            </p>
-            {/* Uncomment once people added to content/gifts folder. */}
-            {/* {gifts.map((e) => {
-              return (
-                <div className="bg-wall-100 rounded-xl p-4 my-8 flex justify-between">
-                <p className="font-semibold">
-                  {e.name}
-                </p>
-                <p>{e.planet}</p>
-                <p>{e.date}</p>
-                <a className="type-p" href={e.link}>Link</a>
-                </div>
-              )
-            })} */}
-            <div className="flex flex-wrap">
-              <PostPreview
-                post={giftPosts[0]}
-                className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
-                key={giftPosts[0].slug}
-                section="updates"
-              />
-              <PostPreview
-                post={giftPosts[1]}
-                className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
-                key={giftPosts[1].slug}
-                section="blog"
-              />
+              <p className="mb-4">
+                <b>Bounties</b> are contracts for work from trusted partners in
+                our ecosystem. The Urbit Foundation matches contributors with
+                projects, verifies the integrity of the poster, and will often
+                chip in on the funding.
+              </p>
+              <Link href="/grants/bounties">
+                <button className="button-sm bg-yellow-300 text-black mb-8">
+                  Post a Bounty
+                </button>
+              </Link>
+
+              <p className="mb-4">
+                <b>Apprenticeships</b> are opportunities to receive mentorship
+                from an experienced Urbit developer. These don't pay as well,
+                but are generally the best way to land a full-time job in Urbit
+                development
+              </p>
+              <Link href="/grants/apprenticeships">
+                <button className="button-sm bg-green-400 text-white">
+                  Apply for an Apprenticeship
+                </button>
+              </Link>
             </div>
           </div>
         </Section>
-        {/*  Find a Grant */}
+
+        <Section wide short>
+          <div className="flex flex-column justify-between">
+            <div className="measure">
+              <h2 id="join-community" className="pb-12">
+                Community
+              </h2>
+              <p className="mb-4">
+                We believe that grants are more successful when tackled with the
+                support of a community, and community starts with individual
+                relationships.
+              </p>
+              <ul className="mb-4">
+                <li>
+                  <p>
+                    <Link href="/grants/proposals">Proposals</Link> are approved
+                    and stewarded by past grant workers
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <Link href="/grants/bounties">Bounties</Link> are overseen
+                    by those that post them
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <Link href="/grants/apprenticeships">Apprenticeships</Link>{" "}
+                    are largely about building a relationship between apprentice
+                    and mentor
+                  </p>
+                </li>
+              </ul>
+
+              <p className="mb-8">
+                Whether you're gearing up to submit your proposal or just
+                thinking about it, the best way to get started is to join the
+                Foundation group on Urbit:
+              </p>
+
+              <JoinGroup
+                emphasize
+                className="mb-8"
+                groupName="~wolref-podlex/foundation"
+              />
+
+              <p>
+                If you're not on the network, reach out to us at{" "}
+                <a href="mailto:grants@urbit.org">grants@urbit.org</a> and we'll
+                get back to you within a couple of days.
+              </p>
+            </div>
+          </div>
+        </Section>
+
+        {/*  View Grants */}
         <Section wide>
-          <h2 id="find-a-grant" className="pb-8">
-            Find a Grant
+          <h2 id="view-grants" className="pb-8">
+            View Grants
           </h2>
-          <h5 className="text-wall-600 font-semibold my-2">Work Programs</h5>
+          <h5 className="text-wall-600 font-semibold my-2">Programs</h5>
           <div className="flex flex-wrap items-center pb-2">
             <button
               onClick={() => {
-                setTab(0);
+                let query = { ...router.query };
+                delete query.program;
+                router.push(
+                  {
+                    pathname: "/grants",
+                    query: { ...query },
+                  },
+                  "",
+                  { scroll: false }
+                );
                 setTypes(types);
               }}
               className={`badge-lg my-2 mr-2 ${
-                tab === 0 ? "text-white bg-black" : "text-wall-500 bg-wall-100"
+                programFilter === undefined
+                  ? "text-white bg-black"
+                  : "text-wall-500 bg-wall-100"
               }`}
             >
               All <div className="opacity-50 ml-2">{allCount}</div>
             </button>
-            {types.map((type, index) => {
+            {types.map((type) => {
               const className = classnames({
                 "bg-blue-400 text-white":
-                  tab === index + 1 && type === "Proposal",
+                  programFilter === "proposal" && type === "Proposal",
                 "bg-green-400 text-white":
-                  tab === index + 1 && type === "Apprenticeship",
-                "bg-yellow-300": tab === index + 1 && type === "Bounty",
-                "bg-wall-100 text-wall-500": tab !== index + 1,
+                  programFilter === "apprenticeship" &&
+                  type === "Apprenticeship",
+                "bg-yellow-300":
+                  programFilter === "bounty" && type === "Bounty",
+                "bg-wall-100 text-wall-500": type !== programFilter,
               });
               return (
                 <button
                   onClick={() => {
                     // + 1 is added here because the 'all' button precedes this sequence
-                    setTab(index + 1);
+                    router.push(
+                      {
+                        pathname: "/grants",
+                        query: { ...router.query, program: type.toLowerCase() },
+                      },
+                      "",
+                      { scroll: false }
+                    );
                     setTypes([type]);
                   }}
                   className={`badge-lg mr-2 ${className}`}
@@ -343,21 +384,48 @@ export default function Grants({
             <div className="pb-8 flex items-center">
               <button
                 className="mr-4 badge-sm bg-black text-white"
-                onClick={() => setIncludeOpen(!includeOpen)}
+                onClick={() =>
+                  router.push(
+                    {
+                      pathname: "/grants",
+                      query: { ...router.query, open: !includeOpen },
+                    },
+                    "",
+                    { scroll: false }
+                  )
+                }
               >
                 {includeOpen ? "Exclude Open" : "Include Open"}
               </button>
 
               <button
                 className="mr-4 badge-sm bg-black text-white"
-                onClick={() => setIncludeCompleted(!includeCompleted)}
+                onClick={() =>
+                  router.push(
+                    {
+                      pathname: "/grants",
+                      query: { ...router.query, completed: !includeCompleted },
+                    },
+                    "",
+                    { scroll: false }
+                  )
+                }
               >
                 {includeCompleted ? "Exclude Completed" : "Include Completed"}
               </button>
 
               <button
                 className="mr-4 badge-sm bg-black text-white"
-                onClick={() => setIncludeInProgress(!includeInProgress)}
+                onClick={() =>
+                  router.push(
+                    {
+                      pathname: "/grants",
+                      query: { ...router.query, wip: !includeInProgress },
+                    },
+                    "",
+                    { scroll: false }
+                  )
+                }
               >
                 {includeInProgress
                   ? "Exclude In Progress"
@@ -387,23 +455,11 @@ export async function getStaticProps() {
     ["title", "slug", "date", "description", "extra", "taxonomies"],
     "grants"
   );
-  // all the gift posts stuff can be removed once we migrate to gifts
-  // let giftPosts = getAllPosts(
-  //   ["title", "slug", "date", "description", "extra", "taxonomies"],
-  //   "blog"
-  // );
-  // giftPosts.map((e) => (e.section = "blog"));
+
   let updates = getAllPosts(
     ["title", "slug", "date", "description", "extra", "taxonomies"],
     "updates"
   );
-  // updates.map((e) => (e.section = "updates"));
-  // giftPosts.push(...updates);
-  // giftPosts = giftPosts
-  //   .filter((e) => e?.taxonomies?.grant_type?.includes("Gift"))
-  //   .sort((a, b) => (a.date > b.date ? -1 : 1));
-
-  // const gifts = getAllPosts(["name", "planet", "date", "link"], "gifts");
 
   // The layout expects exactly 3
   const featuredGrants = [
@@ -413,14 +469,6 @@ export async function getStaticProps() {
   ].map((slug) =>
     getPostBySlug(slug, ["title", "slug", "date", "extra"], "grants")
   );
-
-  // Layout expects exactly 2
-  // const giftPosts = [
-  //   "2021-06-16-update",
-  //   "gifts-q3-2020",
-  // ].map((slug) =>
-  //   getPostBySlug(slug, ["title", "slug", "date", "extra"], "blog")
-  // );
 
   const giftPosts = [
     getPostBySlug(
