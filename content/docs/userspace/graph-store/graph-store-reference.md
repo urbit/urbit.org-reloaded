@@ -61,7 +61,7 @@ Obtain a vase of the current state of graph-store as a noun.
 Fetch the resources of all graphs that graph-store is currently tracking.
 
 - Path: `/x/keys`
-- Output Type: `(set resource)`
+- Output Type: `update:store`, `%keys`
 
 ### Fetch tag queries
 
