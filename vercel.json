@@ -40,12 +40,12 @@
     },
     {
       "source": "/install/mac/latest",
-      "destination": "http://github.com/urbit/urbit/releases/latest/download/darwin.tgz",
+      "destination": "https://github.com/urbit/urbit/releases/latest/download/darwin.tgz",
       "permanent": true
     },
     {
       "source": "/install/linux64/latest",
-      "destination": "http://github.com/urbit/urbit/releases/latest/download/linux64.tgz",
+      "destination": "https://github.com/urbit/urbit/releases/latest/download/linux64.tgz",
       "permanent": true
     },
     {
