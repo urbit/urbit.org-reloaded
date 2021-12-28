@@ -16,10 +16,6 @@ An overview of userspace in Urbit.
 
 Learn how to develop Gall agents.
 
-## [Landscape](/docs/userspace/landscape/)
-
-Resources on the flagship web client Landcape, through which most users interact with their ship.
-
 ## [Threads](/docs/userspace/threads/)
 
 Resources on threads - monadic functions useful for complex IO.
