@@ -40,7 +40,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2i/#aptby' title="Check correctness (map)"><code>++apt:by</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2h/#aptin' title="Check correctness (set)"><code>++apt:in</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2k/#aptto' title="Check correctness of queue"><code>++apt:to</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#at' title="(Undocumented)"><code>++at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#at' title="Basic printing"><code>++at</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#aura' title="'Type' of atom"><code>++aura</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2q/#axis' title="Tree address"><code>+$axis</code></a>
 
@@ -91,6 +91,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#cat' title="Concatenate"><code>++cat</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#cen' title="Parse % (cen)"><code>++cen</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3c/#cetyo' title="Days in a century"><code>++cet:yo</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4a/#chafa' title="Decode base58check character"><code>++cha:fa</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2q/#char' title="Character"><code>+$char</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#chum' title="Jet hint information"><code>++chum</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#cit' title="Octal digit"><code>++cit</code></a>
@@ -128,6 +129,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2j/#delju' title="Delete (jug)"><code>++del:ju</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#dem' title="Decimal to atom"><code>++dem</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#demag' title="Parse decmal with dots"><code>++dem:ag</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4a/#denfa' title="Decode base58check"><code>++den:fa</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#denfl' title="Denormalizes (floating point)"><code>++den:fl</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2k/#depto' title="Maximum depth (queue)"><code>++dep:to</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2i/#difby' title="Difference between maps"><code>++dif:by</code></a>
@@ -178,6 +180,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#emnfl' title="Minimum exponent"><code>++emn:fl</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#emufl' title="Exact multiply"><code>++emu:fl</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#emxfl' title="Maximum exponent"><code>++emx:fl</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4a/#encfa' title="Encode base58check"><code>++enc:fa</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#end' title="Tail"><code>++end</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#equff' title="Equals (IEEE float)"><code>++equ:ff</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#equfl' title="Equals (signed and unsigned integer cell)"><code>++equ:fl</code></a>
@@ -195,6 +198,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 
 ### f
 
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4a/#fa' title="base58check"><code>++fa</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4e/#fail' title="Never parse"><code>++fail</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#fall' title="Give unit a default value"><code>++fall</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#fand' title="All indices in list"><code>++fand</code></a>
@@ -455,6 +459,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 ### p
 
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#paff' title="Initialize fl from ff core"><code>++pa:ff</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4a/#padfa' title="base58check padding bytes"><code>++pad:fa</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1c/#pair' title="Mold of pair of types"><code>++pair</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#pam' title="Parse & (pam)"><code>++pam</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#pat' title="Parse @ (pat)"><code>++pat</code></a>
@@ -499,7 +504,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 
 ### r
 
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rat' title="(Undocumented)"><code>++r:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rat' title="Print term, number or hex"><code>++r:at</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3d/#radog' title="Random in range"><code>++rad:og</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3d/#radsog' title="Random continuation"><code>++rads:og</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#rakuob' title="Key list"><code>++raku:ob</code></a>
@@ -521,11 +526,11 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2i/#repby' title="Reduce to product (map)"><code>++rep:by</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2h/#repin' title="Accumulate elements (set)"><code>++rep:in</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#rev' title="Reverse"><code>++rev</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rfat' title="(Undocumented)"><code>++rf:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rfat' title="Print loobean"><code>++rf:at</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2i/#ribby' title="Transform + product (map)"><code>++rib:by</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4c/#rigre' title="Wrap tape in / (tank)"><code>++rig:re</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#rip' title="Disassemble"><code>++rip</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rnat' title="(Undocumented)"><code>++rn:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rnat' title="Print null"><code>++rn:at</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#rolfe' title="Roll left"><code>++rol:fe</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#roll' title="Left fold (list)"><code>++roll</code></a>
 <code>++rood</code>
@@ -534,23 +539,23 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#roylso' title="Parse dime float"><code>++royl:so</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#roylcellso' title="(Undocumented)"><code>++roylcell:so</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#rsh' title="Rightshift"><code>++rsh</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rtat' title="(Undocumented)"><code>++rt:at</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rtaat' title="(Undocumented)"><code>++rta:at</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rtamat' title="(Undocumented)"><code>++rtam:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rtat' title="Print cord, including escape characters"><code>++rt:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rtaat' title="Print cord, including escape characters"><code>++rta:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rtamat' title="Print cord with @tas syntax"><code>++rtam:at</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2p/#rub' title="Lengthdecode"><code>++rub</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rubat' title="(Undocumented)"><code>++rub:at</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rudat' title="(Undocumented)"><code>++rud:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rubat' title="Print binary"><code>++rub:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rudat' title="Print atom as integer"><code>++rud:at</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#rule' title="Parsing rule (match this with _)"><code>+$rule</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rumat' title="(Undocumented)"><code>++rum:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rumat' title="Print base-n"><code>++rum:at</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2i/#runby' title="Transform values (map)"><code>++run:by</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2h/#runin' title="Apply gate to set"><code>++run:in</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#runt' title="Prepend n times"><code>++runt</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rupat' title="(Undocumented)"><code>++rup:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rupat' title="Print @p (outdated)"><code>++rup:at</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4g/#rush' title="Parse or null"><code>++rush</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4g/#rust' title="Parse tape or null"><code>++rust</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2i/#rutby' title="Transform nodes (map)"><code>++rut:by</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#ruvat' title="(Undocumented)"><code>++ruv:at</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#ruxat' title="(Undocumented)"><code>++rux:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#ruvat' title="Print base-64"><code>++ruv:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#ruxat' title="Print hexadecimal"><code>++rux:at</code></a>
 
 ### s
 
@@ -692,6 +697,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 
 ### t
 
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#taft' title="UTF8 to UTF32 cord"><code>++taft</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2n/#tail' title="Get tail of cell"><code>++tail</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2k/#tapto' title="Queue to list"><code>++tap:to</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#tar' title="Parse * (tar)"><code>++tar</code></a>
@@ -724,6 +730,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#toirs' title="Round singleprecision float to nearest signed integer"><code>++toi:rs</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#toirq' title="Round quadprecision float to nearest signed integer"><code>++toi:rq</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#tojfl' title="Round unsigned and signed integer to float"><code>++toj:fl</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4a/#tokfa' title="Compute base58check checksum"><code>++tok:fa</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#tone' title="Nock result (error report)"><code>+$tone</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#toon' title="Nock result (stack trace)"><code>+$toon</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2k/#topto' title="Produce head of queue"><code>++top:to</code></a>
@@ -739,7 +746,6 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#tufa' title="UTF32 to UTF8 tape"><code>++tufa</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tuna' title="XML template tree"><code>++tuna</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#tuft' title="UTF32 to UTF8 text"><code>++tuft</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#turf' title="UTF8 to UTF32 cord"><code>++turf</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#turn' title="Gate to list"><code>++turn</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tusk' title="List of expressions"><code>++tusk</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#twidso' title="Parse coins without ~ prefix"><code>++twid:so</code></a>
@@ -776,13 +782,13 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 ### w
 
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#wne' title="Render base 64 digit"><code>++w:ne</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#wack' title="Coin format encode"><code>++wack</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#wack' title="Knot escape"><code>++wack</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2q/#wain' title="List of cords"><code>+$wain</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2q/#wall' title="List of list of characters"><code>+$wall</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#weld' title="Concatenate two lists"><code>++weld</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2m/#weldnl' title="Concatenate nullterminated nouns"><code>++weld:nl</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#welp' title="Perfect concatenate (lists)"><code>++welp</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#wick' title="Coin format decode"><code>++wick</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#wick' title="Knot unescape"><code>++wick</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4c/#wigre' title="++win  render tape"><code>++wig:re</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4c/#winre' title="Render at indent"><code>++win:re</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#wing' title="Address in subject"><code>++wing</code></a>
@@ -1417,22 +1423,28 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4a/#inspo' title="Parse prefix"><code>++ins:po</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4a/#todpo' title="Fetch suffix"><code>++tod:po</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4a/#tospo' title="Fetch prefix"><code>++tos:po</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4a/#fa' title="base58check"><code>++fa</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4a/#chafa' title="Decode base58check character"><code>++cha:fa</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4a/#tokfa' title="Compute base58check checksum"><code>++tok:fa</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4a/#padfa' title="base58check padding bytes"><code>++pad:fa</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4a/#encfa' title="Encode base58check"><code>++enc:fa</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4a/#denfa' title="Decode base58check"><code>++den:fa</code></a>
 
 ### 4b: text processing
 
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#at' title="(Undocumented)"><code>++at</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rat' title="(Undocumented)"><code>++r:at</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rfat' title="(Undocumented)"><code>++rf:at</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rnat' title="(Undocumented)"><code>++rn:at</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rtat' title="(Undocumented)"><code>++rt:at</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rtaat' title="(Undocumented)"><code>++rta:at</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rtamat' title="(Undocumented)"><code>++rtam:at</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rubat' title="(Undocumented)"><code>++rub:at</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rudat' title="(Undocumented)"><code>++rud:at</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rumat' title="(Undocumented)"><code>++rum:at</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rupat' title="(Undocumented)"><code>++rup:at</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#ruvat' title="(Undocumented)"><code>++ruv:at</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#ruxat' title="(Undocumented)"><code>++rux:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#at' title="Basic printing"><code>++at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rat' title="Print term, number or hex"><code>++r:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rfat' title="Print loobean"><code>++rf:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rnat' title="Print null"><code>++rn:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rtat' title="Print cord, including escape characters"><code>++rt:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rtaat' title="Print cord, including escape characters"><code>++rta:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rtamat' title="Print cord with @tas syntax"><code>++rtam:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rubat' title="Print binary"><code>++rub:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rudat' title="Print atom as integer"><code>++rud:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rumat' title="Print base-n"><code>++rum:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rupat' title="Print @p (outdated)"><code>++rup:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#ruvat' title="Print base-64"><code>++ruv:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#ruxat' title="Print hexadecimal"><code>++rux:at</code></a>
 
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#cass' title="To lowercase"><code>++cass</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#crip' title="Tape to cord"><code>++crip</code></a>
@@ -1447,9 +1459,9 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#tuba' title="UTF8 to UTF32 tape"><code>++tuba</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#tufa' title="UTF32 to UTF8 tape"><code>++tufa</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#tuft' title="UTF32 to UTF8 text"><code>++tuft</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#turf' title="UTF8 to UTF32 cord"><code>++turf</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#wack' title="Coin format encode"><code>++wack</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#wick' title="Coin format decode"><code>++wick</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#taft' title="UTF8 to UTF32 cord"><code>++taft</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#wack' title="Knot escape"><code>++wack</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#wick' title="Knot unescape"><code>++wick</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#woad' title="Unescape cord"><code>++woad</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#wood' title="Escape cord"><code>++wood</code></a>
 
