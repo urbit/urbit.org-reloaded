@@ -127,7 +127,7 @@ Regular: **2-fixed**.
 
 ##### Discussion
 
-`.*(p q)` is used to run Nock formula `p` on the subject `q` from within Hoon.
+`.*(p q)` is used to run Nock formula `q` on the subject `p` from within Hoon.
 
 Keep in mind that `p` and `q` can be arbitrary Hoon expressions, as long as they evaluate to the appropriate nouns for Nock evaluation.
 
