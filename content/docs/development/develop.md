@@ -27,7 +27,7 @@ throughout the docs.
 
 ### Build Clients {#clients}
 
-Urbit ships with [Landscape](/docs/userspace/landscape/overview), which can be thought
+Urbit ships with [Landscape](/docs/glossary/landscape), which can be thought
 of as its flagship client. Landscape can be broken into two different technical
 components: there's the collection of [agents](#agents) that utilize the
 Urbit for networking and data persistence, and the JavaScript client, which is
@@ -64,9 +64,7 @@ statically-typed interface and built-in database. They're written in
 called [Gall](/docs/arvo/gall/gall).
 
 Applications built on Urbit utilize a collection of different agents, each of
-which handle specific functionality. The [Landscape
-architecture](/docs/userspace/landscape/overview) is a good reference implementation
-to see how this pattern works in practice.
+which handle specific functionality.
 
 If you want to learn how to build gall agents, your best bet is to first [learn
 the Hoon programming language](/docs/hoon/hoon-school/), and then follow that
