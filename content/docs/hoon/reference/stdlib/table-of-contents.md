@@ -84,6 +84,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 
 ### c
 
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#cne' title="Render base58check"><code>++c:ne</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#cab' title="Parse _ (cab)"><code>++cab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#can' title="Assemble"><code>++can</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1b/#cap' title="Tree head"><code>++cap</code></a>
@@ -150,6 +151,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#divrh' title="Divide (halfprecision float)"><code>++div:rh</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#divrs' title="Divide (singleprecision float)"><code>++div:rs</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#divrq' title="Divide (quadprecision float)"><code>++div:rq</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#dof' title="Hep & optional gap"><code>++dof</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#dog' title="Optional gap"><code>++dog</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#doh' title="@p separator"><code>++doh</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#doq' title="Parse double quote"><code>++doq</code></a>
@@ -209,8 +211,11 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#feenob' title="Reverse +fee"><code>++feen:ob</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#feinob' title="Conceal structure v3"><code>++fein:ob</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#feisob' title="Four-round generalised Feistel cipher over the domain [0, 2^32 - 2^16 - 1]"><code>++feis:ob</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#femab' title="Parse base58check char"><code>++fem:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#fenob' title="Reverse +fe"><code>++fen:ob</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#feqag' title="Parse @q phonetic base"><code>++feq:ag</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#fil' title="Fill bloqstream"><code>++fil</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#fimag' title="Parse base58check"><code>++fim:ag</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#find' title="First index in list"><code>++find</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2q/#flag' title="Boolean (flag)"><code>+$flag</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#flifl' title="Flip sign"><code>++fli:fl</code></a>
@@ -280,12 +285,14 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 
 ### h
 
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#hafab' title="Parse non-doz phonetic pair"><code>++haf:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#hair' title="Parsing line and column"><code>+$hair</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2i/#hasby' title="Key existence check (map)"><code>++has:by</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2h/#hasin' title="Key existence check (set)"><code>++has:in</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2j/#hasju' title="Check contents (jug)"><code>++has:ju</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#hax' title="Parse # (hax)"><code>++hax</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2n/#head' title="Get head of cell"><code>++head</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#hefab' title="Parse non-dozzod phonetic pair"><code>++hef:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#here' title="Placebased apply"><code>++here</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#hep' title="Parse  (hep)"><code>++hep</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#hex' title="Hexadecimal to atom"><code>++hex</code></a>
@@ -293,11 +300,12 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#hifab' title="Parse phonetic pair"><code>++hif:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#hig' title="Parse single uppercase letter"><code>++hig</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#hit' title="Parse single hexadecimal digit"><code>++hit</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#hofab' title="Parse 2-4 @q phonetic pair"><code>++hof:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#homo' title="Homogenize list"><code>++homo</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3c/#horyo' title="Seconds in hour"><code>++hor:yo</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#hufab' title="Parse two phonetic pairs"><code>++huf:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#hufab' title="Parse 1-4 @q phonetic pairs"><code>++huf:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#hunt' title="Select between two units by a rule"><code>++hunt</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#hyfab' title="Parse 8 phonetic bytes"><code>++hyf:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#hyfab' title="Parse four @q phonetic pairs"><code>++hyf:ab</code></a>
 
 ### i
 
@@ -401,6 +409,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#mink' title="Mock (virtual Nock) interpreter"><code>++mink</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3c/#mityo' title="Seconds in minute"><code>++mit:yo</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2d/#mix' title="Binary XOR (atom)"><code>++mix</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#mixed-case-symbol' title="Mixed-case term"><code>++mixed-case-symbol</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#mock' title="Compute formula on subject with hint"><code>++mock</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1a/#mod' title="Modulus (atom)"><code>++mod</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3c/#mohyo' title="Days in month"><code>++moh:yo</code></a>
@@ -410,6 +419,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2f/#mor' title="(more) mug order"><code>++mor</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#more' title="Parse list with delimiter"><code>++more</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#most' title="Parse list of at least one match"><code>++most</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#motag' title="Parse numerical month"><code>++mot:ag</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3c/#moyyo' title="Days in months of leapyear"><code>++moy:yo</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#mu' title="Core used to scramble 16bit atoms"><code>++mu</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2e/#mug' title="FNV1a scrambler"><code>++mug</code></a>
@@ -438,7 +448,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3a/#newsi' title="Atom to @s"><code>++new:si</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#next' title="Consume character"><code>++next</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2k/#nipto' title="Remove root of queue"><code>++nip:to</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#nix' title="Parse letters and "><code>++nix</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#nix' title="Parse letters and underscore"><code>++nix</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2m/#nl' title="Noun to container operations"><code>++nl</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#nock' title="Virtual machine (see Nock)"><code>++nock</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2d/#not' title="Binary NOT (atom)"><code>++not</code></a>
@@ -465,16 +475,16 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#pat' title="Parse @ (pat)"><code>++pat</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2q/#path' title="Like unix path"><code>+$path</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1b/#peg' title="Address within address"><code>++peg</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#pel' title="Parse ( (pel)"><code>++pel</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#per' title="Parse ) (per)"><code>++per</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#pal' title="Parse ( (pal)"><code>++pal</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#par' title="Parse ) (par)"><code>++par</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#perdso' title="Parses dime/tiple without standard prefixes"><code>++perd:so</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#perk' title="Parse cube fork"><code>++perk</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#pevab' title="Parse <=5 in base 32"><code>++pev:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#pevab' title="Parse 1-5 @uv base-32 chars"><code>++pev:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#pewab' title="Parse <= 5 in base 64"><code>++pew:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4e/#pfix' title="Discard first rule"><code>++pfix</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#pint' title="Parsing range"><code>+$pint</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#pivab' title="Parse 5 digits in base 32"><code>++piv:ab</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#piwab' title="Parse 5 digits in base 64"><code>++piw:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#pivab' title="Parse 5 @uv base-32 chars"><code>++piv:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#piwab' title="Parse 5 @uw base-64 chars"><code>++piw:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4e/#plug' title="Parse to tuple"><code>++plug</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#plus' title="List of at least one match"><code>++plus</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4a/#po' title="Phonetic base"><code>++po</code></a>
@@ -495,9 +505,10 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 ### q
 
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3c/#qadyo' title="Seconds in 4 years"><code>++qad:yo</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#qebab' title="Parse <=4 binary digits"><code>++qeb:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#qat' title="Parse chars in blockcord"><code>++qat</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#qebab' title="Parse 1-4 binary digits"><code>++qeb:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2o/#qeu' title="Mold generator (queue)"><code>++qeu</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#qexab' title="Parse <=4 hexadecimal digits"><code>++qex:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#qexab' title="Parse 1-4 hex digits"><code>++qex:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#qibab' title="Parse 4 binary digits"><code>++qib:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#qit' title="Parse character to cord atom"><code>++qit</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#qixab' title="Parse 4 hexadecimal digits"><code>++qix:ab</code></a>
@@ -536,6 +547,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#roll' title="Left fold (list)"><code>++roll</code></a>
 <code>++rood</code>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#rorfe' title="Roll right"><code>++ror:fe</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4g/#rose' title="Parse to each"><code>++rose</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#roufl' title="Round to nearest float with 113bit significand"><code>++rou:fl</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#roylso' title="Parse dime float"><code>++royl:so</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#roylcellso' title="(Undocumented)"><code>++roylcell:so</code></a>
@@ -583,7 +595,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#sebab' title="Parse 1"><code>++seb:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#sedab' title="Parse nonzero decimal digit"><code>++sed:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#sel' title="Parse [ (sel)"><code>++sel</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#sem' title="Parse ; (sem)"><code>++sem</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#mic' title="Parse ; (mic)"><code>++mic</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#ser' title="Parse ] (ser)"><code>++ser</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2o/#set' title="Mold generator (set)"><code>++set</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#sevab' title="Parse nonzero base 32 digit"><code>++sev:ab</code></a>
@@ -640,8 +652,8 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#some' title="Wrap value in unit"><code>++some</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#soq' title="Parse ' (soq)"><code>++soq</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#sort' title="Quicksort (list)"><code>++sort</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#sovab' title="Parse base 32 letter"><code>++sov:ab</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#sowab' title="Parse base 64 letter/symbol"><code>++sow:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#sovab' title="Parse @uv base-32 letter"><code>++sov:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#sowab' title="Parse @uw base-64 letter/symbol"><code>++sow:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#soxab' title="Parse hexadecimal letter"><code>++sox:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#soz' title="Parse triple singlequote"><code>++soz</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#span' title="ASCII atom"><code>++span</code></a>
@@ -707,10 +719,11 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2q/#tape' title="List of characters"><code>+$tape</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2q/#tarp' title="Parsed time"><code>+$tarp</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#tashso' title="Parse signed dime"><code>++tash:so</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#tec' title="Parse ` (tec)"><code>++tec</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#tedab' title="Parse decimal number with <= 3 digits"><code>++ted:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#tic' title="Parse ` (tic)"><code>++tic</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#tedab' title="Parse 1-999 decimal"><code>++ted:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#teff' title="UTF8 length"><code>++teff</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#tailob' title="Reverse +feis"><code>++tail:ob</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#tepab' title="Parse non-doz leading phonetic byte"><code>++tep:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2q/#term' title="Hoon constant"><code>+$term</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2n/#test' title="Test for equality"><code>++test</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#tidab' title="Parse 3 decimal digits"><code>++tid:ab</code></a>
@@ -761,8 +774,8 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1c/#unit' title="Mold generator (maybe)"><code>++unit</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2i/#unoby' title="General union (map)"><code>++uno:by</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2i/#urnby' title="Turn (with key) (map)"><code>++urn:by</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#ursab' title="Parse span characters"><code>++urs:ab</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#urtab' title="Parse non_ span"><code>++urt:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#ursab' title="Parse knot characters"><code>++urs:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#urtab' title="Parse knot without underscores"><code>++urt:ab</code></a>
 
 ### v
 
@@ -1526,6 +1539,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 ### 4g: parsing (outside caller)
 
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4g/#rash' title="Parse or crash"><code>++rash</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4g/#rose' title="Parse to each"><code>++rose</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4g/#rush' title="Parse or null"><code>++rush</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4g/#rust' title="Parse tape or null"><code>++rust</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4g/#scan' title="Parse tape or crash"><code>++scan</code></a>
@@ -1553,15 +1567,15 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#lus' title="Parse + (lus)"><code>++lus</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#pam' title="Parse & (pam)"><code>++pam</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#pat' title="Parse @ (pat)"><code>++pat</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#pel' title="Parse ( (pel)"><code>++pel</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#per' title="Parse ) (per)"><code>++per</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#pal' title="Parse ( (pal)"><code>++pal</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#par' title="Parse ) (par)"><code>++par</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#sel' title="Parse [ (sel)"><code>++sel</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#sem' title="Parse ; (sem)"><code>++sem</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#mic' title="Parse ; (mic)"><code>++mic</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#ser' title="Parse ] (ser)"><code>++ser</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#sig' title="Parse ~ (sig)"><code>++sig</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#soq' title="Parse ' (soq)"><code>++soq</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#tar' title="Parse * (tar)"><code>++tar</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#tec' title="Parse ` (tec)"><code>++tec</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#tic' title="Parse ` (tic)"><code>++tic</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#tis' title="Parse = (tis)"><code>++tis</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#wut' title="Parse ? (wut)"><code>++wut</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#zap' title="Parse ! (zap)"><code>++zap</code></a>
@@ -1577,6 +1591,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#cit' title="Octal digit"><code>++cit</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#dem' title="Decimal to atom"><code>++dem</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#dit' title="Decimal digit"><code>++dit</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#dof' title="Hep & optional gap"><code>++dof</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#dog' title="Optional gap"><code>++dog</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#doh' title="@p separator"><code>++doh</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#dun' title=" to ~"><code>++dun</code></a>
@@ -1594,13 +1609,15 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#iny' title="Indentation block"><code>++iny</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#low' title="Parse lowercase letter"><code>++low</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#mes' title="Parse hexabyte"><code>++mes</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#nix' title="Parse letters and "><code>++nix</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#nix' title="Parse letters and underscore"><code>++nix</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#nud' title="Parse numeric character"><code>++nud</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#prn' title="Parse any printable character"><code>++prn</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#qat' title="Parse chars in blockcord"><code>++qat</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#qit' title="Parse character to cord atom"><code>++qit</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#qut' title="Parse cord"><code>++qut</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#soz' title="Parse triple singlequote"><code>++soz</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#sym' title="Term"><code>++sym</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#mixed-case-symbol' title="Mixed-case term"><code>++mixed-case-symbol</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#ven' title="Axis syntax parser"><code>++ven</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#vit' title="Parse base 64 digit"><code>++vit</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#vul' title="Comments to null"><code>++vul</code></a>
@@ -1609,15 +1626,19 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#ab' title="Primitive parser engine"><code>++ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#bixab' title="Parse hex pair"><code>++bix:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#femab' title="Parse base58check char"><code>++fem:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#hafab' title="Parse non-doz phonetic pair"><code>++haf:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#hefab' title="Parse non-dozzod phonetic pair"><code>++hef:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#hifab' title="Parse phonetic pair"><code>++hif:ab</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#hufab' title="Parse two phonetic pairs"><code>++huf:ab</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#hyfab' title="Parse 8 phonetic bytes"><code>++hyf:ab</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#pevab' title="Parse <=5 in base 32"><code>++pev:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#hofab' title="Parse 2-4 @q phonetic pair"><code>++hof:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#hufab' title="Parse 1-4 @q phonetic pairs"><code>++huf:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#hyfab' title="Parse four @q phonetic pairs"><code>++hyf:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#pevab' title="Parse 1-5 @uv base-32 chars"><code>++pev:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#pewab' title="Parse <= 5 in base 64"><code>++pew:ab</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#pivab' title="Parse 5 digits in base 32"><code>++piv:ab</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#piwab' title="Parse 5 digits in base 64"><code>++piw:ab</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#qebab' title="Parse <=4 binary digits"><code>++qeb:ab</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#qexab' title="Parse <=4 hexadecimal digits"><code>++qex:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#pivab' title="Parse 5 @uv base-32 chars"><code>++piv:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#piwab' title="Parse 5 @uw base-64 chars"><code>++piw:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#qebab' title="Parse 1-4 binary digits"><code>++qeb:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#qexab' title="Parse 1-4 hex digits"><code>++qex:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#qibab' title="Parse 4 binary digits"><code>++qib:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#qixab' title="Parse 4 hexadecimal digits"><code>++qix:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#sebab' title="Parse 1"><code>++seb:ab</code></a>
@@ -1630,16 +1651,17 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#sivab' title="Parse a base 32 digit"><code>++siv:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#siwab' title="Parse a base 64 digit"><code>++siw:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#sixab' title="Parse a hexadecimal digit"><code>++six:ab</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#sovab' title="Parse base 32 letter"><code>++sov:ab</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#sowab' title="Parse base 64 letter/symbol"><code>++sow:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#sovab' title="Parse @uv base-32 letter"><code>++sov:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#sowab' title="Parse @uw base-64 letter/symbol"><code>++sow:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#soxab' title="Parse hexadecimal letter"><code>++sox:ab</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#tedab' title="Parse decimal number with <= 3 digits"><code>++ted:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#tedab' title="Parse 1-999 decimal"><code>++ted:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#tepab' title="Parse non-doz leading phonetic byte"><code>++tep:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#tidab' title="Parse 3 decimal digits"><code>++tid:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#tilab' title="Parse 3 lowercase letters"><code>++til:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#tipab' title="Leading phonetic byte"><code>++tip:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#tiqab' title="Trailing phonetic syllable"><code>++tiq:ab</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#ursab' title="Parse span characters"><code>++urs:ab</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#urtab' title="Parse non_ span"><code>++urt:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#ursab' title="Parse knot characters"><code>++urs:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#urtab' title="Parse knot without underscores"><code>++urt:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#voyab' title="Parse bas, soq, or bix"><code>++voy:ab</code></a>
 
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#ag' title="Toplevel atom parser engine"><code>++ag</code></a>
@@ -1650,8 +1672,11 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#dimag' title="Parse decimal number"><code>++dim:ag</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#dumag' title="Parse decimal with leading zero"><code>++dum:ag</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#fedag' title="Parse @p"><code>++fed:ag</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#feqag' title="Parse @q phonetic base"><code>++feq:ag</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#fimag' title="Parse base58check"><code>++fim:ag</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#hexag' title="Parse hexadecimal number"><code>++hex:ag</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#lipag' title="Parse IPv4 address"><code>++lip:ag</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#motag' title="Parse numerical month"><code>++mot:ag</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#vizag' title="Parse base 32 digit with dot separators"><code>++viz:ag</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#vumag' title="Parse base 32 string"><code>++vum:ag</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#wizag' title="Parse base 64 number"><code>++wiz:ag</code></a>
@@ -1662,6 +1687,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#zugmu' title="Concatenate into atom"><code>++zug:mu</code></a>
 
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#ne' title="Digit rendering engine"><code>++ne</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#cne' title="Render base58check"><code>++c:ne</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#dne' title="Render decimal"><code>++d:ne</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#vne' title="Render base 32"><code>++v:ne</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#wne' title="Render base 64 digit"><code>++w:ne</code></a>
