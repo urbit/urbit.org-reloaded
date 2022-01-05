@@ -57,7 +57,7 @@ find-fork-d
 ```
 
 `=>` is a reversed form of the `:` operator we've been using, meaning that `=>  a  b` is the
-same as `b:a`. Here, this means we're evaluation the `?~` expression with the
+same as `b:a`. Here, this means we're evaluating the `?~` expression with the
 `b=...` expression as the subject. We explore this rune in more detail in a
 [later lesson](/docs/hoon/hoon-school/arms-and-cores#cores-and-contexts).
 
