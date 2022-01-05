@@ -250,7 +250,7 @@ The `lent` function takes a list and returns the number of items in it:
 
 #### `lent` Exercise 1.5d
 
-Without using `lent`, write a gate that takes a list and returns the number of item in it. There is a solution at the bottom of this lesson.
+Without using `lent`, write a gate that takes a list and returns the number of items in it. There is a solution at the bottom of this lesson.
 
 ### `roll`
 
