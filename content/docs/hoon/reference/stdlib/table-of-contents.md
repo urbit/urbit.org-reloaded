@@ -18,6 +18,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3a/#abssi' title="Absolute value (signed integer)"><code>++abs:si</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#abel' title="Compiler alias"><code>++abel</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#ace' title="Parse space"><code>++ace</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#a-coco' title="Render decimal"><code>++a-co:co</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1a/#add' title="Add"><code>++add</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#addff' title="Add (floating point)"><code>++add:ff</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#addfl' title="Add (with exact/rounded flag)"><code>++add:fl</code></a>
@@ -90,6 +91,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1b/#cap' title="Tree head"><code>++cap</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#cass' title="To lowercase"><code>++cass</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#cat' title="Concatenate"><code>++cat</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#c-coco' title="Render base58check"><code>++c-co:co</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#cen' title="Parse % (cen)"><code>++cen</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3c/#cetyo' title="Days in a century"><code>++cet:yo</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4a/#chafa' title="Decode base58check character"><code>++cha:fa</code></a>
@@ -124,6 +126,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#dne' title="Render decimal"><code>++d:ne</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2q/#date' title="Parsed date"><code>+$date</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3c/#dayyo' title="Seconds in day"><code>++day:yo</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#d-coco' title="Render decimal with min length"><code>++d-co:co</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1a/#dec' title="Decrement"><code>++dec</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2i/#delby' title="Delete (map)"><code>++del:by</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2h/#delin' title="Delete (set)"><code>++del:in</code></a>
@@ -175,9 +178,11 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#eadfl' title="Exact add"><code>++ead:fl</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1c/#each' title="Mold of fork between two types"><code>++each</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#easy' title="Always parse"><code>++easy</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#ed-coco' title="Format with decimal place"><code>++ed-co:co</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#edge' title="Parsing location metadata"><code>+$edge</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#effob' title="murmur3-based pseudorandom function"><code>++eff:ob</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3a/#egcd' title="Extended Euclidean algorithm"><code>++egcd</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#em-coco' title="Render in numeric base"><code>++em-co:co</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#emnfl' title="Minimum exponent"><code>++emn:fl</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#emufl' title="Exact multiply"><code>++emu:fl</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#emxfl' title="Maximum exponent"><code>++emx:fl</code></a>
@@ -465,6 +470,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3a/#oldsi' title="Sign and absolute value"><code>++old:si</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#oust' title="Remove from list"><code>++oust</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#outfe' title="Maximum integer value"><code>++out:fe</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#ox-coco' title="Format dot-separated digits in numeric base"><code>++ox-co:co</code></a>
 
 ### p
 
@@ -477,7 +483,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1b/#peg' title="Address within address"><code>++peg</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#pal' title="Parse ( (pal)"><code>++pal</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#par' title="Parse ) (par)"><code>++par</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#perdso' title="Parses dime/tiple without standard prefixes"><code>++perd:so</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#perdso' title="Parsing coin literal without prefixes"><code>++perd:so</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#perk' title="Parse cube fork"><code>++perk</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#pevab' title="Parse 1-5 @uv base-32 chars"><code>++pev:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#pewab' title="Parse <= 5 in base 64"><code>++pew:ab</code></a>
@@ -527,6 +533,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#raufl' title="Various roundings (floating point)"><code>++rau:fl</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3d/#rawog' title="Random bits"><code>++raw:og</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3d/#rawsog' title="Random bits continuation"><code>++raws:og</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#r-coco' title="Render floating point"><code>++r-co:co</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4c/#re' title="Prettyprinting engine (tank)"><code>++re</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#rear' title="Last item in list"><code>++rear</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#rearco' title="Prepend and render atom as tape"><code>++rear:co</code></a>
@@ -534,7 +541,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#reel' title="Right fold (list)"><code>++reel</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3a/#remsi' title="Remainder (signed integer)"><code>++rem:si</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#rendco' title="Render coin lot as tape"><code>++rend:co</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#rentco' title="Render coin lot as span"><code>++rent:co</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#rentco' title="Render coin as knot"><code>++rent:co</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#rep' title="Assemble single"><code>++rep</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2i/#repby' title="Reduce to product (map)"><code>++rep:by</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2h/#repin' title="Accumulate elements (set)"><code>++rep:in</code></a>
@@ -543,6 +550,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2i/#ribby' title="Transform + product (map)"><code>++rib:by</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#rip' title="Disassemble"><code>++rip</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rnat' title="Print null"><code>++rn:at</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#ro-coco' title="Format dot-prefixed bloqs in numeric base"><code>++ro-co:co</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#rolfe' title="Roll left"><code>++rol:fe</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#roll' title="Left fold (list)"><code>++roll</code></a>
 <code>++rood</code>
@@ -550,7 +558,12 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4g/#rose' title="Parse to each"><code>++rose</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#roufl' title="Round to nearest float with 113bit significand"><code>++rou:fl</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#roylso' title="Parse dime float"><code>++royl:so</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#roylcellso' title="(Undocumented)"><code>++roylcell:so</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#royl-cellso' title="Convert rn to dn"><code>++royl-cell:so</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#royl-rhso' title="Parse half-precision float"><code>++royl-rh:so</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#royl-rqso' title="Parse quad-precision float"><code>++royl-rq:so</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#royl-rdso' title="Parse double-precision float"><code>++royl-rd:so</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#royl-rsso' title="Parse single-precision float"><code>++royl-rs:so</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#royl-rnso' title="Parse real number"><code>++royl-rn:so</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#rsh' title="Rightshift"><code>++rsh</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rtat' title="Print cord, including escape characters"><code>++rt:at</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rtaat' title="Print cord, including escape characters"><code>++rta:at</code></a>
@@ -584,6 +597,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#sbff' title="Sign bit"><code>++sb:ff</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#scag' title="Prefix (produce front of list)"><code>++scag</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4g/#scan' title="Parse tape or crash"><code>++scan</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#s-coco' title="Render hex list"><code>++s-co:co</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4m/#scot' title="Render dime as cord"><code>++scot</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4m/#scow' title="Render dime as tape"><code>++scow</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#seaff' title="Convert from IEEE float to fn"><code>++sea:ff</code></a>
@@ -783,6 +797,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <code>++vang</code>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#vase' title="Typed data"><code>++vase</code></a>
 <code>++vast</code>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#v-coco' title="Render base-32 with minimum length"><code>++v-co:co</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#ven' title="Axis syntax parser"><code>++ven</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#vise' title="Convert during reboot"><code>++vise</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#vit' title="Parse base 64 digit"><code>++vit</code></a>
@@ -798,9 +813,11 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2q/#wain' title="List of cords"><code>+$wain</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2q/#wall' title="List of list of characters"><code>+$wall</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4c/#wash' title="Render tank at width"><code>++wash</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#w-coco' title="Render base-64 with minimum length"><code>++w-co:co</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#weld' title="Concatenate two lists"><code>++weld</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2m/#weldnl' title="Concatenate nullterminated nouns"><code>++weld:nl</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#welp' title="Perfect concatenate (lists)"><code>++welp</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#whenso' title="Parse date"><code>++when:so</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#wick' title="Knot unescape"><code>++wick</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4c/#winre' title="Render at indent"><code>++win:re</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#wing' title="Address in subject"><code>++wing</code></a>
@@ -816,6 +833,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 
 ### x
 
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#x-coco' title="Render hex with minimum length"><code>++x-co:co</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#xne' title="Render hexadecimal digit as atom of ASCII byte value"><code>++x:ne</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#xeb' title="Binary logarithm"><code>++xeb</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#xpdfl' title="Expand signed and unsigned integer cell"><code>++xpd:fl</code></a>
@@ -824,6 +842,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3c/#yall' title="Time since beginning of time"><code>++yall</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3c/#yawn' title="Days since beginning of time"><code>++yawn</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#y-coco' title="Render decimal with at least two digits"><code>++y-co:co</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3c/#year' title="Date to @d"><code>++year</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3c/#yell' title="Tarp from atomic date"><code>++yell</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3c/#yelp' title="Determine if leapweek"><code>++yelp</code></a>
@@ -838,11 +857,12 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#zagmu' title="Add bottom into top"><code>++zag:mu</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#zap' title="Parse ! (zap)"><code>++zap</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#zartun' title="Reverse look up in 255 sub box"><code>++zart:un</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#z-coco' title="Render '0x'-prefixed hex"><code>++z-co:co</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#zerfl' title="Produce zero as float"><code>++zer:fl</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#zigmu' title="Subtract bottom from top"><code>++zig:mu</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#zing' title="Turn lists into single list by promoting elements from sublists"><code>++zing</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#zugmu' title="Concatenate into atom"><code>++zug:mu</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#zustso' title="Parse prefixed dimes from IP, loobean, or floating point"><code>++zust:so</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#zustso' title="Parse dimes from @i, @f, @r or @q"><code>++zust:so</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#zyftun' title="Lookup byte in 256 sub box"><code>++zyft:un</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#zyrtun' title="Reverse lookup byte in 256 sub box"><code>++zyrt:un</code></a>
 
@@ -1698,7 +1718,21 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#co' title="Literal rendering engine"><code>++co</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#rearco' title="Prepend and render atom as tape"><code>++rear:co</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#rendco' title="Render coin lot as tape"><code>++rend:co</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#rentco' title="Render coin lot as span"><code>++rent:co</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#rentco' title="Render coin as knot"><code>++rent:co</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#a-coco' title="Render decimal"><code>++a-co:co</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#c-coco' title="Render base58check"><code>++c-co:co</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#d-coco' title="Render decimal with min length"><code>++d-co:co</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#r-coco' title="Render floating point"><code>++r-co:co</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#s-coco' title="Render hex list"><code>++s-co:co</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#v-coco' title="Render base-32 with minimum length"><code>++v-co:co</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#w-coco' title="Render base-64 with minimum length"><code>++w-co:co</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#x-coco' title="Render hex with minimum length"><code>++x-co:co</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#y-coco' title="Render decimal with at least two digits"><code>++y-co:co</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#z-coco' title="Render '0x'-prefixed hex"><code>++z-co:co</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#em-coco' title="Render in numeric base"><code>++em-co:co</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#ed-coco' title="Format with decimal place"><code>++ed-co:co</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#ox-coco' title="Format dot-separated digits in numeric base"><code>++ox-co:co</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#ro-coco' title="Format dot-prefixed bloqs in numeric base"><code>++ro-co:co</code></a>
 
 ### 4l: parsing (atom parsing)
 
@@ -1707,12 +1741,18 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#crubso' title="Parse @da, @dr, @p, @t"><code>++crub:so</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#nuckso' title="Toplevel coin parser"><code>++nuck:so</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#nuskso' title="Parse coin literal with escapes"><code>++nusk:so</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#perdso' title="Parses dime/tiple without standard prefixes"><code>++perd:so</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#perdso' title="Parsing coin literal without prefixes"><code>++perd:so</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#roylso' title="Parse dime float"><code>++royl:so</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#roylcellso' title="(Undocumented)"><code>++roylcell:so</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#royl-cellso' title="Convert rn to dn"><code>++royl-cell:so</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#royl-rhso' title="Parse half-precision float"><code>++royl-rh:so</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#royl-rqso' title="Parse quad-precision float"><code>++royl-rq:so</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#royl-rdso' title="Parse double-precision float"><code>++royl-rd:so</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#royl-rsso' title="Parse single-precision float"><code>++royl-rs:so</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#royl-rnso' title="Parse real number"><code>++royl-rn:so</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#tashso' title="Parse signed dime"><code>++tash:so</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#twidso' title="Parse coins without ~ prefix"><code>++twid:so</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#zustso' title="Parse prefixed dimes from IP, loobean, or floating point"><code>++zust:so</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#whenso' title="Parse date"><code>++when:so</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#zustso' title="Parse dimes from @i, @f, @r or @q"><code>++zust:so</code></a>
 
 ### 4m: parsing (formatting functions)
 
