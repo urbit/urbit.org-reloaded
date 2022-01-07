@@ -1,6 +1,6 @@
 +++
 title = "Submit a Proposal"
-date = "2021-01-03"
+date = "2022-01-03"
 weight = 1
 description = "A comprehensive guide to creating a grant proposal"
 +++
@@ -56,7 +56,7 @@ Here are some examples of exceptional proposals for reference:
 
 ### Funding
 
-As of January 2021, the Urbit Foundation will provide funding of up to $50,000 USD for any one grant, paid in [WSTR](https://star.market).
+he Urbit Foundation will provide funding of up to $50,000 USD for any one grant, paid in [WSTR](https://star.market).
 
 Our formula for determining how much to value a particular grant is a function of time spent on the project, value to the Urbit universe, and track record of the contributor (either via past work within the grants program, or a relevant external background).
 
