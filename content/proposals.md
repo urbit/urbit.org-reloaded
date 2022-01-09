@@ -56,7 +56,7 @@ Here are some examples of exceptional proposals for reference:
 
 ### Funding
 
-he Urbit Foundation will provide funding of up to $50,000 USD for any one grant, paid in [WSTR](https://star.market).
+The Urbit Foundation will provide funding of up to $50,000 USD for any one grant, paid in [WSTR](https://star.market).
 
 Our formula for determining how much to value a particular grant is a function of time spent on the project, value to the Urbit universe, and track record of the contributor (either via past work within the grants program, or a relevant external background).
 
