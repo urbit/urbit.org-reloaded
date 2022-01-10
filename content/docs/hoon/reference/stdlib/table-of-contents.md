@@ -16,7 +16,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#ab' title="Primitive parser engine"><code>++ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#absfl' title="Absolute value"><code>++abs:fl</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3a/#abssi' title="Absolute value (signed integer)"><code>++abs:si</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#abel' title="Compiler alias"><code>++abel</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#abel' title="Original sin: type"><code>+$abel</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#ace' title="Parse space"><code>++ace</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#a-coco' title="Render decimal"><code>++a-co:co</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1a/#add' title="Add"><code>++add</code></a>
@@ -29,6 +29,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#addrq' title="Add (quadprecision float)"><code>++add:rq</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2n/#aftr' title="Pair after"><code>++aftr</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#ag' title="Toplevel atom parser engine"><code>++ag</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#alas' title="Alias list"><code>+$alas</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#alf' title="Parse alphabetic characters"><code>++alf</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2i/#allby' title="Logical AND (map and wet gate)"><code>++all:by</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2h/#allin' title="Logical AND (set and wet gate)"><code>++all:in</code></a>
@@ -42,7 +43,8 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2h/#aptin' title="Check correctness (set)"><code>++apt:in</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2k/#aptto' title="Check correctness of queue"><code>++apt:to</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#at' title="Basic printing"><code>++at</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#aura' title="'Type' of atom"><code>++aura</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#atom' title="Just an atom"><code>+$atom</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#aura' title="'Type' of atom"><code>+$aura</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2q/#axis' title="Tree address"><code>+$axis</code></a>
 
 ### b
@@ -51,12 +53,11 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2k/#balto' title="Balance queue"><code>++bal:to</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#bar' title="Parse | (bar)"><code>++bar</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#bas' title="Parse \ (bas)"><code>++bas</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#base' title="Base type"><code>++base</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#base' title="Base type"><code>+$base</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#bass' title="Parser modifier (LSBordered ++list as atom of ++base)"><code>++bass</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#bayag' title="Parses binary number"><code>++bay:ag</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2q/#bean' title="Boolean"><code>+$bean</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#beer' title="Tape builder"><code>++beer</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#beet' title="XML interpolation cases"><code>++beet</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#beerhoot' title="Simple embed"><code>+$beer:hoot</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4e/#bend' title="Conditional composer"><code>++bend</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#bet' title="Parse hep and lus axis syntax"><code>++bet</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#bex' title="Binary exponent"><code>++bex</code></a>
@@ -75,6 +76,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1c/#bite' title="Atom slice specificier"><code>$bite</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#bixab' title="Parse hex pair"><code>++bix:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#biskso' title="Parse auraatom pair"><code>++bisk:so</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#block' title="Abstract identity of resource awaited"><code>+$block</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1c/#bloq' title="Blocksize"><code>$bloq</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#bond' title="Replace null"><code>++bond</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#boss' title="Parser modifier: LSB"><code>++boss</code></a>
@@ -96,13 +98,13 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3c/#cetyo' title="Days in a century"><code>++cet:yo</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4a/#chafa' title="Decode base58check character"><code>++cha:fa</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2q/#char' title="Character"><code>+$char</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#chum' title="Jet hint information"><code>++chum</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#chum' title="Jet hint information"><code>+$chum</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#cit' title="Octal digit"><code>++cit</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#clap' title="Combine two units with function"><code>++clap</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#clef' title="Compose two units with function"><code>++clef</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3a/#cmpsi' title="Compare (signed integer)"><code>++cmp:si</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#co' title="Literal rendering engine"><code>++co</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#coil' title="Tuple of core information"><code>++coil</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#coil' title="Tuple of core information"><code>+$coil</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#coin' title="Nounliteral syntax cases"><code>+$coin</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#col' title="Parse : (col)"><code>++col</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#cold' title="Replace with constant"><code>++cold</code></a>
@@ -113,6 +115,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2q/#cord' title="UTF8 text"><code>+$cord</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2n/#cork' title="Compose forward"><code>++cork</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2n/#corl' title="Compose backward"><code>++corl</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#crib' title="Summary and details"><code>+$crib</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#crip' title="Tape to cord"><code>++crip</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#crubso' title="Parse @da, @dr, @p, @t"><code>++crub:so</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2p/#cue' title="Unpack atom to noun"><code>++cue</code></a>
@@ -159,6 +162,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#doh' title="@p separator"><code>++doh</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#doq' title="Parse double quote"><code>++doq</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2f/#dor' title="Depth order"><code>++dor</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#doss' title="Profiling"><code>+$doss</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#dot' title="Parse period"><code>++dot</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#drgff' title="@r to decimal float"><code>++drg:ff</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#drgfl' title="Get printable decimal (signed and unsigned integer cell)"><code>++drg:fl</code></a>
@@ -233,7 +237,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#fmars' title="Fused multiplyadd (singleprecision float)"><code>++fma:rs</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#fmarq' title="Fused multiplyadd (quadprecision float)"><code>++fma:rq</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3a/#fo' title="Modulo prime"><code>++fo</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#foot' title="Cases of arms by variance model"><code>++foot</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#foot' title="Cases of arms by variance model"><code>+$foot</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2n/#fore' title="Pair before"><code>++fore</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#fosrh' title="@rs to @rh"><code>++fos:rh</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3a/#frafo' title="Divide (modular base)"><code>++fra:fo</code></a>
@@ -250,6 +254,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#gap' title="Plural whitespace"><code>++gap</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#gaq' title="End of line"><code>++gaq</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#gar' title="Parse > (gar)"><code>++gar</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#garb' title="Core metadata"><code>+$garb</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2i/#gasby' title="Concatenate (map)"><code>++gas:by</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2h/#gasin' title="Concatenate (set)"><code>++gas:in</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2j/#gasju' title="Concatenate (jug)"><code>++gas:ju</code></a>
@@ -297,6 +302,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2j/#hasju' title="Check contents (jug)"><code>++has:ju</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#hax' title="Parse # (hax)"><code>++hax</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2n/#head' title="Get head of cell"><code>++head</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#help' title="Documentation"><code>+$help</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#hefab' title="Parse non-dozzod phonetic pair"><code>++hef:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#here' title="Placebased apply"><code>++here</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#hep' title="Parse  (hep)"><code>++hep</code></a>
@@ -307,8 +313,11 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#hit' title="Parse single hexadecimal digit"><code>++hit</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#hofab' title="Parse 2-4 @q phonetic pair"><code>++hof:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#homo' title="Homogenize list"><code>++homo</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#hoon' title="Hoon AST"><code>+$hoon</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#hoot' title="Hoon tools"><code>++hoot</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3c/#horyo' title="Seconds in hour"><code>++hor:yo</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#hufab' title="Parse 1-4 @q phonetic pairs"><code>++huf:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#hump' title="Profiling"><code>+$hump</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#hunt' title="Select between two units by a rule"><code>++hunt</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#hyfab' title="Parse four @q phonetic pairs"><code>++hyf:ab</code></a>
 
@@ -361,9 +370,9 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#lien' title="Logical OR on list"><code>++lien</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#lift' title="Curried bind"><code>++lift</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#like' title="Generic edge"><code>++like</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#limb' title="Reference into subject by name/axis"><code>++limb</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#limb' title="Reference into subject by name/axis"><code>+$limb</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#limo' title="Construct list from nullterminated tuple"><code>++limo</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#line' title="(Undocumented)"><code>++line</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#link' title="Lexical segment"><code>+$link</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#lipag' title="Parse IPv4 address"><code>++lip:ag</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1c/#list' title="Mold constructor (list)"><code>++list</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1c/#lone' title="Mold generator (face on mold)"><code>++lone</code></a>
@@ -391,14 +400,21 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 
 ### m
 
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#manxhoot' title="Dynamic XML node"><code>+$manx:hoot</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#mard' title="Initialize ff (rd core)"><code>++ma:rd</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#marh' title="Initialize ff (rh core)"><code>++ma:rh</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#mars' title="Initialize ff (rs core)"><code>++ma:rs</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#marq' title="Initialize ff (rq core)"><code>++ma:rq</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#mack' title="Nock subject to unit"><code>++mack</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2l/#malt' title="Map from list"><code>++malt</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#manehoot' title="XML name+space"><code>+$mane:hoot</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2o/#map' title="Mold generator (map)"><code>++map</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2i/#marby' title="Add with validation (map)"><code>++mar:by</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#marehoot' title="Node or nodes"><code>+$mare:hoot</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#marlhoot' title="Dynamic XML nodes"><code>+$marl:hoot</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#marthoot' title="Dynamic XML attributes"><code>+$mart:hoot</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#maruhoot' title="Interpolation or nodes"><code>+$maru:hoot</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#marxhoot' title="Dynamic XML tag"><code>+$marx:hoot</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1b/#mas' title="Address within head/tail"><code>++mas</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#mask' title="Match character"><code>++mask</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2p/#mat' title="Lengthencode"><code>++mat</code></a>
@@ -409,15 +425,16 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#mes' title="Parse hexabyte"><code>++mes</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#mesc' title="Escape special characters"><code>++mesc</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#met' title="Measure"><code>++met</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#metl' title="(Undocumented)"><code>++metl</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1a/#min' title="Minimum (atom)"><code>++min</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#mink' title="Mock (virtual Nock) interpreter"><code>++mink</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3c/#mityo' title="Seconds in minute"><code>++mit:yo</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2d/#mix' title="Binary XOR (atom)"><code>++mix</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#mixed-case-symbol' title="Mixed-case term"><code>++mixed-case-symbol</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#moan' title="Profiling: sample metric"><code>+$moan</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#mock' title="Compute formula on subject with hint"><code>++mock</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1a/#mod' title="Modulus (atom)"><code>++mod</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3c/#mohyo' title="Days in month"><code>++moh:yo</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#mole' title="Typed unitary virtual"><code>++mole</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2l/#molt' title="Map from pair list"><code>++molt</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#mong' title="Slam gate with sample"><code>++mong</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#mook' title="Intelligently render crash annotation"><code>++mook</code></a>
@@ -437,6 +454,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#mulrs' title="Multiply (singleprecision float)"><code>++mul:rs</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#mulrq' title="Multiply (quadprecision float)"><code>++mul:rq</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#mule' title="Typed virtual"><code>++mule</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#mure' title="Untyped unitary virtual"><code>++mure</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#mute' title="Untyped virtual"><code>++mute</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#murn' title="Maybe transform"><code>++murn</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2m/#my' title="Map from raw noun"><code>++my</code></a>
@@ -455,12 +473,13 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2k/#nipto' title="Remove root of queue"><code>++nip:to</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#nix' title="Parse letters and underscore"><code>++nix</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2m/#nl' title="Noun to container operations"><code>++nl</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#nock' title="Virtual machine (see Nock)"><code>++nock</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#nock' title="Virtual nock"><code>+$nock</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2d/#not' title="Binary NOT (atom)"><code>++not</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#note' title="Type annotation"><code>+$note</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2q/#noun' title="Any noun"><code>+$noun</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#nuckso' title="Toplevel coin parser"><code>++nuck:so</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#nud' title="Parse numeric character"><code>++nud</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#null' title="(Undocumented)"><code>++null</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#null' title="Null, nil, etc"><code>+$null</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#nuskso' title="Parse coin literal with escapes"><code>++nusk:so</code></a>
 
 ### o
@@ -468,6 +487,8 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#ob' title="Reversible scrambling v2"><code>++ob</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3d/#og' title="Container arm for SHA256 powered RNG"><code>++og</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3a/#oldsi' title="Sign and absolute value"><code>++old:si</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#onyx' title="Arm activation"><code>+$onyx</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#opal' title="Wing match"><code>+$opal</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#oust' title="Remove from list"><code>++oust</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#outfe' title="Maximum integer value"><code>++out:fe</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#ox-coco' title="Format dot-separated digits in numeric base"><code>++ox-co:co</code></a>
@@ -482,20 +503,25 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2q/#path' title="Like unix path"><code>+$path</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1b/#peg' title="Address within address"><code>++peg</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#pal' title="Parse ( (pal)"><code>++pal</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#palo' title="Wing trace, match"><code>+$palo</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#par' title="Parse ) (par)"><code>++par</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#perdso' title="Parsing coin literal without prefixes"><code>++perd:so</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#perk' title="Parse cube fork"><code>++perk</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#pevab' title="Parse 1-5 @uv base-32 chars"><code>++pev:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#pewab' title="Parse <= 5 in base 64"><code>++pew:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4e/#pfix' title="Discard first rule"><code>++pfix</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#pica' title="Prose or code"><code>+$pica</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#pint' title="Parsing range"><code>+$pint</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#pivab' title="Parse 5 @uv base-32 chars"><code>++piv:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#piwab' title="Parse 5 @uw base-64 chars"><code>++piw:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#plat' title="%hoon, %type, %nock or %tank"><code>+$plat</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4e/#plug' title="Parse to tuple"><code>++plug</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#plus' title="List of at least one match"><code>++plus</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4a/#po' title="Phonetic base"><code>++po</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#pock' title="Changes"><code>+$pock</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1c/#pole' title="Mold generator of faceless list"><code>++pole</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#port' title="(Undocumented)"><code>++port</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#poly' title="Polarity"><code>+$poly</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#port' title="Successful wing match"><code>+$port</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4e/#pose' title="Parse options"><code>++pose</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2g/#pow' title="Computes a to the power of b"><code>++pow</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#prcfl' title="Force precision of 2 or greater (floating point)"><code>++prc:fl</code></a>
@@ -545,6 +571,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#rep' title="Assemble single"><code>++rep</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2i/#repby' title="Reduce to product (map)"><code>++rep:by</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2h/#repin' title="Accumulate elements (set)"><code>++rep:in</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#result' title="Internal interpreter result"><code>+$result</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2c/#rev' title="Reverse"><code>++rev</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#rfat' title="Print loobean"><code>++rf:at</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2i/#ribby' title="Transform + product (map)"><code>++rib:by</code></a>
@@ -607,6 +634,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#searq' title="Convert from quadprecision float to fn"><code>++sea:rq</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#sear' title="Conditional ++cook"><code>++sear</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#sebab' title="Parse 1"><code>++seb:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#sect' title="Paragraph"><code>+$sect</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#sedab' title="Parse nonzero decimal digit"><code>++sed:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#sel' title="Parse [ (sel)"><code>++sel</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#mic' title="Parse ; (mic)"><code>++mic</code></a>
@@ -649,6 +677,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#sixab' title="Parse a hexadecimal digit"><code>++six:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#skid' title="Separate list into two lists from slammed elments"><code>++skid</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#skim' title="Produce list of elements from boolean gate"><code>++skim</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#skin' title="Texture"><code>+$skin</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#skip' title="Produce list of elements failing boolean gate"><code>++skip</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#slag' title="Produce all elements from index in list"><code>++slag</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4m/#slat' title="Curried slaw"><code>++slat</code></a>
@@ -657,12 +686,14 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4m/#slay' title="Parse cord to coin"><code>++slay</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/5c/#slog' title="Deify printf"><code>++slog</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#slug' title="Use gate to parse delimited list"><code>++slug</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#slum' title="Slam a gate on a sample using raw nock, untyped"><code>++slum</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4m/#smyt' title="Render path as tank"><code>++smyt</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#snag' title="Produce element at specific index (list)"><code>++snag</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2m/#snagnl' title="Produce element from list at specific nullterminated noun"><code>++snag:nl</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#snip' title="Drop tail off list"><code>++snip</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#snoc' title="Append noun to list"><code>++snoc</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#so' title="Coin parser engine"><code>++so</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#soft' title="Virtual clam"><code>++soft</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2a/#some' title="Wrap value in unit"><code>++some</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#soq' title="Parse ' (soq)"><code>++soq</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#sort' title="Quicksort (list)"><code>++sort</code></a>
@@ -670,9 +701,9 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#sowab' title="Parse @uw base-64 letter/symbol"><code>++sow:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#soxab' title="Parse hexadecimal letter"><code>++sox:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#soz' title="Parse triple singlequote"><code>++soz</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#span' title="ASCII atom"><code>++span</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4m/#spat' title="Render path as cord"><code>++spat</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#spdfl' title="Produce smallest denormalized float"><code>++spd:fl</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#spec' title="Structure definition AST"><code>+$spec</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#spin' title="Gate to list (with state)"><code>++spin</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#spnfl' title="Produce smallest normal float"><code>++spn:fl</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#spot' title="Stack trace line"><code>+$spot</code></a>
@@ -687,6 +718,7 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#sqtrq' title="Produce square root of quadprecision float"><code>++sqt:rq</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4m/#stab' title="Parse cord to path"><code>++stab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#stag' title="Add label"><code>++stag</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4m/#stap' title="Path parser"><code>++stap</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#star' title="Produce list of matches"><code>++star</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1c/#step' title="Atom size or offset, in bloqs"><code>++step</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4f/#stet' title="Add faces to rangeparser pairs in list"><code>++stet</code></a>
@@ -737,18 +769,20 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#tedab' title="Parse 1-999 decimal"><code>++ted:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#teff' title="UTF8 length"><code>++teff</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#tailob' title="Reverse +feis"><code>++tail:ob</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tent' title="Model builder"><code>+$tent</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#tepab' title="Parse non-doz leading phonetic byte"><code>++tep:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2q/#term' title="Hoon constant"><code>+$term</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2n/#test' title="Test for equality"><code>++test</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#thunk' title="Fragment constructor"><code>+$thunk</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#tidab' title="Parse 3 decimal digits"><code>++tid:ab</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tiki' title="(Undocumented)"><code>++tiki</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tiki' title="Test case"><code>+$tiki</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#tilab' title="Parse 3 lowercase letters"><code>++til:ab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tine' title="Partial noun"><code>+$tine</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#tipab' title="Leading phonetic byte"><code>++tip:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#tiqab' title="Trailing phonetic syllable"><code>++tiq:ab</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4h/#tis' title="Parse = (tis)"><code>++tis</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2k/#to' title="Queue operations"><code>++to</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4a/#todpo' title="Fetch suffix"><code>++tod:po</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#toga' title="Tree of faces"><code>++toga</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#toiff' title="Round IEEE float to nearest signed integer"><code>++toi:ff</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#toifl' title="Round float to nearest signed integer"><code>++toi:fl</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#toird' title="Round doubleprecision float to nearest signed integer"><code>++toi:rd</code></a>
@@ -757,12 +791,17 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#toirq' title="Round quadprecision float to nearest signed integer"><code>++toi:rq</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#tojfl' title="Round unsigned and signed integer to float"><code>++toj:fl</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4a/#tokfa' title="Compute base58check checksum"><code>++tok:fa</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tome' title="Core chapter"><code>+$tome</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#tone' title="Nock result (error report)"><code>+$tone</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tony' title="$tone done right"><code>+$tony</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tool' title="Type decoration"><code>+$tool</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#toon' title="Nock result (stack trace)"><code>+$toon</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tope' title="Topographic type"><code>+$tope</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2k/#topto' title="Produce head of queue"><code>++top:to</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4a/#tospo' title="Fetch prefix"><code>++tos:po</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3b/#tosrh' title="Convert halfprecision float to singleprecision float"><code>++tos:rh</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2q/#tour' title="UTF-32 clusters"><code>+$tour</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#type' title="Hoon type type"><code>+$type</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1c/#trap' title="Core with one arm $"><code>++trap</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1c/#tree' title="Mold generator (tree)"><code>++tree</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/1c/#trel' title="Mold generator (tuple of three types)"><code>++trel</code></a>
@@ -770,14 +809,14 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#trip' title="Cord to tape"><code>++trip</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#tuba' title="UTF8 to UTF32 tape"><code>++tuba</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#tufa' title="UTF32 to UTF8 tape"><code>++tufa</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tuna' title="XML template tree"><code>++tuna</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#tuft' title="UTF32 to UTF8 text"><code>++tuft</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tunahoot' title="Maybe interpolation"><code>+$tuna:hoot</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tune' title="Complex"><code>+$tune</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#turn' title="Gate to list"><code>++turn</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tusk' title="List of expressions"><code>++tusk</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#twidso' title="Parse coins without ~ prefix"><code>++twid:so</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tyke' title="List of 'maybe' hoons"><code>++tyke</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#typo' title="Pointer for ++type"><code>++typo</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tyre' title="List, term hoon"><code>++tyre</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tyke' title="List of 'maybe' hoons"><code>+$tyke</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#typo' title="Old type"><code>+$typo</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tyre' title="List, term hoon"><code>+$tyre</code></a>
 
 ### u
 
@@ -795,11 +834,14 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#vne' title="Render base 32"><code>++v:ne</code></a>
 <code>++vang</code>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#vase' title="Typed data"><code>++vase</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#vair' title="Core variance"><code>+$vair</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#vase' title="Type-value pair"><code>+$vase</code></a>
 <code>++vast</code>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4k/#v-coco' title="Render base-32 with minimum length"><code>++v-co:co</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#vein' title="Search trace"><code>+$vein</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#ven' title="Axis syntax parser"><code>++ven</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#vise' title="Convert during reboot"><code>++vise</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#vial' title="co/contra/in/bi"><code>+$vial</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#vise' title="Old vase"><code>+$vise</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4i/#vit' title="Parse base 64 digit"><code>++vit</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#vizag' title="Parse base 32 digit with dot separators"><code>++viz:ag</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#voyab' title="Parse bas, soq, or bix"><code>++voy:ab</code></a>
@@ -817,13 +859,16 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#weld' title="Concatenate two lists"><code>++weld</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2m/#weldnl' title="Concatenate nullterminated nouns"><code>++weld:nl</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/2b/#welp' title="Perfect concatenate (lists)"><code>++welp</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#what' title="Help slogan/section"><code>+$what</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4l/#whenso' title="Parse date"><code>++when:so</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#whit' title="Documentation"><code>+$whit</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#wick' title="Knot unescape"><code>++wick</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4c/#winre' title="Render at indent"><code>++win:re</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#wing' title="Address in subject"><code>++wing</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#wing' title="Search path"><code>+$wing</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4j/#wizag' title="Parse base 64 number"><code>++wiz:ag</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#woad' title="Unescape cord"><code>++woad</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4b/#wood' title="Escape cord"><code>++wood</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#woof' title="Simple embed"><code>+$woof</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3g/#wonk' title="Product from edge"><code>++wonk</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#wredun' title="Restore structure"><code>++wred:un</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/3f/#wrenun' title="Conceal structure"><code>++wren:un</code></a>
@@ -1766,45 +1811,89 @@ Can be navigated [alphabetically](#alphabetical) or [by section](#by-section).
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4m/#spat' title="Render path as cord"><code>++spat</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4m/#spud' title="Render path as tape"><code>++spud</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4m/#stab' title="Parse cord to path"><code>++stab</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4m/#stap' title="Path parser"><code>++stap</code></a>
 
 ### 4n: parsing (virtualization)
 
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#mack' title="Nock subject to unit"><code>++mack</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#mink' title="Mock (virtual Nock) interpreter"><code>++mink</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#mock' title="Compute formula on subject with hint"><code>++mock</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#mong' title="Slam gate with sample"><code>++mong</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#mook' title="Intelligently render crash annotation"><code>++mook</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#mole' title="Typed unitary virtual"><code>++mole</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#mong' title="Slam gate with sample"><code>++mong</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#mule' title="Typed virtual"><code>++mule</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#mure' title="Untyped unitary virtual"><code>++mure</code></a>
 <a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#mute' title="Untyped virtual"><code>++mute</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#slum' title="Slam a gate on a sample using raw nock, untyped"><code>++slum</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4n/#soft' title="Virtual clam"><code>++soft</code></a>
 
 ### 4o: parsing (molds)
 
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#abel' title="Compiler alias"><code>++abel</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#aura' title="'Type' of atom"><code>++aura</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#base' title="Base type"><code>++base</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#beer' title="Tape builder"><code>++beer</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#beet' title="XML interpolation cases"><code>++beet</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#chum' title="Jet hint information"><code>++chum</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#coil' title="Tuple of core information"><code>++coil</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#foot' title="Cases of arms by variance model"><code>++foot</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#limb' title="Reference into subject by name/axis"><code>++limb</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#line' title="(Undocumented)"><code>++line</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#metl' title="(Undocumented)"><code>++metl</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#nock' title="Virtual machine (see Nock)"><code>++nock</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#null' title="(Undocumented)"><code>++null</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#port' title="(Undocumented)"><code>++port</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#span' title="ASCII atom"><code>++span</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tiki' title="(Undocumented)"><code>++tiki</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#toga' title="Tree of faces"><code>++toga</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tone'><code>+$tone</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tuna' title="XML template tree"><code>++tuna</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tusk' title="List of expressions"><code>++tusk</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tyke' title="List of 'maybe' hoons"><code>++tyke</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#typo' title="Pointer for ++type"><code>++typo</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tyre' title="List, term hoon"><code>++tyre</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#vase' title="Typed data"><code>++vase</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#vise' title="Convert during reboot"><code>++vise</code></a>
-<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#wing' title="Address in subject"><code>++wing</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#abel' title="Original sin: type"><code>+$abel</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#alas' title="Alias list"><code>+$alas</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#atom' title="Just an atom"><code>+$atom</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#aura' title="'Type' of atom"><code>+$aura</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#base' title="Base type"><code>+$base</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#woof' title="Simple embed"><code>+$woof</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#chum' title="Jet hint information"><code>+$chum</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#coil' title="Tuple of core information"><code>+$coil</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#garb' title="Core metadata"><code>+$garb</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#poly' title="Polarity"><code>+$poly</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#foot' title="Cases of arms by variance model"><code>+$foot</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#link' title="Lexical segment"><code>+$link</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#crib' title="Summary and details"><code>+$crib</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#help' title="Documentation"><code>+$help</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#limb' title="Reference into subject by name/axis"><code>+$limb</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#null' title="Null, nil, etc"><code>+$null</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#onyx' title="Arm activation"><code>+$onyx</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#opal' title="Wing match"><code>+$opal</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#pica' title="Prose or code"><code>+$pica</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#palo' title="Wing trace, match"><code>+$palo</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#plat' title="%hoon, %type, %nock or %tank"><code>+$plat</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#pock' title="Changes"><code>+$pock</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#port' title="Successful wing match"><code>+$port</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#spec' title="Structure definition AST"><code>+$spec</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tent' title="Model builder"><code>+$tent</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tiki' title="Test case"><code>+$tiki</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#skin' title="Texture"><code>+$skin</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tome' title="Core chapter"><code>+$tome</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tope' title="Topographic type"><code>+$tope</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#hoot' title="Hoon tools"><code>++hoot</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#beerhoot' title="Simple embed"><code>+$beer:hoot</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#manehoot' title="XML name+space"><code>+$mane:hoot</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#manxhoot' title="Dynamic XML node"><code>+$manx:hoot</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#marlhoot' title="Dynamic XML nodes"><code>+$marl:hoot</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#marthoot' title="Dynamic XML attributes"><code>+$mart:hoot</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#marxhoot' title="Dynamic XML tag"><code>+$marx:hoot</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#marehoot' title="Node or nodes"><code>+$mare:hoot</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#maruhoot' title="Interpolation or nodes"><code>+$maru:hoot</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tunahoot' title="Maybe interpolation"><code>+$tuna:hoot</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#hoon' title="Hoon AST"><code>+$hoon</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tyre' title="List, term hoon"><code>+$tyre</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tyke' title="List of 'maybe' hoons"><code>+$tyke</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#nock' title="Virtual nock"><code>+$nock</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#note' title="Type annotation"><code>+$note</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#type' title="Hoon type type"><code>+$type</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tony' title="$tone done right"><code>+$tony</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tine' title="Partial noun"><code>+$tine</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tool' title="Type decoration"><code>+$tool</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#tune' title="Complex"><code>+$tune</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#typo' title="Old type"><code>+$typo</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#vase' title="Type-value pair"><code>+$vase</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#vise' title="Old vase"><code>+$vise</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#vial' title="co/contra/in/bi"><code>+$vial</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#vair' title="Core variance"><code>+$vair</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#vein' title="Search trace"><code>+$vein</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#sect' title="Paragraph"><code>+$sect</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#whit' title="Documentation"><code>+$whit</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#what' title="Help slogan/section"><code>+$what</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#wing' title="Search path"><code>+$wing</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#block' title="Abstract identity of resource awaited"><code>+$block</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#result' title="Internal interpreter result"><code>+$result</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#thunk' title="Fragment constructor"><code>+$thunk</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#doss' title="Profiling"><code>+$doss</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#moan' title="Profiling: sample metric"><code>+$moan</code></a>
+<a class="tooltip" href='/docs/hoon/reference/stdlib/4o/#hump' title="Profiling"><code>+$hump</code></a>
 
 ### 5a: compiler utilities
 
