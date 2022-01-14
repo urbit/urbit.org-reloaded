@@ -2,8 +2,8 @@
 title = "Meetup: Austin"
 starts = "2022-01-21T18:30:00"
 ends = "2022-01-21T20:30:00"
-timezone = ""America/Chicago
-location = ""Distribution Hall, 1500 East 4th St. Austin, TX
+timezone = "America/Chicago"
+location = "x"Distribution Hall, 1500 East 4th St. Austin, TX"
 image = ""
 registration_url = "https://t.co/T9HUlv5RRG"
 description = "The Combine"
