@@ -70,7 +70,7 @@ Combinators come in a few shapes and sizes, and typical operations they may
 perform would be to repeat the same parsing operation until the string is
 consumed, try a few different parsing operations until one of them works,
 or perform a sequence of parsing operations. We will see how all of this is done
-with Hoon in the [Parsing in Hoon](#parsing-in-hoon) section.
+with Hoon in the next section.
 
 # Parsing in Hoon
 
@@ -157,7 +157,7 @@ Glyphs)](/docs/hoon/reference/stdlib/4h), [4i: Parsing (Useful
 Idioms)](/docs/hoon/reference/stdlib/4i), [4j: Parsing (Bases and Base
 Digits)](/docs/hoon/reference/stdlib/4j), [4l: Atom Parsing](/docs/hoon/reference/stdlib/4l).
 
-### `+just`
+### [`+just`](/docs/hoon/reference/stdlib/4f/#just)
 
 The most basic rule builder, `+just` takes in a single `char` and produces a
 `rule` that attempts to match that `char` to the first character in the `tape`
@@ -190,7 +190,7 @@ parsing has failed.
 Later we will use [+star](#star) to string together a sequence of `+just`s in
 order to parse multiple characters at once.
 
-### `+jest`
+### [`+jest`](/docs/hoon/reference/stdlib/4f/#jest)
 
 `+jest` is a `rule` builder used to match a `cord`. It takes an input `cord` and
 produces a `rule` that attempts to match that `cord` against the beginning of
@@ -236,7 +236,7 @@ beginning the parse failed. We will see in [parser
 combinators](#parser-combinators) how to modify this `rule` so that it
 finds `bc` successfully.
 
-### `+shim`
+### [`+shim`](/docs/hoon/reference/stdlib/4f/#shim)
 
 `+shim` is used to parse characters within a given range. It takes in two atoms
 and returns a `rule`.
@@ -246,7 +246,17 @@ and returns a `rule`.
 [p=[p=1 q=2] q=[~ [p='a' q=[p=[p=1 q=2] q="bc"]]]]
 ```
 
-### `+cold`
+### [`+next`](/docs/hoon/reference/stdlib/4f/#next)
+
+`+next` is a simple `rule` that takes in the next character and returns it as the
+parsing result.
+
+```
+> (next [[1 1] "abc"])
+[p=[p=1 q=2] q=[~ [p='a' q=[p=[p=1 q=2] q="bc"]]]]
+```
+
+### [`+cold`](/docs/hoon/reference/stdlib/4f/#cold)
 
 `+cold` is a `rule` builder that takes in a constant noun we'll call `cus` and a
 `rule` we'll call `sef`. It returns a `rule` identical to the `sef` except it
@@ -264,7 +274,7 @@ One common scenario where `+cold` sees play is when writing [command line
 interface (CLI) apps](/docs/hoon/guides/cli-tutorial). We usher the
 reader there to find an example where `+cold` is used.
 
-### `+knee`
+### [`+knee`](/docs/hoon/reference/stdlib/4f/#knee)
 
 Another important function in the parser builder library is `+knee`, used for building
 recursive parsers. We delay discussion of `+knee` to the
@@ -284,11 +294,11 @@ alongside a `rule`, and attempt to parse the input with the `rule`. If the
 parse succeeds, it returns the result. There are crashing and unitized versions
 of each caller, corresponding to what happens when a parse fails.
 
-For additional information including additional examples see [4g: Parsing (Outside Caller)](/docs/hoon/reference/stdlib/4g).
+For additional information including examples see [4g: Parsing (Outside Caller)](/docs/hoon/reference/stdlib/4g).
 
 ### Parsing `tape`s
 
-`+scan` takes in a `tape` and a `rule` and attempts to parse the `tape` with the
+[`+scan`](/docs/hoon/reference/stdlib/4g/#scan) takes in a `tape` and a `rule` and attempts to parse the `tape` with the
 `rule`.
 
 ```
@@ -299,7 +309,7 @@ For additional information including additional examples see [4g: Parsing (Outsi
 'syntax-error'
 ```
 
-`+rust` is the unitized version of `+scan`.
+[`+rust`](/docs/hoon/reference/stdlib/4g/#rust) is the unitized version of `+scan`.
 
 ```
 > (rust "a" (just 'a'))
@@ -309,25 +319,26 @@ For additional information including additional examples see [4g: Parsing (Outsi
 ```
 
 For the remainder of this tutorial we will make use of `+scan` so that we do not
-need to deal directly with `nail`s except where it is ilustrative to do so.
+need to deal directly with `nail`s except where it is illustrative to do so.
 
 ### Parsing atoms
 
 [Recall](/docs/hoon/hoon-school/lists) that `cord`s are atoms with the aura
 `@t` and are typically used to represent strings internally as data, as atoms
 are faster for the computer to work with than `tape`s, which are `list`s of
-`@tD` atoms. `+rash` and `+rush` are for parsing atoms, with `+rash` being
-analogous to `+scan` and `+rush` being analogous to `rust`. Under the hood, `+rash`
+`@tD` atoms. [`+rash`](/docs/hoon/reference/stdlib/4g/#rash) and [`+rush`](/docs/hoon/reference/stdlib/4g/#rush) are for parsing atoms, with `+rash` being
+analogous to `+scan` and `+rush` being analogous to `+rust`. Under the hood, `+rash`
 calls `+scan` after converting the input atom to a `tape`, and `+rush` does
 similary for `+rust`.
 
 ## Parser modifiers
 
-The standard library provides a number of gates that take a `rule` and
-produce a new modified `rule` according to some process. We call these _parser modifiers_. These are
-documented among the [parser builders](/docs/hoon/reference/stdlib/4f).
+The standard library provides a number of gates that take a `rule` and produce a
+new modified `rule` according to some process. We call these _parser modifiers_.
+These are documented among the [parser
+builders](/docs/hoon/reference/stdlib/4f).
 
-### `+ifix`
+### [`+ifix`](/docs/hoon/reference/stdlib/4f/#ifix)
 
 `+ifix` modifies a `rule` so that it matches that `rule` only when it is
 surrounded on both sides by text that matches a pair of `rule`s, which is discarded.
@@ -341,7 +352,7 @@ surrounded on both sides by text that matches a pair of `rule`s, which is discar
 ASCII glyphs have counterparts of this sort, documented
 [here](/docs/hoon/reference/stdlib/4h).
 
-### `+star` {#star}
+### [`+star`](/docs/hoon/reference/stdlib/4f/#star) {#star}
 
 `+star` is used to apply a `rule` repeatedly. Recall that `+just` only parses
 the first character in the input `tape.`
@@ -365,11 +376,32 @@ and we note that the parsing ceases when it fails.
 [p=[p=1 q=4] q=[~ [p=[i='a' t=<|a a|>] q=[p=[p=1 q=4] q="b"]]]]
 ```
 
+We can combine `+star` with `+next` to just return the whole input:
+
+```
+> ((star next) [[1 1] "aaabc"])
+[p=[p=1 q=6] q=[~ [p=[i='a' t=<|a a b c|>] q=[p=[p=1 q=6] q=""]]]]
+```
+
+### [`+cook`](/docs/hoon/reference/stdlib/4f/#cook)
+
+`+cook` takes a `rule` and a gate and produces a modified version of the `rule`
+that passes the result of a successful parse through the given gate.
+
+Let's modify the rule `(just 'a')` so that it when it successfully parses `a`,
+it returns the following letter `b` as the result.
+
+```
+((cook |=(a=@ `@t`+(a)) (just 'a')) [[1 1] "abc"])
+[p=[p=1 q=2] q=[~ u=[p='b' q=[p=[p=1 q=2] q="bc"]]]]
+```
+
+
 ## Parser combinators
 
 Building complex parsers from simpler parsers is accomplished in Hoon with the
 use of two tools: the monadic applicator rune
-[`;~`](/docs/hoon/reference/rune/mic#micsig) and [parsing
+[`;~`](/docs/hoon/reference/rune/mic/#-micsig) and [parsing
 combinators](/docs/hoon/reference/stdlib/4e). First we introduce a few
 combinators, then we examine more closely how `;~` is used to chain them together.
 
@@ -380,11 +412,11 @@ The syntax to combine `rule`s is
 ```
 
 The `rule`s are composed together using the combinator as an
-intermediate function, which takes product of a `rule` (an `edge`) and a `rule` and turns
+intermediate function, which takes the product of a `rule` (an `edge`) and a `rule` and turns
 it into a sample (a `nail`) for the next `rule` to handle. We elaborate on this
 behavior [below](#micsig).
 
-### `+plug`
+### [`+plug`](/docs/hoon/reference/stdlib/4e/#plug)
 
 `+plug` simply takes the `nail` in the `edge` produced by one rule and passes it
 to the next `rule`, forming a cell of the results as it proceeds.
@@ -394,7 +426,7 @@ to the next `rule`, forming a cell of the results as it proceeds.
 ['star' 'ship']
 ```
 
-### `+pose`
+### [`+pose`](/docs/hoon/reference/stdlib/4e/#pose)
 
 `+pose` tries each `rule` you hand it successively until it finds one that
 works.
@@ -406,7 +438,7 @@ works.
 'b'
 ```
 
-### `+glue`
+### [`+glue`](/docs/hoon/reference/stdlib/4e/#glue)
 
 `+glue` parses a delimiter in between each `rule` and forms a cell of the
 results of each `rule`.
@@ -417,15 +449,17 @@ results of each `rule`.
 > (scan "a,b,a" ;~((glue com) (just 'a') (just 'b')))
 {1 4}
 syntax error
+> (scan "a,b,a" ;~((glue com) (just 'a') (just 'b') (just 'a')))
+['a' 'b' 'a']
 ```
 
-### `;~` {#micsig}
+### [`;~`](/docs/hoon/reference/rune/mic/#-micsig) {#micsig}
 
 Understanding the rune `;~` is essential to building parsers with Hoon. Let's
 take this opportunity to think about it carefully.
 
-The `rule` created by `;~(combinator [list rule])` may be understood
-inductively. To do this, let's consider the base case where our `[list rule]` has only a
+The `rule` created by `;~(combinator (list rule))` may be understood
+inductively. To do this, let's consider the base case where our `(list rule)` has only a
 single entry.
 
 ```
@@ -433,9 +467,9 @@ single entry.
 'star'
 ```
 
-Our output is identical to that given by `scan "star" (jest 'star')`. This is to
+Our output is identical to that given by `(scan "star" (jest 'star'))`. This is to
 be expected. The combinator `+plug` is specifically used for chaining together
-`rule`s in the `[list rule]`, but if there is only one `rule`, there is nothing
+`rule`s in the `(list rule)`, but if there is only one `rule`, there is nothing
 to chain. Thus, swapping out `+plug` for another combinator makes no difference here:
 
 ```
@@ -445,7 +479,7 @@ to chain. Thus, swapping out `+plug` for another combinator makes no difference 
 'star'
 ```
 
-`;~` and the combinator only begin to play a role once the `[list rule]` has at
+`;~` and the combinator only begin to play a role once the `(list rule)` has at
 least two elements. So let's look at an example done with `+plug`, the simplest
 combinator.
 
@@ -470,8 +504,9 @@ syntax error
 ## Parsing numbers
 
 Functions for parsing numbers are documented in [4j: Parsing (Bases and Base
-Digits)](/docs/hoon/reference/stdlib/4j). In particular, `dem` is a `rule`
-for parsing decimal numbers.
+Digits)](/docs/hoon/reference/stdlib/4j). In particular,
+[`dem`](/docs/hoon/reference/stdlib/4i/#dem) is a `rule` for parsing decimal
+numbers.
 
 ```
 > (scan "42" dem)
@@ -485,18 +520,23 @@ for parsing decimal numbers.
 Naively attempting to write a recursive `rule`, i.e. like
 
 ```
-> |-(;~(pose den ;~(pose $ (easy ~))))
+> |-(;~(plug prn ;~(pose $ (easy ~))))
 ```
 
-results in an error.
-
+results in an error:
 ```
 -find.,.+6
 -find.,.+6
 rest-loop
 ```
 
-Thus some special sauce is required, the `+knee` function.
+Here, [`+prn`](/docs/hoon/reference/stdlib/4i/#prn) is a `rule` used
+to parse any printable character, and
+[`+easy`](/docs/hoon/reference/stdlib/4f/#easy) is a `rule` that always returns a
+constant (`~` in this case) regardless of the input.
+
+Thus some special sauce is required, the
+[`+knee`](/docs/hoon/reference/stdlib/4f/#knee) function.
 
 `+knee` takes in a noun that is the default value of the parser, typically given
 as the bunt value of the type that the `rule` produces, as well as a gate that
@@ -505,19 +545,11 @@ in the `rule` in a manner acceptable to the compiler. Thus the preferred manner
 to write the above `rule` is as follows:
 
 ```hoon
-++  pars
-  |-
-  ;~  plug  prn
-    ;~  pose
-      (knee *tape |.(^$))
-      (easy ~)
-    ==
-  ==
+|-(;~(plug prn ;~(pose (knee *tape |.(^$)) (easy ~))))
 ```
 
 You may want to utilize the `~+` rune when writing recursive parsers to cache
-the parser to improve performance. In [parsing arithmetic
-expressions](#parsing-arithmetic-expressions) we will be writing a recursive
+the parser to improve performance. In the following section, we will be writing a recursive
 parser making use of `+knee` and `~+` throughout.
 
 # Parsing arithmetic expressions
@@ -536,15 +568,15 @@ To build a parser it is a helpful exercise to first describe its
 formal mathematical definition, but we will manage to get by here describing the grammar
 for arithmetic expressions informally.
 
-First lets look at the code we're going to use, and then dive into explaining
+First let's look at the code we're going to use, and then dive into explaining
 it. If you'd like to follow along, save the following as `expr-parse.hoon` in
 your `gen/` folder.
 
 ```hoon
 ::  expr-parse: parse arithmetic expressions
 ::
-|=  xprs=tape
-|^  (scan xprs expr)
+|=  math=tape
+|^  (scan math expr)
 ++  factor
   %+  knee  *@ud
   |.  ~+
@@ -552,19 +584,19 @@ your `gen/` folder.
     dem
     (ifix [pal par] expr)
   ==
-++  turm
+++  term
   %+  knee  *@ud
   |.  ~+
   ;~  pose
-    ((slug mul) tar ;~(pose factor turm))
+    ((slug mul) tar ;~(pose factor term))
     factor
   ==
 ++  expr
   %+  knee  *@ud
   |.  ~+
   ;~  pose
-    ((slug add) lus ;~(pose turm expr))
-    turm
+    ((slug add) lus ;~(pose term expr))
+    term
   ==
 --
 ```
@@ -627,16 +659,16 @@ them by folding with a binary gate. In this case, our delimiter is `+` and our
 binary gate is `+add`. That is to say, we will split the input string into terms
 and expressions separated by luses, parse each term and expression until they
 reduce to a `@ud`, and then add them together. This is accomplished with the
-rule `((slug add) lus ;~(pose turm expr))`.
+`rule` `((slug add) lus ;~(pose term expr))`.
 
-If the above `rule` does not parse the expression, it must be a `turm`, so the
-`tape` is automatically passed to `+turm` to be evaluated. Again we use `;~` and `pose` to
+If the above `rule` does not parse the expression, it must be a `term`, so the
+`tape` is automatically passed to `+term` to be evaluated. Again we use `;~` and `pose` to
 accomplish this:
 
 ```hoon
 ;~  pose
-  ((slug add) lus ;~(pose turm expr))
-  turm
+  ((slug add) lus ;~(pose term expr))
+  term
 ==
 ```
 
@@ -647,15 +679,15 @@ the same reasons.
 
 A _term_ is either a factor times a term or a factor. This is handled similarly
 for expressions, we just need to swap `lus` for `tar`, `add` for `mul`, and
-`;~(pose factor turm)` instead of `;~(pose turm expr)`.
+`;~(pose factor term)` instead of `;~(pose term expr)`.
 
 ```hoon
 ++  expr
   %+  knee  *@ud
   |.  ~+
   ;~  pose
-    ((slug add) lus ;~(pose turm expr))
-    turm
+    ((slug add) lus ;~(pose term expr))
+    term
   ==
 ```
 
