@@ -159,21 +159,21 @@ If we try merging diffs `a` and `c` however, we get `~` because of a conflict:
 If we run `+mash` on `a` and `b` we get the same diff as with `+join` (sans the `unit`):
 
 ```
-> (mash:txt-nave [our %home diff-a] [our %blah diff-b])
+> (mash:txt-nave [our %base diff-a] [our %blah diff-b])
 [~ ~[[%.n p=<|foo|> q=<|zap|>] [%.n p=<|bar|> q=<|zoo|>] [%.y p=1]]]
 ```
 
 If we `+mash` `a` and `c`, however, we get a diff with the conflict annotated rather than just `~`:
 
 ```
-> (mash:txt-nave [our %home diff-a] [our %blah diff-c])
+> (mash:txt-nave [our %base diff-a] [our %blah diff-c])
 [ ~
   ~[
     [%.y p=1]
     [ %.n
       p=<|bar|>
         q
-      <|>>>>>>>>>>>> ~zod/home zoo ++++++++++++ bar ------------ bla <<<<<<<<<<<< ~zod/blah|>
+      <|>>>>>>>>>>>> ~zod/base zoo ++++++++++++ bar ------------ bla <<<<<<<<<<<< ~zod/blah|>
     ]
     [%.y p=1]
   ]

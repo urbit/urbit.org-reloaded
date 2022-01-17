@@ -10,7 +10,7 @@ category = "arvo"
 
 Ford neither accepts Unix events nor produces Unix effects. It exists entirely for the benefit of [Arvo](/docs/glossary/arvo) applications and other vanes, specifically [Clay](/docs/glossary/clay) and [Gall](/docs/glossary/gall).
 
-Ford is located at `/home/sys/vane/ford.hoon` within [Arvo](/docs/glossary/arvo).
+Ford is located at `/base/sys/vane/ford.hoon` within [Arvo](/docs/glossary/arvo).
 
 ### Further Reading
 

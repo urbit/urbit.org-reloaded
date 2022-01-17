@@ -90,7 +90,7 @@ blob store for performance reasons.
 Recall that a desk is a series of numbered commits. Not every
 commit in a desk must be numbered. For example, if the `%base` desk
 has had 50 commits since `%foo` was forked from it, then a merge
-from `%base` to `%foo` will only add a single revision number to home,
+from `%base` to `%foo` will only add a single revision number,
 although the full commit history will be accessible by traversing
 the parentage of the individual commits.
 

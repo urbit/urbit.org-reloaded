@@ -4,6 +4,7 @@ weight = 4
 template = "doc.html"
 aliases = ["docs/reference/hoon-expressions/rune/zap/"]
 +++
+
 ## Runes
 
 ### `!>` "zapgar"
@@ -20,7 +21,7 @@ Regular: **1-fixed**.
 
 ##### Discussion
 
-In Hoon, a dynamic type is a static type compiled at runtime.  This type-noun cell is generally called a `vase`.
+In Hoon, a dynamic type is a static type compiled at runtime. This type-noun cell is generally called a `vase`.
 
 ##### Examples
 
@@ -29,7 +30,7 @@ In Hoon, a dynamic type is a static type compiled at runtime.  This type-noun ce
 [#t/@ud q=1]
 ```
 
-If you want just the type value, use a 'type spear'.  This is `-:!>`, i.e., the head of the cell produced by `!>`:
+If you want just the type value, use a 'type spear'. This is `-:!>`, i.e., the head of the cell produced by `!>`:
 
 ```
 > -:!>(1)
@@ -50,7 +51,7 @@ The value of `vase` typed with the type of the mold if possible, else a
 
 ##### Syntax
 
-Regular:  **2-fixed**
+Regular: **2-fixed**
 
 ##### Discussion
 
@@ -99,8 +100,8 @@ Regular: **1-fixed**.
 ford: %ride failed to execute:
 
 > !:  ?:(=(0 1) 123 !!)
-/~zod/home/~2018.10.15..19.50.06..74af:<[1 5].[1 22]>
-/~zod/home/~2018.10.15..19.50.06..74af:<[1 19].[1 21]>
+/~zod/base/~2018.10.15..19.50.06..74af:<[1 5].[1 22]>
+/~zod/base/~2018.10.15..19.50.06..74af:<[1 19].[1 21]>
 ford: %ride failed to execute:
 ```
 
@@ -124,7 +125,7 @@ Regular: **1-fixed**.
 
 ##### Discussion
 
-`!.` is used to turn off a debugging stack trace option for any code you have in `p`.  This rune can be embedded under a `!:` rune for inner loops of your code that you don't want or need to trace.  This is especially useful if a trace overflows the stack.
+`!.` is used to turn off a debugging stack trace option for any code you have in `p`. This rune can be embedded under a `!:` rune for inner loops of your code that you don't want or need to trace. This is especially useful if a trace overflows the stack.
 
 ##### Examples
 
@@ -133,18 +134,18 @@ Regular: **1-fixed**.
 ford: %ride failed to execute:
 
 > !:  %.(1 |=(a=@ ^-(@ ?:(=(a 10) !! $(a +(a))))))
-/~zod/home/~2018.10.15..20.01.21..6b0c:<[1 5].[1 49]>
-/~zod/home/~2018.10.15..20.01.21..6b0c:<[1 17].[1 47]>
-/~zod/home/~2018.10.15..20.01.21..6b0c:<[1 22].[1 46]>
-/~zod/home/~2018.10.15..20.01.21..6b0c:<[1 36].[1 45]>
+/~zod/base/~2018.10.15..20.01.21..6b0c:<[1 5].[1 49]>
+/~zod/base/~2018.10.15..20.01.21..6b0c:<[1 17].[1 47]>
+/~zod/base/~2018.10.15..20.01.21..6b0c:<[1 22].[1 46]>
+/~zod/base/~2018.10.15..20.01.21..6b0c:<[1 36].[1 45]>
 ...skipping some lines...
-/~zod/home/~2018.10.15..20.01.21..6b0c:<[1 17].[1 47]>
-/~zod/home/~2018.10.15..20.01.21..6b0c:<[1 22].[1 46]>
-/~zod/home/~2018.10.15..20.01.21..6b0c:<[1 33].[1 35]>
+/~zod/base/~2018.10.15..20.01.21..6b0c:<[1 17].[1 47]>
+/~zod/base/~2018.10.15..20.01.21..6b0c:<[1 22].[1 46]>
+/~zod/base/~2018.10.15..20.01.21..6b0c:<[1 33].[1 35]>
 ford: %ride failed to execute:
 
 > !:  %.(1 !.(|=(a=@ ^-(@ ?:(=(a 10) !! $(a +(a)))))))
-/~zod/home/~2018.10.15..20.01.35..0529:<[1 5].[1 53]>
+/~zod/base/~2018.10.15..20.01.35..0529:<[1 5].[1 53]>
 ford: %ride failed to execute:
 ```
 
@@ -221,7 +222,7 @@ Regular: **2-fixed**.
 
 ##### Produces
 
-Nothing.  Always crashes, with type `%void`.
+Nothing. Always crashes, with type `%void`.
 
 ##### Syntax
 

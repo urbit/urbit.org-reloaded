@@ -15,7 +15,7 @@ A keyboard event's journey from Unix to Dojo, the Urbit shell, can be imagined a
 Keystroke in Unix -> Vere (virtual machine) -> Arvo -> Dill -> the Dojo
 ```
 
-Dill is located at `/home/sys/vane/dill.hoon` within [Arvo](/docs/glossary/arvo).
+Dill is located at `/base/sys/vane/dill.hoon` within [Arvo](/docs/glossary/arvo).
 
 ### Further Reading
 

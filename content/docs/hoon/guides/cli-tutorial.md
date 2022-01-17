@@ -10,9 +10,10 @@ In this walkthrough we will go in-depth on how to build command line interface (
 applications in Urbit using the `shoe` library.
 
 There are three CLI apps that currently ship with urbit - `%dojo`, `%chat-cli`,
-and `%shoe`. You should be familiar with the former two, the latter is an example
-app that shows off how the `shoe` library works that we will be looking at
-closely. These are all Gall apps, and as such their source can be found in the `app/` folder of your `%home` desk.
+and `%shoe`. You should be familiar with the former two, the latter is an
+example app that shows off how the `shoe` library works that we will be looking
+at closely. These are all Gall apps, and their source can be found in the `app/`
+folder of your `%base` desk.
 
 In [the `shoe` library](#the-shoe-library) we take a closer look at the `shoe` library and its
 cores and how they are utilized in CLI apps. Then in [the `sole`
@@ -25,7 +26,6 @@ considered to be an application equivalent of the [Hoon school
 lesson](/docs/hoon/hoon-school/generators#ask) on `sole` and `%ask`
 generators, which only covers the bare minimum necessary to write generators
 that take user input.
-
 
 ## The `shoe` library {#the-shoe-library}
 
@@ -44,9 +44,11 @@ ship and which session on that ship if there are multiple.
 
 Gall agents with the `shoe` library are able to utilize `%shoe` `card`s. These
 additions to the standard set of `cards` have the following shape:
+
 ```hoon
 [%shoe sole-ids=(list @ta) effect=shoe-effect]`
 ```
+
 `sole-ids` is the `list` of session ids that the following `effect` is
 emitted to. An empty `sole-ids` sends the effect to all connected sessions.
 `shoe-effect`s, for now, are always of the shape `[%sole effect=sole-effect]`, where
@@ -144,14 +146,13 @@ This is a function for wrapping a `shoe` core, which has too many
 arms to be a valid Gall agent core. This turns it into a standard Gall agent core by
 integrating the additional arms into the standard ones.
 
-
 ## The `sole` library {#the-sole-library}
 
-`shoe` apps may create specialized `card`s of the `[%shoe
-(list @ta) shoe-effect]` shape, where `shoe-effect` currently just wrap `sole-effect`s, i.e. instructions for displaying text and producing other effects in the console.
+`shoe` apps may create specialized `card`s of the `[%shoe (list @ta) shoe-effect]` shape, where `shoe-effect` currently just wrap `sole-effect`s, i.e. instructions for displaying text and producing other effects in the console.
 
 The list of possible `sole-effects` can be found in `/sur/sole.hoon`. A few
 commonly used ones are as follows.
+
 - `[%txt tape]` is used to display a line of text.
 - `[%bel ~]` is used to emit a beep.
 - `[%pro sole-prompt]` is used to set the prompt.
@@ -159,6 +160,7 @@ commonly used ones are as follows.
 
 For example, a `sole-effect` that beeps and displays `This is some text.` would
 be structured as
+
 ```hoon
 [%mor [%txt "This is some text."] [%bel ~] ~]
 ```
@@ -180,20 +182,23 @@ intention is to connect their `%shoe` apps.
 On each fake ship start `%shoe` by entering `|start %shoe` into dojo. This will
 automatically
 change the prompt to `~zod:shoe>` and `~nus:shoe>`. Type `demo` and watch the following appear:
+
 ```
 ~zod ran the command
 ~zod:shoe>
 ```
+
 `~zod ran the command` should be displayed in bold green text, signifying that
 the command originated locally.
 
-Now we will connect the sessions. Switch `~zod` back to dojo with `Ctrl-X` and enter `|link
-~nus %shoe`. If this succeeds you will see the following.
+Now we will connect the sessions. Switch `~zod` back to dojo with `Ctrl-X` and enter `|link ~nus %shoe`. If this succeeds you will see the following.
+
 ```
 >=
 ; ~nus is your neighbor
 [linked to [p=~nus q=%shoe]]
 ```
+
 Now `~zod` will have two `%shoe` sessions running - one local one on `~zod` and
 one remote one on `~nus`, which you can access by pressing `Ctrl-X` until you see
 `~nus:shoe>` from `~zod`'s console. On the other hand, you should not see
@@ -207,10 +212,12 @@ bold green text.
 
 Now try to link to `~zod`'s `%shoe` session from `~nus` by switching to the dojo
 on `~nus` and entering `|link ~zod %shoe`. You should see
+
 ```
 >=
 [unlinked from [p=~zod q=%shoe]]
 ```
+
 and if you press `Ctrl-X` you will not get a `~zod:shoe>` prompt. This is
 because the example app is set up to always allow `~zod` to connect (as well as
 subject moons if the ship happens to be a planet) but not `~nus`, so this
@@ -229,11 +236,12 @@ message means that `~nus` failed to connect to `~zod`'s `%shoe` session.
 
 `/+` is the Ford rune which imports libraries from the `/lib` directory into
 the subject.
- * `shoe` is the `shoe` library.
- * `verb` is a library used to print what a Gall agent is doing.
- * `dbug` is a library of debugging tools.
- * `default-agent` contains a Gall agent core with minimal implementations of
-   required Gall arms.
+
+- `shoe` is the `shoe` library.
+- `verb` is a library used to print what a Gall agent is doing.
+- `dbug` is a library of debugging tools.
+- `default-agent` contains a Gall agent core with minimal implementations of
+  required Gall arms.
 
 ```hoon
 |%
@@ -243,6 +251,7 @@ the subject.
 +$  card  card:shoe
 --
 ```
+
 The types used by the app.
 
 `state-0` stores the state of the app, which is null as there is no state to
@@ -254,8 +263,7 @@ commands that can be entered by the user. Since this app only supports one
 command, it is unnecessary for it to have any associated data, thus the command
 is represented by `~`.
 
-In a non-trivial context, a `command` is commonly given by `[%name
-data]`, where `%name` is the identifier for the type of command and `data` is
+In a non-trivial context, a `command` is commonly given by `[%name data]`, where `%name` is the identifier for the type of command and `data` is
 a type or list of types that contain data needed to execute the command. See
 `app/chat-cli.hoon` for examples of commands, such as `[%say letter:store]` and
 `[%delete path]`. This is not required though, and you could use something like
@@ -264,14 +272,15 @@ a type or list of types that contain data needed to execute the command. See
 `card` is either an ordinary Gall agent `card` or a `%shoe` `card`, which takes
 the shape `[%shoe sole-ids=(list @ta) effect=shoe-effect]`. A `%shoe` `card` is
 sent to all `sole`s listed in `sole-ids`, imaking them run the `sole-effect`
-specified by `effect` (i.e. printing some text).  Here we can
-reference `card:shoe` because of `/+  shoe` at the beginning of the app.
+specified by `effect` (i.e. printing some text). Here we can
+reference `card:shoe` because of `/+ shoe` at the beginning of the app.
 
 ```hoon
 =|  state-0
 =*  state  -
 ::
 ```
+
 Add the bunt value of `state-0` to the head of the subject, then give it the
 macro `state`. The `-` here is a lark expression referring to the head of the
 subject. This allows us to use `state` to refer to the state elsewhere in the
@@ -293,13 +302,13 @@ producing a standard Gall agent core. Then we call wrap the Gall agent core with
 `agent:dbug`, endowing it with additional arms useful for debugging, and then
 wrap again with `verb`.
 
-
 ```hoon
 |_  =bowl:gall
 +*  this  .
     def   ~(. (default-agent this %|) bowl)
     des   ~(. (default:shoe this command) bowl)
 ```
+
 This is boilerplate Gall agent core code. We set `this` to be a macro for the
 subject, which is the Gall agent core itself. We set `def` and `des` to be
 macros for initialized `default-agent` and `default:shoe` doors respectively.
@@ -323,22 +332,24 @@ the standard Gall arms:
 ++  on-arvo   on-arvo:def
 ++  on-fail   on-fail:def
 ```
+
 These are minimalist Gall app arm implementations using the default behavior found in `def`.
 
 Here begins the implementation of the additional arms required by the
 `(shoe:shoe command)` interface.
+
 ```hoon
 ++  command-parser
   |=  sole-id=@ta
   ^+  |~(nail *(like [? command]))
   (cold [& ~] (jest 'demo'))
 ```
+
 `+command-parser` is of central importance - it is what is used to parse user
 input and transform it into `command`s for the app to execute. Writing a proper
 command parser requires understanding of the Hoon parsing functions found in the
 standard library. How to do so may be found in the [parsing tutorial](/docs/hoon/guides/parsing). For now, it is sufficient to know that this arm matches the text "demo" and
 produces a `[? command]`-shaped noun in response. Note how the `&` signifies that the command will be run as soon as it has been entered, without waiting for the user to press return.
-
 
 ```hoon
 ++  tab-list
@@ -347,47 +358,57 @@ produces a `[? command]`-shaped noun in response. Note how the `&` signifies tha
   :~  ['demo' leaf+"run example command"]
   ==
 ```
+
 `+tab-list` is pretty much plug-n-play. For each command you want to be tab
-completed, add an entry to the `list` begun by `:~` of the form `[%command
-leaf+"description"]`. Now whenever the user types a partial command and presses
+completed, add an entry to the `list` begun by `:~` of the form `[%command leaf+"description"]`. Now whenever the user types a partial command and presses
 tab, the console will display the list of commmands that match the partial
 command as well as the descriptions given here.
 
 Thus here we have that starting to type `demo` and pressing tab will result in
 the following output in the console:
+
 ```
 demo  run example command
 ~zod:shoe> demo
 ```
+
 with the remainder of `demo` now added to the input line.
 
 Next we have `+on-command`, which is called whenever `+command-parser`
 recognizes that `demo` has been entered by a user.
+
 ```hoon
 ++  on-command
   |=  [sole-id=@ta =command]
   ^-  (quip card _this)
 ```
+
 This is a gate that takes in the `sole-id` corresponding to the session and the
 `command` noun parsed by `+command-parser` and returns a `list` of `card`s and
 `_this`, which is our shoe agent core including its state.
+
 ```hoon
   =-  [[%shoe ~ %sole -]~ this]
 ```
+
 This creates a cell of a `%shoe` card that triggers a `sole-effect` given by the head of
 the subject `-`, then the Gall agent core `this` - i.e. the return result of
 this gate. The use of the `=-` rune means that what follows this
 expression is actually run first, which puts the desired `sole-effect` into the
 head of the subject.
+
 ```hoon
   =/  =tape  "{(scow %p src.bowl)} ran the command"
 ```
+
 We define the `tape` that we want to be printed.
+
 ```hoon
   ?.  =(src our):bowl
     [%txt tape]
   [%klr [[`%br ~ `%g] [(crip tape)]~]~]
 ```
+
 We cannot just produce the `tape` we want printed, - it needs to fit the
 `sole-effect` type. This tells us that if the
 origin of the command is not our ship to just print it normally with the `%txt`
@@ -396,6 +417,7 @@ makes the text green and bold).
 
 The following allows either `~zod`, or the host ship and its moons, to connect to
 this app's command line interface using `|link`.
+
 ```hoon
 ++  can-connect
   |=  sole-id=@ta
@@ -407,6 +429,7 @@ this app's command line interface using `|link`.
 
 We use the minimal implementations for the final two `shoe` arms, since we don't
 want to do anything special when users connect or disconnect.
+
 ```hoon
 ++  on-connect      on-connect:des
 ++  on-disconnect   on-disconnect:des

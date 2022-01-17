@@ -135,7 +135,7 @@ We've also added a `+mime` arm to `+grow` for converting _from_ our `%csv` `mark
 
 Additionally, we've used the `+validate` function in a few places to make sure our CSV data has consistent row lengths.
 
-If we save the above mark file as `csv.hoon` in `/mar` and `|commit %home`, we should now be able to import CSV files into Urbit. Let's give it a go. In the root of our `%home` `desk`, let's add a file named `foo.csv` with the following contents:
+If we save the above mark file as `csv.hoon` in `/mar` and `|commit %base`, we should now be able to import CSV files into Urbit. Let's give it a go. In the root of our `%base` `desk`, let's add a file named `foo.csv` with the following contents:
 
 ```
 foo,bar,baz
@@ -143,34 +143,34 @@ blah,blah,blah
 1,2,3
 ```
 
-If we now `|commit %home`, we should see it's been successfully added:
+If we now `|commit %base`, we should see it's been successfully added:
 
 ```
-> |commit %home
+> |commit %base
 >=
-+ /~zod/home/4/foo/csv
++ /~zod/base/4/foo/csv
 ```
 
 And if we try reading the file with the `-read` thread:
 
 ```
-> -read [%x our %home da+now /foo/csv]
+> -read [%x our %base da+now /foo/csv]
 ~[<|foo bar baz|> <|blah blah blah|> <|1 2 3|>]
 ```
 
 We can see our `%csv` `mark` has successfully converted our `foo.csv` file to a `(list (list @t))` when it was imported.
 
-Let's try the other direction now. We can create a new `bar.csv` files in the root of `%home` from the dojo like so:
+Let's try the other direction now. We can create a new `bar.csv` files in the root of `%base` from the dojo like so:
 
 ```
 > */bar/csv ~[['abc' 'def' ~] ['ghi' 'jkl' ~]]
-+ /~zod/home/5/bar/csv
++ /~zod/base/5/bar/csv
 ```
 
 And if we check it in the terminal on the Unix side we can see it's been correctly encoded:
 
 ```
-> cat zod/home/bar.csv
+> cat zod/base/bar.csv
 abc,def
 ghi,jkl
 ```

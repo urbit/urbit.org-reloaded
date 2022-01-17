@@ -10,7 +10,7 @@ category = "arvo"
 
 A common way to use Clay is to create a pier, a directory that exists in and is visible in Unix. Changes are automatically recorded from Urbit to the Unix directory and vice versa. Just set it and forget it!
 
-Clay is located at `/home/sys/vane/clay.hoon` within Arvo.
+Clay is located at `/base/sys/vane/clay.hoon` within Arvo.
 
 ### Further Reading
 
