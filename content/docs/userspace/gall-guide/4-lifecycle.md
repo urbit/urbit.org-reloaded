@@ -445,6 +445,18 @@ new type - in this case by duplicating `val` and changing the head-tag from `%0`
 to `%1`. This is an extremely simple state type transition function - it would
 likely be more complicated for an agent with real functionality.
 
+Note: the `a+b` syntax (as in `1+[val.old val.old]`) forms a cell of the
+constant `%a` and the noun `b`. The constant may either be an integer or a `@tas`.
+For example:
+
+```
+> foo+'bar'
+[%foo 'bar']
+
+> 42+'bar'
+[%42 'bar']
+```
+
 Let's now use `dbug` to confirm our state has successfully been updated to the new
 type:
 
