@@ -273,7 +273,7 @@ a type or list of types that contain data needed to execute the command. See
 the shape `[%shoe sole-ids=(list @ta) effect=shoe-effect]`. A `%shoe` `card` is
 sent to all `sole`s listed in `sole-ids`, imaking them run the `sole-effect`
 specified by `effect` (i.e. printing some text). Here we can
-reference `card:shoe` because of `/+ shoe` at the beginning of the app.
+reference `card:shoe` because of `/+  shoe` at the beginning of the app.
 
 ```hoon
 =|  state-0
