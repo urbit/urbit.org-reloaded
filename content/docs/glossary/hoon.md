@@ -6,7 +6,7 @@ template = "doc.html"
 
 Hoon is a strict, higher-order typed functional programming language that compiles itself to [Nock](/docs/glossary/nock). As a result Hoon code is effectively implemented by the interpreter [Vere](/docs/glossary/vere). Programs for the Urbit operating system and kernel, [Arvo](/docs/glossary/arvo), are written in Hoon.
 
-The Hoon source file is located in `/home/sys/hoon.hoon` within your Urbit.
+The Hoon source file is located in `/base/sys/hoon.hoon` within your Urbit.
 
 ### Further Reading
 

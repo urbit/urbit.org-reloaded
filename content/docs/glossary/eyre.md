@@ -10,7 +10,7 @@ category = "arvo"
 
 In general, apps and vanes do not call Eyre; rather, Eyre calls apps and vanes. Eyre uses [Ford](/docs/glossary/ford) and [Gall](/docs/glossary/gall) to functionally publish pages and facilitate communication with apps.
 
-Eyre is located at `/home/sys/vane/eyre.hoon` within [Arvo](/docs/glossary/arvo).
+Eyre is located at `/base/sys/vane/eyre.hoon` within [Arvo](/docs/glossary/arvo).
 
 ### Further Reading
 

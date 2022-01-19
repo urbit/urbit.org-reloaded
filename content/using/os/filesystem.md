@@ -300,10 +300,10 @@ optional strategy.
 Merge the `%examples` `desk` from `~waxbex-ribmex`
 
 ```
-|merge %home-work /=home=, =gem %fine
+|merge %work /=base=, =gem %fine
 ```
 
-Merge `/=home=` into `%home-work` using merge strategy `%fine`.
+Merge `/=base=` into `%work` using merge strategy `%fine`.
 
 #### Sync
 

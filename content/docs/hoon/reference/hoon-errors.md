@@ -72,12 +72,12 @@ stack trace. An extensive stack trace tutorial is [below](#stack-trace-tutorial)
 If you have `!:` on, you'll see an error trace, like:
 
 ```
-/~zod/home/0/gen/hello:<[7 3].[11 21]>
-/~zod/home/0/gen/hello:<[8 1].[11 21]>
-/~zod/home/0/gen/hello:<[9 1].[11 21]>
-/~zod/home/0/gen/hello:<[10 1].[11 21]>
-/~zod/home/0/gen/hello:<[11 1].[11 21]>
-/~zod/home/0/gen/hello:<[11 7].[11 21]>
+/~zod/base/0/gen/hello:<[7 3].[11 21]>
+/~zod/base/0/gen/hello:<[8 1].[11 21]>
+/~zod/base/0/gen/hello:<[9 1].[11 21]>
+/~zod/base/0/gen/hello:<[10 1].[11 21]>
+/~zod/base/0/gen/hello:<[11 1].[11 21]>
+/~zod/base/0/gen/hello:<[11 7].[11 21]>
 nest-fail
 ```
 
@@ -185,5 +185,3 @@ true:
 For now, you need to be on the local console to see these debug
 printfs (which are implemented by interpreter hints). This is a
 bug and, like all bugs, will be fixed at some point.
-
-

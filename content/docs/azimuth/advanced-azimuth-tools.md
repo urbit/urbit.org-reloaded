@@ -20,7 +20,7 @@ fakezod](https://urbit.org/using/develop/#creating-a-development-ship). You can
 do this with your live running ship but at this time this will need you to
 modify the code so it's best to do this on a ship you can make mistakes on.
 
-Be sure to have mounted your home desk so you can easily edit files on it. The
+Be sure to have mounted your base desk so you can easily edit files on it. The
 first edit that will probably need to be made is in
 [`app/claz.hoon`](https://github.com/urbit/urbit/blob/85435e9a81e105809d5d381b5d34fae1d4daa3b8/pkg/arvo/app/claz.hoon#L14).
 The listed url will need to be changed to a valid Ethereum endpoint. infura.io
@@ -36,7 +36,7 @@ as a guide based on what action you are going to be performing. The maximum cost
 of your transaction will be the maximum gas units multiplied by the gwei you're
 going to set later. You'll need at least this much in your account.
 
-Once you have made these changes be sure to run `|commit %home` to get them into
+Once you have made these changes be sure to run `|commit %base` to get them into
 your ship.
 
 Next run `|start %claz` after which you'll be able to generate transactions.
@@ -48,7 +48,6 @@ Next run `|start %claz` after which you'll be able to generate transactions.
 Here we have an example of generating a transaction to spawn a ship. Something
 to note is that for this to be successful you'll need to actually have the right
 to spawn the ship in question. Let's break down the command.
-
 
 `%generate` is how all commands to `claz` are going to start.
 
@@ -102,7 +101,7 @@ details on that are outside of the scope of this guide.
 `%/spawn-signed/txt` is the path to the output file.
 
 `%/spawn/eth-txs` is the path to the transaction file we generated earlier. It
-will need to be accessible so don't forget to `|commit %home` if you moved it to
+will need to be accessible so don't forget to `|commit %base` if you moved it to
 a different pier.
 
 `%/mykey/txt` is the path to your private key file. It should contain your

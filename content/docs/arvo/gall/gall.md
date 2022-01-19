@@ -302,19 +302,19 @@ a `%wake` card, which you will recieve in `+on-arvo`. It will come back
 on `/my/wire`.
 
 ```hoon
-=/  =path  /(scot %p our.hid)/home/(scot %da now.hid)/my-file/txt
+=/  =path  /(scot %p our.hid)/base/(scot %da now.hid)/my-file/txt
 =/  contents=cage  [%txt !>(~['text file line 1' 'line 2'])]
 [%pass /my/wire %arvo %c %info (foal:space:userlib path contents)]
 ```
 
 This is a request to the `%c` vane (Clay, the filesystem vane) to write
-a file to `/my-file/txt` in the home desk. You will not receive a
+a file to `/my-file/txt` in the base desk. You will not receive a
 response to this `note`.
 
 ```hoon
 =/  =path  /my-file/txt
 =/  =moat  [da+now.hid da+(add now.hid ~h1) path]
-[%pass /my/wire %arvo %c %warp our.hid %home ~ %many & moat]
+[%pass /my/wire %arvo %c %warp our.hid %base ~ %many & moat]
 ```
 
 This is a request to the `%c` vane to send us a `%writ` `card` whenever

@@ -122,7 +122,7 @@ own with patience. Otherwise, try the procedure outlined [here](https://github.c
 
 ### I keep getting an `ames` error stack-trace
 
-You may see a message like this one: `/~zod/home/~2019.7.22..18.55.46..83a3/sys/vane/ames:<[line column].[line column]>`. This is a clay path to a Hoon file, pointing to the line and column where an expression crashed. This kind of error might be accompanied by a `crud` message.
+You may see a message like this one: `/~zod/base/~2019.7.22..18.55.46..83a3/sys/vane/ames:<[line column].[line column]>`. This is a clay path to a Hoon file, pointing to the line and column where an expression crashed. This kind of error might be accompanied by a `crud` message.
 
 This means that another ship is sending invalid packets to you. This could be
 because one of the ships has not updated the other ship's "rift number", which

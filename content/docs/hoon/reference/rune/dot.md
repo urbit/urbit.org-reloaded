@@ -4,7 +4,8 @@ weight = 3
 template = "doc.html"
 aliases = ["docs/reference/hoon-expressions/rune/dot/"]
 +++
-Anything Nock can do, Hoon can do also.  These runes are used for carrying out Nock operations in Hoon.
+
+Anything Nock can do, Hoon can do also. These runes are used for carrying out Nock operations in Hoon.
 
 ## Runes
 
@@ -18,15 +19,15 @@ The noun `q`, cast to the type `p`.
 
 ##### Discussion
 
-Nock has no `12` instruction!  But the virtual Nock
-used to run userspace code does.  Nock `12` loads from a
+Nock has no `12` instruction! But the virtual Nock
+used to run userspace code does. Nock `12` loads from a
 typed immutable namespace defined by its virtual context.
 
-Ordinarily a Hoon expression has access to no information but whatever can be found in the subject.  The one exception is with the `.^` rune.  It essentially allows you to request information from one of the Arvo vanes (modules).
+Ordinarily a Hoon expression has access to no information but whatever can be found in the subject. The one exception is with the `.^` rune. It essentially allows you to request information from one of the Arvo vanes (modules).
 
-`.^` checks that the type of the value retrieved from Arvo nests under `p`.  `q` is a `path` which includes information about which vane is being queried, and what sort of information is requested.
+`.^` checks that the type of the value retrieved from Arvo nests under `p`. `q` is a `path` which includes information about which vane is being queried, and what sort of information is requested.
 
-In principle `.^` takes two subexpressions, but in practice `q` is often given in two parts: the first part includes the vane to be queried (e.g., `%a` for Ames, `%b` for Behn, `%c` for Clay, etc.) and the kind of request.  The second part is a path that corresponds to the kind of request.
+In principle `.^` takes two subexpressions, but in practice `q` is often given in two parts: the first part includes the vane to be queried (e.g., `%a` for Ames, `%b` for Behn, `%c` for Clay, etc.) and the kind of request. The second part is a path that corresponds to the kind of request.
 
 ##### Examples
 
@@ -51,19 +52,19 @@ In the dojo we can ask Clay -- the Arvo filesystem -- for a listing of the files
 ]
 ```
 
-The `%c` is for Clay, and the `y` is for the request type.  `arch` is the type of the listing.  See `gen/cat.hoon` to see how this information is printed more prettily.
+The `%c` is for Clay, and the `y` is for the request type. `arch` is the type of the listing. See `gen/cat.hoon` to see how this information is printed more prettily.
 
 The `%` is for the current path in the dojo:
 
 ```
 > `path`%
-/~zod/home/~2018.9.20..23.05.35..0231
+/~zod/base/~2018.9.20..23.05.35..0231
 ```
 
-You can modify the time of the file listing quite simply and ask for a listing from 5 hours ago.  (Remember that Clay is a revision-controlled file system.)
+You can modify the time of the file listing quite simply and ask for a listing from 5 hours ago. (Remember that Clay is a revision-controlled file system.)
 
 ```
-> .^(arch %cy /(scot %p our)/home/(scot %da (sub now ~h5)))
+> .^(arch %cy /(scot %p our)/base/(scot %da (sub now ~h5)))
 [ fil=~
     dir
   { [p=~.web q=~]
@@ -89,7 +90,7 @@ You can modify the time of the file listing quite simply and ask for a listing f
 
 ##### Produces
 
-`p` plus `1` if `p` is an atom; otherwise, crashes.  The product atom has no aura.
+`p` plus `1` if `p` is an atom; otherwise, crashes. The product atom has no aura.
 
 ##### Syntax
 
@@ -131,7 +132,7 @@ Regular: **2-fixed**.
 
 Keep in mind that `p` and `q` can be arbitrary Hoon expressions, as long as they evaluate to the appropriate nouns for Nock evaluation.
 
-Note also that `.*` ("dottar") can be used to bypass the type system.  It's
+Note also that `.*` ("dottar") can be used to bypass the type system. It's
 therefore possible to use Hoon as a typeless language.
 
 ##### Examples
@@ -172,13 +173,13 @@ Irregular: `=(a b)` is `.=(a b)`.
 
 ##### Discussion
 
-The test for equality includes a type check.  Either the type of `p` must nest under the type of `q`, or _vice versa_.  Otherwise the result is a crash.
+The test for equality includes a type check. Either the type of `p` must nest under the type of `q`, or _vice versa_. Otherwise the result is a crash.
 
 Like Nock equality, `.=` ("dottis") tests whether two nouns are the same,
-ignoring invisible pointer structure.  Because in a conventional
+ignoring invisible pointer structure. Because in a conventional
 noun implementation each noun has a lazy short hash, comparisons
 are fast unless the hash needs to be computed, or we are comparing
-separate copies of identical nouns.  (Comparing large duplicates
+separate copies of identical nouns. (Comparing large duplicates
 is a common cause of performance bugs.)
 
 ##### Examples
