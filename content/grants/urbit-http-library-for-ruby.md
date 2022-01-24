@@ -37,4 +37,6 @@ Using the basic HTTP interface referenced above, create an interface to graph-st
 ### Additional Agent Interfaces
 
 1 stars
-Landscape gall agents that can be interfaced with over the HTTP interface. I will implement at least group-store and contact-store. Time permitting I will also try invite-store and/or metadata-store.
+Landscape gall agents that can be interfaced with over the HTTP interface. I will implement settings-store and group-store. 
+
+After completion, I also commit to implementing invite-store, contact-store and metadata-store in order to complete [Mars Base 10](https://github.com/Zaxonomy/mars-base-10).
