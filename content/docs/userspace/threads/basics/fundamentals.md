@@ -133,7 +133,7 @@ We'll go through it line-by line.
 =,  strand=strand:spider
 ```
 
-First we import `/sur/spider/hoon` which includes `/lib/strand/hoon` and give give the latter the face `strand` for convenience.
+First we import `/sur/spider/hoon` which includes `/lib/strand/hoon` and give the latter the face `strand` for convenience.
 
 ```hoon
 ^-  thread:spider
