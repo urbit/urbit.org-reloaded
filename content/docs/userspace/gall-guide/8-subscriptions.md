@@ -213,9 +213,9 @@ appropriate:
 ++  on-agent
   |=  [=wire =sign:agent:gall]
   ^-  (quip card _this)
-  ?+    wire  (on-watch:def wire sign)
+  ?+    wire  (on-agent:def wire sign)
       [%expected %wire ~]
-    ?+    -.sign  (on-watch:def wire sign)
+    ?+    -.sign  (on-agent:def wire sign)
         %watch-ack
       ?~  p.sign
         ...(do something if ack)...
@@ -251,11 +251,11 @@ extract the data from the `vase` in the `cage`, and apply your logic. Again, rou
 ++  on-agent
   |=  [=wire =sign:agent:gall]
   ^-  (quip card _this)
-  ?+    wire  (on-watch:def wire sign)
+  ?+    wire  (on-agent:def wire sign)
       [%expected %wire ~]
-    ?+    -.sign  (on-watch:def wire sign)
+    ?+    -.sign  (on-agent:def wire sign)
         %fact
-      ?+    p.cage.sign  (on-watch:def wire sign)
+      ?+    p.cage.sign  (on-agent:def wire sign)
           %expected-mark
         =/  foo  !<(expected-type q.cage.sign)
         .....
