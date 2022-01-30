@@ -12,7 +12,7 @@ Following this lesson, we will introduce Gall, a vane used to build user space a
 
 In order to introduce vanes, we must first introduce the concept of a [kernel](https://en.wikipedia.org/wiki/Kernel_(operating_system)). The kernel is in some sense the "core" of an operating system, in that it has complete control over all events in the system and may perform any operation. It is the first part of the operating system to boot, and is responsible for spawning all other processes and routing their communication to one another. The tasks a kernel performs are very low level - managing memory, prioritizing processes, keeping track of time, managing hardware I/O, etc.
 
-Kernel code is generally kept to be as minimal as possible, and so almost anything non-trivial is put into an extension called a kernel module. **Vanes** are kernel modules for Arvo. Arvo currently has eight vanes known as Ames, Behn, Clay, Dill, Eyre, Ford, Gall, and Iris. You can read a short description of each one in [Arvo](/docs/arvo/), along with a more thorough explanation of how vanes communicate than the following.
+Kernel code is generally kept to be as minimal as possible, and so almost anything non-trivial is put into an extension called a kernel module. **Vanes** are kernel modules for Arvo. Arvo currently has seven vanes known as Ames, Behn, Clay, Dill, Eyre, Gall, and Iris. You can read a short description of each one in [Arvo](/docs/arvo/), along with a more thorough explanation of how vanes communicate than the following.
 
 Vanes communicate with one another by exchanging chunks of data known as
 `move`s. We will get into more detail above what a `move` is in our example of
