@@ -209,7 +209,8 @@ Returns a subset of a node's children, with or without descendants, optionally f
 
 ### Request nodes, depth first
 
-- Path: `/x/graph/[ship]/[name]/node/depth-first/[count]/[start]`
+- Path: `/x/graph/[ship]/[name]/depth-first/[count]/[start]`
+- Mark: `%graph-update-3`
 - Input
 
   - **ship** (`ship`) - The ship of the resource.
