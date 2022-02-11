@@ -1,6 +1,6 @@
 +++
 title = "Getting Started"
-weight = 1
+weight = 0
 description = "How to install Urbit."
 page_template = "page_indiced.html"
 template = "getting-started/index.html"

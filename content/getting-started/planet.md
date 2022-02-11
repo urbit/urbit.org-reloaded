@@ -1,6 +1,6 @@
 +++
 title = "Setting up your urbit"
-weight = 1
+weight = 2
 description = "Getting started with a permanent Urbit identity."
 +++
 
