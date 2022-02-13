@@ -10,12 +10,12 @@ Performing transactions directly on the Ethereum blockchain, ‘Layer 1’, has 
 
 ### What to know
 
-- Migration is currently **one-way**.<br />You cannot move a Layer 2 ID back to Layer 1. This includes planets that are spawned on Layer 2.
-- You cannot interact with Layer 2 IDs using Layer 1 tools like OpenSea or Metamask.<br />You will not be able to use your ID with smart contracts, or ‘see’ it using wallets other than Bridge. **Bridge is currently the only software that can see or interact with Layer 2 IDs.**
-- Layer 2 does not have anything to do with networking between ships.<br>Operating your ship on the network will not be influenced by which layer it is on. You will be fully capable of communicating with ships on either layer.
-- You can perform Layer 2 transactions for free with Tlon’s roller.<br>A public roller operated by Tlon is connected to Bridge by default, but anyone can operate a roller. Tlon’s roller offers free subsidized transactions up to a weekly limit of 25 operations.
-- You will need to pay for the migration to L2.<br>Migrating is a one-time process that takes place on Layer 1. You will need to fund it in the same way as a traditional Layer 1 Azimuth transaction.
-- Your star sponsor can be on either layer.<br>The layer that a star is on has no bearing on who it can sponsor.
+- Migration is currently **one-way**.<br /><br />You cannot move a Layer 2 ID back to Layer 1. This includes planets that are spawned on Layer 2.
+- You cannot interact with Layer 2 IDs using Layer 1 tools like OpenSea or Metamask.<br /><br />You will not be able to use your ID with smart contracts, or ‘see’ it using wallets other than Bridge. **Bridge is currently the only software that can see or interact with Layer 2 IDs.**
+- Layer 2 does not have anything to do with networking between ships.<br /><br />Operating your ship on the network will not be influenced by which layer it is on. You will be fully capable of communicating with ships on either layer.
+- You can perform Layer 2 transactions for free with Tlon’s roller.<br /><br />A public roller operated by Tlon is connected to Bridge by default, but anyone can operate a roller. Tlon’s roller offers free subsidized transactions up to a weekly limit of 25 operations.
+- You will need to pay for the migration to L2.<br /><br />Migrating is a one-time process that takes place on Layer 1. You will need to fund it in the same way as a traditional Layer 1 Azimuth transaction.
+- Your star sponsor can be on either layer.<br /><br />The layer that a star is on has no bearing on who it can sponsor.
 
 If you already had a planet before the launch of L2, you don’t have to do anything. Your ship will continue to function normally and you will still be able to communicate with the entire network without any additional intervention. However, you have the option of migrating your planet to Layer 2 in order to take advantage of the reduced costs and subsidized transactions available through Tlon’s roller.
 
