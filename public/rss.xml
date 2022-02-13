@@ -4,7 +4,7 @@
         <title>Urbit</title>
         <link>https://urbit.org</link>
         <description>Urbit is a personal server built from scratch</description>
-        <lastBuildDate>Fri, 11 Feb 2022 18:17:26 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 13 Feb 2022 21:51:49 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[Layer 2 Guides]]></title>
             <link>https://urbit.org/blog/layer-2-guides</link>
             <guid>https://urbit.org/blog/layer-2-guides</guid>
-            <pubDate>Mon, 14 Feb 2022 05:00:00 GMT</pubDate>
+            <pubDate>Mon, 14 Feb 2022 00:00:00 GMT</pubDate>
             <content:encoded><![CDATA[
 Urbit’s [Layer 2](https://urbit.org/docs/azimuth/l2/layer2) system, naive rollups, allows planets to be spawned at substantially lower cost. This system operates in parallel to Layer 1 Azimuth, but introduces some new concepts and differences that are important to understand. Read on for a high-level survey, and check the star and planet guides linked at the bottom for details and instructions.
 

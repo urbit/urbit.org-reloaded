@@ -40,7 +40,7 @@ A single ownership address can own ships on both Layer 1 and Layer 2.
 
 ### Migrating
 
-![placeholder -- image]()
+![](/images/planet-l2-migration.gif)
 
 To migrate:
 
@@ -55,7 +55,7 @@ The migration itself does not need to be submitted to a roller – it should com
 
 ### Activating a Layer 2 planet
 
-![placeholder -- image]()
+![](/images/planet-l2-claim.gif)
 
 **Planet codes** are one-time passphrases used to claim a master ticket through Bridge. These can be standalone text phrases, or embedded in a URL that begins with `bridge.urbit.org`. **Master tickets** are passphrases used to log into Bridge to manage an ID that has already been claimed.
 
@@ -95,7 +95,7 @@ In addition to importing a fresh planet, UrbitHost allows you to migrate an exis
 
 ### Transaction history
 
-![placeholder -- image]()
+![](/images/planet-l2-transactions.png)
 
 A new feature in Bridge is the ability to see the transaction history of your asset. This is particularly important because with Layer 2, much of the Azimuth state is no longer visible on the Ethereum blockchain, but is maintained by the Urbit network. This means you might not be able to directly observe “who owns what” by looking at the Azimuth contracts with something like a [blockchain explorer](https://etherscan.io/address/azimuth.eth). Activities like setting networking keys, issuing planets, or moving your proxy keys will show up in this log. Note that the transaction history menu in Bridge is currently the only way to examine Azimuth operations that take place on Layer 2.
 
