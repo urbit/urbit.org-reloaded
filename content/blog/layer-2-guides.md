@@ -37,14 +37,14 @@ Whether you’re new to the network or a longtime participant, you should gain f
 
 There’s lots more to learn about the new solution. These updates apply to the software on your ship, the Azimuth PKI, and new features and major updates to Bridge. You can learn more in the following guides, with in-depth background and illustrated walkthroughs for common tasks:
 
-[Layer 2 for stars](placeholder) – It’s particularly important for star operators to understand the pros and cons of migrating. This guide will explain the technical background, trade-offs, and how to use Layer 2 on Bridge.
+[Layer 2 for stars](https://operators.urbit.org/guides/layer-2-for-stars) – It’s particularly important for star operators to understand the pros and cons of migrating. This guide will explain the technical background, trade-offs, and how to use Layer 2 on Bridge.
 
 - Stars can migrate their spawn proxy to Layer 2 to spawn up to six planets per week for free using Tlon’s roller.
 - Stars can migrate their ownership key to Layer 2 to perform all Azimuth operations on Layer 2, including planet spawning, factory resets, and point adoption.
 - Migrating is currently a one-way process and cannot be reversed.
 - Layer 2 stars cannot be wrapped as $WSTR tokens, or interact with any other Layer 1 tools or contracts (e.g. MetaMask, OpenSea).
 
-[Layer 2 for planets](placeholder) – Just bought a planet and want to know what all of this means for you? Wondering whether you should migrate your Layer 1 planet? Look here for guidance.
+[Layer 2 for planets](https://urbit.org/getting-started/layer-2-for-planets) – Just bought a planet and want to know what all of this means for you? Wondering whether you should migrate your Layer 1 planet? Look here for guidance.
 
 - Planets spawned by a Layer 2 star will spawn on Layer 2.
 - Migration is one-way; if your planet is on Layer 2, there is no way to migrate it to Layer 1.
