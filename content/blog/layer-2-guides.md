@@ -5,7 +5,7 @@ description = "Urbit’s Layer 2 system is live and operational."
 [extra]
 author = "Reid Scoggin"
 ship = "~sitful-hatred"
-image = "/images/l2-blogpost.jpg"
+image = "/images/l2-blogpost.png"
 +++
 
 Urbit’s [Layer 2](https://urbit.org/docs/azimuth/l2/layer2) system, naive rollups, allows planets to be spawned at substantially lower cost. This system operates in parallel to Layer 1 Azimuth, but introduces some new concepts and differences that are important to understand. Read on for a high-level survey, and check the star and planet guides linked at the bottom for details and instructions.
