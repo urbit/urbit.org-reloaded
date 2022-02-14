@@ -4,10 +4,105 @@
         <title>Urbit</title>
         <link>https://urbit.org</link>
         <description>Urbit is a personal server built from scratch</description>
-        <lastBuildDate>Wed, 08 Dec 2021 19:13:57 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 14 Feb 2022 16:16:43 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Layer 2 Guides]]></title>
+            <link>https://urbit.org/blog/layer-2-guides</link>
+            <guid>https://urbit.org/blog/layer-2-guides</guid>
+            <pubDate>Mon, 14 Feb 2022 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+Urbit’s [Layer 2](https://urbit.org/docs/azimuth/l2/layer2) system, naive rollups, allows planets to be spawned at substantially lower cost. This system operates in parallel to Layer 1 Azimuth, but introduces some new concepts and differences that are important to understand. Read on for a high-level survey, and check the star and planet guides linked at the bottom for details and instructions.
+
+After a year of development and testing, **Urbit’s Layer 2 system is live and operational**. Star and planet operators can now take advantage of subsidized Azimuth operations. If you operate a star, you can distribute planets cheaply or for free; if you’ve been waiting to buy an ID due to transaction fees, you will find planets are available much more cheaply.
+
+Layer 2 (“L2”) introduces some changes that are important to understand, whether you’re new to the network or not. Stars and planet operators that are considering migrating to L2 have different **trade-offs to weigh** before they make a decision.
+
+### Background
+
+Urbit can be broadly divided into two parts: an operating system, Arvo, and the identity layer, Azimuth. These two systems are interlocked. Arvo uses Azimuth to verify that you own an address, which maps to your name on the network. [Azimuth](https://urbit.org/docs/glossary/azimuth) is a public key infrastructure, implemented as contracts on the Ethereum blockchain. Modifications to the ownership or properties of an identity’s keys are recorded on Ethereum. Azimuth faithfully serves its purpose as an authoritative, trustless registry of ownership, but it inherits both the strengths and disadvantages of the ETH ecosystem.
+Due to ETH’s value and popularity, performing transactions directly on the Ethereum blockchain (‘Layer 1’) has become prohibitively expensive for many simple operations. The Ethereum smart contracts that control the logic of Azimuth were developed in a time when ETH was not worth as much. The soaring value of ETH means that the gas fee to spawn or modify a planet routinely costs more than the planet itself. Azimuth is not unique in this regard. All projects built on Ethereum have had to deal with this issue in one form or another. Fortunately, Urbit engineers have come up with a solution for those seeking to get onto the network, albeit with several important trade-offs.
+
+### Naive rollups
+
+‘Layer 2’ refers to technologies built on top of blockchains to enable scaling. [Rollups](https://vitalik.ca/general/2021/01/05/rollup.html) are an Ethereum ecosystem Layer 2 innovation that reduces costs by moving computation off-chain. _Naive rollups_ are a bespoke technology developed for Urbit that augment the original Azimuth contracts. For technical details, you can review the [excellent summary](https://urbit.org/blog/rollups) by `~datnut-pollen`, or the [original proposal](https://groups.google.com/a/urbit.org/g/dev/c/p6rP_WsxLS0) by `~wicdev-wisryt`. In brief: rather than using the Ethereum network to perform the computation associated with PKI modifications (Layer 1), the computation is performed on the Urbit network itself, with the results published to the blockchain by nodes called rollers. Signed data resulting from the combined transactions is posted on a regular basis to the main blockchain by the rollers. Due to this batched, off-chain computation, fees are roughly **65-100x cheaper** than Layer 1 operations.
+
+### What everyone should know
+
+Whether you’re new to the network or a longtime participant, you should gain familiarity with the new changes. There are a few things that everyone should know:
+
+- All ships spawned before now have been on Layer 1 – those ships have the option of migrating to Layer 2, or remaining on Layer 1.
+- **You don’t have to do anything**. Migrating is opt-in, and a Layer 1 ship will continue to have full functionality on the network.
+- Layer 2 lets you perform **Azimuth transactions cheaply or for free**. If you operate a star, you can spawn planets for free with Tlon’s roller. Planets can make use of Tlon’s roller for actions like factory resets and transferring ownership and proxy addresses for free.
+- **Migrating is one-way**. If you migrate to Layer 2, there is not currently an option to reverse your decision.
+- **Migrating does not change which address owns a point**. After migrating, you will still log into Bridge with the same keys.
+
+### Layer 2 guides
+
+There’s lots more to learn about the new solution. These updates apply to the software on your ship, the Azimuth PKI, and new features and major updates to Bridge. You can learn more in the following guides, with in-depth background and illustrated walkthroughs for common tasks:
+
+[Layer 2 for stars](https://operators.urbit.org/guides/layer-2-for-stars) – It’s particularly important for star operators to understand the pros and cons of migrating. This guide will explain the technical background, trade-offs, and how to use Layer 2 on Bridge.
+
+- Stars can migrate their spawn proxy to Layer 2 to spawn up to six planets per week for free using Tlon’s roller.
+- Stars can migrate their ownership key to Layer 2 to perform all Azimuth operations on Layer 2, including planet spawning, factory resets, and point adoption.
+- Migrating is currently a one-way process and cannot be reversed.
+- Layer 2 stars cannot be wrapped as $WSTR tokens, or interact with any other Layer 1 tools or contracts (e.g. MetaMask, OpenSea).
+
+[Layer 2 for planets](https://urbit.org/getting-started/layer-2-for-planets) – Just bought a planet and want to know what all of this means for you? Wondering whether you should migrate your Layer 1 planet? Look here for guidance.
+
+- Planets spawned by a Layer 2 star will spawn on Layer 2.
+- Migration is one-way; if your planet is on Layer 2, there is no way to migrate it to Layer 1.
+- Planets on Layer 2 can take advantage of subsidized, free Azimuth transactions using Tlon’s roller.
+- Planets on Layer 2 cannot currently interact with Layer 1 tools or contracts like MetaMask or OpenSea.
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Urbit Is for Creators]]></title>
+            <link>https://urbit.org/blog/urbit-for-creators</link>
+            <guid>https://urbit.org/blog/urbit-for-creators</guid>
+            <pubDate>Thu, 09 Dec 2021 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+![](https://storage.googleapis.com/media.urbit.org/site/posts/essays/romi%20creators%20blog.jpeg)
+
+It’s no secret that there are huge problems with the way content is distributed on the internet today. Even five years ago these issues hadn’t quite hit the mainstream: the ability of platforms to capriciously alter their terms of service, the corrosive effects of algorithms designed to siphon off as much of our attention as possible, the uncanny effects of a world where tech companies arbitrate truth with behind-the-scenes moderation policies. Although they’re now discussed pretty openly, the horrid effects of this system actually tend to be _understated._ “If you’re not paying for it, you’re not the customer, you’re the product” has become a truism. And yet, as _You Are Not a Gadget_ author Jaron Lanier puts it, it’s not quite specific enough to say that _you_ are the product. Rather, “it’s the gradual, slight, imperceptible change in your own behavior and perception that is the product.”
+
+This product is selling very well, and it has seeped its way fully into the world of content creation, or what might once have been called the arts. Although it’s not so widely publicized, [Tik Tok basically runs the popular music industry at this point](https://www.browndailyherald.com/article/2021/09/for-better-or-worse-tiktok-is-driving-the-music-industry). Meanwhile, platforms like Spotify or YouTube filter what we see by deprecating the “long tails” of content. That is, if you’re searching for a tune on Spotify, it brings Spotify more profit, on average, to design a search feature that will automatically bring you to the most popular songs, even if you were really looking for less popular ones. The same goes for books, which are now purchased mostly according to the algorithm, and not according to what a person might stumble upon in a bookshop. (The upshot: expect more [cookbooks from Snoop Dogg](https://www.nytimes.com/2021/04/18/books/book-sales-publishing-pandemic-coronavirus.html), and fewer titles from authors who are not already celebrities.) Products such as Tik Tok, Spotify, YouTube, and Amazon like for you to think that they’re mere distributors of content. But actually they’re _producers_, and they’re producing the smarmy, anodyne style that has homogenized the globe.
+
+Urbit is for creators who are ready to wake up from this bad dream.
+
+The vibe of today’s internet applications—manipulative, erratic, overcomplicated, overbearing, and highly detrimental to society—is in contrast to the mechanics of the creator economy itself, which can actually be blissfully simple. In 2008 Kevin Kelley made famous the concept of “[1000 true fans](https://kk.org/thetechnium/1000-true-fans/).” That is, to make a living as a creator, you only need 1,000 fans who are interested enough to buy whatever you produce. Even $6.00 or $7.00 a month from such true fans is a boon for a creator—assuming not too much of that cash gets taken away by middlemen, and that fans can discover work from outside the corporate monoculture in the first place.
+
+In a limited sense, this 1,000 true fans model is already working. Creators with fanbases of the size Kelly imagined are able to use Patreon or YouTube or what-have-you to monetize their content. But the problem is, those platforms are not really peer-to-peer. Your fans aren’t your own: they belong to the platform. And with the big tech platforms running the show, we end up with the problems described above.
+
+To those of us who are interested in seeing a thriving culture of artists, musicians, podcasters and writers which is human-centered via a p2p network, rather than being brokered, managed, and manipulated, by the most venal and tasteless of data collectors and profiteers, it likely seems like the world of the arts has gone bottom-up. Urbit is for any creators who are ready to put it back on its feet again.
+
+Urbit is a peer-to-peer network designed to serve as simple, durable neutral infrastructure for whoever wants to build something on it. Like everything else on Urbit, creator content goes directly to the people it’s supposed to go to. No middlemen, no MEGACORP data mining, no capricious terms of service, no obscure algorithms determining what gets seen and what doesn’t. This is the zero-to-one shift that makes Urbit the natural destination for creators who want to both _own_ their work and share it.
+
+Urbit has already seen several communities get excited about the ways Urbit could help them fulfill their goals. Here are just a few examples:
+
+[HOLDERSLAND](https://twitter.com/holdersland), founded by Haleek Maul, a musician, music label owner, and NFT creator based in Barbados. Maul recently [sold](https://urbit.holders.land) a set of customized Urbit NFT artwork, which came bundled with actual Urbit IDs.
+
+[Other Life](https://www.otherlife.co), a community of philosophers and creators founded by the entrepreneurial Justin Murphy.
+
+[The Stack](https://orbisledger.news/), an entertaining and informative podcast with a decidedly Urbit flavor, hosted by Josh and Andy.
+
+[door.link](https://www.door.link), a vibey and idiosyncratic music collective.
+
+[Wet Brain](https://www.patreon.com/wetbrain), a numinous, post-everything New York podcast, hosted by Honor and Walt.
+
+Internet Weirdness Task Force, which has no legacy internet site to link to, so you’ll just have to get on Urbit to scope it out.
+
+Over the last ten years, we’ve already had a taste of what blockchains can do: they’re great so far for distributing a financial ledger so that payments are no longer centralized. But for online communities to go truly peer-to-peer and escape the grip of corporations, they’re going to need something like Urbit. As HOLDERSLAND founder Haleek Maul [puts it](https://urbit.org/blog/haleek-maul-interview) in a recent Q&A, decentralized technologies like blockchain or Urbit “allow . . . new financial relationships and funding structures to emerge. Rather than have a few people contribute $20k, you can have hundreds of people contribute $100.” In such a system, recording artists no longer need to hunt for a deal from sharky impresarios; their communities can comprise both the talent _and_ the executives. They no longer need to pay fealty to streaming services; they can sell their wares peer-to-peer, with the old-fashioned connoisseurship of a cool record shop, except that this record shop is available to anyone across the globe.
+
+Urbit makes this dream a real possibility. In an Urbit future, utilizing your own personalized payments system, which could take either fiat or crypto, should be as easy as sending or receiving money on apps like Venmo or Cash App is today. If _anyone_ can make a direct peer-to-peer payment to anyone else on the network, if _anyone_ can send a piece of writing or audio or video clip in a peer-to-peer way to anyone else on the network, then you’ve truly laid the groundwork for autonomous organizations of creators.
+
+Beyond that, Urbit is one of the very few platforms looking, with seriousness and deep technical consideration, into the distant future. Whereas no one can say whether a mainstream platform like Facebook or Twitter will even _exist_ in ten years (think just how much writing will disappear if those servers do shut down), Urbit is built with maximum durability in mind: one way to think of your urbit computer is as a [100-year computer](https://urbit.org/blog/the-100-year-computer). Whereas most software today is designed to break quickly and be replaced quickly, due to the instability of all of modern computing’s complex interlocking parts, Urbit was built as an overlay operating system, so that it can work no matter what’s running underneath, and thus serve as a resilient, permanent home for your digital world.
+
+Computers can still be used as magical tools for creative individuals, instead of as attention-draining machines—if that is indeed the future we want. For creators, the solution to the ever-growing problems of the internet is not in the hands of any national government, or some new application that mimics the architecture of old applications, or through some impracticable system of reduced screen time. The solution to these problems is, and always has been, to build a whole new system that works _for_ the people instead of against them. That’s what Urbit is here to do.
+]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Report from the field: Assembly 2021]]></title>
             <link>https://urbit.org/blog/2021-11-18-report-from-the-field</link>
@@ -17670,6 +17765,29 @@ Please join the channel 'Urbit Outside ~[masked]' in ~bitbet-bolbel/urbit-commun
 ]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[Developer Call: Urbit Visor - Transforming the Web Browser Into an Urbit Client]]></title>
+            <link>https://urbit.org/events/2021-10-07-developer-call-visor</link>
+            <guid>https://urbit.org/events/2021-10-07-developer-call-visor</guid>
+            <pubDate>Invalid Date</pubDate>
+            <content:encoded><![CDATA[
+Please join us for a deep dive into Urbit Visor, a brand new web extension which transforms your browser into a first class Urbit client. Robert Kornacki from dcSpark will be taking viewers step-by-step through the history of how Urbit Visor came to be, starting off with his initial work on the Rust airlock implementation, moving into Login With Urbit, and finally arriving at the final product of Urbit Visor that we have today.
+
+From there Robert will hit on many topics including:
+
+- Live demonstration of how Urbit Visor works
+- How Urbit Visor improves and increases the security of the Landscape login experience
+- An overview of the first Urbit Web App: Urbit Dashboard
+- Ship hot-swapping
+- Streamlining the developer experience for any JS/TS dev to jump into the ecosystem and start building immediately
+- UV Extensions and how they will allow Urbit and the current web to integrate seamlessly
+- The long term goals and vision of Urbit Visor
+
+Robert Kornacki (~mocrux-nomdep) is CSO at dcSpark and has been in the Urbit ecosystem since 2019. Robert has significant experience working in the crypto industry over the past several years, developing tooling and smart contract protocols which hold millions of dollars of assets to this day.
+
+Hosted by Josh Lehman, the Director of the Urbit Foundation.
+]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[Assembly]]></title>
             <link>https://urbit.org/events/2021-10-15-assembly</link>
             <guid>https://urbit.org/events/2021-10-15-assembly</guid>
@@ -17710,6 +17828,21 @@ We wish we could get everyone together at once for Assembly, but travel still is
 ]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[Developer Call: Running a Hosting Provider]]></title>
+            <link>https://urbit.org/events/2021-10-28-developer-call-hosting</link>
+            <guid>https://urbit.org/events/2021-10-28-developer-call-hosting</guid>
+            <pubDate>Invalid Date</pubDate>
+            <content:encoded><![CDATA[
+As many of you know, Urbit runs best when hosted, seeing that it's a server and all. The problem of course is that hosting an Urbit ship isn't the easiest of things to do for most people. Hosting Urbit ships in production is actually pretty tough though—doing it right requires wrangling the complexity of traditional "Earth" infrastructure in addition to a strong sense of how Urbit works.
+
+In this call we're joined by Brendan Hay, the lead behind Tlon Hosting, and Lukas Bühler of UrbitHost, in what's sure to be an entertaining and informative conversation. Bren and Lukas have both been the masterminds behind their respective hosting architectures, and were somewhat surprised to learn that they'd independently settled on highly similar architectures.
+
+This will be an unscripted conversation that's sure to span a gamut of topics including, but not limited to: the unique technical challenges of hosting Urbit ships, the upcoming %khan vane, Kubernetes operators, product roadmaps, custodianship of (or plans to do away with) private keys, and probably a ton more.
+
+Hosted by Josh Lehman, the Director of the Urbit Foundation.
+]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[Meetup: Brisbane Australia]]></title>
             <link>https://urbit.org/events/2021-11-26-meetup-brisbane</link>
             <guid>https://urbit.org/events/2021-11-26-meetup-brisbane</guid>
@@ -17729,41 +17862,27 @@ Come along and learn about the Urbit with us. You will gain access to an eldritc
 ]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Developer Call: Urbit Visor - Transforming the Web Browser Into an Urbit Client]]></title>
-            <link>https://urbit.org/events/20211007-developer-call-visor</link>
-            <guid>https://urbit.org/events/20211007-developer-call-visor</guid>
+            <title><![CDATA[Meetup: Austin]]></title>
+            <link>https://urbit.org/events/2022-01-21-meetup-austin</link>
+            <guid>https://urbit.org/events/2022-01-21-meetup-austin</guid>
             <pubDate>Invalid Date</pubDate>
             <content:encoded><![CDATA[
-Please join us for a deep dive into Urbit Visor, a brand new web extension which transforms your browser into a first class Urbit client. Robert Kornacki from dcSpark will be taking viewers step-by-step through the history of how Urbit Visor came to be, starting off with his initial work on the Rust airlock implementation, moving into Login With Urbit, and finally arriving at the final product of Urbit Visor that we have today.
+Austin, Texas martians - come hangout and talk Urbit Friday, January 21st at 6:30 pm at Distribution Hall. We will be joined by ~poldec-tonteg, the director of The Combine (the-combine.org), which is the Urbit Foundation's incubator that invests in teams building on Urbit. He will give a presentation around 8pm on The Combine, its purpose and how to get involved as an entrepreneur. It will be followed by a more technical presentation by Edward Amsden (~ritpub-sipsyl), an Urbit kernel developer who is currently rewriting Vere, the Nock run-time environment and Urbit's virtual machine. Team members from many Urbit companies will be in attendance including ~Tirrel, dcSpark, Tlon.io, Urbit Live, Wexpert Systems, Native Planet, and Holium. Hosted by Assembly Capital and the Urbit Foundation.
 
-From there Robert will hit on many topics including:
-
-- Live demonstration of how Urbit Visor works
-- How Urbit Visor improves and increases the security of the Landscape login experience
-- An overview of the first Urbit Web App: Urbit Dashboard
-- Ship hot-swapping
-- Streamlining the developer experience for any JS/TS dev to jump into the ecosystem and start building immediately
-- UV Extensions and how they will allow Urbit and the current web to integrate seamlessly
-- The long term goals and vision of Urbit Visor
-
-Robert Kornacki (~mocrux-nomdep) is CSO at dcSpark and has been in the Urbit ecosystem since 2019. Robert has significant experience working in the crypto industry over the past several years, developing tooling and smart contract protocols which hold millions of dollars of assets to this day.
-
-Hosted by Josh Lehman, the Director of the Urbit Foundation.
+If you haven't joined the network yet, bring a computer and we will help you get set up. Other than that we'll have some food, beverages and a fire, but be sure to bring a jacket too. See you there!
 ]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Developer Call: Running a Hosting Provider]]></title>
-            <link>https://urbit.org/events/20211028-developer-call-hosting</link>
-            <guid>https://urbit.org/events/20211028-developer-call-hosting</guid>
+            <title><![CDATA[Developer Call: Building the Next Developers on Mars]]></title>
+            <link>https://urbit.org/events/2022-02-17-developer-call-building-developers</link>
+            <guid>https://urbit.org/events/2022-02-17-developer-call-building-developers</guid>
             <pubDate>Invalid Date</pubDate>
             <content:encoded><![CDATA[
-As many of you know, Urbit runs best when hosted, seeing that it's a server and all. The problem of course is that hosting an Urbit ship isn't the easiest of things to do for most people. Hosting Urbit ships in production is actually pretty tough though—doing it right requires wrangling the complexity of traditional "Earth" infrastructure in addition to a strong sense of how Urbit works.
+We'll discuss mapping out the current Urbit technology complex, how to promote ongoing developer engagement and cultivation, and the upcoming Hoon School Live reboot.
 
-In this call we're joined by Brendan Hay, the lead behind Tlon Hosting, and Lukas Bühler of UrbitHost, in what's sure to be an entertaining and informative conversation. Bren and Lukas have both been the masterminds behind their respective hosting architectures, and were somewhat surprised to learn that they'd independently settled on highly similar architectures.
+Neal Davis has taught computer science at the University of Illinois since 2015. Trained as a nuclear engineer, he moved through high-performance computing into training engineers to use computers well. He has joined the Urbit Foundation to work on all aspects of our developer experience.
 
-This will be an unscripted conversation that's sure to span a gamut of topics including, but not limited to: the unique technical challenges of hosting Urbit ships, the upcoming %khan vane, Kubernetes operators, product roadmaps, custodianship of (or plans to do away with) private keys, and probably a ton more.
-
-Hosted by Josh Lehman, the Director of the Urbit Foundation.
+[Sign up for Hoon School Live here](https://hooniversity.org/enroll/).
 ]]></content:encoded>
         </item>
     </channel>

@@ -1,6 +1,6 @@
 +++
 title = "Command line install"
-weight = 2
+weight = 4
 description = "Installation instructions for power users."
 +++
 
