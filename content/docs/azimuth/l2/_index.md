@@ -10,7 +10,7 @@ Documentation of the technical details of naive rollups, our Layer 2 solution
 for the reduction of Urbit ID gas prices and friction associated with the usage
 of cryptocurrency.
 
-### [Layer 2 Overview](/docs/azimuth/l2/layer-2)
+### [Layer 2 Overview](/docs/azimuth/l2/layer2)
 
 A high-level technical description of the functionality of the naive rollups
 "Hoon smart contract" and associated apps, such as Bridge and the roller.
