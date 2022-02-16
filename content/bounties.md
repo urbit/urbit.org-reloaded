@@ -9,7 +9,7 @@ Bounties are opportunities to do work on Urbit in exchange for address space or 
 
 For **workers**, bounties offer substantial funding opportunities and, like [apprenticeships](/grants/apprenticeships), are a good way to get hired by other organizations. Learn how to [work on a bounty here](#work-on-a-bounty).
 
-For **benefactors**, bounties allow you to scale your workforce through via the Urbit community, get critical tools built, or just fund cool projects that you want to see exist. Learn how to [post a bounty here](#post-a-bounty)
+For **benefactors**, bounties allow you to scale your workforce through the Urbit community, get critical tools built, or just fund cool projects that you want to see exist. Learn how to [post a bounty here](#post-a-bounty).
 
 ## Work on a Bounty
 
