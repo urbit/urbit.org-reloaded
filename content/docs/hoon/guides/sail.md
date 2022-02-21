@@ -38,12 +38,21 @@ It’s easy to see how Sail can directly translate to HTML:
 
 #### HTML code
 
-```html
-&lt;html> &lt;head> &lt;title>My page&lt;/title> &lt;meta charset="utf-8" />
-&lt;/head> &lt;body> &lt;h1>Welcome!&lt;/h1> &lt;p> Hello, world! Welcome to my
-page. Here is an image: &lt;br /> &lt;img
-src="https://media.urbit.org/docs/userspace/dist/wut.svg" /> &lt;/p> &lt;/body>
-&lt;/html>
+```
+<html>
+  <head>
+    <title>My page</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h1>Welcome!</h1>
+    <p>Hello, world! Welcome to my
+      page. Here is an image:
+      <br />
+      <img src="https://media.urbit.org/docs/userspace/dist/wut.svg" />
+    </p>
+  </body>
+</html>
 ```
 
 ## Tags and Closing
@@ -70,8 +79,8 @@ tag name, then insert your plain text following a space. Example:
 
 Produces:
 
-```html
-&lt;h1>The title&lt;/h1>
+```
+<h1>The title</h1>
 ```
 
 ### Nested
@@ -91,9 +100,11 @@ Example:
 
 Produces:
 
-```html
-&lt;body> &lt;h1>Blog title&lt;/h1> &lt;p>This is some good content.&lt;/p>
-&lt;/body>
+```
+<body>
+  <h1>Blog title</h1>
+  <p>This is some good content.</p>
+</body>
 ```
 
 If we want to write a string with no tag at all, then we can prepend
@@ -109,8 +120,11 @@ those untagged lines with `;` and then a space:
 
 Produces:
 
-```html
-&lt;body> &lt;h1>Welcome!&lt;/h1> Hello, world. We’re on the web. &lt;/body>
+```
+<body>
+  <h1>Welcome!</h1>
+  Hello, world. We’re on the web.
+</body>
 ```
 
 ## Attributes
@@ -147,9 +161,11 @@ Tall-form attributes:
 
 Produces:
 
-```html
-&lt;div title="a tooltip" style="color:red"> &lt;h1>Foo&lt;/h1> &lt;p>foo bar
-baz &lt;/p> &lt;/div>
+```
+<div title="a tooltip" style="color:red">
+  <h1>Foo</h1>
+  <p>foo bar baz </p>
+</div>
 ```
 
 ### IDs
@@ -162,8 +178,8 @@ Add `#` after tag name to add an ID:
 
 Produces:
 
-```html
-&lt;nav id="header">Menu&lt;/nav>
+```
+<nav id="header">Menu</nav>
 ```
 
 ### Classes
@@ -176,8 +192,8 @@ Add `.` after tag name to add a class:
 
 Produces:
 
-```html
-&lt;h1 class="text-blue">Title&lt;/h1>
+```
+<h1 class="text-blue">Title</h1>
 ```
 
 If you want a class name that contains a space, you will need to use use the
@@ -189,8 +205,8 @@ syntax of a generic attribute:
 
 Produces:
 
-```html
-&lt;div class="logo inverse">&lt;/div>
+```
+<div class="logo inverse"></div>
 ```
 
 ### Images
@@ -203,8 +219,8 @@ Add `@` after the tag name to link your source:
 
 Produces:
 
-```html
-&lt;img src="example.png"/>
+```
+<img src="example.png"/>
 ```
 
 To add attributes to the image, like size specifications, add the desired
@@ -225,8 +241,8 @@ Add `/` after tag name to start an `href`.
 
 Produces:
 
-```html
-&lt;a href="urbit.org">A link to Urbit.org&lt;/a>
+```
+<a href="urbit.org">A link to Urbit.org</a>
 ```
 
 ## Interpolation
@@ -242,8 +258,8 @@ usual manner. For example:
 
 Produces:
 
-```html
-&lt;p>foo ~2000.1.1 baz&lt;/p>
+```
+<p>foo ~2000.1.1 baz</p>
 ```
 
 Likewise:
@@ -259,9 +275,11 @@ Likewise:
 
 Produces:
 
-```html
-&lt;article> &lt;b>33138&lt;/b> bananas &lt;p>~zod ~2022.2.21..09.54.21..5b63
-0x9827.99c7.06f4.8ef9 &lt;/p> &lt;/article>
+```
+<article>
+  <b>33138</b> bananas
+  <p>~zod ~2022.2.21..09.54.21..5b63 0x9827.99c7.06f4.8ef9</p>
+</article>
 ```
 
 ## A note on CSS
@@ -391,12 +409,12 @@ tall-form hoon logic in another Sail element. For example:
 
 Produces one of these depending on the value of `number`:
 
-```html
-&lt;p>&lt;b>2 &lt;/b>is an &lt;b>even &lt;/b>number.&lt;/p>
+```
+<p><b>2 </b>is an <b>even </b>number.</p>
 ```
 
-```html
-&lt;p>&lt;b>12345 &lt;/b>is an &lt;b>odd &lt;/b>number.&lt;/p>
+```
+<p><b>12345 </b>is an <b>odd </b>number.</p>
 ```
 
 ### `;/` Micfas
@@ -440,10 +458,12 @@ elements inside another Sail element. For example:
 
 Produces:
 
-```html
-&lt;p> &lt;sub>1&lt;/sub>&lt;sup>2&lt;/sup>&lt;sub>3&lt;/sub>
-&lt;sup>4&lt;/sup>&lt;sub>5&lt;/sub>&lt;sup>6&lt;/sup>
-&lt;sub>7&lt;/sub>&lt;sup>8&lt;/sup>&lt;sub>9&lt;/sub> &lt;/p>
+```
+<p>
+  <sub>1</sub><sup>2</sup><sub>3</sub>
+  <sup>4</sup><sub>5</sub><sup>6</sup>
+  <sub>7</sub><sup>8</sup><sub>9</sub>
+</p>
 ```
 
 ### `;=` Mictis
@@ -466,7 +486,10 @@ For example:
 
 Produces:
 
-```html
-&lt;main> &lt;p>This is the first node.&lt;/p> &lt;p>This is the second.&lt;/p>
-&lt;p>Here is the last one.&lt;/p> &lt;/main>
+```
+<main>
+  <p>This is the first node.</p>
+  <p>This is the second.</p>
+  <p>Here is the last one.</p>
+</main>
 ```
