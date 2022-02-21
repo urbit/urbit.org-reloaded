@@ -392,11 +392,11 @@ tall-form hoon logic in another Sail element. For example:
 Produces one of these depending on the value of `number`:
 
 ```html
-&lt;p> &lt;b>2 &lt;/b>is an &lt;b>even &lt;/b>number. &lt;/p>
+&lt;p>&lt;b>2 &lt;/b>is an &lt;b>even &lt;/b>number.&lt;/p>
 ```
 
 ```html
-&lt;p> &lt;b>12345 &lt;/b>is an &lt;b>odd &lt;/b>number. &lt;/p>
+&lt;p>&lt;b>12345 &lt;/b>is an &lt;b>odd &lt;/b>number.&lt;/p>
 ```
 
 ### `;/` Micfas
