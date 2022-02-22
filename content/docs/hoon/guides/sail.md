@@ -5,7 +5,10 @@ template = "doc.html"
 +++
 
 Sail is a domain-specific language for composing HTML (and XML) structures in
-Hoon. Front-ends for Urbit apps are often created and uploaded separately to the
+Hoon. Like everything else in Hoon, a Sail document is a noun, just one produced
+by a specialized markup language within Hoon.
+
+Front-ends for Urbit apps are often created and uploaded separately to the
 rest of the code in the desk. Sail provides an alternative approach, where
 front-ends can be composed directly inside agents.
 
