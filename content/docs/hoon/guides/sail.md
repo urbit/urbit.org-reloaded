@@ -430,3 +430,14 @@ For example:
   &#x26;&#x6C;&#x74;&#x3B;p>Third node.&#x26;&#x6C;&#x74;&#x3B;/p>
 &#x26;&#x6C;&#x74;&#x3B;/main>
 </pre></td></tr></tbody></table>
+
+## Good examples
+
+Here's a couple of agents that make use of Sail, which you can use as a
+reference:
+
+- [Pals by ~palfun-foslup][pals]
+- [Gora by ~rabsef-bicrym][gora]
+
+[pals]: https://github.com/Fang-/suite/blob/master/app/pals/webui/index.hoon
+[gora]: https://github.com/dalten-collective/gora/blob/master/sail/app/gora/goraui/index.hoon
