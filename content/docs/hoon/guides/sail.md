@@ -59,8 +59,8 @@ It’s easy to see how Sail can directly translate to HTML:
 
 In Sail, tag heads are written with the tag name prepended by `;`. Unlike in
 HTML, there are different ways of closing tags, depending on the needs of the
-tag. One of the nice things about Hoon is that you don’t have to be constantly
-closing expressions; Sail inherits this convenience.
+tag. One of the nice things about Hoon is that you don’t have to constantly
+close expressions; Sail inherits this convenience.
 
 ### Empty
 
