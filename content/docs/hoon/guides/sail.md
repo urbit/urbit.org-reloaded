@@ -315,16 +315,47 @@ elements, converting characters such as `>` to HTML entities. For example:
 
 ### Marks
 
-The mark for a raw `$manx` is a `%hymn`. This mark is included in the `%base`
-desk. The mark for a rendered HTML cord is `%html`. The `%hymn` mark includes
-conversion methods to both `%html` and `%mime`. The `%html` mark includes
-conversion methods to `%mime` and `%hymn`.
+There are a few different HTML and XML related marks, so it can be a bit
+confusing. We'll look at the ones you're most likely to use.
 
-If you want to produce an HTML document through Eyre's scry interface, for
-example, you can either produce a `$manx` with a `%hymn` mark and let Eyre
-convert it to `%html`, or else you can call `++en-xml:html` and then `++crip` on
-the product of your Sail expressions and produce a cord with an `%html` mark
-directly.
+#### `%html`
+
+- Type: `@t`
+
+This mark is used for HTML that has been printed as text in a cord. You may wish
+to return this mark when serving pages to the web. To do so, you must run the
+`$manx` produced by your Sail expressions through `++en-xml:html`, and then run
+the resulting `tape` through `++crip`.
+
+#### `%hymn`
+
+- Type: `$manx`
+
+The `%hymn` mark is intended to be used for complete HTML documents - having an
+`&lt;html>` root element, `&lt;head>`, `&lt;body>`, etc. This isn't enforced on
+the type level but it is assumed in certain mark conversion pathways. Rather
+than calling `++en-xml:html` on the `$manx` produced by your Sail expressions
+and returning an `%html` mark, you may wish to return the `$manx` directly as a
+`%hymn` and let Eyre handle converting it to `%html` before giving it to web
+clients.
+
+#### `%elem`
+
+- Type: `$manx`
+
+The type of the `%elem` mark is a `$manx`, just like a `%hymn`. While `%hymn`s
+are intended for complete HTML documents, `%elem`s are intended for more general
+XML structures. You may wish to use an `%elem` mark if you're producing smaller
+fragments of XML or HTML rather than whole documents. Like a `%hymn`, Eyre can
+automatically convert it to `%html` and provide it to web clients.
+
+#### Summary
+
+In general, if you're going to be composing web pages and serving them to web
+clients, running the result of your Sail through `++en-xml:html`, `++crip`ping
+it and producing `%html` is the most straight-forward approach. If you might
+want to pass around a `$manx` to other agents or ships which may wish to
+manipulate it futher, a `%hymn` or `%elem` is better.
 
 ## Sail Runes
 
