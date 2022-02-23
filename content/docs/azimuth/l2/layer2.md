@@ -21,8 +21,9 @@ rationale and functionality of layer 2, please see this [blog
 post](/blog/rollups). For more information on how Azimuth works more generally,
 including interactions with Bridge and Ethereum, see the page on [Azimuth data flow](/docs/azimuth/flow).
 
-This page is also not where to find instruction on how to run your own "aggregator"/"roller".
-Documentation for this process is forthcoming. However, this page does contain
+This page is also not where to find instruction on how to run your own
+"aggregator"/"roller". Documentation for this process is found
+[here](/docs/azimuth/l2/roller-tutorial). However, this page does contain
 essential background information for anybody in this category.
 
 ## Summary
