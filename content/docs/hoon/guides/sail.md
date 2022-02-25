@@ -307,9 +307,6 @@ A `$manx` can be rendered as HTML in a tape with the `++en-xml:html` function in
 '<p>foobar</p>'
 ```
 
-You may wish to do this in your agent directly, but you can also leave mark
-conversion to Eyre.
-
 ### Sanitization
 
 The `++en-xml:html` function will sanitize the contents of both attributes and
@@ -342,11 +339,9 @@ the resulting `tape` through `++crip`.
 
 The `%hymn` mark is intended to be used for complete HTML documents - having an
 `&lt;html>` root element, `&lt;head>`, `&lt;body>`, etc. This isn't enforced on
-the type level but it is assumed in certain mark conversion pathways. Rather
-than calling `++en-xml:html` on the `$manx` produced by your Sail expressions
-and returning an `%html` mark, you may wish to return the `$manx` directly as a
-`%hymn` and let Eyre handle converting it to `%html` before giving it to web
-clients.
+the type level but it is assumed in certain mark conversion pathways. Eyre can
+automatically convert a `%hymn` to printed `%html` if it was requested through
+Eyre's scry interface.
 
 #### `%elem`
 
@@ -356,7 +351,7 @@ The type of the `%elem` mark is a `$manx`, just like a `%hymn`. While `%hymn`s
 are intended for complete HTML documents, `%elem`s are intended for more general
 XML structures. You may wish to use an `%elem` mark if you're producing smaller
 fragments of XML or HTML rather than whole documents. Like a `%hymn`, Eyre can
-automatically convert it to `%html` and provide it to web clients.
+automatically convert it to `%html` if requested through its scry interface.
 
 #### Summary
 
