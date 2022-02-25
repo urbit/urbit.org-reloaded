@@ -261,7 +261,7 @@ And then your style tag might look like:
 ;style: {style}
 ```
 
-A cord is used rather than a tape so you don't need to escape double-quotes. The
+A cord is used rather than a tape so you don't need to escape braces. The
 [ketsig](/docs/hoon/reference/rune/ket#-ketsig) (`^~`) rune means `++trip` will
 be run at compile time rather than call time.
 
