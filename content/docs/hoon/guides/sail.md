@@ -78,8 +78,11 @@ tag name, then insert your plain text following a space. Example:
 ### Nested
 
 To nest tags, simply create a new line. Nested tags need to be closed with `==`,
-because they expect a list of sub-tags. If we nest lines of plain text with no
-tag, the text will be wrapped in a `&lt;p>` tag.
+because they expect a list of sub-tags.
+
+If we nest lines of plain text with no tag, the text will be wrapped in a
+`&lt;p>` tag. Additionally, any text with atom auras or `++arm:syntax` in such
+plain text lines will be wrapped in `&lt;code>` tags.
 
 Example:
 
