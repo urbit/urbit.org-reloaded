@@ -408,12 +408,11 @@ In order to nest it inside another Sail element, it must be preceeded with a
 
 ```hoon
 ;p
-  ;+  ;/  "foobar"
+  ;+  ;/  ?:  =(0 (mod eny 2))
+            "even"
+          "odd"
 ==
 ```
-
-The argument for Micfas needn't directly be a tape, it may also be a hoon
-expression that produces a tape.
 
 ### `;*` Mictar
 
