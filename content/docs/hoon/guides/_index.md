@@ -15,3 +15,5 @@ insert_anchor_links = "right"
 ## [Strings](/docs/hoon/guides/strings)
 
 ## [JSON](/docs/hoon/guides/json-guide)
+
+## [Sail](/docs/hoon/guides/sail)
