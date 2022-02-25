@@ -167,12 +167,18 @@ Add `.` after tag name to add a class:
 | ---------------------- | ---------------------------------------- |
 | `;h1.text-blue: Title` | `&lt;h1 class="text-blue">Title&lt;/h1>` |
 
-If you want a class name that contains a space, you will need to use use the
-syntax of a generic attribute:
+For class values containing spaces, you can add additional `.`s like so:
 
-| Sail                          | HTML                                     |
-| ----------------------------- | ---------------------------------------- |
-| `;div(class "logo inverse");` | `&lt;div class="logo inverse">&lt;/div>` |
+| Sail                | HTML                                    |
+| ------------------- | --------------------------------------- |
+| `;div.foo.bar.baz;` | `&lt;div class="foo bar baz">&lt;/div>` |
+
+Otherwise, if your class value does not conform to the allowed `@tas`
+characters, you must use the generic attribute syntax:
+
+| Sail                     | HTML                                |
+| ------------------------ | ----------------------------------- |
+| `;div(class "!!! !!!");` | `&lt;div class="!!! !!!">&lt;/div>` |
 
 ### Images
 
