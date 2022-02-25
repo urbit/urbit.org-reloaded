@@ -393,27 +393,6 @@ Produces one of these depending on the value of `number`:
 <p><b>12345 </b>is an <b>odd </b>number.</p>
 ```
 
-### `;/` Micfas
-
-The [micfas rune](/docs/hoon/reference/rune/mic#-micfas) turns an ordinary tape
-into a `$manx`. For example:
-
-```
-> %-  en-xml:html  ;/  "foobar"
-"foobar"
-```
-
-In order to nest it inside another Sail element, it must be preceeded with a
-`;+` rune or similar, it cannot be used directly. For example:
-
-```hoon
-;p
-  ;+  ;/  ?:  =(0 (mod eny 2))
-            "even"
-          "odd"
-==
-```
-
 ### `;*` Mictar
 
 The [mictar rune](/docs/hoon/reference/rune/mic#-mictar) makes a `$marl` (a list
@@ -464,6 +443,27 @@ For example:
   &#x26;&#x6C;&#x74;&#x3B;p>Third node.&#x26;&#x6C;&#x74;&#x3B;/p>
 &#x26;&#x6C;&#x74;&#x3B;/main>
 </pre></td></tr></tbody></table>
+
+### `;/` Micfas
+
+The [micfas rune](/docs/hoon/reference/rune/mic#-micfas) turns an ordinary tape
+into a `$manx`. For example:
+
+```
+> %-  en-xml:html  ;/  "foobar"
+"foobar"
+```
+
+In order to nest it inside another Sail element, it must be preceeded with a
+`;+` rune or similar, it cannot be used directly. For example:
+
+```hoon
+;p
+  ;+  ;/  ?:  =(0 (mod eny 2))
+            "even"
+          "odd"
+==
+```
 
 ## Good examples
 
