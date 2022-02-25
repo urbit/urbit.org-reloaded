@@ -354,7 +354,7 @@ Regular: **3-fixed**.
 =+(^-(p q) r)
 ```
 
-### Desugaring
+##### Desugaring
 
 ```hoon
 ?@  p
