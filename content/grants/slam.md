@@ -29,9 +29,7 @@ I'd like to create a similar asynchronous social action game on Urbit: StreetSma
 
 The obvious value that Slam will bring to the network is that it's fun. But there's a deeper motivation here. An Urbitier reason that's a little harder to articulate. Luckily for me, this recent post from ~winter-paches captures it perfectly:
 
-```
-Consider paldev's suite of tiny apps: %pals, %face, %zone, &c. Throw in Dalten Collective's %gora. Taken individually they look throwaway and useless. However, their eventual personal use is emergent as different people discover ways to use and combine them in interesting ways. Eventually those patterns will become socialized and copied, but in advance of that there will be wildly varied experimentation which may look like chaos. Imagine if facebook were a totally open set of components/api in which anyone could individually combine, configure and tailor them how they saw fit. You and i might both have "facebook" but it might be totally unrecognizable as such.
-```
+> Consider paldev's suite of tiny apps: %pals, %face, %zone, &c. Throw in Dalten Collective's %gora. Taken individually they look throwaway and useless. However, their eventual personal use is emergent as different people discover ways to use and combine them in interesting ways. Eventually those patterns will become socialized and copied, but in advance of that there will be wildly varied experimentation which may look like chaos. Imagine if facebook were a totally open set of components/api in which anyone could individually combine, configure and tailor them how they saw fit. You and i might both have "facebook" but it might be totally unrecognizable as such.
 
 Slam's integration with pals and gora is something that can only happen on Urbit, and I think that pursuing projects which explore these types of combinations will give us a lot of intel about how we can best achieve a future where small-scale custom software is common.
 
