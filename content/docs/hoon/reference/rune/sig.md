@@ -38,11 +38,11 @@ Hints are all conventions at the interpreter level.
 Running the compiler:
 
 ```
-~zod:dojo> (make '~>(%a 42)')
-[%10 p=97 q=[%1 p=42]]
+> (make '~>(%a 42)')
+[%11 p=97 q=[%1 p=42]]
 
-~zod:dojo> (make '~>(%a.+(2) 42)')
-[%10 p=[p=97 q=[%4 p=[%1 p=2]]] q=[%1 p=42]]
+> (make '~>(%a.+(2) 42)')
+[%11 p=[p=97 q=[%4 p=[%1 p=2]]] q=[%1 p=42]]
 ```
 
 ### `~|` "sigbar"
@@ -65,14 +65,14 @@ Regular: **2-fixed**.
 ##### Examples
 
 ```
-~zod:dojo> ~|('sample error message' !!)
+> ~|('sample error message' !!)
 'sample error message'
-ford: build failed
+dojo: hoon expression failed
 
-~zod:dojo> ~|  'sample error message'
-           !!
+> ~|  'sample error message'
+  !!
 'sample error message'
-ford: build failed
+dojo: hoon expression failed
 ```
 
 ### `~$` "sigbuc"
@@ -117,14 +117,14 @@ Shows `p` in stacktrace if `q` crashes.
 ##### Examples
 
 ```
-~zod:dojo> ~_([%leaf "sample error message"] !!)
-"sample error message"
-ford: build failed
+> ~_([%leaf "sample error message"] !!)
+sample error message
+dojo: hoon expression failed
 
-~zod:dojo> ~_  [%leaf "sample error message"]
-           !!
-"sample error message"
-ford: build failed
+> ~_  [%leaf "sample error message"]
+  !!
+sample error message
+dojo: hoon expression failed
 ```
 
 ### `~%` "sigcen"
@@ -241,10 +241,10 @@ rather about its product.
 ##### Examples
 
 ```
-~zod:dojo> (make '~<(%a 42)')
-[%7 p=[%1 p=42] q=[%10 p=97 q=[%0 p=1]]]
-~zod:dojo> (make '~<(%a.+(.) 42)')
-[%7 p=[%1 p=42] q=[%10 p=[p=97 q=[%4 p=[%0 p=1]]] q=[%0 p=1]]]
+> (make '~<(%a 42)')
+[%7 p=[%1 p=42] q=[%11 p=97 q=[%0 p=1]]]
+> (make '~<(%a.+(.) 42)')
+[%7 p=[%1 p=42] q=[%11 p=[p=97 q=[%4 p=[%0 p=1]]] q=[%0 p=1]]]
 ```
 
 ### `~+` "siglus"
