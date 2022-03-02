@@ -125,6 +125,11 @@
   @apply text-green-400;
 }
 
+/* Links in list item tags should be green */
+.markdown li a {
+  @apply text-green-400 font-semibold;
+}
+
 .markdown blockquote {
   @apply border-l-4 border-wall-300 pl-6 italic;
 }
