@@ -22,7 +22,7 @@ The goal will be to build out the email capabilities of the studio mailer app. C
 
 ## Prerequisites
 
-Some hoon knowledge would be a plus, but we're happy to take someone from the point of zero knowledge to being able to work on this stuff. JS/React skills would be valuable for the stretch goal of building out the frontend.
+Some hoon knowledge would be a plus, but we're happy to take someone from the point of zero knowledge to being able to work on this stuff. JS/React skills would be valuable for the frontend part.
 
 ## Time Estimates
 
