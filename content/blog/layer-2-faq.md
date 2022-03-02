@@ -17,20 +17,20 @@ shout online.
 
 #### Planet Booting, Buying, Custody
 
-1. [Do I need ETH to boot my planet?](#q-do-i-need-eth-to-boot-my-planet)
-2. [Do I have full custody of my L2 planet?](#q-is-there-anything-i-need-to-do-to-ensure-full-custody-of-my-planet)
-3. [Where can I buy a planet?](#q-are-there-any-platforms-where-i-can-buy-a-planet-for-btc-or-usd)
-4. [How do I get a hosted planet?](#q-how-do-i-get-a-cloud-hosted-planet)
+1. [Do I need ETH to boot my planet?](#1-do-i-need-eth-to-boot-my-planet)
+2. [Do I have full custody of my L2 planet?](#2-is-there-anything-i-need-to-do-to-ensure-full-custody-of-my-planet)
+3. [Where can I buy a planet?](#3-are-there-any-platforms-where-i-can-buy-a-planet-for-btc-or-usd)
+4. [How do I get a hosted planet?](#4-how-do-i-get-a-cloud-hosted-planet)
 
 #### Layer 2 Architecture & Migration
 
-5. [Why did you decide to build your own Layer 2 rollup?](#q-there-are-plenty-of-organizations-dedicated-to-customizable-rollup-solutions-why-did-you-decide-to-build-your-own)
-6. [Should I migrate my L1 planet to L2?](#q-if-i-currently-have-an-l1-planet-are-there-any-advantages-to-migrating)
-7. [Where did the old Bridge go? Can I still use it?](#q-is-it-possible-to-use-the-old-bridge-for-l1-operations)
-8. [Why is the cost reduction so significant?](#q-why-is-the-cost-reduction-so-significant)
-9. [What exactly is the mechanism for the “naive” consensus?](#q-what-exactly-is-the-mechanism-for-the-naive-consensus)
+5. [Why did you decide to build your own Layer 2 rollup?](#5-there-are-plenty-of-organizations-dedicated-to-customizable-rollup-solutions-why-did-you-decide-to-build-your-own)
+6. [Should I migrate my L1 planet to L2?](#6-if-i-currently-have-an-l1-planet-are-there-any-advantages-to-migrating)
+7. [Where did the old Bridge go? Can I still use it?](#7-is-it-possible-to-use-the-old-bridge-for-l1-operations)
+8. [Why is the cost reduction so significant?](#8-why-is-the-cost-reduction-so-significant)
+9. [What exactly is the mechanism for the “naive” consensus?](#9-what-exactly-is-the-mechanism-for-the-naive-consensus)
 
-#### 1. Q: Do I need ETH to boot my planet?
+#### 1: Do I need ETH to boot my planet?
 
 A: If you were invited to claim a L2 planet, you **do not** need ETH to claim
 that Urbit ID. Anyone can get on Urbit without ETH or a crypto wallet via L2.
@@ -50,13 +50,13 @@ For those with L1 planets, you can avoid future transaction fees by migrating
 your L1 planet to L2. Read the migration instructions
 [here](https://urbit.org/getting-started/layer-2-for-planets).
 
-#### 2. Q: Is there anything I need to do to ensure full custody of my planet?
+#### 2: Is there anything I need to do to ensure full custody of my planet?
 
 A: If you were sent a direct link to claim an L2 planet (see above image), it’s
 in your full custody by design. Bridge generates your master ticket, which you
 downloaded during the claiming process.
 
-#### 3. Q: Are there any platforms where I can buy a planet for BTC or USD?
+#### 3: Are there any platforms where I can buy a planet for BTC or USD?
 
 A: There are a few ways to procure a planet, including some platforms that offer
 BTC and USD payment options.
@@ -87,7 +87,7 @@ planet’s keyfile. As an alternative, [Metamask](https://metamask.io) is an
 easy-to-use Ethereum wallet with a browser extension that integrates easily with
 Bridge.
 
-#### 4. Q: How do I get a cloud-hosted planet?
+#### 4: How do I get a cloud-hosted planet?
 
 A: There are a number of ways to host a planet in the cloud. Your options:
 
@@ -106,7 +106,7 @@ A: There are a number of ways to host a planet in the cloud. Your options:
   Store](https://www.escapepod.store), [Nodestead](https://www.nodestead.dev), and
   [ThirdEarth](https://third.earth/en/).
 
-#### 5. Q: There are plenty of organizations dedicated to customizable rollup solutions. Why did you decide to build your own?
+#### 5: There are plenty of organizations dedicated to customizable rollup solutions. Why did you decide to build your own?
 
 A: Simply put, we designed and engineered our own rollup because we can’t depend
 on the success or longevity of another organization. As they currently exist,
@@ -115,7 +115,7 @@ integrity of our technical principles. We also can’t restrict the aggregators 
 a waitlist, another issue which might eventually be resolved, but one that we
 can’t count on to be resolved soon.
 
-#### 6. Q: If I currently have an L1 planet, are there any advantages to migrating?
+#### 6: If I currently have an L1 planet, are there any advantages to migrating?
 
 A: One of the most significant advantages to migrating is the reduced cost of
 Azimuth-event related transactions. On L2, you can change sponsors or reset your
@@ -123,7 +123,7 @@ network keys for free with our roller. An important note: migration is currently
 one-way. If you want to hold onto your L1 planet as a novelty, migration isn't
 recommended.
 
-#### 7. Q: Is it possible to use the old Bridge for L1 operations?
+#### 7: Is it possible to use the old Bridge for L1 operations?
 
 A: The old version of Bridge will remain live, but unmaintained and eventually
 decommissioned. You can access it at
@@ -131,7 +131,7 @@ decommissioned. You can access it at
 something you can only do with the older version of Bridge,
 [let us know on Github](https://github.com/urbit/bridge/issues/new?assignees=&labels=bridge&template=bridge-bug-report.md&title=).
 
-#### 8. Q: Why is the cost reduction so significant?
+#### 8: Why is the cost reduction so significant?
 
 A: On L1, every operation is an Ethereum transaction, with logic and state, etc.
 On L2 transactions, these operations are reduced and simplified into a
@@ -139,7 +139,7 @@ no-logic-involved Ethereum transaction. This is what makes L2 transactions
 cost-efficient: multiple transactions happen simultaneously to share the cost of
 just one L1 transaction.
 
-#### 9. Q: What exactly is the mechanism for the “naive” consensus?
+#### 9: What exactly is the mechanism for the “naive” consensus?
 
 A: Our engineering team has written extensively about the technical features of
 our L2 rollup. To learn about its intricacies, we encourage you to read
