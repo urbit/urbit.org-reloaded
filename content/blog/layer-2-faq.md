@@ -1,7 +1,7 @@
 +++
 title = "Layer 2 FAQ"
 date = "2022-03-01"
-description = "Wondering if you need ETH to boot your planet? Curious about the cost reduction? Answers to all your lingering L2 questions ahead."
+description = "Answers to all your lingering L2 questions ahead."
 [extra]
 image = "/images/l2-faq-artwork.jpg"
 +++
@@ -13,7 +13,7 @@ selection of the most frequently asked questions and our responses.
 If you're still stumped, head to `~bitbet-bolbel/urbit-community` or give us a
 shout online.
 
-### Index:
+### Questions:
 
 #### Planet Booting, Buying, Custody
 
