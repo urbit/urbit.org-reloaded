@@ -18,7 +18,7 @@ work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A01
 
 ## Project Description
 
-The goal will be to build out the email capabilities of the studio mailer app. Currently it allows sending one-off emails and subscription based emails that are tied to a blog. We want to extend it to include transactional and mailing list based email campaigns, email and site analytics. A stretch goal would be to build out a frontend for managing these things in the studio app.
+The goal will be to build out the email capabilities of the studio mailer app. Currently it allows sending one-off emails and subscription based emails that are tied to a blog. We want to extend it to include transactional and mailing list based email campaigns, email and site analytics. We also want to extend the frontend capabilities to include managing these things in the studio app.
 
 ## Prerequisites
 
