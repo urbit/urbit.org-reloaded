@@ -1,7 +1,7 @@
 +++
 title = "Layer 2 FAQ"
 date = "2022-03-01"
-description = "Answers to all your lingering L2 questions ahead."
+description = "Answers to all your lingering L2 questions."
 [extra]
 image = "/images/l2-faq-artwork.jpg"
 +++
