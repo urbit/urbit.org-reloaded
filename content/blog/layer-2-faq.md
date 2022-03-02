@@ -30,9 +30,9 @@ shout online.
 8. [Why is the cost reduction so significant?](#8-why-is-the-cost-reduction-so-significant)
 9. [What exactly is the mechanism for the “naive” consensus?](#9-what-exactly-is-the-mechanism-for-the-naive-consensus)
 
-#### 1: Do I need ETH to boot my planet?
+#### 1. Do I need ETH to boot my planet?
 
-A: If you were invited to claim a L2 planet, you **do not** need ETH to claim
+If you were invited to claim a L2 planet, you **do not** need ETH to claim
 that Urbit ID. Anyone can get on Urbit without ETH or a crypto wallet via L2.
 Inviting your mom to Urbit just got a lot easier.
 
@@ -50,15 +50,15 @@ For those with L1 planets, you can avoid future transaction fees by migrating
 your L1 planet to L2. Read the migration instructions
 [here](https://urbit.org/getting-started/layer-2-for-planets).
 
-#### 2: Is there anything I need to do to ensure full custody of my planet?
+#### 2. Is there anything I need to do to ensure full custody of my planet?
 
-A: If you were sent a direct link to claim an L2 planet (see above image), it’s
+If you were sent a direct link to claim an L2 planet (see above image), it’s
 in your full custody by design. Bridge generates your master ticket, which you
 downloaded during the claiming process.
 
-#### 3: Are there any platforms where I can buy a planet for BTC or USD?
+#### 3. Are there any platforms where I can buy a planet for BTC or USD?
 
-A: There are a few ways to procure a planet, including some platforms that offer
+There are a few ways to procure a planet, including some platforms that offer
 BTC and USD payment options.
 
 To purchase a L2 planet, we direct you to:
@@ -87,9 +87,9 @@ planet’s keyfile. As an alternative, [Metamask](https://metamask.io) is an
 easy-to-use Ethereum wallet with a browser extension that integrates easily with
 Bridge.
 
-#### 4: How do I get a cloud-hosted planet?
+#### 4. How do I get a cloud-hosted planet?
 
-A: There are a number of ways to host a planet in the cloud. Your options:
+There are a number of ways to host a planet in the cloud. Your options:
 
 - DIY:<br>
   The most cost-effective method is [setting it up
@@ -106,42 +106,42 @@ A: There are a number of ways to host a planet in the cloud. Your options:
   Store](https://www.escapepod.store), [Nodestead](https://www.nodestead.dev), and
   [ThirdEarth](https://third.earth/en/).
 
-#### 5: There are plenty of organizations dedicated to customizable rollup solutions. Why did you decide to build your own?
+#### 5. There are plenty of organizations dedicated to customizable rollup solutions. Why did you decide to build your own?
 
-A: Simply put, we designed and engineered our own rollup because we can’t depend
+Simply put, we designed and engineered our own rollup because we can’t depend
 on the success or longevity of another organization. As they currently exist,
 outsourced rollups are too immature and compromised in ways that undermine the
 integrity of our technical principles. We also can’t restrict the aggregators to
 a waitlist, another issue which might eventually be resolved, but one that we
 can’t count on to be resolved soon.
 
-#### 6: If I currently have an L1 planet, are there any advantages to migrating?
+#### 6. If I currently have an L1 planet, are there any advantages to migrating?
 
-A: One of the most significant advantages to migrating is the reduced cost of
+One of the most significant advantages to migrating is the reduced cost of
 Azimuth-event related transactions. On L2, you can change sponsors or reset your
 network keys for free with our roller. An important note: migration is currently
 one-way. If you want to hold onto your L1 planet as a novelty, migration isn't
 recommended.
 
-#### 7: Is it possible to use the old Bridge for L1 operations?
+#### 7. Is it possible to use the old Bridge for L1 operations?
 
-A: The old version of Bridge will remain live, but unmaintained and eventually
+The old version of Bridge will remain live, but unmaintained and eventually
 decommissioned. You can access it at
 [bridge-sunset.urbit.org](https://bridge-sunset.urbit.org). If you run into
 something you can only do with the older version of Bridge,
 [let us know on Github](https://github.com/urbit/bridge/issues/new?assignees=&labels=bridge&template=bridge-bug-report.md&title=).
 
-#### 8: Why is the cost reduction so significant?
+#### 8. Why is the cost reduction so significant?
 
-A: On L1, every operation is an Ethereum transaction, with logic and state, etc.
+On L1, every operation is an Ethereum transaction, with logic and state, etc.
 On L2 transactions, these operations are reduced and simplified into a
 no-logic-involved Ethereum transaction. This is what makes L2 transactions
 cost-efficient: multiple transactions happen simultaneously to share the cost of
 just one L1 transaction.
 
-#### 9: What exactly is the mechanism for the “naive” consensus?
+#### 9. What exactly is the mechanism for the “naive” consensus?
 
-A: Our engineering team has written extensively about the technical features of
+Our engineering team has written extensively about the technical features of
 our L2 rollup. To learn about its intricacies, we encourage you to read
 `~datnut-pollen`’s comprehensive
 [overview](https://urbit.org/blog/rollups#technical) and `~wicdev-wisryt`’s
