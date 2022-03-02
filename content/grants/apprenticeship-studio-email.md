@@ -26,7 +26,7 @@ Some hoon knowledge would be a plus, but we're happy to take someone from the po
 
 ## Time Estimates
 
-At ~10 hours per week I estimate it would take about a month.
+At ~10 hours per week I estimate it would take about 2 months.
 
 ## Deliverables
 
