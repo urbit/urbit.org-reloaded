@@ -98,4 +98,4 @@ If you’re somewhat technical and you’d like to help and contribute, [install
 
 If you’re interested in homesteading a community when OS 1 comes out, [apply here](/community/community-grants).
 
-Or if you’re curious to try Hoon School, [let us know](/community/hoonschool).
+Or if you’re curious to try Hoon School, [let us know](https://urbit.org/docs/hoon/hoon-school/intro).
