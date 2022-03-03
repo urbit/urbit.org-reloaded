@@ -18,6 +18,8 @@ work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B01
 
 Books is an application for managing your crypto wallets, transactions, and counterparties. It allows you to add your wallet and other people’s, track balances and transactions, and add private annotations to all of the above.
 
+![books-mockup](https://storage.googleapis.com/media.urbit.org/grants/books-mockup.png)
+
 ## Rationale
 
 If you spend much time interacting with crypto, you probably have a few wallets: a few hot wallets in metamask, a ledger or two, perhaps an Urbit ID on a master ticket, and that’s just Ethereum.
@@ -74,6 +76,8 @@ As an user, I can:
 A first version of this could probably just use the etherscan API, but it would be cleaner to pull from the chain directly. You could probably do much of this using `eth-watcher`.
 
 This application should be built as a Landscape application with its own frontend and Gall agents. Use of graph-store is not recommended.
+
+UI mockups will be made available to the worker, like the one shown above.
 
 ## Future Work
 
