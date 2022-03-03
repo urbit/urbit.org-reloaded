@@ -2,7 +2,7 @@
 title = "Port Maintenance"
 date = "2022-03-02"
 [taxonomies]
-grant_type = ["Proposal"]
+grant_type = ["Bounty"]
 grant_category = ["App Dev"]
 [extra]
 image = ""
