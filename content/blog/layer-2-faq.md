@@ -150,6 +150,6 @@ original
 [proposal](https://groups.google.com/a/urbit.org/g/dev/c/p6rP_WsxLS0/m/hQBX0modAwAJ?pli=1)
 on the Urbit developer mailing list.
 
-### 10. When I spawn L2 planets via Metamask, I'm prompted to sign every transaction, 100 in total. Do you have plans to remedy this?
+#### 10. When I spawn L2 planets via Metamask, I'm prompted to sign every transaction, 100 in total. Do you have plans to remedy this?
 
 We realize this UX headache and are taking active steps to devise a more efficient transaction scheme. The new method will reduce the number of manual signatures needed for each spawned L2 planet. At the time of this FAQ's publication, we haven't publicized the release timing for the improvement. A provisional solution: set the star's spawn proxy to a custodied L2 planet secured via Master ticket and log in to Bridge as that planet to spawn invites.
