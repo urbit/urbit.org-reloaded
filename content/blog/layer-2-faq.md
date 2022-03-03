@@ -135,7 +135,7 @@ something you can only do with the older version of Bridge,
 #### 8. Why is the cost reduction so significant?
 
 On L1, every operation is an Ethereum transaction, with logic and state, etc.
-On L2 transactions, these operations are reduced and simplified into a
+On L2, these operations are reduced and simplified into a
 no-logic-involved Ethereum transaction. This is what makes L2 transactions
 cost-efficient: multiple transactions happen simultaneously to share the cost of
 just one L1 transaction.
