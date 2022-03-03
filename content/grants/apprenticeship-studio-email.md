@@ -8,7 +8,7 @@ grant_category = [ "App Dev", "Other" ]
 
 [extra]
 image = ""
-description = ""
+description = "Build out email capabilities of ~tirrel's Studio app"
 reward = "$8000 in WSTR"
 mentor = "~novlud-padtyv"
 assignee = ""
