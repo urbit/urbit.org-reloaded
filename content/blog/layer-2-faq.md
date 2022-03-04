@@ -29,7 +29,7 @@ shout online.
 7. [Where did the old Bridge go? Can I still use it?](#7-is-it-possible-to-use-the-old-bridge-for-l1-operations)
 8. [Why is the cost reduction so significant?](#8-why-is-the-cost-reduction-so-significant)
 9. [What exactly is the mechanism for the “naive” consensus?](#9-what-exactly-is-the-mechanism-for-the-naive-consensus)
-10. [When I spawn L2 planets via Metamask, I'm prompted to sign every transaction, 100 in total. Do you have plans to remedy this?](#10-when-i-spawn-l2-planets-via-metamask-im-prompted-to-sign-every-transaction-do-you-have-plans-to-remedy-this)
+10. [When I spawn L2 planets via Metamask, I'm prompted to sign every transaction. Do you have plans to remedy this?](#10-when-i-spawn-l2-planets-via-metamask-im-prompted-to-sign-every-transaction-do-you-have-plans-to-remedy-this)
 
 #### 1. Do I need ETH to boot my planet?
 
@@ -53,7 +53,7 @@ your L1 planet to L2. Read the migration instructions
 
 #### 2. Is there anything I need to do to ensure full custody of my planet?
 
-If you were sent a direct link to claim an L2 planet (see above image), it’s
+If you were sent a direct link to claim an L2 planet (see above), it’s
 in your full custody by design. Bridge generates your master ticket, which you
 downloaded during the claiming process.
 
