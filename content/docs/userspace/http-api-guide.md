@@ -189,7 +189,7 @@ window.ship = "zod";
 `"zod"` will be replaced with the actual name of the ship in question. You can
 include this file like:
 
-```html
+```
 &lt;script src="/session.js">&lt;/script>
 ```
 
@@ -208,8 +208,8 @@ through its channel system.
 
 The `Urbit` object will generate a random channel ID that looks like
 `1646295453-e1bdfd`, and use a path of `/~/channel/1646295453-e1bdfd` for
-channel communications. Pokes and subscription requests will be sent to that
-channel. Responses and subscription updates will be sent out to you on that
+channel communications. Pokes will and subscription requests will be sent to
+that channel. Responses and subscription updates will be sent out to you on that
 channel too.
 
 Eyre sends out updates and responses on an [SSE] (Server Sent Event) stream for
@@ -274,14 +274,26 @@ question):
 Here's a simple example that will run `authenticate` for a fakezod when the
 _Connect_ button is pressed:
 
-```html
-&lt;html> &lt;head> &lt;script
-src="https://unpkg.com/@urbit/http-api">&lt;/script> &lt;/head> &lt;body>
-&lt;button id="start" type="button" onClick="connect()" >Connect&lt;/button>
-&lt;/body> &lt;script> async function connect() { window.api = await
-UrbitHttpApi.Urbit.authenticate({ ship: "zod", url: "localhost:8080", code:
-"lidlut-tabwed-pillex-ridrup", verbose: true }); document.body.innerHTML =
-"Connected!"; }; &lt;/script> &lt;/html>
+```
+&lt;html>
+  &lt;head>
+    &lt;script src="https://unpkg.com/@urbit/http-api">&lt;/script>
+  &lt;/head>
+  &lt;body>
+    &lt;button id="start" type="button" onClick="connect()" >Connect&lt;/button>
+  &lt;/body>
+  &lt;script>
+    async function connect() {
+      window.api = await UrbitHttpApi.Urbit.authenticate({
+          ship: "zod",
+          url: "localhost:8080",
+          code: "lidlut-tabwed-pillex-ridrup",
+          verbose: true
+      });
+      document.body.innerHTML = "Connected!";
+    };
+  &lt;/script>
+&lt;/html>
 ```
 
 `window.api` can then be used for further communications.
@@ -312,22 +324,45 @@ mark. The `json` argument just contains the message in a string. If for some
 reason the `hood` agent rejects the poke, "Poke failed!" will be displayed on
 the page.
 
-```html
-&lt;html> &lt;head> &lt;script
-src="https://unpkg.com/@urbit/http-api">&lt;/script> &lt;script
-src="/session.js">&lt;/script> &lt;/head> &lt;body> &lt;input id="msg"
-type="text" placeholder="Message for ship" /> &lt;button id="submit"
-type="button" onClick="doPoke()" >Submit&lt;/button> &lt;p id="err">&lt;/p>
-&lt;/body> &lt;script> document.getElementById("msg") .addEventListener("keyup",
-function(event) { if (event.keyCode === 13) {
-document.getElementById("submit").click(); } }) const api = new
-UrbitHttpApi.Urbit(""); api.ship = window.ship; function doPoke() { const msg =
-document.getElementById("msg").value; api.poke({ app: "hood", mark: "helm-hi",
-json: msg, onSuccess: success, onError: error }); } function success() {
-document.getElementById("msg").value = "";
-document.getElementById("err").innerHTML = ""; } function error() {
-document.getElementById("msg").value = "";
-document.getElementById("err").innerHTML = "Poke failed!"; } &lt;/script>
+```
+&lt;html>
+  &lt;head>
+    &lt;script src="https://unpkg.com/@urbit/http-api">&lt;/script>
+    &lt;script src="/session.js">&lt;/script>
+  &lt;/head>
+  &lt;body>
+    &lt;input id="msg" type="text" placeholder="Message for ship" />
+    &lt;button id="submit" type="button" onClick="doPoke()" >Submit&lt;/button>
+    &lt;p id="err">&lt;/p>
+  &lt;/body>
+  &lt;script>
+    document.getElementById("msg")
+      .addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+          document.getElementById("submit").click();
+        }
+      })
+    const api = new UrbitHttpApi.Urbit("");
+    api.ship = window.ship;
+    function doPoke() {
+      const msg = document.getElementById("msg").value;
+      api.poke({
+        app: "hood",
+        mark: "helm-hi",
+        json: msg,
+        onSuccess: success,
+        onError: error
+      });
+    }
+    function success() {
+      document.getElementById("msg").value = "";
+      document.getElementById("err").innerHTML = "";
+    }
+    function error() {
+      document.getElementById("msg").value = "";
+      document.getElementById("err").innerHTML = "Poke failed!";
+    }
+  &lt;/script>
 &lt;/html>
 ```
 
@@ -365,22 +400,47 @@ This example will, upon clicking the "Subscribe" button, subscribe to the
 update it receives. You can test it by doing something like posting a message in
 a chat. You can also unsubscribe by clicking the "Unsubscribe" button.
 
-```html
-&lt;html> &lt;head> &lt;script
-src="https://unpkg.com/@urbit/http-api">&lt;/script> &lt;script
-src="/session.js">&lt;/script> &lt;/head> &lt;body> &lt;button id="toggle"
-type="button" onClick="doSub()" >Subscribe&lt;/button> &lt;pre
-id="event">&lt;/pre> &lt;/body> &lt;script> const api = new
-UrbitHttpApi.Urbit(""); api.ship = window.ship; const toggle =
-document.getElementById("toggle"); const event =
-document.getElementById("event"); function doSub() { window.id = api.subscribe({
-app: "graph-store", path: "/updates", event: printEvent, quit: doSub, err:
-subFail }); toggle.innerHTML = "Unsubscribe"; toggle.onclick = doUnsub;
-event.innerHTML = "Awaiting event"; }; function doUnsub() {
-api.unsubscribe(window.id); toggle.innerHTML = "Subscribe"; toggle.onclick =
-doSub; event.innerHTML = "Subscription closed"; }; function printEvent(update) {
-event.innerHTML = JSON.stringify(update, null, 2); }; function subFail() {
-event.innerHTML = "Subscription failed!"; }; &lt;/script> &lt;/html>
+```
+&lt;html>
+  &lt;head>
+    &lt;script src="https://unpkg.com/@urbit/http-api">&lt;/script>
+    &lt;script src="/session.js">&lt;/script>
+  &lt;/head>
+  &lt;body>
+    &lt;button id="toggle" type="button" onClick="doSub()" >Subscribe&lt;/button>
+    &lt;pre id="event">&lt;/pre>
+  &lt;/body>
+  &lt;script>
+    const api = new UrbitHttpApi.Urbit("");
+    api.ship = window.ship;
+    const toggle = document.getElementById("toggle");
+    const event = document.getElementById("event");
+    function doSub() {
+      window.id = api.subscribe({
+        app: "graph-store",
+        path: "/updates",
+        event: printEvent,
+        quit: doSub,
+        err: subFail
+      });
+      toggle.innerHTML = "Unsubscribe";
+      toggle.onclick = doUnsub;
+      event.innerHTML = "Awaiting event";
+    };
+    function doUnsub() {
+      api.unsubscribe(window.id);
+      toggle.innerHTML = "Subscribe";
+      toggle.onclick = doSub;
+      event.innerHTML = "Subscription closed";
+    };
+    function printEvent(update) {
+      event.innerHTML = JSON.stringify(update, null, 2);
+    };
+    function subFail() {
+      event.innerHTML = "Subscription failed!";
+    };
+  &lt;/script>
+&lt;/html>
 ```
 
 ### Subscribe Once
@@ -417,17 +477,33 @@ printing every `graph-store` update it receives, it will instead just print the
 first one it receives and close the subscription. Additionally, it sets a five
 second timeout, and prints an error message if it times out.
 
-```html
-&lt;html> &lt;head> &lt;script
-src="https://unpkg.com/@urbit/http-api">&lt;/script> &lt;script
-src="/session.js">&lt;/script> &lt;/head> &lt;body> &lt;button type="button"
-onClick="doSub()" >Subscribe Once&lt;/button> &lt;pre id="event">&lt;/pre>
-&lt;/body> &lt;script> const api = new UrbitHttpApi.Urbit(""); api.ship =
-window.ship; const event = document.getElementById("event"); function doSub() {
-event.innerHTML = ""; api.subscribeOnce("graph-store","/updates",5000)
-.then(printEvent, noEvent); }; function printEvent(update) { event.innerHTML =
-JSON.stringify(update, null, 2); }; function noEvent(error) { event.innerHTML =
-error; }; &lt;/script> &lt;/html>
+```
+&lt;html>
+  &lt;head>
+    &lt;script src="https://unpkg.com/@urbit/http-api">&lt;/script>
+    &lt;script src="/session.js">&lt;/script>
+  &lt;/head>
+  &lt;body>
+    &lt;button type="button" onClick="doSub()" >Subscribe Once&lt;/button>
+    &lt;pre id="event">&lt;/pre>
+  &lt;/body>
+  &lt;script>
+    const api = new UrbitHttpApi.Urbit("");
+    api.ship = window.ship;
+    const event = document.getElementById("event");
+    function doSub() {
+      event.innerHTML = "";
+      api.subscribeOnce("graph-store","/updates",5000)
+        .then(printEvent, noEvent);
+    };
+    function printEvent(update) {
+      event.innerHTML = JSON.stringify(update, null, 2);
+    };
+    function noEvent(error) {
+      event.innerHTML = error;
+    };
+  &lt;/script>
+&lt;/html>
 ```
 
 ### Scries
@@ -449,16 +525,26 @@ Upon pressing the "Scry Graphs" button, this example will scry the `graph-store`
 agent's `/keys` endpoint for the list of graphs, and print the resulting JSON
 data.
 
-```html
-&lt;html> &lt;head> &lt;script
-src="https://unpkg.com/@urbit/http-api">&lt;/script> &lt;script
-src="/session.js">&lt;/script> &lt;/head> &lt;body> &lt;button id="scry"
-type="button" onClick="doScry()" >Scry Graphs&lt;/button> &lt;pre
-id="result">&lt;/pre> &lt;/body> &lt;script> const api = new
-UrbitHttpApi.Urbit(""); api.ship = window.ship; async function doScry() { var
-groups = await api.scry({app: "graph-store", path: "/keys"});
-document.getElementById("result") .innerHTML = JSON.stringify(groups, null, 2);
-} &lt;/script> &lt;/html>
+```
+&lt;html>
+  &lt;head>
+    &lt;script src="https://unpkg.com/@urbit/http-api">&lt;/script>
+    &lt;script src="/session.js">&lt;/script>
+  &lt;/head>
+  &lt;body>
+    &lt;button id="scry" type="button" onClick="doScry()" >Scry Graphs&lt;/button>
+    &lt;pre id="result">&lt;/pre>
+  &lt;/body>
+  &lt;script>
+    const api = new UrbitHttpApi.Urbit("");
+    api.ship = window.ship;
+    async function doScry() {
+      var groups = await api.scry({app: "graph-store", path: "/keys"});
+      document.getElementById("result")
+        .innerHTML = JSON.stringify(groups, null, 2);
+    }
+  &lt;/script>
+&lt;/html>
 ```
 
 ### Thread
@@ -482,23 +568,44 @@ JSON result of the thread.
 This example takes a hoon expression (such as `(add 1 1)`), evalutes it with the
 `graph-eval` thread in the `landscape` desk, and prints the result.
 
-```html
-&lt;html> &lt;head> &lt;script
-src="https://unpkg.com/@urbit/http-api">&lt;/script> &lt;script
-src="/session.js">&lt;/script> &lt;/head> &lt;body> &lt;input id="hoon"
-type="text" placeholder="Hoon to evaluate" /> &lt;button id="submit"
-type="button" onClick="runThread()" >Submit&lt;/button> &lt;pre
-id="expr">&lt;/pre> &lt;pre id="result">&lt;/pre> &lt;/body> &lt;script>
-document.getElementById("hoon") .addEventListener("keyup", function(event) { if
-(event.keyCode === 13) { document.getElementById("submit").click(); } }); const
-hoon = document.getElementById("hoon"); const expr =
-document.getElementById("expr"); const result =
-document.getElementById("result"); const desk = "landscape"; const api = new
-UrbitHttpApi.Urbit("", "", desk); api.ship = window.ship; async function
-runThread() { const threadResult = await api.thread({ inputMark:
-"graph-view-action", outputMark: "tang", threadName: "graph-eval", body: {eval:
-hoon.value} }); result.innerHTML = threadResult[0].join("\n"); expr.innerHTML =
-hoon.value; hoon.value = ""; }; &lt;/script> &lt;/html>
+```
+&lt;html>
+  &lt;head>
+    &lt;script src="https://unpkg.com/@urbit/http-api">&lt;/script>
+    &lt;script src="/session.js">&lt;/script>
+  &lt;/head>
+  &lt;body>
+    &lt;input id="hoon" type="text" placeholder="Hoon to evaluate" />
+    &lt;button id="submit" type="button" onClick="runThread()" >Submit&lt;/button>
+    &lt;pre id="expr">&lt;/pre>
+    &lt;pre id="result">&lt;/pre>
+  &lt;/body>
+  &lt;script>
+    document.getElementById("hoon")
+      .addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+          document.getElementById("submit").click();
+        }
+      });
+    const hoon = document.getElementById("hoon");
+    const expr = document.getElementById("expr");
+    const result = document.getElementById("result");
+    const desk = "landscape";
+    const api = new UrbitHttpApi.Urbit("", "", desk);
+    api.ship = window.ship;
+    async function runThread() {
+      const threadResult = await api.thread({
+        inputMark: "graph-view-action",
+        outputMark: "tang",
+        threadName: "graph-eval",
+        body: {eval: hoon.value}
+      });
+      result.innerHTML = threadResult[0].join("\n");
+      expr.innerHTML = hoon.value;
+      hoon.value = "";
+    };
+  &lt;/script>
+&lt;/html>
 ```
 
 ### Delete Channel
@@ -526,13 +633,10 @@ discarded and a fresh channel ID will be generated.
 - [Eyre Guide][eyre-guide] - Lower-level examples of using Eyre's external API
   with `curl`.
 - [`http-api` on Github][http-api-src] - The source code for `@urbit/http-api`.
-- [Software Distribution][dist] - This section of documentation explains how to
-  distribute apps in Urbit, including how to package and serve front-end files.
 
 [eyre-ext-ref]: /docs/arvo/eyre/external-api-ref
 [eyre-guide]: /docs/arvo/eyre/guide
 [http-api-src]: https://github.com/urbit/urbit/tree/master/pkg/npm/http-api
-[dist]: /docs/userspace/dist/dist
 [eyre]: /docs/glossary/eyre
 [vane]: /docs/glossary/vane
 [arvo]: /docs/glossary/arvo
