@@ -190,7 +190,7 @@ window.ship = "zod";
 include this file like:
 
 ```
-&lt;script src="/session.js">&lt;/script>
+<script src="/session.js"></script>
 ```
 
 Then you need to set the `ship` field in the `Urbit` object. You would typically
@@ -275,14 +275,14 @@ Here's a simple example that will run `authenticate` for a fakezod when the
 _Connect_ button is pressed:
 
 ```
-&lt;html>
-  &lt;head>
-    &lt;script src="https://unpkg.com/@urbit/http-api">&lt;/script>
-  &lt;/head>
-  &lt;body>
-    &lt;button id="start" type="button" onClick="connect()" >Connect&lt;/button>
-  &lt;/body>
-  &lt;script>
+<html>
+  <head>
+    <script src="https://unpkg.com/@urbit/http-api"></script>
+  </head>
+  <body>
+    <button id="start" type="button" onClick="connect()" >Connect</button>
+  </body>
+  <script>
     async function connect() {
       window.api = await UrbitHttpApi.Urbit.authenticate({
           ship: "zod",
@@ -292,8 +292,8 @@ _Connect_ button is pressed:
       });
       document.body.innerHTML = "Connected!";
     };
-  &lt;/script>
-&lt;/html>
+  </script>
+</html>
 ```
 
 `window.api` can then be used for further communications.
@@ -325,17 +325,17 @@ reason the `hood` agent rejects the poke, "Poke failed!" will be displayed on
 the page.
 
 ```
-&lt;html>
-  &lt;head>
-    &lt;script src="https://unpkg.com/@urbit/http-api">&lt;/script>
-    &lt;script src="/session.js">&lt;/script>
-  &lt;/head>
-  &lt;body>
-    &lt;input id="msg" type="text" placeholder="Message for ship" />
-    &lt;button id="submit" type="button" onClick="doPoke()" >Submit&lt;/button>
-    &lt;p id="err">&lt;/p>
-  &lt;/body>
-  &lt;script>
+<html>
+  <head>
+    <script src="https://unpkg.com/@urbit/http-api"></script>
+    <script src="/session.js"></script>
+  </head>
+  <body>
+    <input id="msg" type="text" placeholder="Message for ship" />
+    <button id="submit" type="button" onClick="doPoke()" >Submit</button>
+    <p id="err"></p>
+  </body>
+  <script>
     document.getElementById("msg")
       .addEventListener("keyup", function(event) {
         if (event.keyCode === 13) {
@@ -362,8 +362,8 @@ the page.
       document.getElementById("msg").value = "";
       document.getElementById("err").innerHTML = "Poke failed!";
     }
-  &lt;/script>
-&lt;/html>
+  </script>
+</html>
 ```
 
 ### Subscribe and Unsubscribe {#subscribe}
@@ -401,16 +401,16 @@ update it receives. You can test it by doing something like posting a message in
 a chat. You can also unsubscribe by clicking the "Unsubscribe" button.
 
 ```
-&lt;html>
-  &lt;head>
-    &lt;script src="https://unpkg.com/@urbit/http-api">&lt;/script>
-    &lt;script src="/session.js">&lt;/script>
-  &lt;/head>
-  &lt;body>
-    &lt;button id="toggle" type="button" onClick="doSub()" >Subscribe&lt;/button>
-    &lt;pre id="event">&lt;/pre>
-  &lt;/body>
-  &lt;script>
+<html>
+  <head>
+    <script src="https://unpkg.com/@urbit/http-api"></script>
+    <script src="/session.js"></script>
+  </head>
+  <body>
+    <button id="toggle" type="button" onClick="doSub()" >Subscribe</button>
+    <pre id="event"></pre>
+  </body>
+  <script>
     const api = new UrbitHttpApi.Urbit("");
     api.ship = window.ship;
     const toggle = document.getElementById("toggle");
@@ -439,8 +439,8 @@ a chat. You can also unsubscribe by clicking the "Unsubscribe" button.
     function subFail() {
       event.innerHTML = "Subscription failed!";
     };
-  &lt;/script>
-&lt;/html>
+  </script>
+</html>
 ```
 
 ### Subscribe Once
@@ -478,16 +478,16 @@ first one it receives and close the subscription. Additionally, it sets a five
 second timeout, and prints an error message if it times out.
 
 ```
-&lt;html>
-  &lt;head>
-    &lt;script src="https://unpkg.com/@urbit/http-api">&lt;/script>
-    &lt;script src="/session.js">&lt;/script>
-  &lt;/head>
-  &lt;body>
-    &lt;button type="button" onClick="doSub()" >Subscribe Once&lt;/button>
-    &lt;pre id="event">&lt;/pre>
-  &lt;/body>
-  &lt;script>
+<html>
+  <head>
+    <script src="https://unpkg.com/@urbit/http-api"></script>
+    <script src="/session.js"></script>
+  </head>
+  <body>
+    <button type="button" onClick="doSub()" >Subscribe Once</button>
+    <pre id="event"></pre>
+  </body>
+  <script>
     const api = new UrbitHttpApi.Urbit("");
     api.ship = window.ship;
     const event = document.getElementById("event");
@@ -502,8 +502,8 @@ second timeout, and prints an error message if it times out.
     function noEvent(error) {
       event.innerHTML = error;
     };
-  &lt;/script>
-&lt;/html>
+  </script>
+</html>
 ```
 
 ### Scries
@@ -526,16 +526,16 @@ agent's `/keys` endpoint for the list of graphs, and print the resulting JSON
 data.
 
 ```
-&lt;html>
-  &lt;head>
-    &lt;script src="https://unpkg.com/@urbit/http-api">&lt;/script>
-    &lt;script src="/session.js">&lt;/script>
-  &lt;/head>
-  &lt;body>
-    &lt;button id="scry" type="button" onClick="doScry()" >Scry Graphs&lt;/button>
-    &lt;pre id="result">&lt;/pre>
-  &lt;/body>
-  &lt;script>
+<html>
+  <head>
+    <script src="https://unpkg.com/@urbit/http-api"></script>
+    <script src="/session.js"></script>
+  </head>
+  <body>
+    <button id="scry" type="button" onClick="doScry()" >Scry Graphs</button>
+    <pre id="result"></pre>
+  </body>
+  <script>
     const api = new UrbitHttpApi.Urbit("");
     api.ship = window.ship;
     async function doScry() {
@@ -543,8 +543,8 @@ data.
       document.getElementById("result")
         .innerHTML = JSON.stringify(groups, null, 2);
     }
-  &lt;/script>
-&lt;/html>
+  </script>
+</html>
 ```
 
 ### Thread
@@ -569,18 +569,18 @@ This example takes a hoon expression (such as `(add 1 1)`), evalutes it with the
 `graph-eval` thread in the `landscape` desk, and prints the result.
 
 ```
-&lt;html>
-  &lt;head>
-    &lt;script src="https://unpkg.com/@urbit/http-api">&lt;/script>
-    &lt;script src="/session.js">&lt;/script>
-  &lt;/head>
-  &lt;body>
-    &lt;input id="hoon" type="text" placeholder="Hoon to evaluate" />
-    &lt;button id="submit" type="button" onClick="runThread()" >Submit&lt;/button>
-    &lt;pre id="expr">&lt;/pre>
-    &lt;pre id="result">&lt;/pre>
-  &lt;/body>
-  &lt;script>
+<html>
+  <head>
+    <script src="https://unpkg.com/@urbit/http-api"></script>
+    <script src="/session.js"></script>
+  </head>
+  <body>
+    <input id="hoon" type="text" placeholder="Hoon to evaluate" />
+    <button id="submit" type="button" onClick="runThread()" >Submit</button>
+    <pre id="expr"></pre>
+    <pre id="result"></pre>
+  </body>
+  <script>
     document.getElementById("hoon")
       .addEventListener("keyup", function(event) {
         if (event.keyCode === 13) {
@@ -604,8 +604,8 @@ This example takes a hoon expression (such as `(add 1 1)`), evalutes it with the
       expr.innerHTML = hoon.value;
       hoon.value = "";
     };
-  &lt;/script>
-&lt;/html>
+  </script>
+</html>
 ```
 
 ### Delete Channel
