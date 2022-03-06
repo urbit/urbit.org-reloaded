@@ -49,6 +49,11 @@
       "permanent": true
     },
     {
+      "source": "/install/windows/latest",
+      "destination": "http://github.com/urbit/urbit/releases/latest/download/windows.tgz",
+      "permanent": true
+    },
+    {
       "source": "/using/install",
       "destination": "/getting-started",
       "permanent": true
