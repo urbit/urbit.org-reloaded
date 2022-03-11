@@ -130,7 +130,7 @@ We pre-emptively subscribe for the result. Spider sends the result at `/thread-r
 ;<  ~             bind:m  %-  poke-our
                           :*  %spider
                               %spider-start
-                              !>([`tid.bowl byk.bowl `tid %child !>(~)])
+                              !>([`tid.bowl `tid byk.bowl %child !>(~)])
                           ==
 ```
 
