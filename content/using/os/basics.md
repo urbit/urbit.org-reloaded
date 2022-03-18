@@ -189,7 +189,11 @@ To add an existing moon to `jael` on a breached planet, you'll need the followin
  - Your moon's existing keyfile or key-string (`@uw`) _or_ the result of `pub:ex:(nol:nu:crub:crypto .^(@uv %j /=vein=/<life # of moon, per moon, here>))` _and_;
  - Your moon's sponsor's understanding of your moon's existing public key `pass:.^([@ud pass=@uw ~] %j /=deed=/~sampel-monler-dozzod-dozzod/<life # of moon per sponsor here>)`.
 
-If you only have they keyfile or key-string from your moon's last boot, you'll need to derive the `pass` value from that using `pub:ex:(nol:nu:crub:crypto key:(seed:jael:l (cue <your @uw keyfile contents or key-string contents here>)))`. This should produce a long `@ud`.
+If you only have they keyfile or key-string from your moon's last boot, you'll need to derive the `pass` value from that using
+```
+pub:ex:(nol:nu:crub:crypto key:(seed:jael:l (cue <your @uw keyfile contents or key-string contents here>)))
+```
+This should produce a long `@ud`.
 
 Once you have all of the requisite elements, you can perform the following on the moon's sponsor:
 
