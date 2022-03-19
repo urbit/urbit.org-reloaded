@@ -673,6 +673,15 @@ discarded and a fresh channel ID will be generated.
   with `curl`.
 - [`http-api` on Github][http-api-src] - The source code for `@urbit/http-api`.
 
+## Examples
+
+Here are some examples which make use of `@urbit/http-api` that might be useful
+as a reference:
+
+- [Bitcoin Wallet](https://github.com/urbit/urbit/tree/master/pkg/btc-wallet)
+- [Web Terminal](https://github.com/urbit/urbit/tree/master/pkg/interface/webterm)
+- [UrChatFM](https://github.com/urbit/urbit-webrtc/tree/master/urchatfm)
+
 [eyre-ext-ref]: /docs/arvo/eyre/external-api-ref
 [eyre-guide]: /docs/arvo/eyre/guide
 [http-api-src]: https://github.com/urbit/urbit/tree/master/pkg/npm/http-api
