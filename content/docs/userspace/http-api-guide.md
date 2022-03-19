@@ -44,7 +44,7 @@ paths](#subscriptions), pokes, etc, are intended to be used from a front-end, so
 not all use marks which can be converted to and from JSON (the `noun` mark for
 example). If documentation is available for the agent or thread in question, it
 should note in some fashion whether it can take or produce JSON. The majority of
-things you'll want to interact with through Eyre _will_ work with JSON.
+things you'll want to interact with through Eyre will work with JSON.
 
 ### Gall agents
 
@@ -553,7 +553,9 @@ The `scry` function takes two arguments in a object:
 | `path`   | `string` | The path to scry, sans the `care`. | `"/keys"`       |
 
 The `scry` function returns a promise that, if successful, contains the
-requested data as JSON.
+requested data as JSON. If the scry failed, for example due to a non-existent
+scry endpoint, connection problem, or mark conversion failure, the promise will
+fail.
 
 #### Example
 
@@ -597,7 +599,8 @@ The `thread` function takes five arguments in an object:
 | `desk`       | `string` | The desk in which the thread resides. This may be ommitted if previously set for the whole `Urbit` object.    | `"landscape"`           |
 
 The `thread` function will produce a promise that, if successful, contains the
-JSON result of the thread.
+JSON result of the thread. If the thread failed, a connection error occurred, or
+mark conversion failed, the promise will fail.
 
 #### Example
 
