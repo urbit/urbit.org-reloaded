@@ -238,10 +238,11 @@ channel will be opened whenever you first send a poke or subscription request.
 `Urbit` class includes three optional callbacks that fire when the SSE
 connection state changes:
 
-| Callback | Description |
-| `Urbit.onOpen` | Called when an SSE channel connection is successfully established. |
+| Callback        | Description                                                                                                               |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `Urbit.onOpen`  | Called when an SSE channel connection is successfully established.                                                        |
 | `Urbit.onRetry` | This is called whenever a reconnection attempt is made due to an interruption, for example if there are network problems. |
-| `Urbit.onError` | This is called when there is an unrecoverable error, for example after enough reconnection attemps have failed. |
+| `Urbit.onError` | This is called when there is an unrecoverable error, for example after enough reconnection attemps have failed.           |
 
 As mentioned in the previous section, typically a channel will be opened and an
 SSE connection established after you first poke the ship or make a subscription
