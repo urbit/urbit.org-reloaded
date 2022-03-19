@@ -225,11 +225,6 @@ out be acknowledged by the client, and will eventually close the channel if
 enough unacknowledged events accumulate. The `Urbit` object handles event
 acknowledgement automatically, so you don't need to worry about this.
 
-Since the `Urbit` object handles channels internally, you don't typically need
-to deal with them at all. There is, however, the [`delete()`](#delete-channel)
-function if you want to close the whole channel and end all subscriptions at
-once.
-
 Eyre automatically creates a channel when a poke or subscription request is
 first sent to `/~/channel/[a new channel ID]`. If your web app is served
 external to the ship and you use the `authenticate` function [described
@@ -237,6 +232,41 @@ below](#authentication), the function will automatically send a poke and open
 the channel. If your web app is served directly from the ship and you use
 `Urbit` class constructor, it won't open the channel right away. Instead, the
 channel will be opened whenever you first send a poke or subscription request.
+
+### Connection state
+
+`Urbit` class includes three optional callbacks that fire when the SSE
+connection state changes:
+
+| Callback | Description |
+| `Urbit.onOpen` | Called when an SSE channel connection is successfully established. |
+| `Urbit.onRetry` | This is called whenever a reconnection attempt is made due to an interruption, for example if there are network problems. |
+| `Urbit.onError` | This is called when there is an unrecoverable error, for example after enough reconnection attemps have failed. |
+
+As mentioned in the previous section, typically a channel will be opened and an
+SSE connection established after you first poke the ship or make a subscription
+request. If successful, whatever function you provided to `onOpen` will be
+called. If at some point the connection is interrupted, a reconnection attempt will be made three times:
+
+1. Instantly.
+2. 750ms after the first.
+3. 3000ms after the second.
+
+Each attempt will call the function you provided to `onRetry`, if any. If all
+three reconnection attempts failed, or if a fatal error occurred, the function
+you provided `onError` will be called with an `Error` object containing an error
+message as its argument.
+
+How you use these (if you do at all) is up to you and depends on the nature of
+your app. If you want to try reconnecting when `onError` fires, note that Eyre
+will delete a channel if it's had no messages from the client in the last 12
+hours. The timeout is reset whenever it receives a message, including the acks
+that are automatically sent by the `Urbit` object in response to subscription
+updates.
+
+If you don't want to account for the possibility of the channel having been
+deleted in your app's logic, you can also just call the [`reset()`](#reset)
+function before you try reconnecting and consequently open a brand new channel.
 
 ### Authentication
 
