@@ -395,7 +395,7 @@ If `p` is true, prettyprints `q` on the console before computing `r`.
 
 ##### Syntax
 
-Regular: **4-fixed**.
+Regular: **3-fixed**.
 
 ##### Examples
 
