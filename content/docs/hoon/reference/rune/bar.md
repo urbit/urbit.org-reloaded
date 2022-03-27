@@ -654,7 +654,7 @@ Note: The `++` rune may be replaced with any other rune in the `+` family.
 AST:
 
 ```
-[%brvt p=(unit term) q=(map term tome)]
+[%brpt p=(unit term) q=(map term tome)]
 ```
 
 ##### Semantics
