@@ -114,6 +114,8 @@ You can modify the time of the file listing quite simply and ask for a listing f
 
 `our` is the value for your ship's name.
 
+---
+
 ## `.+` "dotlus"
 
 Increment an atom with Nock `4`.
@@ -165,6 +167,8 @@ Wide-form:
 > +([1 2])
 nest-fail
 ```
+
+---
 
 ## `.*` "dottar"
 
@@ -227,6 +231,8 @@ therefore possible to use Hoon as a typeless language.
 > .*(~ [5 1^5 [4 1^3]])
 1
 ```
+
+---
 
 ## `.=` "dottis" {#dottis}
 
@@ -291,6 +297,8 @@ nouns. (Comparing large duplicates is a common cause of performance bugs.)
 > =(12 [12 14])
 %.n
 ```
+
+---
 
 ## `.?` "dotwut"
 
