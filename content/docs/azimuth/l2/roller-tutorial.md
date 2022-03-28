@@ -102,7 +102,9 @@ audits [here](/audits), as well as an
 [FAQ](https://urbit.org/faq#how-secure-is-urbit) on the state of security in
 Urbit. Thus we recommend a fresh wallet generated specifically to be used by
 `%roller` and to only put the amount of ETH in it that you expect to need in the
-near future.
+near future. We also recommend that you only use this address for sending L2
+batches, since otherwise the nonce will get out of sync. `%roller` can detect
+this and handle it, but it could cause a delay in batch submission.
 
 With that being said, the command to set the private key for the wallet to be
 utilized by the roller is `:roller|setkey '0x1234567890abcdef'`, where `0x...`
