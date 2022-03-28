@@ -56,7 +56,8 @@ Note that threads we start this way will be a child of the thread that started t
 
 ## Start thread and get its result
 
-If we want to actually get the result of the thread we started, it's slightly more complicated:
+If we want to actually get the result of the thread we started, it's slightly more complicated.
+We note that this is mostly the same as `await-thread:strandio`.
 
 #### `parent.hoon`
 
