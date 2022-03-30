@@ -11,6 +11,8 @@ Anything Nock can do, Hoon can do also. These runes are used for carrying out No
 
 Load from the Arvo namespace (scry) with a fake Nock instruction: Nock 12.
 
+#### AST
+
 ```hoon
 [%dtkt p=spec q=hoon]
 ```
@@ -118,6 +120,8 @@ You can modify the time of the file listing quite simply and ask for a listing f
 
 Increment an atom with Nock `4`.
 
+#### AST
+
 ```hoon
 [%dtls p=hoon]
 ```
@@ -169,6 +173,8 @@ nest-fail
 ## `.*` "dottar"
 
 Evaluate with Nock `2`.
+
+#### AST
 
 ```hoon
 [%dttr p=hoon q=hoon]
@@ -231,6 +237,8 @@ therefore possible to use Hoon as a typeless language.
 ## `.=` "dottis" {#dottis}
 
 Test for equality with Nock `5`.
+
+#### AST
 
 ```hoon
 [%dtts p=hoon q=hoon]
@@ -295,6 +303,8 @@ nouns. (Comparing large duplicates is a common cause of performance bugs.)
 ## `.?` "dotwut"
 
 Test for cell or atom with Nock `3`.
+
+#### AST
 
 ```hoon
 [%dtwt p=hoon]
