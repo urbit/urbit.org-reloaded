@@ -12,7 +12,6 @@ dark = false
 
 [[hosts]]
 patp = "~ribben-donnyl"
-patp = "~padlyn-sogrum"
 
 +++
 
