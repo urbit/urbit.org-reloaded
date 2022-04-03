@@ -11,17 +11,7 @@ Anything Nock can do, Hoon can do also. These runes are used for carrying out No
 
 Load from the Arvo namespace (scry) with a fake Nock instruction: Nock 12.
 
-#### AST
-
-```hoon
-[%dtkt p=spec q=hoon]
-```
-
-#### Produces
-
-The noun `q`, cast to the type `p`.
-
-#### Regular syntax
+#### Syntax
 
 Two arguments, with the second optionally split into an arbitrary number of
 elements.
@@ -32,26 +22,36 @@ with a `==`. Note also that the `==` does not make the arguments into a list as
 you might expect, so `q` must be explicitly null-terminated if its elements are
 specified separately.
 
-Tall-form:
+Tall form:
 
 ```hoon
 .^  p
-  q-1
-  q-2
-  q-3
-  q-n
+  q1
+  q2
+  q3
+  qn
 ==
 ```
 
-Wide-form:
+Wide form:
 
 ```hoon
-.^(p q-1 q-2)
+.^(p q1 q2)
 ```
 
-#### Irregular syntax
+Irregular form:
 
 None.
+
+#### AST
+
+```hoon
+[%dtkt p=spec q=hoon]
+```
+
+#### Produces
+
+The noun `q`, cast to the type `p`.
 
 #### Discussion
 
@@ -120,6 +120,28 @@ You can modify the time of the file listing quite simply and ask for a listing f
 
 Increment an atom with Nock `4`.
 
+#### Syntax
+
+One argument, fixed.
+
+Tall form:
+
+```hoon
+.+  p
+```
+
+Wide form:
+
+```hoon
+.+(p)
+```
+
+Irregular form:
+
+```hoon
++(p)
+```
+
 #### AST
 
 ```hoon
@@ -129,28 +151,6 @@ Increment an atom with Nock `4`.
 #### Produces
 
 `p` plus `1` if `p` is an atom; otherwise, crashes. The product atom has no aura.
-
-#### Regular syntax
-
-One argument, fixed.
-
-Tall-form:
-
-```hoon
-.+  p
-```
-
-Wide-form:
-
-```hoon
-.+(p)
-```
-
-#### Irregular syntax
-
-```hoon
-+(p)
-```
 
 #### Examples
 
@@ -174,31 +174,35 @@ nest-fail
 
 Evaluate with Nock `2`.
 
-#### AST
-
-```hoon
-[%dttr p=hoon q=hoon]
-```
-
 #### Produces
 
 Nock of formula `q` and subject `p`, with type `%noun`.
 
-#### Regular syntax
+#### Syntax
 
 Two arguments, fixed.
 
-Tall-form:
+Tall form:
 
 ```hoon
 .*  p
 q
 ```
 
-Wide-form:
+Wide form:
 
 ```hoon
 .*(p q)
+```
+
+Irregular form:
+
+None.
+
+#### AST
+
+```hoon
+[%dttr p=hoon q=hoon]
 ```
 
 #### Discussion
@@ -238,6 +242,29 @@ therefore possible to use Hoon as a typeless language.
 
 Test for equality with Nock `5`.
 
+#### Syntax
+
+Two arguments, fixed.
+
+Tall form:
+
+```hoon
+.=  p
+q
+```
+
+Wide form:
+
+```hoon
+.=(p q)
+```
+
+Irregular form:
+
+```hoon
+=(p q)
+```
+
 #### AST
 
 ```hoon
@@ -247,29 +274,6 @@ Test for equality with Nock `5`.
 #### Produces
 
 `%.y` if `p` equals `q`; otherwise `%.n`.
-
-#### Regular syntax
-
-Two arguments, fixed.
-
-Tall-form:
-
-```hoon
-.=  p
-q
-```
-
-Wide-form:
-
-```hoon
-.=(p q)
-```
-
-#### Irregular syntax
-
-```hoon
-=(p q)
-```
 
 #### Discussion
 
@@ -304,6 +308,26 @@ nouns. (Comparing large duplicates is a common cause of performance bugs.)
 
 Test for cell or atom with Nock `3`.
 
+#### Syntax
+
+One argument, fixed.
+
+Tall form:
+
+```hoon
+.?  p
+```
+
+Wide form:
+
+```hoon
+.?(p)
+```
+
+Irregular form:
+
+None.
+
 #### AST
 
 ```hoon
@@ -313,26 +337,6 @@ Test for cell or atom with Nock `3`.
 #### Produces
 
 `%.y` if `p` is a cell; otherwise `%.n`.
-
-#### Regular syntax
-
-One argument, fixed.
-
-Tall-form:
-
-```hoon
-.?  p
-```
-
-Wide-form:
-
-```hoon
-.?(p)
-```
-
-#### Irregular syntax
-
-None.
 
 #### Examples
 
