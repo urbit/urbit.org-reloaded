@@ -5,6 +5,56 @@ template = "doc.html"
 aliases = ["docs/reference/hoon-expressions/rune/zap/"]
 +++
 
+## `!,` "zapcom"
+
+Produce the Hoon AST of an expression.
+
+#### Syntax
+
+Two arguments, fixed.
+
+Tall form:
+
+```hoon
+!,  p
+q
+```
+
+Wide form:
+
+```hoon
+!,(p q)
+```
+
+Irregular form:
+
+None.
+
+#### AST
+
+```hoon
+[%zpcm p=hoon q=hoon]
+```
+
+#### Discussion
+
+This produces the [`$hoon`](/docs/hoon/reference/stdlib/4o#hoon) AST of
+expression `q`. The first argument, `p`, is always an example of the `$hoon`
+type, typically just the `*hoon` bunt value, and is used for type inference. The
+reason for `p` is just to handle transitions if the `$hoon` type changes.
+
+#### Examples
+
+```
+> !,  *hoon  [1 1]
+[%cltr p=~[[%sand p=%ud q=1] [%sand p=%ud q=1]]]
+
+> !,  *hoon  (add 1 1)
+[%cncl p=[%wing p=~[%add]] q=~[[%sand p=%ud q=1] [%sand p=%ud q=1]]]
+```
+
+---
+
 ## `!>` "zapgar"
 
 Wrap a noun in its type (form a [`vase`](/docs/hoon/reference/stdlib/4o#vase)).
@@ -114,6 +164,63 @@ nest-fail
 
 > !<  tape  !>("foobar")
 "foobar"
+```
+
+---
+
+## `!;` "zapmic"
+
+Wrap a noun in its type (raw).
+
+#### Syntax
+
+Two arguments, fixed.
+
+Tall form:
+
+```hoon
+!;  p
+q
+```
+
+Wide form:
+
+```hoon
+!;(p q)
+```
+
+Irregular form:
+
+None.
+
+#### AST
+
+```hoon
+[%zpmc p=hoon q=hoon]
+```
+
+#### Discussion
+
+This wraps the product of `q` in its inferred type. It's a raw version of
+[`!>`](#-zapgar). Unlike zapgar, `q` is not given a `p` face and its type
+information is not stripped to a raw noun.
+
+The first field, `p`, must be an example of the
+[`$type`](/docs/hoon/reference/stdlib/4o#type) type, typically just `*type` (the
+bunt of `$type`). The `p` argument is just so transitions can be handled if the
+`$type` type changes.
+
+It's unlikely you'd use this rune directly; [`!>`](#-zapgar) is much more
+typical.
+
+#### Examples
+
+```
+> !;  *type  [1 1]
+[#t/[@ud @ud] 1 1]
+
+> !;  *type  'foo'
+[#t/@t 'foo']
 ```
 
 ---
