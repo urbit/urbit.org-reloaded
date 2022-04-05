@@ -22,26 +22,34 @@ with a `==`. Note also that the `==` does not make the arguments into a list as
 you might expect, so `q` must be explicitly null-terminated if its elements are
 specified separately.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 .^  p
   q1
   q2
   q3
   qn
 ==
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 .^(p q1 q2)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -124,23 +132,33 @@ Increment an atom with Nock `4`.
 
 One argument, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 .+  p
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 .+(p)
-```
-
-Irregular form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>
+<pre>
 +(p)
-```
+</pre>
+</td>
+</tr>
+</table>
 
 #### AST
 
@@ -182,22 +200,30 @@ Nock of formula `q` and subject `p`, with type `%noun`.
 
 Two arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 .*  p
 q
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 .*(p q)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -246,24 +272,34 @@ Test for equality with Nock `5`.
 
 Two arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 .=  p
 q
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 .=(p q)
-```
-
-Irregular form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>
+<pre>
 =(p q)
-```
+</pre>
+</td>
+</tr>
+</table>
 
 #### AST
 
@@ -312,21 +348,29 @@ Test for cell or atom with Nock `3`.
 
 One argument, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 .?  p
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 .?(p)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 

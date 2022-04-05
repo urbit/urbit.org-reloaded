@@ -39,27 +39,37 @@ Logical OR.
 
 Variable number of arguments.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 ?|  p1
     p2
     p3
     pn
 ==
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 ?|(p1 p2 p3 pn)
-```
-
-Irregular form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>
+<pre>
 |(p1 p2 p3 pn)
-```
+</pre>
+</td>
+</tr>
+</table>
 
 #### AST
 
@@ -111,38 +121,50 @@ Switch against a union, with no default.
 
 One fixed argument, then a variable number of pairs.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall style #1</td>
+<td>
+<pre>
 ?-  p
   q1a  q1b
   q2a  q2b
   qna  qnb
 ==
-```
-
-Alternative tall form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Tall style #2</td>
+<td>
+<pre>
 ?-    p
     q1a
   q1b
+::
     q2a
   q2b
+::
     qna
   qnb
 ==
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 ?-(p q1a q1b, q2a q2b, qna qnb)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -215,23 +237,31 @@ Branch on a boolean test.
 
 Three arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 ?:  p
   q
 r
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 ?:(p q r)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -281,23 +311,31 @@ Branch on a boolean test, inverted.
 
 Three arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 ?.  p
   q
 r
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 ?.(p q r)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -345,23 +383,31 @@ Branch on whether a wing of the subject is a cell.
 
 Three arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 ?^  p
   q
 r
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 ?^(p q r)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -405,22 +451,30 @@ Negative assertion.
 
 Two arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 ?<  p
 q
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 ?<(p q)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -468,22 +522,30 @@ Positive assertion.
 
 Two arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 ?>  p
 q
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 ?>(p q)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -529,7 +591,52 @@ Switch against a union, with a default.
 
 #### Syntax
 
-Regular: **2-fixed**, then **jogging**.
+Two fixed arguments, then a variable number of pairs.
+
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall style #1</td>
+<td>
+<pre>
+?+  p  q
+  r1a  r1b
+  r2a  r2b
+  rna  rnb
+==
+</pre>
+</td>
+</tr>
+<tr>
+<td>Tall style #2</td>
+<td>
+<pre>
+?+    p  q
+    r1a
+  r1b
+::
+    r2a
+  r2b
+::
+    rna
+  rnb
+==
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
+?+(p q r1a r1b, r2a r2b, rna rnb)
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -598,26 +705,36 @@ Logical AND.
 
 Variable arguments.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 ?&  p1
     p2
     pn
 ==
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 ?&(p1 p2 pn)
-```
-
-Irregular form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>
+<pre>
 &(p1 p2 pn)
-```
+</pre>
+</td>
+</tr>
+</table>
 
 #### AST
 
@@ -669,23 +786,31 @@ Branch on whether a wing of the subject is an atom.
 
 Three arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 ?@  p
   q
 r
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 ?@(p q r)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -733,23 +858,31 @@ Branch on whether a wing of the subject is null.
 
 Three arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 ?~  p
   q
 r
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 ?~(p q r)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -791,22 +924,30 @@ Test pattern match.
 
 Two arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 ?=  p
 q
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 ?=(p q)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -851,23 +992,33 @@ Logical NOT.
 
 One argument, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 ?!  p
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 ?!(p)
-```
-
-Irregular form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>
+<pre>
 !p
-```
+</pre>
+</td>
+</tr>
+</table>
 
 #### AST
 

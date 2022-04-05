@@ -13,22 +13,30 @@ Produce the Hoon AST of an expression.
 
 Two arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 !,  p
 q
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 !,(p q)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -63,21 +71,29 @@ Wrap a noun in its type (form a [`vase`](/docs/hoon/reference/stdlib/4o#vase)).
 
 One argument, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 !>  p
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 !>(p)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -120,22 +136,30 @@ its type nests.
 
 Two arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 !<  p
 q
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 !<(p q)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -176,22 +200,30 @@ Wrap a noun in its type (raw).
 
 Two arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 !;  p
 q
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 !;(p q)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -233,21 +265,29 @@ Make the Nock formula for a Hoon expression.
 
 One argument, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 !=  p
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 !=(p)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -299,22 +339,30 @@ Restrict Hoon version.
 
 Two arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 !?  p
 q
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 !?(p q)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -357,23 +405,31 @@ Branch on whether a wing exists.
 
 Three arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 !@  p
   q
 r
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 !@(p q r)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -408,15 +464,29 @@ Crash.
 
 No arguments.
 
-Tall & wide form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 !!
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
+!!
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -449,21 +519,29 @@ Turn on stack trace.
 
 One argument, fixed
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 !:  p
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 !:(p)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### Produces
 
@@ -496,21 +574,29 @@ Turn off stack trace for a subexpression `p`
 
 One argument, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 !.  p
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 !.(p)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### Produces
 

@@ -32,22 +32,30 @@ Compose two expressions.
 
 Two arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 =>  p
 q
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 =>(p q)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -91,22 +99,30 @@ Combine a default type value ("bunt value") with the subject.
 
 Two arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 =|  p
 q
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 =|(p q)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -148,25 +164,33 @@ Change multiple legs in the subject.
 
 Two arguments: the first a variable number of pairs, the second is fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 =:  p1a  p1b
     p2a  p2b
     p3a  p3b
   ==
 q
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 =:(p1a p1b, p2a p2b, p3a p3b q)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -205,22 +229,30 @@ Expose namespace.
 
 Two arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 =,  p
 q
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 =,(p q)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -279,22 +311,30 @@ Change one leg in the subject.
 
 Three arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 =.  p  q
 r
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 =.(p q r)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -342,22 +382,30 @@ Combine a new noun with the subject, inverted.
 
 Two arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 =-  p
 q
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 =-(p q)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -398,23 +446,31 @@ Pin the head of a pair; change a leg with the tail.
 
 Four arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 =^  p  q
   r
 s
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 =^(p q r s)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -466,24 +522,34 @@ Compose two expressions, inverted.
 
 Two arguments, fixed
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 =<  p
 q
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 =<(p q)
-```
-
-Irregular form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>
+<pre>
 p:q
-```
+</pre>
+</td>
+</tr>
+</table>
 
 #### AST
 
@@ -528,22 +594,30 @@ Combine a new noun with the subject.
 
 Two arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 =+  p
 q
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 =+(p q)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -589,23 +663,31 @@ order.
 
 Three arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 =;  p
   q
 r
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 =;(p q r)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -646,23 +728,31 @@ Combine a named noun with the subject, possibly with type annotation.
 
 Three arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 =/  p
   q
 r
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 =/(p q r)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -727,25 +817,33 @@ Compose many expressions.
 
 Variable number of arguments.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 =~  p1
     p2
     p3
     pn
 ==
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 =~(p1 p2 p3 pn)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -798,23 +896,31 @@ Define a deferred expression.
 
 Three arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 =*  p
   q
 r
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 =*(p q r)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 
@@ -871,23 +977,31 @@ Conditionally change one leg in the subject.
 
 Four arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 =?  p  q
   r
 s
-```
-
-Wide form:
-
-```hoon
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
 =?(p q r s)
-```
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
 
 #### AST
 

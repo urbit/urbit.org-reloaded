@@ -24,19 +24,19 @@ Chapter label.
 
 One argument, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 +|  %label
-```
-
-Wide form:
-
-None.
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr><td>Wide</td><td>None.</td></tr>
+<tr><td>Irregular</td><td>None.</td></tr>
+</table>
 
 #### Discussion
 
@@ -87,19 +87,19 @@ Produce a structure arm (type definition).
 
 Two arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 +$  p=term  q=spec
-```
-
-Wide form:
-
-None.
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr><td>Wide</td><td>None.</td></tr>
+<tr><td>Irregular</td><td>None.</td></tr>
+</table>
 
 `p` is an arm name, and `q` is any structure expression.
 
@@ -140,19 +140,19 @@ Produce a normal arm.
 
 Two arguments, fixed.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 ++  p=term  q=hoon
-```
-
-Wide form:
-
-None.
-
-Irregular form:
-
-None.
+</pre>
+</td>
+</tr>
+<tr><td>Wide</td><td>None.</td></tr>
+<tr><td>Irregular</td><td>None.</td></tr>
+</table>
 
 `p` is the arm name, and `q` is any Hoon expression.
 
@@ -189,14 +189,22 @@ Defines deferred expressions within doors.
 
 Arguments: A variable number of pairs.
 
-Tall form:
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 +*  a=term  b=hoon
     c=term  d=hoon
     ...
     e=term  f=hoon
-```
+</pre>
+</td>
+</tr>
+<tr><td>Wide</td><td>None.</td></tr>
+<tr><td>Irregular</td><td>None.</td></tr>
+</table>
 
 `a`, `c`, `e` are arm names and `b`, `d`, `f` are any Hoon expression. Note that
 unlike all other runes with a variable number of arguments, the list of
