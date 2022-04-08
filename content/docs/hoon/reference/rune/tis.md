@@ -486,15 +486,20 @@ s
 
 #### Discussion
 
-`p` is a new name (possibly with type annotation, e.g., `a=@`) of a value to be
-pinned to the subject. The value of `p` is the head of the product of `r`. `q`
-is given the value of the tail of `r`'s product. Then `s` is evaluated against
-this new subject.
+- `p` is a new name (optionally with type) to pin to the subject.
+- `q` is the name of an existing wing of the subject.
+- `r` is an expression that produces `[p-value new-q-value]`.
+- `s` is some more code to be evaluted against the modified subject.
 
-We generally use `=^` when we have a state machine with a function, `r`, that
-produces a cell, whose head is a result and whose tail is a new
-state. The head value is given a new name `p`, and the
-tail is stuffed back into wherever we stored the old state, `q`.
+This is a bit like doing `=/` and `=.` at the same time. It's useful for state
+machines, where you want to produce both effects and a new state. For example,
+many arms of a Gall agent produce `[effects new-state]` in the form of a `(quip card _this)`. In the `++on-poke` arm, you might have something like:
+
+```hoon
+=^  cards  state
+  (handle-poke !<(action vase))
+[cards this]
+```
 
 This may also remind you of Haskell's State monad.
 
