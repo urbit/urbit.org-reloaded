@@ -635,7 +635,7 @@ The default of `p`.
 
 ---
 
-## $& "bucpam"
+## `$&` "bucpam"
 
 Repair a value of a tagged union type.
 
