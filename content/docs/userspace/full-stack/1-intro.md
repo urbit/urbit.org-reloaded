@@ -75,7 +75,7 @@ basic things for our front-end.
 
 #### [8. React App Logic](/docs/userspace/gall-2/8-http-api)
 
-Analysing the core logic of our React app, with particular focus on using
+Analyzing the core logic of our React app, with particular focus on using
 methods of the `Urbit` class from `@urbit/http-api` to communicate with our
 agent.
 
