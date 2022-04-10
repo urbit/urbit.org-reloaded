@@ -84,7 +84,8 @@ idempotent, and usually the identity function on the noun itself.
 either could be used to make wet gates that are mold builders. The buc in `|$`
 is a hint that `|$` is closely related to buc runes, and thus `|$` should be
 used to make mold builders, while `|*` should be used for any other sort of wet
-gate. Thus, the second argument of `|$` is frequently a buc rune. For further
+gate. Unlike `|*`, the body of `|$` is parsed in pattern mode to a `$spec`.
+Thus, the second argument of `|$` is frequently a buc rune. For further
 discussion of wet gates, see the entry for [`|*`](#-bartar).
 
 Like other single-arm cores, the arm for `|$` is named `$` and this can be used to
