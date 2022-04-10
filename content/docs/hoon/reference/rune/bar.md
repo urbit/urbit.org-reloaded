@@ -826,7 +826,7 @@ b
 #### Expands to
 
 ```hoon
-=|  a=spec
+=+  ^~(*a=spec)
 |%  ++  $  b=hoon
 --
 ```
