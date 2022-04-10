@@ -270,8 +270,8 @@ b
 #### Expands to
 
 ```hoon
-=>  ^~  a
-  |.  b
+=+  a
+|.  b
 ```
 
 #### Discussion
