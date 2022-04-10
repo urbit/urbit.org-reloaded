@@ -5,10 +5,10 @@ template = "doc.html"
 +++
 
 That's it! We've built our agent and React front-end, put together a desk and
-published it. We hope this walk-through has helped you see how all the pieces
+published it. We hope this walkthrough has helped you see how all the pieces
 for together for building and distributing an app in Urbit.
 
-The reference material for each section of this walk-through is listed
+The reference material for each section of this walkthrough is listed
 [below](#reference-material), the source code for our app is available
 [here](https://github.com/urbit/docs-examples/tree/main/journal-app), and it can
 be installed from `~pocwet/journal`.
@@ -26,7 +26,7 @@ here](https://github.com/urbit/urbit/tree/master/pkg/npm/api).
 
 ## Reference material
 
-Here is the reference material for each section of this walk-through.
+Here is the reference material for each section of this walkthrough.
 
 #### Types
 

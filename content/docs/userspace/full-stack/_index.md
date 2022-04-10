@@ -1,5 +1,5 @@
 +++
-title = "Full-Stack Walk-Through"
+title = "Full-Stack Walkthrough"
 weight = 10
 sort_by = "weight"
 template = "sections/docs/chapters.html"

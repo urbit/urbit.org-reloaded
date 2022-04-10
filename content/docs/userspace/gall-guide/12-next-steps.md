@@ -9,10 +9,10 @@ to start writing your own agent.
 
 The things haven't touched on yet are front-end development and integration,
 Eyre's HTTP API for communicating with agents from the web, and dealing with
-JSON data. The [Full-stack Walk-through](/docs/userspace/full-stack/1-intro)
+JSON data. The [Full-stack Walkthrough](/docs/userspace/full-stack/1-intro)
 covers these aspects of Urbit app development, and it also puts into practice
 many of the concepts we've discussed in this guide, so you might like to work
-through that next. In addition to that walk-through, you can refer to the
+through that next. In addition to that walkthrough, you can refer to the
 following documents for help writing a web front-end for your app:
 
 - [Eyre's external API reference](/docs/arvo/eyre/external-api-ref) - This
