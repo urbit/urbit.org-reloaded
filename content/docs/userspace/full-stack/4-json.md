@@ -240,7 +240,9 @@ handle incoming poke `$action`s and outgoing facts or scry result `$update`s.
 The first thing we do is use the [`=,`
 rune](/docs/hoon/reference/rune/tis#-tiscom) to expose the `++dejs:format`
 namespace. This allows us to reference `ot`, `ni`, etc rather than having to
-write `ot:dejs:format` every time.
+write `ot:dejs:format` every time. Note that you should be careful using `=,`
+generally as the exposed wings can shadow previous wings if they have the same
+name.
 
 We then create a gate that takes `$json` and returns a `$action` structure.
 Since we'll only take one action at a time, we can use the `++of` function,
