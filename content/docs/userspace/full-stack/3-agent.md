@@ -320,6 +320,9 @@ to `default-agent` for handling:
 --
 ```
 
+The full agent source can be viewed
+[here](https://github.com/urbit/docs-examples/blob/main/journal-app/desk/app/journal.hoon).
+
 ## Resources
 
 - [The Gall Guide](/docs/userspace/gall-guide/intro) - The Gall Guide covers all
