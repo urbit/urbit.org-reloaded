@@ -146,7 +146,7 @@ A table of examples:
 Aura         Meaning                                 Example Literal Syntax
 -------------------------------------------------------------------------
 @            empty aura
-@c           Unicode codepoint                       ~-~45fed
+@c           UTF-32                                  ~-~45fed
 @d           date
   @da        absolute date                           ~2018.5.14..22.31.46..1435
   @dr        relative date (ie, timespan)            ~h5.m30.s12
