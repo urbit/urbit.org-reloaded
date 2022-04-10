@@ -36,6 +36,11 @@ Each section of this walkthrough will list additional resources and learning
 material at the bottom of the page, which will cover the concepts discussed in a
 more comprehensive manner.
 
+Here is the basic structure of the app we'll be building:
+
+![journal app
+diagram](https://media.urbit.org/docs/userspace/full-stack-guide/journal-app-diagram.svg)
+
 ## Sections
 
 #### [1. Introduction](/docs/userspace/gall-2/1-intro)
