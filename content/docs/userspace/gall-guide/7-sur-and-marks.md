@@ -404,5 +404,5 @@ Permissions:
 - Have a quick look at the [tisket
   documentation](/docs/hoon/reference/rune/tis#-tisket).
 - Try writing a mark file for the `update:todo` type, in a similar fashion to
-  the `action:todo` one in the [mark file section](#mark-file). You can compare
+  the `action:todo` one in the [mark file section](#mark-files). You can compare
   yours to the one we'll use in the next lesson.
