@@ -6,7 +6,7 @@ timezone = "Europe/Amsterdam"
 location = "Hortus Botanicus, Plantage Middenlaan 2a, 1018 DD Amsterdam, Netherlands"
 image = "https://i.imgur.com/g75pj4M.png"
 registration_url = "https://www.meetup.com/urbit-sf/events/285233312/"
-description = "The Martian way of peer-to-peer social computing"
+description = "The Martian way of P2P social computing"
 dark = false
 
 
