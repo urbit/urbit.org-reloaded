@@ -84,7 +84,7 @@ compiler does), `[a b]` is the same as `:-(a b)`.
 
 ```
 ~zod:dojo> :-(1 2)
-[1 2
+[1 2]
 
 ~zod:dojo> 1^2
 [1 2]
