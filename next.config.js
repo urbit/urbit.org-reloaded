@@ -49,7 +49,6 @@ module.exports = withTM({
     if (!isServer) {
       config.resolve.fallback = {
         fs: false,
-        process: false,
         path: "path-browserify",
         events: false,
       };
