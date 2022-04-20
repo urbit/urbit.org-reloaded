@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="bg-wall-100 mt-20 w-full flex justify-center">
       <SingleColumn>
         <Section short className="flex flex-row flex-wrap">
-          <div className="w-1/2 md:w-1/3 flex flex-col flex-shrink">
+          <div className="w-1/2 md:w-1/3 flex flex-col shrink">
             <h4 className="mt-16 mb-8">Use Urbit</h4>
             <Link href="/getting-started">
               <div>
@@ -45,7 +45,7 @@ export default function Footer() {
               </div>
             </Link>
           </div>
-          <div className="w-1/2 md:w-1/3 flex flex-col flex-shrink">
+          <div className="w-1/2 md:w-1/3 flex flex-col shrink">
             <h4 className="mt-16 mb-8">About</h4>
             <Link href="/understanding-urbit">
               <div>
@@ -78,7 +78,7 @@ export default function Footer() {
               </div>
             </Link>
           </div>
-          <div className="w-1/2 md:w-1/3 flex flex-col flex-shrink">
+          <div className="w-1/2 md:w-1/3 flex flex-col shrink">
             <h4 className="mt-16 mb-8">News</h4>
             <Link href="/blog">
               <div>
