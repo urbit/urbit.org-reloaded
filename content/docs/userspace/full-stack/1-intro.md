@@ -43,47 +43,47 @@ diagram](https://media.urbit.org/docs/userspace/full-stack-guide/journal-app-dia
 
 ## Sections
 
-#### [1. Introduction](/docs/userspace/gall-2/1-intro)
+#### [1. Introduction](/docs/userspace/full-stack/1-intro)
 
 An overview of the guide and table of contents.
 
-#### [2. Types](/docs/userspace/gall-2/2-types)
+#### [2. Types](/docs/userspace/full-stack/2-types)
 
 Creating the `/sur` structure file for our `%journal` agent.
 
-#### [3. Agent](/docs/userspace/gall-2/3-agent)
+#### [3. Agent](/docs/userspace/full-stack/3-agent)
 
 Creating the `%journal` agent itself.
 
-#### [4. JSON](/docs/userspace/gall-2/5-json)
+#### [4. JSON](/docs/userspace/full-stack/5-json)
 
 Writing a library to convert between our agent's marks and JSON. This lets our
 React front-end poke our agent, and our agent send updates back to it.
 
-#### [5. Marks](/docs/userspace/gall-2/4-marks)
+#### [5. Marks](/docs/userspace/full-stack/4-marks)
 
 Creating the mark files for the pokes our agent takes and updates it sends out.
 
-#### [6. Eyre](/docs/userspace/gall-2/6-eyre)
+#### [6. Eyre](/docs/userspace/full-stack/6-eyre)
 
 A brief overview of how the webserver vane Eyre works.
 
-#### [7. React App Setup](/docs/userspace/gall-2/7-react-setup)
+#### [7. React App Setup](/docs/userspace/full-stack/7-react-setup)
 
 Creating a new React app, installing the required packages, and setting up some
 basic things for our front-end.
 
-#### [8. React App Logic](/docs/userspace/gall-2/8-http-api)
+#### [8. React App Logic](/docs/userspace/full-stack/8-http-api)
 
 Analyzing the core logic of our React app, with particular focus on using
 methods of the `Urbit` class from `@urbit/http-api` to communicate with our
 agent.
 
-#### [9. Desk and Glob](/docs/userspace/gall-2/9-web-scries)
+#### [9. Desk and Glob](/docs/userspace/full-stack/9-web-scries)
 
 Building and "globbing" our front-end, and putting together a desk for
 distribution.
 
-#### [10. Summary](/docs/userspace/gall-2/10-final)
+#### [10. Summary](/docs/userspace/full-stack/10-final)
 
 Some final comments and additional resources.
