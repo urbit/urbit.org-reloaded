@@ -1,4 +1,3 @@
-import "tailwindcss/tailwind.css";
 import { useState, useEffect } from "react";
 import { configure, GlobalHotKeys } from "react-hotkeys";
 import { init } from "@socialgouv/matomo-next";
