@@ -114,15 +114,13 @@ const GroupPage = ({ data, markdown, params }) => {
 export const getServerSideProps = async ({ params }) => {
   let { data, content } = getPage(
     join(process.cwd(), "content/group", params.group?.join("/") || "/")
-  ) || { data: {}, content: {} };
+  ) || { data: {}, content: "" };
 
   if (!data.title) {
     data = { title: params.group?.join("/"), description: "A group on Urbit." };
   }
 
-  const markdown = content
-    ? await Markdown({ post: { content: content } })
-    : "";
+  const markdown = await Markdown({ post: { content: content } });
 
   return {
     props: {

@@ -12,6 +12,7 @@ import { decode } from "html-entities";
 import Markdown from "../../components/Markdown";
 import Sigil from "../../components/Sigil";
 import axios from "axios";
+import useSWR from "swr";
 
 const IdPage = ({ data, markdown, network, params }) => {
   const { id } = params;
@@ -128,8 +129,7 @@ const IdPage = ({ data, markdown, network, params }) => {
 export const getServerSideProps = async ({ params }) => {
   let { data, content } = getPage(
     join(process.cwd(), "content/id/", params.id.slice(1))
-  ) || { data: {}, content: {} };
-  console.log(data);
+  ) || { data: {}, content: "" };
 
   if (!data.ship && ob.isValidPatp(params.id)) {
     data = { ship: params.id, description: "An Urbit ID." };
@@ -143,9 +143,7 @@ export const getServerSideProps = async ({ params }) => {
     )
     .then((res) => res.data);
 
-  const markdown = content
-    ? await Markdown({ post: { content: content } })
-    : "";
+  const markdown = await Markdown({ post: { content: content } });
 
   return {
     props: {
