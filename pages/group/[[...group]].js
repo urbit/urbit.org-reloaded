@@ -120,7 +120,7 @@ export const getServerSideProps = async ({ params }) => {
     data = { title: params.group?.join("/"), description: "A group on Urbit." };
   }
 
-  const markdown = await Markdown({ post: { content: content } });
+  const markdown = await Markdown({ post: { content: content } }, true);
 
   return {
     props: {

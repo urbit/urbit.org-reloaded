@@ -142,7 +142,7 @@ export const getServerSideProps = async ({ params }) => {
     )
     .then((res) => res.data);
 
-  const markdown = await Markdown({ post: { content: content } });
+  const markdown = await Markdown({ post: { content: content } }, true);
 
   return {
     props: {
