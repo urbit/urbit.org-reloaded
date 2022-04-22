@@ -135,9 +135,11 @@ export const getServerSideProps = async ({ params }) => {
     data = { ship: params.id, description: "An Urbit ID." };
   }
 
-  const network = await axios
+  let network = await axios
     .get(
-      `https://mt2aga2c5l.execute-api.us-east-2.amazonaws.com/get-node?urbit-id=${params.id}`
+      `https://mt2aga2c5l.execute-api.us-east-2.amazonaws.com/get-node?urbit-id=${
+        ob.isValidPatp(params.id) ? params.id : "~zod"
+      }`
     )
     .then((res) => res.data);
 
