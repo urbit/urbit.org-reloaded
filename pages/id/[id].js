@@ -12,7 +12,6 @@ import { decode } from "html-entities";
 import Markdown from "../../components/Markdown";
 import Sigil from "../../components/Sigil";
 import axios from "axios";
-import useSWR from "swr";
 
 const IdPage = ({ data, markdown, network, params }) => {
   const { id } = params;
