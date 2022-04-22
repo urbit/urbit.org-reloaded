@@ -1,6 +1,7 @@
 import { Component, createRef } from "react";
 import { glossary } from "../lib/glossary";
 import { withRouter } from "next/router";
+import debounce from "lodash.debounce";
 import Downshift from "downshift";
 
 class Search extends Component {
@@ -38,7 +39,7 @@ class Search extends Component {
     this.props.closeSearch();
   }
 
-  onInputValueChange(query) {
+  onInputValueChange = debounce((query) => {
     if (query.length) {
       fetch(this.searchEndpoint(query))
         .then((res) => res.json())
@@ -61,7 +62,7 @@ class Search extends Component {
     } else {
       this.setState({ results: [] });
     }
-  }
+  }, 250);
 
   render() {
     const { state, props } = this;
