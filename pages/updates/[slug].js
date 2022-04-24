@@ -47,8 +47,12 @@ export default function Post({
               {post.author}
             </div>
           ) : null}
-          {post.ship ? (
-            <div className="type-ui text-wall-500 font-mono">{post.ship}</div>
+          {post?.extra?.ship ? (
+            <Link href={`/id/${post.extra.ship}`}>
+              <a className="type-sub-bold text-wall-500 font-mono">
+                {post?.extra?.ship}
+              </a>
+            </Link>
           ) : null}
           <div className="type-ui text-wall-500 mt-4 md:mt-8 lg:mt-10">
             {formatDate(date)}

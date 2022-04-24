@@ -6,6 +6,7 @@ import {
   generateDisplayDate,
 } from "../../lib/lib";
 import Head from "next/head";
+import Link from "next/link";
 import Meta from "../../components/Meta";
 import ErrorPage from "../404";
 import Container from "../../components/Container";

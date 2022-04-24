@@ -6,6 +6,7 @@ import {
   getSimilarGrants,
 } from "../../lib/lib";
 import Head from "next/head";
+import Link from "next/link";
 import Meta from "../../components/Meta";
 import { decode } from "html-entities";
 import classnames from "classnames";
