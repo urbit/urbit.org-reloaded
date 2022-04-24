@@ -56,21 +56,21 @@ const IdPage = ({ data, markdown, network, params }) => {
               <p>Urbit ID</p>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 justify-between">
-            <div className="flex flex-col">
+          <div className="flex flex-wrap md:flex-nowrap justify-between">
+            <div className="flex flex-col basis-1/2 md:basis-auto mb-4 md:mb-0">
               <p className="font-bold text-wall-400">ID Type</p>
               <p className="font-mono">
                 {ob.clan(id).slice(0, 1).toUpperCase() + ob.clan(id).slice(1)}
               </p>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col basis-1/2 md:basis-auto mb-4 md:mb-0">
               <p className="font-bold text-wall-400">Status</p>
               <p className="font-mono">
                 {network ? "Spawned/Owned" : "Unspawned"}
               </p>
             </div>
             {!isGalaxy && (
-              <div className="flex flex-col">
+              <div className="flex flex-col basis-1/2 md:basis-auto">
                 <p className="font-bold text-wall-400">Parent</p>
                 <Link href={`/id/${parent}`}>
                   <a className="type-ui font-mono text-green-400">{parent}</a>
@@ -78,7 +78,7 @@ const IdPage = ({ data, markdown, network, params }) => {
               </div>
             )}
             {galaxy && (
-              <div className="flex flex-col">
+              <div className="flex flex-col basis-1/2 md:basis-auto">
                 <p className="font-bold text-wall-400">Galaxy</p>
                 <Link href={`/id/${galaxy}`}>
                   <a className="type-ui font-mono text-green-400">{galaxy}</a>
@@ -99,13 +99,36 @@ const IdPage = ({ data, markdown, network, params }) => {
               )}
             </div>
           )}
+          <a
+            className="flex items-center"
+            target="_blank"
+            href={`https://network.urbit.org/${id}`}
+          >
+            <div className="flex items-center">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.56 6.39999C11.9487 6.40124 9.49503 7.65251 7.95999 9.76639C6.42623 11.8789 5.99624 14.6 6.80373 17.0838C7.61122 19.5676 9.55874 21.5139 12.0425 22.3213C14.5274 23.1275 17.2476 22.6963 19.3599 21.1613L23.4236 25.225C23.9236 25.7262 24.7348 25.7262 25.2348 25.225C25.7348 24.725 25.7348 23.9149 25.2348 23.415L21.1712 19.3513V19.35C22.3586 17.7188 22.8974 15.7049 22.6862 13.6988C22.4749 11.6926 21.5274 9.83516 20.0262 8.48764C18.5249 7.1389 16.5775 6.39513 14.5599 6.40015L14.56 6.39999ZM14.56 20.16C13.075 20.16 11.65 19.57 10.6 18.52C9.55 17.47 8.95999 16.045 8.95999 14.56C8.95999 13.075 9.55 11.65 10.6 10.6C11.65 9.55001 13.075 8.95999 14.56 8.95999C16.045 8.95999 17.47 9.55001 18.52 10.6C19.57 11.65 20.16 13.075 20.16 14.56C20.1587 16.045 19.5675 17.4675 18.5175 18.5174C17.4675 19.5674 16.045 20.1587 14.5601 20.1599L14.56 20.16Z"
+                  fill="#80D8B8"
+                />
+              </svg>
+              <p className="text-green-400 font-semibold">
+                View on Network Explorer
+              </p>
+            </div>
+          </a>
           <hr className="text-wall-200" />
           <div className="flex flex-col space-y-6">
             <h3>
               Urbit is a clean-slate, peer-to-peer operating system and network.
             </h3>
             <div className="flex flex-col space-y-4">
-              <p className="text-sm font-semibold text-wall-400">
+              <p className="text-md font-semibold text-wall-400">
                 Learn how get your own Urbit ID.
               </p>
               {/* TODO: Joining groups guide. */}

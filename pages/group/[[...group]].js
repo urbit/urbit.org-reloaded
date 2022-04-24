@@ -47,24 +47,27 @@ const GroupPage = ({ data, markdown, params }) => {
               <p>Urbit Group</p>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 justify-between">
-            <div className="flex flex-col">
+          <div className="flex flex-wrap md:flex-nowrap justify-between">
+            <div className="flex flex-col basis-1/2 md:basis-auto mb-4 md:mb-0">
               <p className="font-bold text-wall-400">Group Type</p>
               <p>{data.type ? data.type : "Unknown"}</p>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col basis-1/2 md:basis-auto mb-4 md:mb-0">
               <p className="font-bold text-wall-400">Members</p>
               <p>
                 {data.participant_range ? data.participant_range : "Unknown"}
               </p>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col basis-1/2 md:basis-auto">
               <p className="font-bold text-wall-400">Host</p>
               <Link href={`/id/${group[0]}`}>
                 <a className="type-ui font-mono text-green-400">{group[0]}</a>
               </Link>
             </div>
-            <CopyLink content={data.shortcode ? data.shortcode : data.title} />
+            <CopyLink
+              className="basis-1/2 md:basis-auto"
+              content={data.shortcode ? data.shortcode : data.title}
+            />
           </div>
           {(data.description !== "A group on Urbit." || markdown) && (
             <div className="flex flex-col space-y-4">
