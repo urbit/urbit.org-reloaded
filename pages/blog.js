@@ -61,9 +61,11 @@ export default function Blog({ posts, search }) {
                         </div>
                       ) : null}
                       {post.extra.ship ? (
-                        <div className="type-sub-bold text-wall-500 font-mono">
-                          {post.extra.ship}
-                        </div>
+                        <Link href={`/id/${post.extra.ship}`}>
+                          <a className="type-sub-bold text-wall-500 font-mono">
+                            {post.extra.ship}
+                          </a>
+                        </Link>
                       ) : null}
                     </div>
                     <div className="text-wall-500 type-sub">

@@ -43,9 +43,11 @@ export default function Grant({ post, markdown, search }) {
             </div>
           ) : null}
           {post.extra.ship ? (
-            <div className="type-ui text-wall-500 font-mono">
-              {post.extra.ship}
-            </div>
+            <Link href={`/id/${post.extra.ship}`}>
+              <a className="type-sub-bold text-wall-500 font-mono">
+                {post.extra.ship}
+              </a>
+            </Link>
           ) : null}
           <div className="type-ui text-wall-500 mt-4 md:mt-8 lg:mt-10">
             {formatDate(DateTime.fromISO(post.date))}

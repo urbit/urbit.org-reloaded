@@ -8,6 +8,7 @@ import {
   generateDisplayDate,
 } from "../../lib/lib";
 import Head from "next/head";
+import Link from "next/link";
 import Meta from "../../components/Meta";
 import ErrorPage from "../404";
 import Container from "../../components/Container";
@@ -49,9 +50,11 @@ export default function Post({
               <div className="type-sub-bold mr-2">{post.extra.author}</div>
             ) : null}
             {post.extra.ship ? (
-              <div className="type-sub-bold text-wall-500 font-mono">
-                {post.extra.ship}
-              </div>
+              <Link href={`/id/${post.extra.ship}`}>
+                <a className="type-sub-bold text-wall-500 font-mono">
+                  {post.extra.ship}
+                </a>
+              </Link>
             ) : null}
           </div>
           <div className="text-wall-500 type-sub">{formatDate(date)}</div>

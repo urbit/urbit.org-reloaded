@@ -40,9 +40,11 @@ export default function MediaPage({ post, markdown, search }) {
             </div>
           ) : null}
           {post.extra.ship ? (
-            <div className="type-ui text-wall-500 font-mono">
-              {post.extra.ship}
-            </div>
+            <Link href={`/id/${post.extra.ship}`}>
+              <a className="type-sub-bold text-wall-500 font-mono">
+                {post.extra.ship}
+              </a>
+            </Link>
           ) : null}
           <div className="type-ui text-wall-500 mt-16">{formatDate(date)}</div>
         </Section>
