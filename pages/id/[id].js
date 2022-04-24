@@ -19,11 +19,15 @@ const IdPage = ({ data, markdown, network, params }) => {
     return <ErrorPage />;
   }
 
+  // Parent ID, grabbed from network or fallback to the default sponsor for that node
   const parent = network ? network.sponsor["urbit-id"] : ob.sein(id);
+  // Galaxy name above that parent
   const galaxy =
     ob.clan(id) === "planet"
       ? network?.sponsor?.sponsor?.["urbit-id"] || ob.sein(parent)
       : null;
+  // Galaxies shouldn't show parents, so store it as boolean here for reference.
+  const isGalaxy = ob.clan(id) === "galaxy";
 
   return (
     <Container>
@@ -65,12 +69,14 @@ const IdPage = ({ data, markdown, network, params }) => {
                 {network ? "Spawned/Owned" : "Unspawned"}
               </p>
             </div>
-            <div className="flex flex-col">
-              <p className="font-bold text-wall-400">Parent</p>
-              <Link href={`/id/${parent}`}>
-                <a className="type-ui font-mono text-green-400">{parent}</a>
-              </Link>
-            </div>
+            {!isGalaxy && (
+              <div className="flex flex-col">
+                <p className="font-bold text-wall-400">Parent</p>
+                <Link href={`/id/${parent}`}>
+                  <a className="type-ui font-mono text-green-400">{parent}</a>
+                </Link>
+              </div>
+            )}
             {galaxy && (
               <div className="flex flex-col">
                 <p className="font-bold text-wall-400">Galaxy</p>
