@@ -47,7 +47,7 @@ export default async function Markdown({ post }, disablePlugins) {
   const result = await remark()
     .use(remarkParse, options)
     .use(remarkprism, {
-      plugins: [!disablePlugins ? "show-invisibles" : ""],
+      plugins: !disablePlugins ? ["show-invisibles"] : [],
     })
     .use(gfm)
     .use(slug)
