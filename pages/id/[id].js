@@ -15,7 +15,7 @@ import axios from "axios";
 
 const IdPage = ({ data, markdown, network, params }) => {
   const { id } = params;
-  if (!ob.isValidPatp(id)) {
+  if (!ob.isValidPatp(id) || id.length > 14) {
     return <ErrorPage />;
   }
 
