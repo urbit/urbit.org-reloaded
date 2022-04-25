@@ -30,7 +30,11 @@ class Search extends Component {
   }
 
   patpSearch(query) {
-    return ob.isValidPatp(`~${deSig(query.toLowerCase())}`) || !isNaN(query);
+    return (
+      (ob.isValidPatp(`~${deSig(query.toLowerCase())}`) &&
+        `~${deSig(query.toLowerCase())}`.length < 15) ||
+      (!isNaN(query) && query <= 4294967295)
+    );
   }
 
   onSelect(item) {

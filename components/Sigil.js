@@ -1,6 +1,9 @@
 import { sigil, reactRenderer } from "@tlon/sigil-js";
 
 export const Sigil = ({ patp, size, icon }) => {
+  if (patp.length > 14) {
+    return <div />;
+  }
   return (
     <div className={icon ? "p-1 bg-black" : ""}>
       {sigil({
