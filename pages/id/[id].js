@@ -39,7 +39,6 @@ const IdPage = ({ data, markdown, network, params }) => {
             id
           )}.png`}
         />
-        {Meta(data)}
       </Head>
       <SingleColumn>
         <Section className="space-y-12" narrow>
