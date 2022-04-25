@@ -17,12 +17,35 @@ const GroupPage = ({ data, markdown, params }) => {
   if (!ob.isValidPatp(group[0])) {
     return <ErrorPage />;
   }
+  const image = `https://urbit-id-og-cards-ltjw3771z-urbit.vercel.app/${
+    data.title
+  }?images=${
+    data.image ? data.image : "https://media.urbit.org/logo/urbit-logo-card.png"
+  }`;
 
   return (
     <Container>
       <Head>
         <title>{data.title} • Groups • urbit.org</title>
-        {Meta(data)}
+        <link rel="icon" type="image/png" href="/images/favicon.ico" />
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+          key="twitter-card"
+        />
+        <meta
+          name="og:title"
+          content={`${data.title} • Groups • urbit.org`}
+          key="title"
+        />
+        <meta
+          name="og:description"
+          content={
+            data?.description || "View more about this group on urbit.org."
+          }
+          key="description"
+        />
+        <meta property="twitter:image" content={image} key="image" />
       </Head>
       <SingleColumn>
         <Section className="space-y-12" narrow>
