@@ -19,6 +19,8 @@ const IdPage = ({ data, markdown, network, params }) => {
     return <ErrorPage />;
   }
 
+  const image = `https://urbit-id-og-cards-kappa.vercel.app/${deSig(id)}.png`;
+
   // Parent ID, grabbed from network or fallback to the default sponsor for that node
   const parent = network ? network.sponsor["urbit-id"] : ob.sein(id);
   // Galaxy name above that parent
@@ -33,12 +35,23 @@ const IdPage = ({ data, markdown, network, params }) => {
     <Container>
       <Head>
         <title>{id} • Urbit ID • urbit.org</title>
+        <link rel="icon" type="image/png" href="/images/favicon.ico" />
         <meta
-          property="og:image"
-          content={`https://urbit-id-og-cards-kappa.vercel.app/${deSig(
-            id
-          )}.png`}
+          name="twitter:card"
+          content="summary_large_image"
+          key="twitter-card"
         />
+        <meta
+          name="og:title"
+          content={`${id} • Urbit ID • urbit.org`}
+          key="title"
+        />
+        <meta
+          name="og:description"
+          content="View more about this Urbit ID on urbit.org."
+          key="description"
+        />
+        <meta property="twitter:image" content={image} key="image" />
       </Head>
       <SingleColumn>
         <Section className="space-y-12" narrow>
