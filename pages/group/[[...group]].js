@@ -137,7 +137,12 @@ const GroupPage = ({ data, markdown, params }) => {
   );
 };
 
-export const getServerSideProps = async ({ params }) => {
+export const getServerSideProps = async ({ params, res }) => {
+  res.setHeader(
+    "Cache-Control",
+    "public, s-maxage=3600, stale-while-revalidate=604800"
+  );
+
   let { data, content } = getPage(
     join(process.cwd(), "content/group", params.group?.join("/") || "/")
   ) || { data: {}, content: "" };

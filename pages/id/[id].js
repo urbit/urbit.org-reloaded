@@ -176,7 +176,12 @@ function deSig(string) {
   return string.startsWith("~") ? string.substring(1) : string;
 }
 
-export const getServerSideProps = async ({ params }) => {
+export const getServerSideProps = async ({ params, res }) => {
+  res.setHeader(
+    "Cache-Control",
+    "public, s-maxage=3600, stale-while-revalidate=604800"
+  );
+
   let { data, content } = getPage(
     join(process.cwd(), "content/id/", params.id.slice(1))
   ) || { data: {}, content: "" };
