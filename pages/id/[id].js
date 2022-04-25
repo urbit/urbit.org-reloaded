@@ -33,6 +33,12 @@ const IdPage = ({ data, markdown, network, params }) => {
     <Container>
       <Head>
         <title>{id} • Urbit ID • urbit.org</title>
+        <meta
+          property="og:image"
+          content={`https://urbit-id-og-cards-kappa.vercel.app/${deSig(
+            id
+          )}.png`}
+        />
         {Meta(data)}
       </Head>
       <SingleColumn>
@@ -153,6 +159,10 @@ const IdPage = ({ data, markdown, network, params }) => {
     </Container>
   );
 };
+
+function deSig(string) {
+  return string.startsWith("~") ? string.substring(1) : string;
+}
 
 export const getServerSideProps = async ({ params }) => {
   let { data, content } = getPage(
