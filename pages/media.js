@@ -100,7 +100,8 @@ export default function Media({ posts, search }) {
 export async function getStaticProps() {
   const posts = getAllPosts(
     ["title", "slug", "date", "description", "extra"],
-    "media"
+    "media",
+    "date"
   );
 
   return {

@@ -73,7 +73,8 @@ export default function Updates({ posts, search }) {
 export async function getStaticProps() {
   const posts = getAllPosts(
     ["title", "slug", "date", "description", "extra"],
-    "updates"
+    "updates",
+    "date"
   );
 
   return {

@@ -86,7 +86,8 @@ export default function Blog({ posts, search }) {
 export async function getStaticProps() {
   const posts = getAllPosts(
     ["title", "slug", "date", "description", "extra"],
-    "blog"
+    "blog",
+    "date"
   );
 
   return {
