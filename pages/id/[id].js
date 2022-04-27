@@ -11,6 +11,7 @@ import ob from "urbit-ob";
 import Markdown from "../../components/Markdown";
 import Sigil from "../../components/Sigil";
 import GatewayHeader from "../../components/gateway/GatewayHeader";
+import Gateway404 from "../../components/gateway/Gateway404";
 import MetadataBlock from "../../components/gateway/MetadataBlock";
 import MetadataLink from "../../components/gateway/MetadataLink";
 import Description from "../../components/gateway/Description";
@@ -19,7 +20,7 @@ import axios from "axios";
 const IdPage = ({ data, markdown, network, params }) => {
   const { id } = params;
   if (!ob.isValidPatp(id) || id.length > 14) {
-    return <ErrorPage />;
+    return <Gateway404 type="ID" />;
   }
 
   const image = `https://urbit-id-og-cards-kappa.vercel.app/${deSig(id)}.png`;
@@ -63,15 +64,13 @@ const IdPage = ({ data, markdown, network, params }) => {
         <meta property="twitter:image" content={image} key="image" />
       </Head>
       <SingleColumn>
-        <Section className="space-y-12" narrow>
-          <div className="flex items-center space-x-4">
-            <GatewayHeader
-              title={id}
-              image={data?.image || false}
-              sigil={sigil}
-              item="Urbit ID"
-            />
-          </div>
+        <Section className="space-y-12 w-full" narrow>
+          <GatewayHeader
+            title={id}
+            image={data?.image || false}
+            sigil={sigil}
+            item="Urbit ID"
+          />
           <div className="flex flex-wrap md:flex-nowrap justify-between">
             <MetadataBlock
               title="ID Type"

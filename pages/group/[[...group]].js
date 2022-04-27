@@ -6,11 +6,11 @@ import Meta from "../../components/Meta";
 import CopyLink from "../../components/CopyLink";
 import Container from "../../components/Container";
 import SingleColumn from "../../components/SingleColumn";
-import ErrorPage from "../404";
 import Section from "../../components/Section";
 import ob from "urbit-ob";
 import Markdown from "../../components/Markdown";
 import GatewayHeader from "../../components/gateway/GatewayHeader";
+import Gateway404 from "../../components/gateway/Gateway404";
 import MetadataBlock from "../../components/gateway/MetadataBlock";
 import MetadataLink from "../../components/gateway/MetadataLink";
 import Description from "../../components/gateway/Description";
@@ -18,7 +18,7 @@ import Description from "../../components/gateway/Description";
 const GroupPage = ({ data, markdown, params }) => {
   const { group } = params;
   if (!ob.isValidPatp(group[0])) {
-    return <ErrorPage />;
+    return <Gateway404 type="group" />;
   }
   const image = `https://urbit-id-og-cards-ltjw3771z-urbit.vercel.app/${
     data.title
@@ -52,13 +52,11 @@ const GroupPage = ({ data, markdown, params }) => {
       </Head>
       <SingleColumn>
         <Section className="space-y-12" narrow>
-          <div className="flex items-center space-x-4">
-            <GatewayHeader
-              title={data.title}
-              image={data?.image}
-              item="Urbit ID"
-            />
-          </div>
+          <GatewayHeader
+            title={data.title}
+            image={data?.image}
+            item="Urbit ID"
+          />
           <div className="flex flex-wrap md:flex-nowrap justify-between">
             <MetadataBlock
               title="Group Type"
