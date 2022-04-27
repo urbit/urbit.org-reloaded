@@ -106,10 +106,9 @@ const ApplicationPage = ({ data, markdown, params }) => {
               Have an application you'd like to share publicly through
               urbit.org?
             </p>
-            {/* TODO Submission guide. */}
-            <p className="type-ui text-green-400">
-              Learn how to submit your application
-            </p>
+            <Link href="/application/submit">
+              <a className="type-ui text-green-400">Submit your application</a>
+            </Link>
           </div>
           <Link href="/">
             <a className="text-xl pt-8 block font-semibold">Urbit.org</a>
