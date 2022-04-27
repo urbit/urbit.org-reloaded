@@ -144,10 +144,11 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
               <p className="text-md font-semibold text-wall-400">
                 Learn how get your own Urbit ID.
               </p>
-              {/* TODO: Joining groups guide. */}
-              <button className="button-lg max-w-xs bg-green-400 text-white">
-                Get an Urbit ID
-              </button>
+              <Link href="/id/get">
+                <button className="button-lg max-w-xs bg-green-400 text-white">
+                  Get an Urbit ID
+                </button>
+              </Link>
             </div>
           </div>
           <hr className="text-wall-200" />
