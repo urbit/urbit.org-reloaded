@@ -171,21 +171,21 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
 const Creations = ({ id, title, data, parentSlug }) => {
   return (
     data?.length > 0 && (
-      <div className="flex flex-col space-y-2">
+      <div className="flex space-y-2 flex-col">
         <p className="text-wall-400 font-semibold">{title}</p>
         <div className="flex flex-wrap space-x-4">
           {data.map((each) => (
             <Link href={`/${parentSlug}/${id}/${each.slug}`}>
-              <div className="cursor-pointer flex flex-col items-center space-y-1">
+              <div className="cursor-pointer rounded-xl bg-wall-100 p-4 flex items-center space-x-4">
                 <img
                   className="overflow-hidden rounded-xl"
-                  style={{ width: 100, height: 100 }}
+                  style={{ width: 50, height: 50 }}
                   src={
                     each?.image ||
                     "https://media.urbit.org/logo/urbit-logo-card.png"
                   }
                 />
-                <a className="text-green-400 font-semibold">{each.title}</a>
+                <a className="font-semibold">{each.title}</a>
               </div>
             </Link>
           ))}
