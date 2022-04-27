@@ -8,9 +8,12 @@ import SingleColumn from "../../components/SingleColumn";
 import ErrorPage from "../404";
 import Section from "../../components/Section";
 import ob from "urbit-ob";
-import { decode } from "html-entities";
 import Markdown from "../../components/Markdown";
 import Sigil from "../../components/Sigil";
+import GatewayHeader from "../../components/gateway/GatewayHeader";
+import MetadataBlock from "../../components/gateway/MetadataBlock";
+import MetadataLink from "../../components/gateway/MetadataLink";
+import Description from "../../components/gateway/Description";
 import axios from "axios";
 
 const IdPage = ({ data, markdown, network, params }) => {
@@ -30,6 +33,12 @@ const IdPage = ({ data, markdown, network, params }) => {
       : null;
   // Galaxies shouldn't show parents, so store it as boolean here for reference.
   const isGalaxy = ob.clan(id) === "galaxy";
+
+  const sigil = (
+    <div className="rounded-xl overflow-hidden">
+      <Sigil patp={id} size={100} />
+    </div>
+  );
 
   return (
     <Container>
@@ -56,67 +65,44 @@ const IdPage = ({ data, markdown, network, params }) => {
       <SingleColumn>
         <Section className="space-y-12" narrow>
           <div className="flex items-center space-x-4">
-            {/* Avatar or sigil */}
-            {data.image ? (
-              <img
-                className="rounded-xl"
-                src={data.image}
-                height={100}
-                width={100}
-              />
-            ) : (
-              <div className="rounded-xl overflow-hidden">
-                <Sigil patp={id} size={100} />
-              </div>
-            )}
-            <div className="flex flex-col">
-              <h2>{id}</h2>
-              <p>Urbit ID</p>
-            </div>
+            <GatewayHeader
+              title={id}
+              image={data?.image || false}
+              sigil={sigil}
+              item="Urbit ID"
+            />
           </div>
           <div className="flex flex-wrap md:flex-nowrap justify-between">
-            <div className="flex flex-col basis-1/2 md:basis-auto mb-4 md:mb-0">
-              <p className="font-bold text-wall-400">ID Type</p>
-              <p className="font-mono">
-                {ob.clan(id).slice(0, 1).toUpperCase() + ob.clan(id).slice(1)}
-              </p>
-            </div>
-            <div className="flex flex-col basis-1/2 md:basis-auto mb-4 md:mb-0">
-              <p className="font-bold text-wall-400">Status</p>
-              <p className="font-mono">
-                {network ? "Spawned/Owned" : "Unspawned"}
-              </p>
-            </div>
+            <MetadataBlock
+              title="ID Type"
+              content={
+                ob.clan(id).slice(0, 1).toUpperCase() + ob.clan(id).slice(1)
+              }
+            />
+            <MetadataBlock
+              title="Status"
+              content={network ? "Spawned/Owned" : "Unspawned"}
+            />
             {!isGalaxy && (
-              <div className="flex flex-col basis-1/2 md:basis-auto">
-                <p className="font-bold text-wall-400">Parent</p>
-                <Link href={`/id/${parent}`}>
-                  <a className="type-ui font-mono text-green-400">{parent}</a>
-                </Link>
-              </div>
+              <MetadataLink
+                title="Parent"
+                href={`/id/${parent}`}
+                content={parent}
+              />
             )}
             {galaxy && (
-              <div className="flex flex-col basis-1/2 md:basis-auto">
-                <p className="font-bold text-wall-400">Galaxy</p>
-                <Link href={`/id/${galaxy}`}>
-                  <a className="type-ui font-mono text-green-400">{galaxy}</a>
-                </Link>
-              </div>
+              <MetadataLink
+                title="Galaxy"
+                href={`/id/${galaxy}`}
+                content={galaxy}
+              />
             )}
           </div>
-          {(data.description !== "An Urbit ID." || markdown) && (
-            <div className="flex flex-col space-y-4">
-              <p className="font-bold text-wall-400">Description</p>
-              {markdown ? (
-                <div
-                  className="flex flex-col space-y-4"
-                  dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-                />
-              ) : (
-                <p>{data.description}</p>
-              )}
-            </div>
-          )}
+          <Description
+            description={data.description}
+            fallback="An Urbit ID."
+            markdown={markdown}
+          />
           <a
             className="flex items-center"
             target="_blank"

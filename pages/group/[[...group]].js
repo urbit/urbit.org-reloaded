@@ -9,8 +9,11 @@ import SingleColumn from "../../components/SingleColumn";
 import ErrorPage from "../404";
 import Section from "../../components/Section";
 import ob from "urbit-ob";
-import { decode } from "html-entities";
 import Markdown from "../../components/Markdown";
+import GatewayHeader from "../../components/gateway/GatewayHeader";
+import MetadataBlock from "../../components/gateway/MetadataBlock";
+import MetadataLink from "../../components/gateway/MetadataLink";
+import Description from "../../components/gateway/Description";
 
 const GroupPage = ({ data, markdown, params }) => {
   const { group } = params;
@@ -50,61 +53,38 @@ const GroupPage = ({ data, markdown, params }) => {
       <SingleColumn>
         <Section className="space-y-12" narrow>
           <div className="flex items-center space-x-4">
-            {/* Group logo and fallback */}
-            {data.image ? (
-              <img
-                className="rounded-xl"
-                src={data.image}
-                height={100}
-                width={100}
-              />
-            ) : (
-              <img
-                className="object-contain shadow-sm rounded-xl"
-                style={{ height: 100, width: 100 }}
-                src="https://media.urbit.org/logo/urbit-logo-card.png"
-              />
-            )}
-            <div className="flex flex-col">
-              <h2>{data.title}</h2>
-              <p>Urbit Group</p>
-            </div>
+            <GatewayHeader
+              title={data.title}
+              image={data?.image}
+              item="Urbit ID"
+            />
           </div>
           <div className="flex flex-wrap md:flex-nowrap justify-between">
-            <div className="flex flex-col basis-1/2 md:basis-auto mb-4 md:mb-0">
-              <p className="font-bold text-wall-400">Group Type</p>
-              <p>{data.type ? data.type : "Unknown"}</p>
-            </div>
-            <div className="flex flex-col basis-1/2 md:basis-auto mb-4 md:mb-0">
-              <p className="font-bold text-wall-400">Members</p>
-              <p>
-                {data.participant_range ? data.participant_range : "Unknown"}
-              </p>
-            </div>
-            <div className="flex flex-col basis-1/2 md:basis-auto">
-              <p className="font-bold text-wall-400">Host</p>
-              <Link href={`/id/${group[0]}`}>
-                <a className="type-ui font-mono text-green-400">{group[0]}</a>
-              </Link>
-            </div>
+            <MetadataBlock
+              title="Group Type"
+              content={data.type ? data.type : "Unknown"}
+            />
+            <MetadataBlock
+              title="Members"
+              content={
+                data.participant_range ? data.participant_range : "Unknown"
+              }
+            />
+            <MetadataLink
+              title="Host"
+              href={`/id/${group[0]}`}
+              content={group[0]}
+            />
             <CopyLink
               className="basis-1/2 md:basis-auto"
               content={data.shortcode ? data.shortcode : data.title}
             />
           </div>
-          {(data.description !== "A group on Urbit." || markdown) && (
-            <div className="flex flex-col space-y-4">
-              <p className="font-bold text-wall-400">Description</p>
-              {markdown ? (
-                <div
-                  className="flex flex-col space-y-4"
-                  dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-                />
-              ) : (
-                <p>{data.description}</p>
-              )}
-            </div>
-          )}
+          <Description
+            description={data.description}
+            fallback="A group on Urbit."
+            markdown={markdown}
+          />
           <hr className="text-wall-200" />
           <div className="flex flex-col space-y-6">
             <h3>
