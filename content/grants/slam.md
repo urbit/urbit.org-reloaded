@@ -7,7 +7,7 @@ grant_category = ["App Dev"]
 [extra]
 image = ""
 description = "Slam Action Game"
-reward = "$24000 in WSTR"
+reward = "3 stars"
 assignee = "~hanfel-dovned"
 champion = "~rabsef-bicrym"
 id = ""
