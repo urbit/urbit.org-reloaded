@@ -1,11 +1,9 @@
 import Head from "next/head";
 import Link from "next/link";
-import { getPage } from "../../lib/lib";
+import { getPage, getAllPosts } from "../../lib/lib";
 import { join } from "path";
-import Meta from "../../components/Meta";
 import Container from "../../components/Container";
 import SingleColumn from "../../components/SingleColumn";
-import ErrorPage from "../404";
 import Section from "../../components/Section";
 import ob from "urbit-ob";
 import Markdown from "../../components/Markdown";
@@ -17,7 +15,7 @@ import MetadataLink from "../../components/gateway/MetadataLink";
 import Description from "../../components/gateway/Description";
 import axios from "axios";
 
-const IdPage = ({ data, markdown, network, params }) => {
+const IdPage = ({ data, markdown, applications, groups, network, params }) => {
   const { id } = params;
   if (!ob.isValidPatp(id) || id.length > 14) {
     return <Gateway404 type="ID" />;
@@ -97,6 +95,18 @@ const IdPage = ({ data, markdown, network, params }) => {
               />
             )}
           </div>
+          <Creations
+            title="Applications"
+            id={id}
+            parentSlug="application"
+            data={applications}
+          />
+          <Creations
+            title="Hosted Groups"
+            id={id}
+            parentSlug="group"
+            data={groups}
+          />
           <Description
             description={data.description}
             fallback="An Urbit ID."
@@ -157,6 +167,33 @@ const IdPage = ({ data, markdown, network, params }) => {
   );
 };
 
+const Creations = ({ id, title, data, parentSlug }) => {
+  return (
+    data?.length > 0 && (
+      <div className="flex flex-col space-y-2">
+        <p className="text-wall-400 font-semibold">{title}</p>
+        <div className="flex flex-wrap space-x-4">
+          {data.map((each) => (
+            <Link href={`/${parentSlug}/${id}/${each.slug}`}>
+              <div className="cursor-pointer flex flex-col items-center space-y-1">
+                <img
+                  className="overflow-hidden rounded-xl"
+                  style={{ width: 100, height: 100 }}
+                  src={
+                    each?.image ||
+                    "https://media.urbit.org/logo/urbit-logo-card.png"
+                  }
+                />
+                <a className="text-green-400 font-semibold">{each.title}</a>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    )
+  );
+};
+
 function deSig(string) {
   return string.startsWith("~") ? string.substring(1) : string;
 }
@@ -170,6 +207,12 @@ export const getServerSideProps = async ({ params, res }) => {
   let { data, content } = getPage(
     join(process.cwd(), "content/id/", params.id.slice(1))
   ) || { data: {}, content: "" };
+
+  const applications = getAllPosts(
+    ["title", "slug", "image"],
+    `application/${params.id}`
+  );
+  const groups = getAllPosts(["title", "slug", "image"], `group/${params.id}`);
 
   if (!data.ship && ob.isValidPatp(params.id)) {
     data = { ship: params.id, description: "An Urbit ID." };
@@ -188,6 +231,8 @@ export const getServerSideProps = async ({ params, res }) => {
   return {
     props: {
       data,
+      applications,
+      groups,
       markdown,
       network,
       params,
