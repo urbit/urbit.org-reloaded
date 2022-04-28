@@ -41,7 +41,7 @@ export default function MediaPage({ post, markdown, search }) {
             </div>
           ) : null}
           {post.extra.ship ? (
-            <Link href={`/id/${post.extra.ship}`}>
+            <Link href={`/ids/${post.extra.ship}`}>
               <a className="type-sub-bold text-wall-500 font-mono">
                 {post.extra.ship}
               </a>

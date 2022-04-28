@@ -50,7 +50,7 @@ export default function Post({
               <div className="type-sub-bold mr-2">{post.extra.author}</div>
             ) : null}
             {post.extra.ship ? (
-              <Link href={`/id/${post.extra.ship}`}>
+              <Link href={`/ids/${post.extra.ship}`}>
                 <a className="type-sub-bold text-wall-500 font-mono">
                   {post.extra.ship}
                 </a>

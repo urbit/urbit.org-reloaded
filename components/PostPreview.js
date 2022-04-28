@@ -28,7 +28,7 @@ export default function PostPreview(props) {
               </div>
             ) : null}
             {props.post.extra.ship ? (
-              <Link href={`/id/${props.post.extra.ship}`}>
+              <Link href={`/ids/${props.post.extra.ship}`}>
                 <a className="type-sub-bold text-wall-500 font-mono">
                   {props.post.extra.ship}
                 </a>

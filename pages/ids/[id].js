@@ -83,14 +83,14 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
             {!isGalaxy && (
               <MetadataLink
                 title="Parent"
-                href={`/id/${parent}`}
+                href={`/ids/${parent}`}
                 content={parent}
               />
             )}
             {galaxy && (
               <MetadataLink
                 title="Galaxy"
-                href={`/id/${galaxy}`}
+                href={`/ids/${galaxy}`}
                 content={galaxy}
               />
             )}
@@ -144,7 +144,7 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
               <p className="text-md font-semibold text-wall-400">
                 Learn how get your own Urbit ID.
               </p>
-              <Link href="/id/get">
+              <Link href="/ids/get">
                 <button className="button-lg max-w-xs bg-green-400 text-white">
                   Get an Urbit ID
                 </button>
@@ -154,7 +154,7 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
           <hr className="text-wall-200" />
           <div className="flex flex-col space-y-1">
             <p>Have an Urbit ID?</p>
-            <Link href="/id/submit">
+            <Link href="/ids/submit">
               <a className="type-ui text-green-400">
                 Claim and customize your Urbit ID page
               </a>
@@ -207,14 +207,14 @@ export const getServerSideProps = async ({ params, res }) => {
   );
 
   let { data, content } = getPage(
-    join(process.cwd(), "content/id/", params.id.slice(1))
+    join(process.cwd(), "content/ids/", params.id.slice(1))
   ) || { data: {}, content: "" };
 
   const applications = getAllPosts(
     ["title", "slug", "image"],
-    `application/${params.id}`
+    `applications/${params.id}`
   );
-  const groups = getAllPosts(["title", "slug", "image"], `group/${params.id}`);
+  const groups = getAllPosts(["title", "slug", "image"], `groups/${params.id}`);
 
   if (!data.ship && ob.isValidPatp(params.id)) {
     data = { ship: params.id, description: "An Urbit ID." };

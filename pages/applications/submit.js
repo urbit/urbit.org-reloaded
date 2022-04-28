@@ -7,11 +7,16 @@ import { useInputChange } from "../../lib/hooks";
 const SubmissionPage = () => {
   const [form, handleFormChange] = useInputChange();
 
-  const href = `https://github.com/urbit/urbit.org/new/master?filename=/content/id/${form?.ship?.substring(
-    1
-  )}.md&value=${encodeURIComponent(
+  const href = `https://github.com/urbit/urbit.org/new/master?filename=/content/applications/${
+    form?.shortcode
+  }.md&value=${encodeURIComponent(
     `+++
-ship = "${form?.ship}"
+title = "${form?.appName}"
+shortcode = "${form?.shortcode}"
+license = "${form?.license || ""}"
+image = "${form?.imageUrl || ""}"
+developer = "${form?.developer || ""}"
+website = "${form?.website || ""}"
 +++
 
 ${form?.description || ""}`
@@ -22,14 +27,14 @@ ${form?.description || ""}`
       <SingleColumn>
         <Section narrow className="space-y-12">
           <div className="flex flex-col space-y-4">
-            <h2>Claim your page</h2>
+            <h2>Submit your application</h2>
             <p>
-              Urbit ID page claims are accomplished through a GitHub pull
+              Application submissions are accomplished through a GitHub pull
               request.
             </p>
             <p>
               You’ll need <a href="https://github.com">a GitHub account</a>{" "}
-              before you get started.
+              before you get started to submit your group.
             </p>
             <p>
               First, enter your information and then click “Submit with GitHub.”
@@ -37,42 +42,59 @@ ${form?.description || ""}`
               pre-populated markdown file. Click “Propose new file,” and then
               “Create pull request” on the following page.
             </p>
-            <p>
-              Then, to validate that you operate this group, send a DM to{" "}
-              <Link href="/id/~haddef-sigwen">
-                <a>~haddef-sigwen</a>
-              </Link>{" "}
-              from your group host <code>@p</code> with a link to the pull
-              request on GitHub. We’ll approve the pull request and your page
-              will be online shortly.
-            </p>
           </div>
           <div className="flex flex-col space-y-4">
-            <h3>Enter your Urbit ID information</h3>
+            <h3>Enter your application information</h3>
             <div className="flex flex-col">
-              <p>
-                Urbit ID (e.g. <code>~bitbet-bolbel</code>) (required)
-              </p>
+              <p>Application name (required)</p>
               <input
                 className="bg-wall-100 p-2"
-                name="ship"
+                name="appName"
                 onChange={handleFormChange}
               />
             </div>
             <div className="flex flex-col">
-              <p>Hosted groups</p>
+              <p>
+                Shortcode (e.g. <code>~paldev/pals</code>) (required)
+              </p>
               <input
-                className="bg-wall-100 p-2 text-wall-400"
-                readOnly
-                value="Submitted groups associated with this ID will automatically appear"
+                className="bg-wall-100 p-2"
+                name="shortcode"
+                onChange={handleFormChange}
               />
             </div>
             <div className="flex flex-col">
-              <p>Applications</p>
+              <p>
+                App image URL (e.g. `https://...`) or color (e.g. `#FFCED0`)
+              </p>
               <input
-                className="bg-wall-100 p-2 text-wall-400"
-                readOnly
-                value="Submitted applications associated with this ID will automatically appear"
+                className="bg-wall-100 p-2"
+                name="imageUrl"
+                onChange={handleFormChange}
+              />
+            </div>
+            <div className="flex flex-col">
+              <p>License (e.g. MIT)</p>
+              <input
+                className="bg-wall-100 p-2"
+                name="license"
+                onChange={handleFormChange}
+              />
+            </div>
+            <div className="flex flex-col">
+              <p>Developer</p>
+              <input
+                className="bg-wall-100 p-2"
+                name="developer"
+                onChange={handleFormChange}
+              />
+            </div>
+            <div className="flex flex-col">
+              <p>Website</p>
+              <input
+                className="bg-wall-100 p-2"
+                name="website"
+                onChange={handleFormChange}
               />
             </div>
             <div className="flex flex-col">

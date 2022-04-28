@@ -34,7 +34,7 @@ export default function GuidePage({ post, markdown }) {
 
 //
 export async function getStaticProps({ params }) {
-  const post = getPostBySlug("guide", ["title", "slug", "content"], "group");
+  const post = getPostBySlug("guide", ["title", "slug", "content"], "groups");
 
   const markdown = await Markdown({ post });
 

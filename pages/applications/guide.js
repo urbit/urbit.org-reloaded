@@ -26,7 +26,7 @@ export default function GuidePage({ post, markdown }) {
           ></article>
           <h2 className="text-3xl my-12">5. Add more applications</h2>
           <p className="my-2">Here's a few more applications to check out:</p>
-          <Link href="/application/~paldev/pals">
+          <Link href="/applications/~paldev/pals">
             <div class="bg-wall-200 rounded-xl p-3 flex flex-col space-y-4 my-6 cursor-pointer">
               <div class="flex space-x-4 items-center">
                 <div
@@ -43,7 +43,7 @@ export default function GuidePage({ post, markdown }) {
             </div>
           </Link>
 
-          <Link href="/application/~fabnev-himnur/escape">
+          <Link href="/applications/~fabnev-himnur/escape">
             <div class="bg-wall-200 rounded-xl p-3 flex flex-col space-y-4 my-6 cursor-pointer">
               <div class="flex space-x-4 items-center">
                 <img
@@ -60,7 +60,7 @@ export default function GuidePage({ post, markdown }) {
             </div>
           </Link>
 
-          <Link href="/application/~paldev/rumors">
+          <Link href="/applications/~paldev/rumors">
             <div class="bg-wall-200 rounded-xl p-3 flex flex-col space-y-4 cursor-pointer">
               <div class="flex space-x-4 items-center">
                 <div
@@ -90,7 +90,7 @@ export async function getStaticProps({ params }) {
   const post = getPostBySlug(
     "guide",
     ["title", "slug", "content"],
-    "application"
+    "applications"
   );
 
   const markdown = await Markdown({ post });

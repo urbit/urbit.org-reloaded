@@ -14,7 +14,7 @@ Read our [Getting Started guide](https://urbit.org/install) for details.
 
 Urbit is still in its early stages, so you’ll need to join groups and browse around the network to discover new applications as they are being brought up.
 
-However, we can get started a simple app from Urbit developer [`~paldev`](/id/~paldev).
+However, we can get started a simple app from Urbit developer [`~paldev`](/ids/~paldev).
 
 ## 3. Search for a Developer
 

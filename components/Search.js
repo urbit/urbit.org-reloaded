@@ -73,7 +73,7 @@ class Search extends Component {
                   type: "PATP",
                   content: {
                     patp: patp,
-                    slug: `/id/${patp}`,
+                    slug: `/ids/${patp}`,
                   },
                 },
               ]

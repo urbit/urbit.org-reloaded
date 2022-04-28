@@ -2,7 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { getPage } from "../../lib/lib";
 import { join } from "path";
-import Meta from "../../components/Meta";
 import CopyLink from "../../components/CopyLink";
 import Container from "../../components/Container";
 import SingleColumn from "../../components/SingleColumn";
@@ -15,12 +14,12 @@ import MetadataBlock from "../../components/gateway/MetadataBlock";
 import MetadataLink from "../../components/gateway/MetadataLink";
 import Description from "../../components/gateway/Description";
 
-const GroupPage = ({ data, markdown, params }) => {
-  const { group } = params;
-  if (!ob.isValidPatp(group[0])) {
-    return <Gateway404 type="group" />;
+const ApplicationPage = ({ data, markdown, params }) => {
+  const { application } = params;
+  if (!ob.isValidPatp(application[0])) {
+    return <Gateway404 type="application" />;
   }
-  const image = `https://urbit-id-og-cards-ltjw3771z-urbit.vercel.app/${
+  const image = `https://urbit-id-og-cards-7mdrgkd36-urbit.vercel.app/${
     data.title
   }?images=${
     data.image ? data.image : "https://media.urbit.org/logo/urbit-logo-card.png"
@@ -29,7 +28,7 @@ const GroupPage = ({ data, markdown, params }) => {
   return (
     <Container>
       <Head>
-        <title>{data.title} • Groups • urbit.org</title>
+        <title>{data.title} • Applications • urbit.org</title>
         <link rel="icon" type="image/png" href="/images/favicon.ico" />
         <meta
           name="twitter:card"
@@ -38,13 +37,14 @@ const GroupPage = ({ data, markdown, params }) => {
         />
         <meta
           name="og:title"
-          content={`${data.title} • Groups • urbit.org`}
+          content={`${data.title} • Applications • urbit.org`}
           key="title"
         />
         <meta
           name="og:description"
           content={
-            data?.description || "View more about this group on urbit.org."
+            data?.description ||
+            "View more about this application on urbit.org."
           }
           key="description"
         />
@@ -55,23 +55,25 @@ const GroupPage = ({ data, markdown, params }) => {
           <GatewayHeader
             title={data.title}
             image={data?.image}
-            item="Urbit ID"
+            item="Urbit Application"
           />
           <div className="flex flex-wrap md:flex-nowrap justify-between">
             <MetadataBlock
-              title="Group Type"
-              content={data.type ? data.type : "Unknown"}
+              title="License"
+              content={data.license ? data.license : "Unknown"}
             />
+            {data?.website && (
+              <MetadataLink
+                title="Website"
+                href={data?.website}
+                content={
+                  data?.website ? data.website.replace(/^https?:\/\//, "") : ""
+                }
+              />
+            )}
             <MetadataBlock
-              title="Members"
-              content={
-                data.participant_range ? data.participant_range : "Unknown"
-              }
-            />
-            <MetadataLink
-              title="Host"
-              href={`/id/${group[0]}`}
-              content={group[0]}
+              title="Developer"
+              content={data.developer ? data.developer : "Unknown"}
             />
             <CopyLink
               className="basis-1/2 md:basis-auto"
@@ -80,7 +82,7 @@ const GroupPage = ({ data, markdown, params }) => {
           </div>
           <Description
             description={data.description}
-            fallback="A group on Urbit."
+            fallback="An application on Urbit."
             markdown={markdown}
           />
           <hr className="text-wall-200" />
@@ -90,20 +92,23 @@ const GroupPage = ({ data, markdown, params }) => {
             </h3>
             <div className="flex flex-col space-y-4">
               <p className="text-sm font-semibold text-wall-400">
-                Get on the network and join this group.
+                Learn how to install an Urbit application
               </p>
-              <Link href="/group/guide">
+              <Link href="/applications/guide">
                 <button className="button-lg max-w-xs bg-green-400 text-white">
-                  How to join a group
+                  Installing Urbit applications
                 </button>
               </Link>
             </div>
           </div>
           <hr className="text-wall-200" />
           <div className="flex flex-col space-y-1">
-            <p>Have a group you'd like to share publicly through urbit.org?</p>
-            <Link href="/group/submit">
-              <a className="type-ui text-green-400">Submit your group</a>
+            <p>
+              Have an application you'd like to share publicly through
+              urbit.org?
+            </p>
+            <Link href="/applications/submit">
+              <a className="type-ui text-green-400">Submit your application</a>
             </Link>
           </div>
           <Link href="/">
@@ -122,11 +127,18 @@ export const getServerSideProps = async ({ params, res }) => {
   );
 
   let { data, content } = getPage(
-    join(process.cwd(), "content/group", params.group?.join("/") || "/")
+    join(
+      process.cwd(),
+      "content/applications",
+      params.application?.join("/") || "/"
+    )
   ) || { data: {}, content: "" };
 
   if (!data.title) {
-    data = { title: params.group?.join("/"), description: "A group on Urbit." };
+    data = {
+      title: params.application?.join("/"),
+      description: "An application on Urbit.",
+    };
   }
 
   const markdown = await Markdown({ post: { content: content } }, true);
@@ -140,4 +152,4 @@ export const getServerSideProps = async ({ params, res }) => {
   };
 };
 
-export default GroupPage;
+export default ApplicationPage;

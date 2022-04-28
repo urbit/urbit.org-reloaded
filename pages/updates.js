@@ -47,7 +47,7 @@ export default function Updates({ posts, search }) {
                         <div className="mx-1 text-wall-500">•</div>
                       ) : null}
                       {post?.extra.ship ? (
-                        <Link href={`/id/${post.extra.ship}`}>
+                        <Link href={`/ids/${post.extra.ship}`}>
                           <a className="type-sub-bold text-wall-500 font-mono">
                             {post.extra.ship}
                           </a>

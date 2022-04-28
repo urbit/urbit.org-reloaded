@@ -10,7 +10,7 @@ const SubmissionPage = () => {
   const [form, handleFormChange] = useInputChange();
   const [publicGroup, setPublicGroup] = useState(true);
 
-  const href = `https://github.com/urbit/urbit.org/new/master?filename=/content/group/${
+  const href = `https://github.com/urbit/urbit.org/new/master?filename=/content/groups/${
     form?.shortcode
   }.md&value=${encodeURIComponent(
     `+++
@@ -46,7 +46,7 @@ ${form?.description || ""}`
             </p>
             <p>
               Then, to validate that you operate this group, send a DM to{" "}
-              <Link href="/id/~haddef-sigwen">
+              <Link href="/ids/~haddef-sigwen">
                 <a>~haddef-sigwen</a>
               </Link>{" "}
               from your group host <code>@p</code> with a link to the pull
@@ -103,7 +103,9 @@ ${form?.description || ""}`
               />
             </div>
             <div className="flex flex-col">
-              <p>Group image URL</p>
+              <p>
+                Group image URL (e.g. `https://...`) or color (e.g. `#FFCED0`)
+              </p>
               <input
                 className="bg-wall-100 p-2"
                 name="imageUrl"
