@@ -7,7 +7,7 @@ grant_category = ["Other"]
 [extra]
 image = ""
 description = "Create in-depth valuation models for Urbit address space, network effects, and commercial utilization"
-reward = "1 star"
+reward = "$5000"
 assignee = ""
 champion = "~simfur-ritwed"
 id = "B0156"
@@ -47,4 +47,4 @@ Qualifying research papers can be either in academic style and submitted to peer
 
 ## Milestones & Compensation
 
-1 Urbit star upon completion of each article which meet the standards of the Mars Invisible College Review Board
+$5000 upon completion of each article which meet the standards of the Mars Invisible College Review Board
