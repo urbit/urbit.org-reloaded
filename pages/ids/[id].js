@@ -7,7 +7,7 @@ import SingleColumn from "../../components/SingleColumn";
 import Section from "../../components/Section";
 import ob from "urbit-ob";
 import Markdown from "../../components/Markdown";
-import Sigil from "../../components/Sigil";
+import ResourceCard from "../../components/ResourceCard";
 import GatewayHeader from "../../components/gateway/GatewayHeader";
 import Gateway404 from "../../components/gateway/Gateway404";
 import MetadataBlock from "../../components/gateway/MetadataBlock";
@@ -32,12 +32,6 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
       : null;
   // Galaxies shouldn't show parents, so store it as boolean here for reference.
   const isGalaxy = ob.clan(id) === "galaxy";
-
-  const sigil = (
-    <div className="rounded-xl overflow-hidden">
-      <Sigil patp={id} size={100} />
-    </div>
-  );
 
   return (
     <Container>
@@ -66,7 +60,7 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
           <GatewayHeader
             title={id}
             image={data?.image || false}
-            sigil={sigil}
+            patp={id}
             item="Urbit ID"
           />
           <div className="flex flex-wrap md:flex-nowrap justify-between">
@@ -98,15 +92,10 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
           <Creations
             title="Applications"
             id={id}
-            parentSlug="application"
+            type="application"
             data={applications}
           />
-          <Creations
-            title="Hosted Groups"
-            id={id}
-            parentSlug="group"
-            data={groups}
-          />
+          <Creations title="Hosted Groups" id={id} type="group" data={groups} />
           <Description
             description={data.description}
             fallback="An Urbit ID."
@@ -169,26 +158,19 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
   );
 };
 
-const Creations = ({ id, title, data, parentSlug }) => {
+const Creations = ({ id, title, data, type }) => {
   return (
     data?.length > 0 && (
       <div className="flex space-y-2 flex-col">
         <p className="text-wall-400 font-semibold">{title}</p>
         <div className="flex flex-wrap space-x-4">
           {data.map((each) => (
-            <Link href={`/${parentSlug}/${id}/${each.slug}`}>
-              <div className="cursor-pointer rounded-xl bg-wall-100 p-4 flex items-center space-x-4">
-                <img
-                  className="overflow-hidden rounded-xl"
-                  style={{ width: 50, height: 50 }}
-                  src={
-                    each?.image ||
-                    "https://media.urbit.org/logo/urbit-logo-card.png"
-                  }
-                />
-                <a className="font-semibold">{each.title}</a>
-              </div>
-            </Link>
+            <ResourceCard
+              type={type}
+              shortcode={`${id}/${each.slug}`}
+              title={each.title}
+              image={each.image}
+            />
           ))}
         </div>
       </div>
