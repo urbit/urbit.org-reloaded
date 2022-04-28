@@ -34,6 +34,15 @@ const GatewayImage = ({
     );
   }
 
+  if (image?.startsWith("#")) {
+    return (
+      <div
+        style={{ height: size, width: size, backgroundColor: image }}
+        className="rounded-xl"
+      />
+    );
+  }
+
   return image ? (
     <img
       className="rounded-xl"
