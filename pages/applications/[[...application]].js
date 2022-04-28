@@ -71,10 +71,18 @@ const ApplicationPage = ({ data, markdown, params }) => {
                 }
               />
             )}
-            <MetadataBlock
-              title="Developer"
-              content={data.developer ? data.developer : "Unknown"}
-            />
+            {ob.isValidPatp(data?.developer) ? (
+              <MetadataLink
+                title="Developer"
+                href={`/ids/${data.developer}`}
+                content={data.developer}
+              />
+            ) : (
+              <MetadataBlock
+                title="Developer"
+                content={data.developer ? data.developer : "Unknown"}
+              />
+            )}
             <CopyLink
               className="basis-1/2 md:basis-auto"
               content={data.shortcode ? data.shortcode : data.title}
