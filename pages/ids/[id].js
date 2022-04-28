@@ -163,7 +163,7 @@ const Creations = ({ id, title, data, type }) => {
     data?.length > 0 && (
       <div className="flex space-y-2 flex-col">
         <p className="text-wall-400 font-semibold">{title}</p>
-        <div className="flex flex-wrap space-x-4">
+        <div className="flex flex-wrap">
           {data.map((each) => (
             <ResourceCard
               type={type}

@@ -3,7 +3,7 @@ import Sigil from "../Sigil";
 const GatewayImage = ({
   error = false,
   patp = false,
-  image = false,
+  image = "",
   size = 100,
 }) => {
   if (error) {
