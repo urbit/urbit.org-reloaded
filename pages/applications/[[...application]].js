@@ -87,7 +87,7 @@ const ApplicationPage = ({ data, markdown, params }) => {
               />
             )}
             <CopyLink
-              className="basis-1/2 md:basis-auto"
+              className="basis-1/2"
               content={data.shortcode ? data.shortcode : data.title}
             />
           </div>

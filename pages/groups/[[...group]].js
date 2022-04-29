@@ -74,7 +74,7 @@ const GroupPage = ({ data, markdown, params }) => {
               content={group[0]}
             />
             <CopyLink
-              className="basis-1/2 md:basis-auto"
+              className="basis-1/2"
               content={data.shortcode ? data.shortcode : data.title}
             />
           </div>
