@@ -19,11 +19,13 @@ const ApplicationPage = ({ data, markdown, params }) => {
   if (!ob.isValidPatp(application[0])) {
     return <Gateway404 type="application" />;
   }
-  const image = `https://urbit-id-og-cards-7mdrgkd36-urbit.vercel.app/${
+  const reqParams = [
+    data?.bgColor ? `color=${encodeURIComponent(data?.bgColor)}` : "",
+    data?.image ? `images=${encodeURIComponent(data?.image)}` : "",
+  ].filter((e) => e !== "");
+  const image = `https://urbit-id-og-cards-78ieodof2-urbit.vercel.app/${
     data.title
-  }?images=${
-    data.image ? data.image : "https://media.urbit.org/logo/urbit-logo-card.png"
-  }`;
+  }.png?${reqParams.join("&")}`;
 
   return (
     <Container>
