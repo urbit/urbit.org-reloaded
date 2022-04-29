@@ -19,7 +19,6 @@ shortcode = "${form?.shortcode}"
 type = "${publicGroup ? "Public" : "Private"}"
 image = "${form?.imageUrl || ""}"
 participant_range = "${form?.members || ""}"
-channels = "${form?.channels || ""}"
 +++
 
 ${form?.description || ""}`
@@ -104,7 +103,8 @@ ${form?.description || ""}`
             </div>
             <div className="flex flex-col">
               <p>
-                Group image URL (e.g. `https://...`) or color (e.g. `#FFCED0`)
+                Group image URL (e.g. <code>https://...</code>) or color (e.g.{" "}
+                <code>#FFCED0</code>)
               </p>
               <input
                 className="bg-wall-100 p-2"
@@ -119,16 +119,6 @@ ${form?.description || ""}`
               <input
                 className="bg-wall-100 p-2"
                 name="members"
-                onChange={handleFormChange}
-              />
-            </div>
-            <div className="flex flex-col">
-              <p>
-                Channels (e.g. <code>7</code>)
-              </p>
-              <input
-                className="bg-wall-100 p-2"
-                name="channels"
                 onChange={handleFormChange}
               />
             </div>

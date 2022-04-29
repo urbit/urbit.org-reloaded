@@ -5,7 +5,6 @@ description = "World hub, help desk, meet and greet, etc."
 type = "Public"
 image = "https://fabled-faster.nyc3.digitaloceanspaces.com/fabled-faster/2021.4.02..21.52.41-UC.png"
 participant_range = "5000+"
-channels = "7"
 +++
 
 Urbit Community, or UC, is the “Town Square” of Urbit. This group, unlike most groups on Urbit, is decidedly about Urbit.
