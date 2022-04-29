@@ -18,7 +18,7 @@ const SubmissionPage = () => {
 title = "${form?.groupName}"
 shortcode = "${form?.shortcode}"
 type = "${publicGroup ? "Public" : "Private"}"
-image = "${form?.imageUrl || ""}"
+tile = "${form?.tile || ""}"
 participant_range = "${form?.members || ""}"
 +++
 
@@ -109,7 +109,7 @@ ${form?.description || ""}`
               <p>Group image URL or color</p>
               <input
                 className="bg-wall-100 p-2"
-                name="imageUrl"
+                name="tile"
                 placeholder="https://... or #FFCDE0"
                 onChange={handleFormChange}
               />

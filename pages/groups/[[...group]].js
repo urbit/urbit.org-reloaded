@@ -54,7 +54,7 @@ const GroupPage = ({ data, markdown, params }) => {
         <Section className="space-y-12" narrow>
           <GatewayHeader
             title={data.title}
-            image={data?.image}
+            image={data?.tile}
             item="Urbit ID"
           />
           <div className="flex flex-wrap md:flex-nowrap justify-between">
