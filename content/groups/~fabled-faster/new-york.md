@@ -1,6 +1,6 @@
 +++
 title = "New York"
-shortcode = "~fabled-faster-/structure"
+shortcode = "~fabled-faster/new-york"
 description = "Martians invade the Big Apple."
 type = "Public"
 tile = "#000000"
