@@ -3,7 +3,7 @@ title = "🌐 networked subject_ 🌲"
 shortcode = "~matwet/networked-subject"
 description = "Become illegible. https://subject.network"
 type = "Public"
-image = "https://urbits3.ams3.digitaloceanspaces.com/sitful-hatred/2022.4.28..19.40.19-ns.png"
+tile = "https://urbits3.ams3.digitaloceanspaces.com/sitful-hatred/2022.4.28..19.40.19-ns.png"
 participant_range = "5000+"
 +++
 

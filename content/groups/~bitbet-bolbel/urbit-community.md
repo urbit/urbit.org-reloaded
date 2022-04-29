@@ -3,7 +3,7 @@ title = "Urbit Community"
 shortcode = "~bitbet-bolbel/urbit-community"
 description = "World hub, help desk, meet and greet, etc."
 type = "Public"
-image = "https://fabled-faster.nyc3.digitaloceanspaces.com/fabled-faster/2021.4.02..21.52.41-UC.png"
+tile = "https://fabled-faster.nyc3.digitaloceanspaces.com/fabled-faster/2021.4.02..21.52.41-UC.png"
 participant_range = "5000+"
 +++
 
