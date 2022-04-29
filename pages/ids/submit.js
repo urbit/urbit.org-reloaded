@@ -26,7 +26,7 @@ ${form?.description || ""}`
 
   let validColor = /^#[0-9A-F]{6}$/i.test(form?.bgColor)
     ? form?.bgColor
-    : "#000000";
+    : "#24201E";
 
   return (
     <Container>
@@ -107,7 +107,7 @@ ${form?.description || ""}`
               <p>Sigil color (or avatar image)</p>
               <div className="flex space-x-2">
                 <input
-                  placeholder="#000000"
+                  placeholder="#24201E"
                   name="bgColor"
                   className="bg-wall-100 p-2 flex-1"
                   onChange={handleFormChange}

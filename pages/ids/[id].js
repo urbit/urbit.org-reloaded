@@ -61,7 +61,7 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
             title={data?.nickname ? data?.nickname : id}
             subtitle={data?.nickname ? id : false}
             subtitleMono
-            color={data?.bgColor || "#000000"}
+            color={data?.bgColor || "#24201E"}
             image={data?.image || false}
             patp={!data?.image ? id : false}
             item="Urbit ID"
