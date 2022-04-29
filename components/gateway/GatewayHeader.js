@@ -16,7 +16,9 @@ const GatewayHeader = ({
       <div className="flex flex-col">
         <h2>{title}</h2>
         {subtitle && (
-          <p className={subtitleMono ? "font-mono" : "font-sans"}>{subtitle}</p>
+          <p className={(subtitleMono ? "font-mono" : "font-sans") + " pb-1"}>
+            {subtitle}
+          </p>
         )}
         <p>{item}</p>
       </div>
