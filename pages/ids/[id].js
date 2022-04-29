@@ -21,7 +21,16 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
     return <Gateway404 type="ID" />;
   }
 
-  const image = `https://urbit-id-og-cards-kappa.vercel.app/${deSig(id)}.png`;
+  const reqParams = [
+    data?.bgColor ? `color=${encodeURIComponent(data?.bgColor)}` : "",
+    data?.nickname ? `nickname=${encodeURIComponent(data?.nickname)}` : "",
+    data?.image ? `images=${encodeURIComponent(data?.image)}` : "",
+  ].filter((e) => e !== "");
+  const image = `https://urbit-id-og-cards-kappa.vercel.app/${deSig(
+    id
+  )}.png?${reqParams.join("&")}`;
+
+  console.log(image);
 
   // Parent ID, grabbed from network or fallback to the default sponsor for that node
   const parent = network ? network.sponsor["urbit-id"] : ob.sein(id);
