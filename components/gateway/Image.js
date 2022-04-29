@@ -3,6 +3,7 @@ import Sigil from "../Sigil";
 const GatewayImage = ({
   error = false,
   patp = false,
+  color = "black",
   image = "",
   size = 100,
 }) => {
@@ -29,7 +30,7 @@ const GatewayImage = ({
   if (patp) {
     return (
       <div className="rounded-xl overflow-hidden">
-        <Sigil patp={patp} size={size} />
+        <Sigil patp={patp} size={size} color={color} />
       </div>
     );
   }
@@ -44,11 +45,13 @@ const GatewayImage = ({
   }
 
   return image ? (
-    <img
-      className="rounded-xl"
-      src={image}
-      style={{ height: size, width: size }}
-    />
+    <div className="rounded-xl" style={{ backgroundColor: color }}>
+      <img
+        className="rounded-xl"
+        src={image}
+        style={{ height: size, width: size }}
+      />
+    </div>
   ) : (
     <img
       className="object-contain shadow-sm rounded-xl"

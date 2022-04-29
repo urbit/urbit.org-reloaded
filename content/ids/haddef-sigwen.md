@@ -1,5 +1,7 @@
 +++
 ship = "~haddef-sigwen"
+nickname = "~am"
+bgColor = "#dcedce"
 +++
 
 Tlon Corporation (2019-2021), Urbit Foundation (2022-)

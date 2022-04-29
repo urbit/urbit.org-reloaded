@@ -3,6 +3,10 @@ import Container from "../../components/Container";
 import Section from "../../components/Section";
 import SingleColumn from "../../components/SingleColumn";
 import { useInputChange } from "../../lib/hooks";
+import ob from "urbit-ob";
+import Sigil from "../../components/Sigil";
+import Head from "next/head";
+import Meta from "../../components/Meta";
 
 const SubmissionPage = () => {
   const [form, handleFormChange] = useInputChange();
@@ -12,13 +16,24 @@ const SubmissionPage = () => {
   )}.md&value=${encodeURIComponent(
     `+++
 ship = "${form?.ship}"
+nickname = "${form?.nickname}"
+bgcolor = "${form?.bgcolor}"
+image = "${form?.image}"
 +++
 
 ${form?.description || ""}`
   )}`;
 
+  let validColor = /^#[0-9A-F]{6}$/i.test(form?.bgColor)
+    ? form?.bgColor
+    : "#000000";
+
   return (
     <Container>
+      <Head>
+        <title>Claim an Urbit ID page • Urbit.org</title>
+        {Meta}
+      </Head>
       <SingleColumn>
         <Section narrow className="space-y-12">
           <div className="flex flex-col space-y-4">
@@ -50,14 +65,60 @@ ${form?.description || ""}`
           <div className="flex flex-col space-y-4">
             <h3>Enter your Urbit ID information</h3>
             <div className="flex flex-col">
-              <p>
-                Urbit ID (e.g. <code>~bitbet-bolbel</code>) (required)
-              </p>
-              <input
-                className="bg-wall-100 p-2"
-                name="ship"
-                onChange={handleFormChange}
-              />
+              <p>Urbit ID (required)</p>
+              <div className="flex items-center">
+                {form?.image ? (
+                  <img
+                    className="mr-2 rounded-lg"
+                    src={form?.image}
+                    style={{ height: 32, width: 32 }}
+                  />
+                ) : (
+                  <div
+                    className="flex p-2 rounded-lg mr-2"
+                    style={{
+                      backgroundColor: validColor,
+                      display: form?.ship?.length > 14 ? "none" : "block",
+                    }}
+                  >
+                    <Sigil
+                      icon
+                      color={validColor}
+                      size="25"
+                      patp={
+                        ob.isValidPatp(form?.ship || "") ? form?.ship : "~zod"
+                      }
+                    />
+                  </div>
+                )}
+                <input
+                  className="bg-wall-100 p-2 flex-1"
+                  name="ship"
+                  placeholder="~bitbet-bolbel"
+                  onChange={handleFormChange}
+                />
+              </div>
+            </div>
+            <div className="flex flex-col">
+              <p>Nickname (optional)</p>
+              <input placeholder="Bitbet" className="bg-wall-100 p-2" />
+            </div>
+            <div>
+              <p>Sigil color (or avatar image)</p>
+              <div className="flex space-x-2">
+                <input
+                  placeholder="#000000"
+                  name="bgColor"
+                  className="bg-wall-100 p-2 flex-1"
+                  onChange={handleFormChange}
+                />
+                <input
+                  placeholder="https://..."
+                  name="image"
+                  className="bg-wall-100 p-2 flex-1"
+                  onChange={handleFormChange}
+                />
+              </div>
             </div>
             <div className="flex flex-col">
               <p>Hosted groups</p>

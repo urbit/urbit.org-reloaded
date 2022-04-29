@@ -58,9 +58,12 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
       <SingleColumn>
         <Section className="space-y-12 w-full" narrow>
           <GatewayHeader
-            title={id}
+            title={data?.nickname ? data?.nickname : id}
+            subtitle={data?.nickname ? id : false}
+            subtitleMono
+            color={data?.bgColor || "#000000"}
             image={data?.image || false}
-            patp={id}
+            patp={!data?.image ? id : false}
             item="Urbit ID"
           />
           <div className="flex flex-wrap md:flex-nowrap justify-between">
@@ -169,6 +172,7 @@ const Creations = ({ id, title, data, type }) => {
               type={type}
               shortcode={`${id}/${each.slug}`}
               title={each.title}
+              color={each.bgColor}
               image={each.image}
             />
           ))}
@@ -193,7 +197,7 @@ export const getServerSideProps = async ({ params, res }) => {
   ) || { data: {}, content: "" };
 
   const applications = getAllPosts(
-    ["title", "slug", "image"],
+    ["title", "slug", "image", "bgColor"],
     `applications/${params.id}`
   );
   const groups = getAllPosts(["title", "slug", "image"], `groups/${params.id}`);
