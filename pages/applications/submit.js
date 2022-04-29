@@ -3,6 +3,8 @@ import Container from "../../components/Container";
 import Section from "../../components/Section";
 import SingleColumn from "../../components/SingleColumn";
 import { useInputChange } from "../../lib/hooks";
+import Head from "next/head";
+import Meta from "../../components/Meta";
 
 const SubmissionPage = () => {
   const [form, handleFormChange] = useInputChange();
@@ -15,6 +17,7 @@ title = "${form?.appName}"
 shortcode = "${form?.shortcode}"
 license = "${form?.license || ""}"
 image = "${form?.imageUrl || ""}"
+bgColor = "${form?.bgColor || ""}
 developer = "${form?.developer || ""}"
 website = "${form?.website || ""}"
 +++
@@ -24,6 +27,10 @@ ${form?.description || ""}`
 
   return (
     <Container>
+      <Head>
+        <title>Submit an application • Urbit.org</title>
+        {Meta}
+      </Head>
       <SingleColumn>
         <Section narrow className="space-y-12">
           <div className="flex flex-col space-y-4">
@@ -50,34 +57,42 @@ ${form?.description || ""}`
               <input
                 className="bg-wall-100 p-2"
                 name="appName"
+                placeholder="pals"
                 onChange={handleFormChange}
               />
             </div>
             <div className="flex flex-col">
-              <p>
-                Shortcode (e.g. <code>~paldev/pals</code>) (required)
-              </p>
+              <p>Shortcode (required)</p>
               <input
                 className="bg-wall-100 p-2"
                 name="shortcode"
+                placeholder="~paldev/pals"
                 onChange={handleFormChange}
               />
             </div>
-            <div className="flex flex-col">
-              <p>
-                App image URL (e.g. `https://...`) or color (e.g. `#FFCED0`)
-              </p>
-              <input
-                className="bg-wall-100 p-2"
-                name="imageUrl"
-                onChange={handleFormChange}
-              />
+            <div className="flex flex-col w-full">
+              <p>App image URL and color</p>
+              <div className="flex space-x-4">
+                <input
+                  className="flex-1 bg-wall-100 p-2"
+                  name="imageUrl"
+                  placeholder="https://..."
+                  onChange={handleFormChange}
+                />
+                <input
+                  name="bgColor"
+                  className="bg-wall-100 p-2 flex-1"
+                  placeholder="#FFCED0"
+                  onChange={handleFormChange}
+                />
+              </div>
             </div>
             <div className="flex flex-col">
-              <p>License (e.g. MIT)</p>
+              <p>License</p>
               <input
                 className="bg-wall-100 p-2"
                 name="license"
+                placeholder="MIT"
                 onChange={handleFormChange}
               />
             </div>
@@ -86,6 +101,7 @@ ${form?.description || ""}`
               <input
                 className="bg-wall-100 p-2"
                 name="developer"
+                placeholder="~paldev"
                 onChange={handleFormChange}
               />
             </div>
@@ -94,6 +110,7 @@ ${form?.description || ""}`
               <input
                 className="bg-wall-100 p-2"
                 name="website"
+                placeholder="https://pal.dev"
                 onChange={handleFormChange}
               />
             </div>

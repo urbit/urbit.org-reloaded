@@ -5,5 +5,5 @@ developer = "~paldev"
 description = "anonymous gossip from friends of friends"
 license = "MIT"
 website = "https://pal.dev/suite/rumors"
-image = "#bb77dd"
+bgColor = "#bb77dd"
 +++

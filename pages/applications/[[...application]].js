@@ -54,7 +54,8 @@ const ApplicationPage = ({ data, markdown, params }) => {
         <Section className="space-y-12" narrow>
           <GatewayHeader
             title={data.title}
-            image={data?.image}
+            color={data?.bgColor}
+            image={data?.image || data?.bgColor}
             item="Urbit Application"
           />
           <div className="flex flex-wrap md:flex-nowrap justify-between">
