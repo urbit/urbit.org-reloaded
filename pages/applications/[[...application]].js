@@ -74,7 +74,7 @@ const ApplicationPage = ({ data, markdown, params }) => {
                 }
               />
             )}
-            {ob.isValidPatp(data?.developer) ? (
+            {ob.isValidPatp(data?.developer) && data.developer.length < 10 ? (
               <MetadataLink
                 title="Developer"
                 href={`/ids/${data.developer}`}
@@ -105,7 +105,7 @@ const ApplicationPage = ({ data, markdown, params }) => {
               <p className="text-sm font-semibold text-wall-400">
                 Learn how to install an Urbit application
               </p>
-              <Link href="/applications/guide">
+              <Link href="/guides/installing-applications">
                 <button className="button-lg max-w-xs bg-green-400 text-white">
                   Installing Urbit applications
                 </button>

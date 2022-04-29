@@ -92,7 +92,7 @@ const GroupPage = ({ data, markdown, params }) => {
               <p className="text-sm font-semibold text-wall-400">
                 Get on the network and join this group.
               </p>
-              <Link href="/groups/guide">
+              <Link href="/guides/joining-groups">
                 <button className="button-lg max-w-xs bg-green-400 text-white">
                   How to join a group
                 </button>

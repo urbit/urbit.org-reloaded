@@ -88,9 +88,9 @@ export default function GuidePage({ post, markdown }) {
 //
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(
-    "guide",
+    "installing-applications",
     ["title", "slug", "content"],
-    "applications"
+    "guides"
   );
 
   const markdown = await Markdown({ post });

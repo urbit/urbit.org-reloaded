@@ -1,14 +1,22 @@
+import { useRouter } from "next/router";
+import { getPostBySlug, getAllPosts } from "../../lib/lib";
 import Head from "next/head";
 import Link from "next/link";
-import { getPostBySlug } from "../../lib/lib";
 import Meta from "../../components/Meta";
-import Markdown from "../../components/Markdown";
+import ErrorPage from "../404";
 import Container from "../../components/Container";
+import Markdown from "../../components/Markdown";
 import SingleColumn from "../../components/SingleColumn";
 import Section from "../../components/Section";
+
 import { decode } from "html-entities";
 
 export default function GuidePage({ post, markdown }) {
+  const router = useRouter();
+  if (!router.isFallback && !post?.slug) {
+    return <ErrorPage />;
+  }
+
   return (
     <Container>
       <Head>
@@ -34,11 +42,30 @@ export default function GuidePage({ post, markdown }) {
 
 //
 export async function getStaticProps({ params }) {
-  const post = getPostBySlug("get", ["title", "slug", "content"], "ids");
+  const post = getPostBySlug(
+    params.slug,
+    ["title", "slug", "date", "description", "content", "extra"],
+    "guides"
+  );
 
   const markdown = await Markdown({ post });
 
   return {
     props: { post, markdown },
+  };
+}
+
+export async function getStaticPaths() {
+  const posts = getAllPosts(["slug", "date"], "guides", "date");
+
+  return {
+    paths: posts.map((post) => {
+      return {
+        params: {
+          slug: post.slug,
+        },
+      };
+    }),
+    fallback: false,
   };
 }
