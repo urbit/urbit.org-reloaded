@@ -180,7 +180,7 @@ const Creations = ({ id, title, data, type }) => {
               shortcode={`${id}/${each.slug}`}
               title={each.title}
               color={each.bgColor}
-              image={each.image}
+              image={type === "group" ? each.tile : each.image}
             />
           ))}
         </div>
@@ -207,7 +207,7 @@ export const getServerSideProps = async ({ params, res }) => {
     ["title", "slug", "image", "bgColor"],
     `applications/${params.id}`
   );
-  const groups = getAllPosts(["title", "slug", "image"], `groups/${params.id}`);
+  const groups = getAllPosts(["title", "slug", "tile"], `groups/${params.id}`);
 
   if (!data.ship && ob.isValidPatp(params.id)) {
     data = { ship: params.id, description: "An Urbit ID." };
