@@ -3,7 +3,7 @@ title = "door.link"
 shortcode = "~natnex-ronret/door-link"
 description = "music cult"
 type = "Public"
-image = ""
+tile = ""
 participant_range = "300+"
 +++
 
