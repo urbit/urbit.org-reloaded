@@ -30,8 +30,6 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
     id
   )}.png?${reqParams.join("&")}`;
 
-  console.log(image);
-
   // Parent ID, grabbed from network or fallback to the default sponsor for that node
   const parent = network ? network.sponsor["urbit-id"] : ob.sein(id);
   // Galaxy name above that parent
