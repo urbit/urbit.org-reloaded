@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { useState } from "react";
-import { encode } from "html-entities";
 import Container from "../../components/Container";
 import Section from "../../components/Section";
 import SingleColumn from "../../components/SingleColumn";
 import { useInputChange } from "../../lib/hooks";
+import Head from "next/head";
+import Meta from "../../components/Meta";
 
 const SubmissionPage = () => {
   const [form, handleFormChange] = useInputChange();
@@ -26,6 +27,10 @@ ${form?.description || ""}`
 
   return (
     <Container>
+      <Head>
+        <title>Submit a group • Urbit.org</title>
+        {Meta}
+      </Head>
       <SingleColumn>
         <Section narrow className="space-y-12">
           <div className="flex flex-col space-y-4">
@@ -60,6 +65,7 @@ ${form?.description || ""}`
               <input
                 className="bg-wall-100 p-2"
                 name="groupName"
+                placeholder="Urbit Community"
                 onChange={handleFormChange}
               />
             </div>
@@ -91,34 +97,29 @@ ${form?.description || ""}`
               </div>
             </div>
             <div className="flex flex-col">
-              <p>
-                Shortcode (e.g. <code>~bitbet-bolbel/urbit-community</code>)
-                (required)
-              </p>
+              <p>Shortcode (required)</p>
               <input
                 className="bg-wall-100 p-2"
                 name="shortcode"
+                placeholder="~bitbet-bolbel/urbit-community"
                 onChange={handleFormChange}
               />
             </div>
             <div className="flex flex-col">
-              <p>
-                Group image URL (e.g. <code>https://...</code>) or color (e.g.{" "}
-                <code>#FFCED0</code>)
-              </p>
+              <p>Group image URL or color</p>
               <input
                 className="bg-wall-100 p-2"
                 name="imageUrl"
+                placeholder="https://... or #FFCDE0"
                 onChange={handleFormChange}
               />
             </div>
             <div className="flex flex-col">
-              <p>
-                Members (e.g. <code>1000+</code>)
-              </p>
+              <p>Members</p>
               <input
                 className="bg-wall-100 p-2"
                 name="members"
+                placeholder="1000+"
                 onChange={handleFormChange}
               />
             </div>
