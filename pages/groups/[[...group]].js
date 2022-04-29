@@ -55,7 +55,7 @@ const GroupPage = ({ data, markdown, params }) => {
           <GatewayHeader
             title={data.title}
             image={data?.image}
-            item="Urbit ID"
+            item="Urbit Group"
           />
           <div className="flex flex-wrap md:flex-nowrap justify-between">
             <MetadataBlock
