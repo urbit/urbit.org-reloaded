@@ -58,8 +58,12 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   const posts = getAllPosts(["slug", "date"], "guides", "date");
 
+  const noApplications = posts.filter(
+    (e) => e.slug !== "installing-applications"
+  );
+
   return {
-    paths: posts.map((post) => {
+    paths: noApplications.map((post) => {
       return {
         params: {
           slug: post.slug,
