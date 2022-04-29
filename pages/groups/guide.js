@@ -16,10 +16,10 @@ export default function GuidePage({ post, markdown }) {
         {Meta(post)}
       </Head>
       <SingleColumn>
-        <Section narrow>
+        <Section narrow short>
           <h2>{post.title}</h2>
         </Section>
-        <Section narrow className="markdown">
+        <Section narrow short className="markdown">
           <article
             dangerouslySetInnerHTML={{ __html: decode(markdown) }}
           ></article>
