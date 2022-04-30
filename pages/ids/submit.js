@@ -16,9 +16,9 @@ const SubmissionPage = () => {
   )}.md&value=${encodeURIComponent(
     `+++
 ship = "${form?.ship}"
-nickname = "${form?.nickname}"
-bgcolor = "${form?.bgcolor}"
-image = "${form?.image}"
+nickname = "${form?.nickname || ""}"
+bgcolor = "${form?.bgColor || "#000000"}"
+image = "${form?.image || ""}"
 +++
 
 ${form?.description || ""}`
@@ -101,7 +101,12 @@ ${form?.description || ""}`
             </div>
             <div className="flex flex-col">
               <p>Nickname (optional)</p>
-              <input placeholder="Bitbet" className="bg-wall-100 p-2" />
+              <input
+                placeholder="Bitbet"
+                name="nickname"
+                onChange={handleFormChange}
+                className="bg-wall-100 p-2"
+              />
             </div>
             <div>
               <p>Sigil color (or avatar image)</p>
