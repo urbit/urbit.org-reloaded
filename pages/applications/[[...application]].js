@@ -74,7 +74,8 @@ const ApplicationPage = ({ data, markdown, params }) => {
                 }
               />
             )}
-            {ob.isValidPatp(data?.developer) && data.developer.length < 10 ? (
+            {ob.isValidPatp(data?.developer || "") &&
+            data?.developer.length < 10 ? (
               <MetadataLink
                 title="Developer"
                 href={`/ids/${data.developer}`}
