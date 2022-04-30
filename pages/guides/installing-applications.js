@@ -43,7 +43,7 @@ export default function GuidePage({ post, markdown }) {
             </div>
           </Link>
 
-          <Link href="/applications/~fabnev-himnur/escape">
+          <Link href="/applications/~dister-fabnev-hinmur/escape">
             <div class="bg-wall-100 rounded-xl p-3 flex flex-col space-y-4 my-6 cursor-pointer">
               <div class="flex space-x-4 items-center">
                 <img
