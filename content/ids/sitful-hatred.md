@@ -5,4 +5,4 @@ bgcolor = "#686362"
 image = "https://urbits3.ams3.digitaloceanspaces.com/sitful-hatred/2021.4.12..21.14.57-av.png"
 +++
 
-reid from texas, [networked subject](web+urbitgraph://group/~matwet/networked-subject) guy
+reid from texas, [networked subject](/groups/~matwet/networked-subject) guy
