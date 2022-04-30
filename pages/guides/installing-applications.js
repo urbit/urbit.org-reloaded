@@ -4,7 +4,7 @@ import { getPostBySlug } from "../../lib/lib";
 import Meta from "../../components/Meta";
 import Markdown from "../../components/Markdown";
 import Container from "../../components/Container";
-import SingleColumn from "../../components/SingleColumn";
+import GuideColumn from "../../components/GuideColumn";
 import Section from "../../components/Section";
 import { decode } from "html-entities";
 
@@ -15,7 +15,7 @@ export default function GuidePage({ post, markdown }) {
         <title>Urbit • {post.title}</title>
         {Meta(post)}
       </Head>
-      <SingleColumn>
+      <GuideColumn>
         <Section narrow short>
           <h2>{post.title}</h2>
         </Section>
@@ -27,7 +27,7 @@ export default function GuidePage({ post, markdown }) {
           <h2 className="text-3xl my-12">5. Add more applications</h2>
           <p className="my-2">Here's a few more applications to check out:</p>
           <Link href="/applications/~paldev/pals">
-            <div class="bg-wall-200 rounded-xl p-3 flex flex-col space-y-4 my-6 cursor-pointer">
+            <div class="bg-wall-100 rounded-xl p-3 flex flex-col space-y-4 my-6 cursor-pointer">
               <div class="flex space-x-4 items-center">
                 <div
                   class="rounded-xl"
@@ -44,11 +44,16 @@ export default function GuidePage({ post, markdown }) {
           </Link>
 
           <Link href="/applications/~fabnev-himnur/escape">
-            <div class="bg-wall-200 rounded-xl p-3 flex flex-col space-y-4 my-6 cursor-pointer">
+            <div class="bg-wall-100 rounded-xl p-3 flex flex-col space-y-4 my-6 cursor-pointer">
               <div class="flex space-x-4 items-center">
                 <img
+                  class="rounded-xl"
                   src="https://media.urbit.org/site/application/escape.png"
-                  style={{ height: 100, width: 100 }}
+                  style={{
+                    backgroundColor: "#ffffff",
+                    height: 100,
+                    width: 100,
+                  }}
                 />
                 <h3>EScape</h3>
               </div>
@@ -61,7 +66,7 @@ export default function GuidePage({ post, markdown }) {
           </Link>
 
           <Link href="/applications/~paldev/rumors">
-            <div class="bg-wall-200 rounded-xl p-3 flex flex-col space-y-4 cursor-pointer">
+            <div class="bg-wall-100 rounded-xl p-3 flex flex-col space-y-4 cursor-pointer">
               <div class="flex space-x-4 items-center">
                 <div
                   class="rounded-xl"
@@ -80,7 +85,7 @@ export default function GuidePage({ post, markdown }) {
             <a className="text-xl pt-12 block font-semibold">Urbit.org</a>
           </Link>
         </Section>
-      </SingleColumn>
+      </GuideColumn>
     </Container>
   );
 }

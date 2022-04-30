@@ -6,7 +6,7 @@ import Meta from "../../components/Meta";
 import ErrorPage from "../404";
 import Container from "../../components/Container";
 import Markdown from "../../components/Markdown";
-import SingleColumn from "../../components/SingleColumn";
+import GuideColumn from "../../components/GuideColumn";
 import Section from "../../components/Section";
 
 import { decode } from "html-entities";
@@ -23,7 +23,7 @@ export default function GuidePage({ post, markdown }) {
         <title>Urbit • {post.title}</title>
         {Meta(post)}
       </Head>
-      <SingleColumn>
+      <GuideColumn>
         <Section narrow short>
           <h2>{post.title}</h2>
         </Section>
@@ -35,7 +35,7 @@ export default function GuidePage({ post, markdown }) {
             <a className="text-xl pt-12 block font-semibold">Urbit.org</a>
           </Link>
         </Section>
-      </SingleColumn>
+      </GuideColumn>
     </Container>
   );
 }

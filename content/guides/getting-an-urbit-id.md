@@ -32,10 +32,10 @@ Here are just a few of the places where you can buy planets:
 
 **L2 Planets**
 
-- [Azimuth.shop](https://azimuth.shop) ($5)
-- [\_networked subject\_](https://networked.subject) ($15)
-- [~mocbel house](https://mocbel.house) ($40)
-- [Wexpert.systems](https://wexpert.systems) ($50)
+- [Azimuth.shop](https://azimuth.shop)
+- [\_networked subject\_](https://networked.subject)
+- [~mocbel house](https://mocbel.house)
+- [Wexpert.systems](https://wexpert.systems)
 
 **Included With Hosting**
 
