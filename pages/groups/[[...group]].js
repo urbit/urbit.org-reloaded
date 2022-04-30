@@ -17,16 +17,23 @@ import Description from "../../components/gateway/Description";
 
 const GroupPage = ({ data, markdown, params }) => {
   const { group } = params;
-  if (!ob.isValidPatp(group[0])) {
+  if (!ob.isValidPatp(group?.[0] || "")) {
     return <Gateway404 type="group" />;
   }
-  const image = `https://urbit-id-og-cards-ltjw3771z-urbit.vercel.app/${
+
+  const color = data?.tile && data?.tile.startsWith("#");
+  const reqParams = [
+    color ? `color=${encodeURIComponent(data.tile)}` : "",
+    !color
+      ? `images=${encodeURIComponent(
+          data?.tile ||
+            "https://media.urbit.org/public-links/placeholder-image.png"
+        )}`
+      : "",
+  ].filter((e) => e !== "");
+  const image = `https://urbit-id-og-cards-667veow91-urbit.vercel.app/${
     data.title
-  }?images=${
-    data?.tile
-      ? data.tile
-      : "https://media.urbit.org/public-links/placeholder-image.png"
-  }`;
+  }.png?${reqParams.join("&")}`;
 
   return (
     <Container>
