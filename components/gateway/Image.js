@@ -56,7 +56,7 @@ const GatewayImage = ({
     <img
       className="object-contain shadow-sm rounded-xl"
       style={{ height: size, width: size }}
-      src="https://media.urbit.org/logo/urbit-logo-card.png"
+      src="https://media.urbit.org/public-links/placeholder-image.png"
     />
   );
 };
