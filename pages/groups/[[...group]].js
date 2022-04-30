@@ -23,7 +23,7 @@ const GroupPage = ({ data, markdown, params }) => {
   const image = `https://urbit-id-og-cards-ltjw3771z-urbit.vercel.app/${
     data.title
   }?images=${
-    data.tile ? data.tile : "https://media.urbit.org/logo/urbit-logo-card.png"
+    data?.tile ? data.tile : "https://media.urbit.org/logo/urbit-logo-card.png"
   }`;
 
   return (
