@@ -83,6 +83,9 @@ code .type-code {
   @apply bg-wall-100 p-4 font-mono;
 }
 
+.font-bold {
+  @apply antialiased;
+}
 /* Utils */
 
 .layout-narrow {

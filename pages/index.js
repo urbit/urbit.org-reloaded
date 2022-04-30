@@ -284,7 +284,8 @@ export async function getStaticProps() {
 
   const posts = getAllPosts(
     ["title", "slug", "date", "description", "extra"],
-    "blog"
+    "blog",
+    "date"
   );
 
   const events = getAllEvents(eventKeys, "events");
