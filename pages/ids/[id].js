@@ -16,7 +16,8 @@ import Description from "../../components/gateway/Description";
 import axios from "axios";
 
 const IdPage = ({ data, markdown, applications, groups, network, params }) => {
-  const { id } = params;
+  let { id } = params;
+  id = `~${deSig(id)}`;
   if (!ob.isValidPatp(id) || id.length > 14) {
     return <Gateway404 type="ID" />;
   }
@@ -199,24 +200,27 @@ export const getServerSideProps = async ({ params, res }) => {
     "public, s-maxage=3600, stale-while-revalidate=604800"
   );
 
+  let { id } = params;
+  id = `~${deSig(id)}`;
+
   let { data, content } = getPage(
-    join(process.cwd(), "content/ids/", params.id.slice(1))
+    join(process.cwd(), "content/ids/", id.slice(1))
   ) || { data: {}, content: "" };
 
   const applications = getAllPosts(
     ["title", "slug", "image", "bgColor"],
     `applications/${params.id}`
   );
-  const groups = getAllPosts(["title", "slug", "tile"], `groups/${params.id}`);
+  const groups = getAllPosts(["title", "slug", "tile"], `groups/${id}`);
 
-  if (!data.ship && ob.isValidPatp(params.id)) {
-    data = { ship: params.id, description: "An Urbit ID." };
+  if (!data.ship && ob.isValidPatp(id)) {
+    data = { ship: id, description: "An Urbit ID." };
   }
 
   let network = await axios
     .get(
       `https://mt2aga2c5l.execute-api.us-east-2.amazonaws.com/get-node?urbit-id=${
-        ob.isValidPatp(params.id) ? params.id : "~zod"
+        ob.isValidPatp(id) ? id : "~zod"
       }`
     )
     .then((res) => res.data);
