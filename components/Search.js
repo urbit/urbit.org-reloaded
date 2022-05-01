@@ -84,7 +84,7 @@ class Search extends Component {
             content: item,
           }));
 
-          const list = [...patpResult, ...glossaryResults, ...results];
+          const list = [...glossaryResults, ...patpResult, ...results];
 
           this.setState({ results: list });
         });
