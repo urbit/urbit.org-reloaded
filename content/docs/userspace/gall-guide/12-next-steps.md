@@ -42,7 +42,7 @@ your app, there are some other guides you might like to have a look at:
 - [Threads guide](/docs/userspace/threads/overview) - Threads are like transient
   agents, typically used for handling complex I/O functionality for Gall
   agents - like interacting with an external HTTP API.
-- [The software distribution guide](/docs/usespace/dist/dist) - This explains
+- [The software distribution guide](/docs/userspace/dist/dist) - This explains
   how to set up a desk for distribution, so other people can install your app.
 
 For more development resources, and for ways to get involved with the Urbit
