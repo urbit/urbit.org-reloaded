@@ -16,7 +16,7 @@ You can also ask around on Twitter or boot up a comet and ask on the Urbit netwo
 
 There are many places to buy a planet using either cryptocurrency or fiat.
 
-Layer 1 planets are the most available through marketplaces, however they can be expensive due to Ethereum gas fees. You will need an Ethereum wallet such as Metamask to purchase these planets, and will later need to sign in to Bridge with your wallet to configure your planet.
+Layer 1 planets are the most available through marketplaces, however they can be expensive due to Ethereum gas fees. You will need an Ethereum wallet such as Metamask to purchase these planets, and will later need to sign in to [Bridge](https://bridge.urbit.org/) with your wallet to configure your planet.
 
 Layer 2 planets do not require any crypto wallet management, but are at present less readily available on marketplaces.
 
@@ -33,7 +33,7 @@ Here are just a few of the places where you can buy planets:
 **L2 Planets**
 
 - [Azimuth.shop](https://azimuth.shop)
-- [\_networked subject\_](https://networked.subject)
+- [\_networked subject\_](https://subject.network/)
 - [~mocbel house](https://mocbel.house)
 - [Wexpert.systems](https://wexpert.systems)
 
