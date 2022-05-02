@@ -4,8 +4,8 @@
   },
   "redirects": [
     {
-      "source": "/groups/~ladtem-filmyr/urbit-nyc-takeover",
-      "destination": "/groups/~ladtem-filmyr/urbit-nyc-week",
+      "source": "/groups/~ladtem-filmyr/urbit-ny-takeover",
+      "destination": "/groups/~ladtem-filmyr/urbit-ny-week",
       "permanent": true
     },
     {
