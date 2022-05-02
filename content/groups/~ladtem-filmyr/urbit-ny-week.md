@@ -7,4 +7,4 @@ tile = "https://fabled-faster.nyc3.digitaloceanspaces.com/fabled-faster/2022.4.0
 participant_range = "100+"
 +++
 
-Urbit NY Takeover may 19-22
+Urbit is coming to NYC from May 19-22. Come party with us. Details on network in this group.
