@@ -1,7 +1,7 @@
 +++
 ship = "~mallus-fabres"
 nickname = ""
-bgColor = "b8d0d5"
+bgColor = "#b8d0d5"
 image = ""
 +++
 
