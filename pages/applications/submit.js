@@ -17,7 +17,7 @@ title = "${form?.appName}"
 shortcode = "${form?.shortcode}"
 license = "${form?.license || ""}"
 image = "${form?.imageUrl || ""}"
-bgColor = "${form?.bgColor || ""}
+bgColor = "${form?.bgColor || ""}"
 developer = "${form?.developer || ""}"
 website = "${form?.website || ""}"
 +++
