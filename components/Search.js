@@ -84,7 +84,7 @@ class Search extends Component {
             content: item,
           }));
 
-          const list = [...patpResult, ...glossaryResults, ...results];
+          const list = [...glossaryResults, ...patpResult, ...results];
 
           this.setState({ results: list });
         });
@@ -206,9 +206,10 @@ class Search extends Component {
                                   className={`font-normal text-base mt-1 ${
                                     selected ? "text-white" : "text-wall-600"
                                   }`}
-                                >
-                                  {item.content.desc}
-                                </p>
+                                  dangerouslySetInnerHTML={{
+                                    __html: item.content.desc,
+                                  }}
+                                ></p>
                               </div>
                             </li>
                           );
