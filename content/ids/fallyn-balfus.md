@@ -1,8 +1,8 @@
 +++
 ship = "fallyn-balfus"
-nickname = "undefined"
-bgcolor = "undefined"
-image = "undefined"
+nickname = ""
+bgColor = "#000000"
+image = ""
 +++
 
 ima blow up and act like a no nobody

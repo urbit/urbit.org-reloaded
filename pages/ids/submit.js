@@ -17,7 +17,7 @@ const SubmissionPage = () => {
     `+++
 ship = "${form?.ship}"
 nickname = "${form?.nickname || ""}"
-bgcolor = "${form?.bgColor || "#000000"}"
+bgColor = "${form?.bgColor || "#000000"}"
 image = "${form?.image || ""}"
 +++
 

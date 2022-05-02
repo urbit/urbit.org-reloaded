@@ -1,7 +1,7 @@
 +++
 ship = "~rabsef-bicrym"
 nickname = ""
-bgcolor = "#000000"
+bgColor = "#000000"
 image = ""
 +++
 

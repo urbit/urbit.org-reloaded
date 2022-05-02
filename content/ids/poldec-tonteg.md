@@ -1,7 +1,7 @@
 +++
 ship = "~poldec-tonteg"
 nickname = ""
-bgcolor = "f2bd58"
+bgColor = "#f2bd58"
 image = ""
 +++
 
