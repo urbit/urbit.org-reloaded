@@ -10,7 +10,7 @@ grant_category = ["App Dev: Other"]
 [extra]
 image = ""
 description = "Urbit address space explorer"
-reward = "$45000 in WSTR"
+reward = "5 stars"
 assignee = "~midlev-mindyr"
 champion = "~norsyr-torryn"
 grant_id = "P0120"
@@ -89,7 +89,7 @@ The rewards are based on $100 per estimated hour.
 
 Time to Complete: ~80 hours over ~1 month
 
-Desired Reward: $8.000
+Desired Reward: 1 star
 
 - Make a cool frontend for @p entry (alert user of mistakes)
 
@@ -106,7 +106,7 @@ Desired Reward: $8.000
 
 Time to Complete: ~100 hours over ~1 1⁄3 months
 
-Desired Reward: $10.000
+Desired Reward: 1 star
 
 - write hoon for searching urbit ids
 
@@ -118,7 +118,7 @@ Desired Reward: $10.000
 
 Time to Complete: ~100 hours over ~1 1⁄3 months
 
-Desired Reward: $10.000
+Desired Reward: 1 star
 
 - PKI graph with performance optimizations
 
@@ -132,7 +132,7 @@ Desired Reward: $10.000
 
 Time to Complete: ~100 hours over ~1 1⁄3 months
 
-Desired Reward: $10.000
+Desired Reward: 1 star
 
 - design and make a cool ui for inputting sigils
 
@@ -144,7 +144,7 @@ Desired Reward: $10.000
 
 Time to Complete: ~70 hours over ~1 month (very rough estimate)
 
-Desired Reward: $7.000
+Desired Reward: 1 star
 
 - Integrations:
 
@@ -161,4 +161,4 @@ Desired Reward: $7.000
 
 Time to Complete: ~450 hours over ~6 months
 
-Desired Reward: $45.000
+Desired Reward: 5 stars
