@@ -93,7 +93,8 @@ the product of `q`, with the product of `p` taken as the subject.
 
 ## `=|` "tisbar"
 
-Combine a default type value ("bunt value") with the subject.
+Combine a named noun with the subject by "bunting" (producing the default value)
+of a given mold.
 
 #### Syntax
 
