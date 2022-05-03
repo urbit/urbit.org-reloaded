@@ -9,7 +9,7 @@ grant_category = [ "App Dev" ]
 [extra]
 image = ""
 description = "Eth-provider is a Gall agent that allows Urbit users to configure their Ethereum connection."
-reward = "$30,000 in WSTR"
+reward = "3 stars"
 assignee = ""
 id = ""
 completed = false
@@ -56,10 +56,10 @@ Building the eth-provider is simplified by the extensive Ethereum JSON RPC capab
 
 ### Eth-provider Gall agent
 
-$20,000 WSTR
+Payment: 2 Stars
 A completed eth-provider Gall agent that satifsfies the project requirements above.
 
 ### Urbit codebase integration
 
-$10,000 WSTR
+Payment: 1 Star
 All Ethereum RPC calls in the urbit codebase have been migrated to use eth-provider instead of the direct Infura connection. This milestone is completed when a PR against the [urbit](https://github.com/urbit/urbit) repository has been merged.

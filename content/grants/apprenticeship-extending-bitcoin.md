@@ -9,9 +9,9 @@ grant_category = [ "App Dev", "Other" ]
 [extra]
 image = ""
 description = ""
-reward = "$8000 in WSTR"
+reward = "1 star"
 mentor = "~dasrun-fadben"
-assignee = ""
+assignee = "~sipned-nistug"
 completed = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0138&prefill_Grant+Name=Extending%20the%20Bitcoin%20Provider%20API"
 +++
