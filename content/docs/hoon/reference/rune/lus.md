@@ -18,7 +18,7 @@ constructor arms use `+*`.
 
 ## `+|` "lusbar"
 
-Chapter label.
+Chapter label (not useful)
 
 #### Syntax
 
@@ -45,7 +45,10 @@ follow it. The arms of a core can be divided into **chapters** for
 'organization'. Chapter labels aren't part of the underlying noun of the core;
 they're stored as type system metadata only.
 
-See `tome` in the Hoon standard library.
+See [`tome`](/docs/hoon/reference/stdlib/4o#tome) in the Hoon standard library.
+
+**Note:** The `+|` rune has little practical utility. Chapter labels cannot be
+referenced short of manually processing the `$type` of a core.
 
 #### Examples
 
