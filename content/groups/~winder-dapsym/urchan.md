@@ -2,7 +2,7 @@
 title = "urChan"
 shortcode = "~winder-dapsym/urchan"
 type = "Public"
-tile = "https://winder-dap sym.sfo3.digitaloceanspaces.com/Images/urChan/urChanlogo_dark.png"
+tile = "https://winder-dapsym.sfo3.digitaloceanspaces.com/Images/urChan/urChanlogo_dark.png"
 participant_range = "1131"
 +++
 
