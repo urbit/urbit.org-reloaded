@@ -15,7 +15,7 @@ const Gateway404 = ({ type }) => {
             item={`No ${type} at this address`}
           />
           <hr className="text-wall-200" />
-          <Link href="/">
+          <Link href="/" passHref>
             <a className="text-xl block font-semibold">Urbit.org</a>
           </Link>
         </Section>

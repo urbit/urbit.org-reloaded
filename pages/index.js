@@ -169,12 +169,12 @@ export default function Home({ posts, events, openGrantsCount, search }) {
               real ownership and authority over the network.
             </p>
             <div className="flex flex-wrap">
-              <Link href="/grants">
+              <Link href="/grants" passHref>
                 <a className="button-lg bg-blue-400 text-white mr-2 mb-8">
                   Learn More
                 </a>
               </Link>
-              <Link href="/grants#view-grants">
+              <Link href="/grants#view-grants" passHref>
                 <a className="button-lg bg-green-400 text-white mr-2 mb-8">
                   View Grants
                 </a>
@@ -200,7 +200,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
             </p>
             <p className="pb-12">
               The entire OS is a{" "}
-              <Link href="https://urbit.org/docs/nock/definition/">
+              <Link href="https://urbit.org/docs/nock/definition/" passHref>
                 <a>single pure function</a>
               </Link>{" "}
               that provides application developers with strong guarantees:
@@ -209,19 +209,22 @@ export default function Home({ posts, events, openGrantsCount, search }) {
             </p>
             <p className="pb-12">
               You can get started learning how to{" "}
-              <Link href="https://urbit.org/docs/development/develop/">
+              <Link href="https://urbit.org/docs/development/develop/" passHref>
                 <a>contribute to the project</a>
               </Link>
               , or view a variety of{" "}
-              <Link href="https://github.com/urbit/awesome-urbit#http-apis-airlock">
+              <Link
+                href="https://github.com/urbit/awesome-urbit#http-apis-airlock"
+                passHref
+              >
                 <a>libraries</a>
               </Link>{" "}
               for building on Urbit using the languages you already know.
             </p>
-            <Link href="/docs">
-              <button className="button-lg type-ui text-white bg-wall-600">
+            <Link href="/docs" passHref>
+              <a className="button-lg type-ui text-white bg-wall-600 max-w-fit">
                 Read the Developer Docs
-              </button>
+              </a>
             </Link>
           </div>
         </Section>
@@ -239,10 +242,10 @@ export default function Home({ posts, events, openGrantsCount, search }) {
             <PostPreview post={posts[1]} key={posts[1].slug} />
           </TwoUp>
 
-          <Link href="/blog">
-            <button className="button-lg type-ui text-white bg-green-400">
+          <Link href="/blog" passHref>
+            <a className="button-lg max-w-fit type-ui text-white bg-green-400">
               See More
-            </button>
+            </a>
           </Link>
         </Section>
 
@@ -259,10 +262,10 @@ export default function Home({ posts, events, openGrantsCount, search }) {
             <EventPreview event={events[1]} key={events[1].slug} />
           </TwoUp>
 
-          <Link href="/events">
-            <button className="button-lg type-ui text-white bg-wall-600">
+          <Link href="/events" passHref>
+            <a className="button-lg max-w-fit type-ui text-white bg-wall-600">
               More Events
-            </button>
+            </a>
           </Link>
         </Section>
 

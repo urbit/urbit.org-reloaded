@@ -39,10 +39,10 @@ export default function GrantProgramOverview({
           <div className="type-ui text-wall-500 mt-4 md:mt-8 lg:mt-10">
             Last Revision: {formatDate(DateTime.fromISO(post.date))}
           </div>
-          <Link href={actionLink}>
-            <button className="button-sm bg-green-400 text-white mt-8">
+          <Link href={actionLink} passHref>
+            <a className="button-sm bg-green-400 text-white mt-8 max-w-fit">
               {actionText}
-            </button>
+            </a>
           </Link>
         </Section>
         <Section narrow short className="markdown">

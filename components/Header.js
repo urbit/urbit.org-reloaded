@@ -16,7 +16,7 @@ function ActiveLink({ children, href, className, currentPath }) {
   });
 
   return (
-    <Link href={href}>
+    <Link href={href} passHref>
       <a className={`${className} ${activeClassName}`}>{children}</a>
     </Link>
   );
@@ -50,11 +50,11 @@ export default function Header(props) {
   return (
     <header className="layout px-4 md:px-8 flex justify-between items-center pt-8 md:pt-10 lg:pt-12 pb-10 md:pb-12 lg:pb-24">
       <div>
-        <Link href="/">
+        <Link href="/" passHref>
           <a className="type-ui">Urbit</a>
         </Link>
         {routeDepth > 2 ? (
-          <Link href={`/${firstCrumb}`}>
+          <Link href={`/${firstCrumb}`} passHref>
             <a className="inline md:hidden type-ui text-wall-500 ml-2">
               {capitalize(firstCrumb)}
             </a>
@@ -123,7 +123,7 @@ export default function Header(props) {
         // Small screen header
       }
       <MenuTray isOpen={isOpen} setTray={setTray} search={props.search}>
-        <Link href="/">
+        <Link href="/" passHref>
           <a className="type-ui mb-12">Urbit</a>
         </Link>
         <ActiveLink

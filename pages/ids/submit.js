@@ -54,7 +54,7 @@ ${form?.description || ""}`
             </p>
             <p>
               Then, to validate that you operate this group, send a DM to{" "}
-              <Link href="/ids/~haddef-sigwen">
+              <Link href="/ids/~haddef-sigwen" passHref>
                 <a>~haddef-sigwen</a>
               </Link>{" "}
               from your group host <code>@p</code> with a link to the pull
@@ -156,7 +156,7 @@ ${form?.description || ""}`
           >
             Submit with GitHub
           </button>
-          <Link href="/">
+          <Link href="/" passHref>
             <a className="text-xl pt-8 block font-semibold">Urbit.org</a>
           </Link>
         </Section>

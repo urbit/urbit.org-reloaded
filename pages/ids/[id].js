@@ -154,13 +154,13 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
           <hr className="text-wall-200" />
           <div className="flex flex-col space-y-1">
             <p>Have an Urbit ID?</p>
-            <Link href="/ids/submit">
+            <Link href="/ids/submit" passHref>
               <a className="type-ui text-green-400">
                 Claim and customize your Urbit ID page
               </a>
             </Link>
           </div>
-          <Link href="/">
+          <Link href="/" passHref>
             <a className="text-xl pt-8 block font-semibold">Urbit.org</a>
           </Link>
         </Section>
