@@ -55,13 +55,13 @@ const Headings = ({ headings, activeId }) => (
     {headings.map((heading, index) => (
       <li key={heading.id}>
         <a
-          className={index === 0 ? "font-bold" : "font-medium"}
+          className={index === 0 ? "font-bold" : "font-medium text-sm"}
           href={`#${heading.id}`}
         >
           {heading.title}
         </a>
         {heading.items.length > 0 && (
-          <ul className="pl-2">
+          <ul className="pl-2 text-xs">
             {heading.items.map((child) => (
               <li
                 key={child.id}
