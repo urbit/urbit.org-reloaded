@@ -53,13 +53,13 @@ ${form?.description || ""}`
               “Create pull request” on the following page.
             </p>
             <p>
-              Then, to validate that you operate this group, send a DM to{" "}
+              Then, to validate that you own that ID, send a DM to{" "}
               <Link href="/ids/~haddef-sigwen">
                 <a>~haddef-sigwen</a>
               </Link>{" "}
-              from your group host <code>@p</code> with a link to the pull
-              request on GitHub. We’ll approve the pull request and your page
-              will be online shortly.
+              from your <code>@p</code> with a link to the pull request on
+              GitHub. We’ll approve the pull request and your page will be
+              online shortly.
             </p>
           </div>
           <div className="flex flex-col space-y-4">
