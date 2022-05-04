@@ -75,7 +75,7 @@ We note that this is mostly the same as `await-thread:strandio`.
 ;<  ~             bind:m  %-  poke-our
                           :*  %spider
                               %spider-start
-                              !>([`tid.bowl `tid byk.bowl(q da+now.bowl) %child !>(~)])
+                              !>([`tid.bowl `tid byk.bowl(r da+now.bowl) %child !>(~)])
                           ==
 ;<  =cage         bind:m  (take-fact /awaiting/[tid])
 ;<  ~             bind:m  (take-kick /awaiting/[tid])
@@ -131,7 +131,7 @@ We pre-emptively subscribe for the result. Spider sends the result at `/thread-r
 ;<  ~             bind:m  %-  poke-our
                           :*  %spider
                               %spider-start
-                              !>([`tid.bowl `tid byk.bowl(q da+now.bowl) %child !>(~)])
+                              !>([`tid.bowl `tid byk.bowl(r da+now.bowl) %child !>(~)])
                           ==
 ```
 
@@ -184,7 +184,7 @@ Finally we test whether the thread produced a `%thread-done` or a `%thread-fail`
 ;<  ~             bind:m  %-  poke-our
                           :*  %spider
                               %spider-start
-                              !>([`tid.bowl byk.bowl(q da+now.bowl) `tid %child !>(~)])
+                              !>([`tid.bowl byk.bowl(r da+now.bowl) `tid %child !>(~)])
                           ==
 ;<  ~             bind:m  (sleep ~s5)
 %-  (slog leaf+"Stopping child thread..." ~)
