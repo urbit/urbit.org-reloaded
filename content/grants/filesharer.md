@@ -9,7 +9,7 @@ grant_category = ["App Dev"]
 [extra]
 image = ""
 description = "Simple file sharing on Urbit"
-reward = "$15,000 in WSTR"
+reward = "2 stars"
 assignee = "~tinden-pontev"
 id = ""
 completed = false
@@ -73,7 +73,7 @@ The following areas need to be added:
 
 Expected completion: 8 weeks
 
-Payment: $7500 in WSTR
+Payment: 1 star
 
 - Rework state and clean up code for implementation of planned features and
   improving readability.
@@ -88,7 +88,7 @@ Payment: $7500 in WSTR
 
 Expected completion: 8 weeks
 
-Payment: $7500 in WSTR
+Payment: 1 star
 
 - Add ability to restrict whitelist by tag.
 
