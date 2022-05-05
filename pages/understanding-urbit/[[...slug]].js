@@ -4,16 +4,12 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import classnames from "classnames";
 import { join } from "path";
-import {
-  buildPageTree,
-  getPage,
-  getPreviousPost,
-  getNextPost,
-} from "../../lib/lib";
+import { getPage, getPreviousPost, getNextPost } from "../../lib/lib";
 import Markdown from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
 import Pagination from "../../components/Pagination";
+import UnderstandingUrbitTree from "../../cache/understanding-urbit.json";
 
 import { decode } from "html-entities";
 
@@ -150,10 +146,7 @@ export default function UnderstandingLayout({
 }
 
 export async function getStaticProps({ params }) {
-  const posts = buildPageTree(
-    join(process.cwd(), "content/understanding-urbit"),
-    "weight"
-  );
+  const posts = UnderstandingUrbitTree;
 
   const { data, content } = getPage(
     join(
@@ -185,10 +178,8 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const posts = buildPageTree(
-    join(process.cwd(), "content/understanding-urbit"),
-    "weight"
-  );
+  const posts = UnderstandingUrbitTree;
+
   const slugs = [];
 
   const allHrefs = (thisLink, tree) => {

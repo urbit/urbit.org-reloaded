@@ -4,17 +4,13 @@ import { useRouter } from "next/router";
 import { useState, useEffect, useRef } from "react";
 import classnames from "classnames";
 import { join } from "path";
-import {
-  getPreviousPost,
-  getNextPost,
-  buildPageTree,
-  getPage,
-} from "../../lib/lib";
+import { getPreviousPost, getNextPost, getPage } from "../../lib/lib";
 import Meta from "../../components/Meta";
 import Pagination from "../../components/Pagination";
 import Markdown from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
+import docsPageTree from "../../cache/docs.json";
 
 import { decode } from "html-entities";
 
@@ -193,7 +189,7 @@ export default function DocsLayout({
 }
 
 export async function getStaticProps({ params }) {
-  const posts = buildPageTree(join(process.cwd(), "content/docs"), "weight");
+  const posts = docsPageTree;
 
   const { data, content } = getPage(
     join(process.cwd(), "content/docs", params.slug?.join("/") || "/")
@@ -221,7 +217,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const posts = buildPageTree(join(process.cwd(), "content/docs"), "weight");
+  const posts = docsPageTree;
   const slugs = [];
 
   const allHrefs = (thisLink, tree) => {

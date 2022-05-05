@@ -4,10 +4,11 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import classnames from "classnames";
 import { join } from "path";
-import { buildPageTree, getPage } from "../../lib/lib";
+import { getPage } from "../../lib/lib";
 import Markdown from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
+import GettingStartedTree from "../../cache/getting-started.json";
 
 import { decode } from "html-entities";
 
@@ -108,10 +109,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
 }
 
 export async function getStaticProps({ params }) {
-  const posts = buildPageTree(
-    join(process.cwd(), "content/getting-started"),
-    "weight"
-  );
+  const posts = GettingStartedTree;
 
   const { data, content } = getPage(
     join(
@@ -127,10 +125,8 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const posts = buildPageTree(
-    join(process.cwd(), "content/getting-started"),
-    "weight"
-  );
+  const posts = GettingStartedTree;
+
   const slugs = [];
 
   const allHrefs = (thisLink, tree) => {
