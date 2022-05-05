@@ -178,7 +178,7 @@ export default function DocsLayout({
             )}
           </div>
           <a
-            className="font-semibold rounded-xl block p-2 text-center bg-wall-100 text-black mt-8"
+            className="font-semibold rounded-xl block p-2 text-wall-400 hover:text-green-400 mt-16"
             target="_blank"
             href={`https://github.com/urbit/urbit.org/blob/master/content/docs/${
               params.slug?.join("/") || "_index"
