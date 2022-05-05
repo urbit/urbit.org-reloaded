@@ -296,7 +296,6 @@ export async function getStaticProps() {
     ).length,
   };
 
-  console.log(grantNumbers.active);
   const now = DateTime.now();
 
   const pastEvents = events.filter((event) => {

@@ -4,12 +4,13 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import classnames from "classnames";
 import { join } from "path";
-import { getDocs, formatDate, buildPageTree, getPage } from "../../lib/lib";
+import { getDocs, formatDate, getPage } from "../../lib/lib";
 import Meta from "../../components/Meta";
 import Markdown from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
 import { decode } from "html-entities";
+import communityTree from "../../cache/community.json";
 
 const breadcrumbs = (posts, paths) => {
   const results = [
@@ -89,10 +90,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
 }
 
 export async function getStaticProps({ params }) {
-  const posts = buildPageTree(
-    join(process.cwd(), "content/community"),
-    "weight"
-  );
+  const posts = communityTree;
 
   const { data, content } = getPage(
     join(process.cwd(), "content/community", params.slug?.join("/") || "/")
@@ -104,10 +102,8 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const posts = buildPageTree(
-    join(process.cwd(), "content/community"),
-    "weight"
-  );
+  const posts = communityTree;
+
   const slugs = [];
 
   const allHrefs = (thisLink, tree) => {
