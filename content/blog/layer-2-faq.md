@@ -45,7 +45,7 @@ you **do not** need ETH to boot Urbit. That Urbit ID is now yours, forever.
 Unsure whether you have been invited to claim a L2 or L1 planet? The quickest
 way to identify a L2 planet is if you used the below flow to claim.
 
-![](/images/planet-l2-claim.gif)
+<img src="/images/planet-l2-claim.gif" style="max-height: 400px; width: auto; margin: 0 auto;"/>
 
 For those with L1 planets, you can avoid future transaction fees by migrating
 your L1 planet to L2. Read the migration instructions
