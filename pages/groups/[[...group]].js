@@ -101,21 +101,21 @@ const GroupPage = ({ data, markdown, params }) => {
               <p className="text-sm font-semibold text-wall-400">
                 Get on the network and join this group.
               </p>
-              <Link href="/guides/joining-groups">
-                <button className="button-lg max-w-xs bg-green-400 text-white">
+              <Link href="/guides/joining-groups" passHref>
+                <a className="button-lg max-w-xs bg-green-400 text-white">
                   How to join a group
-                </button>
+                </a>
               </Link>
             </div>
           </div>
           <hr className="text-wall-200" />
           <div className="flex flex-col space-y-1">
             <p>Have a group you'd like to share publicly through urbit.org?</p>
-            <Link href="/groups/submit">
+            <Link href="/groups/submit" passHref>
               <a className="type-ui text-green-400">Submit your group</a>
             </Link>
           </div>
-          <Link href="/">
+          <Link href="/" passHref>
             <a className="text-xl pt-8 block font-semibold">Urbit.org</a>
           </Link>
         </Section>

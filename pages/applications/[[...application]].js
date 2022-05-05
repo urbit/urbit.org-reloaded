@@ -106,10 +106,10 @@ const ApplicationPage = ({ data, markdown, params }) => {
               <p className="text-sm font-semibold text-wall-400">
                 Learn how to install an Urbit application
               </p>
-              <Link href="/guides/installing-applications">
-                <button className="button-lg max-w-xs bg-green-400 text-white">
+              <Link href="/guides/installing-applications" passHref>
+                <a className="button-lg max-w-xs bg-green-400 text-white">
                   Installing Urbit applications
-                </button>
+                </a>
               </Link>
             </div>
           </div>
@@ -119,11 +119,11 @@ const ApplicationPage = ({ data, markdown, params }) => {
               Have an application you'd like to share publicly through
               urbit.org?
             </p>
-            <Link href="/applications/submit">
+            <Link href="/applications/submit" passHref>
               <a className="type-ui text-green-400">Submit your application</a>
             </Link>
           </div>
-          <Link href="/">
+          <Link href="/" passHref>
             <a className="text-xl pt-8 block font-semibold">Urbit.org</a>
           </Link>
         </Section>

@@ -31,7 +31,7 @@ export default function GuidePage({ post, markdown }) {
           <article
             dangerouslySetInnerHTML={{ __html: decode(markdown) }}
           ></article>
-          <Link href="/">
+          <Link href="/" passHref>
             <a className="text-xl pt-12 block font-semibold">Urbit.org</a>
           </Link>
         </Section>

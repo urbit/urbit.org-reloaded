@@ -53,7 +53,7 @@ const pageTree = (thisLink, tree, level = 0) => {
 
   return (
     <>
-      <Link href={thisLink}>
+      <Link href={thisLink} passHref>
         <a className={`${pageItemClasses} cursor-pointer`}>{tree.title}</a>
       </Link>
     </>
@@ -80,7 +80,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
         <Sidebar search={search}>
           <ul>
             <li>
-              <Link href="/getting-started">
+              <Link href="/getting-started" passHref>
                 <a className={`relative ${selectedClasses} ${rootClasses}`}>
                   Getting Started
                 </a>

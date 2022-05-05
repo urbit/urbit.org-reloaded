@@ -58,7 +58,7 @@ const pageTree = (thisLink, tree, level = 0) => {
 
   return (
     <>
-      <Link href={thisLink}>
+      <Link href={thisLink} passHref>
         <a className={`${pageItemClasses} cursor-pointer`}>{tree.title}</a>
       </Link>
     </>
@@ -92,7 +92,7 @@ export default function UnderstandingLayout({
         <Sidebar search={search}>
           <ul>
             <li>
-              <Link href="/understanding-urbit">
+              <Link href="/understanding-urbit" passHref>
                 <a className={`relative ${selectedClasses} ${rootClasses}`}>
                   Introduction
                 </a>

@@ -29,7 +29,7 @@ export default function Contact({ emphasize }) {
       </h4>
       <h4 className="mt-6 text-wall-500 flex-wrap">
         Boot Urbit and join{" "}
-        <Link href={`/groups/${contact.urbitCommunity}`}>
+        <Link href={`/groups/${contact.urbitCommunity}`} passHref>
           <a className={linkText}>Urbit Community</a>
         </Link>
       </h4>

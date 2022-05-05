@@ -129,7 +129,7 @@ ${form?.description || ""}`
           >
             Submit with GitHub
           </button>
-          <Link href="/">
+          <Link href="/" passHref>
             <a className="text-xl pt-8 block font-semibold">Urbit.org</a>
           </Link>
         </Section>

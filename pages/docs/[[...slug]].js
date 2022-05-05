@@ -86,7 +86,7 @@ const pageTree = (thisLink, tree, level = 0) => {
             });
             return (
               <li>
-                <Link href={href}>
+                <Link href={href} passHref>
                   <a
                     className={`relative inline-block ${pageItemClasses} ${selectedClasses}`}
                   >
@@ -132,7 +132,7 @@ export default function DocsLayout({
         <Sidebar search={search}>
           <ul>
             <li>
-              <Link href="/docs">
+              <Link href="/docs" passHref>
                 <a className={`relative ${selectedClasses} ${rootClasses}`}>
                   Introduction
                 </a>

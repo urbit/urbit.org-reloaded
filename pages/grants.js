@@ -179,20 +179,20 @@ export default function Grants({
             </div>
           </div>
           <div className="flex flex-wrap">
-            <Link href="#grant-types">
-              <button className="button-lg bg-blue-400 text-white mr-2">
+            <Link href="#grant-types" passHref>
+              <a className="button-lg bg-blue-400 text-white mr-2">
                 Learn More
-              </button>
+              </a>
             </Link>
-            <Link href="#join-community">
-              <button className="button-lg bg-black text-white mr-2">
+            <Link href="#join-community" passHref>
+              <a className="button-lg bg-black text-white mr-2">
                 Join the Community
-              </button>
+              </a>
             </Link>
-            <Link href="#view-grants">
-              <button className="button-lg bg-wall-400 text-white mr-2">
+            <Link href="#view-grants" passHref>
+              <a className="button-lg bg-wall-400 text-white mr-2">
                 View Grants
-              </button>
+              </a>
             </Link>
           </div>
         </Section>
@@ -217,10 +217,10 @@ export default function Grants({
                 &mdash; we fund all kinds projects, not strictly technical ones,
                 so don't hesitate to pitch your idea!
               </p>
-              <Link href="/grants/proposals">
-                <button className="button-sm bg-blue-400 text-white mb-8">
+              <Link href="/grants/proposals" passHref>
+                <a className="button-sm bg-blue-400 text-white mb-8 max-w-fit">
                   Submit a Proposal
-                </button>
+                </a>
               </Link>
 
               {/* Apprenticeships */}
@@ -230,10 +230,10 @@ export default function Grants({
                 They're one of the best ways to level up your skills, and often
                 lead to full-time jobs.
               </p>
-              <Link href="/grants/apprenticeships">
-                <button className="button-sm bg-green-400 text-white mb-8">
+              <Link href="/grants/apprenticeships" passHref>
+                <a className="button-sm bg-green-400 text-white mb-8 max-w-fit">
                   Become an Apprentice
-                </button>
+                </a>
               </Link>
 
               {/* Bounties */}
@@ -242,15 +242,15 @@ export default function Grants({
                 Urbit Foundation or from trusted partners in our ecosystem.
               </p>
               <div className="flex flex-wrap">
-                <Link href="/grants/bounties#post-a-bounty">
-                  <button className="button-sm bg-yellow-300 text-black mr-2">
+                <Link href="/grants/bounties#post-a-bounty" passHref>
+                  <a className="button-sm bg-yellow-300 text-black mr-2 max-w-fit">
                     Post a Bounty
-                  </button>
+                  </a>
                 </Link>
-                <Link href="/grants/bounties">
-                  <button className="button-sm bg-wall-400 text-white">
+                <Link href="/grants/bounties" passHref>
+                  <a className="button-sm bg-wall-400 text-white max-w-fit">
                     Learn more
-                  </button>
+                  </a>
                 </Link>
               </div>
             </div>

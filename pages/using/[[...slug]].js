@@ -81,7 +81,7 @@ const pageTree = (thisLink, tree, level = 0) => {
             });
             return (
               <li>
-                <Link href={href}>
+                <Link href={href} passHref>
                   <a
                     className={`relative ${pageItemClasses} ${selectedClasses}`}
                   >
