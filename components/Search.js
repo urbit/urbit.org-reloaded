@@ -25,7 +25,9 @@ class Search extends Component {
 
   glossarySearch(query) {
     return glossary.filter((entry) => {
-      return query.toLowerCase() === entry.name || entry.symbol === query;
+      return (
+        entry.name.includes(query.toLowerCase()) || entry.symbol.includes(query)
+      );
     });
   }
 

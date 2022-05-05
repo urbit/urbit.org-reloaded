@@ -121,6 +121,7 @@ export default function DocsLayout({
     "text-wall-600": !isSelected,
   });
   const rootClasses = "pl-0 text-base hover:text-green-400";
+
   return (
     <>
       <Head>
@@ -176,6 +177,15 @@ export default function DocsLayout({
               />
             )}
           </div>
+          <a
+            className="font-semibold rounded-xl block p-2 text-wall-400 hover:text-green-400 mt-16"
+            target="_blank"
+            href={`https://github.com/urbit/urbit.org/blob/master/content/docs/${
+              params.slug?.join("/") || "_index"
+            }.md`}
+          >
+            Edit this page on GitHub
+          </a>
         </ContentArea>
       </div>
     </>

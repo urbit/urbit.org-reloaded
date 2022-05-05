@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { DateTime } from "luxon";
 
 import Container from "../components/Container";
@@ -8,22 +8,14 @@ import Section from "../components/Section";
 import SingleColumn from "../components/SingleColumn";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import BackgroundImage from "../components/BackgroundImage";
 import Contact from "../components/Contact";
 import PostPreview from "../components/PostPreview";
 import EventPreview from "../components/EventPreview";
 import Cross from "../components/icons/Cross";
 import TwoUp from "../components/TwoUp";
 import BubbleLink from "../components/BubbleLink";
-import {
-  getAllPosts,
-  getAllEvents,
-  formatDate,
-  getOpenGrantsCount,
-  generateRealtimeDate,
-} from "../lib/lib";
-import { contact, eventKeys } from "../lib/constants";
-import { useLocalStorage } from "../lib/hooks";
+import { getAllPosts, getAllEvents, generateRealtimeDate } from "../lib/lib";
+import { eventKeys } from "../lib/constants";
 
 const Banner = ({ children, isOpen, href, dismiss }) => {
   return (
@@ -50,7 +42,7 @@ const Banner = ({ children, isOpen, href, dismiss }) => {
   );
 };
 
-export default function Home({ posts, events, openGrantsCount, search }) {
+export default function Home({ posts, events, grantNumbers, search }) {
   return (
     <Container>
       <Head>
@@ -135,29 +127,24 @@ export default function Home({ posts, events, openGrantsCount, search }) {
         <Section narrow>
           <div className="flex items-center pb-12">
             <h2 className="m-0 p-0 mr-4">Grants</h2>
-            {/* <Link href="/grants/proposals"> */}
-            {/*   <a className="bg-green-400 text-white badge-lg"> */}
-            {/*     {openGrantsCount} Open */}
-            {/*   </a> */}
-            {/* </Link> */}
           </div>
           <div className="flex flex-col md:flex-row w-full items-center md:items-start bg-green-100 px-8 py-8 rounded-xl">
             <div className="flex items-center flex-col p-4 w-full">
-              <h2 className="text-green-400">200+</h2>
+              <h2 className="text-green-400">{grantNumbers?.starsAwarded}</h2>
               <h4 className="text-green-400 text-center pt-2">
                 Urbit stars awarded
               </h4>
             </div>
             <div className="h-0 w-0 md:h-24 md:w-4 bg-green-200 self-center" />
             <div className="flex items-center flex-col p-4 w-full">
-              <h2 className="text-green-400">400+</h2>
+              <h2 className="text-green-400">{grantNumbers?.contributors}</h2>
               <h4 className="text-green-400 text-center pt-2">
                 Different Contributors
               </h4>
             </div>
             <div className="h-0 w-0 md:h-24 md:w-4 bg-green-200 self-center" />
             <div className="flex items-center flex-col p-4 w-full">
-              <h2 className="text-green-400">45+</h2>
+              <h2 className="text-green-400">{grantNumbers?.active}</h2>
               <h4 className="text-green-400 text-center pt-2">
                 Active Projects
               </h4>
@@ -283,8 +270,6 @@ export default function Home({ posts, events, openGrantsCount, search }) {
 }
 
 export async function getStaticProps() {
-  const openGrantsCount = getOpenGrantsCount();
-
   const posts = getAllPosts(
     ["title", "slug", "date", "description", "extra"],
     "blog",
@@ -293,6 +278,25 @@ export async function getStaticProps() {
 
   const events = getAllEvents(eventKeys, "events");
 
+  const grants = getAllPosts(["extra", "taxonomies"], "grants", "date");
+
+  const grantNumbers = {
+    starsAwarded: grants.reduce(
+      (total, a) =>
+        total + (Number(a?.extra?.reward.replace(/ star[s]?/, "")) || 0),
+      0
+    ),
+    contributors: [...new Set(grants.map((e) => e.extra.assignee))].length,
+    active: grants.filter(
+      (e) =>
+        !e.extra.canceled &&
+        !e.extra.completed &&
+        e.extra.assignee &&
+        e.extra.assignee.length > 0
+    ).length,
+  };
+
+  console.log(grantNumbers.active);
   const now = DateTime.now();
 
   const pastEvents = events.filter((event) => {
@@ -325,7 +329,7 @@ export async function getStaticProps() {
   return {
     props: {
       posts,
-      openGrantsCount,
+      grantNumbers,
       events: happeningNow.concat(futureEvents).concat(pastEvents),
     },
   };
