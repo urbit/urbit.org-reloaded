@@ -13,33 +13,12 @@ participant_range = "100+"
 
 **[Map of Events](https://www.google.com/maps/d/edit?mid=1eOCaJApIPrEqmgD9s51MVXVnlps1LaIR&usp=sharing)**
 
-### Wednesday,May 18, 2022
-
-**Informal Urmetica Lodge brunch**
-
-Noon
-
-[Brooklyn Crab](https://www.brooklyncrab.com/)
-
-24 Reed St, Red Hook
-
-Contact: ~todset-partug
-
-**Urmetica Initiation**
-
-2 PM
-
-[Sunny’s](https://www.sunnysredhook.com/)
-
-253 Conover, Red Hook
-
-Contact: ~poldec-tonteg
 
 ### Thursday, May 19, 2022
 
 **Dimes Square (the play) Live!**
 
-5PM
+9PM
 
 The Honey Pot
 
@@ -57,13 +36,6 @@ Contact: ~lagrev-nocfep
 
 ### **Friday, May 20, 2022**
 
-**UF VIP / Senate Dinner**
-
-Night Time
-
-Location TBA
-
-Contact: Josh
 
 **Mars Review of Books**
 
@@ -129,6 +101,7 @@ Contact: ~tasset-norlux
 
 ### Sunday,May 22, 2022
 
+
 **Networked Spirituality (Holium)**
 
 11AM
@@ -136,6 +109,26 @@ Contact: ~tasset-norlux
 Location: TBD
 
 Contact: ~fasnut-famden
+
+**Informal Urmetica Lodge brunch**
+
+Noon
+
+[Brooklyn Crab](https://www.brooklyncrab.com/)
+
+24 Reed St, Red Hook
+
+Contact: ~todset-partug
+
+**Urmetica Initiation**
+
+2 PM
+
+[Sunny’s](https://www.sunnysredhook.com/)
+
+253 Conover, Red Hook
+
+Contact: ~poldec-tonteg
 
 **Innocent Garden Party**
 
