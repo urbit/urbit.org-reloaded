@@ -7,7 +7,7 @@ import normalize from "mdurl/encode";
 import merge from "deepmerge";
 import github from "hast-util-sanitize/lib/github";
 import remarkParse from "remark-parse";
-import remarkRehype from "remark-rehype";
+import remarkRehype, { defaultHandlers } from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import rehypeRaw from "rehype-raw";
 
@@ -63,10 +63,7 @@ function Link(h, node) {
 
 const options = {
   allowDangerousHtml: true,
-  handlers: {
-    image: Img,
-    link: Link,
-  },
+  handlers: Object.assign(defaultHandlers, { image: Img, link: Link }),
   sanitize: merge(github, {
     // remove user-content from github.json to remark-slug work as expected
     clobberPrefix: "",
