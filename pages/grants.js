@@ -72,25 +72,20 @@ export default function Grants({
   gifts,
 }) {
   const router = useRouter();
+  const { open, completed, program, wip } = router.query;
   const [activeTags, setTags] = useState([]);
   const [activeTypes, setTypes] = useState(types);
-  const includeOpen =
-    router.query.open === undefined || router.query.open === "true";
-  const includeCompleted = router.query.completed === "true";
-  const programFilter = router.query.program;
+  const includeOpen = open === "true";
+  const includeCompleted = completed === "true";
+  const programFilter = program;
   const post = {
     title: "Grants",
     description: "Contribute to the Urbit project while earning address space.",
   };
 
-  let includeInProgress =
-    router.query.wip === undefined || router.query.wip === "true";
+  let includeInProgress = wip === undefined || wip === "true";
 
-  if (
-    router.query.open === undefined &&
-    router.query.completed === undefined &&
-    router.query.wip === undefined
-  ) {
+  if (open === undefined && completed === undefined && wip === undefined) {
     includeInProgress = true;
   }
 
