@@ -17,7 +17,7 @@ three different points in the idea maze of subscriptions, and we'll
 encounter each of them here.
 
 For our purposes, a subscription is a stream of events from a publisher
-to a subscriber, where (1) the publisher has indicated interest in that
+to a subscriber, where (1) the subscriber has indicated interest in that
 stream, (2) any update sent to one subscriber is sent to all subscribers
 on the same stream, and (3) when the publisher has a new update ready,
 they send it immediately to their subscribers instead of waiting for a
@@ -102,7 +102,7 @@ stuck in memory until the subscriber comes back online.
 Buffers are commonly bounded by size, but this puts constraints on the
 types of messages may be sent. They may also be bounded in time: if the
 subscriber stops taking messages for at least X time, the buffer is
-full. Gall taks a hybrid approach; currently the heuristic is that the
+full. Gall takes a hybrid approach; currently the heuristic is that the
 buffer counts as full if it has at least five messages and it has been
 30 seconds since a message was acknowledged.
 
