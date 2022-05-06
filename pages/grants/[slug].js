@@ -17,6 +17,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import SingleColumn from "../../components/SingleColumn";
 import GrantPreview from "../../components/GrantPreview";
+import ob from "urbit-ob";
 import Section from "../../components/Section";
 import { DateTime } from "luxon";
 
@@ -27,6 +28,24 @@ export default function Grant({ post, markdown, search }) {
   }
   const isOpen = !post?.extra?.completed && post?.extra?.assignee === "";
   const canApply = isOpen && post?.extra?.work_request_link;
+  const assignee = post?.extra?.assignee;
+  const mentor = post.extra.mentor || post.extra.champion;
+  const assigneeLink =
+    assignee && ob.isValidPatp(assignee) ? (
+      <Link href={`/ids/${assignee}`} passHref>
+        <a className="text-green-400">{assignee}</a>
+      </Link>
+    ) : (
+      assignee
+    );
+  const mentorLink =
+    mentor && ob.isValidPatp(mentor) ? (
+      <Link href={`/ids/${mentor}`} passHref>
+        <a className="text-green-400">{mentor}</a>
+      </Link>
+    ) : (
+      mentor
+    );
 
   return (
     <Container>
@@ -40,7 +59,17 @@ export default function Grant({ post, markdown, search }) {
           <h1>{post.title}</h1>
           {post.extra.assignee ? (
             <div className="type-ui text-wall-500 mt-4">
-              Grantee: {post.extra.assignee}
+              Grantee: {assigneeLink}
+            </div>
+          ) : null}
+          {post.extra.mentor ? (
+            <div className="type-ui text-wall-500 mt-4">
+              Mentor: {mentorLink}
+            </div>
+          ) : null}
+          {post.extra.champion ? (
+            <div className="type-ui text-wall-500 mt-4">
+              Champion: {mentorLink}
             </div>
           ) : null}
           {post.extra.ship ? (
@@ -50,8 +79,14 @@ export default function Grant({ post, markdown, search }) {
               </a>
             </Link>
           ) : null}
-          <div className="type-ui text-wall-500 mt-4 md:mt-8 lg:mt-10">
+          <div className="type-ui text-wall-500 mt-4 md:mt-8 lg:mt-10 flex items-center space-x-1">
             {formatDate(DateTime.fromISO(post.date))}
+            {post?.extra?.grant_id ? (
+              <>
+                <p className="ml-1 text-wall-500 type-ui">• ID:</p>
+                <p className="font-mono type-ui"> {post.extra.grant_id}</p>
+              </>
+            ) : null}
           </div>
           <div className="flex items-center flex-wrap mt-4 md:mt-8 lg:mt-10">
             {post.taxonomies.grant_type.map((category) => {
