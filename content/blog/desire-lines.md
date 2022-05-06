@@ -5,7 +5,7 @@ description = "As more digital communities find their way to Urbit, others are l
 [extra]
 author = "Eleanor"
 ship = "~dalwes-migdec"
-image = "media.urbit.org/blog/desire-lines.jpg"
+image = "https://media.urbit.org/blog/desire-lines.jpg"
 +++
 
 ![](https://media.urbit.org/blog/desire-lines.jpg)
