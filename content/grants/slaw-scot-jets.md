@@ -1,6 +1,6 @@
 +++
 title = "Tune slaw/scot Jets"
-date = "2021-06-16"
+date = "2022-05-06"
 
 [taxonomies]
 grant_type = [ "Bounty" ]
@@ -10,10 +10,11 @@ grant_category = [ "Core Dev" ]
 image = ""
 description = "Tune slaw/scot jets for better perfomance."
 reward = "1 star"
-mentor = "~timluc-miptev"
-assignee = "~lagrev-nocfep"
+mentor = "~master-morzod"
+assignee = ""
+grant_id = "B0164"
 completed = false
-work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0042&prefill_Grant+Name=Tune%20slaw%2Fscot%20jets"
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0164&prefill_Grant+Name=Tune%20slaw%2Fscot%20Jets"
 +++
 
 ## slaw/scot
