@@ -7,12 +7,12 @@ import normalize from "mdurl/encode";
 import merge from "deepmerge";
 import github from "hast-util-sanitize/lib/github";
 import remarkParse from "remark-parse";
-import remarkRehype, { defaultHandlers } from "remark-rehype";
+import remarkRehype, { defaultHandlers, all } from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import rehypeRaw from "rehype-raw";
 
 // img is wrapped in figure so that images can be extra wide in the blog posts
-function Img(h, node) {
+function img(h, node) {
   var props = { src: normalize(node.url), alt: node.alt };
   if (node.title !== null && node.title !== undefined) {
     props.title = node.title;
@@ -31,7 +31,7 @@ function Img(h, node) {
   };
 }
 
-function Link(h, node) {
+function a(h, node) {
   const url = node.url;
 
   if (
@@ -45,7 +45,7 @@ function Link(h, node) {
       properties: {
         href: url,
       },
-      children: node.children,
+      children: all(h, node),
     };
   } else {
     return {
@@ -56,14 +56,18 @@ function Link(h, node) {
         rel: "noopener",
         href: url,
       },
-      children: node.children,
+      children: all(h, node),
     };
   }
 }
 
+const handlers = defaultHandlers;
+handlers.link = a;
+handlers.image = img;
+
 const options = {
   allowDangerousHtml: true,
-  handlers: Object.assign(defaultHandlers, { image: Img, link: Link }),
+  handlers: handlers,
   sanitize: merge(github, {
     // remove user-content from github.json to remark-slug work as expected
     clobberPrefix: "",
