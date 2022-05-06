@@ -7,7 +7,7 @@ grant_category = ["other"]
 [extra]
 image = ""
 description = "User research, domain research/synthesis, white paper creation and publicity effort around Urbit ID as a solution to questions of IoT identity sharing and privacy"
-reward = "$42,004 in WSTR"
+reward = "4.6 stars"
 assignee = "~pilwyc-fastec"
 mentor = "~simfur-ritwed"
 id = ""
@@ -90,8 +90,8 @@ I’m interested in finding models that make sense for the smart home that don�
 
 ## Milestones
 
-Milestone 1: Research
-Payout: $10,501 in WSTR
+### Milestone 1: Research
+Payout: 1 star and .15 WSTR
 Due Date: 3/11/22
 
 The first milestone is after research into the problem area of communal use of Urbit systems. This includes interview guide drafting, recruiting, interviewing (at least 10 45-minute interviews), analysis, and synthesis of research.
@@ -100,16 +100,16 @@ The handoff is a research report (3-5 pages) with themes and important nuggets (
 
 As compensation for the interviews we will give out specific Goras to people that participate in this study.
 
-Milestone 2: Concept Development
-Payout: $10,501 in WSTR
+### Milestone 2: Concept Development
+Payout: 1 star and .15 WSTR
 Due Date: 4/11/22
 
 The second milestone is to turn the research into actionable recommendations. This includes working sessions (at least 5) with the Urbit community to refine problems, ideate, design solutions, and situate in the context of Urbit’s current systems. This will include 5-8 people in a synchronous meeting to workshop.
 
 The handoff is a compilation of ideas with any recommendations from the working sessions. This will most likely be a journey map format with problems and possible solutions.
 
-Milestone 3: Report Creation + Sharing
-Payout: $21,002 in WSTR
+### Milestone 3: Report Creation + Sharing
+Payout: 2 stars and .3 WSTR
 Due Date: 5/27/22
 
 The final milestone is the completion of a whitepaper (10-20 pages). This includes the whitepaper drafting and editing. As well as, authoring a blog post (1,000-2,000 words) and live talk for the Urbit YouTube account (45-60 minutes).
@@ -118,13 +118,13 @@ This will be shared out with the wider boomer web distribution like blogs, podca
 
 Here is a short list of possible groups:
 
-O’Reilly Radar blog
-Building the Metaverse Medium publication
-Inside Blockchain newsletter
-NYC Media Lab Data Download newsletter
-The IoT podcast
-VerseTech SF Metaverse | AI | Blockchain | XR VR AR meetup
-Vienna Digital Identity meetup
-Privacy Engineering SF meetup
-MLUX meetup
-IIW unconference
+- O’Reilly Radar blog
+- Building the Metaverse Medium publication
+- Inside Blockchain newsletter
+- NYC Media Lab Data Download newsletter
+- The IoT podcast
+- VerseTech SF Metaverse | AI | Blockchain | XR VR AR meetup
+- Vienna Digital Identity meetup
+- Privacy Engineering SF meetup
+- MLUX meetup
+- IIW unconference
