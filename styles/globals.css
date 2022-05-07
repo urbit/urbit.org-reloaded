@@ -203,8 +203,8 @@ a:hover {
   border-radius: 99px;
   content: "";
   position: absolute;
-  left: -0.75rem;
-  top: 0.4rem;
+  left: -1rem;
+  top: 33%;
   @apply bg-green-400;
 }
 
