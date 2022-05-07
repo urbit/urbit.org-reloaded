@@ -9,12 +9,11 @@ participant_range = "100+"
 
 # Urbit NY Week May 16th - 22nd
 
-[https://urbit.org/groups/~ladtem-filmyr/urbit-ny-week](https://urbit.org/groups/~ladtem-filmyr/urbit-ny-week)
 
 **[Map of Events](https://www.google.com/maps/d/edit?mid=1eOCaJApIPrEqmgD9s51MVXVnlps1LaIR&usp=sharing)**
 
 
-### Thursday, May 19, 2022
+## Thursday, May 19, 2022
 
 **Dimes Square (the play) Live!**
 
@@ -34,7 +33,7 @@ Lower Manhattan ([RSVP](https://docs.google.com/forms/d/e/1FAIpQLSeY84O65omPNvc1
 
 Contact: ~lagrev-nocfep
 
-### **Friday, May 20, 2022**
+## **Friday, May 20, 2022**
 
 
 **Mars Review of Books**
@@ -57,7 +56,7 @@ Location changed - Lafayette - details TBA
 
 Contact: ~napmer-rilnut
 
-### Saturday, May 21, 2022
+## Saturday, May 21, 2022
 
 **The Combine DAO Launch Party**
 
@@ -99,7 +98,7 @@ Location TBD
 
 Contact: ~tasset-norlux
 
-### Sunday,May 22, 2022
+## Sunday,May 22, 2022
 
 
 **Networked Spirituality (Holium)**
@@ -140,7 +139,7 @@ Contact: ~hatryx-lastud
 
 ## EXTRA
 
-### Monday, May 23, 2022
+## Monday, May 23, 2022
 
 **Flatline Black Lake (Outskirts)**
 
@@ -148,7 +147,7 @@ Contact: ~hatryx-lastud
 
 Contact: ~hatryx-lastud
 
-### Thursday, May 26, 2022
+## Thursday, May 26, 2022
 
 **Merde!**
 
