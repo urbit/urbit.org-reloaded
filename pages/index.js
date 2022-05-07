@@ -281,12 +281,16 @@ export async function getStaticProps() {
   const grants = getAllPosts(["extra", "taxonomies"], "grants", "date");
 
   const grantNumbers = {
-    starsAwarded: grants.reduce(
-      (total, a) =>
-        total + (Number(a?.extra?.reward.replace(/ star[s]?/, "")) || 0),
-      0
+    starsAwarded: Math.floor(
+      grants.reduce(
+        (total, a) =>
+          total + (Number(a?.extra?.reward.replace(/ star[s]?/, "")) || 0),
+        0
+      )
     ),
-    contributors: [...new Set(grants.map((e) => e.extra.assignee))].length,
+    contributors: [
+      ...new Set(...[grants.map((e) => e.extra.assignee.split(","))]),
+    ].length,
     active: grants.filter(
       (e) =>
         !e.extra.canceled &&
