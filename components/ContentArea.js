@@ -63,13 +63,27 @@ export default function ContentArea(props) {
         <div className="w-full flex justify-center">
           {props.narrow ? (
             <Section narrow className={""}>
-              <h2 className="mb-16 mt-24">{props.title}</h2>
+              <div className="mb-16">
+                <h2 className="mt-24">{props.title}</h2>
+                {props?.description && (
+                  <p className="text-wall-400 font-bold text-xl">
+                    {props.description}
+                  </p>
+                )}
+              </div>
               {props.children}
               <div className="pb-24" />
             </Section>
           ) : (
             <div className="min-w-0">
-              <h2 className="mb-16 mt-24">{props.title}</h2>
+              <div className="mb-16">
+                <h2 className="mt-24">{props.title}</h2>
+                {props?.description && (
+                  <p className="text-wall-400 font-bold text-xl">
+                    {props.description}
+                  </p>
+                )}
+              </div>
               {props.children}
               <div className="pb-24" />
             </div>
