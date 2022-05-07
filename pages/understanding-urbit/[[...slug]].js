@@ -45,11 +45,11 @@ const pageTree = (thisLink, tree, level = 0) => {
   const isThisPage = router.asPath === thisLink;
 
   const pageItemClasses = classnames({
-    "pl-4 text-wall-600 text-base hover:text-green-400": level === 0,
-    "pl-8 text-wall-600 text-base hover:text-green-400": level === 1,
-    "pl-12 text-wall-600 text-base hover:text-green-400": level === 2,
-    "dot relative": isThisPage,
-    "text-green-400": isThisPage,
+    "pl-4 text-base hover:text-green-400": level === 0,
+    "pl-8 text-base hover:text-green-400": level === 1,
+    "pl-12 text-base hover:text-green-400": level === 2,
+    "dot relative text-green-400": isThisPage,
+    "text-wall-600": !isThisPage,
   });
 
   return (
