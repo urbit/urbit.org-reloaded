@@ -253,14 +253,15 @@ Contact: [`~hatryx-lastud`](https://urbit.org/ids/~hatryx-lastud)
 }
 .box h2 {
     position: absolute;
-    top: -1.5rem;
+    top: -1.6rem;
     background: white;
-    padding: 0.25rem;
+    padding: 0 0.5rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
     .box h2 {
         font-size: 1.5rem;
+        top: -1rem;
     }
 }
 </style>
