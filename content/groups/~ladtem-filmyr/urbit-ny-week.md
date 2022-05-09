@@ -229,9 +229,7 @@ Contact: [`~hatryx-lastud`](https://urbit.org/ids/~hatryx-lastud)
 
 99 Scott Brooklyn, NY
 
-Tickets:
-
-[https://www.venuepilot.co/events/55905/orders/new](https://www.venuepilot.co/events/55905/orders/new)
+[Tickets](https://www.venuepilot.co/events/55905/orders/new)
 
 [Star for Auction](https://event.auctria.com/b9db22be-4245-42dc-8032-02275a0fea19/a780d600ec2e11e9ae081db830846aa5?2bd25550ec3411e98fdeb3a273cf08d8%2FcurrentPage=2&2bd25550ec3411e98fdeb3a273cf08d8%2FselectedItem=ed2b191c-ad38-4fc6-9cb5-eda5c87ffee5)
 
@@ -251,11 +249,18 @@ Tickets:
 .entry {
     flex-basis: 50%;
     margin-top: 1rem;
+    min-width: 0;
 }
 .box h2 {
     position: absolute;
     top: -1.5rem;
     background: white;
     padding: 0.25rem;
+}
+
+@media screen and (max-width: 600px) {
+    .box h2 {
+        font-size: 1.5rem;
+    }
 }
 </style>
