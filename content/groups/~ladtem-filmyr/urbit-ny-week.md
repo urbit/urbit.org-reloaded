@@ -252,7 +252,7 @@ Tickets:
     flex-basis: 50%;
     margin-top: 1rem;
 }
-h2 {
+.box h2 {
     position: absolute;
     top: -1.5rem;
     background: white;
