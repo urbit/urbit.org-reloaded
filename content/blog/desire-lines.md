@@ -1,7 +1,7 @@
 +++
 title = "Desire Lines to a New Internet"
 date = "2022-05-06"
-description = "As more DAOs, nft and digital communities find their way to Urbit, others are likely to follow their paths, making them their own, just like the network itself."
+description = "As more DAOs, NFT and digital communities find their way to Urbit, others are likely to follow their paths, making them their own, just like the network itself."
 [extra]
 author = ""
 ship = "~dalwes-migdec"
