@@ -23,7 +23,7 @@ participant_range = "100+"
 
 9PM
 
-The Honey Pot
+<div class="blackout"></div>
 
 Contact: [`~librex-dozryc`](https://urbit.org/ids/~librex-dozryc)
 
@@ -55,6 +55,8 @@ Issue I Launch Party
 
 9:30PM
 
+<div class="blackout"></div>
+
 Contact: [`~librex-dozryc`](https://urbit.org/ids/~librex-dozryc)
 
 </div>
@@ -64,6 +66,8 @@ Contact: [`~librex-dozryc`](https://urbit.org/ids/~librex-dozryc)
 **Wet Brain Afternoon Tea**
 
 TBA (PM)
+
+<div class="blackout"></div>
 
 Contact: [`~napmer-rilnut`](https://urbit.org/ids/~napmer-rilnut)
 
@@ -81,6 +85,8 @@ Contact: [`~napmer-rilnut`](https://urbit.org/ids/~napmer-rilnut)
 
 Noon
 
+<div class="blackout"></div>
+
 Contact: [`~poldec-tonteg`](https://urbit.org/ids/~poldec-tonteg)
 
 </div>
@@ -90,6 +96,8 @@ Contact: [`~poldec-tonteg`](https://urbit.org/ids/~poldec-tonteg)
 **Tlon on the Private Island**
 
 3PM-8PM
+
+<div class="blackout"></div>
 
 Contact: Christine or [rsvp@tlon.io](mailto:rsvp@tlon.io)
 
@@ -101,6 +109,8 @@ Contact: Christine or [rsvp@tlon.io](mailto:rsvp@tlon.io)
 
 9PM-4AM
 
+<div class="blackout"></div>
+
 Contact: ~dapryc-tilryn or rsvp@tlon.io
 
 </div>
@@ -111,6 +121,8 @@ Contact: ~dapryc-tilryn or rsvp@tlon.io
 
 Night Time
 
+<div class="blackout"></div>
+
 Contact: [`~pindet-timmut`](https://urbit.org/ids/~pindet-timmut)
 
 </div>
@@ -120,6 +132,8 @@ Contact: [`~pindet-timmut`](https://urbit.org/ids/~pindet-timmut)
 **Sophon x Idolate x Dusko Peter Teal Party**
 
 9PM
+
+<div class="blackout"></div>
 
 Contact: [`~tasset-norlux`](https://urbit.org/ids/~tasset-norlux)
 
@@ -136,6 +150,8 @@ Contact: [`~tasset-norlux`](https://urbit.org/ids/~tasset-norlux)
 
 11AM
 
+<div class="blackout"></div>
+
 Contact: [`~fasnut-famden`](https://urbit.org/ids/~fasnut-famden)
 
 </div>
@@ -146,7 +162,7 @@ Contact: [`~fasnut-famden`](https://urbit.org/ids/~fasnut-famden)
 
 Noon
 
-[Brooklyn Crab](https://www.brooklyncrab.com/)
+<div class="blackout"></div>
 
 Contact: [`~todset-partug`](https://urbit.org/ids/~todset-partug)
 
@@ -158,7 +174,7 @@ Contact: [`~todset-partug`](https://urbit.org/ids/~todset-partug)
 
 2 PM
 
-[Sunny’s](https://www.sunnysredhook.com/)
+<div class="blackout"></div>
 
 Contact: [`~poldec-tonteg`](https://urbit.org/ids/~poldec-tonteg)
 
@@ -170,7 +186,7 @@ Contact: [`~poldec-tonteg`](https://urbit.org/ids/~poldec-tonteg)
 
 5PM - 9PM
 
-Location: Greenpoint
+<div class="blackout"></div>
 
 Contact: [`~hatryx-lastud`](https://urbit.org/ids/~hatryx-lastud)
 
@@ -186,6 +202,8 @@ Contact: [`~hatryx-lastud`](https://urbit.org/ids/~hatryx-lastud)
 **Flatline Black Lake (Outskirts)**
 
 10AM
+
+<div class="blackout"></div>
 
 Contact: [`~hatryx-lastud`](https://urbit.org/ids/~hatryx-lastud)
 
@@ -224,6 +242,11 @@ Contact: [`~hatryx-lastud`](https://urbit.org/ids/~hatryx-lastud)
     flex-basis: 50%;
     margin-top: 1rem;
     min-width: 0;
+}
+.blackout {
+    height: 1rem;
+    width: 10rem;
+    background-color: black;
 }
 .box h2 {
     position: absolute;
