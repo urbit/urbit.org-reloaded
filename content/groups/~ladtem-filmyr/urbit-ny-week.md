@@ -25,8 +25,6 @@ participant_range = "100+"
 
 The Honey Pot
 
-170 Eldridge St, LES
-
 Contact: [`~librex-dozryc`](https://urbit.org/ids/~librex-dozryc)
 
 </div>
@@ -57,10 +55,6 @@ Issue I Launch Party
 
 9:30PM
 
-The Honey Pot
-
-170 Eldridge St, LES
-
 Contact: [`~librex-dozryc`](https://urbit.org/ids/~librex-dozryc)
 
 </div>
@@ -70,8 +64,6 @@ Contact: [`~librex-dozryc`](https://urbit.org/ids/~librex-dozryc)
 **Wet Brain Afternoon Tea**
 
 TBA (PM)
-
-Location changed - Lafayette - details TBA
 
 Contact: [`~napmer-rilnut`](https://urbit.org/ids/~napmer-rilnut)
 
@@ -89,8 +81,6 @@ Contact: [`~napmer-rilnut`](https://urbit.org/ids/~napmer-rilnut)
 
 Noon
 
-267 Kent Ave, Williamsburg
-
 Contact: [`~poldec-tonteg`](https://urbit.org/ids/~poldec-tonteg)
 
 </div>
@@ -100,8 +90,6 @@ Contact: [`~poldec-tonteg`](https://urbit.org/ids/~poldec-tonteg)
 **Tlon on the Private Island**
 
 3PM-8PM
-
-1 Oliver St, LES kind of
 
 Contact: Christine or [rsvp@tlon.io](mailto:rsvp@tlon.io)
 
@@ -113,8 +101,6 @@ Contact: Christine or [rsvp@tlon.io](mailto:rsvp@tlon.io)
 
 9PM-4AM
 
-267 Kent Ave, Williamsburg
-
 Contact: ~dapryc-tilryn or rsvp@tlon.io
 
 </div>
@@ -125,8 +111,6 @@ Contact: ~dapryc-tilryn or rsvp@tlon.io
 
 Night Time
 
-Location TBD
-
 Contact: [`~pindet-timmut`](https://urbit.org/ids/~pindet-timmut)
 
 </div>
@@ -136,8 +120,6 @@ Contact: [`~pindet-timmut`](https://urbit.org/ids/~pindet-timmut)
 **Sophon x Idolate x Dusko Peter Teal Party**
 
 9PM
-
-Location TBD
 
 Contact: [`~tasset-norlux`](https://urbit.org/ids/~tasset-norlux)
 
@@ -154,8 +136,6 @@ Contact: [`~tasset-norlux`](https://urbit.org/ids/~tasset-norlux)
 
 11AM
 
-Location: TBD
-
 Contact: [`~fasnut-famden`](https://urbit.org/ids/~fasnut-famden)
 
 </div>
@@ -168,8 +148,6 @@ Noon
 
 [Brooklyn Crab](https://www.brooklyncrab.com/)
 
-24 Reed St, Red Hook
-
 Contact: [`~todset-partug`](https://urbit.org/ids/~todset-partug)
 
 </div>
@@ -181,8 +159,6 @@ Contact: [`~todset-partug`](https://urbit.org/ids/~todset-partug)
 2 PM
 
 [Sunny’s](https://www.sunnysredhook.com/)
-
-253 Conover, Red Hook
 
 Contact: [`~poldec-tonteg`](https://urbit.org/ids/~poldec-tonteg)
 
@@ -226,8 +202,6 @@ Contact: [`~hatryx-lastud`](https://urbit.org/ids/~hatryx-lastud)
 **Merde!**
 
 10PM - 4AM
-
-99 Scott Brooklyn, NY
 
 [Tickets](https://www.venuepilot.co/events/55905/orders/new)
 
