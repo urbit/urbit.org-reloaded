@@ -7,7 +7,10 @@ tile = "https://fabled-faster.nyc3.digitaloceanspaces.com/fabled-faster/2022.4.0
 participant_range = "100+"
 +++
 
+
 ![](https://media.urbit.org/site/group/urbit-ny-week.png)
+
+Join this group on Urbit for event locations.
 
 <div class="box">
 
@@ -107,7 +110,7 @@ Contact: Christine or [rsvp@tlon.io](mailto:rsvp@tlon.io)
 
 <div class="blackout"></div>
 
-Contact: ~dapryc-tilryn or rsvp@tlon.io
+Contact: [~dapryc-tilryn](https://urbit.org/ids/~dapryc-tilryn) or rsvp@tlon.io
 
 </div>
 
@@ -187,7 +190,19 @@ Contact: [`~poldec-tonteg`](https://urbit.org/ids/~poldec-tonteg)
 Contact: [`~hatryx-lastud`](https://urbit.org/ids/~hatryx-lastud)
 
 </div>
+
+<div class="entry">
+
+**No Agency x Urbit**
+
+<div class="blackout"></div>
+
+Contact: [`~marrys-sapbyt`](https://urbit.org/ids/~marrys-sapbyt) / rsvp@noagency.nyc
+
 </div>
+</div>
+<BR>
+<H2>EXTRA</H2>
 
 <div class="box">
 
