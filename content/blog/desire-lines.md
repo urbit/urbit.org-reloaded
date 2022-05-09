@@ -3,7 +3,7 @@ title = "Desire Lines to a New Internet"
 date = "2022-05-06"
 description = "As more digital communities find their way to Urbit, others are likely to follow their paths, making them their own, just like the network itself."
 [extra]
-author = "Eleanor"
+author = ""
 ship = "~dalwes-migdec"
 image = "https://media.urbit.org/blog/desire-lines.jpg"
 +++
