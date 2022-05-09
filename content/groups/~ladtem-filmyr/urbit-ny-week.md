@@ -115,7 +115,7 @@ Contact: Christine or [rsvp@tlon.io](mailto:rsvp@tlon.io)
 
 267 Kent Ave, Williamsburg
 
-Contact: ~ or rsvp@tlon.io
+Contact: ~dapryc-tilryn or rsvp@tlon.io
 
 </div>
 
