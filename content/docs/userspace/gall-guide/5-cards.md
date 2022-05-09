@@ -47,7 +47,7 @@ We'll consider each separately.
 ## `%pass`
 
 ```hoon
-[%pass path note]
+[%pass wire note]
 ```
 
 The purpose of a `%pass` card is to send some kind of one-off request, action,
