@@ -9,10 +9,6 @@ participant_range = "100+"
 
 ![](https://media.urbit.org/site/group/urbit-ny-week.png)
 
-<p style="text-align: center;">
-<a href="https://www.google.com/maps/d/edit?mid=1eOCaJApIPrEqmgD9s51MVXVnlps1LaIR&usp=sharing">Map</a>
-</p>
-
 <div class="box">
 
 ## Thursday, May 19, 2022
