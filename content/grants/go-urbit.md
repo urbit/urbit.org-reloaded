@@ -10,7 +10,7 @@ grant_category = ["App Dev: Other"]
 [extra]
 image = ""
 description = "Create a go-urbit library that contains the required functions for interfacing with Ames"
-reward = "$30000 in WSTR"
+reward = "3 stars"
 assignee = "~litryl-tadmev"
 champion = "~wicdev-wisryt"
 grant_id = "P0125"
@@ -35,7 +35,7 @@ My end goal, as discussed with ~wicdev-wisryt for a future proposal, is to rewri
 ### Milestone 1 - Go Noun
 
 Expected Completion: 15 April 2022
-Payment: $10000 in WSTR
+Payment: 1 star
 
 Implement the Noun protocol in Golang.
 
@@ -53,7 +53,7 @@ Implement the core Noun structures:
 ### Milestone 2 - Go Ames Utilities
 
 Expected Completion: 1 May 2022
-Payment: $20000 in WSTR
+Payment: 2 stars
 
 Implement a Golang utility library for interfacing with Ames.
 
