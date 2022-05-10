@@ -195,6 +195,8 @@ Contact: [`~hatryx-lastud`](https://urbit.org/ids/~hatryx-lastud)
 
 **No Agency x Urbit**
 
+10PM
+    
 <div class="blackout"></div>
 
 Contact: [`~marrys-sapbyt`](https://urbit.org/ids/~marrys-sapbyt) / rsvp@noagency.nyc
