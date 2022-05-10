@@ -30,7 +30,7 @@ agent (unless the mark specified is already `%json`, in which case it will be
 delivered directly). Outbound facts will go through the same process in
 reverse - converted from the agent's native mark to `$json`, then encoded in a
 string by Eyre using
-[`++en-json:html`](<(/docs/hoon/reference/zuse/2e_2-3#en-jsonhtml)>) and delivered
+[`++en-json:html`](/docs/hoon/reference/zuse/2e_2-3#en-jsonhtml) and delivered
 to the web client. The basic flow for both inbound messages (pokes) and outbound
 messages (facts and scry results) looks like this:
 
