@@ -7,7 +7,6 @@ tile = "https://fabled-faster.nyc3.digitaloceanspaces.com/fabled-faster/2022.4.0
 participant_range = "100+"
 +++
 
-
 ![](https://media.urbit.org/site/group/urbit-ny-week.png)
 
 Join this group on Urbit for event locations.
@@ -15,18 +14,6 @@ Join this group on Urbit for event locations.
 <div class="box">
 
 ## Thursday, May 19, 2022
-
-<div class="entry">
-
-**Dimes Square (the play) Live!**
-
-9PM
-
-<div class="blackout"></div>
-
-Contact: [`~librex-dozryc`](https://urbit.org/ids/~librex-dozryc)
-
-</div>
 
 <div class="entry">
 
@@ -40,11 +27,35 @@ Contact: [`~lagrev-nocfep`](https://urbit.org/ids/~lagrev-nocfep)
 
 </div>
 
+<div class="entry">
+
+**Dimes Square (the play) Live!**
+
+9PM
+
+<div class="blackout"></div>
+
+Contact: [`~librex-dozryc`](https://urbit.org/ids/~librex-dozryc)
+
+</div>
+
 </div>
 
 <div class="box">
 
-## **Friday, May 20, 2022**
+## Friday, May 20, 2022
+
+<div class="entry">
+
+**Wet Brain Afternoon Tea**
+
+TBA (PM)
+
+<div class="blackout"></div>
+
+Contact: [`~napmer-rilnut`](https://urbit.org/ids/~napmer-rilnut)
+
+</div>
 
 <div class="entry">
 
@@ -57,18 +68,6 @@ Issue I Launch Party
 <div class="blackout"></div>
 
 Contact: [`~librex-dozryc`](https://urbit.org/ids/~librex-dozryc)
-
-</div>
-
-<div class="entry">
-
-**Wet Brain Afternoon Tea**
-
-TBA (PM)
-
-<div class="blackout"></div>
-
-Contact: [`~napmer-rilnut`](https://urbit.org/ids/~napmer-rilnut)
 
 </div>
 
@@ -141,7 +140,7 @@ Contact: [`~tasset-norlux`](https://urbit.org/ids/~tasset-norlux)
 
 <div class="box">
 
-## Sunday,May 22, 2022
+## Sunday, May 22, 2022
 
 <div class="entry">
 
@@ -196,7 +195,7 @@ Contact: [`~hatryx-lastud`](https://urbit.org/ids/~hatryx-lastud)
 **No Agency x Urbit**
 
 10PM
-    
+
 <div class="blackout"></div>
 
 Contact: [`~marrys-sapbyt`](https://urbit.org/ids/~marrys-sapbyt) / rsvp@noagency.nyc
