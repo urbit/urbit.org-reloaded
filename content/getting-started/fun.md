@@ -140,7 +140,7 @@ Welcome to Urbit! You can skip ahead to [log in](#log-in), or stick around for s
 
 ### Tips
 
-Check out the [cloud hosting guide](using/running/hosting) for tips on improving the environment for Urbit, with a particular focus on establishing your domain name and using SSL for encryption.
+Check out the [cloud hosting guide](/using/running/hosting) for tips on improving the environment for Urbit, with a particular focus on establishing your domain name and using SSL for encryption.
 
 Shut down your planet by typing Ctrl+D into Dojo.
 

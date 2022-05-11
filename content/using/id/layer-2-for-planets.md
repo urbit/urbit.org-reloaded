@@ -1,6 +1,6 @@
 +++
 title = "Layer 2 for planets"
-weight = 4
+weight = 50
 description = "Getting started with a permanent Urbit identity."
 +++
 
