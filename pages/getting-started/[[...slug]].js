@@ -52,6 +52,10 @@ const pageTree = (thisLink, tree, level = 0) => {
     "text-green-400": isThisPage,
   });
 
+  if (thisLink === "/getting-started/cli") {
+    return false;
+  }
+
   return (
     <>
       <Link href={thisLink} passHref>
@@ -63,12 +67,15 @@ const pageTree = (thisLink, tree, level = 0) => {
 
 export default function UsingLayout({ posts, data, params, search, markdown }) {
   const router = useRouter();
-  const isSelected = "/getting-started".includes(router.asPath);
-  const selectedClasses = classnames({
-    dot: isSelected,
-    "text-green-400": isSelected,
-    "text-wall-500": !isSelected,
-  });
+
+  const select = (href) => {
+    const isSelected = href === router.asPath;
+    return classnames({
+      dot: isSelected,
+      "text-green-400": isSelected,
+      "text-wall-500": !isSelected,
+    });
+  };
   const rootClasses = "pl-0 font-semibold text-base hover:text-green-400";
 
   return (
@@ -82,13 +89,33 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
           <ul>
             <li>
               <Link href="/getting-started" passHref>
-                <a className={`relative ${selectedClasses} ${rootClasses}`}>
+                <a
+                  className={`relative ${select(
+                    "/getting-started"
+                  )} ${rootClasses}`}
+                >
                   Getting Started
                 </a>
               </Link>
             </li>
           </ul>
           {childPages("/getting-started", posts.pages)}
+          <ul className="mt-8">
+            <p className="uppercase font-bold text-xs text-wall-400">
+              Advanced
+            </p>
+            <li>
+              <Link href="/getting-started/cli" passHref>
+                <a
+                  className={`relative ${select(
+                    "/getting-started/cli"
+                  )} ${rootClasses}`}
+                >
+                  CLI Install
+                </a>
+              </Link>
+            </li>
+          </ul>
         </Sidebar>
         <ContentArea
           breadcrumbs={breadcrumbs(posts, params.slug?.slice(0, -1) || "")}
