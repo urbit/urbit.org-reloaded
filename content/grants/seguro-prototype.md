@@ -39,10 +39,7 @@ A Seguro cluster will consist of a master and m replication slaves (user-specifi
 # Performance
 ## Configuration
 Users will have the option to configure Seguro's degree of optimism, which would indicate the minimum number of healthy replicas which must process an event before emitting its side effect from the master. For example, if set to 0, the master will receive, process and emit side effects from an event without waiting for any slaves in the cluster to acknowledge their successful reception and processing of said event. If set to `m`, where `m` is the number of slaves in the cluster, the master will wait for all of the slaves to process the event before emitting its side effects. 0 is most performant, `m` is most durable. In other words, setting a value of 0 tells Seguro to be "optimistic" about event replications, and `m` tells Seguro to be the opposite.
-## Event Log Batching
-An event log batching system could be designed and implemented to improve the performance of Seguro by way of reducing per-event processing and replication overhead (if there is any).
-## Snapshots & Event Log Truncation
-Seguro's support of optimistic run-ahead as defined in the Configuration section depends on coupling segments of the log to binary versions (for error handling and crash recovery), which depends on "epochs" and/or event log truncation. There is a PR currently under review which implements this feature. This PR assumes existence of a local log that can be subdivided into epochs where each epoch is coupled to a particular snapshot. If the log is moved off of the module, and epochs/truncation are supported, there will need to be some way to make sure that the relevant snapshots are persisted with the same durability on slave machines.
+
 # Previous Work
 [Some effort](https://github.com/urbit/urbit/commit/cfeb35e37be63f96bb50fe1f60e2f59e35c07258) to support additional database technologies for event log storage was performed by Tlon in 2018. The work aimed at adding FoundationDB, RocksDB, LMDB and SQLite as storage options. Conceptually, adoption of distributed database systems for replicated/clustered event log storage was conceived and researched as far back as 2013.
 # Open Questions
