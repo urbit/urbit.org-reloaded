@@ -41,21 +41,26 @@ I am ~mirtyl-wacdec, early grantee, author of the [Urbit Elixir API](https://git
 
 # Milestones
 ## Milestone 1
-Payment: 1 star
+### Payment: 1 star
+### Expected Delivery: May 2022
 Basic Microblogging app, with markdown posting and a custom feed-store backend, and the ability to follow and engage with posts by other users with emoji reactions, replies, quotes and reposts.
 
 ## Milestone 2
-Payment: 1 star
+### Payment: 1 star
+### Expected Delivery: May 2022
 Fully functional push and pull-hooks to propagate feed data across the network and persist subscriptions.
 
 ## Milestone 3
-Payment: 1 star
+### Payment: 1 star
+### Expected Delivery: May 2022
 List functionality, where people can make named lists and keep lists of their follows there, and display them as a feed.
 
 ## Milestone 4
-Payment: 1 star
+### Payment: 1 star
+### Expected Delivery: May 2022
 Integrated Twitter client, with the ability to add Twitter users to lists, share or quote Tweets into one's own Trill feed, or send Tweets into Landscape channels they belong to.
 
 ## Milestone 5
-Payment: 1 star
+### Payment: 1 star
+### Expected Delivery: July 2022
 Permission layer, where people can limit who can read/write their posts, granular from the whole-feed to the individual post level.
