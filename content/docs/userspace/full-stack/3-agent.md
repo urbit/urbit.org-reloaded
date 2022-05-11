@@ -274,7 +274,7 @@ so we don't want it to get sent again.
 ::
 ```
 
-Here we have our `++on-scry` arm. The scry endpoints we've defined are divided
+Here we have our `++on-peek` arm. The scry endpoints we've defined are divided
 into two parts: querying the update `$log` and retrieving entries from the
 `$journal`. Each end-point is as follows:
 
