@@ -61,9 +61,9 @@ const pageTree = (thisLink, tree, level = 0) => {
   });
 
   const pageItemClasses = classnames({
-    "pl-4 text-wall-600 text-base hover:text-green-400": level === 0,
-    "pl-8 text-wall-600 text-base hover:text-green-400": level === 1,
-    "pl-12 text-wall-600 text-base hover:text-green-400": level === 2,
+    "pl-4 text-base hover:text-green-400": level === 0,
+    "pl-8 text-base hover:text-green-400": level === 1,
+    "pl-12 text-base hover:text-green-400": level === 2,
   });
 
   return (
@@ -79,12 +79,13 @@ const pageTree = (thisLink, tree, level = 0) => {
             const selectedClasses = classnames({
               dot: isSelected,
               "text-green-400": isSelected,
+              "text-wall-600": !isSelected,
             });
             return (
               <li>
                 <Link href={href} passHref>
                   <a
-                    className={`relative inline-block ${pageItemClasses} ${selectedClasses}`}
+                    className={`relative inline-block ${selectedClasses} ${pageItemClasses} `}
                   >
                     {title}
                   </a>
