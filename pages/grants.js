@@ -9,6 +9,7 @@ import SingleColumn from "../components/SingleColumn";
 import Section from "../components/Section";
 import GrantPreview from "../components/GrantPreview";
 import JoinGroup from "../components/JoinGroup";
+import omit from "lodash.omit";
 import { getAllPosts, getGrantsCategories, getGrantsTypes } from "../lib/lib";
 
 function isArray(arr) {
@@ -39,6 +40,25 @@ export default function Grants({ posts, categories, types, search }) {
       "",
       { scroll: false }
     );
+  }
+
+  function pushOrDropQuery(queryName, currentQuery, item) {
+    let to, toWithQuery;
+    if (isArray(currentQuery)) {
+      to = isOrIsIn(item, currentQuery)
+        ? currentQuery.filter((e) => e !== item)
+        : [...currentQuery, item];
+    } else {
+      to = isOrIsIn(item, currentQuery)
+        ? null
+        : [currentQuery, item].filter((e) => e !== undefined);
+    }
+    if (!to) {
+      toWithQuery = omit(router.query, queryName);
+    } else {
+      toWithQuery = { ...router.query, [queryName]: to };
+    }
+    return toWithQuery;
   }
 
   const annotatedPosts = posts.map((post) => {
@@ -304,21 +324,7 @@ export default function Grants({ posts, categories, types, search }) {
               const active = isOrIsIn(each, category)
                 ? "bg-green-400 text-white"
                 : "bg-wall-100 text-wall-500";
-              let to, categoryQuery;
-              if (isArray(category)) {
-                to = isOrIsIn(each, category)
-                  ? category.filter((e) => e !== each)
-                  : [...category, each];
-              } else {
-                to = isOrIsIn(each, category)
-                  ? null
-                  : [category, each].filter((e) => e !== undefined);
-              }
-              if (!to) {
-                categoryQuery = (({ category, ...obj }) => obj)(router.query);
-              } else {
-                categoryQuery = { ...router.query, category: to };
-              }
+              const categoryQuery = pushOrDropQuery("category", category, each);
               return (
                 <button
                   className={`${active} badge-sm mr-1 my-1`}
@@ -348,19 +354,7 @@ export default function Grants({ posts, categories, types, search }) {
                     ? "Exclude In Progress"
                     : "Include In Progress";
               }
-              let to, statusQuery;
-              if (isArray(status)) {
-                to = isOrIsIn(each, status)
-                  ? status.filter((e) => e !== each)
-                  : [...status, each];
-              } else {
-                to = isOrIsIn(each, status) ? null : [status, each];
-              }
-              if (!to) {
-                statusQuery = (({ status, ...obj }) => obj)(router.query);
-              } else {
-                statusQuery = { ...router.query, status: to };
-              }
+              const statusQuery = pushOrDropQuery("status", status, each);
               return (
                 <button
                   className="mr-4 badge-sm bg-black text-white"
