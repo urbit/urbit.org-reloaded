@@ -15,6 +15,7 @@ import {
   getGrantsTypes,
   getPostBySlug,
 } from "../lib/lib";
+import { useEffect } from "react";
 
 function isArray(arr) {
   return Array.isArray(arr);
@@ -33,10 +34,12 @@ export default function Grants({ posts, categories, types, search }) {
   if (status === undefined) {
     status = "open";
   }
+
   function push(toQuery) {
     router.push(
       {
         pathname: "/grants",
+        hash: "view-grants",
         query: toQuery,
       },
       "",
