@@ -9,13 +9,7 @@ import SingleColumn from "../components/SingleColumn";
 import Section from "../components/Section";
 import GrantPreview from "../components/GrantPreview";
 import JoinGroup from "../components/JoinGroup";
-import {
-  getAllPosts,
-  getGrantsCategories,
-  getGrantsTypes,
-  getPostBySlug,
-} from "../lib/lib";
-import { useEffect } from "react";
+import { getAllPosts, getGrantsCategories, getGrantsTypes } from "../lib/lib";
 
 function isArray(arr) {
   return Array.isArray(arr);
