@@ -1,97 +1,64 @@
 import Head from "next/head";
-import { TableOfContents } from "../components/TableOfContents";
 import Meta from "../components/Meta";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
-import classnames from "classnames";
 import Container from "../components/Container";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SingleColumn from "../components/SingleColumn";
 import Section from "../components/Section";
-import PostPreview from "../components/PostPreview";
 import GrantPreview from "../components/GrantPreview";
 import JoinGroup from "../components/JoinGroup";
-import {
-  getAllPosts,
-  getGrantsCategories,
-  getGrantsTypes,
-  getPostBySlug,
-} from "../lib/lib";
+import omit from "lodash.omit";
+import { getAllPosts, getGrantsCategories, getGrantsTypes } from "../lib/lib";
 
-function addTag(array, tag) {
-  return [...array, tag];
+function isArray(arr) {
+  return Array.isArray(arr);
 }
 
-function removeTag(array, tag) {
-  const location = array.indexOf(tag);
-  if (location === -1) {
-    return array;
+function isOrIsIn(type, query) {
+  if (!query) {
+    return false;
   }
-  const newArr = [...array];
-  newArr.splice(location, 1);
-  return newArr;
+  return isArray(query) ? query.includes(type) : type === query;
 }
 
-function setAllActive(fullSet) {
-  return fullSet;
-}
-
-function setAllInactive() {
-  return [];
-}
-
-function setOneTagOnly(tag) {
-  return [tag];
-}
-
-function toggleTag(array, tag) {
-  if (array.includes(tag)) {
-    return removeTag(array, tag);
-  } else {
-    return addTag(array, tag);
-  }
-}
-
-function toggleAll(currentArray, fullSet) {
-  if (currentArray.length === 0) {
-    return setAllActive(fullSet);
-  } else {
-    return setAllInactive();
-  }
-}
-
-export default function Grants({
-  posts,
-  categories,
-  types,
-  featuredGrants,
-  search,
-  giftPosts,
-  gifts,
-}) {
+export default function Grants({ posts, categories, types, search }) {
   const router = useRouter();
-  const [activeTags, setTags] = useState([]);
-  const [activeTypes, setTypes] = useState(types);
-  const includeOpen =
-    router.query.open === undefined || router.query.open === "true";
-  const includeCompleted = router.query.completed === "true";
-  const programFilter = router.query.program;
-  const post = {
-    title: "Grants",
-    description: "Contribute to the Urbit project while earning address space.",
-  };
+  let { status, type, category } = router.query;
+  if (status === undefined) {
+    status = "open";
+  }
 
-  let includeInProgress =
-    router.query.wip === undefined || router.query.wip === "true";
+  function push(toQuery) {
+    router.push(
+      {
+        pathname: "/grants",
+        hash: "view-grants",
+        query: toQuery,
+      },
+      "",
+      { scroll: false }
+    );
+  }
 
-  if (
-    router.query.open === undefined &&
-    router.query.completed === undefined &&
-    router.query.wip === undefined
-  ) {
-    includeInProgress = true;
+  function pushOrDropQuery(queryName, currentQuery, item) {
+    let to, toWithQuery;
+    if (isArray(currentQuery)) {
+      to = isOrIsIn(item, currentQuery)
+        ? currentQuery.filter((e) => e !== item)
+        : [...currentQuery, item];
+    } else {
+      to = isOrIsIn(item, currentQuery)
+        ? null
+        : [currentQuery, item].filter((e) => e !== undefined);
+    }
+    if (!to) {
+      toWithQuery = omit(router.query, queryName);
+    } else {
+      toWithQuery = { ...router.query, [queryName]: to };
+    }
+    return toWithQuery;
   }
 
   const annotatedPosts = posts.map((post) => {
@@ -108,33 +75,24 @@ export default function Grants({
 
   const byStatus = (post) => {
     return (
-      (includeOpen ? post.status === "open" : false) ||
-      (includeCompleted ? post.status === "completed" : false) ||
-      (includeInProgress ? post.status === "wip" : false)
+      (isOrIsIn("open", status) ? post.status === "open" : false) ||
+      (isOrIsIn("complete", status) ? post.status === "completed" : false) ||
+      (isOrIsIn("wip", status) ? post.status === "wip" : false)
     );
   };
 
   const postsByStatus = annotatedPosts.filter(byStatus);
 
-  const filteredPosts = annotatedPosts.filter((post) => {
-    // Posts are returned if they match both the selected category and selected tags, or if the user has no category filters set.
-    const hasCategory = post.taxonomies.grant_category.some((category) =>
-      activeTags.includes(category)
-    );
+  const filteredPosts = postsByStatus.filter((post) => {
+    const hasCategory = category
+      ? isArray(category)
+        ? post.taxonomies.grant_category.some((cat) => category.includes(cat))
+        : post.taxonomies.grant_category.includes(category)
+      : true;
 
     const notCanceled = !post.extra.canceled;
-
-    const noTagsSelected = activeTags.length === 0;
-    const hasType = post.taxonomies.grant_type.some((type) =>
-      activeTypes.includes(type)
-    );
-
-    return (
-      (hasCategory || noTagsSelected) &&
-      byStatus(post) &&
-      hasType &&
-      notCanceled
-    );
+    const hasType = type ? post.taxonomies.grant_type.includes(type) : true;
+    return hasCategory && notCanceled && hasType;
   });
 
   const allCount = postsByStatus.length;
@@ -155,7 +113,11 @@ export default function Grants({
     <Container>
       <Head>
         <title>Grants • urbit.org</title>
-        {Meta(post)}
+        {Meta({
+          title: "Grants",
+          description:
+            "Contribute to the Urbit project while earning address space.",
+        })}
       </Head>
       <SingleColumn>
         <Header search={search} />
@@ -318,139 +280,98 @@ export default function Grants({
           </h2>
           <h5 className="text-wall-600 font-semibold my-2">Programs</h5>
           <div className="flex flex-wrap items-center pb-2">
-            <button
-              onClick={() => {
-                let query = { ...router.query };
-                delete query.program;
-                router.push(
-                  {
-                    pathname: "/grants",
-                    query: { ...query },
-                  },
-                  "",
-                  { scroll: false }
-                );
-                setTypes(types);
-              }}
-              className={`badge-lg my-2 mr-2 ${
-                programFilter === undefined
-                  ? "text-white bg-black"
-                  : "text-wall-500 bg-wall-100"
+            <a
+              className={`badge-lg mr-2 ${
+                !type ? "bg-black text-white" : "bg-wall-100 text-wall-500"
               }`}
+              onClick={() => push((({ type, ...obj }) => obj)(router.query))}
             >
               All <div className="opacity-50 ml-2">{allCount}</div>
-            </button>
-            {types.map((type) => {
-              const className = classnames({
-                "bg-blue-400 text-white":
-                  programFilter === "proposal" && type === "Proposal",
-                "bg-green-400 text-white":
-                  programFilter === "apprenticeship" &&
-                  type === "Apprenticeship",
-                "bg-yellow-300":
-                  programFilter === "bounty" && type === "Bounty",
-                "bg-wall-100 text-wall-500": type !== programFilter,
-              });
+            </a>
+            {types.map((each) => {
+              let activeBg;
+              switch (each) {
+                case "Proposal":
+                  activeBg = "bg-blue-400 text-white";
+                  break;
+                case "Bounty":
+                  activeBg = "bg-yellow-300 text-white";
+                  break;
+                case "Apprenticeship":
+                  activeBg = "bg-green-400 text-white";
+                  break;
+                default:
+                  activeBg = "bg-black";
+              }
               return (
-                <button
-                  onClick={() => {
-                    // + 1 is added here because the 'all' button precedes this sequence
-                    router.push(
-                      {
-                        pathname: "/grants",
-                        query: { ...router.query, program: type.toLowerCase() },
-                      },
-                      "",
-                      { scroll: false }
-                    );
-                    setTypes([type]);
-                  }}
-                  className={`badge-lg mr-2 ${className}`}
+                <a
+                  className={`badge-lg mr-2 ${
+                    isOrIsIn(each, type)
+                      ? activeBg
+                      : "bg-wall-100 text-wall-500"
+                  }`}
+                  onClick={() => push({ ...router.query, type: each })}
                 >
-                  {type} <div className="opacity-50 ml-2">{counts[type]}</div>
-                </button>
+                  {each}
+                  <div className="opacity-50 ml-2">{counts[each]}</div>
+                </a>
               );
             })}
           </div>
           <h5 className="text-wall-600 font-semibold my-2">Work Categories</h5>
           <div className="flex flex-wrap mb-12">
-            {categories.map((category) => {
-              const isActive = activeTags.includes(category);
-              const activeClasses = classnames({
-                "bg-green-400 text-white": isActive,
-                "bg-wall-100 text-wall-500": !isActive,
-              });
+            {categories.map((each) => {
+              const active = isOrIsIn(each, category)
+                ? "bg-green-400 text-white"
+                : "bg-wall-100 text-wall-500";
+              const categoryQuery = pushOrDropQuery("category", category, each);
               return (
                 <button
-                  onClick={() => setTags(toggleTag(activeTags, category))}
-                  className={`${activeClasses} badge-sm mr-1 my-1`}
+                  className={`${active} badge-sm mr-1 my-1`}
+                  onClick={() => push(categoryQuery)}
                 >
-                  {category}
+                  {each}
                 </button>
               );
             })}
           </div>
-          {
-            <div className="pb-8 flex items-center">
-              <button
-                className="mr-4 badge-sm bg-black text-white"
-                onClick={() =>
-                  router.push(
-                    {
-                      pathname: "/grants",
-                      query: { ...router.query, open: !includeOpen },
-                    },
-                    "",
-                    { scroll: false }
-                  )
-                }
-              >
-                {includeOpen ? "Exclude Open" : "Include Open"}
-              </button>
-
-              <button
-                className="mr-4 badge-sm bg-black text-white"
-                onClick={() =>
-                  router.push(
-                    {
-                      pathname: "/grants",
-                      query: { ...router.query, completed: !includeCompleted },
-                    },
-                    "",
-                    { scroll: false }
-                  )
-                }
-              >
-                {includeCompleted ? "Exclude Completed" : "Include Completed"}
-              </button>
-
-              <button
-                className="mr-4 badge-sm bg-black text-white"
-                onClick={() =>
-                  router.push(
-                    {
-                      pathname: "/grants",
-                      query: { ...router.query, wip: !includeInProgress },
-                    },
-                    "",
-                    { scroll: false }
-                  )
-                }
-              >
-                {includeInProgress
-                  ? "Exclude In Progress"
-                  : "Include In Progress"}
-              </button>
-
-              <h4>
-                Showing {filteredPosts.length} grant
-                {filteredPosts.length === 1 ? "" : "s"}
-              </h4>
-            </div>
-          }
-          {filteredPosts.map((post) => {
-            return <GrantPreview grant={post} />;
-          })}
+          <div className="pb-8 flex items-center">
+            {["open", "complete", "wip"].map((each) => {
+              let title;
+              switch (each) {
+                case "open":
+                  title = isOrIsIn(each, status)
+                    ? "Exclude Open"
+                    : "Include Open";
+                  break;
+                case "complete":
+                  title = isOrIsIn(each, status)
+                    ? "Exclude Completed"
+                    : "Include Completed";
+                  break;
+                case "wip":
+                  title = isOrIsIn(each, status)
+                    ? "Exclude In Progress"
+                    : "Include In Progress";
+              }
+              const statusQuery = pushOrDropQuery("status", status, each);
+              return (
+                <button
+                  className="mr-4 badge-sm bg-black text-white"
+                  onClick={() => push(statusQuery)}
+                >
+                  {title}
+                </button>
+              );
+            })}
+            <h4>
+              Showing {filteredPosts.length} grant
+              {filteredPosts.length === 1 ? "" : "s"}
+            </h4>
+          </div>
+          {filteredPosts.map((post) => (
+            <GrantPreview grant={post} />
+          ))}
         </Section>
       </SingleColumn>
       <Footer />
@@ -466,33 +387,11 @@ export async function getStaticProps() {
     "grants",
     "date"
   );
-
-  // The layout expects exactly 3
-  const featuredGrants = [
-    "bitcoin-full-node-provider-and-wallet",
-    "webrtc-gall-agent-and-external-app",
-    "urbian-a-customized-linux-distribution-for-urbit-appliances",
-  ].map((slug) =>
-    getPostBySlug(slug, ["title", "slug", "date", "extra"], "grants")
-  );
-
-  const giftPosts = [
-    getPostBySlug(
-      "2021-06-16-update",
-      ["title", "slug", "date", "extra"],
-      "updates"
-    ),
-    getPostBySlug("gifts-q3-2020", ["title", "slug", "date", "extra"], "blog"),
-  ];
-
   return {
     props: {
       posts: posts,
       categories,
       types,
-      featuredGrants,
-      giftPosts,
-      gifts: [],
     },
   };
 }
