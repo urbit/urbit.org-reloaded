@@ -1,5 +1,5 @@
 +++
-title = "Hosted"
+title = "Hosted urbit"
 description = "Run Urbit on a managed service"
 weight = 3
 +++
@@ -20,4 +20,4 @@ The exact steps for logging into your Urbit will depend on your hosting provider
 
 ### Next steps
 
-Learn how to [get around your urbit](/getting-started/getting-around-your-urbit).
+Learn how to [get around your urbit](/getting-started/getting-around).

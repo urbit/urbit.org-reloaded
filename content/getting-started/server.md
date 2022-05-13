@@ -1,6 +1,6 @@
 +++
-title = "Fun"
-description = "Run Urbit on a server"
+title = "Server setup"
+description = "Run urbit on a local or cloud server"
 weight = 2
 +++
 
@@ -164,7 +164,7 @@ Open up the Urbit CLI again if it's not still running, and enter +code. The outp
 
 ### Next steps
 
-Learn how to [get around your urbit](/getting-started/getting-around-your-urbit).
+Learn how to [get around your urbit](/getting-started/getting-around).
 
 <style>
   .os {

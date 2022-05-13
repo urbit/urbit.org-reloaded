@@ -1,6 +1,6 @@
 +++
-title = "Easy"
-description = "Run Urbit with a desktop app"
+title = "Desktop app"
+description = "Run Urbit locally as a desktop application"
 weight = 1
 +++
 

@@ -2,6 +2,7 @@
 title = "Command line install"
 weight = 4
 description = "Installation instructions for power users."
+tag = "additional"
 +++
 
 If you're a power user, you can run the Urbit virtual machine directly using the command line. Choose the code for your operating system and run the commands in your terminal.

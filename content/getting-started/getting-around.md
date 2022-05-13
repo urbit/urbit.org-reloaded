@@ -1,5 +1,6 @@
 +++
-title = "Getting around your urbit"
+title = "Getting around"
+description = "Get around your urbit"
 weight = 4
 +++
 
