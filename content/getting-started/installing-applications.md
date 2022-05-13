@@ -1,5 +1,7 @@
 +++
-title = "Installing applications on Urbit"
+title = "Installing apps"
+tag = "additional"
+weight = 3
 +++
 
 ## 1. Get on the network

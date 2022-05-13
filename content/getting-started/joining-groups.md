@@ -1,5 +1,7 @@
 +++
-title = "Joining groups on Urbit"
+title = "Joining groups"
+tag = "additional"
+weight = 2
 +++
 
 ## 1. Get on the network
