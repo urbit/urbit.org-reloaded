@@ -23,7 +23,7 @@ link = ""
 # Seguro Specification and Prototype Proposal
 
 # Overview
-Seguro improves Urbit's dependability by automatically replicating its event log across a set of machines in a cluster. The goal of this proposal is to specify and prototype such a system. This initial phase will be focused on writing a detailed technical specification, having it reviewed by Tlon engineering, accordingly revised, and ultimately approved for prototyping.
+Seguro improves Urbit's dependability by automatically replicating its event log across a set of machines in a cluster. The goal of this proposal is to write a working prototype of such a system. The prototype will be used to assess implementation direction and implement a complete integration.
 ## Problem
 The [Urbit runtime](https://github.com/urbit/urbit/tree/master/pkg/urbit/vere) was designed to host just a single Urbit instance running in a Unix process, with a single file volume attached for its event log and checkpoints. For individuals running only one or a handful of ships, this architecture is satisfactory. For providing Urbit to the world as a new, decentralized, peer-to-peer network of personal servers, the current implementation has inarguably succeeded.
 However, for a quickly maturing platform which needs to scale to meet enormous demand, current Urbit technology is not suitable. Its low dependability is one element which continues to prevent the Urbit community from building truly resilient and scalable hosting services.
