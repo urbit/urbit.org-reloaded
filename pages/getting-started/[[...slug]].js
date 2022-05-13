@@ -5,12 +5,98 @@ import { useRouter } from "next/router";
 import classnames from "classnames";
 import { join } from "path";
 import { getPage } from "../../lib/lib";
+import { decode } from "html-entities";
 import Markdown from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
 import GettingStartedTree from "../../cache/getting-started.json";
 
-import { decode } from "html-entities";
+export default function UsingLayout({ posts, data, params, search, markdown }) {
+  const router = useRouter();
+
+  const select = (href) => {
+    const isSelected =
+      `/getting-started${href === "" ? "" : `/${href}`}` === router.asPath;
+    return classnames({
+      dot: isSelected,
+      "text-green-400": isSelected,
+      "text-wall-500": !isSelected,
+    });
+  };
+
+  let menu = [{ title: "Overview", slug: "", weight: 0 }],
+    additional = [];
+
+  posts.pages.map((post) => {
+    if (post?.tag === "additional") {
+      additional.push(post);
+    } else {
+      menu.push(post);
+    }
+  });
+
+  menu.sort((a, b) => a.weight > b.weight);
+  additional.sort((a, b) => a.weight > b.weight);
+
+  const rootClasses = "pl-0 font-semibold text-base hover:text-green-400";
+
+  return (
+    <>
+      <Head>
+        <title>{data.title} • Getting Started • urbit.org</title>
+        {Meta(data)}
+      </Head>
+      <div className="flex h-screen min-h-screen w-screen sidebar">
+        <Sidebar search={search}>
+          <p className="uppercase font-bold text-xs text-wall-400">
+            Getting Started
+          </p>
+          <ul>
+            {menu.map((post) => (
+              <li>
+                <Link href={post.slug} passHref>
+                  <a className={`relative ${select(post.slug)} ${rootClasses}`}>
+                    {post.title}
+                  </a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <ul className="mt-8">
+            <p className="uppercase font-bold text-xs text-wall-400">
+              Additional Guides
+            </p>
+            {additional.map((post) => (
+              <li>
+                <Link href={post.slug} passHref>
+                  <a className={`relative ${select(post.slug)} ${rootClasses}`}>
+                    {post.title}
+                  </a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Sidebar>
+        <ContentArea
+          breadcrumbs={breadcrumbs(posts, params.slug?.slice(0, -1) || "")}
+          title={data.title}
+          description={data.description}
+          search={search}
+          section={"Getting Started"}
+          params={params}
+          disableToC
+        >
+          <div className="markdown">
+            <article
+              dangerouslySetInnerHTML={{ __html: decode(markdown) }}
+            ></article>
+          </div>
+          {!params?.slug && <LaunchCards />}
+        </ContentArea>
+      </div>
+    </>
+  );
+}
 
 const breadcrumbs = (posts, paths) => {
   const results = [
@@ -30,122 +116,20 @@ const breadcrumbs = (posts, paths) => {
   return results;
 };
 
-const childPages = (thisLink, children, level = 0) => (
-  <ul className="pl-0">
-    {children?.map((child) => (
-      <li>{pageTree(join(thisLink, child.slug), child, level)}</li>
-    ))}
-  </ul>
-);
-
-const pageTree = (thisLink, tree, level = 0) => {
-  const router = useRouter();
-
-  const isThisPage = router.asPath === thisLink;
-
-  const pageItemClasses = classnames({
-    "pl-0 font-semibold text-wall-500 text-base hover:text-green-400":
-      level === 0,
-    "pl-8 text-wall-600 text-base hover:text-green-400": level === 1,
-    "pl-12 text-wall-600 text-base hover:text-green-400": level === 2,
-    "dot relative": isThisPage,
-    "text-green-400": isThisPage,
-  });
-
-  if (thisLink === "/getting-started/cli") {
-    return false;
-  }
-
-  return (
-    <>
-      <Link href={thisLink} passHref>
-        <a className={`${pageItemClasses} cursor-pointer`}>{tree.title}</a>
-      </Link>
-    </>
-  );
-};
-
-export default function UsingLayout({ posts, data, params, search, markdown }) {
-  const router = useRouter();
-
-  const select = (href) => {
-    const isSelected = href === router.asPath;
-    return classnames({
-      dot: isSelected,
-      "text-green-400": isSelected,
-      "text-wall-500": !isSelected,
-    });
-  };
-  const rootClasses = "pl-0 font-semibold text-base hover:text-green-400";
-
-  return (
-    <>
-      <Head>
-        <title>{data.title} • Getting Started • urbit.org</title>
-        {Meta(data)}
-      </Head>
-      <div className="flex h-screen min-h-screen w-screen sidebar">
-        <Sidebar search={search}>
-          <ul>
-            <li>
-              <Link href="/getting-started" passHref>
-                <a
-                  className={`relative ${select(
-                    "/getting-started"
-                  )} ${rootClasses}`}
-                >
-                  Getting Started
-                </a>
-              </Link>
-            </li>
-          </ul>
-          {childPages("/getting-started", posts.pages)}
-          <ul className="mt-8">
-            <p className="uppercase font-bold text-xs text-wall-400">
-              Advanced
-            </p>
-            <li>
-              <Link href="/getting-started/cli" passHref>
-                <a
-                  className={`relative ${select(
-                    "/getting-started/cli"
-                  )} ${rootClasses}`}
-                >
-                  CLI Install
-                </a>
-              </Link>
-            </li>
-          </ul>
-        </Sidebar>
-        <ContentArea
-          breadcrumbs={breadcrumbs(posts, params.slug?.slice(0, -1) || "")}
-          title={data.title}
-          description={data.description}
-          search={search}
-          section={"Getting Started"}
-          params={params}
-        >
-          <div className="markdown">
-            <article
-              dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-            ></article>
-          </div>
-          {!params.slug && <LaunchCards />}
-        </ContentArea>
-      </div>
-    </>
-  );
-}
-
 function LaunchCards() {
   const info = [
     {
-      title: "Easy",
+      title: "Desktop app",
       subtitle: "Deploy Urbit on your local system",
       points: [
-        "Zero cost to you",
-        "Set up in minutes using a desktop GUI",
-        "Not a permanent way to use Urbit",
+        {
+          title: "Benefits",
+          content: ["Free", "Set up in minutes"],
+        },
+        {
+          title: "Considerations",
+          content: ["Not a permanent way to use Urbit"],
+        },
       ],
       svg: (
         <svg
@@ -165,16 +149,23 @@ function LaunchCards() {
           />
         </svg>
       ),
-      href: "/getting-started/easy",
+      href: "/getting-started/desktop",
     },
     {
-      title: "Fun",
+      title: "Server setup",
       subtitle: "Deploy Urbit on a cloud/VPS provider",
       points: [
-        "Self-host and own your data",
-        "Portable identity and accessibility from anywhere",
-        "Requires investment in a planet (one-time) and cloud service (monthly)",
-        "Requires Linux proficiency",
+        {
+          title: "Benefits",
+          content: ["Complete data ownership", "Accessibility from anywhere"],
+        },
+        {
+          title: "Considerations",
+          content: [
+            "Requires monthly cloud service subscription & (one-time) Urbit ID purchase",
+            "Requires Linux proficiency",
+          ],
+        },
       ],
       svg: (
         <svg
@@ -192,16 +183,27 @@ function LaunchCards() {
           />
         </svg>
       ),
-      href: "/getting-started/fun",
+      href: "/getting-started/server",
     },
     {
-      title: "Hosted",
+      title: "Hosted urbit",
       subtitle: "Deploy Urbit on a managed service",
       points: [
-        "Streamlined setup for ownership and identity",
-        "No technical proficiency required",
-        "Need to trust your provider",
-        "Requires monthly investment",
+        {
+          title: "Benefits",
+          content: [
+            "Accessibility from anywhere",
+            "Streamlined setup for ownership and identity",
+            "No technical proficiency required",
+          ],
+        },
+        {
+          title: "Considerations",
+          content: [
+            "Requires monthly subscription",
+            "Requires trust in your service provider",
+          ],
+        },
       ],
       svg: (
         <svg
@@ -235,31 +237,44 @@ function LaunchCards() {
           />
         </svg>
       ),
-      href: "/getting-started/hosting",
+      href: "/getting-started/hosted",
     },
   ];
   return (
     <div className="flex flex-col space-y-8 mt-8">
       {info.map((e) => {
         return (
-          <div className="py-8 bg-wall-100 rounded-xl">
+          <div className="p-8 bg-wall-100 rounded-xl max-w-screen-md flex flex-col">
             <div className="flex">
-              <div className="px-8 justify-center flex">{e.svg}</div>
+              <div className="pl-4 pr-8 justify-center items-center flex">
+                {e.svg}
+              </div>
               <div className="flex flex-col">
-                <h4>{e.title}</h4>
+                <h4 className="text-2xl">{e.title}</h4>
                 <p className="font-light text-lg">{e.subtitle}</p>
-                <ul className="mx-8 mt-2 list-disc text-sm flex flex-col space-y-2">
-                  {e.points.map((point) => {
-                    return <li>{point}</li>;
-                  })}
-                </ul>
-                <Link href={e.href} passHref>
-                  <a className="button-lg max-w-fit text-white mt-4 bg-green-400">
-                    Get Started
-                  </a>
-                </Link>
               </div>
             </div>
+            <div className="flex mt-8">
+              {e.points.map((section) => {
+                return (
+                  <div className="basis-1/2">
+                    <p className="uppercase font-bold text-sm text-black">
+                      {section.title}
+                    </p>
+                    <ul className="mx-8 my-4 list-disc text-sm flex flex-col space-y-2">
+                      {section.content.map((point) => (
+                        <li>{point}</li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
+            <Link href={e.href} passHref>
+              <a className="button-lg max-w-fit text-white mt-4 bg-green-400">
+                Get Started
+              </a>
+            </Link>
           </div>
         );
       })}
@@ -268,7 +283,7 @@ function LaunchCards() {
 }
 
 export async function getStaticProps({ params }) {
-  const posts = GettingStartedTree;
+  let posts = GettingStartedTree;
 
   const { data, content } = getPage(
     join(
