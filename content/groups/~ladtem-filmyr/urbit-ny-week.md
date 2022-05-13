@@ -7,7 +7,7 @@ tile = "https://fabled-faster.nyc3.digitaloceanspaces.com/fabled-faster/2022.4.0
 participant_range = "100+"
 +++
 
-![](https://media.urbit.org/site/group/urbit-ny-week.png)
+![](https://media.urbit.org/site/group/urbit-ny-week.jpg)
 
 Join this group on Urbit for event locations.
 
