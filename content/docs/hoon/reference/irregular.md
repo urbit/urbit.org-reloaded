@@ -15,7 +15,7 @@ aliases = ["docs/reference/hoon-expressions/irregular/"]
 | `(fun a b c)` | [`%:`](https://urbit.org/docs/hoon/reference/rune/cen#-cencol), calls a gate with n arguments |
 | `~(arm core arg)` | [`%~`](https://urbit.org/docs/hoon/reference/rune/cen#-censig), pulls an arm in a door |
 | `foo(x 1, y 2, z 3)` | [`%=`](https://urbit.org/docs/hoon/reference/rune/cen#-centis), resolve a wing with changes |
-| `[a b c]` | [`:*`](https://urbit.org/docs/hoon/reference/rune/col#-coltar) or [`$:`](https://urbit.org/docs/hoon/reference/rune/buc#_-buccol), constructs _n_-tuple in normal mode or its structure in structure mode |
+| `[a b c]` | [`:*`](https://urbit.org/docs/hoon/reference/rune/col#-coltar) or [`$:`](https://urbit.org/docs/hoon/reference/rune/buc#-buccol), constructs _n_-tuple in normal mode or its structure in structure mode |
 | `~[a b c]` | [`:~`](https://urbit.org/docs/hoon/reference/rune/col#-colsig), constructs null-terminated list |
 | `+(42)` | [`.+`](https://urbit.org/docs/hoon/reference/rune/dot#-dotlus), increments with Nock 4 |
 | `=(a b)` | [`.=`](https://urbit.org/docs/hoon/reference/rune/dot#-dottis), tests for equality wiht Nock 5 |
