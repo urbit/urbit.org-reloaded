@@ -9,25 +9,25 @@ aliases = ["docs/reference/hoon-expressions/irregular/"]
 
 | Form | Regular Form |
 | ---- | ------------ |
-| `_foo` | [`$_`](https://urbit.org/docs/hoon/reference/rune/buc#_-buccab), normalizes to an example |
-| `foo=bar` | [`$=`](https://urbit.org/docs/hoon/reference/rune/buc#_-buctis), wraps a face around a value |
-| `?(%foo %bar %baz)` | [`$?`](https://urbit.org/docs/hoon/reference/rune/buc#_-bucwut), forms a type union |
-| `(fun a b c)` | [`%:`](https://urbit.org/docs/hoon/reference/rune/cen#_-cencol), calls a gate with n arguments |
-| `~(arm core arg)` | [`%~`](https://urbit.org/docs/hoon/reference/rune/cen#_-censig), pulls an arm in a door |
-| `foo(x 1, y 2, z 3)` | [`%=`](https://urbit.org/docs/hoon/reference/rune/cen#_-centis), resolve a wing with changes |
-| `[a b c]` | [`:*`](https://urbit.org/docs/hoon/reference/rune/col#_-coltar) or [`$:`](https://urbit.org/docs/hoon/reference/rune/buc#_-buccol), constructs _n_-tuple in normal mode or its structure in structure mode |
-| `~[a b c]` | [`:~`](https://urbit.org/docs/hoon/reference/rune/col#_-colsig), constructs null-terminated list |
-| `+(42)` | [`.+`](https://urbit.org/docs/hoon/reference/rune/dot#_-dotlus), increments with Nock 4 |
-| `=(a b)` | [`.=`](https://urbit.org/docs/hoon/reference/rune/dot#_-dottis), tests for equality wiht Nock 5 |
-| `&#96;foo&#96;bar` | [`^-`](https://urbit.org/docs/hoon/reference/rune/ket#_-kethep), typecasts by explicit type label |
-| `foo=bar` | [`^=`](https://urbit.org/docs/hoon/reference/rune/ket#_-kettis), binds name to value |
-| `*foo` | [`^*`](https://urbit.org/docs/hoon/reference/rune/ket#_-kettar), bunts (produces default mold value) |
-| `,foo` | [`^:`](https://urbit.org/docs/hoon/reference/rune/ket#_-ketcol), produces “factory” gate for type |
-| `:(fun a b c d)` | [`;:`](https://urbit.org/docs/hoon/reference/rune/mic#_-miccol), calls binary function as _n_-ary function |
-| `foo:bar` | [`=<`](https://urbit.org/docs/hoon/reference/rune/tis#_-tisgal), composes two expressions, inverted |
-| `&#124;(foo bar baz)` | [`?&#124;`](https://urbit.org/docs/hoon/reference/rune/wut#_-wutbar), logical OR (loobean) |
-| `&(foo bar baz)` | [`?&`](https://urbit.org/docs/hoon/reference/rune/wut#_-wutpam), logical AND (loobean) |
-| `!foo` | [`?!`](https://urbit.org/docs/hoon/reference/rune/wut#_-wutzap), logical NOT (loobean) |
+| `_foo` | [`$_`](https://urbit.org/docs/hoon/reference/rune/buc#-buccab), normalizes to an example |
+| `foo=bar` | [`$=`](https://urbit.org/docs/hoon/reference/rune/buc#-buctis), wraps a face around a value |
+| `?(%foo %bar %baz)` | [`$?`](https://urbit.org/docs/hoon/reference/rune/buc#-bucwut), forms a type union |
+| `(fun a b c)` | [`%:`](https://urbit.org/docs/hoon/reference/rune/cen#-cencol), calls a gate with n arguments |
+| `~(arm core arg)` | [`%~`](https://urbit.org/docs/hoon/reference/rune/cen#-censig), pulls an arm in a door |
+| `foo(x 1, y 2, z 3)` | [`%=`](https://urbit.org/docs/hoon/reference/rune/cen#-centis), resolve a wing with changes |
+| `[a b c]` | [`:*`](https://urbit.org/docs/hoon/reference/rune/col#-coltar) or [`$:`](https://urbit.org/docs/hoon/reference/rune/buc#_-buccol), constructs _n_-tuple in normal mode or its structure in structure mode |
+| `~[a b c]` | [`:~`](https://urbit.org/docs/hoon/reference/rune/col#-colsig), constructs null-terminated list |
+| `+(42)` | [`.+`](https://urbit.org/docs/hoon/reference/rune/dot#-dotlus), increments with Nock 4 |
+| `=(a b)` | [`.=`](https://urbit.org/docs/hoon/reference/rune/dot#-dottis), tests for equality wiht Nock 5 |
+| `&#96;foo&#96;bar` | [`^-`](https://urbit.org/docs/hoon/reference/rune/ket#-kethep), typecasts by explicit type label |
+| `foo=bar` | [`^=`](https://urbit.org/docs/hoon/reference/rune/ket#-kettis), binds name to value |
+| `*foo` | [`^*`](https://urbit.org/docs/hoon/reference/rune/ket#-kettar), bunts (produces default mold value) |
+| `,foo` | [`^:`](https://urbit.org/docs/hoon/reference/rune/ket#-ketcol), produces “factory” gate for type |
+| `:(fun a b c d)` | [`;:`](https://urbit.org/docs/hoon/reference/rune/mic#-miccol), calls binary function as _n_-ary function |
+| `foo:bar` | [`=<`](https://urbit.org/docs/hoon/reference/rune/tis#-tisgal), composes two expressions, inverted |
+| `&#124;(foo bar baz)` | [`?&#124;`](https://urbit.org/docs/hoon/reference/rune/wut#-wutbar), logical OR (loobean) |
+| `&(foo bar baz)` | [`?&`](https://urbit.org/docs/hoon/reference/rune/wut#-wutpam), logical AND (loobean) |
+| `!foo` | [`?!`](https://urbit.org/docs/hoon/reference/rune/wut#-wutzap), logical NOT (loobean) |
 
 ##### Reading guide
 
