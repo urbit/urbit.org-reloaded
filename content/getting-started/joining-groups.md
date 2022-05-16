@@ -16,7 +16,7 @@ Read our [Getting Started guide](https://urbit.org/install) for details.
 
 Once you’re on the network, you’ll see and large tiled interface with a few applications installed: Terminal, Groups, and Bitcoin. Click on Groups.
 
-![](https://media.urbit.org/site/group/groups-guide1.png)
+![](https://media.urbit.org/site/additional-guides/Joining-groups-1.jpg)
 
 ### 3. Enter the group shortcode
 
@@ -26,8 +26,8 @@ In the Groups app, click the “Join Group” button and enter `~bitbet-bolbel/u
 
 Then confirm by clicking with the second “Join Group” button.
 
-![](https://media.urbit.org/site/group/groups-guide2.png)
-![](https://media.urbit.org/site/group/groups-guide3.png)
+![](https://media.urbit.org/site/additional-guides/Joining-groups-2.jpg)
+![](https://media.urbit.org/site/additional-guides/Joining-groups-3.jpg)
 
 ### 4. Confirm join
 
@@ -37,7 +37,7 @@ Alternatively, the ship that is hosting the group may be offline.
 
 Click "Join Urbit Community".
 
-![](https://media.urbit.org/site/group/groups-guide4.png)
+![](https://media.urbit.org/site/additional-guides/Joining-groups-4.jpg)
 
 ### 5. Join channels
 
@@ -47,8 +47,9 @@ There two types of channels in the left column: Chats, and Notebooks. The former
 
 To join a channel within the group, select a channel name from the left column, and click the Join Channel button.
 
-![](https://media.urbit.org/site/group/groups-guide5.png)
-![](https://media.urbit.org/site/group/groups-guide6.png)
+![](https://media.urbit.org/site/additional-guides/Joining-groups-4.jpg)
+
+![](https://media.urbit.org/site/additional-guides/Joining-groups-6.jpg)
 
 ### 6. Chat and post on the network
 

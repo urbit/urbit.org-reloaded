@@ -80,9 +80,9 @@ Learn more about [layer 2 for planets](/using/id/layer-2-for-planets) in the Use
 
 Got your planet?
 
-Choose [Easy](/getting-started/easy) and learn how to set it up locally with Port.
+Get your planet [set it up locally with Port](/getting-started/easy).
 
-Read the [Fun](/getting-started/fun) guide to learn how to get it set up on a server.
+Read the [Server setup](/getting-started/fun) guide to learn how to get it set up on a server.
 
 Or, follow the instructions of a [hosting provider](/getting-started/hosted) and set up your planet there.
 

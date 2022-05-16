@@ -4,7 +4,7 @@ weight = 0
 description = ""
 +++
 
-## Introduction
+### Introduction
 
 Nothing about building a new OS from scratch has been easy. Or creating an identity system that adequately replaces the IP address.
 
@@ -12,7 +12,7 @@ Getting on Urbit isn't always easy, either. The onboarding process hasn't been o
 
 But we like to think this hard work is exactly what makes Urbit special. **Consider yourself warned.**
 
-## Benefits
+### Why Urbit?
 
 **As a user**, you can explore the people, community, and sheer novelty of the Urbit ecosystem while owning your entire experience. Your data, your messages, your apps.
 
@@ -20,6 +20,6 @@ But we like to think this hard work is exactly what makes Urbit special. **Consi
 
 Someone once said, "All the smart people I know disappear into Urbit." If you're smart, you will too — not just installing and running Urbit, but taking the first step toward deploying your Final Computer.
 
-## Launch into Urbit
+### Launch into Urbit
 
 Choose how you want to disappear into Urbit.

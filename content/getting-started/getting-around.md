@@ -8,7 +8,7 @@ weight = 4
 
 After you've logged into your Urbit for the first time, you're officially an Urbiter! You've unlocked the entire Urbit network with your newly-minted ID — the key to your new digital life.
 
-![](https://media.urbit.org/site/getting-started/getting-started-getting-around-1.png)
+![](https://media.urbit.org/site/getting-started/Getting-around-1.jpg)
 
 You'll see your Home and a few pre-installed applications: Terminal, Groups, and Bitcoin. More on them in a moment.
 

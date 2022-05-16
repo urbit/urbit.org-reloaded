@@ -26,9 +26,9 @@ Click and the search bar and search for the software provider’s Urbit ID.
 
 For example, to install the picture application, search for `~paldev` and then click on the result for `~paldev` to show his applications.
 
-![](https://media.urbit.org/site/application/app-guide1.png)
+![](https://media.urbit.org/site/additional-guides/Installing-apps-1.jpg)
 
-![](https://media.urbit.org/site/application/app-guide2.png)
+![](https://media.urbit.org/site/additional-guides/Installing-apps-2.jpg)
 
 ### 4. Get the Application
 
@@ -36,6 +36,6 @@ After selecting the “picture” app, a pane will open that shows some informat
 
 Soon you’ll have a new application tile on your home screen that will let you upload and display a picture to your home screen.
 
-![](https://media.urbit.org/site/application/app-guide3.png)
-
-![](https://media.urbit.org/site/application/app-guide4.png)
+![](https://media.urbit.org/site/additional-guides/Installing-apps-3.jpg)
+<br><br>
+![](https://media.urbit.org/site/additional-guides/Installing-apps-4.jpg)

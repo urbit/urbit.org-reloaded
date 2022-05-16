@@ -128,7 +128,7 @@ function LaunchCards() {
         },
         {
           title: "Considerations",
-          content: ["Not a permanent way to use Urbit"],
+          content: ["Limited functionality with certain applications"],
         },
       ],
       svg: (
@@ -254,14 +254,14 @@ function LaunchCards() {
                 <p className="font-light text-lg">{e.subtitle}</p>
               </div>
             </div>
-            <div className="flex mt-8">
+            <div className="flex mt-8 border-b-neutral-300 pt-2 pb-5 ">
               {e.points.map((section) => {
                 return (
                   <div className="basis-1/2">
                     <p className="uppercase font-bold text-sm text-black">
                       {section.title}
                     </p>
-                    <ul className="mx-8 my-4 list-disc text-sm flex flex-col space-y-2">
+                    <ul className="mx-8 my-2 list-disc text-sm flex flex-col space-y-2">
                       {section.content.map((point) => (
                         <li>{point}</li>
                       ))}

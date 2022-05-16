@@ -36,7 +36,7 @@ The first is an email invitation with an Urbit ID and a Master Ticket.
 
 The second, only recently made available through our [L2 solution](/getting-started/layer-2-for-planets), is an activation code or a link to activate on [Bridge](https://bridge.urbit.org), which can be thought of as an Urbit account management tool.
 
-![](https://media.urbit.org/site/getting-started/getting-started-fun-1.png)
+![](https://media.urbit.org/site/getting-started/Server-setup-1.jpg)
 
 Clicking a link to activate a planet on Bridge will take you to page which will generate a Master Ticket for you. Follow the instructions which will prompt you to download a copy of your Passport - your Master Ticket, management proxy, and keyfile. Store your Master Ticket and management proxy somewhere safe, hold on to the keyfile, and proceed to the next step.
 

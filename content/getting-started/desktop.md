@@ -88,11 +88,13 @@ A comet serves as a temporary identity for the network. It works just fine for c
 
 Start Port and hit the **Start without an ID** button. It'll take a few minutes to spin up the new comet.
 
-![](https://media.urbit.org/site/getting-started/getting-started-easy-1.png)
+![](https://media.urbit.org/site/getting-started/Desktop-app-1.jpg)
 
 ### 3. Launch your ship
 
 Once that's finished, click **Launch Ship into Urbit** and you'll be on the network.
+
+![](https://media.urbit.org/site/getting-started/Desktop-app-2.jpg)
 
 <div className="bg-wall-100 p-7 rounded-xl markdown-callout">
 
