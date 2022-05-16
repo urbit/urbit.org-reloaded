@@ -48,7 +48,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
       </Head>
       <div className="flex h-screen min-h-screen w-screen sidebar">
         <Sidebar search={search}>
-          <p className="uppercase font-bold text-xs text-wall-400">
+          <p className="uppercase pb-1 font-bold text-xs text-wall-400">
             Getting Started
           </p>
           <ul>
@@ -63,7 +63,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
             ))}
           </ul>
           <ul className="mt-8">
-            <p className="uppercase font-bold text-xs text-wall-400">
+            <p className="uppercase pb-1 font-bold text-xs text-wall-400">
               Additional Guides
             </p>
             {additional.map((post) => (
