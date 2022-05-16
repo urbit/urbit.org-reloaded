@@ -54,3 +54,5 @@ To join a channel within the group, select a channel name from the left column, 
 ### 6. Chat and post on the network
 
 Congratulations you’re now a part of a peer-to-peer Urbit group. Be friendly, be curious, and have fun.
+
+![](https://media.urbit.org/site/additional-guides/Joining-groups-7.jpg)
