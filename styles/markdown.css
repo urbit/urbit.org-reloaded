@@ -39,6 +39,12 @@
   @apply text-base md:text-lg leading-relaxed;
 }
 
+.markdown-callout p {
+  @apply mt-1;
+  @apply mb-2;
+  font-size: 1rem;
+}
+
 .markdown li {
   @apply py-2 ml-6 text-base md:text-lg;
 }

@@ -4,7 +4,7 @@ description = "Run urbit on a local or cloud server"
 weight = 2
 +++
 
-### Get yourself a planet
+### 1. Get yourself a planet
 
 Here's some of the hard fun work we talked about earlier.
 
@@ -18,7 +18,7 @@ Visit the instructions for [launching a temporary comet with Port](/getting-star
 
 There are many markets and individuals selling planets such as [azimuth.shop](https://azimuth.shop), [Networked Subject](https://subject.network), and [Wexpert Systems](https://wexpert.systems) for Ethereum, Bitcoin, and USD respectively.
 
-<div className="bg-wall-100 p-4 rounded-xl" style="padding-bottom: 1rem;">
+<div className="bg-wall-100 p-7 rounded-xl markdown-callout">
 
 **Layer 1 vs Layer 2 planet purchasing**
 
@@ -28,7 +28,7 @@ For this reason we generally advise using a L2 planet market, unless you are int
 
 </div>
 
-### Claim your planet
+### 2. Claim your planet
 
 An invitation to claim your planet comes in one of two forms.
 
@@ -40,7 +40,7 @@ The second, only recently made available through our [L2 solution](/getting-star
 
 Clicking a link to activate a planet on Bridge will take you to page which will generate a Master Ticket for you. Follow the instructions which will prompt you to download a copy of your Passport - your Master Ticket, management proxy, and keyfile. Store your Master Ticket and management proxy somewhere safe, hold on to the keyfile, and proceed to the next step.
 
-<div className="bg-wall-100 p-4 rounded-xl" style="padding-bottom: 1rem;">
+<div className="bg-wall-100 p-7 rounded-xl markdown-callout">
 
 **Claiming L1 planets**
 
@@ -48,7 +48,7 @@ If you’ve purchased an L1 planet, you won’t need to claim it because you alr
 
 </div>
 
-### Use Bridge to get your keyfile
+### 3. Use Bridge to get your keyfile
 
 Now that you have your planet, you can create your keyfile (eg. `sample-palnet.key`), which is the cryptographic signature required to encrypt and decrypt messages on Urbit's P2P network.
 
@@ -138,7 +138,7 @@ Arvo, the Urbit OS, now creates a directory called `sampel-palnet/` and begins b
 
 Welcome to Urbit! You can skip ahead to [log in](#log-in), or stick around for some tips.
 
-### Tips
+### 4. Tips
 
 Check out the [cloud hosting guide](/using/running/hosting) for tips on improving the environment for Urbit, with a particular focus on establishing your domain name and using SSL for encryption.
 
@@ -154,7 +154,7 @@ You should also delete your keyfile from your remote system to prevent yourself 
 rm ./your-keyfile.key
 ```
 
-### Log in
+### 5. Log in
 
 First, use your browser to navigate to the URL+port where your ship is running. This could be an IP address or a fully-qualified domain name, depending on how you set yours up.
 

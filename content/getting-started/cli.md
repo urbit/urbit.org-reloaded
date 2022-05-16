@@ -82,9 +82,9 @@ There are five kinds of Urbit IDs but to get started you only need to know about
 
 A planet name looks like `~sampel-palnet`.
 
-[Follow this guide](/getting-started/planet) if you have already acquired a planet.
+[Follow this guide](/getting-started/) if you have already acquired a planet.
 
-[Find a planet to purchase](/getting-started#get-a-planet)
+[Find a planet to purchase](/getting-started/get-planet)
 
 ---
 

@@ -4,7 +4,7 @@ tag = "additional"
 weight = 3
 +++
 
-## 1. Get on the network
+### 1. Get on the network
 
 First, you’ll need to get on Urbit. You can quickly check out the network by [downloading the Port application](https://github.com/urbit/port) and booting up a comet–a temporary Urbit ID.
 
@@ -12,13 +12,13 @@ For long-term use, you’ll want to get a permanent Urbit ID and consider a runn
 
 Read our [Getting Started guide](https://urbit.org/install) for details.
 
-## 2. Finding applications
+### 2. Finding applications
 
 Urbit is still in its early stages, so you’ll need to join groups and browse around the network to discover new applications as they are being brought up.
 
 However, we can get started a simple app from Urbit developer [`~paldev`](/ids/~paldev).
 
-## 3. Search for a Developer
+### 3. Search for a Developer
 
 Once you’re on the network, you’ll see and large tiled interface with a few applications installed and a search bar on the top of the page.
 
@@ -30,7 +30,7 @@ For example, to install the picture application, search for `~paldev` and then c
 
 ![](https://media.urbit.org/site/application/app-guide2.png)
 
-## 4. Get the Application
+### 4. Get the Application
 
 After selecting the “picture” app, a pane will open that shows some information about the application. Go ahead and click the “Get App” button, and confirm the following modal window to begin the installation process.
 

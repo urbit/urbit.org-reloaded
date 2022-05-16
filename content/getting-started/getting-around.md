@@ -4,7 +4,7 @@ description = "Get around your urbit"
 weight = 4
 +++
 
-### Get oriented
+### 1. Get oriented
 
 After you've logged into your Urbit for the first time, you're officially an Urbiter! You've unlocked the entire Urbit network with your newly-minted ID — the key to your new digital life.
 
@@ -16,7 +16,7 @@ Above those are buttons to view System Preferences and Help and Support and chec
 
 You'll likely want to focus on finding and joining new communities, which you can do with the **Groups** app. Click on the box to open the application.
 
-### Join a few groups with fellow Urbiters
+### 2. Join a few groups with fellow Urbiters
 
 No two people will ever have the same experience on Urbit. That depends entirely on who you find and where they invite you to join them. But we can set you down a good path.
 
@@ -32,7 +32,7 @@ Here are a few more useful groups to join:
 - [`~middev/the-forge`](/groups/~middev/the-forge): A group for sharing, discussing, and discovering new Urbit applications.
 - [`~hocwyn-tipwex/uqbar-event-horizon`](/groups/~hocwyn-tipwex/uqbar-event-horizon): A community around [Uqbar](https://uqbar.network), a company creating applications and experiences on top of Urbit — notably EScape, which is an alternative to the default Groups application for joining communities and messaging with other Urbiters.
 
-### Get more Urbit apps
+### 3. Get more Urbit apps
 
 Groups are great, but Urbit goes way deeper with apps that are developed specifically for Urbit and use P2P networking for everything.
 
@@ -48,7 +48,7 @@ Some popular apps to get things moving:
 - [Studio](/applications/~tirrel/studio): Tools for making money on the Urbit network.
 - [Wrdu](/applications/~magped-magped-rabsef-bicrym/wrdu): A Wordle clone.
 
-### Get help
+### 4. Get help
 
 If you need help getting around Urbit, the best place to go is the official Urbit community: [`~bitbet-bolbel/urbit-community`](/groups/~bitbet-bolbel/urbit-community). Those in the Help channel are willing to troubleshoot or provide links to resources to help you get out of a jam.
 
@@ -58,7 +58,7 @@ If you're having trouble with your planet or the hosting provider that's running
 
 And if you can't get through this guide and launch into Urbit, you may have luck with the [Urbit Live community](https://t.me/UrbitLiveGroup) on Telegram.
 
-### What's next?
+### 5. What's next?
 
 You made it! You did the work and now have your Final Computer.
 
