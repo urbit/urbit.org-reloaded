@@ -111,4 +111,4 @@ For more information on getting a planet, see our [Getting an Urbit ID](/guides/
 
 ### Next steps
 
-Learn how to [get around your urbit](/getting-started/get-around-your-urbit).
+Learn how to [get around your urbit](/getting-started/getting-around).
