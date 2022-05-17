@@ -4,6 +4,18 @@
   },
   "redirects": [
     {
+      "source": "/guides/getting-an-urbit-id",
+      "destination": "/getting-started/get-planet"
+    },
+    {
+      "source": "/guides/installing-applications",
+      "destination": "/getting-started/installing-applications"
+    },
+    {
+      "source": "/guides/joining-groups",
+      "destination": "/getting-started/joining-groups"
+    },
+    {
       "source": "/groups/~ladtem-filmyr/urbit-ny-takeover",
       "destination": "/groups/~ladtem-filmyr/urbit-ny-week",
       "permanent": true

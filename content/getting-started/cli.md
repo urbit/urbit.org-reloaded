@@ -2,6 +2,7 @@
 title = "Command line install"
 weight = 4
 description = "Installation instructions for power users."
+tag = "additional"
 +++
 
 If you're a power user, you can run the Urbit virtual machine directly using the command line. Choose the code for your operating system and run the commands in your terminal.
@@ -81,9 +82,9 @@ There are five kinds of Urbit IDs but to get started you only need to know about
 
 A planet name looks like `~sampel-palnet`.
 
-[Follow this guide](/getting-started/planet) if you have already acquired a planet.
+[Follow this guide](/getting-started/) if you have already acquired a planet.
 
-[Find a planet to purchase](/getting-started#get-a-planet)
+[Find a planet to purchase](/getting-started/get-planet)
 
 ---
 
@@ -160,7 +161,7 @@ You can continue using this comet indefinitely. There are currently few differen
 
 A comet also comes with a long and fairly unmemorable name whereas a planet has a short name and a "sigil" (avatar) associated with it that makes it more identifiable on the network. You may notice all this within the first few minutes of using Urbit.
 
-[For details of how to purchase a planet, visit this page](/getting-started#get-a-planet).
+[For details of how to purchase a planet, visit this page](/getting-started/get-planet).
 
 <style>
   .os {

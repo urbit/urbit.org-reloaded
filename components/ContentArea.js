@@ -60,23 +60,24 @@ export default function ContentArea(props) {
             </button>
           </div>
         </div>
-        <div className="w-full flex justify-center">
-          {props.narrow ? (
-            <Section narrow className={""}>
-              <h2 className="mb-16 mt-24">{props.title}</h2>
-              {props.children}
-              <div className="pb-24" />
-            </Section>
-          ) : (
-            <div className="min-w-0">
-              <h2 className="mb-16 mt-24">{props.title}</h2>
-              {props.children}
-              <div className="pb-24" />
+        <div className="flex justify-between">
+          <div className="min-w-0 max-w-screen-md">
+            <div className="mb-16">
+              <h2 className="mt-24">{props.title}</h2>
+              {props?.description && (
+                <p className="text-wall-400 font-bold text-xl">
+                  {props.description}
+                </p>
+              )}
             </div>
+            {props.children}
+            <div className="pb-24" />
+          </div>
+          {!props?.disableToC && (
+            <TableOfContents
+              key={props.params.slug?.join("/") || Math.random()}
+            />
           )}
-          <TableOfContents
-            key={props.params.slug?.join("/") || Math.random()}
-          />
         </div>
       </div>
     </div>
