@@ -20,14 +20,17 @@ canceled = false
 
 Currently %studio allows publishing groups notebook content to the web, but we would like to extend that to all the content types groups offer, with collections being the next logical step. This work will involve userspace and frontend development. It will be a solo project with mentor support.
 
+We desire to use collections to build out 2 frontend layouts: a gallery view and
+link-tree-esque "about me" page.
+
 ## Deliverables
 
 A number of backend and frontend changes would have to be made to %studio.
 - The pipe app will have to be modified to enable an additional flow type
   specific to collections, as well as whatever necessary state changes are
   required to support that
-- A new template type would have to be developed, along with at least one
-  instance of the new template type
+- Two instances of a new template type would have to be developed, a gallery and
+  an "about me" page
 - Frontend changes will have to be made according to designs we will specify, to
   expose the new functionality to %studio users
 
@@ -35,7 +38,6 @@ A number of backend and frontend changes would have to be made to %studio.
 
 - We require apprentices to either have some experience with hoon, or at least have completed hoon school.
 - React/JS experience
-
 
 ### Educational Outcomes for the Apprentice
 
