@@ -12,7 +12,7 @@ There are two ways to get a planet.
 
 **A) Ask nicely**
 
-Visit the instructions for [launching a temporary comet with Port](/getting-started/easy), get yourself onto the network, find a group, and start conversations with people with planets to spare. Many urbiters are also active on [Twitter](https://twitter.com), where you can also ask around.
+Visit the instructions for [launching a temporary comet with Port](/getting-started/desktop), get yourself onto the network, find a group, and start conversations with people with planets to spare. Many urbiters are also active on [Twitter](https://twitter.com), where you can also ask around.
 
 **B) Buy a planet**
 
@@ -34,7 +34,7 @@ An invitation to claim your planet comes in one of two forms.
 
 The first is an email invitation with an Urbit ID and a Master Ticket.
 
-The second, only recently made available through our [L2 solution](/getting-started/layer-2-for-planets), is an activation code or a link to activate on [Bridge](https://bridge.urbit.org), which can be thought of as an Urbit account management tool.
+The second, only recently made available through our [L2 solution](/using/id/layer-2-for-planets), is an activation code or a link to activate on [Bridge](https://bridge.urbit.org), which can be thought of as an Urbit account management tool.
 
 ![](https://media.urbit.org/site/getting-started/Server-setup-1.jpg)
 
