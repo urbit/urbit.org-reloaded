@@ -1,6 +1,14 @@
-+++ title = "Convivial Networks" date = "2022-05-27" description = "Like the relationships that we build within them, our platforms should yield satisfaction precisely because they’re non-trivial; they demand effort, which is another way of saying they require engagement with the world." [extra] author = "" ship = "~witwyt-widlyr" image = "https://media.urbit.org/blog/media.urbit.org/blog/convivial-computers.jpg" +++
++++ 
+title = "Convivial Networks" 
+date = "2022-05-27" 
+description = "Like the relationships that we build within them, our platforms should yield satisfaction precisely because they’re non-trivial; they demand effort, which is another way of saying they require engagement with the world." 
+[extra] 
+author = "" 
+ship = "~witwyt-widlyr" 
+image = "https://media.urbit.org/blog/media.urbit.org/blog/convivial-computers.jpg" 
++++
 
-![](https://media.urbit.org/blog/convivial-networks.jpg)
+![](https://media.urbit.org/blog/convivial-computers.jpg)
 
 In 1989, when the idea of forging a community online was still niche enough to feel like a radical dream, an essay in the inaugural issue of cyberpunk magazine Mondo2000 already had the audacity to ask: have we missed the revolution? Penned by Lee Felsenstein, the text takes stock of the potential, promised by the advent of the personal computer, for new technologies to contest control and engender greater forms of interpersonal connection. This opportunity, of course, was not a given. “If people can gain control over their own channels, and have the technological means available to do that directly”, he wrote, “then they can control their own communities.” If the revolution in question was not to be missed, then ownership and control over one’s own means of communication were central affordances of any technology that would lend itself to genuine community-building, or what Felsenstein called “convivial” interaction. 
 
