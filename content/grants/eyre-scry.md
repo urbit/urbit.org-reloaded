@@ -3,7 +3,7 @@ title = "Eyre Request Scry Cache"
 date = "2022-05-18"
 
 [taxonomies]
-grant_type = [ "Proposal" ]
+grant_type = [ "Bounty" ]
 grant_category = [ "Core Dev" ]
 
 [extra]
