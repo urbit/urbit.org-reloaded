@@ -4,6 +4,10 @@
   },
   "redirects": [
     {
+      "source": "/getting-started/layer-2-for-planets",
+      "destination": "/using/id/layer-2-for-planets"
+    },
+    {
       "source": "/guides/getting-an-urbit-id",
       "destination": "/getting-started/get-planet"
     },
