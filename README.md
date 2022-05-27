@@ -1,4 +1,4 @@
-The website for Urbit is maintained by [Tlon](https://tlon.io) and the Urbit community. Issues and contributions are welcome.
+The website for Urbit is maintained by the Urbit Foundation and the Urbit community. Issues and contributions are welcome.
 
 ## Getting Started
 
@@ -30,44 +30,7 @@ The website for Urbit is maintained by [Tlon](https://tlon.io) and the Urbit com
 
     Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
     
-## Contributing
-
-Once you're ready to contribute:
-
-1. Create a new local branch for your work:
-
-    ``` shell
-    cd urbit.org
-    git checkout -b "<your branch name>"
-    ```
-
-2. Make your changes in the text editor of your choice (e.g., [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/)).
-
-3. Stage your changes for commit:
-
-    ```
-    git add <filename>
-    ```
-
-4. Commit your changes:
-
-    ```
-    git commit -m "<concise message describing changes>"
-    ```
-
-5. Run the development server to view your local changes in your browser at [http://localhost:3000](http://localhost:3000).
-
-    ```shell
-    npm run dev
-    # or
-    yarn dev
-    ```
-
-6. [Push your local branch to the remote repo](https://help.github.com/articles/pushing-to-a-remote/).
-
-7. Back in the urbit.org repo in the GitHub UI, [open a pull request](https://github.com/urbit/urbit.org/pulls).
-
-Once your changes have been reviewed and any necessary edits have been made, you'll be able to merge your pull request.
+To learn more about contributing, see GitHub's [documentation](https://docs.github.com/en/get-started/quickstart/contributing-to-projects).
 
 ## Framework and Library Documentation
 
