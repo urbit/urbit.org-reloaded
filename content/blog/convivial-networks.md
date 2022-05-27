@@ -5,7 +5,7 @@ description = "Like the relationships that we build within them, our platforms s
 [extra] 
 author = "" 
 ship = "~witwyt-widlyr" 
-image = "https://media.urbit.org/blog/media.urbit.org/blog/convivial-computers.jpg" 
+image = "https://media.urbit.org/blog/convivial-computers.jpg" 
 +++
 
 ![](https://media.urbit.org/blog/convivial-computers.jpg)
