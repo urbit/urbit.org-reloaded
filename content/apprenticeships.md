@@ -36,4 +36,4 @@ When a mentor has signed off on the apprentice's work, the mentor will notify th
 
 ## Funding
 
-Apprenticeships pay $4,000 in WSTR per month to the apprentice and $1,000 WSTR per month to the mentor, for a limit of up to three months.
+Apprenticeships pay 1 star upon the sucessful completion of the apprenticeship, for an apprenticeship of a duration of up to three months.
