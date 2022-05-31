@@ -1,24 +1,36 @@
-The website for Urbit.
+The website for Urbit is maintained by the Urbit Foundation and the Urbit community. Issues and contributions are welcome.
 
 ## Getting Started
 
-Install Node 14. [nvm](https://github.com/nvm-sh/nvm) should handle this by running `nvm install 14`, then `nvm use` whenever in the repository (or automate it with a script - see [here](https://github.com/nvm-sh/nvm#deeper-shell-integration)).
+1. Fork the [Urbit site repository](https://github.com/urbit/urbit.org).
 
-Install our dependencies:
+2. [Create a local clone](https://help.github.com/articles/cloning-a-repository/) of your fork.
 
-```bash
-npm install
-```
+3. Navigate to the `urbit.org` directory and install Node 14 using [nvm](https://github.com/nvm-sh/nvm):
 
-Run the development server:
+    ```shell
+    cd urbit.org
+    nvm install 14
+    ```
+    You can then run `nvm use` whenever in the repository (or automate it with a script - see [here](https://github.com/nvm-sh/nvm#deeper-shell-integration)).
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+4. Install our dependencies:
 
-Finally, open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    ```shell
+    npm install
+    ```
+    
+5. Run the development server:
+
+    ```shell
+    npm run dev
+    # or
+    yarn dev
+    ```
+
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    
+To learn more about contributing, see GitHub's [documentation](https://docs.github.com/en/get-started/quickstart/contributing-to-projects).
 
 ## Framework and Library Documentation
 
