@@ -121,10 +121,7 @@ export default function Event({
         ) : null}
 
         <Section short narrow className="markdown">
-          <article
-            className="pt-12 w-full"
-            dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-          ></article>
+          <Markdown post={event} />
         </Section>
         <Section narrow>
           <Contact />
@@ -161,10 +158,8 @@ export async function getStaticProps({ params }) {
 
   const event = getPostBySlug(params.slug, eventKeys, "events");
 
-  const markdown = await Markdown({ post: event });
-
   return {
-    props: { event, markdown, nextEvent, previousEvent },
+    props: { event, nextEvent, previousEvent },
   };
 }
 

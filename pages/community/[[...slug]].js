@@ -60,7 +60,7 @@ const pageTree = (thisLink, tree, level = 0) => {
   );
 };
 
-export default function UsingLayout({ posts, data, params, search, markdown }) {
+export default function UsingLayout({ posts, data, params, search, content }) {
   return (
     <>
       <Head>
@@ -79,9 +79,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
           params={params}
         >
           <div className="markdown">
-            <article
-              dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-            ></article>
+            <Markdown post={{ content: content }} />
           </div>
         </ContentArea>
       </div>
@@ -96,9 +94,7 @@ export async function getStaticProps({ params }) {
     join(process.cwd(), "content/community", params.slug?.join("/") || "/")
   );
 
-  const markdown = await Markdown({ post: { content: content } });
-
-  return { props: { posts, data, markdown, params } };
+  return { props: { posts, data, content, params } };
 }
 
 export async function getStaticPaths() {

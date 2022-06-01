@@ -59,9 +59,7 @@ export default function Post({
           </div>
         </Section>
         <Section narrow className="markdown">
-          <article
-            dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-          ></article>
+          <Markdown post={post} />
         </Section>
         <Section narrow>
           <Contact />
@@ -116,10 +114,8 @@ export async function getStaticProps({ params }) {
     "updates"
   );
 
-  const markdown = await Markdown({ post });
-
   return {
-    props: { post, markdown, nextPost, previousPost },
+    props: { post, nextPost, previousPost },
   };
 }
 

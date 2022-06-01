@@ -14,7 +14,6 @@ import { DateTime } from "luxon";
 
 export default function GrantProgramOverview({
   post,
-  markdown,
   search,
   program,
   actionLink,
@@ -46,9 +45,7 @@ export default function GrantProgramOverview({
           </Link>
         </Section>
         <Section narrow short className="markdown">
-          <article
-            dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-          ></article>
+          <Markdown post={post} />
         </Section>
       </SingleColumn>
       <Footer />

@@ -8,9 +8,10 @@ import Footer from "./Footer";
 import SingleColumn from "./SingleColumn";
 import Section from "./Section";
 import { decode } from "html-entities";
+import Markdown from "../components/Markdown";
 import { TableOfContents } from "./TableOfContents";
 
-export default function PageWithIndex({ post, markdown, search }) {
+export default function PageWithIndex({ post, search }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
@@ -28,10 +29,9 @@ export default function PageWithIndex({ post, markdown, search }) {
         </Section>
         <Section narrow>
           <div className="flex sidebar">
-            <article
-              className={"markdown pr-0 lg:pr-16"}
-              dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-            ></article>
+            <div className="markdown">
+              <Markdown post={post} />
+            </div>
             <TableOfContents />
           </div>
         </Section>

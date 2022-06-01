@@ -2,7 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { getPage } from "../../lib/lib";
 import { join } from "path";
-import Meta from "../../components/Meta";
 import CopyLink from "../../components/CopyLink";
 import Container from "../../components/Container";
 import SingleColumn from "../../components/SingleColumn";
@@ -15,7 +14,7 @@ import MetadataBlock from "../../components/gateway/MetadataBlock";
 import MetadataLink from "../../components/gateway/MetadataLink";
 import Description from "../../components/gateway/Description";
 
-const GroupPage = ({ data, markdown, params }) => {
+const GroupPage = ({ data, content, params }) => {
   const { group } = params;
   if (!ob.isValidPatp(group?.[0] || "")) {
     return <Gateway404 type="group" />;
@@ -90,7 +89,7 @@ const GroupPage = ({ data, markdown, params }) => {
           <Description
             description={data.description}
             fallback="A group on Urbit."
-            markdown={markdown}
+            markdown={content}
           />
           <hr className="text-wall-200" />
           <div className="flex flex-col space-y-6">
@@ -138,12 +137,10 @@ export const getServerSideProps = async ({ params, res }) => {
     data = { title: params.group?.join("/"), description: "A group on Urbit." };
   }
 
-  const markdown = await Markdown({ post: { content: content } }, true);
-
   return {
     props: {
       data,
-      markdown,
+      content,
       params,
     },
   };

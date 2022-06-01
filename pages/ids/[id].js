@@ -15,7 +15,7 @@ import MetadataLink from "../../components/gateway/MetadataLink";
 import Description from "../../components/gateway/Description";
 import axios from "axios";
 
-const IdPage = ({ data, markdown, applications, groups, network, params }) => {
+const IdPage = ({ data, content, applications, groups, network, params }) => {
   let { id } = params;
   id = `~${deSig(id)}`;
   if (!ob.isValidPatp(id) || id.length > 14) {
@@ -110,7 +110,7 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
           <Description
             description={data.description}
             fallback="An Urbit ID."
-            markdown={markdown}
+            markdown={content}
           />
           <a
             className="flex items-center"
@@ -225,14 +225,12 @@ export const getServerSideProps = async ({ params, res }) => {
     )
     .then((res) => res.data);
 
-  const markdown = await Markdown({ post: { content: content } }, true);
-
   return {
     props: {
       data,
       applications,
       groups,
-      markdown,
+      content,
       network,
       params,
     },

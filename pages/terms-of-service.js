@@ -2,8 +2,8 @@ import { getPostBySlug } from "../lib/lib";
 import PageWithIndex from "../components/PageWithIndex";
 import Markdown from "../components/Markdown";
 
-export default function Post({ post, markdown, search }) {
-  return <PageWithIndex post={post} markdown={markdown} search={search} />;
+export default function Post({ post, search }) {
+  return <PageWithIndex post={post} search={search} />;
 }
 
 export async function getStaticProps() {
@@ -13,9 +13,7 @@ export async function getStaticProps() {
     "/"
   );
 
-  const markdown = await Markdown({ post });
-
   return {
-    props: { post, markdown },
+    props: { post },
   };
 }

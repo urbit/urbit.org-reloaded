@@ -11,7 +11,7 @@ import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
 import GettingStartedTree from "../../cache/getting-started.json";
 
-export default function UsingLayout({ posts, data, params, search, markdown }) {
+export default function UsingLayout({ posts, data, params, search, content }) {
   const router = useRouter();
 
   const select = (href) => {
@@ -87,9 +87,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
           disableToC
         >
           <div className="markdown">
-            <article
-              dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-            ></article>
+            <Markdown post={{ content: content }} />
           </div>
           {!params?.slug && <LaunchCards />}
         </ContentArea>
@@ -293,9 +291,7 @@ export async function getStaticProps({ params }) {
     )
   );
 
-  const markdown = await Markdown({ post: { content: content } });
-
-  return { props: { posts, data, markdown, params } };
+  return { props: { posts, data, content, params } };
 }
 
 export async function getStaticPaths() {

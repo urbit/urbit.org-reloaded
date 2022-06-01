@@ -7,14 +7,13 @@ import Container from "../../components/Container";
 import SingleColumn from "../../components/SingleColumn";
 import Section from "../../components/Section";
 import ob from "urbit-ob";
-import Markdown from "../../components/Markdown";
 import GatewayHeader from "../../components/gateway/GatewayHeader";
 import Gateway404 from "../../components/gateway/Gateway404";
 import MetadataBlock from "../../components/gateway/MetadataBlock";
 import MetadataLink from "../../components/gateway/MetadataLink";
 import Description from "../../components/gateway/Description";
 
-const ApplicationPage = ({ data, markdown, params }) => {
+const ApplicationPage = ({ data, content, params }) => {
   const { application } = params;
   if (!ob.isValidPatp(application[0])) {
     return <Gateway404 type="application" />;
@@ -95,7 +94,7 @@ const ApplicationPage = ({ data, markdown, params }) => {
           <Description
             description={data.description}
             fallback="An application on Urbit."
-            markdown={markdown}
+            markdown={content}
           />
           <hr className="text-wall-200" />
           <div className="flex flex-col space-y-6">
@@ -153,12 +152,10 @@ export const getServerSideProps = async ({ params, res }) => {
     };
   }
 
-  const markdown = await Markdown({ post: { content: content } }, true);
-
   return {
     props: {
       data,
-      markdown,
+      content,
       params,
     },
   };

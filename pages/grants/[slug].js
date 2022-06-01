@@ -109,7 +109,7 @@ export default function Grant({ post, markdown, search }) {
           </div>
         </Section>
         <Section narrow className="markdown">
-          <article dangerouslySetInnerHTML={{ __html: decode(markdown) }} />
+          <Markdown post={post} />
         </Section>
         {canApply && (
           <a
@@ -134,10 +134,8 @@ export async function getStaticProps({ params }) {
     "grants"
   );
 
-  const markdown = await Markdown({ post });
-
   return {
-    props: { post, markdown },
+    props: { post },
   };
 }
 

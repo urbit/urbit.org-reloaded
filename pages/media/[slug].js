@@ -19,7 +19,7 @@ import Section from "../../components/Section";
 
 import { decode } from "html-entities";
 
-export default function MediaPage({ post, markdown, search }) {
+export default function MediaPage({ post, search }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
@@ -73,10 +73,7 @@ export default function MediaPage({ post, markdown, search }) {
           ) : null}
         </Section>
         <Section narrow className="markdown">
-          <article
-            className="pt-12 w-full"
-            dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-          ></article>
+          <Markdown post={post} />
         </Section>
         <Section narrow>
           <Contact />
@@ -95,10 +92,8 @@ export async function getStaticProps({ params }) {
     "media"
   );
 
-  const markdown = await Markdown({ post });
-
   return {
-    props: { post, markdown },
+    props: { post },
   };
 }
 

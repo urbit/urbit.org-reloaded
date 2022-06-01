@@ -66,7 +66,7 @@ export default function UnderstandingLayout({
   data,
   params,
   search,
-  markdown,
+  content,
   previousPost,
   nextPost,
 }) {
@@ -105,9 +105,7 @@ export default function UnderstandingLayout({
           params={params}
         >
           <div className="markdown">
-            <article
-              dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-            ></article>
+            <Markdown post={{ content: content }} />
           </div>
           <div className="flex justify-between mt-16">
             {previousPost === null ? (
@@ -172,9 +170,7 @@ export async function getStaticProps({ params }) {
       "weight"
     ) || null;
 
-  const markdown = await Markdown({ post: { content: content } });
-
-  return { props: { posts, data, markdown, params, previousPost, nextPost } };
+  return { props: { posts, data, content, params, previousPost, nextPost } };
 }
 
 export async function getStaticPaths() {
