@@ -21,6 +21,6 @@ export async function getStaticProps() {
   );
 
   return {
-    props: { post, markdown },
+    props: { post },
   };
 }

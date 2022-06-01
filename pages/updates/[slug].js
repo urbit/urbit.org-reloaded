@@ -20,13 +20,7 @@ import Contact from "../../components/Contact";
 
 import { decode } from "html-entities";
 
-export default function Post({
-  post,
-  nextPost,
-  previousPost,
-  markdown,
-  search,
-}) {
+export default function Post({ post, nextPost, previousPost, search }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;

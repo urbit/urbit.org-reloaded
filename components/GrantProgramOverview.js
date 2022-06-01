@@ -11,6 +11,7 @@ import SingleColumn from "./SingleColumn";
 import Section from "./Section";
 import { decode } from "html-entities";
 import { DateTime } from "luxon";
+import Markdown from "./Markdown";
 
 export default function GrantProgramOverview({
   post,

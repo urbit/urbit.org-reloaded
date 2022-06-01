@@ -1,7 +1,7 @@
 import { getPostBySlug } from "../lib/lib";
 import BasicPage from "../components/BasicPage";
 
-export default function Post({ post, markdown, search }) {
+export default function Post({ post, search }) {
   return <BasicPage post={post} search={search} />;
 }
 

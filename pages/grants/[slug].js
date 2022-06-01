@@ -21,7 +21,7 @@ import ob from "urbit-ob";
 import Section from "../../components/Section";
 import { DateTime } from "luxon";
 
-export default function Grant({ post, markdown, search }) {
+export default function Grant({ post, search }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;

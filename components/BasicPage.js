@@ -10,7 +10,7 @@ import Section from "./Section";
 import { decode } from "html-entities";
 import Markdown from "./Markdown";
 
-export default function BasicPage({ post, markdown, search }) {
+export default function BasicPage({ post, search }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;

@@ -32,13 +32,7 @@ import {
 import { decode } from "html-entities";
 import { eventKeys } from "../../lib/constants";
 
-export default function Event({
-  event,
-  nextEvent,
-  previousEvent,
-  markdown,
-  search,
-}) {
+export default function Event({ event, nextEvent, previousEvent, search }) {
   const starts = generateDisplayDate(event.starts, event.timezone);
   const ends = generateDisplayDate(event.ends, event.timezone);
 

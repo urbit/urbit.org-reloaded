@@ -22,13 +22,7 @@ import TwoUp from "../../components/TwoUp";
 import { decode } from "html-entities";
 import Markdown from "../../components/Markdown";
 
-export default function Post({
-  post,
-  nextPost,
-  previousPost,
-  markdown,
-  search,
-}) {
+export default function Post({ post, nextPost, previousPost, search }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;

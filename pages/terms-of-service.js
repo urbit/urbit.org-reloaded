@@ -1,6 +1,5 @@
 import { getPostBySlug } from "../lib/lib";
 import PageWithIndex from "../components/PageWithIndex";
-import Markdown from "../components/Markdown";
 
 export default function Post({ post, search }) {
   return <PageWithIndex post={post} search={search} />;
