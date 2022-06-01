@@ -7,10 +7,9 @@ tag = "additional"
 
 If you're a power user, you can run the Urbit virtual machine directly using the command line. Choose the code for your operating system and run the commands in your terminal.
 
-<div id="os" class="os">
-  <input type="radio" id="macos" name="os" checked>
-  <label for="macos">MacOS</label>
-  <div class="tab">
+{% tabs %}
+
+{% tab label="MacOS" %}
 
 ```bash
 mkdir ~/urbit
@@ -20,11 +19,9 @@ tar zxvf ./darwin.tgz --strip=1
 ~/urbit/urbit
 ```
 
-  </div>
+{% /tab %}
 
-  <input type="radio" id="linux" name="os">
-  <label for="linux">Linux</label>
-  <div class="tab">
+{% tab label="Linux" %}
 
 ```shell
 mkdir ~/urbit
@@ -41,11 +38,9 @@ sudo apt-get install libcap2-bin
 sudo setcap 'cap_net_bind_service=+ep' ~/urbit/urbit
 ```
 
-</div>
+{% /tab %}
 
-  <input type="radio" id="windows" name="os">
-  <label for="windows">Windows</label>
-  <div class="tab">
+{% tab label="Windows" %}
 
 ```winbatch
 mkdir %USERPROFILE%\urbit
@@ -57,8 +52,9 @@ tar zxvf .\windows.tgz --strip=1
 
 > Windows 10 build 17063 and later includes the familiar `curl` and `tar` command-line tools.
 
-</div>
-</div>
+{% /tab %}
+
+{% /tabs %}
 
 If successful, you will see a block of output beginning with the line:
 
@@ -162,40 +158,3 @@ You can continue using this comet indefinitely. There are currently few differen
 A comet also comes with a long and fairly unmemorable name whereas a planet has a short name and a "sigil" (avatar) associated with it that makes it more identifiable on the network. You may notice all this within the first few minutes of using Urbit.
 
 [For details of how to purchase a planet, visit this page](/getting-started/get-planet).
-
-<style>
-  .os {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .os label {
-    order: -1;
-    padding: .5rem;
-    min-width: 70px;
-    text-align: center;
-    cursor: pointer;
-  }
-  .os input[type="radio"] {
-    display: none;
-  }
-  .os .tab {
-    display: none;
-    margin-top: 1rem;
-    width: 100%;
-    max-width: 100%;
-  }
-  .os .tab p:first-child {
-    margin-top: 0;
-  }
-  .os .tab p:last-child {
-    margin-bottom: 0;
-  }
-  .os input[type='radio']:checked + label {
-    font-weight: bold;
-    background-color: rgba(244,243,241,1);
-    border-radius: 0.5em;
-  }
-  .os input[type='radio']:checked + label + .tab {
-    display: block;
-}
-</style>

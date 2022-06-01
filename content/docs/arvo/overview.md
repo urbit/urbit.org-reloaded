@@ -383,9 +383,7 @@ activates the vane it will have this context as its subject.
 This cycle of `%pass`ing a `note` to `%pass`ing a `task` to `%give`ing a `gift`
 to `%give`ing a `%sign` is summarized in the following diagram:
 
-<div style="text-align:center">
-<img class="mv5 w-150" src="https://media.urbit.org/docs/arvo/cycle.png">
-</div>
+![](https://media.urbit.org/docs/arvo/cycle.png)
 
 Note that `%pass`ing a `note` doesn't _always_ result in a return - this diagram
 just

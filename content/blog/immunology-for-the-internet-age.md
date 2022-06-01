@@ -13,10 +13,10 @@ conference on “The Decentralization of Power”](https://www.mtaconf.org/)._
 
 **✿**
 
-IN THE BEGINNING, *God created the prokaryotes. And the
+IN THE BEGINNING, _God created the prokaryotes. And the
 prokaryotes were without nucleus and organelle; and structural
 simplicity was upon the face of the deep. And chemotaxis moved it upon
-the face of the waters.*
+the face of the waters._
 
 A single-celled organism possesses many advantages, notably simplicity
 of form. Being largely indistinguishable, they have no differentiation
@@ -120,7 +120,7 @@ apex predators---at best, sheepdogs with a strong strain of wolfishness;
 at worst, tar pits manned by various bad-faith actors. The pre-Web
 cypherpunks were right: "Privacy is the power to selectively reveal
 oneself to the world."[^9] If anything, they were too narrow; not only
-their valued "open society" (polyvalent crypto-anarchy) but *any*
+their valued "open society" (polyvalent crypto-anarchy) but _any_
 non-megacorp society at all requires true privacy.
 
 What cyberspace (and human culture writ broadly) needed was an immune
@@ -156,7 +156,7 @@ sensibilities enjoy the sanction of megacorp sociality. There is
 essentially no native culture left, only that forged in the enterprise
 brand management office.[^10]
 
-In an immune system, *surface barriers* are designed to make it hard for
+In an immune system, _surface barriers_ are designed to make it hard for
 exogenous agents to enter a cell or organism; in our analogy, the
 primary surface barrier was the match of physical separation to
 psychological separation. Surface barriers were rendered finally
@@ -164,9 +164,9 @@ obsolete by the launch of the World Wide Web and its subsequent
 infiltration of every aspect of human culture. To the extent they exist
 today, it is a matter of ignorance, self-discipline, or happy accident.
 
-The *innate immune system* responds non-specifically to pathogens. Any
-immune system must have a way of deciding what is *me* and what is
-*not-me*. Framed as an identity problem in a zero-trust environment,
+The _innate immune system_ responds non-specifically to pathogens. Any
+immune system must have a way of deciding what is _me_ and what is
+_not-me_. Framed as an identity problem in a zero-trust environment,
 users have evolved several ways to uniquely identify agents without
 reference to legacy systems. Chief among these means is the blockchain,
 introduced by Bitcoin for control and transaction of digital assets and
@@ -177,7 +177,7 @@ platforms.
 Identity is still fluid and polysemous, but in certain key instances it
 is indelibly demonstrable.[^11] The individual actor has the capability
 to express itself with many public faces or none; one of these typically
-enjoys government sanction and liability, but it is no more *real* than
+enjoys government sanction and liability, but it is no more _real_ than
 the others, only more legible to regulation and taxation.[^12]
 
 Another aspect of the innate immune system is the public visibility of
@@ -186,7 +186,7 @@ epistemological grounds (i.e. you have a right to know what code you are
 running) and practical grounds. (Linus's law: "given enough eyeballs,
 all bugs are shallow."[^13])
 
-The *adaptive immune system* responds to specific pathogenic incursions.
+The _adaptive immune system_ responds to specific pathogenic incursions.
 Particular conditions arise, whether through social, regulatory,
 military, or other requirements, which must be met with specialized
 forms that are thereafter in evolutionary competition with the external
@@ -201,7 +201,7 @@ firearms, deviant scientific or political thought[^15], or even the
 DRM-free sharing of copyrighted material can be contained[^16]; the
 experience with export-grade cryptography[^17] has already shown that
 regulatory attempts ultimately fail. The philosophical question is what
-kind of world will evolve (a *fait accompli* driven by factors beyond
+kind of world will evolve (a _fait accompli_ driven by factors beyond
 any individual or office) and the practical question is how any
 particular group of actors can preserve their own agency, autonomy, and
 ambit of action.
@@ -226,7 +226,7 @@ agencies have in place arbitrary investor requirements which would make
 little sense even if pegged to something like inflation or index rather
 than the rapidly-devaluing petrodollar. Nominally put in place to
 protect the naïve from getting scammed, these restrictions have had the
-pernicious effect of pulling up the ladder behind the *actuel riche*.
+pernicious effect of pulling up the ladder behind the _actuel riche_.
 
 DAOs have rapidly evolved as a way of distributing ownership and stake
 in a purely democratic way. (As an aside, the word "democracy" has been
@@ -240,7 +240,7 @@ Decentralized autonomous organizations, zero-knowledge cryptographic
 proofs, cryptocurrencies, proof-of-identity systems, and their
 as-yet-unborn kin represent the evolution of an immune system on top of
 the Darwinian churn of the legacy Internet. The stakes are necessarily
-high: possession is *de facto* ownership, the other end of the stick
+high: possession is _de facto_ ownership, the other end of the stick
 from "not your keys, not your coins" (the old cryptocurrency chestnut).
 The focus is currently on ownership of money, non-fungible tokens, and
 similar assets, but broadly speaking such systems allow the
@@ -287,7 +287,7 @@ cryptographic evidence of its identity gets a vote on the consensus.
 We must consider modern systems to necessarily interact at the pinnacle
 intensity of competence and competition: any differential advantage that
 can be exploited to outcompete an adversary not only can be exploited
-but *should* be. Illegibility, redundancy, and apposite complexity are
+but _should_ be. Illegibility, redundancy, and apposite complexity are
 allies in the immune fight to maintain identity and ownership in the
 modern Internet.[^24] Any system which does not have an operational
 DAO-like layer is immuno­compromised. All tools for the individual and
@@ -331,15 +331,15 @@ been diminishing both by cutting off older forms from the modern world
 and by cultivating only certain state-legible apex predators[^26] and
 their preferred ovine repast.
 
-Contra this monoculture, the *telos* of social computing is to recreate
+Contra this monoculture, the _telos_ of social computing is to recreate
 the village green, not the penitentiary. Revisiting a thesis from above:
 "All tools for the individual and collective need to be architected
-around *using cryptographic proofs to create stable high-trust havens in
-an otherwise* zero-trust adversarial world." The village is a stable,
+around _using cryptographic proofs to create stable high-trust havens in
+an otherwise_ zero-trust adversarial world." The village is a stable,
 long-term tribe well below Dunbar's limit which shares values and assets
 in common, from which a member occasionally ventures out into the
 broader social web but always has a home. Every village will grow its
-own culture, perhaps even its own *cultus*, enabled by decentralized
+own culture, perhaps even its own _cultus_, enabled by decentralized
 technologies to protect their assets and precious peculiarities. The
 World Wide Web has been an extinction-level event for many forms of
 life, livelihood, and culture. For others, it has offered strange forms
@@ -348,174 +348,31 @@ now operational, human endeavor stands on the cusp of a Cambrian
 explosion, unconstrainable by a rent-seeking boardroom-and-bureaucracy
 world that never comprehended the light shining in its darkness.
 
-[^1]: Kaufman, Jim. (2010) ["Evolution and
-    immunity"](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2913256/).
-    *Immunology 130*, iss. 4, pp. 459--462.
-
-[^2]: President Eisenhower's original coinage was likely "the
-    military-industrial-academic complex."
-
-[^3]: E.g., Richard Bellman of the RAND Corporation on the origin of
-    "dynamic programming," a mathematical discipline: in dealing with a
-    recalcitrant secretary of defense who hated the word "research,"
-    Bellman instead chose the word "dynamic" arbitrarily because "it's
-    impossible to use the word 'dynamic' in a pejorative sense. ...It
-    was something not even a Congressman could object to. So I used it
-    as an umbrella for my activities." (Bellman, Richard. (1984) [*Eye
-    of the
-    Hurricane*](https://books.google.ch/books?id=4FwGCwAAQBAJ&lpg=PA159&dq=#v=onepage&q=).)
-
-[^4]: The nuclear triad doctrine, joining the Air Force's Strategic Air
-    Command bombers, the Navy's nuclear submarines, and the Army's ICBMs
-    and other assorted nuclear warheads, was based less on strategic
-    considerations than on appeasing constituent departments of the
-    military. Strategists developed a formal justification decades later
-    in a magnificent demonstration of motivated reasoning. (Woolf, Amy.
-    (2016) "U.S. Strategic Nuclear Forces: Background, Developments, and
-    Issues". [CRS
-    7-5700](https://digital.library.unt.edu/ark:/67531/metadc847627/m2/1/high_res_d/RL33640_2016Mar10.pdf).)
-
-[^5]: The Air Force early commissioned the RAND Corporation on contract
-    with Douglas Aircraft Company as the first "think tank"; RAND soon
-    upended the traditional role of passive reception of studies by
-    making its own recommendations and showing their analytical chops.
-    Other service branches followed suit, such as the U.S. Navy's Center
-    for Naval Analyses and the Battelle Memorial Institute for various
-    federal contracting agencies; compare also the role of the national
-    laboratory system, e.g. Los Alamos, Sandia, Livermore, etc. for the
-    Department of Energy and Department of Defense. (Rich, Michael.
-    (2003) "RAND: How Think Tanks Interact with the Military".
-    [RP-1050](https://www.rand.org/pubs/reprints/RP1050.html).)
-
-[^6]: "On January 18, 1994, the first large-scale deliberate USENET spam
-    occurred. A message with the subject "Global Alert for All: Jesus is
-    Coming Soon" was cross-posted to every available newsgroup."
-    ([Wikipedia, "History of email
-    spam"](https://en.wikipedia.org/wiki/History_of_email_spam))
-
-[^7]: The first instance which seems to have brough this to general
-    public awareness was the submission of Judge Robert Bork's video
-    rental history as evidence in his Supreme Court hearings before the
-    U.S. Senate. The resulting Video Privacy Protection Act was
-    delightfully naïve. Besides relying on "video rental" narrowly
-    construed, users have effectively no leverage against
-    unilaterally-imposed terms of service and end-user license
-    agreements. (See, e.g., [Electronic Privacy Information Center,
-    "Video Privacy Protection
-    Act"](https://archive.epic.org/privacy/vppa/).)
-
-[^8]: E.g. Tumblr and OnlyFans and adult content; Twitter and right-wing
-    content; Youtube and Facebook and unsanctioned medical content, etc.
-    Note that this is regardless of the viability of a given view or the
-    necessity of vigorous debate within a field, but focuses on the
-    palatibility of politics to the megacorp entity providing the
-    platform, even if the content drives platform usage.
-
-[^9]: Hughes, Eric. (1993) [*A Cypherpunk's
-    Manifesto*](https://nakamotoinstitute.org/cypherpunk-manifesto/).
-
-[^10]: The mass shift to remote work from March 2020 onwards due to the
-    COVID-19 pandemic has accelerated the trend of corporate
-    colonization of private spaces. At first, this was occasionally
-    humorous, as when a child ran into the background of a Zoom call, or
-    underwear or private materials were inadvertently left in view of
-    the remote audience. In the end, it demanded that individuals
-    reconfigure their homes to accommodate mass corporate preferences,
-    thus another invasion of private space by the megacorp panopticon.\
-    I note as well an invasive doctrine demanding "truth in
-    communication" under names like ["radical
-    transparency"](https://www.bridgewater.com/principles-and-culture)
-    and ["radical
-    candor"](https://third-bit.com/2018/11/24/afraid-of-change/) put
-    forward by partisans of power over against vulnerable employees,
-    clients, and customers, who may be disproportionately affected by a
-    megacorp demand for one-sided transparency.
-
-[^11]: Several have pointed to the failure of Craig S. Wright to
-    demonstrate cryptographically that he is Satoshi Nakamoto, the
-    pseudonymous inventor of Bitcoin. (C.f. Khaosan, Venzen. (2016)
-    ["Craig Wright is Not Satoshi Nakamoto---The Technical
-    Proof"](https://www.ccn.com/technical-proof-craig-wright-not-satoshi-nakamoto/).)
-
-[^12]: Davidson, Dale, and Rees-Mogg, William. (1999) *The Sovereign
-    Individual: Mastering the Transition to the Information Age*.
-
-[^13]: Raymond, Eric. (1999) [*The Cathedral and the
-    Bazaar*](http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/ar01s04.html).
-
-[^14]: The [Coalition for Content Provenance and
-    Authenticity](https://c2pa.org/) "addresses the prevalence of
-    misleading information online through the development of technical
-    standards for certifying the source and history (or provenance) of
-    media content."
-
-[^15]: Cf. Walker, Shawn, et al. (2019) ["The disinformation landscape
-    and the lockdown of social
-    platforms."](https://www.tandfonline.com/doi/full/10.1080/1369118X.2019.1648536)
-    *Information, Communication & Society 22*, pp. 1531--43. Walker et
-    al. lament that "highly ephemeral mis/disinformation campaigns" are
-    not susceptible of study due to closed platform APIs. "Social media
-    platforms \[attempt\] to rekindle trust by appearing to reinforce
-    individual privacy within a newly secured user community, a set of
-    measures that also locked academic and non-profit researchers out
-    from studying social platforms while preserving corporate and
-    business access to social media users' data." They fail to address
-    the tension between community self-determination and academic
-    exploitation.
-
-[^16]: "If in fact you can't crack \[the encryption\] at all, government
-    can't get in, then everybody is walking around with a Swiss bank
-    account in their pocket -- right? So there has to be some concession
-    to the need to be able to get into that information somehow."
-    ([Barack Obama in March 2016 at
-    SXSW](https://www.businessinsider.com/obama-comments-on-encryption-at-sxsw-2016-3))
-
-[^17]: Heninger, Nadia. (2016) ["The Legacy of Export-Grade Cryptography
-    in the 21^st^
-    Century"](https://publish.illinois.edu/science-of-security-lablet/files/2016/08/10062016-Heninger-Slides.pdf).
-
-[^18]: Chohan, Usman. (2017) ["The Decentralized Autonomous Organization
-    and Governance
-    Issues"](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3082055).
-    Discussion Paper Series: *Notes on the 21^st^ Century*.
-
-[^19]: Lessig, Lawrence. (1999) *Code and Other Laws of Cyberspace*.
-
-[^20]: Hobart, Byrne \~lableg-tadrex. (Nov 17, 2021) ["The Promise and
-    Paradox of
-    Decentralization"](https://urbit.org/blog/2021-11-18-the-promise-and-paradox-of-decentralization).
-    *The Diff*.
-
-[^21]: See, e.g., the Governor Alpha smart contract protocols. Solari,
-    R. (2021) ["The case for Governor
-    Alpha".](https://medium.com/tally-blog/the-case-for-governor-alpha-15c1362d49eb)
-
-[^22]: Robinson, D. (2020) ["Ethereum is a dark
-    forest"](https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest).
-    Paradigm blog.
-
-[^23]: [Uqbar Network](https://uqbar.network/); ["Introducing Uqbar
-    Network"](https://uqbarnetwork.substack.com/p/introducing-uqbar-network);
-    \~hocwyn-tipwex/uqbar-event-horizon (Urbit group)
-
-[^24]: This is not to deny the benefits of system-legibility, in
-    particular legal protections. As common law develops around DAOs, I
-    hope for similar affordances where they must interact with the
-    legacy legal system.
-
-[^25]: Originally this list included Discord, as there has been
-    substantial growth in stable goal-oriented communities thereon.
-    However, more recently the company [adopted a user
-    policy](https://discord.com/blog/addressing-harmful-off-platform-behavior)
-    which subjects use of their product to judgment calls about
-    "off-platform behavior"---a clear violation of a cypherpunk ethos
-    which Discord likely never espoused anyway.
-
-[^26]: E.g., Auerbach, David. (Mar 3, 2022) ["The metaverse will steal
-    your
-    identity"](https://unherd.com/2022/03/the-metaverse-will-steal-your-identity/).
-    *UnHerd*. Auerbach correctly recognizes and decries the looming
-    "monetisation of identity" which will allow any platform controller
-    to incentivize prosocial or antisocial behaviors at will.
-
 _The header image is [Volvox sp. microscopic algae](https://www.flickr.com/photos/picksfromoutthere/35891780782/in/photolist-WFCKYA-XPdGLq-2k9Cew6-ViCgrB-23QUBQR-21rF362-CCSE2n-23AwZ7m-CbKedu-gznqa-2dHUv3k-EE8eoq-gznq9-i5zqqk-WYSwcf-XWVgQk-WabAAG-gLjRj-gDcLp-4VvECm-259cDCS-i5zqRk-25cV246-i5yNvM-gupiMJ-PXLbhr-LUACZ7-ihvxSH-ihvvVg-ihwjbF-ihvxDX-i5yQDd-ihzQwK-fWwpxb-rarKrm-8LWTQf-qVar5j-ihzAPA-JNrgyK-ihzBrC-ca6Ex9-2kCTSrj-ihz67k-qfJsYd-248ePDL-ihztbm-ihzuyS-LQYZQq-2kCTRxL-ihvWPA) by Picturepest on Flickr._
+
+[^1]: Kaufman, Jim. (2010) ["Evolution and immunity"](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2913256/). _Immunology 130_, iss. 4, pp. 459--462.
+[^2]: President Eisenhower's original coinage was likely "the military-industrial-academic complex."
+[^3]: E.g., Richard Bellman of the RAND Corporation on the origin of "dynamic programming," a mathematical discipline: in dealing with a recalcitrant secretary of defense who hated the word "research," Bellman instead chose the word "dynamic" arbitrarily because "it's impossible to use the word 'dynamic' in a pejorative sense. ...It was something not even a Congressman could object to. So I used it as an umbrella for my activities." (Bellman, Richard. (1984) [_Eye of the Hurricane_](https://books.google.ch/books?id=4FwGCwAAQBAJ&lpg=PA159&dq=#v=onepage&q=).)
+[^4]: The nuclear triad doctrine, joining the Air Force's Strategic Air Command bombers, the Navy's nuclear submarines, and the Army's ICBMs and other assorted nuclear warheads, was based less on strategic considerations than on appeasing constituent departments of the military. Strategists developed a formal justification decades later in a magnificent demonstration of motivated reasoning. (Woolf, Amy. (2016) "U.S. Strategic Nuclear Forces: Background, Developments, and Issues". [CRS 7-5700](https://digital.library.unt.edu/ark:/67531/metadc847627/m2/1/high_res_d/RL33640_2016Mar10.pdf).)
+[^5]: The Air Force early commissioned the RAND Corporation on contract with Douglas Aircraft Company as the first "think tank"; RAND soon upended the traditional role of passive reception of studies by making its own recommendations and showing their analytical chops. Other service branches followed suit, such as the U.S. Navy's Center for Naval Analyses and the Battelle Memorial Institute for various federal contracting agencies; compare also the role of the national laboratory system, e.g. Los Alamos, Sandia, Livermore, etc. for the Department of Energy and Department of Defense. (Rich, Michael. (2003) "RAND: How Think Tanks Interact with the Military". [RP-1050](https://www.rand.org/pubs/reprints/RP1050.html).)
+[^6]: "On January 18, 1994, the first large-scale deliberate USENET spam occurred. A message with the subject "Global Alert for All: Jesus is Coming Soon" was cross-posted to every available newsgroup." ([Wikipedia, "History of email spam"](https://en.wikipedia.org/wiki/History_of_email_spam))
+[^7]: The first instance which seems to have brough this to general public awareness was the submission of Judge Robert Bork's video rental history as evidence in his Supreme Court hearings before the U.S. Senate. The resulting Video Privacy Protection Act was delightfully naïve. Besides relying on "video rental" narrowly construed, users have effectively no leverage against unilaterally-imposed terms of service and end-user license agreements. (See, e.g., [Electronic Privacy Information Center, "Video Privacy Protection Act"](https://archive.epic.org/privacy/vppa/).)
+[^8]: E.g. Tumblr and OnlyFans and adult content; Twitter and right-wing content; Youtube and Facebook and unsanctioned medical content, etc. Note that this is regardless of the viability of a given view or the necessity of vigorous debate within a field, but focuses on the palatibility of politics to the megacorp entity providing the platform, even if the content drives platform usage.
+[^9]: Hughes, Eric. (1993) [_A Cypherpunk's Manifesto_](https://nakamotoinstitute.org/cypherpunk-manifesto/).
+[^10]: The mass shift to remote work from March 2020 onwards due to the COVID-19 pandemic has accelerated the trend of corporate colonization of private spaces. At first, this was occasionally humorous, as when a child ran into the background of a Zoom call, or underwear or private materials were inadvertently left in view of the remote audience. In the end, it demanded that individuals reconfigure their homes to accommodate mass corporate preferences, thus another invasion of private space by the megacorp panopticon.\ I note as well an invasive doctrine demanding "truth in communication" under names like ["radical transparency"](https://www.bridgewater.com/principles-and-culture) and ["radical candor"](https://third-bit.com/2018/11/24/afraid-of-change/) put forward by partisans of power over against vulnerable employees, clients, and customers, who may be disproportionately affected by a megacorp demand for one-sided transparency.
+[^11]: Several have pointed to the failure of Craig S. Wright to demonstrate cryptographically that he is Satoshi Nakamoto, the pseudonymous inventor of Bitcoin. (C.f. Khaosan, Venzen. (2016) ["Craig Wright is Not Satoshi Nakamoto---The Technical Proof"](https://www.ccn.com/technical-proof-craig-wright-not-satoshi-nakamoto/).)
+[^12]: Davidson, Dale, and Rees-Mogg, William. (1999) _The Sovereign Individual: Mastering the Transition to the Information Age_.
+[^13]: Raymond, Eric. (1999) [_The Cathedral and the Bazaar_](http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/ar01s04.html).
+[^14]: The [Coalition for Content Provenance and Authenticity](https://c2pa.org/) "addresses the prevalence of misleading information online through the development of technical standards for certifying the source and history (or provenance) of media content."
+[^15]: Cf. Walker, Shawn, et al. (2019) ["The disinformation landscape and the lockdown of social platforms."](https://www.tandfonline.com/doi/full/10.1080/1369118X.2019.1648536) _Information, Communication & Society 22_, pp. 1531--43. Walker et al. lament that "highly ephemeral mis/disinformation campaigns" are not susceptible of study due to closed platform APIs. "Social media platforms \[attempt\] to rekindle trust by appearing to reinforce individual privacy within a newly secured user community, a set of measures that also locked academic and non-profit researchers out from studying social platforms while preserving corporate and business access to social media users' data." They fail to address the tension between community self-determination and academic exploitation.
+[^16]: "If in fact you can't crack \[the encryption\] at all, government can't get in, then everybody is walking around with a Swiss bank account in their pocket -- right? So there has to be some concession to the need to be able to get into that information somehow." ([Barack Obama in March 2016 at SXSW](https://www.businessinsider.com/obama-comments-on-encryption-at-sxsw-2016-3))
+[^17]: Heninger, Nadia. (2016) ["The Legacy of Export-Grade Cryptography in the 21^st^ Century"](https://publish.illinois.edu/science-of-security-lablet/files/2016/08/10062016-Heninger-Slides.pdf).
+[^18]: Chohan, Usman. (2017) ["The Decentralized Autonomous Organization and Governance Issues"](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3082055). Discussion Paper Series: _Notes on the 21^st^ Century_.
+[^19]: Lessig, Lawrence. (1999) _Code and Other Laws of Cyberspace_.
+[^20]: Hobart, Byrne \~lableg-tadrex. (Nov 17, 2021) ["The Promise and Paradox of Decentralization"](https://urbit.org/blog/2021-11-18-the-promise-and-paradox-of-decentralization). _The Diff_.
+[^21]: See, e.g., the Governor Alpha smart contract protocols. Solari, R. (2021) ["The case for Governor Alpha".](https://medium.com/tally-blog/the-case-for-governor-alpha-15c1362d49eb)
+[^22]: Robinson, D. (2020) ["Ethereum is a dark forest"](https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest). Paradigm blog.
+[^23]: [Uqbar Network](https://uqbar.network/); ["Introducing Uqbar Network"](https://uqbarnetwork.substack.com/p/introducing-uqbar-network); \~hocwyn-tipwex/uqbar-event-horizon (Urbit group)
+[^24]: This is not to deny the benefits of system-legibility, in particular legal protections. As common law develops around DAOs, I hope for similar affordances where they must interact with the legacy legal system.
+[^25]: Originally this list included Discord, as there has been substantial growth in stable goal-oriented communities thereon. However, more recently the company [adopted a user policy](https://discord.com/blog/addressing-harmful-off-platform-behavior) which subjects use of their product to judgment calls about "off-platform behavior"---a clear violation of a cypherpunk ethos which Discord likely never espoused anyway.
+[^26]: E.g., Auerbach, David. (Mar 3, 2022) ["The metaverse will steal your identity"](https://unherd.com/2022/03/the-metaverse-will-steal-your-identity/). _UnHerd_. Auerbach correctly recognizes and decries the looming "monetisation of identity" which will allow any platform controller to incentivize prosocial or antisocial behaviors at will.
