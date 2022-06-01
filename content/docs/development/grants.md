@@ -16,7 +16,7 @@ If you're curious about grants, join the conversation in Landscape at
 `~wolref-podlex/foundation` or book some time to [talk with
 us](https://calendly.com/wolref/30min).
 
-### Bounties {#bounties}
+### Bounties {% #bounties %}
 
 [Bounties](https://grants.urbit.org/bounties) are specific, tightly-scoped
 pieces of work that we at the Urbit Foundation think are of high value to the
@@ -26,7 +26,7 @@ relate to marketing, community-building or technical writing.
 Bounties are usually competitive&mdash;worker requests should provide plenty of
 information about why the requester is right candidate for the job.
 
-### Proposals {#proposals}
+### Proposals {% #proposals %}
 
 Where Bounties are put forward by the Foundation,
 [Proposals](https://grants.urbit.org/proposals) come from the community. These
@@ -54,7 +54,7 @@ obvious that a lot of thought has gone into the idea.
 If you've got an idea and want some help turning it into a proposal, book some
 time with us [here](https://calendly.com/wolref/30min).
 
-### Scholarships {#scholarships}
+### Scholarships {% #scholarships %}
 
 Scholarships are the newest addition to the grants program that pairs
 contributors with core Urbit developers to tackle infrastructure projects. These
@@ -71,7 +71,7 @@ New scholarships are posted within the Foundation group in Landscape
 (`~wolref-podlex/foundation`), and you can sign up for the waitlist using [this
 form](https://airtable.com/shr6Xmo55h8dZ0O46).
 
-### Gifts {#gifts}
+### Gifts {% #gifts %}
 
 Not every contribution is made with a plan or according to a specification.
 Sometimes people just fix issues, help newcomers, or promote the project because

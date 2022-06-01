@@ -264,7 +264,7 @@ therefore possible to use Hoon as a typeless language.
 
 ---
 
-## `.=` "dottis" {#dottis}
+## `.=` "dottis" {% #dottis %}
 
 Test for equality with Nock `5`.
 

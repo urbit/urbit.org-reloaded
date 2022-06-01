@@ -285,7 +285,7 @@ arguments that aren't in the cells.
 42
 ```
 
-### `%ask` generators {#ask}
+### `%ask` generators {% #ask %}
 
 We use the `%ask` generator when we want to create an interactive program
 that prompts for inputs as it runs, rather than expecting arguments to be passed

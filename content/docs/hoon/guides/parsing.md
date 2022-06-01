@@ -11,7 +11,7 @@ how it is implemented in Hoon.
 
 **Note:** For JSON printing/parsing and encoding/decoding, see the [JSON Guide](/docs/hoon/guides/json-guide).
 
-## What is parsing? {#what-is-parsing}
+## What is parsing? {% #what-is-parsing %}
 
 A program which takes a raw sequence of characters as an input and produces a data
 structure as an output is known as a _parser_. The data structure produced
@@ -352,7 +352,7 @@ surrounded on both sides by text that matches a pair of `rule`s, which is discar
 ASCII glyphs have counterparts of this sort, documented
 [here](/docs/hoon/reference/stdlib/4h).
 
-### [`+star`](/docs/hoon/reference/stdlib/4f/#star) {#star}
+### [`+star`](/docs/hoon/reference/stdlib/4f/#star) {% #star %}
 
 `+star` is used to apply a `rule` repeatedly. Recall that `+just` only parses
 the first character in the input `tape.`
@@ -395,7 +395,6 @@ it returns the following letter `b` as the result.
 ((cook |=(a=@ `@t`+(a)) (just 'a')) [[1 1] "abc"])
 [p=[p=1 q=2] q=[~ u=[p='b' q=[p=[p=1 q=2] q="bc"]]]]
 ```
-
 
 ## Parser combinators
 
@@ -453,7 +452,7 @@ syntax error
 ['a' 'b' 'a']
 ```
 
-### [`;~`](/docs/hoon/reference/rune/mic/#-micsig) {#micsig}
+### [`;~`](/docs/hoon/reference/rune/mic/#-micsig) {% #micsig %}
 
 Understanding the rune `;~` is essential to building parsers with Hoon. Let's
 take this opportunity to think about it carefully.
@@ -524,6 +523,7 @@ Naively attempting to write a recursive `rule`, i.e. like
 ```
 
 results in an error:
+
 ```
 -find.,.+6
 -find.,.+6

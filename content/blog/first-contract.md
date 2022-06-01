@@ -40,7 +40,7 @@ time, and how sponsorship works. Put another way, the data and database format
 must remain the same, but the rules by which we interact with it may change
 according to the governance rules we [detail below](#senate).
 
-## Changelist {#changelist}
+## Changelist {% #changelist %}
 
 The Galactic Senate is voting on the following changes to Ecliptic:
 
@@ -106,7 +106,7 @@ yourself), its configured proxies, networking keys and claims are cleared during
 transfer. As such, Ecliptic will need to know about the address of the new
 Claims contract.
 
-## Urbit Governance {#senate}
+## Urbit Governance {% #senate %}
 
 ![geology](https://media.urbit.org/site/posts/essays/b1.jpg)
 

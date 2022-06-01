@@ -221,7 +221,7 @@ Thus a message-level ack must be received before the next message on the flow
 can begin. The full story is more complicated than this; see the section on
 [flows](#flows).
 
-#### Nacks {#nacks}
+#### Nacks {% #nacks %}
 
 A nack indicates a negative acknowledgement to a `%plea`, meaning that the
 requested action was not performed.

@@ -17,7 +17,7 @@ There are a few ways to get your own planet:
 - Purchasing a planet, including hosting, from a hosting provider
 - Manually setting up and hosting a planet purchased from a third party marketplace
 
-### Hosting Providers {#hosting-providers}
+### Hosting Providers {% #hosting-providers %}
 
 Hosting providers will often sell you a planet and run it for you. This option is very simple but will probably cost a regular fee.
 

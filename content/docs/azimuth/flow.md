@@ -27,17 +27,18 @@ following sections outline what each component is responsible for and how it
 communicates with the others.
 
 The Gall agents involved with Azimuth are summarized as follows:
- - [`%azimuth`](#azimuth) - obtains and holds PKI state.
- - [`%azimuth-rpc`](#azimuth-rpc) - JSON RPC-API for `%azimuth`.
- - [`%eth-watcher`](#eth-watcher) - Ethereum event log collector.
- - [`%roller`](#roller) - submits batches of L2 transactions to Ethereum.
- - [`%roller-rpc`](#roller-rpc) - JSON RPC-API for `%roller`.
- 
+
+- [`%azimuth`](#azimuth) - obtains and holds PKI state.
+- [`%azimuth-rpc`](#azimuth-rpc) - JSON RPC-API for `%azimuth`.
+- [`%eth-watcher`](#eth-watcher) - Ethereum event log collector.
+- [`%roller`](#roller) - submits batches of L2 transactions to Ethereum.
+- [`%roller-rpc`](#roller-rpc) - JSON RPC-API for `%roller`.
+
 The transaction processing library is [`/lib/naive.hoon`](#naive).
- 
+
 ### Gall agents
 
-#### `%azimuth` {#azimuth}
+#### `%azimuth` {% #azimuth %}
 
 `%azimuth`, located at `/app/azimuth.hoon`, is a Gall agent and thread handler
 responsible for finding Azimuth transactions gathered by `%eth-watcher`,
@@ -79,12 +80,12 @@ Scries can be inferred from the `+on-peek` arm:
   ==
 ```
 
-#### `%azimuth-rpc` {#azimuth-rpc}
+#### `%azimuth-rpc` {% #azimuth-rpc %}
 
 `%azimuth-rpc`, located at `app/azimuth-rpc.hoon`, is a JSON RPC-API for getting
 `point` and `dns` data from the Azimuth PKI state kept by `%azimuth`.
 
-#### `%eth-watcher` {#eth-watcher}
+#### `%eth-watcher` {% #eth-watcher %}
 
 `%eth-watcher`, located at `/app/eth-watcher.hoon`, is responsible for listening
 to an Ethereum node and collecting event logs from it. It is general-purpose and
@@ -94,11 +95,11 @@ not particular to Azimuth. It sends collected transactions to `+on-agent` in
 
 [![Eth-watcher](https://media.urbit.org/docs/layer2/roller-agents.png)](https://media.urbit.org/docs/layer2/roller-agents.png)
 
-#### `%roller` {#roller}
+#### `%roller` {% #roller %}
 
 `%roller`, stored at `/app/roller.hoon`, is a Gall agent responsible for
 collecting and submitting batches of layer 2 transactions to the Ethereum
-blockchain.  Among other things, it keeps
+blockchain. Among other things, it keeps
 track of a list of pending transactions to be sent, transactions it has sent
 that are awaiting confirmation, history of transactions sent organized by
 Ethereum address, and when the next batch of transactions will be sent. See also
@@ -152,7 +153,7 @@ does not keep any state - its only purpose is to act as an intermediary between
 Bridge and `%roller`. See [here](/docs/azimuth/l2/layer2-api) for more
 information on the JSON RPC-API.
 
-### `naive.hoon` {#naive}
+### `naive.hoon` {% #naive %}
 
 `/lib/naive.hoon` consists of a gate whose sample is a `verifier`, `chain-id=@ud`,
 `state`, and `input`, which outputs a cell of `[effects state]`. This is the
@@ -229,4 +230,3 @@ standard](https://eips.ethereum.org/EIPS/eip-721).
 
 `dns` is a list of DNS entries by which galaxy IP addresses may be looked up. At
 present, this is always `~['urbit.org' 'urbit.org' 'urbit.org']`.
-

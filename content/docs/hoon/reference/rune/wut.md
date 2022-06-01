@@ -229,7 +229,7 @@ A missing case will throw the `mint-lost` error. An extra case will throw
 
 ---
 
-## `?:` "wutcol" {#wutcol}
+## `?:` "wutcol" {% #wutcol %}
 
 Branch on a boolean test.
 

@@ -63,7 +63,8 @@ In order to see messages in `:chat-cli` you may need to do the following in Dojo
 ```
 :chat-cli %connect
 ```
- ### Creating and managing chats {#chat-management}
+
+### Creating and managing chats {% #chat-management %}
 
 As mentioned before, any urbit can host any number of chats. Existing chats can be deleted or modified with various commands. All commands in this section should be sent from the `chat-cli>` prompt.
 
@@ -72,6 +73,7 @@ As mentioned before, any urbit can host any number of chats. Existing chats can 
 Syntax: `;create [type] /name +`, where `+` represents an optional glyph.
 
 Creates and joins a chat, where `[type]` is any of the following:
+
 - `channel`: public chat. Has a blacklist for write control.
 - `village`: invite-only chat.
 - `journal`: publicly readable, invite-only for writing.
@@ -191,7 +193,6 @@ There are a few special-purpose "glyphs":
 
 - `|` - Informational messages
 - `*` - Posts to a target you don't have a glyph binding for
-
 
 ### Configuration
 

@@ -66,7 +66,7 @@ If successful, you will see a block of output beginning with the line:
 Urbit: a personal server operating function
 ```
 
-### Booting a free identity {#comet}
+### Booting a free identity {% #comet %}
 
 There are two parts to Urbit: an **ID** and an **Operating System**.
 
@@ -134,7 +134,7 @@ At the moment, the most common way to use Urbit is by launching apps like Groups
 
 ## Next Steps
 
-### Updating your comet {#updating}
+### Updating your comet {% #updating %}
 
 Urbit comes with a recent release of the Urbit OS, but automatic updates of the `%base` desk (which contains the kernel of the OS) are not enabled by default for Comets. Many comets are used only once and thrown away, so it would be wasteful to update every single comet as soon as it boots. If you plan to use your comet for more than a quick test, you'll probably want to ensure you're running the latest version of the OS.
 
@@ -147,7 +147,7 @@ kiln: activated install into %base from [~samzod %kids]
 kiln: downloading update for %base from [~samzod %kids]
 ```
 
-### Read More about the Dojo {#the-dojo}
+### Read More about the Dojo {% #the-dojo %}
 
 The dojo is Urbit's command line. You can use it to control your ship, or to execute arbitrary code. Check out the links below for more information.
 
@@ -155,7 +155,7 @@ The dojo is Urbit's command line. You can use it to control your ship, or to exe
 - [Basic Hoon](/docs/tutorials/hoon/hoon-school/setup)
 - [Glossary Entry](/docs/glossary/dojo)
 
-### Purchase a Permanent Identity {#boot-your-planet}
+### Purchase a Permanent Identity {% #boot-your-planet %}
 
 You can continue using this comet indefinitely. There are currently few differences between using a comet-level identity and a planet-level one. However, some groups will not allow comets entry in order to maintain a certain level of quality, and changes may be made in the future that further devalue comets. They will always, however, be able to access the basic functions of the network.
 

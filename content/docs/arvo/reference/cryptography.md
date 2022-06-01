@@ -20,7 +20,7 @@ library reference.
 [`+ed:crypto`](#ed), [`+aes:crypto`](#aes), and [`+crub:crypto`](#crub), with
 the latter being the only one which is implemented as an [`+acru:ames`](/docs/arvo/ames/cryptography#crypto-core)-shaped core.
 
-## `+crub:crypto` {#crub}
+## `+crub:crypto` {% #crub %}
 
 `+crub:crypto` implements an
 [`+acru:ames`](/docs/arvo/ames/cryptography#crypto-core) core that implements
@@ -59,7 +59,7 @@ signed message using `+en:siva:aes` with the symmetric key, and then `+jam`s it.
 
 Crashes if `sek` is null.
 
-### `+sign:as` {#sign-as}
+### `+sign:as` {% #sign-as %}
 
 ```hoon
       ++  sign                                          ::
@@ -122,7 +122,7 @@ Returns null in case of failure.
 
 Same as `+dy`, but crashes in case of failure.
 
-### `+en` {#en}
+### `+en` {% #en %}
 
 ```hoon
     ++  en                                              ::  encrypt
@@ -148,7 +148,7 @@ Returns the concatenation of `sgn.pub` and `cry.pub`.
 
 Returns the concatenation of `sgn.u.sek` and `cry.u.sek`.
 
-### `+pit:nu` {#nu}
+### `+pit:nu` {% #nu %}
 
 ```hoon
       ++  pit                                           ::  create keypair
@@ -187,7 +187,7 @@ if `+sec:ex` is not a `+crub` secret key.
 Takes in a `pass` from a `+pub:ex:crub` and generates a new `+crub` core with
 `pub` taken from `+pub:ex` and null `sek`.
 
-## `+ed:crypto` {#ed}
+## `+ed:crypto` {% #ed %}
 
 This core contains cryptographic primitives and helper functions for elliptic
 curve cryptography with [Curve25519](https://en.wikipedia.org/wiki/Curve25519).
@@ -206,7 +206,7 @@ rather than running in Nock natively. See the [Vere
 documentation](/docs/vere/cryptography#ed) for more information about the
 library utilized by jets.
 
-## `+aes:crypto` {#aes}
+## `+aes:crypto` {% #aes %}
 
 This core contains cryptographic primitives and helper functions for
 [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) symmetric key

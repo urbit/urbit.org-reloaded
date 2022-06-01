@@ -263,7 +263,7 @@ first, and then the gate.
 
 ---
 
-## `%-` "cenhep" {#cenhep}
+## `%-` "cenhep" {% #cenhep %}
 
 Call a gate (function).
 

@@ -403,7 +403,7 @@ the page.
 </html>
 ```
 
-### Subscribe and Unsubscribe {#subscribe}
+### Subscribe and Unsubscribe {% #subscribe %}
 
 For subscribing to a particular path in an agent, the `Urbit` class in `http-api` includes a `subscribe` function.
 The `subscribe` function takes six arguments in a object:
