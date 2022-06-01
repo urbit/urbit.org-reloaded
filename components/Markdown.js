@@ -111,14 +111,13 @@ const tab = {
 const tabs = {
   render: "Tabs",
   attributes: {},
-  children: [],
   transform(node, config) {
     const labels = node
       .transformChildren(config)
       .filter((child) => child && child.name === "Tab")
       .map((tab) => (typeof tab === "object" ? tab.attributes.label : null));
 
-    return new Tag(this.render, { labels }, tabs);
+    return new Tag(this.render, { labels }, node.transformChildren(config));
   },
 };
 
@@ -132,10 +131,10 @@ export default function Markdown({ post }) {
       footnoteItem,
       footnoteRef,
     },
-    // tags: {
-    //   tabs,
-    //   tab,
-    // },
+    tags: {
+      tabs,
+      tab,
+    },
   });
   return Markdoc.renderers.react(content, React, {
     components: {
