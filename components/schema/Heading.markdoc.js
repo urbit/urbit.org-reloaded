@@ -1,11 +1,14 @@
 import { Tag } from "@markdoc/markdoc";
 
-// Or replace this with your own function
 function generateID(children, attributes) {
   if (attributes.id && typeof attributes.id === "string") {
     return attributes.id;
   }
-  return children
+
+  const bottomChildren = children
+    .map((child) => (child.children ? child.children : child))
+    .flat();
+  return bottomChildren
     .filter((child) => typeof child === "string")
     .join(" ")
     .replace(/[?]/g, "")
