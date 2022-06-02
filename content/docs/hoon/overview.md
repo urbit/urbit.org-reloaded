@@ -20,6 +20,7 @@ sense.
 
 In particular, the problems Hoon solves that aren't solved by other
 functional languages are:
+
 - Compile and run other code in a typesafe manner at full speed,
 - Typesafe metaprogramming, and
 - Hot code reload and online data migration.
@@ -144,7 +145,7 @@ Hoon and Nock have several unusual properties:
   the runtime has a matching jet, it will use that instead of the Nock
   implementation. Nock isn't as slow as you might think, especially
   considering it's a minimal, dynamic, axiomatic language.
-<br/><br/>
+
   This arrangement has the deeper implication that all code written in
   Nock is best considered as a specification for a program, which can be
   executed directly but might never run at all due to being jetted.
@@ -271,6 +272,3 @@ turn, we get an OS that provides far stronger guarantees than Unix with
 a thousand times less code. Given the complexity of modern software,
 this is what's required to put personal computing back into the hands of
 people.
-
-
-

@@ -145,7 +145,7 @@ Hoon and Nock have several unusual properties:
   the runtime has a matching jet, it will use that instead of the Nock
   implementation. Nock isn't as slow as you might think, especially
   considering it's a minimal, dynamic, axiomatic language.
-  <br/><br/>
+
   This arrangement has the deeper implication that all code written in
   Nock is best considered as a specification for a program, which can be
   executed directly but might never run at all due to being jetted.

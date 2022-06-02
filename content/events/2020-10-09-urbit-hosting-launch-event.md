@@ -24,10 +24,10 @@ Join the waitlist for hosting here: <a href="https://tlon.io/" class="linkified"
 
 ---
 
-Got a group of friends who want to use Urbit together? We periodically give away blocks of planets and help people get set up. Apply for a community grant:<br/><a href="https://urbit.org/community/community-grants/" class="linkified">https://urbit.org/community/community-grants/</a>
+Got a group of friends who want to use Urbit together? We periodically give away blocks of planets and help people get set up. Apply for a community grant: <a href="https://urbit.org/community/community-grants/" class="linkified">https://urbit.org/community/community-grants/</a>
 
-Interested developing on Urbit? Hoon School is a community-run program to teach you the basics of the language and system. Sign up here:<br/><a href="https://hooniversity.org" class="linkified">https://hooniversity.org</a>
+Interested developing on Urbit? Hoon School is a community-run program to teach you the basics of the language and system. Sign up here: <a href="https://hooniversity.org" class="linkified">https://hooniversity.org</a>
 
-Mostly, you can find us on Urbit in the Urbit Community group. But you can also follow along here:<br/><a href="https://urbit.org/blog/" class="linkified">https://urbit.org/blog/</a><br/><a href="https://twitter.com/urbit" class="linkified">https://twitter.com/urbit</a><br/><a href="https://github.com/urbit" class="linkified">https://github.com/urbit</a>
+Mostly, you can find us on Urbit in the Urbit Community group. But you can also follow along here: <a href="https://urbit.org/blog/" class="linkified">https://urbit.org/blog/</a> <a href="https://twitter.com/urbit" class="linkified">https://twitter.com/urbit</a> <a href="https://github.com/urbit" class="linkified">https://github.com/urbit</a>
 
-And if you're still confused about what Urbit is, try these:<br/><a href="https://urbit.org/understanding-urbit/" class="linkified">https://urbit.org/understanding-urbit/</a>
+And if you're still confused about what Urbit is, try these: <a href="https://urbit.org/understanding-urbit/" class="linkified">https://urbit.org/understanding-urbit/</a>
