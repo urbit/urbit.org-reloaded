@@ -1,14 +1,8 @@
 import { useRouter } from "next/router";
-import {
-  getPostBySlug,
-  getAllPosts,
-  formatDate,
-  getSimilarGrants,
-} from "../../lib/lib";
+import { getPostBySlug, getAllPosts, formatDate } from "../../lib/lib";
 import Head from "next/head";
 import Link from "next/link";
 import Meta from "../../components/Meta";
-import { decode } from "html-entities";
 import classnames from "classnames";
 import ErrorPage from "../404";
 import Container from "../../components/Container";
@@ -16,7 +10,6 @@ import Markdown from "../../components/Markdown";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import SingleColumn from "../../components/SingleColumn";
-import GrantPreview from "../../components/GrantPreview";
 import ob from "urbit-ob";
 import Section from "../../components/Section";
 import { DateTime } from "luxon";

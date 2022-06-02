@@ -19,7 +19,6 @@ import Section from "../../components/Section";
 import Contact from "../../components/Contact";
 import PostPreview from "../../components/PostPreview";
 import TwoUp from "../../components/TwoUp";
-import { decode } from "html-entities";
 import Markdown from "../../components/Markdown";
 
 export default function Post({ post, nextPost, previousPost, search }) {

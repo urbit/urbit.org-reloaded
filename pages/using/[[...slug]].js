@@ -5,13 +5,11 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import classnames from "classnames";
 import { join } from "path";
-import { getDocs, formatDate, getPage } from "../../lib/lib";
+import { getPage } from "../../lib/lib";
 import Markdown from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
 import UsingTree from "../../cache/using.json";
-
-import { decode } from "html-entities";
 
 const breadcrumbs = (posts, paths) => {
   const results = [

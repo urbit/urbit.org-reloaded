@@ -11,8 +11,6 @@ import Sidebar from "../../components/Sidebar";
 import Pagination from "../../components/Pagination";
 import UnderstandingUrbitTree from "../../cache/understanding-urbit.json";
 
-import { decode } from "html-entities";
-
 const breadcrumbs = (posts, paths) => {
   const results = [
     <Link href="/">Urbit</Link>,

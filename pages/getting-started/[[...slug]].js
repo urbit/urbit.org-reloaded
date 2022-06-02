@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 import classnames from "classnames";
 import { join } from "path";
 import { getPage } from "../../lib/lib";
-import { decode } from "html-entities";
 import Markdown from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";

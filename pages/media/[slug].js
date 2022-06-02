@@ -17,8 +17,6 @@ import SingleColumn from "../../components/SingleColumn";
 import Contact from "../../components/Contact";
 import Section from "../../components/Section";
 
-import { decode } from "html-entities";
-
 export default function MediaPage({ post, search }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {

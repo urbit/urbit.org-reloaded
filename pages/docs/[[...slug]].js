@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import classnames from "classnames";
 import { join } from "path";
 import { getPreviousPost, getNextPost, getPage } from "../../lib/lib";
@@ -11,8 +11,6 @@ import Markdown from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
 import docsPageTree from "../../cache/docs.json";
-
-import { decode } from "html-entities";
 
 const breadcrumbs = (posts, paths) => {
   const results = [

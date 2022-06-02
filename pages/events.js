@@ -9,15 +9,8 @@ import Header from "../components/Header";
 import SingleColumn from "../components/SingleColumn";
 import Section from "../components/Section";
 import EventPreview from "../components/EventPreview";
-import { ShowOrHide } from "../components/Snippets";
 import { contact } from "../lib/constants";
-import {
-  getAllEvents,
-  generateDisplayDate,
-  generateRealtimeDate,
-  formatDate,
-  formatTime,
-} from "../lib/lib";
+import { getAllEvents, generateRealtimeDate } from "../lib/lib";
 
 import { eventKeys } from "../lib/constants";
 

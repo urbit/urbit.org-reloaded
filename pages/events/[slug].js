@@ -1,13 +1,9 @@
-import { useRouter } from "next/router";
 import { DateTime } from "luxon";
 import {
   getPostBySlug,
   getAllPosts,
   getNextPost,
   getPreviousPost,
-  formatDate,
-  formatTime,
-  formatTimeZone,
   generateDisplayDate,
   generateRealtimeDate,
 } from "../../lib/lib";
@@ -29,7 +25,6 @@ import {
   ShowOrHide,
   DateRange,
 } from "../../components/Snippets";
-import { decode } from "html-entities";
 import { eventKeys } from "../../lib/constants";
 
 export default function Event({ event, nextEvent, previousEvent, search }) {

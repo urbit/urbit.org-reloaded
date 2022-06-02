@@ -18,9 +18,7 @@ import SingleColumn from "../../components/SingleColumn";
 import Section from "../../components/Section";
 import Contact from "../../components/Contact";
 
-import { decode } from "html-entities";
-
-export default function Post({ post, nextPost, previousPost, search }) {
+export default function Post({ post, search }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;

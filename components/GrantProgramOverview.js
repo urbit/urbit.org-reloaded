@@ -9,7 +9,6 @@ import Header from "./Header";
 import Footer from "./Footer";
 import SingleColumn from "./SingleColumn";
 import Section from "./Section";
-import { decode } from "html-entities";
 import { DateTime } from "luxon";
 import Markdown from "./Markdown";
 
