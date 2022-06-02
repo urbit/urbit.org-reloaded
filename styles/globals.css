@@ -217,3 +217,7 @@ a:hover {
   position: static !important;
   border-radius: 0 !important;
 }
+
+.markdown .display .tab {
+  @apply p-3;
+}

@@ -10,6 +10,15 @@
   @apply pt-0 mt-0;
 }
 
+.markdown .display * {
+  margin-top: unset;
+  margin-bottom: unset;
+  margin-left: unset;
+  padding: unset;
+  padding-top: unset;
+  padding-bottom: unset;
+}
+
 .markdown p,
 .markdown ul,
 .markdown ol,
