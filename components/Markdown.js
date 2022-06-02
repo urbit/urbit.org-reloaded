@@ -147,6 +147,13 @@ const callout = {
   },
 };
 
+const customFence = {
+  render: "CustomFence",
+  attributes: {},
+};
+
+const CustomFence = ({ children }) => <pre>{children}</pre>;
+
 export default function Markdown({ post }) {
   const ast = Markdoc.parse(post.content);
   const finalAst = footnoteParse(ast);
@@ -162,6 +169,7 @@ export default function Markdown({ post }) {
       tab,
       button,
       callout,
+      customFence,
     },
   });
   return Markdoc.renderers.react(content, React, {
@@ -171,6 +179,7 @@ export default function Markdown({ post }) {
       Tab,
       Button,
       Callout,
+      CustomFence,
     },
   });
 }
