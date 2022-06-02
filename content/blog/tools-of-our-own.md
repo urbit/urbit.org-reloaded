@@ -29,7 +29,7 @@ And it's nobody's distinct fault that the experience of aligning all these dispa
 
 > If you don't understand a system you're using, you don't control it. If nobody understands the system, the system is in control.
 >
-> <cite>Philip Monk, <a href="https://urbit.org/blog/precepts/">Precepts</a></cite>
+> <cite>Philip Monk, [Precepts](https://urbit.org/blog/precepts/)</cite>
 
 If you asked any of the creators of the social tools we use today what their mission was, it would seem neutral, a public good. To "bring the world closer," to "make a more open and connected world," to "easily see what's happening in the world." Ignore the fact that the net effects of their products are far more mixed than their mission suggests: for many users, the tools themselves come second to the power the tools have in capturing their social graph.
 

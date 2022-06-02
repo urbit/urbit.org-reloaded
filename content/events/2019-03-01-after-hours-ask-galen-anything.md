@@ -17,4 +17,4 @@ name = "Urbit"
 
 Afterwards, have a beer, connect with Urbit developers, fans, and friends IRL.
 
-Feel free to bring friends and share the primer. <a href="https://urbit.org/primer" class="linkified">https://urbit.org/primer</a>
+Feel free to bring friends and share the primer. [https://urbit.org/primer](https://urbit.org/primer)
