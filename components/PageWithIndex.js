@@ -7,7 +7,6 @@ import Header from "./Header";
 import Footer from "./Footer";
 import SingleColumn from "./SingleColumn";
 import Section from "./Section";
-import { decode } from "html-entities";
 import Markdown from "../components/Markdown";
 import { TableOfContents } from "./TableOfContents";
 
@@ -29,7 +28,7 @@ export default function PageWithIndex({ post, search }) {
         </Section>
         <Section narrow>
           <div className="flex sidebar">
-            <div className="markdown">
+            <div className="markdown max-w-prose">
               <Markdown post={post} />
             </div>
             <TableOfContents />
