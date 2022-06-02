@@ -5,6 +5,8 @@ import { footnoteRef } from "./schema/footnoteRef.markdoc";
 import { footnoteItem } from "./schema/footnoteItem.markdoc";
 import Tabs from "../components/Tabs";
 import Tab from "../components/Tab";
+import Button from "../components/Button";
+import Callout from "../components/Callout";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import Prism from "prism-react-renderer/prism";
 (typeof global !== "undefined" ? global : window).Prism = Prism;
@@ -121,6 +123,30 @@ const tabs = {
   },
 };
 
+const button = {
+  render: "Button",
+  attributes: {
+    label: {
+      type: String,
+    },
+    link: {
+      type: String,
+    },
+    color: {
+      type: String,
+    },
+  },
+};
+
+const callout = {
+  render: "Callout",
+  attributes: {
+    title: {
+      type: String,
+    },
+  },
+};
+
 export default function Markdown({ post }) {
   const ast = Markdoc.parse(post.content);
   const finalAst = footnoteParse(ast);
@@ -134,6 +160,8 @@ export default function Markdown({ post }) {
     tags: {
       tabs,
       tab,
+      button,
+      callout,
     },
   });
   return Markdoc.renderers.react(content, React, {
@@ -141,6 +169,8 @@ export default function Markdown({ post }) {
       Fence,
       Tabs,
       Tab,
+      Button,
+      Callout,
     },
   });
 }
