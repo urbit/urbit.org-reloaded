@@ -9,8 +9,6 @@ ship = "~wicdev-wisryt"
 image = "https://media.urbit.org/site/posts/essays/discuss-01.jpg"
 +++
 
-<br>
-
 ![](https://media.urbit.org/site/posts/essays/discuss-01.jpg)
 
 The precepts aren’t arguments. We will discuss and justify them here. We don't expect to convince you this is exactly the right set of precepts, but we hope to convince you that this is a coherent set of precepts that might lead to something very interesting.
@@ -35,8 +33,6 @@ We will address these in the same categories presented above:
 
 - F: Real Software. Not all software matters. Any software which
   wouldn't exist on Mars isn't real.
-
-<br>
 
 ![](https://media.urbit.org/site/posts/essays/discuss-02.jpg)
 
@@ -355,8 +351,6 @@ An example of the second is "security through obscurity is ineffective". Securit
 
 However, it's important for whoever's coming up with the cliches to understand the specifics of how they're untruthful. Some of these very precepts may fall under the category of "literally untrue but more useful than the truth".
 
-<br>
-
 ![](https://media.urbit.org/site/posts/essays/discuss-03.jpg)
 
 ## B: Specific Design
@@ -415,8 +409,6 @@ Memory access restrictions are blunt tools. Blunt tools are nice in simple syste
 
 Better to define rules in a more powerful language. This allows you to follow A6 and A8. It also lets you use all the correctness tools, like type systems, that you've developed for the rest of your code.
 
-<br>
-
 ![](https://media.urbit.org/site/posts/essays/discuss-04.jpg)
 
 ### C: Attitude
@@ -468,8 +460,6 @@ of your own mind.
 This is also one of the best ways to build stuff correctly. Very often, you will be tempted to cut a corner, and someone will point out that it should be done correctly. You should consider why you immediately rejected it. Was it because you were afraid of the relevant piece of code? If so, you should learn more about that code to determine if it's actually a good idea. Did you reject it because you felt it would distract you from working on what you thought was more important?
 Consider carefully whether this particular piece of technical debt is worth taking on. It's worth 60 seconds of thinking about how you could solve it correctly right now — often it would be quite easy to do correctly and you'd be paying interest on the incorrectness for a long time.
 
-<br>
-
 ![](https://media.urbit.org/site/posts/essays/discuss-05.jpg)
 
 ### D: Theory
@@ -512,8 +502,6 @@ objective properties and your subjective judgment of the quality of the system.
 However, that explanatory power is indeed powerful, and the exploratory suggestions are often able to break you out of a rut (attractor basin). Respect the tension.
 
 ![](https://media.urbit.org/site/posts/essays/discuss-06.jpg)
-
-<br>
 
 ### E: Text Style
 
@@ -614,8 +602,6 @@ Examples:
 We're really good at memorizing sets of things, like runes. We're also good at inferring structure from patterns. We're bad at memorizing structure in apparently unrelated names, though, and once we see a pattern, we assume it's densely populated.
 
 So don't be afraid to use new names for new concepts. If concepts are siblings, they needn't necessarily have a direct connection in their name, but if they're hierarchical, then something should suggest that. This can be syntactic or semantic.
-
-<br>
 
 ![](https://media.urbit.org/site/posts/essays/discuss-07.jpg)
 

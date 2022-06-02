@@ -9,8 +9,6 @@ ship = "~fabled-faster"
 image = "https://media.urbit.org/site/posts/essays/infrastructural-2.jpg"
 +++
 
-<br>
-
 ![](https://media.urbit.org/site/posts/essays/infrastructural-1.jpg)
 
 ## Seasons
@@ -52,10 +50,6 @@ Another way of thinking about “Infrastructure” (here defined loosely as “t
 We deeply hope that Urbit can form a support structure for you and your community.
 
 These self-evident statements underlie the core problems we sought to address in designing a userspace for OS 1: How do we design an _actually_ personal digital infrastructure? What does infrastructure look like when shared with immediate friends? With a cooperative organization? How can we impress upon Urbit's earliest adopters that once they've obtained an Urbit ID, their computer is at that moment _literally_ entirely theirs?
-
-<br>
-
-<br>
 
 ![](https://media.urbit.org/site/posts/essays/infrastructural-2.jpg)
 

@@ -9,11 +9,7 @@ ship = "~pindet-timmut"
 image = "https://media.urbit.org/site/posts/essays/ocean.jpeg"
 +++
 
-<br>
-
 ![ocean](https://media.urbit.org/site/posts/essays/ocean.jpeg)
-
-<br>
 
 ## Paying
 

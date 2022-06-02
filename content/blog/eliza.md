@@ -9,11 +9,7 @@ ship = "~pindet-timmut"
 image = "https://media.urbit.org/site/posts/essays/valleys.jpg"
 +++
 
-<br>
-
 ![valleys](https://media.urbit.org/site/posts/essays/valleys.jpg)
-
-<br>
 
 ## The Storm before the Calm
 

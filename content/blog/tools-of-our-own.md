@@ -9,11 +9,7 @@ ship = "~haddef-sigwen"
 image = "https://media.urbit.org/site/posts/essays/tools-of-our-own-1.png"
 +++
 
-<br>
-
 ![](https://media.urbit.org/site/posts/essays/tools-of-our-own-1.png)
-
-<br>
 
 > People need only not to obtain things, they need above all the freedom to make things among which they can live, or give shape to them according to their own tastes, and to put them to use in caring for and about others.
 >
@@ -26,8 +22,6 @@ After all, we think of our slate of tools as our entire toolbox. This makes sens
 The [Rube Goldberg machine](https://en.wikipedia.org/wiki/Rube_Goldberg_machine) made out of aligning these tools in increasingly virtuosic, but also increasingly restrained and mechanical ways, felt like constructing an exoskeleton out of prefab parts. The person in my social group closest to constructing the full range of human movement became a legend. But let's be honest: none of us came even close.
 
 And it's nobody's distinct fault that the experience of aligning all these disparate services into a workflow is a skill in itself. It's a collective restriction that comes from the systems beneath.
-
-<br>
 
 ![](https://media.urbit.org/site/posts/essays/tools-of-our-own-2.png)
 
@@ -52,8 +46,6 @@ But this is crazy: for decades, an aspect of the Internet stack that necessitate
 And for productivity tools—for the personal activities we do every day—the same problem ultimately applies. Either you wrangle more and more single-use "products" into a framework, wrangling combinatorial explosion, or you punt the problem to the user's brain, remembering the relation between tools.
 
 This is why hybrid products are born _and_ why massive enterprises are shifting toward subscription models for office software. With the [clearnet](<https://en.wikipedia.org/wiki/Clearnet_(networking)>), using our own computers for everyday tasks that extend outside themselves is not easy. It's way easier to sign into an enterprise's server farm for your persistent data storage and manipulation. In 2020, the prefab parts for the exoskeleton only come in "left arm, right leg" pairs, or you can just give up and plug straight into SkyNet.
-
-<br>
 
 ![](https://media.urbit.org/site/posts/essays/tools-of-our-own-3.png)
 

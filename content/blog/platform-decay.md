@@ -9,8 +9,6 @@ ship = "~simfur-ritwed"
 image = "https://media.urbit.org/site/posts/essays/platform-decay-preview.png"
 +++
 
-<br>
-
 ![](https://media.urbit.org/site/posts/essays/platform-decay.png)
 
 ## Platform decay, decentralized marketplaces, and Urbit

@@ -9,11 +9,7 @@ ship = "~datnut-pollen and ~palfun-foslup"
 image = "https://media.urbit.org/site/posts/essays/land3.jpg"
 +++
 
-<br>
-
 ![milestone](https://media.urbit.org/site/posts/essays/land3.jpg)
-
-<br>
 
 Recently, the [first upgrade](https://github.com/urbit/azimuth/pull/35) to the
 [Azimuth](/docs/glossary/azimuth) smart contracts which make up Urbit ID was

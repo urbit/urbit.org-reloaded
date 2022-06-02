@@ -9,8 +9,6 @@ ship = "~ravmel-ropdyl"
 image = "https://media.urbit.org/site/posts/essays/urbit-is-for-communities.jpg"
 +++
 
-<br>
-
 ![](https://media.urbit.org/site/posts/essays/urbit-is-for-communities.jpg)
 
 ## Generated, not fabricated

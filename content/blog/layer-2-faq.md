@@ -92,12 +92,12 @@ Bridge.
 
 There are a number of ways to host a planet in the cloud. Your options:
 
-- DIY:<br>
+- DIY:
   The most cost-effective method is [setting it up
   yourself](https://urbit.org/using/running/hosting), though this route requires
   some system administration, and troubleshooting if any issues arise.
 
-- Via a Hosting Provider:<br>
+- Via a Hosting Provider:
   The more “headache-free” option is paying for a
   hosting provider to take care of all these processes for you, plus support. The
   following service providers offer hosting (some include a free planet):

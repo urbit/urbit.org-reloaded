@@ -9,8 +9,6 @@ ship = "~ravmel-ropdyl"
 image = "https://media.urbit.org/site/posts/essays/intro-os1-landscape.png"
 +++
 
-<br>
-
 <video class="ba w-100" autoplay loop src="https://media.urbit.org/site/posts/essays/intro-os1.mov"></video>
 
 ## Introducing OS 1

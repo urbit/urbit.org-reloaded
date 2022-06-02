@@ -9,11 +9,7 @@ ship = "~wicdev-wisryt"
 image = "https://media.urbit.org/site/posts/essays/zion-canyon-1.jpg"
 +++
 
-<br>
-
 ![canyon](https://media.urbit.org/site/posts/essays/zion-canyon-1.jpg)
-
-<br>
 
 Let's talk about IO in Urbit. I won't say much about how events and effects are processed by the runtime; it suffices to note that the runtime is a normal Unix program which (1) listens for various events, (2) passes them to Arvo (Urbit OS), and (3) processes the effects produced by Arvo. Instead, I’ll focus on how IO works from the perspective of Hoon programs, like Arvo or apps running on Arvo. But first, let's review IO paradigms in other languages.
 

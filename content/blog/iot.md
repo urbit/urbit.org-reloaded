@@ -9,11 +9,7 @@ ship = "~datnut-pollen"
 image = "https://media.urbit.org/site/posts/essays/phobos.jpeg"
 +++
 
-<br>
-
 ![phobos](https://media.urbit.org/site/posts/essays/phobos.jpeg)
-
-<br>
 
 Each of the ~4B 32-or-fewer-bit or [Azimuth](/docs/glossary/azimuth)
 identities, namely [planets](/docs/glossary/planet),

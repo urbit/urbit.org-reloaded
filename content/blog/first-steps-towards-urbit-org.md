@@ -9,8 +9,6 @@ ship = "~wolref-podlex"
 image = "https://media.urbit.org/site/posts/essays/first-steps.png"
 +++
 
-<br>
-
 ![](https://media.urbit.org/site/posts/essays/first-steps.png)
 
 ## Summary

@@ -121,7 +121,7 @@ I’ll try to explain the most important of these without straying too deep into
 
    What all this adds up to is that the Urbit network is immensely more resource efficient, secure, easier to customize, and smaller in size than any other computing system in the world. If you care about data security, privacy, durability, or even just elegance, Urbit has the best design going.
 
-   <br></br>
+    </br>
 
 ![](https://media.urbit.org/site/posts/essays/normies-2.png)
 
