@@ -1,11 +1,19 @@
 +++
-
-title = "Membrane" date = "2022-06-02"
-
-[taxonomies] grant_type = ["Proposal"] grant_category = ["App Dev"]
-
-[extra] image = "" description = "Martian native spreadsheets" reward = "5 stars" assignee = "~tiller-tolbus" champion = "~sarlev-sarsen" grant_id = "P0165" completed = false canceled = false link = ""
-
+title = "Membrane" 
+date = "2022-06-02"
+[taxonomies] 
+grant_type = ["Proposal"]
+grant_category = ["App Dev"]
+[extra] 
+image = ""
+description = "Martian native spreadsheets"
+reward = "5 stars"
+assignee = "~tiller-tolbus"
+champion = "~sarlev-sarsen"
+grant_id = "P0165"
+completed = false
+canceled = false
+link = ""
 +++
 
 # Intro
