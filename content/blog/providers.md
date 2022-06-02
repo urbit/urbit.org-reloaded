@@ -11,7 +11,7 @@ image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/provid
 
 <br>
 
-<img class="ba" src="https://storage.googleapis.com/media.urbit.org/site/posts/essays/providers.png">
+![](https://storage.googleapis.com/media.urbit.org/site/posts/essays/providers.png)
 
 <br>
 

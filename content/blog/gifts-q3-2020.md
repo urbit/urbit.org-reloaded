@@ -15,7 +15,7 @@ image = "https://media.urbit.org/site/posts/essays/gifts.png"
 
 <br>
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/gifts.png">
+![](https://media.urbit.org/site/posts/essays/gifts.png)
 
 <br>
 

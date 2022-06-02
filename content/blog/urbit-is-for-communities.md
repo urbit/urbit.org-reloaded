@@ -11,7 +11,7 @@ image = "https://media.urbit.org/site/posts/essays/urbit-is-for-communities.jpg"
 
 <br>
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/urbit-is-for-communities.jpg">
+![](https://media.urbit.org/site/posts/essays/urbit-is-for-communities.jpg)
 
 ## Generated, not fabricated
 

@@ -11,7 +11,7 @@ image = "https://media.urbit.org/site/posts/essays/discuss-01.jpg"
 
 <br>
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/discuss-01.jpg">
+![](https://media.urbit.org/site/posts/essays/discuss-01.jpg)
 
 The precepts aren’t arguments. We will discuss and justify them here. We don't expect to convince you this is exactly the right set of precepts, but we hope to convince you that this is a coherent set of precepts that might lead to something very interesting.
 
@@ -38,7 +38,7 @@ We will address these in the same categories presented above:
 
 <br>
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/discuss-02.jpg">
+![](https://media.urbit.org/site/posts/essays/discuss-02.jpg)
 
 ### A: General Design
 
@@ -357,7 +357,7 @@ However, it's important for whoever's coming up with the cliches to understand t
 
 <br>
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/discuss-03.jpg">
+![](https://media.urbit.org/site/posts/essays/discuss-03.jpg)
 
 ## B: Specific Design
 
@@ -417,7 +417,7 @@ Better to define rules in a more powerful language. This allows you to follow A6
 
 <br>
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/discuss-04.jpg">
+![](https://media.urbit.org/site/posts/essays/discuss-04.jpg)
 
 ### C: Attitude
 
@@ -470,7 +470,7 @@ Consider carefully whether this particular piece of technical debt is worth taki
 
 <br>
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/discuss-05.jpg">
+![](https://media.urbit.org/site/posts/essays/discuss-05.jpg)
 
 ### D: Theory
 
@@ -511,7 +511,7 @@ objective properties and your subjective judgment of the quality of the system.
 
 However, that explanatory power is indeed powerful, and the exploratory suggestions are often able to break you out of a rut (attractor basin). Respect the tension.
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/discuss-06.jpg">
+![](https://media.urbit.org/site/posts/essays/discuss-06.jpg)
 
 <br>
 
@@ -617,7 +617,7 @@ So don't be afraid to use new names for new concepts. If concepts are siblings, 
 
 <br>
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/discuss-07.jpg">
+![](https://media.urbit.org/site/posts/essays/discuss-07.jpg)
 
 ### F: Real Software
 

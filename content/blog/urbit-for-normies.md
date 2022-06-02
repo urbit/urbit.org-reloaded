@@ -51,7 +51,7 @@ By “intermediary” I’m talking about all those centralized servers that we 
 
 Urbit will fundamentally change that — more about the privacy implications later.
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/normies-1.png">
+![](https://media.urbit.org/site/posts/essays/normies-1.png)
 
 ## What it looks like
 
@@ -123,7 +123,7 @@ I’ll try to explain the most important of these without straying too deep into
 
    <br></br>
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/normies-2.png">
+![](https://media.urbit.org/site/posts/essays/normies-2.png)
 
 ## How it compares
 

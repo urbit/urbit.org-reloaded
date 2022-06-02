@@ -11,7 +11,7 @@ image = "https://media.urbit.org/site/posts/essays/tools-of-our-own-1.png"
 
 <br>
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/tools-of-our-own-1.png">
+![](https://media.urbit.org/site/posts/essays/tools-of-our-own-1.png)
 
 <br>
 
@@ -29,7 +29,7 @@ And it's nobody's distinct fault that the experience of aligning all these dispa
 
 <br>
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/tools-of-our-own-2.png">
+![](https://media.urbit.org/site/posts/essays/tools-of-our-own-2.png)
 
 ### Systems as masters
 
@@ -55,7 +55,7 @@ This is why hybrid products are born _and_ why massive enterprises are shifting 
 
 <br>
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/tools-of-our-own-3.png">
+![](https://media.urbit.org/site/posts/essays/tools-of-our-own-3.png)
 
 ### The collective body
 

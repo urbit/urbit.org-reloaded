@@ -11,7 +11,7 @@ image = "https://media.urbit.org/site/posts/essays/infrastructural-2.jpg"
 
 <br>
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/infrastructural-1.jpg">
+![](https://media.urbit.org/site/posts/essays/infrastructural-1.jpg)
 
 ## Seasons
 
@@ -57,7 +57,7 @@ These self-evident statements underlie the core problems we sought to address in
 
 <br>
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/infrastructural-2.jpg">
+![](https://media.urbit.org/site/posts/essays/infrastructural-2.jpg)
 
 ## Expressing Infrastructure
 
