@@ -10,7 +10,7 @@ description = "Layer 2 Planet Sales via Urbit"
 reward = "6 stars"
 assignee = "~tacryt-socryp"
 grant_id = "P0071"
-completed = false
+completed = true
 canceled = false
 link = ""
 +++
