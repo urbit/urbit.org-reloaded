@@ -9,7 +9,7 @@ grant_category = [ "Other" ]
 [extra]
 image = ""
 description = "Native Planet - A domestic hosting solution for Urbit"
-reward = "$50,000 in WSTR"
+reward = "6 stars"
 assignee = "~dalhec-banler"
 champion = "~poldec-tonteg"
 completed = false
@@ -34,7 +34,7 @@ The final version of the Native Planet will extend the proof-of-concept prototyp
 
 Expected Completion: 30 May 2022
 
-Payment: $25,000 WSTR
+Payment: 3 stars
 
 Anchor Server
 
@@ -64,7 +64,7 @@ Onboard screen UI
 
 Expected Completion: 30 July, 2022
 
-Payment: $25,000 WSTR
+Payment: 3 stars
 
 Production UX
 
