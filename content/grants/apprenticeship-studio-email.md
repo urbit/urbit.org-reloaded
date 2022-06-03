@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Other" ]
 [extra]
 image = ""
 description = "Build out email capabilities of ~tirrel's Studio app"
-reward = "$8000 in WSTR"
+reward = "1 star"
 mentor = "~novlud-padtyv"
 assignee = "~rivmud-fabwen"
 completed = false
@@ -33,3 +33,7 @@ At ~10 hours per week I estimate it would take about 2 months.
 - A PR against this repo for the backend changes: https://github.com/tirrel-corp/studio
 
 - A PR against this repo for the frontend changes: https://github.com/tirrel-corp/studio-ui
+
+## Compensation
+
+1 star upon successful completion of the apprenticeship
