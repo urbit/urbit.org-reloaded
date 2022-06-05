@@ -298,11 +298,11 @@ Example usage:
 - Undocked: `urbit vere -a x86_64-linux -v 1.9 -p live .`
 - Docked: `[pier]/.run vere -a x86_64-linux -v 1.9 -p live .`
 
-### `serf`
+### `serf ARGS`
 
 Run as a 'serf' (as though it were the previously separate `urbit-worker`).
 
-- Undocked: `urbit serf <pier> <key> <flags> <cache-size> <at-event>`
+- Undocked: `urbit serf [pier] [key] [flags] [cache-size] [at-event]`
 
 ## Options
 
