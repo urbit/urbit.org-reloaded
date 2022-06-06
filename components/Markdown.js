@@ -3,6 +3,7 @@ import Markdoc, { Ast, Node, Tag } from "@markdoc/markdoc";
 import { heading } from "./schema/Heading.markdoc";
 import { footnoteRef } from "./schema/footnoteRef.markdoc";
 import { footnoteItem } from "./schema/footnoteItem.markdoc";
+import { link } from "./schema/link.markdoc";
 import Tabs from "../components/Tabs";
 import Tab from "../components/Tab";
 import Button from "../components/Button";
@@ -31,40 +32,6 @@ require("prismjs/components/prism-hoon");
 //     ],
 //   };
 // }
-
-// function a(h, node) {
-//   const url = node.url;
-
-//   if (
-//     url.includes("https://urbit.org") ||
-//     url.startsWith("/") ||
-//     url.startsWith("#")
-//   ) {
-//     return {
-//       type: "element",
-//       tagName: "a",
-//       properties: {
-//         href: url,
-//       },
-//       children: all(h, node),
-//     };
-//   } else {
-//     return {
-//       type: "element",
-//       tagName: "a",
-//       properties: {
-//         target: "_blank",
-//         rel: "noopener",
-//         href: url,
-//       },
-//       children: all(h, node),
-//     };
-//   }
-// }
-
-// const handlers = defaultHandlers;
-// handlers.link = a;
-// handlers.image = img;
 
 export function Fence({ children, language }) {
   return (
@@ -161,6 +128,7 @@ export default function Markdown({ post }) {
     nodes: {
       fence,
       heading,
+      link,
       footnoteItem,
       footnoteRef,
     },
