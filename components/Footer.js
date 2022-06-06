@@ -87,10 +87,8 @@ export default function Footer() {
             <Link href="https://github.com/urbit/urbit/issues" passHref>
               <a className="type-bold text-wall-500">Issue Tracker</a>
             </Link>
-            <Link href="/grants">
-              <a className="type-bold text-wall-500" passHref>
-                Urbit Grants
-              </a>
+            <Link href="/grants" passHref>
+              <a className="type-bold text-wall-500">Urbit Grants</a>
             </Link>
           </div>
 
