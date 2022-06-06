@@ -102,12 +102,12 @@
   @apply rounded-lg w-full h-auto;
 }
 
-.markdown figure {
-  @apply relative my-8 z-0 w-full left-0;
+.markdown span#figure {
+  @apply relative my-8 z-0 w-full left-0 block;
 }
 
 @media (min-width: 768px) {
-  .markdown figure {
+  .markdown span#figure {
     width: 125%;
     left: -12.5%;
   }

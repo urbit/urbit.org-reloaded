@@ -4,6 +4,7 @@ import { heading } from "./schema/Heading.markdoc";
 import { footnoteRef } from "./schema/footnoteRef.markdoc";
 import { footnoteItem } from "./schema/footnoteItem.markdoc";
 import { link } from "./schema/link.markdoc";
+import { image } from "./schema/image.markdoc";
 import Tabs from "../components/Tabs";
 import Tab from "../components/Tab";
 import Button from "../components/Button";
@@ -12,26 +13,6 @@ import Highlight, { defaultProps } from "prism-react-renderer";
 import Prism from "prism-react-renderer/prism";
 (typeof global !== "undefined" ? global : window).Prism = Prism;
 require("prismjs/components/prism-hoon");
-
-// img is wrapped in figure so that images can be extra wide in the blog posts
-// function img(h, node) {
-//   var props = { src: normalize(node.url), alt: node.alt };
-//   if (node.title !== null && node.title !== undefined) {
-//     props.title = node.title;
-//   }
-//   return {
-//     type: "element",
-//     tagName: "figure",
-//     properties: {},
-//     children: [
-//       {
-//         type: "element",
-//         tagName: "img",
-//         properties: props,
-//       },
-//     ],
-//   };
-// }
 
 export function Fence({ children, language }) {
   return (
@@ -128,6 +109,7 @@ export default function Markdown({ post }) {
     nodes: {
       fence,
       heading,
+      image,
       link,
       footnoteItem,
       footnoteRef,
