@@ -25,6 +25,10 @@
       "permanent": true
     },
     {
+      "source": "/groups/~lomder-librun/ballot",
+      "destination": "/groups/~livdel-binmun-lomder-librun/ballot"
+    },
+    {
       "source": "/grants/grant-submission-guide",
       "destination": "/grants/proposals",
       "permanent": true
