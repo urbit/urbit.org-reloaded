@@ -21,7 +21,7 @@ Things only accelerate from here. Our next objective, to integrate Lightning Net
 
 > And there is all the difference in the world between paying and being paid. The act of paying is perhaps the most uncomfortable infliction that the two orchard thieves entailed upon us. But being paid,—what will compare with it?
 >
-> <cite>Herman Melville</cite>
+> **Herman Melville**
 
 However, a good wallet is only half the equation for a holistic P2P commercial experience. Interfaces for selling goods and services is the other half. While we don’t part with our Bitcoin [easily](https://nakamotoinstitute.org/mempool/everyones-a-scammer/), two initial markets appear logical and attractive: content and Urbit-native services.
 

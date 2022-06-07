@@ -43,7 +43,7 @@ foo
 }
 ```
 
-<sup>Note: The mime byte-length and data are 0 in this example because it was made with empty dummy files.</sup>
+Note: The mime byte-length and data are 0 in this example because it was made with empty dummy files.
 
 A glob may contain any number of files and folders in any kind of heirarchy. The one important thing is that an `index.html` file is present in its root. The `index.html` file is automatically served when the app is opened in the browser and will fail if it is missing.
 

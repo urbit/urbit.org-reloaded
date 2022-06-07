@@ -95,7 +95,7 @@ I’ll try to explain the most important of these without straying too deep into
 
 4. **An incentive for good behavior**
 
-   On the Urbit network, identities are finite, and they accrue reputation. Compare that to the current internet where identity is infinite (anyone can create as many email addresses or social media profiles as they want, essentially for free) and so spam, scams, and DoS attacks (“denial-of-service”: when many disposable identities ‘attack’ a server at the same time) are rampant. On the Urbit network, there are just over 4 billion total IDs (2<sup>32</sup> to be exact). Scarcity creates value. That scarcity, combined with reputation accrual, means there's an incentive for good behavior.
+   On the Urbit network, identities are finite, and they accrue reputation. Compare that to the current internet where identity is infinite (anyone can create as many email addresses or social media profiles as they want, essentially for free) and so spam, scams, and DoS attacks (“denial-of-service”: when many disposable identities ‘attack’ a server at the same time) are rampant. On the Urbit network, there are just over 4 billion total IDs (2^32^ to be exact). Scarcity creates value. That scarcity, combined with reputation accrual, means there's an incentive for good behavior.
 
    You might think 4 billion IDs sounds like too few given how many humans we have on the planet. I won’t go into the technical details here, but if we ever get to the point where that’s a problem (which would be a great problem to have), we’ve outlined several solutions that allow everyone alive to get on the network. We don’t intend to lock anyone out.
 
@@ -121,7 +121,6 @@ I’ll try to explain the most important of these without straying too deep into
 
    What all this adds up to is that the Urbit network is immensely more resource efficient, secure, easier to customize, and smaller in size than any other computing system in the world. If you care about data security, privacy, durability, or even just elegance, Urbit has the best design going.
 
-    </br>
 
 ![](https://media.urbit.org/site/posts/essays/normies-2.png)
 

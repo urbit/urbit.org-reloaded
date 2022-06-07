@@ -199,7 +199,7 @@ Hoon and Nock have several unusual properties:
   lot of the system manipulates types. In particular, the `!>` rune, when
   applied to a piece of data, uses compile-time type reflection to
   produce something called a "vase": a pair of type and data, similar to
-  a <code>Data.Dynamic</code> in Haskell, or a limited form of a dependent pair.
+  a `Data.Dynamic` in Haskell, or a limited form of a dependent pair.
   Since the Arvo kernel does a lot of dynamic compilation, it uses vases
   to implement something akin to a dynamically typed language using
   Hoon. This allows for type-safe dynamic program loading, program

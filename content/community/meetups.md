@@ -9,10 +9,7 @@ hideprevious = "true"
 hide_next_title = "true"
 +++
 
-<picture>
-<source src="https://media.urbit.org/site/meetup1.jpg">
 ![](https://media.urbit.org/site/meetup1.jpg)
-</picture>
 
 Turns out that getting Urbit fans together in one room is pretty fun. Here's an incomplete list of community-led Urbit IRL groups. These events are generally informal and very approachable – feel free to dive in.
 

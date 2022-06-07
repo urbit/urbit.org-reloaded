@@ -31,7 +31,7 @@ In this post, we don’t expand that framework, but rather explore two elements 
 
 ## Lockups and spawning limits
 
-One way to think about galaxies, stars, and planets is that they’re different-sized buckets of Urbit IDs. A star contains 2<sup>16</sup> (~65K) planets, a galaxy contains 2<sup>8</sup> (256) stars and, in turn, 2<sup>24</sup> planets (16,777,216). Beyond this nesting pattern, there are three further considerations to note: booted versus unbooted addresses, locked versus unlocked addresses, and planet spawning limits.
+One way to think about galaxies, stars, and planets is that they’re different-sized buckets of Urbit IDs. A star contains 2^16^ (~65K) planets, a galaxy contains 2^8^ (256) stars and, in turn, 2^24^ planets (16,777,216). Beyond this nesting pattern, there are three further considerations to note: booted versus unbooted addresses, locked versus unlocked addresses, and planet spawning limits.
 
 Booted and Unbooted Addresses –
 

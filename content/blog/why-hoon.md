@@ -125,7 +125,7 @@ Hoon and Nock have several unusual properties:
   converted to each other. Lisp dialects are also homoiconic, but Hoon
   and Nock are arguably even more so, since things like closures and the
   environment are just Nock trees. We even have a statically typed
-  metacircular interpreter called <code>+mule</code>. We run userspace code
+  metacircular interpreter called `+mule`. We run userspace code
   metacircularly with negligible performance overhead because of Urbit's
   jet system. In Lisp, "eval is evil" is a common saying, but in Urbit,
   eval is a first-class feature.
@@ -199,7 +199,7 @@ Hoon and Nock have several unusual properties:
   lot of the system manipulates types. In particular, the `!>` rune, when
   applied to a piece of data, uses compile-time type reflection to
   produce something called a "vase": a pair of type and data, similar to
-  a <code>Data.Dynamic</code> in Haskell, or a limited form of a dependent pair.
+  a `Data.Dynamic` in Haskell, or a limited form of a dependent pair.
   Since the Arvo kernel does a lot of dynamic compilation, it uses vases
   to implement something akin to a dynamically typed language using
   Hoon. This allows for type-safe dynamic program loading, program
