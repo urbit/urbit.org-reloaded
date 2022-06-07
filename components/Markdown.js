@@ -1,15 +1,17 @@
 import React from "react";
-import Markdoc, { Ast, Node, Tag } from "@markdoc/markdoc";
+import Markdoc, { Ast, Node, Tag, Raw } from "@markdoc/markdoc";
 import { heading } from "./schema/Heading.markdoc";
 import { footnoteRef } from "./schema/footnoteRef.markdoc";
 import { footnoteItem } from "./schema/footnoteItem.markdoc";
 import { link } from "./schema/link.markdoc";
 import { image } from "./schema/image.markdoc";
+import { sup } from "./schema/superscript.markdoc";
 import Tabs from "../components/Tabs";
 import Tab from "../components/Tab";
 import Button from "../components/Button";
 import Callout from "../components/Callout";
 import Highlight, { defaultProps } from "prism-react-renderer";
+import parse from "html-react-parser";
 import Prism from "prism-react-renderer/prism";
 (typeof global !== "undefined" ? global : window).Prism = Prism;
 require("prismjs/components/prism-hoon");
@@ -100,12 +102,36 @@ const customFence = {
   attributes: {},
 };
 
+const html = {
+  render: "RenderHtml",
+  attributes: {
+    content: {
+      type: String,
+    },
+  },
+  transform(node) {
+    return node.attributes.content
+      ? new Tag("RenderHtml", { content: node.attributes.content }, [
+          node.inline,
+        ])
+      : null;
+  },
+};
+
+const RenderHtml = ({ content }) => {
+  return parse(content);
+};
+
+const superscript = ({ children }) => <sup>{children}</sup>;
+
 const CustomFence = ({ children }) => <pre>{children}</pre>;
 
-export default function Markdown({ post }) {
-  const ast = Markdoc.parse(post.content);
+export function MarkdownParse({ post }) {
+  const tokeniser = new Markdoc.Tokenizer({ html: true });
+  const tokens = tokeniser.tokenize(post.content);
+  const ast = Markdoc.parse(tokens);
   const finalAst = footnoteParse(ast);
-  const content = Markdoc.transform(finalAst, {
+  return Markdoc.transform(finalAst, {
     nodes: {
       fence,
       heading,
@@ -113,6 +139,8 @@ export default function Markdown({ post }) {
       link,
       footnoteItem,
       footnoteRef,
+      html,
+      sup,
     },
     tags: {
       tabs,
@@ -120,8 +148,13 @@ export default function Markdown({ post }) {
       button,
       callout,
       customFence,
+      RenderHtml,
+      superscript,
     },
   });
+}
+
+export default function Markdown({ content }) {
   return Markdoc.renderers.react(content, React, {
     components: {
       Fence,
@@ -130,6 +163,7 @@ export default function Markdown({ post }) {
       Button,
       Callout,
       CustomFence,
+      RenderHtml,
     },
   });
 }
