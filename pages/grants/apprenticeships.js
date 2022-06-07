@@ -1,11 +1,13 @@
 import { getPostBySlug } from "../../lib/lib";
 import GrantProgramOverview from "../../components/GrantProgramOverview";
+import { MarkdownParse } from "../../components/Markdown";
 
-export default function Post({ post, search }) {
+export default function Post({ post, markdown, search }) {
   return (
     <GrantProgramOverview
       program="apprenticeships"
       post={post}
+      markdown={markdown}
       search={search}
       actionText="View Apprenticeships"
       actionLink="/grants?program=apprenticeship&completed=true#view-grants"
@@ -20,7 +22,9 @@ export async function getStaticProps() {
     "/"
   );
 
+  const markdown = JSON.stringify(MarkdownParse({ post }));
+
   return {
-    props: { post },
+    props: { post, markdown },
   };
 }

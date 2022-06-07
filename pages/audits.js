@@ -2,7 +2,7 @@ import { getPostBySlug } from "../lib/lib";
 import BasicPage from "../components/BasicPage";
 import { MarkdownParse } from "../components/Markdown";
 
-export default function Post({ post, search }) {
+export default function Post({ post, markdown, search }) {
   return <BasicPage post={post} markdown={markdown} search={search} />;
 }
 
