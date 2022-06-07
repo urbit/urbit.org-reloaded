@@ -13,8 +13,9 @@ import MetadataBlock from "../../components/gateway/MetadataBlock";
 import MetadataLink from "../../components/gateway/MetadataLink";
 import Description from "../../components/gateway/Description";
 import axios from "axios";
+import { MarkdownParse } from "../../components/Markdown";
 
-const IdPage = ({ data, content, applications, groups, network, params }) => {
+const IdPage = ({ data, markdown, applications, groups, network, params }) => {
   let { id } = params;
   id = `~${deSig(id)}`;
   if (!ob.isValidPatp(id) || id.length > 14) {
@@ -109,7 +110,7 @@ const IdPage = ({ data, content, applications, groups, network, params }) => {
           <Description
             description={data.description}
             fallback="An Urbit ID."
-            markdown={content}
+            markdown={markdown}
           />
           <a
             className="flex items-center"
@@ -206,6 +207,8 @@ export const getServerSideProps = async ({ params, res }) => {
     join(process.cwd(), "content/ids/", id.slice(1))
   ) || { data: {}, content: "" };
 
+  const markdown = JSON.stringify(MarkdownParse({ post: { content } }));
+
   const applications = getAllPosts(
     ["title", "slug", "image", "bgColor"],
     `applications/${params.id}`
@@ -229,7 +232,7 @@ export const getServerSideProps = async ({ params, res }) => {
       data,
       applications,
       groups,
-      content,
+      markdown,
       network,
       params,
     },

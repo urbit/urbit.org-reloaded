@@ -7,6 +7,7 @@ import Container from "../../components/Container";
 import SingleColumn from "../../components/SingleColumn";
 import Section from "../../components/Section";
 import ob from "urbit-ob";
+import { MarkdownParse } from "../../components/Markdown";
 import GatewayHeader from "../../components/gateway/GatewayHeader";
 import Gateway404 from "../../components/gateway/Gateway404";
 import MetadataBlock from "../../components/gateway/MetadataBlock";
@@ -94,7 +95,7 @@ const ApplicationPage = ({ data, content, params }) => {
           <Description
             description={data.description}
             fallback="An application on Urbit."
-            markdown={content}
+            markdown={markdown}
           />
           <hr className="text-wall-200" />
           <div className="flex flex-col space-y-6">
@@ -145,6 +146,8 @@ export const getServerSideProps = async ({ params, res }) => {
     )
   ) || { data: {}, content: "" };
 
+  const markdown = JSON.stringify(MarkdownParse({ post: { content } }));
+
   if (!data.title) {
     data = {
       title: params.application?.join("/"),
@@ -155,7 +158,7 @@ export const getServerSideProps = async ({ params, res }) => {
   return {
     props: {
       data,
-      content,
+      markdown,
       params,
     },
   };

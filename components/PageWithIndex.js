@@ -10,7 +10,7 @@ import Section from "./Section";
 import Markdown from "../components/Markdown";
 import { TableOfContents } from "./TableOfContents";
 
-export default function PageWithIndex({ post, search }) {
+export default function PageWithIndex({ post, markdown, search }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
@@ -29,7 +29,7 @@ export default function PageWithIndex({ post, search }) {
         <Section narrow>
           <div className="flex sidebar">
             <div className="markdown max-w-prose">
-              <Markdown post={post} />
+              <Markdown content={JSON.parse(markdown)} />
             </div>
             <TableOfContents />
           </div>

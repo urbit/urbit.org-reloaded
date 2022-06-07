@@ -14,6 +14,7 @@ import Markdown from "./Markdown";
 
 export default function GrantProgramOverview({
   post,
+  markdown,
   search,
   program,
   actionLink,
@@ -45,7 +46,7 @@ export default function GrantProgramOverview({
           </Link>
         </Section>
         <Section narrow short className="markdown">
-          <Markdown post={post} />
+          <Markdown content={JSON.parse(markdown)} />
         </Section>
       </SingleColumn>
       <Footer />

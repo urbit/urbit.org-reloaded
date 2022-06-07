@@ -7,7 +7,7 @@ import { join } from "path";
 import { getPreviousPost, getNextPost, getPage } from "../../lib/lib";
 import Meta from "../../components/Meta";
 import Pagination from "../../components/Pagination";
-import Markdown from "../../components/Markdown";
+import Markdown, { MarkdownParse } from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
 import docsPageTree from "../../cache/docs.json";
@@ -103,7 +103,7 @@ export default function DocsLayout({
   data,
   params,
   search,
-  content,
+  markdown,
   previousPost,
   nextPost,
 }) {
@@ -144,7 +144,7 @@ export default function DocsLayout({
           params={params}
         >
           <div className="markdown technical">
-            <Markdown post={{ content: content }} />
+            <Markdown content={JSON.parse(markdown)} />
           </div>
           <div className="flex justify-between mt-16">
             {previousPost === null ? (
@@ -208,7 +208,8 @@ export async function getStaticProps({ params }) {
       "weight"
     ) || null;
 
-  return { props: { posts, data, content, previousPost, nextPost, params } };
+  const markdown = JSON.stringify(MarkdownParse({ post: { content } }));
+  return { props: { posts, data, markdown, previousPost, nextPost, params } };
 }
 
 export async function getStaticPaths() {

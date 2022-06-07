@@ -10,7 +10,7 @@ import {
 import Head from "next/head";
 import Meta from "../../components/Meta";
 import Container from "../../components/Container";
-import Markdown from "../../components/Markdown";
+import Markdown, { MarkdownParse } from "../../components/Markdown";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import SingleColumn from "../../components/SingleColumn";
@@ -27,7 +27,13 @@ import {
 } from "../../components/Snippets";
 import { eventKeys } from "../../lib/constants";
 
-export default function Event({ event, nextEvent, previousEvent, search }) {
+export default function Event({
+  event,
+  markdown,
+  nextEvent,
+  previousEvent,
+  search,
+}) {
   const starts = generateDisplayDate(event.starts, event.timezone);
   const ends = generateDisplayDate(event.ends, event.timezone);
 
@@ -110,7 +116,7 @@ export default function Event({ event, nextEvent, previousEvent, search }) {
         ) : null}
 
         <Section short narrow className="markdown">
-          <Markdown post={event} />
+          <Markdown content={JSON.parse(markdown)} />
         </Section>
         <Section narrow>
           <Contact />
@@ -147,8 +153,10 @@ export async function getStaticProps({ params }) {
 
   const event = getPostBySlug(params.slug, eventKeys, "events");
 
+  const markdown = JSON.stringify(MarkdownParse({ post: event }));
+
   return {
-    props: { event, nextEvent, previousEvent },
+    props: { event, markdown, nextEvent, previousEvent },
   };
 }
 

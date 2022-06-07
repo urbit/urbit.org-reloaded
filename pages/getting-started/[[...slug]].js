@@ -5,12 +5,12 @@ import { useRouter } from "next/router";
 import classnames from "classnames";
 import { join } from "path";
 import { getPage } from "../../lib/lib";
-import Markdown from "../../components/Markdown";
+import Markdown, { MarkdownParse } from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
 import GettingStartedTree from "../../cache/getting-started.json";
 
-export default function UsingLayout({ posts, data, params, search, content }) {
+export default function UsingLayout({ posts, data, params, search, markdown }) {
   const router = useRouter();
 
   const select = (href) => {
@@ -86,7 +86,7 @@ export default function UsingLayout({ posts, data, params, search, content }) {
           disableToC
         >
           <div className="markdown">
-            <Markdown post={{ content: content }} />
+            <Markdown content={JSON.parse(markdown)} />
           </div>
           {!params?.slug && <LaunchCards />}
         </ContentArea>
@@ -290,7 +290,9 @@ export async function getStaticProps({ params }) {
     )
   );
 
-  return { props: { posts, data, content, params } };
+  const markdown = JSON.stringify(MarkdownParse({ post: { content } }));
+
+  return { props: { posts, data, markdown, params } };
 }
 
 export async function getStaticPaths() {

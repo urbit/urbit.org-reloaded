@@ -1,8 +1,9 @@
 import { getPostBySlug } from "../lib/lib";
 import PageWithIndex from "../components/PageWithIndex";
+import { MarkdownParse } from "../components/Markdown";
 
-export default function Post({ post, search }) {
-  return <PageWithIndex post={post} search={search} />;
+export default function Post({ post, markdown, search }) {
+  return <PageWithIndex post={post} markdown={markdown} search={search} />;
 }
 
 export async function getStaticProps() {
@@ -12,7 +13,9 @@ export async function getStaticProps() {
     "/"
   );
 
+  const markdown = JSON.stringify(MarkdownParse({ post }));
+
   return {
-    props: { post },
+    props: { post, markdown },
   };
 }

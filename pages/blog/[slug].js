@@ -19,9 +19,15 @@ import Section from "../../components/Section";
 import Contact from "../../components/Contact";
 import PostPreview from "../../components/PostPreview";
 import TwoUp from "../../components/TwoUp";
-import Markdown from "../../components/Markdown";
+import Markdown, { MarkdownParse } from "../../components/Markdown";
 
-export default function Post({ post, nextPost, previousPost, search }) {
+export default function Post({
+  post,
+  markdown,
+  nextPost,
+  previousPost,
+  search,
+}) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
@@ -53,7 +59,7 @@ export default function Post({ post, nextPost, previousPost, search }) {
           <div className="text-wall-500 type-sub">{formatDate(date)}</div>
         </Section>
         <Section short narrow className="markdown">
-          <Markdown post={post} />
+          <Markdown content={JSON.parse(markdown)} />
         </Section>
         <Section narrow>
           <Contact />
@@ -96,8 +102,9 @@ export async function getStaticProps({ params }) {
     "blog"
   );
 
+  const markdown = JSON.stringify(MarkdownParse({ post }));
   return {
-    props: { post, nextPost, previousPost },
+    props: { post, markdown, nextPost, previousPost },
   };
 }
 

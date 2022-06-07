@@ -10,14 +10,14 @@ import Link from "next/link";
 import Meta from "../../components/Meta";
 import ErrorPage from "../404";
 import Container from "../../components/Container";
-import Markdown from "../../components/Markdown";
+import Markdown, { MarkdownParse } from "../../components/Markdown";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import SingleColumn from "../../components/SingleColumn";
 import Contact from "../../components/Contact";
 import Section from "../../components/Section";
 
-export default function MediaPage({ post, search }) {
+export default function MediaPage({ post, markdown, search }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
@@ -71,7 +71,7 @@ export default function MediaPage({ post, search }) {
           ) : null}
         </Section>
         <Section narrow className="markdown">
-          <Markdown post={post} />
+          <Markdown content={JSON.parse(markdown)} />
         </Section>
         <Section narrow>
           <Contact />
@@ -90,8 +90,10 @@ export async function getStaticProps({ params }) {
     "media"
   );
 
+  const markdown = JSON.stringify(MarkdownParse({ post }));
+
   return {
-    props: { post },
+    props: { post, markdown },
   };
 }
 

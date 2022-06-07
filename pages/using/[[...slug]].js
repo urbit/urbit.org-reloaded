@@ -6,7 +6,7 @@ import { useState } from "react";
 import classnames from "classnames";
 import { join } from "path";
 import { getPage } from "../../lib/lib";
-import Markdown from "../../components/Markdown";
+import Markdown, { MarkdownParse } from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
 import UsingTree from "../../cache/using.json";
@@ -96,7 +96,7 @@ const pageTree = (thisLink, tree, level = 0) => {
   );
 };
 
-export default function UsingLayout({ posts, data, params, search, content }) {
+export default function UsingLayout({ posts, data, params, search, markdown }) {
   return (
     <>
       <Head>
@@ -115,7 +115,7 @@ export default function UsingLayout({ posts, data, params, search, content }) {
           params={params}
         >
           <div className="markdown">
-            <Markdown post={{ content: content }} />
+            <Markdown content={JSON.parse(markdown)} />
           </div>
         </ContentArea>
       </div>
@@ -130,7 +130,9 @@ export async function getStaticProps({ params }) {
     join(process.cwd(), "content/using", params.slug?.join("/") || "/")
   );
 
-  return { props: { posts, data, content, params } };
+  const markdown = JSON.stringify(MarkdownParse({ post: { content } }));
+
+  return { props: { posts, data, markdown, params } };
 }
 
 export async function getStaticPaths() {

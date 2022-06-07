@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import classnames from "classnames";
 import { join } from "path";
 import { getPage, getPreviousPost, getNextPost } from "../../lib/lib";
-import Markdown from "../../components/Markdown";
+import Markdown, { MarkdownParse } from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
 import Pagination from "../../components/Pagination";
@@ -64,7 +64,7 @@ export default function UnderstandingLayout({
   data,
   params,
   search,
-  content,
+  markdown,
   previousPost,
   nextPost,
 }) {
@@ -101,9 +101,10 @@ export default function UnderstandingLayout({
           search={search}
           section={"Understanding Urbit"}
           params={params}
+          disableToC
         >
           <div className="markdown">
-            <Markdown post={{ content: content }} />
+            <Markdown content={JSON.parse(markdown)} />
           </div>
           <div className="flex justify-between mt-16">
             {previousPost === null ? (
@@ -151,6 +152,7 @@ export async function getStaticProps({ params }) {
       params.slug?.join("/") || "/"
     )
   );
+  const markdown = JSON.stringify(MarkdownParse({ post: { content } }));
 
   const previousPost =
     getPreviousPost(
@@ -168,7 +170,7 @@ export async function getStaticProps({ params }) {
       "weight"
     ) || null;
 
-  return { props: { posts, data, content, params, previousPost, nextPost } };
+  return { props: { posts, data, markdown, params, previousPost, nextPost } };
 }
 
 export async function getStaticPaths() {
