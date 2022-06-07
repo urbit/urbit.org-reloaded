@@ -5,7 +5,6 @@ export const sup = {
   children: ["strong", "em", "s", "code", "text", "tag"],
   attributes: {},
   transform(node, config) {
-    console.log(node);
     return new Tag(
       `sup`,
       node.transformAttributes(config),
