@@ -35,7 +35,9 @@ One fixed argument, then a variable number of pairs.
     f=wing  g=hoon
   ==
   ```
-  ***
+
+---
+
 - Tall style #2
 - ```hoon
   %_    a=wing
@@ -49,12 +51,16 @@ One fixed argument, then a variable number of pairs.
     g=hoon
   ==
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   %_(a=wing b=wing c=hoon, d=wing e=hoon, ...)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -129,15 +135,19 @@ One fixed argument, then a variable number of arguments.
     d=hoon
   ==
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   %:(a b c d)
   ```
-  ***
+
+---
+
 - Irregular
 - ```hoon
-  (a b c d)
+    (a b c d)
   ```
   {% /table %}
 
@@ -206,12 +216,16 @@ Two arguments, fixed.
 - ```hoon
   %.  a  b
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   %.(a b)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -267,15 +281,19 @@ Call a gate (function).
   %-  a
   b
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   %-(a b)
   ```
-  ***
+
+---
+
 - Irregular
 - ```hoon
-  (a b)
+    (a b)
   ```
   {% /table %}
 
@@ -340,15 +358,19 @@ Four arguments, fixed.
     c
   d
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   %^(a b c d)
   ```
-  ***
+
+---
+
 - Irregular
 - ```hoon
-  (a b c d)
+    (a b c d)
   ```
   {% /table %}
 
@@ -396,15 +418,19 @@ Three arguments, fixed.
     b
   c
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   %+(a b c)
   ```
-  ***
+
+---
+
 - Irregular
 - ```hoon
-  (a b c)
+    (a b c)
   ```
   {% /table %}
 
@@ -456,15 +482,19 @@ Three arguments, fixed.
   %~  p  q
   r
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   %~(p q r)
   ```
-  ***
+
+---
+
 - Irregular
 - ```
-  ~(p q r1 r2 rn)
+    ~(p q r1 r2 rn)
   ```
   {% /table %}
 
@@ -524,7 +554,9 @@ Two fixed arguments, then a variable number of pairs.
     g=wing  h=hoon
   ==
   ```
-  ***
+
+---
+
 - Tall style #2
 - ```hoon
   %*    a=wing  b=hoon
@@ -538,12 +570,16 @@ Two fixed arguments, then a variable number of pairs.
     h=hoon
   ==
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   %*(a b c d, e f, g h)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -622,7 +658,9 @@ One fixed argument, then a variable number of pairs.
     f=wing  g=hoon
   ==
   ```
-  ***
+
+---
+
 - Tall style #2
 - ```hoon
   %=    a=wing
@@ -636,15 +674,19 @@ One fixed argument, then a variable number of pairs.
     g=hoon
   ==
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   %=(a b c, d e, f g)
   ```
-  ***
+
+---
+
 - Irregular
 - ```
-  a(b c, d e, f g)
+    a(b c, d e, f g)
   ```
   {% /table %}
 

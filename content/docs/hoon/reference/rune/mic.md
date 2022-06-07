@@ -30,15 +30,19 @@ One fixed argument, then a variable number of arguments.
     qn
   ==
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ;:(p q1 q2 qn)
   ```
-  ***
+
+---
+
 - Irregular
 - ```
-  :(p q1 q2 qn)
+    :(p q1 q2 qn)
   ```
   {% /table %}
 
@@ -112,12 +116,16 @@ Four arguments, fixed.
 - ```hoon
   ;<  mold  bind  expr1  expr2
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ;<(mold bind expr1 expr2)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -214,12 +222,16 @@ One argument, fixed.
 - ```hoon
   ;+  p
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ;+(p)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -301,12 +313,16 @@ Two arguments, fixed.
   ;;  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ;;(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -375,12 +391,16 @@ One argument, fixed.
 - ```hoon
   ;/  p
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ;/(p)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -429,12 +449,16 @@ One fixed argument, then a variable number of arguments.
     qn
   ==
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ;~(p q1 q2 qn)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -565,12 +589,16 @@ One argument, fixed.
 - ```hoon
   ;*  p
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ;*(p)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -646,12 +674,16 @@ A variable number of arguments.
      pn
   ==
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ;=(p1 p2 p3 pn)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}

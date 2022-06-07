@@ -135,7 +135,9 @@ One fixed argument, then a variable number of `+`-family expressions.
   ++  f=term  g=hoon
   --
   ```
-  ***
+
+---
+
 - Wide
 - None.
 
@@ -252,12 +254,16 @@ Two arguments, fixed.
   |:  a
   b
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   |:(a b)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -324,7 +330,9 @@ Argument: a variable number of `+`-family expressions.
   ++  e=term  f=hoon
   --
   ```
-  ***
+
+---
+
 - Wide
 - None.
 
@@ -410,12 +418,16 @@ One argument, fixed.
 - ```hoon
   |.  a
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   |.(a)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -505,7 +517,9 @@ One fixed argument, then a variable number of `+`-family expressions.
   ++  f=term  g=hoon
   --
   ```
-  ***
+
+---
+
 - Wide
 - None.
 
@@ -584,12 +598,16 @@ One argument, fixed.
 - ```hoon
   |-  a
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   |-(a)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -664,12 +682,16 @@ Two arguments, fixed.
   |~  a
   b
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   |~(a b)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -723,12 +745,16 @@ Two arguments, fixed.
 - ```hoon
   |*  a  b
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   |*(a b)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -813,12 +839,16 @@ Two arguments, fixed.
   |=  a
   b
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   |=(a b)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -900,7 +930,9 @@ Arguments: a variable number of `+`-family expressions.
   ++  e=term  f=hoon
   --
   ```
-  ***
+
+---
+
 - Wide
 - None.
 
@@ -952,12 +984,16 @@ One argument, fixed.
 - ```hoon
   |?  a
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   |?(a)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}

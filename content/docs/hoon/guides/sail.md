@@ -44,20 +44,20 @@ It’s easy to see how Sail can directly translate to HTML:
   ==
   ```
 - ```
-  <html>
-    <head>
-      <title>My page</title>
-      <meta charset="utf-8" />
-    </head>
-    <body>
-      <h1>Welcome!</h1>
-      <p>Hello, world! Welcome to my
-        page. Here is an image:
-        <br />
-        <img src="/foo.png" />
-      </p>
-    </body>
-  </html>
+    <html>
+      <head>
+        <title>My page</title>
+        <meta charset="utf-8" />
+      </head>
+      <body>
+        <h1>Welcome!</h1>
+        <p>Hello, world! Welcome to my
+          page. Here is an image:
+          <br />
+          <img src="/foo.png" />
+        </p>
+      </body>
+    </html>
   ```
   {% /table %}
 
@@ -108,10 +108,10 @@ Example:
   ==
   ```
 - ```
-  <body>
-  <h1>Blog title</h1>
-  <p>This is some good content.</p>
-  </body>
+    <body>
+    <h1>Blog title</h1>
+    <p>This is some good content.</p>
+    </body>
   ```
   {% /table %}
 
@@ -133,11 +133,11 @@ those untagged lines with `;` and then a space:
   ==
   ```
 - ```
-  <body>
-    <h1>Welcome!</h1>
-    Hello, world!
-    We’re on the web.
-  </body>
+    <body>
+      <h1>Welcome!</h1>
+      Hello, world!
+      We’re on the web.
+    </body>
   ```
   {% /table %}
 
@@ -167,7 +167,9 @@ shown below.
     foo bar baz
   ==
   ```
-  ***
+
+---
+
 - Tall
 - ```
   ;div
@@ -177,13 +179,15 @@ shown below.
     foo bar baz
   ==
   ```
-  ***
+
+---
+
 - HTML
 - ```
-  <div title="a tooltip" style="color:red">
-    <h1>Foo</h1>
-    <p>foo bar baz </p>
-  </div>
+    <div title="a tooltip" style="color:red">
+      <h1>Foo</h1>
+      <p>foo bar baz </p>
+    </div>
   ```
   {% /table %}
 
@@ -243,7 +247,7 @@ Add `/` after tag name to start an `href`.
   ;a/"urbit.org": A link to Urbit.org
   ```
 - ```
-  <a href="urbit.org">A link to Urbit.org</a>
+    <a href="urbit.org">A link to Urbit.org</a>
   ```
   {% /table %}
 
@@ -265,7 +269,7 @@ usual manner. For example:
   ;p: foo {<time>} bar
   ```
 - ```
-  <p>foo ~2000.1.1 baz</p>
+    <p>foo ~2000.1.1 baz</p>
   ```
   {% /table %}
 
@@ -278,12 +282,12 @@ Likewise:
 ---
 
 - ```
-  =/  txt=tape  " bananas"
-  ;article
-    ;b: {(a-co:co (mul 42 789))}
-    ; {txt}
-    {<our>} {<now>} {<`@ux`(end 6 eny)>}
-  ==
+    =/  txt=tape  " bananas"
+    ;article
+      ;b: {(a-co:co (mul 42 789))}
+      ; {txt}
+      {<our>} {<now>} {<`@ux`(end 6 eny)>}
+    ==
   ```
   {% /table %}
 
@@ -294,10 +298,10 @@ Likewise:
 ---
 
 - ```
-  <article>
-    <b>33138</b> bananas
-    <p>~zod ~2022.2.21..09.54.21..5b63 0x9827.99c7.06f4.8ef9</p>
-  </article>
+    <article>
+      <b>33138</b> bananas
+      <p>~zod ~2022.2.21..09.54.21..5b63 0x9827.99c7.06f4.8ef9</p>
+    </article>
   ```
   {% /table %}
 
@@ -486,13 +490,13 @@ elements inside another Sail element. For example:
   ==
   ```
 - ```
-  <p>
-    <sub>1</sub><sup>2</sup>
-    <sub>3</sub><sup>4</sup>
-    <sub>5</sub><sup>6</sup>
-    <sub>7</sub><sup>8</sup>
-    <sub>9</sub>
-  </p>
+    <p>
+      <sub>1</sub><sup>2</sup>
+      <sub>3</sub><sup>4</sup>
+      <sub>5</sub><sup>6</sup>
+      <sub>7</sub><sup>8</sup>
+      <sub>9</sub>
+    </p>
   ```
   {% /table %}
 
@@ -521,11 +525,11 @@ For example:
   ==
   ```
 - ```
-  <main>
-    <p>First node.</p>
-    <p>Second node.</p>
-    <p>Third node.</p>
-  </main>
+    <main>
+      <p>First node.</p>
+      <p>Second node.</p>
+      <p>Third node.</p>
+    </main>
   ```
   {% /table %}
 

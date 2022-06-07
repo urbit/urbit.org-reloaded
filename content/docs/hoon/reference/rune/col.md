@@ -28,20 +28,26 @@ Two arguments, fixed.
   :-  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   :-(p q)
   ```
-  ***
+
+---
+
 - Irregular #1
 - ```hoon
   [p q]
   ```
-  ***
+
+---
+
 - Irregular #2
 - ```
-  p^q
+    p^q
   ```
   {% /table %}
 
@@ -93,12 +99,16 @@ Two arguments, fixed.
   :_  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   :_(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -145,15 +155,19 @@ Three arguments, fixed.
     q
   r
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   :+(p q r)
   ```
-  ***
+
+---
+
 - Irregular
 - ```hoon
-  [p q r]
+    [p q r]
   ```
   {% /table %}
 
@@ -205,15 +219,19 @@ Four arguments, fixed.
     r
   s
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   :^(p q r s)
   ```
-  ***
+
+---
+
 - Irregular
 - ```hoon
-  [p q r s]
+    [p q r s]
   ```
   {% /table %}
 
@@ -267,15 +285,19 @@ Variable number of arguments.
       pn
   ==
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   :*(p1 p2 p3 pn)
   ```
-  ***
+
+---
+
 - Irregular
 - ```
-  [p1 p2 p3 pn]
+    [p1 p2 p3 pn]
   ```
   {% /table %}
 
@@ -352,15 +374,19 @@ Variable number of arguments.
       pn
   ==
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   :~(p1 p2 p3 pn)
   ```
-  ***
+
+---
+
 - Irregular
 - ```
-  ~[p1 p2 p3 pn]
+    ~[p1 p2 p3 pn]
   ```
   {% /table %}
 

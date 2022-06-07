@@ -44,12 +44,16 @@ Two arguments, fixed.
   =>  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   =>(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -109,12 +113,16 @@ Two arguments, fixed.
   =|  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   =|(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -174,12 +182,16 @@ Two arguments: the first a variable number of pairs, the second is fixed.
     ==
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   =:(p1a p1b, p2a p2b, p3a p3b q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -233,12 +245,16 @@ Two arguments, fixed.
   =,  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   =,(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -312,12 +328,16 @@ Three arguments, fixed.
   =.  p  q
   r
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   =.(p q r)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -380,12 +400,16 @@ Two arguments, fixed.
   =-  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   =-(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -442,12 +466,16 @@ Four arguments, fixed.
     r
   s
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   =^(p q r s)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -519,15 +547,19 @@ Two arguments, fixed
   =<  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   =<(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - ```
-  p:q
+    p:q
   ```
   {% /table %}
 
@@ -586,12 +618,16 @@ Two arguments, fixed.
   =+  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   =+(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -653,12 +689,16 @@ Three arguments, fixed.
     q
   r
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   =;(p q r)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -715,12 +755,16 @@ Three arguments, fixed.
     q
   r
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   =/(p q r)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -803,12 +847,16 @@ Variable number of arguments.
       pn
   ==
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   =~(p1 p2 p3 pn)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -877,12 +925,16 @@ Three arguments, fixed.
     q
   r
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   =*(p q r)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -955,12 +1007,16 @@ Four arguments, fixed.
     r
   s
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   =?(p q r s)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}

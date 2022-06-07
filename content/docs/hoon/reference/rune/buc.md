@@ -68,12 +68,16 @@ Two arguments, fixed.
   $|  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   $|(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -171,15 +175,19 @@ One argument, fixed.
 - ```hoon
   $_  p
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   $_(p)
   ```
-  ***
+
+---
+
 - Irregular
 - ```
-  _p
+    _p
   ```
   {% /table %}
 
@@ -240,12 +248,16 @@ A variable number of arguments.
       [%pn ...]
   ==
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   $%([%p1 ...] [%p2 ...] [%p3 ...] [%pn ...])
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -311,20 +323,26 @@ A variable number of arguments.
       pn
   ==
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   $:(p1 p2 p3 pn)
   ```
-  ***
+
+---
+
 - Irregular (noun mode)
 - ```hoon
   ,[p1 p2 p3 pn]
   ```
-  ***
+
+---
+
 - Irregular (structure mode)
 - ```hoon
-  [p1 p2 p3 pn]
+    [p1 p2 p3 pn]
   ```
   {% /table %}
 
@@ -380,12 +398,16 @@ Two arguments, fixed.
   $<  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   $<(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -443,12 +465,16 @@ Two arguments, fixed.
   $>  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   $>(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -531,12 +557,16 @@ Two arguments, fixed.
   $-  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   $-(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -578,12 +608,16 @@ Two arguments, fixed.
   $^  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   $^(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -642,12 +676,16 @@ Two arguments, fixed.
   $&  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   $&(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -714,12 +752,16 @@ Two arguments, fixed.
   $~  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   $~(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -808,12 +850,16 @@ Two arguments, fixed.
   $@  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   $@(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -874,15 +920,19 @@ Two arguments, fixed.
   $=  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   $=(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - ```
-  p=q
+    p=q
   ```
   {% /table %}
 
@@ -942,15 +992,19 @@ Variable number of arguments.
       pn
   ==
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   $?(p1 p2 p3 pn)
   ```
-  ***
+
+---
+
 - Irregular
 - ```hoon
-  ?(p1 p2 p3 pn)
+    ?(p1 p2 p3 pn)
   ```
   {% /table %}
 

@@ -28,12 +28,16 @@ Two arguments, fixed.
   ~>  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ~>(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -98,12 +102,16 @@ Two arguments, fixed.
   ~|  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ~|(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -157,12 +165,16 @@ Two arguments, fixed.
   ~&  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ~&(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -232,12 +244,16 @@ Two arguments, fixed.
   ~_  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ~_(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -302,7 +318,9 @@ fixed argument.
     ==
   s
   ```
-  ***
+
+---
+
 - Wide
 - None.
 
@@ -413,12 +431,16 @@ Two arguments, fixed.
   ~<  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ~<(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -472,12 +494,16 @@ One argument, fixed.
 - ```hoon
   ~+  p
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ~+(p)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -542,12 +568,16 @@ Two arguments, fixed.
   ~/  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ~/(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -599,12 +629,16 @@ Two arguments, fixed.
   ~&  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ~&(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -665,12 +699,16 @@ Two arguments, fixed.
   ~=  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ~=(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -732,12 +770,16 @@ Three arguments, fixed.
     q
   r
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ~?(p q r)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -800,12 +842,16 @@ Two arguments, fixed.
   ~!  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ~!(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}

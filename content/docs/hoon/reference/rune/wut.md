@@ -54,15 +54,19 @@ Variable number of arguments.
       pn
   ==
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ?|(p1 p2 p3 pn)
   ```
-  ***
+
+---
+
 - Irregular
 - ```hoon
-  |(p1 p2 p3 pn)
+    |(p1 p2 p3 pn)
   ```
   {% /table %}
 
@@ -131,7 +135,9 @@ One fixed argument, then a variable number of pairs.
     qna  qnb
   ==
   ```
-  ***
+
+---
+
 - Tall style #2
 - ```hoon
   ?-    p
@@ -145,12 +151,16 @@ One fixed argument, then a variable number of pairs.
     qnb
   ==
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ?-(p q1a q1b, q2a q2b, qna qnb)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -239,12 +249,16 @@ Three arguments, fixed.
     q
   r
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ?:(p q r)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -310,12 +324,16 @@ Three arguments, fixed.
     q
   r
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ?.(p q r)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -379,12 +397,16 @@ Three arguments, fixed.
     q
   r
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ?^(p q r)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -443,12 +465,16 @@ Two arguments, fixed.
   ?<  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ?<(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -511,12 +537,16 @@ Two arguments, fixed.
   ?>  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ?>(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -582,7 +612,9 @@ Two fixed arguments, then a variable number of pairs.
     rna  rnb
   ==
   ```
-  ***
+
+---
+
 - Tall style #2
 - ```hoon
   ?+    p  q
@@ -596,12 +628,16 @@ Two fixed arguments, then a variable number of pairs.
     rnb
   ==
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ?+(p q r1a r1b, r2a r2b, rna rnb)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -687,15 +723,19 @@ Variable arguments.
       pn
   ==
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ?&(p1 p2 pn)
   ```
-  ***
+
+---
+
 - Irregular
 - ```
-  &(p1 p2 pn)
+    &(p1 p2 pn)
   ```
   {% /table %}
 
@@ -762,12 +802,16 @@ Three arguments, fixed.
     q
   r
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ?@(p q r)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -831,12 +875,16 @@ Three arguments, fixed.
     q
   r
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ?~(p q r)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -893,12 +941,16 @@ Two arguments, fixed.
   ?=  p
   q
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ?=(p q)
   ```
-  ***
+
+---
+
 - Irregular
 - None.
   {% /table %}
@@ -957,15 +1009,19 @@ One argument, fixed.
 - ```hoon
   ?!  p
   ```
-  ***
+
+---
+
 - Wide
 - ```hoon
   ?!(p)
   ```
-  ***
+
+---
+
 - Irregular
 - ```hoon
-  !p
+    !p
   ```
   {% /table %}
 

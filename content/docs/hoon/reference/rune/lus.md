@@ -35,7 +35,9 @@ One argument, fixed.
 - ```hoon
   +|  %label
   ```
-  ***
+
+---
+
 - Wide
 - None.
 
@@ -108,7 +110,9 @@ Two arguments, fixed.
 - ```hoon
   +$  p=term  q=spec
   ```
-  ***
+
+---
+
 - Wide
 - None.
 
@@ -168,7 +172,9 @@ Two arguments, fixed.
 - ```hoon
   ++  p=term  q=hoon
   ```
-  ***
+
+---
+
 - Wide
 - None.
 
@@ -227,7 +233,9 @@ Arguments: A variable number of pairs.
       ...
       e=term  f=hoon
   ```
-  ***
+
+---
+
 - Wide
 - None.
 
