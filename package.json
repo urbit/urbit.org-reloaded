@@ -7,7 +7,6 @@
     "build": "next build",
     "export": "npm run prebuild && next build && next export",
     "start": "next start",
-    "prepare": "husky install",
     "prebuild": "npm run cache-posts && npm run rss && npm run community-tree && npm run docs-tree && npm run getting-started-tree && npm run understanding-urbit-tree && npm run using-tree",
     "community-tree": "node lib/buildPageTree community weight",
     "docs-tree": "node lib/buildPageTree docs weight",
