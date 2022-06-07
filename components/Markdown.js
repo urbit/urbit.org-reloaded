@@ -127,7 +127,7 @@ const superscript = ({ children }) => <sup>{children}</sup>;
 const CustomFence = ({ children }) => <pre>{children}</pre>;
 
 export function MarkdownParse({ post }) {
-  const tokeniser = new Markdoc.Tokenizer({ html: true });
+  const tokeniser = new Markdoc.Tokenizer({ html: true, linkify: true });
   const tokens = tokeniser.tokenize(post.content);
   const ast = Markdoc.parse(tokens);
   const finalAst = footnoteParse(ast);
