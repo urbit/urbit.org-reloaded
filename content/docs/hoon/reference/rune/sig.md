@@ -16,30 +16,27 @@ Raw hint, applied to computation.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-~>  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-~>(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ~>  p
+  q
+  ```
+  ***
+- Wide
+- ```hoon
+  ~>(p q)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -89,30 +86,27 @@ Tracing printf.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-~|  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-~|(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ~|  p
+  q
+  ```
+  ***
+- Wide
+- ```hoon
+  ~|(p q)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -151,30 +145,27 @@ Profiling hit counter.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-~&  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-~&(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ~&  p
+  q
+  ```
+  ***
+- Wide
+- ```hoon
+  ~&(p q)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -229,30 +220,27 @@ User-formatted tracing printf.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-~_  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-~_(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ~_  p
+  q
+  ```
+  ***
+- Wide
+- ```hoon
+  ~_(p q)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -297,25 +285,32 @@ Four arguments. Two fixed arguments, then a third which may be `~` if empty or
 else a variable number of pairs sandwiched between two `==`s, then a fourth
 fixed argument.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-~%  p  q
-  ==
-    r1a  r1b
-    r2a  r2b
-    rna  rnb
-  ==
-s
-</pre>
-</td>
-</tr>
-<tr><td>Wide</td><td>None.</td></tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ~%  p  q
+    ==
+      r1a  r1b
+      r2a  r2b
+      rna  rnb
+    ==
+  s
+  ```
+  ***
+- Wide
+- None.
+
+---
+
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -406,30 +401,27 @@ Raw hint, applied to product.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-~<  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-~<(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ~<  p
+  q
+  ```
+  ***
+- Wide
+- ```hoon
+  ~<(p q)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 `p` may either be a a `term` or a pair of `[term hoon]`. If it's the latter, `p`
 may optionally be written as `%foo.some-hoon`.
@@ -469,29 +461,26 @@ Cache a computation.
 
 One argument, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-~+  p
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-~+(p)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ~+  p
+  ```
+  ***
+- Wide
+- ```hoon
+  ~+(p)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -541,30 +530,27 @@ Jet registration for gate with registered context.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-~/  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-~/(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ~/  p
+  q
+  ```
+  ***
+- Wide
+- ```hoon
+  ~/(p q)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -601,30 +587,27 @@ Debugging printf.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-~&  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-~&(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ~&  p
+  q
+  ```
+  ***
+- Wide
+- ```hoon
+  ~&(p q)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -670,30 +653,27 @@ Detect duplicate.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-~=  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-~=(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ~=  p
+  q
+  ```
+  ***
+- Wide
+- ```hoon
+  ~=(p q)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -739,31 +719,28 @@ Conditional debug printf.
 
 Three arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-~?  p
-  q
-r
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-~?(p q r)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ~?  p
+    q
+  r
+  ```
+  ***
+- Wide
+- ```hoon
+  ~?(p q r)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -811,30 +788,27 @@ Print type on compilation fail.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-~!  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-~!(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ~!  p
+  q
+  ```
+  ***
+- Wide
+- ```hoon
+  ~!(p q)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 

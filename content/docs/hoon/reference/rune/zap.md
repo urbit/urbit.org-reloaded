@@ -13,30 +13,27 @@ Produce the Hoon AST of an expression.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-!,  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-!,(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  !,  p
+  q
+  ```
+  ***
+- Wide
+- ```hoon
+  !,(p q)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -71,29 +68,26 @@ Wrap a noun in its type (form a [`vase`](/docs/hoon/reference/stdlib/4o#vase)).
 
 One argument, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-!>  p
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-!>(p)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  !>  p
+  ```
+  ***
+- Wide
+- ```hoon
+  !>(p)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -136,30 +130,27 @@ its type nests.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-!<  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-!<(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  !<  p
+  q
+  ```
+  ***
+- Wide
+- ```hoon
+  !<(p q)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -200,30 +191,27 @@ Wrap a noun in its type (raw).
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-!;  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-!;(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  !;  p
+  q
+  ```
+  ***
+- Wide
+- ```hoon
+  !;(p q)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -265,29 +253,26 @@ Make the Nock formula for a Hoon expression.
 
 One argument, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-!=  p
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-!=(p)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  !=  p
+  ```
+  ***
+- Wide
+- ```hoon
+  !=(p)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -339,30 +324,27 @@ Restrict Hoon version.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-!?  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-!?(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  !?  p
+  q
+  ```
+  ***
+- Wide
+- ```hoon
+  !?(p q)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -405,31 +387,28 @@ Branch on whether a wing exists.
 
 Three arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-!@  p
-  q
-r
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-!@(p q r)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  !@  p
+    q
+  r
+  ```
+  ***
+- Wide
+- ```hoon
+  !@(p q r)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -464,29 +443,26 @@ Crash.
 
 No arguments.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-!!
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-!!
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  !!
+  ```
+  ***
+- Wide
+- ```
+  !!
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -519,29 +495,26 @@ Turn on stack trace.
 
 One argument, fixed
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-!:  p
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-!:(p)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  !:  p
+  ```
+  ***
+- Wide
+- ```hoon
+  !:(p)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### Produces
 
@@ -574,29 +547,26 @@ Turn off stack trace for a subexpression `p`
 
 One argument, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-!.  p
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-!.(p)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  !.  p
+  ```
+  ***
+- Wide
+- ```hoon
+  !.(p)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### Produces
 

@@ -125,7 +125,7 @@ Hoon and Nock have several unusual properties:
   converted to each other. Lisp dialects are also homoiconic, but Hoon
   and Nock are arguably even more so, since things like closures and the
   environment are just Nock trees. We even have a statically typed
-  metacircular interpreter called <code>+mule</code>. We run userspace code
+  metacircular interpreter called `+mule`. We run userspace code
   metacircularly with negligible performance overhead because of Urbit's
   jet system. In Lisp "eval is evil" is a common saying but, in Urbit,
   eval is a first-class feature.

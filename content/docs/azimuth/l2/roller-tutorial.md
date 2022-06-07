@@ -159,53 +159,14 @@ set up at `https://myroller.sampel-pal.net`.
 rate at which transactions are submitted and manually submitting batches. These
 can be modified using the following generators:
 
-<table>
-  <thead><tr><th>Dojo Command</th><th>Description</th><th>Argument</th></tr></thead>
-<tbody>
-  <tr>
-    <td><code>:roller|commit</code></td>
-    <td>Submits a new L2 batch with all pending transactions.</td>
-    <td>None.</td>
-  </tr>
-  <tr>
-    <td><code>:roller|config</code></td>
-    <td>General configuration command.</td>
-    <td><code>$config</code> (see <code>/sur/dice.hoon</code>)</td>
-  </tr>
-  <tr>
-    <td><code>:roller|endpoint</code></td>
-    <td>Set the Infura endpoint.</td>
-    <td><code>[@t ?(%mainnet %ropsten %local)]</code></td>
-  </tr>
-  <tr>
-    <td><code>:roller|frequency</code></td>
-    <td>Sets the frequency at which batches are submitted.</td>
-    <td><code>@dr</code></td>
-  </tr>
-  <tr>
-    <td><code>:roller|local</code></td>
-    <td>Configures <code>%roller</code> to listen to a local Ethereum node at port 8545.</td>
-    <td>None.</td>
-  </tr>
-  <tr>
-    <td><code>:roller|quota</code></td>
-    <td>Modified the number of txs a ship is allowed to send per unit time.</td>
-    <td><code>@ud</code></td>
-  </tr>
-  <tr>
-    <td><code>:roller|ropsten</code></td>
-    <td>Configure %roller to listen to a preset Ropsten Infura node.</td>
-    <td>None.</td>
-  </tr>
-  <tr>
-    <td><code>:roller|setkey</code></td>
-    <td>Load a private key into the roller and retrieves its L1 nonce.</td>
-    <td><code>@t</code></td>
-  </tr>
-  <tr>
-    <td><code>:roller|slice</code></td>
-    <td>Modified the unit of time for each ship's quota.</td>
-    <td><code>@dr</code></td>
-  </tr>
-</tbody>
-</table>
+| Dojo Command         | Description                                                           | Argument                           |
+| -------------------- | --------------------------------------------------------------------- | ---------------------------------- |
+| `:roller\|commit`    | Submits a new L2 batch with all pending transactions.                 | None.                              |
+| `:roller\|config`    | General configuration command.                                        | `$config` (see `/sur/dice.hoon`)   |
+| `:roller\|endpoint`  | Set the Infura endpoint.                                              | `[@t ?(%mainnet %ropsten %local)]` |
+| `:roller\|frequency` | Sets the frequency at which batches are submitted.                    | `@dr`                              |
+| `:roller\|local`     | Configures `%roller` to listen to a local Ethereum node at port 8545. | None.                              |
+| `:roller\|quota`     | Modified the number of txs a ship is allowed to send per unit time.   | `@ud`                              |
+| `:roller\|ropsten`   | Configure `%roller` to listen to a preset Ropsten Infura node.        | None.                              |
+| `:roller\|setkey`    | Load a private key into the roller and retrieves its L1 nonce.        | `@t`                               |
+| `:roller\|slice`     | Modified the unit of time for each ship's quota.                      | `@dr`                              |

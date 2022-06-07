@@ -24,19 +24,26 @@ Chapter label (not useful)
 
 One argument, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-+|  %label
-</pre>
-</td>
-</tr>
-<tr><td>Wide</td><td>None.</td></tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  +|  %label
+  ```
+  ***
+- Wide
+- None.
+
+---
+
+- Irregular
+- None.
+  {% /table %}
 
 #### Discussion
 
@@ -90,19 +97,26 @@ Produce a structure arm (type definition).
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-+$  p=term  q=spec
-</pre>
-</td>
-</tr>
-<tr><td>Wide</td><td>None.</td></tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  +$  p=term  q=spec
+  ```
+  ***
+- Wide
+- None.
+
+---
+
+- Irregular
+- None.
+  {% /table %}
 
 `p` is an arm name, and `q` is any structure expression.
 
@@ -143,19 +157,26 @@ Produce a normal arm.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-++  p=term  q=hoon
-</pre>
-</td>
-</tr>
-<tr><td>Wide</td><td>None.</td></tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ++  p=term  q=hoon
+  ```
+  ***
+- Wide
+- None.
+
+---
+
+- Irregular
+- None.
+  {% /table %}
 
 `p` is the arm name, and `q` is any Hoon expression.
 
@@ -192,22 +213,29 @@ Defines deferred expressions within doors.
 
 Arguments: A variable number of pairs.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-+*  a=term  b=hoon
-    c=term  d=hoon
-    ...
-    e=term  f=hoon
-</pre>
-</td>
-</tr>
-<tr><td>Wide</td><td>None.</td></tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  +*  a=term  b=hoon
+      c=term  d=hoon
+      ...
+      e=term  f=hoon
+  ```
+  ***
+- Wide
+- None.
+
+---
+
+- Irregular
+- None.
+  {% /table %}
 
 `a`, `c`, `e` are arm names and `b`, `d`, `f` are any Hoon expression. Note that
 unlike all other runes with a variable number of arguments, the list of

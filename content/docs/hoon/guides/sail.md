@@ -18,40 +18,48 @@ This document will walk through the basics of Sail and its syntax.
 
 It’s easy to see how Sail can directly translate to HTML:
 
-<table><thead><tr><th>Sail</th><th>HTML</th></tr></thead>
-<tbody><tr><td><pre class="language-hoon">
-;html
-  ;head
-    ;title: My page
-    ;meta(charset "utf-8");
-  ==
-  ;body
-    ;h1: Welcome!
-    ;p
-      ; Hello, world!
-      ; Welcome to my page.
-      ; Here is an image:
-      ;br;
-      ;img@"/foo.png";
+{% table %}
+
+- Sail
+- HTML
+
+---
+
+- ```
+  ;html
+    ;head
+      ;title: My page
+      ;meta(charset "utf-8");
+    ==
+    ;body
+      ;h1: Welcome!
+      ;p
+        ; Hello, world!
+        ; Welcome to my page.
+        ; Here is an image:
+        ;br;
+        ;img@"/foo.png";
+      ==
     ==
   ==
-==
-</pre></td><td><pre>
-&#x26;&#x6C;&#x74;&#x3B;html>
-  &#x26;&#x6C;&#x74;&#x3B;head>
-    &#x26;&#x6C;&#x74;&#x3B;title>My page&#x26;&#x6C;&#x74;&#x3B;/title>
-    &#x26;&#x6C;&#x74;&#x3B;meta charset="utf-8" />
-  &#x26;&#x6C;&#x74;&#x3B;/head>
-  &#x26;&#x6C;&#x74;&#x3B;body>
-    &#x26;&#x6C;&#x74;&#x3B;h1>Welcome!&#x26;&#x6C;&#x74;&#x3B;/h1>
-    &#x26;&#x6C;&#x74;&#x3B;p>Hello, world! Welcome to my
-      page. Here is an image:
-      &#x26;&#x6C;&#x74;&#x3B;br />
-      &#x26;&#x6C;&#x74;&#x3B;img src="/foo.png" />
-    &#x26;&#x6C;&#x74;&#x3B;/p>
-  &#x26;&#x6C;&#x74;&#x3B;/body>
-&#x26;&#x6C;&#x74;&#x3B;/html>
-</pre></td></tr></tbody></table>
+  ```
+- ```
+  <html>
+    <head>
+      <title>My page</title>
+      <meta charset="utf-8" />
+    </head>
+    <body>
+      <h1>Welcome!</h1>
+      <p>Hello, world! Welcome to my
+        page. Here is an image:
+        <br />
+        <img src="/foo.png" />
+      </p>
+    </body>
+  </html>
+  ```
+  {% /table %}
 
 ## Tags and Closing
 
@@ -63,17 +71,17 @@ close expressions; Sail inherits this convenience.
 ### Empty
 
 Empty tags are closed with a `;` following the tag. For example, `;div;` will be
-rendered as `&lt;div>&lt;/div>`. Non-container tags `;br;` and `;img@"some-url";` in
-particular will be rendered as a single tag like `&lt;br />` and `&lt;img src="some-url" />`.
+rendered as `<div></div>`. Non-container tags `;br;` and `;img@"some-url";` in
+particular will be rendered as a single tag like `<br />` and `<img src="some-url" />`.
 
 ### Filled
 
 Filled tags are closed via line-break. To fill text inside, add `:` after the
 tag name, then insert your plain text following a space. Example:
 
-| Sail             | HTML                       |
-| ---------------- | -------------------------- |
-| `;h1: The title` | `&lt;h1>The title&lt;/h1>` |
+| Sail             | HTML                 |
+| ---------------- | -------------------- |
+| `;h1: The title` | `<h1>The title</h1>` |
 
 ### Nested
 
@@ -81,41 +89,57 @@ To nest tags, simply create a new line. Nested tags need to be closed with `==`,
 because they expect a list of sub-tags.
 
 If we nest lines of plain text with no tag, the text will be wrapped in a
-`&lt;p>` tag. Additionally, any text with atom auras or `++arm:syntax` in such
-plain text lines will be wrapped in `&lt;code>` tags.
+`<p>` tag. Additionally, any text with atom auras or `++arm:syntax` in such
+plain text lines will be wrapped in `<code>` tags.
 
 Example:
 
-<table><thead><tr><th>Sail</th><th>HTML</th></tr></thead><tbody><tr><td>
-<pre class="language-hoon">
-;body
-  ;h1: Blog title
-  This is some good content.
-==
-</pre></td><td><pre>
-&#x26;&#x6C;&#x74;&#x3B;body>
-  &#x26;&#x6C;&#x74;&#x3B;h1>Blog title&#x26;&#x6C;&#x74;&#x3B;/h1>
-  &#x26;&#x6C;&#x74;&#x3B;p>This is some good content.&#x26;&#x6C;&#x74;&#x3B;/p>
-&#x26;&#x6C;&#x74;&#x3B;/body>
-</pre></td></tr></tbody></table>
+{% table %}
+
+- Sail
+- HTML
+
+---
+
+- ```
+  ;body
+    ;h1: Blog title
+    This is some good content.
+  ==
+  ```
+- ```
+  <body>
+  <h1>Blog title</h1>
+  <p>This is some good content.</p>
+  </body>
+  ```
+  {% /table %}
 
 If we want to write a string with no tag at all, then we can prepend
 those untagged lines with `;` and then a space:
 
-<table><thead><tr><th>Sail</th><th>HTML</th></tr></thead><tbody><tr><td>
-<pre class="language-hoon">
-;body
-  ;h1: Welcome!
-  ; Hello, world!
-  ; We’re on the web.
-==
-</pre></td><td><pre>
-&#x26;&#x6C;&#x74;&#x3B;body>
-  &#x26;&#x6C;&#x74;&#x3B;h1>Welcome!&#x26;&#x6C;&#x74;&#x3B;/h1>
-  Hello, world!
-  We’re on the web.
-&#x26;&#x6C;&#x74;&#x3B;/body>
-</pre></td></tr></tbody></table>
+{% table %}
+
+- Sail
+- HTML
+
+---
+
+- ```
+  ;body
+    ;h1: Welcome!
+    ; Hello, world!
+    ; We’re on the web.
+  ==
+  ```
+- ```
+  <body>
+    <h1>Welcome!</h1>
+    Hello, world!
+    We’re on the web.
+  </body>
+  ```
+  {% /table %}
 
 ## Attributes
 
@@ -129,78 +153,99 @@ shown below.
 
 ### Generic
 
-<table><thead><tr><th>Form</th><th>Example</th></tr></thead><tbody>
-<tr><td>Wide</td><td><pre class="language-hoon">
-;div(title "a tooltip", style "color:red")
-  ;h1: Foo
-  foo bar baz
-==
-</pre></td></tr>
-<tr><td>Tall</td><td><pre class="language-hoon">
-;div
-  =title  "a tooltip"
-  =style  "color:red"
-  ;h1: Foo
-  foo bar baz
-==
-</pre></td></tr>
-<tr><td>HTML</td><td><pre>
-&#x26;&#x6C;&#x74;&#x3B;div title="a tooltip" style="color:red">
-  &#x26;&#x6C;&#x74;&#x3B;h1>Foo&#x26;&#x6C;&#x74;&#x3B;/h1>
-  &#x26;&#x6C;&#x74;&#x3B;p>foo bar baz &#x26;&#x6C;&#x74;&#x3B;/p>
-&#x26;&#x6C;&#x74;&#x3B;/div>
-</pre></td></tr></tbody></table>
+{% table %}
+
+- Form
+- Example
+
+---
+
+- Wide
+- ```
+  ;div(title "a tooltip", style "color:red")
+    ;h1: Foo
+    foo bar baz
+  ==
+  ```
+  ***
+- Tall
+- ```
+  ;div
+    =title  "a tooltip"
+    =style  "color:red"
+    ;h1: Foo
+    foo bar baz
+  ==
+  ```
+  ***
+- HTML
+- ```
+  <div title="a tooltip" style="color:red">
+    <h1>Foo</h1>
+    <p>foo bar baz </p>
+  </div>
+  ```
+  {% /table %}
 
 ### IDs
 
 Add `#` after tag name to add an ID:
 
-| Sail                | HTML                                |
-| ------------------- | ----------------------------------- |
-| `;nav#header: Menu` | `&lt;nav id="header">Menu&lt;/nav>` |
+| Sail                | HTML                          |
+| ------------------- | ----------------------------- |
+| `;nav#header: Menu` | `<nav id="header">Menu</nav>` |
 
 ### Classes
 
 Add `.` after tag name to add a class:
 
-| Sail                   | HTML                                     |
-| ---------------------- | ---------------------------------------- |
-| `;h1.text-blue: Title` | `&lt;h1 class="text-blue">Title&lt;/h1>` |
+| Sail                   | HTML                               |
+| ---------------------- | ---------------------------------- |
+| `;h1.text-blue: Title` | `<h1 class="text-blue">Title</h1>` |
 
 For class values containing spaces, you can add additional `.`s like so:
 
-| Sail                | HTML                                    |
-| ------------------- | --------------------------------------- |
-| `;div.foo.bar.baz;` | `&lt;div class="foo bar baz">&lt;/div>` |
+| Sail                | HTML                              |
+| ------------------- | --------------------------------- |
+| `;div.foo.bar.baz;` | `<div class="foo bar baz"></div>` |
 
 Otherwise, if your class value does not conform to the allowed `@tas`
 characters, you must use the generic attribute syntax:
 
-| Sail                     | HTML                                |
-| ------------------------ | ----------------------------------- |
-| `;div(class "!!! !!!");` | `&lt;div class="!!! !!!">&lt;/div>` |
+| Sail                     | HTML                          |
+| ------------------------ | ----------------------------- |
+| `;div(class "!!! !!!");` | `<div class="!!! !!!"></div>` |
 
 ### Images
 
 Add `@` after the tag name to link your source:
 
-| Sail                  | HTML                          |
-| --------------------- | ----------------------------- |
-| `;img@"example.png";` | `&lt;img src="example.png"/>` |
+| Sail                  | HTML                       |
+| --------------------- | -------------------------- |
+| `;img@"example.png";` | `<img src="example.png"/>` |
 
 To add attributes to the image, like size specifications, add the desired
 attribute after the `"` of the image name and before the final `;` of the `img`
-tag like ;img@"example.png"(width "100%");`.
+tag like `;img@"example.png"(width "100%");`.
 
 ### Links
 
 Add `/` after tag name to start an `href`.
 
-<table><tr><th>Sail</th></tr><tr><td><pre class="language-hoon">
-;a/"urbit.org": A link to Urbit.org
-</pre></td></tr><tr><th>HTML</th></tr><tr><td><pre>
-&#x26;&#x6C;&#x74;&#x3B;a href="urbit.org">A link to Urbit.org&#x26;&#x6C;&#x74;&#x3B;/a>
-</pre></td></tr></table>
+{% table %}
+
+- Sail
+- HTML
+
+---
+
+- ```
+  ;a/"urbit.org": A link to Urbit.org
+  ```
+- ```
+  <a href="urbit.org">A link to Urbit.org</a>
+  ```
+  {% /table %}
 
 ## Interpolation
 
@@ -208,29 +253,53 @@ The textual content of tags, despite not being enclosed in double-quotes, are
 actually tapes. This means they support interpolated Hoon expressions in the
 usual manner. For example:
 
-<table><thead><tr><th>Sail</th><th>HTML</th></tr></thead><tbody><tr><td>
-<pre class="language-hoon">
-=|  =time
-;p: foo {&#x26;&#x6C;&#x74;&#x3B;time>} bar
-</pre></td><td><pre>
-&#x26;&#x6C;&#x74;&#x3B;p>foo ~2000.1.1 baz&#x26;&#x6C;&#x74;&#x3B;/p>
-</pre></td></tr></tbody></table>
+{% table %}
+
+- Sail
+- HTML
+
+---
+
+- ```
+  =|  =time
+  ;p: foo {<time>} bar
+  ```
+- ```
+  <p>foo ~2000.1.1 baz</p>
+  ```
+  {% /table %}
 
 Likewise:
 
-<table><tr><th>Sail</th></tr><tr><td><pre class="language-hoon">
-=/  txt=tape  " bananas"
-;article
-  ;b: {(a-co:co (mul 42 789))}
-  ; {txt}
-  {&#x26;&#x6C;&#x74;&#x3B;our>} {&#x26;&#x6C;&#x74;&#x3B;now>} {&#x26;&#x6C;&#x74;&#x3B;`@ux`(end 6 eny)>}
-==
-</pre></td></tr><tr><th>HTML</th></tr><tr><td><pre>
-&#x26;&#x6C;&#x74;&#x3B;article>
-  &#x26;&#x6C;&#x74;&#x3B;b>33138&#x26;&#x6C;&#x74;&#x3B;/b> bananas
-  &#x26;&#x6C;&#x74;&#x3B;p>~zod ~2022.2.21..09.54.21..5b63 0x9827.99c7.06f4.8ef9&#x26;&#x6C;&#x74;&#x3B;/p>
-&#x26;&#x6C;&#x74;&#x3B;/article>
-</pre></td></tr></table>
+{% table .w-full %}
+
+- Sail
+
+---
+
+- ```
+  =/  txt=tape  " bananas"
+  ;article
+    ;b: {(a-co:co (mul 42 789))}
+    ; {txt}
+    {<our>} {<now>} {<`@ux`(end 6 eny)>}
+  ==
+  ```
+  {% /table %}
+
+{% table .w-full %}
+
+- HTML
+
+---
+
+- ```
+  <article>
+    <b>33138</b> bananas
+    <p>~zod ~2022.2.21..09.54.21..5b63 0x9827.99c7.06f4.8ef9</p>
+  </article>
+  ```
+  {% /table %}
 
 ## A note on CSS
 
@@ -316,7 +385,7 @@ elements, converting characters such as `>` to HTML entities. For example:
 > =z ;p(class "\"><script src=\"example.com/xxx.js"): <h1>FOO</h1>
 
 > (crip (en-xml:html z))
-'<p class="&quot;&gt;&lt;script src=&quot;example.com/xxx.js">&lt;h1&gt;FOO&lt;/h1&gt;</p>'
+'<p class="&quot;&gt;<script src=&quot;example.com/xxx.js"><h1&gt;FOO</h1&gt;</p>'
 ```
 
 ### Marks
@@ -338,7 +407,7 @@ the resulting `tape` through `++crip`.
 - Type: `$manx`
 
 The `%hymn` mark is intended to be used for complete HTML documents - having an
-`&lt;html>` root element, `&lt;head>`, `&lt;body>`, etc. This isn't enforced on
+`<html>` root element, `<head>`, `<body>`, etc. This isn't enforced on
 the type level but it is assumed in certain mark conversion pathways. Eyre can
 automatically convert a `%hymn` to printed `%html` if it was requested through
 Eyre's scry interface.
@@ -399,25 +468,33 @@ The [mictar rune](/docs/hoon/reference/rune/mic#-mictar) makes a `$marl` (a list
 of XML nodes) from a complex hoon expression. This rune lets you add many
 elements inside another Sail element. For example:
 
-<table><thead><tr><th>Sail</th><th>HTML</th></tr></thead><tbody><tr><td>
-<pre class="language-hoon">
-=/  nums=(list @ud)  (gulf 1 9)
-;p
-  ;*  %+  turn  nums
-      |=  n=@ud
-      ?:  =(0 (mod n 2))
-        ;sup: {(a-co:co n)}
-      ;sub: {(a-co:co n)}
-==
-</pre></td><td><pre>
-&#x26;&#x6C;&#x74;&#x3B;p>
-  &#x26;&#x6C;&#x74;&#x3B;sub>1&#x26;&#x6C;&#x74;&#x3B;/sub>&#x26;&#x6C;&#x74;&#x3B;sup>2&#x26;&#x6C;&#x74;&#x3B;/sup>
-  &#x26;&#x6C;&#x74;&#x3B;sub>3&#x26;&#x6C;&#x74;&#x3B;/sub>&#x26;&#x6C;&#x74;&#x3B;sup>4&#x26;&#x6C;&#x74;&#x3B;/sup>
-  &#x26;&#x6C;&#x74;&#x3B;sub>5&#x26;&#x6C;&#x74;&#x3B;/sub>&#x26;&#x6C;&#x74;&#x3B;sup>6&#x26;&#x6C;&#x74;&#x3B;/sup>
-  &#x26;&#x6C;&#x74;&#x3B;sub>7&#x26;&#x6C;&#x74;&#x3B;/sub>&#x26;&#x6C;&#x74;&#x3B;sup>8&#x26;&#x6C;&#x74;&#x3B;/sup>
-  &#x26;&#x6C;&#x74;&#x3B;sub>9&#x26;&#x6C;&#x74;&#x3B;/sub>
-&#x26;&#x6C;&#x74;&#x3B;/p>
-</pre></td></tr></tbody></table>
+{% table %}
+
+- Sail
+- HTML
+
+---
+
+- ```
+  =/  nums=(list @ud)  (gulf 1 9)
+  ;p
+    ;*  %+  turn  nums
+        |=  n=@ud
+        ?:  =(0 (mod n 2))
+          ;sup: {(a-co:co n)}
+        ;sub: {(a-co:co n)}
+  ==
+  ```
+- ```
+  <p>
+    <sub>1</sub><sup>2</sup>
+    <sub>3</sub><sup>4</sup>
+    <sub>5</sub><sup>6</sup>
+    <sub>7</sub><sup>8</sup>
+    <sub>9</sub>
+  </p>
+  ```
+  {% /table %}
 
 ### `;=` Mictis
 
@@ -426,23 +503,31 @@ of XML nodes) from a series of `$manx`es. This is mostly useful if you want to
 make the list outside of an element and then be able to insert it afterwards.
 For example:
 
-<table><thead><tr><th>Sail</th><th>HTML</th></tr></thead><tbody><tr><td>
-<pre class="language-hoon">
-=/  paras=marl
-  ;=  ;p: First node.
-      ;p: Second node.
-      ;p: Third node.
+{% table %}
+
+- Sail
+- HTML
+
+---
+
+- ```
+  =/  paras=marl
+    ;=  ;p: First node.
+        ;p: Second node.
+        ;p: Third node.
+    ==
+  ;main
+    ;*  paras
   ==
-;main
-  ;*  paras
-==
-</pre></td><td><pre>
-&#x26;&#x6C;&#x74;&#x3B;main>
-  &#x26;&#x6C;&#x74;&#x3B;p>First node.&#x26;&#x6C;&#x74;&#x3B;/p>
-  &#x26;&#x6C;&#x74;&#x3B;p>Second node.&#x26;&#x6C;&#x74;&#x3B;/p>
-  &#x26;&#x6C;&#x74;&#x3B;p>Third node.&#x26;&#x6C;&#x74;&#x3B;/p>
-&#x26;&#x6C;&#x74;&#x3B;/main>
-</pre></td></tr></tbody></table>
+  ```
+- ```
+  <main>
+    <p>First node.</p>
+    <p>Second node.</p>
+    <p>Third node.</p>
+  </main>
+  ```
+  {% /table %}
 
 ### `;/` Micfas
 

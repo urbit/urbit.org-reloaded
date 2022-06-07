@@ -32,30 +32,27 @@ Compose two expressions.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-=>  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-=>(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  =>  p
+  q
+  ```
+  ***
+- Wide
+- ```hoon
+  =>(p q)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -100,30 +97,27 @@ of a given mold.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-=|  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-=|(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  =|  p
+  q
+  ```
+  ***
+- Wide
+- ```hoon
+  =|(p q)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -165,33 +159,30 @@ Change multiple legs in the subject.
 
 Two arguments: the first a variable number of pairs, the second is fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-=:  p1a  p1b
-    p2a  p2b
-    p3a  p3b
-  ==
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-=:(p1a p1b, p2a p2b, p3a p3b q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  =:  p1a  p1b
+      p2a  p2b
+      p3a  p3b
+    ==
+  q
+  ```
+  ***
+- Wide
+- ```hoon
+  =:(p1a p1b, p2a p2b, p3a p3b q)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -230,30 +221,27 @@ Expose namespace.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-=,  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-=,(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  =,  p
+  q
+  ```
+  ***
+- Wide
+- ```hoon
+  =,(p q)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -312,30 +300,27 @@ Change one leg in the subject.
 
 Three arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-=.  p  q
-r
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-=.(p q r)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  =.  p  q
+  r
+  ```
+  ***
+- Wide
+- ```hoon
+  =.(p q r)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -383,30 +368,27 @@ Combine a new noun with the subject, inverted.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-=-  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-=-(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  =-  p
+  q
+  ```
+  ***
+- Wide
+- ```hoon
+  =-(p q)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -447,31 +429,28 @@ Pin the head of a pair; change a leg with the tail.
 
 Four arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-=^  p  q
-  r
-s
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-=^(p q r s)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  =^  p  q
+    r
+  s
+  ```
+  ***
+- Wide
+- ```hoon
+  =^(p q r s)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -528,34 +507,29 @@ Compose two expressions, inverted.
 
 Two arguments, fixed
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-=<  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-=<(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>
-<pre>
-p:q
-</pre>
-</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  =<  p
+  q
+  ```
+  ***
+- Wide
+- ```hoon
+  =<(p q)
+  ```
+  ***
+- Irregular
+- ```
+  p:q
+  ```
+  {% /table %}
 
 #### AST
 
@@ -600,30 +574,27 @@ Combine a new noun with the subject.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-=+  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-=+(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  =+  p
+  q
+  ```
+  ***
+- Wide
+- ```hoon
+  =+(p q)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -669,31 +640,28 @@ order.
 
 Three arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-=;  p
-  q
-r
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-=;(p q r)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  =;  p
+    q
+  r
+  ```
+  ***
+- Wide
+- ```hoon
+  =;(p q r)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -734,31 +702,28 @@ Combine a named noun with the subject, possibly with type annotation.
 
 Three arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-=/  p
-  q
-r
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-=/(p q r)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  =/  p
+    q
+  r
+  ```
+  ***
+- Wide
+- ```hoon
+  =/(p q r)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -823,33 +788,30 @@ Compose many expressions.
 
 Variable number of arguments.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-=~  p1
-    p2
-    p3
-    pn
-==
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-=~(p1 p2 p3 pn)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  =~  p1
+      p2
+      p3
+      pn
+  ==
+  ```
+  ***
+- Wide
+- ```hoon
+  =~(p1 p2 p3 pn)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -902,31 +864,28 @@ Define a deferred expression.
 
 Three arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-=*  p
-  q
-r
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-=*(p q r)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  =*  p
+    q
+  r
+  ```
+  ***
+- Wide
+- ```hoon
+  =*(p q r)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
@@ -983,31 +942,28 @@ Conditionally change one leg in the subject.
 
 Four arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-=?  p  q
-  r
-s
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-=?(p q r s)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  =?  p  q
+    r
+  s
+  ```
+  ***
+- Wide
+- ```hoon
+  =?(p q r s)
+  ```
+  ***
+- Irregular
+- None.
+  {% /table %}
 
 #### AST
 
