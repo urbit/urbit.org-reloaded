@@ -59,7 +59,7 @@ It’s easy to see how Sail can directly translate to HTML:
       </body>
     </html>
   ```
-  {% /table %}
+{% /table %}
 
 ## Tags and Closing
 
@@ -113,7 +113,7 @@ Example:
     <p>This is some good content.</p>
     </body>
   ```
-  {% /table %}
+{% /table %}
 
 If we want to write a string with no tag at all, then we can prepend
 those untagged lines with `;` and then a space:
@@ -139,7 +139,7 @@ those untagged lines with `;` and then a space:
       We’re on the web.
     </body>
   ```
-  {% /table %}
+{% /table %}
 
 ## Attributes
 
@@ -189,7 +189,7 @@ shown below.
       <p>foo bar baz </p>
     </div>
   ```
-  {% /table %}
+{% /table %}
 
 ### IDs
 
@@ -249,7 +249,7 @@ Add `/` after tag name to start an `href`.
 - ```
     <a href="urbit.org">A link to Urbit.org</a>
   ```
-  {% /table %}
+{% /table %}
 
 ## Interpolation
 
@@ -271,7 +271,7 @@ usual manner. For example:
 - ```
     <p>foo ~2000.1.1 baz</p>
   ```
-  {% /table %}
+{% /table %}
 
 Likewise:
 
@@ -289,7 +289,7 @@ Likewise:
       {<our>} {<now>} {<`@ux`(end 6 eny)>}
     ==
   ```
-  {% /table %}
+{% /table %}
 
 {% table .w-full %}
 
@@ -303,7 +303,7 @@ Likewise:
       <p>~zod ~2022.2.21..09.54.21..5b63 0x9827.99c7.06f4.8ef9</p>
     </article>
   ```
-  {% /table %}
+{% /table %}
 
 ## A note on CSS
 
@@ -498,7 +498,7 @@ elements inside another Sail element. For example:
       <sub>9</sub>
     </p>
   ```
-  {% /table %}
+{% /table %}
 
 ### `;=` Mictis
 
@@ -531,7 +531,7 @@ For example:
       <p>Third node.</p>
     </main>
   ```
-  {% /table %}
+{% /table %}
 
 ### `;/` Micfas
 

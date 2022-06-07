@@ -45,7 +45,7 @@ One argument, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### Discussion
 
@@ -120,7 +120,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 `p` is an arm name, and `q` is any structure expression.
 
@@ -182,7 +182,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 `p` is the arm name, and `q` is any Hoon expression.
 
@@ -243,7 +243,7 @@ Arguments: A variable number of pairs.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 `a`, `c`, `e` are arm names and `b`, `d`, `f` are any Hoon expression. Note that
 unlike all other runes with a variable number of arguments, the list of

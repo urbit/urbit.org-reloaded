@@ -42,7 +42,7 @@ One argument, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -113,7 +113,7 @@ One argument, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -192,7 +192,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -265,7 +265,7 @@ Two arguments, fixed.
 - ```
     `p`q
   ```
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -339,7 +339,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -392,7 +392,7 @@ One argument, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -479,7 +479,7 @@ One argument, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -536,7 +536,7 @@ One argument, fixed.
 - ```hoon
     *p
   ```
-  {% /table %}
+{% /table %}
 
 `p` is any structure expression.
 
@@ -617,7 +617,7 @@ Two arguments, fixed.
 - ```
     p=q
   ```
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -684,7 +684,7 @@ One argument, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 

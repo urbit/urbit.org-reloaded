@@ -45,7 +45,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -145,7 +145,7 @@ One fixed argument, then a variable number of `+`-family expressions.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 Note: The `++` rune may be replaced with any other rune in the `+` family.
 
@@ -266,7 +266,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -340,7 +340,7 @@ Argument: a variable number of `+`-family expressions.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 Note: The `++` rune may be replaced with any other rune in the `+` family.
 
@@ -430,7 +430,7 @@ One argument, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -610,7 +610,7 @@ One argument, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -694,7 +694,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -757,7 +757,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -851,7 +851,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -940,7 +940,7 @@ Arguments: a variable number of `+`-family expressions.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 Note: The `++` rune may be replaced with any other rune in the `+` family.
 
@@ -996,7 +996,7 @@ One argument, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 

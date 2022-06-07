@@ -49,7 +49,7 @@ Two arguments, fixed.
 - ```
     p^q
   ```
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -111,7 +111,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -169,7 +169,7 @@ Three arguments, fixed.
 - ```hoon
     [p q r]
   ```
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -233,7 +233,7 @@ Four arguments, fixed.
 - ```hoon
     [p q r s]
   ```
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -299,7 +299,7 @@ Variable number of arguments.
 - ```
     [p1 p2 p3 pn]
   ```
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -388,7 +388,7 @@ Variable number of arguments.
 - ```
     ~[p1 p2 p3 pn]
   ```
-  {% /table %}
+{% /table %}
 
 #### AST
 

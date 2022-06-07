@@ -80,7 +80,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -189,7 +189,7 @@ One argument, fixed.
 - ```
     _p
   ```
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -260,7 +260,7 @@ A variable number of arguments.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 Each item may be an atom or (more commonly) a cell. The atom or head of the cell
 _must_ be a constant (`%foo`, `%1`, `%.y`, etc).
@@ -344,7 +344,7 @@ A variable number of arguments.
 - ```hoon
     [p1 p2 p3 pn]
   ```
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -410,7 +410,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -477,7 +477,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -569,7 +569,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 `p` is the type the gate takes and `q` is the type the gate produces.
 
@@ -620,7 +620,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -688,7 +688,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 ```hoon
 $&(combined-mold=spec normalizing-gate=hoon)
@@ -764,7 +764,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 `p` defines the default value, and `q` defines everything else about the
 structure.
@@ -862,7 +862,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -934,7 +934,7 @@ Two arguments, fixed.
 - ```
     p=q
   ```
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -1006,7 +1006,7 @@ Variable number of arguments.
 - ```hoon
     ?(p1 p2 p3 pn)
   ```
-  {% /table %}
+{% /table %}
 
 #### AST
 

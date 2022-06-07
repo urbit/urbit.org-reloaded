@@ -40,7 +40,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -114,7 +114,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -177,7 +177,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -256,7 +256,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -328,7 +328,7 @@ fixed argument.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -443,7 +443,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 `p` may either be a a `term` or a pair of `[term hoon]`. If it's the latter, `p`
 may optionally be written as `%foo.some-hoon`.
@@ -506,7 +506,7 @@ One argument, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -580,7 +580,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -641,7 +641,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -711,7 +711,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -782,7 +782,7 @@ Three arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -854,7 +854,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 

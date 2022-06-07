@@ -63,7 +63,7 @@ One fixed argument, then a variable number of pairs.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -149,7 +149,7 @@ One fixed argument, then a variable number of arguments.
 - ```hoon
     (a b c d)
   ```
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -228,7 +228,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -295,7 +295,7 @@ Call a gate (function).
 - ```hoon
     (a b)
   ```
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -372,7 +372,7 @@ Four arguments, fixed.
 - ```hoon
     (a b c d)
   ```
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -432,7 +432,7 @@ Three arguments, fixed.
 - ```hoon
     (a b c)
   ```
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -496,7 +496,7 @@ Three arguments, fixed.
 - ```
     ~(p q r1 r2 rn)
   ```
-  {% /table %}
+{% /table %}
 
 In the irregular form, `r` may be split into multiple parts. Multiple parts of
 `r` will be formed into a cell.
@@ -582,7 +582,7 @@ Two fixed arguments, then a variable number of pairs.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -688,7 +688,7 @@ One fixed argument, then a variable number of pairs.
 - ```
     a(b c, d e, f g)
   ```
-  {% /table %}
+{% /table %}
 
 #### AST
 

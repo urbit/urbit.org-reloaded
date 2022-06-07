@@ -44,7 +44,7 @@ One fixed argument, then a variable number of arguments.
 - ```
     :(p q1 q2 qn)
   ```
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -128,7 +128,7 @@ Four arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -234,7 +234,7 @@ One argument, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 `p` is a Hoon expression that produces a `manx`.
 
@@ -325,7 +325,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -403,7 +403,7 @@ One argument, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -461,7 +461,7 @@ One fixed argument, then a variable number of arguments.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -601,7 +601,7 @@ One argument, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 `p` is a Hoon expression that produces a `marl`.
 
@@ -686,7 +686,7 @@ A variable number of arguments.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 `p1`-`pn` are Hoon expressions, each of which poduces a `manx`.
 

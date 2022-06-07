@@ -68,7 +68,7 @@ Variable number of arguments.
 - ```hoon
     |(p1 p2 p3 pn)
   ```
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -163,7 +163,7 @@ One fixed argument, then a variable number of pairs.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -261,7 +261,7 @@ Three arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -336,7 +336,7 @@ Three arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -409,7 +409,7 @@ Three arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -477,7 +477,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -549,7 +549,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -640,7 +640,7 @@ Two fixed arguments, then a variable number of pairs.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -737,7 +737,7 @@ Variable arguments.
 - ```
     &(p1 p2 pn)
   ```
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -814,7 +814,7 @@ Three arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -887,7 +887,7 @@ Three arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -953,7 +953,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -1023,7 +1023,7 @@ One argument, fixed.
 - ```hoon
     !p
   ```
-  {% /table %}
+{% /table %}
 
 #### AST
 

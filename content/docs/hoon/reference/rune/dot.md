@@ -50,7 +50,7 @@ specified separately.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -158,7 +158,7 @@ One argument, fixed.
 - ```hoon
     +(p)
   ```
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -224,7 +224,7 @@ Two arguments, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -299,7 +299,7 @@ Two arguments, fixed.
 - ```hoon
     =(p q)
   ```
-  {% /table %}
+{% /table %}
 
 #### AST
 
@@ -371,7 +371,7 @@ One argument, fixed.
 
 - Irregular
 - None.
-  {% /table %}
+{% /table %}
 
 #### AST
 
