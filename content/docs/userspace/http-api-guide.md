@@ -147,7 +147,7 @@ import Urbit from '@urbit/http-api';
 ```
 
 Note that the examples in this guide are simple HTML documents with vanilla
-Javascript in `&lt;script>` tags, so they use [unpkg.com](https://unpkg.com) to
+Javascript in `<script>` tags, so they use [unpkg.com](https://unpkg.com) to
 import `@urbit/http-api`. This is not typical, and is just done here for
 purposes of simplicity.
 
@@ -437,7 +437,7 @@ This example will, upon clicking the "Subscribe" button, subscribe to the
 update it receives. You can test it by doing something like posting a message in
 a chat. You can also unsubscribe by clicking the "Unsubscribe" button.
 
-```
+````
 <html>
   <head>
     <script src="https://unpkg.com/@urbit/http-api"></script>
@@ -445,7 +445,7 @@ a chat. You can also unsubscribe by clicking the "Unsubscribe" button.
   </head>
   <body>
     <button id="toggle" type="button" onClick="doSub()" >Subscribe</button>
-    <pre id="event"></pre>
+    <pre id="event">```
   </body>
   <script>
     const api = new UrbitHttpApi.Urbit("");
@@ -478,7 +478,7 @@ a chat. You can also unsubscribe by clicking the "Unsubscribe" button.
     };
   </script>
 </html>
-```
+````
 
 ### Subscribe Once
 
@@ -514,7 +514,7 @@ printing every `graph-store` update it receives, it will instead just print the
 first one it receives and close the subscription. Additionally, it sets a five
 second timeout, and prints an error message if it times out.
 
-```
+````
 <html>
   <head>
     <script src="https://unpkg.com/@urbit/http-api"></script>
@@ -522,7 +522,7 @@ second timeout, and prints an error message if it times out.
   </head>
   <body>
     <button type="button" onClick="doSub()" >Subscribe Once</button>
-    <pre id="event"></pre>
+    <pre id="event">```
   </body>
   <script>
     const api = new UrbitHttpApi.Urbit("");
@@ -541,7 +541,7 @@ second timeout, and prints an error message if it times out.
     };
   </script>
 </html>
-```
+````
 
 ### Scries
 
@@ -564,7 +564,7 @@ Upon pressing the "Scry Graphs" button, this example will scry the `graph-store`
 agent's `/keys` endpoint for the list of graphs, and print the resulting JSON
 data.
 
-```
+````
 <html>
   <head>
     <script src="https://unpkg.com/@urbit/http-api"></script>
@@ -572,7 +572,7 @@ data.
   </head>
   <body>
     <button id="scry" type="button" onClick="doScry()" >Scry Graphs</button>
-    <pre id="result"></pre>
+    <pre id="result">```
   </body>
   <script>
     const api = new UrbitHttpApi.Urbit("");
@@ -584,7 +584,7 @@ data.
     }
   </script>
 </html>
-```
+````
 
 ### Thread
 
@@ -608,7 +608,7 @@ mark conversion failed, the promise will fail.
 This example takes a hoon expression (such as `(add 1 1)`), evalutes it with the
 `graph-eval` thread in the `landscape` desk, and prints the result.
 
-```
+````
 <html>
   <head>
     <script src="https://unpkg.com/@urbit/http-api"></script>
@@ -617,8 +617,8 @@ This example takes a hoon expression (such as `(add 1 1)`), evalutes it with the
   <body>
     <input id="hoon" type="text" placeholder="Hoon to evaluate" />
     <button id="submit" type="button" onClick="runThread()" >Submit</button>
-    <pre id="expr"></pre>
-    <pre id="result"></pre>
+    <pre id="expr">```
+    <pre id="result">```
   </body>
   <script>
     document.getElementById("hoon")
@@ -646,7 +646,7 @@ This example takes a hoon expression (such as `(add 1 1)`), evalutes it with the
     };
   </script>
 </html>
-```
+````
 
 ### Delete Channel
 

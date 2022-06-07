@@ -204,7 +204,7 @@ Server: urbit/vere-1.5
 set-cookie: urbauth-~zod=0v1.1pseu.tq7hs.hps2t.ltaf1.tmqjm; Path=/; Max-Age=604800
 content-type: text/html
 
-&lt;html>&lt;head>&lt;title>404 Not Found&lt;/title>&lt;/head>&lt;body>&lt;h1>Not Found&lt;/h1>&lt;p>There was an error while handling the request for /foo/bar/baz.json.&lt;/p>&lt;code>no scry result&lt;/code>&lt;/body>&lt;/html>
+<html><head><title>404 Not Found</title></head><body><h1>Not Found</h1><p>There was an error while handling the request for /foo/bar/baz.json.</p><code>no scry result</code></body></html>
 ```
 
 ## Advanced
@@ -254,7 +254,7 @@ Note that this example does a lot of things manually for demonstrative purposes.
     ~&  [mark req]
     ?+    method.request.q.req
       =/  data=octs
-        (as-octs:mimes:html '&lt;h1>405 Method Not Allowed&lt;/h1>')
+        (as-octs:mimes:html '<h1>405 Method Not Allowed</h1>')
       =/  content-length=@t
         (crip ((d-co:co 1) p.data))
       =/  =response-header:http
@@ -272,7 +272,7 @@ Note that this example does a lot of things manually for demonstrative purposes.
     ::
         %'GET'
       =/  data=octs
-        (as-octs:mimes:html '&lt;h1>Hello, World!&lt;/h1>')
+        (as-octs:mimes:html '<h1>Hello, World!</h1>')
       =/  content-length=@t
         (crip ((d-co:co 1) p.data))
       =/  =response-header:http
@@ -374,7 +374,7 @@ Content-Type: text/html
 Content-Length: 22
 transfer-encoding: chunked
 
-&lt;h1>Hello, World!&lt;/h1>%
+<h1>Hello, World!</h1>%
 ```
 
 ...which has succeed! This is because the `+on-poke` arm tests for http GET requests and responds with `Hello, World!` when it sees one:
@@ -382,7 +382,7 @@ transfer-encoding: chunked
 ```hoon
   %'GET'
 =/  data=octs
-  (as-octs:mimes:html '&lt;h1>Hello, World!&lt;/h1>')
+  (as-octs:mimes:html '<h1>Hello, World!</h1>')
 =/  content-length=@t
   (crip ((d-co:co 1) p.data))
 =/  =response-header:http

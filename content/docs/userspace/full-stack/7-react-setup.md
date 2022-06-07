@@ -74,7 +74,7 @@ window.ship = "sampel-palnet";
 ```
 
 `sampel-palnet` will of course be replaced by the actual name of the ship. We
-include this script by adding the following line to the `&lt;head>` section of
+include this script by adding the following line to the `<head>` section of
 `public/index.html`:
 
 ```

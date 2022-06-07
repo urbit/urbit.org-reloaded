@@ -55,8 +55,8 @@ Now here's a quick recap of the main points covered:
 
 - is used to chain strands together like javascript promises
 - is used in conjunction with micgal (`;<`)
-- must be specialised to a type like `;< &lt;type> bind:m ...`
-- takes two arguments. The first is a function that returns the `form` of a `strand` that produces `&lt;type>`. The second is a gate whose sample is `&lt;type>` and which returns a `form`.
+- must be specialised to a type like `;< <type> bind:m ...`
+- takes two arguments. The first is a function that returns the `form` of a `strand` that produces `<type>`. The second is a gate whose sample is `<type>` and which returns a `form`.
 - calls the first and then, if it succeeded, calls the second with the result of the first as its sample.
 
 ## Strand input
@@ -68,9 +68,9 @@ Now here's a quick recap of the main points covered:
 
 ## Strand output
 
-- contains `[cards=(list card:agent:gall) &lt;response>]`
+- contains `[cards=(list card:agent:gall) <response>]`
 - `cards` are any cards to be sent immediately
-- `&lt;response>` is something like `[%done value]`, `[%fail err]`, etc.
+- `<response>` is something like `[%done value]`, `[%fail err]`, etc.
 - `%done` will contain the result
 - responses are only used internally to manage the flow of the thread and are not returned to subscribers.
 
