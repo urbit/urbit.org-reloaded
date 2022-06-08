@@ -154,6 +154,7 @@ However, Arvo is a single-level store — all of its state is permanent. This is
 
 Further, Arvo and the vanes rarely perform long sequences of IO. Generally, they do one thing and emit some effects, similar to the HTTP server example above. Sometimes they "pass through" a request. For example, the Eyre vane passes HTTP requests to userspace agents or threads. In this case, there is a sequence of IO, which in monadic code would be:
 
+```
     loop()
 
     where:
@@ -164,6 +165,7 @@ Further, Arvo and the vanes rarely perform long sequences of IO. Generally, they
       response <- callAgent(agent, request)
       _ <- sendResponse(request, response)
       loop()
+```
 
 This is clear code to read, but it leaves open the question of how to respond during the callAgent() function. If another request comes in, can we handle it in parallel? If we need to upgrade ourselves before the agent responds, can we make sure to properly handle the response?
 
@@ -171,6 +173,7 @@ The naive solution in monadic code is to say that you can only handle one reques
 
 In a state machine, the naive solution is:
 
+```
     state :: (map request agent)
     main(state, event) {
       switch event {
@@ -181,6 +184,7 @@ In a state machine, the naive solution is:
           [del(state, request), HTTPRespond request response]
       }
     }
+```
 
 Upgrading this is trivial, since the state (map of requests to outstanding calls to agents) is explicit. It also trivially handles concurrent requests.
 
@@ -196,6 +200,7 @@ However, userspace sometimes needs to perform long sequences of IO. Let's look a
 
 Monadic:
 
+```
     topStories <- fetch(topStoriesUrl)
     loop(topStories)
 
@@ -215,9 +220,11 @@ Monadic:
           bail
         else:
           retryLoop(n-1, story)
+```
 
 State machine:
 
+```
     state :: Initial
            | FetchingTop
            | FetchingStory comments stories retries
@@ -249,6 +256,7 @@ State machine:
           }
       }
     }
+```
 
 With practice, the state machine version of this can be written correctly. However, (1) it's verbose, (2) the control flow jumps all over the place, and (3) in practice it's challenging to get exactly right. This is still a small example, and it gets much worse as the length and complexity of the IO sequence grows.
 
@@ -276,12 +284,15 @@ We're in a bit of a bind, though: Jael has to be a state machine. The solution i
 
 This thread has a definite purpose: given the most recent block number we already know about, fetch all the PKI transactions since then. The function signature is:
 
+```
     syncEthereum oldBlockNumber -> IO [newBlockNumber, newTxs]
+```
 
 Jael runs this thread every five minutes and, if it succeeds, then we update our block number and PKI state. If the thread fails, gets stuck, or we need to upgrade it, we just kill the old thread and start a new one. Again, a few extra HTTP requests don’t matter.
 
 From Jael's perspective, it looks something like:
 
+```
     state :: State block txs outstandingThread
     main(state,event) {
       switch event {
@@ -300,6 +311,7 @@ From Jael's perspective, it looks something like:
           [State newBlockNumber append(txs,newTxs) Null, Null]
       }
     }
+```
 
 In other words, from Jael's perspective, it's just a single IO event that encapsulates arbitrarily complex IO in the thread. A single IO event is easy enough, and we can maintain all our permanency and robustness guarantees, because we know the thread will have one of three results: success, failure, or it hangs. If we set a timeout, hang becomes failure, so there's only two possible results: success or failure. If we handle both of those correctly, we've handled all the possible IO errors that could have occurred.
 
