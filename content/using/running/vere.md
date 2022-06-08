@@ -13,10 +13,11 @@ ship (`urbit` on Linux and MacOS, `urbit.exe` on Windows). Vere manages your
 ship's [pier](https://urbit.org/docs/glossary/pier), handles events, and runs
 the Nock virtual machine that performs your ship's computations.
 
-Before version 1.9, Vere was split into two separate binaries: `urbit` and
-`urbit-worker` (also known as the King and the Serf). As of version 1.9, these
+Before version 1.9, Vere was split into two separate binaries: The `urbit`
+"king" responsible for I/O and event persistence, and the `urbit-worker` "serf"
+responsible for computations and state persistence. As of version 1.9, these
 have been merged into a single `urbit` (or `urbit.exe`) binary, though under the
-hood there's still two separate processes. The alternative King written in
+hood there's still two separate processes. The alternative king written in
 Haskell, `urbit-king`, has also been deprecated, so there's now only one binary.
 
 Version 1.9 has introduced a couple of new features. The first is the concept of
