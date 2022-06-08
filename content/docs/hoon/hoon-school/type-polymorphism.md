@@ -443,7 +443,7 @@ nest-fail
 
 The first cast goes through because the two gates have the same sample type. The second cast fails because the right-hand gate has a more specific sample type than the left-hand gate does. If you're casting for a gate that accepts any cell, `^`, it's because we want to be able to pass any cell to it. A gate that is only designed for pairs of atoms, `[@ @]`, can't handle all such cases, naturally. The third cast goes through because the right-hand gate sample type is broader than the left-hand gate sample type. A gate that can take any noun as its sample, `*`, works just fine if we choose only to pass it cells, `^`.
 
-We mentioned previously that an iron core has a write-only sample and an opaque core. Let's prove it.
+We mentioned previously that an iron core has a write-only sample and an opaque context. Let's prove it.
 
 Let's define a trivial gate with a context of `[g=22 h=44 .]`, convert it to iron with `^|`, and bind it to `iron-gate` in the dojo:
 

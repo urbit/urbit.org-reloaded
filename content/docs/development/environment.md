@@ -201,7 +201,7 @@ compatible. You can copy it across from the `%base` desk, or just run the
 following in the terminal from within the desk directory:
 
 ```sh
-echo "[%zuse 419]" > sys.kelvin
+echo "[%zuse 418]" > sys.kelvin
 ```
 
 The other `mark` files can just be copied across from the `%base` desk.
@@ -271,7 +271,7 @@ and copy the actual files.
 Now you can just add a `sys.kelvin` file:
 
 ```
-echo "[%zuse 419]" > mydesk/sys.kelvin
+echo "[%zuse 418]" > mydesk/sys.kelvin
 ```
 
 And you'll be able to mount the desk with `|commit %mydesk`.
