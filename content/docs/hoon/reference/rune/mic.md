@@ -15,37 +15,36 @@ Call a binary function as an n-ary function.
 
 One fixed argument, then a variable number of arguments.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-;:  p
-  q1
-  q2
-  qn
-==
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-;:(p q1 q2 qn)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>
-<pre>
-:(p q1 q2 qn)
-</pre>
-</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ;:  p
+    q1
+    q2
+    qn
+  ==
+  ```
+
+---
+
+- Wide
+- ```hoon
+  ;:(p q1 q2 qn)
+  ```
+
+---
+
+- Irregular
+- ```
+    :(p q1 q2 qn)
+  ```
+{% /table %}
 
 #### AST
 
@@ -106,26 +105,30 @@ Monadic do notation.
 
 Four arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-;<  mold  bind  expr1  expr2
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-;<(mold bind expr1 expr2)
-</pre>
-</td>
-</tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ;<  mold  bind  expr1  expr2
+  ```
+
+---
+
+- Wide
+- ```hoon
+  ;<(mold bind expr1 expr2)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -208,26 +211,30 @@ make a single XML node (Sail)
 
 One argument, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-;+  p
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-;+(p)
-</pre>
-</td>
-</tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ;+  p
+  ```
+
+---
+
+- Wide
+- ```hoon
+  ;+(p)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 `p` is a Hoon expression that produces a `manx`.
 
@@ -246,7 +253,7 @@ nouns that represent XML nodes. With the appropriate rendering pipeline, a Sail
 document can be used to generate a static website.
 
 In Sail a single XML node is represented by a `manx`. A single
-<code>&lt;p&gt;</code> node `manx` can be produced in the following way:
+<code><p&gt;</code> node `manx` can be produced in the following way:
 
 ```
 > ;p: This will be rendered as an XML node.
@@ -294,27 +301,31 @@ Normalize with a mold, asserting fixpoint.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-;;  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-;;(p q)
-</pre>
-</td>
-</tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ;;  p
+  q
+  ```
+
+---
+
+- Wide
+- ```hoon
+  ;;(p q)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -369,26 +380,30 @@ Tape as XML element.
 
 One argument, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-;/  p
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-;/(p)
-</pre>
-</td>
-</tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ;/  p
+  ```
+
+---
+
+- Wide
+- ```hoon
+  ;/(p)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -419,30 +434,34 @@ Glue a pipeline together with a product-sample adapter.
 
 One fixed argument, then a variable number of arguments.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-;~  p
-  q1
-  q2
-  qn
-==
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-;~(p q1 q2 qn)
-</pre>
-</td>
-</tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ;~  p
+    q1
+    q2
+    qn
+  ==
+  ```
+
+---
+
+- Wide
+- ```hoon
+  ;~(p q1 q2 qn)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -559,26 +578,30 @@ make a list of XML nodes from complex Hoon expression (Sail)
 
 One argument, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-;*  p
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-;*(p)
-</pre>
-</td>
-</tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ;*  p
+  ```
+
+---
+
+- Wide
+- ```hoon
+  ;*(p)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 `p` is a Hoon expression that produces a `marl`.
 
@@ -636,30 +659,34 @@ make a list of XML nodes (Sail)
 
 A variable number of arguments.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-;=  p1
-    p2
-    p3
-    pn
-==
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-;=(p1 p2 p3 pn)
-</pre>
-</td>
-</tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ;=  p1
+      p2
+      p3
+     pn
+  ==
+  ```
+
+---
+
+- Wide
+- ```hoon
+  ;=(p1 p2 p3 pn)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 `p1`-`pn` are Hoon expressions, each of which poduces a `manx`.
 

@@ -9,8 +9,8 @@ import Header from "./Header";
 import Footer from "./Footer";
 import SingleColumn from "./SingleColumn";
 import Section from "./Section";
-import { decode } from "html-entities";
 import { DateTime } from "luxon";
+import Markdown from "./Markdown";
 
 export default function GrantProgramOverview({
   post,
@@ -46,9 +46,7 @@ export default function GrantProgramOverview({
           </Link>
         </Section>
         <Section narrow short className="markdown">
-          <article
-            dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-          ></article>
+          <Markdown content={JSON.parse(markdown)} />
         </Section>
       </SingleColumn>
       <Footer />

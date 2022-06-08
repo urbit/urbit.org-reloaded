@@ -11,22 +11,14 @@ import Head from "next/head";
 import Meta from "../../components/Meta";
 import ErrorPage from "../404";
 import Container from "../../components/Container";
-import Markdown from "../../components/Markdown";
+import Markdown, { MarkdownParse } from "../../components/Markdown";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import SingleColumn from "../../components/SingleColumn";
 import Section from "../../components/Section";
 import Contact from "../../components/Contact";
 
-import { decode } from "html-entities";
-
-export default function Post({
-  post,
-  nextPost,
-  previousPost,
-  markdown,
-  search,
-}) {
+export default function Post({ post, markdown, search }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
@@ -59,9 +51,7 @@ export default function Post({
           </div>
         </Section>
         <Section narrow className="markdown">
-          <article
-            dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-          ></article>
+          <Markdown content={JSON.parse(markdown)} />
         </Section>
         <Section narrow>
           <Contact />
@@ -115,8 +105,7 @@ export async function getStaticProps({ params }) {
     ["title", "slug", "date", "description", "content", "author", "ship"],
     "updates"
   );
-
-  const markdown = await Markdown({ post });
+  const markdown = JSON.stringify(MarkdownParse({ post }));
 
   return {
     props: { post, markdown, nextPost, previousPost },

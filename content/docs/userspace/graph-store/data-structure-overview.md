@@ -12,9 +12,6 @@ Let's go through the type definitions of some of the most used types when workin
 
 Here's `sur/post.hoon`
 
-<details>
-  <summary> Code Listing (Click to Expand)</summary>
-
 ```hoon
 +$  index       (list atom)
 +$  uid         [=resource =index]
@@ -56,8 +53,6 @@ Here's `sur/post.hoon`
       [%reference =reference]
   ==
 ```
-
-</details>
 
 ### Index
 
@@ -156,9 +151,6 @@ The parts of a `post` that are actually hashed to obtain a value of type the ear
 
 Here's `sur/graph-store.hoon`
 
-<details>
-<summary>Code Listing (Click To Expand)</summary>
-
 ```hoon
 +$  graph         ((mop atom node) gth)
 +$  marked-graph  [p=graph q=(unit mark)]
@@ -230,7 +222,6 @@ Here's `sur/graph-store.hoon`
   ?(%no %self %yes)
 ```
 
-</details>
 
 ### Graph, Node, and Related Objects
 

@@ -1,22 +1,15 @@
 import { useRouter } from "next/router";
-import {
-  getPostBySlug,
-  getAllPosts,
-  formatDate,
-  getSimilarGrants,
-} from "../../lib/lib";
+import { getPostBySlug, getAllPosts, formatDate } from "../../lib/lib";
 import Head from "next/head";
 import Link from "next/link";
 import Meta from "../../components/Meta";
-import { decode } from "html-entities";
 import classnames from "classnames";
 import ErrorPage from "../404";
 import Container from "../../components/Container";
-import Markdown from "../../components/Markdown";
+import Markdown, { MarkdownParse } from "../../components/Markdown";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import SingleColumn from "../../components/SingleColumn";
-import GrantPreview from "../../components/GrantPreview";
 import ob from "urbit-ob";
 import Section from "../../components/Section";
 import { DateTime } from "luxon";
@@ -109,7 +102,7 @@ export default function Grant({ post, markdown, search }) {
           </div>
         </Section>
         <Section narrow className="markdown">
-          <article dangerouslySetInnerHTML={{ __html: decode(markdown) }} />
+          <Markdown content={JSON.parse(markdown)} />
         </Section>
         {canApply && (
           <a
@@ -134,8 +127,7 @@ export async function getStaticProps({ params }) {
     "grants"
   );
 
-  const markdown = await Markdown({ post });
-
+  const markdown = JSON.stringify(MarkdownParse({ post }));
   return {
     props: { post, markdown },
   };

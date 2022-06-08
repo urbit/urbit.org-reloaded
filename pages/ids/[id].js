@@ -6,7 +6,6 @@ import Container from "../../components/Container";
 import SingleColumn from "../../components/SingleColumn";
 import Section from "../../components/Section";
 import ob from "urbit-ob";
-import Markdown from "../../components/Markdown";
 import ResourceCard from "../../components/ResourceCard";
 import GatewayHeader from "../../components/gateway/GatewayHeader";
 import Gateway404 from "../../components/gateway/Gateway404";
@@ -14,6 +13,7 @@ import MetadataBlock from "../../components/gateway/MetadataBlock";
 import MetadataLink from "../../components/gateway/MetadataLink";
 import Description from "../../components/gateway/Description";
 import axios from "axios";
+import { MarkdownParse } from "../../components/Markdown";
 
 const IdPage = ({ data, markdown, applications, groups, network, params }) => {
   let { id } = params;
@@ -207,6 +207,11 @@ export const getServerSideProps = async ({ params, res }) => {
     join(process.cwd(), "content/ids/", id.slice(1))
   ) || { data: {}, content: "" };
 
+  const markdown =
+    content !== ""
+      ? JSON.stringify(MarkdownParse({ post: { content } }))
+      : null;
+
   const applications = getAllPosts(
     ["title", "slug", "image", "bgColor"],
     `applications/${params.id}`
@@ -224,8 +229,6 @@ export const getServerSideProps = async ({ params, res }) => {
       }`
     )
     .then((res) => res.data);
-
-  const markdown = await Markdown({ post: { content: content } }, true);
 
   return {
     props: {

@@ -1,18 +1,16 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import classnames from "classnames";
 import { join } from "path";
 import { getPreviousPost, getNextPost, getPage } from "../../lib/lib";
 import Meta from "../../components/Meta";
 import Pagination from "../../components/Pagination";
-import Markdown from "../../components/Markdown";
+import Markdown, { MarkdownParse } from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
 import docsPageTree from "../../cache/docs.json";
-
-import { decode } from "html-entities";
 
 const breadcrumbs = (posts, paths) => {
   const results = [
@@ -146,9 +144,7 @@ export default function DocsLayout({
           params={params}
         >
           <div className="markdown technical">
-            <article
-              dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-            ></article>
+            <Markdown content={JSON.parse(markdown)} />
           </div>
           <div className="flex justify-between mt-16">
             {previousPost === null ? (
@@ -212,8 +208,7 @@ export async function getStaticProps({ params }) {
       "weight"
     ) || null;
 
-  const markdown = await Markdown({ post: { content: content } });
-
+  const markdown = JSON.stringify(MarkdownParse({ post: { content } }));
   return { props: { posts, data, markdown, previousPost, nextPost, params } };
 }
 

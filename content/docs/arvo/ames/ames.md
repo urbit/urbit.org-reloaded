@@ -221,7 +221,7 @@ Thus a message-level ack must be received before the next message on the flow
 can begin. The full story is more complicated than this; see the section on
 [flows](#flows).
 
-#### Nacks {#nacks}
+#### Nacks {% #nacks %}
 
 A nack indicates a negative acknowledgement to a `%plea`, meaning that the
 requested action was not performed.
@@ -363,9 +363,7 @@ discovery, analagous to the role that galaxies currently play for stars and plan
 
 The following diagram summarizes the packet creation and forwarding process.
 
-<div style="text-align:center">
-<img src="https://media.urbit.org/docs/arvo/datagram-updated-2021-06-09.png">
-</div>
+![](https://media.urbit.org/docs/arvo/datagram-updated-2021-06-09.png)
 
 We elaborate on the above diagram.
 
@@ -448,9 +446,7 @@ This division is summarized in the following diagram, describing how
 `~bacbel-tagfeb` requests a subscription to the `recipes` notebook of
 `~worwel-sipnum` in the Publish app.
 
-<div style="text-align:center">
-<img src="https://media.urbit.org/docs/arvo/packet.png">
-</div>
+![](https://media.urbit.org/docs/arvo/packet.png)
 
 Ames, as a part of Arvo, handles `+jam`ming, packetizing, encryption, and
 forming Ames packets. Once it is ready to send an Ames packet, it `%give`s to

@@ -1,20 +1,16 @@
-import { useRouter } from "next/router";
 import { DateTime } from "luxon";
 import {
   getPostBySlug,
   getAllPosts,
   getNextPost,
   getPreviousPost,
-  formatDate,
-  formatTime,
-  formatTimeZone,
   generateDisplayDate,
   generateRealtimeDate,
 } from "../../lib/lib";
 import Head from "next/head";
 import Meta from "../../components/Meta";
 import Container from "../../components/Container";
-import Markdown from "../../components/Markdown";
+import Markdown, { MarkdownParse } from "../../components/Markdown";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import SingleColumn from "../../components/SingleColumn";
@@ -29,14 +25,13 @@ import {
   ShowOrHide,
   DateRange,
 } from "../../components/Snippets";
-import { decode } from "html-entities";
 import { eventKeys } from "../../lib/constants";
 
 export default function Event({
   event,
+  markdown,
   nextEvent,
   previousEvent,
-  markdown,
   search,
 }) {
   const starts = generateDisplayDate(event.starts, event.timezone);
@@ -121,10 +116,7 @@ export default function Event({
         ) : null}
 
         <Section short narrow className="markdown">
-          <article
-            className="pt-12 w-full"
-            dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-          ></article>
+          <Markdown content={JSON.parse(markdown)} />
         </Section>
         <Section narrow>
           <Contact />
@@ -161,7 +153,7 @@ export async function getStaticProps({ params }) {
 
   const event = getPostBySlug(params.slug, eventKeys, "events");
 
-  const markdown = await Markdown({ post: event });
+  const markdown = JSON.stringify(MarkdownParse({ post: event }));
 
   return {
     props: { event, markdown, nextEvent, previousEvent },

@@ -17,31 +17,6 @@ import BubbleLink from "../components/BubbleLink";
 import { getAllPosts, getAllEvents, generateRealtimeDate } from "../lib/lib";
 import { eventKeys } from "../lib/constants";
 
-const Banner = ({ children, isOpen, href, dismiss }) => {
-  return (
-    <div className="w-full flex justify-center bg-green-100">
-      <SingleColumn>
-        <div className="w-full layout">
-          <div className="w-full flex justify-between items-center px-4 md:px-8 py-4">
-            <a href={href} target="_blank">
-              {children}
-            </a>
-            <button
-              className="type-ui w-6 h-6 bg-green-400 flex items-center justify-center rounded-full text-white hover:opacity-70"
-              onClick={(e) => {
-                e.stopPropagation();
-                dismiss();
-              }}
-            >
-              <Cross width="10" height="10" fill="#E5F7F1" />
-            </button>
-          </div>
-        </div>
-      </SingleColumn>
-    </div>
-  );
-};
-
 export default function Home({ posts, events, grantNumbers, search }) {
   return (
     <Container>

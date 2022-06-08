@@ -56,27 +56,31 @@ Structure that satisfies a validator.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-$|  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-$|(p q)
-</pre>
-</td>
-</tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  $|  p
+  q
+  ```
+
+---
+
+- Wide
+- ```hoon
+  $|(p q)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -160,33 +164,32 @@ Structure that normalizes to an example.
 
 One argument, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-$_  p
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-$_(p)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>
-<pre>
-_p
-</pre>
-</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  $_  p
+  ```
+
+---
+
+- Wide
+- ```hoon
+  $_(p)
+  ```
+
+---
+
+- Irregular
+- ```
+    _p
+  ```
+{% /table %}
 
 #### AST
 
@@ -230,30 +233,34 @@ Structure which recognizes a union tagged by head atom.
 
 A variable number of arguments.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-$%  [%p1 ...]
-    [%p2 ...]
-    [%p3 ...]
-    [%pn ...]
-==
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-$%([%p1 ...] [%p2 ...] [%p3 ...] [%pn ...])
-</pre>
-</td>
-</tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  $%  [%p1 ...]
+      [%p2 ...]
+      [%p3 ...]
+      [%pn ...]
+  ==
+  ```
+
+---
+
+- Wide
+- ```hoon
+  $%([%p1 ...] [%p2 ...] [%p3 ...] [%pn ...])
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 Each item may be an atom or (more commonly) a cell. The atom or head of the cell
 _must_ be a constant (`%foo`, `%1`, `%.y`, etc).
@@ -301,45 +308,43 @@ Form a cell type.
 
 A variable number of arguments.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-$:  p1
-    p2
-    p3
-    pn
-==
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-$:(p1 p2 p3 pn)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular (noun mode)</td>
-<td>
-<pre>
-,[p1 p2 p3 pn]
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular (structure mode)</td>
-<td>
-<pre>
-[p1 p2 p3 pn]
-</pre>
-</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  $:  p1
+      p2
+      p3
+      pn
+  ==
+  ```
+
+---
+
+- Wide
+- ```hoon
+  $:(p1 p2 p3 pn)
+  ```
+
+---
+
+- Irregular (noun mode)
+- ```hoon
+  ,[p1 p2 p3 pn]
+  ```
+
+---
+
+- Irregular (structure mode)
+- ```hoon
+    [p1 p2 p3 pn]
+  ```
+{% /table %}
 
 #### AST
 
@@ -381,27 +386,31 @@ structure.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-$<  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-$<(p q)
-</pre>
-</td>
-</tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  $<  p
+  q
+  ```
+
+---
+
+- Wide
+- ```hoon
+  $<(p q)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -444,27 +453,31 @@ Filters a mold to obtain a new mold matching a particular structure.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-$>  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-$>(p q)
-</pre>
-</td>
-</tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  $>  p
+  q
+  ```
+
+---
+
+- Wide
+- ```hoon
+  $>(p q)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -532,27 +545,31 @@ $_  ^|
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-$-  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-$-(p q)
-</pre>
-</td>
-</tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  $-  p
+  q
+  ```
+
+---
+
+- Wide
+- ```hoon
+  $-(p q)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 `p` is the type the gate takes and `q` is the type the gate produces.
 
@@ -579,27 +596,31 @@ Structure which normalizes a union tagged by head depth (cell).
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-$^  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-$^(p q)
-</pre>
-</td>
-</tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  $^  p
+  q
+  ```
+
+---
+
+- Wide
+- ```hoon
+  $^(p q)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -643,27 +664,31 @@ Repair a value of a tagged union type.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-$&  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-$&(p q)
-</pre>
-</td>
-</tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  $&  p
+  q
+  ```
+
+---
+
+- Wide
+- ```hoon
+  $&(p q)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 ```hoon
 $&(combined-mold=spec normalizing-gate=hoon)
@@ -715,27 +740,31 @@ Define a custom type default value.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-$~  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-$~(p q)
-</pre>
-</td>
-</tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  $~  p
+  q
+  ```
+
+---
+
+- Wide
+- ```hoon
+  $~(p q)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 `p` defines the default value, and `q` defines everything else about the
 structure.
@@ -809,27 +838,31 @@ Structure which normalizes a union tagged by head depth (atom).
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-$@  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-$@(p q)
-</pre>
-</td>
-</tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  $@  p
+  q
+  ```
+
+---
+
+- Wide
+- ```hoon
+  $@(p q)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -875,34 +908,33 @@ Structure which wraps a face around another structure.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-$=  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-$=(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>
-<pre>
-p=q
-</pre>
-</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  $=  p
+  q
+  ```
+
+---
+
+- Wide
+- ```hoon
+  $=(p q)
+  ```
+
+---
+
+- Irregular
+- ```
+    p=q
+  ```
+{% /table %}
 
 #### AST
 
@@ -945,37 +977,36 @@ Form a type from a union of other types.
 
 Variable number of arguments.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-$?  p1
-    p2
-    p3
-    pn
-==
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-$?(p1 p2 p3 pn)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>
-<pre>
-?(p1 p2 p3 pn)
-</pre>
-</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  $?  p1
+      p2
+      p3
+      pn
+  ==
+  ```
+
+---
+
+- Wide
+- ```hoon
+  $?(p1 p2 p3 pn)
+  ```
+
+---
+
+- Irregular
+- ```hoon
+    ?(p1 p2 p3 pn)
+  ```
+{% /table %}
 
 #### AST
 

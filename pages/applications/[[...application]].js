@@ -7,7 +7,7 @@ import Container from "../../components/Container";
 import SingleColumn from "../../components/SingleColumn";
 import Section from "../../components/Section";
 import ob from "urbit-ob";
-import Markdown from "../../components/Markdown";
+import { MarkdownParse } from "../../components/Markdown";
 import GatewayHeader from "../../components/gateway/GatewayHeader";
 import Gateway404 from "../../components/gateway/Gateway404";
 import MetadataBlock from "../../components/gateway/MetadataBlock";
@@ -146,14 +146,17 @@ export const getServerSideProps = async ({ params, res }) => {
     )
   ) || { data: {}, content: "" };
 
+  const markdown =
+    content !== ""
+      ? JSON.stringify(MarkdownParse({ post: { content } }))
+      : null;
+
   if (!data.title) {
     data = {
       title: params.application?.join("/"),
       description: "An application on Urbit.",
     };
   }
-
-  const markdown = await Markdown({ post: { content: content } }, true);
 
   return {
     props: {

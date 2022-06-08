@@ -7,7 +7,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import SingleColumn from "./SingleColumn";
 import Section from "./Section";
-import { decode } from "html-entities";
+import Markdown from "./Markdown";
 
 export default function BasicPage({ post, markdown, search }) {
   const router = useRouter();
@@ -26,9 +26,7 @@ export default function BasicPage({ post, markdown, search }) {
           <h1>{post.title}</h1>
         </Section>
         <Section narrow className="markdown">
-          <article
-            dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-          ></article>
+          <Markdown content={JSON.parse(markdown)} />
         </Section>
       </SingleColumn>
       <Footer />

@@ -23,7 +23,7 @@ core into which one of the cryptosuites in `zuse` may be implemented. Some, but
 not all, of the calls to cryptography-related tasks (encryption, signing,
 decrypting, and authenticating) are peformed utilizing the `+acru` core.
 
-## Packet encryption and authentication {#packets}
+## Packet encryption and authentication {% #packets %}
 
 Each Urbit ship possesses two networking keypairs: one for encryption, and one
 for authentication. We often refer to these two keypairs as though they were a
@@ -40,7 +40,7 @@ message fragment is signed using the authentication key. It is encrypted using
 [`+en:crub:crypto`](/docs/arvo/reference/cryptography#en) found in
 `sys/zuse.hoon`, which utilizes the 256-bit AES-SIV algorithm.
 
-## Diffie-Hellman key exchange {#key-exchange}
+## Diffie-Hellman key exchange {% #key-exchange %}
 
 For each foreign ship a given ship has communicated with, `$ames-state` contains a
 [$peer-state](/docs/arvo/ames/data-types#peer-state), inside which the [$symmetric-key](/docs/arvo/ames/data-types#symmetric-key) (an atom which nests under
@@ -54,7 +54,7 @@ in a two-way conversation computes the shared symmetric key for that
 conversation by computing the product of their own private key and the public
 key of the other party.
 
-## Comet self-attestation {#comets}
+## Comet self-attestation {% #comets %}
 
 Recall that the `@p` of a comet is the hash of their 128-bit public key cast as
 a `@p`. Since the public key of a comet is not stored on Azimuth, a comet proves
@@ -74,7 +74,7 @@ be an attestation packet is why comets are unable to initiate communication with
 one another, and also why comets must be the first to initiate communication
 with a non-comet. This is a technical limitation with a planned workaround.
 
-## `+acru:ames` {#crypto-core}
+## `+acru:ames` {% #crypto-core %}
 
 The `+crypto-core` in `$ames-state` is an `+acru:ames` core, a
 [lead](/docs/hoon/reference/advanced#dry-polymorphism-and-core-nesting-rules)

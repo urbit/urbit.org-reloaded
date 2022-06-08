@@ -40,7 +40,7 @@ have a corresponding [layer 2 action](/docs/azimuth/l2/l2-actions), and/or can b
 performed using [Bridge](/using/id/using-bridge). We note these facts where
 applicable.
 
-## Write functions {#write}
+## Write functions {% #write %}
 
 Here we briefly describe each function in `Ecliptic.eth` which allows one to write
 data to Ethereum. These can be called using
@@ -194,7 +194,7 @@ section for more detail. The detach action available in Bridge is a layer 2
 action, so a layer 1 detach must be done
 [manually](https://etherscan.io/address/ecliptic.eth#writeContract).
 
-### Proxy management {#proxies}
+### Proxy management {% #proxies %}
 
 These functions are used to manage the various
 [proxies](/docs/using/id/proxies). All of these actions may be performed from Bridge.
@@ -383,7 +383,7 @@ this function has no valid arguments.
 Sets 3 DNS domains by which galaxy IP addresses may be looked up as part of the
 bootstrap process to get on the network. Currently, all three domains are `urbit.org`.
 
-## Read functions {#read}
+## Read functions {% #read %}
 
 Here we briefly describe each function in the Ecliptic which allows one to read
 data from the contract. These can be called using

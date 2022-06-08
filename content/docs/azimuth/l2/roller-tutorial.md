@@ -28,11 +28,13 @@ the roller that performs these actions, and "front-end" refers to the optional
 web GUI most users will use to interact with your roller (probably Bridge).
 
 There are three main steps involved with setting up a roller:
- - ensuring that the data in `%azimuth` is up to date,
- - starting and configuring `%roller`,
- - aiming your front-end at the roller
+
+- ensuring that the data in `%azimuth` is up to date,
+- starting and configuring `%roller`,
+- aiming your front-end at the roller
 
 ### 1. Make sure `%azimuth` state is up to date
+
 If you are using an ordinary live ship on the network as the roller, you should
 already have the latest `%azimuth` state and this step should not be necessary
 and you may move to step 2.
@@ -51,7 +53,8 @@ found under the Setting page for the node on infura.io listed under `ENDPOINTS`.
 If you do not perform this step, you'll later see an error "roller not ready"
 when the first roller batch is about to be submitted.
 
-### 2. Starting and configuring `%roller` {#step2}
+### 2. Starting and configuring `%roller` {% #step2 %}
+
 This step must be performed whether you're using a fakezod or a live ship.
 
 First we need to start `%roller` and `%roller-rpc` (the agent used to send
@@ -60,8 +63,7 @@ instead will be accepting transactions to batch entirely from within Urbit,
 `%roller-rpc` is not necessary. We assume you will be using Bridge as a
 front-end.
 
-To start the agents, enter the following command in dojo: `|rein %base [&
-%roller] [& %roller-rpc]`. You should see the following response:
+To start the agents, enter the following command in dojo: `|rein %base [& %roller] [& %roller-rpc]`. You should see the following response:
 
 ```
 gall: installing %roller-rpc
@@ -90,8 +92,8 @@ available but do not participate in propagating transactions). Enter
 `:roller|endpoint 'https://MAINNET_INFURA_URL' %mainnet` into dojo.
 
 Next we set the private key for the Ethereum wallet from which batches built by
-`%roller` will be submitted. We *strongly emphasize* that this step has serious
-security implications. *`%roller` will be able to spend ETH in this wallet.*
+`%roller` will be submitted. We _strongly emphasize_ that this step has serious
+security implications. _`%roller` will be able to spend ETH in this wallet._
 This is mandatory, of course, as the primary function of `%roller` is to submit
 batches of transactions to Ethereum, which requires ETH. If you downloaded
 `%roller` from someone other than Tlon and have not personally audited their
@@ -157,56 +159,14 @@ set up at `https://myroller.sampel-pal.net`.
 rate at which transactions are submitted and manually submitting batches. These
 can be modified using the following generators:
 
-<table>
-  <thead><tr><th>Dojo Command</th><th>Description</th><th>Argument</th></tr></thead>
-<tbody>
-  <tr>
-    <td><code>:roller|commit</code></td>
-    <td>Submits a new L2 batch with all pending transactions.</td>
-    <td>None.</td>
-  </tr>
-  <tr>
-    <td><code>:roller|config</code></td>
-    <td>General configuration command.</td>
-    <td><code>$config</code> (see <code>/sur/dice.hoon</code>)</td>
-  </tr>
-  <tr>
-    <td><code>:roller|endpoint</code></td>
-    <td>Set the Infura endpoint.</td>
-    <td><code>[@t ?(%mainnet %ropsten %local)]</code></td>
-  </tr>
-  <tr>
-    <td><code>:roller|frequency</code></td>
-    <td>Sets the frequency at which batches are submitted.</td>
-    <td><code>@dr</code></td>
-  </tr>
-  <tr>
-    <td><code>:roller|local</code></td>
-    <td>Configures <code>%roller</code> to listen to a local Ethereum node at port 8545.</td>
-    <td>None.</td>
-  </tr>
-  <tr>
-    <td><code>:roller|quota</code></td>
-    <td>Modified the number of txs a ship is allowed to send per unit time.</td>
-    <td><code>@ud</code></td>
-  </tr>
-  <tr>
-    <td><code>:roller|ropsten</code></td>
-    <td>Configure %roller to listen to a preset Ropsten Infura node.</td>
-    <td>None.</td>
-  </tr>
-  <tr>
-    <td><code>:roller|setkey</code></td>
-    <td>Load a private key into the roller and retrieves its L1 nonce.</td>
-    <td><code>@t</code></td>
-  </tr>
-  <tr>
-    <td><code>:roller|slice</code></td>
-    <td>Modified the unit of time for each ship's quota.</td>
-    <td><code>@dr</code></td>
-  </tr>
-</tbody>
-</table>
-
-
-
+| Dojo Command         | Description                                                           | Argument                           |
+| -------------------- | --------------------------------------------------------------------- | ---------------------------------- |
+| `:roller\|commit`    | Submits a new L2 batch with all pending transactions.                 | None.                              |
+| `:roller\|config`    | General configuration command.                                        | `$config` (see `/sur/dice.hoon`)   |
+| `:roller\|endpoint`  | Set the Infura endpoint.                                              | `[@t ?(%mainnet %ropsten %local)]` |
+| `:roller\|frequency` | Sets the frequency at which batches are submitted.                    | `@dr`                              |
+| `:roller\|local`     | Configures `%roller` to listen to a local Ethereum node at port 8545. | None.                              |
+| `:roller\|quota`     | Modified the number of txs a ship is allowed to send per unit time.   | `@ud`                              |
+| `:roller\|ropsten`   | Configure `%roller` to listen to a preset Ropsten Infura node.        | None.                              |
+| `:roller\|setkey`    | Load a private key into the roller and retrieves its L1 nonce.        | `@t`                               |
+| `:roller\|slice`     | Modified the unit of time for each ship's quota.                      | `@dr`                              |

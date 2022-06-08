@@ -36,12 +36,12 @@ Interested in contributing to Urbit? Sign up for Hoon School:
 
 Get the latest on Urbit:
 
-Blog: <a href="https://urbit.org/blog/" class="linkified">https://urbit.org/blog/</a>
+Blog: [https://urbit.org/blog/](https://urbit.org/blog/)
 
-Urbit Twitter: <a href="https://twitter.com/urbit" class="linkified">https://twitter.com/urbit</a>
+Urbit Twitter: [https://twitter.com/urbit](https://twitter.com/urbit)
 
-Urbit Github: <a href="https://github.com/urbit" class="linkified">https://github.com/urbit</a>
+Urbit Github: [https://github.com/urbit](https://github.com/urbit)
 
 Still confused about what Urbit is?
 
-<a href="https://urbit.org/understanding-urbit/" class="linkified">https://urbit.org/understanding-urbit/</a>
+[https://urbit.org/understanding-urbit/](https://urbit.org/understanding-urbit/)

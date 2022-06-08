@@ -21,30 +21,31 @@ Declares a mold builder wet gate with one or more molds as its sample.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-|$  sample
-body
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-|$(sample body)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  |$  sample
+  body
+  ```
+
+---
+
+- Wide
+- ```hoon
+  |$(sample body)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -118,24 +119,33 @@ Produce a **door** (a core with a sample).
 
 One fixed argument, then a variable number of `+`-family expressions.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-|_  a=spec
-++  b=term  c=hoon
-++  d=term  e=hoon
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  |_  a=spec
+  ++  b=term  c=hoon
+  ++  d=term  e=hoon
        ...
-++  f=term  g=hoon
---
-</pre>
-</td>
-</tr>
-<tr><td>Wide</td><td>None.</td></tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+  ++  f=term  g=hoon
+  --
+  ```
+
+---
+
+- Wide
+- None.
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 Note: The `++` rune may be replaced with any other rune in the `+` family.
 
@@ -232,30 +242,31 @@ Produce a gate with a custom sample.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-|:  a
-b
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-|:(a b)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  |:  a
+  b
+  ```
+
+---
+
+- Wide
+- ```hoon
+  |:(a b)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -303,24 +314,33 @@ Produce a core, `[battery payload]`.
 
 Argument: a variable number of `+`-family expressions.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-|%
-++  a=term  b=hoon
-++  c=term  d=hoon
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  |%
+  ++  a=term  b=hoon
+  ++  c=term  d=hoon
        ...
-++  e=term  f=hoon
---
-</pre>
-</td>
-</tr>
-<tr><td>Wide</td><td>None.</td></tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+  ++  e=term  f=hoon
+  --
+  ```
+
+---
+
+- Wide
+- None.
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 Note: The `++` rune may be replaced with any other rune in the `+` family.
 
@@ -387,29 +407,30 @@ Produce a trap (a core with one arm `$`).
 
 One argument, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-|.  a
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-|.(a)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  |.  a
+  ```
+
+---
+
+- Wide
+- ```hoon
+  |.(a)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -480,25 +501,36 @@ Produce a core whose battery includes a `$` arm and compute the latter.
 
 One fixed argument, then a variable number of `+`-family expressions.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-|^  a=hoon
-++  b=term  c=hoon
-++  d=term  e=hoon
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  |^  a=hoon
+  ++  b=term  c=hoon
+  ++  d=term  e=hoon
        ...
-++  f=term  g=hoon
---
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td><td>None.</td></tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+  ++  f=term  g=hoon
+  --
+  ```
+
+---
+
+- Wide
+- None.
+
+---
+
+- Irregular
+- None.
+
+---
+
+{% /table %}
 
 #### AST
 
@@ -555,29 +587,30 @@ Produce a trap (a core with one arm `$`) and evaluate it.
 
 One argument, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-|-  a
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-|-(a)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  |-  a
+  ```
+
+---
+
+- Wide
+- ```hoon
+  |-(a)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -637,30 +670,31 @@ Produce an iron gate.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-|~  a
-b
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-|~(a b)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  |~  a
+  b
+  ```
+
+---
+
+- Wide
+- ```hoon
+  |~(a b)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -700,29 +734,30 @@ Produce a wet gate (one-armed core with sample).
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-|*  a  b
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-|*(a b)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  |*  a  b
+  ```
+
+---
+
+- Wide
+- ```hoon
+  |*(a b)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -792,30 +827,31 @@ Produce a gate (a one-armed core with a sample).
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-|=  a
-b
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-|=(a b)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  |=  a
+  b
+  ```
+
+---
+
+- Wide
+- ```hoon
+  |=(a b)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -878,24 +914,33 @@ Produce a 'wet' core `[battery payload]`.
 
 Arguments: a variable number of `+`-family expressions.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-|@
-++  a=term  b=hoon
-++  c=term  d=hoon
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  |@
+  ++  a=term  b=hoon
+  ++  c=term  d=hoon
        ...
-++  e=term  f=hoon
---
-</pre>
-</td>
-</tr>
-<tr><td>Wide</td><td>None.</td></tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+  ++  e=term  f=hoon
+  --
+  ```
+
+---
+
+- Wide
+- None.
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 Note: The `++` rune may be replaced with any other rune in the `+` family.
 
@@ -928,29 +973,30 @@ Produce a lead trap.
 
 One argument, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-|?  a
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-|?(a)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  |?  a
+  ```
+
+---
+
+- Wide
+- ```hoon
+  |?(a)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 

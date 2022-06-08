@@ -12,7 +12,7 @@ for the contract containing the business logic for this ledger. `Azimuth.eth`
 cannot be modified directly by [galaxy vote](/docs/glossary/upgrade) - they are
 only eligible to modify the Ecliptic.
 
-## Global state {#global}
+## Global state {% #global %}
 
 The global state of `Azimuth.eth` is given by the following.
 
@@ -42,7 +42,7 @@ tokens](https://eips.ethereum.org/EIPS/eip-721) and are indexed by a number
 between `0` and `2^32-1`, e.g. a `uint32`. There are two data structures
 associated to a given `uint32`: a `Point` and a `Deed`.
 
-## `Point`s {#points}
+## `Point`s {% #points %}
 
 A `Point` contains data about networking keys and sponsorship status, arranged
 in the following `struct`:
@@ -101,7 +101,7 @@ in the following `struct`:
   }
 ```
 
-## `Deed`s {#deeds}
+## `Deed`s {% #deeds %}
 
 A `Deed` says which Ethereum address owns a given `Point` as well as several
 [proxies](/docs/using/id/proxies) for that `Point`.
@@ -134,7 +134,7 @@ struct Deed
   }
 ```
 
-## Other state {#other}
+## Other state {% #other %}
 
 Finally, each Ethereum address may set for itself a number of `operators`, as
 defined and required by the [ERC-721
@@ -155,4 +155,3 @@ All data in this ledger is stored and processed locally on your ship by the
 2](/docs/azimuth/l2/layer2) data. Because state transitions resulting from layer 2
 transactions are not included in this ledger, in general the local store will
 differ from what is kept in `Azimuth.eth`.
-

@@ -1,15 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
 import classnames from "classnames";
 import { join } from "path";
-import { getDocs, formatDate, getPage } from "../../lib/lib";
+import { getPage } from "../../lib/lib";
 import Meta from "../../components/Meta";
-import Markdown from "../../components/Markdown";
+import Markdown, { MarkdownParse } from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
-import { decode } from "html-entities";
 import communityTree from "../../cache/community.json";
 
 const breadcrumbs = (posts, paths) => {
@@ -60,7 +58,7 @@ const pageTree = (thisLink, tree, level = 0) => {
   );
 };
 
-export default function UsingLayout({ posts, data, params, search, markdown }) {
+export default function UsingLayout({ posts, data, markdown, params, search }) {
   return (
     <>
       <Head>
@@ -79,9 +77,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
           params={params}
         >
           <div className="markdown">
-            <article
-              dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-            ></article>
+            <Markdown content={JSON.parse(markdown)} />
           </div>
         </ContentArea>
       </div>
@@ -96,7 +92,7 @@ export async function getStaticProps({ params }) {
     join(process.cwd(), "content/community", params.slug?.join("/") || "/")
   );
 
-  const markdown = await Markdown({ post: { content: content } });
+  const markdown = JSON.stringify(MarkdownParse({ post: { content } }));
 
   return { props: { posts, data, markdown, params } };
 }

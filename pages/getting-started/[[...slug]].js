@@ -5,8 +5,7 @@ import { useRouter } from "next/router";
 import classnames from "classnames";
 import { join } from "path";
 import { getPage } from "../../lib/lib";
-import { decode } from "html-entities";
-import Markdown from "../../components/Markdown";
+import Markdown, { MarkdownParse } from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
 import GettingStartedTree from "../../cache/getting-started.json";
@@ -87,9 +86,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
           disableToC
         >
           <div className="markdown">
-            <article
-              dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-            ></article>
+            <Markdown content={JSON.parse(markdown)} />
           </div>
           {!params?.slug && <LaunchCards />}
         </ContentArea>
@@ -293,7 +290,7 @@ export async function getStaticProps({ params }) {
     )
   );
 
-  const markdown = await Markdown({ post: { content: content } });
+  const markdown = JSON.stringify(MarkdownParse({ post: { content } }));
 
   return { props: { posts, data, markdown, params } };
 }

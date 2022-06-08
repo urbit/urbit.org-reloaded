@@ -22,34 +22,35 @@ with a `==`. Note also that the `==` does not make the arguments into a list as
 you might expect, so `q` must be explicitly null-terminated if its elements are
 specified separately.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-.^  p
-  q1
-  q2
-  q3
-  qn
-==
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-.^(p q1 q2)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  .^  p
+    q1
+    q2
+    q3
+    qn
+  ==
+  ```
+
+---
+
+- Wide
+- ```hoon
+  .^(p q1 q2)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -132,33 +133,32 @@ Increment an atom with Nock `4`.
 
 One argument, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-.+  p
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-.+(p)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>
-<pre>
-+(p)
-</pre>
-</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  .+  p
+  ```
+
+---
+
+- Wide
+- ```hoon
+  .+(p)
+  ```
+
+---
+
+- Irregular
+- ```hoon
+    +(p)
+  ```
+{% /table %}
 
 #### AST
 
@@ -200,30 +200,31 @@ Nock of formula `q` and subject `p`, with type `%noun`.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-.*  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-.*(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  .*  p
+  q
+  ```
+
+---
+
+- Wide
+- ```hoon
+  .*(p q)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -264,7 +265,7 @@ therefore possible to use Hoon as a typeless language.
 
 ---
 
-## `.=` "dottis" {#dottis}
+## `.=` "dottis" {% #dottis %}
 
 Test for equality with Nock `5`.
 
@@ -272,34 +273,33 @@ Test for equality with Nock `5`.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-.=  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-.=(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>
-<pre>
-=(p q)
-</pre>
-</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  .=  p
+  q
+  ```
+
+---
+
+- Wide
+- ```hoon
+  .=(p q)
+  ```
+
+---
+
+- Irregular
+- ```hoon
+    =(p q)
+  ```
+{% /table %}
 
 #### AST
 
@@ -348,29 +348,30 @@ Test for cell or atom with Nock `3`.
 
 One argument, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-.?  p
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-.?(p)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  .?  p
+  ```
+
+---
+
+- Wide
+- ```hoon
+  .?(p)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 

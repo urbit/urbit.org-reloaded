@@ -27,7 +27,7 @@ lesson](/docs/hoon/hoon-school/generators#ask) on `sole` and `%ask`
 generators, which only covers the bare minimum necessary to write generators
 that take user input.
 
-## The `shoe` library {#the-shoe-library}
+## The `shoe` library {% #the-shoe-library %}
 
 Here we describe how sessions are identified, the specialized `card`s that Gall agents
 with the `shoe` library are able to utilize, and the different cores of `/lib/shoe.hoon` and their purpose.
@@ -146,7 +146,7 @@ This is a function for wrapping a `shoe` core, which has too many
 arms to be a valid Gall agent core. This turns it into a standard Gall agent core by
 integrating the additional arms into the standard ones.
 
-## The `sole` library {#the-sole-library}
+## The `sole` library {% #the-sole-library %}
 
 `shoe` apps may create specialized `card`s of the `[%shoe (list @ta) shoe-effect]` shape, where `shoe-effect` currently just wrap `sole-effect`s, i.e. instructions for displaying text and producing other effects in the console.
 
@@ -165,7 +165,7 @@ be structured as
 [%mor [%txt "This is some text."] [%bel ~] ~]
 ```
 
-## `%shoe` app walkthrough {#shoe-app-walkthrough}
+## `%shoe` app walkthrough {% #shoe-app-walkthrough %}
 
 Here we explore the capabilities of the `%shoe` example app and then go through
 the code, explaining what each line does.
@@ -273,7 +273,7 @@ a type or list of types that contain data needed to execute the command. See
 the shape `[%shoe sole-ids=(list @ta) effect=shoe-effect]`. A `%shoe` `card` is
 sent to all `sole`s listed in `sole-ids`, imaking them run the `sole-effect`
 specified by `effect` (i.e. printing some text). Here we can
-reference `card:shoe` because of `/+  shoe` at the beginning of the app.
+reference `card:shoe` because of `/+ shoe` at the beginning of the app.
 
 ```hoon
 =|  state-0

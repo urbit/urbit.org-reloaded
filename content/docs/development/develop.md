@@ -25,7 +25,7 @@ Below we'll go into more detail about each of these options and do our best to
 point you towards a number of additional helpful resources that can be found
 throughout the docs.
 
-### Build Clients {#clients}
+### Build Clients {% #clients %}
 
 Urbit ships with [Landscape](/docs/glossary/landscape), which can be thought
 of as its flagship client. Landscape can be broken into two different technical
@@ -55,7 +55,7 @@ Alternatively, command-line interface (CLI) applications can be built using a
 library called `shoe`, which you can learn more about
 [here](/docs/hoon/guides/cli-tutorial). This does require Hoon knowledge.
 
-### Develop Agents {#agents}
+### Develop Agents {% #agents %}
 
 Gall agents can be best thought of as individual services with a
 statically-typed interface and built-in database. They're written in
@@ -70,7 +70,7 @@ If you want to learn how to build gall agents, your best bet is to first [learn
 the Hoon programming language](/docs/hoon/hoon-school/), and then follow that
 up with the [Gall guide](/docs/userspace/gall-guide/intro).
 
-### Contribute to Urbit Core {#core}
+### Contribute to Urbit Core {% #core %}
 
 Working on the core means improving the Urbit project itself, working with the
 existing community of Urbit developers. The kernel is much more stable, but

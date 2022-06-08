@@ -24,15 +24,11 @@ Bringing together many different things in one place is something only a general
 
 As Urbit matures, other killer digital environments may emerge—but Landscape is the app we need if we want to move away from the world of MEGACORP software and onto a secure, distraction-free network of our own.
 
-<br>
-
 ![A Landscape](https://storage.googleapis.com/media.urbit.org/tlon/landscape.png)
 
 Today, we pour all of our focus into making Landscape a comfortable place for digital communities to call home, starting with our own. This effort forces us to mature the entire stack, from the interpreter to the interface.
 
 Let’s walk through the next few phases of Landscape to get a sense of where we are and where we’re headed.
-
-<br>
 
 ![The current state of Landscape/OS1](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-interface-3.png)
 
@@ -47,8 +43,6 @@ The first version of OS 1 shipped in March and we’ve been improving it continu
 Our initial goal was just to get ourselves living on Urbit everyday. We achieved that, and managed to see quite a few other communities pop up along the way. We made enormous progress, but our system isn’t refined or reliable enough. It also still needs a thorough security audit (which we’re already working on).
 
 OS 1 was a huge step forward. Let’s talk about what’s next.
-
-<br>
 
 ![A speculative interface for Landscape S2](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-interface-4.png)
 
@@ -68,8 +62,6 @@ We know that getting onto the network can be difficult for less technical users.
 
 We’re planning to share the hosted version of S2 with a few small communities to test it out and put it through the paces. If you’re curious, [let us know](https://tlon.io).
 
-<br>
-
 ![A speculative payments interface](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-roadmap-4.jpg)
 
 ## Early 2021: Landscape S3
@@ -81,8 +73,6 @@ A native desktop and mobile app, Landscape S3 will be supported by at least one 
 Perhaps most importantly, Landscape 3 will be backed by a fully audited networking protocol. We’re in the process of auditing our networking now and, once complete, we can be confident that communication over Urbit is secure.
 
 Landscape inherits the benefits of Urbit itself: simplicity, durability, and a real sense of ownership. These come out of the box, from the beginning, but supporting a fully-featured interface makes a lot of demands of a new stack. By Landscape 3 our interface and infrastructure will have matured to the point that it can be confidently held up against alternatives.
-
-<br>
 
 ![A landscape](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-roadmap-5.jpg)
 

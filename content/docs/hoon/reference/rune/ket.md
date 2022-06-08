@@ -19,29 +19,30 @@ Convert a gold core to an iron core (contravariant).
 
 One argument, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-^|  p
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-^|(p)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ^|  p
+  ```
+
+---
+
+- Wide
+- ```hoon
+  ^|(p)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -89,29 +90,30 @@ Mold gate for type `p`.
 
 One argument, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-^:  p
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-^:(p)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ^:  p
+  ```
+
+---
+
+- Wide
+- ```hoon
+  ^:(p)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -166,30 +168,31 @@ Typecast on value produced by passing `q` to `p`.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-^.  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-^.(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ^.  p
+  q
+  ```
+
+---
+
+- Wide
+- ```hoon
+  ^.(p q)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -236,34 +239,33 @@ Typecast by explicit type label.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-^-  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-^-(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>
-<pre>
-`p`q
-</pre>
-</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ^-  p
+  q
+  ```
+
+---
+
+- Wide
+- ```hoon
+  ^-(p q)
+  ```
+
+---
+
+- Irregular
+- ```
+    `p`q
+  ```
+{% /table %}
 
 #### AST
 
@@ -313,27 +315,31 @@ Typecast by inferred type.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-^+  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-^+(p q)
-</pre>
-</td>
-</tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ^+  p
+  q
+  ```
+
+---
+
+- Wide
+- ```hoon
+  ^+(p q)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -363,26 +369,30 @@ Convert a core to a zinc core (covariant).
 
 One argument, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-^&  p
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-^&(p)
-</pre>
-</td>
-</tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ^&  p
+  ```
+
+---
+
+- Wide
+- ```hoon
+  ^&(p)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -446,26 +456,30 @@ Fold constant at compile time.
 
 One argument, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-^~  p
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-^~(p)
-</pre>
-</td>
-</tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ^~  p
+  ```
+
+---
+
+- Wide
+- ```hoon
+  ^~(p)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -497,33 +511,32 @@ Produce example type value.
 
 One argument, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-^*  p
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-^*(p)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>
-<pre>
-*p
-</pre>
-</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ^*  p
+  ```
+
+---
+
+- Wide
+- ```hoon
+  ^*(p)
+  ```
+
+---
+
+- Irregular
+- ```hoon
+    *p
+  ```
+{% /table %}
 
 `p` is any structure expression.
 
@@ -578,34 +591,33 @@ Bind name to a value.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-^=  p
-q
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-^=(p q)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>
-<pre>
-p=q
-</pre>
-</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ^=  p
+  q
+  ```
+
+---
+
+- Wide
+- ```hoon
+  ^=(p q)
+  ```
+
+---
+
+- Irregular
+- ```
+    p=q
+  ```
+{% /table %}
 
 #### AST
 
@@ -649,26 +661,30 @@ Convert any core to a lead core (bivariant).
 
 One argument, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-^?  p
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-^?(p)
-</pre>
-</td>
-</tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  ^?  p
+  ```
+
+---
+
+- Wide
+- ```hoon
+  ^?(p)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 

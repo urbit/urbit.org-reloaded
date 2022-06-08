@@ -134,7 +134,7 @@ String with interpolated prettyprinting:
 
 ---
 
-## "Warm Atoms" {#warm}
+## "Warm Atoms" {% #warm %}
 
 A constant, warm atom.
 

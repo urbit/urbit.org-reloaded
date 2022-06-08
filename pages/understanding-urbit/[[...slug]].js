@@ -5,13 +5,11 @@ import { useRouter } from "next/router";
 import classnames from "classnames";
 import { join } from "path";
 import { getPage, getPreviousPost, getNextPost } from "../../lib/lib";
-import Markdown from "../../components/Markdown";
+import Markdown, { MarkdownParse } from "../../components/Markdown";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
 import Pagination from "../../components/Pagination";
 import UnderstandingUrbitTree from "../../cache/understanding-urbit.json";
-
-import { decode } from "html-entities";
 
 const breadcrumbs = (posts, paths) => {
   const results = [
@@ -103,11 +101,10 @@ export default function UnderstandingLayout({
           search={search}
           section={"Understanding Urbit"}
           params={params}
+          disableToC
         >
           <div className="markdown">
-            <article
-              dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-            ></article>
+            <Markdown content={JSON.parse(markdown)} />
           </div>
           <div className="flex justify-between mt-16">
             {previousPost === null ? (
@@ -155,6 +152,7 @@ export async function getStaticProps({ params }) {
       params.slug?.join("/") || "/"
     )
   );
+  const markdown = JSON.stringify(MarkdownParse({ post: { content } }));
 
   const previousPost =
     getPreviousPost(
@@ -171,8 +169,6 @@ export async function getStaticProps({ params }) {
       join("understanding-urbit", params.slug?.slice(0, -1).join("/") || "/"),
       "weight"
     ) || null;
-
-  const markdown = await Markdown({ post: { content: content } });
 
   return { props: { posts, data, markdown, params, previousPost, nextPost } };
 }

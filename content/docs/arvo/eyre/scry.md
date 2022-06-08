@@ -14,7 +14,7 @@ All examples are run from the dojo.
 
 An `x` scry with a `path` of `/cors` will return Eyre's CORS origin registry. The type returned is a [cors-registry](/docs/arvo/eyre/data-types#cors-registry) which contains the `set`s of approved, rejected and requested origins.
 
-### Example
+### Example {% #example-1 %}
 
 ```
 > .^(cors-registry:eyre %ex /=//=/cors)
@@ -28,7 +28,7 @@ An `x` scry with a `path` of `/cors` will return Eyre's CORS origin registry. Th
 
 An `x` scry with a `path` of `/cors/requests` will return the `set` of pending origin requests. These are origins that were in an `Origin: ...` HTTP header but weren't in the existing approved or rejected sets. The type returned is a `(set origin:eyre)`.
 
-### Example
+### Example {% #example-2 %}
 
 ```
 > .^(requests=(set origin:eyre) %ex /=//=/cors/requests)
@@ -39,7 +39,7 @@ requests={~~http~3a.~2f.~2f.baz~.example}
 
 An `x` scry with a `path` of `/cors/approved` will return the `set` of approved CORS origins. The type returned is a `(set origin:eyre)`.
 
-### Example
+### Example {% #example-3 %}
 
 ```
 > .^(approved=(set origin:eyre) %ex /=//=/cors/approved)
@@ -52,7 +52,7 @@ An `x` scry whose `path` is `/cors/approved/{ORIGIN}` tests whether the given or
 
 The origin URL is a `@t`, but since `@t` may not be valid in a path, it must be encoded in a `@ta` using `+scot` like `(scot %t 'foo')` rather than just `'foo'`.
 
-### Examples
+### Examples {% #examples-1 %} 
 
 ```
 > .^(? %ex /=//=/cors/approved/(scot %t 'http://foo.example'))
@@ -68,7 +68,7 @@ The origin URL is a `@t`, but since `@t` may not be valid in a path, it must be 
 
 An `x` scry with a `path` of `/cors/rejected` will return the `set` of rejected CORS origins. The type returned is a `(set origin:eyre)`.
 
-### Example
+### Example {% #example-4 %}
 
 ```
 > .^(rejected=(set origin:eyre) %ex /=//=/cors/rejected)
@@ -81,7 +81,7 @@ An `x` scry whose `path` is `/cors/rejected/{ORIGIN}` tests whether the given or
 
 The origin URL must be a cord-encoded `@t` rather than just the plain `@t`, so you'll have to do something like `(scot %t 'foo')` rather than just `'foo'`.
 
-### Examples
+### Examples {% #examples-2 %} 
 
 ```
 > .^(? %ex /=//=/cors/rejected/(scot %t 'http://bar.example'))
@@ -99,7 +99,7 @@ An `x` scry whose `path` is `/authenticated/cookie/{COOKIE}` tests whether the g
 
 The cookie must be the full cookie including the `urbauth-{SHIP}=` part. The cookie must be a cord-encoded `@t` rather than just a plain `@t`, so you'll have to do something like `(scot %t 'foo')` rather than just `'foo'`.
 
-### Examples
+### Examples {% #examples-3 %} 
 
 ```
 > .^(? %ex /=//=/authenticated/cookie/(scot %t 'urbauth-~zod=0vvndn8.bfsjj.j3614.k40ha.8fomi'))
@@ -115,7 +115,7 @@ The cookie must be the full cookie including the `urbauth-{SHIP}=` part. The coo
 
 A scry with `bindings` in place of the `desk` in the `beak` will return Eyre's URL path bindings. The type returned is a `(list [binding:eyre duct action:eyre])` (see the [$binding](/docs/arvo/eyre/data-types#binding) & [$action](/docs/arvo/eyre/data-types#action) sections of the Data Types document for details).
 
-### Example
+### Example {% #example-5 %}
 
 ```
 > .^((list [binding:eyre duct action:eyre]) %e /=bindings=)
@@ -136,7 +136,7 @@ A scry with `bindings` in place of the `desk` in the `beak` will return Eyre's U
 
 A scry with `bindings` in place of the `desk` in the `beak` will return all open HTTP connections that aren't fully complete. The type returned is a `(map duct outstanding-connection:eyre)` (see the [$outstanding-connection](/docs/arvo/eyre/data-types#outstanding-connection) section of the Data Types document for details).
 
-### Example
+### Example {% #example-6 %}
 
 ```
 > .^((map duct outstanding-connection:eyre) %e /=connections=)
@@ -147,7 +147,7 @@ A scry with `bindings` in place of the `desk` in the `beak` will return all open
 
 A scry with `authentication-state` in place of the `desk` in the `beak` will return authentication details of all current sessions. The type returned is a [$authentication-state](/docs/arvo/eyre/data-types#authentication-state). The `p` field is the cookie sans the `urbauth-{SHIP}=` part.
 
-### Example
+### Example {% #example-7 %}
 
 ```
 > .^(authentication-state:eyre %e /=authentication-state=)
@@ -162,7 +162,7 @@ A scry with `authentication-state` in place of the `desk` in the `beak` will ret
 
 A scry with `channel-state` in place of the `desk` in the `beak` will return details of the state of each channel. The type returned is a [channel-state](/docs/arvo/eyre/data-types#channel-state).
 
-### Example
+### Example {% #example-8 %}
 
 ```
 > .^(channel-state:eyre %e /=channel-state=)
@@ -187,7 +187,7 @@ A scry with `channel-state` in place of the `desk` in the `beak` will return det
 
 A scry with `host` in place of the `desk` in the `beak` will return host details of the ship. The type returned is a `hart:eyre`.
 
-### Example
+### Example {% #example-9 %}
 
 ```
 > .^(hart:eyre %e /=host=)

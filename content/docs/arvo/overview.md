@@ -45,7 +45,7 @@ Arvo is designed to avoid the usual state of complex event networks: event spagh
 
 Unlike any other popular operating system, it is possible for a single human to understand every aspect of Arvo due to its compact size. The entire Urbit stack is around 30,000 lines of code, while the Arvo kernel is only about 1,000 lines of code. We strive for a small codebase because the difficulty in administering a system is roughly proportional to the size of its code base.
 
-## An operating function {#operating-function}
+## An operating function {% #operating-function %}
 
 Arvo is the world's first _purely functional_ operating system, and as such it may reasonably be called an _operating function_. The importance of understanding this design choice and its relevance to the overarching goal cannot be understated. If you knew only a single thing about Arvo, let it be this.
 
@@ -383,9 +383,7 @@ activates the vane it will have this context as its subject.
 This cycle of `%pass`ing a `note` to `%pass`ing a `task` to `%give`ing a `gift`
 to `%give`ing a `%sign` is summarized in the following diagram:
 
-<div style="text-align:center">
-<img class="mv5 w-150" src="https://media.urbit.org/docs/arvo/cycle.png">
-</div>
+![](https://media.urbit.org/docs/arvo/cycle.png)
 
 Note that `%pass`ing a `note` doesn't _always_ result in a return - this diagram
 just

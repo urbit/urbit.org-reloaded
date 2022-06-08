@@ -41,7 +41,7 @@ is not perfectly adhered to - sometimes you may find structure definitions in
   run a particular test `+test-bar` in `/tests/foo.hoon` in dojo, enter `-test %/tests/foo/test-bar ~`. If a file is specified, every test in that file will
   run. If a folder is specified, every test in that folder will run.
 
-## `/sys` {#sys}
+## `/sys` {% #sys %}
 
 `/sys` contains four files: `hoon.hoon`, `arvo.hoon`, `lull.hoon`, and
 `zuse.hoon`. These are the files used to construct kernelspace. Only the `%base`

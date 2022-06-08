@@ -10,6 +10,15 @@
   @apply pt-0 mt-0;
 }
 
+.markdown .display * {
+  margin-top: unset;
+  margin-bottom: unset;
+  margin-left: unset;
+  padding: unset;
+  padding-top: unset;
+  padding-bottom: unset;
+}
+
 .markdown p,
 .markdown ul,
 .markdown ol,
@@ -57,6 +66,11 @@
   min-height: 512px;
 }
 
+/* Implicit "citation" heuristic */
+.markdown blockquote > p > strong {
+  font-style: normal;
+}
+
 /* Technical Typography */
 
 .markdown.technical h1 {
@@ -93,12 +107,12 @@
   @apply rounded-lg w-full h-auto;
 }
 
-.markdown figure {
-  @apply relative my-8 z-0 w-full left-0;
+.markdown span#figure {
+  @apply relative my-8 z-0 w-full left-0 block;
 }
 
 @media (min-width: 768px) {
-  .markdown figure {
+  .markdown span#figure {
     width: 125%;
     left: -12.5%;
   }

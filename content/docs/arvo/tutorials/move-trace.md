@@ -44,7 +44,9 @@ followed by Enter. Your terminal should pretty print a series of `move`s that lo
 ["|||||||||||" %give %b %doze [i=//behn/0v1p.sn2s7 t=~]]
 > -time ~s1
 ```
+
 followed by a pause of one second, then
+
 ```
 ["" %unix p=%wake //behn ~2020.1.14..19.01.26..755d]
 ["|" %give %b %doze [i=//behn/0v1p.sn2s7 t=~]]
@@ -56,6 +58,7 @@ followed by a pause of one second, then
 ["||" %give %g [%unto %kick] [i=/g/use/dojo/~zod/out/~zod/spider/drum/wool t=~[/d //term/1]]]
 ~s1..0007
 ```
+
 This gives us a move trace that is a list of `move`s and some
 associated metadata. Some of the `move`s are a bit of a distraction from what's
 going on overall such as acknowledgements that a `poke` was received
@@ -70,7 +73,6 @@ begun by Behn, which then passes through Gall and ultimately ends up back at the
 terminal. Any `move`s besides `%pass` in the first segment of the move trace is a
 secondary process utilized for book-keeping, spawning processes, interpreting
 commands, etc. All of this will be explained in detail below.
-
 
 It is important to note that this move trace should be thought of
 as being from the "point of view" of the kernel - each line represents the
@@ -89,15 +91,12 @@ the move trace), and a particular focus on what code is being activated in the
 first few lines that should equip you well enough to unravel the rest of the
 move trace in as much detail as you desire.
 
-
 ### The call
 
 Let's put the first part of the move trace into a diagram to make following
 along a little easier.
 
-<div style="text-align:center">
-<img src="https://media.urbit.org/docs/arvo/move-trace-with-key.png">
-</div>
+![](https://media.urbit.org/docs/arvo/move-trace-with-key.png)
 
 Here, each arrow represents the passing of some information, with most of it
 being from vane to vane. Here, when Vane A has an arrow to a card and then an
@@ -111,9 +110,11 @@ This simple action ends up involving four vanes - Dill, Gall, Behn, and Ford -
 as well as four applications - hood, spider, dojo, and time.
 
 Now let's go through each line one by one.
+
 ```
 ["" %unix p=%belt //term/1 ~2020.1.14..19.01.25..7556]
 ```
+
 This tells us that Unix has sent a `%belt` `card`, which corresponds to
 terminal input (the Enter keystroke) at time `~2020.1.14..19.01.25..7556`
 
@@ -123,6 +124,7 @@ Here is the line of code in `arvo.hoon`, found in the [section
 ```hoon
     ~?  !lac  ["" %unix -.q.ovo p.ovo now]
 ```
+
 First we note that this line is executed only if the laconic bit is set to true,
 as we did when we input `|verb`. Here, `ovo` is the input `ovum`. Knowing that an `ovum` is a `[p=wire q=curd]`,
 we can then say that this is a `%unix` `move` tagged with `%belt` whose cause is a `wire` given by `//term/1`,
@@ -155,7 +157,6 @@ instructions to `%poke` hood, which is a Gall app
 primarily used for interfacing with Dill. Here, `+deal` is an arm for
 `%pass`ing a `card` to Gall to ask it to create a `%deal` `task`:
 
-
 ```hoon
       ++  deal                                          ::  pass to %gall
         |=  [=wire =deal:gall]
@@ -163,9 +164,11 @@ primarily used for interfacing with Dill. Here, `+deal` is an arm for
 ```
 
 Next in our move trace we have this:
+
 ```
 ["|" %pass [%d %g] [[%deal [~zod ~zod] %hood %poke] /] [i=//term/1 t=~]]
 ```
+
 Here, Dill `%pass`es a `task` `card` saying to `%poke` Gall's hood app (with the
 Enter keystroke).
 
@@ -204,7 +207,7 @@ concerning the laconic bit (following `!lac`) we can mostly determine what is be
 From the initial input event, Arvo has generated a `card` that it is now
 `%pass`ing from Dill (represented by `%d`) to Gall (represented by `%g`). The
 `card` is a `%deal` `task`, asking Gall to `%poke` hood using data that has
-originated from the terminal `//term/1`, namely that the Enter key was pressed. The line `:-  (runt [s.gum '|'] "")`
+originated from the terminal `//term/1`, namely that the Enter key was pressed. The line `:- (runt [s.gum '|'] "")`
 displays the causal chain length metadatum mentioned above. Lastly, `[~zod ~zod]` tells us that
 `~zod` is both the sending and receiving ship.
 
@@ -215,8 +218,7 @@ that cannot be directly read from the move trace in [brackets]. Onto the next li
 ["||" %pass [%g %g] [[%deal [~zod ~zod] %dojo %poke] /use/hood/~zod/out/~zod/dojo/drum/phat/~zod/dojo] [i=/d t=~[//term/1]]]
 ```
 
-Here is another `%pass` `move`, this time from Gall to iself as denoted by `[%g
-%g]`. Gall's hood has received the `%deal` `card` from Dill, and in response it is
+Here is another `%pass` `move`, this time from Gall to iself as denoted by `[%g %g]`. Gall's hood has received the `%deal` `card` from Dill, and in response it is
 `%poke`ing dojo with the information [that Enter was pressed].
 
 ```
@@ -229,6 +231,7 @@ the terminal prompt].
 ```
 ["||||" %give %g [%unto %fact] [i=/d t=~[//term/1]]]
 ```
+
 Gall's hood `%give`s a `gift` with a `%fact` to Dill [saying to replace the current terminal line with `~zod:dojo>`]
 
 Next is the `move` that is not actually printed in the move trace mentioned
@@ -316,7 +319,7 @@ passed, leading to a chain of `%give` `move`s that ultimately prints
 Let's throw the move trace into a table:
 
 | length | move    | vane(s) | card            | duct                                                                                                             |
-|--------|---------|---------|-----------------|------------------------------------------------------------------------------------------------------------------|
+| ------ | ------- | ------- | --------------- | ---------------------------------------------------------------------------------------------------------------- |
 | 0      | `%unix` |         | `%wake`         | `//behn`                                                                                                         |
 | 1      | `%give` | `%b`    | `%doze`         | `//behn/0v1p.sn2s7`                                                                                              |
 | 1      | `%give` | `%b`    | `%wake`         | `/g/use/spider/~zod/thread/~.dojo_0v6.210tt.1sme1.ev3qm.qgv2e.a754u/wait/~2020.1.14..19.01.26..7556 /d //term/1` |
@@ -375,4 +378,3 @@ Dill `%give`s a `%blit` (terminal output) event to Unix [saying to print a new l
 ```
 
 Gall's spider also closes the subscription from dojo [since the thread has completed].
-

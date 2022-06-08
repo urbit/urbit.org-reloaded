@@ -18,7 +18,6 @@ Moons may be utilized for many purposes, including but not limited to:
  - testing software
  - bots
 
-
 Looking towards the future, we expect moons to also be utilized as identities
 for devices, such as such as phones, desktops, smart TVs, and digital thermostats
 

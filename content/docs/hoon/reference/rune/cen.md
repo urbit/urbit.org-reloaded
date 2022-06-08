@@ -20,50 +20,50 @@ Resolve a wing with changes, preserving type.
 
 One fixed argument, then a variable number of pairs.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall style #1</td>
-<td>
-<pre>
-%_  a=wing
-  b=wing  c=hoon
-  d=wing  e=hoon
-  f=wing  g=hoon
-==
-</pre>
-</td>
-</tr>
-<tr>
-<td>Tall style #2</td>
-<td>
-<pre>
-%_    a=wing
-    b=wing
-  c=hoon
-::
-    d=wing
-  e=hoon
-::
-    f=wing
-  g=hoon
-==
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-%_(a=wing b=wing c=hoon, d=wing e=hoon, ...)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall style #1
+- ```hoon
+  %_  a=wing
+    b=wing  c=hoon
+    d=wing  e=hoon
+    f=wing  g=hoon
+  ==
+  ```
+
+---
+
+- Tall style #2
+- ```hoon
+  %_    a=wing
+      b=wing
+    c=hoon
+  ::
+      d=wing
+    e=hoon
+  ::
+      f=wing
+    g=hoon
+  ==
+  ```
+
+---
+
+- Wide
+- ```hoon
+  %_(a=wing b=wing c=hoon, d=wing e=hoon, ...)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -119,38 +119,37 @@ Call a gate with many arguments.
 
 One fixed argument, then a variable number of arguments.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-%:  a=hoon
-  b=hoon
-  c=hoon
-   ...
-  d=hoon
-==
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-%:(a b c d)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>
-<pre>
-(a b c d)
-</pre>
-</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  %:  a=hoon
+    b=hoon
+    c=hoon
+     ...
+    d=hoon
+  ==
+  ```
+
+---
+
+- Wide
+- ```hoon
+  %:(a b c d)
+  ```
+
+---
+
+- Irregular
+- ```hoon
+    (a b c d)
+  ```
+{% /table %}
 
 #### AST
 
@@ -206,29 +205,30 @@ Call a gate (function), inverted.
 
 Two arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-%.  a  b
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-%.(a b)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>None.</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  %.  a  b
+  ```
+
+---
+
+- Wide
+- ```hoon
+  %.(a b)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -263,40 +263,39 @@ first, and then the gate.
 
 ---
 
-## `%-` "cenhep" {#cenhep}
+## `%-` "cenhep" {% #cenhep %}
 
 Call a gate (function).
 
 #### Syntax
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-%-  a
-b
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-%-(a b)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>
-<pre>
-(a b)
-</pre>
-</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  %-  a
+  b
+  ```
+
+---
+
+- Wide
+- ```hoon
+  %-(a b)
+  ```
+
+---
+
+- Irregular
+- ```hoon
+    (a b)
+  ```
+{% /table %}
 
 #### AST
 
@@ -345,36 +344,35 @@ Call gate with triple sample.
 
 Four arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-%^    a
-    b
-  c
-d
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-%^(a b c d)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>
-<pre>
-(a b c d)
-</pre>
-</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  %^    a
+      b
+    c
+  d
+  ```
+
+---
+
+- Wide
+- ```hoon
+  %^(a b c d)
+  ```
+
+---
+
+- Irregular
+- ```hoon
+    (a b c d)
+  ```
+{% /table %}
 
 #### AST
 
@@ -407,35 +405,34 @@ Call gate with a cell sample.
 
 Three arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-%+  a
-  b
-c
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-%+(a b c)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>
-<pre>
-(a b c)
-</pre>
-</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  %+  a
+    b
+  c
+  ```
+
+---
+
+- Wide
+- ```hoon
+  %+(a b c)
+  ```
+
+---
+
+- Irregular
+- ```hoon
+    (a b c)
+  ```
+{% /table %}
 
 #### AST
 
@@ -473,34 +470,33 @@ Evaluate an arm in a door.
 
 Three arguments, fixed.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall</td>
-<td>
-<pre>
-%~  p  q
-r
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-%~(p q r)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>
-<pre>
-~(p q r1 r2 rn)
-</pre>
-</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall
+- ```hoon
+  %~  p  q
+  r
+  ```
+
+---
+
+- Wide
+- ```hoon
+  %~(p q r)
+  ```
+
+---
+
+- Irregular
+- ```
+    ~(p q r1 r2 rn)
+  ```
+{% /table %}
 
 In the irregular form, `r` may be split into multiple parts. Multiple parts of
 `r` will be formed into a cell.
@@ -542,48 +538,51 @@ Evaluate an expression, then resolve a wing with changes.
 
 Two fixed arguments, then a variable number of pairs.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall style #1</td>
-<td>
-<pre>
-%*  a=wing  b=hoon
-  c=wing  d=hoon
-  e=wing  f=hoon
-       ...
-  g=wing  h=hoon
-==
-</pre>
-</td>
-</tr>
-<tr>
-<td>Tall style #2</td>
-<td>
-<pre>
-%*    a=wing  b=hoon
-    c=wing
-  d=hoon
-::
-    e=wing
-  f=hoon
-::
-    g=wing
-  h=hoon
-==
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-%*(a b c d, e f, g h)
-</pre>
-</td>
-</tr>
-<tr><td>Irregular</td><td>None.</td></tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall style #1
+- ```hoon
+  %*  a=wing  b=hoon
+    c=wing  d=hoon
+    e=wing  f=hoon
+         ...
+    g=wing  h=hoon
+  ==
+  ```
+
+---
+
+- Tall style #2
+- ```hoon
+  %*    a=wing  b=hoon
+      c=wing
+    d=hoon
+  ::
+      e=wing
+    f=hoon
+  ::
+      g=wing
+    h=hoon
+  ==
+  ```
+
+---
+
+- Wide
+- ```hoon
+  %*(a b c d, e f, g h)
+  ```
+
+---
+
+- Irregular
+- None.
+{% /table %}
 
 #### AST
 
@@ -643,55 +642,53 @@ Resolve a wing with changes.
 
 One fixed argument, then a variable number of pairs.
 
-<table>
-<tr><th>Form</th><th>Syntax</th></tr>
-<tr>
-<td>Tall style #1</td>
-<td>
-<pre>
-%=  a=wing
-  b=wing  c=hoon
-  d=wing  e=hoon
-       ...
-  f=wing  g=hoon
-==
-</pre>
-</td>
-</tr>
-<tr>
-<td>Tall style #2</td>
-<td>
-<pre>
-%=    a=wing
-    b=wing
-  c=hoon
-::
-    d=wing
-  e=hoon
-::
-    f=wing
-  g=hoon
-==
-</pre>
-</td>
-</tr>
-<tr>
-<td>Wide</td>
-<td>
-<pre>
-%=(a b c, d e, f g)
-</pre>
-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>
-<pre>
-a(b c, d e, f g)
-</pre>
-</td>
-</tr>
-</table>
+{% table %}
+
+- Form
+- Syntax
+
+---
+
+- Tall style #1
+- ```hoon
+  %=  a=wing
+    b=wing  c=hoon
+    d=wing  e=hoon
+         ...
+    f=wing  g=hoon
+  ==
+  ```
+
+---
+
+- Tall style #2
+- ```hoon
+  %=    a=wing
+      b=wing
+    c=hoon
+  ::
+      d=wing
+    e=hoon
+  ::
+      f=wing
+    g=hoon
+  ==
+  ```
+
+---
+
+- Wide
+- ```hoon
+  %=(a b c, d e, f g)
+  ```
+
+---
+
+- Irregular
+- ```
+    a(b c, d e, f g)
+  ```
+{% /table %}
 
 #### AST
 

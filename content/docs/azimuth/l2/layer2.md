@@ -42,37 +42,37 @@ We briefly review how "Layer 1", i.e. the [Azimuth](/docs/glossary/azimuth) smar
 contract suite, functions. An update to the Azimuth PKI data stored on your urbit
 occurs with four steps:
 
- 1. A transaction is posted to the Ethereum blockchain.
- 2. The [Ethereum Virtual Machine](https://ethereum.org/en/developers/docs/evm/)
+1.  A transaction is posted to the Ethereum blockchain.
+2.  The [Ethereum Virtual Machine](https://ethereum.org/en/developers/docs/evm/)
     calculates the resulting state transition and checks its validity, then
     updates the state if it is a valid transition.
- 3. Your urbit downloads the new state from an Ethereum node.
- 4. Your urbit makes the final decision on whether the new state is valid.
+3.  Your urbit downloads the new state from an Ethereum node.
+4.  Your urbit makes the final decision on whether the new state is valid.
 
 By default, step four always succeeds. It has always been possible in theory for
 your urbit to dispute what it read on Ethereum, but there has never been any
 reason to do so.
 
-### Layer 2 {#layer-2}
+### Layer 2 {% #layer-2 %}
 
 Layer 1 still functions identically today as it did before naive rollups. Naive
 rollups work via the following process.
 
- 1. A batch of one or more transactions is posted to the Ethereum blockchain by
+1.  A batch of one or more transactions is posted to the Ethereum blockchain by
     an urbit node called a roller or aggregator.
- 2. Your urbit downloads the transactions from an Ethereum node.
- 3. Your urbit computes the resulting state transitions from the transactions
+2.  Your urbit downloads the transactions from an Ethereum node.
+3.  Your urbit computes the resulting state transitions from the transactions
     and checks them for validity.
- 4. Your urbit updates its locally stored Azimuth state using state transitions
+4.  Your urbit updates its locally stored Azimuth state using state transitions
     from the batch that have been deemed valid.
-    
- In comparison with Layer 1, the EVM no longer checks the validity or computes
- the state transitions for any given transaction. It is now being used solely as
- a database of submitted transactions, and the business logic of computing what
- these transactions mean has been offloaded to your urbit. Thus we think of
- `naive.hoon` as being the first "Hoon smart contract". You could also consider
+
+In comparison with Layer 1, the EVM no longer checks the validity or computes
+the state transitions for any given transaction. It is now being used solely as
+a database of submitted transactions, and the business logic of computing what
+these transactions mean has been offloaded to your urbit. Thus we think of
+`naive.hoon` as being the first "Hoon smart contract". You could also consider
 steps 3 and 4 of the Layer 2 process as being a fattening of the trivial step 4
- of the layer 1 process.
+of the layer 1 process.
 
 Here we briefly elaborate on the layer 2 steps, but see below for more technical
 detail.
@@ -96,17 +96,17 @@ the Gall agent `/app/azimuth.hoon` accordingly.
 There are several dimensions by which naive rollups saves on gas over layer 1.
 They are:
 
- 1. Gas is not spent on instructing the EVM to compute state transitions and
+1.  Gas is not spent on instructing the EVM to compute state transitions and
     confirm validity.
- 2. Layer 2 Azimuth state is not stored on Ethereum, so the only data storage
+2.  Layer 2 Azimuth state is not stored on Ethereum, so the only data storage
     gas costs is for the transactions themselves.
- 3. Layer 2 transactions are written in a highly compressed form. E.g., instead
+3.  Layer 2 transactions are written in a highly compressed form. E.g., instead
     of calling the spawn action by name, it is simply referred to as action `%1`.
- 4. By collecting multiple layer 2 transactions and submitting them as a single
+4.  By collecting multiple layer 2 transactions and submitting them as a single
     "batch transaction", additional gas savings are achieved by not needing to
     duplicate information such as which smart contract the transactions are
     intended for.
-    
+
 Put together, these create a reduction in gas costs of at least 65x when adding
 a transaction to a sufficiently large batch (approximately 30 or more
 transactions). A single transaction submitted as a batch is approximately 5x
@@ -132,7 +132,7 @@ For a complete list of what layer 2 actions each ship rank, layer, and proxy can
 perform, see [Layer 2 Actions](/docs/azimuth/l2/l2-actions). For an explicit
 description of the byte format of Layer 2 Ethereum transaction, see [Bytestring format](/docs/azimuth/l2/bytestring).
 
-### Sponsorship {#sponsorship}
+### Sponsorship {% #sponsorship %}
 
 Due to the possibility of sponsors and sponsees existing on different layers,
 the precise logic of how sponsorship works is complex. However, under common
@@ -160,37 +160,37 @@ transitions](#sponsorship-state-transitions) section below, we give a table that
 shows how the sponsor and escape status of a ship changes according to which
 actions are taken.
 
-### Smart contracts {#smart-contracts}
+### Smart contracts {% #smart-contracts %}
 
 Smart contracts are unable to own layer 2 ships, and thus cannot sign layer 2
 transactions. This creates a hard requirement that layer 1 ships be allowed to
 perform a layer 1 detach operation on a layer 2 ships.
 
-## Azimuth state {#state}
+## Azimuth state {% #state %}
 
 The introduction of layer 2 presents additional complication in understanding
 Azimuth state. In order to be precise we define the following terminology:
 
- - _Layer 1 Azimuth state_ refers to the state of Azimuth as reflected on the
-   Ethereum blockchain. This excludes all layer 2 transactions. Depositing to
-   layer 2 is considered a layer 1 action, so the layer 1 Azimuth state is aware
-   of which ships are on layer 2, but is blind to everything that happens to
-   them afterward.
- - _Layer 2 Azimuth state_ refers to the state of Azimuth as stored in
-   `/app/azimuth.hoon` on your ship. The state here takes into account
-   transactions that occur on both layers. No distinction between the
-   layers is made in the state here - e.g. a ship only has one sponsor in Layer 2
-   Azimuth state, not a layer 1 sponsor and a layer 2 sponsor. This is the state
-   actually in use by Urbit. Layer 1 Azimuth state is now only an input for
-   generating Layer 2 Azimuth state, so any time a ship needs to check e.g. the
-   public key of a ship (regardless of which layer it is on), it will check the
-   Layer 2 Azimuth state, not the Layer 1 Azimuth state.
- - _Layer-2-Only Azimuth state_ refers to the state of Azimuth as reflected
-   solely by layer 2 transactions. This state is not explicitly stored anywhere,
-   but is computed as part of the process to create the Layer 2 Azimuth state.
-   We do not make any further references to this state, but it is important to
-   keep in mind conceptually.
-   
+- _Layer 1 Azimuth state_ refers to the state of Azimuth as reflected on the
+  Ethereum blockchain. This excludes all layer 2 transactions. Depositing to
+  layer 2 is considered a layer 1 action, so the layer 1 Azimuth state is aware
+  of which ships are on layer 2, but is blind to everything that happens to
+  them afterward.
+- _Layer 2 Azimuth state_ refers to the state of Azimuth as stored in
+  `/app/azimuth.hoon` on your ship. The state here takes into account
+  transactions that occur on both layers. No distinction between the
+  layers is made in the state here - e.g. a ship only has one sponsor in Layer 2
+  Azimuth state, not a layer 1 sponsor and a layer 2 sponsor. This is the state
+  actually in use by Urbit. Layer 1 Azimuth state is now only an input for
+  generating Layer 2 Azimuth state, so any time a ship needs to check e.g. the
+  public key of a ship (regardless of which layer it is on), it will check the
+  Layer 2 Azimuth state, not the Layer 1 Azimuth state.
+- _Layer-2-Only Azimuth state_ refers to the state of Azimuth as reflected
+  solely by layer 2 transactions. This state is not explicitly stored anywhere,
+  but is computed as part of the process to create the Layer 2 Azimuth state.
+  We do not make any further references to this state, but it is important to
+  keep in mind conceptually.
+
 Layer 1 Azimuth state is computed by the Ethereum Virtual Machine. Layer 2
 Azimuth state is computed by taking in the Layer 1 Azimuth state and modifying
 it according to layer 2 transactions using `/lib/naive.hoon`. When we are being
@@ -401,4 +401,3 @@ submitted to is taking too long for your liking, and you want to try again with
 another. If both rollers end up submitting the transaction, only the first one
 will succeed, as the second one will be ignored by `naive.hoon` for having the
 wrong nonce.
-

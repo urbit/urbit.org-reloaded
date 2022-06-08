@@ -1,6 +1,6 @@
 import { getPostBySlug } from "../lib/lib";
 import PageWithIndex from "../components/PageWithIndex";
-import Markdown from "../components/Markdown";
+import { MarkdownParse } from "../components/Markdown";
 
 export default function Post({ post, markdown, search }) {
   return <PageWithIndex post={post} markdown={markdown} search={search} />;
@@ -9,7 +9,7 @@ export default function Post({ post, markdown, search }) {
 export async function getStaticProps() {
   const post = getPostBySlug("/privacy", ["title", "slug", "content"], "/");
 
-  const markdown = await Markdown({ post });
+  const markdown = JSON.stringify(MarkdownParse({ post }));
 
   return {
     props: { post, markdown },
