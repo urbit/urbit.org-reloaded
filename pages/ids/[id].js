@@ -207,7 +207,10 @@ export const getServerSideProps = async ({ params, res }) => {
     join(process.cwd(), "content/ids/", id.slice(1))
   ) || { data: {}, content: "" };
 
-  const markdown = JSON.stringify(MarkdownParse({ post: { content } }));
+  const markdown =
+    content !== ""
+      ? JSON.stringify(MarkdownParse({ post: { content } }))
+      : null;
 
   const applications = getAllPosts(
     ["title", "slug", "image", "bgColor"],

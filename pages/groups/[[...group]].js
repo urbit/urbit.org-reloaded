@@ -133,7 +133,10 @@ export const getServerSideProps = async ({ params, res }) => {
     join(process.cwd(), "content/groups", params.group?.join("/") || "/")
   ) || { data: {}, content: "" };
 
-  const markdown = JSON.stringify(MarkdownParse({ post: { content } }));
+  const markdown =
+    content !== ""
+      ? JSON.stringify(MarkdownParse({ post: { content } }))
+      : null;
 
   if (!data.title) {
     data = { title: params.group?.join("/"), description: "A group on Urbit." };

@@ -14,7 +14,7 @@ import MetadataBlock from "../../components/gateway/MetadataBlock";
 import MetadataLink from "../../components/gateway/MetadataLink";
 import Description from "../../components/gateway/Description";
 
-const ApplicationPage = ({ data, content, params }) => {
+const ApplicationPage = ({ data, markdown, params }) => {
   const { application } = params;
   if (!ob.isValidPatp(application[0])) {
     return <Gateway404 type="application" />;
@@ -146,7 +146,10 @@ export const getServerSideProps = async ({ params, res }) => {
     )
   ) || { data: {}, content: "" };
 
-  const markdown = JSON.stringify(MarkdownParse({ post: { content } }));
+  const markdown =
+    content !== ""
+      ? JSON.stringify(MarkdownParse({ post: { content } }))
+      : null;
 
   if (!data.title) {
     data = {
