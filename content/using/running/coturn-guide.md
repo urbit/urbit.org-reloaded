@@ -44,6 +44,24 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plug
 ```
 $ sudo docker run hello-world
 ```
+# Configure firewall to open up coturn ports
+- coturn requires ports 3478 and 5349 to talk to it plus ports 49152-65535 to relay data. (I know this is a ton of ports but it IS a relay server).
+
+```
+$ sudo ufw allow 3478
+$ sudo ufw allow 5349
+$ sudo ufw allow 49152:65535/udp
+```
+
+- Turn on the firewall
+```
+$ sudo ufw enable 
+```
+
+- Check the status
+``` 
+$ sudo ufw status
+```
 
 # Install coturn 
 - First create a directory for it
