@@ -8,8 +8,10 @@ import Footer from "./Footer";
 import SingleColumn from "./SingleColumn";
 import Section from "./Section";
 import Markdown from "./Markdown";
+import classNames from "classnames";
+import { TableOfContents } from "./TableOfContents";
 
-export default function BasicPage({ post, markdown, search }) {
+export default function BasicPage({ post, markdown, search, index = false }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
@@ -25,8 +27,13 @@ export default function BasicPage({ post, markdown, search }) {
         <Section narrow>
           <h1>{post.title}</h1>
         </Section>
-        <Section narrow className="markdown">
-          <Markdown content={JSON.parse(markdown)} />
+        <Section narrow>
+          <div className={classNames("flex", { sidebar: index })}>
+            <div className={classNames("markdown", { "max-w-prose": index })}>
+              <Markdown content={JSON.parse(markdown)} />
+            </div>
+            {index && <TableOfContents />}
+          </div>
         </Section>
       </SingleColumn>
       <Footer />

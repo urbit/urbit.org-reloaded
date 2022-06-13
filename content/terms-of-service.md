@@ -1,9 +1,9 @@
 +++
 title = "Terms of Use"
 aliases = ["/tos"]
-template = "page_indiced.html"
 [extra]
 hidetitle = "true"
+index = "true"
 +++
 
 ## Overview
