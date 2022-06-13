@@ -1,6 +1,7 @@
 +++
 title = "Privacy Policy"
-template = "page_indiced.html"
+[extra]
+index = "true"
 +++
 
 ## Scope of this Privacy Policy {% #scope %}

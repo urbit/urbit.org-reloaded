@@ -3,6 +3,7 @@ title = "FAQ"
 template = "page_indiced.html"
 [extra]
 hidetitle = "true"
+index = "true"
 +++
 
 ## Urbit
