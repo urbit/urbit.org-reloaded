@@ -16,7 +16,11 @@ export async function getStaticProps({ params }) {
     "/"
   );
 
-  const { index } = post?.extra || { index: null };
+  let { index } = post?.extra || { index: null };
+
+  if (index === undefined) {
+    index = null;
+  }
 
   const markdown = JSON.stringify(MarkdownParse({ post }));
   return {
