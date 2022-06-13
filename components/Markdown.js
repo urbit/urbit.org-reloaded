@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Markdoc, { Ast, Node, Tag, Raw } from "@markdoc/markdoc";
 import { heading } from "./schema/Heading.markdoc";
 import { footnoteRef } from "./schema/footnoteRef.markdoc";
@@ -126,6 +127,14 @@ const superscript = ({ children }) => <sup>{children}</sup>;
 
 const CustomFence = ({ children }) => <pre>{children}</pre>;
 
+const NextLink = ({ href, target, children }) => {
+  return (
+    <Link href={href} passHref>
+      <a target={target}>{children}</a>
+    </Link>
+  );
+};
+
 export function MarkdownParse({ post }) {
   const tokeniser = new Markdoc.Tokenizer({ html: true, linkify: true });
   const tokens = tokeniser.tokenize(post.content);
@@ -150,6 +159,7 @@ export function MarkdownParse({ post }) {
       customFence,
       RenderHtml,
       superscript,
+      NextLink,
     },
   });
 }
@@ -164,6 +174,7 @@ export default function Markdown({ content }) {
       Callout,
       CustomFence,
       RenderHtml,
+      NextLink,
     },
   });
 }

@@ -15,7 +15,7 @@ function checkIfExternal(attributes) {
 }
 
 export const link = {
-  render: "a",
+  render: "NextLink",
   children: ["strong", "em", "s", "code", "text", "tag"],
   attributes: {
     href: { type: String, required: true },
@@ -28,6 +28,6 @@ export const link = {
 
     const target = checkIfExternal(attributes);
 
-    return new Tag(`a`, { ...attributes, target }, children);
+    return new Tag("NextLink", { ...attributes, target }, children);
   },
 };
