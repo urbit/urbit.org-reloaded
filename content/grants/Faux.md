@@ -33,7 +33,9 @@ For this project, I will rewrite the Faux discord bridge as a native gall agent 
 - When the bridge is established, I can talk to my discord friends from urbit, and they can talk to me from discord.
 - I can choose which channel on my urbit group corresponds to a given channel on my discord group.
 
-# Milestone One - Implement discord bridge backend.
+# Milestones
+
+### Milestone One - Implement discord bridge backend
 
 Expected Completion: Mid-July 2022 (six weeks)
 
@@ -42,7 +44,7 @@ Payment: One star
 Feature parity with current python implementation: select a discord channel and an urbit groups channel, and your ship will echo messages between them.
 Configuration will be through dojo commands at this stage.
 
-# Milestone Two - Create a frontend app to configure the discord bridge
+### Milestone Two - Create configuration app
 
 Expected Completion: Early September 2022 (six weeks)
 
