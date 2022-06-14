@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import classNames from "classnames";
 
 export const TableOfContents = ({ staticPosition, noh3s }) => {
   const { nestedHeadings } = useHeadingsData(noh3s);
@@ -51,7 +52,7 @@ const useHeadingsData = (noh3s) => {
 };
 
 const Headings = ({ headings, activeId }) => (
-  <ul>
+  <ul className={classNames({ hidden: headings.length === 1 })}>
     {headings.map((heading, index) => (
       <li key={heading.id}>
         <a
