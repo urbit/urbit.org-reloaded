@@ -13,7 +13,9 @@ export const TableOfContents = ({ staticPosition, noh3s }) => {
       }
       style={{ top: "8rem", height: "calc(100vh - 16rem)" }}
     >
-      <Headings headings={nestedHeadings} activeId={activeId} />
+      <div className="relative after:fixed after:bg-gradient-to-t after:from-white after:via-white after:bottom-0 after:w-52 after:h-60 after:pointer-events-none">
+        <Headings headings={nestedHeadings} activeId={activeId} />
+      </div>
     </nav>
   );
 };
