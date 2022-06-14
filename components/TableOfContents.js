@@ -54,7 +54,11 @@ const useHeadingsData = (noh3s) => {
 };
 
 const Headings = ({ headings, activeId }) => (
-  <ul className={classNames({ hidden: headings.length === 1 })}>
+  <ul
+    className={classNames({
+      hidden: headings.length === 1 && headings?.[0]?.items?.length === 0,
+    })}
+  >
     {headings.map((heading, index) => (
       <li key={heading.id}>
         <a
