@@ -1,9 +1,9 @@
 +++
 title = "Regular Expressions Library" 
-date = "2022-06-07"
+date = "2022-06-13"
 
 [taxonomies]
-grant_type = [ "Apprenticeship" ]
+grant_type = [ "Bounty" ]
 grant_category = [ "Core Dev" ]
 
 [extra]
@@ -11,7 +11,7 @@ image = ""
 description = "Implement a regular expressions library in Hoon"
 reward = "3 stars"
 mentor = "~lagrev-nocfep"
-assignee = ""
+assignee = "~macrep-racdec"
 completed = false
 canceled = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0177&prefill_Grant+Name=Regular%20Expressions%20Library"
