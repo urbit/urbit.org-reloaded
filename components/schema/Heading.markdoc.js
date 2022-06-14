@@ -11,7 +11,7 @@ function generateID(children, attributes) {
   return bottomChildren
     .filter((child) => typeof child === "string")
     .join(" ")
-    .replace(/[=?!><:;,+#^|$&~"*@\._%/]/g, "")
+    .replace(/[=?!><:;,+#^|$&~"*@\.%/]/g, "")
     .replace(/\s+/g, "-")
     .toLowerCase();
 }
