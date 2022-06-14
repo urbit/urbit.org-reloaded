@@ -56,7 +56,11 @@ const Headings = ({ headings, activeId }) => (
     {headings.map((heading, index) => (
       <li key={heading.id}>
         <a
-          className={index === 0 ? "font-bold" : "font-medium text-sm"}
+          className={classNames({
+            "font-bold": index === 0,
+            "font-medium text-sm": index !== 0,
+            "text-green-400": heading.id === activeId && index !== 0,
+          })}
           href={`#${heading.id}`}
         >
           {heading.title}
