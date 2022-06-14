@@ -42,7 +42,7 @@ Regular expression (hereafter “regex”) rules vary slightly across implementa
 Supported metacharacters should include:
 
 | Metacharacter | Description                                                           |
-| :-----------: | :-------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| :-----------: | :-------------------------------------------------------------------- |
 |      `^`      | Match starting position in string (line).                             |
 |      `.`      | Match any single character.                                           |
 |     `[ ]`     | Match a single character within the brackets.                         |
@@ -54,7 +54,7 @@ Supported metacharacters should include:
 |    `{m,n}`    | Match the preceding element at least _m_ and not more than _n_ times. |
 |      `?`      | Match the preceding element zero or one time.                         |
 |      `+`      | Match the preceding element one or more times.                        |
-|       `       | `                                                                     | Allow choice in matching expressions before or after the operator. |
+|      `\|`     | Allow choice in matching expressions before or after the operator.    |
 
 Supported character classes should include:
 
