@@ -1,19 +1,8 @@
 import Link from "next/link";
 import { DateTime } from "luxon";
-import {
-  ShowOrHide,
-  ReadableList,
-  Person,
-  Name,
-  DateRange,
-} from "../components/Snippets";
-import {
-  generateDisplayDate,
-  generateRealtimeDate,
-  formatDate,
-  formatTime,
-  formatTimeZone,
-} from "../lib/lib";
+import { DateRange } from "../components/Snippets";
+import { generateDisplayDate, generateRealtimeDate } from "../lib/lib";
+import classNames from "classnames";
 
 export default function EventPreview({ event, className, big }) {
   // Event tiles have a 'dark mode' used when their background images are dark and white text is needed for legibility.
@@ -39,7 +28,14 @@ export default function EventPreview({ event, className, big }) {
       >
         <Link href={`/events/${event.slug}`}>
           <div
-            className={`flex flex-col p-6 justify-between items-between h-full relative`}
+            className={classNames(
+              "flex flex-col p-6 justify-between items-between h-full relative",
+              {
+                "backdrop-brightness-50 rounded-xl": Boolean(
+                  event?.darken_image
+                ),
+              }
+            )}
           >
             <div
               className={`grow-1 flex ${
