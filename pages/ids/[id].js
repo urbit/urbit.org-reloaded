@@ -87,7 +87,7 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
             />
             {!isGalaxy && (
               <MetadataLink
-                title="Parent"
+                title="Sponsor"
                 href={`/ids/${parent}`}
                 content={parent}
               />
