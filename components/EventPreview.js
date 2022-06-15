@@ -15,42 +15,6 @@ import {
   formatTimeZone,
 } from "../lib/lib";
 
-// JAL(2021.9.13) Couldn't quite get this to work properly. There's a trailing
-// "and"
-//
-// function GuestList({ guests, textClass }) {
-
-//   const renderGuests = guests?.length > 2 ? guests?.slice(0,2) : guests;
-//   const noRenderGuestsCount = guests?.slice(2).length;
-
-//   return (
-//     <p className={textClass + " type-sub"}>
-//       <b>
-//         {renderGuests?.length > 1 ? "With guests " : "With guest "}
-//       </b>
-//       <ReadableList>
-//         {renderGuests?.map((guest, index) => (
-//           <>
-//             <Person
-//               key={`${guest.name}-${guest.patp}`}
-//               nameClassNames={textClass}
-//               patpClassNames={textClass}
-//               name={guest.name}
-//               patp={guest.patp}
-//             />
-//           {renderGuests?.length > 1 ? <span>, </span> : <></>}
-//           </>
-//         ))}
-//        {noRenderGuestsCount > 1 ?
-//          <Name>{noRenderGuestsCount} more </Name>
-//         :
-//          <></>
-//         }
-//       </ReadableList>
-//     </p>
-//   );
-// }
-
 export default function EventPreview({ event, className, big }) {
   // Event tiles have a 'dark mode' used when their background images are dark and white text is needed for legibility.
   const grayText = event?.dark ? "text-washedWhite" : "text-wall-400";
@@ -83,7 +47,9 @@ export default function EventPreview({ event, className, big }) {
               } flex-col h-full`}
             >
               <h3 className={`${blackText} mb-2`}>{event.title}</h3>
-              <p className={blackText + ""}>{event.description}</p>
+              <p className={blackText + " truncate text-sm"}>
+                {event.description}
+              </p>
             </div>
 
             <div className="absolute p-6 left-0 bottom-0 w-full pr-32">
