@@ -1,6 +1,6 @@
 +++
 title = "Urbit Hosting Launch Event"
-ends = "2020-10-10T03:00:00.000-07:00"
+ends = "2020-10-10T15:00:00.000-07:00"
 location = "Online event"
 image = "https://secure.meetupstatic.com/photos/event/8/600_492480008.jpeg"
 registration_url = "https://www.meetup.com/urbit-sf/events/273439025/"
@@ -8,7 +8,7 @@ youtube = "w3qKe_WZr50"
 description = ""
 guests = ""
 timezone = "America/Los_Angeles"
-starts = "2020-10-10T01:00:00.000-07:00"
+starts = "2020-10-10T13:00:00.000-07:00"
 dark = "true"
 darken_image = "true"
 [[hosts]]

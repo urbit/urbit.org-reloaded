@@ -7,7 +7,7 @@ registration_url = "https://www.meetup.com/urbit-sf/events/259144802/"
 description = "We thought we'd try something new this month. Come hang out and ask Galen questions about Azimuth, Arvo, or any part of Urbit."
 guests = ""
 timezone = "America/Los_Angeles"
-starts = "2019-03-02T03:30:00.000-08:00"
+starts = "2019-03-02T15:30:00.000-08:00"
 
 [[hosts]]
 name = "Urbit"
