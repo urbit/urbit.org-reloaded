@@ -6,7 +6,7 @@ import Container from "../../components/Container";
 import SingleColumn from "../../components/SingleColumn";
 import Section from "../../components/Section";
 import ob from "urbit-ob";
-import ResourceCard from "../../components/ResourceCard";
+import ResourceCard from "../../components/gateway/ResourceCard";
 import GatewayHeader from "../../components/gateway/GatewayHeader";
 import Gateway404 from "../../components/gateway/Gateway404";
 import MetadataBlock from "../../components/gateway/MetadataBlock";

@@ -11,9 +11,8 @@ import Footer from "../components/Footer";
 import Contact from "../components/Contact";
 import PostPreview from "../components/PostPreview";
 import EventPreview from "../components/EventPreview";
-import Cross from "../components/icons/Cross";
 import TwoUp from "../components/TwoUp";
-import BubbleLink from "../components/BubbleLink";
+import BubbleLink from "../components/index/BubbleLink";
 import { getAllPosts, getAllEvents, generateRealtimeDate } from "../lib/lib";
 import { eventKeys } from "../lib/constants";
 

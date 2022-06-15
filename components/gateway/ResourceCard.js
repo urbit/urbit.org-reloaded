@@ -1,5 +1,5 @@
 import Link from "next/link";
-import GatewayImage from "./gateway/Image";
+import GatewayImage from "./Image";
 
 const ResourceCard = ({ type, shortcode, title, color, image }) => (
   <Link href={`/${type}s/${shortcode}`}>
