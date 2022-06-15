@@ -9,7 +9,8 @@ description = ""
 guests = ""
 timezone = "America/Los_Angeles"
 starts = "2020-10-10T01:00:00.000-07:00"
-
+dark = "true"
+darken_image = "true"
 [[hosts]]
 name = "Urbit"
 +++

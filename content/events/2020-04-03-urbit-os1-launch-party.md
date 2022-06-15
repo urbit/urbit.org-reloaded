@@ -9,6 +9,8 @@ description = "Join us as we launch Urbit OS1!"
 guests = ""
 timezone = "America/Los_Angeles"
 starts = "2020-04-04T03:00:00.000-07:00"
+dark = "true"
+darken_image = "true"
 
 [[hosts]]
 name = "Urbit"
