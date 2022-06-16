@@ -4,6 +4,10 @@
   },
   "redirects": [
     {
+      "source": "/grants/Faux",
+      "destination": "/grants/faux"
+    },
+    {
       "source": "/getting-started/layer-2-for-planets",
       "destination": "/using/id/layer-2-for-planets"
     },
