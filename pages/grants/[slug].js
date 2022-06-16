@@ -6,7 +6,7 @@ import Meta from "../../components/Meta";
 import classnames from "classnames";
 import ErrorPage from "../404";
 import Container from "../../components/Container";
-import Markdown, { MarkdownParse } from "../../components/Markdown";
+import Markdown from "foundation-design-system";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import SingleColumn from "../../components/SingleColumn";
@@ -102,7 +102,7 @@ export default function Grant({ post, markdown, search }) {
           </div>
         </Section>
         <Section narrow className="markdown">
-          <Markdown content={JSON.parse(markdown)} />
+          <Markdown.render content={JSON.parse(markdown)} />
         </Section>
         {canApply && (
           <a
@@ -127,7 +127,7 @@ export async function getStaticProps({ params }) {
     "grants"
   );
 
-  const markdown = JSON.stringify(MarkdownParse({ post }));
+  const markdown = JSON.stringify(Markdown.parse({ post }));
   return {
     props: { post, markdown },
   };

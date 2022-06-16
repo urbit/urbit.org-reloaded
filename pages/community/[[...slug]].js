@@ -5,7 +5,7 @@ import classnames from "classnames";
 import { join } from "path";
 import { getPage } from "../../lib/lib";
 import Meta from "../../components/Meta";
-import Markdown, { MarkdownParse } from "../../components/Markdown";
+import Markdown from "foundation-design-system";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
 import communityTree from "../../cache/community.json";
@@ -77,7 +77,7 @@ export default function UsingLayout({ posts, data, markdown, params, search }) {
           params={params}
         >
           <div className="markdown">
-            <Markdown content={JSON.parse(markdown)} />
+            <Markdown.render content={JSON.parse(markdown)} />
           </div>
         </ContentArea>
       </div>
@@ -92,7 +92,7 @@ export async function getStaticProps({ params }) {
     join(process.cwd(), "content/community", params.slug?.join("/") || "/")
   );
 
-  const markdown = JSON.stringify(MarkdownParse({ post: { content } }));
+  const markdown = JSON.stringify(Markdown.parse({ post: { content } }));
 
   return { props: { posts, data, markdown, params } };
 }

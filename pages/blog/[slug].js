@@ -19,7 +19,7 @@ import Section from "../../components/Section";
 import Contact from "../../components/Contact";
 import PostPreview from "../../components/PostPreview";
 import TwoUp from "../../components/TwoUp";
-import Markdown, { MarkdownParse } from "../../components/Markdown";
+import Markdown from "foundation-design-system";
 
 export default function Post({
   post,
@@ -59,7 +59,7 @@ export default function Post({
           <div className="text-wall-500 type-sub">{formatDate(date)}</div>
         </Section>
         <Section short narrow className="markdown">
-          <Markdown content={JSON.parse(markdown)} />
+          <Markdown.render content={JSON.parse(markdown)} />
         </Section>
         <Section narrow>
           <Contact />
@@ -102,7 +102,7 @@ export async function getStaticProps({ params }) {
     "blog"
   );
 
-  const markdown = JSON.stringify(MarkdownParse({ post }));
+  const markdown = JSON.stringify(Markdown.parse({ post }));
   return {
     props: { post, markdown, nextPost, previousPost },
   };
