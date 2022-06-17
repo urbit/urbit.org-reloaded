@@ -10,7 +10,7 @@ description = "Provide meetup bounty hunters with the persuasive narratives and 
 reward = "6 stars"
 assignee = "~sarlev-sarsen"
 grant_id = "P0093"
-completed = false
+completed = true
 canceled = false
 link = ""
 +++
