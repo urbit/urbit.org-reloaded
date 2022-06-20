@@ -1,4 +1,4 @@
-import Markdown from "../Markdown";
+import Markdown from "foundation-design-system";
 
 const Description = ({ description, fallback, markdown }) => {
   return (
@@ -7,7 +7,7 @@ const Description = ({ description, fallback, markdown }) => {
         <p className="font-bold text-wall-400">Description</p>
         {markdown ? (
           <div className="markdown">
-            <Markdown content={JSON.parse(markdown)} />
+            <Markdown.render content={JSON.parse(markdown)} />
           </div>
         ) : (
           <p>{description}</p>

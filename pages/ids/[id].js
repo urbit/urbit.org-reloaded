@@ -13,7 +13,7 @@ import MetadataBlock from "../../components/gateway/MetadataBlock";
 import MetadataLink from "../../components/gateway/MetadataLink";
 import Description from "../../components/gateway/Description";
 import axios from "axios";
-import { MarkdownParse } from "../../components/Markdown";
+import Markdown from "foundation-design-system";
 
 const IdPage = ({ data, markdown, applications, groups, network, params }) => {
   let { id } = params;
@@ -31,15 +31,17 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
     id
   )}.png?${reqParams.join("&")}`;
 
+  // Galaxies shouldn't show parents, so store it as boolean here for reference.
+  const isGalaxy = ob.clan(id) === "galaxy";
+
   // Parent ID, grabbed from network or fallback to the default sponsor for that node
-  const parent = network ? network.sponsor["urbit-id"] : ob.sein(id);
+  const parent =
+    !isGalaxy && network ? network.sponsor["urbit-id"] : ob.sein(id);
   // Galaxy name above that parent
   const galaxy =
     ob.clan(id) === "planet"
       ? network?.sponsor?.sponsor?.["urbit-id"] || ob.sein(parent)
       : null;
-  // Galaxies shouldn't show parents, so store it as boolean here for reference.
-  const isGalaxy = ob.clan(id) === "galaxy";
 
   return (
     <Container>
@@ -209,7 +211,7 @@ export const getServerSideProps = async ({ params, res }) => {
 
   const markdown =
     content !== ""
-      ? JSON.stringify(MarkdownParse({ post: { content } }))
+      ? JSON.stringify(Markdown.parse({ post: { content } }))
       : null;
 
   const applications = getAllPosts(

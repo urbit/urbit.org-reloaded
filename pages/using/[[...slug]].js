@@ -6,7 +6,7 @@ import { useState } from "react";
 import classnames from "classnames";
 import { join } from "path";
 import { getPage } from "../../lib/lib";
-import Markdown, { MarkdownParse } from "../../components/Markdown";
+import Markdown from "foundation-design-system";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
 import UsingTree from "../../cache/using.json";
@@ -115,7 +115,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
           params={params}
         >
           <div className="markdown">
-            <Markdown content={JSON.parse(markdown)} />
+            <Markdown.render content={JSON.parse(markdown)} />
           </div>
         </ContentArea>
       </div>
@@ -130,7 +130,7 @@ export async function getStaticProps({ params }) {
     join(process.cwd(), "content/using", params.slug?.join("/") || "/")
   );
 
-  const markdown = JSON.stringify(MarkdownParse({ post: { content } }));
+  const markdown = JSON.stringify(Markdown.parse({ post: { content } }));
 
   return { props: { posts, data, markdown, params } };
 }

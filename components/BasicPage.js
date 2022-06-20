@@ -7,7 +7,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import SingleColumn from "./SingleColumn";
 import Section from "./Section";
-import Markdown from "./Markdown";
+import Markdown from "foundation-design-system";
 import classNames from "classnames";
 import { TableOfContents } from "./TableOfContents";
 
@@ -30,7 +30,7 @@ export default function BasicPage({ post, markdown, search, index = false }) {
         <Section narrow>
           <div className={classNames("flex", { sidebar: index })}>
             <div className={classNames("markdown", { "max-w-prose": index })}>
-              <Markdown content={JSON.parse(markdown)} />
+              <Markdown.render content={JSON.parse(markdown)} />
             </div>
             {index && <TableOfContents />}
           </div>

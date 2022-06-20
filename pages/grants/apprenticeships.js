@@ -1,6 +1,6 @@
 import { getPostBySlug } from "../../lib/lib";
 import GrantProgramOverview from "../../components/GrantProgramOverview";
-import { MarkdownParse } from "../../components/Markdown";
+import Markdown from "foundation-design-system";
 
 export default function Post({ post, markdown, search }) {
   return (
@@ -22,7 +22,7 @@ export async function getStaticProps() {
     "/"
   );
 
-  const markdown = JSON.stringify(MarkdownParse({ post }));
+  const markdown = JSON.stringify(Markdown.parse({ post }));
 
   return {
     props: { post, markdown },
