@@ -17,3 +17,5 @@ insert_anchor_links = "right"
 ## [JSON](/docs/hoon/guides/json-guide)
 
 ## [Sail](/docs/hoon/guides/sail)
+
+## [Unit tests](/docs/hoon/guides/unit-tests)
