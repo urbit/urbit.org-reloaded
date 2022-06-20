@@ -5,6 +5,7 @@ import debounce from "lodash.debounce";
 import Downshift from "downshift";
 import ob from "urbit-ob";
 import Sigil from "../components/Sigil";
+import levenSort from "leven-sort";
 
 class Search extends Component {
   constructor(props) {
@@ -24,11 +25,12 @@ class Search extends Component {
   }
 
   glossarySearch(query) {
-    return glossary.filter((entry) => {
+    const entries = glossary.filter((entry) => {
       return (
         entry.name.includes(query.toLowerCase()) || entry.symbol.includes(query)
       );
     });
+    return levenSort(entries, query, ["symbol"]);
   }
 
   patpSearch(query) {
@@ -57,6 +59,7 @@ class Search extends Component {
       fetch(this.searchEndpoint(query))
         .then((res) => res.json())
         .then((res) => {
+          console.log(res);
           // Wrap results in an object which will tell React what component to use to render results.
           const results = res.results.map((item) => ({
             type: "RESULT",

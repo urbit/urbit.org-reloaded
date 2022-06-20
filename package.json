@@ -29,6 +29,7 @@
     "feed": "^4.2.2",
     "foundation-design-system": "github:urbit/foundation-design-system",
     "gray-matter": "^4.0.3",
+    "leven-sort": "^3.0.0",
     "lodash.debounce": "^4.0.8",
     "lodash.omit": "^4.5.0",
     "luxon": "^2.0.2",
