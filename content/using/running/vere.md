@@ -115,6 +115,8 @@ urbit -F zod
 
 ### Compact State
 
+**Note the ship should be shut down before using either of the utilities described below.**
+
 Ships currently have a hard 2GB limit on the size of their state. Sometimes the
 state of long-running, heavily-used ships can exceed the 2GB limit and crash
 with a `bail: meme` error. To fix this, there are a couple of ways to reduce the
@@ -136,8 +138,6 @@ To run `meld`, you can either do `urbit meld /path/to/pier` or
 
 If the meld succeeds, it'll print a memory report and exit. If it exits with
 `KILLED`, it means it ran out of memory and the meld was aborted.
-
-**Note that the ships must not be running when using either of these.**
 
 ### Dock binary
 
