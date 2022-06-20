@@ -525,10 +525,12 @@ communications.
 
 ### `-P, --profile`
 
-Enable profiling. Profiles will be saved to
-`[pier]/.urb/put/profile/[now].txt`. This is useful for debugging and
-development. Profiling hit counters in Hoon code specified with the `~$` rune
-will be recorded here.
+Enable profiling. Profiles will be saved to `[pier]/.urb/put/profile/[now].txt`.
+This is useful for debugging and development. Profiling hit counters in Hoon
+code specified with the `~$` rune will be recorded here.
+
+This runs a sampling profiler and produces custom output. Runtime cost metrics
+are only calculated if the binary was built with `CPU_DEBUG`.
 
 - Undocked `urbit -P [pier]`
 - Docked `[pier]/.run -P`
