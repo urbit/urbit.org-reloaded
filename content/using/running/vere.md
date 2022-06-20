@@ -414,8 +414,8 @@ Boot a new ship with private key `STRING`.The private key is `@uw` format. See
 Set the HTTP port to `PORT`. This is the port you'd insecurely access Landscape
 on. Note this is for insecure HTTP only, see `--https-port` for HTTPS.
 
-- Undocked: `urbit --https-port 8085 [pier]`
-- Docked: `[pier]/.run --https-port 8085`
+- Undocked: `urbit --http-port 8085 [pier]`
+- Docked: `[pier]/.run --http-port 8085`
 
 ### `--https-port PORT`
 
