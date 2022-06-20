@@ -312,11 +312,6 @@ interface, it does not have a user interface.
 Below are all the options/flags/arguments that can be given to the urbit
 runtime.
 
-### `-a, --abort`
-
-Abort aggressively. This option is currently a no-op, and doesn't do anything.
-It may be revived in the future or it may be removed.
-
 ### `-A, --arvo DIR`
 
 When booting a new ship, use directory `DIR` for the initial `%base` desk sync,
@@ -372,12 +367,6 @@ Run the ship in daemon mode. The process will be detached from the terminal
 
 - Undocked: `urbit -d [pier]`
 - Docked: `[pier]/.run -d`
-
-### `-D, --replay`
-
-Recompute a ship's state from events rather than loading its checkpoint. This
-option is currently a no-op, and doesn't do anything. It may be revived in the
-future or it may be removed.
 
 ### `-e, --ethereum URL`
 
@@ -472,16 +461,6 @@ Boot a new ship with the private key file `KEY`. See `-G` for an alternative.
 
 - Undocked: `urbit -w sampel-palnet -k /path/to/my.key`
 
-### `-K, --kernel-stage STAGE`
-
-Start at Hoon kernel version stage specified. This option is currently a no-op,
-and doesn't do anything. It may be revived in the future or it may be removed.
-
-### `-l, --lite-boot`
-
-Most-minimal startup. This option is currently a no-op, and doesn't do anything.
-It may be revived in the future or it may be removed.
-
 ### `-L, --local`
 
 Run a ship with local networking only. This will disable Ames networking, so the
@@ -572,11 +551,6 @@ curl: 7.81.0
 
 - Undocked: `urbit -R [pier]`
 - Docked: `[pier]/.run -R`
-
-### `-S, --skip-battery-hashes`
-
-Disable battery hashing. This option is currently a no-op, and doesn't do
-anything. It may be revived in the future or it may be removed.
 
 ### `-t, --no-tty`
 
