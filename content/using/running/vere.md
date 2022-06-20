@@ -297,7 +297,6 @@ Download a binary. `DIR` is an output directory (it must already exist) and `ARG
 Example usage:
 
 - Undocked: `urbit vere -a x86_64-linux -v 1.9 -p live .`
-- Docked: `[pier]/.run vere -a x86_64-linux -v 1.9 -p live .`
 
 ### `serf ARGS`
 
