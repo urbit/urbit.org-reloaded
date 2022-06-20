@@ -302,6 +302,9 @@ Example usage:
 
 Run as a 'serf' (as though it were the previously separate `urbit-worker`).
 
+Note this utility is for kernel development purposes and has a programmatic
+interface, it does not have a user interface.
+
 - Undocked: `urbit serf [pier] [key] [flags] [cache-size] [at-event]`
 
 ## Options
