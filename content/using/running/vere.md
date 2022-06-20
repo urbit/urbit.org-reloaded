@@ -440,6 +440,10 @@ Note this is for secure HTTPS only, see `--http-port` for insecure HTTP.
 
 Inject the event stored in `FILE` jamfile.
 
+Note this has "full privileges" and can do anything to your ship. `-I` is for
+customization in hosting environments, and emergency recovery for sinking ships.
+Only run from trusted sources.
+
 - Undocked: `urbit -I /path/to/file.jam [pier]`
 - Docked: `[pier]/.run -I /path/to/file.jam`
 
