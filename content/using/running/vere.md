@@ -398,7 +398,11 @@ urbit -F zod
 
 ### `-g, --gc`
 
-Set GC flag, dumping garbage collector logs to stdout.
+Set GC flag, dumping garbage collector logs to stdout. This runs a GC pass at
+the end of every virtualized computation. This is intended as a runtime
+developer/QA tool for verifying refcounts. This currently only works if the
+binary was built with `MEMORY_DEBUG` (which changes allocation structures and
+produces incompatible snapshots).
 
 - Undocked: `urbit -g [pier]`
 - Docked: `[pier]/.run -g`
