@@ -4,6 +4,8 @@ weight = 10
 template = "doc.html"
 +++
 
+## Structure
+
 The `%base` desk includes a `-test` thread which can run unit tests you've
 written. A test is a Hoon file which produces a `core`. The `-test` thread will
 look for any arms in the core whose name begin with `test-`, e.g:
@@ -53,9 +55,15 @@ expressions in the test file itself. To do that, you'd just import the file with
 You're free to do any compositions, import types, etc, as long as the file
 ultimately produces a `core` with `test-*` arms.
 
+## Running
+
 The `-test` thread takes a `(list path)` in the Dojo, where each path is a path
-to a test file. The `path` must include the full path prefix
-(`/[ship]/[desk]/[case]`). The conventional location for tests is a `/tests`
+to a test file. The `path` _must_ include the full path prefix
+(`/[ship]/[desk]/[case]`). The `path` _may_ omit the mark, since a `.hoon` file
+is assumed. The `path` _may_ include the name of a test arm after the filename.
+In that case, only the specified test arm will be run.
+
+The conventional location for tests is a `/tests`
 directory in the root of a desk.
 
 The output of the `-test` thread will note which arms were tested and whether
@@ -68,7 +76,7 @@ they succeeded. It will also include:
 Here's an example of running the tests for the `naive.hoon` library:
 
 ```
-> -test ~[%/tests/lib/naive/hoon]
+> -test %/tests/lib/naive ~
 built   /tests/lib/naive/hoon
 >   test-zod-spawn-to-zero: took 81359µs
 OK      /lib/naive/test-zod-spawn-to-zero
@@ -83,6 +91,19 @@ OK      /lib/naive/test-approval-for-all
 OK      /lib/naive/test-address-padding
 ok=%.y
 ```
+
+Here's an example of running just a single test for `naive.hoon`, the
+`++test-deposit` arm:
+
+```
+> -test %/tests/lib/naive/test-deposit ~
+built   /tests/lib/naive/hoon
+>   test-deposit: took ms/45.542
+OK      /lib/naive/test-deposit
+ok=%.y
+```
+
+## More info
 
 A good reference example is the test file for the `/lib/number-to-words.hoon`
 library, located in `/tests/lib/number-to-words.hoon`. Note that the `/tests`
