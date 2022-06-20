@@ -29,10 +29,10 @@ separate binary unnecessary. For older ships that were booted by a previous
 binary, v1.9 or later will not automatically perform this step, so it must be
 done with the `dock` utility ([see below](#dock)).
 
-The `pace` mentioned in the path above is a new feature, and repesents a release
-channel. At the time of writing, the default `pace` is `live`, which is for
-standard, stable releases. Alternative release channels will be introduced in
-the future, for things such as pre-release testing, nightly builds, etc. The
+The `pace` mentioned in the path above is a new feature, and represents a
+release channel. At the time of writing, the default `pace` is `live`, which is
+for standard, stable releases. Alternative release channels will be introduced
+in the future, for things such as pre-release testing, nightly builds, etc. The
 `pace` is specified in a text file at `[pier]/.bin/pace`.
 
 Along with docking, a binary upgrade feature has also been introduced. If you
