@@ -389,7 +389,8 @@ Use the Ethereum gateway at `URL` rather than the default.
 ### `-F, --fake SHIP`
 
 Boot a new fake development ship. Real networking is disabled, and instead the
-fake ship can only communicate with other fake ships on the local machine.
+fake ship can only communicate with other fake ships on the local machine. This
+works for all ship classes except comets.
 
 ```
 urbit -F zod
