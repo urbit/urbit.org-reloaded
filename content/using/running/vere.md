@@ -497,7 +497,7 @@ Disable the control pane unix socket.
 
 ### `--no-dock`
 
-From v1.8 onwards, when a new ship is booted, the urbit binary will copy itself
+From v1.9 onwards, when a new ship is booted, the urbit binary will copy itself
 into the newly created pier by default (see the [`dock`](#dock) section for
 details). To prevent this from happening, the `--no-dock` option can be used.
 
