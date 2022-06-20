@@ -11,7 +11,7 @@ import Head from "next/head";
 import Meta from "../../components/Meta";
 import ErrorPage from "../404";
 import Container from "../../components/Container";
-import Markdown, { MarkdownParse } from "../../components/Markdown";
+import Markdown from "foundation-design-system";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import SingleColumn from "../../components/SingleColumn";
@@ -51,7 +51,7 @@ export default function Post({ post, markdown, search }) {
           </div>
         </Section>
         <Section narrow className="markdown">
-          <Markdown content={JSON.parse(markdown)} />
+          <Markdown.render content={JSON.parse(markdown)} />
         </Section>
         <Section narrow>
           <Contact />
@@ -105,7 +105,7 @@ export async function getStaticProps({ params }) {
     ["title", "slug", "date", "description", "content", "author", "ship"],
     "updates"
   );
-  const markdown = JSON.stringify(MarkdownParse({ post }));
+  const markdown = JSON.stringify(Markdown.parse({ post }));
 
   return {
     props: { post, markdown, nextPost, previousPost },

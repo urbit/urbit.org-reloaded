@@ -10,7 +10,7 @@ import {
 import Head from "next/head";
 import Meta from "../../components/Meta";
 import Container from "../../components/Container";
-import Markdown, { MarkdownParse } from "../../components/Markdown";
+import Markdown from "foundation-design-system";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import SingleColumn from "../../components/SingleColumn";
@@ -116,7 +116,7 @@ export default function Event({
         ) : null}
 
         <Section short narrow className="markdown">
-          <Markdown content={JSON.parse(markdown)} />
+          <Markdown.render content={JSON.parse(markdown)} />
         </Section>
         <Section narrow>
           <Contact />
@@ -153,7 +153,7 @@ export async function getStaticProps({ params }) {
 
   const event = getPostBySlug(params.slug, eventKeys, "events");
 
-  const markdown = JSON.stringify(MarkdownParse({ post: event }));
+  const markdown = JSON.stringify(Markdown.parse({ post: event }));
 
   return {
     props: { event, markdown, nextEvent, previousEvent },

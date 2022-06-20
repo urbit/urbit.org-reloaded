@@ -1,7 +1,7 @@
 import { getPostBySlug } from "../lib/lib";
 import BasicPage from "../components/BasicPage";
 import { getPostSlugs } from "../lib/lib";
-import { MarkdownParse } from "../components/Markdown";
+import Markdown from "foundation-design-system";
 
 export default function Post({ post, markdown, search, index }) {
   return (
@@ -22,7 +22,7 @@ export async function getStaticProps({ params }) {
     index = null;
   }
 
-  const markdown = JSON.stringify(MarkdownParse({ post }));
+  const markdown = JSON.stringify(Markdown.parse({ post }));
   return {
     props: { post, markdown, index },
   };

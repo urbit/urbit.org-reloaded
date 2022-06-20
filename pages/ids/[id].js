@@ -13,7 +13,7 @@ import MetadataBlock from "../../components/gateway/MetadataBlock";
 import MetadataLink from "../../components/gateway/MetadataLink";
 import Description from "../../components/gateway/Description";
 import axios from "axios";
-import { MarkdownParse } from "../../components/Markdown";
+import Markdown from "foundation-design-system";
 
 const IdPage = ({ data, markdown, applications, groups, network, params }) => {
   let { id } = params;
@@ -211,7 +211,7 @@ export const getServerSideProps = async ({ params, res }) => {
 
   const markdown =
     content !== ""
-      ? JSON.stringify(MarkdownParse({ post: { content } }))
+      ? JSON.stringify(Markdown.parse({ post: { content } }))
       : null;
 
   const applications = getAllPosts(

@@ -10,7 +10,7 @@ import Footer from "./Footer";
 import SingleColumn from "./SingleColumn";
 import Section from "./Section";
 import { DateTime } from "luxon";
-import Markdown from "./Markdown";
+import Markdown from "foundation-design-system";
 
 export default function GrantProgramOverview({
   post,
@@ -46,7 +46,7 @@ export default function GrantProgramOverview({
           </Link>
         </Section>
         <Section narrow short className="markdown">
-          <Markdown content={JSON.parse(markdown)} />
+          <Markdown.render content={JSON.parse(markdown)} />
         </Section>
       </SingleColumn>
       <Footer />
