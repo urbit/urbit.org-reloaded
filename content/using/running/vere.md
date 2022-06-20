@@ -451,6 +451,9 @@ Only run from trusted sources.
 
 Create JSON trace files in `[pier]/.urb/put/trace`.
 
+This runs a tracing profiler, and produces JSON output compatible with
+`chrome://tracing`.
+
 - Undocked: `urbit -j [pier]`
 - Docked: `[pier]/.run urbit -j`
 
