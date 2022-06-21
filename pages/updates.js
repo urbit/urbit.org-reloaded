@@ -1,11 +1,9 @@
 import Head from "next/head";
 import Meta from "../components/Meta";
 import Link from "next/link";
-import Container from "../components/Container";
+import { Container, SingleColumn, Section } from "foundation-design-system";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import SingleColumn from "../components/SingleColumn";
-import Section from "../components/Section";
 import { getAllPosts, formatDate, generateDisplayDate } from "../lib/lib";
 
 export default function Updates({ posts, search }) {

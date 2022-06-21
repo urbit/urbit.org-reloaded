@@ -7,7 +7,7 @@ import { join } from "path";
 import { getPreviousPost, getNextPost, getPage } from "../../lib/lib";
 import Meta from "../../components/Meta";
 import Pagination from "../../components/Pagination";
-import Markdown from "foundation-design-system";
+import { Markdown } from "foundation-design-system";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/Sidebar";
 import docsPageTree from "../../cache/docs.json";

@@ -1,4 +1,4 @@
-import Section from "./Section";
+import { Section } from "foundation-design-system";
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import { TableOfContents } from "./TableOfContents";

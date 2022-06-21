@@ -2,12 +2,14 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Meta from "../components/Meta";
 import ErrorPage from "../pages/404";
-import Container from "./Container";
+import {
+  Container,
+  SingleColumn,
+  Section,
+  Markdown,
+} from "foundation-design-system";
 import Header from "./Header";
 import Footer from "./Footer";
-import SingleColumn from "./SingleColumn";
-import Section from "./Section";
-import Markdown from "foundation-design-system";
 import classNames from "classnames";
 import { TableOfContents } from "./TableOfContents";
 

@@ -4,13 +4,15 @@ import Link from "next/link";
 import Head from "next/head";
 import Meta from "../components/Meta";
 import ErrorPage from "../pages/404";
-import Container from "./Container";
+import {
+  Container,
+  Section,
+  SingleColumn,
+  Markdown,
+} from "foundation-design-system";
 import Header from "./Header";
 import Footer from "./Footer";
-import SingleColumn from "./SingleColumn";
-import Section from "./Section";
 import { DateTime } from "luxon";
-import Markdown from "foundation-design-system";
 
 export default function GrantProgramOverview({
   post,

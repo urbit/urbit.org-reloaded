@@ -3,11 +3,9 @@ import Link from "next/link";
 import { DateTime } from "luxon";
 
 import Meta from "../components/Meta";
-import Container from "../components/Container";
+import { Container, SingleColumn, Section } from "foundation-design-system";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import SingleColumn from "../components/SingleColumn";
-import Section from "../components/Section";
 import EventPreview from "../components/EventPreview";
 import { contact } from "../lib/constants";
 import { getAllEvents, generateRealtimeDate } from "../lib/lib";

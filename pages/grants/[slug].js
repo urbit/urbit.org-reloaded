@@ -5,13 +5,15 @@ import Link from "next/link";
 import Meta from "../../components/Meta";
 import classnames from "classnames";
 import ErrorPage from "../404";
-import Container from "../../components/Container";
-import Markdown from "foundation-design-system";
+import {
+  Container,
+  Markdown,
+  SingleColumn,
+  Section,
+} from "foundation-design-system";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import SingleColumn from "../../components/SingleColumn";
 import ob from "urbit-ob";
-import Section from "../../components/Section";
 import { DateTime } from "luxon";
 
 export default function Grant({ post, markdown, search }) {

@@ -3,9 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { DateTime } from "luxon";
 
-import Container from "../components/Container";
-import Section from "../components/Section";
-import SingleColumn from "../components/SingleColumn";
+import { Container, Section, SingleColumn } from "foundation-design-system";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";

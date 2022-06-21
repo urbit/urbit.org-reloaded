@@ -9,14 +9,16 @@ import {
 } from "../../lib/lib";
 import Head from "next/head";
 import Meta from "../../components/Meta";
-import Container from "../../components/Container";
-import Markdown from "foundation-design-system";
+import {
+  Container,
+  Markdown,
+  SingleColumn,
+  Section,
+} from "foundation-design-system";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import SingleColumn from "../../components/SingleColumn";
 import Contact from "../../components/Contact";
 import EventPreview from "../../components/EventPreview";
-import Section from "../../components/Section";
 import TwoUp from "../../components/TwoUp";
 
 import {

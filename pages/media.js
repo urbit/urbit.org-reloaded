@@ -1,11 +1,9 @@
 import Head from "next/head";
 import Link from "next/link";
 import Meta from "../components/Meta";
-import Container from "../components/Container";
+import { Container, SingleColumn, Section } from "foundation-design-system";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import SingleColumn from "../components/SingleColumn";
-import Section from "../components/Section";
 import { getAllPosts } from "../lib/lib";
 
 export function MediaPreview({ event, dir, className }) {

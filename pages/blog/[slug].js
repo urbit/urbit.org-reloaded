@@ -11,15 +11,17 @@ import Head from "next/head";
 import Link from "next/link";
 import Meta from "../../components/Meta";
 import ErrorPage from "../404";
-import Container from "../../components/Container";
+import {
+  Container,
+  Markdown,
+  SingleColumn,
+  Section,
+} from "foundation-design-system";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import SingleColumn from "../../components/SingleColumn";
-import Section from "../../components/Section";
 import Contact from "../../components/Contact";
 import PostPreview from "../../components/PostPreview";
 import TwoUp from "../../components/TwoUp";
-import Markdown from "foundation-design-system";
 
 export default function Post({
   post,

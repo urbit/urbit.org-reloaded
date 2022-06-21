@@ -9,13 +9,15 @@ import Head from "next/head";
 import Link from "next/link";
 import Meta from "../../components/Meta";
 import ErrorPage from "../404";
-import Container from "../../components/Container";
-import Markdown from "foundation-design-system";
+import {
+  Container,
+  Markdown,
+  SingleColumn,
+  Section,
+} from "foundation-design-system";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import SingleColumn from "../../components/SingleColumn";
 import Contact from "../../components/Contact";
-import Section from "../../components/Section";
 
 export default function MediaPage({ post, markdown, search }) {
   const router = useRouter();
