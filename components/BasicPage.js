@@ -7,6 +7,7 @@ import {
   SingleColumn,
   Section,
   Markdown,
+  IntraNav,
 } from "foundation-design-system";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -24,8 +25,9 @@ export default function BasicPage({ post, markdown, search, index = false }) {
         <title>Urbit • {post.title}</title>
         {Meta(post)}
       </Head>
+      <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header search={search} />
+        <Header />
         <Section narrow>
           <h1>{post.title}</h1>
         </Section>

@@ -10,6 +10,7 @@ import {
   Markdown,
   SingleColumn,
   Section,
+  IntraNav,
 } from "foundation-design-system";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -48,8 +49,9 @@ export default function Grant({ post, markdown, search }) {
         <title>{post.title} • Grants • urbit.org</title>
         {Meta(post)}
       </Head>
+      <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header search={search} />
+        <Header />
         <Section narrow short>
           <h1>{post.title}</h1>
           {post.extra.assignee ? (

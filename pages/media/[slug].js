@@ -14,6 +14,7 @@ import {
   Markdown,
   SingleColumn,
   Section,
+  IntraNav,
 } from "foundation-design-system";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -31,8 +32,9 @@ export default function MediaPage({ post, markdown, search }) {
         <title>{post.title} • Media • urbit.org</title>
         {Meta(post)}
       </Head>
+      <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header search={search} />
+        <Header />
         <Section narrow short>
           <h1>{post.title}</h1>
           {post.extra.author ? (

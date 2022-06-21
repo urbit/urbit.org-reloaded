@@ -1,7 +1,12 @@
 import Head from "next/head";
 import Meta from "../components/Meta";
 import Link from "next/link";
-import { Container, SingleColumn, Section } from "foundation-design-system";
+import {
+  Container,
+  SingleColumn,
+  Section,
+  IntraNav,
+} from "foundation-design-system";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import BackgroundImage from "../components/BackgroundImage";
@@ -20,8 +25,9 @@ export default function Blog({ posts, search }) {
         <title>Blog • urbit.org</title>
         {Meta(post)}
       </Head>
+      <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header search={search} />
+        <Header />
         <Section narrow>
           <div className="measure">
             <h1 className="pb-16">Blog</h1>

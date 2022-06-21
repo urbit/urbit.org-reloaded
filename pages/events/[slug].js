@@ -14,6 +14,7 @@ import {
   Markdown,
   SingleColumn,
   Section,
+  IntraNav,
 } from "foundation-design-system";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -50,8 +51,9 @@ export default function Event({
         <title>{event.title} • Events • urbit.org</title>
         {Meta(event)}
       </Head>
+      <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header search={search} />
+        <Header />
         <Section narrow short>
           <h1>{event.title}</h1>
           <h3 className="mt-6">{event.description}</h3>

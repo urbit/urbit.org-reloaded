@@ -15,6 +15,7 @@ import {
   Markdown,
   SingleColumn,
   Section,
+  IntraNav,
 } from "foundation-design-system";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -32,8 +33,9 @@ export default function Post({ post, markdown, search }) {
         <title>{post.title} • Updates • urbit.org</title>
         {Meta(post)}
       </Head>
+      <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header search={search} />
+        <Header />
         <Section short narrow>
           <h1>{post.title}</h1>
           {post.author ? (

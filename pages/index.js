@@ -3,7 +3,12 @@ import Link from "next/link";
 import React from "react";
 import { DateTime } from "luxon";
 
-import { Container, Section, SingleColumn } from "foundation-design-system";
+import {
+  Container,
+  Section,
+  SingleColumn,
+  IntraNav,
+} from "foundation-design-system";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";
@@ -20,9 +25,9 @@ export default function Home({ posts, events, grantNumbers, search }) {
       <Head>
         <title>urbit.org</title>
       </Head>
-      {/* {bannerElement} */}
+      <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header search={search} />
+        <Header />
         {
           // Hero Statement
         }

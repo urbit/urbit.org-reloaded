@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
 import {
   getPostBySlug,
   getAllPosts,
@@ -14,6 +15,7 @@ import ErrorPage from "../404";
 import {
   Container,
   Markdown,
+  IntraNav,
   SingleColumn,
   Section,
 } from "foundation-design-system";
@@ -41,8 +43,9 @@ export default function Post({
         <title>{post.title} • Blog • urbit.org</title>
         {Meta(post)}
       </Head>
+      <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header search={search} />
+        <Header />
         <Section short narrow>
           <h1>{post.title}</h1>
           <h3 className=" mt-6">{post.description}</h3>

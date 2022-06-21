@@ -3,7 +3,12 @@ import Link from "next/link";
 import { DateTime } from "luxon";
 
 import Meta from "../components/Meta";
-import { Container, SingleColumn, Section } from "foundation-design-system";
+import {
+  Container,
+  SingleColumn,
+  Section,
+  IntraNav,
+} from "foundation-design-system";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import EventPreview from "../components/EventPreview";
@@ -53,8 +58,9 @@ export default function Events({ events, search }) {
         <title>Events • urbit.org</title>
         {Meta(post)}
       </Head>
+      <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header search={search} />
+        <Header />
         <Section short narrow>
           <div className="measure">
             <h1 className="pb-16">Events</h1>
