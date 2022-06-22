@@ -122,10 +122,10 @@ At the moment, the most common way to use Urbit is by launching apps like Groups
 
 Urbit comes with a recent release of the Urbit OS, but automatic updates of the `%base` desk (which contains the kernel of the OS) are not enabled by default for Comets. Many comets are used only once and thrown away, so it would be wasteful to update every single comet as soon as it boots. If you plan to use your comet for more than a quick test, you'll probably want to ensure you're running the latest version of the OS.
 
-You can enable updates for your comet by typing `|install (sein:title our now our) %kids, =local %base` into Dojo and pressing Enter.
+You can enable updates for your comet by typing `|ota (sein:title our now our)` into Dojo and pressing Enter.
 
 ```
-> |install (sein:title our now our) %kids, =local %base
+> |ota (sein:title our now our)
 >=
 kiln: activated install into %base from [~samzod %kids]
 kiln: downloading update for %base from [~samzod %kids]
