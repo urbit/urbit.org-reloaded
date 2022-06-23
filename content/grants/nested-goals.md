@@ -85,9 +85,13 @@ To print the ancestors or parent tree of a specific goal use `pp ---`.
 (Also clearall will clear your whole data structure.)
 
 ## Milestones & Compensation
+
 ### Milestone 1
+
 Expected Completion: July 9th
+
 Payment: 1 star
+
 A fully functional personal task manager CLI.
 Functionality:
 - Can add and remove goals. (Milestone 0)
@@ -100,16 +104,24 @@ Functionality:
 - Can interact richly with the data structure; can move up and down the hierarchy, collapse and uncollapse nested subgoals.
 - Can extract ("harvest") actionable, unpreceded goals in a list to see what goals can be tackled immediately.
 - Can sort by date of deadline or by date of goal creation.
+
 ### Milestone 2
+
 Expected Completion: August 6th
+
 Payment: 1 star
+
 A fully functional social task manager CLI.
 - Can share goals so that they are viewable by others.
 - Can delegate goals (and their subgoals) to other ships. Delegates will have permissions to add subgoals, edit deadlines, edit goal descriptions, create precedence relationships, and to further delegate subgoals with respect to the goal they have been delegated.
 - Can transfer ownership of goals (and all their subgoals) between ships.
+
 ### Milestone 3
+
 Expected Completion: September 16th
+
 Payment: 1 star
+
 - A basic Sail frontend.
 - Ability to reference an arbitrary graph-store node or set of nodes to capture context which triggered the creation of the goal.
 - Ability to have threaded comments on goals.
