@@ -1,3 +1,21 @@
++++
+title = "Self-hosted Uniswap"
+date = "2022-06-22"
+
+[taxonomies]
+grant_type = [ "Bounty" ]
+grant_category = [ "App Dev" ]
+
+[extra]
+image = ""
+description = "Host a Uniswap frontend trading UI on your urbit"
+reward = "1 star"
+assignee = ""
+id = "B0186"
+completed = false
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0186&prefill_Grant+Name=Uniswap"
++++
+
 # Overview
 
 Self-host Uniswap on your Urbit 
@@ -20,9 +38,9 @@ Also, Urbit can extend the possibilities of DeFi by adding a cohesive identity a
 
 Develop an Urbit application that serves the [open-source Uniswap UI](https://github.com/Uniswap/interface). The app should only be served if the user is logged in to the Urbit ship running it– it should not be publicly accessible for anyone to access. Distribute the application on Urbit so that anyone on Urbit can install it. See [this guide](https://urbit.org/docs/userspace/dist/guide) for a walk-through example of developing and distributing an app or “desk” on Urbit. A great submission will maximize user choice i.e. using or not using Uniswap’s [unsupported token list](https://github.com/Uniswap/uniswap-interface/blob/main/src/constants/tokenLists/unsupported.tokenlist.json). A stellar submission will creatively integrate Urbit’s native ID and network (i.e. groups and/or the “Pals” app) into the Uniswap experience.
 
-# Milestones & Compensation
+# Compensation
 
-TDB
+1 Star upon successful distribution of the app to the network
 
 # Future Work
 
