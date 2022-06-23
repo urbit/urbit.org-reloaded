@@ -99,10 +99,10 @@ When your comet is finished booting, you will see `~sampel_marzod:dojo>` (Dojo: 
 
 To exit Urbit, use `Ctrl-D` or enter `|exit` into Dojo.
 
-To start your comet up again, run the following (note the lack of `-c` argument):
+To start your comet up again, run the following command:
 
 ```sh
-./urbit mycomet
+./mycomet/.run
 ```
 
 ### Using the web interface
