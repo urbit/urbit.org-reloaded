@@ -43,7 +43,7 @@ export default function Home({ posts, events, grantNumbers, search }) {
             <h2 className="m-0 p-0 mr-4 pb-6">Assembly 2022</h2>
 
               <p>
-                Assembly 2022 is the second ever Urbit confluence coming to you this year from Miami Beach.  Get early bird tickets now.
+                Assembly 2022 is the second ever Urbit conference coming to you this year from Miami Beach.  Get early bird tickets now.
               </p>
               <p className="pt-4 font-bold pb-8">
                 September 22nd–25th • Miami Beach, Florida
