@@ -185,7 +185,7 @@ export default function Home({ posts, events, grantNumbers, search }) {
               </Link>{" "}
               for building on Urbit using the languages you already know.
             </p>
-            <Link href="/docs" passHref>
+            <Link href="https://developers.urbit.org" passHref>
               <a className="button-lg type-ui text-white bg-wall-600 max-w-fit">
                 Read the Developer Docs
               </a>
