@@ -30,11 +30,33 @@ export default function Home({ posts, events, grantNumbers, search }) {
         }
         <Section narrow>
           <div>
-            <h1>A clean-slate OS</h1>
-            <h1>and network</h1>
-            <h1>for the 21st century.</h1>
+            <h1>A clean-slate OS and network for the 21st&nbsp;century.</h1>
           </div>
         </Section>
+        {
+          // Hero
+        }
+        <Section>
+          <div className="bg-[#FEFFDA] w-full p-8 md:p-12 rounded-3xl flex flex-col md:flex-row">
+            <div className="md:w-10/12 w-full md:mr-6">
+
+            <h2 className="m-0 p-0 mr-4 pb-6">Assembly 2022</h2>
+
+              <p>
+                Assembly 2022 is the second ever Urbit conference coming to you this year from Miami Beach.  Get early bird tickets now.
+              </p>
+              <p className="pt-4 font-bold pb-8">
+                September 22nd–25th • Miami Beach, Florida
+              </p>
+              <Link href="https://assembly.urbit.org" passHref>
+                <a className="button-lg max-w-fit bg-green-400 text-white">
+                  Learn More
+                </a>
+              </Link>
+            </div>
+          </div>
+        </Section>
+
 
         {
           // Hero
@@ -42,10 +64,9 @@ export default function Home({ posts, events, grantNumbers, search }) {
         <Section>
           <div className="bg-wall-100 w-full p-8 md:p-12 rounded-3xl flex flex-col md:flex-row">
             <div className="md:w-6/12 w-full md:mr-6">
-              <p>
-                Urbit is for everyone, but sometimes it is easy to get lost in
-                this universe.
-              </p>
+              <h3>
+                Urbit is a new kind of computer that you can own completely in ways that matter: networking, identity, and data. 
+              </h3>
               <p className="pt-8">
                 Follow these links to contribute to the network through
                 developing, operating, and exploring.
