@@ -6,8 +6,6 @@ hidetitle = "true"
 index = "true"
 +++
 
-## Urbit
-
 ### What is Urbit? {% #what-is-urbit %}
 
 Urbit reimagines the internet as a peer-to-peer network designed to stay that way. Previous attempts to "decentralize" the internet have only attempted to solve certain corners of the problem. Urbit proposes that only a new stack, built from the ground up as a tightly integrated system, can realize a great user experience for people using a peer-to-peer web.

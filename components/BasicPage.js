@@ -28,10 +28,10 @@ export default function BasicPage({ post, markdown, search, index = false }) {
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
         <Header />
-        <Section narrow>
+        <Section>
           <h1>{post.title}</h1>
         </Section>
-        <Section narrow>
+        <Section>
           <div className={classNames("flex", { sidebar: index })}>
             <div className={classNames("markdown", { "max-w-prose": index })}>
               <Markdown.render content={JSON.parse(markdown)} />
