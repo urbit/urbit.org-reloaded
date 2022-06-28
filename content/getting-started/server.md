@@ -95,7 +95,7 @@ sudo setcap 'cap_net_bind_service=+ep' ./urbit
 {% tab label="Windows" %}
 
 ```shell
-curl.exe -L https://urbit.org/install/windows/latest | tar xzk --strip=1
+curl -L https://urbit.org/install/windows/latest | tar xzk --strip=1
 urbit.exe
 ```
 
