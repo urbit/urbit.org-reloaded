@@ -70,17 +70,17 @@ export default function Header(props) {
         </ActiveLink>
         <ActiveLink
           currentPath={currentPath}
-          className="mr-5 text-green-400 type-ui button-text"
-          href="/getting-started"
-        >
-          Get Started
-        </ActiveLink>
-        <ActiveLink
-          currentPath={currentPath}
           className="mr-5 type-ui"
           href="/faq"
         >
           FAQ
+        </ActiveLink>
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 text-green-400 type-ui button-text"
+          href="/getting-started"
+        >
+          Get Started
         </ActiveLink>
       </nav>
 
