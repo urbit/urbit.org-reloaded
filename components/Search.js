@@ -18,10 +18,15 @@ class Search extends Component {
     this.onSelect = this.onSelect.bind(this);
     this.glossarySearch = this.glossarySearch.bind(this);
     this.patpSearch = this.patpSearch.bind(this);
+    this.devSearch = this.devSearch.bind(this);
   }
 
   searchEndpoint(query) {
     return `/api/search?q=${query}`;
+  }
+
+  devSearch(query) {
+    return `/api/dev-search?q=${query}`;
   }
 
   glossarySearch(query) {
@@ -54,12 +59,11 @@ class Search extends Component {
     this.props.closeSearch();
   }
 
-  onInputValueChange = debounce((query) => {
+  onInputValueChange = debounce(async (query) => {
     if (query.length) {
       fetch(this.searchEndpoint(query))
         .then((res) => res.json())
-        .then((res) => {
-          console.log(res);
+        .then(async (res) => {
           // Wrap results in an object which will tell React what component to use to render results.
           const results = res.results.map((item) => ({
             type: "RESULT",
@@ -89,7 +93,21 @@ class Search extends Component {
             content: item,
           }));
 
-          const list = [...glossaryResults, ...patpResult, ...results];
+          const devResults = await fetch(this.devSearch(query))
+            .then((res) => res.json())
+            .then((res) => {
+              return res.results.map((item) => ({
+                type: "DEV_RESULT",
+                content: item,
+              }));
+            });
+
+          const list = [
+            ...glossaryResults,
+            ...patpResult,
+            ...results,
+            ...devResults,
+          ];
 
           this.setState({ results: list });
         });
@@ -241,6 +259,47 @@ class Search extends Component {
                                   {item.content.parent !== "Content"
                                     ? `${item.content.parent} /`
                                     : ""}{" "}
+                                  {item.content.title}
+                                </p>
+                                <p
+                                  className={`text-base font-regular text-small ${
+                                    selected ? "text-midWhite" : "text-wall-500"
+                                  }`}
+                                >
+                                  {item.content.content}
+                                </p>
+                              </div>
+                            </li>
+                          );
+                        }
+                        if (item.type === "DEV_RESULT") {
+                          const devItem = Object.assign({}, item.content);
+                          devItem[
+                            "slug"
+                          ] = `https://developers.urbit.org${item.content.slug}`;
+                          return (
+                            <li
+                              className={`cursor-pointer flex text-left w-full ${
+                                selected ? "bg-green-400" : ""
+                              }`}
+                              {...getItemProps({
+                                key: item.content.link + "-" + index,
+                                index,
+                                item: devItem,
+                                selected,
+                              })}
+                            >
+                              <div className="p-3">
+                                <p
+                                  className={`font-medium text-base ${
+                                    selected ? "text-white" : "text-wall-600"
+                                  }`}
+                                >
+                                  <span className="text-wall-400">
+                                    {item.content.parent !== "Content"
+                                      ? `developers.urbit.org / ${item.content.parent} /`
+                                      : "developers.urbit.org /"}{" "}
+                                  </span>
                                   {item.content.title}
                                 </p>
                                 <p
