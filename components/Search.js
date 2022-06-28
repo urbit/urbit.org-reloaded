@@ -1,5 +1,4 @@
 import { Component, createRef } from "react";
-import { glossary } from "../lib/glossary";
 import { withRouter } from "next/router";
 import debounce from "lodash.debounce";
 import Downshift from "downshift";
@@ -30,12 +29,7 @@ class Search extends Component {
   }
 
   glossarySearch(query) {
-    const entries = glossary.filter((entry) => {
-      return (
-        entry.name.includes(query.toLowerCase()) || entry.symbol.includes(query)
-      );
-    });
-    return levenSort(entries, query, ["symbol"]);
+    return `/api/glossary?q=${encodeURIComponent(query)}`;
   }
 
   patpSearch(query) {
@@ -88,10 +82,14 @@ class Search extends Component {
               ]
             : [];
 
-          const glossaryResults = this.glossarySearch(query).map((item) => ({
-            type: "GLOSSARY_RESULT",
-            content: item,
-          }));
+          const glossaryResults = await fetch(this.glossarySearch(query))
+            .then((res) => res.json())
+            .then((res) => {
+              return res.results.map((item) => ({
+                type: "GLOSSARY_RESULT",
+                content: item,
+              }));
+            });
 
           const devResults = await fetch(this.devSearch(query))
             .then((res) => res.json())
