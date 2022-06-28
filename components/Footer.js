@@ -29,7 +29,7 @@ export default function Footer() {
               //   </div>
               // </Link>
             }
-            <Link href="/getting-started/planet/#hosting-providers" passHref>
+            <Link href="/getting-started/get-planet#hosting-providers" passHref>
               <a className="type-bold text-wall-500">Hosting Providers</a>
             </Link>
           </div>
