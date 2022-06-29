@@ -63,11 +63,6 @@
       "permanent": true
     },
     {
-      "source": "/landscape",
-      "destination": "/docs/development/develop",
-      "permanent": true
-    },
-    {
       "source": "/install",
       "destination": "/getting-started",
       "permanent": true
@@ -95,11 +90,6 @@
     {
       "source": "/using/planet",
       "destination": "/getting-started/planet",
-      "permanent": true
-    },
-    {
-      "source": "/using/develop",
-      "destination": "/docs/development/develop",
       "permanent": true
     },
     {
@@ -154,7 +144,7 @@
     },
     {
       "source": "/docs/development/:path*",
-      "destination": "https://developers.urbit.org/guides/additional/development/:path",
+      "destination": "https://developers.urbit.org/guides/core/environment",
       "permanent": true
     },
     {
@@ -215,6 +205,11 @@
     {
       "source": "/docs/system-overview/vere",
       "destination": "https://developers.urbit.org/overview/vere",
+      "permanent": true
+    },
+    {
+      "source": "/docs/userspace/dist/:path*",
+      "destination": "https://developers.urbit.org/guides/additional/software-distribution",
       "permanent": true
     },
     {
