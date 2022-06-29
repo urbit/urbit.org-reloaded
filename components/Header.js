@@ -89,41 +89,47 @@ export default function Header(props) {
       }
       <MenuTray isOpen={isOpen} setTray={setTray} search={props.search}>
         <Link href="/" passHref>
-          <a className="type-ui mb-12">Urbit</a>
+          <a className="font-semibold mb-4">Urbit</a>
         </Link>
+        <Link href="https://urbit.org" passHref>
+          <a className="font-semibold mt-2">Urbit.org</a>
+        </Link>
+        <Link href="https://operators.urbit.org" passHref>
+          <a className="mt-2">Operators</a>
+        </Link>
+        <Link href="https://developers.urbit.org" passHref>
+          <a className="mt-2 mb-4">Developers</a>
+        </Link>
+        <hr className="border-wall-200" />
         <ActiveLink
           currentPath={currentPath}
-          className="mr-5 mb-4 type-h3"
+          className="mt-4 mr-5 mb-4"
           href="/manual"
         >
           Manual
         </ActiveLink>
         <ActiveLink
           currentPath={currentPath}
-          className="mr-5 mb-4 type-h3"
+          className="mr-5 mb-4"
           href="/blog"
         >
           Blog
         </ActiveLink>
         <ActiveLink
           currentPath={currentPath}
-          className="mr-5 mb-4 type-h3"
+          className="mr-5 mb-4"
           href="/events"
         >
           Events
         </ActiveLink>
         <ActiveLink
           currentPath={currentPath}
-          className="mr-5 mb-4 text-green-400 type-h3"
+          className="mr-5 mb-4 text-green-400"
           href="/getting-started"
         >
           Get Started
         </ActiveLink>
-        <ActiveLink
-          currentPath={currentPath}
-          className="mr-5 mb-4 type-h3"
-          href="/faq"
-        >
+        <ActiveLink currentPath={currentPath} className="mr-5 mb-4" href="/faq">
           FAQ
         </ActiveLink>
       </MenuTray>
