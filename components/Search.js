@@ -18,6 +18,7 @@ class Search extends Component {
     this.glossarySearch = this.glossarySearch.bind(this);
     this.patpSearch = this.patpSearch.bind(this);
     this.devSearch = this.devSearch.bind(this);
+    this.opsSearch = this.opsSearch.bind(this);
   }
 
   searchEndpoint(query) {
@@ -30,6 +31,10 @@ class Search extends Component {
 
   glossarySearch(query) {
     return `/api/glossary?q=${encodeURIComponent(query)}`;
+  }
+
+  opsSearch(query) {
+    return `/api/ops-search?q=${query}`;
   }
 
   patpSearch(query) {
@@ -100,11 +105,21 @@ class Search extends Component {
               }));
             });
 
+          const opsResults = await fetch(this.opsSearch(query))
+            .then((res) => res.json())
+            .then((res) => {
+              return res.results.map((item) => ({
+                type: "OPS_RESULT",
+                content: item,
+              }));
+            });
+
           const list = [
             ...glossaryResults,
             ...patpResult,
             ...results,
             ...devResults,
+            ...opsResults,
           ];
 
           this.setState({ results: list });
@@ -297,6 +312,47 @@ class Search extends Component {
                                     {item.content.parent !== "Content"
                                       ? `developers.urbit.org / ${item.content.parent} /`
                                       : "developers.urbit.org /"}{" "}
+                                  </span>
+                                  {item.content.title}
+                                </p>
+                                <p
+                                  className={`text-base font-regular text-small ${
+                                    selected ? "text-midWhite" : "text-wall-500"
+                                  }`}
+                                >
+                                  {item.content.content}
+                                </p>
+                              </div>
+                            </li>
+                          );
+                        }
+                        if (item.type === "OPS_RESULT") {
+                          const opsItem = Object.assign({}, item.content);
+                          opsItem[
+                            "slug"
+                          ] = `https://operators.urbit.org${item.content.slug}`;
+                          return (
+                            <li
+                              className={`cursor-pointer flex text-left w-full ${
+                                selected ? "bg-green-400" : ""
+                              }`}
+                              {...getItemProps({
+                                key: item.content.link + "-" + index,
+                                index,
+                                item: opsItem,
+                                selected,
+                              })}
+                            >
+                              <div className="p-3">
+                                <p
+                                  className={`font-medium text-base ${
+                                    selected ? "text-white" : "text-wall-600"
+                                  }`}
+                                >
+                                  <span className="text-wall-400">
+                                    {item.content.parent !== "Content"
+                                      ? `operators.urbit.org / ${item.content.parent} /`
+                                      : "operators.urbit.org /"}{" "}
                                   </span>
                                   {item.content.title}
                                 </p>
