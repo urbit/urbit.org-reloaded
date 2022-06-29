@@ -164,7 +164,7 @@
     },
     {
       "source": "/docs/hoon/guides/:path*",
-      "destination": "https://developers.urbit.org/guides/additional/hoon/:path",
+      "destination": "https://developers.urbit.org/guides/additional/:path",
       "permanent": true
     },
     {
@@ -229,7 +229,7 @@
     },
     {
       "source": "/docs/userspace/threads/:path*",
-      "destination": "https://developers.urbit.org/guides/additional/threads/:path*",
+      "destination": "https://developers.urbit.org/reference/arvo/threads/:path*",
       "permanent": true
     },
     {
