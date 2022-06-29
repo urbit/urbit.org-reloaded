@@ -2,9 +2,12 @@ import Head from "next/head";
 import Link from "next/link";
 import { getPage, getAllPosts } from "../../lib/lib";
 import { join } from "path";
-import Container from "../../components/Container";
-import SingleColumn from "../../components/SingleColumn";
-import Section from "../../components/Section";
+import {
+  Container,
+  SingleColumn,
+  Section,
+  Markdown,
+} from "foundation-design-system";
 import ob from "urbit-ob";
 import ResourceCard from "../../components/gateway/ResourceCard";
 import GatewayHeader from "../../components/gateway/GatewayHeader";
@@ -13,7 +16,6 @@ import MetadataBlock from "../../components/gateway/MetadataBlock";
 import MetadataLink from "../../components/gateway/MetadataLink";
 import Description from "../../components/gateway/Description";
 import axios from "axios";
-import Markdown from "foundation-design-system";
 
 const IdPage = ({ data, markdown, applications, groups, network, params }) => {
   let { id } = params;

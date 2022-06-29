@@ -2,9 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import classnames from "classnames";
-import path from "path";
 import MenuTray from "../components/MenuTray";
-import Section from "../components/Section";
 import { capitalize } from "../lib/lib";
 
 function ActiveLink({ children, href, className, currentPath }) {
@@ -24,7 +22,6 @@ function ActiveLink({ children, href, className, currentPath }) {
 
 export default function Header(props) {
   const [isOpen, setTray] = useState(false);
-  const [shortcut, setShortcut] = useState("");
 
   const currentPath = useRouter().asPath;
 
@@ -32,26 +29,11 @@ export default function Header(props) {
 
   const firstCrumb = currentPath.split("/")[1];
 
-  const detectOS = () => {
-    const agent = window.navigator.appVersion;
-    if (agent.includes("Win")) {
-      return "Ctrl+K";
-    } else if (agent.includes("Mac")) {
-      return "⌘K";
-    } else if (agent.includes("Linux")) {
-      return "Ctrl+K";
-    }
-  };
-
-  useEffect(() => {
-    setShortcut(detectOS());
-  }, []);
-
   return (
     <header className="layout px-4 md:px-8 flex justify-between items-center pt-8 md:pt-10 lg:pt-12 pb-10 md:pb-12 lg:pb-24">
       <div>
         <Link href="/" passHref>
-          <a className="type-ui">Urbit</a>
+          <a className="font-semibold text-lg">Urbit</a>
         </Link>
         {routeDepth > 2 ? (
           <Link href={`/${firstCrumb}`} passHref>
@@ -65,13 +47,6 @@ export default function Header(props) {
         // Large screen header
       }
       <nav className="items-center hidden md:flex">
-        <ActiveLink
-          currentPath={currentPath}
-          className="mr-5 type-ui"
-          href="/docs"
-        >
-          Docs
-        </ActiveLink>
         <ActiveLink
           currentPath={currentPath}
           className="mr-5 type-ui"
@@ -107,16 +82,6 @@ export default function Header(props) {
         >
           FAQ
         </ActiveLink>
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            props.search.toggleSearch(e);
-          }}
-          className="bg-wall-100 text-wall-500 flex px-4 py-1 rounded-lg type-ui"
-        >
-          <div>Search</div>
-          <div className="ml-4 text-wall-400">{shortcut}</div>
-        </button>
       </nav>
 
       {
@@ -124,48 +89,47 @@ export default function Header(props) {
       }
       <MenuTray isOpen={isOpen} setTray={setTray} search={props.search}>
         <Link href="/" passHref>
-          <a className="type-ui mb-12">Urbit</a>
+          <a className="font-semibold mb-4">Urbit</a>
         </Link>
+        <Link href="https://urbit.org" passHref>
+          <a className="font-semibold mt-2">Urbit.org</a>
+        </Link>
+        <Link href="https://operators.urbit.org" passHref>
+          <a className="mt-2">Operators</a>
+        </Link>
+        <Link href="https://developers.urbit.org" passHref>
+          <a className="mt-2 mb-4">Developers</a>
+        </Link>
+        <hr className="border-wall-200" />
         <ActiveLink
           currentPath={currentPath}
-          className="mr-5 mb-4 type-h3"
-          href="/docs"
-        >
-          Docs
-        </ActiveLink>
-        <ActiveLink
-          currentPath={currentPath}
-          className="mr-5 mb-4 type-h3"
+          className="mt-4 mr-5 mb-4"
           href="/manual"
         >
           Manual
         </ActiveLink>
         <ActiveLink
           currentPath={currentPath}
-          className="mr-5 mb-4 type-h3"
+          className="mr-5 mb-4"
           href="/blog"
         >
           Blog
         </ActiveLink>
         <ActiveLink
           currentPath={currentPath}
-          className="mr-5 mb-4 type-h3"
+          className="mr-5 mb-4"
           href="/events"
         >
           Events
         </ActiveLink>
         <ActiveLink
           currentPath={currentPath}
-          className="mr-5 mb-4 text-green-400 type-h3"
+          className="mr-5 mb-4 text-green-400"
           href="/getting-started"
         >
           Get Started
         </ActiveLink>
-        <ActiveLink
-          currentPath={currentPath}
-          className="mr-5 mb-4 type-h3"
-          href="/faq"
-        >
+        <ActiveLink currentPath={currentPath} className="mr-5 mb-4" href="/faq">
           FAQ
         </ActiveLink>
       </MenuTray>

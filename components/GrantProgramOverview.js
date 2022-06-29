@@ -4,13 +4,16 @@ import Link from "next/link";
 import Head from "next/head";
 import Meta from "../components/Meta";
 import ErrorPage from "../pages/404";
-import Container from "./Container";
+import {
+  Container,
+  Section,
+  SingleColumn,
+  Markdown,
+  IntraNav,
+} from "foundation-design-system";
 import Header from "./Header";
 import Footer from "./Footer";
-import SingleColumn from "./SingleColumn";
-import Section from "./Section";
 import { DateTime } from "luxon";
-import Markdown from "foundation-design-system";
 
 export default function GrantProgramOverview({
   post,
@@ -32,8 +35,9 @@ export default function GrantProgramOverview({
         <title>{title} • Grants • urbit.org</title>
         {Meta(post)}
       </Head>
+      <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header search={search} />
+        <Header />
         <Section narrow short>
           <h1>{post.title}</h1>
           <div className="type-ui text-wall-500 mt-4 md:mt-8 lg:mt-10">

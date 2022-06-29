@@ -9,13 +9,16 @@ import Head from "next/head";
 import Link from "next/link";
 import Meta from "../../components/Meta";
 import ErrorPage from "../404";
-import Container from "../../components/Container";
-import Markdown from "foundation-design-system";
+import {
+  Container,
+  Markdown,
+  SingleColumn,
+  Section,
+  IntraNav,
+} from "foundation-design-system";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import SingleColumn from "../../components/SingleColumn";
 import Contact from "../../components/Contact";
-import Section from "../../components/Section";
 
 export default function MediaPage({ post, markdown, search }) {
   const router = useRouter();
@@ -29,8 +32,9 @@ export default function MediaPage({ post, markdown, search }) {
         <title>{post.title} • Media • urbit.org</title>
         {Meta(post)}
       </Head>
+      <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header search={search} />
+        <Header />
         <Section narrow short>
           <h1>{post.title}</h1>
           {post.extra.author ? (

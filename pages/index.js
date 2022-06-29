@@ -3,9 +3,12 @@ import Link from "next/link";
 import React from "react";
 import { DateTime } from "luxon";
 
-import Container from "../components/Container";
-import Section from "../components/Section";
-import SingleColumn from "../components/SingleColumn";
+import {
+  Container,
+  Section,
+  SingleColumn,
+  IntraNav,
+} from "foundation-design-system";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";
@@ -22,9 +25,9 @@ export default function Home({ posts, events, grantNumbers, search }) {
       <Head>
         <title>urbit.org</title>
       </Head>
-      {/* {bannerElement} */}
+      <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header search={search} />
+        <Header />
         {
           // Hero Statement
         }
@@ -203,7 +206,7 @@ export default function Home({ posts, events, grantNumbers, search }) {
               </Link>{" "}
               for building on Urbit using the languages you already know.
             </p>
-            <Link href="/docs" passHref>
+            <Link href="https://developers.urbit.org" passHref>
               <a className="button-lg type-ui text-white bg-wall-600 max-w-fit">
                 Read the Developer Docs
               </a>

@@ -3,11 +3,13 @@ import Link from "next/link";
 import { getPage } from "../../lib/lib";
 import { join } from "path";
 import CopyLink from "../../components/CopyLink";
-import Container from "../../components/Container";
-import SingleColumn from "../../components/SingleColumn";
-import Section from "../../components/Section";
+import {
+  Container,
+  SingleColumn,
+  Section,
+  Markdown,
+} from "foundation-design-system";
 import ob from "urbit-ob";
-import Markdown from "foundation-design-system";
 import GatewayHeader from "../../components/gateway/GatewayHeader";
 import Gateway404 from "../../components/gateway/Gateway404";
 import MetadataBlock from "../../components/gateway/MetadataBlock";

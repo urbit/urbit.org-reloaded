@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
 import {
   getPostBySlug,
   getAllPosts,
@@ -11,15 +12,18 @@ import Head from "next/head";
 import Link from "next/link";
 import Meta from "../../components/Meta";
 import ErrorPage from "../404";
-import Container from "../../components/Container";
+import {
+  Container,
+  Markdown,
+  IntraNav,
+  SingleColumn,
+  Section,
+} from "foundation-design-system";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import SingleColumn from "../../components/SingleColumn";
-import Section from "../../components/Section";
 import Contact from "../../components/Contact";
 import PostPreview from "../../components/PostPreview";
 import TwoUp from "../../components/TwoUp";
-import Markdown from "foundation-design-system";
 
 export default function Post({
   post,
@@ -39,8 +43,9 @@ export default function Post({
         <title>{post.title} • Blog • urbit.org</title>
         {Meta(post)}
       </Head>
+      <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header search={search} />
+        <Header />
         <Section short narrow>
           <h1>{post.title}</h1>
           <h3 className=" mt-6">{post.description}</h3>

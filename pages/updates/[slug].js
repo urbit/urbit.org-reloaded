@@ -10,12 +10,15 @@ import {
 import Head from "next/head";
 import Meta from "../../components/Meta";
 import ErrorPage from "../404";
-import Container from "../../components/Container";
-import Markdown from "foundation-design-system";
+import {
+  Container,
+  Markdown,
+  SingleColumn,
+  Section,
+  IntraNav,
+} from "foundation-design-system";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import SingleColumn from "../../components/SingleColumn";
-import Section from "../../components/Section";
 import Contact from "../../components/Contact";
 
 export default function Post({ post, markdown, search }) {
@@ -30,8 +33,9 @@ export default function Post({ post, markdown, search }) {
         <title>{post.title} • Updates • urbit.org</title>
         {Meta(post)}
       </Head>
+      <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header search={search} />
+        <Header />
         <Section short narrow>
           <h1>{post.title}</h1>
           {post.author ? (
