@@ -6,7 +6,7 @@ description = "Inside the mind of the Combine"
 [extra]
 author = "Anthony Arroyo"
 ship = "~poldec-tonteg"
-image = "https://media.urbit.org/blog/Cortina-D'Ampezzo.jpg"
+image = "https://media.urbit.org/blog/cortina-ampezzo.jpg"
 +++
 
 ![Cortina-D'Ampezzo-1200x1200px.jpg](https://poldec-tonteg-content.sfo2.digitaloceanspaces.com/poldec-tonteg/2022.6.15..17.51.24-Cortina-D%27Ampezzo-1200x1200px.jpg)
