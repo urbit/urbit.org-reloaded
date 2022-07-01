@@ -63,11 +63,6 @@
       "permanent": true
     },
     {
-      "source": "/landscape",
-      "destination": "/docs/development/develop",
-      "permanent": true
-    },
-    {
       "source": "/install",
       "destination": "/getting-started",
       "permanent": true
@@ -95,11 +90,6 @@
     {
       "source": "/using/planet",
       "destination": "/getting-started/planet",
-      "permanent": true
-    },
-    {
-      "source": "/using/develop",
-      "destination": "/docs/development/develop",
       "permanent": true
     },
     {
@@ -154,7 +144,7 @@
     },
     {
       "source": "/docs/development/:path*",
-      "destination": "https://developers.urbit.org/guides/additional/development/:path",
+      "destination": "https://developers.urbit.org/guides/core/environment",
       "permanent": true
     },
     {
@@ -164,7 +154,7 @@
     },
     {
       "source": "/docs/hoon/guides/:path*",
-      "destination": "https://developers.urbit.org/guides/additional/hoon/:path",
+      "destination": "https://developers.urbit.org/guides/additional/:path",
       "permanent": true
     },
     {
@@ -218,6 +208,11 @@
       "permanent": true
     },
     {
+      "source": "/docs/userspace/dist/:path*",
+      "destination": "https://developers.urbit.org/guides/additional/software-distribution",
+      "permanent": true
+    },
+    {
       "source": "/docs/userspace/full-stack/:path*",
       "destination": "https://developers.urbit.org/guides/core/app-school-full-stack/:path",
       "permanent": true
@@ -229,7 +224,7 @@
     },
     {
       "source": "/docs/userspace/threads/:path*",
-      "destination": "https://developers.urbit.org/guides/additional/threads/:path*",
+      "destination": "https://developers.urbit.org/reference/arvo/threads/:path*",
       "permanent": true
     },
     {
