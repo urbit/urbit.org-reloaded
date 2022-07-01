@@ -9,7 +9,7 @@ ship = "~poldec-tonteg"
 image = "https://media.urbit.org/blog/cortina-ampezzo.jpg"
 +++
 
-![Cortina-D'Ampezzo-1200x1200px.jpg](https://poldec-tonteg-content.sfo2.digitaloceanspaces.com/poldec-tonteg/2022.6.15..17.51.24-Cortina-D%27Ampezzo-1200x1200px.jpg)
+![Cortina-D'Ampezzo-1200x1200px.jpg](https://media.urbit.org/blog/cortina-ampezzo.jpg)
 
 _This is cross-posted from [The Combine DAO Blog](https://blog.the-combine.org). If you'd like to comment, join the public [Urbit group](https://urbit.org/groups/~famreb-todmec/the-combine-public)_
 
