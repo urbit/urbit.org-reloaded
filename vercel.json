@@ -135,7 +135,7 @@
     {
       "source": "/docs",
       "destination": "https://developers.urbit.org/",
-      "permanent": true,
+      "permanent": true
     },
     {
       "source": "/docs/arvo/:path*",
