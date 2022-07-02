@@ -15,7 +15,7 @@ champion = "~tirrel"
 grant_id = "B0182"
 completed = false
 canceled = false
-link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefillGrant+ID=&prefillGrant+Name=Eyre%20Request%20Cache"
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefillGrant+ID=&prefillGrant+Name=Eyre%20Request%20Cache"
 +++
 
 
