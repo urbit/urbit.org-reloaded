@@ -46,7 +46,7 @@ export default function Post({
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
         <Header />
-        <Section short narrow>
+        <Section narrow className="pb-10">
           <h1>{post.title}</h1>
           <h3 className=" mt-6">{post.description}</h3>
           <div className="flex items-baseline mt-6">
