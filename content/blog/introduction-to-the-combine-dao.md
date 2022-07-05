@@ -32,7 +32,7 @@ So, members of The Combine DAO should believe at least one of two things:
  
 ## Our Pipeline
 
-The Combine works hand-in-hand with the Urbit Foundation, meaning we have unparalleled visibility into the development of new projects and teams on Urbit. The Foundation has been working hard to shore up Urbit's developer pipeline, with Hoon School constantly bringing in new developers. The last cohort had 61 finishers, seven of whom had no previous programming experience. The Foundation’s [Grants]](https://urbit.org/grants) program is active with over 40 active grants. The Combine and The Foundation continue to work together to identify, nurture and launch projects in need of funding.
+The Combine works hand-in-hand with the Urbit Foundation, meaning we have unparalleled visibility into the development of new projects and teams on Urbit. The Foundation has been working hard to shore up Urbit's developer pipeline, with Hoon School constantly bringing in new developers. The last cohort had 61 finishers, seven of whom had no previous programming experience. The Foundation’s [Grants](https://urbit.org/grants) program is active with over 40 active grants. The Combine and The Foundation continue to work together to identify, nurture and launch projects in need of funding.
  
 ## Our Membership
 
