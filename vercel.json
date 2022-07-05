@@ -133,6 +133,11 @@
       "permanent": true
     },
     {
+      "source": "/docs",
+      "destination": "https://developers.urbit.org/",
+      "permanent": true
+    },
+    {
       "source": "/docs/arvo/:path*",
       "destination": "https://developers.urbit.org/reference/arvo/:path",
       "permanent": true
