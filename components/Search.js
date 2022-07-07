@@ -87,7 +87,7 @@ class Search extends Component {
               ]
             : [];
 
-          const glossaryResults = await fetch(this.glossarySearch(query))
+          const glossarySearch = fetch(this.glossarySearch(query))
             .then((res) => res.json())
             .then((res) => {
               return res.results.map((item) => ({
@@ -96,7 +96,7 @@ class Search extends Component {
               }));
             });
 
-          const devResults = await fetch(this.devSearch(query))
+          const devSearch = fetch(this.devSearch(query))
             .then((res) => res.json())
             .then((res) => {
               return res.results.map((item) => ({
@@ -105,7 +105,7 @@ class Search extends Component {
               }));
             });
 
-          const opsResults = await fetch(this.opsSearch(query))
+          const opsSearch = fetch(this.opsSearch(query))
             .then((res) => res.json())
             .then((res) => {
               return res.results.map((item) => ({
@@ -113,6 +113,12 @@ class Search extends Component {
                 content: item,
               }));
             });
+
+          const [glossaryResults, devResults, opsResults] = await Promise.all([
+            glossarySearch,
+            devSearch,
+            opsSearch,
+          ]);
 
           const list = [
             ...glossaryResults,
