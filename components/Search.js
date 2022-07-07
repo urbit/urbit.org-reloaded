@@ -60,76 +60,72 @@ class Search extends Component {
 
   onInputValueChange = debounce(async (query) => {
     if (query.length) {
-      fetch(this.searchEndpoint(query))
+      const search = fetch(this.searchEndpoint(query))
         .then((res) => res.json())
         .then(async (res) => {
-          // Wrap results in an object which will tell React what component to use to render results.
-          const results = res.results.map((item) => ({
+          return res.results.map((item) => ({
             type: "RESULT",
             content: item,
           }));
-
-          const patp = this.patpSearch(query)
-            ? !isNaN(query)
-              ? ob.patp(query)
-              : ob.patp(ob.patp2dec(`~${deSig(query)}`))
-            : null;
-
-          const patpResult = this.patpSearch(query)
-            ? [
-                {
-                  type: "PATP",
-                  content: {
-                    patp: patp,
-                    slug: `/ids/${patp}`,
-                  },
-                },
-              ]
-            : [];
-
-          const glossarySearch = fetch(this.glossarySearch(query))
-            .then((res) => res.json())
-            .then((res) => {
-              return res.results.map((item) => ({
-                type: "GLOSSARY_RESULT",
-                content: item,
-              }));
-            });
-
-          const devSearch = fetch(this.devSearch(query))
-            .then((res) => res.json())
-            .then((res) => {
-              return res.results.map((item) => ({
-                type: "DEV_RESULT",
-                content: item,
-              }));
-            });
-
-          const opsSearch = fetch(this.opsSearch(query))
-            .then((res) => res.json())
-            .then((res) => {
-              return res.results.map((item) => ({
-                type: "OPS_RESULT",
-                content: item,
-              }));
-            });
-
-          const [glossaryResults, devResults, opsResults] = await Promise.all([
-            glossarySearch,
-            devSearch,
-            opsSearch,
-          ]);
-
-          const list = [
-            ...glossaryResults,
-            ...patpResult,
-            ...results,
-            ...devResults,
-            ...opsResults,
-          ];
-
-          this.setState({ results: list });
         });
+
+      const patp = this.patpSearch(query)
+        ? !isNaN(query)
+          ? ob.patp(query)
+          : ob.patp(ob.patp2dec(`~${deSig(query)}`))
+        : null;
+
+      const patpResult = this.patpSearch(query)
+        ? [
+            {
+              type: "PATP",
+              content: {
+                patp: patp,
+                slug: `/ids/${patp}`,
+              },
+            },
+          ]
+        : [];
+
+      const glossarySearch = fetch(this.glossarySearch(query))
+        .then((res) => res.json())
+        .then((res) => {
+          return res.results.map((item) => ({
+            type: "GLOSSARY_RESULT",
+            content: item,
+          }));
+        });
+
+      const devSearch = fetch(this.devSearch(query))
+        .then((res) => res.json())
+        .then((res) => {
+          return res.results.map((item) => ({
+            type: "DEV_RESULT",
+            content: item,
+          }));
+        });
+
+      const opsSearch = fetch(this.opsSearch(query))
+        .then((res) => res.json())
+        .then((res) => {
+          return res.results.map((item) => ({
+            type: "OPS_RESULT",
+            content: item,
+          }));
+        });
+
+      const [results, glossaryResults, devResults, opsResults] =
+        await Promise.all([search, glossarySearch, devSearch, opsSearch]);
+
+      const list = [
+        ...glossaryResults,
+        ...patpResult,
+        ...results,
+        ...devResults,
+        ...opsResults,
+      ];
+
+      this.setState({ results: list });
     } else {
       this.setState({ results: [] });
     }
