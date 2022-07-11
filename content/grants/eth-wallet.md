@@ -45,4 +45,4 @@ Because Ethereum is a complete computer, it won’t be feasible to keep shipping
 
 - Integrate with [Holium’s Ballot app](https://urbit.org/applications/~lomder-librun/ballot) to build a treasury management system for DAOs
 
-- Integrate with Uribt Books app to utilize transaction history and address rolodex functionality 
+- Integrate with [Books](https://urbit.org/grants/books) app to utilize transaction history and address rolodex functionality 
