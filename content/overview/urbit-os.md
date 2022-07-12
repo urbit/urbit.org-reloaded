@@ -22,7 +22,7 @@ Let’s talk about how we think we’re going to pull this off from a technical 
 
 Urbit OS is a completely new, carefully architected software stack: a VM, programming language, and kernel designed to run software for an individual. Urbit OS is a program that runs on almost any cloud server, most laptops and many phones: anything with Unix and an internet connection.
 
-![](https://smedia.urbit.org/site/overview/overview-os.png)
+![](https://media.urbit.org/site/overview/overview-os.png)
 
 The main thing to understand about our ‘overlay OS’, as we call it, is that the foundation is a single, simple function. This function is the Urbit OS virtual machine. We call it ‘Nock’. The entire Urbit OS system compiles down to Nock, and Nock is just 33 lines of code.
 
