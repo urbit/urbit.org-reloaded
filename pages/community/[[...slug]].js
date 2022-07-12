@@ -7,7 +7,7 @@ import { getPage } from "../../lib/lib";
 import Meta from "../../components/Meta";
 import { Markdown } from "foundation-design-system";
 import ContentArea from "../../components/ContentArea";
-import Sidebar from "../../components/Sidebar";
+import Sidebar from "../../components/DocsSidebar";
 import communityTree from "../../cache/community.json";
 
 const breadcrumbs = (posts, paths) => {

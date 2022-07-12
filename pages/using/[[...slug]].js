@@ -8,7 +8,7 @@ import { join } from "path";
 import { getPage } from "../../lib/lib";
 import { Markdown } from "foundation-design-system";
 import ContentArea from "../../components/ContentArea";
-import Sidebar from "../../components/Sidebar";
+import Sidebar from "../../components/DocsSidebar";
 import UsingTree from "../../cache/using.json";
 
 const breadcrumbs = (posts, paths) => {
