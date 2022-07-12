@@ -7,10 +7,10 @@
     "build": "next build",
     "export": "npm run prebuild && next build && next export",
     "start": "next start",
-    "prebuild": "npm run cache-posts && npm run rss && npm run community-tree && npm run getting-started-tree && npm run understanding-urbit-tree && npm run using-tree",
+    "prebuild": "npm run cache-posts && npm run rss && npm run community-tree && npm run getting-started-tree && npm run overview-tree && npm run using-tree",
     "community-tree": "node lib/buildPageTree community weight",
     "getting-started-tree": "node lib/buildPageTree getting-started weight",
-    "understanding-urbit-tree": "node lib/buildPageTree understanding-urbit weight",
+    "overview-tree": "node lib/buildPageTree overview weight",
     "using-tree": "node lib/buildPageTree using weight",
     "cache-posts": "node lib/cache.js",
     "rss": "node lib/rss.js"
