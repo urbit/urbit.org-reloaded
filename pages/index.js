@@ -42,11 +42,11 @@ export default function Home({ posts, events, grantNumbers, search }) {
         <Section>
           <div className="bg-[#FEFFDA] w-full p-8 md:p-12 rounded-3xl flex flex-col md:flex-row">
             <div className="md:w-10/12 w-full md:mr-6">
-
-            <h2 className="m-0 p-0 mr-4 pb-6">Assembly 2022</h2>
+              <h2 className="m-0 p-0 mr-4 pb-6">Assembly 2022</h2>
 
               <p>
-                Assembly 2022 is the second ever Urbit conference coming to you this year from Miami Beach.  Grab a towel and get ready.
+                Assembly 2022 is the second ever Urbit conference coming to you
+                this year from Miami Beach. Grab a towel and get ready.
               </p>
               <p className="pt-4 font-bold pb-8">
                 September 22nd–25th • Miami Beach, Florida
@@ -56,65 +56,6 @@ export default function Home({ posts, events, grantNumbers, search }) {
                   Learn More
                 </a>
               </Link>
-            </div>
-          </div>
-        </Section>
-
-
-        {
-          // Hero
-        }
-        <Section>
-          <div className="bg-wall-100 w-full p-8 md:p-12 rounded-3xl flex flex-col md:flex-row">
-            <div className="md:w-6/12 w-full md:mr-6">
-              <h3>
-                Urbit is a new kind of computer that you can own completely in ways that matter: networking, identity, and data. 
-              </h3>
-              <p className="pt-8">
-                Follow these links to contribute to the network through
-                developing, operating, and exploring.
-              </p>
-            </div>
-            <div className="pt-8 md:pt-0 md:w-6/12 w-full md:ml-6">
-              <BubbleLink
-                href="https://developers.urbit.org"
-                title="Developers"
-                target="_blank"
-                className="md:h-16"
-                caption="Start building on Urbit today."
-              >
-                <img
-                  alt="Marketplace logo"
-                  className="max-w-none w-12 h-12 rounded-full"
-                  src="/images/developers-guide-logo.png"
-                />
-              </BubbleLink>
-              <BubbleLink
-                href="https://operators.urbit.org"
-                className="mt-4 md:h-16"
-                target="_blank"
-                title="Operator’s Guide"
-                caption="Own a star or galaxy? This is for you."
-              >
-                <img
-                  alt="Marketplace logo"
-                  className="max-w-none w-12 h-12 rounded-full"
-                  src="/images/operators-guide-logo.png"
-                />
-              </BubbleLink>
-              <BubbleLink
-                href="https://network.urbit.org/"
-                className="mt-4 md:h-16"
-                target="_blank"
-                title="Network Explorer"
-                caption="View on-chain Urbit activity in real-time."
-              >
-                <img
-                  alt="Marketplace logo"
-                  className="max-w-none w-12 h-12 rounded-full"
-                  src="/images/network-explorer-logo.png"
-                />
-              </BubbleLink>
             </div>
           </div>
         </Section>
