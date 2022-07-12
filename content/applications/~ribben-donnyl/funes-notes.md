@@ -8,4 +8,6 @@ developer = "~ribben-donnyl"
 website = "https://funes.app"
 +++
 
-Notes for iOS, backed up to Graph Store.
+Mobile notetaking application [available for iOS](https://apps.apple.com/us/app/funes-notes/id1627315560), using urbit's `%graph-store` as a backend.
+
+Initial development funded by the Urbit Foundation via [Urbit Notes](https://urbit.org/grants/urbit-notes) proposal grant.
