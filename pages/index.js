@@ -2,7 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import { DateTime } from "luxon";
-
 import {
   Container,
   Section,
@@ -15,7 +14,6 @@ import Contact from "../components/Contact";
 import PostPreview from "../components/PostPreview";
 import EventPreview from "../components/EventPreview";
 import TwoUp from "../components/TwoUp";
-import BubbleLink from "../components/index/BubbleLink";
 import { getAllPosts, getAllEvents, generateRealtimeDate } from "../lib/lib";
 import { eventKeys } from "../lib/constants";
 
@@ -31,7 +29,7 @@ export default function Home({ posts, events, grantNumbers, search }) {
         {
           // Hero Statement
         }
-        <Section narrow>
+        <Section className="pb-36">
           <div>
             <h1>A clean-slate OS and network for the 21st&nbsp;century.</h1>
           </div>
@@ -58,6 +56,32 @@ export default function Home({ posts, events, grantNumbers, search }) {
               </Link>
             </div>
           </div>
+        </Section>
+        <Section narrow className="space-y-8">
+          <h2 className="font-normal">
+            Urbit is a{" "}
+            <span className="font-semibold">new kind of computer</span> that you
+            can <span className="font-semibold">own completely</span> in ways
+            that matter:{" "}
+            <span className="font-semibold">
+              networking, identity, and data
+            </span>
+            .
+          </h2>
+          <p className="max-w-prose">
+            We realized that in order to fix the internet, we had to build a new
+            computer from scratch. Good thing we started over a decade ago.
+          </p>
+          <p className="max-w-prose">
+            Today, Urbit a real system with thousands of users that are building
+            all kinds of communities, software, DAOs, and more. And it’s getting
+            better every day.{" "}
+          </p>
+          <Link href="/overview" passHref>
+            <a className="button-lg bg-green-400 text-white type-ui max-w-fit">
+              Read the Overview
+            </a>
+          </Link>
         </Section>
 
         {
@@ -148,8 +172,8 @@ export default function Home({ posts, events, grantNumbers, search }) {
               for building on Urbit using the languages you already know.
             </p>
             <Link href="https://developers.urbit.org" passHref>
-              <a className="button-lg type-ui text-white bg-wall-600 max-w-fit">
-                Read the Developer Docs
+              <a className="button-lg type-ui text-white bg-green-400 max-w-fit">
+                Visit Urbit Developers
               </a>
             </Link>
           </div>
