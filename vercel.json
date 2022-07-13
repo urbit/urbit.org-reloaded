@@ -4,8 +4,8 @@
   },
   "redirects": [
     {
-     "source": "/understanding-urbit",
-     "destination": "/overview"
+     "source": "/understanding-urbit/:path*",
+     "destination": "/overview/:path*"
     },
     {
       "source": "/blog/layer-2-guides",
