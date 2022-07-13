@@ -59,14 +59,10 @@ export default function Home({ posts, events, grantNumbers, search }) {
         </Section>
         <Section narrow className="space-y-8">
           <h2 className="font-normal">
-            Urbit is a{" "}
-            <span className="font-semibold">new kind of computer</span> that you
-            can <span className="font-semibold">own completely</span> in ways
-            that matter:{" "}
-            <span className="font-semibold">
-              networking, identity, and data
-            </span>
-            .
+            Urbit is a <span className="font-bold">new kind of computer</span>{" "}
+            that you can <span className="font-bold">own completely</span> in
+            ways that matter:{" "}
+            <span className="font-bold">networking, identity, and data</span>.
           </h2>
           <p className="max-w-prose">
             We realized that in order to fix the internet, we had to build a new
