@@ -4,6 +4,10 @@
   },
   "redirects": [
     {
+     "source": "/understanding-urbit",
+     "destination": "/overview"
+    },
+    {
       "source": "/blog/layer-2-guides",
       "destination": "https://developers.urbit.org/blog/layer-2-guides"
     },
