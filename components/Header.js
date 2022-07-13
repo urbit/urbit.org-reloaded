@@ -122,7 +122,7 @@ export default function Header(props) {
         </ActiveLink>
         <ActiveLink
           currentPath={currentPath}
-          className="mt-4 mr-5 mb-4"
+          className="mr-5 mb-4"
           href="/using"
         >
           Manual
