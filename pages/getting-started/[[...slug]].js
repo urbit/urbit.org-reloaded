@@ -7,7 +7,7 @@ import { join } from "path";
 import { getPage } from "../../lib/lib";
 import { Markdown } from "foundation-design-system";
 import ContentArea from "../../components/ContentArea";
-import Sidebar from "../../components/Sidebar";
+import Sidebar from "../../components/DocsSidebar";
 import GettingStartedTree from "../../cache/getting-started.json";
 
 export default function UsingLayout({ posts, data, params, search, markdown }) {

@@ -47,7 +47,6 @@ export default function Header(props) {
         // Large screen header
       }
       <nav className="items-center hidden md:flex">
-
         <ActiveLink
           currentPath={currentPath}
           className="mr-5 text-green-400 type-ui button-text"
@@ -59,11 +58,18 @@ export default function Header(props) {
         <ActiveLink
           currentPath={currentPath}
           className="mr-5 type-ui"
+          href="/overview"
+        >
+          Overview
+        </ActiveLink>
+
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 type-ui"
           href="/using"
         >
           Manual
         </ActiveLink>
-
 
         <ActiveLink
           currentPath={currentPath}
@@ -71,7 +77,7 @@ export default function Header(props) {
           href="/faq"
         >
           FAQ
-        </ActiveLink> 
+        </ActiveLink>
 
         <ActiveLink
           currentPath={currentPath}
@@ -110,6 +116,13 @@ export default function Header(props) {
         <ActiveLink
           currentPath={currentPath}
           className="mt-4 mr-5 mb-4"
+          href="/overview"
+        >
+          Overview
+        </ActiveLink>
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 mb-4"
           href="/using"
         >
           Manual

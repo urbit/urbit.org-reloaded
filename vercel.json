@@ -54,7 +54,7 @@
     },
     {
       "source": "/primer",
-      "destination": "/understanding-urbit/",
+      "destination": "/overview",
       "permanent": true
     },
     {
