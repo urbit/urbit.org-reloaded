@@ -12,7 +12,7 @@ Today, Urbit is built and maintained by three organizations, a community of cont
 
 Let’s talk first about these individual groups within the Urbit community, then about the history of the project and how it came to be.
 
-**Organizations**
+Organizations {% .font-bold .subpixel-antialiased .pt-8 %}
 
 There are currently three principal organizations involved in Urbit’s development and maintenance: Tlon, Urbit.live and the Urbit Foundation.
 
@@ -26,7 +26,7 @@ The Urbit Foundation was formally established in 2021. The Foundation runs the g
 
 The community of contributors and core developers has been steadily contributing to the code base since before Tlon existed, and they’re still going strong. They can primarily be found on Urbit itself, in the Urbit Community ([~bitbet-bolbel/urbit-community](/groups/~bitbet-bolbel/urbit-community)), the urbit-dev mailing list and on GitHub.
 
-**Timeline**
+Timeline {% .font-bold .subpixel-antialiased .pt-8 %}
 
 At the beginning, Urbit was just a few people with the right combination of imagination and discipline to try to rebuild computing.
 

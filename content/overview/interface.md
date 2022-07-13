@@ -7,7 +7,7 @@ weight = 4
 
 We built Urbit OS + Urbit ID to be the software stack for human-scale computing in the cloud. This system wasn’t built solely to be new infrastructure—it was built so that we can build better interfaces on top and people can use Urbit without having to know about the technology at all. For Urbit to actually matter, we have to go all the way from VM to UI.
 
-**Landscape**
+Landscape {% .font-bold .subpixel-antialiased .pt-8 %}
 
 To address the interface component of the stack, Tlon built Landscape: a simple, calm, browser-based interface for building digital communities. 
 
@@ -29,7 +29,7 @@ The ‘desk’ of today is cluttered with apps and services, data structures, an
 
 Landscape is a minimal, multipurpose interface for bringing a group together to chat, share links, write and engage in discussion. It’s free of any ads, tracking, or surveillance (as is the norm for anything built on Urbit). It’s a stripped-down social utility designed for high-trust, direct communication and collaboration. It’s the perfect place for small communities to feel at home.
 
-**Design**
+Design {% .font-bold .subpixel-antialiased .pt-8 %}
 
 Landscape has two basic building blocks: groups and modules. A group is exactly what it sounds like: one or more people. A module is sort of like an app without the data lock-in. A module is just a tool for getting something done, like ‘tasks’, ‘links’ or ‘votes’ that’s shared by a group.
 
