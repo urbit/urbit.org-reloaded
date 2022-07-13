@@ -31,7 +31,7 @@ export default function Overview({ posts, data, markdown, search }) {
           <h1>Overview</h1>
         </Section>
         <Section>
-          <div className="flex space-x-16 justify-between sidebar">
+          <div className="flex justify-between sidebar">
             <Sidebar>{childPages("/overview", posts.pages)}</Sidebar>
             <div className="markdown max-w-prose">
               <h3>{data.title}</h3>
