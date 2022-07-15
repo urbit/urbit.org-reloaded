@@ -53,10 +53,11 @@ Here are a few of the places where you can buy planets:
     - [Urbit.me](https://urbit.me)
 * 
     - [azimuth.shop](https://azimuth.shop)
-    - [\_networked subject](https://subject.network)
-    - [~mocbel house](https://mocbel.house)
-    - [Wexpert Systems](https://wexpert.systems)
     - [lanlyd](https://lanlyd.net/)
+    - [~mocbel house](https://mocbel.house)
+    - [\_networked subject](https://subject.network)
+    - [Planet Market](https://planet.market)
+    - [Wexpert Systems](https://wexpert.systems)
 {% /table %}
 
 {% callout %}
