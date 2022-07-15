@@ -1,6 +1,6 @@
 +++
 title = "Urbit Meetup Paris"
-starts = "2022-04-21T20:00:00"
+starts = "2022-07-21T20:00:00"
 ends = "2022-07-21T23:00:00"
 timezone = "Europe/Paris"
 location = "Le Comptoir Général, 84 Quai de Jemmapes, 75010 Paris"
