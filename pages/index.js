@@ -69,7 +69,7 @@ export default function Home({ posts, events, grantNumbers, search }) {
             computer from scratch. Good thing we started over a decade ago.
           </p>
           <p className="max-w-prose">
-            Today, Urbit a real system with thousands of users that are building
+            Today, Urbit is a real system with thousands of users that are building
             all kinds of communities, software, DAOs, and more. And it’s getting
             better every day.{" "}
           </p>
