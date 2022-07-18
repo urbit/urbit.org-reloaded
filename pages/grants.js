@@ -251,9 +251,7 @@ export default function Grants({ posts, categories, types, search }) {
                 />
 
                 <p>
-                  If you're not on the network, reach out to us at{" "}
-                  <a href="mailto:grants@urbit.org">grants@urbit.org</a> and we'll
-                  get back to you within a couple of days.
+                  If you're not on the network, check out our <Link href="/getting-started">Getting Started</Link> guide.
                 </p>
               </div>
           </div>
