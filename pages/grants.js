@@ -217,20 +217,20 @@ export default function Grants({ posts, categories, types, search }) {
                   <li className="mb-2">
                     <p>
                       <Link href="/grants/proposals">Proposals</Link> are approved
-                      and stewarded by past grant workers
+                      and stewarded by past grant workers.
                     </p>
                   </li>
                   <li className="mb-2">
                     <p>
                       <Link href="/grants/bounties">Bounties</Link> are overseen
-                      by those that post them
+                      by those that post them.
                     </p>
                   </li>
                   <li className="mb-2">
                     <p>
                       <Link href="/grants/apprenticeships">Apprenticeships</Link>{" "}
                       are largely about building a relationship between apprentice
-                      and mentor
+                      and mentor.
                     </p>
                   </li>
                 </ul>
