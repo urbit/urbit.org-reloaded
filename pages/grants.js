@@ -150,7 +150,7 @@ export default function Grants({ posts, categories, types, search }) {
                   {/* Proposals */}
                     <h3>Proposals</h3>
                     <p className="mb-4">
-                    Get funding for your project.  We fund all kinds projects, not strictly technical ones,
+                    Proposals are the main way to get funding for your project.  We fund all kinds projects, not strictly technical ones,
                     so don't hesitate to pitch your idea!
                     </p>
                   <Link href="/grants/proposals" passHref>
