@@ -162,7 +162,7 @@ export default function Grants({ posts, categories, types, search }) {
                   {/* Apprenticeships */}
                     <h3>Apprenticeships</h3>
                     <p className="mb-4">
-                     Practical learning opportunities for
+                     Apprenticeships are practical learning opportunities for
                     new Urbit developers provided by members of the Urbit community.
                     They're one of the best ways to level up your skills, and often
                     lead to full-time jobs.
