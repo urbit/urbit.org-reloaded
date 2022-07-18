@@ -178,7 +178,7 @@ export default function Grants({ posts, categories, types, search }) {
                   {/* Bounties */}
                   <h3>Bounties</h3>
                   <p className="mb-4">
-                  Contracts for work provided by either the
+                  Bounties are contracts for work provided by either the
                     Urbit Foundation or from trusted partners in our ecosystem.
                   </p>
                   <div className="flex flex-wrap">
