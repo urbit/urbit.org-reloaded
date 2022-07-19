@@ -71,9 +71,14 @@ export async function getStaticProps({ params }) {
   );
 
   const spotlights = getAllPosts(
-    ["title", "slug", "featured"],
+    ["title", "slug", "featured-1", "featured-2", "featured-3"],
     "ecosystem/spotlight"
-  ).filter((e) => e.featured.includes(post.title));
+  ).filter(
+    (e) =>
+      e?.["featured-1"]?.title === post.title ||
+      e?.["featured-2"]?.title === post.title ||
+      e?.["featured-3"]?.title === post.title
+  );
 
   const applications = post.ships
     .map((ship) => {
