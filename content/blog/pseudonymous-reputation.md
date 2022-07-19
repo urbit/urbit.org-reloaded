@@ -11,7 +11,7 @@ image = "https://poldec-tonteg-content.sfo2.digitaloceanspaces.com/poldec-tonteg
 
 ![](https://poldec-tonteg-content.sfo2.digitaloceanspaces.com/poldec-tonteg/2022.7.14..19.19.05-image.png)
 
-_This is cross-posted from [The Combine DAO Blog](https://blog.the-combine.org). If you'd like to comment, join the public [Urbit group](https://urbit.org/groups/~famreb-todmec/the-combine-public)_
+_This is cross-posted from [The Combine DAO Blog](https://blog.the-combine.org). If you'd like to comment, join the public [Urbit group](https://urbit.org/groups/~famreb-todmec/the-combine-public)._
 
 [The Combine DAO](https://blog.the-combine.org/introduction-to-the-combine-dao) is a DAO built on Urbit to invest in promising projects on the network. While building the DAO, we did a survey of the existing identity solutions and found our solution close to home: Urbit ID provided the best balance of trust and anonymity due to the Urbit networks’ pseudonymous reputation. In this post, we’ll discuss the challenges facing DAOs and discuss why Urbit ID presents advantages over current approaches like token gated DAOs.
  
