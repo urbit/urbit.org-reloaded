@@ -6,10 +6,10 @@ description = "Using Urbit ID’s pseudonymous reputation model, DAO participant
 [extra]
 author = "Anthony Arroyo"
 ship = "~poldec-tonteg"
-image = "https://poldec-tonteg-content.sfo2.digitaloceanspaces.com/poldec-tonteg/2022.7.14..19.19.05-image.png"
+image = "https://storage.googleapis.com/media.urbit.org/blog/2022.7.14..19.19.05-image.jpg"
 +++
 
-![](https://poldec-tonteg-content.sfo2.digitaloceanspaces.com/poldec-tonteg/2022.7.14..19.19.05-image.png)
+![](https://storage.googleapis.com/media.urbit.org/blog/2022.7.14..19.19.05-image.jpg)
 
 _This is cross-posted from [The Combine DAO Blog](https://blog.the-combine.org). If you'd like to comment, join the public [Urbit group](https://urbit.org/groups/~famreb-todmec/the-combine-public)._
 
