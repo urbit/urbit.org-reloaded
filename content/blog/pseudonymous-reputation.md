@@ -17,9 +17,9 @@ _This is cross-posted from [The Combine DAO Blog](https://blog.the-combine.org).
  
 ## Trust, Anonymity and Pseudonymous Reputation
  
-Anonymity is a core feature of most DAOs. It’s great in theory. No one wants to trust that the humans operating Robinhood will execute trades how and when they say they will (much less know their names). We’d all prefer if a smart contract handled it for them.
+Anonymity is a core feature of most DAOs. It’s great in theory. No one wants to trust that the humans operating Robinhood will execute trades how and when they say they will (much less know their names.) We’d all prefer if a smart contract handled it for them.
  
-The problem is that trust and anonymity don’t mix, and trust is essential to the practical operation of any organization.This is why existing DAOs take shortcuts to establish trust hierarchies—things like delegating multi-sigs to small groups of trusted leaders, or trusted leaders establishing authority via exclusive Discord channels.
+The problem is that trust and anonymity don’t mix, and trust is essential to the practical operation of any organization. This is why existing DAOs take shortcuts to establish trust hierarchies—things like delegating multi-sigs to small groups of trusted leaders, or trusted leaders establishing authority via exclusive Discord channels.
  
 Put simply, if there’s no human to trust, there’s no human to hold accountable. Lack of accountability is a major hurdle for any organization.
  
@@ -41,19 +41,19 @@ Thus, unlike an anonymous wallet address, Twitter handles or Discord accounts, t
  
 ## Urbit ID for DAOs
  
-Many DAOs gate their membership on the ownership of a cryptographic asset like an ERC-721 or an ERC-20 token. Token gating is used to create a flat, anonymous membership. This was initially seen as a good thing. “One member, one voice.” All decisions made anonymously via multi sigs and voting apps secured via smart contract.
+Many DAOs gate their membership on the ownership of a cryptographic asset like an ERC-721 or an ERC-20 token. Token gating is used to create a flat, anonymous membership. This was initially seen as a good thing. “One member, one voice.” All decisions made anonymously via multi-sigs and voting apps secured via smart contract.
  
 Token gating also adds utility to NFTs; it unlocks access to perks like special releases or events apart from the core asset. To get into the Milady Rave you need to buy a Milady NFT. It doesn’t matter who you are, what you’ve done, or how capable you are of participating in the community’s goals, if you buy a Milady, you’re in. You have the same rights and privileges as everyone else. 
  
 In reality, many DAOs move inexorably back towards a more conventional model of “human trust” simply because organization requires it. That’s why DAO builders have long sought “decentralized IDs” for members. “One member, one voice” doesn’t work for complex, efficient decision making; it risks chaos and endless discussion. It creates the need for offchain governance executed by smaller groups, which is cumbersome, requires a patchwork of Web2 apps (i.e. Google and Notion), and undermines the “trustless” nature of the DAO. 
  
-To return to a prior example, imagine Robinhood was a DAO of its members. If it was run like DAOs today—e.g. those not built on Urbit—a group of Robinhood “elites” make and execute trade decisions via private Discord channels. DAO members vote to approve, but participation is low (Some DAOs even cold-call members to garner participation). Not only is participation low, it’s also low quality: banter about the issues of the day. 
+To return to a prior example, imagine Robinhood was a DAO of its members. If it was run like DAOs today—e.g. those not built on Urbit—a group of Robinhood “elites” make and execute trade decisions via private Discord channels. DAO members vote to approve, but participation is low. Some DAOs even cold-call members to garner participation. Not only is participation low, it’s also low quality: banter about the issues of the day. 
  
 Urbit ID mitigates membership participation issues by adding permanent, pseudonymous reputations to the mix. As in: Who are you letting into your DAO? And whose DAO are you joining?
 
 As a leader of an organization, you want high quality members. You want to avoid Dumb Money: people passively investing in your DAO because it’s cool, but without the ability to add value. You also want to avoid oversubscription/underparticipation: a dropoff in engagement from most members as they become interested in newer, shinier things.
 
-When it came time to recruit members for Combine DAO, we didn’t have to leave Urbit. We only considered those with strong pseudonymous reputations on the network, many of whom were anon outside of Urbit. Some of the Urbit IDs in Combine DAO like `~bitmep-faswyn` have been on the network for years. Some like `~timluc-miptev` have created valuable groups and built companies on Urbit. Selection blindness was both unneeded and unnecessary—members were selected not in spite of “who” they were on Urbit, but because of it. 
+When it came time to recruit members for Combine DAO, we didn’t have to leave Urbit. We only considered those with strong pseudonymous reputations on the network, many of whom were anonymous outside of Urbit. Some of the Urbit IDs in Combine DAO like `~bitmep-faswyn` have been on the network for years. Some like `~timluc-miptev` have created valuable groups and built companies on Urbit. Selection blindness was both unneeded and unnecessary—members were selected not in spite of “who” they were on Urbit, but because of it. 
 
 Pseudonymous reputations also allow prospective DAO members to better evaluate leaders. Urbit ID reputations subsume the need for patchworks of authority. You know exactly “who” `~mogmet-tadnem` is. You don’t need to google his Twitter handle and figure out, oh maybe he’s also the guy behind this or that DAO or NFT release. Leaders benefit from the past and are held accountable for future actions. 
  
