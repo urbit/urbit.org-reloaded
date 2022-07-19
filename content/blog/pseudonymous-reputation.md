@@ -13,7 +13,7 @@ image = "https://poldec-tonteg-content.sfo2.digitaloceanspaces.com/poldec-tonteg
 
 _This is cross-posted from [The Combine DAO Blog](https://blog.the-combine.org). If you'd like to comment, join the public [Urbit group](https://urbit.org/groups/~famreb-todmec/the-combine-public)_
 
-The Combine DAO is a DAO built on Urbit to invest in promising projects on the network. While building the DAO, we did a survey of the existing identity solutions and found our solution close to home: Urbit ID provided the best balance of trust and anonymity due to the Urbit networks’ pseudonymous reputation. In this post, we’ll discuss the challenges facing DAOs and discuss why Urbit ID presents advantages over current approaches like token gated DAOs.
+[The Combine DAO](https://blog.the-combine.org/introduction-to-the-combine-dao) is a DAO built on Urbit to invest in promising projects on the network. While building the DAO, we did a survey of the existing identity solutions and found our solution close to home: Urbit ID provided the best balance of trust and anonymity due to the Urbit networks’ pseudonymous reputation. In this post, we’ll discuss the challenges facing DAOs and discuss why Urbit ID presents advantages over current approaches like token gated DAOs.
  
 ## Trust, Anonymity and Pseudonymous Reputation
  
@@ -23,7 +23,7 @@ The problem is that trust and anonymity don’t mix, and trust is essential to t
  
 Put simply, if there’s no human to trust, there’s no human to hold accountable. Lack of accountability is a major hurdle for any organization.
  
-We were aware of this fundamental flaw when building Combine DAO on Urbit, and we’ve found a solution in Urbit ID. Urbit ID is the decentralized identity system at the core of the Urbit project. Urbit IDs are the “decentralized IDs” that DAO builders yearn for. They’re endowed with what we call pseudonymous reputations that unlock the ability to run DAOs in ways that more closely resemble successful IRL organizations, while maintaining the automation that makes them so attractive. 
+We were aware of this fundamental flaw when building Combine DAO on Urbit, and we’ve found a solution in Urbit ID. Urbit ID is the decentralized identity system at the core of the Urbit project. Urbit IDs are the “decentralized IDs” that [DAO builders yearn](https://thmueller.medium.com/decentralized-identity-3-ways-to-build-trust-in-your-dao-4871491903c8) for. They’re endowed with what we call pseudonymous reputations that unlock the ability to run DAOs in ways that more closely resemble successful IRL organizations, while maintaining the automation that makes them so attractive. 
  
 ## What is Urbit ID? 
  
