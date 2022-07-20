@@ -1,0 +1,109 @@
+import { useRouter } from "next/router";
+import Link from "next/link";
+import Head from "next/head";
+import Meta from "../Meta";
+import ErrorPage from "../../pages/404";
+import classnames from "classnames";
+import {
+  Container,
+  SingleColumn,
+  Section,
+  Markdown,
+  IntraNav,
+} from "foundation-design-system";
+import Header from "../Header";
+import Footer from "../Footer";
+
+export default function BasicPage({
+  section,
+  post,
+  group,
+  markdown,
+  search,
+  children,
+}) {
+  const router = useRouter();
+  if (!router.isFallback && !post?.slug) {
+    return <ErrorPage />;
+  }
+  return (
+    <Container>
+      <Head>
+        <title>
+          {post.title} • {section} • Urbit
+        </title>
+        {Meta(post)}
+      </Head>
+      <IntraNav ourSite="https://urbit.org" search={search} />
+      <SingleColumn>
+        <Header />
+        <Section narrow className="space-y-12">
+          <div className="flex items-center space-x-4">
+            <img src={post.image} className="w-36" />
+            <div className="flex flex-col">
+              <h1
+                className={classnames({ "text-3xl": section === "Podcasts" })}
+              >
+                {post.title}
+              </h1>
+              <p>{section.slice(0, -1)}</p>
+            </div>
+          </div>
+          {/* General purpose metadata bar -- podcast listen button is special-cased URL, flexed at the end of the row */}
+          <div className="flex justify-between">
+            <div className="flex space-x-12">
+              {post?.podcast && (
+                <div className="flex flex-col">
+                  <p className="font-bold text-wall-400">Podcast</p>
+                  <p>{post.podcast}</p>
+                </div>
+              )}
+              {post?.date && (
+                <div className="flex flex-col">
+                  <p className="font-bold text-wall-400">Date</p>
+                  <p className="shrink-0">{post.date}</p>
+                </div>
+              )}
+              {post?.URL && section !== "Podcasts" && (
+                <div className="flex flex-col">
+                  <p className="font-bold text-wall-400">Website</p>
+                  <a
+                    className="text-green-400 text-sm font-semibold font-mono"
+                    href={post.URL}
+                  >
+                    {post.URL.slice(post.URL.indexOf("://") + 3)}
+                  </a>
+                </div>
+              )}
+              {(group || post?.group) && (
+                <div className="flex flex-col">
+                  <p className="font-bold text-wall-400">Group</p>
+                  <Link href={`/groups/${post.group}`} passHref>
+                    <a className="text-green-400 text-sm font-semibold font-mono">
+                      {group?.title || post.group}
+                    </a>
+                  </Link>
+                </div>
+              )}
+            </div>
+            {post?.URL && section === "Podcasts" && (
+              <div className="button-lg bg-green-400 text-white cursor-pointer flex space-x-2">
+                <img src="/images/sound.svg" />
+                <a target="_blank" href={post.URL}>
+                  Listen
+                </a>
+              </div>
+            )}
+          </div>
+          <div className="flex">
+            <div className="markdown">
+              <Markdown.render content={JSON.parse(markdown)} />
+              {children}
+            </div>
+          </div>
+        </Section>
+      </SingleColumn>
+      <Footer />
+    </Container>
+  );
+}

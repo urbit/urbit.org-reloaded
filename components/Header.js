@@ -62,6 +62,13 @@ export default function Header(props) {
         >
           Overview
         </ActiveLink>
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 type-ui"
+          href="/ecosystem"
+        >
+          Ecosystem
+        </ActiveLink>
 
         <ActiveLink
           currentPath={currentPath}
@@ -69,14 +76,6 @@ export default function Header(props) {
           href="/using"
         >
           Manual
-        </ActiveLink>
-
-        <ActiveLink
-          currentPath={currentPath}
-          className="mr-5 type-ui"
-          href="/faq"
-        >
-          FAQ
         </ActiveLink>
 
         <ActiveLink
@@ -123,6 +122,13 @@ export default function Header(props) {
         <ActiveLink
           currentPath={currentPath}
           className="mr-5 mb-4"
+          href="/ecosystem"
+        >
+          Ecosystem
+        </ActiveLink>
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 mb-4"
           href="/using"
         >
           Manual
@@ -147,9 +153,6 @@ export default function Header(props) {
           href="/getting-started"
         >
           Get Started
-        </ActiveLink>
-        <ActiveLink currentPath={currentPath} className="mr-5 mb-4" href="/faq">
-          FAQ
         </ActiveLink>
       </MenuTray>
     </header>

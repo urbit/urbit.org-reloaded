@@ -16,8 +16,15 @@ import EventPreview from "../components/EventPreview";
 import TwoUp from "../components/TwoUp";
 import { getAllPosts, getAllEvents, generateRealtimeDate } from "../lib/lib";
 import { eventKeys } from "../lib/constants";
+import IndexCard from "../components/ecosystem/IndexCard";
 
-export default function Home({ posts, events, grantNumbers, search }) {
+export default function Home({
+  posts,
+  ecosystem,
+  events,
+  grantNumbers,
+  search,
+}) {
   return (
     <Container>
       <Head>
@@ -69,9 +76,9 @@ export default function Home({ posts, events, grantNumbers, search }) {
             computer from scratch. Good thing we started over a decade ago.
           </p>
           <p className="max-w-prose">
-            Today, Urbit is a real system with thousands of users that are building
-            all kinds of communities, software, DAOs, and more. And it’s getting
-            better every day.{" "}
+            Today, Urbit is a real system with thousands of users that are
+            building all kinds of communities, software, DAOs, and more. And
+            it’s getting better every day.{" "}
           </p>
           <Link href="/overview" passHref>
             <a className="button-lg bg-green-400 text-white type-ui max-w-fit">
@@ -79,7 +86,38 @@ export default function Home({ posts, events, grantNumbers, search }) {
             </a>
           </Link>
         </Section>
-
+        {/* Ecosystem */}
+        <Section>
+          <div className="flex flex-col space-y-8 pb-12">
+            <h2 className="m-0 p-0 mr-4">Ecosystem</h2>
+            <p>
+              The Urbit ecosystem is comprised of a wide variety of individuals
+              and organizations, including developers, DAOs, podcasters, and
+              more.
+            </p>
+            <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
+              {["featured-1", "featured-2", "featured-3"].map((feat) => {
+                if (ecosystem?.[feat]) {
+                  return (
+                    <IndexCard
+                      slug={
+                        ecosystem[feat].type === "Application"
+                          ? `/ids/${ecosystem[feat].URL}`
+                          : ecosystem[feat].URL
+                      }
+                      feat={ecosystem[feat]}
+                    />
+                  );
+                }
+              })}
+            </div>
+            <Link href="/ecosystem" passHref>
+              <a className="button-lg bg-green-400 text-white w-fit">
+                Explore Ecosystem
+              </a>
+            </Link>
+          </div>
+        </Section>
         {
           // Grants
         }
@@ -222,7 +260,6 @@ export default function Home({ posts, events, grantNumbers, search }) {
           <Contact emphasize />
         </Section>
       </SingleColumn>
-
       <Footer />
     </Container>
   );
@@ -234,6 +271,12 @@ export async function getStaticProps() {
     "blog",
     "date"
   );
+
+  const ecosystem = getAllPosts(
+    ["featured-1", "featured-2", "featured-3"],
+    "ecosystem/spotlight",
+    "date"
+  )[0];
 
   const events = getAllEvents(eventKeys, "events");
 
@@ -291,6 +334,7 @@ export async function getStaticProps() {
   return {
     props: {
       posts,
+      ecosystem,
       grantNumbers,
       events: happeningNow.concat(futureEvents).concat(pastEvents),
     },
