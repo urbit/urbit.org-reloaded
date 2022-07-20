@@ -35,7 +35,7 @@ Like wallet addresses, Urbit IDs are anonymous. Like Discord, Twitter, or Notion
 
 Your Urbit ID is to your urbit ship what your deed is to your house or your keys to your car. It encrypts all of your ship’s communications and provides access to your online communities, which in this instance are DAOs. 
 
-Using Urbit ID’s pseudonymous reputation model, DAO participants know Urbit ID holders’ past behavior before relying on them, and without sacrificing anonymity. Why do reputations stick to Urbit IDs? Because, like your physical person, every action you take with your Urbit ID affects your reputation. Urbit Maximilalists often ask “How high of a ransom would you pay if your Urbit ID were ‘kidnapped?’” That’s because the reputation of your Urbit ID is the result of years of labor. Imagine every social account you’ve ever had in one immutable chain tied to one immutable pseudonym. 
+Using Urbit ID’s pseudonymous reputation model, DAO participants know Urbit ID holders’ past behavior before relying on them, and without sacrificing anonymity. Why do reputations stick to Urbit IDs? Because, like your physical person, every action you take with your Urbit ID affects your reputation. Urbit Maximalists often ask “How high of a ransom would you pay if your Urbit ID were ‘kidnapped?’” That’s because the reputation of your Urbit ID is the result of years of labor. Imagine every social account you’ve ever had in one immutable chain tied to one immutable pseudonym. 
  
 Thus, unlike an anonymous wallet address, Twitter handles or Discord accounts, there are high incentives for keeping your Urbit ID’s reputation squeaky clean.
  
