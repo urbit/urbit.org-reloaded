@@ -252,13 +252,6 @@ export default function Home({
             </a>
           </Link>
         </Section>
-
-        {
-          // Newsletter and social media
-        }
-        <Section narrow>
-          <Contact emphasize />
-        </Section>
       </SingleColumn>
       <Footer />
     </Container>

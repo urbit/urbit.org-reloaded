@@ -57,9 +57,7 @@ export default function Post({ post, markdown, search }) {
         <Section narrow className="markdown">
           <Markdown.render content={JSON.parse(markdown)} />
         </Section>
-        <Section narrow>
-          <Contact />
-        </Section>
+        <Section narrow>/></Section>
         <Section wide className="flex">
           {
             // {previousPost === null ? (
