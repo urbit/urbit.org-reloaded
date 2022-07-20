@@ -53,10 +53,10 @@ export default function CopyLink({ content, className }) {
 
   return (
     <button
-      className={`bg-wall-600 p-4 rounded-xl button-lg text-white flex items-center justify-center space-x-4 ${className}`}
+      className={`bg-wall-600 p-4 rounded-xl button-sm text-white flex items-center justify-center space-x-2 ${className}`}
       onClick={() => copy()}
     >
-      <h4 className="">{copyStatus === "copied" ? "Copied" : "Copy Link"}</h4>
+      <p className="leading-5">{copyStatus === "copied" ? "Copied" : "Copy Link"}</p>
       {buttonIcon}
     </button>
   );
