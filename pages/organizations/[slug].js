@@ -13,7 +13,7 @@ export default function Organization({
   markdown,
   search,
   index,
-  group,
+  groups,
   applications = [],
   spotlights = [],
 }) {
@@ -21,7 +21,6 @@ export default function Organization({
     <BasicPage
       section="Organizations"
       post={post}
-      group={group}
       markdown={markdown}
       search={search}
       index={index}
@@ -53,6 +52,35 @@ export default function Organization({
                     )}
                   </div>
                   <p className="text-center font-bold font-xl">{app.title}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </>
+      )}
+      {groups.length > 0 && (
+        <>
+          <h3>Groups</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {groups.map((group) => (
+              <Link href={`/groups/${group.ship}/${group.slug}`}>
+                <div className="flex flex-col space-y-4 cursor-pointer">
+                  {group?.tile?.startsWith("#") ? (
+                    <div
+                      className="rounded-xl"
+                      style={{
+                        backgroundColor: group.tile,
+                        height: 164,
+                        width: 164,
+                      }}
+                    />
+                  ) : (
+                    <img
+                      src={group.tile}
+                      className="h-full w-full rounded-xl"
+                    />
+                  )}
+                  <p className="text-center font-bold font-xl">{group.title}</p>
                 </div>
               </Link>
             ))}
@@ -95,18 +123,18 @@ export async function getStaticProps({ params }) {
     })
     .flat();
 
-  let group = null;
-  const groupHost = post?.group?.slice(0, post.group.indexOf("/"));
-  const groupName = post?.group?.slice(post.group.indexOf("/"));
-  if (
-    post.group &&
-    fs.existsSync(path.join(process.cwd(), "content/groups", groupHost)) &&
-    fs.existsSync(
-      path.join(process.cwd(), "content/groups", groupHost, `${groupName}.md`)
-    )
-  ) {
-    group = getPostBySlug(groupName, ["title"], `groups/${groupHost}`);
-  }
+  const groups = post.ships
+    .map((ship) => {
+      let groups = [];
+      if (fs.existsSync(path.join(process.cwd(), "content/groups", ship))) {
+        groups = getAllPosts(["title", "tile", "slug"], `groups/${ship}`).map(
+          (e) => ({ ...e, ship })
+        );
+      }
+      return groups;
+    })
+    .flat();
+
   let { index } = post?.extra || { index: null };
 
   if (index === undefined) {
@@ -115,7 +143,7 @@ export async function getStaticProps({ params }) {
 
   const markdown = JSON.stringify(Markdown.parse({ post }));
   return {
-    props: { post, markdown, spotlights, applications, group, index },
+    props: { post, markdown, spotlights, applications, groups, index },
   };
 }
 

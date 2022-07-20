@@ -17,7 +17,6 @@ import Footer from "../Footer";
 export default function BasicPage({
   section,
   post,
-  group,
   markdown,
   search,
   children,
@@ -73,16 +72,6 @@ export default function BasicPage({
                   >
                     {post.URL.slice(post.URL.indexOf("://") + 3)}
                   </a>
-                </div>
-              )}
-              {(group || post?.group) && (
-                <div className="flex flex-col">
-                  <p className="font-bold text-wall-400">Group</p>
-                  <Link href={`/groups/${post.group}`} passHref>
-                    <a className="text-green-400 text-sm font-semibold font-mono">
-                      {group?.title || post.group}
-                    </a>
-                  </Link>
                 </div>
               )}
             </div>
