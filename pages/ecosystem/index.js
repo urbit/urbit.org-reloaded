@@ -102,8 +102,9 @@ export default function Ecosystem({
                 </>
               )}
               <div
-                className={classnames("grid grid-cols-2 gap-12 w-full", {
-                  "md:grid-cols-3": type !== "podcasts",
+                className={classnames("grid gap-12 w-full", {
+                  "grid-cols-2 md:grid-cols-3": type !== "podcasts",
+                  "grid-cols-1 lg:grid-cols-2": type === "podcasts",
                   hidden: type === undefined,
                 })}
               >
@@ -148,9 +149,11 @@ export default function Ecosystem({
                     <Link href={`/podcasts/${pod.slug}`}>
                       <div className="flex cursor-pointer space-x-4 items-center">
                         <img className="w-36" src={pod.image} />
-                        <div className="flex flex-col space-y-4">
+                        <div className="flex flex-col space-y-4 min-w-0">
                           <p className="font-bold">{pod.podcast}</p>
-                          <p>{pod.title}</p>
+                          <p className="truncate min-w-0 min-h-0">
+                            {pod.title}
+                          </p>
                           <p className="text-wall-400">{pod.date}</p>
                         </div>
                       </div>
