@@ -74,6 +74,14 @@ export default function Header(props) {
         <ActiveLink
           currentPath={currentPath}
           className="mr-5 type-ui"
+          href="/grants"
+        >
+          Grants
+        </ActiveLink>
+
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 type-ui"
           href="/events"
         >
           Events
@@ -105,6 +113,16 @@ export default function Header(props) {
           <a className="mt-2 mb-4">Developers</a>
         </Link>
         <hr className="border-wall-200" />
+
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 mb-4 text-green-400"
+          href="/getting-started"
+        >
+          Get Started
+        </ActiveLink>
+
+
         <ActiveLink
           currentPath={currentPath}
           className="mt-4 mr-5 mb-4"
@@ -112,12 +130,13 @@ export default function Header(props) {
         >
           Overview
         </ActiveLink>
-        <ActiveLink
-          currentPath={currentPath}
-          className="mr-5 mb-4"
-          href="/blog"
-        >
-          Blog
+
+        <ActiveLink currentPath={currentPath} className="mr-5 mb-4" href="/faq">
+          FAQ
+        </ActiveLink>
+
+        <ActiveLink currentPath={currentPath} className="mr-5 mb-4" href="/grants">
+          Grants
         </ActiveLink>
         <ActiveLink
           currentPath={currentPath}
@@ -126,16 +145,17 @@ export default function Header(props) {
         >
           Events
         </ActiveLink>
+        
         <ActiveLink
           currentPath={currentPath}
-          className="mr-5 mb-4 text-green-400"
-          href="/getting-started"
+          className="mr-5 mb-4"
+          href="/blog"
         >
-          Get Started
+          Blog
         </ActiveLink>
-        <ActiveLink currentPath={currentPath} className="mr-5 mb-4" href="/faq">
-          FAQ
-        </ActiveLink>
+
+
+
       </MenuTray>
     </header>
   );
