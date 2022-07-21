@@ -1,7 +1,7 @@
 +++
 title = "Demystifying the Politics of Urbit Governance with Anthony Arroyo of The Combine | The Urbit Series"
 podcast = "Other Life"
-date = "March 23, 2022"
+date = "March 18, 2022"
 URL = "https://podcast.otherlife.co/episodes/demystifying-the-politics-of-urbit-governance-with-anthony-arroyo-of-the-combine-the-urbit-series"
 image = "https://media.urbit.org/site/ecosystem/podcasts/full_1639502000-artwork.jpg"
 +++
