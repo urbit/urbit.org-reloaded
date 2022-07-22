@@ -5,7 +5,7 @@ const MetadataLink = ({ title, href, content }) => (
     <p className="font-bold text-wall-400">{title}</p>
     <Link href={href}>
       <div className="flex truncate">
-        <a className="type-ui truncate font-mono text-green-400">{content}</a>
+        <a className="truncate font-mono text-green-400">{content}</a>
       </div>
     </Link>
   </div>

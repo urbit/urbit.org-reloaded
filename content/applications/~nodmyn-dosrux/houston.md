@@ -6,6 +6,7 @@ image = "https://0x0.st/ojrj.png"
 bgColor = "#FFFFFF"
 developer = "~nodmyn-dosrux"
 website = "https://github.com/assemblycapital/houston"
+description = "Moon Management Dashboard"
 +++
 
 Moon Management Dashboard

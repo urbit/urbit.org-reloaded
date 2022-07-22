@@ -99,15 +99,19 @@ export default function Ecosystem({
                       Spotlight Archive
                     </a>
                   </Link>
+                  <Contact emphasize className="pt-36 self-center w-fit mx-auto" />
+
                 </>
               )}
               <div
                 className={classnames("grid gap-12 w-full", {
                   "grid-cols-2 md:grid-cols-3": type !== "podcasts",
-                  "grid-cols-1 lg:grid-cols-2": type === "podcasts",
+                  "grid-cols-1": type === "podcasts",
+                  "grid-cols-1 md:grid-cols-1": type === "applications",
                   hidden: type === undefined,
                 })}
               >
+
                 {type === "organizations" &&
                   organizations.map((org) => (
                     <Link href={`/organizations/${org.slug}`}>
@@ -120,18 +124,21 @@ export default function Ecosystem({
                 {type === "applications" &&
                   applications.map((app) => (
                     <Link href={`/applications/${app.ship}/${app.slug}`}>
-                      <div className="flex flex-col space-y-4 justify-center items-center cursor-pointer">
+                      <div className="flex space-x-4 items-center cursor-pointer ">
                         <div
-                          className="w-36 h-36 overflow-hidden rounded-xl"
+                          className="h-36 w-36 rounded-xl items-center justify-center"
                           style={{
                             backgroundColor: app?.bgColor || "rgba(0,0,0,0)",
                           }}
                         >
                           {app?.image && (
-                            <img className="w-full h-full" src={app.image} />
+                            <img className="items-center" src={app.image} />
                           )}
                         </div>
-                        <p className="text-center font-bold">{app.title}</p>
+                        <div className="">
+                        <p className="text-left font-bold">{app.title}</p>
+                        <p className="text-left text-wall-400 font-light">{app.description}</p>
+                        </div>
                       </div>
                     </Link>
                   ))}
@@ -148,10 +155,10 @@ export default function Ecosystem({
                   podcasts.map((pod) => (
                     <Link href={`/podcasts/${pod.slug}`}>
                       <div className="flex cursor-pointer space-x-4 items-center">
-                        <img className="w-36" src={pod.image} />
-                        <div className="flex flex-col space-y-4 min-w-0">
+                        <img className="w-28" src={pod.image} />
+                        <div className="flex flex-col space-y-2 min-w-0">
                           <p className="font-bold">{pod.podcast}</p>
-                          <p className="truncate min-w-0 min-h-0">
+                          <p className="min-w-0 min-h-0 leading-5 ">
                             {pod.title}
                           </p>
                           <p className="text-wall-400">{pod.date}</p>
@@ -162,7 +169,8 @@ export default function Ecosystem({
               </div>
             </div>
           </div>
-          <Contact emphasize className="pt-36 self-center w-fit mx-auto" />
+
+
         </Section>
       </SingleColumn>
       <Footer />
@@ -176,8 +184,8 @@ function ActiveLink({ children, href, className, currentPath }) {
     currentPath === "/ecosystem?type=archive" && href === "/ecosystem"
   );
   const activeClassName = classnames({
-    "text-wall-600": currentPath === href || archive,
-    "text-wall-500": currentPath !== href && !archive,
+    "text-wall-800": currentPath === href || archive,
+    "text-wall-400": currentPath !== href && !archive,
   });
 
   return (
@@ -325,7 +333,7 @@ export async function getStaticProps({}) {
     .filter((f) => f.isDirectory())
     .map((dir) =>
       getAllPosts(
-        ["title", "bgColor", "image", "slug"],
+        ["title", "bgColor", "image", "slug", "description"],
         `applications/${dir.name}`
       )
         .map((e) => ({ ...e, ship: dir.name }))

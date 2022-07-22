@@ -99,12 +99,10 @@ const GroupPage = ({ data, markdown, params }) => {
               Urbit is a clean-slate, peer-to-peer operating system and network.
             </h3>
             <div className="flex flex-col space-y-4">
-              <p className="text-sm font-semibold text-wall-400">
-                Get on the network and join this group.
-              </p>
+
               <Link href="/guides/joining-groups" passHref>
                 <a className="button-lg max-w-xs bg-green-400 text-white">
-                  How to join a group
+                  How to Join an Urbit Group
                 </a>
               </Link>
             </div>
@@ -113,7 +111,7 @@ const GroupPage = ({ data, markdown, params }) => {
           <div className="flex flex-col space-y-1">
             <p>Have a group you'd like to share publicly through urbit.org?</p>
             <Link href="/groups/submit" passHref>
-              <a className="type-ui text-green-400">Submit your group</a>
+              <a className="font-bold text-green-400">Submit your group</a>
             </Link>
           </div>
           <Link href="/" passHref>

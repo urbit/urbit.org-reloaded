@@ -6,6 +6,7 @@ image = "https://lomder-librun.sfo3.digitaloceanspaces.com/tiles/ballot-app-tile
 bgColor = "#cebef0"
 developer = "~lomder-librun"
 website = "https://www.holium.com"
+description = "An app that allows you to vote with other ships."
 +++
 
 An app that allows you to vote with other ships.

@@ -105,12 +105,9 @@ const ApplicationPage = ({ data, markdown, params }) => {
               Urbit is a clean-slate, peer-to-peer operating system and network.
             </h3>
             <div className="flex flex-col space-y-4">
-              <p className="text-sm font-semibold text-wall-400">
-                Learn how to install an Urbit application
-              </p>
               <Link href="/guides/installing-applications" passHref>
                 <a className="button-lg max-w-xs bg-green-400 text-white">
-                  Installing Urbit applications
+                  How to Install an Urbit Application
                 </a>
               </Link>
             </div>
@@ -122,7 +119,7 @@ const ApplicationPage = ({ data, markdown, params }) => {
               urbit.org?
             </p>
             <Link href="/applications/submit" passHref>
-              <a className="type-ui text-green-400">Submit your application</a>
+              <a className="font-bold text-green-400">Submit your application</a>
             </Link>
           </div>
           <Link href="/" passHref>

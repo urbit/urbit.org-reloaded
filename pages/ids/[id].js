@@ -145,12 +145,9 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
               Urbit is a clean-slate, peer-to-peer operating system and network.
             </h3>
             <div className="flex flex-col space-y-4">
-              <p className="text-md font-semibold text-wall-400">
-                Learn how get your own Urbit ID.
-              </p>
               <Link href="/guides/getting-an-urbit-id">
                 <button className="button-lg max-w-xs bg-green-400 text-white">
-                  Get an Urbit ID
+                  Learn how to get an Urbit ID
                 </button>
               </Link>
             </div>
@@ -159,7 +156,7 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
           <div className="flex flex-col space-y-1">
             <p>Have an Urbit ID?</p>
             <Link href="/ids/submit" passHref>
-              <a className="type-ui text-green-400">
+              <a className="font-bold text-green-400">
                 Claim and customize your Urbit ID page
               </a>
             </Link>

@@ -6,6 +6,7 @@ image = "https://yosoyubik.fra1.digitaloceanspaces.com/canvas/tile.svg"
 bgColor = "#3787B9"
 developer = "~norsyr-torryn"
 website = "https://github.com/yosoyubik/canvas"
+description = "Collaborative Pixel Art"
 +++
 
 Collaborative Pixel Art

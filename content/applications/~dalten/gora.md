@@ -7,3 +7,5 @@ license = "MIT"
 website = "https://dalten.org"
 bgColor = "#FCD977"
 +++
+
+A Proof of Attendance Protocol for Urbit
