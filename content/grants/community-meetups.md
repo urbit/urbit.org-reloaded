@@ -11,7 +11,7 @@ image = ""
 description = "Earn stars by building culture through local, recurring, and in-person urbit events"
 reward = "1 star"
 assignee = ""
-id = "B0165"
+grant_id = "B0165"
 champion = "~taller-ravnut"
 completed = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0165&prefill_Grant+Name=Meetup%20Bounty"
