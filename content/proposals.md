@@ -110,4 +110,4 @@ The Urbit Foundation must comply with international law when distributing addres
 
 After you've finished your work and gotten signoff from your champion, you'll [submit an invoice](https://airtable.com/shrXXCs1uaxtNSBcg) to the Urbit Foundation for the amount agreed upon in your grant or milestone, which the Foundation will pay.
 
-We approve and issue payments twice per month, **on the 2nd and 17th**, with payments happening over the course of **up to five days following those dates.** It takes a while because we have to issue each payment individually, and weekends/holidays sometimes interfere.
+We approve and issue payments within 30 days of invoice receipt and approval, although often payment is made more quickly as transactions are batched with other grantees who have recently completed milestones. If you are having any issues accepting stars through [Bridge](https://bridge.urbit.org) please contact `~taller-ravnut` for assistance.
