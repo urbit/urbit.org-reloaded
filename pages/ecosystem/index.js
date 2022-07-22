@@ -99,8 +99,12 @@ export default function Ecosystem({
                       Spotlight Archive
                     </a>
                   </Link>
-                  <Contact emphasize className="pt-36 self-center w-fit mx-auto" />
 
+                  <div className="pt-36">  
+                    <h3 className="pb-2">Urbit Monthly</h3>
+                    <p className="pb-8">Get the Spotlight in your inbox along with updates on everything Urbit.</p>
+                    <Contact emphasize className="w-full" />
+                  </div>
                 </>
               )}
               <div

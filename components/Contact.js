@@ -1,4 +1,4 @@
-import NewsletterSignup from "./NewletterSignup";
+import NewsletterSignup from "./NewsletterSignup";
 import { name, contact } from "../lib/constants";
 import Link from "next/link";
 
@@ -12,12 +12,6 @@ export default function Contact({
 
   return (
     <div className={className}>
-      <div className="measure">
-        <h4 className="pb-6">
-          Sign up for the Urbit Newsletter for a monthly Spotlight summary, and
-          more Urbit news.
-        </h4>
-      </div>
       <NewsletterSignup color={border} />
     </div>
   );

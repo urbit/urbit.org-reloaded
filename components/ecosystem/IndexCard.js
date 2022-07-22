@@ -4,7 +4,7 @@ export default function IndexCard({ slug, feat }) {
   return (
     <Link href={slug}>
       <div className="cursor-pointer bg-wall-100 rounded-xl basis-1/3 h-full">
-        <div className="flex flex-col p-6 justify-between items-between h-full relative">
+        <div className="flex flex-col p-4 justify-between items-between h-full relative">
           {feat.image ? (
             <img
               className="rounded-xl w-full flex-1 object-cover"
@@ -18,9 +18,9 @@ export default function IndexCard({ slug, feat }) {
             />
           )}
           <div className="grow-1 shrink-0 flex flex-col h-full min-h-0 pt-4">
-            <h3 className="mb-2">{feat.title}</h3>
+            <p className="mb-1 font-bold">{feat.title}</p>
             {badge(feat.type)}
-            <p>{feat?.description}</p>
+            <p className="text-sm">{feat?.description}</p>
           </div>
         </div>
       </div>
