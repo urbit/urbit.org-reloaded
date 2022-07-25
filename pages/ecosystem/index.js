@@ -316,15 +316,6 @@ export async function getStaticProps({}) {
     "ecosystem/spotlight",
     "date"
   )[0];
-  ["featured-1", "featured-2", "featured-3"].forEach((feat) => {
-    if (post?.[feat]) {
-      post[feat].content = JSON.stringify(
-        Markdown.parse({
-          post: { content: post[feat].content },
-        })
-      );
-    }
-  });
   const marketplaces = getAllPosts(["title", "image", "slug"], "marketplaces");
   const podcasts = getAllPosts(
     ["title", "image", "date", "podcast", "slug"],
@@ -354,6 +345,24 @@ export async function getStaticProps({}) {
       const nameB = b.title.toLowerCase();
       return nameA < nameB ? -1 : 1;
     });
+
+  ["featured-1", "featured-2", "featured-3"].forEach((feat) => {
+    if (post?.[feat]) {
+      const matchedPost = [
+        ...applications.map((e) => ({ ...e, type: "Application" })),
+        ...organizations.map((e) => ({ ...e, type: "Organization" })),
+        ...podcasts.map((e) => ({ ...e, type: "Podcast" })),
+        ...marketplaces.map((e) => ({ ...e, type: "Marketplace" })),
+      ].filter((e) => e.title === post[feat].title)?.[0];
+      post[feat].image = post[feat].image || matchedPost?.image;
+      post[feat].type = matchedPost?.type || "Podcast";
+      post[feat].content = JSON.stringify(
+        Markdown.parse({
+          post: { content: post[feat].content },
+        })
+      );
+    }
+  });
 
   return {
     props: { posts, post, applications, marketplaces, podcasts, organizations },
