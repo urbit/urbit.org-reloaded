@@ -21,7 +21,7 @@ work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B01
 - Meetups should be geographically based; if you have distributed, interest-based communities of which you are a part, check out Urbit Embassies for a way to build digital communities on Mars.
 - Meetups must be publicized and include a public web line with event details (time, date, location), and should be actively promoted via social media, in-person recruitment, flyers, a website, etc. If you need a signal boost, email support@urbit.org.
 - You must host a total of six meetups, with a targeted cadence of once a month.
-- Creation and admin of an Urbit group for your locality to which all meetup attendees will be invited, or a fully public group. This group should be actively maintained with info about upcoming events, copies of past presentation materials, or other related meetup content.
+- Creation and admin of an Urbit group for your locality to which all meetup attendees will be invited or a fully public group. This group should be actively maintained with info about upcoming events, copies of past presentation materials, and any other related meetup content.
 - Sharing of materials generated in service of your meetup; similarly, things like presentation materials, flyers, and FAQs from other meetups will be made available for utilization, forking, or inspiration. For more info, contact ~sarlev-sarsen or ask for help in ~siddef/uf-meetups
 - Completion of a pull request to the urbit.org github repo to add your meetup's information to the urbit.org/community/meetups page. If you have never submitted a pull request on github before, let us know and we will teach you how. You will need to provide the following:
 	- Location (City, State, GEO)
