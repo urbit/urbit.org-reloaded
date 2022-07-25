@@ -4,7 +4,10 @@ import Link from "next/link";
 export default function Post({ post }) {
   return ["featured-1", "featured-2", "featured-3"].map((feat) => {
     return post?.[feat] ? (
-      <div className="mt-8 mb-24">
+      <div
+        className="mt-8 mb-24"
+        id={post?.[feat].title.toLowerCase().replace(/ /, "-")}
+      >
         <div className="flex space-x-4 items-center">
           <img
             className="rounded-xl w-24 object-cover"

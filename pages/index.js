@@ -18,7 +18,6 @@ import { getAllPosts, getAllEvents, generateRealtimeDate } from "../lib/lib";
 import { eventKeys } from "../lib/constants";
 import IndexCard from "../components/ecosystem/IndexCard";
 
-
 export default function Home({
   posts,
   ecosystem,
@@ -101,11 +100,9 @@ export default function Home({
                 if (ecosystem?.[feat]) {
                   return (
                     <IndexCard
-                      slug={
-                        ecosystem[feat].type === "Application"
-                          ? `/ids/${ecosystem[feat].URL}`
-                          : ecosystem[feat].URL
-                      }
+                      slug={`/ecosystem/#${ecosystem[feat]?.title
+                        .toLowerCase()
+                        .replace(/ /, "-")}`}
                       feat={ecosystem[feat]}
                     />
                   );
@@ -254,17 +251,12 @@ export default function Home({
           </Link>
         </Section>
 
-
         <Section narrow>
-
           <h3 className="pb-2">Urbit Monthly</h3>
           <p className="pb-8">Get monthly email updates on all things Urbit.</p>
 
-
           <Contact emphasize />
         </Section>
-
-
       </SingleColumn>
       <Footer />
     </Container>
