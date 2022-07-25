@@ -121,7 +121,7 @@ export default function Ecosystem({
                 {type === "organizations" &&
                   organizations.map((org) => (
                     <Link href={`/organizations/${org.slug}`}>
-                      <div className="flex flex-col space-y-4 justify-center items-center cursor-pointer">
+                      <div className="flex flex-col space-y-4 justify-center items-center cursor-pointer hover:opacity-90">
                         <img className="w-36" src={org.image} />
                         <p className="text-center font-bold">{org.title}</p>
                       </div>
@@ -130,7 +130,7 @@ export default function Ecosystem({
                 {type === "applications" &&
                   applications.map((app) => (
                     <Link href={`/applications/${app.ship}/${app.slug}`}>
-                      <div className="flex space-x-4 items-center cursor-pointer ">
+                      <div className="flex space-x-4 items-center cursor-pointer hover:opacity-90">
                         <div
                           className="h-36 w-36 rounded-xl items-center justify-center"
                           style={{
@@ -153,7 +153,7 @@ export default function Ecosystem({
                 {type === "marketplaces" &&
                   marketplaces.map((market) => (
                     <Link href={`/marketplaces/${market.slug}`}>
-                      <div className="flex flex-col space-y-4 justify-center items-center cursor-pointer">
+                      <div className="flex flex-col space-y-4 justify-center items-center cursor-pointer hover:opacity-90">
                         <img className="w-36" src={market.image} />
                         <p className="text-center font-bold">{market.title}</p>
                       </div>
@@ -162,7 +162,7 @@ export default function Ecosystem({
                 {type === "podcasts" &&
                   podcasts.map((pod) => (
                     <Link href={`/podcasts/${pod.slug}`}>
-                      <div className="flex cursor-pointer space-x-4 items-center">
+                      <div className="flex cursor-pointer space-x-4 items-center hover:opacity-90">
                         <img className="w-28" src={pod.image} />
                         <div className="flex flex-col space-y-2 min-w-0">
                           <p className="font-bold">{pod.podcast}</p>
