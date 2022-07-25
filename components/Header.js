@@ -108,7 +108,7 @@ export default function Header(props) {
 
         <ActiveLink
           currentPath={currentPath}
-          className="mr-5 mb-4 text-green-400"
+          className="mr-5 mt-4 text-green-400"
           href="/getting-started"
         >
           Get Started
@@ -117,7 +117,7 @@ export default function Header(props) {
 
         <ActiveLink
           currentPath={currentPath}
-          className="mt-4 mr-5 mb-4"
+          className="mr-5 mb-4"
           href="/overview"
         >
           Overview
