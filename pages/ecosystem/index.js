@@ -100,9 +100,12 @@ export default function Ecosystem({
                     </a>
                   </Link>
 
-                  <div className="pt-36">  
+                  <div className="pt-36">
                     <h3 className="pb-2">Urbit Monthly</h3>
-                    <p className="pb-8">Get the Spotlight in your inbox along with updates on everything Urbit.</p>
+                    <p className="pb-8">
+                      Get the Spotlight in your inbox along with updates on
+                      everything Urbit.
+                    </p>
                     <Contact emphasize className="w-full" />
                   </div>
                 </>
@@ -115,7 +118,6 @@ export default function Ecosystem({
                   hidden: type === undefined,
                 })}
               >
-
                 {type === "organizations" &&
                   organizations.map((org) => (
                     <Link href={`/organizations/${org.slug}`}>
@@ -140,8 +142,10 @@ export default function Ecosystem({
                           )}
                         </div>
                         <div className="">
-                        <p className="text-left font-bold">{app.title}</p>
-                        <p className="text-left text-wall-400 font-light">{app.description}</p>
+                          <p className="text-left font-bold">{app.title}</p>
+                          <p className="text-left text-wall-400 font-light">
+                            {app.description}
+                          </p>
                         </div>
                       </div>
                     </Link>
@@ -165,7 +169,9 @@ export default function Ecosystem({
                           <p className="min-w-0 min-h-0 leading-5 ">
                             {pod.title}
                           </p>
-                          <p className="text-wall-400">{pod.date}</p>
+                          <p className="text-wall-400">
+                            {formatDate(generateDisplayDate(pod.date))}
+                          </p>
                         </div>
                       </div>
                     </Link>
@@ -173,8 +179,6 @@ export default function Ecosystem({
               </div>
             </div>
           </div>
-
-
         </Section>
       </SingleColumn>
       <Footer />
@@ -324,7 +328,8 @@ export async function getStaticProps({}) {
   const marketplaces = getAllPosts(["title", "image", "slug"], "marketplaces");
   const podcasts = getAllPosts(
     ["title", "image", "date", "podcast", "slug"],
-    "podcasts"
+    "podcasts",
+    "date"
   );
   const organizations = getAllPosts(
     ["title", "image", "slug"],
