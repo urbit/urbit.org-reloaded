@@ -55,4 +55,21 @@ A %warp request to clay is maintained for each clay file in the map in order to
 be notified about changes to them. When notified about said changes, Eyre will
 give a %gift to the runtime.
 
+### Milestone 1: 3 stars
+
+Have a complete pass-through interface inside Eyre for catching GET requests and
+bypassing the normal flow to do a scry instead. Fully implement the Clay request
+flow and subscription for keeping track of all scry paths in the map. Milestone
+is considered complete once the code is to spec and has been tested by
+~tacryt-socryp.
+
+### Milestone 2: 2 stars
+
+Have a complete modification to Arvo for issuing a new runtime %gift to notify
+the interpreter that content in the Eyre scry map has changed, and test  that it
+is sent upon %born events and when content changes. This milestone is considered
+complete once the code is to spec, it has been tested by ~tacryt-socryp, and one
+or more reviewers from the core team has approved the code, but not necessarily
+merged it.
+
 reward: 5 stars

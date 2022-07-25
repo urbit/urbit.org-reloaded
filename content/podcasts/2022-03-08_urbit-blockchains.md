@@ -1,7 +1,7 @@
 +++
 title = "Urbit, Blockchains, and the Next Billion Users with Ted Blackman, Engineer at Tlon | The Urbit Series"
 podcast = "Other Life"
-date = "March 8, 2022"
+date = "2022-03-08"
 URL = "https://podcast.otherlife.co/episodes/urbit-blockchains-and-the-next-billion-users-with-ted-blackman-engineer-at-tlon-the-urbit-series"
 image = "https://media.urbit.org/site/ecosystem/podcasts/full_1639502000-artwork.jpg"
 +++

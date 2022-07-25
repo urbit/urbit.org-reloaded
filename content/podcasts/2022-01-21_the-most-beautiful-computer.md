@@ -1,7 +1,7 @@
 +++
 title = "The Most Beautiful Computer with Édouard Urcades | The Urbit Series"
 podcast = "Other Life"
-date = "January 21, 2022"
+date = "2022-01-21"
 URL = "https://podcast.otherlife.co/episodes/quantum-computing-and-anarcho-communist-swarm-intelligence-with-jonathan-paprocki-the-urbit-series"
 image = "https://media.urbit.org/site/ecosystem/podcasts/full_1639502000-artwork.jpg"
 +++

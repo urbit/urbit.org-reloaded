@@ -1,7 +1,7 @@
 +++
 title = "The 100-Year Computer with Galen Wolfe-Pauly | The Urbit Series"
 podcast = "Other Life"
-date = "February 1, 2022"
+date = "2022-02-01"
 URL = "https://www.youtube.com/watch?v=YWOsBWBQAnQ"
 image = "https://media.urbit.org/site/ecosystem/podcasts/full_1639502000-artwork.jpg"
 +++

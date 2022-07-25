@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import { getPage } from "../../lib/lib";
+import { getPage, getAllPosts } from "../../lib/lib";
 import { join } from "path";
 import CopyLink from "../../components/CopyLink";
 import {
@@ -16,7 +16,7 @@ import MetadataBlock from "../../components/gateway/MetadataBlock";
 import MetadataLink from "../../components/gateway/MetadataLink";
 import Description from "../../components/gateway/Description";
 
-const ApplicationPage = ({ data, markdown, params }) => {
+const ApplicationPage = ({ data, markdown, organisation, params }) => {
   const { application } = params;
   if (!ob.isValidPatp(application[0])) {
     return <Gateway404 type="application" />;
@@ -29,6 +29,31 @@ const ApplicationPage = ({ data, markdown, params }) => {
     data.title
   }.png?${reqParams.join("&")}`;
 
+  let devLink;
+
+  if (organisation) {
+    devLink = (
+      <MetadataLink
+        title="Developer"
+        href={`/organizations/${organisation.slug}`}
+        content={organisation.title}
+      />
+    );
+  } else {
+    devLink =
+      ob.isValidPatp(data?.developer || "") && data?.developer.length <= 14 ? (
+        <MetadataLink
+          title="Developer"
+          href={`/ids/${data.developer}`}
+          content={data.developer}
+        />
+      ) : (
+        <MetadataBlock
+          title="Developer"
+          content={data.developer ? data.developer : "Unknown"}
+        />
+      );
+  }
   return (
     <Container>
       <Head>
@@ -76,19 +101,7 @@ const ApplicationPage = ({ data, markdown, params }) => {
                 }
               />
             )}
-            {ob.isValidPatp(data?.developer || "") &&
-            data?.developer.length <= 14 ? (
-              <MetadataLink
-                title="Developer"
-                href={`/ids/${data.developer}`}
-                content={data.developer}
-              />
-            ) : (
-              <MetadataBlock
-                title="Developer"
-                content={data.developer ? data.developer : "Unknown"}
-              />
-            )}
+            {devLink}
             <CopyLink
               className="basis-1/2 sm:basis-1/4"
               content={data.shortcode ? data.shortcode : data.title}
@@ -119,7 +132,9 @@ const ApplicationPage = ({ data, markdown, params }) => {
               urbit.org?
             </p>
             <Link href="/applications/submit" passHref>
-              <a className="font-bold text-green-400">Submit your application</a>
+              <a className="font-bold text-green-400">
+                Submit your application
+              </a>
             </Link>
           </div>
           <Link href="/" passHref>
@@ -145,6 +160,11 @@ export const getServerSideProps = async ({ params, res }) => {
     )
   ) || { data: {}, content: "" };
 
+  const organisation =
+    getAllPosts(["title", "slug", "ships"], "organizations").filter((e) =>
+      e.ships.includes(params.application?.[0])
+    )[0] || null;
+
   const markdown =
     content !== ""
       ? JSON.stringify(Markdown.parse({ post: { content } }))
@@ -161,6 +181,7 @@ export const getServerSideProps = async ({ params, res }) => {
     props: {
       data,
       markdown,
+      organisation,
       params,
     },
   };

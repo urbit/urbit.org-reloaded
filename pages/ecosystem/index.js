@@ -1,6 +1,3 @@
-// All sections in one template
-// Grid-columns-three
-// Get content from content/ecosystem/spotlight, content/applications, content/marketplaces, content/organizations, content/podcasts, content/groups
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Meta from "../../components/Meta";
@@ -100,9 +97,12 @@ export default function Ecosystem({
                     </a>
                   </Link>
 
-                  <div className="pt-36">  
+                  <div className="pt-36">
                     <h3 className="pb-2">Urbit Monthly</h3>
-                    <p className="pb-8">Get the Spotlight in your inbox along with updates on everything Urbit.</p>
+                    <p className="pb-8">
+                      Get the Spotlight in your inbox along with updates on
+                      everything Urbit.
+                    </p>
                     <Contact emphasize className="w-full" />
                   </div>
                 </>
@@ -111,15 +111,14 @@ export default function Ecosystem({
                 className={classnames("grid gap-12 w-full", {
                   "grid-cols-2 md:grid-cols-3": type !== "podcasts",
                   "grid-cols-1": type === "podcasts",
-                  "grid-cols-1 md:grid-cols-1": type === "applications",
+                  "grid-cols-1 md:grid-cols-2": type === "applications",
                   hidden: type === undefined,
                 })}
               >
-
                 {type === "organizations" &&
                   organizations.map((org) => (
                     <Link href={`/organizations/${org.slug}`}>
-                      <div className="flex flex-col space-y-4 justify-center items-center cursor-pointer">
+                      <div className="flex flex-col space-y-4 justify-center items-center cursor-pointer hover:opacity-90">
                         <img className="w-36" src={org.image} />
                         <p className="text-center font-bold">{org.title}</p>
                       </div>
@@ -128,20 +127,25 @@ export default function Ecosystem({
                 {type === "applications" &&
                   applications.map((app) => (
                     <Link href={`/applications/${app.ship}/${app.slug}`}>
-                      <div className="flex space-x-4 items-center cursor-pointer ">
+                      <div className="flex space-x-4 items-center cursor-pointer hover:opacity-90">
                         <div
-                          className="h-36 w-36 rounded-xl items-center justify-center"
+                          className="h-36 w-36 rounded-xl items-center justify-center shrink-0 overflow-hidden"
                           style={{
                             backgroundColor: app?.bgColor || "rgba(0,0,0,0)",
                           }}
                         >
                           {app?.image && (
-                            <img className="items-center" src={app.image} />
+                            <img
+                              className="items-center h-36 w-36"
+                              src={app.image}
+                            />
                           )}
                         </div>
                         <div className="">
-                        <p className="text-left font-bold">{app.title}</p>
-                        <p className="text-left text-wall-400 font-light">{app.description}</p>
+                          <p className="text-left font-bold">{app.title}</p>
+                          <p className="text-left text-wall-400 font-light">
+                            {app.description}
+                          </p>
                         </div>
                       </div>
                     </Link>
@@ -149,7 +153,7 @@ export default function Ecosystem({
                 {type === "marketplaces" &&
                   marketplaces.map((market) => (
                     <Link href={`/marketplaces/${market.slug}`}>
-                      <div className="flex flex-col space-y-4 justify-center items-center cursor-pointer">
+                      <div className="flex flex-col space-y-4 justify-center items-center cursor-pointer hover:opacity-90">
                         <img className="w-36" src={market.image} />
                         <p className="text-center font-bold">{market.title}</p>
                       </div>
@@ -158,14 +162,16 @@ export default function Ecosystem({
                 {type === "podcasts" &&
                   podcasts.map((pod) => (
                     <Link href={`/podcasts/${pod.slug}`}>
-                      <div className="flex cursor-pointer space-x-4 items-center">
+                      <div className="flex cursor-pointer space-x-4 items-center hover:opacity-90">
                         <img className="w-28" src={pod.image} />
                         <div className="flex flex-col space-y-2 min-w-0">
                           <p className="font-bold">{pod.podcast}</p>
                           <p className="min-w-0 min-h-0 leading-5 ">
                             {pod.title}
                           </p>
-                          <p className="text-wall-400">{pod.date}</p>
+                          <p className="text-wall-400">
+                            {formatDate(generateDisplayDate(pod.date))}
+                          </p>
                         </div>
                       </div>
                     </Link>
@@ -173,8 +179,6 @@ export default function Ecosystem({
               </div>
             </div>
           </div>
-
-
         </Section>
       </SingleColumn>
       <Footer />
@@ -312,19 +316,11 @@ export async function getStaticProps({}) {
     "ecosystem/spotlight",
     "date"
   )[0];
-  ["featured-1", "featured-2", "featured-3"].forEach((feat) => {
-    if (post?.[feat]) {
-      post[feat].content = JSON.stringify(
-        Markdown.parse({
-          post: { content: post[feat].content },
-        })
-      );
-    }
-  });
   const marketplaces = getAllPosts(["title", "image", "slug"], "marketplaces");
   const podcasts = getAllPosts(
     ["title", "image", "date", "podcast", "slug"],
-    "podcasts"
+    "podcasts",
+    "date"
   );
   const organizations = getAllPosts(
     ["title", "image", "slug"],
@@ -349,6 +345,25 @@ export async function getStaticProps({}) {
       const nameB = b.title.toLowerCase();
       return nameA < nameB ? -1 : 1;
     });
+
+  ["featured-1", "featured-2", "featured-3"].forEach((feat) => {
+    if (post?.[feat]) {
+      const matchedPost = [
+        ...applications.map((e) => ({ ...e, type: "Application" })),
+        ...organizations.map((e) => ({ ...e, type: "Organization" })),
+        ...podcasts.map((e) => ({ ...e, type: "Podcast" })),
+        ...marketplaces.map((e) => ({ ...e, type: "Marketplace" })),
+      ].filter((e) => e.title === post[feat].title)?.[0];
+      post[feat].image = post[feat].image || matchedPost?.image;
+      post[feat].type = matchedPost?.type || "Podcast";
+      post[feat].matchedPost = matchedPost || null;
+      post[feat].content = JSON.stringify(
+        Markdown.parse({
+          post: { content: post[feat].content },
+        })
+      );
+    }
+  });
 
   return {
     props: { posts, post, applications, marketplaces, podcasts, organizations },

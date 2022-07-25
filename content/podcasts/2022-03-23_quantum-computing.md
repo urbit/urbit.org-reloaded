@@ -1,7 +1,7 @@
 +++
 title = "Quantum Computing and Anarcho-Communist Swarm Intelligence with Jonathan Paprocki | The Urbit Series"
 podcast = "Other Life"
-date = "March 23, 2022"
+date = "2022-03-23"
 URL = "https://podcast.otherlife.co/episodes/quantum-computing-and-anarcho-communist-swarm-intelligence-with-jonathan-paprocki-the-urbit-series"
 image = "https://media.urbit.org/site/ecosystem/podcasts/full_1639502000-artwork.jpg"
 +++

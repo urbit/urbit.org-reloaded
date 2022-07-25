@@ -1,7 +1,7 @@
 +++
 title = "The Only Dignified Computer with Tirrel Corporation | The Urbit Series"
 podcast = "Other Life"
-date = "January 26, 2022"
+date = "2022-01-26"
 URL = "https://podcast.otherlife.co/episodes/urbit-blockchains-and-the-next-billion-users-with-ted-blackman-engineer-at-tlon-the-urbit-series"
 image = "https://media.urbit.org/site/ecosystem/podcasts/full_1639502000-artwork.jpg"
 +++

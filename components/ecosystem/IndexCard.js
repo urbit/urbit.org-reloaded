@@ -3,7 +3,7 @@ import classnames from "classnames";
 export default function IndexCard({ slug, feat }) {
   return (
     <Link href={slug}>
-      <div className="cursor-pointer bg-wall-100 rounded-xl basis-1/3 h-full">
+      <div className="cursor-pointer bg-wall-100 rounded-xl min-h-0 flex-1">
         <div className="flex flex-col p-4 justify-between items-between h-full relative">
           {feat.image ? (
             <img
@@ -36,7 +36,7 @@ const badge = (type) => {
         {
           "bg-[#B37ED7]": type === "Organization",
           "bg-[#83b2d4]": type === "Application",
-          "bg-[#8dd5b1]": type === "Podcast",
+          "bg-[#333333]": type === "Podcast",
           "bg-[#8dd5b1]": type === "Marketplace",
         }
       )}
