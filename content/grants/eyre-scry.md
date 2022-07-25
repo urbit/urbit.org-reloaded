@@ -12,10 +12,10 @@ description = "Speed up Urbit http server by implementing a cache for requests"
 reward = "5 stars"
 assignee = ""
 champion = "~tirrel"
-grant_id = "B0182"
+grant_id = "B0151"
 completed = false
 canceled = false
-work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefillGrant+ID=&prefillGrant+Name=Eyre%20Request%20Cache"
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefillGrant+ID=B0151&prefillGrant+Name=Eyre%20Request%20Cache"
 +++
 
 

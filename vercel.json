@@ -47,11 +47,6 @@
       "permanent": true
     },
     {
-      "source": "/using/os/getting-started",
-      "destination": "/using/os/basics",
-      "permanent": true
-    },
-    {
       "source": "/grants/(apprenticeships|proposals|bounties)/:page",
       "destination": "/grants/:page",
       "permanent": true
@@ -72,6 +67,11 @@
       "permanent": true
     },
     {
+      "source": "/using/:path*",
+      "destination": "https://operators.urbit.org/manual/:path",
+      "permanent": true
+    },
+    {
       "source": "/install/mac/latest",
       "destination": "https://github.com/urbit/urbit/releases/latest/download/darwin.tgz",
       "permanent": true
@@ -84,51 +84,6 @@
     {
       "source": "/install/windows/latest",
       "destination": "http://github.com/urbit/urbit/releases/latest/download/windows.tgz",
-      "permanent": true
-    },
-    {
-      "source": "/using/install",
-      "destination": "/getting-started",
-      "permanent": true
-    },
-    {
-      "source": "/using/planet",
-      "destination": "/getting-started/planet",
-      "permanent": true
-    },
-    {
-      "source": "/using/integrating-api",
-      "destination": "/docs/arvo/eyre/using-eyre",
-      "permanent": true
-    },
-    {
-      "source": "/using/operations",
-      "destination": "/using",
-      "permanent": true
-    },
-    {
-      "source": "/using/operations/bridge",
-      "destination": "/using/id/using-bridge",
-      "permanent": true
-    },
-    {
-      "source": "/using/operations/hosting",
-      "destination": "/using/running/hosting",
-      "permanent": true
-    },
-    {
-      "source": "/using/operations/using-your-ship",
-      "destination": "/using/os/getting-started",
-      "permanent": true
-    },
-    {
-      "source": "/using/operations/stars-and-galaxies",
-      "destination": "/using/os/stars-and-galaxies",
-      "permanent": true
-    },
-    {
-      "source": "/using/operations/bridge-troubleshooting",
-      "destination": "/using/id/bridge-troubleshooting",
       "permanent": true
     },
     {

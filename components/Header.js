@@ -62,20 +62,20 @@ export default function Header(props) {
         >
           Overview
         </ActiveLink>
+
         <ActiveLink
           currentPath={currentPath}
           className="mr-5 type-ui"
-          href="/ecosystem"
-        >
+          href="/ecosystem">
           Ecosystem
         </ActiveLink>
 
         <ActiveLink
           currentPath={currentPath}
           className="mr-5 type-ui"
-          href="/using"
-        >
-          Manual
+          href="/grants">
+
+          Grants
         </ActiveLink>
 
         <ActiveLink
@@ -112,41 +112,7 @@ export default function Header(props) {
           <a className="mt-2 mb-4">Developers</a>
         </Link>
         <hr className="border-wall-200" />
-        <ActiveLink
-          currentPath={currentPath}
-          className="mt-4 mr-5 mb-4"
-          href="/overview"
-        >
-          Overview
-        </ActiveLink>
-        <ActiveLink
-          currentPath={currentPath}
-          className="mr-5 mb-4"
-          href="/ecosystem"
-        >
-          Ecosystem
-        </ActiveLink>
-        <ActiveLink
-          currentPath={currentPath}
-          className="mr-5 mb-4"
-          href="/using"
-        >
-          Manual
-        </ActiveLink>
-        <ActiveLink
-          currentPath={currentPath}
-          className="mr-5 mb-4"
-          href="/blog"
-        >
-          Blog
-        </ActiveLink>
-        <ActiveLink
-          currentPath={currentPath}
-          className="mr-5 mb-4"
-          href="/events"
-        >
-          Events
-        </ActiveLink>
+
         <ActiveLink
           currentPath={currentPath}
           className="mr-5 mb-4 text-green-400"
@@ -154,6 +120,43 @@ export default function Header(props) {
         >
           Get Started
         </ActiveLink>
+
+
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 mb-4"
+          href="/ecosystem">
+
+          Ecosystem
+        </ActiveLink>
+
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 mb-4"
+          href="/overview">
+          Overview
+        </ActiveLink>
+
+        <ActiveLink currentPath={currentPath} className="mr-5 mb-4" href="/grants">
+          Grants
+        </ActiveLink>
+
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 mb-4"
+          href="/events"
+        >
+          Events
+        </ActiveLink>
+        
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 mb-4"
+          href="/blog"
+        >
+          Blog
+        </ActiveLink>
+
       </MenuTray>
     </header>
   );
