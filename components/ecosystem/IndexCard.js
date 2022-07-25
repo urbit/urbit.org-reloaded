@@ -3,7 +3,7 @@ import classnames from "classnames";
 export default function IndexCard({ slug, feat }) {
   return (
     <Link href={slug}>
-      <div className="cursor-pointer bg-wall-100 rounded-xl basis-1/3 h-full">
+      <div className="cursor-pointer bg-wall-100 rounded-xl min-h-0 flex-1">
         <div className="flex flex-col p-4 justify-between items-between h-full relative">
           {feat.image ? (
             <img
