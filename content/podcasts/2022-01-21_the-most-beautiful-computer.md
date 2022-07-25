@@ -8,8 +8,9 @@ image = "https://media.urbit.org/site/ecosystem/podcasts/full_1639502000-artwork
 
 Édouard Urcades is a designer at Tlon. He thinks computers are like flowers; his goal is to design the most beautiful computer.
 
-Édouard on Twitter: https://twitter.com/fiowerstructure
-Édouard on Urbit: ~fabled-faster
+Édouard on Twitter: https://twitter.com/flowerstructure
+
+Édouard on Urbit: [~fabled-faster](https://urbit.org/ids/~fabled-faster)
 
 ✦ Get your own Urbit planet at [imperceptible.computer](https://imperceptible.computer)
 

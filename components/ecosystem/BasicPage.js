@@ -76,12 +76,10 @@ export default function BasicPage({
               )}
             </div>
             {post?.URL && section === "Podcasts" && (
-              <div className="button-lg bg-green-400 text-white cursor-pointer flex space-x-2">
+              <a href={post.URL} className="button-lg bg-green-400 text-white cursor-pointer flex space-x-2">
                 <img src="/images/sound.svg" />
-                <a target="_blank" href={post.URL}>
-                  Listen
-                </a>
-              </div>
+                  &nbsp;Listen
+              </a>
             )}
           </div>
           <div className="flex">
