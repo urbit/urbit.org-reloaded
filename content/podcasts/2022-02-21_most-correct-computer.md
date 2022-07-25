@@ -1,7 +1,7 @@
 +++
 title = "The Most Correct Computer (How Urbit Wins) with Philip Monk, CTO of Tlon | The Urbit Series"
 podcast = "Other Life"
-date = "February 21, 2022"
+date = "2022-02-21"
 URL = "https://podcast.otherlife.co/episodes/the-most-correct-computer-how-urbit-wins-with-philip-monk-cto-of-tlon-the-urbit-series"
 image = "https://media.urbit.org/site/ecosystem/podcasts/full_1639502000-artwork.jpg"
 +++

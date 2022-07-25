@@ -1,7 +1,7 @@
 +++
 title = "Rationalists Are a Bunch of Queers with Wet Brain | The Urbit Series"
 podcast = "Other Life"
-date = "February 7, 2022"
+date = "2022-02-07"
 URL = "https://podcast.otherlife.co/episodes/rationalists-are-a-bunch-of-queers-with-wet-brain-the-urbit-series"
 image = "https://media.urbit.org/site/ecosystem/podcasts/full_1639502000-artwork.jpg"
 +++

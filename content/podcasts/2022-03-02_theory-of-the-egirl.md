@@ -1,7 +1,7 @@
 +++
 title = "Materials for a Theory of the E-Girl with Soph and **** of Remilia Collective | The Urbit Series"
 podcast = "Other Life"
-date = "March 2, 2022"
+date = "2022-03-02"
 URL = "https://podcast.otherlife.co/episodes/materials-for-a-theory-of-the-e-girl-with-soph-and-of-remilia-collective-the-urbit-series"
 image = "https://media.urbit.org/site/ecosystem/podcasts/full_1639502000-artwork.jpg"
 +++

@@ -1,7 +1,7 @@
 +++
 title = "Alien Invasions From the Future with Sam Frank, Writer and Galaxy Owner | The Urbit Series"
 podcast = "Other Life"
-date = "March 13, 2022"
+date = "2022-03-12"
 URL = "https://podcast.otherlife.co/episodes/alien-invasions-from-the-future-with-sam-frank-writer-and-galaxy-owner-the-urbit-series"
 image = "https://media.urbit.org/site/ecosystem/podcasts/full_1639502000-artwork.jpg"
 
