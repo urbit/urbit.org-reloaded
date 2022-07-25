@@ -1,6 +1,3 @@
-// All sections in one template
-// Grid-columns-three
-// Get content from content/ecosystem/spotlight, content/applications, content/marketplaces, content/organizations, content/podcasts, content/groups
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Meta from "../../components/Meta";
@@ -114,7 +111,7 @@ export default function Ecosystem({
                 className={classnames("grid gap-12 w-full", {
                   "grid-cols-2 md:grid-cols-3": type !== "podcasts",
                   "grid-cols-1": type === "podcasts",
-                  "grid-cols-1 md:grid-cols-1": type === "applications",
+                  "grid-cols-1 md:grid-cols-2": type === "applications",
                   hidden: type === undefined,
                 })}
               >
@@ -132,13 +129,16 @@ export default function Ecosystem({
                     <Link href={`/applications/${app.ship}/${app.slug}`}>
                       <div className="flex space-x-4 items-center cursor-pointer hover:opacity-90">
                         <div
-                          className="h-36 w-36 rounded-xl items-center justify-center"
+                          className="h-36 w-36 rounded-xl items-center justify-center shrink-0 overflow-hidden"
                           style={{
                             backgroundColor: app?.bgColor || "rgba(0,0,0,0)",
                           }}
                         >
                           {app?.image && (
-                            <img className="items-center" src={app.image} />
+                            <img
+                              className="items-center h-36 w-36"
+                              src={app.image}
+                            />
                           )}
                         </div>
                         <div className="">
