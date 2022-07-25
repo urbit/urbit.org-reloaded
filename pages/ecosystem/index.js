@@ -356,6 +356,7 @@ export async function getStaticProps({}) {
       ].filter((e) => e.title === post[feat].title)?.[0];
       post[feat].image = post[feat].image || matchedPost?.image;
       post[feat].type = matchedPost?.type || "Podcast";
+      post[feat].matchedPost = matchedPost || null;
       post[feat].content = JSON.stringify(
         Markdown.parse({
           post: { content: post[feat].content },
