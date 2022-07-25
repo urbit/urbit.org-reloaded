@@ -66,14 +66,6 @@ export default function Header(props) {
         <ActiveLink
           currentPath={currentPath}
           className="mr-5 type-ui"
-          href="/faq"
-        >
-          FAQ
-        </ActiveLink>
-
-        <ActiveLink
-          currentPath={currentPath}
-          className="mr-5 type-ui"
           href="/grants"
         >
           Grants
@@ -129,10 +121,6 @@ export default function Header(props) {
           href="/overview"
         >
           Overview
-        </ActiveLink>
-
-        <ActiveLink currentPath={currentPath} className="mr-5 mb-4" href="/faq">
-          FAQ
         </ActiveLink>
 
         <ActiveLink currentPath={currentPath} className="mr-5 mb-4" href="/grants">
