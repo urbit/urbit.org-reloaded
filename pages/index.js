@@ -225,7 +225,7 @@ export default function Home({
           </TwoUp>
 
           <Link href="/blog" passHref>
-            <a className="button-lg max-w-fit type-ui text-white bg-green-400">
+            <a className="button-lg max-w-fit type-ui text-white bg-green-400 z-10">
               See More
             </a>
           </Link>

@@ -68,12 +68,8 @@ export default function Post({
         </Section>
         <Section wide className="flex">
           <TwoUp>
-            {nextPost ? (
-              <PostPreview title="Next Post" post={nextPost} />
-            ) : null}
-            {previousPost ? (
-              <PostPreview title="Previous Post" post={previousPost} />
-            ) : null}
+            {nextPost ? <PostPreview post={nextPost} /> : null}
+            {previousPost ? <PostPreview post={previousPost} /> : null}
           </TwoUp>
         </Section>
       </SingleColumn>
