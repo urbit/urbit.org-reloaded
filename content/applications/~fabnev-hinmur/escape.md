@@ -1,7 +1,7 @@
 +++
 title = "EScape"
-developer = "Uqbar"
 shortcode = "~dister-fabnev-hinmur/escape"
+developer = "Uqbar"
 description = "EScape from Eternal September. The UI from Uqbar."
 license = "MIT"
 website = "https://uqbar.network"

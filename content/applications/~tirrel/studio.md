@@ -5,7 +5,7 @@ license = "MIT"
 image = "https://tirrel.io/assets/stool.svg"
 bgColor = "rgb(160, 226, 167)"
 developer = "Tirrel Corp."
-website = "tirrel.io"
+website = "https://tirrel.io"
 description = "Tools for making money."
 +++
 
