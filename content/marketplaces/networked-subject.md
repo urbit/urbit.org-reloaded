@@ -2,7 +2,7 @@
 title = "networked subject_"
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/marketplaces/subject.network.png"
 URL = "https://subject.network/buy/"
-payment = "BTC"
+payment = ["BTC"]
 +++
 
 Networked Subject is an independent, boutique Urbit star service, planet market and a collection of Urbit information and tutorials.

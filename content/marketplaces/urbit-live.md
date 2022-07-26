@@ -2,7 +2,7 @@
 title = "Urbit.live"
 image = "https://urbit.live/static/media/urbit-live-logo-png-400.6ec9a92b.png"
 URL = "https://urbit.live"
-payment = "ETH"
+payment = ["ETH"]
 +++
 
 Urbit.live is Urbit’s largest planet exchange and first network explorer, selling Layer 1 planets and stars for ETH.
