@@ -74,6 +74,16 @@ export default function BasicPage({
                   </a>
                 </div>
               )}
+              {post?.URL && section !== "Podcasts" && (
+                <div className="flex flex-col">
+                  <p className="font-bold text-wall-400">Accepts</p>
+                  <p
+                    className="text-sm font-semibold font-mono"
+                  >
+                    {post.payment }
+                  </p>
+                </div>
+              )}
             </div>
             {post?.URL && section === "Podcasts" && (
               <a href={post.URL} className="button-lg bg-green-400 text-white cursor-pointer flex space-x-2">

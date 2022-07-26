@@ -1,7 +1,7 @@
 +++
 title = "Tlon Operations & Community"
 podcast = "Understanding Urbit"
-date = "April 5, 2020"
+date = "2020-04-05"
 URL = "https://podcasts.apple.com/us/podcast/tlon-operations-community/id1504188804?i=1000469641776"
 image = "https://media.urbit.org/site/posts/essays/uu-podcast.png"
 +++

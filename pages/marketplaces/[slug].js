@@ -36,7 +36,7 @@ export default function Marketplace({
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(
     params.slug,
-    ["title", "slug", "URL", "image", "content"],
+    ["title", "slug", "URL", "image", "payment", "content"],
     "marketplaces"
   );
 

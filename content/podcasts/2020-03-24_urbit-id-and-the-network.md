@@ -1,7 +1,7 @@
 +++
 title = "Urbit ID & the Network"
 podcast = "Understanding Urbit"
-date = "March 24, 2020"
+date = "2020-03-24"
 URL = "https://podcasts.apple.com/us/podcast/urbit-id-the-network/id1504188804?i=1000469544396"
 image = "https://media.urbit.org/site/posts/essays/uu-podcast.png"
 +++

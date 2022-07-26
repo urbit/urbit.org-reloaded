@@ -1,7 +1,7 @@
 +++
 title = "Josh Lehman: Urbit – The Peer-to-Peer Network Re-Decentralizing the Internet"
 podcast = "Epicenter"
-date = "June 29, 2022"
+date = "2022-06-29"
 URL = "https://www.youtube.com/watch?v=DqqUM-L_-2s"
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/podcasts/epicenter.jpg"
 +++

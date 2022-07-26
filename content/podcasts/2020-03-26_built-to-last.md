@@ -1,7 +1,7 @@
 +++
 title = "Built to Last"
 podcast = "Understanding Urbit"
-date = "March 24, 2020"
+date = "2020-03-26"
 URL = "https://podcasts.apple.com/us/podcast/built-to-last/id1504188804?i=1000469641777"
 image = "https://media.urbit.org/site/posts/essays/uu-podcast.png"
 +++

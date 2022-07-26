@@ -1,7 +1,7 @@
 +++
 title = "Technology & Freedom"
 podcast = "Understanding Urbit"
-date = "March 23, 2020"
+date = "2020-03-23"
 URL = "https://podcasts.apple.com/us/podcast/technology-freedom/id1504188804?i=1000469310961"
 image = "https://media.urbit.org/site/posts/essays/uu-podcast.png"
 +++

@@ -1,7 +1,7 @@
 +++
 title = "How Do We Enable More People to Run Their Own Servers? w/ Stuart Christoph"
 podcast = "Crazy Wisdom"
-date = "July 4, 2022"
+date = "2022-07-04"
 URL = "https://podcasts.apple.com/us/podcast/how-do-we-enable-more-people-to-run-their-own-servers/id1354589767?i=1000568724305"
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/podcasts/crazywisdom.jpg"
 +++

@@ -2,6 +2,9 @@
 title = "Azimuth Shop"
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/marketplaces/azimuthshop.png"
 URL = "https://azimuth.shop/"
+payment = "ETH"
 +++
 
-Layer 2 planet marketplace.
+Azimuth.shop is a Layer 2 planet marketplace offering planets for sale at extremely competitive prices, accepting ETH for payment.
+
+![Screenshot](https://storage.googleapis.com/media.urbit.org/site/ecosystem/marketplaces/azimuth-screenshot.jpg)

@@ -1,7 +1,7 @@
 +++
 title = "Palladium Podcast 49: Humane Computing with Urbit"
 podcast = "Palladium Podcast"
-date = "November 24, 2020"
+date = "2020-11-24"
 URL = "https://palladiummag.podbean.com/e/palladium-podcast-49-humane-computing-with-urbit/"
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/podcasts/palladiumpodcast.jpeg"
 +++

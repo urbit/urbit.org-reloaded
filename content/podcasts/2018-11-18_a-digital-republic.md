@@ -1,7 +1,7 @@
 +++
 title = "Urbit – A Digital Republic Reinventing the Internet"
 podcast = "Epicenter"
-date = "October 18, 2017"
+date = "2018-11-18"
 URL = "https://epicenter.tv/episodes/205/"
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/podcasts/epicenter.jpg"
 +++
