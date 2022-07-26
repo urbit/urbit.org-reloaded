@@ -8,15 +8,18 @@ import {
   SingleColumn,
   Section,
   Markdown,
+  IntraNav,
 } from "foundation-design-system";
 import ob from "urbit-ob";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import GatewayHeader from "../../components/gateway/GatewayHeader";
 import Gateway404 from "../../components/gateway/Gateway404";
 import MetadataBlock from "../../components/gateway/MetadataBlock";
 import MetadataLink from "../../components/gateway/MetadataLink";
 import Description from "../../components/gateway/Description";
 
-const ApplicationPage = ({ data, markdown, organisation, params }) => {
+const ApplicationPage = ({ data, markdown, organisation, search, params }) => {
   const { application } = params;
   if (!ob.isValidPatp(application[0])) {
     return <Gateway404 type="application" />;
@@ -79,13 +82,15 @@ const ApplicationPage = ({ data, markdown, organisation, params }) => {
         />
         <meta property="twitter:image" content={image} key="image" />
       </Head>
+      <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
+        <Header search={search} />
         <Section className="space-y-12" narrow>
           <GatewayHeader
             title={data.title}
             color={data?.bgColor}
             image={data?.image || data?.bgColor}
-            item="Urbit Application"
+            item="Application"
           />
           <div className="flex flex-wrap md:flex-nowrap justify-between">
             <MetadataBlock
@@ -137,11 +142,9 @@ const ApplicationPage = ({ data, markdown, organisation, params }) => {
               </a>
             </Link>
           </div>
-          <Link href="/" passHref>
-            <a className="text-xl pt-8 block font-semibold">Urbit.org</a>
-          </Link>
         </Section>
       </SingleColumn>
+      <Footer />
     </Container>
   );
 };
