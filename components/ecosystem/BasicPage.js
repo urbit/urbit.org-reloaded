@@ -74,7 +74,7 @@ export default function BasicPage({
                   </a>
                 </div>
               )}
-              {post?.URL && section !== "Podcasts" && (
+              {post?.URL && section === "Marketplaces" && (
                 <div className="flex flex-col">
                   <p className="font-bold text-wall-400">Accepts</p>
                   <p className="text-sm font-semibold font-mono">
