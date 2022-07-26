@@ -77,18 +77,19 @@ export default function BasicPage({
               {post?.URL && section !== "Podcasts" && (
                 <div className="flex flex-col">
                   <p className="font-bold text-wall-400">Accepts</p>
-                  <p
-                    className="text-sm font-semibold font-mono"
-                  >
-                    {post.payment }
+                  <p className="text-sm font-semibold font-mono">
+                    {post.payment.join(", ")}
                   </p>
                 </div>
               )}
             </div>
             {post?.URL && section === "Podcasts" && (
-              <a href={post.URL} className="button-lg bg-green-400 text-white cursor-pointer flex space-x-2">
+              <a
+                href={post.URL}
+                className="button-lg bg-green-400 text-white cursor-pointer flex space-x-2"
+              >
                 <img src="/images/sound.svg" />
-                  &nbsp;Listen
+                &nbsp;Listen
               </a>
             )}
           </div>
