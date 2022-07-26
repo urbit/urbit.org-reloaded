@@ -107,6 +107,12 @@ export default function Ecosystem({
                   </div>
                 </>
               )}
+
+               {type === "applications" && (<div class="bg-[#FBEDBC] py-4 px-6 mb-12 border-wall-300 rounded-xl">
+                    <p class="text-sm text-wall-500"><span class="font-bold">Disclaimer:</span> Applications may not be audited for security and might contain malicious code or vulnerabilities that could lead to unwanted interaction with your ship. Explore at your own risk.</p>
+                  </div>)
+                }
+
               <div
                 className={classnames("grid gap-12 w-full", {
                   "grid-cols-2 md:grid-cols-3": type !== "podcasts",
@@ -124,6 +130,7 @@ export default function Ecosystem({
                       </div>
                     </Link>
                   ))}
+
                 {type === "applications" &&
                   applications.map((app) => (
                     <Link href={`/applications/${app.ship}/${app.slug}`}>

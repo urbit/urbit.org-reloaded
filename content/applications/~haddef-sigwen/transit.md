@@ -10,3 +10,5 @@ website = ""
 +++
 
 Planetary transit occurs once per day.
+
+![Screenshot](https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/transit.png)

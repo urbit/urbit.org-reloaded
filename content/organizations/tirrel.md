@@ -7,4 +7,4 @@ ships = ["~tirrel"]
 
 ### Tirrel Corporation is an Urbit product studio. 
 
-Tirrel's main products are Studio, a website-hosting app, and [Planet Market](planet.market), an Urbit onboarding service. Tirrel also offers market services for Urbit address space including OTC, and a trading forum. Additionally, Tirrel collaborates with the Urbit Foundation and Uqbar on a variety of R&D.
+Tirrel's main products are Studio, a website-hosting app, and [Planet Market](https://planet.market), an Urbit onboarding service. Tirrel also offers market services for Urbit address space including OTC, and a trading forum. Additionally, Tirrel collaborates with the Urbit Foundation and Uqbar on a variety of R&D.

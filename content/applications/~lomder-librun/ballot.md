@@ -9,4 +9,6 @@ website = "https://www.holium.com"
 description = "An app that allows you to vote with other ships."
 +++
 
-An app that allows you to vote with other ships.
+An app that allows you to create and vote on proposals, delegate votes to others, and trigger actions based on results.
+
+![Screenshot](https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/ballot.png)

@@ -86,12 +86,14 @@ const ApplicationPage = ({ data, markdown, organisation, search, params }) => {
       <SingleColumn>
         <Header search={search} />
         <Section className="space-y-12" narrow>
+
           <GatewayHeader
             title={data.title}
             color={data?.bgColor}
             image={data?.image || data?.bgColor}
             item="Application"
           />
+
           <div className="flex flex-wrap md:flex-nowrap justify-between">
             <MetadataBlock
               title="License"
@@ -112,16 +114,22 @@ const ApplicationPage = ({ data, markdown, organisation, search, params }) => {
               content={data.shortcode ? data.shortcode : data.title}
             />
           </div>
+
+
           <Description
             description={data.description}
             fallback="An application on Urbit."
             markdown={markdown}
-          />
+          / >
+
+          <hr className="text-white" />
+
+          <div class="bg-wall-100 py-4 px-6 border-2 border-wall-300 rounded-xl">
+            <p class="text- text-wall-600"><span class="font-bold">Disclaimer:</span> Applications may not be audited for security and might contain malicious code or vulnerabilities that could lead to unwanted interaction with your ship. Explore at your own risk.</p>
+          </div>
+
           <hr className="text-wall-200" />
           <div className="flex flex-col space-y-6">
-            <h3>
-              Urbit is a clean-slate, peer-to-peer operating system and network.
-            </h3>
             <div className="flex flex-col space-y-4">
               <Link href="/guides/installing-applications" passHref>
                 <a className="button-lg max-w-xs bg-green-400 text-white">
@@ -131,6 +139,7 @@ const ApplicationPage = ({ data, markdown, organisation, search, params }) => {
             </div>
           </div>
           <hr className="text-wall-200" />
+
           <div className="flex flex-col space-y-1">
             <p>
               Have an application you'd like to share publicly through
