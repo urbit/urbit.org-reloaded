@@ -45,7 +45,11 @@ export default function Organization({
                 <div className="flex flex-col space-y-4 cursor-pointer">
                   <div
                     className="overflow-hidden rounded-xl"
-                    style={{ backgroundColor: app.bgColor || "rgba(0,0,0,0)" }}
+                    style={{
+                      backgroundColor: app.bgColor || "rgba(0,0,0,0)",
+                      height: 164,
+                      width: 164,
+                    }}
                   >
                     {app.image && (
                       <img src={app.image} className="h-full w-full" />
