@@ -39,7 +39,7 @@ export default function Organization({
       {applications.length > 0 && (
         <>
           <h3>Applications</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {applications.map((app) => (
               <Link href={`/applications/${app.ship}/${app.slug}`}>
                 <div className="flex flex-col space-y-4 cursor-pointer">

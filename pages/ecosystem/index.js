@@ -112,15 +112,15 @@ export default function Ecosystem({
                 className={classnames("grid gap-12 w-full", {
                   "grid-cols-2 md:grid-cols-3": type !== "podcasts",
                   "grid-cols-1": type === "podcasts",
-                  "grid-cols-1 md:grid-cols-2": type === "applications",
+                  "grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2": type === "applications",
                   hidden: type === undefined,
                 })}
               >
                 {type === "organizations" &&
                   organizations.map((org) => (
                     <Link href={`/organizations/${org.slug}`}>
-                      <div className="flex flex-col space-y-4 justify-center items-center cursor-pointer hover:opacity-90">
-                        <img className="w-36" src={org.image} />
+                      <div className="flex flex-col space-y-4  items-center cursor-pointer hover:opacity-90">
+                        <img className="w-36 rounded-xl" src={org.image} />
                         <p className="text-center font-bold">{org.title}</p>
                       </div>
                     </Link>
@@ -156,7 +156,7 @@ export default function Ecosystem({
                   marketplaces.map((market) => (
                     <Link href={`/marketplaces/${market.slug}`}>
                       <div className="flex flex-col space-y-4 justify-center items-center cursor-pointer hover:opacity-90">
-                        <img className="w-36" src={market.image} />
+                        <img className="w-36 rounded-xl" src={market.image} />
                         <p className="text-center font-bold">{market.title}</p>
                       </div>
                     </Link>

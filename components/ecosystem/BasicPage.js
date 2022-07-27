@@ -39,7 +39,7 @@ export default function BasicPage({
         <Section narrow className="space-y-12">
           <div className="flex items-center space-x-4">
             <img src={post.image} className="w-36" />
-            <div className="flex flex-col">
+            <div className="flex flex-col pl-2">
               <h1
                 className={classnames({ "text-3xl": section === "Podcasts" })}
               >

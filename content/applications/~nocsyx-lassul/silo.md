@@ -5,6 +5,7 @@ license = "MIT"
 image = ""
 bgColor = "#4f46e5"
 developer = "~nocsyx-lassul"
+description = "An S3 storage manager"
 website = "https://github.com/arthyn/silo"
 +++
 
