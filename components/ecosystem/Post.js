@@ -21,7 +21,7 @@ export default function Post({ post }) {
               src={post[feat].image}
             />
             <div className="flex flex-col">
-              <h4 className="text-xl pb-1 font-bold">{post?.[feat].title}</h4>
+              <h4 className="text-xl pb-2 leading-6 font-bold">{post?.[feat].title}</h4>
               {badge(post[feat].type)}
             </div>
           </div>

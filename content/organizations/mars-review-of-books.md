@@ -1,12 +1,14 @@
 +++
-title = "The Mars Review of Books"
-image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/mars-review.jpg"
+title = "Mars Review of Books"
+image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/marsreview.jpg"
 URL = "https://store.marsreview.org"
-ships = ["~librex-dozryc"]
+ships = []
 +++
 
 
-The Mars Review of Books is a magazine in print and on Urbit which combines ruthlessly intelligent and fearless sense-making on subjects of global importance with today’s most stylish belletristic writing on contemporary arts and culture. Inspired by the early New York Review of Books, which was launched in protest against limp and toneless book reviewing in the Times Book Review, the MRB takes as its thesis that many topics and artistic productions which are important and stimulating to know about are ignored by today’s legacy publications. A new magazine that brings these topics to light will also create the conditions for the intellectual milieu that serious people and dedicated artists wish to see thrive.
+The Mars Review of Books is a magazine in print and on Urbit which combines ruthlessly intelligent and fearless sense-making on subjects of global importance with today’s most stylish belletristic writing on contemporary arts and culture. 
+
+Inspired by the early New York Review of Books, which was launched in protest against limp and toneless book reviewing in the Times Book Review, the MRB takes as its thesis that many topics and artistic productions which are important and stimulating to know about are ignored by today’s legacy publications. A new magazine that brings these topics to light will also create the conditions for the intellectual milieu that serious people and dedicated artists wish to see thrive.
 
 
 The digital version MRB is hosted on Urbit on the ~bidbel star, which is also the home of The Machine War, a work-in-progress book on Urbit and the history of computing, written by Noah Kumin (~librex-dozryc). The book is being re-published on the legacy internet at machinewar.substack.com. 
