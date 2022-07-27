@@ -39,16 +39,15 @@ export default function Organization({
       {applications.length > 0 && (
         <>
           <h3>Applications</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 h-full w-full">
             {applications.map((app) => (
               <Link href={`/applications/${app.ship}/${app.slug}`}>
-                <div className="flex flex-col space-y-4 cursor-pointer">
+                <div className="flex flex-col h-full w-full space-y-4 cursor-pointer">
                   <div
-                    className="overflow-hidden rounded-xl"
+                    className="overflow-hidden rounded-xl w-full"
                     style={{
                       backgroundColor: app.bgColor || "rgba(0,0,0,0)",
-                      height: 164,
-                      width: 164,
+                      aspectRatio: "1",
                     }}
                   >
                     {app.image && (

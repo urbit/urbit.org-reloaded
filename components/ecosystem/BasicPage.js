@@ -94,7 +94,7 @@ export default function BasicPage({
             )}
           </div>
           <div className="flex">
-            <div className="markdown">
+            <div className="markdown w-full">
               <Markdown.render content={JSON.parse(markdown)} />
               {children}
             </div>
