@@ -9,8 +9,7 @@ grant_category = ["Runtime"]
 
 [extra]
 image = ""
-description = "Implement a working FoundationDB event read/write layer that is as
-ready as possible for interfacing with the Urbit runtime."
+description = "Implement a working FoundationDB event read/write layer that is as ready as possible for interfacing with the Urbit runtime."
 reward = "5 stars"
 assignee = "~mastyr-bottec"
 champion = "~master-morzod"
