@@ -1,6 +1,6 @@
 +++
 title = "Implement Gnosis Safe on Urbit"
-date = "2022-06-22"
+date = "2022-07-27"
 
 [taxonomies]
 grant_type = [ "Bounty" ]
@@ -11,9 +11,10 @@ image = ""
 description = "An Urbit app that serves the Gnosis Safe UI, but with Urbit used for storing safe/wallet metadata and exchanging signatures."
 reward = "1 star"
 assignee = ""
-id = "B0185"
+champion = "~dinleb-rambep"
+grant_id = "B0154"
 completed = false
-work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0185&prefill_Grant+Name=Gnosis%20Safe"
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0154&prefill_Grant+Name=Gnosis%20Safe"
 +++
 
 # Overview
@@ -44,4 +45,4 @@ The networking component of this is fairly challenging and requires modification
 
 # Milestones & Compenstation
 
-TBD
+Specific Milestones will be defined in conjuction with the bounty Champion prior to initiated work.
