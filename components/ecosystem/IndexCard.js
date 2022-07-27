@@ -13,8 +13,11 @@ export default function IndexCard({ slug, feat }) {
             />
           ) : (
             <div
-              className="bg-wall-200 rounded-xl w-full flex-1"
-              style={{ aspectRatio: "4 / 3" }}
+              className="rounded-xl w-full flex-1"
+              style={{
+                aspectRatio: "4 / 3",
+                backgroundColor: feat?.matchedPost?.bgColor || "rgba(0,0,0,0)",
+              }}
             />
           )}
           <div className="grow-1 shrink-0 flex flex-col h-full min-h-0 pt-4">

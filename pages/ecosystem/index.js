@@ -112,7 +112,8 @@ export default function Ecosystem({
                 className={classnames("grid gap-12 w-full", {
                   "grid-cols-2 md:grid-cols-3": type !== "podcasts",
                   "grid-cols-1": type === "podcasts",
-                  "grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2": type === "applications",
+                  "grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2":
+                    type === "applications",
                   hidden: type === undefined,
                 })}
               >
@@ -356,7 +357,7 @@ export async function getStaticProps({}) {
         ...podcasts.map((e) => ({ ...e, type: "Podcast" })),
         ...marketplaces.map((e) => ({ ...e, type: "Marketplace" })),
       ].filter((e) => e.title === post[feat].title)?.[0];
-      post[feat].image = post[feat].image || matchedPost?.image;
+      post[feat].image = post[feat]?.image || matchedPost?.image || null;
       post[feat].type = matchedPost?.type || "Podcast";
       post[feat].matchedPost = matchedPost || null;
       post[feat].content = JSON.stringify(

@@ -318,8 +318,10 @@ export async function getStaticProps() {
         ...podcasts.map((e) => ({ ...e, type: "Podcast" })),
         ...marketplaces.map((e) => ({ ...e, type: "Marketplace" })),
       ].filter((e) => e.title === ecosystem[feat].title)?.[0];
-      ecosystem[feat].image = ecosystem[feat].image || matchedPost?.image;
+      ecosystem[feat].image =
+        ecosystem[feat].image || matchedPost?.image || null;
       ecosystem[feat].type = matchedPost?.type || "Podcast";
+      ecosystem[feat].matchedPost = matchedPost || null;
     }
   });
 
