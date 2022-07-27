@@ -45,4 +45,4 @@ The networking component of this is fairly challenging and requires modification
 
 # Milestones & Compenstation
 
-Specific Milestones will be defined in conjuction with the bounty Champion prior to initiated work.
+Specific Milestones will be defined in conjuction with the bounty Champion prior to initiating work.
