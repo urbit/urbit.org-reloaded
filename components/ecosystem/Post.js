@@ -11,9 +11,8 @@ export default function Post({ post }) {
       ? `/${post[feat].matchedPost.type.toLowerCase()}s/${childPath}`
       : null;
     return post?.[feat] ? (
-      <Link href={href || "#"}>
         <div
-          className="mt-8 mb-24 cursor-pointer"
+          className="mt-8 mb-24"
           id={post?.[feat].title.toLowerCase().replace(/ /, "-")}
         >
           <div className="flex space-x-4 items-center">
@@ -26,11 +25,33 @@ export default function Post({ post }) {
               {badge(post[feat].type)}
             </div>
           </div>
-          <div className="markdown mt-8">
+          <div className="markdown mt-8 mb-8">
             <Markdown.render content={JSON.parse(post[feat].content)} />
           </div>
+
+
+          {post[feat].type === "Podcast" && 
+          (<Link href={href || "#"} passHref>
+              <a class="button-sm text-white flex-col bg-green-400 cursor-pointer pr-4 w-fit">Listen to {post[feat].type}</a>
+          </Link>)}
+          
+          {post[feat].type === "Application" && 
+          (<Link href={href || "#"} passHref>
+              <a class="button-sm text-white flex-col bg-green-400 cursor-pointer pr-4 w-fit">View {post[feat].type}</a>
+          </Link>)}
+
+          {post[feat].type === "Organization" && 
+          (<Link href={href || "#"} passHref>
+              <a class="button-sm text-white flex-col bg-green-400 cursor-pointer pr-4 w-fit">More about {post[feat].title}</a>
+          </Link>)}
+
+          {post[feat].type === "Marketplace" && 
+          (<Link href={href || "#"} passHref>
+              <a class="button-sm text-white flex-col bg-green-400 cursor-pointer pr-4 w-fit">More about {post[feat].title}</a>
+          </Link>)}
+
         </div>
-      </Link>
+
     ) : null;
   });
 }

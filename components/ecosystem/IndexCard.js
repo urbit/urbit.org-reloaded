@@ -18,9 +18,9 @@ export default function IndexCard({ slug, feat }) {
             />
           )}
           <div className="grow-1 shrink-0 flex flex-col h-full min-h-0 pt-4">
-            <p className="mb-1 font-bold">{feat.title}</p>
+            <p className="mb-2 font-semibold leading-5">{feat.title}</p>
             {badge(feat.type)}
-            <p className="text-sm">{feat?.description}</p>
+            <p className="text-sm leading-5">{feat?.description}</p>
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@ const badge = (type) => {
   return (
     <div
       className={classnames(
-        "uppercase font-bold text-white text-xs w-fit rounded-lg mb-2 px-2 py-1",
+        "uppercase font-bold text-white text-xs w-fit rounded-lg mb-5 px-2 py-1",
         {
           "bg-[#B37ED7]": type === "Organization",
           "bg-[#83b2d4]": type === "Application",
