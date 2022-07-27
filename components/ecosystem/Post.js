@@ -11,47 +11,68 @@ export default function Post({ post }) {
       ? `/${post[feat].matchedPost.type.toLowerCase()}s/${childPath}`
       : null;
     return post?.[feat] ? (
-        <div
-          className="mt-8 mb-24"
-          id={post?.[feat].title.toLowerCase().replace(/ /, "-")}
-        >
-          <div className="flex space-x-4 items-center">
-            <img
-              className="rounded-xl w-24 object-cover"
-              src={post[feat].image}
-            />
-            <div className="flex flex-col">
-              <h4 className="text-xl pb-2 leading-6 font-bold">{post?.[feat].title}</h4>
-              {badge(post[feat].type)}
-            </div>
+      <div
+        className="mt-8 mb-24"
+        id={post?.[feat].title.toLowerCase().replace(/ /, "-")}
+      >
+        <div className="flex space-x-4 items-center">
+          <div
+            className="h-24 w-24 rounded-xl items-center justify-center shrink-0 overflow-hidden"
+            style={{
+              backgroundColor:
+                post[feat]?.matchedPost?.bgColor || "rgba(0,0,0,0)",
+            }}
+          >
+            {post[feat]?.image && (
+              <img
+                className="rounded-xl w-24 object-cover"
+                src={post[feat].image}
+              />
+            )}
           </div>
-          <div className="markdown mt-8 mb-8">
-            <Markdown.render content={JSON.parse(post[feat].content)} />
+          <div className="flex flex-col">
+            <h4 className="text-xl pb-2 leading-6 font-bold">
+              {post?.[feat].title}
+            </h4>
+            {badge(post[feat].type)}
           </div>
-
-
-          {post[feat].type === "Podcast" && 
-          (<Link href={href || "#"} passHref>
-              <a class="button-sm text-white flex-col bg-green-400 cursor-pointer pr-4 w-fit">Listen to {post[feat].type}</a>
-          </Link>)}
-          
-          {post[feat].type === "Application" && 
-          (<Link href={href || "#"} passHref>
-              <a class="button-sm text-white flex-col bg-green-400 cursor-pointer pr-4 w-fit">View {post[feat].type}</a>
-          </Link>)}
-
-          {post[feat].type === "Organization" && 
-          (<Link href={href || "#"} passHref>
-              <a class="button-sm text-white flex-col bg-green-400 cursor-pointer pr-4 w-fit">More about {post[feat].title}</a>
-          </Link>)}
-
-          {post[feat].type === "Marketplace" && 
-          (<Link href={href || "#"} passHref>
-              <a class="button-sm text-white flex-col bg-green-400 cursor-pointer pr-4 w-fit">More about {post[feat].title}</a>
-          </Link>)}
-
+        </div>
+        <div className="markdown mt-8 mb-8">
+          <Markdown.render content={JSON.parse(post[feat].content)} />
         </div>
 
+        {post[feat].type === "Podcast" && (
+          <Link href={href || "#"} passHref>
+            <a class="button-sm text-white flex-col bg-green-400 cursor-pointer pr-4 w-fit">
+              Listen to {post[feat].type}
+            </a>
+          </Link>
+        )}
+
+        {post[feat].type === "Application" && (
+          <Link href={href || "#"} passHref>
+            <a class="button-sm text-white flex-col bg-green-400 cursor-pointer pr-4 w-fit">
+              View {post[feat].type}
+            </a>
+          </Link>
+        )}
+
+        {post[feat].type === "Organization" && (
+          <Link href={href || "#"} passHref>
+            <a class="button-sm text-white flex-col bg-green-400 cursor-pointer pr-4 w-fit">
+              More about {post[feat].title}
+            </a>
+          </Link>
+        )}
+
+        {post[feat].type === "Marketplace" && (
+          <Link href={href || "#"} passHref>
+            <a class="button-sm text-white flex-col bg-green-400 cursor-pointer pr-4 w-fit">
+              More about {post[feat].title}
+            </a>
+          </Link>
+        )}
+      </div>
     ) : null;
   });
 }
