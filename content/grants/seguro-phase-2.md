@@ -1,7 +1,7 @@
 +++
 
 title = "Seguro Prototype"
-date = "2022-05-09"
+date = "2022-07-27"
 
 [taxonomies]
 grant_type = ["Proposal"]
