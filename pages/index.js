@@ -112,7 +112,7 @@ export default function Home({
               })}
             </div>
             <Link href="/ecosystem" passHref>
-              <a className="button-lg bg-green-400 text-white w-fit">
+              <a className="z-50 button-lg bg-green-400 text-white w-fit">
                 Explore Ecosystem
               </a>
             </Link>
