@@ -13,6 +13,8 @@ import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import Post from "../../../components/ecosystem/Post";
 import { getAllPosts, getPostBySlug } from "../../../lib/lib";
+import fs from "fs";
+import path from "path";
 
 export default function BasicPage({ post, markdown, search, index = false }) {
   const router = useRouter();
@@ -46,8 +48,47 @@ export async function getStaticProps({ params }) {
     ["title", "slug", "date", "featured-1", "featured-2", "featured-3"],
     "ecosystem/spotlight"
   );
+  const marketplaces = getAllPosts(["title", "image", "slug"], "marketplaces");
+  const podcasts = getAllPosts(
+    ["title", "image", "date", "podcast", "slug"],
+    "podcasts",
+    "date"
+  );
+  const organizations = getAllPosts(
+    ["title", "image", "slug"],
+    "organizations"
+  );
+  const applications = fs
+    .readdirSync(path.join(process.cwd(), "content/applications"), {
+      withFileTypes: true,
+    })
+    .filter((f) => f.isDirectory())
+    .map((dir) =>
+      getAllPosts(
+        ["title", "bgColor", "image", "slug", "description"],
+        `applications/${dir.name}`
+      )
+        .map((e) => ({ ...e, ship: dir.name }))
+        .flat()
+    )
+    .flat()
+    .sort((a, b) => {
+      const nameA = a.title.toLowerCase();
+      const nameB = b.title.toLowerCase();
+      return nameA < nameB ? -1 : 1;
+    });
+
   ["featured-1", "featured-2", "featured-3"].forEach((feat) => {
     if (post?.[feat]) {
+      const matchedPost = [
+        ...applications.map((e) => ({ ...e, type: "Application" })),
+        ...organizations.map((e) => ({ ...e, type: "Organization" })),
+        ...podcasts.map((e) => ({ ...e, type: "Podcast" })),
+        ...marketplaces.map((e) => ({ ...e, type: "Marketplace" })),
+      ].filter((e) => e.title === post[feat].title)?.[0];
+      post[feat].image = post[feat]?.image || matchedPost?.image || null;
+      post[feat].type = matchedPost?.type || "Podcast";
+      post[feat].matchedPost = matchedPost || null;
       post[feat].content = JSON.stringify(
         Markdown.parse({
           post: { content: post[feat].content },
