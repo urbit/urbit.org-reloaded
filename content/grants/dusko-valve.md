@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Other" ]
 [extra]
 image = ""
 description = "a tool which allows NFT artists to offer planets for redemption to their patrons alongside their NFTs"
-reward = "2 stars"
+reward = "1.0 WSTR"
 assignee = "~tasset-norlux"
 champion = "~tacryt-socryp"
 grant_id = "P0143"
