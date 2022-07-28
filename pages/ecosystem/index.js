@@ -41,22 +41,22 @@ export default function Ecosystem({
   if (type) {
     switch (type) {
       case "applications":
-        title = "Applications";
+        title = "Applications • Ecosystem";
         break;
       case "marketplaces":
-        title = "Marketplaces";
+        title = "Marketplaces • Ecosystem";
         break;
       case "podcasts":
-        title = "Podcasts";
+        title = "Podcasts • Ecosystem";
         break;
       case "organizations":
-        title = "Organizations";
+        title = "Organizations • Ecosystem";
         break;
       default:
-        title = "Spotlight";
+        title = "Ecosystem Spotlight";
     }
   } else {
-    title = "Spotlight";
+    title = "Ecosystem Spotlight";
   }
 
   const data = {
