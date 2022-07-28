@@ -37,7 +37,7 @@ export default function MenuTray({ isOpen, setTray, search, children }) {
     <>
       <nav
         {...handlers}
-        className={`z-10 w-screen h-screen top-0 left-0 fixed block md:hidden ${menuClasses}`}
+        className={`z-20 w-screen h-screen top-0 left-0 fixed block md:hidden ${menuClasses}`}
       >
         <div
           onClick={() => setTray(!isOpen)}
@@ -59,7 +59,7 @@ export default function MenuTray({ isOpen, setTray, search, children }) {
             e.stopPropagation();
             search.toggleSearch(e);
           }}
-          className={`z-10 fixed px-4 items-center justify-center type-ui rounded-xl h-16 bg-white text-wall-500 left-4 right-4 bottom-4 mobile-search-button-width ${
+          className={`z-20 fixed px-4 items-center justify-center type-ui rounded-xl h-16 bg-white text-wall-500 left-4 right-4 bottom-4 mobile-search-button-width ${
             isOpen ? "flex" : "hidden"
           }`}
         >
@@ -68,7 +68,7 @@ export default function MenuTray({ isOpen, setTray, search, children }) {
       </nav>
       <button
         onClick={() => setTray(!isOpen)}
-        className="z-10 fixed bottom-4 right-4 w-16 h-16 bg-wall-600 flex items-center justify-center rounded-full md:hidden"
+        className="z-20 fixed bottom-4 right-4 w-16 h-16 bg-wall-600 flex items-center justify-center rounded-full md:hidden"
       >
         {isOpen ? (
           <svg
