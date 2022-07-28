@@ -12,10 +12,10 @@ description = "An app to serve the UI to urbit's lightning wallet"
 reward = "1 star"
 mentor = "~dasrun-fadben"
 assignee = "~mipsun-diflex"
-grant_id = "A0183"
+grant_id = "A0152"
 completed = false
 cancelled = false
-work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0183&prefill_Grant+Name=Lightning%20Wallet%20User%20Interface"
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0152&prefill_Grant+Name=Lightning%20Wallet%20User%20Interface"
 +++
 
 ## Project Description
