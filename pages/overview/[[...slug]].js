@@ -32,7 +32,9 @@ export default function Overview({ posts, data, markdown, search }) {
         </Section>
         <Section>
           <div className="flex justify-between sidebar">
-            <Sidebar>{childPages("/overview", posts.pages)}</Sidebar>
+            <Sidebar search={search}>
+              {childPages("/overview", posts.pages)}
+            </Sidebar>
             <div className="markdown max-w-prose">
               <h3>{data.title}</h3>
               <Markdown.render content={JSON.parse(markdown)} />

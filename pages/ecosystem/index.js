@@ -77,7 +77,7 @@ export default function Ecosystem({
         </Section>
         <Section className="justify-center">
           <div className="flex justify-between sidebar">
-            <Sidebar>
+            <Sidebar search={search}>
               <EcosystemSidebar />
             </Sidebar>
             <div
