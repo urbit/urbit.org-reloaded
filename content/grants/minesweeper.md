@@ -9,7 +9,7 @@ grant_category = [ "App Dev" ]
 [extra]
 image = ""
 description = "A redesigned version of minesweeper where all of the game logic is written in hoon"
-reward = "1 star ($2k if done by assembly)"
+reward = "1 star ($2k if done by Assembly)"
 assignee = ""
 grant_id = "B0163"
 champion = "Holium"
