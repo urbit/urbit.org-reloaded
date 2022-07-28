@@ -13,7 +13,7 @@ reward = "1.0 WSTR"
 assignee = "~tasset-norlux"
 champion = "~tacryt-socryp"
 grant_id = "P0143"
-completed = false
+completed = true
 canceled = false
 link = ""
 +++
