@@ -124,8 +124,8 @@ const ApplicationPage = ({ data, markdown, organisation, search, params }) => {
 
           <hr className="text-white" />
 
-          <div class="bg-wall-100 py-4 px-6 border-2 border-wall-300 rounded-xl">
-            <p class="text- text-wall-600"><span class="font-bold">Disclaimer:</span> Applications may not be audited for security and might contain malicious code or vulnerabilities that could lead to unwanted interaction with your ship. Explore at your own risk.</p>
+          <div class="bg-wall-100 py-4 px-6 border-2 border-wall-200 rounded-xl">
+            <p class="text-sm text-wall-400"><span class="font-bold">Disclaimer:</span> Applications may not be audited for security and might contain malicious code or vulnerabilities that could lead to unwanted interaction with your ship. Explore at your own risk.</p>
           </div>
 
           <hr className="text-wall-200" />

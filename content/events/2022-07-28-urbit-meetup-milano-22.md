@@ -8,6 +8,7 @@ image = "https://flawless.life/wp-content/uploads/2020/02/Lubar_milano_07.jpg"
 registration_url = "https://www.meetup.com/urbit-sf/events/287394327/"
 description = "Urbit Meetup Milano"
 dark = true
+darken_image = "true"
 
 [[hosts]]
 patp = "~timluc-miptev"

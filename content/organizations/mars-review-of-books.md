@@ -1,5 +1,5 @@
 +++
-title = "Mars Review of Books"
+title = "The Mars Review of Books"
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/marsreview.jpg"
 URL = "https://store.marsreview.org"
 ships = []

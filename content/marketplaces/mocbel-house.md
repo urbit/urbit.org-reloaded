@@ -13,6 +13,6 @@ Planets under ~mocbel house come with the following:
 
 - Optional set-up support to initialize your planet (via call or messaging)
 - Direct technical support upon request
-- 99.9% Star uptime (~mocbel currently runs on a Digial Ocean instance and is monitored regularly; however, some events beyond our control may cause brief downtime)
+- 99.9% Star uptime (~mocbel currently runs on a Digital Ocean instance and is monitored regularly; however, some events beyond our control may cause brief downtime)
 - Good sponsor repuation on the Urbit Network
 - If you have any questions, hit us up at info@mocbel.house or [~polrel-witter](~polrel-witter) on the network.
