@@ -122,9 +122,6 @@ export default function Event({
         <Section short narrow className="markdown">
           <Markdown.render content={JSON.parse(markdown)} />
         </Section>
-        <Section narrow>
-          <Contact />
-        </Section>
         <Section wide className="flex">
           <TwoUp>
             {previousEvent ? (

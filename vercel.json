@@ -4,6 +4,10 @@
   },
   "redirects": [
     {
+     "source": "/applications",
+     "destination": "/ecosystem?type=applications"
+    },
+    {
      "source": "/understanding-urbit/:path*",
      "destination": "/overview/:path*"
     },

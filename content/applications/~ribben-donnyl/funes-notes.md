@@ -6,8 +6,10 @@ image = "https://is4-ssl.mzstatic.com/image/thumb/Purple112/v4/64/64/8b/64648bfc
 bgColor = ""
 developer = "~ribben-donnyl"
 website = "https://funes.app"
+description = "Mobile notetaking application using urbit as a back-end."
 +++
 
-Mobile notetaking application [available for iOS](https://apps.apple.com/us/app/funes-notes/id1627315560), using urbit's `%graph-store` as a backend.
+Funes Notes is a mobile notetaking application [available for iOS](https://apps.apple.com/us/app/funes-notes/id1627315560), using urbit's `%graph-store` as a backend.
+
 
 Initial development funded by the Urbit Foundation via [Urbit Notes](https://urbit.org/grants/urbit-notes) proposal grant.

@@ -7,3 +7,17 @@ license = "MIT"
 website = "https://dalten.org"
 bgColor = "#FCD977"
 +++
+
+### A Proof of Attendance Protocol for Urbit
+
+Gora is a proof of presence protocol (POPP) that is
+intended to be extensible, flexible and educational
+(at least for new hooners). 
+
+![Screenshot](https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/gora.png)
+
+
+Gora has two distros in
+circulation - these can be found at:
+~laddys-dozzod-dalten (Vue.js frontend)
+~mister-dozzod-dalten (sail frontend)

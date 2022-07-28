@@ -33,37 +33,37 @@ What are the basic primitives of a visual language? There aren’t any completel
 
 So we started by collecting influences.
 
-<iframe class="arena-iframe" width="100%" src="https://www.are.na/tlon/seal-zp3irwad52y/embed"></iframe>
+{% iframe src="https://www.are.na/tlon/seal-zp3irwad52y/embed" className="arena-iframe" width="100%" /%}
 
 The ‘chop’ or [seal](<https://en.wikipedia.org/wiki/Seal_(East_Asia)>) is conceptually pretty close to what we wanted to get to.
 
 <br /><br />
 
-<iframe class="arena-iframe" width="100%" src="https://www.are.na/tlon/kamon/embed"></iframe>
+{% iframe className="arena-iframe" src="https://www.are.na/tlon/kamon/embed" width="100%" /%}
 
 [Kamon](<https://en.wikipedia.org/wiki/Mon_(emblem)>) are even closer — especially since they have very little visual complexity.
 
 <br /><br />
 
-<iframe class="arena-iframe" width="100%" src="https://www.are.na/tlon/grids-jd_xbmspxkm/embed"></iframe>
+{% iframe className="arena-iframe" src="https://www.are.na/tlon/grids-jd_xbmspxkm/embed" width="100%" /%}
 
 We also spent a good amount of time with both Anni Albers and Agnes Martin. Both of these painters had an incredible mastery of the grid as a means of creating engaging visual work. These paintings all have a wonderful tension between an underlying system and their specific expression.
 
 <br /><br />
 
-<iframe class="arena-iframe" width="100%" src="https://www.are.na/tlon/stella-xfroicotm_4/embed"></iframe>
+{% iframe className="arena-iframe" src="https://www.are.na/tlon/stella-xfroicotm_4/embed" width="100%" /%}
 
 Frank Stella is a master at producing incredibly dynamic work from only a few elements. His ability to create a sense of depth from simple overlapping elements is fantastic.
 
 <br /><br />
 
-<iframe class="arena-iframe" width="100%" src="https://www.are.na/tlon/ledoux-palladio/embed"></iframe>
+{% iframe className="arena-iframe" src="https://www.are.na/tlon/ledoux-palladio/embed" width="100%" /%}
 
 The plans of both Ledoux and Palladio are incredibly dynamic. They’re mostly gridded, use only a few elements, and use lots of symmetry — but they’re at once distinct, engaging, and fresh.
 
 <br /><br />
 
-<iframe class="arena-iframe" width="100%" src="https://www.are.na/tlon/flags-k9moxiayuvq/embed"></iframe>
+{% iframe className="arena-iframe" src="https://www.are.na/tlon/flags-k9moxiayuvq/embed" width="100%" /%}
 
 Another influence: international maritime signal flags. We like these not only because of their striking visual qualities, but also because they correspond with a letter system, just like our sigils. Each one conveys useful information; for example, “Keep clear of me; I am maneuvering with difficulty,” a flag we all feel like raising from time to time. This influence was key to the idea that pairing symbol to phoneme was a possibility.
 

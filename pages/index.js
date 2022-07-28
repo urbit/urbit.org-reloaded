@@ -16,8 +16,17 @@ import EventPreview from "../components/EventPreview";
 import TwoUp from "../components/TwoUp";
 import { getAllPosts, getAllEvents, generateRealtimeDate } from "../lib/lib";
 import { eventKeys } from "../lib/constants";
+import IndexCard from "../components/ecosystem/IndexCard";
+import fs from "fs";
+import path from "path";
 
-export default function Home({ posts, events, grantNumbers, search }) {
+export default function Home({
+  posts,
+  ecosystem,
+  events,
+  grantNumbers,
+  search,
+}) {
   return (
     <Container>
       <Head>
@@ -79,7 +88,36 @@ export default function Home({ posts, events, grantNumbers, search }) {
             </a>
           </Link>
         </Section>
-
+        {/* Ecosystem */}
+        <Section>
+          <div className="flex flex-col space-y-8 pb-12">
+            <h2 className="m-0 p-0 mr-4">Ecosystem</h2>
+            <p>
+              The Urbit ecosystem is comprised of a wide variety of individuals
+              and organizations, including developers, DAOs, podcasters, and
+              more.
+            </p>
+            <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
+              {["featured-1", "featured-2", "featured-3"].map((feat) => {
+                if (ecosystem?.[feat]) {
+                  return (
+                    <IndexCard
+                      slug={`/ecosystem/#${ecosystem[feat]?.title
+                        .toLowerCase()
+                        .replace(/ /, "-")}`}
+                      feat={ecosystem[feat]}
+                    />
+                  );
+                }
+              })}
+            </div>
+            <Link href="/ecosystem" passHref>
+              <a className="z-50 button-lg bg-green-400 text-white w-fit">
+                Explore Ecosystem
+              </a>
+            </Link>
+          </div>
+        </Section>
         {
           // Grants
         }
@@ -215,28 +253,79 @@ export default function Home({ posts, events, grantNumbers, search }) {
           </Link>
         </Section>
 
-        {
-          // Newsletter and social media
-        }
         <Section narrow>
+          <h3 className="pb-2">Urbit Monthly</h3>
+          <p className="pb-8">Get monthly email updates on all things Urbit.</p>
+
           <Contact emphasize />
         </Section>
       </SingleColumn>
-
       <Footer />
     </Container>
   );
 }
 
 export async function getStaticProps() {
+  // Latest blog posts
   const posts = getAllPosts(
     ["title", "slug", "date", "description", "extra"],
     "blog",
     "date"
   );
 
-  const events = getAllEvents(eventKeys, "events");
+  // Pull all latest ecosystem information
+  const ecosystem = getAllPosts(
+    ["featured-1", "featured-2", "featured-3"],
+    "ecosystem/spotlight",
+    "date"
+  )[0];
 
+  const marketplaces = getAllPosts(["title", "image", "slug"], "marketplaces");
+  const podcasts = getAllPosts(
+    ["title", "image", "date", "podcast", "slug"],
+    "podcasts",
+    "date"
+  );
+  const organizations = getAllPosts(
+    ["title", "image", "slug"],
+    "organizations"
+  );
+  const applications = fs
+    .readdirSync(path.join(process.cwd(), "content/applications"), {
+      withFileTypes: true,
+    })
+    .filter((f) => f.isDirectory())
+    .map((dir) =>
+      getAllPosts(
+        ["title", "bgColor", "image", "slug", "description"],
+        `applications/${dir.name}`
+      )
+        .map((e) => ({ ...e, ship: dir.name }))
+        .flat()
+    )
+    .flat()
+    .sort((a, b) => {
+      const nameA = a.title.toLowerCase();
+      const nameB = b.title.toLowerCase();
+      return nameA < nameB ? -1 : 1;
+    });
+
+  ["featured-1", "featured-2", "featured-3"].forEach((feat) => {
+    if (ecosystem?.[feat]) {
+      const matchedPost = [
+        ...applications.map((e) => ({ ...e, type: "Application" })),
+        ...organizations.map((e) => ({ ...e, type: "Organization" })),
+        ...podcasts.map((e) => ({ ...e, type: "Podcast" })),
+        ...marketplaces.map((e) => ({ ...e, type: "Marketplace" })),
+      ].filter((e) => e.title === ecosystem[feat].title)?.[0];
+      ecosystem[feat].image =
+        ecosystem[feat].image || matchedPost?.image || null;
+      ecosystem[feat].type = matchedPost?.type || "Podcast";
+      ecosystem[feat].matchedPost = matchedPost || null;
+    }
+  });
+
+  // Latest grants
   const grants = getAllPosts(["extra", "taxonomies"], "grants", "date");
 
   const grantNumbers = {
@@ -259,6 +348,8 @@ export async function getStaticProps() {
     ).length,
   };
 
+  // Latest events
+  const events = getAllEvents(eventKeys, "events");
   const now = DateTime.now();
 
   const pastEvents = events.filter((event) => {
@@ -291,6 +382,7 @@ export async function getStaticProps() {
   return {
     props: {
       posts,
+      ecosystem,
       grantNumbers,
       events: happeningNow.concat(futureEvents).concat(pastEvents),
     },

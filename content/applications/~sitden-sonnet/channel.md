@@ -6,6 +6,7 @@ image = "https://s3.us-east-1.amazonaws.com/haddefsigwen1/reciprocal/2022.7.09..
 bgColor = "#000000"
 developer = "Quartus Co., Reciprocal Ltd."
 website = "https://reciprocal.ltd"
+description = "A distributed imageboard platform, with love"
 +++
 
 ### An imageboard platform, with love
