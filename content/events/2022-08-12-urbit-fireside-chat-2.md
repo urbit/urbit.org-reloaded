@@ -8,6 +8,7 @@ image = "https://i.imgur.com/o7DMLN3.png"
 registration_url = "https://www.meetup.com/urbit-sf/events/287471323/"
 description = ""
 dark = true
+darken_image = "true"
 youtube = "k5zM9xGdyS8"
 
 [[hosts]]
