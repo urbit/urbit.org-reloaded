@@ -3,7 +3,7 @@
 // Needs to look for its title in ecosystem/spotlight
 import { getAllPosts, getPostBySlug, getPostSlugs } from "../../lib/lib";
 import BasicPage from "../../components/ecosystem/BasicPage";
-import { Markdown } from "foundation-design-system";
+import { Markdown } from "@urbit/foundation-design-system";
 import Link from "next/link";
 import fs from "fs";
 import path from "path";

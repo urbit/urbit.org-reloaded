@@ -6,7 +6,7 @@ import {
   SingleColumn,
   Section,
   IntraNav,
-} from "foundation-design-system";
+} from "@urbit/foundation-design-system";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { getAllPosts, formatDate, generateDisplayDate } from "../lib/lib";

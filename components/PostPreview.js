@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Card } from "foundation-design-system";
+import { Card } from "@urbit/foundation-design-system";
 import { formatDate, generateDisplayDate } from "../lib/lib";
 
 export default function PostPreview(props) {

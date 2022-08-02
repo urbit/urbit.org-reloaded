@@ -1,5 +1,9 @@
 import GatewayHeader from "./GatewayHeader";
-import { Container, SingleColumn, Section } from "foundation-design-system";
+import {
+  Container,
+  SingleColumn,
+  Section,
+} from "@urbit/foundation-design-system";
 import Link from "next/link";
 
 const Gateway404 = ({ type }) => {

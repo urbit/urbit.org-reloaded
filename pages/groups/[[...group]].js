@@ -8,7 +8,7 @@ import {
   SingleColumn,
   Section,
   Markdown,
-} from "foundation-design-system";
+} from "@urbit/foundation-design-system";
 import ob from "urbit-ob";
 import GatewayHeader from "../../components/gateway/GatewayHeader";
 import Gateway404 from "../../components/gateway/Gateway404";
@@ -99,7 +99,6 @@ const GroupPage = ({ data, markdown, params }) => {
               Urbit is a clean-slate, peer-to-peer operating system and network.
             </h3>
             <div className="flex flex-col space-y-4">
-
               <Link href="/guides/joining-groups" passHref>
                 <a className="button-lg max-w-xs bg-green-400 text-white">
                   How to Join an Urbit Group

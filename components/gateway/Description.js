@@ -1,4 +1,4 @@
-import { Markdown } from "foundation-design-system";
+import { Markdown } from "@urbit/foundation-design-system";
 
 const Description = ({ description, fallback, markdown }) => {
   return (
