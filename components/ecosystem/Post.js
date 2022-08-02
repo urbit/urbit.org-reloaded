@@ -1,4 +1,4 @@
-import { Markdown } from "foundation-design-system";
+import { Markdown } from "@urbit/foundation-design-system";
 import classnames from "classnames";
 import Link from "next/link";
 export default function Post({ post }) {

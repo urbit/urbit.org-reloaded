@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { useState } from "react";
-import { Container, Section, SingleColumn } from "foundation-design-system";
+import {
+  Container,
+  Section,
+  SingleColumn,
+} from "@urbit/foundation-design-system";
 import { useInputChange } from "../../lib/hooks";
 import Head from "next/head";
 import Meta from "../../components/Meta";

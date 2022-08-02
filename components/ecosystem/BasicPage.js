@@ -10,7 +10,7 @@ import {
   Section,
   Markdown,
   IntraNav,
-} from "foundation-design-system";
+} from "@urbit/foundation-design-system";
 import Header from "../Header";
 import Footer from "../Footer";
 

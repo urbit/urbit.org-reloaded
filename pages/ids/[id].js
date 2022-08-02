@@ -7,7 +7,7 @@ import {
   SingleColumn,
   Section,
   Markdown,
-} from "foundation-design-system";
+} from "@urbit/foundation-design-system";
 import ob from "urbit-ob";
 import ResourceCard from "../../components/gateway/ResourceCard";
 import GatewayHeader from "../../components/gateway/GatewayHeader";

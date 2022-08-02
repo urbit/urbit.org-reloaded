@@ -9,7 +9,7 @@ import {
   Section,
   Markdown,
   IntraNav,
-} from "foundation-design-system";
+} from "@urbit/foundation-design-system";
 import ob from "urbit-ob";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -86,7 +86,6 @@ const ApplicationPage = ({ data, markdown, organisation, search, params }) => {
       <SingleColumn>
         <Header search={search} />
         <Section className="space-y-12" narrow>
-
           <GatewayHeader
             title={data.title}
             color={data?.bgColor}
@@ -115,17 +114,21 @@ const ApplicationPage = ({ data, markdown, organisation, search, params }) => {
             />
           </div>
 
-
           <Description
             description={data.description}
             fallback="An application on Urbit."
             markdown={markdown}
-          / >
+          />
 
           <hr className="text-white" />
 
           <div class="bg-wall-100 py-4 px-6 border-2 border-wall-200 rounded-xl">
-            <p class="text-sm text-wall-400"><span class="font-bold">Disclaimer:</span> Applications may not be audited for security and might contain malicious code or vulnerabilities that could lead to unwanted interaction with your ship. Explore at your own risk.</p>
+            <p class="text-sm text-wall-400">
+              <span class="font-bold">Disclaimer:</span> Applications may not be
+              audited for security and might contain malicious code or
+              vulnerabilities that could lead to unwanted interaction with your
+              ship. Explore at your own risk.
+            </p>
           </div>
 
           <hr className="text-wall-200" />

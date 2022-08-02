@@ -25,7 +25,7 @@ The Urbit ID registry is live and deployed to the Ethereum blockchain. Urbit ID 
 
 Each Urbit ID is really just a number. From that number we generate a pronounceable name and a visually identifiable sigil. ~dalwel-fadrun is 3,509,632,436, for example.
 
-Urbit IDs are distributed by a sponsorship tree. At the top of the tree are 28 (256) galaxies. Each galaxy issues 28 stars, making a total of 216 (65K). Stars then each can issue 216 planets, making for 232 (~4B). As you might expect, each planet issues 232 moons.
+Urbit IDs are distributed by a sponsorship tree. At the top of the tree are 28 (256) galaxies. Each galaxy issues 28 stars, making a total of 2^16^ (65K). Stars then each can issue 216 planets, making for 2^32^ (~4B). As you might expect, each planet issues 2^32^ moons.
 
 ![](https://media.urbit.org/site/overview/overview-id.png)
 
@@ -35,7 +35,7 @@ Design {% .font-bold .subpixel-antialiased .pt-8 %}
 
 At a high level, there are three important things to understand about the overall Urbit ID system design.
 
-First, scarcity: there are only 232 (~4B) Urbit IDs, so they cost something. Since they cost something, people are less likely to use them to spam or abuse the network. When you meet a stranger with an Urbit ID, you know they have some skin in the game (even without leaking personal data in either direction). That said, each Urbit ID is purely pseudonymous, so ~dalwel-fadrun for example, is proof of some stake in the network, but not much more.
+First, scarcity: there are only 2^32^ (~4B) Urbit IDs, so they cost something. Since they cost something, people are less likely to use them to spam or abuse the network. When you meet a stranger with an Urbit ID, you know they have some skin in the game (even without leaking personal data in either direction). That said, each Urbit ID is purely pseudonymous, so ~dalwel-fadrun for example, is proof of some stake in the network, but not much more.
 
 Second, decentralization: Urbit IDs are distributed by a sponsorship tree. Each sponsor issues a fixed number of addresses. Since there are lots of sponsors, there are lots of ways to get an Urbit ID — not just one central authority. Once you get one, it’s yours forever.
 

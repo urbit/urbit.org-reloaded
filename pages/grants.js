@@ -7,7 +7,7 @@ import {
   SingleColumn,
   Section,
   IntraNav,
-} from "foundation-design-system";
+} from "@urbit/foundation-design-system";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import GrantPreview from "../components/GrantPreview";
@@ -132,7 +132,8 @@ export default function Grants({ posts, categories, types, search }) {
           <h1 className="pb-16">Grants Program</h1>
           <p className="mb-8 lead">
             The Urbit Foundation's Grants program is one of our primary
-            mechanisms for distributing address space to creators and developers.
+            mechanisms for distributing address space to creators and
+            developers.
           </p>
         </Section>
         {
@@ -140,120 +141,117 @@ export default function Grants({ posts, categories, types, search }) {
         }
         <Section wide short>
           <div className="b-12">
-              <h2 id="grant-types" className="pb-12">
-                Grant types
-              </h2>
+            <h2 id="grant-types" className="pb-12">
+              Grant types
+            </h2>
 
-              <div className="flex flex-column flex-wrap md:flex-nowrap grid-cols-2 gap-x-12  pb-12">
+            <div className="flex flex-column flex-wrap md:flex-nowrap grid-cols-2 gap-x-12  pb-12">
+              <div className="md:basis-1/2">
+                {/* Proposals */}
+                <h3>Proposals</h3>
+                <p className="mb-4">
+                  Proposals are the main way to get funding for your project. We
+                  fund all kinds projects, not strictly technical ones, so don't
+                  hesitate to pitch your idea!
+                </p>
+                <Link href="/grants/proposals" passHref>
+                  <a className="button-sm bg-blue-400 text-white mb-8 max-w-fit">
+                    Submit a Proposal
+                  </a>
+                </Link>
 
-                <div className="md:basis-1/2">
-                  {/* Proposals */}
-                    <h3>Proposals</h3>
-                    <p className="mb-4">
-                    Proposals are the main way to get funding for your project.  We fund all kinds projects, not strictly technical ones,
-                    so don't hesitate to pitch your idea!
-                    </p>
-                  <Link href="/grants/proposals" passHref>
-                    <a className="button-sm bg-blue-400 text-white mb-8 max-w-fit">
-                      Submit a Proposal
+                {/* Apprenticeships */}
+                <h3>Apprenticeships</h3>
+                <p className="mb-4">
+                  Apprenticeships are practical learning opportunities for new
+                  Urbit developers provided by members of the Urbit community.
+                  They're one of the best ways to level up your skills and often
+                  lead to full-time jobs.
+                </p>
+                <Link href="/grants/apprenticeships" passHref>
+                  <a className="button-sm bg-green-400 text-white mb-8 max-w-fit">
+                    Become an Apprentice
+                  </a>
+                </Link>
+              </div>
+
+              <div className="md:basis-1/2">
+                {/* Bounties */}
+                <h3>Bounties</h3>
+                <p className="mb-4">
+                  Bounties are contracts for work provided by either the Urbit
+                  Foundation or from trusted partners in our ecosystem.
+                </p>
+                <div className="flex flex-wrap">
+                  <Link href="/grants/bounties#post-a-bounty" passHref>
+                    <a className="button-sm bg-yellow-300 text-black mr-2 max-w-fit">
+                      Post a Bounty
                     </a>
                   </Link>
-
-                  {/* Apprenticeships */}
-                    <h3>Apprenticeships</h3>
-                    <p className="mb-4">
-                     Apprenticeships are practical learning opportunities for
-                    new Urbit developers provided by members of the Urbit community.
-                    They're one of the best ways to level up your skills and often
-                    lead to full-time jobs.
-                  </p>
-                  <Link href="/grants/apprenticeships" passHref>
-                    <a className="button-sm bg-green-400 text-white mb-8 max-w-fit">
-                      Become an Apprentice
+                  <Link href="/grants/bounties" passHref>
+                    <a className="button-sm bg-wall-400 text-white max-w-fit">
+                      Learn more
                     </a>
                   </Link>
                 </div>
-
-                <div className="md:basis-1/2">
-                  {/* Bounties */}
-                  <h3>Bounties</h3>
-                  <p className="mb-4">
-                  Bounties are contracts for work provided by either the
-                    Urbit Foundation or from trusted partners in our ecosystem.
-                  </p>
-                  <div className="flex flex-wrap">
-                    <Link href="/grants/bounties#post-a-bounty" passHref>
-                      <a className="button-sm bg-yellow-300 text-black mr-2 max-w-fit">
-                        Post a Bounty
-                      </a>
-                    </Link>
-                    <Link href="/grants/bounties" passHref>
-                      <a className="button-sm bg-wall-400 text-white max-w-fit">
-                        Learn more
-                      </a>
-                    </Link>
-                  </div>
-                </div>
+              </div>
             </div>
           </div>
         </Section>
 
         <Section wide short>
+          <h2 id="join-community" className="pb-12">
+            Community
+          </h2>
 
-            <h2 id="join-community" className="pb-12">
-              Community
-            </h2>
+          <div className="flex flex-column flex-wrap md:flex-nowrap grid-cols-2 gap-x-12  pb-12">
+            <div className="md:basis-1/2">
+              <p className="mb-4">
+                We believe that grants are more successful when tackled with the
+                support of a community, and community starts with individual
+                relationships.
+              </p>
+              <ul className="mb-4">
+                <li className="mb-2">
+                  <p>
+                    <Link href="/grants/proposals">Proposals</Link> are approved
+                    and stewarded by past grant workers.
+                  </p>
+                </li>
+                <li className="mb-2">
+                  <p>
+                    <Link href="/grants/bounties">Bounties</Link> are overseen
+                    by those that post them.
+                  </p>
+                </li>
+                <li className="mb-2">
+                  <p>
+                    <Link href="/grants/apprenticeships">Apprenticeships</Link>{" "}
+                    are largely about building a relationship between apprentice
+                    and mentor.
+                  </p>
+                </li>
+              </ul>
+            </div>
 
-              <div className="flex flex-column flex-wrap md:flex-nowrap grid-cols-2 gap-x-12  pb-12">
+            <div className="md:basis-1/2">
+              <p className="mb-8">
+                Whether you're gearing up to submit your proposal or just
+                thinking about it, the best way to get started is to join the
+                Foundation group on Urbit:
+              </p>
 
-              <div className="md:basis-1/2">
+              <JoinGroup
+                emphasize
+                className="mb-8"
+                groupName="~wolref-podlex/foundation"
+              />
 
-                <p className="mb-4">
-                  We believe that grants are more successful when tackled with the
-                  support of a community, and community starts with individual
-                  relationships.
-                </p>
-                <ul className="mb-4">
-                  <li className="mb-2">
-                    <p>
-                      <Link href="/grants/proposals">Proposals</Link> are approved
-                      and stewarded by past grant workers.
-                    </p>
-                  </li>
-                  <li className="mb-2">
-                    <p>
-                      <Link href="/grants/bounties">Bounties</Link> are overseen
-                      by those that post them.
-                    </p>
-                  </li>
-                  <li className="mb-2">
-                    <p>
-                      <Link href="/grants/apprenticeships">Apprenticeships</Link>{" "}
-                      are largely about building a relationship between apprentice
-                      and mentor.
-                    </p>
-                  </li>
-                </ul>
-              </div>
-
-
-              <div className="md:basis-1/2">
-                <p className="mb-8">
-                  Whether you're gearing up to submit your proposal or just
-                  thinking about it, the best way to get started is to join the
-                  Foundation group on Urbit:
-                </p>
-
-                <JoinGroup
-                  emphasize
-                  className="mb-8"
-                  groupName="~wolref-podlex/foundation"
-                />
-
-                <p>
-                  If you're not on the network, check out our <Link href="/getting-started">Getting Started</Link> guide.
-                </p>
-              </div>
+              <p>
+                If you're not on the network, check out our{" "}
+                <Link href="/getting-started">Getting Started</Link> guide.
+              </p>
+            </div>
           </div>
         </Section>
 

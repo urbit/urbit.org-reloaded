@@ -8,7 +8,7 @@ import {
   Section,
   Markdown,
   IntraNav,
-} from "foundation-design-system";
+} from "@urbit/foundation-design-system";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import Post from "../../../components/ecosystem/Post";
