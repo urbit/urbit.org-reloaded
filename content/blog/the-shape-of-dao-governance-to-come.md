@@ -98,5 +98,6 @@ If Ballot doesn’t suit your DAO’s needs, it’s easy to use Urbit’s primit
 
 The Combine DAO uses Ballot for voting on proposals as it integrates cleanly with Urbit ID and provides flexibility for setting different quora for votes and Custom Actions to automate outcomes. There is thus no need to distinguish between the tool used for a “real vote” such as deploying Stars in exchange for tokens and the tool used for a “fun vote” like choosing a date for a meetup.This flexibility and interoperability is a hallmark to the burgeoning supply of [applications](https://urbit.org/ecosystem?type=applications) being built for Urbit.
 
+—
 
-**Anthony Arroyo is the Director of [The Combine DAO](https://blog.the-combine.org/introduction-to-the-combine-dao)**
+*Anthony Arroyo is the Director of [The Combine DAO](https://blog.the-combine.org/introduction-to-the-combine-dao)*
