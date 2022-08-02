@@ -261,7 +261,7 @@ export default function Home({
         <Section narrow>
           <h2 className="pb-8">Social Media</h2>
           <p className="pb-2">Follow us on <Link href="http://twitter.com/urbit">Twitter</Link></p>
-          <p className="pb-2">Check out our posts on <Link href="http://instagram.com/urbit">Instgram</Link></p>
+          <p className="pb-2">Check out our posts on <Link href="http://instagram.com/urbit">Instagram</Link></p>
           <p className="pb-2">Watch livestreams on <Link href="https://www.youtube.com/channel/UCNYIS9_SktINCC9yqO4CFZw">YouTube</Link></p>
           <p className="pb-2">Dig into code on <Link href="http://github.com/urbit">Github</Link></p>
           <p className="pb-2">Boot Urbit and join <Link href="https://urbit.org/groups/~bitbet-bolbel/urbit-community">Urbit Community</Link></p>
