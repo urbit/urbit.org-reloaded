@@ -11,7 +11,7 @@ image = "https://storage.googleapis.com/media.urbit.org/blog/2022.7.29..17.14.22
 
 ![Image](https://storage.googleapis.com/media.urbit.org/blog/2022.7.29..17.14.22-image.jpg)
 
-On Urbit, the risk of a governance attack is reduced because the Combine DAO’s founding team was selected based on their on-Urbit track records All participants had skin in the game. This allowed us to focus on workaday consensus building, which forms the bulk of any organization’s activities. We use Holium’s Ballot app, which integrates with all aspects of Urbit OS and gives complete flexibility for automating the execution of a winning proposal via [Custom Actions](https://docs.holium.com/ballot/custom-actions/intro).
+On Urbit, the risk of a governance attack is reduced because the Combine DAO’s founding team was selected based on their on-Urbit track records. All participants had skin in the game. This allowed us to focus on workaday consensus building, which forms the bulk of any organization’s activities. We use Holium’s Ballot app, which integrates with all aspects of Urbit OS and gives complete flexibility for automating the execution of a winning proposal via [Custom Actions](https://docs.holium.com/ballot/custom-actions/intro).
 
 Let’s walk through the thought process that led us to adopt an Urbit-centric approach to DAO governance.
 
@@ -51,7 +51,9 @@ Moloch DAO was born in the shadow of The DAO fiasco; its governance was expressl
 
 The first thing is submitting and voting on proposals for new members. Votes are majority rule with one vote per Moloch share. Only an existing member can propose a new member, so prospective members must convince an existing one to nominate them. 
 
-New member proposals double as funding proposals, a clever wrinkle which demonstrates just how much can be done on-chain with a single function. Every proposal must include a fundable ETH infrastructure project and a fundee to execute it. If approved, Moloch accepts the fundee as a new member and grants them a number of Moloch shares exchangeable 1:1 for ETH. 
+New member proposals double as funding proposals, a clever wrinkle which demonstrates just how much can be done on-chain with a single function. Every proposal must include a fundable ETH infrastructure project and a fundee to execute it. If approved, Moloch accepts the fundee as a new member and grants them a number of Moloch shares exchangeable 1:1 for ETH.
+
+![Moloch DAO](https://storage.googleapis.com/media.urbit.org/blog/moloch-dao.png)
 
 How the fundee exchanges the shares for ETH brings us to the second thing Moloch members can do: ragequitting.
 
@@ -85,6 +87,8 @@ Traditional DAOs suffer from what we like to call the Self-Enforcement Problem. 
 This all brings us finally back to Urbit. In the Urbit OS using Urbit IDs, DAOs can integrate every governance solution discussed above without touching Web2. Tailor DAO governance to your own precise needs. Download someone else’s voting app, or spin up your own. Using Urbit blurs the boundaries between on-chain and off-chain actions, eliminating the need for ad hoc fixes then fixes to fix those fixes. It all occurs in one landscape, and can pivot with new information
 
 One Urbit app is called Ballot. Ballot most closely resembles Snapshot. It’s like a decentralized version of Snapshot that works without the need for Discord—everything is on the Urbit OS—that can also be modified to execute custom off-chain actions after a vote is held.
+
+![Ballot](https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/ballot.png)
 
 Ballot allows for this sort of dynamic governance enhancement, or what we call Custom Actions. In a way, Custom Actions make the dream of smart contracts a reality: instead of being constrained to ragequitting or not ragequitting, you can create automated granular responses to Ballot votes. In other words, smart contracts that are actually smart. One action could be “tweet something” or “ping someone” once a vote is recorded in Ballot. You can write any if-then you want on the outcomes of a vote. For example, instead of relegating membership to simplistic on-chain democracy, a la ragequitting, Ballot has a function for inviting or kicking members via Urbit native logic.  Imagine if Snapshot could both conduct a Moloch-style membership vote, and then automatically add or kick the member depending on the result. That’s Ballot.
 
