@@ -54,6 +54,9 @@ The first thing is submitting and voting on proposals for new members. Votes are
 New member proposals double as funding proposals, a clever wrinkle which demonstrates just how much can be done on-chain with a single function. Every proposal must include a fundable ETH infrastructure project and a fundee to execute it. If approved, Moloch accepts the fundee as a new member and grants them a number of Moloch shares exchangeable 1:1 for ETH.
 
 ![Moloch DAO](https://storage.googleapis.com/media.urbit.org/blog/moloch-dao.png)
+<p align = "center">
+Moloch DAO
+</p>
 
 How the fundee exchanges the shares for ETH brings us to the second thing Moloch members can do: ragequitting.
 
@@ -89,6 +92,9 @@ This all brings us finally back to Urbit. In the Urbit OS using Urbit IDs, DAOs 
 One Urbit app is called Ballot. Ballot most closely resembles Snapshot. It’s like a decentralized version of Snapshot that works without the need for Discord—everything is on the Urbit OS—that can also be modified to execute custom off-chain actions after a vote is held.
 
 ![Ballot](https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/ballot.png)
+<p align = "center">
+Holium's Ballot App
+</p>
 
 Ballot allows for this sort of dynamic governance enhancement, or what we call Custom Actions. In a way, Custom Actions make the dream of smart contracts a reality: instead of being constrained to ragequitting or not ragequitting, you can create automated granular responses to Ballot votes. In other words, smart contracts that are actually smart. One action could be “tweet something” or “ping someone” once a vote is recorded in Ballot. You can write any if-then you want on the outcomes of a vote. For example, instead of relegating membership to simplistic on-chain democracy, a la ragequitting, Ballot has a function for inviting or kicking members via Urbit native logic.  Imagine if Snapshot could both conduct a Moloch-style membership vote, and then automatically add or kick the member depending on the result. That’s Ballot.
 
