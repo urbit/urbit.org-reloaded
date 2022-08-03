@@ -7,7 +7,7 @@ grant_category = ["App Dev: Other"]
 [extra]
 image = ""
 description = "Bridge for the command line"
-reward = "5 stars"
+reward = "3 stars"
 assignee = "~lavlyn-litmeg"
 grant_id = "P0080"
 completed = true
