@@ -1,7 +1,8 @@
 const markdoc = require("@urbit/markdoc");
+const themeSwapper = require("tailwindcss-theme-swapper");
+const { base, dark } = require("@urbit/foundation-design-system/themes");
 
 module.exports = {
-  presets: [require("@urbit/foundation-design-system/tailwind.config")],
   content: {
     files: [
       "./node_modules/@urbit/foundation-design-system/**/*.js",
@@ -17,5 +18,22 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/aspect-ratio")],
+  plugins: [
+    require("@tailwindcss/aspect-ratio"),
+    themeSwapper({
+      themes: [
+        {
+          name: "base",
+          selectors: [":root"],
+          theme: base,
+        },
+        {
+          name: "dark",
+          selectors: [".dark"],
+          mediaQuery: "@media (prefers-color-scheme: dark)",
+          theme: dark,
+        },
+      ],
+    }),
+  ],
 };
