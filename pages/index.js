@@ -171,18 +171,17 @@ export default function Home({
           // Build on Urbit Developer CTA
         }
         <Section narrow>
-          <div className="measure">
-            <h2 className="pb-12">Build on Urbit</h2>
-            <h4 className="pb-12">
+            <h2 className="pb-8">Build on Urbit</h2>
+            <h4 className="pb-6">
               Urbit is a personal OS designed from scratch to run peer-to-peer
               applications.
             </h4>
-            <p className="pb-12">
+            <p className="pb-6">
               It solves the hard problems of implementing a peer-to-peer network
               (including identity, NAT traversal, and exactly-once delivery) in
               the kernel so app developers can focus on business logic.
             </p>
-            <p className="pb-12">
+            <p className="pb-6">
               The entire OS is a{" "}
               <Link href="https://urbit.org/docs/nock/definition/" passHref>
                 <a>single pure function</a>
@@ -191,7 +190,7 @@ export default function Home({
               automated persistence and memory management, repeatable builds,
               and support for hot code reloading.
             </p>
-            <p className="pb-12">
+            <p className="pb-10">
               You can get started learning how to{" "}
               <Link href="https://urbit.org/docs/development/develop/" passHref>
                 <a>contribute to the project</a>
@@ -210,7 +209,6 @@ export default function Home({
                 Visit Urbit Developers
               </a>
             </Link>
-          </div>
         </Section>
 
         {
@@ -254,11 +252,22 @@ export default function Home({
         </Section>
 
         <Section narrow>
-          <h3 className="pb-2">Urbit Monthly</h3>
+          <h2 className="pb-2">Urbit Monthly</h2>
           <p className="pb-8">Get monthly email updates on all things Urbit.</p>
 
           <Contact emphasize />
         </Section>
+
+        <Section narrow>
+          <h2 className="pb-8">Social Media</h2>
+          <p className="pb-2">Follow us on <Link href="http://twitter.com/urbit">Twitter</Link></p>
+          <p className="pb-2">Check out our posts on <Link href="http://instagram.com/urbit">Instagram</Link></p>
+          <p className="pb-2">Watch livestreams on <Link href="https://www.youtube.com/channel/UCNYIS9_SktINCC9yqO4CFZw">YouTube</Link></p>
+          <p className="pb-2">Dig into code on <Link href="http://github.com/urbit">Github</Link></p>
+          <p className="pb-2">Boot Urbit and join <Link href="https://urbit.org/groups/~bitbet-bolbel/urbit-community">Urbit Community</Link></p>
+        </Section>
+
+
       </SingleColumn>
       <Footer />
     </Container>
