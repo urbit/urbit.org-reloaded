@@ -47,7 +47,7 @@ export default function Home({
           // Hero
         }
         <Section>
-          <div className="bg-[#FEFFDA] w-full p-8 md:p-12 rounded-3xl flex flex-col md:flex-row">
+          <div className="bg-yellow-100 w-full p-8 md:p-12 rounded-3xl flex flex-col md:flex-row">
             <div className="md:w-10/12 w-full md:mr-6">
               <h2 className="m-0 p-0 mr-4 pb-6">Assembly 2022</h2>
 
