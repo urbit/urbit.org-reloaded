@@ -134,7 +134,7 @@ const ApplicationPage = ({ data, markdown, organisation, search, params }) => {
           <hr className="text-wall-200" />
           <div className="flex flex-col space-y-6">
             <div className="flex flex-col space-y-4">
-              <Link href="/guides/installing-applications" passHref>
+              <Link href="/getting-started/installing-applications" passHref>
                 <a className="button-lg max-w-xs bg-green-400 text-white">
                   How to Install an Urbit Application
                 </a>
