@@ -6,8 +6,10 @@ import classNames from "classnames";
 
 export default function EventPreview({ event, className, big }) {
   // Event tiles have a 'dark mode' used when their background images are dark and white text is needed for legibility.
-  const grayText = event?.dark ? "text-white" : "text-wall-400";
-  const blackText = event?.dark ? "text-white" : "text-wall-600";
+  const grayText = event?.dark ? "text-white dark:text-black" : "text-wall-400";
+  const blackText = event?.dark
+    ? "text-white dark:text-black"
+    : "text-wall-600";
 
   const starts = generateDisplayDate(event.starts, event.timezone);
   const ends = generateDisplayDate(event.ends, event.timezone);
