@@ -12,6 +12,6 @@ Opensea is the world's largest market for NFTs.
 
 Check out planets for sale: https://opensea.io/collection/urbit-id-planet
 
-Check out stars for sale: https://opensea.io/collection/urbit-id-sta
+Check out stars for sale: https://opensea.io/collection/urbit-id-star
 
 Explore galaxies: https://opensea.io/collection/urbit-id-galaxy
