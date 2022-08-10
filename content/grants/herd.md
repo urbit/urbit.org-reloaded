@@ -51,7 +51,7 @@ install them into %application-desk, all while maintaining the integrity of curr
 
 ```:citadel [%install %application-desk ~sampel-palnet %remote-lib]```
 
-## Milstone
+## Milestones & Compensation
 
 Expected completion: September 15, 2022
 
