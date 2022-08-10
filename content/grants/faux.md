@@ -14,7 +14,7 @@ reward = "2 stars"
 assignee = "~midsum-salrux"
 champion = "~littel-wolfur"
 grant_id = "P0145"
-completed = false
+completed = true
 canceled = false
 link = ""
 
