@@ -1,4 +1,24 @@
-# UF Grant: Loom pointer compression
++++
+title = "Loom Pointer Compression" 
+date = "2022-08-11"
+
+[taxonomies]
+grant_type = [ "Apprenticeship" ]
+grant_category = [ "Core Dev", "Runtime" ]
+
+[extra]
+image = ""
+description = "Expand the maximum addressable loom size"
+reward = "1 star"
+mentor = "~fanfun-mocbud"
+assignee = ""
+grant_id = "A0173"
+completed = false
+canceled = false
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0173&prefill_Grant+Name=Loom%20Pointer%20Compression"
++++
+
+# Loom Pointer Compression Apprenticeship
 
 This project makes it possible to at least double the maximum addressible loom size, taking advantage of object allocation alignment to make use of one-or-more additional bits in our 29-bit (30-bits possible) loom-offset references.
 
@@ -33,4 +53,4 @@ The apprentice will learn about:
 
 ## Duration and Compensation
 
-Expected duration is two months.
+Expected duration is two months. Compensation is 1 star upon successful completion of the apprenticeship.
