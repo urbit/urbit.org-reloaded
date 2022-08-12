@@ -61,7 +61,7 @@ export default function DiscordLanding({ search }) {
               <a>(and a lot more)</a>
             </Link>
           </div>
-          <video autoPlay playsInline>
+          <video autoPlay loop playsInline>
             <source
               src="https://storage.googleapis.com/media.urbit.org/site/groupsdemo.webm"
               type="video/webm"
