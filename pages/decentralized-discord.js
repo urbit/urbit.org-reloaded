@@ -57,9 +57,11 @@ export default function DiscordLanding({ search }) {
         <Section narrow className="pb-36">
           <div className="flex flex-col items-center justify-center space-y-4">
             <h1 className="text-center">Urbit is Decentralized Discord</h1>
-            <p>(and a lot more)</p>
+            <Link href="/ecosystem">
+              <a>(and a lot more)</a>
+            </Link>
           </div>
-          <video autoPlay>
+          <video autoPlay playsInline>
             <source
               src="https://storage.googleapis.com/media.urbit.org/site/groupsdemo.webm"
               type="video/webm"
