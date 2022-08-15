@@ -64,7 +64,7 @@ export default function DiscordLanding({ search }) {
               <a className="text-wall-400 pb-12">(and a lot more)</a>
             </Link>
           </div>
-          <video autoPlay loop playsInline>
+          <video autoPlay muted loop playsInline>
             <source
               src="https://storage.googleapis.com/media.urbit.org/site/groupsdemo.webm"
               type="video/webm"
