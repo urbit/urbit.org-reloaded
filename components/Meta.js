@@ -4,7 +4,7 @@ export default function Meta(post, disableImage) {
   const description =
     post?.description || "Urbit is a personal server built from scratch.";
   const image =
-    post?.extra?.image || post?.image || "https://media.urbit.org/logo/urbit-logo-card.png";
+    post?.extra?.image || "https://media.urbit.org/logo/urbit-logo-card.png";
   return (
     <>
       <link rel="icon" type="image/png" href="/images/favicon.ico" />

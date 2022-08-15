@@ -44,7 +44,9 @@ export default function DiscordLanding({ search }) {
     title: "Urbit is Decentralized Discord",
     description:
       "There's no need to rely on centralized services to run a decentralized web3 project.",
-    image: "https://storage.googleapis.com/media.urbit.org/site/landing/discord-opengraph.png"
+      extra:[
+        {image:"https://storage.googleapis.com/media.urbit.org/site/landing/discord-opengraph.png"}
+      ] 
   };
   return (
     <Container>
