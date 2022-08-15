@@ -94,4 +94,4 @@ In the future, we'd like to see the following things implemented on `Membrane` t
 Our team is a two-man cohort of `~tiller-tolbus` and `~randes-losrep`. Our duo currently works by splitting the front-end and back-end considerations evenly. In simple terms, `~tiller-tolbus` works on Martian code, while `~randes-losrep` works on Terran code. 
 
 As we are both remaining pseudonymous to whatever degree possible, we have developed a demo app showcasing our ability to write and distribute apps on Urbit.
-As we are both remaining pseudonymous to whatever degree possible, we have developed a demo app showcasing our ability to write and distribute apps on Urbit.
+``
