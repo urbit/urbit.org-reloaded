@@ -41,9 +41,10 @@ function GuideCard({ title, description, href, className }) {
 
 export default function DiscordLanding({ search }) {
   const post = {
-    title: "Urbit is your decentralized Discord (and a lot more)",
+    title: "Urbit is Decentralized Discord",
     description:
       "There's no need to rely on centralized services to run a decentralized web3 project.",
+    image: "https://storage.googleapis.com/media.urbit.org/site/landing/discord-opengraph.png"
   };
   return (
     <Container>
@@ -54,11 +55,12 @@ export default function DiscordLanding({ search }) {
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
         <Header />
-        <Section narrow className="pb-36">
+        <Section className="pb-24">
           <div className="flex flex-col items-center justify-center space-y-4">
-            <h1 className="text-center">Urbit is Decentralized Discord</h1>
-            <Link href="/ecosystem">
-              <a>(and a lot more)</a>
+            <h3 className="uppercase tracking-widest">Urbit is</h3>
+            <h1 className="text-center">Decentralized Discord</h1>
+            <Link href="/ecosystem" >
+              <a className="text-wall-400 pb-12">(and a lot more)</a>
             </Link>
           </div>
           <video autoPlay loop playsInline>
@@ -67,18 +69,25 @@ export default function DiscordLanding({ search }) {
               type="video/webm"
             />
             <source
-              src="https://storage.googleapis.com/media.urbit.org/site/groupsdemo.mp4"
+              src="https://storage.googleapis.com/media.urbit.org/site/groupsdemo-2.mp4"
               type="video/mp4"
             />
           </video>
+
+          <div className="md:p-16">
+          <p className="type-ui text-center">Urbit’s Groups app allows teams, communities, and friends to get together and communicate using their own private servers.</p>
+          <p className="type-ui pt-8 text-center">Unlike Discord, only you can delete your Urbit and identity.</p>
+          </div>
         </Section>
+
         <Section className="justify-center flex-col flex items-center space-y-8">
           <h2 className="text-center">
             Host your own group in under 60 minutes
           </h2>
           <p className="text-center">
-            Get immediate decentralized messaging, blogging, chatting, and
-            collections.
+            Get immediate             <Link href="/applications/~lander-dister-dozzod-dozzod/groups" >
+decentralized messaging, blogging, chatting, and
+            collections.</Link>
           </p>
           <TwoUp>
             <GuideCard
@@ -105,10 +114,22 @@ export default function DiscordLanding({ search }) {
               href="https://urbit.org/getting-started/desktop"
             />
           </TwoUp>
-          <p>
-            There's no need to rely on centralized services to run a
-            decentralized web3 project.
-          </p>
+
+
+          <Link href="/applications/~lander-dister-dozzod-dozzod/groups">
+            <a className="pt-16 flex space-x-2 text-green-400 font-semibold">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="24" height="24" rx="5" fill="#DC5F3F" />
+              </svg>
+              <span>Learn more about Urbit Groups</span>
+            </a>
+          </Link>
           <Link href="/overview">
             <a className="flex space-x-2 text-green-400 font-semibold">
               <svg
@@ -164,20 +185,6 @@ export default function DiscordLanding({ search }) {
                 </defs>
               </svg>
               <span>Learn more about Urbit</span>
-            </a>
-          </Link>
-          <Link href="/applications/~lander-dister-dozzod-dozzod/groups">
-            <a className="flex space-x-2 text-green-400 font-semibold">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect width="24" height="24" rx="5" fill="#DC5F3F" />
-              </svg>
-              <span>Learn more about Urbit groups</span>
             </a>
           </Link>
         </Section>
