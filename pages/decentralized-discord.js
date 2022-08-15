@@ -44,13 +44,15 @@ export default function DiscordLanding({ search }) {
     title: "Urbit is Decentralized Discord",
     description:
       "There's no need to rely on centralized services to run a decentralized web3 project.",
+    image:
+      "https://storage.googleapis.com/media.urbit.org/site/landing/discord-opengraph.png",
   };
   return (
     <Container>
       <Head>
         <title>Urbit is Decentralized Discord (and a lot more)</title>
+        {Meta(post)}
       </Head>
-      {Meta(post)}
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
         <Header />
