@@ -43,7 +43,7 @@ export default function DiscordLanding({ search }) {
   const post = {
     title: "Urbit is Decentralized Discord",
     description:
-      "There's no need to rely on centralized services to run a decentralized web3 project."
+      "There's no need to rely on centralized services to run a decentralized web3 project.",
   };
   return (
     <Container>
@@ -58,7 +58,7 @@ export default function DiscordLanding({ search }) {
           <div className="flex flex-col items-center justify-center space-y-4">
             <h3 className="uppercase tracking-widest">Urbit is</h3>
             <h1 className="text-center">Decentralized Discord</h1>
-            <Link href="/ecosystem" >
+            <Link href="/ecosystem">
               <a className="text-wall-400 pb-12">(and a lot more)</a>
             </Link>
           </div>
@@ -74,8 +74,13 @@ export default function DiscordLanding({ search }) {
           </video>
 
           <div className="md:p-16">
-          <p className="type-ui text-center">Urbit’s Groups app allows teams, communities, and friends to get together and communicate using their own private servers.</p>
-          <p className="type-ui pt-8 text-center">Unlike Discord, only you can delete your Urbit and identity.</p>
+            <p className="type-ui text-center">
+              Urbit’s Groups app allows teams, communities, and friends to get
+              together and communicate using their own private servers.
+            </p>
+            <p className="type-ui pt-8 text-center">
+              Unlike Discord, only you can delete your Urbit and identity.
+            </p>
           </div>
         </Section>
 
@@ -84,9 +89,10 @@ export default function DiscordLanding({ search }) {
             Host your own group in under 60 minutes
           </h2>
           <p className="text-center">
-            Get immediate             <Link href="/applications/~lander-dister-dozzod-dozzod/groups" >
-decentralized messaging, blogging, chatting, and
-            collections.</Link>
+            Get immediate{" "}
+            <Link href="/applications/~lander-dister-dozzod-dozzod/groups">
+              decentralized messaging, blogging, chatting, and collections.
+            </Link>
           </p>
           <TwoUp>
             <GuideCard
@@ -113,7 +119,6 @@ decentralized messaging, blogging, chatting, and
               href="https://urbit.org/getting-started/desktop"
             />
           </TwoUp>
-
 
           <Link href="/applications/~lander-dister-dozzod-dozzod/groups">
             <a className="pt-16 flex space-x-2 text-green-400 font-semibold">
