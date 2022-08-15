@@ -49,7 +49,7 @@ export default function DiscordLanding({ search }) {
   return (
     <Container>
       <Head>
-        <title>Urbit is your decentralized Discord (and a lot more)</title>
+        <title>Urbit is Decentralized Discord (and a lot more)</title>
       </Head>
       {Meta(post)}
       <IntraNav ourSite="https://urbit.org" search={search} />
