@@ -1,5 +1,6 @@
 +++
 title = "The Marketplace"
+description = "Welcome to The Marketplace, featuring The Pit, Urbit's first open-outcry market!"
 shortcode = "~tirrel/the-marketplace"
 type = "Public"
 tile = "https://snipboard.io/F5ubXp.jpg"
