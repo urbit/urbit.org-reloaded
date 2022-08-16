@@ -25,6 +25,7 @@ export default function Ecosystem({
   post,
   posts,
   applications,
+  groups,
   marketplaces,
   organizations,
   podcasts,
@@ -113,7 +114,7 @@ export default function Ecosystem({
                   "grid-cols-2 md:grid-cols-3": type !== "podcasts",
                   "grid-cols-1": type === "podcasts",
                   "grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2":
-                    type === "applications",
+                    type === "applications" || type === "groups",
                   hidden: type === undefined,
                 })}
               >
@@ -148,6 +149,34 @@ export default function Ecosystem({
                           <p className="text-left font-bold">{app.title}</p>
                           <p className="text-left text-wall-400 font-light">
                             {app.description}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                {type === "groups" &&
+                  groups.map((group) => (
+                    <Link href={`/groups/${group.ship}/${group.slug}`}>
+                      <div className="flex space-x-4 items-center cursor-pointer hover:opacity-90">
+                        <div
+                          className="h-36 w-36 rounded-xl items-center justify-center shrink-0 overflow-hidden"
+                          style={{
+                            backgroundColor: group?.tile?.startsWith("#")
+                              ? group?.tile
+                              : "rgba(0,0,0,0)",
+                          }}
+                        >
+                          {!group?.tile?.startsWith("#") && (
+                            <img
+                              className="items-center h-36 w-36"
+                              src={group.tile}
+                            />
+                          )}
+                        </div>
+                        <div className="">
+                          <p className="text-left font-bold">{group.title}</p>
+                          <p className="text-left text-wall-400 font-light">
+                            {group.description}
                           </p>
                         </div>
                       </div>
@@ -231,6 +260,13 @@ function EcosystemSidebar() {
         href="/ecosystem?type=applications"
       >
         Applications
+      </ActiveLink>
+      <ActiveLink
+        currentPath={currentPath}
+        className="type-ui"
+        href="/ecosystem?type=groups"
+      >
+        Groups
       </ActiveLink>
       <ActiveLink
         currentPath={currentPath}
@@ -348,6 +384,25 @@ export async function getStaticProps({}) {
       const nameB = b.title.toLowerCase();
       return nameA < nameB ? -1 : 1;
     });
+  const groups = fs
+    .readdirSync(path.join(process.cwd(), "content/groups"), {
+      withFileTypes: true,
+    })
+    .filter((f) => f.isDirectory())
+    .map((dir) =>
+      getAllPosts(
+        ["title", "tile", "slug", "description"],
+        `groups/${dir.name}`
+      )
+        .map((e) => ({ ...e, ship: dir.name }))
+        .flat()
+    )
+    .flat()
+    .sort((a, b) => {
+      const nameA = a.title.toLowerCase();
+      const nameB = b.title.toLowerCase();
+      return nameA < nameB ? -1 : 1;
+    });
 
   ["featured-1", "featured-2", "featured-3"].forEach((feat) => {
     if (post?.[feat]) {
@@ -369,6 +424,14 @@ export async function getStaticProps({}) {
   });
 
   return {
-    props: { posts, post, applications, marketplaces, podcasts, organizations },
+    props: {
+      posts,
+      post,
+      applications,
+      groups,
+      marketplaces,
+      podcasts,
+      organizations,
+    },
   };
 }
