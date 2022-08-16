@@ -17,10 +17,7 @@ import Footer from "../components/Footer";
 function GuideCard({ title, description, href, className }) {
   return (
     <div
-      className={
-        "bg-wall-100 rounded-xl cursor-pointer aspect-w-none aspect-h-none md:aspect-w-5 md:aspect-h-4 h-full " +
-        className
-      }
+      className={"bg-wall-100 rounded-xl cursor-pointer h-full " + className}
     >
       <div className="p-8 measure flex justify-between flex-col">
         <div className="flex flex-col space-y-2">
