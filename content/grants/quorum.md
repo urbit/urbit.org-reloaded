@@ -3,14 +3,14 @@ title = "Quorum"
 date = "2022-08-16"
 
 [taxonomies]
-grant_type = [ "Bounty" ]
+grant_type = [ "Proposal" ]
 grant_category = [ "App Dev" ]
 
 [extra]
 image = ""
 description = "Quorum: Clone of Stack Exchange on Urbit"
 reward = "3 stars"
-assignee = "~tamlut-modnys, ~litlep-nibbyt,~sidnym-ladrut"
+assignee = "~tamlut-modnys, ~litlep-nibbyt, ~sidnym-ladrut"
 grant_id = "B0167"
 champion = "~lagrev-nocfep"
 completed = false
