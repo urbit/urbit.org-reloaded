@@ -10,13 +10,15 @@ import {
   Markdown,
 } from "@urbit/foundation-design-system";
 import ob from "urbit-ob";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import GatewayHeader from "../../components/gateway/GatewayHeader";
 import Gateway404 from "../../components/gateway/Gateway404";
 import MetadataBlock from "../../components/gateway/MetadataBlock";
 import MetadataLink from "../../components/gateway/MetadataLink";
 import Description from "../../components/gateway/Description";
 
-const GroupPage = ({ data, markdown, params }) => {
+const GroupPage = ({ data, markdown, params, search }) => {
   const { group } = params;
   if (!ob.isValidPatp(group?.[0] || "")) {
     return <Gateway404 type="group" />;
@@ -61,6 +63,7 @@ const GroupPage = ({ data, markdown, params }) => {
         <meta property="twitter:image" content={image} key="image" />
       </Head>
       <SingleColumn>
+        <Header search={search} />
         <Section className="space-y-12" narrow>
           <GatewayHeader
             title={data.title}
@@ -113,11 +116,9 @@ const GroupPage = ({ data, markdown, params }) => {
               <a className="font-bold text-green-400">Submit your group</a>
             </Link>
           </div>
-          <Link href="/" passHref>
-            <a className="text-xl pt-8 block font-semibold">Urbit.org</a>
-          </Link>
         </Section>
       </SingleColumn>
+      <Footer />
     </Container>
   );
 };
