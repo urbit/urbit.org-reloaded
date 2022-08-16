@@ -31,7 +31,7 @@ export default function Overview({ posts, data, markdown, search }) {
           <h1>Overview</h1>
         </Section>
         <Section>
-          <div className="flex justify-between sidebar">
+          <div className="flex justify-between sidebar md:space-x-8">
             <Sidebar search={search}>
               {childPages("/overview", posts.pages)}
             </Sidebar>
