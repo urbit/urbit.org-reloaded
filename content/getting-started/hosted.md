@@ -6,7 +6,7 @@ weight = 3
 
 ### 1. Select a hosting provider
 
-Hosting providers can sell you a planet and manage the hosting for you for a regular fee. We recommend [ThirdEarth]([https://urbithost.com](https://third.earth/) for quickly acquiring a planet and the hosting required to make your Urbit experience accessible from anywhere.
+Hosting providers can sell you a planet and manage the hosting for you for a regular fee. We recommend [ThirdEarth](https://third.earth/) for quickly acquiring a planet and the hosting required to make your Urbit experience accessible from anywhere.
 
 Two important points about hosting providers:
 
