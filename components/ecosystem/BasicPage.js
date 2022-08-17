@@ -25,13 +25,17 @@ export default function BasicPage({
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
   }
+  const metaPost = Object.assign({}, post);
+  metaPost.title = `${post.title} - ${section}`;
+  metaPost.description =
+    section === "Podcast" ? `${post.podcast} - ${post.date}` : post.description;
   return (
     <Container>
       <Head>
         <title>
           {post.title} • {section}
         </title>
-        {Meta(post)}
+        {Meta(metaPost)}
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>

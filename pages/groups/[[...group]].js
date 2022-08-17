@@ -27,12 +27,12 @@ const GroupPage = ({ data, markdown, params, search }) => {
   return (
     <Container>
       <Head>
-        <title>{data.title} • Urbit Group</title>
+        <title>{data.title} - Urbit Group</title>
         <link rel="icon" type="image/png" href="/images/favicon.ico" />
         <meta name="twitter:card" content="summary" key="twitter-card" />
         <meta
           name="og:title"
-          content={`${data.title} • Urbit Group`}
+          content={`${data.title} - Urbit Group`}
           key="title"
         />
         <meta
