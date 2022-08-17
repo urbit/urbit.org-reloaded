@@ -11,7 +11,7 @@ image = ""
 description = "Host a Uniswap frontend trading UI on your urbit"
 reward = "1 star"
 assignee = [""]
-grant_id = "B0186"
+grant_id = "B0155"
 completed = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0186&prefill_Grant+Name=Uniswap"
 +++
