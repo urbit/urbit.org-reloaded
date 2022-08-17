@@ -54,7 +54,7 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
           property="twitter:image"
           content={
             data?.image ||
-            `https://urbit-org-git-mp-og-cards-urbit.vercel.app/api/sigil?patp=${id}&color=${
+            `https://urbit.org/api/sigil?patp=${id}&color=${
               data?.bgColor || "24201E"
             }`
           }
