@@ -10,7 +10,7 @@ grant_category = [ "App Dev" ]
 image = ""
 description = "Build an Ethereum wallet and UI that you can run from your urbit ship and use to interact with the web3 ecosystem"
 reward = "3 stars"
-assignee = ""
+assignee = [""]
 grant_id = "B0158"
 completed = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0158&prefill_Grant+Name=Urbit%20Native%20Ethereum%20Wallet"
