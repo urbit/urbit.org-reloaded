@@ -24,33 +24,15 @@ const GroupPage = ({ data, markdown, params, search }) => {
     return <Gateway404 type="group" />;
   }
 
-  const color = data?.tile && data?.tile.startsWith("#");
-  const reqParams = [
-    color ? `color=${encodeURIComponent(data.tile)}` : "",
-    !color
-      ? `images=${encodeURIComponent(
-          data?.tile ||
-            "https://media.urbit.org/public-links/placeholder-image.png"
-        )}`
-      : "",
-  ].filter((e) => e !== "");
-  const image = `https://urbit-id-og-cards-667veow91-urbit.vercel.app/${
-    data.title
-  }.png?${reqParams.join("&")}`;
-
   return (
     <Container>
       <Head>
-        <title>{data.title} • Groups • urbit.org</title>
+        <title>{data.title} • Urbit Group</title>
         <link rel="icon" type="image/png" href="/images/favicon.ico" />
-        <meta
-          name="twitter:card"
-          content="summary_large_image"
-          key="twitter-card"
-        />
+        <meta name="twitter:card" content="summary" key="twitter-card" />
         <meta
           name="og:title"
-          content={`${data.title} • Groups • urbit.org`}
+          content={`${data.title} • Urbit Group`}
           key="title"
         />
         <meta
@@ -60,7 +42,7 @@ const GroupPage = ({ data, markdown, params, search }) => {
           }
           key="description"
         />
-        <meta property="twitter:image" content={image} key="image" />
+        <meta property="twitter:image" content={data.tile} key="image" />
       </Head>
       <SingleColumn>
         <Header search={search} />

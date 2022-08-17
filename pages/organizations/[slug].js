@@ -1,6 +1,3 @@
-// Single page per organisation
-// Needs to have *associated ships* by which it polls content/applications for applications it "owns"
-// Needs to look for its title in ecosystem/spotlight
 import { getAllPosts, getPostBySlug, getPostSlugs } from "../../lib/lib";
 import BasicPage from "../../components/ecosystem/BasicPage";
 import { Markdown } from "@urbit/foundation-design-system";
@@ -19,7 +16,7 @@ export default function Organization({
 }) {
   return (
     <BasicPage
-      section="Organizations"
+      section="Organization"
       post={post}
       markdown={markdown}
       search={search}

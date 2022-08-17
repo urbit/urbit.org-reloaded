@@ -46,7 +46,7 @@ export default function Grant({ post, markdown, search }) {
   return (
     <Container>
       <Head>
-        <title>{post.title} • Grants • urbit.org</title>
+        <title>{post.title} • Grant</title>
         {Meta(post)}
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />

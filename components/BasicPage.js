@@ -22,7 +22,7 @@ export default function BasicPage({ post, markdown, search, index = false }) {
   return (
     <Container>
       <Head>
-        <title>Urbit • {post.title}</title>
+        <title>{post.title}</title>
         {Meta(post)}
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />

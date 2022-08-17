@@ -12,7 +12,7 @@ export default function Marketplace({
 }) {
   return (
     <BasicPage
-      section="Marketplaces"
+      section="Urbit Marketplace"
       post={post}
       markdown={markdown}
       search={search}

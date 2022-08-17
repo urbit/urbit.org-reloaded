@@ -12,7 +12,7 @@ export default function Podcast({
 }) {
   return (
     <BasicPage
-      section="Podcasts"
+      section="Podcast"
       post={post}
       markdown={markdown}
       search={search}

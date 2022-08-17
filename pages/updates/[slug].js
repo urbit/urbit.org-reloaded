@@ -30,7 +30,7 @@ export default function Post({ post, markdown, search }) {
   return (
     <Container>
       <Head>
-        <title>{post.title} • Updates • urbit.org</title>
+        <title>{post.title} • Updates</title>
         {Meta(post)}
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />

@@ -67,7 +67,7 @@ export default function Ecosystem({
   return (
     <Container>
       <Head>
-        <title>{title} • Urbit</title>
+        <title>{title}</title>
         {Meta(data)}
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
