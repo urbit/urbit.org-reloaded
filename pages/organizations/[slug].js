@@ -94,7 +94,16 @@ export default function Organization({
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(
     params.slug,
-    ["title", "slug", "URL", "image", "ships", "group", "content"],
+    [
+      "title",
+      "slug",
+      "description",
+      "URL",
+      "image",
+      "ships",
+      "group",
+      "content",
+    ],
     "organizations"
   );
 
