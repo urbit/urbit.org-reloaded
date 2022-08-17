@@ -1,5 +1,6 @@
 +++
 title = "Urbit.live"
+description = "Urbit.live is Urbit’s largest planet exchange and first network explorer, selling Layer 1 planets and stars for ETH."
 image = "https://urbit.live/static/media/urbit-live-logo-png-400.6ec9a92b.png"
 URL = "https://urbit.live"
 payment = ["ETH"]

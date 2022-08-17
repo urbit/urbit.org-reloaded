@@ -1,5 +1,6 @@
 +++
 title = "Urbitex"
+description = "Urbitex is an automated marketplace and network explorer for Urbit address space."
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/marketplaces/urbitex-logo.png"
 URL = "https://urbitex.io"
 payment = ["ETH"]

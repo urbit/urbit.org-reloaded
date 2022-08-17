@@ -1,5 +1,6 @@
 +++
 title = "~mocbel house"
+description = "~mocbel house is a layer 2 planet marketplace, accepting BTC, ETH, and ADA."
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/marketplaces/mocbelhouse.png"
 URL = "https://mocbel.house/"
 payment = ["ETH","BTC","ADA"]

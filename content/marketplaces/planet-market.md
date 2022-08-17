@@ -1,5 +1,6 @@
 +++
 title = "Planet Market"
+description = "The easiest way to get on Urbit."
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/marketplaces/planet.market.png"
 URL = "https://planet.market"
 payment = ["USD"]
