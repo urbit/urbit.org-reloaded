@@ -47,7 +47,6 @@ export default function Home({
           // Hero
         }
         <Section>
-
           <div className="bg-yellow-100 dark:bg-[#5C5037] w-full p-8 md:p-12 rounded-3xl flex flex-col md:flex-row">
             <div className="md:w-10/12 w-full md:mr-6">
               <h2 className="m-0 p-0 mr-4 pb-6">Assembly 2022</h2>
@@ -172,44 +171,44 @@ export default function Home({
           // Build on Urbit Developer CTA
         }
         <Section narrow>
-            <h2 className="pb-8">Build on Urbit</h2>
-            <h4 className="pb-6">
-              Urbit is a personal OS designed from scratch to run peer-to-peer
-              applications.
-            </h4>
-            <p className="pb-6">
-              It solves the hard problems of implementing a peer-to-peer network
-              (including identity, NAT traversal, and exactly-once delivery) in
-              the kernel so app developers can focus on business logic.
-            </p>
-            <p className="pb-6">
-              The entire OS is a{" "}
-              <Link href="https://urbit.org/docs/nock/definition/" passHref>
-                <a>single pure function</a>
-              </Link>{" "}
-              that provides application developers with strong guarantees:
-              automated persistence and memory management, repeatable builds,
-              and support for hot code reloading.
-            </p>
-            <p className="pb-10">
-              You can get started learning how to{" "}
-              <Link href="https://urbit.org/docs/development/develop/" passHref>
-                <a>contribute to the project</a>
-              </Link>
-              , or view a variety of{" "}
-              <Link
-                href="https://github.com/urbit/awesome-urbit#http-apis-airlock"
-                passHref
-              >
-                <a>libraries</a>
-              </Link>{" "}
-              for building on Urbit using the languages you already know.
-            </p>
-            <Link href="https://developers.urbit.org" passHref>
-              <a className="button-lg type-ui text-white bg-green-400 max-w-fit">
-                Visit Urbit Developers
-              </a>
+          <h2 className="pb-8">Build on Urbit</h2>
+          <h4 className="pb-6">
+            Urbit is a personal OS designed from scratch to run peer-to-peer
+            applications.
+          </h4>
+          <p className="pb-6">
+            It solves the hard problems of implementing a peer-to-peer network
+            (including identity, NAT traversal, and exactly-once delivery) in
+            the kernel so app developers can focus on business logic.
+          </p>
+          <p className="pb-6">
+            The entire OS is a{" "}
+            <Link href="https://urbit.org/docs/nock/definition/" passHref>
+              <a>single pure function</a>
+            </Link>{" "}
+            that provides application developers with strong guarantees:
+            automated persistence and memory management, repeatable builds, and
+            support for hot code reloading.
+          </p>
+          <p className="pb-10">
+            You can get started learning how to{" "}
+            <Link href="https://urbit.org/docs/development/develop/" passHref>
+              <a>contribute to the project</a>
             </Link>
+            , or view a variety of{" "}
+            <Link
+              href="https://github.com/urbit/awesome-urbit#http-apis-airlock"
+              passHref
+            >
+              <a>libraries</a>
+            </Link>{" "}
+            for building on Urbit using the languages you already know.
+          </p>
+          <Link href="https://developers.urbit.org" passHref>
+            <a className="button-lg type-ui text-white bg-green-400 max-w-fit">
+              Visit Urbit Developers
+            </a>
+          </Link>
         </Section>
 
         {
@@ -261,14 +260,29 @@ export default function Home({
 
         <Section narrow>
           <h2 className="pb-8">Social Media</h2>
-          <p className="pb-2">Follow us on <Link href="http://twitter.com/urbit">Twitter</Link></p>
-          <p className="pb-2">Check out our posts on <Link href="http://instagram.com/urbit">Instagram</Link></p>
-          <p className="pb-2">Watch livestreams on <Link href="https://www.youtube.com/channel/UCNYIS9_SktINCC9yqO4CFZw">YouTube</Link></p>
-          <p className="pb-2">Dig into code on <Link href="http://github.com/urbit">Github</Link></p>
-          <p className="pb-2">Boot Urbit and join <Link href="https://urbit.org/groups/~bitbet-bolbel/urbit-community">Urbit Community</Link></p>
+          <p className="pb-2">
+            Follow us on <Link href="http://twitter.com/urbit">Twitter</Link>
+          </p>
+          <p className="pb-2">
+            Check out our posts on{" "}
+            <Link href="http://instagram.com/urbit">Instagram</Link>
+          </p>
+          <p className="pb-2">
+            Watch livestreams on{" "}
+            <Link href="https://www.youtube.com/channel/UCNYIS9_SktINCC9yqO4CFZw">
+              YouTube
+            </Link>
+          </p>
+          <p className="pb-2">
+            Dig into code on <Link href="http://github.com/urbit">Github</Link>
+          </p>
+          <p className="pb-2">
+            Boot Urbit and join{" "}
+            <Link href="https://urbit.org/groups/~bitbet-bolbel/urbit-community">
+              Urbit Community
+            </Link>
+          </p>
         </Section>
-
-
       </SingleColumn>
       <Footer />
     </Container>
@@ -346,15 +360,13 @@ export async function getStaticProps() {
         0
       )
     ),
-    contributors: [
-      ...new Set(...[grants.map((e) => e.extra.assignee.split(","))]),
-    ].length,
+    contributors: [...new Set(...[grants.map((e) => e.extra.assignee)])].length,
     active: grants.filter(
       (e) =>
         !e.extra.canceled &&
         !e.extra.completed &&
         e.extra.assignee &&
-        e.extra.assignee.length > 0
+        e.extra.assignee?.[0]?.length > 0
     ).length,
   };
 
