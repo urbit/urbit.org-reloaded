@@ -8,6 +8,6 @@ website = "https://pal.dev/suite/verse"
 bgColor = "#EEEEDD"
 +++
 
-a random Bible verse, every day
+Verse displays a random Bible verse. Whenever you open Landscape, a new daily passage awaits.
 
 ![Screenshot](https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/verse.png)
