@@ -12,7 +12,7 @@ description = "Native Planet - A domestic hosting solution for Urbit"
 reward = "6 stars"
 assignee = "~dalhec-banler"
 champion = "~poldec-tonteg"
-grant_id = "P0152"
+grant_id = "P0126"
 completed = false
 canceled = false
 +++

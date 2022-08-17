@@ -11,7 +11,7 @@ image = ""
 description = "Simple file sharing on Urbit"
 reward = "2 stars"
 assignee = "~tinden-pontev"
-grant_id = "P0123"
+grant_id = "P0102"
 completed = false
 link = ""
 +++

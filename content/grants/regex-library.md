@@ -12,7 +12,7 @@ description = "Implement a regular expressions library in Hoon"
 reward = "3 stars"
 mentor = "~lagrev-nocfep"
 assignee = "~macrep-racdec"
-grant_id = "B0177"
+grant_id = "B0149"
 completed = false
 canceled = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0177&prefill_Grant+Name=Regular%20Expressions%20Library"
