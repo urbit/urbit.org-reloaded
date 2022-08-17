@@ -12,7 +12,8 @@
     "getting-started-tree": "node lib/buildPageTree getting-started weight",
     "overview-tree": "node lib/buildPageTree overview weight",
     "cache-posts": "node lib/cache.js",
-    "rss": "node lib/rss.js"
+    "rss": "node lib/rss.js",
+    "vercel-build": "yum install libuuid-devel libmount-devel && cp /lib64/{libuuid,libmount,libblkid}.so.1 node_modules/canvas/build/Release/ && npm run build"
   },
   "dependencies": {
     "@iarna/toml": "^2.2.5",
