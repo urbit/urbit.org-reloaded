@@ -55,7 +55,7 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
           content={
             data?.image ||
             `https://urbit.org/api/sigil?patp=${id}&color=${
-              data?.bgColor || "24201E"
+              data?.bgColor?.slice(1) || "24201E"
             }`
           }
           key="image"
