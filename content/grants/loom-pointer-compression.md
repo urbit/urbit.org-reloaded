@@ -24,9 +24,9 @@ This project makes it possible to at least double the maximum addressable loom s
 
 ## Deliverables
 
-- an updated allocator (`u3a_walloc()`) that ensures at 8-byte (2-word) alignment for all loom allocations
-- an updated de/reference api that compresses pointer-to-offset (`u3a_to_off()`) and decompresses offset-to-pointer (`u3a_to_ptr()`)
-- a migration from the old to new heap layout (`u3m_pack()`, but enforcing new alignment invariants)
+- an updated allocator (`u3a_walloc()` and friends) that ensures at least 8-byte (2-word) alignment for all loom allocations
+- an updated de/reference api that compresses pointer-to-offset (`u3a_outa()`) and decompresses offset-to-pointer (`u3a_into()`)
+- a migration from the old to new heap layout (`u3m_pack()`, but capable of reordering the heap to adjust minimum allocation alignment)
 
 ## User Stories
 
