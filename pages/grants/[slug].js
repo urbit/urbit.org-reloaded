@@ -27,13 +27,22 @@ export default function Grant({ post, markdown, search }) {
   const assignee = post?.extra?.assignee;
   const mentor = post.extra.mentor || post.extra.champion;
   const assigneeLink =
-    assignee && ob.isValidPatp(assignee) ? (
-      <Link href={`/ids/${assignee}`} passHref>
-        <a className="text-green-400">{assignee}</a>
-      </Link>
-    ) : (
-      assignee
-    );
+    assignee &&
+    assignee.map((each, index) => {
+      return ob.isValidPatp(each) ? (
+        <>
+          {index ? ", " : ""}
+          <Link href={`/ids/${each}`} passHref>
+            <a className="text-green-400">{each}</a>
+          </Link>
+        </>
+      ) : (
+        <>
+          {index ? ", " : ""}
+          {each}
+        </>
+      );
+    });
   const mentorLink =
     mentor && ob.isValidPatp(mentor) ? (
       <Link href={`/ids/${mentor}`} passHref>
@@ -56,7 +65,7 @@ export default function Grant({ post, markdown, search }) {
           <h1>{post.title}</h1>
           {post.extra.assignee ? (
             <div className="type-ui text-wall-500 mt-4">
-              Grantee: {assigneeLink}
+              Grantee(s): {assigneeLink}
             </div>
           ) : null}
           {post.extra.mentor ? (
