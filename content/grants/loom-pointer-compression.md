@@ -20,11 +20,11 @@ work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A01
 
 # Loom Pointer Compression Apprenticeship
 
-This project makes it possible to at least double the maximum addressible loom size, taking advantage of object allocation alignment to make use of one-or-more additional bits in our 29-bit (30-bits possible) loom-offset references.
+This project makes it possible to at least double the maximum addressable loom space. Use of an unused bit in loom offset references, which are currently 29 bits, can increase the addressable loom space from 2GB to 4GB, and aligning all allocations on an 8-byte boundary can further double the addressable loom space from 4GB to 8GB.
 
 ## Deliverables
 
-- an updated allocator (`u3a_walloc()`) that ensures at least 8-byte (2-word) alignment for all allocations
+- an updated allocator (`u3a_walloc()`) that ensures at 8-byte (2-word) alignment for all loom allocations
 - an updated de/reference api that compresses pointer-to-offset (`u3a_to_off()`) and decompresses offset-to-pointer (`u3a_to_ptr()`)
 - a migration from the old to new heap layout (`u3m_pack()`, but enforcing new alignment invariants)
 
