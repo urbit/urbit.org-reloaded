@@ -20,18 +20,16 @@ export default function EventPreview({ event, className, big }) {
     generateRealtimeDate(event.starts) > DateTime.now() && !inFuture;
 
   return (
-    <div
-      className={`cursor-pointer aspect-w-4 aspect-h-5 md:aspect-w-5 md:aspect-h-4 ${className}`}
-    >
+    <div className={`cursor-pointer h-full ${className}`}>
       <div
         key={event.slug}
-        className={`bg-wall-100 rounded-xl bg-cover bg-center bg-no-repeat `}
+        className={`bg-wall-100 min-h-[320px] h-full flex flex-col rounded-xl bg-cover bg-center bg-no-repeat `}
         style={{ backgroundImage: `url(${event.image})` || "" }}
       >
         <Link href={`/events/${event.slug}`}>
           <div
             className={classNames(
-              "flex flex-col p-6 justify-between items-between h-full relative",
+              "flex flex-col p-6 min-h-[320px] justify-between items-between h-full relative",
               {
                 "backdrop-brightness-50 rounded-xl": Boolean(
                   event?.darken_image
@@ -50,38 +48,40 @@ export default function EventPreview({ event, className, big }) {
               </p>
             </div>
 
-            <div className="absolute p-6 left-0 bottom-0 w-full pr-32">
-              <p className={`${blackText} type-sub mb-1`}>{event.location}</p>
-              <DateRange
-                starts={starts}
-                ends={ends}
-                className={`${grayText} type-sub`}
-              />
-            </div>
+            <div className="flex justify-between items-end">
+              <div className="">
+                <p className={`${blackText} type-sub mb-1`}>{event.location}</p>
+                <DateRange
+                  starts={starts}
+                  ends={ends}
+                  className={`${grayText} type-sub`}
+                />
+              </div>
 
-            {inFuture && event.registration_url ? (
-              <div className="absolute right-0 bottom-0 p-6">
-                <a
-                  className="button-sm bg-green-400 text-white"
-                  href={event.registration_url}
-                  onClick={(e) => e.stopPropagation()}
-                  target="_blank"
-                >
-                  RSVP
-                </a>
-              </div>
-            ) : event.youtube ? (
-              <div className="absolute right-0 bottom-0 p-6">
-                <a
-                  className="button-sm bg-wall-600 text-white"
-                  href={`https://www.youtube.com/watch?v=${event.youtube}`}
-                  onClick={(e) => e.stopPropagation()}
-                  target="_blank"
-                >
-                  ▶ Watch
-                </a>
-              </div>
-            ) : null}
+              {inFuture && event.registration_url ? (
+                <div>
+                  <a
+                    className="button-sm bg-green-400 text-white"
+                    href={event.registration_url}
+                    onClick={(e) => e.stopPropagation()}
+                    target="_blank"
+                  >
+                    RSVP
+                  </a>
+                </div>
+              ) : event.youtube ? (
+                <div className="shrink-0">
+                  <a
+                    className="button-sm bg-wall-600 text-white shrink-0"
+                    href={`https://www.youtube.com/watch?v=${event.youtube}`}
+                    onClick={(e) => e.stopPropagation()}
+                    target="_blank"
+                  >
+                    ▶ Watch
+                  </a>
+                </div>
+              ) : null}
+            </div>
           </div>
         </Link>
       </div>
