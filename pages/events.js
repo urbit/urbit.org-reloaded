@@ -1,23 +1,24 @@
 import Head from "next/head";
-import Link from "next/link";
+import cn from "classnames";
 import { DateTime } from "luxon";
-
+import { useState } from "react";
 import Meta from "../components/Meta";
 import {
   Container,
   SingleColumn,
   Section,
   IntraNav,
+  TwoUp,
 } from "@urbit/foundation-design-system";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import EventPreview from "../components/EventPreview";
-import { contact } from "../lib/constants";
-import { getAllEvents, generateRealtimeDate } from "../lib/lib";
+import { getAllEvents, generateRealtimeDate, pair } from "../lib/lib";
 
 import { eventKeys } from "../lib/constants";
 
 export default function Events({ events, search }) {
+  const [selected, setSelected] = useState("All");
   const post = {
     title: "Events",
     description: "In-person, remote, and recorded events about Urbit.",
@@ -25,32 +26,63 @@ export default function Events({ events, search }) {
 
   const now = DateTime.now();
 
-  const pastEvents = events.filter((event) => {
-    const ends = generateRealtimeDate(event.ends);
-    return ends < now;
-  });
+  const selectionFilter = (event) => {
+    if (selected === "All") {
+      return true;
+    } else if (selected === "In-person") {
+      return event.location !== "Online Event";
+    } else if (selected === "Online") {
+      return event.location === "Online Event";
+    }
+  };
 
-  const futureEvents = events
-    .filter((event) => {
-      const starts = generateRealtimeDate(event.starts);
-      return starts > now;
+  const pastEvents = pair(
+    events.filter(selectionFilter).filter((event) => {
+      const ends = generateRealtimeDate(event.ends);
+      return ends < now;
     })
-    .sort((a, b) => {
-      const aStarts = generateRealtimeDate(a.starts).ts;
-      const bStarts = generateRealtimeDate(b.starts).ts;
-      if (aStarts > bStarts) {
-        return 1;
-      } else if (aStarts === bStarts) {
-        return 0;
-      }
-      return -1;
-    });
+  );
 
-  const happeningNow = events.filter((event) => {
-    const starts = generateRealtimeDate(event.starts);
-    const ends = generateRealtimeDate(event.ends);
-    return starts < DateTime.now() && ends > now;
-  });
+  const futureEvents = pair(
+    events
+      .filter(selectionFilter)
+      .filter((event) => {
+        const starts = generateRealtimeDate(event.starts);
+        return starts > now;
+      })
+      .sort((a, b) => {
+        const aStarts = generateRealtimeDate(a.starts).ts;
+        const bStarts = generateRealtimeDate(b.starts).ts;
+        if (aStarts > bStarts) {
+          return 1;
+        } else if (aStarts === bStarts) {
+          return 0;
+        }
+        return -1;
+      })
+  );
+
+  const happeningNow = pair(
+    events.filter(selectionFilter).filter((event) => {
+      const starts = generateRealtimeDate(event.starts);
+      const ends = generateRealtimeDate(event.ends);
+      return starts < DateTime.now() && ends > now;
+    })
+  );
+
+  const SelectedButton = ({ selection, text }) => {
+    return (
+      <a
+        className={cn("badge-lg w-fit cursor-pointer type-ui", {
+          "bg-wall-600 text-white": selected === selection,
+          "bg-wall-100 text-wall-500": selected !== selection,
+        })}
+        onClick={() => setSelected(selection)}
+      >
+        {text}
+      </a>
+    );
+  };
 
   return (
     <Container>
@@ -64,13 +96,11 @@ export default function Events({ events, search }) {
         <Section narrow>
           <div className="measure">
             <h1 className="pb-16">Events</h1>
-            <p className="pb-6">
-              Events of all kinds: In-person, Remote, and Recorded.
-            </p>
-            <p>
-              <a href={contact.newsletter}>Subscribe</a> to the Urbit Newsletter
-              for regular updates, including new blog posts and events.
-            </p>
+            <div className="flex space-x-2">
+              <SelectedButton selection="All" text="All Events" />
+              <SelectedButton selection="In-person" text="In-person" />
+              <SelectedButton selection="Online" text="Online" />
+            </div>
           </div>
         </Section>
 
@@ -80,8 +110,14 @@ export default function Events({ events, search }) {
               <div className="mb-8 mt-16 table">
                 <h3 className="text-green-400">Happening Now</h3>
               </div>
-              {happeningNow.map((post) => {
-                return <EventPreview big event={post} className="mb-8" />;
+              {happeningNow.map((group) => {
+                return (
+                  <TwoUp>
+                    {group.map((post) => (
+                      <EventPreview big event={post} className="mb-8" />
+                    ))}
+                  </TwoUp>
+                );
               })}
             </>
           ) : null}
@@ -90,8 +126,14 @@ export default function Events({ events, search }) {
               <div className="mb-8 mt-16 table">
                 <h3 className="">Coming Soon</h3>
               </div>
-              {futureEvents.map((post) => {
-                return <EventPreview big event={post} className="mb-8" />;
+              {futureEvents.map((group) => {
+                return (
+                  <TwoUp>
+                    {group.map((post) => (
+                      <EventPreview event={post} className="mb-8" />
+                    ))}
+                  </TwoUp>
+                );
               })}
             </>
           ) : null}
@@ -99,8 +141,14 @@ export default function Events({ events, search }) {
             <h3 className="text-wall-500">Past Events</h3>
           </div>
 
-          {pastEvents.map((post) => {
-            return <EventPreview big event={post} className="mb-8" />;
+          {pastEvents.map((group) => {
+            return (
+              <TwoUp>
+                {group.map((post) => (
+                  <EventPreview event={post} className="mb-8" />
+                ))}
+              </TwoUp>
+            );
           })}
         </Section>
       </SingleColumn>
