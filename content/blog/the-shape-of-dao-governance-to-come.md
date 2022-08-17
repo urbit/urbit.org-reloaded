@@ -1,6 +1,6 @@
 +++
 title = "The Shape of DAO Governance to Come"
-date = "2022-08-02"
+date = "2022-08-17"
 description = "When building the Combine DAO, we conducted a survey of DAO governance and tooling and came to the conclusion that the many theoretical approaches to the problem of governance were tied to the implementation details of the DAO stack. Since we were building everything on Urbit—as opposed to through the typical combination of Solidity contracts, Web2 tools and Snapshot—we realized that we’d have to do some rethinking. A new approach for a new stack."
 
 [extra]
