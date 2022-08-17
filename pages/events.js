@@ -93,7 +93,7 @@ export default function Events({ events, search }) {
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
         <Header />
-        <Section narrow>
+        <Section>
           <div className="measure">
             <h1 className="pb-16">Events</h1>
             <div className="flex space-x-2">
@@ -104,7 +104,7 @@ export default function Events({ events, search }) {
           </div>
         </Section>
 
-        <Section narrow>
+        <Section>
           {happeningNow.length > 0 ? (
             <>
               <div className="mb-8 mt-16 table">
