@@ -2,7 +2,7 @@
 title = "Faux"
 developer = "~midsum-salrux"
 shortcode = "~tindys-botter-dozzod-tomdys/faux"
-description = "An Urbit native Discord bridge"
+description = "An Urbit-native Discord bridge"
 license = "MIT"
 website = "https://github.com/midsum-salrux/faux"
 bgColor = "#000000"
