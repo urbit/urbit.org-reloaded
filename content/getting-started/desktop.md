@@ -4,6 +4,9 @@ description = "Run Urbit locally as a desktop application"
 weight = 1
 +++
 
+<div class="bg-yellow-200 rounded-xl display !p-7 flex flex-col space-y-4"><h4 level="4" id="notice">Notice</h4><p className="text-sm">Port is early beta software, and inconsistent functionality has been reported in certain operating environments.  A more reliable way to quickly check out the network is in the works.</p><p>For the best immediate Urbit experience we recommend <a href="/getting-started/server">setting up a VPS</a> or <a href="/getting-started/hosted">using a hosting service</a>.</p></div>
+
+
 ### 1. Get Port
 
 Port is a desktop GUI application that allows you to spin up, access, and manage your Urbit ships without any knowledge of the command line or Urbit binary.
