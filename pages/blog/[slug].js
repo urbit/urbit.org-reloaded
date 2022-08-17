@@ -21,7 +21,6 @@ import {
 } from "@urbit/foundation-design-system";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import Contact from "../../components/Contact";
 import PostPreview from "../../components/PostPreview";
 import TwoUp from "../../components/TwoUp";
 
@@ -41,7 +40,7 @@ export default function Post({
     <Container>
       <Head>
         <title>{post.title} • Blog • urbit.org</title>
-        {Meta(post)}
+        {Meta(post, false, true)}
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>

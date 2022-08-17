@@ -25,13 +25,17 @@ export default function BasicPage({
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
   }
+  const metaPost = Object.assign({}, post);
+  metaPost.title = `${post.title} - ${section}`;
+  metaPost.description =
+    section === "Podcast" ? `${post.podcast} - ${post.date}` : post.description;
   return (
     <Container>
       <Head>
         <title>
-          {post.title} • {section} • Urbit
+          {post.title} • {section}
         </title>
-        {Meta(post)}
+        {Meta(metaPost)}
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
@@ -40,12 +44,10 @@ export default function BasicPage({
           <div className="flex items-center space-x-4">
             <img src={post.image} className="w-36" />
             <div className="flex flex-col pl-2">
-              <h1
-                className={classnames({ "text-3xl": section === "Podcasts" })}
-              >
+              <h1 className={classnames({ "text-3xl": section === "Podcast" })}>
                 {post.title}
               </h1>
-              <p>{section.slice(0, -1)}</p>
+              <p>{section}</p>
             </div>
           </div>
           {/* General purpose metadata bar -- podcast listen button is special-cased URL, flexed at the end of the row */}
@@ -63,7 +65,7 @@ export default function BasicPage({
                   <p className="shrink-0">{post.date}</p>
                 </div>
               )}
-              {post?.URL && section !== "Podcasts" && (
+              {post?.URL && section !== "Podcast" && (
                 <div className="flex flex-col">
                   <p className="font-bold text-wall-400">Website</p>
                   <a
@@ -74,7 +76,7 @@ export default function BasicPage({
                   </a>
                 </div>
               )}
-              {post?.URL && section === "Marketplaces" && (
+              {post?.URL && section === "Urbit Marketplace" && (
                 <div className="flex flex-col">
                   <p className="font-bold text-wall-400">Accepts</p>
                   <p className="text-sm font-semibold font-mono">
@@ -83,7 +85,7 @@ export default function BasicPage({
                 </div>
               )}
             </div>
-            {post?.URL && section === "Podcasts" && (
+            {post?.URL && section === "Podcast" && (
               <a
                 href={post.URL}
                 className="button-lg bg-green-400 text-white cursor-pointer flex space-x-2"

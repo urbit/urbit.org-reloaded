@@ -62,7 +62,7 @@ export default function UsingLayout({ posts, data, markdown, params, search }) {
   return (
     <>
       <Head>
-        <title>{data.title} • Community • urbit.org</title>
+        <title>{data.title} • Community</title>
         {Meta(data)}
       </Head>
       <div className="flex h-screen min-h-screen w-screen sidebar">

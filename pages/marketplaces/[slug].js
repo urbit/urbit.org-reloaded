@@ -12,7 +12,7 @@ export default function Marketplace({
 }) {
   return (
     <BasicPage
-      section="Marketplaces"
+      section="Urbit Marketplace"
       post={post}
       markdown={markdown}
       search={search}
@@ -36,7 +36,7 @@ export default function Marketplace({
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(
     params.slug,
-    ["title", "slug", "URL", "image", "payment", "content"],
+    ["title", "slug", "description", "URL", "image", "payment", "content"],
     "marketplaces"
   );
 

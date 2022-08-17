@@ -1,5 +1,6 @@
 +++
 title = "~lanlyd"
+description = "~lanlyd is a star on the Urbit network."
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/marketplaces/lanlyd.png"
 URL = "https://lanlyd.net"
 payment = ["USD"]

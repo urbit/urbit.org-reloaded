@@ -1,5 +1,6 @@
 +++
 title = "Dalten Collective"
+description = "Dalten is a distributed fellowship of like minded individuals."
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/dalten.jpg"
 URL = "https://dalten.org"
 ships = ["~dalten", "~magped-magped-rabsef-bicrym", "~mirler-dozzod-talwet"]

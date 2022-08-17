@@ -51,12 +51,14 @@ export default function Grant({ post, markdown, search }) {
     ) : (
       mentor
     );
+  const metaPost = Object.assign({}, post);
+  metaPost.title = `${post.title} - Grant`;
 
   return (
     <Container>
       <Head>
-        <title>{post.title} • Grants • urbit.org</title>
-        {Meta(post)}
+        <title>{post.title} - Grant</title>
+        {Meta(metaPost)}
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>

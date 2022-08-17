@@ -19,6 +19,7 @@ import { eventKeys } from "../lib/constants";
 import IndexCard from "../components/ecosystem/IndexCard";
 import fs from "fs";
 import path from "path";
+import Meta from "../components/Meta";
 
 export default function Home({
   posts,
@@ -27,10 +28,15 @@ export default function Home({
   grantNumbers,
   search,
 }) {
+  const post = {
+    title: "Urbit",
+    description: "A clean-slate OS and network for the 21st century.",
+  };
   return (
     <Container>
       <Head>
-        <title>urbit.org</title>
+        <title>Urbit</title>
+        {Meta(post)}
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>

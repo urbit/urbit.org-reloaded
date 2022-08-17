@@ -49,7 +49,7 @@ export default function Event({
     <Container>
       <Head>
         <title>{event.title} • Events • urbit.org</title>
-        {Meta(event)}
+        {Meta(event, false, true)}
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>

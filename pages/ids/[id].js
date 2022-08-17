@@ -24,15 +24,6 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
     return <Gateway404 type="ID" />;
   }
 
-  const reqParams = [
-    data?.bgColor ? `color=${encodeURIComponent(data?.bgColor)}` : "",
-    data?.nickname ? `nickname=${encodeURIComponent(data?.nickname)}` : "",
-    data?.image ? `images=${encodeURIComponent(data?.image)}` : "",
-  ].filter((e) => e !== "");
-  const image = `https://urbit-id-og-cards-kappa.vercel.app/${deSig(
-    id
-  )}.png?${reqParams.join("&")}`;
-
   // Galaxies shouldn't show parents, so store it as boolean here for reference.
   const isGalaxy = ob.clan(id) === "galaxy";
 
@@ -48,24 +39,27 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
   return (
     <Container>
       <Head>
-        <title>{id} • Urbit ID • urbit.org</title>
+        <title>{id} • Urbit ID</title>
         <link rel="icon" type="image/png" href="/images/favicon.ico" />
-        <meta
-          name="twitter:card"
-          content="summary_large_image"
-          key="twitter-card"
-        />
-        <meta
-          name="og:title"
-          content={`${id} • Urbit ID • urbit.org`}
-          key="title"
-        />
+        <meta name="twitter:card" content="summary" key="twitter-card" />
+        <meta name="og:title" content={`${id} • Urbit ID`} key="title" />
         <meta
           name="og:description"
-          content="View more about this Urbit ID on urbit.org."
+          content={`ID Type: ${
+            ob.clan(id).slice(0, 1).toUpperCase() + ob.clan(id).slice(1)
+          }`}
           key="description"
         />
-        <meta property="twitter:image" content={image} key="image" />
+        <meta
+          property="twitter:image"
+          content={
+            data?.image ||
+            `https://urbit.org/api/sigil?patp=${id}&color=${
+              data?.bgColor?.slice(1) || "24201E"
+            }`
+          }
+          key="image"
+        />
       </Head>
       <SingleColumn>
         <Section className="space-y-12 w-full" narrow>

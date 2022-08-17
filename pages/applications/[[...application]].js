@@ -24,13 +24,6 @@ const ApplicationPage = ({ data, markdown, organisation, search, params }) => {
   if (!ob.isValidPatp(application[0])) {
     return <Gateway404 type="application" />;
   }
-  const reqParams = [
-    data?.bgColor ? `color=${encodeURIComponent(data?.bgColor)}` : "",
-    data?.image ? `images=${encodeURIComponent(data?.image)}` : "",
-  ].filter((e) => e !== "");
-  const image = `https://urbit-id-og-cards-78ieodof2-urbit.vercel.app/${
-    data.title
-  }.png?${reqParams.join("&")}`;
 
   let devLink;
 
@@ -60,16 +53,12 @@ const ApplicationPage = ({ data, markdown, organisation, search, params }) => {
   return (
     <Container>
       <Head>
-        <title>{data.title} • Applications • urbit.org</title>
+        <title>{data.title} • Urbit Application</title>
         <link rel="icon" type="image/png" href="/images/favicon.ico" />
-        <meta
-          name="twitter:card"
-          content="summary_large_image"
-          key="twitter-card"
-        />
+        <meta name="twitter:card" content="summary" key="twitter-card" />
         <meta
           name="og:title"
-          content={`${data.title} • Applications • urbit.org`}
+          content={`${data.title} • Urbit Application`}
           key="title"
         />
         <meta
@@ -80,7 +69,7 @@ const ApplicationPage = ({ data, markdown, organisation, search, params }) => {
           }
           key="description"
         />
-        <meta property="twitter:image" content={image} key="image" />
+        <meta property="twitter:image" content={data.image} key="image" />
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>

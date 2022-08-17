@@ -32,7 +32,7 @@ export default function GrantProgramOverview({
   return (
     <Container>
       <Head>
-        <title>{title} • Grants • urbit.org</title>
+        <title>{title} • Grants</title>
         {Meta(post)}
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />

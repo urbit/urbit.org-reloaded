@@ -21,7 +21,7 @@ export default function Overview({ posts, data, markdown, search }) {
   return (
     <Container>
       <Head>
-        <title>{data.title} • Overview • Urbit</title>
+        <title>{data.title} • Overview</title>
         {Meta(data)}
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />

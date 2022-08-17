@@ -1,21 +1,23 @@
-export default function Meta(post, disableImage) {
-  const author = post?.extra?.author || "Urbit";
-  const title = post?.title ? `${post.title} - ` : "";
+export default function Meta(post, disableImage, large = false) {
+  const author = post?.extra?.author || "urbit.org";
+  const title = post?.title ? post.title : "";
   const description =
     post?.description || "Urbit is a personal server built from scratch.";
   const image =
-    post?.extra?.image || post?.image || "https://media.urbit.org/logo/urbit-logo-card.png";
+    post?.extra?.image ||
+    post?.image ||
+    "https://media.urbit.org/logo/urbit-logo-card.png";
   return (
     <>
       <link rel="icon" type="image/png" href="/images/favicon.ico" />
       <meta
         name="twitter:card"
-        content="summary_large_image"
+        content={large ? "summary_large_image" : "summary"}
         key="twitter-card"
       />
       <meta name="twitter:site" content="@urbit" key="twitter-site" />
       <meta name="twitter:creator" content="@urbit" key="twitter-creator" />
-      <meta name="og:title" content={`${title}urbit.org`} key="title" />
+      <meta name="og:title" content={title} key="title" />
       <meta name="og:description" content={description} key="description" />
       <meta name="description" content={description} />
       <meta name="author" content={author} key="author" />

@@ -1,5 +1,6 @@
 +++
 title = "Third.Earth"
+description = "Third.Earth is an Urbit hosting and development company focused on bridging Web2 capabilities to the Urbit ecosystem."
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/thirdearth.png"
 URL = "https://third.earth"
 ships = ["~botwet"]
