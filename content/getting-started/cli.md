@@ -12,11 +12,14 @@ If you're a power user, you can run the Urbit virtual machine directly using the
 {% tab label="MacOS" %}
 
 ```bash
-mkdir ~/urbit
-cd ~/urbit
-curl -JLO https://urbit.org/install/mac/latest
-tar zxvf ./darwin.tgz --strip=1
-~/urbit/urbit
+curl -L https://urbit.org/install/mac/latest | tar xzk --strip=1 && ./urbit
+```
+
+Note our Mac build is only compatible with Apple Silicon (M1/M2) via Rosetta.
+If you have such a machine you must run the following command:
+
+```
+/usr/sbin/softwareupdate --install-rosetta --agree-to-license
 ```
 
 {% /tab %}
@@ -24,18 +27,14 @@ tar zxvf ./darwin.tgz --strip=1
 {% tab label="Linux" %}
 
 ```shell
-mkdir ~/urbit
-cd ~/urbit
-wget --content-disposition https://urbit.org/install/linux64/latest
-tar zxvf ./linux64.tgz --strip=1
-~/urbit/urbit
+curl -L https://urbit.org/install/linux64/latest | tar xzk --strip=1 && ./urbit
 ```
 
 Linux users may need to run this command in another terminal window to access your Urbit on port 80:
 
 ```shell
 sudo apt-get install libcap2-bin
-sudo setcap 'cap_net_bind_service=+ep' ~/urbit/urbit
+sudo setcap 'cap_net_bind_service=+ep' ./urbit
 ```
 
 {% /tab %}
@@ -43,14 +42,15 @@ sudo setcap 'cap_net_bind_service=+ep' ~/urbit/urbit
 {% tab label="Windows" %}
 
 ```winbatch
-mkdir %USERPROFILE%\urbit
-cd %USERPROFILE%\urbit
-curl -JLO https://urbit.org/install/windows/latest
-tar zxvf .\windows.tgz --strip=1
-%USERPROFILE%\urbit\urbit
+curl -L https://urbit.org/install/windows/latest | tar -xzkf - --strip-components=1 && urbit
 ```
 
-> Windows 10 build 17063 and later includes the familiar `curl` and `tar` command-line tools.
+Windows 10 build 17063 and later includes the familiar `curl` and `tar`
+command-line tools. If you're running an older version of Windows, you may need
+to visit
+[https://github.com/urbit/urbit/releases/latest](https://github.com/urbit/urbit/releases/latest)
+in the browser, download the `windows.zip` file, extract it and execute the
+contained `urbit.exe` file in the command prompt.
 
 {% /tab %}
 
@@ -92,10 +92,10 @@ A comet name looks like `~dasres-ragnep-lislyt-ribpyl--mosnyx-bisdem-nidful-marz
 
 ---
 
-To boot a comet, go into the command line and run the following command from the `urbit` directory you created during [Urbit installation](#os).
+To boot a comet, go into the command line and run the following command:
 
 ```sh
-~/urbit/urbit -c mycomet
+./urbit -c mycomet
 ```
 
 It may take a while to load the comet (probably only take a few minutes, but it could take longer). This comes along with it being free. When it's done you'll some messages ending like this:
@@ -111,10 +111,10 @@ When your comet is finished booting, you will see `~sampel_marzod:dojo>` (Dojo: 
 
 To exit Urbit, use `Ctrl-D` or enter `|exit` into Dojo.
 
-To start your comet up again, run the following from your `urbit` directory (note the lack of `-c` argument):
+To start your comet up again, run the following command:
 
 ```sh
-~/urbit/urbit mycomet
+./mycomet/.run
 ```
 
 ### Using the web interface
@@ -134,10 +134,10 @@ At the moment, the most common way to use Urbit is by launching apps like Groups
 
 Urbit comes with a recent release of the Urbit OS, but automatic updates of the `%base` desk (which contains the kernel of the OS) are not enabled by default for Comets. Many comets are used only once and thrown away, so it would be wasteful to update every single comet as soon as it boots. If you plan to use your comet for more than a quick test, you'll probably want to ensure you're running the latest version of the OS.
 
-You can enable updates for your comet by typing `|install (sein:title our now our) %kids, =local %base` into Dojo and pressing Enter.
+You can enable updates for your comet by typing `|ota (sein:title our now our)` into Dojo and pressing Enter.
 
 ```
-> |install (sein:title our now our) %kids, =local %base
+> |ota (sein:title our now our)
 >=
 kiln: activated install into %base from [~samzod %kids]
 kiln: downloading update for %base from [~samzod %kids]

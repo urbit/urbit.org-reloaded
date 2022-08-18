@@ -72,11 +72,14 @@ Download Urbit with the following commands:
 {% tab label="MacOS" %}
 
 ```bash
-mkdir ~/urbit
-cd ~/urbit
-curl -JLO https://urbit.org/install/mac/latest
-tar zxvf ./darwin.tgz --strip=1
-~/urbit/urbit
+curl -L https://urbit.org/install/mac/latest | tar xzk --strip=1 && ./urbit
+```
+
+Note our Mac build is only compatible with Apple Silicon (M1/M2) via Rosetta.
+If you have such a machine you must run the following command:
+
+```
+/usr/sbin/softwareupdate --install-rosetta --agree-to-license
 ```
 
 {% /tab %}
@@ -84,18 +87,14 @@ tar zxvf ./darwin.tgz --strip=1
 {% tab label="Linux" %}
 
 ```shell
-mkdir ~/urbit
-cd ~/urbit
-wget --content-disposition https://urbit.org/install/linux64/latest
-tar zxvf ./linux64.tgz --strip=1
-~/urbit/urbit
+curl -L https://urbit.org/install/linux64/latest | tar xzk --strip=1 && ./urbit
 ```
 
 Linux users may need to run this command in another terminal window to access your Urbit on port 80:
 
 ```shell
 sudo apt-get install libcap2-bin
-sudo setcap 'cap_net_bind_service=+ep' ~/urbit/urbit
+sudo setcap 'cap_net_bind_service=+ep' ./urbit
 ```
 
 {% /tab %}
@@ -103,25 +102,26 @@ sudo setcap 'cap_net_bind_service=+ep' ~/urbit/urbit
 {% tab label="Windows" %}
 
 ```winbatch
-mkdir %USERPROFILE%\urbit
-cd %USERPROFILE%\urbit
-curl -JLO https://urbit.org/install/windows/latest
-tar zxvf .\windows.tgz --strip=1
-%USERPROFILE%\urbit\urbit
+curl -L https://urbit.org/install/windows/latest | tar -xzkf - --strip-components=1 && urbit
 ```
 
-> Windows 10 build 17063 and later includes the familiar `curl` and `tar` command-line tools.
+Windows 10 build 17063 and later includes the familiar `curl` and `tar`
+command-line tools. If you're running an older version of Windows, you may need
+to visit
+[https://github.com/urbit/urbit/releases/latest](https://github.com/urbit/urbit/releases/latest)
+in the browser, download the `windows.zip` file, extract it and execute the
+contained `urbit.exe` file in the command prompt.
 
 {% /tab %}
 
 {% /tabs %}
 
-Next, transfer `your-keyfile.key` to your server using scp or an FTP client, then move it to the `~/urbit` directory you created in the last step.
+Next, transfer `your-keyfile.key` to your server using scp or an FTP client.
 
 Now you can run Urbit for the first time. Run the below command, replacing ames_port with a public port number between 49152 to 65535, sampel-palnet with the name of your planet, and sampel-palnet.key with the name of your keyfile.
 
 ```sh
-./urbit -p ames_port -w sampel-palnet -k ./sampel-palnet.key
+./urbit -p ames_port -w sampel-palnet -k sampel-palnet.key
 ```
 
 Arvo, the Urbit OS, now creates a directory called `sampel-palnet/` and begins booting your planet and establishing connections with the P2P network. When that's finished, you'll see Dojo, the Urbit command line:
@@ -138,14 +138,17 @@ Check out the [cloud hosting guide](/using/running/hosting) for tips on improvin
 
 Shut down your planet by typing Ctrl+D into Dojo.
 
-To boot your planet up again, run the following command, once again replacing `ames_port` with the port you used previously, and now referencing your planet's folder.
+The `urbit` binary will have automatically "docked" with your pier, copying
+itself inside so a separate binary isn't necessary. To boot your planet up
+again, run `./sampel-palnet/.run -p ames_port`, once again replacing
+`ames_port` with the port you used previously.
 
 Your planet's folder, `sampel-palnet/`, is called your pier, and it holds all your data. If you want to migrate your data from one system to another, you must bring your pier.
 
 You should also delete your keyfile from your remote system to prevent yourself from using the same key twice, which will cause communication problems with other planets.
 
 ```sh
-rm ./your-keyfile.key
+rm your-keyfile.key
 ```
 
 ### 5. Log in
