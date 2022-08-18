@@ -35,11 +35,15 @@ sudo setcap 'cap_net_bind_service=+ep' ./urbit
 {% tab label="Windows" %}
 
 ```winbatch
-curl -L https://urbit.org/install/windows/latest | tar xzk --strip=1
-urbit.exe
+curl -L https://urbit.org/install/windows/latest | tar -xzkf - --strip-components=1 && urbit
 ```
 
-> Windows 10 build 17063 and later includes the familiar `curl` and `tar` command-line tools.
+Windows 10 build 17063 and later includes the familiar `curl` and `tar`
+command-line tools. If you're running an older version of Windows, you may need
+to visit
+[https://github.com/urbit/urbit/releases/latest](https://github.com/urbit/urbit/releases/latest)
+in the browser, download the `windows.zip` file, extract it and execute the
+contained `urbit.exe` file in the command prompt.
 
 {% /tab %}
 
