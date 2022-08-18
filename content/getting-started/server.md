@@ -75,6 +75,13 @@ Download Urbit with the following commands:
 curl -L https://urbit.org/install/mac/latest | tar xzk --strip=1 && ./urbit
 ```
 
+Note our Mac build is only compatible with Apple Silicon (M1/M2) via Rosetta.
+If you have such a machine you must run the following command:
+
+```
+/usr/sbin/softwareupdate --install-rosetta --agree-to-license
+```
+
 {% /tab %}
 
 {% tab label="Linux" %}

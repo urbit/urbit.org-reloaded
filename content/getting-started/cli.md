@@ -15,6 +15,13 @@ If you're a power user, you can run the Urbit virtual machine directly using the
 curl -L https://urbit.org/install/mac/latest | tar xzk --strip=1 && ./urbit
 ```
 
+Note our Mac build is only compatible with Apple Silicon (M1/M2) via Rosetta.
+If you have such a machine you must run the following command:
+
+```
+/usr/sbin/softwareupdate --install-rosetta --agree-to-license
+```
+
 {% /tab %}
 
 {% tab label="Linux" %}
