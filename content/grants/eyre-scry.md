@@ -44,16 +44,13 @@ work, but the desired speedup will not occur until both parts are in.
 
 ## Implementation
 
-Eyre will store a map from URLs to clay scry paths. HTTP requests coming in to
-eyre will first check this map, and if it matches, scries the file out of clay
-and returns it immediately. It if doesn't match, it just goes through the
-current normal path for HTTP requests.
+Eyre will store a map of mutable URL bindings to a trie (`+of` core) that contains a tagged union of either a scry path or a pair of a simple payload (defined in lull.hoon) and an aeon (a revision number).
+
+HTTP requests coming in to eyre will first check this map, and if it matches, returns either the payload immediately, or performs the scry and returns that immediately. It if doesn't match, it just goes through the current normal path for HTTP requests.
 
 New %tasks will be created for eyre to add and remove from this map.
 
-A %warp request to clay is maintained for each clay file in the map in order to
-be notified about changes to them. When notified about said changes, Eyre will
-give a %gift to the runtime.
+Eyre will give a %gift to the runtime upon startup and whenever a binding is added or removed from the map.
 
 ### Milestone 1: 3 stars
 
