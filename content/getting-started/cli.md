@@ -12,7 +12,7 @@ Note there is a much more comprehensive [cloud hosting
 guide](https://operators.urbit.org/manual/running/hosting) which walks through
 setting up Urbit on a [Digital Ocean](https://www.digitalocean.com/) VPS.
 
-## 1. Install Urbit
+### 1. Install Urbit
 
 Choose your operating system and run the given command in your terminal to
 download the Urbit runtime:
@@ -73,7 +73,7 @@ If successful, you will see a block of output beginning with the line:
 Urbit: a personal server operating function
 ```
 
-## 2. Boot Urbit
+### 2. Boot Urbit
 
 An Urbit instance is intrinsically tied to a unique identity called an **Urbit
 ID**. There are five classes of Urbit ID, but we will consider two here: comets
@@ -207,7 +207,7 @@ delete that keyfile.
 
 {% /tabs %}
 
-## 3. Login
+### 3. Login
 
 While your urbit is running, the web interface called *Landscape* can be
 accessed in the browser. Its URL will usually be either `localhost` or
@@ -225,7 +225,7 @@ code you copied from the dojo in the previous step and hit "continue". You'll
 now be taken to your homescreen, with tiles for the default apps such as Groups
 and Terminal.
 
-## Next steps
+### Next steps
 
 Learn how to [get around your
 urbit](https://urbit.org/getting-started/getting-around).
