@@ -1,5 +1,5 @@
 +++
-title = "Command line install"
+title = "Command line app"
 weight = 2
 description = "Installation instructions for power users."
 +++
