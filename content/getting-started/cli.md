@@ -1,8 +1,7 @@
 +++
 title = "Command line install"
-weight = 4
+weight = 2
 description = "Installation instructions for power users."
-tag = "additional"
 +++
 
 If you're a power user, you can run the Urbit virtual machine directly using the
