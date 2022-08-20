@@ -41,7 +41,7 @@ curl -L https://urbit.org/install/linux64/latest | tar xzk --strip=1 && ./urbit
 ```
 
 > Linux users may need to run this command in another terminal window to access
-> your Urbit on port 80:
+> your urbit on port 80:
 >
 > ```shell
 > sudo apt-get install libcap2-bin
@@ -81,7 +81,7 @@ and planets.
 
 - **Comet:** A comet is an identity which anyone can generate themselves, for
   free. It's a good option to try out Urbit. Comets are limited by the fact they
-  cannot be "factory reset", meaning if your Urbit somehow becomes broken or
+  cannot be "factory reset", meaning if your urbit somehow becomes broken or
   corrupted then you'll have to start again with a new identity. In that sense,
   they are impermanent.
 
@@ -136,7 +136,7 @@ idea to enable updates with the following command in the dojo:
 |ota (sein:title our now our)
 ```
 
-Lastly, while the dojo is quite powerful, most people use their Urbit via
+Lastly, while the dojo is quite powerful, most people use their urbit via
 Landscape, the browser-based UI. In order to access Landscape, you need your web
 login code. You can get this by running the following command in the dojo:
 
@@ -187,7 +187,7 @@ folder, so you can start it up again by doing:
 ./sampel-palnet/.run
 ```
 
-While the dojo is quite powerful, most people use their Urbit via Landscape, the
+While the dojo is quite powerful, most people use their urbit via Landscape, the
 browser-based UI. In order to access Landscape, you need your web login code.
 You can get this by running the following command in the dojo:
 
@@ -207,9 +207,9 @@ delete that keyfile.
 
 {% /tabs %}
 
-## 3. Login to Landscape
+## 3. Login
 
-While your Urbit is running, the web interface called *Landscape* can be
+While your urbit is running, the web interface called *Landscape* can be
 accessed in the browser. Its URL will usually be either `localhost` or
 `localhost:8080`, depending on your platform. To check the address, you can look
 at the boot messages in the terminal. You should see a line like:
@@ -225,5 +225,7 @@ code you copied from the dojo in the previous step and hit "continue". You'll
 now be taken to your homescreen, with tiles for the default apps such as Groups
 and Terminal.
 
-For more information on navigating Landscape, see the [getting
-around](https://urbit.org/getting-started/getting-around) guide.
+## Next steps
+
+Learn how to [get around your
+urbit](https://urbit.org/getting-started/getting-around).
