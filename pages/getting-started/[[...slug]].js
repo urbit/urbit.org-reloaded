@@ -233,7 +233,7 @@ function LaunchCards() {
           />
         </svg>
       ),
-      href: "/getting-started/server",
+      href: "/getting-started/cli",
     },
     {
       title: "Server setup",
