@@ -200,6 +200,10 @@ It'll spit out a code that'll look something like `lidlut-tabwed-pillex-ridrup`
 (note this is a separate code to your master ticket). Copy the code it gives you
 to the clipboard.
 
+One last thing: The `sampel-palnet-1.key` keyfile is only needed once, when you
+first boot your planet. Now that it's booted, it's good security practice to
+delete that keyfile.
+
 {% /tab %}
 
 {% /tabs %}
