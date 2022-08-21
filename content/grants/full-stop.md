@@ -45,7 +45,7 @@ Through whatever front-end the user chooses, Full Stop's available functions wil
 - **Period Data:** The user can record information about their period.
     - Start and Stop dates
     - Flow rate per day, during period
-    - Pain and Physical Symptom checklist per day
+    - Physical Symptom checklist per day
 - **Sexual Activity Data:** The user can record information about any sexual contact they may experience.
     - Date of encounter
     - Use or non-use of additional contraceptive protection (e.g. condoms)
