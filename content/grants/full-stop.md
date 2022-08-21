@@ -81,6 +81,8 @@ As a user, I can:
 - Track additional biomarkers related to menstruation:
     - Off-Period Spotting,
     - Birth control pill consumption,
+- Track the weeks of my pregnancy
+- Project my fertile days based on my own data stored on my secured server
 - Receive push notifications from the application as reminders, but where such notifications must'n't leak data about the users potential medical conditions, including potential pregnancies,
 - Review my tracked data in a visually appealing format, in application,
 - Receive assistance from the application in timing my sexual contact to encourage/avoid pregnancy,
