@@ -65,9 +65,7 @@ Through whatever front-end the user chooses, Full Stop's available functions wil
     - **Full Stop** will incorporate several methods of timing contraception users can select from including those proscribed by various women's health organizations as potential alternatives to hormonal or physical birth control options (the 'Rhythm Method', Natural Family Planning, the Standard Day method).
     - **Full Stop** will also incorporate available ovulation/fertility window timing algorithms users may select from, to assist them in becoming pregnant.
 ### Outputting Data
-- **U on Urbit:**
-    - **U on Urbit** is a Biometric Data Suite for Urbit. Users of **U** will be able to track a wide array of their personal biometric data on their personal server.
-    - Rather than attempting to build a comprehensive, monolithic health application, **U** combines many, separate biometric input streams that correspond with the way Users already use other devices/applications to track, e.g. calories, steps, heart rate, recurring medication, insulin levels. Any development team should be able to add a new application or device, whos data **U** should be able to injest.
+- Application data should be available for use in other applications, pending inter-app-permissions development.
     - The **U on Urbit** product lineup will begin with **Full Stop**.
 ## User Stories
 As a user, I can:
