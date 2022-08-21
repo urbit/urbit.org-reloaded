@@ -52,7 +52,13 @@ Through whatever front-end the user chooses, Full Stop's available functions wil
     - User's partner's @p (kidding)
 - **Additional BioMarkers:** The user can record period-adjacent data they may wish to record.
     - Off-period spotting
-    - Birth Control Pill consumption tracker (possibly alerts, though we're considering the data leak possibilities through push notifications)
+    - Birth Control Pill consumption tracker
+    - Term Birth Control application and renewal date tracker (e.g. IUD)
+ - **Pregnancy Tracking:** The user can record information about their pregnancy, and track the weeks until their due date.
+   - User can set a due date from the date of the start of the pregnancy or their projected due date.
+   - The application will provide the user with a count of weeks since the start of their pregnancy.
+- **Fertility Prediction:** The user can elect to view various projections of fertility windows based on their prior period data, as an aid for con(tra)ception.
+   - Methods include timing methods and, later, application of basal body temp and cervical mucosal density data inputted by the user to further specify fertility windows 
 ### Reviewing Data
 - **Data Visualization:** Visualize cycles over time, along with predictive models of likely windows of fertility, hormonal activity (based on current medical literature), and the likely window of the user's next period.
 - **Orientation Assistance:** Should a user choose, Full Stop will assist them in planning sexual encounters to most likely result or not result in a pregnancy
