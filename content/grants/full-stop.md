@@ -69,7 +69,7 @@ Through whatever front-end the user chooses, Full Stop's available functions wil
 ## User Stories
 As a user, I can:
 - Download an iOS/Android App from the app store,
-- Point their phone app at an Urbit (by IP or URL) and enter their `+code` to connect the app to their Urbit,
+- Point my phone app at an Urbit (by IP or URL) and enter my `+code` to connect the app to their Urbit,
 - Optionally set an additional PIN in the app to control access,
 - Track my period within the application including:
     - Start Date,
