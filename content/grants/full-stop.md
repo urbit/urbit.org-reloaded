@@ -66,7 +66,6 @@ Through whatever front-end the user chooses, Full Stop's available functions wil
     - **Full Stop** will also incorporate available ovulation/fertility window timing algorithms users may select from, to assist them in becoming pregnant.
 ### Outputting Data
 - Application data should be available for use in other applications, pending inter-app-permissions development.
-    - The **U on Urbit** product lineup will begin with **Full Stop**.
 ## User Stories
 As a user, I can:
 - Download an iOS/Android App from the app store,
