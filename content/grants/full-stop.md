@@ -39,7 +39,7 @@ At the risk of sounding flippant, Urbit fixes a great deal of this for users wit
 
 # Overview
 Full Stop helps you track your period and period-related-accessory-phenomena on a secure, private, personal server called an urbit. **Full Stop** is accessed like a traditional phone application, available on major phone operating systems. **Full Stop** will include basic Push Notifications which will, given the need to pass through Apple's Great Filter, never include private information and should provide no indicia of a user's health conditions (or lack thereof) in their frequency or rate of occurrence.
-On first opening **Full Stop**, a user should enter a simple PIN, in addition to their `+code` required to log into their Urbit, generally. This pin provides a final layer of security, on top of their Phone's security, on top of Urbit's encryption and login requirements, as an additional precaution to ensure private access, only.
+**Full Stop** should provide a variety of secure methods for accessing and inputting data, including a web-app, asynchronous apps built by core devs and 3rd parties, etc. If users don't trust the in-the-box web-app, they should be free to construct their own.
 After establishing their security PIN, Full Stop will proceed as with most period tracker applications:
 ### Recording Data
 - **Period Data:** The user can record information about their period.
