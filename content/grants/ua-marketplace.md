@@ -14,7 +14,7 @@ mentor = "~timluc-miptev"
 assignee = ["~dachus-tiprel"]
 grant_id = "A0009"
 completed = false
-cancelled = true
+canceled = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0018&prefill_Grant+Name=Marketplace"
 +++
 
