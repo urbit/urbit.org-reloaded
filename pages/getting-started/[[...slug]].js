@@ -149,40 +149,6 @@ function LaunchCards() {
       href: "/getting-started/desktop",
     },
     {
-      title: "Server setup",
-      subtitle: "Deploy Urbit on a cloud/VPS provider",
-      points: [
-        {
-          title: "Benefits",
-          content: ["Complete data ownership", "Accessibility from anywhere"],
-        },
-        {
-          title: "Considerations",
-          content: [
-            "Requires monthly cloud service subscription & (one-time) Urbit ID purchase",
-            "Requires Linux proficiency",
-          ],
-        },
-      ],
-      svg: (
-        <svg
-          width="50"
-          height="50"
-          viewBox="0 0 61 45"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M49.2551 15.2806C49.5291 16.4304 50.4122 17.3353 51.5533 17.636H51.5527C54.4975 18.5808 57.035 20.4998 58.7427 23.0815C60.4504 25.6633 61.227 28.7507 60.9424 31.8327C60.5301 35.2182 58.8836 38.3348 56.3195 40.5811C53.7554 42.8274 50.4492 44.0491 47.0418 44.0118H35.4601V35.1486H38.0641C38.8723 35.1521 39.6109 34.7022 39.9547 33.9966C40.2985 33.2909 40.1869 32.4547 39.6658 31.8567L32.0952 23.1122C31.6983 22.657 31.1132 22.3924 30.4969 22.3924C29.8807 22.3924 29.2955 22.657 28.8987 23.1122L21.3337 31.8567C20.8144 32.4547 20.701 33.2874 21.0448 33.9948C21.3867 34.7005 22.1237 35.1503 22.9301 35.1486H25.5414V44.0118H13.9581C10.5508 44.049 7.24457 42.8274 4.68045 40.5811C2.11627 38.3347 0.469828 35.2181 0.057545 31.8327C-0.227016 28.7505 0.549654 25.6631 2.25729 23.0815C3.9652 20.4998 6.50276 18.5808 9.44724 17.636C10.5883 17.3353 11.4714 16.4304 11.7454 15.2806C12.9452 9.48101 16.7593 4.5598 22.0737 1.9542C27.3911 -0.651399 33.6097 -0.651399 38.9268 1.9542C44.2412 4.56034 48.0555 9.48122 49.2551 15.2806Z"
-            className="fill-wall-600"
-          />
-        </svg>
-      ),
-      href: "/getting-started/server",
-    },
-    {
       title: "Hosted urbit",
       subtitle: "Deploy Urbit on a managed service",
       points: [
@@ -234,7 +200,42 @@ function LaunchCards() {
           />
         </svg>
       ),
-      href: "/getting-started/hosted",
+      href: "https://operators.urbit.org/manual/running/hosting",
+    },
+    {
+      title: "Command line app",
+      subtitle: "Run Urbit from the terminal",
+      points: [
+        {
+          title: "Benefits",
+          content: ["Greater control", "Reliable", "Smaller footprint"],
+        },
+        {
+          title: "Considerations",
+          content: [
+            "Requires familiarity with the command line",
+          ],
+        },
+      ],
+      svg: (
+        <svg
+          width="55"
+          height="55"
+          viewBox="0 0 66 50"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M52.9288 0.03125H3.07125C1.39393 0.03125 0.03125 1.39393 0.03125 3.07125V52.9288C0.03125 53.7333 0.351879 54.5081 0.921894 55.0781C1.49191 55.6481 2.26671 55.9688 3.07125 55.9688H52.9288C53.7333 55.9688 54.5081 55.6481 55.0781 55.0781C55.6481 54.5081 55.9688 53.7333 55.9688 52.9288V3.07125C55.9688 2.26671 55.6481 1.49189 55.0781 0.921894C54.5081 0.351894 53.7333 0.03125 52.9288 0.03125V0.03125ZM12.8 38.7912L20.78 30.7368L12.8 22.7568L17.1314 18.4254L27.2402 28.6079C27.8191 29.1779 28.1456 29.9586 28.1456 30.7721C28.1456 31.5885 27.8191 32.3693 27.2402 32.9393L17.0577 43.0481L12.8 38.7912ZM38.9425 43.1226H27.0113V37.0426H38.8688L38.9425 43.1226Z"
+            className="fill-wall-600"
+          />
+
+
+        </svg>
+      ),
+      href: "/getting-started/cli",
     },
   ];
   return (
