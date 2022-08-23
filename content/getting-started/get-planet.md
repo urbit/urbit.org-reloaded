@@ -68,6 +68,42 @@ Learn more about [layer 2 for planets](/using/id/layer-2-for-planets) in the Use
 
 {% /callout %}
 
+
+### Claiming your planet
+
+An invitation to claim your planet comes in one of two forms.
+
+The first is an email invitation with an Urbit ID and a Master Ticket.
+
+The second, only recently made available through our [L2 solution](/using/id/layer-2-for-planets), is an activation code or a link to activate on [Bridge](https://bridge.urbit.org), which can be thought of as an Urbit account management tool.
+
+![](https://media.urbit.org/site/getting-started/Server-setup-1.jpg)
+
+Clicking a link to activate a planet on Bridge will take you to page which will generate a Master Ticket for you. Follow the instructions which will prompt you to download a copy of your Passport: your Master Ticket, management proxy, and keyfile. Store your Master Ticket and management proxy somewhere safe, hold on to the keyfile, and proceed to the next step.
+
+{% callout %}
+
+**Claiming L1 planets**
+
+If you’ve purchased an L1 planet, you won’t need to claim it because you already own it as an NFT. Simply log into Bridge using Metamask or your wallet of choice.
+
+{% /callout %}
+
+
+### Using Bridge to get your keyfile
+
+Now that you have your planet, you can create your keyfile (eg. `sample-palnet.key`), which is the cryptographic signature required to encrypt and decrypt messages on Urbit's P2P network.
+
+- **Claimed L2 planets**  
+  If you’ve claimed your L2 Planet then you should already have downloaded your Passport, which contains your Master Ticket and keyfile.
+
+- **Master Ticket holders**  
+  If you haven’t downloaded your Passport but have a Master Ticket, then you can simply log in with Bridge using the Master Ticket option with your planet name and Master Ticket password. Click the ID box near the bottom of the page to open the ID page, then click the **Download Passport** button, which contains your keyfile.
+
+- **L1 Planet Purchasers**  
+  Log in to Bridge with your Ethereum wallet using Metamask or the wallet of your choice with WalletConnect. Click the “OS” box on the bottom of the page to open the OS page, and then click the **Download Keyfile** button.
+
+
 ### Next steps
 
 Got your planet?
