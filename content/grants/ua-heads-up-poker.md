@@ -10,7 +10,7 @@ grant_category = [ "App Dev", "Arvo" ]
 image = ""
 description = "A fun client app that would be a good way to get acquainted with Urbit's networking and p2p abilities."
 reward = "1 star"
-mentor = "~timluc-miptev"
+mentor = ["~timluc-miptev"]
 assignee = ["~bacwyl-samweg", "~hodzod-walrus"]
 completed = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0021&prefill_Grant+Name=Heads-up%20poker"

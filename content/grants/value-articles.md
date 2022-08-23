@@ -9,7 +9,7 @@ image = ""
 description = "Create in-depth valuation models for Urbit address space, network effects, and commercial utilization"
 reward = "$5000"
 assignee = [""]
-champion = "~simfur-ritwed"
+champion = ["~simfur-ritwed"]
 id = "B0156"
 completed = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0156&prefill_Grant+Name=Urbit%20Value%20Longform%20Writing%2FAnalysis"

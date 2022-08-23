@@ -44,13 +44,23 @@ export default function Grant({ post, markdown, search }) {
       );
     });
   const mentorLink =
-    mentor && ob.isValidPatp(mentor) ? (
-      <Link href={`/ids/${mentor}`} passHref>
-        <a className="text-green-400">{mentor}</a>
-      </Link>
-    ) : (
-      mentor
-    );
+    mentor &&
+    mentor.map((each, index) => {
+      return ob.isValidPatp(each) ? (
+        <>
+          {index ? ", " : ""}
+          <Link href={`/ids/${each}`} passHref>
+            <a className="text-green-400">{each}</a>
+          </Link>
+        </>
+      ) : (
+        <>
+          {index ? ", " : ""}
+          {each}
+        </>
+      );
+    });
+
   const metaPost = Object.assign({}, post);
   metaPost.title = `${post.title} - Grant`;
 

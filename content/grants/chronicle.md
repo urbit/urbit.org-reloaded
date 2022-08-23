@@ -12,7 +12,7 @@ description = "Chronicle is a news app that links all articles from group channe
 reward = "2 stars ($4k bonus if done by Assembly)"
 assignee = [""]
 grant_id = "B0161"
-champion = "Holium"
+champion = ["Holium"]
 completed = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0161&prefill_Grant+Name=Chronicle"
 +++
