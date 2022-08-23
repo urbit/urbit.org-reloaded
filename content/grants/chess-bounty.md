@@ -39,7 +39,7 @@ The grantees would be encouraged to perform reviews of each other's code. As cha
 ~finmep-lanteb is able and willing to spare approximately an hour per day for the purposes of meetings, design aid, or to otherwise supporting the bounty. Travel and family matters crop up, so this can instead be measured as "~7 hours per week".
 
 # Expected Completion Time:
-For a team of 3, this should tkae no more than 2 months
+For a team of 3, this should take no more than 2 months
 
 # Number of Grantees
 Never say never, but there is a strong preference for 3 novice developers to work on this. This bounty is just begging for people breaking into Urbit/coding to take it on.
