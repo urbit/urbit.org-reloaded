@@ -72,10 +72,17 @@ Learn more about [layer 2 for planets](/using/id/layer-2-for-planets) in the Use
 
 Got your planet?
 
-Get your planet [set it up locally with Port](/getting-started/desktop).
+Get it up and running with one of these options:
 
-Read the [Server setup](/getting-started/server) guide to learn how to get it set up on a server.
+- Let a [hosting provider](/getting-started/hosted) do the hard work for you.
 
-Or, follow the instructions of a [hosting provider](/getting-started/hosted) and set up your planet there.
+- [Try Port](/getting-started/desktop), the user-friendly desktop app.
+
+- For power users, check out the [command line install
+  guide](/getting-started/cli) and run your urbit from the terminal.
+
+- If you have a bit of Linux server experience, the [cloud hosting
+  guide](https://operators.urbit.org/manual/running/hosting) will help you set
+  up Urbit on a Digital Ocean VPS, so you can access it from anywhere.
 
 Remember, your planet is yours and you can always change how you run your urbit in the future.

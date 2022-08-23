@@ -1,11 +1,21 @@
 +++
-title = "Command line install"
-weight = 4
+title = "Command line app"
+weight = 2
 description = "Installation instructions for power users."
-tag = "additional"
 +++
 
-If you're a power user, you can run the Urbit virtual machine directly using the command line. Choose the code for your operating system and run the commands in your terminal.
+If you're a power user, you can run the Urbit virtual machine directly using the
+command line. This can be run on your local machine or a server in the cloud, we
+just cover the general case here.
+
+Note there is a much more comprehensive [cloud hosting
+guide](https://operators.urbit.org/manual/running/hosting) which walks through
+setting up Urbit on a [Digital Ocean](https://www.digitalocean.com/) VPS.
+
+### 1. Install Urbit
+
+Choose your operating system and run the given command in your terminal to
+download the Urbit runtime:
 
 {% tabs %}
 
@@ -15,12 +25,12 @@ If you're a power user, you can run the Urbit virtual machine directly using the
 curl -L https://urbit.org/install/mac/latest | tar xzk --strip=1 && ./urbit
 ```
 
-Note our Mac build is only compatible with Apple Silicon (M1/M2) via Rosetta.
-If you have such a machine you must run the following command:
-
-```
-/usr/sbin/softwareupdate --install-rosetta --agree-to-license
-```
+> Note our Mac build is only compatible with Apple Silicon (M1/M2) via Rosetta.
+> If you have such a machine you may need to run the following command:
+>
+> ```
+> /usr/sbin/softwareupdate --install-rosetta --agree-to-license
+> ```
 
 {% /tab %}
 
@@ -30,12 +40,13 @@ If you have such a machine you must run the following command:
 curl -L https://urbit.org/install/linux64/latest | tar xzk --strip=1 && ./urbit
 ```
 
-Linux users may need to run this command in another terminal window to access your Urbit on port 80:
-
-```shell
-sudo apt-get install libcap2-bin
-sudo setcap 'cap_net_bind_service=+ep' ./urbit
-```
+> Linux users may need to run this command in another terminal window to access
+> your urbit on port 80:
+>
+> ```shell
+> sudo apt-get install libcap2-bin
+> sudo setcap 'cap_net_bind_service=+ep' ./urbit
+> ```
 
 {% /tab %}
 
@@ -45,12 +56,12 @@ sudo setcap 'cap_net_bind_service=+ep' ./urbit
 curl -L https://urbit.org/install/windows/latest | tar -xzkf - --strip-components=1 && urbit
 ```
 
-Windows 10 build 17063 and later includes the familiar `curl` and `tar`
-command-line tools. If you're running an older version of Windows, you may need
-to visit
-[https://github.com/urbit/urbit/releases/latest](https://github.com/urbit/urbit/releases/latest)
-in the browser, download the `windows.zip` file, extract it and execute the
-contained `urbit.exe` file in the command prompt.
+> Windows 10 build 17063 and later includes the familiar `curl` and `tar`
+> command-line tools. If you're running an older version of Windows, you may need
+> to visit
+> [https://github.com/urbit/urbit/releases/latest](https://github.com/urbit/urbit/releases/latest)
+> in the browser, download the `windows.zip` file, extract it and execute the
+> contained `urbit.exe` file in the command prompt.
 
 {% /tab %}
 
@@ -62,43 +73,45 @@ If successful, you will see a block of output beginning with the line:
 Urbit: a personal server operating function
 ```
 
-### Booting a free identity {% #comet %}
+### 2. Boot Urbit
 
-There are two parts to Urbit: an **ID** and an **Operating System**.
+An Urbit instance is intrinsically tied to a unique identity called an **Urbit
+ID**. There are five classes of Urbit ID, but we will consider two here: comets
+and planets.
 
-You have just installed the Operating System on your computer.
+- **Comet:** A comet is an identity which anyone can generate themselves, for
+  free. It's a good option to try out Urbit. Comets are limited by the fact they
+  cannot be "factory reset", meaning if your urbit somehow becomes broken or
+  corrupted then you'll have to start again with a new identity. In that sense,
+  they are impermanent.
 
-The **ID** is similar to a username and password on another site. The difference is that the public part (the username) is verified by thousands of people around the world while only you hold the key (the password) to that ID.
+- **Planet:** A planet is a permanent identity which you own forever. Planets
+  are the class intended for individuals. While there are essentially an
+  unlimited number of comets, planets are more scarce (preventing spamming,
+  among other things). This scarcity means they usually aren't free (though
+  sometimes nice people give them away). This guide will assume you've already
+  acquired a planet. If you haven't, you can refer to the ["Get a planet"
+  guide](https://urbit.org/getting-started/get-planet) before continuing.
 
-There are five kinds of Urbit IDs but to get started you only need to know about two: we call them **planets** and **comets**.
+Follow the instructions for your case:
 
----
+{% tabs %}
 
-**Planets** are scarce (this prevents spamming, among other things) and usually require a price to acquire. This is the recommended way to run Urbit, but it's a bit more involved.
+{% tab label="Boot a Comet" %}
 
-A planet name looks like `~sampel-palnet`.
+In the terminal, with the `urbit` binary you installed in the previous step, a
+comet can be booted with the `-c` option:
 
-[Follow this guide](/getting-started/) if you have already acquired a planet.
-
-[Find a planet to purchase](/getting-started/get-planet)
-
----
-
-**Comets** are practically unlimited and free to acquire. At present, these are a great way to try out the network for free.
-
-A comet name looks like `~dasres-ragnep-lislyt-ribpyl--mosnyx-bisdem-nidful-marzod`.
-
-[Read more about Urbit ID here](/understanding-urbit/urbit-id)
-
----
-
-To boot a comet, go into the command line and run the following command:
-
-```sh
+```bash
 ./urbit -c mycomet
 ```
 
-It may take a while to load the comet (probably only take a few minutes, but it could take longer). This comes along with it being free. When it's done you'll some messages ending like this:
+> `mycomet` will be the name given to the data folder it will create. You can
+> choose any name you like.
+
+It may take a while to initialize the comet (usually only a couple of minutes,
+but it could take longer). When it's done, it'll take you to the dojo prompt
+(the dojo is Urbit's shell):
 
 ```
 ames: live on 31337
@@ -107,54 +120,112 @@ http: loopback live on http://localhost:12321
 ~sampel_marzod:dojo>
 ```
 
-When your comet is finished booting, you will see `~sampel_marzod:dojo>` (Dojo: the Urbit command line).
+You can shut down the comet again by typing `|exit` in the dojo or hitting
+`Ctrl+D`. When it's first shut down, the runtime will be copied inside the data
+folder, so you can start it up again by doing:
 
-To exit Urbit, use `Ctrl-D` or enter `|exit` into Dojo.
-
-To start your comet up again, run the following command:
-
-```sh
+```bash
 ./mycomet/.run
 ```
 
-### Using the web interface
-
-Urbit is an entirely new computer, so by default it drops you into the "dojo," which is its terminal. Like your current computer, it can be used to do just about anything if you know the right commands. You only need to know one command for now.
-
-At the moment, the most common way to use Urbit is by launching apps like Groups (a communications suite) from the web interface homescreen. The web interface allows you to use your ship without touching the terminal. You just need to get the password, or `code`, from the terminal.
-
-1. With your Urbit running, look for a line that says something like `http: web interface live on http://localhost:8080`. The number given is the port that your ship is using. It will most likely be 80 or 8080, but we're just making sure.
-2. If the port given is `80`, simply type `localhost` into your browser's address bar. If the given port is a different number, such as `8080`, you would type `localhost:8080`. You'll be met with a login prompt.
-3. In the window where you found the port number, type `+code` and press return. Copy-paste the code that appears into the "Access Key" field in the browser, and press continue.
-4. Once in, take a look around and try launching an app like Groups.
-
-## Next Steps
-
-### Updating your comet {% #updating %}
-
-Urbit comes with a recent release of the Urbit OS, but automatic updates of the `%base` desk (which contains the kernel of the OS) are not enabled by default for Comets. Many comets are used only once and thrown away, so it would be wasteful to update every single comet as soon as it boots. If you plan to use your comet for more than a quick test, you'll probably want to ensure you're running the latest version of the OS.
-
-You can enable updates for your comet by typing `|ota (sein:title our now our)` into Dojo and pressing Enter.
+Since comets are often used temporarily and then discarded, kernel updates are
+not enabled by default. If you plan to use your comet for a while, it's a good
+idea to enable updates with the following command in the dojo:
 
 ```
-> |ota (sein:title our now our)
->=
-kiln: activated install into %base from [~samzod %kids]
-kiln: downloading update for %base from [~samzod %kids]
+|ota (sein:title our now our)
 ```
 
-### Read More about the Dojo {% #the-dojo %}
+Lastly, while the dojo is quite powerful, most people use their urbit via
+Landscape, the browser-based UI. In order to access Landscape, you need your web
+login code. You can get this by running the following command in the dojo:
 
-The dojo is Urbit's command line. You can use it to control your ship, or to execute arbitrary code. Check out the links below for more information.
+```
++code
+```
 
-- [Basic Operations](/using/os/getting-started)
-- [Basic Hoon](/docs/tutorials/hoon/hoon-school/setup)
-- [Glossary Entry](/docs/glossary/dojo)
+It'll spit out a code that'll look something like `lidlut-tabwed-pillex-ridrup`.
+Copy the code it gives you to the clipboard.
 
-### Purchase a Permanent Identity {% #boot-your-planet %}
+{% /tab %}
 
-You can continue using this comet indefinitely. There are currently few differences between using a comet-level identity and a planet-level one. However, some groups will not allow comets entry in order to maintain a certain level of quality, and changes may be made in the future that further devalue comets. They will always, however, be able to access the basic functions of the network.
+{% tab label="Boot a Planet" %}
 
-A comet also comes with a long and fairly unmemorable name whereas a planet has a short name and a "sigil" (avatar) associated with it that makes it more identifiable on the network. You may notice all this within the first few minutes of using Urbit.
+In order to boot a planet, you need a copy of its private keys. If you got your
+planet via a claim link, the passport backup `.zip` file you downloaded will
+contain a file called something like `sampel-palnet-1.key`. If you don't have
+the passport backup or you got your planet by another method, you can instead
+login to [Bridge](https://bridge.urbit.org/), select your planet, go to the OS
+section, and hit the "Download Keyfile" button.
 
-[For details of how to purchase a planet, visit this page](/getting-started/get-planet).
+Back in the terminal, with the `urbit` binary you installed in the previous
+step, you can boot your planet with the following command (replacing
+`sampel-palnet` with your own planet and pointing to the location of your
+keyfile):
+
+```bash
+./urbit -w sampel-palnet -k sampel-palnet-1.key
+```
+
+This will create a data folder with the name of your planet and begin booting.
+It may take a while to initialize the planet (usually only a couple of minutes,
+but it could take longer). When it's done, it'll take you to the dojo prompt
+(the dojo is Urbit's shell):
+
+```
+ames: live on 31337
+http: web interface live on http://localhost:8080
+http: loopback live on http://localhost:12321
+~sampel-palnet:dojo>
+```
+
+You can shut down the planet again by typing `|exit` in the dojo or hitting
+`Ctrl+D`. When it's first shut down, the runtime will be copied inside the data
+folder, so you can start it up again by doing:
+
+```bash
+./sampel-palnet/.run
+```
+
+While the dojo is quite powerful, most people use their urbit via Landscape, the
+browser-based UI. In order to access Landscape, you need your web login code.
+You can get this by running the following command in the dojo:
+
+```
++code
+```
+
+It'll spit out a code that'll look something like `lidlut-tabwed-pillex-ridrup`
+(note this is a separate code to your master ticket). Copy the code it gives you
+to the clipboard.
+
+One last thing: The `sampel-palnet-1.key` keyfile is only needed once, when you
+first boot your planet. Now that it's booted, it's good security practice to
+delete that keyfile.
+
+{% /tab %}
+
+{% /tabs %}
+
+### 3. Login
+
+While your urbit is running, the web interface called *Landscape* can be
+accessed in the browser. Its URL will usually be either `localhost` or
+`localhost:8080`, depending on your platform. To check the address, you can look
+at the boot messages in the terminal. You should see a line like:
+
+```
+http: web interface live on http://localhost:8080
+```
+
+Whichever address and port it says there is the one to open in the browser.
+
+Once open, you'll be presented with the login screen. Paste in the web login
+code you copied from the dojo in the previous step and hit "continue". You'll
+now be taken to your homescreen, with tiles for the default apps such as Groups
+and Terminal.
+
+### Next steps
+
+Learn how to [get around your
+urbit](https://urbit.org/getting-started/getting-around).
