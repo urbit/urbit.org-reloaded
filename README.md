@@ -19,7 +19,13 @@ The website for Urbit is maintained by the Urbit Foundation and the Urbit commun
     ```shell
     npm install
     ```
-    
+
+    If running an arm64 Mac (M1 or later), you may need to install some dependencies to compile canvas, one of our dependencies. Assuming you have [Homebrew](https://brew.sh):
+
+    ```shell
+    arch -arm64 brew install pkg-config cairo pango libpng jpeg giflib librsvg
+    ```
+
 5. Run the development server:
 
     ```shell
