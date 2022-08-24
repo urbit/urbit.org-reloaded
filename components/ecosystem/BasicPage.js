@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import Link from "next/link";
 import Head from "next/head";
 import Meta from "../Meta";
 import ErrorPage from "../../pages/404";

@@ -7,8 +7,8 @@ import {
   SingleColumn,
   IntraNav,
   TwoUp,
+  getPostBySlug,
 } from "@urbit/foundation-design-system";
-import { getPostBySlug } from "../lib/lib";
 import Meta from "../components/Meta";
 import Header from "../components/Header";
 import Footer from "../components/Footer";

@@ -1,12 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
-import { getPage, getAllPosts } from "../../lib/lib";
 import { join } from "path";
 import {
   Container,
   SingleColumn,
   Section,
   Markdown,
+  getPage,
+  getAllPosts,
 } from "@urbit/foundation-design-system";
 import ob from "urbit-ob";
 import ResourceCard from "../../components/gateway/ResourceCard";

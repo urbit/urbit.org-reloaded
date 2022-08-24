@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import { getPage, getAllPosts } from "../../lib/lib";
 import { join } from "path";
 import CopyLink from "../../components/CopyLink";
 import {
@@ -9,6 +8,8 @@ import {
   Section,
   Markdown,
   IntraNav,
+  getPage,
+  getAllPosts,
 } from "@urbit/foundation-design-system";
 import ob from "urbit-ob";
 import Header from "../../components/Header";

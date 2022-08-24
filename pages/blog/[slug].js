@@ -1,13 +1,4 @@
 import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
-import {
-  getPostBySlug,
-  getAllPosts,
-  getNextPost,
-  getPreviousPost,
-  formatDate,
-  generateDisplayDate,
-} from "../../lib/lib";
 import Head from "next/head";
 import Link from "next/link";
 import Meta from "../../components/Meta";
@@ -18,11 +9,17 @@ import {
   IntraNav,
   SingleColumn,
   Section,
+  TwoUp,
+  getPostBySlug,
+  getAllPosts,
+  getNextPost,
+  getPreviousPost,
+  formatDate,
+  generateDisplayDate,
 } from "@urbit/foundation-design-system";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import PostPreview from "../../components/PostPreview";
-import TwoUp from "../../components/TwoUp";
 
 export default function Post({
   post,

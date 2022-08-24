@@ -1,6 +1,4 @@
 import NewsletterSignup from "./NewsletterSignup";
-import { name, contact } from "../lib/constants";
-import Link from "next/link";
 
 export default function Contact({
   emphasize,

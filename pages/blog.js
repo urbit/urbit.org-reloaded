@@ -6,11 +6,13 @@ import {
   SingleColumn,
   Section,
   IntraNav,
+  getAllPosts,
+  formatDate,
+  generateDisplayDate,
 } from "@urbit/foundation-design-system";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import BackgroundImage from "../components/BackgroundImage";
-import { getAllPosts, formatDate, generateDisplayDate } from "../lib/lib";
 import { contact } from "../lib/constants";
 
 export default function Blog({ posts, search }) {
@@ -48,7 +50,7 @@ export default function Blog({ posts, search }) {
               <div key={post.slug} className="mb-20 cursor-pointer">
                 <Link href={`/blog/${post.slug}`}>
                   <div class="flex items-center md:flex-row flex-col">
-                    <div class="flex w-full rounded-lg aspect-h-4 w-full">
+                    <div class="flex w-full rounded-lg aspect-h-4">
                       {
                         // Not all blog posts have images
                         post.extra.image ? (

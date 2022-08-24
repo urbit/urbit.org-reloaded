@@ -1,12 +1,4 @@
 import { DateTime } from "luxon";
-import {
-  getPostBySlug,
-  getAllPosts,
-  getNextPost,
-  getPreviousPost,
-  generateDisplayDate,
-  generateRealtimeDate,
-} from "../../lib/lib";
 import Head from "next/head";
 import Meta from "../../components/Meta";
 import {
@@ -15,13 +7,17 @@ import {
   SingleColumn,
   Section,
   IntraNav,
+  TwoUp,
+  getPostBySlug,
+  getAllPosts,
+  getNextPost,
+  getPreviousPost,
+  generateDisplayDate,
+  generateRealtimeDate,
 } from "@urbit/foundation-design-system";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import Contact from "../../components/Contact";
 import EventPreview from "../../components/EventPreview";
-import TwoUp from "../../components/TwoUp";
-
 import {
   Person,
   ReadableList,

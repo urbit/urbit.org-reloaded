@@ -1,12 +1,4 @@
 import { useRouter } from "next/router";
-import {
-  getPostBySlug,
-  getAllPosts,
-  getNextPost,
-  getPreviousPost,
-  formatDate,
-  generateDisplayDate,
-} from "../../lib/lib";
 import Head from "next/head";
 import Meta from "../../components/Meta";
 import ErrorPage from "../404";
@@ -16,10 +8,15 @@ import {
   SingleColumn,
   Section,
   IntraNav,
+  getPostBySlug,
+  getAllPosts,
+  getNextPost,
+  getPreviousPost,
+  formatDate,
+  generateDisplayDate,
 } from "@urbit/foundation-design-system";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import Contact from "../../components/Contact";
 
 export default function Post({ post, markdown, search }) {
   const router = useRouter();
@@ -57,7 +54,6 @@ export default function Post({ post, markdown, search }) {
         <Section narrow className="markdown">
           <Markdown.render content={JSON.parse(markdown)} />
         </Section>
-        <Section narrow>/></Section>
         <Section wide className="flex">
           {
             // {previousPost === null ? (

@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import { getPage } from "../../lib/lib";
 import { join } from "path";
 import CopyLink from "../../components/CopyLink";
 import {
@@ -8,6 +7,7 @@ import {
   SingleColumn,
   Section,
   Markdown,
+  getPage,
 } from "@urbit/foundation-design-system";
 import ob from "urbit-ob";
 import Header from "../../components/Header";

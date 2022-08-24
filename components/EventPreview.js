@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { DateTime } from "luxon";
 import { DateRange } from "../components/Snippets";
-import { generateDisplayDate, generateRealtimeDate } from "../lib/lib";
+import {
+  generateDisplayDate,
+  generateRealtimeDate,
+} from "@urbit/foundation-design-system";
 import classNames from "classnames";
 
 export default function EventPreview({ event, className, big }) {

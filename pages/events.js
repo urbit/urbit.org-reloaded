@@ -9,11 +9,12 @@ import {
   Section,
   IntraNav,
   TwoUp,
+  generateRealtimeDate,
 } from "@urbit/foundation-design-system";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import EventPreview from "../components/EventPreview";
-import { getAllEvents, generateRealtimeDate, pair } from "../lib/lib";
+import { getAllEvents, pair } from "../lib/lib";
 
 import { eventKeys } from "../lib/constants";
 
