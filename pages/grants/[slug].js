@@ -22,7 +22,7 @@ export default function Grant({ post, markdown, search }) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
   }
-  const isOpen = !post?.extra?.completed && post?.extra?.assignee === "";
+  const isOpen = !post?.extra?.completed && post?.extra?.assignee?.[0] === "";
   const canApply = isOpen && post?.extra?.work_request_link;
   const assignee = post?.extra?.assignee;
   const mentor = post.extra.mentor || post.extra.champion;
