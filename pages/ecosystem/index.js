@@ -7,6 +7,9 @@ import {
   Section,
   IntraNav,
   Markdown,
+  getAllPosts,
+  generateDisplayDate,
+  formatDate,
 } from "@urbit/foundation-design-system";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -14,11 +17,9 @@ import Sidebar from "../../components/Sidebar";
 import Post from "../../components/ecosystem/Post";
 import classnames from "classnames";
 import Link from "next/link";
-import { getAllPosts } from "../../lib/lib";
 import fs from "fs";
 import path from "path";
 import Contact from "../../components/Contact";
-import { generateDisplayDate, formatDate } from "../../lib/lib";
 
 export default function Ecosystem({
   search,

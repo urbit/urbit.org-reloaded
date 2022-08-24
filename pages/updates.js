@@ -6,10 +6,12 @@ import {
   SingleColumn,
   Section,
   IntraNav,
+  getAllPosts,
+  formatDate,
+  generateDisplayDate,
 } from "@urbit/foundation-design-system";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import { getAllPosts, formatDate, generateDisplayDate } from "../lib/lib";
 
 export default function Updates({ posts, search }) {
   const post = {

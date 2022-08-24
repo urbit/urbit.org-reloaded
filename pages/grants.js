@@ -7,13 +7,14 @@ import {
   SingleColumn,
   Section,
   IntraNav,
+  getAllPosts,
 } from "@urbit/foundation-design-system";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import GrantPreview from "../components/GrantPreview";
 import JoinGroup from "../components/JoinGroup";
 import omit from "lodash.omit";
-import { getAllPosts, getGrantsCategories, getGrantsTypes } from "../lib/lib";
+import { getGrantsCategories, getGrantsTypes } from "../lib/lib";
 
 function isArray(arr) {
   return Array.isArray(arr);

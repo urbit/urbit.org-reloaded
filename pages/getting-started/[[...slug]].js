@@ -4,8 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import classnames from "classnames";
 import { join } from "path";
-import { getPage } from "../../lib/lib";
-import { Markdown } from "@urbit/foundation-design-system";
+import { Markdown, getPage } from "@urbit/foundation-design-system";
 import ContentArea from "../../components/ContentArea";
 import Sidebar from "../../components/DocsSidebar";
 import GettingStartedTree from "../../cache/getting-started.json";
@@ -212,9 +211,7 @@ function LaunchCards() {
         },
         {
           title: "Considerations",
-          content: [
-            "Requires familiarity with the command line",
-          ],
+          content: ["Requires familiarity with the command line"],
         },
       ],
       svg: (
@@ -231,8 +228,6 @@ function LaunchCards() {
             d="M52.9288 0.03125H3.07125C1.39393 0.03125 0.03125 1.39393 0.03125 3.07125V52.9288C0.03125 53.7333 0.351879 54.5081 0.921894 55.0781C1.49191 55.6481 2.26671 55.9688 3.07125 55.9688H52.9288C53.7333 55.9688 54.5081 55.6481 55.0781 55.0781C55.6481 54.5081 55.9688 53.7333 55.9688 52.9288V3.07125C55.9688 2.26671 55.6481 1.49189 55.0781 0.921894C54.5081 0.351894 53.7333 0.03125 52.9288 0.03125V0.03125ZM12.8 38.7912L20.78 30.7368L12.8 22.7568L17.1314 18.4254L27.2402 28.6079C27.8191 29.1779 28.1456 29.9586 28.1456 30.7721C28.1456 31.5885 27.8191 32.3693 27.2402 32.9393L17.0577 43.0481L12.8 38.7912ZM38.9425 43.1226H27.0113V37.0426H38.8688L38.9425 43.1226Z"
             className="fill-wall-600"
           />
-
-
         </svg>
       ),
       href: "/getting-started/cli",

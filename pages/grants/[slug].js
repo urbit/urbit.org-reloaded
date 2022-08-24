@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import { getPostBySlug, getAllPosts, formatDate } from "../../lib/lib";
 import Head from "next/head";
 import Link from "next/link";
 import Meta from "../../components/Meta";
@@ -11,6 +10,9 @@ import {
   SingleColumn,
   Section,
   IntraNav,
+  getPostBySlug,
+  getAllPosts,
+  formatDate,
 } from "@urbit/foundation-design-system";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";

@@ -8,11 +8,11 @@ import {
   Section,
   Markdown,
   IntraNav,
+  TableOfContents,
 } from "@urbit/foundation-design-system";
 import Header from "./Header";
 import Footer from "./Footer";
 import classNames from "classnames";
-import { TableOfContents } from "./TableOfContents";
 
 export default function BasicPage({ post, markdown, search, index = false }) {
   const router = useRouter();

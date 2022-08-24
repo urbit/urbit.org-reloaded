@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import { formatDate } from "../lib/lib";
 import Link from "next/link";
 import Head from "next/head";
 import Meta from "../components/Meta";
@@ -10,6 +9,7 @@ import {
   SingleColumn,
   Markdown,
   IntraNav,
+  formatDate,
 } from "@urbit/foundation-design-system";
 import Header from "./Header";
 import Footer from "./Footer";

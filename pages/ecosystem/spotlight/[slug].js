@@ -8,11 +8,12 @@ import {
   Section,
   Markdown,
   IntraNav,
+  getAllPosts,
+  getPostBySlug,
 } from "@urbit/foundation-design-system";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import Post from "../../../components/ecosystem/Post";
-import { getAllPosts, getPostBySlug } from "../../../lib/lib";
 import fs from "fs";
 import path from "path";
 

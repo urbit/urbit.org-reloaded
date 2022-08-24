@@ -6,15 +6,17 @@ import {
   Container,
   Section,
   SingleColumn,
+  TwoUp,
   IntraNav,
+  getAllPosts,
+  generateRealtimeDate,
 } from "@urbit/foundation-design-system";
+import { getAllEvents } from "../lib/lib";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";
 import PostPreview from "../components/PostPreview";
 import EventPreview from "../components/EventPreview";
-import TwoUp from "../components/TwoUp";
-import { getAllPosts, getAllEvents, generateRealtimeDate } from "../lib/lib";
 import { eventKeys } from "../lib/constants";
 import IndexCard from "../components/ecosystem/IndexCard";
 import fs from "fs";

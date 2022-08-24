@@ -1,6 +1,8 @@
-import Link from "next/link";
-import { Card } from "@urbit/foundation-design-system";
-import { formatDate, generateDisplayDate } from "../lib/lib";
+import {
+  Card,
+  formatDate,
+  generateDisplayDate,
+} from "@urbit/foundation-design-system";
 
 export default function PostPreview(props) {
   const section = props?.section ? props.section : "blog";
