@@ -4,10 +4,11 @@ starts = "2022-09-08T09:00:00"
 ends = "2022-09-08T10:30:00"
 timezone = "America/Los_Angeles"
 location = "Online Event"
-image = "https://storage.googleapis.com/media.urbit.org/site/events/Web%201%20(1).png"
+image = "https://storage.googleapis.com/media.urbit.org/site/events/2022-09-08-Developer-Call.jpg"
 registration_url = "https://www.meetup.com/urbit-sf/events/287886460/"
 description = ""
-dark = false
+dark = true
+darken_image = "true"
 youtube = "cdSFvFNFqpI"
 
 [[hosts]]
