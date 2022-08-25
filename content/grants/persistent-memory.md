@@ -42,9 +42,15 @@ The copy-on-write strategy ensures that commmitted data is not corrupted. Since 
 
 ### Handling writes to the arena
 
+There are several ways in which we can handle writes without overwriting, and possibly corrupting, data already committed to our store.
+
 By default, pages in the persistent memory arena are protected read-only (`PROT_READ` flag to `mmap()` or `mprotect()`). This means that an attempt to write through a pointer into such a page will trigger a protection fault, raising a SIGSEGV to our process.
 
-To handle this signal and resolve the fault, our handler will:
+#### Immediate copying
+
+The most likely successful approach involves immediately copying the page to a new page, mapped to a new region of the file, and then mapping this page back over the same virtual memory space.
+
+To handle the SIGSEGV signal and resolve the fault, our handler will:
 
 - move the page to the copy-on-write set, so other threads faulting will not also attempt to copy the page.
 - `write()` the contents of the page to an unused region of the backing block storage. Note that this will not block on writing through to the disk, though it may write through if the OS decides.
@@ -53,11 +59,17 @@ To handle this signal and resolve the fault, our handler will:
 
 The net effect of this is that the file region to which the read-protected page was mapped will remain unmodified, but our process continues with identical contents in a virtual memory page mapped to a new region of the file. The process continues from the faulting instruction and writes to memory. Index metadata which maps regions of the file to regions of memory remains untouched at this juncture.
 
-### Committing writes
-
 To facilitate restoring the persistent memory arena from durable block storage, we reserve two pages at the beginning of the file for metadata storage. This does not limit us to a page for metadata, we may commit metadata objects alongside our stored data, and reference it from a page. A metadata page contains a counter and a checksum of the page's contents. The page with a valid checksum and the more recent counter is used to load the data.
 
 To atomically commit writes since the last commit to durable storage, we simply `msync()` each dirty page. If all syncs succeed, we know that data in these pages is durably persisted to disk. We may now safely write a new metadata page to whichever metadata page is not in use. Once this too successfully `msync`s, our writes are durably committed.
+
+#### Lazy copying
+
+Another possible approach which leverages kernel support for in-memory copy-on-write, at the expense of using a boundable amount of swap, is to make writable mappings `MAP_PRIVATE`. This instructs the kernel to copy the page in the page cache on the first write. Unfortunately, this is now an anonymous mapping, meaning it is not backed by file storage.
+Thus, if the kernel elects to evict it, it will be written to swap space on disk. It is still necessary to map pages as `PROT_READ` and use a signal handler, because we must track which pages are dirtied. It is almost certainly necessary to set a configurable limit on the number of dirty pages before a snapshot will be committed, since the number of dirty pages is limited by the available RAM and swap.
+
+To commit, we select regions in the file from the free list, and `write()` each dirty page to a free region.
+We must then achieve a successful `fsync()` to know that the file has been committed.
 
 ### When to commit
 
@@ -88,8 +100,7 @@ After each event is processed, the working state is copied to the snapshot persi
 
 The event log should live in a separate arena from Arvo snapshot nouns. These arenas should be of incomparable seniority: that is, references are not permitted between either of them. This precludes synchronization issues between snapshot and event log commits, and ensures that old epochs of the event log can be freed without corrupting a snapshot.
 
-In practice, this is achieved by copying the event from the stack to the event log once it is successfully computed, so that the computed arvo core and effects reference the event on the stack, rather than the event in the event log.
-This ensures that if the event or some subnoun of it is included in the Arvo snapshot, it is copied to the snapshot arena.
+This requires logic in the copier to ensure that a reference is only preserved as a reference if the seniority of the source is ≤ the seniority of the destination.
 
 Epochs in the event log can be stored as linked lists in the event log persistent arena. In order to safely release effects computed from incoming events, the events must be durably written to disk.
 
@@ -113,7 +124,7 @@ Committing more often incurs more disk IO, saving nouns that will potentially so
 
 
 # Evaluation
-An important part of this work is to objectively evaluate the proposed approach. This will require the implementation of at least one alternate approach. The primary alternative is to map pages `MAP_PRIVATE` and simply track dirty pages and set `PROT_WRITE` in the fault handler. Then dirty pages could be more lazily written to disk, using `write()`, and committing using `fsync()`. The main reason this tradeoff is not expected to perform well is that it requires the underlying OS to have swap space configured and available if a dirty page must be evicted from the page cache.
+An important part of this work is to objectively evaluate the proposed approach. This will require the implementation of at least one alternate approach. The primary alternative is to map pages `MAP_PRIVATE` and simply track dirty pages and set `PROT_WRITE` in the fault handler. Then dirty pages could be more lazily written to disk, using `write()`, and committing using `fsync()`. The main reason this tradeoff is not expected to perform well is that it requires the underlying OS to have swap space configured and available if a dirty page must be evicted from the page cache. Another way of stating this is that the size of our dirty page set is limited by available RAM and swap space.
 
 However, this approach is used both by the current Vere as well as by LMDB for writing dirtied pages. It should therefore be implemented for New Mars at least by way of comparison.
 
@@ -132,8 +143,7 @@ Implement a copy-on-write arena by mapping pages `MAP_PRIVATE` and lazily writin
 
 Implement a memory allocator on top of this arena. This includes the ability to store metadata such as roots which will be committed with the snapshot, and reference counting or tracing to free nouns which are not referenced from the root.
 
-Implement a separate (may be interleaved at the page level in memory/on disk) arena for event logs, which is bump-allocated and not copy-on-write but rather does not reallocate in committed pages. (TODO: be more explicit/detailed about this in above spec, including memory allocator and paging system interface to assign arenas to pages.)
-
+Implement a separate (may be interleaved at the page level in memory/on disk) arena for event logs, which is bump-allocated and not copy-on-write but rather does not reallocate in committed pages.
 
 ## Stretch/beyond scope
 - Migration to/from vere
