@@ -12,7 +12,7 @@ description = "Olif: olfactive rendering of Urbit address space"
 reward = "2 stars"
 assignee = ["~litneb-maltyp"]
 grant_id = "P0159"
-champion = "~tocrex-holpen"
+champion = ["~tocrex-holpen"]
 completed = false
 +++
 
