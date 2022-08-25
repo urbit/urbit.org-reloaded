@@ -9,7 +9,7 @@ grant_category = [ "Runtime" ]
 [extra]
 image = ""
 description = "Development of persistent memory arena for the New Mars runtime"
-reward = "up to 5 stars"
+reward = "4 stars"
 champion = "~ritpub-sipsyl"
 assignee = ""
 grant_id = "B0178"
