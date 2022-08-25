@@ -12,7 +12,7 @@ description = "Improvements to the Chess app, creating an Urbit Chess experience
 reward = "3 stars"
 assignee = [""]
 grant_id = "B0175"
-champion = "~finmep-lanteb"
+champion = ["~finmep-lanteb"]
 completed = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0175&prefill_Grant+Name=Chess%3A%20Improved%2C%20Timed%2C%20%26%20Rated"
 +++
