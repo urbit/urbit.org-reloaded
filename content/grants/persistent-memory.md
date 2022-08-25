@@ -135,15 +135,21 @@ However, this approach is used both by the current Vere as well as by LMDB for w
 Implement a copy-on-write arena by using `write()` to copy pages to new regions of the backing file.
 This should include at least single-arena snapshot support.
 
+Compensation: 1 star
+
 ## Milestone 2: Kernel copy-on-write (`MAP_PRIVATE`) + lazy write arena
 
 Implement a copy-on-write arena by mapping pages `MAP_PRIVATE` and lazily writing dirty pages to the backing file.
+
+Compensation: 1 star
 
 ## Milestone 3: Memory allocation and separate event arena
 
 Implement a memory allocator on top of this arena. This includes the ability to store metadata such as roots which will be committed with the snapshot, and reference counting or tracing to free nouns which are not referenced from the root.
 
 Implement a separate (may be interleaved at the page level in memory/on disk) arena for event logs, which is bump-allocated and not copy-on-write but rather does not reallocate in committed pages.
+
+Compensation: 2 stars
 
 ## Stretch/beyond scope
 - Migration to/from vere
