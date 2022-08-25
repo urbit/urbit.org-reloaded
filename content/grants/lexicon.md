@@ -12,7 +12,7 @@ description = "A simple dictionary app with ability to add custom definitions fo
 reward = "1 star ($3k bonus if done by Assembly)"
 assignee = ["~bitful-pannul"]
 grant_id = "B0162"
-champion = "Holium"
+champion = ["Holium"]
 completed = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0162&prefill_Grant+Name=Lexicon"
 +++
