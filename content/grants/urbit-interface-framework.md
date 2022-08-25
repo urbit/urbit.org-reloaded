@@ -58,7 +58,16 @@ In this milestone we implement push and pull hooks similar to how groups works t
 ## Milestone 5: proof of concept custom component/app - DeepSpace meditation app
 ### 1 star
 In this milestone we create an application on top of the interface builder. The design considerations for this application are as follows:
-
+### Design - The DeepSpaceApp
+- three slightly different 2-3 min guided basic meditation where the user sees written text + hears audio with some simple animation like a dot that is going bigger when you breathe in and smaller when you breathe out
+    - one where the user focuses on breathing
+    - one where the user focuses on counting
+    - one where the user focuses on “feeling”
+- built-in timer to set up a time of how long users that already knows techniques of meditation want to meditate with a bell sound at the start and end of the session
+- a small journal that the user can write a few words after each meditation to store the ideas, and feelings that emerge during the session, it is also good practice to write short journals for a benefit of daily focus and mental health, by storing it all on Urbit user will have a feeling that he really own it personally and no one have access to it
+- quote of some zen master, budda, Krishna, or from Hermetic books to inspire users after each meditation, all taken from some pre-created database
+- way to evaluate each user’s meditation session, emotional/mental state of each day with "triangle" "circle" "square" (not “:)” , “:|” , “:(“ -> like in every other meditation app)
+- **MOST IMPORTANT**: Group sessions so like there will be pre-define and pre-announced three hours daily in UTC when users will know that if they want to meditate with other people they can join and see how many people meditate with them at the same time (they don't need to hear each other or anything, just a visible number of people, maybe Urbit names, some levitations dots representing users, that now are currently login and potentially meditate at the same time). This builds a strong connection between people and lets them feel “not alone” in the process or even in the whole world/space/time.
 # Future Work
 Future work involves expanding the functionality and writing custom components, aka "apps".
 Potential expansions:
