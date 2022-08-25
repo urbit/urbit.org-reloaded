@@ -8,7 +8,7 @@ grant_category = [ "Other" ]
 
 [extra]
 image = ""
-description = "Develop frameowrk for alternative urbit web browser interface"
+description = "Develop framework for alternative urbit web browser interface"
 reward = "5 stars"
 champion = "~nocsyx-lassul"
 assignee = ["~nortex-ramnyd"]
