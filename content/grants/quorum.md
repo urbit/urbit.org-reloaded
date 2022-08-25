@@ -12,7 +12,7 @@ description = "Quorum: Clone of Stack Exchange on Urbit"
 reward = "3 stars"
 assignee = ["~tamlut-modnys", "~litlep-nibbyt", "~sidnym-ladrut"]
 grant_id = "B0167"
-champion = "~lagrev-nocfep"
+champion = ["~lagrev-nocfep"]
 completed = false
 +++
 

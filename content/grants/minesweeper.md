@@ -12,7 +12,7 @@ description = "A redesigned version of minesweeper where all of the game logic i
 reward = "1 star ($2k if done by Assembly)"
 assignee = ["~hanfel-dovned"]
 grant_id = "B0163"
-champion = "Holium"
+champion = ["Holium"]
 completed = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0163&prefill_Grant+Name=Minesweeper"
 +++

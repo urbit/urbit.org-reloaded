@@ -11,7 +11,7 @@ image = ""
 description = "An Urbit app that serves the Gnosis Safe UI, but with Urbit used for storing safe/wallet metadata and exchanging signatures."
 reward = "1 star"
 assignee = [""]
-champion = "~dinleb-rambep"
+champion = ["~dinleb-rambep"]
 grant_id = "B0154"
 completed = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0154&prefill_Grant+Name=Gnosis%20Safe"

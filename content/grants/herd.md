@@ -12,7 +12,7 @@ description = "Herd - Dependency management for Citadel"
 reward = "2 stars"
 assignee = ["~midsum-salrux"]
 grant_id = "P0170"
-champion = "~littel-wolfur"
+champion = ["~littel-wolfur"]
 completed = false
 +++
 

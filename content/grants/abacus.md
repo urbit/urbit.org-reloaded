@@ -12,7 +12,7 @@ description = "Abacus: A basic calculator app with the ability to convert units"
 reward = "1 star ($1k bonus if done by Assembly)"
 assignee = ["~sorpes-ranrep"]
 grant_id = "B0160"
-champion = "Holium"
+champion = ["Holium"]
 completed = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0160&prefill_Grant+Name=Abacus"
 +++
