@@ -23,6 +23,7 @@ I'm proposing to write code for what could become an alternative urbit web brows
 This interface basically functions like website builder [Wix](https://www.wix.com/) but puts more emphasis on
 1. Enabling creation of custom components as easy as using pre-fabricated ones - Wix has an option to create custom components with javascript but it's limited and impractical.
 2. Implementing collaborative composing as an integral feature rather than an "add-on".
+
 The interface would be composed together from components in similar way Wix does. The components are draggable around the screen and it will be possible to align a component into a grid with automatic alignment. In practice this enables composing (live) "dashboards" for reasoning about various data.
 The interface will be accessed from browser and mobile browser. Future work includes a native iOS app and a desktop Electron app. Though it's the same codebase for web browser interface, the mobile browser interface components will be auto-aligned for mobile screen. iOS app will have support for native notifications and widgets.
 The components will be written in Sail, an Urbit markup language. A trivial example of a component could be `;smiley` which renders on the screen as `:-)`.
