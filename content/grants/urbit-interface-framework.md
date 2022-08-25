@@ -55,7 +55,7 @@ In this milestone we're mostly just improving the usability of the editor and ad
 ## Milestone 3: collaborative editing
 ### 1 star
 In this milestone we implement push and pull hooks similar to how groups works to allow for syncing of state between multiple editors and implement custom permissioning logic.
-## Milestone 5: proof of concept custom component/app - DeepSpace meditation app
+## Milestone 4: proof of concept custom component/app - DeepSpace meditation app
 ### 1 star
 In this milestone we create an application on top of the interface builder. The design considerations for this application are as follows:
 ### Design - The DeepSpaceApp
