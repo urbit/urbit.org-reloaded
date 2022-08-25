@@ -8,7 +8,7 @@ grant_category = [ "Runtime" ]
 
 [extra]
 image = ""
-description = "Support developement of persistent memory allocation in the New Mars runtime"
+description = "Development of persistent memory arena for the New Mars runtime"
 reward = "up to 5 stars"
 champion = "~ritpub-sipsyl"
 assignee = ""
@@ -57,7 +57,7 @@ The net effect of this is that the file region to which the read-protected page 
 
 To facilitate restoring the persistent memory arena from durable block storage, we reserve two pages at the beginning of the file for metadata storage. This does not limit us to a page for metadata, we may commit metadata objects alongside our stored data, and reference it from a page. A metadata page contains a counter and a checksum of the page's contents. The page with a valid checksum and the more recent counter is used to load the data.
 
-To atomically commit writes since the last commit to durable storage, we simply `msync()` (note: and `fsync()` or is that implied by `msync()`?) each dirty page. If all syncs succeed, we know that data in these pages is durably persisted to disk. We may now safely write a new metadata page to whichever metadata page is not in use. Once this too successfully `msync`s, our writes are durably committed.
+To atomically commit writes since the last commit to durable storage, we simply `msync()` each dirty page. If all syncs succeed, we know that data in these pages is durably persisted to disk. We may now safely write a new metadata page to whichever metadata page is not in use. Once this too successfully `msync`s, our writes are durably committed.
 
 ### When to commit
 
@@ -111,11 +111,32 @@ Contention for this lock is not likely to be high, and this will eliminate a gre
 Commit frequency of the Arvo snapshot arena is a potentially tunable value, with performance implications.
 Committing more often incurs more disk IO, saving nouns that will potentially soon be discarded (Ames queues, for instance). However, under memory pressure, it makes paging more performant, as the proportion of dirty pages which must be *written* to disk to evict is smaller. Already-committed pages can simply be evicted from memory and re-read from disk when a read fault occurs. Committing less often requires writes as part of eviction, but reduces disk IO. It is desirable as long as memory pressure as low, and highly desirable for block storage where write-wearing is a concern.
 
-## TODO
+
+# Evaluation
+An important part of this work is to objectively evaluate the proposed approach. This will require the implementation of at least one alternate approach. The primary alternative is to map pages `MAP_PRIVATE` and simply track dirty pages and set `PROT_WRITE` in the fault handler. Then dirty pages could be more lazily written to disk, using `write()`, and committing using `fsync()`. The main reason this tradeoff is not expected to perform well is that it requires the underlying OS to have swap space configured and available if a dirty page must be evicted from the page cache.
+
+However, this approach is used both by the current Vere as well as by LMDB for writing dirtied pages. It should therefore be implemented for New Mars at least by way of comparison.
+
+# Milestones & Compensation
+
+## Milestone 1: Basic copy-on-write arena
+
+Implement a copy-on-write arena by using `write()` to copy pages to new regions of the backing file.
+This should include at least single-arena snapshot support.
+
+## Milestone 2: Kernel copy-on-write (`MAP_PRIVATE`) + lazy write arena
+
+Implement a copy-on-write arena by mapping pages `MAP_PRIVATE` and lazily writing dirty pages to the backing file.
+
+## Milestone 3: Memory allocation and separate event arena
+
+Implement a memory allocator on top of this arena. This includes the ability to store metadata such as roots which will be committed with the snapshot, and reference counting or tracing to free nouns which are not referenced from the root.
+
+Implement a separate (may be interleaved at the page level in memory/on disk) arena for event logs, which is bump-allocated and not copy-on-write but rather does not reallocate in committed pages. (TODO: be more explicit/detailed about this in above spec, including memory allocator and paging system interface to assign arenas to pages.)
+
+
+## Stretch/beyond scope
 - Migration to/from vere
   - Portable snapshots?
   - LMDB event log import/export
 - Raw block devices?
-
-# Milestones & Compensation
-TBD
