@@ -10,7 +10,7 @@ grant_category = ["App Dev"]
 [extra]
 image = ""
 description = "An Urbit native meetup tool for subculture gatherings"
-reward = "3 stars"
+reward = "4 stars"
 assignee = ["~polrel-witter", "~pontus-fadpun"]
 champion = ["~dolweb-donfun", "~dinleb-rambep"]
 grant_id = "P0166"
@@ -27,127 +27,56 @@ Meatspace interaction and synchronous, virtual discussions are core values many 
 - User is in a foreign city and is curious to know who (ships they interact with regularly or members of a Group they're a part of) is in the area and open to meeting up.
 - User has a core group of people they meet up with reguarly.
 - User is curious to know if they have mutual, Urbit acquaintances in their area.
-# Two Main Features and a Settings Page
-## Gathering: for organized meet ups
-- Functionality example: `~sampel-palnet` is hosting a poker night and wants to invite people he regularly interacts with on Urbit, and members of a specific Group. He has 9 seats so will take the first 9 to accept his invite. He writes the details in the invite note, marks the address where the game will take place, and sends the invite to these ships. He can see who has accepted/declined the invite and finalize it (removing any pending invites from the Invitee's pending queue) when 9 have accepted it.
-- Send and receive invites
-- Search field for ships
-- Dropdown menu to select groups user is a part of
-- Accept/Decline an invite
-- Write an invite note (dummed down for Hackathon; will eventually be a full page - see below)
-- Host can view the note they sent for a gathering (dummed down for Hackathon)
-- If ship accepts an invite they can view the invite list
-- Host ship can cancel a gathering
-- Host ship can finalize a gathering (meaning they won't take any more attendees)
-- Distinguish between Pending and Accepted invites for the Invitee
-- Invitee can accept, decline, or ignore an invite
-- Invitee can ghost a host ship
-- Invitee or Host can click a button to start a Groups message thread between each other
-- Host can create a group message thread with all attendees
-- Attendee can RSVP to a public gathering via a button on the Gathering page
-- Attendee can un-RSVP to a Gathering
-- Host can establish a Gathering page with a title, link, description, photo, address, venue name, date, and time
-- Host can toggle a gathering's settings: public or private (if so, select who's invited; no link generated to restrict access to the Gathering page), meatspace (if so, enter address) or virtual, display attendees or not
-- A potential Attendee can access a Gathering page if they have the link and the gathering is public
-- Attendee can see who else is attending (if enabled by host)
-- Host can see list of gatherings they're hosting in a dashboard
-- Attendee can see list of gatherings they're attending in a dashboard
-- Host can archive or delete gatherings that have passed
-## Status: for chance encounters and finding nearby friends
-- Functionality example:
-    - Among other select ships, the user (e.g. `~sampel-palnet`) has specified that `~polrel-witter` is a part of their Gang (i.e. someone they would be willing to share their location with when they turn the Status feature on). `~polrel-witter` has also added `~sampel-palnet` to their Gang. Given this mutual affinity, a small tile with each ship's @p, the brief status note, and distance between them will appear on each others' dashboard if the following extra two conditions are met:
-        - Both ships have Status turned on
-        - Both ship's radiuses overlap
-    - A non-Gang ship can add sampel-palnet to their Gang, but because it's not mutual, when both ships have the Status feature turned on sampel-palnet will receive the non-Gang member's status note and city/country and can decide to add them to their Gang (making it mutual), message them, ignore their note, or ghost them (banning future notes from that ship).
-    - Additionally, the user can choose to share their status with members of one or more Groups they're a part of. The user's status will appear in the members' Foreign Ships queue where they'll then have the same options listed in the bullet point above.
-- Toggle on and off
-- Edit and set status note
-- Send and receive statuses
-- See list of Gang and Foreign ship statuses
-- Auto-calculate distance between mutual Gang members and display distance
-- DM button
-- Share status with members of a group or attendess of a gathering the user is attending
-- Ignore Status tiles
-- Ghost Foreign ships
-- Add Foreign ships to Gang
-- Display city, state, and country of Foreign ships
-- Can see list of ships (with status notes and distance) within radius that are mutual Gang members and also have the Status feature turned on
-- Can see list of Foreign ships (with status notes and their city, state, and country)
-## Settings
-Set "My Location": enter an address
-Set a radius within which they're willing to receive status notes
-Add any ship to Gang
-Remove ships from Gang
-See list of Ghosted ships
-Unghost ships
-Toggle how user wants to receive Gathering Invites: from anyone or only from Gang
-Toggle how user wants to receive Statuses: from anyone, only from Gang, only from ships within radius
-Toggle notification for new status notes and invites received
+
 # Milestones
 ## Milestone 1
-Expected Completion: August 28, 2022
-Compensation: 1 star
-### Gathering
-- Can send and receive invites
-- Can search for ships
-- Can accept/decline/ignore invites
-- Can edit and set an invite note
-- Host can view note sent
-- Invitee can distinguish Pending and Accepted invites
-- Invitee can ghost a ship from Pending queue
-- Invitee can unaccept an invite
+Expected Completion: September 16, 2022
+Compensation: 2 stars
+**Gathering**
+- User can create, send, and receive gathering invites
+- User can ban ships to stop sending and receiving invites to/from selected ships
+- User can see a list of gatherings they're hosting, been invited to, and RSVP'd to in a dashboard
+- User can delete gatherings from their dashboard that have passed
+- Host can search for ships to which to send an invite
+- Host can set a maximum number of RSVPs they will accept
+- Host can cancel, finalize (meaning no more RSVPs will be accepted), or mark a gathering as completed
+- Host can edit an invite that has already been sent out, and unfinalize it to make changes, if needed
 - Host can see who accepted/declined their invite
-### Status
-- Can toggle this feature on and off
-- Can edit and set status note
-- Can send and receive statuses
-- Can ignore status notes
-- Can see list of Gang and Foreign Ship statuses
-- Can ghost Foreign Ships
-- Can add Foreign Ships to Gang
-### Settings
-- Can add any ship to Gang
-- Can remove ships from Gang
-- Can see list of Ghosted Ships
-- Can unghost ships
-- Can toggle notification for new status notes and invites received
+- Host can restrict an invite to deliver only within a specific radius; meaning an invite will only appear in a ship's dashboard if their settings location is within the host's specified radius of the venue address
+- Host can include a venue location in the invite
+- Host can select one or more groups the user is a part of from a dropdown menu to invite members
+- Invitee can distinguish Pending, Accepted, and Completed gatherings
+- Invitee can unaccept an invite if they decide they can no longer attend
+- Invitee can see invite and RSVP list
+- Invitee can click a button on the invite to DM the host
+- Invitee can accept or decline invites
+- Invitee can see distance from their address to venue included in invite
+- Invitee can restrict receiving invites to only those with venue addresses in their radius
+- Connect to an open source map API so the app can retreive Longitude and Latitude and calculate the distance between two addresses (the address input is left up to the user for privacy control)
+    - The map API query would work as follows:
+        - Ship obtains latitude and longitude coordinates from a free, open source map API such as [Nominatim address search](https://nominatim.org/release-docs/develop/api/Search/)
+        - Since Nominatim has a strict use policy, ship obtains the Lat and Lon once, each time the address field is updated, and stores it locally
+        - Whenever a ship receives a location-based invite, their ship will auto-calculate the distance from their location (address in their settings) to the venue (received in the invite).
+**Settings**
+- User can toggle whether they want to receive invites from anyone or only within a set radius from their location to the gathering venue included in the invite
+- User can set a radius within which they'll receive invites, if they're not receiving invites from anyone
+- User can set "My Location": street, city, state, country, and zip to determine coordinates
+- User can ban/unban ships
+- User can see list of banned ships
+- User can create a collection to store a subset of ships or groups to easily send future invites to select groups of ships
+- User can toggle notification for new invites received
 ## Milestone 2
 Expected Completion: September 16, 2022
-Compensation: 1 star
-- Connect to an open source map API so the app can retreive Longitude and Latitude and calculate the distance between two ships (the address input is left up to the user for privacy control)
-- The map API query would work as follows:
-- Ship obtains latitude and longitude coordinates from a free, open source map API such as Nominatim address search
-- Since Nominatim has a strict use policy, ship obtains the Lat and Lon once, each time the address field is updated, and stores it locally
-- Whenever two ships are trying to find the distance between each other, the locally stored coordinates are passed to each other and calculated on-ship.
-### Gathering
-- Host can select one or more Groups the user is a part of from a dropdown menu
-- Invitee can view invite list
-- Host can cancel and finalize a gathering
-- Host or Invitee can create a message thread (in Groups) between each other
-### Status
-- Auto-calculate distance between mutual Gang members and display distance on each others' tiles
-- Message button on tiles to open up message thread in Groups
-- Can see city, state, and country of Foreign Ships
-### Settings
-- Can set street, city, state, country, and zip to determine coordinates
-- Can set radius
-- Can toggle how user wants to receive Gathering Invites: from anyone or only from Gang
-- Can toggle how user wants to receive Statuses: from anyone, only from Gang, only from ships within radius
-## Milestone 3
-Expected Completion: November 2022
-Compensation: 1 star
-### Gathering
-- Host can establish a Gathering page with a title, link, description, photo, address, venue name, date, and time
-- Host can toggle a gathering's settings: public or private (if so, select who's invited; no link generated to restrict access to the Gathering page), meatspace (if so, enter address) or virtual, display attendees or not
-- Anyone with a ship can access a Gathering page if they have the link and the gathering is public
-- Attendee can see who else is attending (if enabled by host)
-- Attendee can RSVP to a public gathering via a button on the Gathering page
-- Host can see list of gatherings they're hosting in a dashboard
-- Attendee can see list of gatherings they're attending in a dashboard
-- Host and Attendee can archive or delete gatherings that have passed
-- Host can create a group message thread with all attendees
-### Status
-- User can easily select a group and/or attendees of a gathering they're attending to which to share their status
+Compensation: 2 stars
+**Gathering**
+- Implement feedback from Hackathon/Assembly
+- Host can establish an event page with a title, link, description, photo, address, venue name, date, and time
+- Host can toggle a gathering's settings: public or private (if so, select who's invited; no link generated to restrict access to the event page), meatspace (if so, enter address) or virtual (if so, enter an access link), allow those who RSVP'd to see other ships who are attending, restrict message thread access to anyone (with an invite, if private) or only those who RSVP'd
+- Attendee can see who else has RSVP'd (if enabled by host)
+- Anyone with a ship can access a event page and RSVP, if they have the link and the gathering is public
+- Attendee can set a reminder on gathering's they've RSVP'd to
+- Native messaging on event page for pre, during, and post-event chat/networking
+- Beam event page to clearweb
 
 # About Us
 `~polrel-witter`
