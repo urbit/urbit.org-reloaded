@@ -26,7 +26,7 @@ export default function Updates({ posts, search }) {
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header />
+        <Header search={search} />
         <Section narrow>
           <div className="measure">
             <h1 className="pb-16">Updates</h1>

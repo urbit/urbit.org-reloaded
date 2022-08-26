@@ -74,7 +74,7 @@ export default function Grant({ post, markdown, search }) {
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header />
+        <Header search={search} />
         <Section narrow short>
           <h1>{post.title}</h1>
           {post.extra.assignee ? (

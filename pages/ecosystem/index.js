@@ -73,7 +73,7 @@ export default function Ecosystem({
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header />
+        <Header search={search} />
         <Section>
           <h1>Ecosystem</h1>
         </Section>
@@ -300,7 +300,7 @@ function SpotlightArchive({ posts, search }) {
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header />
+        <Header search={search} />
         <Section>
           <div className="measure">
             <h1>Ecosystem</h1>

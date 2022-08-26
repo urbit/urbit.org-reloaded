@@ -93,7 +93,7 @@ export default function Events({ events, search }) {
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header />
+        <Header search={search} />
         <Section>
           <div className="measure">
             <h1 className="pb-16">Events</h1>

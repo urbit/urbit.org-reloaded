@@ -32,7 +32,7 @@ export default function Post({ post, markdown, search }) {
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header />
+        <Header search={search} />
         <Section short narrow>
           <h1>{post.title}</h1>
           {post.author ? (

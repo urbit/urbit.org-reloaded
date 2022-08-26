@@ -42,7 +42,7 @@ export default function Home({
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header />
+        <Header search={search} />
         {
           // Hero Statement
         }
