@@ -10,11 +10,10 @@ grant_category = [ "Runtime" ]
 image = ""
 description = "Development of persistent memory arena for the New Mars runtime"
 reward = "4 stars"
-champion = "~ritpub-sipsyl"
-assignee = ""
+champion = ["~ritpub-sipsyl"]
+assignee = [""]
 grant_id = "B0178"
 completed = false
-canceled = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0178&prefill_Grant+Name=New%20Mars%20Persistent%20Memory%20Arena"
 +++
 
