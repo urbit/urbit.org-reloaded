@@ -21,7 +21,7 @@ export default function NotFound(props) {
       </Head>
       <IntraNav ourSite="https://urbit.org" search={props.search} />
       <SingleColumn>
-        <Header />
+        <Header search={props.search} />
         <Section className="pt-48">
           <h1>404</h1>
           <p className="mt-12">It looks like nothing is here.</p>

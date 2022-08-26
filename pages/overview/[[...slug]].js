@@ -28,7 +28,7 @@ export default function Overview({ posts, data, markdown, search }) {
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header />
+        <Header search={search} />
         <Section>
           <h1>Overview</h1>
         </Section>

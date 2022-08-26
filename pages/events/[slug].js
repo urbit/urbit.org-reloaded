@@ -49,7 +49,7 @@ export default function Event({
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header />
+        <Header search={search} />
         <Section narrow short>
           <h1>{event.title}</h1>
           <h3 className="mt-6">{event.description}</h3>

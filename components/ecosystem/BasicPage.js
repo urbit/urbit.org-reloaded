@@ -38,7 +38,7 @@ export default function BasicPage({
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header />
+        <Header search={search} />
         <Section narrow className="space-y-12">
           <div className="flex items-center space-x-4">
             <img src={post.image} className="w-36" />

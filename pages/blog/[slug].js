@@ -41,7 +41,7 @@ export default function Post({
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header />
+        <Header search={search} />
         <Section narrow className="pb-10">
           <h1>{post.title}</h1>
           <h3 className=" mt-6">{post.description}</h3>

@@ -125,7 +125,7 @@ export default function Grants({ posts, categories, types, search }) {
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header />
+        <Header search={search} />
         {
           // Heading and Introduction
         }

@@ -54,7 +54,7 @@ export default function DiscordLanding({ search, featuredGroups }) {
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header />
+        <Header search={search} />
         <Section className="pb-24">
           <div className="flex flex-col items-center justify-center space-y-4">
             <h3 className="uppercase tracking-widest">Urbit is</h3>

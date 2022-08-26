@@ -27,7 +27,7 @@ export default function BasicPage({ post, markdown, search, index = false }) {
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header />
+        <Header search={search} />
         <Section>
           <h1>{post.title}</h1>
         </Section>

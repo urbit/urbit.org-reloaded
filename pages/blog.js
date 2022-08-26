@@ -29,7 +29,7 @@ export default function Blog({ posts, search }) {
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header />
+        <Header search={search} />
         <Section>
           <h1 className="pb-16">Blog</h1>
           <div className="md:columns-2 gap-x-8">
