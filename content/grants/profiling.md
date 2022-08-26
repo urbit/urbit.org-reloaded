@@ -9,13 +9,12 @@ grant_category = [ "Core Dev", "Runtime" ]
 [extra]
 image = ""
 description = "Uncover and visualize performance bottlenecks in the runtime"
-reward = "TODO"
+reward = "1 star"
 mentor = "~fanfun-mocbud"
 assignee = "~pontus-fadpun"
-grant_id = "TODO"
+grant_id = "A0180"
 completed = false
-canceled = false
-work_request_link = "TODO"
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0180&prefill_Grant+Name=Vere%20Profiling"
 +++
 
 # Vere Profiling Apprenticeship
@@ -72,4 +71,4 @@ The mentor will:
 
 ## Duration and Compensation
 
-The expected duration is two months. Compensation is TODO.
+The expected duration is two months. Compensation is 1 star upon sucessful completion of the apprenticeship.
