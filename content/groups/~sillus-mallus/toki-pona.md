@@ -3,6 +3,7 @@ title = "toki pona"
 shortcode = "~sillus-mallus/toki-pona"
 type = "Public"
 tile = "https://personal-server.fra1.digitaloceanspaces.com/sillus-mallus/tp-lg.png"
+description = "The world's smallest language."
 participant_range = "100"
 +++
 
