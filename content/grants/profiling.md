@@ -10,8 +10,8 @@ grant_category = [ "Core Dev", "Runtime" ]
 image = ""
 description = "Uncover and visualize performance bottlenecks in the runtime"
 reward = "1 star"
-mentor = "~fanfun-mocbud"
-assignee = "~pontus-fadpun"
+mentor = ["~fanfun-mocbud"]
+assignee = ["~pontus-fadpun"]
 grant_id = "A0180"
 completed = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0180&prefill_Grant+Name=Vere%20Profiling"
