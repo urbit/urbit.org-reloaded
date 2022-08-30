@@ -1,5 +1,5 @@
 +++
-title = "UF Apprenticeship Grant: Notifications Protocol"
+title = "Notifications Protocol"
 date = "2022-05-04"
 
 [taxonomies]

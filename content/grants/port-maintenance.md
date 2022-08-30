@@ -11,7 +11,7 @@ reward = "2 stars"
 champion = ["~nocsyx-lassul"]
 assignee = ["~latter-bolden"]
 grant_id = "B0112"
-completed = false
+completed = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0137&prefill_Grant+Name=Port%20Maintenance"
 +++
 

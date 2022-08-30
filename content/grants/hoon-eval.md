@@ -1,5 +1,5 @@
 +++
-title = "UF Apprenticeship Grant: Hoon Eval and REPL"
+title = "Hoon Eval and REPL"
 date = "2022-05-04"
 
 [taxonomies]

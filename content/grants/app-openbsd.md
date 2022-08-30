@@ -13,7 +13,7 @@ reward = "1 star"
 mentor = ["~silsyn-wathep"]
 assignee = ["~tidsut-radryd"]
 grant_id = "A0103"
-completed = false
+completed = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0124&prefill_Grant+Name=Resurrect%20OpenBSD%20Build"
 +++
 

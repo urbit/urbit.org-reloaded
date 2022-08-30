@@ -1,5 +1,5 @@
 +++
-title = "UF Apprenticeship Grant: Reduce memory usage of |meld"
+title = "Reduce memory usage of |meld"
 date = "2022-05-04"
 
 [taxonomies]

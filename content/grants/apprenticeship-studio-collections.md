@@ -13,7 +13,7 @@ reward = "1 star"
 mentor = ["~novlud-padtyv"]
 assignee = ["~dachus-tiprel"]
 grant_id = "A0147"
-completed = false
+completed = true
 canceled = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0174&prefill_Grant+Name=Studio%20Collections"
 +++
