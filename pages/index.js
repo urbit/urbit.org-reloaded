@@ -307,7 +307,7 @@ export async function getStaticProps() {
 
   // Pull all latest ecosystem information
   const ecosystem = getAllPosts(
-    ["featured-1", "featured-2", "featured-3"],
+    ["date", "featured-1", "featured-2", "featured-3"],
     "ecosystem/spotlight",
     "date"
   )[0];
