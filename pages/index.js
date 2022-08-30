@@ -368,7 +368,8 @@ export async function getStaticProps() {
         0
       )
     ),
-    contributors: [...new Set(...[grants.map((e) => e.extra.assignee)])].length,
+    contributors: [...new Set(...[grants.map((e) => e.extra.assignee).flat()])]
+      .length,
     active: grants.filter(
       (e) =>
         !e.extra.canceled &&
