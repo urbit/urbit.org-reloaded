@@ -1,5 +1,5 @@
 +++
-title = "July 2022"
+title = "August 2022"
 date = "2022-07-27"
 
 [featured-1]
