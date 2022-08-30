@@ -12,7 +12,7 @@ description = "Eth-provider is a Gall agent that allows Urbit users to configure
 reward = "3 stars"
 assignee = ["~pontus-fadpun"]
 grant_id = "B0117"
-completed = false
+completed = true
 work_request_link="https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0142&prefill_Grant+Name=Ethereum%20Provider"
 +++
 
