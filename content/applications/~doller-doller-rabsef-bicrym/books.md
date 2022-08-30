@@ -10,7 +10,7 @@ bgColor = "#E44D11"
 
 Books is an application for managing your crypto wallets, transactions, and counterparties. It allows you to add your wallet and other people’s, track balances and transactions, and add private annotations to all of the above.
 
-![Screenshot](https://sarlev-sarsen.sfo3.digitaloceanspaces.com/sarlev-sarsen/2022.8.30..02.59.22-image.png)
+![Screenshot](https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/books.png)
 
 ## Books in a Nutshell
 If you spend much time interacting with crypto, you probably have a few wallets: a few hot wallets in metamask, a ledger or two, perhaps an Urbit ID on a master ticket, and that’s just Ethereum.
