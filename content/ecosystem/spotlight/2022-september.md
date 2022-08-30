@@ -18,6 +18,7 @@ You can currently submit and search for applications, groups, and content (noteb
 [featured-2]
 title = "peat"
 description = "Back up your urbit with peat, Urbit's first backup utility."
+image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/spotlight/peat-thumb.png"
 content = """
 
 Peat is Urbit’s first backup utility.  Prior to Peat, there was no easy way to backup content from groups from your ship aside from copying your entire urbit.  Peat makes it easy to export all your data from Groups, which uses the graph-store data structure, and in the future will provide support for the new structure in Tlon’s upcoming Groups revamp.
