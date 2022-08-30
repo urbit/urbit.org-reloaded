@@ -7,12 +7,12 @@ export default function IndexCard({ slug, feat }) {
         <div className="flex flex-col p-4 h-full relative">
           {feat.image ? (
             <div
-              className="rounded-xl object-cover overflow-hidden basis-1/3"
+              className="w-64 md:w-full rounded-xl object-cover overflow-hidden basis-1/2"
               style={{
                 backgroundColor: feat?.matchedPost?.bgColor || "rgba(0,0,0,0)",
               }}
             >
-              <img className="h-full w-full object-cover" src={feat.image} />
+              <img className="h-full w-64 md:w-full object-cover" src={feat.image} />
             </div>
           ) : (
             <div

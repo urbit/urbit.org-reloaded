@@ -32,6 +32,8 @@ Peat is Urbit’s first backup utility.  Prior to Peat, there was no easy way to
 
 title = "Josh Lehman: Urbit – The Peer-to-Peer Network Re-Decentralizing the Internet"
 description = "Urbit Foundation Executive Director Josh Lehman and Epicenter host Brian Crain have a wide ranging discussion on Urbit's history and future."
+image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/spotlight/epicenterjoshthumb.jpg"
+
 content = """
 
 In this podcast Urbit Foundation Executive Director Josh Lehman provides a broad overview of that state of Urbit as of 2022, and what people can expecture in the near future and beyond.
