@@ -8,7 +8,7 @@ ship = "~sarlev-sarsen"
 image = "https://storage.googleapis.com/media.urbit.org/blog/b52.jpg"
 +++
 
-~sarlev-sarsen
+![Image](https://storage.googleapis.com/media.urbit.org/blog/b52.jpg)
 
 # Completed Grants
 
