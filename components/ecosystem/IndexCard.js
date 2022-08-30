@@ -4,23 +4,25 @@ export default function IndexCard({ slug, feat }) {
   return (
     <Link href={slug}>
       <div className="cursor-pointer bg-wall-100 rounded-xl min-h-0 flex-1">
-        <div className="flex flex-col p-4 justify-between items-between h-full relative">
+        <div className="flex flex-col p-4 h-full relative">
           {feat.image ? (
-            <img
-              className="rounded-xl w-full flex-1 object-cover"
-              src={feat.image}
-              style={{ aspectRatio: "4 / 3" }}
-            />
+            <div
+              className="rounded-xl object-cover overflow-hidden basis-1/3"
+              style={{
+                backgroundColor: feat?.matchedPost?.bgColor || "rgba(0,0,0,0)",
+              }}
+            >
+              <img className="h-full w-full object-cover" src={feat.image} />
+            </div>
           ) : (
             <div
-              className="rounded-xl w-full flex-1"
+              className="rounded-xl w-full"
               style={{
-                aspectRatio: "4 / 3",
                 backgroundColor: feat?.matchedPost?.bgColor || "rgba(0,0,0,0)",
               }}
             />
           )}
-          <div className="grow-1 shrink-0 flex flex-col h-full min-h-0 pt-4">
+          <div className="pt-4">
             <p className="mb-2 font-semibold leading-5">{feat.title}</p>
             {badge(feat.type)}
             <p className="text-sm leading-5">{feat?.description}</p>
