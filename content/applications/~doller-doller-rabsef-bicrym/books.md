@@ -1,8 +1,8 @@
 +++
-title = "Books"
+title = "books"
 developer = "Quartus Co."
 shortcode = "~doller-doller-rabsef-bicrym/books"
-description = "Graph Backup and Restoration Utility"
+description = "it just makes cents"
 license = "MIT"
 website = "https://dalten.org"
 bgColor = "#E44D11"
