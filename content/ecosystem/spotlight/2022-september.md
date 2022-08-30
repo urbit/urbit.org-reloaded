@@ -17,10 +17,10 @@ You can currently submit and search for applications, groups, and content (noteb
 
 [featured-2]
 title = "peat"
-description = "Need a personal website, fast? Studio can set one up in under a minute."
+description = "Back up your urbit with peat, Urbit's first backup utility."
 content = """
 
-Peat is Urbit’s first backup utility.  Prior to Peat, there was no easy way to backup content from groups from your ship aside from copying your entire urbit.  Peat makes it easy to export all your data from Groups, which uses the graph-store structure, and in the future will provide support for the new structure in Tlon’s upcoming Groups revamp.
+Peat is Urbit’s first backup utility.  Prior to Peat, there was no easy way to backup content from groups from your ship aside from copying your entire urbit.  Peat makes it easy to export all your data from Groups, which uses the graph-store data structure, and in the future will provide support for the new structure in Tlon’s upcoming Groups revamp.
 
 ![Screenshot](https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/peat.png)
 
@@ -30,7 +30,7 @@ Peat is Urbit’s first backup utility.  Prior to Peat, there was no easy way to
 [featured-3]
 
 title = "Josh Lehman: Urbit – The Peer-to-Peer Network Re-Decentralizing the Internet"
-description = "In this podcast Urbit Foundation Executive Director Josh Lehman provides a broad overview of that state of Urbit as of 2022, and what people can expecture in the near future and beyond."
+description = "Urbit Foundation Executive Director Josh Lehman and Epicenter host Brian Crain have a wide ranging discussion on Urbit's history and future."
 content = """
 
 In this podcast Urbit Foundation Executive Director Josh Lehman provides a broad overview of that state of Urbit as of 2022, and what people can expecture in the near future and beyond.
