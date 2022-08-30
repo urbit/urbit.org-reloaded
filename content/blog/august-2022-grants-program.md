@@ -14,7 +14,7 @@ image = "https://storage.googleapis.com/media.urbit.org/blog/b52.jpg"
 
 Recently completed grant projects include Urbit micro-blogging, Hoon-native Discord bridging, Urbit’s first arcade-style game, Port application improvements, Ethereum bookkeeping and eth-provider infrastructure. 
 
-* [Trill](https://urbit.org/applications/~sortug/trill) and sister application [Urbit Feed Aggregator](https://urbit.org/applications/~sortug/ufa) give you a way to escape from Twitter’s algorithms while still being able to share your shower-thoughts with your followers. 
+* [Trill](https://urbit.org/applications/~sortug/trill) and sister application [Urbit Feed Aggregator](https://urbit.org/applications/~sortug/ufa) give you a way to escape from Twitter’s algorithms while still being able to share your shower thoughts with your followers. 
 * [Faux](https://urbit.org/applications/~midsum-salrux/faux) is a transformation of the python-based Urbit to Discord bridge, turning it into a Hoon native app and offering a front-end that takes you through the setup experience, letting you to bring your Discord friends a little taste of Urbit. 
 * [Slam](https://urbit.org/applications/~hanfel-dovned/slam), everyone’s favorite new arcade game, integrates with [Gora](https://urbit.org/applications/~dalten/gora) and [pals](https://urbit.org/applications/~paldev/pals), utilizing a mechanism whereby the number of gorae held by your pals will influence the way your game is played.
 * The [Ethereum Provider](https://urbit.org/grants/eth-provider) grant gets the network a step closer to decentralized Ethereum access, particularly for those who don’t wish to rely on an infura node.
