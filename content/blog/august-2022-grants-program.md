@@ -55,7 +55,7 @@ Three new apprenticeships began in August:
 
 August also brings with it the assignment of previously open bounties to developers looking to grow their portfolio of Urbit projects. Many of bounties that found contributors are a part of [Holium’s App Dev Summer](https://www.youtube.com/watch?v=dHyzH09QaZQ), and are slated to be completed by Assembly in Miami:
 
-* [Minesweeper](https://urbit.org/grants/minesweeper) - A classic desktop game, now natively in hoon.
+* [Minesweeper](https://urbit.org/grants/minesweeper) - A classic desktop game, now natively in hoon
 * [Abacus](https://urbit.org/grants/abacus) - A basic calculator app with the ability to convert units
 * [Chronicle](https://urbit.org/grants/chronicle) - A news app that links articles from group channels
 * [Lexicon](https://urbit.org/grants/lexicon) - A simple dictionary app with custom definitions for a group 
