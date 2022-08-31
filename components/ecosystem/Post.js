@@ -3,6 +3,7 @@ import classnames from "classnames";
 import Link from "next/link";
 export default function Post({ post }) {
   return ["featured-1", "featured-2", "featured-3"].map((feat) => {
+    console.log(post[feat]?.matchedPost);
     const childPath =
       post[feat] && post[feat]?.matchedPost?.type === "Application"
         ? `${post[feat]?.matchedPost.ship}/${post[feat].matchedPost.slug}`
@@ -26,7 +27,7 @@ export default function Post({ post }) {
             {post[feat]?.matchedPost?.image && (
               <img
                 className="rounded-xl w-24 object-cover"
-                src={post[feat].image}
+                src={post[feat]?.matchedPost?.image}
               />
             )}
           </div>
