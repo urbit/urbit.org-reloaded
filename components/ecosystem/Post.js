@@ -23,10 +23,10 @@ export default function Post({ post }) {
                 post[feat]?.matchedPost?.bgColor || "rgba(0,0,0,0)",
             }}
           >
-            {post[feat]?.image && (
+            {post[feat]?.matchedPost?.image && (
               <img
                 className="rounded-xl w-24 object-cover"
-                src={post[feat].image}
+                src={post[feat]?.matchedPost?.image}
               />
             )}
           </div>
