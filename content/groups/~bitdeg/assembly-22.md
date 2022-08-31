@@ -1,7 +1,7 @@
 +++
 title = "Assembly 2022"
 shortcode = "~bitdeg/assembly22"
-description = "Official Urbit Assembly Miami 22 group"
+description = "Official group for Urbit Assembly 2022"
 type = "Public"
 tile = "https://storage.googleapis.com/media.urbit.org/assembly/groupicon.png"
 participant_range = "100+"
