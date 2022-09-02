@@ -1,5 +1,5 @@
+const { Markdown } = require("@urbit/foundation-design-system");
 const markdoc = require("@urbit/markdoc");
-
 module.exports = {
   presets: [require("@urbit/foundation-design-system/tailwind.config")],
   content: {
@@ -11,9 +11,8 @@ module.exports = {
     ],
     transform: {
       md: (content) => {
-        const parsed = markdoc.parse(content);
-        const transform = markdoc.transform(parsed);
-        return markdoc.renderers.html(transform);
+        const parsed = Markdown.parse({ post: { content } });
+        return markdoc.renderers.html(parsed);
       },
     },
   },

@@ -4,6 +4,8 @@ description = "Run Urbit locally as a desktop application"
 weight = 1
 +++
 
+
+
 ### 1. Get Port
 
 Port is a desktop GUI application that allows you to spin up, access, and manage your Urbit ships without any knowledge of the command line or Urbit binary.
@@ -33,7 +35,17 @@ Or to install `snap` for your distribution, snapcraft provides [installation ins
 
 {% tab label="Windows" %}
 
-**WARNING:** Support for Windows is experimental. For the best experience, we recommend using a [cloud hosting provider](https://urbit.org/getting-started/hosted) rather than running Urbit locally.
+{% callout className="bg-yellow-200" %}
+
+#### Notice
+
+Support for Windows is experimental. 
+
+For the best immediate Urbit experience we recommend [setting up a VPS](/getting-started/cli) or using a [hosting service](/getting-started/hosted).
+
+{% /callout %}
+
+
 
 To install **Port** on Windows, simply download and open the `.exe` file.
 
