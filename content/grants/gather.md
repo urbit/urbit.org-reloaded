@@ -32,6 +32,7 @@ Meatspace interaction and synchronous, virtual discussions are core values many 
 ## Milestone 1
 Expected Completion: September 16, 2022
 Compensation: 2 stars
+
 **Gathering**
 - User can create, send, and receive gathering invites
 - User can ban ships to stop sending and receiving invites to/from selected ships
@@ -66,8 +67,9 @@ Compensation: 2 stars
 - User can create a collection to store a subset of ships or groups to easily send future invites to select groups of ships
 - User can toggle notification for new invites received
 ## Milestone 2
-Expected Completion: September 16, 2022
+Expected Completion:  November 30, 2022
 Compensation: 2 stars
+
 **Gathering**
 - Implement feedback from Hackathon/Assembly
 - Host can establish an event page with a title, link, description, photo, address, venue name, date, and time
