@@ -55,7 +55,7 @@ export default function Home({
           // Hero
         }
         <Section>
-          <div className="bg-yellow-100 dark:bg-[#5C5037] w-full p-8 md:p-12 rounded-3xl flex flex-col md:flex-row">
+          <div className="bg-wall-100 dark:bg-[#5C5037] w-full p-8 md:p-12 rounded-3xl flex flex-col md:flex-row">
             <div className="md:w-10/12 w-full md:mr-6">
               <h2 className="m-0 p-0 mr-4 pb-6">Assembly 2022</h2>
 
@@ -66,11 +66,19 @@ export default function Home({
               <p className="pt-4 font-bold pb-8">
                 September 22nd–25th • Miami Beach, Florida
               </p>
-              <Link href="https://assembly.urbit.org" passHref>
-                <a className="button-lg max-w-fit bg-green-400 text-white">
-                  Learn More
-                </a>
-              </Link>
+
+              <div class="flex flex-wrap">
+                <Link href="https://assembly.urbit.org" passHref>
+                  <a className="button-lg max-w-fit bg-wall-600 text-white mr-3 mb-8">
+                    Learn More
+                  </a>
+                </Link>
+                <Link href="/groups/~bitdeg/assembly22" passHref>
+                  <a className="button-lg max-w-fit bg-transparent text-wall-600 border-2 border-wall-600">
+                    Join the Group
+                  </a>
+                </Link>
+              </div>
             </div>
           </div>
         </Section>
@@ -162,7 +170,7 @@ export default function Home({
             </p>
             <div className="flex flex-wrap">
               <Link href="/grants" passHref>
-                <a className="button-lg bg-blue-400 text-white mr-2 mb-8">
+                <a className="button-lg bg-blue-400 text-white mr-3 mb-8">
                   Learn More
                 </a>
               </Link>
