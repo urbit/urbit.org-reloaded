@@ -69,12 +69,12 @@ export default function Home({
 
               <div class="flex flex-wrap">
                 <Link href="https://assembly.urbit.org" passHref>
-                  <a className="button-lg max-w-fit bg-wall-600 text-white mr-3 mb-8">
+                  <a target="_blank" className="button-lg max-w-fit bg-wall-600 text-white mr-3 mb-8">
                     Learn More
                   </a>
                 </Link>
                 <Link href="/groups/~bitdeg/assembly22" passHref>
-                  <a className="button-lg max-w-fit bg-transparent text-wall-600 border-2 border-wall-600">
+                  <a className="button-lg max-w-fit bg-transparent text-wall-600 border-2 border-wall-600 hover:bg-wall-600 hover:text-wall-100">
                     Join the Group
                   </a>
                 </Link>
