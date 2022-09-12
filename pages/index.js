@@ -21,27 +21,6 @@ import fs from "fs";
 import path from "path";
 import Meta from "../components/Meta";
 
-const postReq = (path, params, method='post') => {
-  const form = document.createElement('form');
-  form.method = method;
-  form.action = path;
-
-  for (const key in params) {
-    if (params.hasOwnProperty(key)) {
-      const hiddenField = document.createElement('input');
-      hiddenField.type = 'hidden';
-      hiddenField.name = key;
-      hiddenField.value = params[key];
-
-      form.appendChild(hiddenField);
-    }
-  }
-
-  document.body.appendChild(form);
-  form.submit();
-}
-
-
 export default function Home({
   posts,
   ecosystem,
@@ -73,23 +52,6 @@ export default function Home({
         {
           // Hero
         }
-        <div className="layout px-4 md:px-8">
-          <a className="p-8 button-lg bg-green-400 text-white"
-             onClick={(e) => {
-               e.stopPropagation();
-               fetch('https://api.shore.arvo.network/enter', {
-                 method: 'GET',
-                 headers: {'Content-Type': 'application/json'}
-               })
-                 .then(res => res.json())
-                 .then(data => {
-                   postReq(data.url + '/~/login', {password: data.code, redirect: '/'});
-                 });
-             }}
-          >
-            Try now
-          </a>
-        </div>
         <Section>
           <div className="bg-yellow-100 dark:bg-[#5C5037] w-full p-8 md:p-12 rounded-3xl flex flex-col md:flex-row">
             <div className="md:w-10/12 w-full md:mr-6">
