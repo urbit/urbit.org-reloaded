@@ -70,11 +70,11 @@ export default function Trial(props) {
           <div className="flex flex-col items-center space-y-4 xl:space-y-0 xl:flex-row xl:space-x-4">
             <video className="max-w-md w-full min-w-0" autoPlay muted loop playsInline>
               <source
-                src="https://storage.googleapis.com/media.urbit.org/site/groupsdemo.webm"
+                src="https://storage.googleapis.com/media.urbit.org/site/explorethenetwork.webm"
                 type="video/webm"
               />
               <source
-                src="https://storage.googleapis.com/media.urbit.org/site/groupsdemo-2.mp4"
+                src="https://storage.googleapis.com/media.urbit.org/site/explorethenetwork.mp4"
                 type="video/mp4"
               />
             </video>
