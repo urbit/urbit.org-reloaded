@@ -83,7 +83,7 @@ export default function Trial(props) {
               <p>No downloads, no signup.</p>
               <p>Get <span className="font-bold">one week</span> of a complimentary hosted comet: a temporary Urbit ID.</p>
               {/* Button is flexed to space potential "try again later" copy */}
-              <div className="xl:space-x-4 space-y-4 xl:space-y-0 self-center flex-col xl:flex-row flex items-center">
+              <div className="xl:space-x-4 space-y-4 xl:space-y-0 self-center xl:self-start w-full flex-col xl:flex-row flex items-center">
                 <a className={cn("p-8 button-lg text-white max-w-fit shrink-0", {
                   "bg-green-400": available,
                   "bg-wall-300 cursor-not-allowed": !available,
