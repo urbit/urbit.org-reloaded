@@ -68,7 +68,16 @@ export default function Trial(props) {
           <h1>{post.title}</h1>
           {/* Flex between image and blurb, collapse to col on mobile */}
           <div className="flex flex-col items-center space-y-4 xl:space-y-0 xl:flex-row xl:space-x-4">
-            <img className="max-w-lg h-auto w-full" src="https://media.urbit.org/site/getting-started/explore.png" />
+            <video className="max-w-md w-full min-w-0" autoPlay muted loop playsInline>
+              <source
+                src="https://storage.googleapis.com/media.urbit.org/site/groupsdemo.webm"
+                type="video/webm"
+              />
+              <source
+                src="https://storage.googleapis.com/media.urbit.org/site/groupsdemo-2.mp4"
+                type="video/mp4"
+              />
+            </video>
             {/* Blurb is flexed to space button and copy */}
             <div className="flex-col flex space-y-4">
               <p>No downloads, no signup.</p>
