@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Meta from "../components/Meta";
 import {
   Container,
@@ -22,14 +23,13 @@ export default function TrialOver(props) {
         {Meta(post)}
       </Head>
       <IntraNav ourSite="https://urbit.org" search={props.search} />
-      <SingleColumn>
-        <Header />
-        <Section className="pt-8">
-          <h1>Trial Over</h1>
-          <p className="mt-12">Your trial has ended.</p>
-        </Section>
-      </SingleColumn>
-      <Footer />
+      <div className="h-full w-full grow flex items-center justify-center flex-col px-8 md:px-0">
+        <div className="w-fit">
+          <h2>Your one week comet trial has concluded.</h2>
+          <p className="my-12 max-w-prose">To keep using Urbit, we recommend getting a planet and setting up Urbit yourself or using a hosting provider.
+            <Link href="/getting-started"><a className="button-lg bg-green-400 text-white max-w-fit my-12">Get Started</a></Link></p>
+        </div>
+      </div>
     </Container>
   );
 }
