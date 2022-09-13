@@ -16,7 +16,7 @@ champion = ["~dinleb-rambep"]
 grant_id = "P0154"
 completed = false
 canceled = false
-link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0154&prefill_Grant+Name=Gnosis%20Safe"
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0154&prefill_Grant+Name=Gnosis%20Safe"
 
 +++
 
