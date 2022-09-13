@@ -67,15 +67,15 @@ export default function Trial(props) {
         <Section className="space-y-12">
           <h1>{post.title}</h1>
           {/* Flex between image and blurb, collapse to col on mobile */}
-          <div className="flex flex-col items-center space-y-4 md:space-y-0 md:flex-row md:space-x-4">
+          <div className="flex flex-col items-center space-y-4 xl:space-y-0 xl:flex-row xl:space-x-4">
             <img className="max-w-lg h-auto w-full" src="https://media.urbit.org/site/getting-started/explore.png" />
             {/* Blurb is flexed to space button and copy */}
             <div className="flex-col flex space-y-4">
               <p>No downloads, no signup.</p>
               <p>Get <span className="font-bold">one week</span> of a complimentary hosted comet: a temporary Urbit ID.</p>
               {/* Button is flexed to space potential "try again later" copy */}
-              <div className="space-x-4 flex items-center">
-                <a className={cn("p-8 button-lg text-white max-w-fit", {
+              <div className="xl:space-x-4 space-y-4 xl:space-y-0 self-center flex-col xl:flex-row flex items-center">
+                <a className={cn("p-8 button-lg text-white max-w-fit shrink-0", {
                   "bg-green-400": available,
                   "bg-wall-300 cursor-not-allowed": !available,
                 })}
