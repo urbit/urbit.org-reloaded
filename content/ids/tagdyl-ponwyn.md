@@ -1,7 +1,7 @@
 +++
 ship = "~tagdyl-ponwyn"
 nickname = ""
-bgColor = "bbdddd"
+bgColor = "#bbdddd"
 image = ""
 +++
 
