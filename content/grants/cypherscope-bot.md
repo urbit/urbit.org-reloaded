@@ -10,7 +10,7 @@ description = "On-demand financial charts chat bot"
 reward = "2 stars"
 assignee = ["~mitten-dapper", "~ristyc-ridwyx"]
 grant_id = "P0054"
-completed = false
+completed = true
 canceled = false
 link = ""
 +++
