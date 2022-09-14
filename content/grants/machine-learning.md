@@ -10,7 +10,7 @@ description = "Create a supervised machine learning library"
 reward = "7 stars"
 assignee = ["~tamdev-nocdun"]
 grant_id = "P0059"
-completed = false
+completed = true
 canceled = false
 link = ""
 +++
