@@ -10,9 +10,9 @@ grant_category = [ "App Dev" ]
 image = ""
 description = "Allow small scale spatial data to be stored and retrieved in Urbit, for use in landscape and external applications, and shared across ships."
 reward = "4 stars"
-assignee = ["Lumphead"]
+assignee = ["~lomped-firser"]
 id = "634393623"
-completed = false
+completed = true
 link = ""
 +++
 
