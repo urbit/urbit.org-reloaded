@@ -11,7 +11,7 @@ reward = "3 stars"
 assignee = ["~hanfel-dovned"]
 champion = ["~rabsef-bicrym"]
 grant_id = "P0101"
-completed = false
+completed = true
 link = ""
 +++
 

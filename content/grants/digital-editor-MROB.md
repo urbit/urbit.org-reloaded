@@ -9,11 +9,11 @@ grant_category = ["Other"]
 [extra]
 image = ""
 description = "Digital Editor for the Mars Review of Books"
-reward = "$4,500 in WSTR"
+reward = "$4,500 USD"
 assignee = ["~randem-wishes"]
 champion = ["~librex-dozryc"]
 grant_id = "B0115"
-completed = false
+completed = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0140&prefill_Grant+Name=Digital%20Editor%2C%20Mars%20Review%20of%20Books"
 +++
 
@@ -39,7 +39,7 @@ The Digital Editor will be responsible for:
 
 ## Compensation
 
-$1500 (in WSTR) per month for three months of work, with possibility of extension and increased compensation after the initial period of three months.
+$1500 per month for three months of work, with possibility of extension and increased compensation after the initial period of three months.
 
 Month 1 deliverable: Mars Review group is successfully hosted on Urbit and contributors are onboarded
 

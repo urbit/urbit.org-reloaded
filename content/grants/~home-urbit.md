@@ -11,6 +11,7 @@ reward = "4 stars"
 assignee = ["~sipsen-pilser"]
 id = ""
 completed = false
+canceled = true
 link = ""
 +++
 

@@ -11,7 +11,7 @@ reward = "4.6 stars"
 assignee = ["~pilwyc-fastec"]
 mentor = ["~simfur-ritwed"]
 grant_id = "P0113"
-completed = false
+completed = true
 link = ""
 +++
 
