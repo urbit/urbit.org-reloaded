@@ -1,3 +1,22 @@
++++
+title = "Importing and exporting desks as jamfiles"
+date = "2022-09-25"
+
+[taxonomies]
+grant_type = [ "Bounty" ]
+grant_category = [ "App Dev" ]
+
+[extra]
+image = ""
+description = "Eth-provider is a Gall agent that allows Urbit users to configure their Ethereum connection."
+reward = "2 stars"
+champion = ["~tinnus-napbus"]
+assignee = [""]
+grant_id = "B0187"
+completed = true
+work_request_link="https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0187&prefill_Grant+Name=Desk%20jamfile%20import%2Fexport"
++++
+
 ## Rationale
 
 App development is typically done on a fake ship. Fake ships are isolated from
@@ -74,7 +93,7 @@ As a user, I can:
   maybe the current import temporarily if it needs to be examined for info to
   display to the user.
 
-## Milestones
+## Milestones & Compenstation
 
 1. Implement full desk export and create a new desk from an imported jamfile.
    (1 star)
