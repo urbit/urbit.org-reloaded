@@ -10,21 +10,21 @@ grant_category = [ "App Dev" ]
 image = ""
 description = "Books is an application for managing your crypto wallets, transactions, and counterparties. It allows you to add your wallet and others' wallets, track balances and transactions, and add private annotations to all of the above."
 reward = "2 stars"
-assignee = ["~nismut-tamwep"]
+assignee = [""]
 champion = ["~dinleb-rambep"]
-grant_id = ""
+grant_id = "B0189"
 completed = false
-work_request_link = ""
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0189&prefill_Grant+Name=Books%20Feature%20Development"
 +++
 
 [Books](https://urbit.org/grants/books) is an application for managing your crypto wallets, transactions, and counterparties. It allows you to add your wallet and other people’s, track balances and transactions, and add private annotations to all of the above.
 
 
-## Overview
+# Overview
 
 Books was developed by Quartus and has is currently distributed from [~dister-dozzod-dalten](web+urbitgraph://~dister-dozzod-dalten/books). The Foundation has found internal use for Books and has decided to fund continued development for some key features.
 
-### Features in scope
+## Features in scope
 
 - Rolodex entries should support multiple public addresses.
 - Transactions in the ledger should automatically be associated with known counterparties from the rolodex. The associations should happen even for transactions that happened before the rolodex entry was created.
@@ -32,4 +32,9 @@ Books was developed by Quartus and has is currently distributed from [~dister-do
 - Books should be able to display balances.
 - Books should issue notifications on incoming transactions.
 
-### Implementation Notes
+## Implementation Notes
+
+Implementation notes will be determined in conjunction with applicants and added to this scope prior to starting work.
+
+## Milestones and Compensation
+Milestones will be determined in conjunction with the selected applicant. Expected compensation is 2 stars
