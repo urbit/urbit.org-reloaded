@@ -13,7 +13,7 @@ reward = "3 stars"
 assignee = [""]
 champion = ["Holium"]
 grant_id = "B0190"
-completed = true
+completed = false
 work_request_link="https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0190&prefill_Grant+Name=Calendar%20Feature%20Completion"
 +++
 
