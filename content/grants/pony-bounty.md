@@ -13,8 +13,8 @@ reward = "4 stars"
 assignee = [""]
 champion = ["~normul-postem", "~sarlev-sarsen"]
 grant_id = "B0191"
-completed = true
-work_request_link="https://airtable.com/shr4qt9t9kz7RaOIa?prefillGrant+ID=&prefillGrant+Name=Pony"
+completed = flase
+work_request_link="https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0191&prefill_Grant+Name=Pony"
 +++
 
 # %pony: Urbit-native long-form mail
