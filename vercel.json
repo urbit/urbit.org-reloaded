@@ -4,6 +4,10 @@
   },
   "redirects": [
     {
+     "source": "/getinvolved",
+     "destination": "https://developers.urbit.org/blog/get-involved"
+    },
+    {
      "source": "/getting-started/server",
      "destination": "/getting-started/cli"
     },
