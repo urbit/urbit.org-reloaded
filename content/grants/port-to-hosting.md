@@ -10,7 +10,8 @@ grant_category = [ "Other" ]
 image = ""
 description = "Create an easy way to onboard Port users to hosting providers"
 reward = "3 stars"
-assignee = ["~latter-bolden"]
+champion = ["~latter-bolden"]
+assignee = [""]
 grant_id = "B0194"
 completed = true
 work_request_link="https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0194&prefill_Grant+Name=Port%20to%20Hosting%20Onboarding%20Protocol"
