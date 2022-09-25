@@ -13,7 +13,7 @@ reward = "2 stars"
 champion = ["~tinnus-napbus"]
 assignee = [""]
 grant_id = "B0187"
-completed = true
+completed = false
 work_request_link="https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0187&prefill_Grant+Name=Desk%20jamfile%20import%2Fexport"
 +++
 
