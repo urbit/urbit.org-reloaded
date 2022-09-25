@@ -4,7 +4,7 @@ date = "2022-09-25"
 
 [taxonomies]
 grant_type = [ "Apprenticeship" ]
-grant_category = [ "App Dev", "Other" ]
+grant_category = [ "App Dev"]
 
 [extra]
 image = ""
@@ -15,8 +15,7 @@ assignee = [""]
 grant_id = "A0192"
 completed = false
 canceled = false
-work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0192&prefill_Grant+Name=Gora%20Apprenticeship
-"
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0192&prefill_Grant+Name=Gora%20Apprenticeship"
 +++
 
 # Gora QR Edition - Updating Urbit's Premier Sticker Software
