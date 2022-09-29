@@ -34,7 +34,9 @@ Books was developed by Quartus and has is currently distributed from [~dister-do
 
 ## Implementation Notes
 
-Implementation notes will be determined in conjunction with applicants and added to this scope prior to starting work.
+Books is distributed as a desk that contains `/app/books` and a frontend written in Vue. This bounty will require modifying the Urbit backend and the Vue frontend.
+
+The source code for Books lives at https://github.com/dalten-collective/books.
 
 ## Milestones and Compensation
-Milestones will be determined in conjunction with the selected applicant. Expected compensation is 2 stars
+The applicant will receive 2 stars on completion of all the features in scope.
