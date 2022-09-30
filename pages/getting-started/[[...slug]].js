@@ -115,39 +115,6 @@ const breadcrumbs = (posts, paths) => {
 function LaunchCards() {
   const info = [
     {
-      title: "Desktop app",
-      subtitle: "Deploy Urbit on your local system",
-      points: [
-        {
-          title: "Benefits",
-          content: ["Free", "Set up in minutes"],
-        },
-        {
-          title: "Considerations",
-          content: ["Limited functionality with certain applications"],
-        },
-      ],
-      svg: (
-        <svg
-          width="35"
-          height="49"
-          viewBox="0 0 35 49"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M7.43609 18.2477H10.856V2.43515C10.8608 1.09 11.9608 1.65662e-05 13.3153 1.65662e-05H21.4235C22.0767 -0.00236832 22.7012 0.252829 23.1623 0.71078C23.6234 1.16632 23.8828 1.7888 23.8828 2.43515V18.2477H27.3123C28.3714 18.2453 29.3393 18.8535 29.7883 19.8075C30.2399 20.7639 30.091 21.8896 29.4089 22.6982L19.4734 34.5206C18.9523 35.1359 18.1837 35.4937 17.3744 35.4937C16.565 35.4937 15.7965 35.136 15.2753 34.5206L5.3325 22.6982C4.64802 21.8896 4.50151 20.7591 4.95304 19.8051C5.40457 18.8511 6.37481 18.2429 7.43635 18.2477H7.43609Z"
-            className="fill-wall-600"
-          />
-          <path
-            d="M0 46.4217V44.5866C0.00657627 43.5411 0.854839 42.6928 1.90369 42.6928H32.8365C33.8853 42.6928 34.7336 43.5411 34.7402 44.5866V46.4217C34.7402 47.4738 33.8886 48.3287 32.8365 48.3352H1.90369C0.851556 48.3286 0 47.4738 0 46.4217Z"
-            className="fill-wall-600"
-          />
-        </svg>
-      ),
-      href: "/getting-started/desktop",
-    },
-    {
       title: "Hosted urbit",
       subtitle: "Deploy Urbit on a managed service",
       points: [
@@ -231,6 +198,39 @@ function LaunchCards() {
         </svg>
       ),
       href: "/getting-started/cli",
+    },
+    {
+      title: "Desktop app",
+      subtitle: "Deploy Urbit on your local system",
+      points: [
+        {
+          title: "Benefits",
+          content: ["Free", "Set up in minutes"],
+        },
+        {
+          title: "Considerations",
+          content: ["Limited functionality with certain applications"],
+        },
+      ],
+      svg: (
+        <svg
+          width="35"
+          height="49"
+          viewBox="0 0 35 49"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.43609 18.2477H10.856V2.43515C10.8608 1.09 11.9608 1.65662e-05 13.3153 1.65662e-05H21.4235C22.0767 -0.00236832 22.7012 0.252829 23.1623 0.71078C23.6234 1.16632 23.8828 1.7888 23.8828 2.43515V18.2477H27.3123C28.3714 18.2453 29.3393 18.8535 29.7883 19.8075C30.2399 20.7639 30.091 21.8896 29.4089 22.6982L19.4734 34.5206C18.9523 35.1359 18.1837 35.4937 17.3744 35.4937C16.565 35.4937 15.7965 35.136 15.2753 34.5206L5.3325 22.6982C4.64802 21.8896 4.50151 20.7591 4.95304 19.8051C5.40457 18.8511 6.37481 18.2429 7.43635 18.2477H7.43609Z"
+            className="fill-wall-600"
+          />
+          <path
+            d="M0 46.4217V44.5866C0.00657627 43.5411 0.854839 42.6928 1.90369 42.6928H32.8365C33.8853 42.6928 34.7336 43.5411 34.7402 44.5866V46.4217C34.7402 47.4738 33.8886 48.3287 32.8365 48.3352H1.90369C0.851556 48.3286 0 47.4738 0 46.4217Z"
+            className="fill-wall-600"
+          />
+        </svg>
+      ),
+      href: "/getting-started/desktop",
     },
   ];
   return (

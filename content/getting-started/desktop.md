@@ -1,7 +1,7 @@
 +++
 title = "Desktop app"
 description = "Run Urbit locally as a desktop application"
-weight = 1
+weight = 3
 +++
 
 
