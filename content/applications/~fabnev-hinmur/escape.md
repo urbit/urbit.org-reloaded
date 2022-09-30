@@ -9,10 +9,8 @@ bgColor = "#f2f3ef"
 image = "https://escape-app-dist.s3.us-east-2.amazonaws.com/uqbar-logo.png"
 +++
 
-EScape is an alternative interface to Tlon's groups app. 
+EScape is a fully-integrated social management and DAO Tooling system. EScape provides a simple, intuitive, and unified interface for managing groups, messaging ships, receiving notifications, and interacting with other Urbit apps. 
 
-![Screenshot](https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/escape.png)
-
-EScape lets you view groups, messages, and apps in collapsible column interface, organize groups by folders, and "like" messages in chats.  EScape is also has apps for both iOS and Android that include push notifications for chat mentions and messages.
+![Screenshot](https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/escape2.png)
 
 Get EScape on [iOS](https://apps.apple.com/my/app/escape-by-uqbar/id1610194217) and [Android](https://play.google.com/store/apps/details?id=network.uqbar.escape).
