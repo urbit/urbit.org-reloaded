@@ -1,7 +1,7 @@
 +++
 title = "Hosted urbit"
 description = "Run Urbit on a managed service"
-weight = 3
+weight = 1
 +++
 
 ### 1. Select a hosting provider
