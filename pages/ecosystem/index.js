@@ -30,6 +30,7 @@ export default function Ecosystem({
   marketplaces,
   organizations,
   podcasts,
+  articles
 }) {
   const router = useRouter();
 
@@ -53,6 +54,9 @@ export default function Ecosystem({
         break;
       case "organizations":
         title = "Organizations • Ecosystem";
+        break;
+      case "articles":
+        title = "Articles • Ecosystem";
         break;
       default:
         title = "Ecosystem Spotlight";
@@ -112,8 +116,8 @@ export default function Ecosystem({
 
               <div
                 className={classnames("grid gap-12 w-full", {
-                  "grid-cols-2 md:grid-cols-3": type !== "podcasts",
-                  "grid-cols-1": type === "podcasts",
+                  "grid-cols-2 md:grid-cols-3": type == "organizations" || type == "marketplaces",
+                  "grid-cols-1": type === "podcasts" || type === "articles",
                   "grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2":
                     type === "applications" || type === "groups",
                   hidden: type === undefined,
@@ -209,6 +213,26 @@ export default function Ecosystem({
                       </div>
                     </Link>
                   ))}
+
+                {type === "articles" &&
+                  articles.map((article) => (
+                    <Link href={`/articles/${article.slug}`}>
+                      <div className="flex cursor-pointer space-x-4 items-center hover:opacity-90">
+                        <img className="w-28" src={article.image} />
+                        <div className="flex flex-col space-y-2 min-w-0">
+                          <p className="font-bold">{article.publication}</p>
+                          <p className="min-w-0 min-h-0 leading-5 ">
+                            {article.title}
+                          </p>
+                          <p className="text-wall-400">
+                            {formatDate(generateDisplayDate(article.date))}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+
+
               </div>
             </div>
           </div>
@@ -283,6 +307,16 @@ function EcosystemSidebar() {
       >
         Podcasts
       </ActiveLink>
+
+      <ActiveLink
+        currentPath={currentPath}
+        className="mr-5 type-ui"
+        href="/ecosystem?type=articles"
+      >
+        Articles
+      </ActiveLink>
+
+
     </div>
   );
 }
@@ -362,6 +396,11 @@ export async function getStaticProps({}) {
     "podcasts",
     "date"
   );
+  const articles = getAllPosts(
+    ["title", "image", "date", "publication", "author", "slug"],
+    "articles",
+    "date"
+  );
   const organizations = getAllPosts(
     ["title", "image", "slug"],
     "organizations"
@@ -411,6 +450,7 @@ export async function getStaticProps({}) {
         ...applications.map((e) => ({ ...e, type: "Application" })),
         ...organizations.map((e) => ({ ...e, type: "Organization" })),
         ...podcasts.map((e) => ({ ...e, type: "Podcast" })),
+        ...articles.map((e) => ({ ...e, type: "Article" })),
         ...marketplaces.map((e) => ({ ...e, type: "Marketplace" })),
       ].filter((e) => e.title === post[feat].title)?.[0];
       post[feat].image = post[feat]?.image || matchedPost?.image || null;
@@ -433,6 +473,7 @@ export async function getStaticProps({}) {
       marketplaces,
       podcasts,
       organizations,
+      articles
     },
   };
 }

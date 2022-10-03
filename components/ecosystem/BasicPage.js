@@ -28,6 +28,7 @@ export default function BasicPage({
   metaPost.title = `${post.title} - ${section}`;
   metaPost.description =
     section === "Podcast" ? `${post.podcast} - ${post.date}` : post.description;
+    section === "Article" ? `${post.publication} - ${post.date}` : post.description;
   return (
     <Container>
       <Head>
@@ -43,7 +44,7 @@ export default function BasicPage({
           <div className="flex items-center space-x-4">
             <img src={post.image} className="w-36" />
             <div className="flex flex-col pl-2">
-              <h1 className={classnames({ "text-3xl": section === "Podcast" })}>
+              <h1 className={classnames({ "text-3xl": section === "Podcast" },{ "text-3xl": section === "Article" })}>
                 {post.title}
               </h1>
               <p>{section}</p>
@@ -58,13 +59,26 @@ export default function BasicPage({
                   <p>{post.podcast}</p>
                 </div>
               )}
+              {post?.publication && (
+                <div className="flex flex-col">
+                  <p className="font-bold text-wall-400">Publication</p>
+                  <p>{post.publication}</p>
+                </div>
+              )}
+              {post?.author && (
+                <div className="flex flex-col">
+                  <p className="font-bold text-wall-400">Author</p>
+                  <p>{post.author}</p>
+                </div>
+              )}
               {post?.date && (
                 <div className="flex flex-col">
                   <p className="font-bold text-wall-400">Date</p>
                   <p className="shrink-0">{post.date}</p>
                 </div>
               )}
-              {post?.URL && section !== "Podcast" && (
+
+              {post?.URL && section !== "Podcast" && section !== "Article" && (
                 <div className="flex flex-col">
                   <p className="font-bold text-wall-400">Website</p>
                   <a
@@ -75,6 +89,7 @@ export default function BasicPage({
                   </a>
                 </div>
               )}
+
               {post?.URL && section === "Urbit Marketplace" && (
                 <div className="flex flex-col">
                   <p className="font-bold text-wall-400">Accepts</p>
@@ -91,6 +106,14 @@ export default function BasicPage({
               >
                 <img src="/images/sound.svg" />
                 &nbsp;Listen
+              </a>
+            )}
+            {post?.URL && section === "Article" && (
+              <a
+                href={post.URL}
+                className="button-lg bg-green-400 text-white cursor-pointer flex space-x-2"
+              >
+                Read
               </a>
             )}
           </div>

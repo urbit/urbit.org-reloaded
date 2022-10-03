@@ -49,6 +49,14 @@ export default function Post({ post }) {
           </Link>
         )}
 
+        {post[feat].type === "Article" && (
+          <Link href={href || "#"} passHref>
+            <a class="button-sm text-white flex-col bg-green-400 cursor-pointer pr-4 w-fit">
+              Listen to {post[feat].type}
+            </a>
+          </Link>
+        )}
+
         {post[feat].type === "Application" && (
           <Link href={href || "#"} passHref>
             <a class="button-sm text-white flex-col bg-green-400 cursor-pointer pr-4 w-fit">
