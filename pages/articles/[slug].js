@@ -40,7 +40,7 @@ export default function Article({
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(
     params.slug,
-    ["title", "slug", "URL", "publication", "date", "image", "content"],
+    ["title", "slug", "URL", "publication", "author", "date", "image", "content"],
     "articles"
   );
 
