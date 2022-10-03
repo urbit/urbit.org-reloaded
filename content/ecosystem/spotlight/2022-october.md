@@ -10,7 +10,7 @@ content = """
 At Assembly 2022 Uqbar debuted their brand new developer toolkit: Ziggurat.  Ziggurat provides a unified development interface where programmers can write contracts, receive compiler feedback, and test on a fake chain. This promises a huge improvement on the developer experience for smart contracts and blockchain application development alike.  Note: As Ziggurat is in active development and undergoing frequent updates, Uqbar recommends installing Ziggurat on a moon rather than your primary ship.
 
 
-![Screenshot](https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/sphinx2.png)
+![Screenshot](https://storage.googleapis.com/media.urbit.org/site/ecosystem/spotlight/uqbar-code.png)
 
 """
 
