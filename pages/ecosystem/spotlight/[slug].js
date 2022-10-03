@@ -55,6 +55,11 @@ export async function getStaticProps({ params }) {
     "podcasts",
     "date"
   );
+  const articles = getAllPosts(
+    ["title", "image", "date", "publication", "author", "slug"],
+    "articles",
+    "date"
+  );
   const organizations = getAllPosts(
     ["title", "image", "slug"],
     "organizations"
@@ -86,6 +91,7 @@ export async function getStaticProps({ params }) {
         ...organizations.map((e) => ({ ...e, type: "Organization" })),
         ...podcasts.map((e) => ({ ...e, type: "Podcast" })),
         ...marketplaces.map((e) => ({ ...e, type: "Marketplace" })),
+        ...articles.map((e) => ({ ...e, type: "Article" })),
       ].filter((e) => e.title === post[feat].title)?.[0];
       post[feat].image = post[feat]?.image || matchedPost?.image || null;
       post[feat].type = matchedPost?.type || "Podcast";
