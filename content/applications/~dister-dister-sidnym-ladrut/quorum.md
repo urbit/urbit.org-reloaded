@@ -11,6 +11,7 @@ image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/applicati
 
 Quorum is a Stack Overflow/Quora style application that allows individuals to submit and vote on questions and answers in threads.
 
+To join the Urbit Foundation's [battery payload] board, when prompted to add a board, enter `~dister-dozzod-lapdeg` as the provider, and `battery-payload` as the board.
 
 ![Screenshot](https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/quorum.png)
 
