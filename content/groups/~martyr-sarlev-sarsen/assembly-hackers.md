@@ -7,4 +7,4 @@ tile = "#000000"
 participant_range = "20+"
 +++
 
-For participants of the 2022 Assembly Hackathon
+Originally generated for participants of the 2022 Assembly Hackathon, this group is being made public through the end of 2022 so that the broader community can access the full set of hackathon submissions and project groups.
