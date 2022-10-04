@@ -132,9 +132,9 @@ When inventing a new system, you should consider which of these you intend to su
 
 So much for exploring the space of IO solutions. In terms of deployed code on Earth, the split is about 90% imperative, 5% monadic, and 5% state machine. In Urbit, the split is about 90% state machine and 10% monadic. This is what I intend to explain and defend.
 
-Urbit's OS is called Arvo; it has several "kernel modules" called vanes, and it has userspace applications. Colloquially these are called "apps," but when speaking about them abstractly, it's helpful to use their more specific name: ["agents"](https://urbit.org/docs/tutorials/arvo/gall/#agents). Arvo, the vanes, and agents are all structured as explicit state machines.
+Urbit's OS is called Arvo; it has several "kernel modules" called vanes, and it has userspace applications. Colloquially these are called "apps," but when speaking about them abstractly, it's helpful to use their more specific name: ["agents"](https://developers.urbit.org/reference/glossary/agent). Arvo, the vanes, and agents are all structured as explicit state machines.
 
-In addition, there are ["threads"](https://urbit.org/docs/tutorials/arvo/gall/#threads), which are structured as monadic IO. Note there's only a superficial resemblance to Unix threads: they are not executed in parallel and they don't share memory, or at least not any more than agents do. They're simply a computation that takes an argument and produces a result, possibly after doing some IO, structured monadically.
+In addition, there are ["threads"](https://developers.urbit.org/reference/glossary/thread), which are structured as monadic IO. Note there's only a superficial resemblance to Unix threads: they are not executed in parallel and they don't share memory, or at least not any more than agents do. They're simply a computation that takes an argument and produces a result, possibly after doing some IO, structured monadically.
 
 As you can see, all the lowest levels of Arvo are explicit state machines, and only the highest layer supports monadic IO. To see why this is the case, let's list advantages and disadvantages to each type. Note that, while I'm speaking specifically of agents and threads in the context of Urbit, these are fundamental properties of monadic and state machine IO.
 
