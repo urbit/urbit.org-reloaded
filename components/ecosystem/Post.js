@@ -49,6 +49,14 @@ export default function Post({ post }) {
           </Link>
         )}
 
+        {post[feat].type === "Article" && (
+          <Link href={href || "#"} passHref>
+            <a class="button-sm text-white flex-col bg-green-400 cursor-pointer pr-4 w-fit">
+              Read {post[feat].type}
+            </a>
+          </Link>
+        )}
+
         {post[feat].type === "Application" && (
           <Link href={href || "#"} passHref>
             <a class="button-sm text-white flex-col bg-green-400 cursor-pointer pr-4 w-fit">
@@ -87,6 +95,7 @@ const badge = (type) => {
           "bg-[#83b2d4]": type === "Application",
           "bg-wall-600": type === "Podcast",
           "bg-[#8dd5b1]": type === "Marketplace",
+          "bg-[#B5966D]": type === "Article",
         }
       )}
     >

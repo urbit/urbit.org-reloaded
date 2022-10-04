@@ -68,20 +68,20 @@ export default function Home({
             </h2>
 
             <div className="space-y-4">
-            <p className="max-w-prose">
-              We realized that in order to fix the internet, we had to build a new
-              computer from scratch. Good thing we started over a decade ago.
-            </p>
-            <p className="max-w-prose pb-4">
-              Today, Urbit is a real system with thousands of users that are
-              building all kinds of communities, software, DAOs, and more. And
-              it’s getting better every day.{" "}
-            </p>
-            <Link href="/overview" passHref>
-              <a className="button-lg bg-green-400 text-white type-ui max-w-fit">
-                Read the Overview
-              </a>
-            </Link>
+              <p className="max-w-prose">
+                We realized that in order to fix the internet, we had to build a new
+                computer from scratch. Good thing we started over a decade ago.
+              </p>
+              <p className="max-w-prose pb-4">
+                Today, Urbit is a real system with thousands of users that are
+                building all kinds of communities, software, DAOs, and more. And
+                it’s getting better every day.{" "}
+              </p>
+              <Link href="/overview" passHref>
+                <a className="button-lg bg-green-400 text-white type-ui max-w-fit">
+                  Read the Overview
+                </a>
+              </Link>
             </div>
 
           </div>
@@ -302,6 +302,12 @@ export async function getStaticProps() {
     "date"
   )[0];
 
+  const articles = getAllPosts(
+    ["title", "image", "date", "podcast", "slug"],
+    "articles",
+    "date"
+  );
+
   const marketplaces = getAllPosts(["title", "image", "slug"], "marketplaces");
   const podcasts = getAllPosts(
     ["title", "image", "date", "podcast", "slug"],
@@ -335,6 +341,7 @@ export async function getStaticProps() {
   ["featured-1", "featured-2", "featured-3"].forEach((feat) => {
     if (ecosystem?.[feat]) {
       const matchedPost = [
+        ...articles.map((e) => ({ ...e, type: "Article" })),
         ...applications.map((e) => ({ ...e, type: "Application" })),
         ...organizations.map((e) => ({ ...e, type: "Organization" })),
         ...podcasts.map((e) => ({ ...e, type: "Podcast" })),

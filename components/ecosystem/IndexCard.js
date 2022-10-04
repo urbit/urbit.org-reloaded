@@ -43,6 +43,7 @@ const badge = (type) => {
           "bg-[#83b2d4]": type === "Application",
           "bg-wall-600": type === "Podcast",
           "bg-[#8dd5b1]": type === "Marketplace",
+          "bg-[#B5966D]": type === "Article"
         }
       )}
     >
