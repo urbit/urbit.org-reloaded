@@ -7,7 +7,7 @@ grant_category = ["App Dev"]
 [extra]
 image = ""
 description = "Urbit application for invidividual and social management of high-level goals and their tasks"
-reward = "3 stars"
+reward = "5 stars"
 champion = ["~tacryt-socryp"]
 assignee = ["~niblyx-malnus"]
 grant_id = "P0143"
@@ -126,3 +126,33 @@ Payment: 1 star
 - Ability to reference an arbitrary graph-store node or set of nodes to capture context which triggered the creation of the goal.
 - Ability to have threaded comments on goals.
 - Other such integrations with Groups which will probably become more obvious to me as I become more familiar with this part of user space.
+
+## Milestone 4
+Expected Completion: October 28th, 2022
+Payment: 2 stars (1 for back-end (~niblyx-malnus), 1 for front-end (~randes-losrep))
+
+Based on the relative success of the Goals prototype, we believe a self-sustaining version of the app is possible by leaning into what we already have that works and focusing on making it rock solid. To this end we want to focus on the following: 
+ 
+Implement all existing CLI functionality in the front-end:
+  (1) moving subgoals under different goals, (2) virtual children, (3) precedence, (4) priority, (5) marking actionable, (6) specifying kickoff/deadline times, (7) delegating goals and subgoals to other ships, and (8) harvesting
+Integration with Groups so that pools can be created which are associated with existing groups
+
+In addition we need to make the backend robust with the following:
+- Marks/Subscription versioning to gracefully manage API upgrades
+- Subscription channel update log in case front-end is kicked and must resubscribe
+- Poke relays and undecided/approved/rejected status for pokes to other ships for front-end display
+- Documentation
+
+### User Stories
+- I can set a deadline or a kickoff date for a goal and edit or remove it
+- I can mark/unmark goals as actionable
+- I can filter to see only actionable goals
+- I can precede a goal before another, having the option to remove the relation
+- I can prioritize a goal ahead of another, having the option to remove the relation
+I can "harvest" from a goal, listing the preceding goals which can be tackled immediately
+I can archive goals and have an option to view them later
+I can restore or permanently delete archived goals (as an admin)
+I can read about nested-goals in a documentation page
+I can select a group from the Groups app and invite everyone from that group to a pool
+I can move a goal to be nested elsewhere in the tree
+I can make a copy of any pool 
