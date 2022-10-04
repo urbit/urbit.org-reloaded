@@ -1,6 +1,6 @@
 +++
 title = "Books feature development"
-date = "2022-02-21"
+date = "2022-10-04"
 
 [taxonomies]
 grant_type = [ "Bounty" ]
@@ -10,7 +10,7 @@ grant_category = [ "App Dev" ]
 image = ""
 description = "Books is an application for managing your crypto wallets, transactions, and counterparties. It allows you to add your wallet and others' wallets, track balances and transactions, and add private annotations to all of the above."
 reward = "2 stars"
-assignee = [""]
+assignee = ["~nismut-tamwep"]
 champion = ["~dinleb-rambep"]
 grant_id = "B0189"
 completed = false
