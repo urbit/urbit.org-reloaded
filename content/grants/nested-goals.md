@@ -7,7 +7,7 @@ grant_category = ["App Dev"]
 [extra]
 image = ""
 description = "Urbit application for invidividual and social management of high-level goals and their tasks"
-reward = "3 stars"
+reward = "5 stars"
 champion = ["~tacryt-socryp"]
 assignee = ["~niblyx-malnus"]
 grant_id = "P0143"
@@ -138,17 +138,17 @@ Implement all existing CLI functionality in the front-end:
 Integration with Groups so that pools can be created which are associated with existing groups
 
 In addition we need to make the backend robust with the following:
-Marks/Subscription versioning to gracefully manage API upgrades
-Subscription channel update log in case front-end is kicked and must resubscribe
-Poke relays and undecided/approved/rejected status for pokes to other ships for front-end display
-Documentation
+- Marks/Subscription versioning to gracefully manage API upgrades
+- Subscription channel update log in case front-end is kicked and must resubscribe
+- Poke relays and undecided/approved/rejected status for pokes to other ships for front-end display
+- Documentation
 
 ### User Stories
-I can set a deadline or a kickoff date for a goal and edit or remove it
-I can mark/unmark goals as actionable
-I can filter to see only actionable goals
-I can precede a goal before another, having the option to remove the relation
-I can prioritize a goal ahead of another, having the option to remove the relation
+- I can set a deadline or a kickoff date for a goal and edit or remove it
+- I can mark/unmark goals as actionable
+- I can filter to see only actionable goals
+- I can precede a goal before another, having the option to remove the relation
+- I can prioritize a goal ahead of another, having the option to remove the relation
 I can "harvest" from a goal, listing the preceding goals which can be tackled immediately
 I can archive goals and have an option to view them later
 I can restore or permanently delete archived goals (as an admin)
