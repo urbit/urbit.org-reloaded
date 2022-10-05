@@ -25,7 +25,7 @@ Since Creator DAOs are blank slates, primordial cryptographic objects just begin
 
 In contrast to centralized programs like Discord, Urbit offers creators far more flexibility in interacting with their fanbases. Say, for example, you want to set up a trustless contribution program for guest writers. The Urbit app [Straw](https://urbit.org/applications/~pocwet/straw) supports group curation with voting on proposed articles. To increase guest engagement and expand participation while also maintaining quality control, Murphy can use Straw to initiate votes on his own pieces or potential guest pieces, which automates publication to the clear web when a vote passes.
 
-“Imagine I want to publish to the Studio newsletter, and when I go to click publish it first gets sent as a proposal to Straw, and it only actually gets published if a majority of the group agree that it passes the quality bar. As Straw develops, you can imagine that if the proposal is passed, two things happen. One: the post in the Urbit notebook gets sent to the email newsletter through Studio [a tool for publishing from an Urbit Group to the clear web]. Two: money is transferred.”
+“Imagine I want to publish to the [Studio](https://urbit.org/applications/~tirrel/studio) newsletter, and when I go to click publish it first gets sent as a proposal to Straw, and it only actually gets published if a majority of the group agree that it passes the quality bar. As Straw develops, you can imagine that if the proposal is passed, two things happen. One: the post in the Urbit notebook gets sent to the email newsletter through Studio. Two: money is transferred.”
 
 Indeed, future functionality will enable automated payments after publication.
 
