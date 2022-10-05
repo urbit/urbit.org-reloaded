@@ -5,8 +5,8 @@ shortcode = "~pocwet/straw"
 description = "Vote on what to publish."
 license = "MIT"
 website = "https://urbit.org"
-bgColor = "#FBCF44"
-image = "https://m.tinnus-napbus.xyz/pub/books.svg"
+bgColor = "#6C6973"
+image = ""
 +++
 
 
