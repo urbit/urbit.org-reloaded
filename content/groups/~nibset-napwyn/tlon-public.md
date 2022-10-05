@@ -7,6 +7,4 @@ tile = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizati
 participant_range = "200+"
 +++
 
-Download the latest alphas of Tlon products, check out Tlon's visual inspiration and design work, and chat with Tlon team about their software. 
-
-![](https://storage.googleapis.com/media.urbit.org/site/ecosystem/groups/tlon-public.png)
+Tlon Public is a hub for the community-at-large to learn about what we're working on, hear from team members on their processes, and see some of the references that influence their work.
