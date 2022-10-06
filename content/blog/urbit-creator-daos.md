@@ -66,4 +66,6 @@ Finally, Murphy cites Urbit’s durability.
 
 Creator DAOs are perhaps the smallest, most nimble type of DAO—a creator, his followers, and the content they share between them. For that reason, they’ve been underplayed as archetypal DAOs. But their small size and flexibility may make them the perfect candidate to realize the possibilities of immensely improved DAO experiences. 
 
-**Isaac Simpson is a Los Angeles based writer and the founder of the marketing agency [WILL](https://willtheagency.com/). You can find his work on his substack [The Carousel](https://thecarousel.substack.com/).**
+—
+
+*Isaac Simpson is a Los Angeles based writer and the founder of the marketing agency [WILL](https://willtheagency.com/). You can read his work on his substack, [The Carousel](https://thecarousel.substack.com/).*
