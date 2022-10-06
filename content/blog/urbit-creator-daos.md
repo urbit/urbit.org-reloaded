@@ -68,4 +68,4 @@ Creator DAOs are perhaps the smallest, most nimble type of DAO—a creator, his 
 
 —
 
-*Isaac Simpson is a Los Angeles based writer and the founder of the marketing agency [WILL](https://willtheagency.com/). You can read his work on his substack, [The Carousel](https://thecarousel.substack.com/).*
+*Isaac Simpson is a Los Angeles based writer and the founder of the marketing agency [WILL](https://willtheagency.com/). You can read his work on his substack [The Carousel](https://thecarousel.substack.com/).*
