@@ -108,6 +108,6 @@ The Urbit Foundation must comply with international law when distributing addres
 
 ## Getting Paid
 
-After you've finished your work and gotten signoff from your champion, you'll [submit an invoice](https://airtable.com/shrXXCs1uaxtNSBcg) to the Urbit Foundation for the amount agreed upon in your grant or milestone, which the Foundation will pay.
+After you've finished your work on a given milestone, you will need to get signoff from your champion. To do this, make a notebook post in your proposal group with the details of the milestone completed, any relevant instructions, github repos, or app download links, and solicit review from your champion. Their reply  of `approved` in the notebook post comments will constitute signoff and you'll need a link to that milestone post when you [submit an invoice](https://airtable.com/shrXXCs1uaxtNSBcg). Upon successful review of this notebook post by the Urbit Foundation and an invoice recievd for the amount agreed upon in your grant or milestone, the Foundation will pay your star allocation to the Ethereum address you have provided.
 
 We approve and issue payments within 30 days of invoice receipt and approval, although often payment is made more quickly as transactions are batched with other grantees who have recently completed milestones. If you are having any issues accepting stars through [Bridge](https://bridge.urbit.org) please contact `~taller-ravnut` for assistance.
