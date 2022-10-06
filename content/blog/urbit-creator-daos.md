@@ -32,6 +32,9 @@ In contrast to centralized programs like Discord, Urbit offers creators far more
 
 Indeed, future functionality will enable automated payments after publication.
 
+![Image](https://storage.googleapis.com/media.urbit.org/blog/straw.jpg)
+<div style="font-size:13px; text-align: center; color: #999;">The Straw App</div>
+
 “I’ll offer bounties, making a list of topics that I want people in the group to write about,” says Murphy. “They can publish permissionlessly to the group blog, through Studio and anyone in the group could potentially publish on any set of topics, kind of replicating a multi-author magazine.”
 
 Straw opens up a whole new way to decide what—and who—creators publish next. We’re the last to advocate art-by-democracy, but the potential is huge. 
@@ -42,7 +45,7 @@ Urbit also offers a novel solution with regards to vetting group members and wee
 
 > If someone makes a proposal in [Ballot](https://urbit.org/applications/~lomder-librun/ballot), and maybe the owner gets to decide the threshold where if a certain amount of people want to kick someone out, they're kicked. It's actually a really annoying burden, in some ways, to know who to kick out. How bad does someone have to bet? You can have all the rules and regulations you want and try to be as objective as possible, but ultimately the owners and the admins have to use their judgment to decide. I would frankly much rather not have that responsibility. I would love for it to be hardwired such that only a super majority, or something like that, could do it. You can imagine that as a custom action on Ballot.
 
-One can imagine this custom action with a combination of Ballot and the [Forms](https://urbit.org/applications/~donpub-datdux/forms) app.  Since the form data is all on Urbit, it would be a simple matter for an app like Ballot to automatically access that information.  With a few forms to vote on membership, this would make adding members equally simple, automated, and trustless as kicking them.
+One can imagine this custom action with a combination of Ballot and the [Forms](/applications/~donpub-datdux/forms) app.  Since the form data is all on Urbit, it would be a simple matter for an app like Ballot to automatically access that information.  With a few forms to vote on membership, this would make adding members equally simple, automated, and trustless as kicking them.
 
 “I think the Forms App is cool. You can use it on certain channels where if you want to get in, you fill out a form, then it's evaluated by Ballot. So the content of a form submission gets plugged into a proposal. People vote on the information supplied in the form and if the vote is approved, then the person gets added to the channel or group.”
 

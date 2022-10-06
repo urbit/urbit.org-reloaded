@@ -9,6 +9,6 @@ bgColor = "#AFC4E0"
 image = ""
 +++
 
-Create forms and make surveys and gather feedback on Urbit.
+Create and fill out forms and surveys on Urbit.
 
 ![Screenshot](https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/new-form.png)
