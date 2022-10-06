@@ -13,7 +13,7 @@ image = "https://storage.googleapis.com/media.urbit.org/blog/creatordao-3.jpg"
 <div style="font-size:13px; text-align: center; color: #999">Photo by <a href="https://unsplash.com/@nathynmasters
 ">Nathyn Masters</a></div>
 
-# Otherlife: Proto Creator DAO
+# Other Life: Proto Creator DAO
 
 Justin Murphy runs a creator network. As a thinker, writer, and podcaster, he works to grow value within this network in order to stay independent. No ads. No branded content. Just varying degrees of membership, with members enjoying private channels and cohort-based courses all under the header “Philosophy and technology for the ungovernable.” 
 
@@ -65,7 +65,7 @@ Furthermore, the more work you put into building your Creator DAO on Urbit, the 
 
 Finally, Murphy cites Urbit’s durability.
 
-> The second most important Urbit trait after ownership is durability. The creator economy tools change all the time. Every time you try to move your people from one new app to another app, you lose a lot, right? You want to be an influencer, you want to be an important thinker and speaker. All of a sudden, you’ve got to be on Clubhouse! This means telling the people on your newsletter, telling your Patreon subscribers, telling the people on your podcast, hey, download this cool new app called Clubhouse and find me there. It's going to be awesome. It's so cringe and corny and only a small number of them will even make it over there. Then all of a sudden, no one's on Clubhouse and no one wants to use Clubhouse anymore. This is a major problem for people navigating the creator economy. I think one of the big selling points of Urbit is—this is the one place that I’ll always be. I’ve been working on my Urbit for over 10 years. This thing is going to be the nuclear bunker of the internet.
+> The second most important Urbit trait after ownership is durability. The creator economy tools change all the time. Every time you try to move your people from one new app to another app, you lose a lot, right? You want to be an influencer, you want to be an important thinker and speaker. All of a sudden, you’ve got to be on Clubhouse! This means telling the people on your newsletter, telling your Patreon subscribers, telling the people on your podcast, hey, download this cool new app called Clubhouse and find me there. It's going to be awesome. It's so cringe and corny and only a small number of them will even make it over there. Then all of a sudden, no one's on Clubhouse and no one wants to use Clubhouse anymore. This is a major problem for people navigating the creator economy. I think one of the big selling points of Urbit is—this is the one place that I’ll always be. I (will have) been working on my Urbit for over 10 years. This thing is going to be the nuclear bunker of the internet.
 
 Creator DAOs are perhaps the smallest, most nimble type of DAO—a creator, his followers, and the content they share between them. For that reason, they’ve been underplayed as archetypal DAOs. But their small size and flexibility may make them the perfect candidate to realize the possibilities of immensely improved DAO experiences. 
 
