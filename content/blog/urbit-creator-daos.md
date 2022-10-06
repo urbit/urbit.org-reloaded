@@ -1,7 +1,7 @@
 +++
 title = "Urbit + Creator DAOs with Justin Murphy"
 date = "2022-10-05"
-description = "Creator DAOs are blank slates, new foundational cryptographic patterns just beginning to take shape. Podcaster, writer, and former academic Justin Murphy thinks Urbit is the most obvious place to start building one."
+description = "Creator DAOs are blank slates, new foundational cryptographic patterns just beginning to take shape. Justin Murphy thinks Urbit is the most obvious place to start building one."
 
 [extra]
 author = "Isaac Simpson"
@@ -16,7 +16,7 @@ image = "https://storage.googleapis.com/media.urbit.org/blog/creatordao-3.jpg"
 
 Justin Murphy runs a creator network. As a thinker, writer, and podcaster, he works to grow value within this network in order to stay independent. No ads. No branded content. Just varying degrees of membership, with members enjoying private channels and cohort-based courses all under the header “Philosophy and technology for the ungovernable.” 
 
-Murphy’s “personal media company,” called Other Life, is composed of a newsletter, podcast, and Youtube channel. Followers and friends of Other Life create and share their own work within the private network, aided by a catalog of courses. Murphy’s next logical step is building what we’re calling a Creator DAO: all the same stuff, but instead of a la carte memberships you secure your spot via ERC-20 tokens. In exchange, you get access to all levels of his community and content and attain the rights and responsibilities inherent to any DAO member.
+Murphy’s “personal media company,” called Other Life, is composed of a newsletter, podcast, Youtube channel.  It also extends to Urbit; [Other Life](https://urbit.org/groups/~hatryx-lastud/other-life) is one of the largest groups on the network. Followers and friends of Other Life create and share their own work within the network, aided by a catalog of courses. Murphy’s next logical step is building what we’re calling a Creator DAO: all the same stuff, but instead of a la carte memberships you secure your spot via ERC-20 tokens. In exchange, you get access to all levels of his community and content and attain the rights and responsibilities inherent to any DAO member.
 
 ![Image](https://storage.googleapis.com/media.urbit.org/blog/otherlife.png)
 
@@ -52,8 +52,12 @@ These use cases help with DAO flexibility, usability, and decentralized automati
 “The main positive is you and your community getting to own the real estate that you operate on,” says Murphy. No other app, even dapps like Agora or Snapshot, allows for a genuinely P2P offchain operating environment. Your Urbit ID is self-owned and portable, and you build your community P2P. Your creations are yours and you can continue building them without corporate middlemen ripping your canvas out from under you, or changing your tools or access without notice.
 
 ![Image](https://storage.googleapis.com/media.urbit.org/blog/otherlifegroup.png)
+<div style="font-size:13px; text-align: center; color: #999">~hatryx-lastud/other-life</div>
 
 Furthermore, the more work you put into building your Creator DAO on Urbit, the more valuable the Urbit address space becomes. When you use Facebook, you’re relegated to the role of a content serf. The more you produce, the more Facebook grows in value. On Urbit, the more your produce, the more Urbit grows in value—and you are an owner of Urbit. 
+
+![Image](https://storage.googleapis.com/media.urbit.org/blog/justinmurphy.jpg)
+<div style="font-size:13px; text-align: center; color: #999">Murphy already offers his members access to the Other Life urbit group.</div>
 
 Finally, Murphy cites Urbit’s durability.
 
