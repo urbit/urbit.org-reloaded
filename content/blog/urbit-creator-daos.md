@@ -10,7 +10,8 @@ image = "https://storage.googleapis.com/media.urbit.org/blog/creatordao-3.jpg"
 +++
 
 ![Image](https://storage.googleapis.com/media.urbit.org/blog/creatordao-3.jpg)
-
+<div style="font-size:13px; text-align: center; color: #999">Photo by <a href="https://unsplash.com/@nathynmasters
+">Nathyn Masters</a></div>
 
 # Otherlife: Proto Creator DAO
 

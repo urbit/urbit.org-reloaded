@@ -1,7 +1,7 @@
 +++
 title = "Forms"
 shortcode = "~donpub-datdux/forms"
-developer = "Holium"
+developer = "~nallux-dozryl"
 description = "Publish and Respond to Forms."
 license = "MIT"
 website = "https://github.com/nallux-dozryl/urbit-forms"
