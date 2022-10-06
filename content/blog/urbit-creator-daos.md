@@ -37,7 +37,7 @@ Straw opens up a whole new way to decide what—and who—creators publish next.
 
 # Decentralized Kicking and Adding
 
-Urbit also offers a novel solution with regards to vetting group members and weeding out bad ones. As Murphy points out, the Holium’s Urbit app Ballot—which works like a decentralized [Snapshot](https://snapshot.org/#/) for Urbit Groups—allows creators to decentralize the expulsion process which many creators who run creator networks would much prefer.
+Urbit also offers a novel solution with regards to vetting group members and weeding out bad ones. As Murphy points out, Holium’s Urbit app Ballot—which works like a decentralized [Snapshot](https://snapshot.org/#/) for Urbit Groups—allows creators to decentralize the expulsion process.  A shift which many who run creator networks would much prefer.
 
 > If someone makes a proposal in [Ballot](https://urbit.org/applications/~lomder-librun/ballot), and maybe the owner gets to decide the threshold where if a certain amount of people want to kick someone out, they're kicked. It's actually a really annoying burden, in some ways, to know who to kick out. How bad does someone have to bet? You can have all the rules and regulations you want and try to be as objective as possible, but ultimately the owners and the admins have to use their judgment to decide. I would frankly much rather not have that responsibility. I would love for it to be hardwired such that only a super majority, or something like that, could do it. You can imagine that as a custom action on Ballot.
 
