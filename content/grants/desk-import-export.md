@@ -8,7 +8,7 @@ grant_category = [ "App Dev" ]
 
 [extra]
 image = ""
-description = "Eth-provider is a Gall agent that allows Urbit users to configure their Ethereum connection."
+description = "Improve the application development experience through simplified importing and exporting of desks."
 reward = "2 stars"
 champion = ["~tinnus-napbus"]
 assignee = [""]
