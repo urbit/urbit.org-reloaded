@@ -1,6 +1,6 @@
 +++
 
-title = "Seguro Prototype"
+title = "Seguro MVP"
 date = "2022-07-27"
 
 [taxonomies]
