@@ -52,4 +52,4 @@ Quartus expects Bolt to take roughly 20 hours. At a minimum of 10 hours per week
 8. If I receive an update to my underlying agent, likely resulting in the removal of my transformer (unless distributed by the manufacturer complete with the transformer), I am notified to retransform my agent.
 
 ## Milestones & Compensation
-The expected duration of the apprenticeship is three months. Upon successful completion of the apprenticeship, grantee will be awarded 1 Star.
+The expected duration of the apprenticeship is one month. Upon successful completion of the apprenticeship, grantee will be awarded 1 Star.
