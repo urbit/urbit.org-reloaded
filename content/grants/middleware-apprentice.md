@@ -19,15 +19,27 @@ work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A01
 +++
 
 ## Bolt Middleware Apprenticeship
-
 At Assembly 2022, Quartus CTO ~wicrum-wicrun gave a presentation on agent transformers, and how this is currently the necessary pattern to implement middleware in Gall. Now, we are pleased to announce an opportunity to work with ~wicrum-wicrun as an apprentice in developing a whitelisting middleware. While it is possible, today, on the network to `%ruin` ships you don't want to talk to, or to hard-code exceptions to pokes based on ship IDs, there is no good no-code, non-permanent way whereby one ship can authorize or disallow pokes from any arbitrary group of other ships.
 
 Enter the Whitelist Middleware (Bolt). The Whitelist Middleware Apprenticeship will provide Agent Transformer (an `$-(agent:gall agent:gall)` library) experience in a real world usecase. The whitelist middleware will add to the growing list of Agent Transforms in use on the network (following on Keep and Bank which Quartus described and released in connection to Assembly 2022). Experience with Middleware like Bank or Bolt informs apprentices about the nature of Gall agents and the limitations of middleware software in its current configuration. The Apprentice will be asked to consider many elements of the current Gall configuration. Additionally, the apprentice will be required to investigate points where an agent transformer like Bolt might interfere with the underlying agent (subscriptions, pokes, arvo gifts) and make affordances to ensure that service is only interrupted based on the blacklist/whitelist.
 
-### Expectations of the Mentor
+## Expectations of the Mentor
 
-### Expectations of the Grantee
+### Work Style
+Quartus is committed to providing the apprentice with weekly 1 hour meetings to review code and discuss next steps. Depending on the apprentice's timezone, Quartus can provide additional support during apprentice's working hours via DM on Urbit (or videoconference if appropriate).
+
+Prior to submission of the work for payment, Quartus will do a full code review for style and completeness, with the apprentice. Submitted code must adhere to the [style guide](https://developers.urbit.org/reference/hoon/style) ***except*** where code-elegance demonstrably surpasses form.
+
+### Learning Outcomes
+Experience with Middleware like Keep or Bolt informs apprentices about the nature of Gall agents and the limitations of middleware software in its current configuration. The Apprentice will be asked to consider many elements of the current Gall configuration, to understand points where an agent transformer like Bolt might interfere with the underlying agent (subscriptions, pokes, arvo gifts) and make affordances to ensure that service is only interrupted based on the blacklist/whitelist.
+
+After completion the apprentice will be well-equipped to create their own middleware according to patterns established by Quartus.
+
+## Expectations of the Grantee
 It is recommended that any candidates have either created at least one previous Gall agent or significant previous experience with programming.
+
+### Time Commitment
+Quartus expects Bolt to take roughly 20 hours. At a minimum of 10 hours per week, Quartus expects the engagement to take roughly 2 full weeks of work.
 
 ## User Stories:
 1. As a user, I can transform my agent with a whitelisting library (Bolt)
