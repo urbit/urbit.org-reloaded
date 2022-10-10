@@ -11,7 +11,7 @@ image = ""
 description = "Urbit-native long-form mail for threaded communications."
 reward = "4 stars"
 assignee = [""]
-champion = ["~normul-postem", "~sarlev-sarsen"]
+champion = ["~sarlev-sarsen"]
 grant_id = "B0191"
 completed = false
 work_request_link="https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0191&prefill_Grant+Name=Pony"
