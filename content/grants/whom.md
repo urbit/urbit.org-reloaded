@@ -22,9 +22,12 @@ link = ""
 
 # Rationale
 When I've been to in-person social events like Assembly or other meetups, I was excited to meet new people, but frustrated that I couldn't easily keep track of everyone I met. While I could add other users by `@p` in `%pals`, the tagging system doesn't lend itself to storing contact info in a structured way, like names, emails, Twitter handles, etc. Also, even at Urbit events, many people I met didn't have planets yet! I could add them into my phone's contacts or as a Web 2 social contact, but now my contacts are split between multiple disconnected sources.
+
 Urbit needs more robust way of connecting people and representing who they are. In short, I should be able to broadcast who I am with a profile, and I should be able to keep an organized list of contacts with my friends' profiles.
+
 While `%pals` is a great tool for defining a list of friends, its tagging feature was not meant to represent structured contact data. The `%pals` frontend states
 > Applications could make use of tags for grouping content, but should not change their core behavior based on the presence or absence of specific tags.
+
 A dedicated contacts app needs to be able to store contact info in a way that other apps can programmatically access specific info about a contact. For example, if I knew somebody in real life, I could enter their real name into my contacts app, and Groups could display their real name instead of their @p in chats.
 # Overview
 `%whom` would be an app that lets me manage a list of contacts.
