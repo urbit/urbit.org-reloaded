@@ -1,4 +1,5 @@
 import { index } from "../../cache/data";
+import { glossary } from "../../cache/glossary";
 const levenSort = require("leven-sort");
 
 export default (req, res) => {
@@ -8,6 +9,13 @@ export default (req, res) => {
       e?.slug.includes(req.query.q.toLowerCase()) ||
       e?.parent.toLowerCase().includes(req.query.q.toLowerCase())
   );
+
+  const entries = glossary.filter((entry) => {
+    return (
+      entry.name.includes(req.query.q.toLowerCase()) ||
+      entry.symbol.includes(req.query.q)
+    );
+  });
 
   results.push(
     ...index
@@ -30,7 +38,8 @@ export default (req, res) => {
     "parent",
     "headings",
   ]);
+  const sortedEntries = levenSort(entries, req.query.q, ["symbol"]);
   res.statusCode = 200;
   res.setHeader("Content-Type", "application/json");
-  res.end(JSON.stringify({ results: sorted }));
+  res.end(JSON.stringify({ results: sorted, glossary: sortedEntries }));
 };
