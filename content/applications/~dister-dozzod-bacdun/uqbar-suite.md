@@ -17,5 +17,4 @@ The Uqbar Development Suite, also known as Ziggurat, is an all-in-one developer 
 ![Screenshot](https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/ziggurat-2.png)
 
 
-For more information, read our [Dev Docs](https://uqbar-network.gitbook.io/uqbar/developer-documentation/developer-documentation). 
-
+For more information, read our [Developer Docs](https://uqbar-network.gitbook.io/uqbar-developer-documentation/developer-documentation/developer-documentation). 
