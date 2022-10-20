@@ -18,6 +18,8 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import ob from "urbit-ob";
 import { DateTime } from "luxon";
+import fs from 'fs';
+import { join } from 'path';
 
 export default function Grant({ post, markdown, search }) {
   const router = useRouter();
@@ -146,13 +148,18 @@ export default function Grant({ post, markdown, search }) {
   );
 }
 
-//
 export async function getStaticProps({ params }) {
+  const basePath = join(process.cwd(), 'content/grants')
+  const years = fs.readdirSync(basePath, { 'withFileTypes': true }).filter((f) => f.isDirectory());
+  const dir = years.find((year) => {
+    const yearDir = fs.readdirSync(join(basePath, year.name), { 'withFileTypes': true });
+    return yearDir.some((file) => file.name === `${params.slug}.md`)
+  });
   const post = getPostBySlug(
     params.slug,
     ["title", "slug", "date", "description", "content", "extra", "taxonomies"],
-    "grants"
-  );
+    `grants/${dir.name}`
+  )
 
   const markdown = JSON.stringify(Markdown.parse({ post }));
   return {
@@ -161,13 +168,18 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(["slug", "date"], "grants", "date");
+  const basePath = join(process.cwd(), 'content/grants')
+  const years = fs.readdirSync(basePath, { 'withFileTypes': true });
+  const posts = years.filter((year) => year.isDirectory()).map((year) => {
+    const yearDir = fs.readdirSync(join(basePath, year.name), { 'withFileTypes': true });
+    return yearDir.filter((entry) => entry.isFile()).map((entry) => entry.name.replace(/\.md$/, ""))
+  }).flat()
 
   return {
     paths: posts.map((post) => {
       return {
         params: {
-          slug: post.slug,
+          slug: post,
         },
       };
     }),
