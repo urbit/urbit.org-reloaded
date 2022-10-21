@@ -7,8 +7,8 @@ grant_type = [ "Proposal" ]
 grant_category = [ "App Dev" ]
 
 [extra]
-image = "Extending Bitcoin on Urbit via lightning submarine swaps and onion routing"
-description = ""
+image = ""
+description = "Extending Bitcoin on Urbit via lightning submarine swaps and onion routing"
 reward = "6 stars"
 assignee = ["~tondes-sitrym"]
 grant_id = "P0183"
