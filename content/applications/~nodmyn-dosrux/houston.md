@@ -4,7 +4,7 @@ shortcode = "~nodmyn-dosrux/houston"
 license = "MIT"
 image = "https://0x0.st/ojrj.png"
 bgColor = "#FFFFFF"
-developer = "~nodmyn-dosrux"
+developer = "Assembly Capital"
 website = "https://github.com/assemblycapital/houston"
 description = "Moon Management Dashboard"
 +++
