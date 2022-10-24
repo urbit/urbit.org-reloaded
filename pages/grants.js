@@ -15,6 +15,8 @@ import GrantPreview from "../components/GrantPreview";
 import JoinGroup from "../components/JoinGroup";
 import omit from "lodash.omit";
 import { getGrantsCategories, getGrantsTypes } from "../lib/lib";
+import fs from 'fs';
+import { join } from 'path';
 
 function isArray(arr) {
   return Array.isArray(arr);
@@ -264,9 +266,8 @@ export default function Grants({ posts, categories, types, search }) {
           <h5 className="text-wall-600 font-semibold my-2">Programs</h5>
           <div className="flex flex-wrap items-center pb-2">
             <a
-              className={`badge-lg mr-2 ${
-                !type ? "bg-black text-white" : "bg-wall-100 text-wall-500"
-              }`}
+              className={`badge-lg mr-2 ${!type ? "bg-black text-white" : "bg-wall-100 text-wall-500"
+                }`}
               onClick={() => push((({ type, ...obj }) => obj)(router.query))}
             >
               All <div className="opacity-50 ml-2">{allCount}</div>
@@ -288,11 +289,10 @@ export default function Grants({ posts, categories, types, search }) {
               }
               return (
                 <a
-                  className={`badge-lg mr-2 ${
-                    isOrIsIn(each, type)
-                      ? activeBg
-                      : "bg-wall-100 text-wall-500"
-                  }`}
+                  className={`badge-lg mr-2 ${isOrIsIn(each, type)
+                    ? activeBg
+                    : "bg-wall-100 text-wall-500"
+                    }`}
                   onClick={() => push({ ...router.query, type: each })}
                 >
                   {each}
@@ -365,11 +365,18 @@ export default function Grants({ posts, categories, types, search }) {
 export async function getStaticProps() {
   const categories = getGrantsCategories();
   const types = getGrantsTypes();
-  const posts = getAllPosts(
-    ["title", "slug", "date", "description", "extra", "taxonomies"],
-    "grants",
-    "date"
-  );
+  const basePath = join(process.cwd(), 'content/grants')
+  const years = fs.readdirSync(basePath, { 'withFileTypes': true }).filter((f) => f.isDirectory());
+  const posts = years.map((year) => {
+    return getAllPosts(
+      ["title", "slug", "date", "description", "extra", "taxonomies"],
+      `grants/${year.name}`,
+      "date"
+    )
+  }).flat().sort((a, b) => {
+    return a.title.toLowerCase().localeCompare(b.title.toLowerCase())
+  });
+
   return {
     props: {
       posts: posts,

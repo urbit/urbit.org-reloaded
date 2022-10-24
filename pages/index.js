@@ -376,7 +376,15 @@ export async function getStaticProps() {
   });
 
   // Latest grants
-  const grants = getAllPosts(["extra", "taxonomies"], "grants", "date");
+  const basePath = path.join(process.cwd(), 'content/grants')
+  const years = fs.readdirSync(basePath, { 'withFileTypes': true }).filter((f) => f.isDirectory());
+  const grants = years.map((year) => {
+    return getAllPosts(
+      ["title", "slug", "date", "description", "extra", "taxonomies"],
+      `grants/${year.name}`,
+      "date"
+    )
+  }).flat();
 
   const grantNumbers = {
     starsAwarded: Math.floor(
