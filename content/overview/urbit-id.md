@@ -25,7 +25,7 @@ The Urbit ID registry is live and deployed to the Ethereum blockchain. Urbit ID 
 
 Each Urbit ID is really just a number. From that number we generate a pronounceable name and a visually identifiable sigil. ~dalwel-fadrun is 3,509,632,436, for example.
 
-Urbit IDs are distributed by a sponsorship tree. At the top of the tree are 28 (256) galaxies. Each galaxy issues 28 stars, making a total of 2^16^ (65K). Stars then each can issue 216 planets, making for 2^32^ (~4B). As you might expect, each planet issues 2^32^ moons.
+Urbit IDs are distributed by a sponsorship tree. At the top of the tree are 2^8 (256) galaxies. Each galaxy issues 2^8 stars, making a total of 2^16^ (65K). Stars then each can issue 216 planets, making for 2^32^ (~4B). As you might expect, each planet issues 2^32^ moons.
 
 ![](https://media.urbit.org/site/overview/overview-id.png)
 
