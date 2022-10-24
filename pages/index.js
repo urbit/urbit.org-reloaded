@@ -56,23 +56,44 @@ export default function Home({
           // Hero
         }
 
-        <Section className="space-y-8">
+        <Section className="pb-12">
+          <div className="bg-wall-100 w-full p-4 md:p-8 rounded-3xl flex flex-wrap items-center">
 
-          <div className="bg-wall-100 w-full p-8 md:p-10 rounded-3xl space-y-8">
+            <div className="basis-full sm:basis-1/3 pb-4 sm:pb-0">
+              <img className="rounded-xl w-72" src="https://storage.googleapis.com/media.urbit.org/assembly/assembly-thumb2.jpg"/>
+            </div>
+            <div className="sm:basis-2/3 sm:pl-6 align-middle">
+              <h2 className="text-2xl pb-2">Assembly 2022</h2 >
+                <p className="max-w-prose pb-4">
+                  Select talks and panels are being released from the second annual Urbit confluence in Miami.
+                </p>
+                <Link href="https://assembly.urbit.org" passHref>
+                  <a className="button-sm border-2 border-wall-600 text-wall-600 type-sm max-w-fit">
+                    Watch Now
+                  </a>
+                </Link>
+            </div>
+          </div>
+        </Section>
+
+
+        <Section narrow className="space-y-8">
+
+          <div className="w-full space-y-8 max-w-prose">
 
             <h2 className="font-normal leading-tight">
               Urbit is a <span className="font-bold">new kind of computer</span>{" "}
               that you can <span className="font-bold">own completely</span> in
               ways that matter:{" "}
-              <span className="font-bold">networking, identity, and data</span>.
+              <span className="font-bold">networking, identity, &amp; data</span>.
             </h2>
 
             <div className="space-y-4">
-              <p className="max-w-prose">
+              <p className="">
                 We realized that in order to fix the internet, we had to build a new
                 computer from scratch. Good thing we started over a decade ago.
               </p>
-              <p className="max-w-prose pb-4">
+              <p className="pb-4">
                 Today, Urbit is a real system with thousands of users that are
                 building all kinds of communities, software, DAOs, and more. And
                 it’s getting better every day.{" "}
@@ -90,7 +111,7 @@ export default function Home({
         <Section>
           <div className="flex flex-col space-y-8 pb-12">
             <h2 className="m-0 p-0 mr-4">Ecosystem</h2>
-            <p>
+            <p className="max-w-prose">
               The Urbit ecosystem is comprised of a wide variety of individuals
               and organizations, including developers, DAOs, podcasters, and
               more.
