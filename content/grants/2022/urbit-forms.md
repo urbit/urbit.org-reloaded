@@ -10,11 +10,11 @@ grant_category = ["App Dev"]
 [extra]
 image = ""
 description = "Create forms and surveys with multiple question types"
-reward = "2 stars"
+reward = "1 star"
 assignee = ["~nallux-dozryl"]
 champion = ["~lagrev-nocfep"]
 grant_id = "P0110"
-completed = false
+completed = true
 canceled = false
 link = ""
 
@@ -235,7 +235,7 @@ Below all that are the questions itself. At the bottom of the survey, there is a
   - multiple choice grid (select many)
   - datetime
 
-### Milestone 2 - 1 Star
+### Milestone 2 - 1 Star - *Cancelled as grantee got a full time job working on Urbit*
 - Completion: 11 July 2022 (1 month)
 - Improved front-end
 - CSV export
