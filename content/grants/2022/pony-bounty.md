@@ -10,7 +10,7 @@ grant_category = [ "App Dev" ]
 image = ""
 description = "Urbit-native long-form mail for threaded communications."
 reward = "4 stars"
-assignee = [""]
+assignee = ["~hanfel-dovned"]
 champion = ["~sarlev-sarsen"]
 grant_id = "B0191"
 completed = false
@@ -51,10 +51,22 @@ The minimum viable functionality consists in sending messages to some set of shi
 ## Milestones & Compensation
 Final milestones and compensation are pending selection of the bounty applicant and refinement of the exact execution plan, but are expected to look something like the following:
 ### Milestone 1 - MVP
-Expected completion: T+3 months
+Expected completion: November 30th 2022
+
 Payment: 2 stars
+
 The Gall agent and frontend have all core functionality in place. Sending and receiving messages, replying to threads, editing and saving drafts, and forwarding messages are all possible.
+
 ### Milestone 2 - Advanced Functionality and Polish
-Expected completion: T+7 months
+
+Expected completion: January 31st 2022
+
 Payment: 2 stars
+
 Received messages and conversations can be sorted into folders, archived, and categorized with custom tags. Incoming messages can be categorized and sorted according to the author's %pals status (mutual status, tags) on the recipient ship. Messages can be scheduled to be sent at a particular time, and other agents on the ship can request to write a message into %pony's Drafts folder, pending final approval by the pilot before sending.
+
+### Strech Goals
+- Referencing arbitrary agent state within a message or thread
+- Integration with Contacts (%whom) application, or other agents.
+- S3 Integration for 'Attachments
+These and other potential features will be assessed upon the completion of the MVP application and formally agreed to between grantee and Champion prior to further work being undertaking.
