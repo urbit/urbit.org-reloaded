@@ -13,7 +13,7 @@ reward = "6 stars"
 assignee = ["~dalhec-banler"]
 champion = ["~poldec-tonteg"]
 grant_id = "P0126"
-completed = false
+completed = true
 canceled = false
 +++
 
