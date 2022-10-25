@@ -373,9 +373,8 @@ export async function getStaticProps() {
       `grants/${year.name}`,
       "date"
     )
-  }).flat().sort((a, b) => {
-    return a.title.toLowerCase().localeCompare(b.title.toLowerCase())
-  });
+  }).flat()
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
 
   return {
     props: {
