@@ -7,7 +7,7 @@ grant_category = ["App Dev"]
 [extra]
 image = ""
 description = "Urbit application for invidividual and social management of high-level goals and their tasks"
-reward = "5 stars"
+reward = "6 stars"
 champion = ["~tacryt-socryp"]
 assignee = ["~niblyx-malnus"]
 grant_id = "P0143"
@@ -116,16 +116,19 @@ A fully functional social task manager CLI.
 - Can delegate goals (and their subgoals) to other ships. Delegates will have permissions to add subgoals, edit deadlines, edit goal descriptions, create precedence relationships, and to further delegate subgoals with respect to the goal they have been delegated.
 - Can transfer ownership of goals (and all their subgoals) between ships.
 
-### Milestone 3
+## Milestone 3
+Expected Completion: September 21st
+Payment: 2 stars (1 for back-end API (~niblyx-malnus), 1 for front-end (~randes-losrep))
 
-Expected Completion: September 16th
+A basic but compelling front-end prototype to showcase at Assembly 2022. A working interactive browser analog of the current CLI. Focused on getting the backend hooked up to the frontend and providing a minimum viable product. The main view will be the "hierarchical/nested" view in which projects and goals can be viewed and explored.
 
-Payment: 1 star
-
-- A basic Sail frontend.
-- Ability to reference an arbitrary graph-store node or set of nodes to capture context which triggered the creation of the goal.
-- Ability to have threaded comments on goals.
-- Other such integrations with Groups which will probably become more obvious to me as I become more familiar with this part of user space.
+### User Stories
+I can create projects and update/delete them
+I can create goals and update/delete them
+I can nest goals beneath one another
+I can mark goals as complete or incomplete 
+I can collapse/uncollapse any hierarchy of goals or projects
+I can filter out completed/uncompleted goals
 
 ## Milestone 4
 Expected Completion: October 28th, 2022
