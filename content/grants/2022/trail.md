@@ -38,7 +38,7 @@ The Gall App API will be documented clearly using the `%docs` app, and will addr
 
 ###Milestones & Compensation
 **Milestone 1: Gall app backend**
-*1 Star, Estimated delivery date:*
+*1 Star, Estimated delivery date: November 30, 2022*
 Pokes
 - `%start-activity`: Starts an activity, making it available to receive location information.
 - `%save-path`: Saves a list of locations to the currently active activity.
@@ -94,7 +94,7 @@ Peeks
 --
 ```
 **Milestone 2: Basic outdoor workout tracking on iPhone**
-*1 Star, Estimated delivery date:*
+*1 Star, Estimated delivery date: December 31, 2022*
 - Choose between metric and imperial unit systems
 - Live tracking of an outdoor workout
 - Path on map updates as user moves
@@ -102,13 +102,13 @@ Peeks
 - View summary of previously completed workouts
 - View details of a previously completed workout
 **Milestone 3: Grid application developed in React**
-*1 Star, Estimated delivery date:*
+*1 Star, Estimated delivery date: January 15, 2023*
 - View summary of previously completed workouts
 - View details of a previously completed workout
 - Edit workout
 - Can modify the time of the workout to remove a time period at the end of a workout
 **Milestone 4: Ingest data from various sources**
-*1 Star, Estimated delivery date:*
+*1 Star, Estimated delivery date: January 31, 2023*
 - Ingest data from common activity file types
     - Create gall agent
         - Parse Strava data and save to %trail agent
