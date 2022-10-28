@@ -4,8 +4,8 @@ date = "2022-10-28"
 
 [featured-1]
 title = "radio"
-description = "an app for urbit disc jockeys"
-image=""
+description = "Join or create shared environments for chatting and DJing with YouTube."
+image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/radio-card.jpg"
 content = """
 Assembly Capital recently released radio, an app that lets you create or tune into rooms where you can collaboratively DJ with other users on the network.
 
@@ -24,22 +24,19 @@ description = "What the heck is Urbit?"
 image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/articles/3things40.jpg"
 content = """
 
-Lane Rettig takes on the challenge of defining Urbit and comes up with a novel way of viewing Urbit.
+Lane Rettig takes on the challenge of defining Urbit.
 
 
 """
 
 [featured-3]
 
-title = "User Error: A More Beautiful Computer"
-image="https://www.spikeartmagazine.com/sites/default/files/styles/large_retina/public/users/shared/articles/images/summer_ends_urbit_is_forever_-_design_by_romina_malta_0.jpg?itok=phc5Ut5P"
-description = "Adina Glickstein attends Urbit Assembly and considers the politics of tech-augmented exit."
+title = "E12 - The Gang Does an Urbit Maxi Episode"
+image=""
+description = "Ted Blackman joins the Uqbar crew to discuss Assembly 2022, composability and the future of Urbit."
 content = """
 
-Spike Art writer Adina Glickstein attended Assembly 2022 and wrote a thoughtful piece discussing her experience.
-
-![](https://www.spikeartmagazine.com/sites/default/files/styles/large_retina/public/users/shared/articles/images/summer_ends_urbit_is_forever_-_design_by_romina_malta_0.jpg?itok=phc5Ut5P)
-
+This episode of [Uqbar](/organizations/uqbar)'s podcast asks important questions like "How do we evaluate Urbit?" and "Is Urbit ready for outside investment?" in this unique episode with long-time Urbit core developer Ted Blackman.
 
 """
 +++
