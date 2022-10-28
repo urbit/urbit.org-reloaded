@@ -8,4 +8,4 @@ developer = "~datryn-ribdun"
 website = "https://github.com/datryn-ribdun/urbit-webrtc"
 +++
 
-Hang out with your friends. Vice and video chat by Holium.
+Hang out with your friends. Voice and video chat by Holium.
