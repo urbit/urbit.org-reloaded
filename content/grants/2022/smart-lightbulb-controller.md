@@ -9,7 +9,7 @@ grant_category = ["App Dev"]
 
 [extra]
 image = ""
-description = "A smart light bulb app for controlling "
+description = "A smart light bulb app for controlling the ambiance in your home"
 reward = "4 stars"
 assignee = ["~pilwyc-fastec", "~larryx-woldyr"]
 champion = ["~simfur-ritwed"]
