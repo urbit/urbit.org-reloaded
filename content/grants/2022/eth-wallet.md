@@ -9,7 +9,7 @@ grant_category = [ "App Dev" ]
 [extra]
 image = ""
 description = "Build an Ethereum wallet and UI that you can run from your urbit ship and use to interact with the web3 ecosystem"
-reward = "3 stars + 15k USD"
+reward = "3 stars + $15k USD"
 assignee = [""]
 grant_id = "B0158"
 completed = false
