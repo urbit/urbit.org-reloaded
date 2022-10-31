@@ -9,7 +9,7 @@ grant_category = [ "App Dev" ]
 [extra]
 image = ""
 description = "Build an Ethereum wallet and UI that you can run from your urbit ship and use to interact with the web3 ecosystem"
-reward = "3 stars"
+reward = "3 stars + 15k USD"
 assignee = [""]
 grant_id = "B0158"
 completed = false
@@ -33,11 +33,11 @@ Your task is to build an Ethereum wallet with similar behavior.
 
 An important component is to build a way for a ship to associate Ethereum public keys with their ID so it can share its wallet address to peers when asked for. A different scheme than the one used by the Bitcoin wallet (a new address per transaction) is probably needed. After that, a sleek interface is needed so users can send each other ETH at a minimum. Replicating the Bitcoin app’s provider node system is outside of the scope, but a good submission will allow the user to set their own RPC URL. You could also consider using Pocket Network.
 
-Because Ethereum is a complete computer, it won’t be feasible to keep shipping new UIs for all the things you can do on Ethereum. A great submission will let users use other Ethereum apps on the public internet with their Urbit-native wallet. One potential approach would be to embed a mini-browser and inject web3 into it the same way many mobile wallets do (Metamask iOS, Coinbase Wallet, etc.) Another would be to support WalletConnect.
+Because Ethereum is a complete computer, it won’t be feasible to keep shipping new UIs for all the things you can do on Ethereum. A great submission will let users use other Ethereum apps on the public internet with their Urbit-native wallet. One potential approach would be to embed a mini-browser and inject web3 into it the same way many mobile wallets do (Metamask iOS, Coinbase Wallet, etc.) Another would be to support WalletConnect. Prior to assignment of this bounty, The Urbit Foundation and the contributor will meet and further expand on the scope and specific implementation of this bounty. Star compensation listed below is negotiable and may change depending on specific timing and features in the final scope.
 
 # Milestones & Compensation
 
-3 stars upon successful completion of the bounty.
+3 stars upon successful completion of the bounty and a 15,000 USD bonus provided by [Reserve Protocol](https://reserve.org/).
 
 # Future Work 
 
