@@ -8,4 +8,5 @@ image = "https://urbitas.sgp1.digitaloceanspaces.com/nallux-dozryl/2022.10.31..1
 Data should belong to the individual.
 
 Software engineer at nativeplanet.io
+
 My work: https://github.com/nallux-dozryl
