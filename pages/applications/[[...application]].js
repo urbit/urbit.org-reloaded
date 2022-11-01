@@ -180,7 +180,7 @@ export const getServerSideProps = async ({ params, res }) => {
       ? JSON.stringify(Markdown.parse({ post: { content } }))
       : null;
 
-  const matchedGrant = getGrantByShortcode(params.application);
+  const matchedGrant = getGrantByShortcode(params.application) || null;
   if (!data.title) {
     data = {
       title: params.application?.join("/"),
