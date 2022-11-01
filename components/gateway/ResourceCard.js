@@ -1,6 +1,7 @@
 import Link from "next/link";
 import GatewayImage from "./Image";
 import classNames from "classnames";
+import { capitalize } from "@urbit/foundation-design-system";
 
 const ResourceCard = ({ type, shortcode, title, description = "", color, image, full }) => (
   <Link href={`/${type}s/${shortcode}`}>
@@ -13,7 +14,7 @@ const ResourceCard = ({ type, shortcode, title, description = "", color, image, 
           <a className="font-semibold">{title}</a>
           <p className="hidden lg:block">{description}</p>
         </div>
-          <a className="button-lg bg-green-400 text-white shrink-0">View {type}</a>
+          <a className="button-lg bg-green-400 text-white shrink-0">View {capitalize(type)}</a>
         </>
         : <a className="font-semibold">{title}</a>}
     </div>

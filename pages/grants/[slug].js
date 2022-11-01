@@ -95,7 +95,8 @@ export default function Grant({ post, markdown, match, search }) {
         image={match.data.image}
         color={match.data.bgColor || "#000000"}
         description={match.data?.description || ""}
-        type="Application"
+        type="application"
+        shortcode={post.extra.deliverable}
         full
       />
     }
