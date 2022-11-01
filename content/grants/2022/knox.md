@@ -9,14 +9,14 @@ grant_category = ["App Dev"]
 
 [extra]
 image = ""
-description = "An application for tracking and reviewing your outdoor workouts via a native mobile OS application, a webapp, and an Urbit backend for your sensitive location data"
+description = "A vault for web2 passwords with a browser extension and easy to use client interface, bringing the features you would expect from a first class password manager to Urbit"
 reward = "4 stars"
 assignee = ["~wordel-sitnec", "~radbus-tactyl"]
 champion = ["~haddef-sigwen"]
-grant_id = "P0197"
+grant_id = "P0185"
 completed = false
 canceled = false
-link = ""
+link = "~wordel-sitnec/knox"
 
 +++
 
