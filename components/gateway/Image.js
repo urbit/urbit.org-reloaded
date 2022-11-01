@@ -9,7 +9,7 @@ const GatewayImage = ({
 }) => {
   if (error) {
     return (
-      <div className="overflow-hidden rounded-xl">
+      <div className="overflow-hidden rounded-xl shrink-0">
         <svg
           width={size}
           height={size}
@@ -29,7 +29,7 @@ const GatewayImage = ({
 
   if (patp) {
     return (
-      <div className="rounded-xl overflow-hidden">
+      <div className="rounded-xl overflow-hidden shrink-0">
         <Sigil patp={patp} size={size} color={color} />
       </div>
     );
@@ -39,14 +39,14 @@ const GatewayImage = ({
     return (
       <div
         style={{ height: size, width: size, backgroundColor: image }}
-        className="rounded-xl"
+        className="rounded-xl shrink-0"
       />
     );
   }
 
   return image ? (
     <div
-      className="rounded-xl overflow-hidden"
+      className="rounded-xl overflow-hidden shrink-0"
       style={{ backgroundColor: color }}
     >
       <img src={image} style={{ height: size, width: size }} />
