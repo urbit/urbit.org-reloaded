@@ -23,6 +23,7 @@ import ob from "urbit-ob";
 import { DateTime } from "luxon";
 import fs from 'fs';
 import path, { join } from 'path';
+import { getGrantYear } from "../../lib/lib";
 
 export default function Grant({ post, markdown, match, search }) {
   const router = useRouter();
@@ -202,12 +203,7 @@ export default function Grant({ post, markdown, match, search }) {
 
 export async function getStaticProps({ params }) {
   // Gets post in any year folder sharing the slug name in the param
-  const basePath = join(process.cwd(), 'content/grants')
-  const years = fs.readdirSync(basePath, { 'withFileTypes': true }).filter((f) => f.isDirectory());
-  const dir = years.find((year) => {
-    const yearDir = fs.readdirSync(join(basePath, year.name), { 'withFileTypes': true });
-    return yearDir.some((file) => file.name === `${params.slug}.md`)
-  });
+  const dir = getGrantYear(params.slug);
   const post = getPostBySlug(
     params.slug,
     ["title", "slug", "date", "description", "content", "extra", "taxonomies"],
@@ -236,6 +232,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
+  // Flatten all year subfolders into a flat array of slugs
   const basePath = join(process.cwd(), 'content/grants')
   const years = fs.readdirSync(basePath, { 'withFileTypes': true });
   const posts = years.filter((year) => year.isDirectory()).map((year) => {
