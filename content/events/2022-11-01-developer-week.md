@@ -14,4 +14,4 @@ description = ""
 
 From the 14th until the 18th of November the Urbit Foundation is organizing Urbit Developer Week. A week full of announcements, good conversations, the launch of several new initiatives and much more. 
 
-Stay tuned here or on urbit.org, we will release the full schedule soon.
+Stay tuned here or on the network, we will release the full schedule soon.
