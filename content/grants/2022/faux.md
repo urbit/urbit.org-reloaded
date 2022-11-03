@@ -16,7 +16,8 @@ champion = ["~littel-wolfur"]
 grant_id = "P0145"
 completed = true
 canceled = false
-link = ""
+link = "~tomdys/the-faux-shore"
+deliverable = "~midsum-salrux/faux"
 
 +++
 
