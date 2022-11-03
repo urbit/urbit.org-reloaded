@@ -10,8 +10,8 @@ description = ""
 
 +++
 
-2022 is slowly coming to an end, Assembly is almost 2 months ago and the last cohort of Hoon School Live has just finished. The Urbit developer community is getting bigger every day and that calls for a celebration. 
+It's been almost two months since our second Assembly, and the last cohort of Hoon School Live has just finished. 2022 is drawing to a close and the Urbit developer community is getting bigger every day. This calls for a celebration. 
 
 From the 14th until the 18th of November the Urbit Foundation is organizing Urbit Developer Week. A week full of announcements, good conversations, the launch of several new initiatives and much more. 
 
-Stay tuned here or on the network, we will release the full schedule soon.
+Check back here or keep an eye on our socials and the network.  A full schedule of events will be available soon.
