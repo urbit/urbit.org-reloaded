@@ -1,6 +1,6 @@
 +++
 title = "Submit a Proposal"
-date = "2022-01-03"
+date = "2022-10-26"
 weight = 1
 description = "A comprehensive guide to creating a grant proposal"
 +++
@@ -50,9 +50,10 @@ It's recommended to break your project into _milestones_, each of which must hav
 
 Here are some examples of exceptional proposals for reference:
 
-- [Azimuth CLI](https://urbit.org/grants/azimuth-cli)
-- [Pokur: Texas Holdem on Urbit](https://urbit.org/grants/pokur)
-- [Urbit Speech Recognition](https://urbit.org/grants/speech-recognition)
+- [Urbit Forms](https://urbit.org/grants/urbit-forms) has great demonstration of thinking around technical architecture
+- [Bitcoin Lightning Development](https://urbit.org/grants/lightning-development) shows well defined user stories and future development opportunities that can inspire potential collaborators
+- [%pony](https://urbit.org/grants/pony-bounty) contains detailed thinking of current affordances of existing software if trying to build analogs to the traditional software stack
+- [App Store](https://urbit.org/grants/app-store) blends the above with a nearly ideal balance of user stories mapped to milestones for clarity of completion, initial architectural thinking, and thinking around unique affordances and challenges of building on a distributed p2p system
 
 ### Funding
 
@@ -60,11 +61,11 @@ The Urbit Foundation will provide funding of up to five stars for any one grant.
 
 Our formula for determining how much to value a particular grant is a function of time spent on the project, value to the Urbit universe, and track record of the contributor (either via past work within the grants program, or a relevant external background).
 
-If you're looking for more funding for a project that you're planning on devoting 100% of your full-time work to, you might instead consider [The Combine](https://the-combine.org).
+Further funding may be available for continued development pending the successful completion of your grant. Additionally, contributors of exceptionally well completed grant proposals become eligible to mentor apprentices which can support continued development of their application for maintenence and feature additions.
 
 ### Abandonment
 
-A proposal is considered abandoned when a milestone is more than a month behind schedule. When a proposal is considered abandoned, the Urbit Foundation may choose to compensate the work differently upon completion, or not at all.
+A proposal is considered abandoned when a milestone is more than a month behind schedule and preemptive action is not taken to inform The Urbit Foundation of an adjusted timeline that has been approved by your Champion. When a proposal is considered abandoned, the Urbit Foundation may choose to compensate the work differently upon completion, or not at all.
 
 The intent of this policy is to:
 
@@ -94,9 +95,9 @@ Your champion is invested in the success of your project &mdash; if they success
 Here are some guidelines for how to engage with your champion:
 
 - **Meet regularly:** Those that can champion projects are chosen for their past contributions. This means that they're able to provide hands-on support. This structure works best if you set up a regular check-in, either once a week or every other week. If nothing else, having an accountability buddy is really helpful.
-- **Stay in touch:** Leverage the Urbit network for keeping in touch about your project. Don't hesitate to ask questions!
+- **Stay in touch:** Leverage the Urbit network for keeping in touch about your project. Don't hesitate to ask questions! The `[battery payload]` group (~dister-dozzod-lapdeg/battery-payload) is a great place to hang out with other developers, ask questions, and share your experiences. 
 - **Ask for connections:** Champions are well-connected throughout the network and know who's who. If you need support in a particular area that is beyond your Champion's expertise, they should be able to put you in touch with someone that can help.
-- **Get your work reviewed:** Part of your Champion's job is to review your work and get others' eyes on it as well. Let them know when you need something reviewed.
+- **Get your work reviewed:** Part of your Champion's job is to review your work and get others' eyes on it as well. Let them know when you need something reviewed by making a post in your proposal groups. Particularly, this is required for getting review and signoff that you have completed a milestone, but can be helpful for other complex asks as well.
 
 If your Champion becomes unresponsive or is unhelpful, let someone at the Urbit Foundation know and we'll take care of it.
 
@@ -108,6 +109,6 @@ The Urbit Foundation must comply with international law when distributing addres
 
 ## Getting Paid
 
-After you've finished your work on a given milestone, you will need to get signoff from your champion. To do this, make a notebook post in your proposal group with the details of the milestone completed, any relevant instructions, github repos, or app download links, and solicit review from your champion. Their reply  of `approved` in the notebook post comments will constitute signoff and you'll need a link to that milestone post when you [submit an invoice](https://airtable.com/shrXXCs1uaxtNSBcg). Upon successful review of this notebook post by the Urbit Foundation and an invoice recievd for the amount agreed upon in your grant or milestone, the Foundation will pay your star allocation to the Ethereum address you have provided.
+After you've finished your work on a given milestone, you will need to get signoff from your champion. To do this, make a notebook post in your proposal group with the details of the milestone completed, any relevant instructions, github repos, or app download links, and solicit review from your champion. Their reply  of `approved` in the notebook post comments will constitute signoff and you'll need a link to that milestone post when you [submit an invoice](https://airtable.com/shrXXCs1uaxtNSBcg). Upon successful review of this notebook post by the Urbit Foundation and an invoice recieved for the amount agreed upon in your grant or milestone, the Foundation will pay your star allocation to the Ethereum address you have provided.
 
 We approve and issue payments within 30 days of invoice receipt and approval, although often payment is made more quickly as transactions are batched with other grantees who have recently completed milestones. If you are having any issues accepting stars through [Bridge](https://bridge.urbit.org) please contact `~taller-ravnut` for assistance.
