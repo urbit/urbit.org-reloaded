@@ -20,7 +20,7 @@ Why? Because developers eschew sales. If something is good, it will rise to the 
 
 Enter the Agency DAO. The idea—a creative agency that solicits work, receives clients, hires creatives, and makes decisions all on the blockchain—is oft-discussed because it appeals to the crunchy, anti-establishment vibe at the core of every major ad agency. A trustless, leaderless creative community where everyone has equal voice and the best creative rises naturally to the top? The dream of the ‘90s come true! 
 
-Unfortunately, decentralization in the ad world currently occupies much more podcast time than reality.,
+Unfortunately, decentralization in the ad world currently occupies much more podcast time than reality.
 
 ## Creative by Committee
 
@@ -94,7 +94,7 @@ The creative industries rely almost entirely on reputation—so any Agency DAO w
 
 “Goodby Silverstein and Partners, for example, is widely regarded as one of the best ad agencies out there,” says Callahan. “When a big name in the creative industry goes to work there, the reputation of Goodby Silverstein increases.”
 
-Urbit IDs let you maintain your creative and working reputations while operating within a self-owned ecosystem that can’t be deleted. Beyond that, Urbit’s design-forward OS selects for self-expression in a way that no corporate-owned platform could
+Urbit IDs let you maintain your creative and working reputations while operating within a self-owned ecosystem that can’t be deleted. Beyond that, Urbit’s design-forward OS selects for self-expression in a way that no corporate-owned platform could.
 
 
 “The sigil itself is its own design feature,” says Callahan.
