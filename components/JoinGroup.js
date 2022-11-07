@@ -58,9 +58,9 @@ export default function Contact({ emphasize, groupName, label, className }) {
 
   return (
     <div className={className}>
-      <h4 className="mt-4 text-wall-500 flex items-baseline flex-wrap">
+      <h4 className="text-wall-500 flex items-baseline flex-wrap">
         {label ? label + " " : ""}
-        <div className="md:ml-2 rounded-lg flex items-stretch">
+        <div className="rounded-lg flex items-stretch">
           <code
             className={`rounded-l-lg px-2 md:px-4 py-2 ${washedBg} flex items-center h-full ${linkText}`}
           >

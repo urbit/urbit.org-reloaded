@@ -52,7 +52,7 @@ export default function Organization({
                     }}
                   >
                     {app.image && (
-                      <img src={app.image} className="h-full w-full" />
+                      <img src={app.image} className="h-full w-full" style={{ aspectRatio: "1" }} />
                     )}
                   </div>
                   <p className="text-center font-bold font-xl">{app.title}</p>

@@ -19,8 +19,10 @@ import Gateway404 from "../../components/gateway/Gateway404";
 import MetadataBlock from "../../components/gateway/MetadataBlock";
 import MetadataLink from "../../components/gateway/MetadataLink";
 import Description from "../../components/gateway/Description";
+import { getGrantsByShortcode } from "../../lib/lib";
+import GrantPreview from "../../components/GrantPreview";
 
-const ApplicationPage = ({ data, markdown, organisation, search, params }) => {
+const ApplicationPage = ({ data, markdown, organisation, matchedGrants, search, params }) => {
   const { application } = params;
   if (!ob.isValidPatp(application[0])) {
     return <Gateway404 type="application" />;
@@ -83,7 +85,7 @@ const ApplicationPage = ({ data, markdown, organisation, search, params }) => {
             item="Application"
           />
 
-          <div className="flex flex-wrap md:flex-nowrap justify-between">
+          <div className="flex flex-wrap justify-between">
             <MetadataBlock
               title="License"
               content={data.license ? data.license : "Unknown"}
@@ -103,14 +105,18 @@ const ApplicationPage = ({ data, markdown, organisation, search, params }) => {
               content={data.shortcode ? data.shortcode : data.title}
             />
           </div>
-
           <Description
             description={data.description}
             fallback="An application on Urbit."
             markdown={markdown}
           />
-
-          <hr className="text-white" />
+          <hr className="text-wall-200" />
+          {matchedGrants && <div className="basis-full flex flex-col space-y-2">
+            <p className="font-semibold text-wall-400">Related Grants</p>
+            {matchedGrants.map((grant) => {
+              return <GrantPreview grant={grant} />
+            })}
+          </div>}
 
           <div class="bg-wall-100 py-4 px-6 border-2 border-wall-200 rounded-xl">
             <p class="text-sm text-wall-400">
@@ -175,6 +181,8 @@ export const getServerSideProps = async ({ params, res }) => {
       ? JSON.stringify(Markdown.parse({ post: { content } }))
       : null;
 
+  const matchedGrants = getGrantsByShortcode(params.application) || null;
+
   if (!data.title) {
     data = {
       title: params.application?.join("/"),
@@ -187,6 +195,7 @@ export const getServerSideProps = async ({ params, res }) => {
       data,
       markdown,
       organisation,
+      matchedGrants,
       params,
     },
   };

@@ -12,6 +12,7 @@ import {
 } from "@urbit/foundation-design-system";
 import Header from "../Header";
 import Footer from "../Footer";
+import MetadataBlock from "./MetadataBlock";
 
 export default function BasicPage({
   section,
@@ -28,7 +29,7 @@ export default function BasicPage({
   metaPost.title = `${post.title} - ${section}`;
   metaPost.description =
     section === "Podcast" ? `${post.podcast} - ${post.date}` : post.description;
-    section === "Article" ? `${post.publication} - ${post.date}` : post.description;
+  section === "Article" ? `${post.publication} - ${post.date}` : post.description;
   return (
     <Container>
       <Head>
@@ -44,7 +45,7 @@ export default function BasicPage({
           <div className="flex items-center space-x-4">
             <img src={post.image} className="w-36" />
             <div className="flex flex-col pl-2">
-              <h1 className={classnames({ "text-3xl": section === "Podcast" },{ "text-3xl": section === "Article" })}>
+              <h1 className={classnames({ "text-3xl": section === "Podcast" }, { "text-3xl": section === "Article" })}>
                 {post.title}
               </h1>
               <p>{section}</p>
@@ -54,28 +55,28 @@ export default function BasicPage({
           <div className="flex justify-between">
             <div className="flex space-x-12">
               {post?.podcast && (
-                <div className="flex flex-col">
-                  <p className="font-bold text-wall-400">Podcast</p>
-                  <p>{post.podcast}</p>
-                </div>
+                <MetadataBlock
+                  title="Podcast"
+                  content={post.podcast}
+                />
               )}
               {post?.publication && (
-                <div className="flex flex-col">
-                  <p className="font-bold text-wall-400">Publication</p>
-                  <p>{post.publication}</p>
-                </div>
+                <MetadataBlock
+                  title="Publication"
+                  content={post.publication}
+                />
               )}
               {post?.author && (
-                <div className="flex flex-col">
-                  <p className="font-bold text-wall-400">Author</p>
-                  <p>{post.author}</p>
-                </div>
+                <MetadataBlock
+                  title="Author"
+                  content={post.author}
+                />
               )}
               {post?.date && (
-                <div className="flex flex-col">
-                  <p className="font-bold text-wall-400">Date</p>
-                  <p className="shrink-0">{post.date}</p>
-                </div>
+                <MetadataBlock
+                  title="Date"
+                  content={post.date}
+                />
               )}
 
               {post?.URL && section !== "Podcast" && section !== "Article" && (
