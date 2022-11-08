@@ -34,7 +34,7 @@ Want to know what’s new at the Urbit Foundation? On Monday Josh Lehman and Ted
 [Meetup](https://www.meetup.com/urbit-sf/events/289623363/) | [Youtube](https://www.youtube.com/watch?v=xCxHvkS9o8g )
 
 ### Developer Week: The Network State's Ministry of Education
-In the last year Hoon Education has taken-off, hundreds of people have gone through Hoon School including Dr. Murphy himself. Tune in to watch the two post-academics talk about education on Urbit, the chances for developers and what the future has in store for new Hooners.
+In the last year Hoon Education has taken-off and hundreds of people have gone through Hoon School including Dr. Murphy himself. Tune in to watch the two post-academics talk about education on Urbit, opportunities for developers, and what the future has in store for new Hooners.
 
 [Meetup](https://www.meetup.com/urbit-sf/events/289629398/) | [Youtube](https://www.youtube.com/watch?v=dTpw2DG6WBc)  
 
