@@ -29,7 +29,7 @@ From the 14th through the 18th of November the Urbit Foundation is organizing a 
 **times are in Pacific Time**
 
 ### Developer Week: Urbit Foundation
-Want to know what’s new at the Urbit Foundation? On Monday Josh Lehman and Ted Blackman will kick-off Urbit Developer Week with a look back at the first year of the Urbit Foundation’s existence and they have some exciting news to share with you. Make sure to tune in and ask your questions.
+Want to know what’s new at the Urbit Foundation? On Monday Josh Lehman and Ted Blackman will kick-off Urbit Developer Week with a look back at the first year of the Urbit Foundation’s existence and share some exciting news with you. Make sure to tune in and ask your questions.
 
 [Meetup](https://www.meetup.com/urbit-sf/events/289623363/) | [Youtube](https://www.youtube.com/watch?v=xCxHvkS9o8g )
 
