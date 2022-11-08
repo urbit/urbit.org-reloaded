@@ -26,44 +26,44 @@ From the 14th until the 18th of November the Urbit Foundation is organizing Urbi
 | 11/18 – 10:00 | So you want to work on Urbit? | [here](https://www.meetup.com/urbit-sf/events/289629483/) | [here](https://www.youtube.com/watch?v=j96Gb6dXaNs)  |
 | 11/18 – 12:00 | Engine Pattern                | [here](https://www.meetup.com/urbit-sf/events/289629506/) | [here](https://www.youtube.com/watch?v=T4VyW72zX0w)  |
 
-/*times are in Pacific Time/
+**times are in Pacific Time*
 
-###Developer Week: Urbit Foundation
+### Developer Week: Urbit Foundation
 Want to know what’s new at the Urbit Foundation? On Monday Josh Lehman and Ted Blackman will kick-off Urbit Developer Week with a look back at the first year of the Urbit Foundation’s existence and they have some exciting news to share with you. Make sure to tune in and ask your questions.
 
 [Meetup](https://www.meetup.com/urbit-sf/events/289623363/) | [Youtube](https://www.youtube.com/watch?v=xCxHvkS9o8g )
 
-###Developer Week: Dr. Davis & Dr. Murphy
+### Developer Week: Dr. Davis & Dr. Murphy
 In the last year Hoon Education has taken-off, hundreds of people have gone through Hoon School including Dr. Murphy himself. Tune in to watch the two post-academics talk about education on Urbit, the chances for developers and what the future has in store for new Hooners.
 
 [Meetup](https://www.meetup.com/urbit-sf/events/289629398/) | [Youtube](https://www.youtube.com/watch?v=dTpw2DG6WBc)  
 
-###Developer Week: Volcano Summit
+### Developer Week: Volcano Summit
 Assembly is barely two months out and there is already a new event waiting for us. The Urbit Foundation and Tlon have teamed up with AlephDAO to organize a new developer summit. Writing runes in magma has never been so comfortable.
 
 [Meetup](https://www.meetup.com/urbit-sf/events/289629419/) | [Youtube](https://www.youtube.com/watch?v=ckFsPr-DXNE)
 
-###Developer Week: Speed Hooning with Quartus
+### Developer Week: Speed Hooning with Quartus
 Nobody is quicker than Quartus, in this workshop ~rabsef-bicrym will build a reminder application from scratch that integrates with the new %homestead and show you how you can do it as well. Are you up for the challenge?
 
 [Meetup](https://www.meetup.com/urbit-sf/events/289629435/) | [Youtube](https://www.youtube.com/watch?v=eRz3s9dQZe8)
 
-###Developer Week: Core Roadmap
+### Developer Week: Core Roadmap
 Urbit Core Development is opening up to the world. Want to see where it is going? Join Philip Monk and Ted Blackman to listen to the new vision on core development, their plans for the future and what is in the pipeline already. Urbit will never be the same again.
 
 [Meetup](https://www.meetup.com/urbit-sf/events/289629450/) | [Youtube](https://www.youtube.com/watch?v=BJaRloyA02Y)
 
-###Developer Week: AMA Core Dev
+### Developer Week: AMA Core Dev
 Always had a question for the core developers of Urbit, the new plans or the roadmap? Urbit’s core developers will come together in public and provide their wisdom to answer any question you might have. Join ~rovnys-ricfer, ~wicdev-wisryt, ~palfun-foslup & ~master-morzod on friday right after the Roadmap presentation.  
 
 [Meetup](https://www.meetup.com/urbit-sf/events/289629467/) | [Youtube](https://www.youtube.com/watch?v=SI_B7H8tSRE)
 
-###Developer Week: So you want to work on Urbit?
+### Developer Week: So you want to work on Urbit?
 Just finished Hoon School? Or always wanted to work for an Urbit company but don’t know where to start? In this session ~poldec-tonteg will lead a panel with several Urbit companies, about their open positions, hiring strategies and how you could become a part of it.
 
 [Meetup](https://www.meetup.com/urbit-sf/events/289629483/) | [Youtube](https://www.youtube.com/watch?v=j96Gb6dXaNs)
 
-###Developer Week: Engine Pattern
+### Developer Week: Engine Pattern
 The “trade secret” or little-known engine pattern in Hoon programs. A newer design pattern that extends working with cores to higher-level domain-specific abstractions. Join Neal Davis and Ted Blackman in their conversation about this little-known piece of magic.
 
 [Meetup](https://www.meetup.com/urbit-sf/events/289629506/) | [Youtube](https://www.youtube.com/watch?v=T4VyW72zX0w)
