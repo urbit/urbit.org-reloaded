@@ -1,6 +1,6 @@
 +++
 title = "Trove: group file drive"
-date = "2022-07-18"
+date = "2022-11-08"
 
 [taxonomies]
 grant_type = [ "Bounty" ]
@@ -9,8 +9,8 @@ grant_category = [ "App Dev" ]
 [extra]
 image = ""
 description = "A shared file drive allowing the upload of files to an S3 bucket or IPFS and the ability to organize the file links in folders."
-reward = "2 stars ($4k bonus if done by Assembly)"
-assignee = [""]
+reward = "3 stars ($4k bonus if done by Assembly)"
+assignee = ["Quartus"]
 grant_id = "B0164"
 champion = ["Holium"]
 completed = false
@@ -69,7 +69,7 @@ A set of roles will be mapped to each action as below:
 
 Holium will work with the developer(s) to provide frontend support, but the team working on this bounty will be responsible for frontend implementation.
 
-## Milestone 1: 2 stars ($4k bonus if done by Assembly)
+## Milestone 1: 3 stars ($4k bonus if done by December 12, 2022)
 
 Have a working file eHave a working file explorer app that can find files, transfer files, and drag and drop.
 
