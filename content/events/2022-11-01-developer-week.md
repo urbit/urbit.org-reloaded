@@ -18,7 +18,7 @@ From the 14th through the 18th of November the Urbit Foundation is organizing a 
 | Date – Time*   | What                          | Meetup                                                    | Youtube                                              |
 |---------------|-------------------------------|-----------------------------------------------------------|------------------------------------------------------|
 | 11/14 – 10:00 | Urbit Foundation              | [here](https://www.meetup.com/urbit-sf/events/289623363/) | [here](https://www.youtube.com/watch?v=xCxHvkS9o8g ) |
-| 11/15 – 10:00 | Dr. Davis & Dr. Murphy        | [here](https://www.meetup.com/urbit-sf/events/289629398/) | [here](https://www.youtube.com/watch?v=dTpw2DG6WBc)  |
+| 11/15 – 10:00 | The Network State's Ministry of Education| [here](https://www.meetup.com/urbit-sf/events/289629398/) | [here](https://www.youtube.com/watch?v=dTpw2DG6WBc)  |
 | 11/15 – 13:00 | Volcano Summit                | [here](https://www.meetup.com/urbit-sf/events/289629419/) | [here](https://www.youtube.com/watch?v=ckFsPr-DXNE)  |
 | 11/16 – 10:00 | Speed Hooning                 | [here](https://www.meetup.com/urbit-sf/events/289629435/) | [here](https://www.youtube.com/watch?v=eRz3s9dQZe8)  |
 | 11/17 – 12:00 | Core Roadmap                  | [here](https://www.meetup.com/urbit-sf/events/289629450/) | [here](https://www.youtube.com/watch?v=BJaRloyA02Y)  |
@@ -33,7 +33,7 @@ Want to know what’s new at the Urbit Foundation? On Monday Josh Lehman and Ted
 
 [Meetup](https://www.meetup.com/urbit-sf/events/289623363/) | [Youtube](https://www.youtube.com/watch?v=xCxHvkS9o8g )
 
-### Developer Week: Dr. Davis & Dr. Murphy
+### Developer Week: The Network State's Ministry of Education
 In the last year Hoon Education has taken-off, hundreds of people have gone through Hoon School including Dr. Murphy himself. Tune in to watch the two post-academics talk about education on Urbit, the chances for developers and what the future has in store for new Hooners.
 
 [Meetup](https://www.meetup.com/urbit-sf/events/289629398/) | [Youtube](https://www.youtube.com/watch?v=dTpw2DG6WBc)  
