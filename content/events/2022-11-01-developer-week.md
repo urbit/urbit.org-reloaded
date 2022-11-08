@@ -49,7 +49,7 @@ Nobody is quicker than Quartus. In this workshop ~rabsef-bicrym will build a rem
 [Meetup](https://www.meetup.com/urbit-sf/events/289629435/) | [Youtube](https://www.youtube.com/watch?v=eRz3s9dQZe8)
 
 ### Developer Week: Core Roadmap
-Urbit Core Development is opening up to the world. Want to see where it is going? Join Philip Monk and Ted Blackman to listen to the new vision on core development, their plans for the future and what is in the pipeline already. Urbit will never be the same again.
+Urbit Core Development is opening up to the world. Want to see where it is going? Join Philip Monk and Ted Blackman to listen to the new vision on core development, their plans for the future and what is in the pipeline already.
 
 [Meetup](https://www.meetup.com/urbit-sf/events/289629450/) | [Youtube](https://www.youtube.com/watch?v=BJaRloyA02Y)
 
