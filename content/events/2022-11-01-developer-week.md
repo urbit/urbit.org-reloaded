@@ -64,6 +64,6 @@ Just finished Hoon School? Or always wanted to work for an Urbit company but don
 [Meetup](https://www.meetup.com/urbit-sf/events/289629483/) | [Youtube](https://www.youtube.com/watch?v=j96Gb6dXaNs)
 
 ### Developer Week: Engine Pattern
-The “trade secret” or little-known engine pattern in Hoon programs. A newer design pattern that extends working with cores to higher-level domain-specific abstractions. Join Neal Davis and Ted Blackman in their conversation about this little-known piece of magic.
+The "engine pattern" in Hoon programs is a newer design pattern that extends working with cores to higher-level domain-specific abstractions. Join Neal Davis and Ted Blackman in their conversation about this little-known piece of magic.
 
 [Meetup](https://www.meetup.com/urbit-sf/events/289629506/) | [Youtube](https://www.youtube.com/watch?v=T4VyW72zX0w)
