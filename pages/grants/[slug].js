@@ -142,7 +142,7 @@ export default function Grant({ post, markdown, match, search }) {
               </div>
             ))}
           </div>
-          <div className="flex flex-wrap md:flex-nowrap justify-between">
+          <div className="flex flex-wrap justify-between">
             {post?.extra?.grant_id ? (
               <>
                 <MetadataBlock
