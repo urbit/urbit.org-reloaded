@@ -26,7 +26,7 @@ From the 14th through the 18th of November the Urbit Foundation is organizing a 
 | 11/18 – 10:00 | So you want to work on Urbit? | [here](https://www.meetup.com/urbit-sf/events/289629483/) | [here](https://www.youtube.com/watch?v=j96Gb6dXaNs)  |
 | 11/18 – 12:00 | Engine Pattern                | [here](https://www.meetup.com/urbit-sf/events/289629506/) | [here](https://www.youtube.com/watch?v=T4VyW72zX0w)  |
 
-**times are in Pacific Time*
+**times are in Pacific Time**
 
 ### Developer Week: Urbit Foundation
 Want to know what’s new at the Urbit Foundation? On Monday Josh Lehman and Ted Blackman will kick-off Urbit Developer Week with a look back at the first year of the Urbit Foundation’s existence and they have some exciting news to share with you. Make sure to tune in and ask your questions.
