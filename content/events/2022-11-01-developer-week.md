@@ -54,7 +54,7 @@ Urbit Core Development is opening up to the world. Want to see where it is going
 [Meetup](https://www.meetup.com/urbit-sf/events/289629450/) | [Youtube](https://www.youtube.com/watch?v=BJaRloyA02Y)
 
 ### Developer Week: Core Dev AMA
-Always had a question for the core developers of Urbit, the new plans or the roadmap? Urbit’s core developers will come together in public and provide their wisdom to answer any question you might have. Join ~rovnys-ricfer, ~wicdev-wisryt, ~palfun-foslup & ~master-morzod on friday right after the Roadmap presentation.  
+Have a burning question for the core developers of Urbit about what's going on or where things are going? Urbit’s core developers will be available to answer any questions you have. Join ~rovnys-ricfer, ~wicdev-wisryt, ~palfun-foslup & ~master-morzod on Friday right after the Roadmap presentation.  
 
 [Meetup](https://www.meetup.com/urbit-sf/events/289629467/) | [Youtube](https://www.youtube.com/watch?v=SI_B7H8tSRE)
 
