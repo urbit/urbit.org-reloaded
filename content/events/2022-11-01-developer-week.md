@@ -44,7 +44,7 @@ Assembly is barely two months out and there is already a new event waiting for u
 [Meetup](https://www.meetup.com/urbit-sf/events/289629419/) | [Youtube](https://www.youtube.com/watch?v=ckFsPr-DXNE)
 
 ### Developer Week: Speed Hooning with Quartus
-Nobody is quicker than Quartus, in this workshop ~rabsef-bicrym will build a reminder application from scratch that integrates with the new %homestead and show you how you can do it as well. Are you up for the challenge?
+Nobody is quicker than Quartus. In this workshop ~rabsef-bicrym will build a reminder application from scratch that integrates with the new %homestead and show you how you can do it as well. Are you up for the challenge?
 
 [Meetup](https://www.meetup.com/urbit-sf/events/289629435/) | [Youtube](https://www.youtube.com/watch?v=eRz3s9dQZe8)
 
