@@ -59,7 +59,7 @@ Have a burning question for the core developers of Urbit about what's going on o
 [Meetup](https://www.meetup.com/urbit-sf/events/289629467/) | [Youtube](https://www.youtube.com/watch?v=SI_B7H8tSRE)
 
 ### Developer Week: So you want to work on Urbit?
-Just finished Hoon School? Or always wanted to work for an Urbit company but don’t know where to start? In this session ~poldec-tonteg will lead a panel with several Urbit companies, about their open positions, hiring strategies and how you could become a part of it.
+Just finished Hoon School? Or always wanted to work for an Urbit company but don’t know where to start? In this session ~poldec-tonteg will lead a panel with several Urbit companies about their open positions, hiring strategies, and explain how you can join them.
 
 [Meetup](https://www.meetup.com/urbit-sf/events/289629483/) | [Youtube](https://www.youtube.com/watch?v=j96Gb6dXaNs)
 
