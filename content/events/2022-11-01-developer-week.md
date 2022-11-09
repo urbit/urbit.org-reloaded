@@ -20,7 +20,7 @@ From the 14th through the 18th of November the Urbit Foundation is organizing a 
 | 11/14 – 10:00 | Urbit Foundation              | [here](https://www.meetup.com/urbit-sf/events/289623363/) | [here](https://www.youtube.com/watch?v=xCxHvkS9o8g ) |
 | 11/15 – 10:00 | The Network State's Ministry of Education| [here](https://www.meetup.com/urbit-sf/events/289629398/) | [here](https://www.youtube.com/watch?v=dTpw2DG6WBc)  |
 | 11/15 – 13:00 | Volcano Summit                | [here](https://www.meetup.com/urbit-sf/events/289629419/) | [here](https://www.youtube.com/watch?v=ckFsPr-DXNE)  |
-| 11/16 – 10:00 | Encode Club x Urbit Hackathon | [here](https://www.meetup.com/urbit-sf/events/289646836)  | [here](https://www.youtube.com/watch?v=Mn_kGE9Ndbw)  |
+| 11/16 – 08:00 | Encode Club x Urbit Hackathon | [here](https://www.meetup.com/urbit-sf/events/289646836)  | [here](https://www.youtube.com/watch?v=Mn_kGE9Ndbw)  |
 | 11/16 – 10:00 | Speed Hooning                 | [here](https://www.meetup.com/urbit-sf/events/289629435/) | [here](https://www.youtube.com/watch?v=eRz3s9dQZe8)  |
 | 11/17 – 13:00 | Core Dev AMA                  | [here](https://www.meetup.com/urbit-sf/events/289629467/) | [here](https://www.youtube.com/watch?v=SI_B7H8tSRE)  |
 | 11/18 – 10:00 | So you want to work on Urbit? | [here](https://www.meetup.com/urbit-sf/events/289629483/) | [here](https://www.youtube.com/watch?v=j96Gb6dXaNs)  |
