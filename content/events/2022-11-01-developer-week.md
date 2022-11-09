@@ -10,7 +10,7 @@ description = ""
 
 +++
 
-It's been almost two months since Assembly and the last cohort of Hoon School Live has just finished. The year is drawing to a close and the Urbit developer community is getting bigger every day. This calls for a celebration. 
+It's been almost two months since Assembly and the last cohort of Hoon School Live has just finished. The year is drawing to a close and the Urbit developer community is getting bigger every day. This calls for a celebration.
 
 From the 14th through the 18th of November the Urbit Foundation is organizing a week full of announcements, thoughtful conversations, launches, and more.
 
@@ -20,8 +20,8 @@ From the 14th through the 18th of November the Urbit Foundation is organizing a 
 | 11/14 – 10:00 | Urbit Foundation              | [here](https://www.meetup.com/urbit-sf/events/289623363/) | [here](https://www.youtube.com/watch?v=xCxHvkS9o8g ) |
 | 11/15 – 10:00 | The Network State's Ministry of Education| [here](https://www.meetup.com/urbit-sf/events/289629398/) | [here](https://www.youtube.com/watch?v=dTpw2DG6WBc)  |
 | 11/15 – 13:00 | Volcano Summit                | [here](https://www.meetup.com/urbit-sf/events/289629419/) | [here](https://www.youtube.com/watch?v=ckFsPr-DXNE)  |
+| 11/16 – 08:00 | Encode Club x Urbit Hackathon | [here](https://www.meetup.com/urbit-sf/events/289646836)  | [here](https://www.youtube.com/watch?v=Mn_kGE9Ndbw)  |
 | 11/16 – 10:00 | Speed Hooning                 | [here](https://www.meetup.com/urbit-sf/events/289629435/) | [here](https://www.youtube.com/watch?v=eRz3s9dQZe8)  |
-| 11/17 – 12:00 | Core Roadmap                  | [here](https://www.meetup.com/urbit-sf/events/289629450/) | [here](https://www.youtube.com/watch?v=BJaRloyA02Y)  |
 | 11/17 – 13:00 | Core Dev AMA                  | [here](https://www.meetup.com/urbit-sf/events/289629467/) | [here](https://www.youtube.com/watch?v=SI_B7H8tSRE)  |
 | 11/18 – 10:00 | So you want to work on Urbit? | [here](https://www.meetup.com/urbit-sf/events/289629483/) | [here](https://www.youtube.com/watch?v=j96Gb6dXaNs)  |
 | 11/18 – 12:00 | Engine Pattern                | [here](https://www.meetup.com/urbit-sf/events/289629506/) | [here](https://www.youtube.com/watch?v=T4VyW72zX0w)  |
@@ -42,6 +42,11 @@ In the last year Hoon Education has taken-off and hundreds of people have gone t
 Assembly is barely two months out and there is already a new event waiting for us. The Urbit Foundation and Tlon have teamed up with AlephDAO to organize a new developer summit. Writing runes in magma has never been so comfortable.
 
 [Meetup](https://www.meetup.com/urbit-sf/events/289629419/) | [Youtube](https://www.youtube.com/watch?v=ckFsPr-DXNE)
+
+### Developer Week: Encode Club x Urbit Hackathon
+A new Hackathon for developers is being launched in just a few weeks. If you haven’t signed up for it yet, make sure to do so quickly. During this event we will let you know all the ins and outs about the Encode Club x Urbit Hackathon so you are ready to sign up and start preparing. More information about the hackathon can be found [here](https://www.encode.club/urbit-hackathon).
+
+[Meetup](https://www.meetup.com/urbit-sf/events/289646836)  | [Youtube](https://www.youtube.com/watch?v=Mn_kGE9Ndbw)
 
 ### Developer Week: Speed Hooning with Quartus
 Nobody is quicker than Quartus. In this workshop ~rabsef-bicrym will build a reminder application from scratch that integrates with the new %homestead and show you how you can do it as well. Are you up for the challenge?
