@@ -22,11 +22,12 @@ From the 14th through the 18th of November the Urbit Foundation is organizing a 
 | 11/15 – 13:00 | Volcano Summit                | [here](https://www.meetup.com/urbit-sf/events/289629419/) | [here](https://www.youtube.com/watch?v=ckFsPr-DXNE)  |
 | 11/16 – 08:00 | Encode Club x Urbit Hackathon | [here](https://www.meetup.com/urbit-sf/events/289646836)  | [here](https://www.youtube.com/watch?v=Mn_kGE9Ndbw)  |
 | 11/16 – 10:00 | Speed Hooning                 | [here](https://www.meetup.com/urbit-sf/events/289629435/) | [here](https://www.youtube.com/watch?v=eRz3s9dQZe8)  |
+| 11/17 – 12:00 | Core Roadmap                  | [here](https://www.meetup.com/urbit-sf/events/289629450/) | [here](https://www.youtube.com/watch?v=BJaRloyA02Y)  |
 | 11/17 – 13:00 | Core Dev AMA                  | [here](https://www.meetup.com/urbit-sf/events/289629467/) | [here](https://www.youtube.com/watch?v=SI_B7H8tSRE)  |
 | 11/18 – 10:00 | So you want to work on Urbit? | [here](https://www.meetup.com/urbit-sf/events/289629483/) | [here](https://www.youtube.com/watch?v=j96Gb6dXaNs)  |
 | 11/18 – 12:00 | Engine Pattern                | [here](https://www.meetup.com/urbit-sf/events/289629506/) | [here](https://www.youtube.com/watch?v=T4VyW72zX0w)  |
 
-**times are in Pacific Time**
+**times are in Pacific Time*
 
 ### Developer Week: Urbit Foundation
 Want to know what’s new at the Urbit Foundation? On Monday Josh Lehman and Ted Blackman will kick-off Urbit Developer Week with a look back at the first year of the Urbit Foundation’s existence and share some exciting news with you. Make sure to tune in and ask your questions.
