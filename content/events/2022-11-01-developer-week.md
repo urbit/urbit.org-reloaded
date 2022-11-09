@@ -46,7 +46,7 @@ Assembly is barely two months out and there is already a new event waiting for u
 ### Developer Week: Encode Club x Urbit Hackathon
 A new Hackathon for developers is being launched in just a few weeks. If you haven’t signed up for it yet, make sure to do so quickly. During this event we will let you know all the ins and outs about the Encode Club x Urbit Hackathon so you are ready to sign up and start preparing. More information about the hackathon can be found [here](https://www.encode.club/urbit-hackathon).
 
-[Meetup](https://www.meetup.com/urbit-sf/events/289646836)  | [Youtube](https://www.youtube.com/watch?v=Mn_kGE9Ndbw)  |
+[Meetup](https://www.meetup.com/urbit-sf/events/289646836)  | [Youtube](https://www.youtube.com/watch?v=Mn_kGE9Ndbw)
 
 ### Developer Week: Speed Hooning with Quartus
 Nobody is quicker than Quartus. In this workshop ~rabsef-bicrym will build a reminder application from scratch that integrates with the new %homestead and show you how you can do it as well. Are you up for the challenge?
