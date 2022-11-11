@@ -14,6 +14,8 @@ mentor = ["~dasrun-fadben"]
 assignee = ["~sipned-nistug"]
 grant_id = "A0113"
 completed = true
+link = "~pindet-timmut/urbitcoiners"
+deliverable = "~mister-dister-dozzod-dozzod/bitcoin"
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0138&prefill_Grant+Name=Extending%20the%20Bitcoin%20Provider%20API"
 +++
 

@@ -14,6 +14,8 @@ assignee = ["~timluc-miptev"]
 id = "2056919898"
 completed = true
 link = ""
+link = "~pindet-timmut/urbitcoiners"
+deliverable = "~mister-dister-dozzod-dozzod/bitcoin"
 +++
 
 ## Introduction

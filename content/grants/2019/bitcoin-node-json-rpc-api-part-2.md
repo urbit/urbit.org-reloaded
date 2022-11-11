@@ -14,6 +14,8 @@ assignee = ["pkova"]
 id = "1577544668"
 completed = true
 link = ""
+link = "~pindet-timmut/urbitcoiners"
+deliverable = "~mister-dister-dozzod-dozzod/bitcoin"
 +++
 
 #### Background

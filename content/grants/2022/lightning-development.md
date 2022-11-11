@@ -14,6 +14,8 @@ assignee = ["~tondes-sitrym"]
 grant_id = "P0183"
 champion = ["~hastuc-dibtux"]
 completed = false
+link = "~pindet-timmut/urbitcoiners"
+deliverable = "~mister-dister-dozzod-dozzod/bitcoin"
 +++
 
 # Introduction

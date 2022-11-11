@@ -15,6 +15,8 @@ assignee = ["~mipsun-diflex"]
 grant_id = "A0152"
 completed = false
 cancelled = false
+link = "~pindet-timmut/urbitcoiners"
+deliverable = "~mister-dister-dozzod-dozzod/bitcoin"
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0152&prefill_Grant+Name=Lightning%20Wallet%20User%20Interface"
 +++
 
