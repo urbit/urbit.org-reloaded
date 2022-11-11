@@ -16,6 +16,8 @@ champion = ["~norsyr-torryn"]
 grant_id = "P0099"
 completed = false
 canceled = false
+link = "~poster-hoster-midlev-mindyr/astrolabe"
+deliverable = "~midlev-mindyr/astrolabe"
 link = ""
 
 +++
