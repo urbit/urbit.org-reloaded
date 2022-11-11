@@ -16,7 +16,8 @@ champion = ["~sarlev-sarsen"]
 grant_id = "P0174"
 completed = false
 canceled = false
-link = ""
+link = "~magped-magped-rabsef-bicrym/peat"
+deliverable = "~magped-magped-rabsef-bicrym/peat"
 
 +++
 
