@@ -16,7 +16,8 @@ champion = ["~fabnev-hinmur"]
 grant_id = "P0186"
 completed = true
 canceled = false
-link = ""
+link = "~hoster-dozzod-sortug"
+deliverable = "~sortug/gate"
 
 +++
 
