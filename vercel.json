@@ -98,6 +98,11 @@
       "permanent": true
     },
     {
+      "source": "/install/linux-aarch64/latest",
+      "destination": "https://github.com/urbit/urbit/releases/latest/download/linux-aarch64.tgz",
+      "permanent": true
+    },
+    {
       "source": "/install/windows/latest",
       "destination": "http://github.com/urbit/urbit/releases/latest/download/windows.tgz",
       "permanent": true
