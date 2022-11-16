@@ -111,7 +111,7 @@ const ApplicationPage = ({ data, markdown, organisation, matchedGrants, search, 
             markdown={markdown}
           />
           <hr className="text-wall-200" />
-          {matchedGrants && <div className="basis-full flex flex-col space-y-2">
+          {matchedGrants.length > 0 && <div className="basis-full flex flex-col space-y-2">
             <p className="font-semibold text-wall-400">Related Grants</p>
             {matchedGrants.map((grant) => {
               return <GrantPreview grant={grant} />
@@ -181,7 +181,7 @@ export const getServerSideProps = async ({ params, res }) => {
       ? JSON.stringify(Markdown.parse({ post: { content } }))
       : null;
 
-  const matchedGrants = getGrantsByShortcode(params.application) || null;
+  const matchedGrants = getGrantsByShortcode(params.application);
 
   if (!data.title) {
     data = {
