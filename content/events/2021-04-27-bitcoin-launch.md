@@ -24,4 +24,4 @@ We’d like to take a moment to show it off, and discuss the future of commerce 
 
 The event will have a live stream on Youtube, and a live-chat on Urbit, links to come.
 
-Join the Bitcoin dev conversation in the Urbitcoiners group: [~pindet-timmut/urbitcoin-cash](web+urbitgraph://group/~pindet-timmut/urbitcoin-cash)
+Join the Bitcoin dev conversation in the Urbitcoiners group: [~pindet-timmut/urbitcoin-cash](web+urbitgraph://group/~pindet-timmut/urbitcoiners)
