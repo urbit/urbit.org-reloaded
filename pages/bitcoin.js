@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Meta from "../components/Meta";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import PostPreview from "../components/PostPreview"
 import { join } from 'path';
 import EventPreview from "../components/EventPreview";
@@ -68,6 +69,7 @@ export default function Bitcoin({ search, posts, data, markdown, events }) {
                     <TableOfContents markdown={false} />
                 </Section>
             </SingleColumn>
+            <Footer />
         </Container>
     )
 }
