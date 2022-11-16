@@ -2,6 +2,7 @@
 title = "Interplanetary Commerce"
 date = "2021-04-08"
 description = "OS-level commercial primitives."
+tags = ["bitcoin"]
 
 [extra]
 author = "Christian Langalis"

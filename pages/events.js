@@ -15,11 +15,15 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import EventPreview from "../components/EventPreview";
 import { getAllEvents, pair } from "../lib/lib";
+import { useRouter } from "next/router";
 
 import { eventKeys } from "../lib/constants";
 
 export default function Events({ events, search }) {
   const [selected, setSelected] = useState("All");
+  const router = useRouter();
+  const { tag } = router.query;
+
   const post = {
     title: "Events",
     description: "In-person, remote, and recorded events about Urbit.",
@@ -27,6 +31,13 @@ export default function Events({ events, search }) {
 
   const now = DateTime.now();
 
+  const tagFilter = (event) => {
+    if (tag) {
+      return event?.tags?.includes(tag)
+    } else {
+      return true;
+    }
+  }
   const selectionFilter = (event) => {
     if (selected === "All") {
       return true;
@@ -38,7 +49,7 @@ export default function Events({ events, search }) {
   };
 
   const pastEvents = pair(
-    events.filter(selectionFilter).filter((event) => {
+    events.filter(selectionFilter).filter(tagFilter).filter((event) => {
       const ends = generateRealtimeDate(event.ends);
       return ends < now;
     })
@@ -47,6 +58,7 @@ export default function Events({ events, search }) {
   const futureEvents = pair(
     events
       .filter(selectionFilter)
+      .filter(tagFilter)
       .filter((event) => {
         const starts = generateRealtimeDate(event.starts);
         return starts > now;
@@ -64,7 +76,7 @@ export default function Events({ events, search }) {
   );
 
   const happeningNow = pair(
-    events.filter(selectionFilter).filter((event) => {
+    events.filter(selectionFilter).filter(tagFilter).filter((event) => {
       const starts = generateRealtimeDate(event.starts);
       const ends = generateRealtimeDate(event.ends);
       return starts < DateTime.now() && ends > now;
@@ -96,7 +108,9 @@ export default function Events({ events, search }) {
         <Header search={search} />
         <Section>
           <div className="measure">
-            <h1 className="pb-16">Events</h1>
+            {tag
+              ? <h1 className="pb-16">{events.filter(tagFilter).length} events tagged "{tag}"</h1>
+              : <h1 className="pb-16">Events</h1>}
             <div className="flex space-x-2">
               <SelectedButton selection="All" text="All Events" />
               <SelectedButton selection="In-person" text="In-person" />

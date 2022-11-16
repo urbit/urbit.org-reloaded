@@ -31,7 +31,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const posts = getPostSlugs("/");
+  const posts = getPostSlugs("/").filter((e) => e !== 'bitcoin.md');
 
   const slugs = posts.map((e) => e.slice(0, -3));
 

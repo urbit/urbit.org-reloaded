@@ -9,6 +9,7 @@ description = "Bitcoin is coming to Urbit! With the upcoming release of the Bitc
 timezone = "America/Los_Angeles"
 starts = "2021-04-27T20:00:00.000-07:00"
 dark = true
+tags = ["bitcoin"]
 
 [[hosts]]
 name = "Urbit Foundation"

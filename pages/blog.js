@@ -14,8 +14,14 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import BackgroundImage from "../components/BackgroundImage";
 import { contact } from "../lib/constants";
+import { useRouter } from "next/router";
 
 export default function Blog({ posts, search }) {
+  const router = useRouter();
+  const { tag } = router.query;
+
+  const filteredPosts = tag ? posts.filter((e) => e?.tags?.includes(tag)) : posts;
+
   const post = {
     title: "Blog",
     description:
@@ -31,20 +37,27 @@ export default function Blog({ posts, search }) {
       <SingleColumn>
         <Header search={search} />
         <Section>
-          <h1 className="pb-16">Blog</h1>
-          <div className="md:columns-2 gap-x-8">
-            <p className="pb-6 md:pb-0">
-              Stories from the broader Urbit community, the Urbit Foundation,
-              and the many people contributing to Urbit.
-            </p>
-            <p>
-              <a href={contact.newsletter}>Subscribe</a> to the Urbit Newsletter
-              for regular updates, including new blog posts and events.
-            </p>
-          </div>
+          {tag ?
+            <><h1 className="pb-16">{filteredPosts.length} posts tagged "{tag}"</h1>
+              <p>
+                For more posts, return to the <Link href="/blog">blog index</Link>.
+              </p>
+            </>
+            : <><h1 className="pb-16">Blog</h1>
+              <div className="md:columns-2 gap-x-8">
+                <p className="pb-6 md:pb-0">
+                  Stories from the broader Urbit community, the Urbit Foundation,
+                  and the many people contributing to Urbit.
+                </p>
+                <p>
+                  <a href={contact.newsletter}>Subscribe</a> to the Urbit Newsletter
+                  for regular updates, including new blog posts and events.
+                </p>
+              </div>
+            </>}
         </Section>
         <Section>
-          {posts.map((post) => {
+          {filteredPosts.map((post) => {
             const date = generateDisplayDate(post.date);
             return (
               <div key={post.slug} className="mb-20 cursor-pointer">
@@ -107,7 +120,7 @@ export default function Blog({ posts, search }) {
 
 export async function getStaticProps() {
   const posts = getAllPosts(
-    ["title", "slug", "date", "description", "extra"],
+    ["title", "slug", "date", "description", "tags", "extra"],
     "blog",
     "date"
   );
