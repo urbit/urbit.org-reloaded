@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { configure, GlobalHotKeys } from "react-hotkeys";
 import { init } from "@socialgouv/matomo-next";
-import Search from "../components/Search";
+import { Search } from "@urbit/foundation-design-system";
 import "@urbit/foundation-design-system/styles/globals.css";
 import "@urbit/foundation-design-system/styles/markdown.css";
 import "@urbit/foundation-design-system/styles/prism.css";
@@ -54,7 +54,7 @@ function MyApp({ Component, pageProps }) {
   configure({
     // ignoreTags: [],
     ignoreTags: ["input", "select", "textarea"],
-    ignoreEventsCondition: function () {},
+    ignoreEventsCondition: function () { },
   });
 
   return (
@@ -65,6 +65,7 @@ function MyApp({ Component, pageProps }) {
         toggleSearch={toggleSearch}
         closeSearch={closeSearch}
         openSearch={openSearch}
+        order={["org", "dev", "ops", "roadmap"]}
       />
       <Component
         {...pageProps}

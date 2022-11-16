@@ -1,5 +1,4 @@
-import Sigil from "../Sigil";
-
+import { Sigil } from "@urbit/foundation-design-system";
 const GatewayImage = ({
   error = false,
   patp = false,
