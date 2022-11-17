@@ -7,7 +7,7 @@ image = ""
 bgColor = "rgb(54, 39, 17)"
 developer = "~niblyx-malnus"
 website = ""
-description = "Spreadsheets and databases"
+description = "Hierarchically nested goals and projects"
 +++
 
 ### Goals helps you track and share interrelated tasks
