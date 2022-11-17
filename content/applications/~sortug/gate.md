@@ -6,7 +6,7 @@ image = "https://s3.sortug.com/img/fav.png"
 bgColor = "#000000"
 developer = "Sortug Development"
 website = "https://sortug.com"
-description = "Urbit Native Microblog"
+description = "Seamless QR login"
 +++
 
 # Secure, seamless login for Urbit
