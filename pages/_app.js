@@ -66,6 +66,7 @@ function MyApp({ Component, pageProps }) {
         closeSearch={closeSearch}
         openSearch={openSearch}
         order={["org", "dev", "ops", "roadmap"]}
+        ourSite="https://urbit.org"
       />
       <Component
         {...pageProps}
