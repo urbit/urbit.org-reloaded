@@ -13,7 +13,6 @@ reward = "7 stars"
 assignee = ["~dasrun-fadben"]
 completed = true
 canceled = false
-link = ""
 link = "~pindet-timmut/urbitcoiners"
 deliverable = "~mister-dister-dozzod-dozzod/bitcoin"
 +++

@@ -14,7 +14,6 @@ assignee = ["yosoyubik"]
 id = "273059635"
 completed = false
 canceled = true
-link = ""
 link = "~pindet-timmut/urbitcoiners"
 deliverable = "~mister-dister-dozzod-dozzod/bitcoin"
 +++
