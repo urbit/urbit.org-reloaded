@@ -18,7 +18,6 @@ completed = false
 canceled = false
 link = "~poster-hoster-midlev-mindyr/astrolabe"
 deliverable = "~midlev-mindyr/astrolabe"
-link = ""
 
 +++
 
