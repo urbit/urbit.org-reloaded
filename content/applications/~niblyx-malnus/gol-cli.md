@@ -1,4 +1,3 @@
-
 +++
 title = "Goals"
 shortcode = "~dister-dozzod-niblyx-malnus/gol-cli"
