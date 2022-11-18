@@ -181,7 +181,9 @@ export const getServerSideProps = async ({ params, res }) => {
       ? JSON.stringify(Markdown.parse({ post: { content } }))
       : null;
 
-  const matchedGrants = getGrantsByShortcode(params.application) || null;
+  const matchedGrants = getGrantsByShortcode(params.application)
+    .filter((e) => !e.extra.canceled)
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
 
   if (!data.title) {
     data = {
