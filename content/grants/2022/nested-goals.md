@@ -13,7 +13,8 @@ assignee = ["~niblyx-malnus"]
 grant_id = "P0143"
 completed = false
 canceled = false
-link = ""
+link = "~dister-dozzod-niblyx-malnus/proposal-nested-goals"
+deliverable = "~niblyx-malnus/gol-cli"
 +++
 
 # Project Description

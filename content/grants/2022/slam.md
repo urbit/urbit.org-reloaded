@@ -12,7 +12,8 @@ assignee = ["~hanfel-dovned"]
 champion = ["~rabsef-bicrym"]
 grant_id = "P0101"
 completed = true
-link = ""
+link = "~hanfel-dovned/arcadia"
+deliverable = "~hanfel-dovned/slam"
 +++
 
 ## Overview

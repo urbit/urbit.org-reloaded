@@ -13,6 +13,8 @@ reward = "3 stars"
 mentor = ["~timluc-miptev"]
 assignee = ["~finned-palmer"]
 completed = true
+link = "~pindet-timmut/urbitcoiners"
+deliverable = "~mister-dister-dozzod-dozzod/bitcoin"
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0032&prefill_Grant+Name=Bitcoin%20Wallet%20Maintenance"
 +++
 

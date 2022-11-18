@@ -13,7 +13,8 @@ reward = "2 stars"
 assignee = ["pkova"]
 id = "794126751"
 completed = true
-link = ""
+link = "~pindet-timmut/urbitcoiners"
+deliverable = "~mister-dister-dozzod-dozzod/bitcoin"
 +++
 
 ## Overview
