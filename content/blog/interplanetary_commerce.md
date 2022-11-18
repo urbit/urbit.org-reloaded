@@ -2,6 +2,7 @@
 title = "Interplanetary Commerce"
 date = "2021-04-08"
 description = "OS-level commercial primitives."
+tags = ["bitcoin"]
 
 [extra]
 author = "Christian Langalis"
@@ -33,4 +34,4 @@ The Urbit Foundation is soliciting contributors to this project through Urbit Gr
 
 ## An Ocean
 
-After honing our commercial tools on these use-cases, we’ll sail into a blue ocean. On the horizon: beautiful products, deployable at scale, built with the robust primitives of Urbit OS. Extensibility is Urbit’s promise to middle-men: every Web2.0 service they use to scalp us will find its P2P analog on Urbit. We invite developers and entrepreneurs of all stripes to join in the feeding frenzy. Ideas are constantly nucleating in [Urbitcoiners](web+urbitgraph://group/~pindet-timmut/urbitcoin-cash) and [Urbit Community](web+urbitgraph://group/~bitbet-bolbel/urbit-community/graph/~darrux-landes/business-building-on-urbit).
+After honing our commercial tools on these use-cases, we’ll sail into a blue ocean. On the horizon: beautiful products, deployable at scale, built with the robust primitives of Urbit OS. Extensibility is Urbit’s promise to middle-men: every Web2.0 service they use to scalp us will find its P2P analog on Urbit. We invite developers and entrepreneurs of all stripes to join in the feeding frenzy. Ideas are constantly nucleating in [Urbitcoiners](web+urbitgraph://group/~pindet-timmut/urbitcoiners) and [Urbit Community](web+urbitgraph://group/~bitbet-bolbel/urbit-community/graph/~darrux-landes/business-building-on-urbit).

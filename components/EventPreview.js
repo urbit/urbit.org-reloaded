@@ -41,11 +41,10 @@ export default function EventPreview({ event, className, big }) {
             )}
           >
             <div
-              className={`grow-1 flex ${
-                big ? "justify-center" : ""
-              } flex-col h-full`}
+              className={`grow-1 flex ${big ? "justify-center" : ""
+                } flex-col h-full`}
             >
-              <h3 className={`${blackText} mb-2`}>{event.title}</h3>
+              <h3 className={`${blackText} mb-2`} id={event.title}>{event.title}</h3>
               <p className={blackText + " truncate text-sm"}>
                 {event.description}
               </p>

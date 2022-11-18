@@ -50,6 +50,24 @@ curl -L https://urbit.org/install/linux64/latest | tar xzk --strip=1 && ./urbit
 
 {% /tab %}
 
+{% tab label="Linux ARM64" %}
+
+Note this is for the AArch64 architecture.
+
+```shell
+curl -L https://urbit.org/install/linux-aarch64/latest | tar xzk --strip=1 && ./urbit
+```
+
+> Linux users may need to run this command in another terminal window to access
+> your urbit on port 80:
+>
+> ```shell
+> sudo apt-get install libcap2-bin
+> sudo setcap 'cap_net_bind_service=+ep' ./urbit
+> ```
+
+{% /tab %}
+
 {% tab label="Windows" %}
 
 ```winbatch

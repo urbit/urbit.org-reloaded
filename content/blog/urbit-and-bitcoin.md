@@ -2,7 +2,7 @@
 title = "Urbit and Bitcoin"
 description = "A sound money deserves a sound computer."
 date = "2019-10-16"
-
+tags = ["bitcoin"]
 [extra]
 author = "Christian Langalis"
 ship = "~pindet-timmut"

@@ -9,6 +9,7 @@ description = "Bitcoin is coming to Urbit! With the upcoming release of the Bitc
 timezone = "America/Los_Angeles"
 starts = "2021-04-27T20:00:00.000-07:00"
 dark = true
+tags = ["bitcoin"]
 
 [[hosts]]
 name = "Urbit Foundation"
@@ -23,4 +24,4 @@ We’d like to take a moment to show it off, and discuss the future of commerce 
 
 The event will have a live stream on Youtube, and a live-chat on Urbit, links to come.
 
-Join the Bitcoin dev conversation in the Urbitcoiners group: [~pindet-timmut/urbitcoin-cash](web+urbitgraph://group/~pindet-timmut/urbitcoin-cash)
+Join the Bitcoin dev conversation in the Urbitcoiners group: [~pindet-timmut/urbitcoin-cash](web+urbitgraph://group/~pindet-timmut/urbitcoiners)
