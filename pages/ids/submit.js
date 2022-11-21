@@ -3,10 +3,10 @@ import {
   Container,
   SingleColumn,
   Section,
+  Sigil
 } from "@urbit/foundation-design-system";
 import { useInputChange } from "../../lib/hooks";
 import ob from "urbit-ob";
-import Sigil from "../../components/Sigil";
 import Head from "next/head";
 import Meta from "../../components/Meta";
 
