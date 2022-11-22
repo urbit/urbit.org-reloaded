@@ -49,7 +49,7 @@ export default function Home({
         <Section className="pb-36">
           <div className="space-y-8">
             <h1>A clean-slate OS and network for the 21st&nbsp;century.</h1>
-            <Link href="/trial" passHref><a className="bg-green-400 text-white button-lg max-w-fit">Explore the Network</a></Link>
+            <Link href="/trial" passHref><a className="bg-green-400 text-white button-lg max-w-fit">Try Urbit Now</a></Link>
           </div>
         </Section>
         {
