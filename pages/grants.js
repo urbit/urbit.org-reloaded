@@ -240,19 +240,7 @@ export default function Grants({ posts, categories, types, search }) {
             <div className="md:basis-1/2">
               <p className="mb-8">
                 Whether you're gearing up to submit your proposal or just
-                thinking about it, the best way to get started is to join the
-                Foundation group on Urbit:
-              </p>
-
-              <JoinGroup
-                emphasize
-                className="mb-8"
-                groupName="~wolref-podlex/foundation"
-              />
-
-              <p>
-                If you're not on the network, check out our{" "}
-                <Link href="/getting-started">Getting Started</Link> guide.
+                thinking about it, the best way to get started is to join the <Link href="/groups/~halbex-palheb/uf-public">Urbit Foundation</Link> group.
               </p>
             </div>
           </div>
