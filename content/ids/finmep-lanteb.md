@@ -5,13 +5,22 @@ bgColor = "#0dd33f"
 image = ""
 +++
 
-The infamous hacker known as Urbit
+**THE INFAMOUS HACKER KNOWN AS URBIT**
 
-Urbit FAQ:
+General Manager of the Urbit hockey team
+
+Urbit Chess Ecosystem:  
+https://github.com/thecommons-urbit/chess
+
+Hoon Language Plugin for IntelliJ IDEA:  
+https://plugins.jetbrains.com/plugin/19294-hoon-language
+
+Urbit FAQ:  
 https://github.com/ashelkovnykov/urbit-faq
 
-Urbit Hosting:
+Urbit Hosting:  
 https://github.com/ashelkovnykov/urbit-hosting
 
-Urbit Wordlists:
-https://github.com/ashelkovnykov/urbit-wordlists
+Urbit Wordlists (used by Gonetia):  
+https://github.com/ashelkovnykov/urbit-wordlists  
+https://github.com/tomholford/gonetia
