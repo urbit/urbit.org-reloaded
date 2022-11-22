@@ -3,7 +3,7 @@ title = "Bitcoin"
 shortcode = "~mister-dister-dozzod-dozzod"
 license = "MIT"
 image = "https://urbit.ewr1.vultrobjects.com/hastuc-dibtux/2021.8.24..02.57.38-bitcoin.svg"
-bgColor = ""
+bgColor = "#EB9452"
 developer = "~zod"
 website = "https://tlon.io"
 +++
