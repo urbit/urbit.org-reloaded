@@ -1,5 +1,5 @@
 +++
-title = "uniswap"
+title = "Uniswap"
 shortcode = "~maptyl-lapsyl/uniswap"
 license = "MIT"
 image = "https://cryptologos.cc/logos/uniswap-uni-logo.svg"
