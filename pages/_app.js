@@ -5,6 +5,7 @@ import { Search } from "@urbit/foundation-design-system";
 import "@urbit/foundation-design-system/styles/globals.css";
 import "@urbit/foundation-design-system/styles/markdown.css";
 import "@urbit/foundation-design-system/styles/prism.css";
+import Head from "next/head";
 
 const MATOMO_URL = process?.env?.NEXT_PUBLIC_MATOMO_URL || "";
 const MATOMO_SITE_ID = process?.env?.NEXT_PUBLIC_MATOMO_SITE_ID || "";
@@ -59,6 +60,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+
       <GlobalHotKeys keyMap={keyMap} handlers={handlers} />
       <Search
         showSearch={showSearch}
