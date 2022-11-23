@@ -2,7 +2,7 @@
 title = "uniswap"
 shortcode = "~maptyl-lapsyl/uniswap"
 license = "MIT"
-image = "'https://cryptologos.cc/logos/uniswap-uni-logo.svg"
+image = "https://cryptologos.cc/logos/uniswap-uni-logo.svg"
 bgColor = "0xffffff"
 developer = "~maptyl-lapsyl"
 website = "http://uniswap.org"
