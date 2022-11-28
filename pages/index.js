@@ -38,7 +38,7 @@ export default function Home({
     <Container>
       <Head>
         <title>Urbit</title>
-        {Meta(post)}
+        {Meta(post, false, true)}
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
@@ -60,18 +60,18 @@ export default function Home({
           <div className="bg-wall-100 w-full p-4 md:p-8 rounded-3xl flex flex-wrap items-center">
 
             <div className="basis-full sm:basis-1/3 pb-4 sm:pb-0">
-              <img className="rounded-xl w-72" src="https://storage.googleapis.com/media.urbit.org/assembly/assembly-thumb2.jpg"/>
+              <img className="rounded-xl w-72" src="https://storage.googleapis.com/media.urbit.org/assembly/assembly-thumb2.jpg" />
             </div>
             <div className="sm:basis-2/3 sm:pl-6 align-middle">
               <h2 className="text-2xl pb-2">Assembly 2022</h2 >
-                <p className="max-w-prose pb-4">
-                  Select talks and panels are being released from the second annual Urbit confluence in Miami.
-                </p>
-                <Link href="https://assembly.urbit.org" passHref>
-                  <a className="button-sm border-2 border-wall-600 text-wall-600 type-sm max-w-fit">
-                    Watch Now
-                  </a>
-                </Link>
+              <p className="max-w-prose pb-4">
+                Select talks and panels are being released from the second annual Urbit confluence in Miami.
+              </p>
+              <Link href="https://assembly.urbit.org" passHref>
+                <a className="button-sm border-2 border-wall-600 text-wall-600 type-sm max-w-fit">
+                  Watch Now
+                </a>
+              </Link>
             </div>
           </div>
         </Section>
