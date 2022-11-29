@@ -166,7 +166,7 @@ function LaunchCards() {
           />
         </svg>
       ),
-      href: "https://operators.urbit.org/manual/running/hosting",
+      href: "/getting-started/hosted",
     },
     {
       title: "Command line app",
