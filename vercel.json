@@ -83,6 +83,11 @@
       "permanent": true
     },
     {
+      "source": "/using/install",
+      "destination": "/getting-started/cli",
+      "permanent": true
+    },
+    {
       "source": "/using/:path*",
       "destination": "https://operators.urbit.org/manual/:path",
       "permanent": true

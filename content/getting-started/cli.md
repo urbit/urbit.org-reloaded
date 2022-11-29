@@ -12,7 +12,27 @@ Note there is a much more comprehensive [cloud hosting
 guide](https://operators.urbit.org/manual/running/hosting) which walks through
 setting up Urbit on a [Digital Ocean](https://www.digitalocean.com/) VPS.
 
-### 1. Install Urbit
+### 1. System Requirements
+
+- **Processor**: 1 core
+- **Memory**: 2GB
+- **Storage**: At least a few GB, 40-50GB preferable
+- **Network**: Any
+
+**A note on memory**: By default, the Urbit runtime needs 2GB of free memory,
+and will fail to boot without it. Urbit usually only uses a portion of this, so
+it's possible to use a swap file to makeup for a shortfall without degrading
+performance. For instructions on how to configure a swap file on Linux, see
+[this linuxize.com guide](https://linuxize.com/post/create-a-linux-swap-file/).
+
+**A note on storage**: Urbit saves every event it processes to its [Event
+Log](https://developers.urbit.org/reference/glossary/eventlog). This means its
+disk usage slowly grows over time. Until event log truncation is implemented,
+it's advisable to have 40 or 50GB of disk space available, so you don't have to
+worry about running out for a long time. If you don't have that much, your ship
+will still run fine, but you may run out of space some months down the line.
+
+### 2. Install Urbit
 
 Choose your operating system and run the given command in your terminal to
 download the Urbit runtime:
@@ -91,7 +111,7 @@ If successful, you will see a block of output beginning with the line:
 Urbit: a personal server operating function
 ```
 
-### 2. Boot Urbit
+### 3. Boot Urbit
 
 An Urbit instance is intrinsically tied to a unique identity called an **Urbit
 ID**. There are five classes of Urbit ID, but we will consider two here: comets
@@ -225,7 +245,7 @@ delete that keyfile.
 
 {% /tabs %}
 
-### 3. Login
+### 4. Login
 
 While your urbit is running, the web interface called *Landscape* can be
 accessed in the browser. Its URL will usually be either `localhost` or
