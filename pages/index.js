@@ -359,6 +359,26 @@ export async function getStaticProps() {
       return nameA < nameB ? -1 : 1;
     });
 
+  const groups = fs
+    .readdirSync(path.join(process.cwd(), "content/groups"), {
+      withFileTypes: true,
+    })
+    .filter((f) => f.isDirectory())
+    .map((dir) =>
+      getAllPosts(
+        ["title", "tile", "slug", "description"],
+        `groups/${dir.name}`
+      )
+        .map((e) => ({ ...e, ship: dir.name }))
+        .flat()
+    )
+    .flat()
+    .sort((a, b) => {
+      const nameA = a.title.toLowerCase();
+      const nameB = b.title.toLowerCase();
+      return nameA < nameB ? -1 : 1;
+    });
+
   ["featured-1", "featured-2", "featured-3"].forEach((feat) => {
     if (ecosystem?.[feat]) {
       const matchedPost = [
@@ -367,6 +387,7 @@ export async function getStaticProps() {
         ...organizations.map((e) => ({ ...e, type: "Organization" })),
         ...podcasts.map((e) => ({ ...e, type: "Podcast" })),
         ...marketplaces.map((e) => ({ ...e, type: "Marketplace" })),
+        ...groups.map((e) => ({ ...e, type: "Group" }))
       ].filter((e) => e.title === ecosystem[feat].title)?.[0];
       ecosystem[feat].image =
         ecosystem[feat].image || matchedPost?.image || null;

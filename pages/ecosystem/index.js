@@ -46,7 +46,7 @@ export default function Ecosystem({
       case "applications":
         title = "Applications • Ecosystem";
         break;
-      case "applications":
+      case "groups":
         title = "Groups • Ecosystem";
         break;
       case "marketplaces":
@@ -234,8 +234,6 @@ export default function Ecosystem({
                       </div>
                     </Link>
                   ))}
-
-
               </div>
             </div>
           </div>
@@ -382,7 +380,7 @@ function SpotlightArchive({ posts, search }) {
   );
 }
 
-export async function getStaticProps({}) {
+export async function getStaticProps({ }) {
   const posts = getAllPosts(
     ["title", "date", "slug", "featured-1", "featured-2", "featured-3"],
     "ecosystem/spotlight",
@@ -455,6 +453,7 @@ export async function getStaticProps({}) {
         ...podcasts.map((e) => ({ ...e, type: "Podcast" })),
         ...articles.map((e) => ({ ...e, type: "Article" })),
         ...marketplaces.map((e) => ({ ...e, type: "Marketplace" })),
+        ...groups.map((e) => ({ ...e, type: "Group" })),
       ].filter((e) => e.title === post[feat].title)?.[0];
       post[feat].image = post[feat]?.image || matchedPost?.image || null;
       post[feat].type = matchedPost?.type || "Podcast";
