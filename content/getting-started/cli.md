@@ -12,7 +12,7 @@ Note there is a much more comprehensive [cloud hosting
 guide](https://operators.urbit.org/manual/running/hosting) which walks through
 setting up Urbit on a [Digital Ocean](https://www.digitalocean.com/) VPS.
 
-### 1. System Requirements
+### 1. System Requirements {% #about-swap-space %}
 
 - **Processor**: 1 core
 - **Memory**: 2GB
