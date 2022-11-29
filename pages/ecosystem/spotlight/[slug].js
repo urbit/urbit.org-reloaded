@@ -50,6 +50,7 @@ export async function getStaticProps({ params }) {
     "ecosystem/spotlight"
   );
   const marketplaces = getAllPosts(["title", "image", "slug"], "marketplaces");
+  const groups = getAllPosts(["title", "tile,", "description", "slug"], "groups");
   const podcasts = getAllPosts(
     ["title", "image", "date", "podcast", "slug"],
     "podcasts",
@@ -89,6 +90,7 @@ export async function getStaticProps({ params }) {
       const matchedPost = [
         ...applications.map((e) => ({ ...e, type: "Application" })),
         ...organizations.map((e) => ({ ...e, type: "Organization" })),
+        ...groups.map((e) => ({ ...e, type: "Group" })),
         ...podcasts.map((e) => ({ ...e, type: "Podcast" })),
         ...marketplaces.map((e) => ({ ...e, type: "Marketplace" })),
         ...articles.map((e) => ({ ...e, type: "Article" })),

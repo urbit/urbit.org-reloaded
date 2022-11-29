@@ -80,6 +80,15 @@ export default function Post({ post }) {
             </a>
           </Link>
         )}
+
+        {post[feat].type === "Group" && (
+          <Link href={href || "#"} passHref>
+            <a class="button-sm text-white flex-col bg-green-400 cursor-pointer pr-4 w-fit">
+              More about {post[feat].title}
+            </a>
+          </Link>
+        )}
+
       </div>
     ) : null;
   });
@@ -96,6 +105,7 @@ const badge = (type) => {
           "bg-wall-600": type === "Podcast",
           "bg-[#8dd5b1]": type === "Marketplace",
           "bg-[#B5966D]": type === "Article",
+          "bg-[#219DFF]": type === "Group",
         }
       )}
     >

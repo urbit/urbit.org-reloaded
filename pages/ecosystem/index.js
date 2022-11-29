@@ -46,6 +46,9 @@ export default function Ecosystem({
       case "applications":
         title = "Applications • Ecosystem";
         break;
+      case "applications":
+        title = "Groups • Ecosystem";
+        break;
       case "marketplaces":
         title = "Marketplaces • Ecosystem";
         break;
@@ -296,7 +299,7 @@ function EcosystemSidebar() {
       <ActiveLink
         currentPath={currentPath}
         className="type-ui"
-        href="/ecosystem?type=marketplaces"
+        href="/ecosystem?type=groups"
       >
         Marketplaces
       </ActiveLink>
