@@ -1,5 +1,5 @@
 import Link from "next/link";
-import classnames from "classnames";
+import EcosystemBadge from "./Badge";
 export default function IndexCard({ slug, feat }) {
   return (
     <Link href={slug}>
@@ -24,7 +24,7 @@ export default function IndexCard({ slug, feat }) {
           )}
           <div className="pt-4">
             <p className="mb-2 font-semibold leading-5">{feat.title}</p>
-            {badge(feat.type)}
+            <EcosystemBadge type={feat.type} />
             <p className="text-sm leading-5">{feat?.description}</p>
           </div>
         </div>
@@ -32,23 +32,3 @@ export default function IndexCard({ slug, feat }) {
     </Link>
   );
 }
-
-const badge = (type) => {
-  return (
-    <div
-      className={classnames(
-        "uppercase font-bold text-white text-xs w-fit rounded-lg mb-5 px-2 py-1",
-        {
-          "bg-[#B37ED7]": type === "Organization",
-          "bg-[#83b2d4]": type === "Application",
-          "bg-[#219DFF]": type === "Group",
-          "bg-wall-600": type === "Podcast",
-          "bg-[#8dd5b1]": type === "Marketplace",
-          "bg-[#B5966D]": type === "Article",
-        }
-      )}
-    >
-      {type}
-    </div>
-  );
-};
