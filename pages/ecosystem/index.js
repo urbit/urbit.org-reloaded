@@ -53,7 +53,7 @@ export default function Ecosystem({
       case "applications":
         title = "Applications • Ecosystem";
         break;
-      case "groups":
+      case "applications":
         title = "Groups • Ecosystem";
         break;
       case "marketplaces":
