@@ -12,9 +12,8 @@ Join the new and improved Urbit Foundation group to get updates from the Urbit F
 """
 
 [featured-2]
-title = "Groups 2.0 (Beta)"
+title = "Groups (Beta)"
 description = "The new Groups application from Tlon is officially now in beta."
-image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/articles/3things40.jpg"
 content = """
 
 Test drive the future of Urbit now with Tlon's official beta of Groups.  This beta features a 
