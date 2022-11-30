@@ -22,6 +22,7 @@ import IndexCard from "../components/ecosystem/IndexCard";
 import fs from "fs";
 import path from "path";
 import Meta from "../components/Meta";
+import { matchEcosystemPost } from "../lib/lib";
 
 export default function Home({
   posts,
@@ -316,85 +317,12 @@ export async function getStaticProps() {
     "date"
   );
 
-  // Pull all latest ecosystem information
-  const ecosystem = getAllPosts(
+  // Latest ecosystem report with matched post metadata
+  const ecosystem = matchEcosystemPost(getAllPosts(
     ["date", "featured-1", "featured-2", "featured-3"],
     "ecosystem/spotlight",
     "date"
-  )[0];
-
-  const articles = getAllPosts(
-    ["title", "image", "date", "podcast", "slug"],
-    "articles",
-    "date"
-  );
-
-  const marketplaces = getAllPosts(["title", "image", "slug"], "marketplaces");
-  const podcasts = getAllPosts(
-    ["title", "image", "date", "podcast", "slug"],
-    "podcasts",
-    "date"
-  );
-  const organizations = getAllPosts(
-    ["title", "image", "slug"],
-    "organizations"
-  );
-  const applications = fs
-    .readdirSync(path.join(process.cwd(), "content/applications"), {
-      withFileTypes: true,
-    })
-    .filter((f) => f.isDirectory())
-    .map((dir) =>
-      getAllPosts(
-        ["title", "bgColor", "image", "slug", "description"],
-        `applications/${dir.name}`
-      )
-        .map((e) => ({ ...e, ship: dir.name }))
-        .flat()
-    )
-    .flat()
-    .sort((a, b) => {
-      const nameA = a.title.toLowerCase();
-      const nameB = b.title.toLowerCase();
-      return nameA < nameB ? -1 : 1;
-    });
-
-  const groups = fs
-    .readdirSync(path.join(process.cwd(), "content/groups"), {
-      withFileTypes: true,
-    })
-    .filter((f) => f.isDirectory())
-    .map((dir) =>
-      getAllPosts(
-        ["title", "tile", "slug", "description"],
-        `groups/${dir.name}`
-      )
-        .map((e) => ({ ...e, ship: dir.name }))
-        .flat()
-    )
-    .flat()
-    .sort((a, b) => {
-      const nameA = a.title.toLowerCase();
-      const nameB = b.title.toLowerCase();
-      return nameA < nameB ? -1 : 1;
-    });
-
-  ["featured-1", "featured-2", "featured-3"].forEach((feat) => {
-    if (ecosystem?.[feat]) {
-      const matchedPost = [
-        ...articles.map((e) => ({ ...e, type: "Article" })),
-        ...applications.map((e) => ({ ...e, type: "Application" })),
-        ...organizations.map((e) => ({ ...e, type: "Organization" })),
-        ...podcasts.map((e) => ({ ...e, type: "Podcast" })),
-        ...marketplaces.map((e) => ({ ...e, type: "Marketplace" })),
-        ...groups.map((e) => ({ ...e, type: "Group" }))
-      ].filter((e) => e.title === ecosystem[feat].title)?.[0];
-      ecosystem[feat].image =
-        ecosystem[feat].image || matchedPost?.image || null;
-      ecosystem[feat].type = matchedPost?.type || "Podcast";
-      ecosystem[feat].matchedPost = matchedPost || null;
-    }
-  });
+  )[0]);
 
   // Latest grants
   const basePath = path.join(process.cwd(), 'content/grants')

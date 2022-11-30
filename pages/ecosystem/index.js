@@ -20,6 +20,7 @@ import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import Contact from "../../components/Contact";
+import { matchEcosystemPost } from "../../lib/lib";
 
 export default function Ecosystem({
   search,
@@ -386,11 +387,11 @@ export async function getStaticProps({ }) {
     "ecosystem/spotlight",
     "date"
   );
-  let post = getAllPosts(
+  let post = matchEcosystemPost(getAllPosts(
     ["title", "date", "featured-1", "featured-2", "featured-3"],
     "ecosystem/spotlight",
     "date"
-  )[0];
+  )[0]);
   const marketplaces = getAllPosts(["title", "image", "slug"], "marketplaces");
   const podcasts = getAllPosts(
     ["title", "image", "date", "podcast", "slug"],
@@ -444,27 +445,6 @@ export async function getStaticProps({ }) {
       const nameB = b.title.toLowerCase();
       return nameA < nameB ? -1 : 1;
     });
-
-  ["featured-1", "featured-2", "featured-3"].forEach((feat) => {
-    if (post?.[feat]) {
-      const matchedPost = [
-        ...applications.map((e) => ({ ...e, type: "Application" })),
-        ...organizations.map((e) => ({ ...e, type: "Organization" })),
-        ...podcasts.map((e) => ({ ...e, type: "Podcast" })),
-        ...articles.map((e) => ({ ...e, type: "Article" })),
-        ...marketplaces.map((e) => ({ ...e, type: "Marketplace" })),
-        ...groups.map((e) => ({ ...e, type: "Group" })),
-      ].filter((e) => e.title === post[feat].title)?.[0];
-      post[feat].image = post[feat]?.image || matchedPost?.image || null;
-      post[feat].type = matchedPost?.type || "Podcast";
-      post[feat].matchedPost = matchedPost || null;
-      post[feat].content = JSON.stringify(
-        Markdown.parse({
-          post: { content: post[feat].content },
-        })
-      );
-    }
-  });
 
   return {
     props: {
