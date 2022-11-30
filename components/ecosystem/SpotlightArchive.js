@@ -3,7 +3,9 @@ import Header from "../Header";
 import Footer from "../Footer";
 import Meta from "../Meta";
 import Head from "next/head";
+import Link from "next/link";
 import EcosystemSidebar from "./EcosystemSidebar";
+import Sidebar from "../Sidebar";
 
 export default function SpotlightArchive({ posts, search }) {
     const post = {
