@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Link from "next/link";
 import classnames from "classnames";
 function ActiveLink({ children, href, className, currentPath }) {
     // special casing this behaviour which overloads one nav

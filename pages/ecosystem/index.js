@@ -13,6 +13,7 @@ import {
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Sidebar from "../../components/Sidebar";
+import EcosystemSidebar from "../../components/ecosystem/EcosystemSidebar";
 import SpotlightArchive from "../../components/ecosystem/SpotlightArchive";
 import Post from "../../components/ecosystem/Post";
 import classnames from "classnames";
