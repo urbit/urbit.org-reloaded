@@ -54,7 +54,7 @@ export default function EcosystemSidebar() {
             <ActiveLink
                 currentPath={currentPath}
                 className="type-ui"
-                href="/ecosystem?type=groups"
+                href="/ecosystem?type=marketplaces"
             >
                 Marketplaces
             </ActiveLink>
