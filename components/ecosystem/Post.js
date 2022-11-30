@@ -1,5 +1,6 @@
 import { Markdown } from "@urbit/foundation-design-system";
-import classnames from "classnames";
+import EcosystemBadge from "./Badge";
+
 import Link from "next/link";
 export default function Post({ post }) {
   return ["featured-1", "featured-2", "featured-3"].map((feat) => {
@@ -34,7 +35,7 @@ export default function Post({ post }) {
             <h4 className="text-xl pb-2 leading-6 font-bold">
               {post?.[feat].title}
             </h4>
-            {badge(post[feat].type)}
+            <EcosystemBadge type={post[feat].type} />
           </div>
         </div>
         <div className="markdown mt-8 mb-8">
@@ -94,22 +95,4 @@ export default function Post({ post }) {
   });
 }
 
-const badge = (type) => {
-  return (
-    <div
-      className={classnames(
-        "uppercase font-bold text-white text-xs w-fit rounded-lg mb-2 px-2 py-1",
-        {
-          "bg-[#B37ED7]": type === "Organization",
-          "bg-[#83b2d4]": type === "Application",
-          "bg-wall-600": type === "Podcast",
-          "bg-[#8dd5b1]": type === "Marketplace",
-          "bg-[#B5966D]": type === "Article",
-          "bg-[#219DFF]": type === "Group",
-        }
-      )}
-    >
-      {type}
-    </div>
-  );
-};
+
