@@ -452,6 +452,7 @@ export async function getStaticProps({}) {
       const matchedPost = [
         ...applications.map((e) => ({ ...e, type: "Application" })),
         ...organizations.map((e) => ({ ...e, type: "Organization" })),
+        ...groups.map((e) => ({ ...e, type: "Group" })),
         ...podcasts.map((e) => ({ ...e, type: "Podcast" })),
         ...articles.map((e) => ({ ...e, type: "Article" })),
         ...marketplaces.map((e) => ({ ...e, type: "Marketplace" })),
