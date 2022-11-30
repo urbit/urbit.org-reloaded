@@ -1,6 +1,6 @@
 +++
 title = "Tlon Public"
-shortcode = "~nibset-napwyn/tlon-public"
+shortcode = "~nibset-napwyn/tlon"
 description = "Updates, announcements, and broadcasts from Tlon."
 type = "Public"
 tile = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon.png"
