@@ -13,7 +13,7 @@ reward = "1 star"
 assignee = ["~togtyr-roplux"]
 champion = ["~dinleb-rambep"]
 grant_id = "B0155"
-completed = false
+completed = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0186&prefill_Grant+Name=Uniswap"
 deliverable = "~maptyl-lapsyl/uniswap"
 +++
