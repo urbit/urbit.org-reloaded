@@ -6,7 +6,7 @@ export default function Meta(post, disableImage, large = false) {
   const image =
     post?.extra?.image ||
     post?.image ||
-    "https://storage.googleapis.com/media.urbit.org/site/opengraph/urbit.png";
+    "https://storage.googleapis.com/media.urbit.org/site/opengraph/sig-white.png";
   return (
     <>
       <link rel="icon" type="image/png" href="/images/favicon.ico" />
