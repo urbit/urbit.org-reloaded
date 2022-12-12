@@ -39,7 +39,7 @@ Interested in hosting an Urbit event of your own? Follow our [guide to meetup be
 | Austin, TX        | [Meetup.com](https://www.meetup.com/Urbit-Austin/)                                               |
 | Denton, TX        | [Twitter](https://twitter.com/UrbitDFW)                                                          |
 | Seattle, WA       | [Twitter](https://twitter.com/SeattleUrbit), [Meetup.com](https://www.meetup.com/urbit-seattle/)                                              |
-| DC/NoVA/MD        | [Twitter] (<https://twitter.com/dcurbit>), [Meetup.com] (<https://www.meetup.com/dc-urbit-meetup-group/>) |
+| DC/NoVA/MD        | [Twitter](https://twitter.com/dcurbit), [Meetup.com](https://www.meetup.com/dc-urbit-meetup-group/) |
 
 ### Oceania
 
