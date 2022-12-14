@@ -8,7 +8,7 @@ grant_category = [ "App Dev" ]
 
 [extra]
 image = ""
-description = "Facilitating "A literal but delinquent reprint of the Encyclopedia Schizophrenica on Urbit"."
+description = "Facilitating 'A literal but delinquent reprint of the Encyclopedia Schizophrenica on Urbit'."
 reward = "6 stars"
 assignee = ["~rabsef-bicrym" "~sogrum-savluc"]
 grant_id = "B0211"
