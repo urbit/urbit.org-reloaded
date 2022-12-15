@@ -112,8 +112,6 @@ Get it up and running with one of these options:
 
 - Let a [hosting provider](/getting-started/hosted) do the hard work for you.
 
-- [Try Port](/getting-started/desktop), the user-friendly desktop app.
-
 - For power users, check out the [command line install
   guide](/getting-started/cli) and run your urbit from the terminal.
 
