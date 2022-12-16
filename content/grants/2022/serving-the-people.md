@@ -1,5 +1,5 @@
 +++
-title = "Engram: a collaborative knowledge managment app"
+title = "Hari + Rama (The Urbit Cyclopaedia)"
 date = "2022-03-25"
 
 [taxonomies]
