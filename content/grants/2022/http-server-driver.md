@@ -10,11 +10,11 @@ grant_category = [ "Core Dev", "Runtime" ]
 image =""
 description = "Rewrite the HTTP server driver in Rust"
 reward = "2 stars"
-mentor = "~fanfun-mocbud"
-assignee = ""
-grant_id = ""
+mentor = ["~fanfun-mocbud"]
+assignee = ["~soctun-ridsyr"]
+grant_id = "B0208"
 completed = false
-work_request_link = ""
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0208&prefill_Grant+Name=HTTP%20Server%20IO%20Driver"
 +++
 
 # HTTP Server IO Driver
