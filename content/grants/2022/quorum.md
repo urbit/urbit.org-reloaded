@@ -13,7 +13,7 @@ reward = "3 stars"
 assignee = ["~tamlut-modnys", "~litlep-nibbyt", "~sidnym-ladrut"]
 grant_id = "B0167"
 champion = ["~lagrev-nocfep"]
-completed = false
+completed = true
 +++
 
 ## Purpose
