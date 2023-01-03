@@ -26,6 +26,7 @@ Interested in hosting an Urbit event of your own? Follow our [guide to meetup be
 | Location       | Contact information                                                                             |
 | :------------- | :---------------------------------------------------------------------------------------------- |
 | Copenhagen, DK | [Twitter](https://twitter.com/UrbitCPH), [Meetup.com](https://www.meetup.com/Urbit-Copenhagen/) |
+| Berlin, DE     | [Meetup.com](https://www.meetup.com/urbit-berlin/)                                              |
 
 ### North America
 
