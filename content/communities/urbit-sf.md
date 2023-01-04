@@ -1,7 +1,7 @@
 +++
 title = "Urbit SF"
-description = "Urbit meetups in San Francisco"
-tile = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/communities/urbit-sf.png"
+description = ""
+image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/communities/urbit-sf.png"
 +++
 
 Want to own and control the server side? Your digital identity, data and computation?

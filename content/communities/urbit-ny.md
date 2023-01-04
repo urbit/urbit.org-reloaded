@@ -1,7 +1,7 @@
 +++
 title = "Urbit NY"
-description = "Urbit meetups in New York"
-tile = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/communities/urbit-ny.png"
+description = ""
+image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/communities/urbit-ny.png"
 +++
 
 We love experimenting with Urbit & tinkering with Arvo, Hoon, & Nock

@@ -1,7 +1,7 @@
 +++
 title = "DC Metro Urbit Meetup Group"
-description = "Urbit meetups in the DC area"
-tile = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/communities/urbit-dc.png"
+description = ""
+image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/communities/urbit-dc.png"
 +++
 
 This is a DC/Northern Virginia/Southern Maryland Urbit discussion group.

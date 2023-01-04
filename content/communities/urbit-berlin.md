@@ -1,7 +1,7 @@
 +++
 title = "Urbit Berlin"
 description = ""
-tile = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/communities/urbit-berlin.png"
+image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/communities/urbit-berlin.png"
 +++
 
 If you are sick of the current state of the web, of handing over your data and entire online presence to a handful of American corporations, of a web fueled with ads, then Urbit might be for you.

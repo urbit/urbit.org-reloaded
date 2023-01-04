@@ -33,10 +33,18 @@ export default function EcosystemSidebar() {
             <ActiveLink
                 currentPath={currentPath}
                 className="type-ui"
+                href="/ecosystem?type=communities"
+            >
+                Communities
+            </ActiveLink>
+            <ActiveLink
+                currentPath={currentPath}
+                className="type-ui"
                 href="/ecosystem?type=organizations"
             >
                 Organizations
             </ActiveLink>
+
             <ActiveLink
                 currentPath={currentPath}
                 className="type-ui"
