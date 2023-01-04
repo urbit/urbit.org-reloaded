@@ -12,9 +12,10 @@ We have a track record of funding many different kinds of different projects: ne
 Ready to get started? Here's how the process works:
 
 1. Submit your proposal using [this form](https://airtable.com/shrCi54rEDxgSZr3z)
-2. Obtain [approval](#community-approval) from the Urbit Foundation and find a member of our community to champion your proposal
-3. Sign our [grant agreement](#paperwork)
-4. [Submit invoices](#getting-paid) after obtaining community signoff
+2. Obtain [approval](#approval by the foundation) from the Urbit Foundation and find a member of our community to champion your proposal
+3. When your proposal is approved the Urbit Foundation and you will start looking for a suitable [champion](#looking for a champion)
+4. Sign our [grant agreement](#paperwork)
+5. [Submit invoices](#getting-paid) after obtaining community signoff
 
 ## Create your proposal
 
@@ -60,19 +61,11 @@ The intent of this policy is to:
 
 We try to use this rule in good faith. Reasonable delays due to unforseen life circumstances or project complexity will be tolerated, so long as the contributor is communicative with their champion and/or the Urbit Foundation. In these cases we'll encourage the contributor to modify the timelines and/or scope of their proposals to accommodate new information.
 
-## Community approval
+### Approval by the Foundation
+The Grants team of the Urbit Foundation looks at Grants on a bi-weekly basis. After they have decided on the grant they will inform you whether it is approved, rejected or needs some adjustments. In the latter case someone of the grants team will help you finetune your proposal so it can be reconsidered in the next round.
 
-Your proposal will be considered approved when an established member of our community decides to _champion_ it. Only those that have made substantial past contributions to the project, generally through their own grants, are eligible to provide such a seal of approval.
-
-Approval from the community goes beyond simply clearing the project for funding. The community member that approves your project, called the _Champion_, will meet with you regularly to provide mentorship and support, help onboard you to the rest of the community, and ultimately be responsible for approving your work.
-
-### How it works
-
-After [submitting your proposal](https://airtable.com/shrCi54rEDxgSZr3z), the Urbit Foundation team will post your proposal to the community members that are approved to Champion proposals.
-
-The contents of your submission will be available to prospective champions, and if they're interested, they'll reach out to dive into the details with you.
-
-When someone is sufficiently interested, they'll say so and ask to champion your project. If multiple people are interested in championing, you'll need to choose who to go with! This is, in our view, a good problem to have.
+### Looking for a Champion
+Finding a suitable champion is important for the success of your grant. Therefore we ask you to stay on the look-out
 
 ### Working with your Champion
 
