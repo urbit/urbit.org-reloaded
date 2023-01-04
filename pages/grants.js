@@ -238,7 +238,7 @@ export default function Grants({ posts, categories, types, search }) {
             </div>
 
             <div className="md:basis-1/2">
-              <p>
+              <p className="mb-8">
                 Whether you're gearing up to submit your proposal or just
                 thinking about it, the best way to get started is to join the <Link href="/groups/~halbex-palheb/uf-public">Urbit Foundation</Link> group.
               </p>
