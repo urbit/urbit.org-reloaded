@@ -65,7 +65,7 @@ We try to use this rule in good faith. Reasonable delays due to unforseen life c
 The Grants team of the Urbit Foundation looks at Grants on a bi-weekly basis. After they have decided on the grant they will inform you whether it is approved, rejected or needs some adjustments. In the latter case someone of the grants team will help you finetune your proposal so it can be reconsidered in the next round.
 
 ### Looking for a Champion
-Finding a suitable champion is important for the success of your grant. Therefore we ask you to stay on the look-out
+Finding a suitable champion is important for the success of your grant. Therefore we ask you to stay on the look-out for someone on the network who is capable to champion your proposal. The Foundation will assist you in finding a good champion.
 
 ### Working with your Champion
 
