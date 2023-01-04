@@ -1,0 +1,11 @@
++++
+title = "Urbit NY"
+description = "Urbit meetups in New York"
+tile = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/communities/urbit-ny.png"
++++
+
+We love experimenting with Urbit & tinkering with Arvo, Hoon, & Nock
+
+––
+
+[meetup.com/Urbit-New-York](https://www.meetup.com/Urbit-New-York/)
