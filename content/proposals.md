@@ -12,7 +12,7 @@ We have a track record of funding many different kinds of different projects: ne
 Ready to get started? Here's how the process works:
 
 1. Submit your proposal using [this form](https://airtable.com/shrCi54rEDxgSZr3z)
-2. Obtain [approval](#approval by the foundation) from the Urbit Foundation and find a member of our community to champion your proposal
+2. Obtain [approval](#approval-by-the-foundation) from the Urbit Foundation and find a member of our community to champion your proposal
 3. When your proposal is approved the Urbit Foundation and you will start looking for a suitable [champion](#looking for a champion)
 4. Sign our [grant agreement](#paperwork)
 5. [Submit invoices](#getting-paid) after obtaining community signoff
