@@ -242,7 +242,7 @@ export default function Grants({ posts, categories, types, search }) {
                 Whether you're gearing up to submit your proposal or just
                 thinking about it, the best way to get started is to join the <Link href="/groups/~halbex-palheb/uf-public">Urbit Foundation</Link> group.
               </p>
-              <p className="mb-8">Feel free to contact `~poldec-tonteg` with general questions or `~marfun-pacpet` regarding administrative matters.</p>
+              <p className="mb-8">Feel free to contact <a href="/ids/~poldec-tonteg">~poldec-tonteg</a> with general questions or <a href="/ids/~marfun-pacpet">~marfun-pacpet</a> regarding administrative matters.</p>
             </div>
           </div>
         </Section>
