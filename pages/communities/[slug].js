@@ -33,6 +33,9 @@ export default function Community({
           ))}
         </p>
       )}
+
+      <p>––</p>
+      <p>Interested in starting an Urbit meetup? <a href="/grants/community-meetups">Learn more here</a>.</p>
     </BasicPage>
   );
 }
