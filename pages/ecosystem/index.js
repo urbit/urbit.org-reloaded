@@ -32,7 +32,8 @@ export default function Ecosystem({
   marketplaces,
   organizations,
   podcasts,
-  articles
+  articles,
+  communities
 }) {
   const router = useRouter();
 
@@ -52,6 +53,9 @@ export default function Ecosystem({
     switch (type) {
       case "applications":
         title = "Applications • Ecosystem";
+        break;
+      case "communities":
+        title = "Communities • Ecosystem";
         break;
       case "applications":
         title = "Groups • Ecosystem";
@@ -124,10 +128,9 @@ export default function Ecosystem({
               {/* Ecosystem type layouts */}
               <div
                 className={classnames("grid gap-12 w-full", {
-                  "grid-cols-2 md:grid-cols-3": type == "organizations" || type == "marketplaces",
                   "grid-cols-1": type === "podcasts" || type === "articles",
                   "grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2":
-                    type === "applications" || type === "groups",
+                    type === "applications" || type === "groups" || type === "communities" || type === "organizations" || type === "marketplaces",
                   hidden: spotlight,
                 })}
               >
@@ -137,6 +140,9 @@ export default function Ecosystem({
 
                 {type === "applications" &&
                   <Applications dir={applications} />
+                }
+                {type === "communities" &&
+                  <Communities dir={communities} />
                 }
                 {type === "groups" &&
                   <Groups dir={groups} />
@@ -161,16 +167,6 @@ export default function Ecosystem({
   );
 }
 
-const Organizations = ({ dir }) => {
-  return dir.map((org) => (
-    <Link href={`/organizations/${org.slug}`}>
-      <div className="flex flex-col space-y-4  items-center cursor-pointer hover:opacity-90">
-        <img className="w-36 rounded-xl" src={org.image} />
-        <p className="text-center font-bold">{org.title}</p>
-      </div>
-    </Link>
-  ))
-}
 
 const Applications = ({ dir }) => {
   return dir.map((app) => (
@@ -230,16 +226,6 @@ const Groups = ({ dir }) => {
   ))
 }
 
-const Marketplaces = ({ dir }) => {
-  return dir.map((market) => (
-    <Link href={`/marketplaces/${market.slug}`}>
-      <div className="flex flex-col space-y-4 justify-center items-center cursor-pointer hover:opacity-90">
-        <img className="w-36 rounded-xl" src={market.image} />
-        <p className="text-center font-bold">{market.title}</p>
-      </div>
-    </Link>
-  ))
-}
 
 const Podcasts = ({ dir }) => {
   return dir.map((pod) => (
@@ -279,6 +265,74 @@ const Articles = ({ dir }) => {
   ))
 }
 
+const Communities = ({ dir }) => {
+  return dir.map((community) => (
+    <Link href={`/communities/${community.slug}`}>
+      <div className="flex space-x-4 items-center cursor-pointer hover:opacity-90">
+        <div className="h-36 w-36 rounded-xl items-center justify-center shrink-0 overflow-hidden">
+            <img
+              className="items-center h-36 w-36"
+              src={community.image}
+            />
+        </div>
+        <div className="">
+          <p className="text-left font-bold">{community.title}</p>
+          <p className="text-left text-wall-400 font-light">
+            {community.description}
+          </p>
+        </div>
+      </div>
+    </Link>
+  ))
+}
+
+
+const Marketplaces = ({ dir }) => {
+  return dir.map((market) => (
+    <Link href={`/marketplaces/${market.slug}`}>
+      <div className="flex space-x-4 items-center cursor-pointer hover:opacity-90">
+        <div className="h-36 w-36 rounded-xl items-center justify-center shrink-0 overflow-hidden">
+            <img
+              className="items-center h-36 w-36"
+              src={market.image}
+            />
+        </div>
+        <div className="">
+          <p className="text-left font-bold">{market.title}</p>
+          <p className="text-left text-wall-400 font-light">
+            {market.description}
+          </p>
+        </div>
+      </div>
+    </Link>
+  ))
+}
+
+const Organizations = ({ dir }) => {
+  return dir.map((org) => (
+    <Link href={`/organizations/${org.slug}`}>
+      <div className="flex space-x-4 items-center cursor-pointer hover:opacity-90">
+        <div className="h-36 w-36 rounded-xl items-center justify-center shrink-0 overflow-hidden">
+            <img
+              className="items-center h-36 w-36"
+              src={org.image}
+            />
+        </div>
+        <div className="">
+          <p className="text-left font-bold">{org.title}</p>
+          <p className="text-left text-wall-400 font-light">
+            {org.description}
+          </p>
+        </div>
+      </div>
+    </Link>
+  ))
+}
+
+
+
+
+
 
 export async function getStaticProps() {
   const posts = getAllPosts(
@@ -292,6 +346,7 @@ export async function getStaticProps() {
     "date"
   )[0]);
   const marketplaces = getAllPosts(["title", "image", "slug"], "marketplaces");
+  const communities = getAllPosts(["title", "image", "slug", "description"], "communities");
   const podcasts = getAllPosts(
     ["title", "image", "date", "podcast", "slug"],
     "podcasts",
@@ -354,7 +409,8 @@ export async function getStaticProps() {
       marketplaces,
       podcasts,
       organizations,
-      articles
+      articles,
+      communities
     },
   };
 }

@@ -6,7 +6,7 @@ description = "EScape from Eternal September. The UI from Uqbar."
 license = "MIT"
 website = "https://uqbar.network"
 bgColor = "#f2f3ef"
-image = "https://escape-app-dist.s3.us-east-2.amazonaws.com/uqbar-logo.png"
+image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/uqbar.png"
 +++
 
 EScape is a fully-integrated social management and DAO Tooling system. EScape provides a simple, intuitive, and unified interface for managing groups, messaging ships, receiving notifications, and interacting with other Urbit apps. 

@@ -45,7 +45,7 @@ export default function BasicPage({
           <div className="flex items-center space-x-4">
             <img src={post.image} className="w-36" />
             <div className="flex flex-col pl-2">
-              <h1 className={classnames({ "text-3xl": section === "Podcast" }, { "text-3xl": section === "Article" })}>
+              <h1 className="text-3xl">
                 {post.title}
               </h1>
               <p>{section}</p>

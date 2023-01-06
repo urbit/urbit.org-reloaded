@@ -74,6 +74,15 @@ export default function Post({ post }) {
           </Link>
         )}
 
+        {post[feat].type === "Community" && (
+          <Link href={href || "#"} passHref>
+            <a class="button-sm text-white flex-col bg-green-400 cursor-pointer pr-4 w-fit">
+              More about {post[feat].title}
+            </a>
+          </Link>
+        )}
+
+
         {post[feat].type === "Marketplace" && (
           <Link href={href || "#"} passHref>
             <a class="button-sm text-white flex-col bg-green-400 cursor-pointer pr-4 w-fit">
