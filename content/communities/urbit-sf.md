@@ -12,4 +12,4 @@ Come join us to talk about what the future of the internet might look like.
 
 ––
 
-[meetup.com/urbit-sf](https://www.meetup.com/urbit-sf/)
+[Meetup page](https://www.meetup.com/urbit-sf/)
