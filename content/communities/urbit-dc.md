@@ -15,4 +15,5 @@ Find us on urbit chat at ~tillys-fasryp/nova-urbit-meetup-lobby-3347
 ––
 
 [meetup.com/dc-urbit-meetup-group](https://www.meetup.com/dc-urbit-meetup-group/)
+
 [twitter.com/dcurbit](https://twitter.com/dcurbit)
