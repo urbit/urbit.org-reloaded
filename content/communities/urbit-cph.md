@@ -8,4 +8,4 @@ image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/communiti
 
 ––
 
-[twitter.com/UrbitCPH](https://twitter.com/UrbitCPH)
+[Twitter](https://twitter.com/UrbitCPH)
