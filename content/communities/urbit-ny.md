@@ -8,4 +8,4 @@ We love experimenting with Urbit & tinkering with Arvo, Hoon, & Nock
 
 ––
 
-[meetup.com/Urbit-New-York](https://www.meetup.com/Urbit-New-York/)
+[Meetup page](https://www.meetup.com/Urbit-New-York/)
