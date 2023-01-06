@@ -6,11 +6,9 @@ weight = 3
 
 ### 1. Get on the network
 
-First, you’ll need to get on Urbit. You can quickly check out the network by [downloading the Port application](https://github.com/urbit/port) and booting up a comet–a temporary Urbit ID.
+First, you’ll need to get on Urbit.
 
-For long-term use, you’ll want to get a permanent Urbit ID and consider a running your urbit in the cloud or on a hosted service.
-
-Read our [Getting Started guide](https://urbit.org/install) for details.
+Check out our [Getting Started guide](https://urbit.org/install) to find the best way for you.
 
 ### 2. Finding applications
 

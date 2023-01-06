@@ -6,53 +6,45 @@ weight = 2
 
 ### 1. Get on the network
 
-First, you’ll need to get on Urbit. You can quickly check out the network by [downloading the Port application](https://urbit.org/getting-started/desktop) and booting up a comet–a temporary Urbit ID.
+First, you’ll need to get on Urbit.
 
-For long-term use, you’ll want to get a permanent Urbit ID and consider a running your urbit in the cloud or on a hosted service.
-
-Read our [Getting Started guide](https://urbit.org/install) for details.
+Check out our [Getting Started guide](https://urbit.org/install) to find the best way for you.
 
 ### 2. Open the Groups app
 
-Once you’re on the network, you’ll see and large tiled interface with a few applications installed: Terminal, Groups, and Bitcoin. Click on Groups.
+Once you’re on the network, you’ll see and large tiled interface with a few applications installed: Talk, Terminal, Groups, and Bitcoin. Click on Groups.
 
-![](https://media.urbit.org/site/additional-guides/Joining-groups-1.jpg)
+![](https://media.urbit.org/site/additional-guides/groups-1.png)
 
 ### 3. Enter the group shortcode
 
-We’ll start by joining Urbit Community, a friendly introductory Urbit group.
+We’ll start by joining UF, the official group of the Urbit Foundation.
 
-In the Groups app, click the “Join Group” button and enter `~bitbet-bolbel/urbit-community`.
+In the Groups app, click on "Find Groups" in the left column and enter `~halbex-palheb/uf-public`
 
-Then confirm by clicking with the second “Join Group” button.
+Then click on the "Join" button once the group appears.
 
-![](https://media.urbit.org/site/additional-guides/Joining-groups-2.jpg)
-![](https://media.urbit.org/site/additional-guides/Joining-groups-3.jpg)
+![](https://media.urbit.org/site/additional-guides/groups-2.png)
 
-### 4. Confirm join
+### 4. Join channels
 
-You should see a window that provides a description and group information. If not, check the spelling of the group name and address and try again.
+Now, you'll see the first default channel of the group.
 
-Alternatively, the ship that is hosting the group may be offline.
+![](https://media.urbit.org/site/additional-guides/groups-3.png)
 
-Click "Join Urbit Community".
 
-![](https://media.urbit.org/site/additional-guides/Joining-groups-4.jpg)
+We can join more channels in the group by clicking on the "All Channels" link in the left column.
 
-### 5. Join channels
+![](https://media.urbit.org/site/additional-guides/groups-5.png)
 
-Congratulations, if you’re seeing a window like the one that appears below then you’ve joined the group!
 
-There two types of channels in the left column: Chats, and Notebooks. The former is self-explanatory, while the latter is like a blog with optional comments.
 
-To join a channel within the group, select a channel name from the left column, and click the Join Channel button.
+### 5. Chat and post on the network
 
-![](https://media.urbit.org/site/additional-guides/Joining-groups-4.jpg)
+In addition to posting text, you can now react, start threads, and reference messages by hovering over chat messages.  And you can leave comments in notebooks if they are enabled.
 
-![](https://media.urbit.org/site/additional-guides/Joining-groups-6.jpg)
+Remember to be nice, and have fun.
 
-### 6. Chat and post on the network
+![](https://media.urbit.org/site/additional-guides/groups-4.png)
 
-Congratulations you’re now a part of a peer-to-peer Urbit group. Be friendly, be curious, and have fun.
 
-![](https://media.urbit.org/site/additional-guides/Joining-groups-7.jpg)
