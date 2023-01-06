@@ -9,5 +9,6 @@ Urbit is a simple, durable computer that you own 100% and forever. In this group
 
 ––
 
-[meetup.com/urbit-seattle](https://www.meetup.com/urbit-seattle/)
-[twitter.com/SeattleUrbit](https://twitter.com/SeattleUrbit)
+[Meetup page](https://www.meetup.com/urbit-seattle/)
+
+[Twitter](https://twitter.com/SeattleUrbit)
