@@ -13,4 +13,4 @@ We meet regularly in Berlin, and we try to have a theme or presentation for each
 
 ––
 
-[meetup.com/urbit-berlin](https://www.meetup.com/urbit-berlin/)
+[Meetup page](https://www.meetup.com/urbit-berlin/)
