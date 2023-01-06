@@ -184,11 +184,11 @@ export default function DiscordLanding({ search, featuredGroups }) {
               title="Join a Group"
               description={
                 <p>
-                  The easiest way to jump on the network is to download our
-                  desktop application and boot up a comet - a Temporary ID.
+                  The easiest way to jump on the network is to download Urbit
+                  and boot up a comet - a Temporary ID.
                 </p>
               }
-              href="https://urbit.org/getting-started/desktop"
+              href="https://urbit.org/getting-started"
             />
           </TwoUp>
           <div className="flex items-center space-x-4 w-full">
