@@ -8,4 +8,4 @@ Curious about Urbit? Questions about Hoon syntax? Fed up with the current state 
 
 ––
 
-[meetup.com/Urbit-Austin](https://www.meetup.com/Urbit-Austin/)
+[Meetup page](https://www.meetup.com/Urbit-Austin/)
