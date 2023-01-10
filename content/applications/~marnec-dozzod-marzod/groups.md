@@ -1,5 +1,5 @@
 +++
-title = "Groups (Beta)"
+title = "Groups"
 shortcode = "~marnec-dozzod-marzod/groups"
 license = "MIT"
 image = "https://bootstrap.urbit.org/icon-groups.svg"

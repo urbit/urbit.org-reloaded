@@ -13,11 +13,11 @@ Join the new and improved Urbit Foundation group to get updates from the Urbit F
 """
 
 [featured-2]
-title = "Groups (Beta)"
-description = "The new Groups application from Tlon is officially now in beta."
+title = "Groups"
+description = "The new Groups application from Tlon is officially available."
 content = """
 
-Test drive the future of Urbit now with Tlon's official beta of Groups.  This beta features improved discoverability with features like searching by nickname, and creating public, private, or secret groups.
+Test drive the future of Urbit now with Tlon's initial release of of Groups.  This version features improved discoverability with features like searching by nickname, and creating public, private, or secret groups.
 
 Groups is part of the new Landscape suite of applications, and integrates seamlessly with Talk, Gallery, and Notes.
 
