@@ -56,8 +56,8 @@ ${form?.description || ""}`
             </p>
             <p>
               Then, to validate that you own that ID, send a DM to{" "}
-              <Link href="/ids/~haddef-sigwen" passHref>
-                <a>~haddef-sigwen</a>
+              <Link href="/ids/~battus-datsun" passHref>
+                <a>~battus-datsun</a>
               </Link>{" "}
               from your <code>@p</code> with a link to the pull request on
               GitHub. We’ll approve the pull request and your page will be
