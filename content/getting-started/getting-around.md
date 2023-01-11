@@ -20,11 +20,11 @@ You'll likely want to focus on finding and joining new communities, which you ca
 
 No two people will ever have the same experience on Urbit. That depends entirely on who you find and where they invite you to join them. But we can set you down a good path.
 
-With Groups open, you'll see three boxes for **My Channels**, your local weather, and a stylized clock. You can dig into those later, but let's focus on joining new communities, which is likely one of the reasons you wanted to try out Urbit in the first place.
+First, Open the Groups app.
 
-Click on Join Group, and in that modal, enter [~bitbet-bolbel/urbit-community](/groups/~bitbet-bolbel/urbit-community) — the official Urbit community. You can either automatically join all channels by clicking the Join all channels checkbox, or leave it blank and hit Join Group right away. Your Urbit will connect to the P2P network and download information about the group, like a list of all its participants. When that's finished, click **View Group**.
+Then click on "Find Groups" in the left column. Enter [~bitbet-bolbel/urbit-community](/groups/~bitbet-bolbel/urbit-community) — the official Urbit community. Click the "Join" button when you see the group listing.
 
-You're now looking at a single group and all of its channels. If you didn't choose to join all channels right away, click on an individual channel and then **Join Channel**, which immediately opens the feed of latest messages.
+Give it a minute, and the group will load its default channels. To join additional channels in the group, click the "All Channels" button.
 
 Here are a few more useful groups to join:
 
@@ -45,8 +45,10 @@ Click **Get App**, then **Get "Canvas"** to continue. Your Urbit gets to work, a
 Some popular apps to get things moving:
 
 - [EScape](/applications/~dister-fabnev-hinmur/escape): An alternative UI to the core groups, communities, and messaging capabilities in Urbit.
-- [Studio](/applications/~tirrel/studio): Tools for making money on the Urbit network.
+- [Studio](/applications/~tirrel/studio): Run a blog on your urbit.
 - [Wrdu](/applications/~magped-magped-rabsef-bicrym/wrdu): A Wordle clone.
+
+Discover more applications on the [Ecosystem page](https://urbit.org/ecosystem?type=applications).
 
 ### 4. Get help
 
@@ -62,18 +64,12 @@ And if you can't get through this guide and launch into Urbit, you may have luck
 
 You made it! You did the work and now have your Final Computer.
 
-What you do with it is up to you. Where you go from here is up to you. No two experiences on Urbit will be the same, so we encourage you to follow your own. Explore. Discover! Get lost and find the people who make you feel like you're not lost any more.
+What you do with it is up to you. Where you go from here is up to you. No two experiences on Urbit will be the same, so we encourage you to follow your own intuition and explore.
 
-Still need some bumpers to guide you along the way?
+**Learn more about using Urbit**: Check out the [Operators Site](https://operators.urbit.org/) to learn more about running your own Urbit and how the network functions.
 
-**Learn more about using Urbit**: Check out the [User's Manual](/using/).
+**Get updates about Urbit**: [Subscribe](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&id=be143888d2) to the Urbit Newsletter for news, blog posts, and events from the Urbit Foundation.
 
-**Get updates about Urbit**: [Subscribe](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&id=be143888d2) to the Urbit Newsletter for new blog posts and events from one of the primary organizations responsible for Urbit development.
+**Join an event or meetup**: Many of the organizations and people behind Urbit host virtual and in-person events on a regular basis — check out the latest on our [Events feed](/events/), or a local [Meetup] group((/https://urbit.org/ecosystem?type=communities/).
 
-**Join an event or meetup**: Many of the organizations and people behind Urbit host virtual and in-person events on a regular basis — check out the latest on our [Events feed](/events/).
-
-**Learn how to build on Urbit**: If you're the kind of person who wants to build applications directly for discerning communities with built-in identity and networking primitives, or even jump into the Urbit kernel's core, we have the most phenomenally-comprehensive information to get you started.
-
-- Read the [Development Docs](/docs/).
-- Check out the development-driven [Getting Started guide](/docs/development/develop).
-- Join [Hoon School Live (HSL)](https://hooniversity.org), the cohort-driven course that teaches you Hoon, with the goal of getting you comfortable writing generators, working with core concepts, using the standard library, and distributing code using desks.
+**Learn how to build on Urbit**: If you're the kind of person who wants to build applications directly for discerning communities with built-in identity and networking primitives, or even jump into the Urbit kernel's core, we have the most comprehensive information to get you started on the [Urbit Developers Site](https://developers.urbit.org/).
