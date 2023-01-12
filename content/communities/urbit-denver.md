@@ -4,7 +4,7 @@ description = ""
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/communities/urbit-denver.png"
 +++
 
-WWhile Urbit is the animating force behind this group, people of all interest levels & familiarity with the project - be they long-time users, or newcomers simply wondering what the heck Urbit is - are welcome & encouraged to attend these meet-ups. The conversations are lively and span a wide variety of topics, ranging from Urbit to philosophy, tech, crypto, the arts, health and well-being, and much more.
+While Urbit is the animating force behind this group, people of all interest levels & familiarity with the project - be they long-time users, or newcomers simply wondering what the heck Urbit is - are welcome & encouraged to attend these meet-ups. The conversations are lively and span a wide variety of topics, ranging from Urbit to philosophy, tech, crypto, the arts, health and well-being, and much more.
 
 Our goal is simply to build a community of people interested in the project and the future it envisions, in which members can freely connect and discuss the project and the various ideas & values adjacent to it.
 
@@ -13,4 +13,5 @@ And for those wondering what the heck is Urbit? Urbit is an ambitious reimaginin
 ––
 
 ~nospex-larsut/mile-high-mars
+
 [Meetup page](https://www.meetup.com/mile-high-mars-denver-urbit-group/)
