@@ -11,7 +11,7 @@ image = ""
 description = "Improve the application development experience through simplified importing and exporting of desks."
 reward = "2 stars"
 champion = ["~tinnus-napbus"]
-assignee = [""]
+assignee = ["~niblyx-malnus"]
 grant_id = "B0187"
 completed = false
 work_request_link="https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0187&prefill_Grant+Name=Desk%20jamfile%20import%2Fexport"
