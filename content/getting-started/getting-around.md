@@ -70,6 +70,6 @@ What you do with it is up to you. Where you go from here is up to you. No two ex
 
 **Get updates about Urbit**: [Subscribe](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&id=be143888d2) to the Urbit Newsletter for news, blog posts, and events from the Urbit Foundation.
 
-**Join an event or meetup**: Many of the organizations and people behind Urbit host virtual and in-person events on a regular basis — check out the latest on our [Events feed](/events/), or a local [Meetup] group((/https://urbit.org/ecosystem?type=communities/).
+**Join an event or meetup**: Many of the organizations and people behind Urbit host virtual and in-person events on a regular basis — check out the latest on our [Events feed](/events/), or a local [Meetup group](/ecosystem?type=communities).
 
 **Learn how to build on Urbit**: If you're the kind of person who wants to build applications directly for discerning communities with built-in identity and networking primitives, or even jump into the Urbit kernel's core, we have the most comprehensive information to get you started on the [Urbit Developers Site](https://developers.urbit.org/).
