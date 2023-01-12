@@ -13,7 +13,7 @@ reward = "5 stars"
 assignee = ["~watter-parter"]
 champion = ["~tirrel"]
 grant_id = "B0151"
-completed = false
+completed = true
 canceled = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefillGrant+ID=B0151&prefillGrant+Name=Eyre%20Request%20Cache"
 +++
