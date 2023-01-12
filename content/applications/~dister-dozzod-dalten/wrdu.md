@@ -1,8 +1,8 @@
 +++
 title = "wrdu"
-developer = "~dalten"
-shortcode = "~magped-magped-rabsef-bicrym/wrdu"
-description = "word game by ~dalten for our mothers"
+developer = "Quartus Co."
+shortcode = "~dister-dozzod-dalten/wrdu"
+description = "Word game by ~dalten for our mothers"
 license = "MIT"
 website = "https://dalten.org"
 bgColor = "#79A86B"

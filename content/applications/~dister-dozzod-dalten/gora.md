@@ -21,3 +21,4 @@ Gora has two distros in
 circulation - these can be found at:
 ~laddys-dozzod-dalten (Vue.js frontend)
 ~mister-dozzod-dalten (sail frontend)
+The canonical distro for all Quartus and Dalten Collective apps can always be found at ~dister-dozzod-dalten
