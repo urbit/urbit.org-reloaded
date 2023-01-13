@@ -13,7 +13,7 @@ reward = "1 star ($2k if done by Assembly)"
 assignee = ["~hanfel-dovned"]
 grant_id = "B0163"
 champion = ["Holium"]
-completed = false
+completed = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0163&prefill_Grant+Name=Minesweeper"
 +++
 
