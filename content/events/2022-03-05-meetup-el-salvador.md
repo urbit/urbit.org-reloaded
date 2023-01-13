@@ -1,7 +1,7 @@
 +++
 title = "Urbit Meetup – El Salvador"
-starts = "2022-03-05T19:00:00"
-ends = "2022-03-05T22:00:00"
+starts = "2023-03-05T19:00:00"
+ends = "2023-03-05T22:00:00"
 timezone = "America/El_Salvador"
 location = "Urbit Mansion - San Salvador"
 image = "https://elsalvador.travel/img/slide04.jpg"
