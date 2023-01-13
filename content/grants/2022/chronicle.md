@@ -13,7 +13,7 @@ reward = "2 stars ($4k bonus if done by Assembly)"
 assignee = ["~hanfel-dovned"]
 grant_id = "B0161"
 champion = ["Holium"]
-completed = false
+completed = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0161&prefill_Grant+Name=Chronicle"
 +++
 
