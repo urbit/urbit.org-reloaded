@@ -39,22 +39,6 @@ download the Urbit runtime:
 
 {% tabs %}
 
-{% tab label="Linux AArch64" %}
-
-```shell
-curl -L https://urbit.org/install/linux-aarch64/latest | tar xzk --strip=1 && ./urbit
-```
-
-> Linux users may need to run this command in another terminal window to access
-> your urbit on port 80:
->
-> ```shell
-> sudo apt-get install libcap2-bin
-> sudo setcap 'cap_net_bind_service=+ep' ./urbit
-> ```
-
-{% /tab %}
-
 {% tab label="Linux x86_64" %}
 
 ```shell
@@ -71,17 +55,18 @@ curl -L https://urbit.org/install/linux-x86_64/latest | tar xzk --strip=1 && ./u
 
 {% /tab %}
 
-{% tab label="macOS AArch64" %}
+{% tab label="Linux AArch64" %}
 
-```bash
-curl -L https://urbit.org/install/macos-aarch64/latest | tar xzk --strip=1 && ./urbit
+```shell
+curl -L https://urbit.org/install/linux-aarch64/latest | tar xzk --strip=1 && ./urbit
 ```
 
-> Note this build is only compatible with Apple Silicon (M1/M2) via Rosetta.
-> If you have such a machine you may need to run the following command:
+> Linux users may need to run this command in another terminal window to access
+> your urbit on port 80:
 >
-> ```
-> /usr/sbin/softwareupdate --install-rosetta --agree-to-license
+> ```shell
+> sudo apt-get install libcap2-bin
+> sudo setcap 'cap_net_bind_service=+ep' ./urbit
 > ```
 
 {% /tab %}
@@ -90,6 +75,14 @@ curl -L https://urbit.org/install/macos-aarch64/latest | tar xzk --strip=1 && ./
 
 ```bash
 curl -L https://urbit.org/install/macos-x86_64/latest | tar xzk --strip=1 && ./urbit
+```
+
+{% /tab %}
+
+{% tab label="macOS AArch64" %}
+
+```bash
+curl -L https://urbit.org/install/macos-aarch64/latest | tar xzk --strip=1 && ./urbit
 ```
 
 {% /tab %}
