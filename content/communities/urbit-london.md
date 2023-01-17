@@ -10,6 +10,6 @@ Urbit London is a monthly, occasionally biweekly, meet-up series aiming to estab
 
 ~tichus-holnet/urblon
 
-[Twitter](twitter.com/urblon)
+[Twitter](https://twitter.com/urblon)
 
-[Telegram](t.me/urblon)
+[Telegram](https://t.me/urblon)
