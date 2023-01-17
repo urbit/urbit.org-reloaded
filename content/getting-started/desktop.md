@@ -1,5 +1,5 @@
 +++
-title = "Urbit as desktop app"
+title = "Desktop app"
 weight = 4
 description = ""
 +++
