@@ -74,7 +74,7 @@ curl -L https://urbit.org/install/linux-aarch64/latest | tar xzk --transform='s/
 {% tab label="macOS x86_64" %}
 
 ```bash
-curl -L https://urbit.org/install/macos-x86_64/latest | tar xzk -s '/.*/urbit/g' && ./urbit
+curl -L https://urbit.org/install/macos-x86_64/latest | tar xzk -s '/.*/urbit/' && ./urbit
 ```
 
 {% /tab %}
@@ -82,7 +82,7 @@ curl -L https://urbit.org/install/macos-x86_64/latest | tar xzk -s '/.*/urbit/g'
 {% tab label="macOS AArch64" %}
 
 ```bash
-curl -L https://urbit.org/install/macos-aarch64/latest | tar xzk -s '/.*/urbit/g' && ./urbit
+curl -L https://urbit.org/install/macos-aarch64/latest | tar xzk -s '/.*/urbit/' && ./urbit
 ```
 
 {% /tab %}
