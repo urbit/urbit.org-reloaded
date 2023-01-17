@@ -13,6 +13,7 @@ reward = "2 stars"
 assignee = ["~tinden-pontev"]
 grant_id = "P0102"
 completed = false
+canceled = true
 link = ""
 +++
 
