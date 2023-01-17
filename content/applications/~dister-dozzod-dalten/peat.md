@@ -1,14 +1,14 @@
 +++
 title = "peat"
 developer = "Quartus Co."
-shortcode = "~magped-magped-rabsef-bicrym/peat"
+shortcode = "~dister-dozzod-dalten/peat"
 description = "Graph Backup and Restoration Utility"
 license = "REKT"
 website = "https://dalten.org"
 bgColor = "#574D5A"
 +++
 
-Peat is Urbit's first backup utility.
+Peat is Urbit's first backup utility and works with the %graph-store backend. Quartus is also working to support backup and recovery for arbitrary agent state via %keep, as well as updated utility tooling that supports the new Groups backend.
 
 ![Screenshot](https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/peat.png)
 

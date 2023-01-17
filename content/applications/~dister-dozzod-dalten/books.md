@@ -1,8 +1,8 @@
 +++
-title = "books"
+title = "Books"
 developer = "Quartus Co."
-shortcode = "~doller-doller-rabsef-bicrym/books"
-description = "it just makes cents"
+shortcode = "~dister-dozzod-dalten/books"
+description = "It just makes cents"
 license = "MIT"
 website = "https://dalten.org"
 bgColor = "#E44D11"
