@@ -4,9 +4,10 @@ weight = 2
 description = "Installation instructions for power users."
 +++
 
-If you're a power user, you can run the Urbit virtual machine directly using the
-command line. This can be run on your local machine or a server in the cloud, we
-just cover the general case here.
+If you're a power user, you can run the Urbit runtime (Vere) using the command 
+line. This can be run on your local machine or a server in the cloud, we
+just cover the local case here. The runtime is what interprets the Urbit kernel
+code (Arvo) into commands your specific machine (macOS or Linux) understands.
 
 Note there is a much more comprehensive [cloud hosting
 guide](https://operators.urbit.org/manual/running/hosting) which walks through
@@ -35,7 +36,8 @@ will still run fine, but you may run out of space some months down the line.
 ### 2. Install Urbit
 
 Choose your operating system and run the given command in your terminal to
-download the Urbit runtime:
+download the Urbit runtime, this command downloads the latest build, unpacks
+it, and runs the binary with no arguments to show you the help output:
 
 {% tabs %}
 
@@ -45,8 +47,8 @@ download the Urbit runtime:
 curl -L https://urbit.org/install/linux-x86_64/latest | tar xzk --transform='s/.*/urbit/g' && ./urbit
 ```
 
-> Linux users may need to run this command in another terminal window to access
-> your urbit on port 80:
+> Linux users need to run this command in another terminal window to access
+> your urbit on port 80, otherwise it'll default to port 8080:
 >
 > ```shell
 > sudo apt-get install libcap2-bin
@@ -61,8 +63,8 @@ curl -L https://urbit.org/install/linux-x86_64/latest | tar xzk --transform='s/.
 curl -L https://urbit.org/install/linux-aarch64/latest | tar xzk --transform='s/.*/urbit/g' && ./urbit
 ```
 
-> Linux users may need to run this command in another terminal window to access
-> your urbit on port 80:
+> Linux users need to run this command in another terminal window to access
+> your urbit on port 80, otherwise it'll default to port 8080:
 >
 > ```shell
 > sudo apt-get install libcap2-bin
@@ -128,8 +130,8 @@ comet can be booted with the `-c` option:
 ./urbit -c mycomet
 ```
 
-> `mycomet` will be the name given to the data folder it will create. You can
-> choose any name you like.
+> `mycomet` will be the name given to the folder it will create. 
+>  You can choose any name you like.
 
 It may take a while to initialize the comet (usually only a couple of minutes,
 but it could take longer). When it's done, it'll take you to the dojo prompt
@@ -158,9 +160,9 @@ idea to enable updates with the following command in the dojo:
 |ota (sein:title our now our)
 ```
 
-Lastly, while the dojo is quite powerful, most people use their urbit via
-Landscape, the browser-based UI. In order to access Landscape, you need your web
-login code. You can get this by running the following command in the dojo:
+Lastly most people use their urbit via Landscape, the browser-based UI. In order 
+to access Landscape, you need your web login code. You can get this by running 
+the following command in the dojo:
 
 ```
 +code
@@ -189,7 +191,7 @@ keyfile):
 ./urbit -w sampel-palnet -k sampel-palnet-1.key
 ```
 
-This will create a data folder with the name of your planet and begin booting.
+This will create a folder with the name of your planet and begin booting.
 It may take a while to initialize the planet (usually only a couple of minutes,
 but it could take longer). When it's done, it'll take you to the dojo prompt
 (the dojo is Urbit's shell):
@@ -209,8 +211,8 @@ folder, so you can start it up again by doing:
 ./sampel-palnet/.run
 ```
 
-While the dojo is quite powerful, most people use their urbit via Landscape, the
-browser-based UI. In order to access Landscape, you need your web login code.
+Most people use their urbit via Landscape, the browser-based UI. 
+In order to access Landscape, you need your web login code.
 You can get this by running the following command in the dojo:
 
 ```
@@ -222,8 +224,8 @@ It'll spit out a code that'll look something like `lidlut-tabwed-pillex-ridrup`
 to the clipboard.
 
 One last thing: The `sampel-palnet-1.key` keyfile is only needed once, when you
-first boot your planet. Now that it's booted, it's good security practice to
-delete that keyfile.
+first boot your planet. **Now that it's booted, it's good security practice to
+delete that keyfile.**
 
 {% /tab %}
 
@@ -244,8 +246,42 @@ Whichever address and port it says there is the one to open in the browser.
 
 Once open, you'll be presented with the login screen. Paste in the web login
 code you copied from the dojo in the previous step and hit "continue". You'll
-now be taken to your homescreen, with tiles for the default apps such as Groups
-and Terminal.
+now be taken to your homescreen, with tiles for the default apps such as Groups,
+Talk, and Terminal.
+
+### 5. Runtime Upgrades
+
+When new versions of the Urbit runtime (Vere) are available, you'll have to 
+shutdown your urbit and then run the `next` command in order to upgrade.
+```
+:dojo> |exit
+<pier>/.run next
+```
+Note that `<pier>` in this case is the folder that was created when you first booted
+your urbit. When you run this command your urbit will download the latest binary
+and place it inside the `.bin` directory inside your pier folder. You can then 
+start your ship with the following and you'll be on the latest runtime version:
+```
+<pier>/.run
+```
+> Linux users need to run this command in another terminal window to access
+> your urbit on port 80 every time you upgrade your runtime (otherwise it'll 
+> default to port 8080):
+>
+> ```shell
+> sudo apt-get install libcap2-bin
+> sudo setcap 'cap_net_bind_service=+ep' ./urbit
+> ```
+
+If you've been running Urbit for a while (from before runtime version 1.9) 
+and these `.run` commands don't work for you, it probably means you need to 
+[dock](https://operators.urbit.org/manual/running/vere#dock) your pier. 
+You can do this with the following command:
+```
+./urbit dock <pier>
+```
+Then `.run` should work as expected and future runtime upgrades can be done via
+`next`.
 
 ### Next steps
 
