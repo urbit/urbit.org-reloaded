@@ -14,7 +14,7 @@ mentor = ["~rovnys-ricfer"]
 assignee = ["~novned-tidsyl", "~boldur-dashes"]
 grant_id = "A0136"
 completed = false
-canceled = false
+canceled = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0163&prefill_Grant+Name=Notifications%20Protocol"
 
 +++
