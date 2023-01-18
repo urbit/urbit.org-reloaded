@@ -47,14 +47,6 @@ it, and runs the binary with no arguments to show you the help output:
 curl -L https://urbit.org/install/linux-x86_64/latest | tar xzk --transform='s/.*/urbit/g' && ./urbit
 ```
 
-> Linux users need to run this command in another terminal window to access
-> your urbit on port 80, otherwise it'll default to port 8080:
->
-> ```shell
-> sudo apt-get install libcap2-bin
-> sudo setcap 'cap_net_bind_service=+ep' ./urbit
-> ```
-
 {% /tab %}
 
 {% tab label="Linux AArch64" %}
@@ -62,14 +54,6 @@ curl -L https://urbit.org/install/linux-x86_64/latest | tar xzk --transform='s/.
 ```shell
 curl -L https://urbit.org/install/linux-aarch64/latest | tar xzk --transform='s/.*/urbit/g' && ./urbit
 ```
-
-> Linux users need to run this command in another terminal window to access
-> your urbit on port 80, otherwise it'll default to port 8080:
->
-> ```shell
-> sudo apt-get install libcap2-bin
-> sudo setcap 'cap_net_bind_service=+ep' ./urbit
-> ```
 
 {% /tab %}
 
@@ -151,6 +135,14 @@ folder, so you can start it up again by doing:
 ```bash
 ./mycomet/.run
 ```
+> Linux users need to run this command in another terminal window to access
+> your urbit on port 80 every time you upgrade your runtime (otherwise it'll 
+> default to port 8080):
+>
+> ```shell
+> sudo apt-get install libcap2-bin
+> sudo setcap 'cap_net_bind_service=+ep' <pier>/.run
+> ```
 
 Since comets are often used temporarily and then discarded, kernel updates are
 not enabled by default. If you plan to use your comet for a while, it's a good
@@ -210,6 +202,14 @@ folder, so you can start it up again by doing:
 ```bash
 ./sampel-palnet/.run
 ```
+> Linux users need to run this command in another terminal window to access
+> your urbit on port 80 every time you upgrade your runtime (otherwise it'll 
+> default to port 8080):
+>
+> ```shell
+> sudo apt-get install libcap2-bin
+> sudo setcap 'cap_net_bind_service=+ep' <pier>/.run
+> ```
 
 Most people use their urbit via Landscape, the browser-based UI. 
 In order to access Landscape, you need your web login code.
