@@ -8,5 +8,5 @@ Curious about Urbit? Questions about Hoon syntax? Fed up with the current state 
 
 ––
 
-[Meetup page](https://chchurbit.eventbrite.com)
-[Meetup Group](https://t.me/chchurbit)
+[Eventbrite](https://chchurbit.eventbrite.com)
+[Telegram](https://t.me/chchurbit)
