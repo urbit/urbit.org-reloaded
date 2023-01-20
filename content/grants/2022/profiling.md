@@ -13,7 +13,7 @@ reward = "1 star"
 mentor = ["~fanfun-mocbud"]
 assignee = ["~pontus-fadpun"]
 grant_id = "A0180"
-completed = false
+completed = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0180&prefill_Grant+Name=Vere%20Profiling"
 +++
 
