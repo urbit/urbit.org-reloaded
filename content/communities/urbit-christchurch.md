@@ -9,4 +9,5 @@ Curious about Urbit? Questions about Hoon syntax? Fed up with the current state 
 ––
 
 [Eventbrite](https://chchurbit.eventbrite.com)
+
 [Telegram](https://t.me/chchurbit)
