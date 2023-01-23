@@ -1,36 +1,34 @@
 +++
-title = "Get a planet"
-weight = 1
-description = "How to acquire a planet, or an Urbit ID"
-tag = "additional"
+title = "Get an Urbit ID"
+weight = 2
+description = "How to acquire an Urbit ID"
+tag = "selfhost"
 +++
 
-### What's a planet?
+### Types of ID
 
-Planets are a type of [Urbit ID](/understanding-urbit/urbit-id) that is useful for providing individuals long-term access to the Urbit network.
+There are [five different
+types](https://operators.urbit.org/guides/which-id-should-i-buy) of Urbit ID,
+but for our purposes we'll only talk about two of them: **comets** and **planets**.
+
+**Comets** are identities that you can issue yourself and are best-suited for
+short-term usage. **Planets** are how most people use Urbit and are suitable for
+long-term use.
+
+If you're just trying it out, a comet is fine and you can skip to the [Command line instructions](/getting-started/cli).
+
+If you plan to use Urbit regularly you'll want to keep reading.
 
 ### Where to get a planet
 
 There are a few ways to get your own planet:
 
-- Getting an invitation from a friend (or stranger)
-- Purchasing a planet, including hosting, from a hosting provider
-- Manually setting up and hosting a planet purchased from a third party marketplace
+- Receiving one from a friend
+- Asking on Twitter (if you're lucky)
+- Booting a comet and being friendly in [Urbit Community](https://urbit.org/groups/~bitbet-bolbel/urbit-community)
+- Purchasing one from a marketplace
 
-### Hosting Providers {% #hosting-providers %}
-
-Hosting providers will often sell you a planet and run it for you. This option is very simple but will probably cost a regular fee.
-
-Urbit is designed to be portable. This means that if you sign up for hosting now but later want to leave your hosting provider and run your Urbit yourself, you should be able to work with them to obtain all of your data and boot your planet back up without losing anything.
-
-Using hosting does mean that you're trusting your provider with your data, but so long as you have your planet, you'll always own your identity.
-
-Current hosting providers are:
-
-- [UrbitHost](https://urbithost.com)
-- [escape pod store](https://www.escapepod.store/)
-- [Third Earth](https://third.earth/)
-- [Tlon Corporation](https://tlon.io)
+This guide will cover the last case and what to do after receiving one.
 
 ### Buying a planet
 
@@ -103,20 +101,8 @@ Now that you have your planet, you can create your keyfile (eg. `sample-palnet.k
 - **L1 Planet Purchasers**  
   Log in to Bridge with your Ethereum wallet using Metamask or the wallet of your choice with WalletConnect. Click the “OS” box on the bottom of the page to open the OS page, and then click the **Download Keyfile** button.
 
+### Next Steps
 
-### Next steps
+Now that you have a keyfile let's move on to booting the Urbit OS.
 
-Got your planet?
-
-Get it up and running with one of these options:
-
-- Let a [hosting provider](/getting-started/hosted) do the hard work for you.
-
-- For power users, check out the [command line install
-  guide](/getting-started/cli) and run your urbit from the terminal.
-
-- If you have a bit of Linux server experience, the [cloud hosting
-  guide](https://operators.urbit.org/manual/running/hosting) will help you set
-  up Urbit on a Digital Ocean VPS, so you can access it from anywhere.
-
-Remember, your planet is yours and you can always change how you run your urbit in the future.
+TODO: Pagination that points to CLI instructions

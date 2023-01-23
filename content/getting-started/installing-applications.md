@@ -1,7 +1,7 @@
 +++
 title = "Installing apps"
-tag = "additional"
-weight = 3
+tag = "around"
+weight = 1
 +++
 
 ### 1. Get on the network

@@ -1,13 +1,14 @@
 +++
-title = "Command line app"
-weight = 2
-description = "Installation instructions for power users."
+title = "Command-line Install"
+weight = 3
+description = "Installation instructions for technical users"
+tag = "selfhost"
 +++
 
-If you're a power user, you can run the Urbit runtime (Vere) using the command 
-line. This can be run on your local machine or a server in the cloud, we
-just cover the local case here. The runtime is what interprets the Urbit kernel
-code (Arvo) into commands your specific machine (macOS or Linux) understands.
+This guide covers running the Urbit runtime (Vere) using the command line. This
+can be run on your local machine or a server in the cloud, we just cover the
+local case here. The runtime is what interprets the Urbit kernel code (Arvo)
+into commands your specific machine (macOS or Linux) understands.
 
 Note there is a much more comprehensive [cloud hosting
 guide](https://operators.urbit.org/manual/running/hosting) which walks through

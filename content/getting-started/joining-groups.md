@@ -1,6 +1,6 @@
 +++
 title = "Joining groups"
-tag = "additional"
+tag = "around"
 weight = 2
 +++
 
