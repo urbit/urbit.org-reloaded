@@ -4,8 +4,6 @@ weight = 0
 description = ""
 +++
 
-*These documents are intended to show you how to use Urbit. They'll guide you through the various options and give you enough context to find your way around. If dont know what Urbit is, you might want to read the [Overview](https://urbit.org/overview) first.*
-
 The goal of Urbit is to make peer-to-peer software easy for developers to write
 and for users to run on their own. The code is [completely open
 source](https://github.com/urbit), [actively
@@ -13,12 +11,8 @@ maintained](https://github.com/urbit/urbit/graphs/code-frequency), supported by
 a [growing ecosystem](https://urbit.org/ecosystem), and [used daily by
 thousands](https://network.urbit.org).
 
-The Urbit software stack consists of two high-level components: an operating
-system (Urbit OS) and an identity system (Urbit ID). If Urbit OS were a door,
-Urbit ID would be the key that unlocks it; the former requires the latter.
-
-Urbit OS enables its user to communicate directly with others using Urbit OS via
-their Urbit ID's. You can think of these like phone numbers &mdash; meaningless
+Urbit consists of two high-level components: an operating
+system (Urbit OS) and an identity system (Urbit ID). Urbit OS enables its user to communicate directly with others using Urbit OS via their Urbit ID's. You can think of these like phone numbers &mdash; meaningless
 but memorizable, and likely to identify the same person reliably through time.
 
 Using Urbit requires having access to a running **ship**: an Urbit OS running

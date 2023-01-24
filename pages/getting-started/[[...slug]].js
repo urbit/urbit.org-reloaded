@@ -44,7 +44,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
   hostprov.sort((a, b) => a.weight > b.weight);
   around.sort((a, b) => a.weight > b.weight);
 
-  const rootClasses = "pl-0 font-semibold text-base hover:text-green-400";
+  const rootClasses = "pl-0 font-semibold antialiased text-base hover:text-green-400";
 
   return (
     <>
@@ -54,7 +54,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
       </Head>
       <div className="flex h-screen min-h-screen w-screen sidebar">
         <Sidebar search={search}>
-          <p className="uppercase pb-1 font-bold text-xs text-wall-400">
+          <p className="uppercase pb-1 font-bold antialiased text-xs text-wall-400">
             Getting Started
           </p>
           <ul>
@@ -68,9 +68,9 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
               </li>
             ))}
           </ul>
-          <ul className="mt-8">
-            <p className="uppercase pb-1 font-bold text-xs text-wall-400">
-              Run Yourself (Technical)
+          <ul className="mt-6">
+            <p className="uppercase pb-1 font-bold antialiased text-xs text-wall-400">
+              Run Yourself
             </p>
             {selfhost.map((post) => (
               <li>
@@ -82,9 +82,9 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
               </li>
             ))}
           </ul>
-          <ul className="mt-8">
-            <p className="uppercase pb-1 font-bold text-xs text-wall-400">
-              Hosting Services (Non-technical)
+          <ul className="mt-6">
+            <p className="uppercase pb-1 font-bold antialiased text-xs text-wall-400">
+              Hosting Services
             </p>
             {hostprov.map((post) => (
               <li>
@@ -96,8 +96,8 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
               </li>
             ))}
           </ul>
-          <ul className="mt-8">
-            <p className="uppercase pb-1 font-bold text-xs text-wall-400">
+          <ul className="mt-6">
+            <p className="uppercase pb-1 font-bold antialiased text-xs text-wall-400">
               Getting Around
             </p>
             {around.map((post) => (
@@ -132,9 +132,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
 
 const breadcrumbs = (posts, paths) => {
   const results = [
-    <Link href="/">Urbit</Link>,
-    <span className="px-1">/</span>,
-    <Link href="/getting-started">Getting Started</Link>,
+    <Link href="/getting-started">Getting Started</Link>
   ];
   let thisLink = "/getting-started";
   for (const path of paths) {
