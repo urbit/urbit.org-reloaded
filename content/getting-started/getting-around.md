@@ -1,12 +1,9 @@
 +++
-title = "Getting around"
-description = "Get around your urbit"
-tags = "around"
-weight = 1
+title = "Overview"
+description = "Getting around your urbit"
+tag = "around"
+weight = 0
 +++
-
-
-
 
 ### 1. Get oriented
 
