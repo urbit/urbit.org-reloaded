@@ -284,7 +284,7 @@ You can do this with the following command:
 Then `.run` should work as expected and future runtime upgrades can be done via
 `next`.
 
-### Next steps
+## Next steps
 
 Learn how to [get around your
-urbit](https://urbit.org/getting-started/getting-around).
+urbit](/getting-started/getting-around).

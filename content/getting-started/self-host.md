@@ -20,11 +20,10 @@ Remember, never run your Urbit in more than one place!  Doing so will likely nec
 
 ## Next Steps
 
-1. [Get an Urbit ID](/getting-started/get-id): 
-You can boot Urbit with a comet, a temporary Urbit ID, but you'll want a planet so you can take full advantage of the networked experience.
+- [Get an Urbit ID](/getting-started/get-id) – Get a planet, a permanent Urbit ID, for the best networked experience.
 
-2. [CLI instructions](/getting-started/cli):
-Set up Vere, the Urbit runtime, using the command line.
+- [CLI instructions](/getting-started/cli) – Set up Vere, the Urbit runtime, using the command line.
 
-3. [Install on the cloud](/getting-started/cloud-hosting):
-A step-by-step guide to setting up Urbit on Digital Ocean.
+- [Install on the cloud](/getting-started/cloud-hosting) – A step-by-step guide to setting up Urbit on Digital Ocean.
+
+- [Set up a home server](/getting-started/home-servers) – Explore options for running your own dedicated physical Urbit computer.
