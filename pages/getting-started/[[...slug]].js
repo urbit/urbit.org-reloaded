@@ -81,7 +81,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
           </ul>
           <ul className="mt-6">
             <p className="uppercase pb-1 font-bold antialiased text-xs text-wall-400">
-              Hosting Services
+              Hosting
             </p>
             {hostprov.map((post) => (
               <li>
