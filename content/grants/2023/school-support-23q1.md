@@ -4,13 +4,14 @@ title = "School Support"
 date = "2023-01-25"
 
 [taxonomies]
-grant_type = ["Proposal"]
+grant_type = ["Bounty"]
 grant_category = ["App Dev"]
 
 [extra]
 image = ""
 description = "Supporting online course teaching and composing grading apps."
 reward = "2 stars"
+assignee = ["~tamlut-modnys"]
 champion = ["~lagrev-nocfrp"]
 grant_id = "B0225"
 completed = false
