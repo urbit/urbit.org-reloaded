@@ -1,6 +1,6 @@
 +++
 title = "Interfaces"
-weight = 1
+weight = 4
 description = "Ways to interact with Urbit"
 tag = "around"
 +++

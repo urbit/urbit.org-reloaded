@@ -8,16 +8,16 @@ tag = "selfhost"
 ### Types of ID
 
 There are [five different
-types](https://operators.urbit.org/guides/which-id-should-i-buy) of Urbit ID,
-but for our purposes we'll only talk about two of them: **comets** and **planets**.
+types](https://operators.urbit.org/guides/which-id-should-i-buy) of Urbit ID, but here we'll just be  discussing two types called comets and planets.
 
-**Comets** are identities that you can issue yourself and are best-suited for
-short-term usage. **Planets** are how most people use Urbit and are suitable for
-long-term use.
+**Comets** are free, temporary identities that you can issue yourself and are best-suited for
+short-term usage. **Planets** are permanent identities that are suitable for long-term use.
 
-If you're just trying it out, a comet is fine and you can skip to the [Command line instructions](/getting-started/cli).
+![](https://storage.googleapis.com/media.urbit.org/site/getting-started/comet-planet.png)
 
-If you plan to use Urbit regularly you'll want to keep reading.
+Planets have a unique, four syllable phonetic name and a [sigil](https://urbit.org/blog/creating-sigils), a visual representation of the name.
+
+
 
 ### Where to get a planet
 
@@ -32,7 +32,7 @@ This guide will cover the last case and what to do after receiving one.
 
 ### Buying a planet
 
-There are many places to buy a planet using either cryptocurrency or fiat.
+There are many places to buy a planet using either crypto or fiat currency.
 
 Layer 1 planets are the most available through marketplaces, however they can be expensive due to Ethereum gas fees. You will need an Ethereum wallet such as Metamask to purchase these planets, and will later need to sign in to Bridge with your wallet to configure your planet.
 

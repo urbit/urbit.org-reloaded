@@ -22,7 +22,7 @@ provider &mdash; that is, someone that provides you with an Urbit as a service.
 
 ## Next steps
 
-1. [Run Urbit yourself](/getting-started/self-host) or get a [hosted ship](/getting-started/hosted)
-2. Use [interfaces](/getting-started/interfaces) that talk to your ship
-3. [Install apps](/getting-started/installing-apps) to experiment with
-4. [Join groups](/getting-started/joining-groups) using the Groups app
+- [Run Urbit yourself](/getting-started/self-host) or select a [hosting provider](/getting-started/hosted)
+- Meet friendly people by [joining groups](/getting-started/joining-groups)
+- [Install apps](/getting-started/installing-apps) to experiment with
+- Explore [interfaces](/getting-started/interfaces) for Urbit
