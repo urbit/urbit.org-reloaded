@@ -54,9 +54,6 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
       </Head>
       <div className="flex h-screen min-h-screen w-screen sidebar">
         <Sidebar search={search}>
-          <p className="uppercase pb-1 font-bold antialiased text-xs text-wall-400">
-            Getting Started
-          </p>
           <ul>
             {started.map((post) => (
               <li>

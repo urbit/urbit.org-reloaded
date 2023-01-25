@@ -1,7 +1,7 @@
 +++
 title = "Overview"
 weight = 0
-description = ""
+description = "Running Urbit with a hosting provider"
 tag = "hostprov"
 +++
 
@@ -18,4 +18,5 @@ The two important points one should remember about hosting providers:
 - Urbit has portable data, so you should be able to work with a hosting provider to download all your data and boot up elsewhere if you choose to migrate or start self-hosting.
 
 
-Next: [Hosting Providers -&gt;](/getting-started/providers)
+
+**Next** – [Explore Hosting Providers -&gt;](/getting-started/providers)

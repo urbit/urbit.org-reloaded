@@ -4,9 +4,7 @@ tag = "around"
 weight = 2
 +++
 
-Joining public groups is straightforward: search for the group host's Urbit ID, and join.
-
-Some groups are private, so you'll need approval to join.
+Joining public groups is straightforward: search for the group host's Urbit ID, and join. Some groups are private, so you'll need approval to join.
 
 And still other groups are secret!  Which means you can't find them, and you'll need to be invited to join.
 

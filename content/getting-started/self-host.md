@@ -1,7 +1,7 @@
 +++
 title = "Overview"
 weight = 1
-description = ""
+description = "Running your own urbit"
 tag = "selfhost"
 +++
 
