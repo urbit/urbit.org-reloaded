@@ -8,6 +8,10 @@
       "destination": "/groups/~halbex-palheb/uf-public"
     },
     {
+      "source": "/getting-started/get-planet",
+      "destination": "/getting-started/get-id"
+    },
+    {
       "source": "/docs/getting-started",
       "destination": "/getting-started"
     },
