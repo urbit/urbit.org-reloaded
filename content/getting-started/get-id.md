@@ -101,8 +101,12 @@ Now that you have your planet, you can create your keyfile (eg. `sample-palnet.k
 - **L1 Planet Purchasers**  
   Log in to Bridge with your Ethereum wallet using Metamask or the wallet of your choice with WalletConnect. Click the “OS” box on the bottom of the page to open the OS page, and then click the **Download Keyfile** button.
 
-### Next Steps
+### Next steps
 
 Now that you have a keyfile let's move on to booting the Urbit OS.
 
-TODO: Pagination that points to CLI instructions
+- [CLI instructions](/getting-started/cli) – Set up Vere, the Urbit runtime, using the command line.
+
+- [Install on the cloud](/getting-started/cloud-hosting) – A step-by-step guide to setting up Urbit on Digital Ocean.
+
+- [Set up a home server](/getting-started/home-servers) – Explore options for running your own dedicated physical Urbit computer.

@@ -1,5 +1,5 @@
 +++
-title = "Cloud Hosting"
+title = "Cloud hosting"
 weight = 4
 description = "How to host your ship in the cloud so you can access it from any device"
 tag = "selfhost"

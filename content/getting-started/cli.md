@@ -1,5 +1,5 @@
 +++
-title = "Command-line Install"
+title = "Command-line install"
 weight = 3
 description = "Installation instructions for technical users"
 tag = "selfhost"

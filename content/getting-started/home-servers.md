@@ -1,5 +1,5 @@
 +++
-title = "Home Servers"
+title = "Home servers"
 weight = 5
 description = "Options for hosting with a home server"
 tag = "selfhost"
