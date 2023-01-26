@@ -58,25 +58,60 @@ export default function Home({
           // Hero
         }
 
-        <Section className="pb-12">
-          <div className="bg-wall-100 w-full p-4 md:p-8 rounded-3xl flex flex-wrap items-center">
 
-            <div className="basis-full sm:basis-1/3 pb-4 sm:pb-0">
-              <img className="rounded-xl w-72" src="https://storage.googleapis.com/media.urbit.org/assembly/assembly-thumb2.jpg" />
-            </div>
-            <div className="sm:basis-2/3 sm:pl-6 align-middle">
-              <h2 className="text-2xl pb-2">Assembly 2022</h2 >
-              <p className="max-w-prose pb-4">
-                Select talks and panels are being released from the second annual Urbit confluence in Miami.
-              </p>
-              <Link href="https://assembly.urbit.org" passHref>
-                <a className="button-sm border-2 border-wall-600 text-wall-600 type-sm max-w-fit">
-                  Watch Now
-                </a>
-              </Link>
-            </div>
+          <Section className="pb-12">
+
+          <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
+
+
+            <Link href="#">
+              <div className="cursor-pointer bg-wall-100 rounded-xl min-h-0 flex-1">
+                <div className="flex flex-col p-4 h-full relative">
+                    <div className="w-64 md:w-full rounded-xl object-cover overflow-hidden basis-3/5">
+                      <img className="h-full w-64 md:w-full object-cover" src="https://storage.googleapis.com/media.urbit.org/site/featured/state-of-network.png"/>
+                    </div>
+                  <div className="pt-4">
+                    <p className="mb-2 font-semibold leading-5">State of the Network</p>
+                    <p className="text-sm leading-5">Urbit is not the same in 2023 as it was in 2022.</p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            <Link href="https://roadmap.urbit.org">
+              <div className="bg-wall-100 rounded-xl min-h-0 flex-1">
+                <div className="cursor-pointer flex flex-col p-4 h-full relative">
+                    <div className="w-64 md:w-full rounded-xl object-cover overflow-hidden basis-3/5">
+                      <img className="h-full w-64 md:w-full object-cover" src="https://storage.googleapis.com/media.urbit.org/site/featured/roadmap-icon.jpg"/>
+                    </div>
+                  <div className="pt-4">
+                    <p className="mb-2 font-semibold leading-5">Roadmap</p>
+                    <p className="text-sm leading-5">Explore the technical plan for making Urbit suitable to mass adoption.</p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+
+            <Link href="https://developers.urbit.org/courses/hsl">
+              <div className="bg-wall-100 rounded-xl min-h-0 flex-1">
+                <div className="cursor-pointer flex flex-col p-4 h-full relative">
+                    <div className="w-64 md:w-full rounded-xl object-cover overflow-hidden basis-3/5">
+                      <img className="h-full w-64 md:w-full object-cover" src="https://storage.googleapis.com/media.urbit.org/site/featured/hoon-school-23.png"/>
+                    </div>
+                  <div className="pt-4">
+                    <p className="mb-2 font-semibold leading-5">Hoon School Live 23'</p>
+                    <p className="text-sm leading-5">The next cohort class to learn Hoon begins in March.</p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
           </div>
+
         </Section>
+
+
 
 
         <Section narrow className="space-y-8">
@@ -139,6 +174,53 @@ export default function Home({
             </Link>
           </div>
         </Section>
+
+        {
+          // Build on Urbit Developer CTA
+        }
+        <Section narrow>
+          <h2 className="pb-8">Build on Urbit</h2>
+          <h4 className="pb-6">
+            Urbit is a personal OS designed from scratch to run peer-to-peer
+            applications.
+          </h4>
+          <p className="pb-6">
+            It solves the hard problems of implementing a peer-to-peer network
+            (including identity, NAT traversal, and exactly-once delivery) in
+            the kernel so app developers can focus on business logic.
+          </p>
+          <p className="pb-6">
+            The entire OS is a{" "}
+            <Link href="https://urbit.org/docs/nock/definition/" passHref>
+              <a>single pure function</a>
+            </Link>{" "}
+            that provides application developers with strong guarantees:
+            automated persistence and memory management, repeatable builds, and
+            support for hot code reloading.
+          </p>
+          <p className="pb-10">
+            You can get started learning how to{" "}
+            <Link href="https://urbit.org/docs/development/develop/" passHref>
+              <a>contribute to the project</a>
+            </Link>
+            , or view a variety of{" "}
+            <Link
+              href="https://github.com/urbit/awesome-urbit#http-apis-airlock"
+              passHref
+            >
+              <a>libraries</a>
+            </Link>{" "}
+            for building on Urbit using the languages you already know.
+          </p>
+          <Link href="https://developers.urbit.org" passHref>
+            <a className="button-lg type-ui text-white bg-green-400 max-w-fit">
+              Visit Urbit Developers
+            </a>
+          </Link>
+        </Section>
+
+
+
         {
           // Grants
         }
@@ -188,49 +270,6 @@ export default function Home({
           </div>
         </Section>
 
-        {
-          // Build on Urbit Developer CTA
-        }
-        <Section narrow>
-          <h2 className="pb-8">Build on Urbit</h2>
-          <h4 className="pb-6">
-            Urbit is a personal OS designed from scratch to run peer-to-peer
-            applications.
-          </h4>
-          <p className="pb-6">
-            It solves the hard problems of implementing a peer-to-peer network
-            (including identity, NAT traversal, and exactly-once delivery) in
-            the kernel so app developers can focus on business logic.
-          </p>
-          <p className="pb-6">
-            The entire OS is a{" "}
-            <Link href="https://urbit.org/docs/nock/definition/" passHref>
-              <a>single pure function</a>
-            </Link>{" "}
-            that provides application developers with strong guarantees:
-            automated persistence and memory management, repeatable builds, and
-            support for hot code reloading.
-          </p>
-          <p className="pb-10">
-            You can get started learning how to{" "}
-            <Link href="https://urbit.org/docs/development/develop/" passHref>
-              <a>contribute to the project</a>
-            </Link>
-            , or view a variety of{" "}
-            <Link
-              href="https://github.com/urbit/awesome-urbit#http-apis-airlock"
-              passHref
-            >
-              <a>libraries</a>
-            </Link>{" "}
-            for building on Urbit using the languages you already know.
-          </p>
-          <Link href="https://developers.urbit.org" passHref>
-            <a className="button-lg type-ui text-white bg-green-400 max-w-fit">
-              Visit Urbit Developers
-            </a>
-          </Link>
-        </Section>
 
         {
           // Blog Posts
@@ -272,12 +311,35 @@ export default function Home({
           </Link>
         </Section>
 
+        <Section className="pb-12">
+          <div className="bg-wall-100 w-full p-4 md:p-8 rounded-3xl flex flex-wrap items-center">
+
+            <div className="basis-full sm:basis-1/3 pb-4 sm:pb-0">
+              <img className="rounded-xl w-72" src="https://storage.googleapis.com/media.urbit.org/assembly/assembly-thumb2.jpg" />
+            </div>
+            <div className="sm:basis-2/3 sm:pl-6 align-middle">
+              <h2 className="text-2xl pb-2">Assembly 2022</h2 >
+              <p className="max-w-prose pb-4">
+                Watch talks and panels from last year's confluence in Miami.
+              </p>
+              <Link href="https://assembly.urbit.org" passHref>
+                <a className="button-sm border-2 border-wall-600 text-wall-600 type-sm max-w-fit">
+                  Watch Now
+                </a>
+              </Link>
+            </div>
+          </div>
+        </Section>
+
         <Section narrow>
           <h2 className="pb-2">Urbit Monthly</h2>
           <p className="pb-8">Get monthly email updates on all things Urbit.</p>
 
           <Contact emphasize />
         </Section>
+
+
+
 
         <Section narrow>
           <h2 className="pb-8">Social Media</h2>
