@@ -3,7 +3,8 @@ title = "Finishing Touches to Eyre Noun-Based Channels"
 date = "2022-01-26"
 
 [taxonomies]
-grant_type = [ "Proposal" ]
+grant_type = ["Proposal"]
+grant_category = ["App Dev"]
 
 [extra]
 image = ""
