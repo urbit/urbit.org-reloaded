@@ -1,6 +1,6 @@
 +++
-title = "Hoon School Live 23'"
-image = "https://storage.googleapis.com/media.urbit.org/site/featured/hoon-school-23.png"
-url="https://developers.urbit.org/courses/hsl"
-description = "The next cohort class to learn Hoon begins in March 2023."
+title = "The Roadmap"
+image = "https://storage.googleapis.com/media.urbit.org/site/featured/roadmap-icon.jpg"
+url="https://roadmap.urbit.org/"
+description = "Explore the technical plan for making Urbit suitable for mass adoption."
 +++
