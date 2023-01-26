@@ -4,7 +4,7 @@ date = "2022-01-26"
 
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["App Dev"]
+grant_category = ["Core Dev"]
 
 [extra]
 image = ""
