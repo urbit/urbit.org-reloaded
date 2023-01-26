@@ -19,6 +19,7 @@ import PostPreview from "../components/PostPreview";
 import EventPreview from "../components/EventPreview";
 import { eventKeys } from "../lib/constants";
 import IndexCard from "../components/ecosystem/IndexCard";
+import HighlightCard from "../components/HighlightCard";
 import fs from "fs";
 import path from "path";
 import Meta from "../components/Meta";
@@ -26,6 +27,7 @@ import { matchEcosystemPost } from "../lib/lib";
 
 export default function Home({
   posts,
+  highlights,
   ecosystem,
   events,
   grantNumbers,
@@ -58,57 +60,15 @@ export default function Home({
           // Hero
         }
 
-
-          <Section className="pb-12">
-
+        {
+          // Highlights
+        }
+        <Section className="pb-12">
           <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
-
-
-            <Link href="#">
-              <div className="cursor-pointer bg-wall-100 rounded-xl min-h-0 flex-1">
-                <div className="flex flex-col p-4 h-full relative">
-                    <div className="w-64 md:w-full rounded-xl object-cover overflow-hidden basis-3/5">
-                      <img className="h-full w-64 md:w-full object-cover" src="https://storage.googleapis.com/media.urbit.org/site/featured/state-of-network.png"/>
-                    </div>
-                  <div className="pt-4">
-                    <p className="mb-2 font-semibold leading-5">State of the Network</p>
-                    <p className="text-sm leading-5">Urbit is not the same in 2023 as it was in 2022.</p>
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            <Link href="https://roadmap.urbit.org">
-              <div className="bg-wall-100 rounded-xl min-h-0 flex-1">
-                <div className="cursor-pointer flex flex-col p-4 h-full relative">
-                    <div className="w-64 md:w-full rounded-xl object-cover overflow-hidden basis-3/5">
-                      <img className="h-full w-64 md:w-full object-cover" src="https://storage.googleapis.com/media.urbit.org/site/featured/roadmap-icon.jpg"/>
-                    </div>
-                  <div className="pt-4">
-                    <p className="mb-2 font-semibold leading-5">Roadmap</p>
-                    <p className="text-sm leading-5">Explore the technical plan for making Urbit suitable to mass adoption.</p>
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-
-            <Link href="https://developers.urbit.org/courses/hsl">
-              <div className="bg-wall-100 rounded-xl min-h-0 flex-1">
-                <div className="cursor-pointer flex flex-col p-4 h-full relative">
-                    <div className="w-64 md:w-full rounded-xl object-cover overflow-hidden basis-3/5">
-                      <img className="h-full w-64 md:w-full object-cover" src="https://storage.googleapis.com/media.urbit.org/site/featured/hoon-school-23.png"/>
-                    </div>
-                  <div className="pt-4">
-                    <p className="mb-2 font-semibold leading-5">Hoon School Live 23'</p>
-                    <p className="text-sm leading-5">The next cohort class to learn Hoon begins in March.</p>
-                  </div>
-                </div>
-              </div>
-            </Link>
-
+            <HighlightCard highlight={highlights[0]} key={highlights[0].slug} />
+            <HighlightCard highlight={highlights[1]} key={highlights[1].slug} />
+            <HighlightCard highlight={highlights[2]} key={highlights[2].slug} />
           </div>
-
         </Section>
 
 
@@ -372,6 +332,8 @@ export default function Home({
   );
 }
 
+
+
 export async function getStaticProps() {
   // Latest blog posts
   const posts = getAllPosts(
@@ -379,6 +341,14 @@ export async function getStaticProps() {
     "blog",
     "date"
   );
+
+
+  // Highlights
+  const highlights = getAllPosts(
+    ["title", "slug", "image", "url", "description"],
+    "highlights"
+  );
+
 
   // Latest ecosystem report with matched post metadata
   const ecosystem = matchEcosystemPost(getAllPosts(
@@ -451,6 +421,7 @@ export async function getStaticProps() {
   return {
     props: {
       posts,
+      highlights,
       ecosystem,
       grantNumbers,
       events: happeningNow.concat(futureEvents).concat(pastEvents),
