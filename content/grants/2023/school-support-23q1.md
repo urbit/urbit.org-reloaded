@@ -33,6 +33,8 @@ a course setting.
 The basic spec for this proposal:
 
 -   support teaching and grading ASL and HSL
--   course grading CLI tools
--   course admin CLI tools
--   maybe Urbit Forms upgrade/update
+-   course grading CLI tools (grading agent or thread from reference answer to student answer yielding final grade)
+-   course admin CLI tools (gradebook store with DM reporting agent or thread)
+-   maybe Urbit Forms upgrade/update (postponing)
+
+(So about three agents/threads.)
