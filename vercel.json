@@ -40,8 +40,12 @@
       "destination": "/grants/faux"
     },
     {
+      "source": "/using/id/layer-2-for-planets",
+      "destination": "https://operators.urbit.org/manual/id/layer-2-for-planets"
+    },
+    {
       "source": "/getting-started/layer-2-for-planets",
-      "destination": "/using/id/layer-2-for-planets"
+      "destination": "https://operators.urbit.org/manual/id/layer-2-for-planets"
     },
     {
       "source": "/guides/getting-an-urbit-id",

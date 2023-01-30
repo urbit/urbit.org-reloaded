@@ -34,11 +34,12 @@ This guide will cover the last case and what to do after receiving one.
 
 There are many places to buy a planet using either crypto or fiat currency.
 
-Layer 1 planets are the most available through marketplaces, however they can be expensive due to Ethereum gas fees. You will need an Ethereum wallet such as Metamask to purchase these planets, and will later need to sign in to Bridge with your wallet to configure your planet.
+Layer 1 planets are the most available through marketplaces, however they can be expensive due to Ethereum gas fees. You will need an Ethereum wallet such as Metamask to purchase planets, and will later need to sign in to Bridge with your wallet to configure your planet.
 
-Layer 2 planets do not require any crypto wallet management, but are at present less readily available on marketplaces.
+Layer 2 planets do not require any crypto wallet management, but are only available on specific marketplaces.
 
-Don’t worry, both types work the same on the network.
+There is no difference between Layer 1 or Layer 2 in the quality of experience
+when using Urbit.
 
 Here are a few of the places where you can buy planets:
 {% table .w-full .my-4 %}
@@ -62,7 +63,7 @@ Here are a few of the places where you can buy planets:
 
 **Layer 2 for planets**
 
-Learn more about [layer 2 for planets](/using/id/layer-2-for-planets) in the User's Manual page on the topic.
+Learn more about [layer 2 for planets](https://operators.urbit.org/manual/id/layer-2-for-planets) in the User's Manual page on the topic.
 
 {% /callout %}
 
@@ -73,7 +74,7 @@ An invitation to claim your planet comes in one of two forms.
 
 The first is an email invitation with an Urbit ID and a Master Ticket.
 
-The second, only recently made available through our [L2 solution](/using/id/layer-2-for-planets), is an activation code or a link to activate on [Bridge](https://bridge.urbit.org), which can be thought of as an Urbit account management tool.
+The second, made available through our [L2 solution](https://operators.urbit.org/manual/id/layer-2-for-planets), is an activation code or a link to activate on [Bridge](https://bridge.urbit.org), the Urbit ID management tool.
 
 ![](https://media.urbit.org/site/getting-started/Server-setup-1.jpg)
 
@@ -107,6 +108,6 @@ Now that you have a keyfile let's move on to booting the Urbit OS.
 
 - [CLI instructions](/getting-started/cli) – Set up Vere, the Urbit runtime, using the command line.
 
-- [Install on the cloud](/getting-started/cloud-hosting) – A step-by-step guide to setting up Urbit on Digital Ocean.
+- [Install on the cloud](/getting-started/cloud-hosting) – A step-by-step guide to setting up Urbit on a VPS.
 
 - [Set up a home server](/getting-started/home-servers) – Explore options for running your own dedicated physical Urbit computer.
