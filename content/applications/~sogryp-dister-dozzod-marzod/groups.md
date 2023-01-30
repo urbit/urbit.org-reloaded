@@ -1,6 +1,6 @@
 +++
 title = "Groups"
-shortcode = "~marnec-dozzod-marzod/groups"
+shortcode = "~sogryp-dister-dozzod-dozzod/groups"
 license = "MIT"
 image = "https://bootstrap.urbit.org/icon-groups.svg"
 bgColor = "#EFF0F4"
