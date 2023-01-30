@@ -1,9 +1,9 @@
 +++
 title = "Temple O Chess"
-shortcode = "~ropmer-nosnux-bacwyl-samweg/templeochess"
+shortcode = "~bacwyl-samweg/templeochess"
 license = "MIT"
-image = "https://templeos.org/Templeos-header.png"
-bgColor = "#11FFFF"
+image = "https://0x0.st/oFuT.png"
+bgColor = "#FFFF55"
 developer = "~bacwyl-samweg"
 website = "https://youtu.be/Raej8C2yIEc"
 +++
