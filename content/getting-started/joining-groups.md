@@ -23,7 +23,7 @@ To join a group, you'll need to know its host Urbit ID (e.g. ~bitbet-bolbel) or 
 
 Check out some public groups in the [urbit.org groups directory](/ecosystem?type=groups)
 
-As an example, we’ll start by joining UF, the official group of the Urbit Foundation.
+As an example, we’ll start by joining UF, the Urbit Foundation's official group.
 
 In the Groups app, click on "Find Groups" in the left column and enter `~halbex-palheb/uf-public`
 
