@@ -23,7 +23,7 @@ To join a group, you'll need to know its host Urbit ID (e.g. ~bitbet-bolbel) or 
 
 Check out some public groups in the [urbit.org groups directory](/ecosystem?type=groups)
 
-As an example, we’ll start by joining UF, the official group of the Urbit Foundation.
+As an example, we’ll start by joining UF, the Urbit Foundation's official group.
 
 In the Groups app, click on "Find Groups" in the left column and enter `~halbex-palheb/uf-public`
 
@@ -34,7 +34,7 @@ Then click on the "Join" button once the group appears.
 
 ### 3. Join channels
 
-Give it a minute and you'll see the first default channel of the group.  For some larger groups with a large backlog, such as Urbit Community, this may require for than a minute.
+After a few moments the default channels will load. For groups with a large backlog, such as Urbit Community (~bitbet-bolbel/urbit-community), this may take a few minutes.
 
 ![](https://media.urbit.org/site/additional-guides/groups-3.png)
 
