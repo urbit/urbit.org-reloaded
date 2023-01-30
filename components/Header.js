@@ -8,7 +8,7 @@ function ActiveLink({ children, href, className, currentPath }) {
   const firstCrumb = currentPath.split("/")[1];
 
   const activeClassName = classnames({
-    "text-wall-600": "/" + firstCrumb === href,
+    "text-wall-900": "/" + firstCrumb === href,
     "text-wall-500": "/" + firstCrumb !== href,
   });
 
@@ -48,7 +48,7 @@ export default function Header(props) {
       <nav className="items-center hidden md:flex">
         <ActiveLink
           currentPath={currentPath}
-          className="mr-5 text-green-400 type-ui button-text"
+          className="mr-5 type-ui"
           href="/getting-started"
         >
           Get Started

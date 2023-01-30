@@ -1,17 +1,18 @@
 +++
-title = "Command line app"
-weight = 2
-description = "Installation instructions for power users."
+title = "Command-line install"
+weight = 3
+description = "Installation instructions for technical users"
+tag = "selfhost"
 +++
 
-If you're a power user, you can run the Urbit runtime (Vere) using the command 
-line. This can be run on your local machine or a server in the cloud, we
-just cover the local case here. The runtime is what interprets the Urbit kernel
-code (Arvo) into commands your specific machine (macOS or Linux) understands.
+This guide covers running the Urbit runtime (Vere) using the command line. This
+can be run on your local machine or a server in the cloud, we just cover the
+local case here. The runtime is what interprets the Urbit kernel code (Arvo)
+into commands your specific machine (macOS or Linux) understands.
 
 Note there is a much more comprehensive [cloud hosting
-guide](https://operators.urbit.org/manual/running/hosting) which walks through
-setting up Urbit on a [Digital Ocean](https://www.digitalocean.com/) VPS.
+guide](/getting-started/cloud-hosting) which walks through setting up Urbit on a
+[Digital Ocean](https://www.digitalocean.com/) VPS.
 
 ### 1. System Requirements {% #about-swap-space %}
 
@@ -98,8 +99,8 @@ and planets.
   unlimited number of comets, planets are more scarce (preventing spamming,
   among other things). This scarcity means they usually aren't free (though
   sometimes nice people give them away). This guide will assume you've already
-  acquired a planet. If you haven't, you can refer to the ["Get a planet"
-  guide](https://urbit.org/getting-started/get-planet) before continuing.
+  acquired a planet. If you haven't, you can refer to the ["Get an Urbit ID"
+  guide](/getting-started/get-id) before continuing.
 
 Follow the instructions for your case:
 
@@ -283,7 +284,7 @@ You can do this with the following command:
 Then `.run` should work as expected and future runtime upgrades can be done via
 `next`.
 
-### Next steps
+## Next steps
 
 Learn how to [get around your
-urbit](https://urbit.org/getting-started/getting-around).
+urbit](/getting-started/getting-around).
