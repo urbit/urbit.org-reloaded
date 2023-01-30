@@ -48,7 +48,7 @@ If you're having trouble with your planet or the hosting provider that's running
 
 **Learn more**: Check out the [Operators Site](https://operators.urbit.org/) to learn more about running your own Urbit and how the network functions.
 
-**Stay updated**: [Subscribe](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&id=be143888d2) to the Urbit Newsletter for news, blog posts, and events from the Urbit Foundation.
+**Stay updated**: [Subscribe](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&id=be143888d2) to the Urbit Newsletter for news, blog posts, and upcoming events.
 
 **Meet up**: Many of the organizations and people behind Urbit host virtual and in-person events on a regular basis — check out the latest on our [Events feed](/events/), or a local [Meetup group](/ecosystem?type=communities).
 
