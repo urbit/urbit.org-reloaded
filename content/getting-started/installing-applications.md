@@ -12,7 +12,7 @@ To isntall an application, you'll need to know the ship it is distributed from, 
 
 You can find a [public directory of applications](/ecosystem?type=applications) in the Ecosystem section of urbit.org.
 
-Urbit is still in its early stages and not all applications are listed on urbit.org, so you’ll need to join groups and browse around the network to discover the newest applications as they are being brought up. 
+Not all applications are listed on urbit.org, so you’ll discover more by actively using Urbit and meeting people.
 
 However, we can get started a simple app from Urbit developer [`~tirrel`](/ids/~tirrel).
 
