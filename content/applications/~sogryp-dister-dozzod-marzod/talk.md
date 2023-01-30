@@ -10,3 +10,5 @@ description = "Talk is a decentralized chat app that integrates with Groups, Not
 +++
 
 Send encrypted direct messages to one or many friends. Talk is a simple chat tool for catching up, getting work done, and everything in between.
+
+![](https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/talk-screenshot.png)
