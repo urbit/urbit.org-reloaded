@@ -1,8 +1,9 @@
 +++
 title = "Holium"
 description = "Holium's mission is to enable the networked state."
-image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/holium.png"
+image = "https://media.urbit.org/site/ecosystem/organizations/holium-logo.jpg"
 URL = "https://holium.com"
+twitter = "HoliumCorp"
 ships = ["~livdel-binmun-lomder-librun", "~lomder-librun"]
 +++
 
