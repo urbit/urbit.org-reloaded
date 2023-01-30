@@ -103,6 +103,7 @@ export async function getStaticProps({ params }) {
       "slug",
       "description",
       "URL",
+      "twitter",
       "image",
       "ships",
       "group",
