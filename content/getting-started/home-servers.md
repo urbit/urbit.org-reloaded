@@ -5,7 +5,7 @@ description = "Options for hosting with a home server"
 tag = "selfhost"
 +++
 
-There are now a variety of tools that make running Urbit at home much simpler.  If your enjoy hardware ownership and full embracing the spirit of decentralization, then these tools are for you.
+There are a variety of tools that make running Urbit at home straightforward on dedicated hardware.  If your enjoy hardware ownership and full embracing the spirit of decentralization, then these tools are for you.
 
 
 ## Native Planet
