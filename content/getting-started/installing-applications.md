@@ -14,7 +14,7 @@ You can find a [public directory of applications](/ecosystem?type=applications) 
 
 Not all applications are listed on urbit.org, so you’ll discover more by actively using Urbit and meeting people.
 
-However, we can get started a simple app from Urbit developer [`~tirrel`](/ids/~tirrel).
+However, we can get started a simple app from Urbit developer [`~paldev`](/ids/~paldev).
 
 ### 2. Search for a Developer
 
@@ -22,18 +22,18 @@ Once you’re on the network, you’ll see a large tiled interface with a few ap
 
 Click and the search bar and search for the software provider’s Urbit ID.
 
-For example, to install the Studio application, search for `~tirrel` and then click on the result for `~tirrel` to show the applications.
+For example, to install the pals application, search for `~paldev` and then click on the result for `~paldev` to show the applications.
 
-![](https://media.urbit.org/site/additional-guides/apps-1.png)
+![](https://media.urbit.org/site/getting-started/install-apps-1.png)
 
-![](https://media.urbit.org/site/additional-guides/apps-2.png)
+![](https://media.urbit.org/site/getting-started/install-apps-2.png)
 
 ### 3. Get the Application
 
-Select the Studio app, and a modal window will open that shows some information about the application. Go ahead and click the “Get App” button, and confirm the following modal window to begin the installation process.
+Select the pals app, and a modal window will open that shows some information about the application. Go ahead and click the “Get App” button, and confirm the following modal window to begin the installation process.
 
-Soon you’ll have a new application tile on your home screen that will let you host a blog from your urbit.
+Soon you’ll have a new application tile on your home screen.  Now you can add people you know on the network as your pals just by entering their Urbit ID.
 
-![](https://media.urbit.org/site/additional-guides/apps-3.png)
+![](https://media.urbit.org/site/getting-started/install-apps-3.png)
 
-![](https://media.urbit.org/site/additional-guides/apps-4.png)
+![](https://media.urbit.org/site/getting-started/install-apps-4.png)
