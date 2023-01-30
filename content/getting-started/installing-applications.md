@@ -4,7 +4,7 @@ tag = "around"
 weight = 3
 +++
 
-Installing urbit applications is very simple.  Just search for the developer, and download the application.  We'll walk you through it.
+Installing Urbit applications is simple. Search for the developer and download the application directly from them.  We'll walk you through it.
 
 ### 1. Finding applications
 
