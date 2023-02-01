@@ -24,5 +24,5 @@ provider &mdash; that is, someone that provides you with an Urbit as a service.
 
 - [Run Urbit yourself](/getting-started/self-host) or select a [hosting provider](/getting-started/hosted)
 - Meet friendly people by [joining groups](/getting-started/joining-groups)
-- [Install apps](/getting-started/installing-apps) to experiment with
+- [Install apps](/getting-started/installing-applications) to experiment with
 - Explore [interfaces](/getting-started/interfaces) for Urbit
