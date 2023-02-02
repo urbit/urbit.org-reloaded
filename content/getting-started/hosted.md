@@ -21,7 +21,7 @@ The two important points one should remember about hosting providers:
 
 - Because the provider has access to the resources that run your Urbit
   experience, you must trust them with your data.
-- Urbit is designed to be portable, so yoru hosting provider will allow you to
+- Urbit is designed to be portable, so your hosting provider will allow you to
   export all your data and boot up elsewhere if you choose.
 
 
