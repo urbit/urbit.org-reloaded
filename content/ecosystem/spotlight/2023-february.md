@@ -28,15 +28,15 @@ Native Planet is Urbit's first dedicated hardware company.  Their first product,
 
 [featured-3]
 
-title = "Urbitex"
-description = "Urbitex is an Urbit-focused marketplace which allows you to purchase Urbit IDs."
-image=""
+title = "Tlon"
+description = "You’ll be ready to use Urbit in five minutes—as long as it takes to unpack a new computer."
+image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon-hosting.jpg"
 
 content = """
 
-Urbitex is a marketplace which offers two types of Urbit IDs, planets and stars, in a simple, dedicated interface.
+Run your Urbit with the new hosting platform from the company that built Urbit. Your Urbit will automatically be up to date and accessible from anywhere.
 
-Learn more about planets in our [Get an Urbit ID](/getting-started/get-id) guide, and about stars in our [Star Buyer's Guide](https://operators.urbit.org/guides/star-buyers-guide).
+[![Screenshot](https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon-hosting-provider.png)](https://tlon.io)
 
 
 """

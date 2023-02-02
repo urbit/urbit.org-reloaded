@@ -113,7 +113,7 @@ export async function getStaticProps({ params }) {
   );
 
   const spotlights = getAllPosts(
-    ["title", "slug", "featured-1", "featured-2", "featured-3"],
+    ["title", "heading", "slug", "featured-1", "featured-2", "featured-3"],
     "ecosystem/spotlight"
   ).filter(
     (e) =>
