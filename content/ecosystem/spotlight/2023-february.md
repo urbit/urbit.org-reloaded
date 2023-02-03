@@ -37,7 +37,6 @@ Native Planet is Urbit's first dedicated hardware company.  Their first product,
 title = "What does it mean to reject and transcend triviality?"
 description = "Holium founder Trent Gillham tackles wide-ranging philosophical questions on the nature of technology in this podcast."
 image="https://media.urbit.org/site/ecosystem/podcasts/crazywisdom-home-card.jpg"
-
 content = """
 
 Listen to Holium founder Trent Gillham discuss the inspiration behind Realm, the advantages of Urbit, and the effects of the internet on humanity.
