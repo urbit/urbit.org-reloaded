@@ -196,13 +196,12 @@ export default function Grants({ posts, categories, types, search }) {
                       Learn more
                     </a>
                   </Link>
-                  
+                </div>
                  {/* Approval */}
                 <h3>Approval</h3>
                 <p className="mb-4">
                   Grant applications and proposals are approved on a bi-weekly basis. The next deadlines are <b>February 7th & 21st</b>.
                 </p>
-                </div>
               </div>
             </div>
           </div>
