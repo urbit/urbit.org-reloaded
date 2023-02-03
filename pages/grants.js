@@ -176,6 +176,11 @@ export default function Grants({ posts, categories, types, search }) {
                     Become an Apprentice
                   </a>
                 </Link>
+                {/* Approval */}
+                <h3>Approval</h3>
+                <p className="mb-4">
+                  Grant applications and proposals are approved on a bi-weekly basis. The next deadlines are **February 7th & 21st**.
+                </p>
               </div>
 
               <div className="md:basis-1/2">
