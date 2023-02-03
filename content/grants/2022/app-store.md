@@ -128,16 +128,18 @@ ETA: November 4th 2022.
 
 - Building the front end in ReactJS according to our design from Milestone 2.
 - Connect the front end to the back end, so that all roles can do everything they did in Milestone 2, but through a UI
-- Add a search bar on the front end. It will be able to search by app name, Developer ship ID, tags, and possibly also pattern match through app descriptions.
-    
-**Milestone 4** - Front end customization and publication.
-ETA: January 6st 2023.
-  
-- Enable Developers and Curators to customize their pages. They will probably have a CSS file to customize which will be funneled to the User and be served on the User’s front end.  
+- Add a search bar on the front end. It will be able to search by app name, Developer ship ID, tags, and possibly also pattern match through app descriptions.    
+
+**Milestone 4** - Groups discovery and mobile view optimization.
+
+- As a curator, I want to list groups in my collection for users to browse
+- As a user, I want to browse through a list of groups that a curator recommends to me
+- As a user, I want to see a group’s name, description, and host, and join the group easily from the app store
+- As a user, I want a mobile-optimized experience the app store so I can easily use the app inside the EScape mobile app or in a mobile browser
 - App Store will be published and downloadable on urbit
 - There will be detailed documentation for App Store, describing how it works and how to use it
 - A github pull request will be submitted to [https://urbit.org/applications/submit](https://urbit.org/applications/submit)
-    
+     
 ### About Us
 
 I was looking for stuff to do which might actually do some good for the world. So here I am. My name is Jurij Jukić, ~dilryd-mopreg. I have about a year of programming experience, mostly in Python. I recently quit my job to come work on Urbit full time. I just finished App School Live and I’m looking to build and learn.

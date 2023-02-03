@@ -1,25 +1,28 @@
 +++
-title = "Overview"
+title = "Introduction"
 weight = 0
 description = ""
 +++
 
-### Introduction
+The goal of Urbit is to make peer-to-peer software easy for developers to write
+and for users to run on their own. The code is [completely open
+source](https://github.com/urbit), [actively
+maintained](https://github.com/urbit/urbit/graphs/code-frequency), supported by
+a [growing ecosystem](https://urbit.org/ecosystem), and [used daily by
+thousands](https://network.urbit.org).
 
-Nothing about building a new OS from scratch has been easy. Or creating an identity system that adequately replaces the IP address.
+Urbit consists of two high-level components: an operating
+system (Urbit OS) and an identity system (Urbit ID). Urbit OS enables its user to communicate directly with others using Urbit OS via their Urbit ID's. You can think of these like phone numbers &mdash; meaningless
+but memorizable, and likely to identify the same person reliably through time.
 
-Getting on Urbit isn't always easy, either. The onboarding process hasn't been optimized by product managers in search of maximal profit. There's no checkbox for your interests—you have to discover them yourself.
+Using Urbit requires having access to a running **ship**: an Urbit OS running
+with a supplied Urbit ID. You can run Urbit yourself if you're comfortable at a
+command-line or willing to learn. Otherwise you should probably use a hosting
+provider &mdash; that is, someone that provides you with an Urbit as a service.
 
-But we like to think this hard work is exactly what makes Urbit special. **Consider yourself warned.**
+## Next steps
 
-### Why Urbit?
-
-**As a user**, you can explore the people, community, and sheer novelty of the Urbit ecosystem while owning your entire experience. Your data, your messages, your apps.
-
-**As a developer**, you can now build apps, a protocol for a whole suite of apps, or an entire online subculture, and distribute your work directly to your users' operating systems. No middlemen, no MEGACORPs, and no lock-in.
-
-Someone once said, "All the smart people I know disappear into Urbit." If you're smart, you will too — not just installing and running Urbit, but taking the first step toward deploying your Final Computer.
-
-### Launch into Urbit
-
-Choose how you want to disappear into Urbit.
+- [Run Urbit yourself](/getting-started/self-host) or select a [hosting provider](/getting-started/hosted)
+- Meet friendly people by [joining groups](/getting-started/joining-groups)
+- [Install apps](/getting-started/installing-applications) to experiment with
+- Explore [interfaces](/getting-started/interfaces) for Urbit
