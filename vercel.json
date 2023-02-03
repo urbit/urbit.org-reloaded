@@ -8,6 +8,10 @@
       "destination": "/groups/~halbex-palheb/uf-public"
     },
     {
+      "source": "/getting-around",
+      "destination": "/getting-started/getting-around"
+    },
+    {
       "source": "/docs/getting-started",
       "destination": "/getting-started"
     },
