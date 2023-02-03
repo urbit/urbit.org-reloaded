@@ -15,3 +15,5 @@ And for those wondering what the heck is Urbit? Urbit is an ambitious reimaginin
 ~nospex-larsut/mile-high-mars
 
 [Meetup page](https://www.meetup.com/mile-high-mars-denver-urbit-group/)
+
+[Organizer's Twitter](https://twitter.com/OnAPersonaLevel)

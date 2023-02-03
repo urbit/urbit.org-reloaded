@@ -282,11 +282,6 @@ export async function getStaticProps() {
       "groups/~tirrel"
     ),
     getPostBySlug(
-      "group-discovery",
-      ["title", "slug", "shortcode", "description", "tile"],
-      "groups/~rondev"
-    ),
-    getPostBySlug(
       "other-life",
       ["title", "slug", "shortcode", "description", "tile"],
       "groups/~hatryx-lastud"
