@@ -30,6 +30,10 @@ Native Planet is Urbit's first dedicated hardware company.  Their first product,
 
 ![Screenshot](https://storage.googleapis.com/media.urbit.org/site/getting-started/native-planet.jpg)
 
+What's the point of having a physical Urbit computer, besides the fact that look very cool?
+
+You get the best of both worlds: the accessibility of cloud hosting, with the ownership of running Urbit locally.  Groundseg and Startram make your Urbit accessible to any networked device without the need to trust any cloud service provider.
+
 
 """
 
@@ -39,7 +43,8 @@ description = "Holium founder Trent Gillham tackles wide-ranging philosophical q
 image="https://media.urbit.org/site/ecosystem/podcasts/crazywisdom-home-card.jpg"
 content = """
 
-Listen to Holium founder Trent Gillham discuss the inspiration behind Realm, the advantages of Urbit, and the effects of the internet on humanity.
+Crazy Wisdom host Stewart Alsop guides this podcast from a perspective of mindfulness, resulting in a fascinating discussion on the inspiration behind Holium's Realm, the advantages of Urbit, monoculture, algorithmic pharaohs, and the effects of infinite content on the collective hivemind.  
+
 
 """
 +++
