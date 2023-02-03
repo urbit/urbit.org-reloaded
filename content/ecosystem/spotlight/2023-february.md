@@ -29,7 +29,7 @@ Native Planet is Urbit's first dedicated hardware company.  Their first product,
 [featured-3]
 
 title = "Tlon"
-description = "You’ll be ready to use Urbit in five minutes—as long as it takes to unpack a new computer."
+description = "Tlon is now offering a hosting service to get you up and running on Urbit in minutes."
 image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon-hosting.jpg"
 
 content = """
