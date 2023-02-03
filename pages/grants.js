@@ -196,6 +196,7 @@ export default function Grants({ posts, categories, types, search }) {
                       Learn more
                     </a>
                   </Link>
+                  
                  {/* Approval */}
                 <h3>Approval</h3>
                 <p className="mb-4">
