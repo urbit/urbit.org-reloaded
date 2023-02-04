@@ -7,7 +7,7 @@ tag = "hostprov"
 
 
 ## Tlon
-[Tlon](https://tlon.io) is the company responsible for creating Urbit, Landscape, Groups and Talk. They also offer hosting services that seamlessly integrate with the rest of their products.  [Tlon Hosting](https://tlon.network/) offers Urbit hosting for $20/month.
+[Tlon](https://tlon.io) is the company responsible for creating Urbit, Landscape, Groups and Talk. They also offer hosting services that seamlessly integrate with the rest of their products.  [Tlon Hosting](https://tlon.io/hosting) offers Urbit hosting for $20/month.
 
 [![Tlon Hosting](https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon-hosting-provider.png)](https://tlon.network/) 
 
