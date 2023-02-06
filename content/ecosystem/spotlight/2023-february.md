@@ -30,7 +30,7 @@ Native Planet is Urbit's first dedicated hardware company.  Their first product,
 
 ![Screenshot](https://storage.googleapis.com/media.urbit.org/site/getting-started/native-planet.jpg)
 
-What's the point of having a physical Urbit computer, besides the fact that look very cool?
+What's the point of having a physical Urbit computer, besides the fact that they look very cool?
 
 You get the best of both worlds: the accessibility of cloud hosting, with the ownership of running Urbit locally.  Groundseg and Startram make your Urbit accessible to any networked device without the need to trust any cloud service provider.
 
