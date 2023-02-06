@@ -16,7 +16,7 @@ Realm is the flagship product of Holium, who are also building out several colla
 
 ![](https:///media.urbit.org/site/ecosystem/applications/app-suite.png)
 
-Realm is currently in private alpha.  Visit [holium.com](https://holium.com) to sign up for the invitation waitlist.
+Realm is currently in private alpha.  Visit [holium.com](https://holium.com) to sign up for the invitation waitlist.  In the meantime, you can also enjoy an [entertaining podcast](/podcasts/2023-01-24_reject-triviality) in which Holium founder talks about his vision for Realm, amongst many other interesting topics.
 
 """
 
@@ -38,13 +38,11 @@ You get the best of both worlds: the accessibility of cloud hosting, with the ow
 """
 
 [featured-3]
-title = "What does it mean to reject and transcend triviality?"
-description = "Holium founder Trent Gillham tackles wide-ranging philosophical questions on the nature of technology in this podcast."
-image="https://media.urbit.org/site/ecosystem/podcasts/crazywisdom-home-card.jpg"
+title = "Urbit for Idiots | Galen Wolfe-Pauly, Tlon Corporation"
+description = "Tlon CEO Galen Wolfe-Pauly talks to the Boys Club ladies and expounds on the fundamentals of Urbit."
+image=""
 content = """
 
-Crazy Wisdom host Stewart Alsop guides this podcast from a perspective of mindfulness, resulting in a fascinating discussion on the inspiration behind Holium's Realm, the advantages of Urbit, monoculture, algorithmic pharaohs, and the effects of infinite content on the collective hivemind.  
-
-
+Is Urbit a computer? Is owning 'space' on the internet valuable? What is Urbit? How is it different from the the existing internet?  Galen and Boys Club get to the bottom of these evergreen topics.
 """
 +++
