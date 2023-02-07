@@ -185,7 +185,7 @@ export default function Grants({ posts, categories, types, search }) {
                   Bounties are contracts for work provided by either the Urbit
                   Foundation or from trusted partners in our ecosystem.
                 </p>
-                <div className="flex flex-wrap">
+                <div className="flex flex-wrap mb-8">
                   <Link href="/grants/bounties#post-a-bounty" passHref>
                     <a className="button-sm bg-yellow-300 text-black mr-2 max-w-fit">
                       Post a Bounty
@@ -197,7 +197,15 @@ export default function Grants({ posts, categories, types, search }) {
                     </a>
                   </Link>
                 </div>
-              </div>
+                
+                
+                 {/* Approval */}
+                <h3>Approval</h3>
+                <p className="mb-4">
+                  Grant applications and proposals are approved on a bi-weekly basis.  The next deadlines are <b>February 7th & 21st</b>.
+                </p>
+                <p>If you any questions regarding grants, feel free to email grants@urbit.org.</p>
+             </div>
             </div>
           </div>
         </Section>
