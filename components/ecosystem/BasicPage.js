@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
+import Link from "next/link";
 import Meta from "../Meta";
 import ErrorPage from "../../pages/404";
 import classnames from "classnames";
@@ -79,6 +80,16 @@ export default function BasicPage({
                 />
               )}
 
+              {post?.twitter && (
+                <div className="flex flex-col">
+                  <p className="font-bold text-wall-400">Twitter</p>
+                  <Link href={"http://twitter.com/" + post.twitter}>
+                    <a className="text-green-400 text-sm font-semibold font-mono">@{post.twitter}</a>
+                  </Link>
+                </div>
+              )}
+
+
               {post?.URL && section !== "Podcast" && section !== "Article" && (
                 <div className="flex flex-col">
                   <p className="font-bold text-wall-400">Website</p>
@@ -100,6 +111,9 @@ export default function BasicPage({
                 </div>
               )}
             </div>
+
+
+            
             {post?.URL && section === "Podcast" && (
               <a
                 href={post.URL}

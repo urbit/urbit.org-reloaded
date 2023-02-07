@@ -4,6 +4,7 @@ description = "The first developer of Urbit. Their work continues to maintain co
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon.png"
 URL = "https://tlon.io"
 ships = ["~mister-dister-dozzod-dozzod", "~lander-dister-dozzod-dozzod"]
+twitter = "tloncorporation"
 +++
 
 [Tlon Corporation](https://tlon.io) is the first developer of Urbit, and their work continues to maintain core infrastructure development in addition to designing products for communities on the network. Tlon’s primary products are Hosting, cloud storage for your urbit, Landscape, an operating system and interface, and Groups, a communication suite.

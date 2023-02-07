@@ -4,6 +4,7 @@ description = "We build software using the novel affordances of Urbit."
 image = "https://freedom-club.sfo2.digitaloceanspaces.com/ab_Quartus-03.jpg"
 URL = "https://www.quartus.co/"
 ships = ["~mister-hilper-dozzod-dalten", "~dister-dozzod-dalten"]
+twitter = "QuartusCo"
 +++
 
 ### Quartus is Fulfilling Urbit's Covenant with Users

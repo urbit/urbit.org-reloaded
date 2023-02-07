@@ -1,0 +1,17 @@
++++
+title = "Realm"
+shortcode = "~lomdyr-librun/realm"
+license = "MIT"
+image = ""
+bgColor = "#CBBFED"
+developer = "Holium"
+website = "https://www.holium.com/"
++++
+
+Realm is a desktop app for Urbit communities (currently in private alpha).  
+
+[Sign up for the alpha.](https://www.holium.com/)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gdu4QtFR-Bs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+Note that the shortcode will not install this application.

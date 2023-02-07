@@ -4,6 +4,7 @@ description = "Urbit Foundation is a non-profit organization whose mission is to
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/urbit-foundation.png"
 URL = "https://urbit.org"
 ships = ["~lapdeg"]
+twitter = "urbitfoundation"
 +++
 
 Urbit Foundation is a non-profit organization whose mission is to ensure Urbit's success as a technology. 

@@ -4,6 +4,7 @@ description = "Tirrel Corporation is an Urbit product studio."
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/Tirrel%20Corp%20Logo.png"
 URL = "https://tirrel.io"
 ships = ["~tirrel"]
+twitter = "tirrelcorp"
 +++
 
 ### Tirrel Corporation is an Urbit product studio. 
