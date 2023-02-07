@@ -9,9 +9,9 @@ image = ""
 description = "Debugging Tools"
 reward = "2 stars"
 mentor = ["~master-morzod"]
-assignee = ["~nosmes-sibwyx", "~topfet-parmed"]
-completed = false
-canceled = true
+assignee = ["~topfet-parmed"]
+completed = true
+canceled = false
 work_request_link = ""
 +++
 
