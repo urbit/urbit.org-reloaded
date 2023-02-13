@@ -8,7 +8,7 @@ grant_category = ["Core Dev"]
 
 [extra]
 image = ""
-assignee = [""]
+assignee = ["~napnyl-nortuc"]
 description = "Adapt the comments in the default generators to take advantage of the new doccord features."
 reward = "1 star"
 grant_id = "B0231"
