@@ -13,7 +13,7 @@ reward = "1 star ($3k bonus if done by Assembly)"
 assignee = ["~bitful-pannul"]
 grant_id = "B0162"
 champion = ["Holium"]
-completed = false
+completed = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0162&prefill_Grant+Name=Lexicon"
 +++
 
