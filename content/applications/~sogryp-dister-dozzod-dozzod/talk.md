@@ -4,7 +4,7 @@ shortcode = "~sogryp-dister-dozzod-dozzod/talk"
 license = "MIT"
 image = "https://bootstrap.urbit.org/icon-talk.svg"
 bgColor = "#2B5DC0"
-developer = "~zod"
+developer = "Tlon"
 website = "https://github.com/tloncorp/landscape-apps"
 description = "Talk is a decentralized chat app that integrates with Groups, Notebook, and Gallery for a full, communal suite of tools."
 +++
