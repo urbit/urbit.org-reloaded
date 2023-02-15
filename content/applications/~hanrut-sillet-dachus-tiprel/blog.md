@@ -4,7 +4,7 @@ shortcode = "~hanrut-sillet-dachus-tiprel/talk"
 license = "MIT"
 image = ""
 bgColor = "#533E78"
-developer = "~zod"
+developer = "~dachus-tiprel"
 website = "https://dachus-tiprel.tlon.network/blog/introducing-blog"
 description = "The easiest and most versatile publishing app on Urbit."
 +++
