@@ -72,7 +72,7 @@ key content" field on Digital Ocean. In the "Name" field, enter your ship name.
 
 #### Additional options
 
-Click "User data" and paste the script below into the field provided. This
+Click "+Advanced Options" check the box for "Add Initialization scripts (free)" and paste the script below into the field provided. This
 will automatically configure the server and install necessary software.
 
 ```bash {% copy=true %}
