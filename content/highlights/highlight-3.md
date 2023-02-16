@@ -1,6 +1,6 @@
 +++
-title = "Hoon School Live 23'"
+title = "Hoon School Live March 23'"
 image = "https://storage.googleapis.com/media.urbit.org/site/featured/hoon-school-23.png"
 url="https://developers.urbit.org/courses/hsl"
-description = "Sign up now for Hoon School Live and start your Hoon journey in March"
+description = "Sign up now to learn the basics of Urbit development."
 +++
