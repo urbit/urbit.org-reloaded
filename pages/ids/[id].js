@@ -140,7 +140,7 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
               Urbit is a clean-slate, peer-to-peer operating system and network.
             </h3>
             <div className="flex flex-col space-y-4">
-              <Link href="/guides/getting-an-urbit-id">
+              <Link href="/getting-started/get-id">
                 <button className="button-lg max-w-xs bg-green-400 text-white">
                   Learn how to get an Urbit ID
                 </button>

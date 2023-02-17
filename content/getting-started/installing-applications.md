@@ -32,8 +32,8 @@ For example, to install the pals application, search for `~paldev` and then clic
 
 Select the pals app, and a modal window will open that shows some information about the application. Go ahead and click the “Get App” button, and confirm the following modal window to begin the installation process.
 
-Soon you’ll have a new application tile on your home screen.  Now you can add people you know on the network as your pals just by entering their Urbit ID.
-
 ![](https://media.urbit.org/site/getting-started/install-apps-3.png)
+
+Soon you’ll have a new application tile on your home screen.  Now you can add people you know on the network as your pals just by entering their Urbit ID.
 
 ![](https://media.urbit.org/site/getting-started/install-apps-4.png)

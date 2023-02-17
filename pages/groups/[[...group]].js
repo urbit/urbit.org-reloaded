@@ -84,7 +84,7 @@ const GroupPage = ({ data, markdown, params, search }) => {
               Urbit is a clean-slate, peer-to-peer operating system and network.
             </h3>
             <div className="flex flex-col space-y-4">
-              <Link href="/guides/joining-groups" passHref>
+              <Link href="/getting-started/joining-groups" passHref>
                 <a className="button-lg max-w-xs bg-green-400 text-white">
                   How to Join an Urbit Group
                 </a>
