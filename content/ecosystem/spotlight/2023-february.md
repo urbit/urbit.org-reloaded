@@ -16,7 +16,7 @@ Realm is the flagship product of Holium, who are also building out several colla
 
 ![](https:///media.urbit.org/site/ecosystem/applications/app-suite.png)
 
-Realm is currently in private alpha.  Visit [holium.com](https://holium.com) to sign up for the invitation waitlist.  In the meantime, you can also enjoy an [entertaining podcast](/podcasts/2023-01-24_reject-triviality) in which Holium founder talks about his vision for Realm, amongst many other interesting topics.
+Realm is currently in private alpha.  Visit [holium.com](https://holium.com) to sign up for the invitation waitlist.  In the meantime, you can also enjoy an [entertaining podcast](/podcasts/2023-01-24_reject-triviality) in which Holium founder `~lomder-librun` talks about his vision for Realm, amongst many other interesting topics.
 
 """
 
