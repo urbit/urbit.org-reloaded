@@ -20,7 +20,7 @@ Read on to learn about the background underpinning these decisions and your opti
 
 With the introduction of Landscape in 2020 the demand for being on the network rose substantially from what it had been, yet the only way of running Urbit was through the command line, which was a significant barrier for entry. 
 
-In 2021 Port and a native Windows binary were both introduced via contributions from the open source community: Port was built via our [grants](https://urbit.org/grants/cross-platform-desktop-urbit-app) [program](urbit.org/grants), and the Windows binary was contributed via a [pull request](https://github.com/urbit/urbit/pull/4675). Together, these two projects enabled users to run Urbit locally without requiring command-line knowledge. Port was summarily added as an officially recommended way to run Urbit.
+In 2021 Port and a native Windows binary were both introduced via contributions from the open source community: Port was built via our [grants](https://urbit.org/grants/cross-platform-desktop-urbit-app) [program](https://urbit.org/grants), and the Windows binary was contributed via a [pull request](https://github.com/urbit/urbit/pull/4675). Together, these two projects enabled users to run Urbit locally without requiring command-line knowledge. Port was summarily added as an officially recommended way to run Urbit.
 
 Over the course of 2022 it became clear that, while often useful for trying Urbit out, the experience of running Urbit locally via Port was fundamentally limited: Urbit runs best as a server, and laptops provide neither a stable running environment nor consistent web-based access from other devices.
 
