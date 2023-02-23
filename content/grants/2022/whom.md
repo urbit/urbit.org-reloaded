@@ -42,9 +42,8 @@ If a contact is another Urbit user with `%whom` installed, the contact will also
 6. As a user, when one of my non-Urbit contacts gets a planet, I want to be able to convert them to an Urbit contact.
 7. As a user with `%pals`, I want my pals to be added to my contacts list automatically.
 8. As a user with `%pals`, I want to be able to add my contact as a %pal with a button click.
-9. As a user with `%pals`, I can filter my contacts by tags.
-10. As a user with `%pals`, I want some info on my profile to be public, but I only want to share more personal info with users I trust (pals).
-11. As a developer of another app, I want to be able to programmatically access specific fields from contacts.
+9. As a user with `%pals`, I want some info on my profile to be public, but I only want to share more personal info with users I trust (pals).
+10. As a developer of another app, I want to be able to programmatically access specific fields from contacts.
 # My background
 I'm a professional fullstack software engineer and I've been active on Urbit since 2019. I operate the star ~holnes and have onboarded a few of my friends. I graduated Hoon School in 2020, attended Assembly and a few local meetups, and completed the Studio email apprenticeship with Tirrel earlier this year. I've had a great experience working with Hoon and Gall so far, and am eager to build more apps.
 # Milestones / Estimates / Compensation
@@ -67,6 +66,5 @@ Completed by: Sep. 1
 - Goals:
     - Pals are automatically added as contacts
     - The frontend shows which contacts are pals
-    - Contacts can be filtered by %pals tags
     - Users can click a button to send a contact a pal request
     - Users can restrict visibility on their profile, so only pals can see certain fields
