@@ -37,7 +37,7 @@ A set of generators which can automate a majority of the work involved in writin
 
 # Implementation
 
-For the noun to JSON direction, the conversion would be direct: given any input noun, the generator would produce the corresponding JSON.  `~rovnys-ricfer` has completed most of a noun to json encoder. The code can be found here. When complete, it will be able to take a noun and its AST and convert it to a json representation. We have identified missing encodings inside of en-dime for the following auras: `%s, %rq, %rh, %rd, %rs, %ub, %uc, %ux, %uv, %uw`. Part of this bounty will involve implementing the json encoding for the missing auras.
+For the noun to JSON direction, the conversion would be direct: given any input noun, the generator would produce the corresponding JSON.  `~rovnys-ricfer` has completed most of a noun to json encoder. The code can be found [here](https://gist.github.com/belisarius222/d22b39ac0fece6e0680db5d60c6595c6). When complete, it will be able to take a noun and its AST and convert it to a json representation. We have identified missing encodings inside of en-dime for the following auras: `%s, %rq, %rh, %rd, %rs, %ub, %uc, %ux, %uv, %uw`. Part of this bounty will involve implementing the json encoding for the missing auras.
 
 
 
