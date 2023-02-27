@@ -1,8 +1,8 @@
 +++
 ship = "~hocmed-lidrev"
 nickname = "Launchpad"
-bgColor = "#08ECC3"
+bgColor = "#000000"
 image = ""
 +++
 
-Founder of FANGTANG Network Technology, Python&Web Programmer.
+Founder of FANGTANG Network Technology, Software Developer.
