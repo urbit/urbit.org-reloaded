@@ -17,63 +17,72 @@ completed = false
 canceled = false
 +++
 
-# Rationale
+Proposal to develop web application creation tooling and framework in hoon following [thick stateful server single-page application architecture](https://en.wikipedia.org/wiki/Single-page_application#Thick_stateful_server_architecture).
 
-I'm proposing to write code for what could become an alternative urbit web browser interface alongside Landscape, Escape, Holium and maybe others I've yet to see.
-This interface basically functions like website builder [Wix](https://www.wix.com/) but puts more emphasis on
-1. Enabling creation of custom components as easy as using pre-fabricated ones - Wix has an option to create custom components with javascript but it's limited and impractical.
-2. Implementing collaborative composing as an integral feature rather than an "add-on".
+The framework is abstracted into a library that is used by a gall agent. The gall agent defines the application's data model and state controller. View model is defined separately from the agent. This ensures that agent api remains as is and, if needed, agent could implement multiple different view/UI models, e.g some other UI framework that is targeting different kind of device instead of web browser. It also means existing agents can plug in the view model defined with this framework without making changes to agent data and controller model.
 
-The interface would be composed together from components in similar way Wix does. The components are draggable around the screen and it will be possible to align a component into a grid with automatic alignment. In practice this enables composing (live) "dashboards" for reasoning about various data.
-The interface will be accessed from browser and mobile browser. Future work includes a native iOS app and a desktop Electron app. Though it's the same codebase for web browser interface, the mobile browser interface components will be auto-aligned for mobile screen. iOS app will have support for native notifications and widgets.
-The components will be written in Sail, an Urbit markup language. A trivial example of a component could be `;smiley` which renders on the screen as `:-)`.
-The `;smiley` definition might look something like `;span: ":-)"`. It must be in valid HTML namespace, but can be written in Sail syntax or alternatively, defined in pure HTML itself.
-If you try to add this `;smiley` component to your screen but it doesn't exist on your urbit yet, a prompt appears telling to either define this component or download component with this name from other urbit. By default, downloads happen from your parent star but can be configured to download from other indexers as well.
-Alternatively, if you know that this `;smiley` component exists on some particular urbit, you can also download directly by just appending the name of urbit, e.g. if ~nortex-ramnyd has this component, you could `;smiley~nortex-ramnyd` and after that, this component is available on your ship as well (so next time you want to use this component, you can just `;smiley` without asking it from ~nortex-ramnyd).
-For this project, I will implement an additional CSS abstraction layer into Sail. This makes styling components a little bit easier. So instead of `;smiley(style "color:blue")`, it would be `;smiley(color "blue")`. Or to make custom fonts easier `;p(font "custom-font"): Hello` or `;p(font "https://url-of/custom-font.woff2"): Hello`. To bypass CORS restrictions, I'll host a CORS relay (or can be configured to use a different host).
-"Pages" of composed components are linked together like web pages and can be either pages composed by only you (only available on your urbit), e.g. your "home screen"/"dashboard", or group pages - pages that are composed together by group members.
-Both types can have specified view and edit permissions.
-The first time when the interface is installed (an Electron app), the "welcome" screen appears and this is also the "home screen" that appears when later reopening the application. The welcome screen walks through the functionality of the interface and subsequently prepares the user to start composing their home screen.
-Some code I have already written, the repository is stored on github: https://github.com/h5gq3/wix.com
-# Milestones and Compenstation
-## Milestone 1: finish core features and polish UI
-### 2 stars
-The first milestone is to get the current functionality polished and usable with minimal bugs. It should be clear to the user how to edit and add blocks as well as how to switch back to rendering. The user should be able to install the freeform editor as an app and see the basic demo where state is only seen through the app itself.
-- Implement basic fixed freeform positioning
-- Implement component resizing logic
-- Implement page routing
-- Add some UI for showing editing vs rendered state
-- Add UI helpers for rendering editor
-- Add docket file and editor html + js so that it can be rendered as an app for ease of showing off
-## Milestone 2: usability and component enhancements
-### 1 star
-In this milestone we're mostly just improving the usability of the editor and adding nice-to-have features like being able to make and use components.
-- Implement component creation logic using React 18
-- Download components from other ships
-- Install and use React components straight from markup
-- CSS abstraction
-- Some "convenience" functions library in style of jQuery
-## Milestone 3: collaborative editing
-### 1 star
-In this milestone we implement push and pull hooks similar to how groups works to allow for syncing of state between multiple editors and implement custom permissioning logic.
-## Milestone 4: proof of concept custom component/app - DeepSpace meditation app
-### 1 star
-In this milestone we create an application on top of the interface builder. The design considerations for this application are as follows:
-### Design - The DeepSpaceApp
-- three slightly different 2-3 min guided basic meditation where the user sees written text + hears audio with some simple animation like a dot that is going bigger when you breathe in and smaller when you breathe out
-    - one where the user focuses on breathing
-    - one where the user focuses on counting
-    - one where the user focuses on “feeling”
-- built-in timer to set up a time of how long users that already knows techniques of meditation want to meditate with a bell sound at the start and end of the session
-- a small journal that the user can write a few words after each meditation to store the ideas, and feelings that emerge during the session, it is also good practice to write short journals for a benefit of daily focus and mental health, by storing it all on Urbit user will have a feeling that he really own it personally and no one have access to it
-- quote of some zen master, budda, Krishna, or from Hermetic books to inspire users after each meditation, all taken from some pre-created database
-- way to evaluate each user’s meditation session, emotional/mental state of each day with "triangle" "circle" "square" (not “:)” , “:|” , “:(“ -> like in every other meditation app)
-- **MOST IMPORTANT**: Group sessions so like there will be pre-define and pre-announced three hours daily in UTC when users will know that if they want to meditate with other people they can join and see how many people meditate with them at the same time (they don't need to hear each other or anything, just a visible number of people, maybe Urbit names, some levitations dots representing users, that now are currently login and potentially meditate at the same time). This builds a strong connection between people and lets them feel “not alone” in the process or even in the whole world/space/time.
-# Future Work
-Future work involves expanding the functionality and writing custom components, aka "apps".
-Potential expansions:
-- Dragging various media onto the page and automatically storing it in your data store (possibly IPFS or S3)
-- Sail and udon improvement - try improving syntax for more ergonomic use
-- "Convenience" functions library expansion
-- Codemirror integrations like indentation, syntax highlighting, and json previewing
-- Component discovery from other ships
+Being a SPA, in-app links and navigation is intercepted: DOM patching and history api is used instead. In-app navigation is handled by a router in which URL paths are mapped to UI states, either strucutred as separate pages but could also be more granular (i.e. some UI state might only change part of current document not the whole document).
+
+The view model should be defined using sail components. Sail components abstract view model into splitted subviews, which store their own internal state and controller. Component's controller is conceptually similar to agent's controller (on-poke arm), it receives  [mark vase] and produces list of card:agent:gall and the component with possible internal state modification. `+on-init` in called when component is going to be mounted to DOM. At this arm, a card needs to be sent that declares which browser events this component expects to receive.
+
+```
+++  sail-component
+  $_  ^|
+  |_  [props children bowl:sail]
+  ++  on-poke  |~([mark vase] *(quip card:agent:gall _^|(..on-poke)))
+  ++  on-init  *(quip card:agent:gall _^|(..on-poke))
+  ++  manx  *^manx
+  --
+```
+
+Component's on-poke arm receives from browser user interaction events (DOM events) and handles these accordingly, by emitting cards and/or modifying state.
+
+In case agent's state or component's internal state gets modified at on-poke call, a view patch is sent to browser. The view patch is an html string representing the component(s) whose state (and thus their sail template at `+manx` which interpolates state) got modified.
+
+The patch is then applied in the application's javascript context with diffHTML.
+
+The view model declares component tree in sail syntax:
+
+```
+:: component1, component2 are imported from some path :: 
+:: foo, boo are passed in from agent
+;div#root
+  ;component1(prop1 (p foo));
+  ;component2
+    =prop1  (p foo)
+    =prop2  (p boo)
+  ==
+==
+```
+
+gate `+p` produces jammed atom that is encoded to tape since manx properites must be tapes. decoding is handled by the library and components receive nouns that they have to normalize to their own needed structures (using `;;(mold noun)`)
+
+---
+
+**milestones**
+
+_sail component abstraction layer and framework base logic_
+
+2 stars
+
+the base of the framework is written in scope of this milestone. this is the base functionality of writing sail components and attaching the resulting UI logic to agent.
+
+_routing and navigation layer_
+
+1 star
+
+- implementing url mapping to view states.
+
+- implementing history api.
+
+_hot reloading_
+
+1 star
+
+implementing transition logic when components source code changes
+
+_documentation and example agent_
+
+1 star
+
+documentation about using this framework and example usage in form of a todo app
