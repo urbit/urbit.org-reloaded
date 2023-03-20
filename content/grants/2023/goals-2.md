@@ -1,6 +1,6 @@
 +++
 title = "Goals 2"
-date = "2023-02-10"
+date = "2023-03-20"
 
 [taxonomies]
 grant_type = ["Proposal"]
@@ -9,8 +9,8 @@ grant_category = ["App Dev"]
 [extra]
 image = ""
 description = "Goals 2"
-reward = "3 stars"
-assignee = ["~niblyx-malnus, ~sidlup-havwen"]
+reward = "5 stars"
+assignee = ["~niblyx-malnus", "~sidlup-havwen"]
 grant_id = "P0227"
 champion = ["~datder-sonnet"]
 completed = false
@@ -19,8 +19,7 @@ canceled = false
 
 # Main Objectives
 
-## Groups Integration
-
+## Groups Integration (Reward: 2 Stars)
 - Full association of a pool with a group.
   - The pool is public or private in correspondence with the group.
   - The pool has the same set of banned/allowed ships as the group.
@@ -38,7 +37,8 @@ canceled = false
   - Non-actionable goals with no subgoals being left childless for an extended period of time.
   - Other events as they emerge and are deemed appropriate.
 
-## Sorting/Filtering and Tags/Fields
+
+## Sorting/Filtering and Tags/Fields (Reward: 2 Stars)
 
 - Tags
   - Each goal within a pool can be tagged.
@@ -49,21 +49,16 @@ canceled = false
   - Goals can be sorted by the date of their deadline or kickoff.
   - Goals can be re-ordered in the context of their subgoals with a simple dragging mechanism.
 
-## Calendar
 
-- Incorporate a calendar view which draws from a separate agent allowing for the possibility that it could grow into a full blown calendar application.
-  - A frontend calendar view can scry this agent for events within a particular range (initially corresponding only to goals).
-  - If a goal has both a kickoff and a deadline, it will display in the calendar with this datetime range showing. If either only the kickoff or deadline exists, the kickoff or deadline of that goal will display as an instantaneous event.
-  - Goals which span many days will be displayed differently than goals which or on the order of a few hours.
-
-## Improved UX
+## Improved UX (Reward: 1 Star)
 
 - Shortcuts and quick actions using ctrl
 - Improved mobile experience 
-- Navigating the tree (zooming/isolation) with a breadcrumb element (clickable links) for navigating back (possibly incorporating notes and comment section)
-- Incorporate tagging system into a Kanban view
 - Working poke relays on the frontend
+- Ability to re-order subgoals with a drag and drop action
+- Dark mode
+
 
 # Compensation
 
-Reward: 3 stars
+Reward: 5 stars
