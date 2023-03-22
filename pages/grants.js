@@ -33,7 +33,7 @@ export default function Grants({ posts, categories, types, search }) {
   const router = useRouter();
   let { status, type, category } = router.query;
   if (status === undefined) {
-    status = "open";
+    status = ["open", "wip"];
   }
 
   function push(toQuery) {
@@ -82,8 +82,8 @@ export default function Grants({ posts, categories, types, search }) {
   const byStatus = (post) => {
     return (
       (isOrIsIn("open", status) ? post.status === "open" : false) ||
-      (isOrIsIn("complete", status) ? post.status === "completed" : false) ||
-      (isOrIsIn("wip", status) ? post.status === "wip" : false)
+        (isOrIsIn("complete", status) ? post.status === "completed" : false) ||
+        (isOrIsIn("wip", status) ? post.status === "wip" : false)
     );
   };
 
@@ -91,10 +91,10 @@ export default function Grants({ posts, categories, types, search }) {
 
   const filteredPosts = postsByStatus.filter((post) => {
     const hasCategory = category
-      ? isArray(category)
-        ? post.taxonomies.grant_category.some((cat) => category.includes(cat))
-        : post.taxonomies.grant_category.includes(category)
-      : true;
+          ? isArray(category)
+          ? post.taxonomies.grant_category.some((cat) => category.includes(cat))
+          : post.taxonomies.grant_category.includes(category)
+          : true;
 
     const notCanceled = !post.extra.canceled;
     const hasType = type ? post.taxonomies.grant_type.includes(type) : true;
@@ -106,6 +106,9 @@ export default function Grants({ posts, categories, types, search }) {
   const counts = {
     Bounty: postsByStatus.filter((post) =>
       post.taxonomies.grant_type.includes("Bounty")
+    ).length,
+    RFP: postsByStatus.filter((post) =>
+      post.taxonomies.grant_type.includes("RFP")
     ).length,
     Apprenticeship: postsByStatus.filter((post) =>
       post.taxonomies.grant_type.includes("Apprenticeship")
@@ -122,7 +125,7 @@ export default function Grants({ posts, categories, types, search }) {
         {Meta({
           title: "Grants",
           description:
-            "Contribute to the Urbit project while earning address space.",
+          "Contribute to the Urbit project while earning address space.",
         })}
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
@@ -157,11 +160,18 @@ export default function Grants({ posts, categories, types, search }) {
                   fund all kinds projects, not strictly technical ones, so don't
                   hesitate to pitch your idea!
                 </p>
-                <Link href="/grants/proposals" passHref>
-                  <a className="button-sm bg-blue-400 text-white mb-8 max-w-fit">
-                    Submit a Proposal
-                  </a>
-                </Link>
+                <div className="flex flex-wrap mb-8">
+                  <Link href="/grants/proposals" passHref>
+                    <a className="button-sm bg-blue-400 text-white mb-8 max-w-fit mr-2">
+                      Submit a Proposal
+                    </a>
+                  </Link>
+                  <Link href="/grants?program=rfps&type=RFP#view-grants" passHref>
+                    <a className="button-sm bg-purple text-white mb-8 max-w-fit">
+                      Get Ideas
+                    </a>
+                  </Link>
+                </div>
 
                 {/* Apprenticeships */}
                 <h3>Apprenticeships</h3>
@@ -197,15 +207,7 @@ export default function Grants({ posts, categories, types, search }) {
                     </a>
                   </Link>
                 </div>
-                
-                
-                 {/* Approval */}
-                <h3>Approval</h3>
-                <p className="mb-4">
-                  Grant applications and proposals are approved on a bi-weekly basis.  The next deadlines are <b>March 14th & 28th</b>.
-                </p>
-                <p>If you any questions regarding grants, feel free to email grants@urbit.org.</p>
-             </div>
+              </div>
             </div>
           </div>
         </Section>
@@ -237,6 +239,12 @@ export default function Grants({ posts, categories, types, search }) {
                 </li>
                 <li className="mb-2">
                   <p>
+                    <Link href="/grants/rfps">RFPs</Link>{" "}
+                    are suitable for people experienced with hoon development but who need some ideas on what to work on.
+                  </p>
+                </li>
+                <li className="mb-2">
+                  <p>
                     <Link href="/grants/apprenticeships">Apprenticeships</Link>{" "}
                     are largely about building a relationship between apprentice
                     and mentor.
@@ -248,9 +256,16 @@ export default function Grants({ posts, categories, types, search }) {
             <div className="md:basis-1/2">
               <p className="mb-8">
                 Whether you're gearing up to submit your proposal or just
-                thinking about it, the best way to get started is to join the <Link href="/groups/~halbex-palheb/uf-public">Urbit Foundation</Link> group.
+                thinking about it, the best way to get started is to join the <Link href="/groups/~halbex-palheb/uf-public">Urbit Foundation</Link> group, ask questions there or come find our grants office hours in the group.
               </p>
-              <p className="mb-8">Feel free to contact <a href="/ids/~poldec-tonteg">~poldec-tonteg</a> with general questions or <a href="/ids/~marfun-pacpet">~marfun-pacpet</a> regarding administrative matters.</p>
+              <p className="mb-8">
+                Feel free to contact <a href="/ids/~poldec-tonteg">~poldec-tonteg</a> with general questions or <a href="/ids/~marfun-pacpet">~marfun-pacpet</a> regarding administrative matters.
+              </p>
+              <p className="mb-8">
+                <h4>Approval</h4>
+              </p>
+              <p className="mb-8">Grant applications and proposals are approved on a bi-weekly basis.  The next deadlines are <b>March 14th & 28th</b>.
+              </p>
             </div>
           </div>
         </Section>
@@ -272,17 +287,20 @@ export default function Grants({ posts, categories, types, search }) {
             {types.map((each) => {
               let activeBg;
               switch (each) {
-                case "Proposal":
-                  activeBg = "bg-blue-400 text-white";
-                  break;
-                case "Bounty":
-                  activeBg = "bg-yellow-300 text-white";
-                  break;
-                case "Apprenticeship":
-                  activeBg = "bg-green-400 text-white";
-                  break;
-                default:
-                  activeBg = "bg-black";
+              case "Proposal":
+                activeBg = "bg-blue-400 text-white";
+                break;
+              case "Bounty":
+                activeBg = "bg-yellow-300 text-white";
+                break;
+              case "RFP":
+                activeBg = "bg-purple-400 text-white";
+                break;
+              case "Apprenticeship":
+                activeBg = "bg-green-400 text-white";
+                break;
+              default:
+                activeBg = "bg-black";
               }
               return (
                 <a
@@ -302,8 +320,8 @@ export default function Grants({ posts, categories, types, search }) {
           <div className="flex flex-wrap mb-12">
             {categories.map((each) => {
               const active = isOrIsIn(each, category)
-                ? "bg-green-400 text-white"
-                : "bg-wall-100 text-wall-500";
+                    ? "bg-green-400 text-white"
+                    : "bg-wall-100 text-wall-500";
               const categoryQuery = pushOrDropQuery("category", category, each);
               return (
                 <button
@@ -319,20 +337,20 @@ export default function Grants({ posts, categories, types, search }) {
             {["open", "complete", "wip"].map((each) => {
               let title;
               switch (each) {
-                case "open":
-                  title = isOrIsIn(each, status)
-                    ? "Exclude Open"
-                    : "Include Open";
-                  break;
-                case "complete":
-                  title = isOrIsIn(each, status)
-                    ? "Exclude Completed"
-                    : "Include Completed";
-                  break;
-                case "wip":
-                  title = isOrIsIn(each, status)
-                    ? "Exclude In Progress"
-                    : "Include In Progress";
+              case "open":
+                title = isOrIsIn(each, status)
+                  ? "Exclude Open"
+                  : "Include Open";
+                break;
+              case "complete":
+                title = isOrIsIn(each, status)
+                  ? "Exclude Completed"
+                  : "Include Completed";
+                break;
+              case "wip":
+                title = isOrIsIn(each, status)
+                  ? "Exclude In Progress"
+                  : "Include In Progress";
               }
               const statusQuery = pushOrDropQuery("status", status, each);
               return (
@@ -371,7 +389,7 @@ export async function getStaticProps() {
       "date"
     )
   }).flat()
-    .sort((a, b) => new Date(b.date) - new Date(a.date));
+        .sort((a, b) => new Date(b.date) - new Date(a.date));
 
   return {
     props: {

@@ -4,19 +4,19 @@ import { Markdown, getPostBySlug } from "@urbit/foundation-design-system";
 export default function Post({ post, markdown, search }) {
   return (
     <GrantProgramOverview
-      program="apprenticeships"
+      program="rfps"
       post={post}
       markdown={markdown}
       search={search}
-      actionText="View Requests"
-      actionLink="/grants?program=apprenticeship&completed=true#view-grants"
+      actionText="View RFPs"
+      actionLink="/grants?program=rfps#view-grants"
     />
   );
 }
 
 export async function getStaticProps() {
   const post = getPostBySlug(
-    "/apprenticeships",
+    "/rfps",
     ["title", "date", "slug", "content"],
     "/"
   );
