@@ -54,7 +54,7 @@ Payment: 2 stars
 
 ## Milestone 2
 
-Expected Completion: November 2022
+Expected Completion: May 2023
 
 Payment: 3 stars
 
