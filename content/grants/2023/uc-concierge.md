@@ -37,6 +37,6 @@ The Urbit Community concierge will triage Urbit support issues that come in thro
 - Ability/interest in synthesizing support data and recommending new features or documentation
 - Dilligence
 
-## Compensation
+## Compensation and Timeline
 
-1 Star per month for 3 months, at which time the agreement can be renewed. 
+1 Star for 3 months of work, at which time the agreement may be renewed. 
