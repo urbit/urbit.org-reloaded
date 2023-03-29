@@ -10,7 +10,7 @@ grant_category = ["Other"]
 [extra]
 image = ""
 description = "The Urbit Community concierge will triage Urbit support issues that come in through the Urbit Community Group."
-reward = "1 Stars/mo"
+reward = "1 Star"
 assignee = [""]
 champion = [""]
 grant_id = "B0232"
