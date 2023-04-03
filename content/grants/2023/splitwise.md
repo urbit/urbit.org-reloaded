@@ -1,7 +1,7 @@
 +++
 
 title = "Expense Sharing App for Urbit"
-date = "2023-03-02"
+date = "2023-04-03"
 
 [taxonomies]
 grant_type = ["RFP"]
