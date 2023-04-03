@@ -109,38 +109,29 @@ export default function Home({
             */}
 
 
-            <Section className="pb-12">
+            <Section narrow className="pb-12">
               <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
-                <Link href="/campus/software-developers#reading">
+                <Link href="https://airtable.com/shrmfUVpMskWw145u">
                   <div className="cursor-pointer bg-wall-100 rounded-xl min-h-0 flex-1">    
                     <div className="flex flex-col p-4 h-full relative">
                       <div className="pt-1">
-                        <p className="mb-2 font-semibold leading-5">Urbit for Software Developers</p>
-                        <p className="text-sm leading-5">Learn how to build on the clean-slate OS and network for the 21st century</p>
+                        <p className="mb-2 font-semibold leading-5">Get on Urbit</p>
+                        <p className="text-sm leading-5">Start exploring the network and OS — for free</p>
                       </div>
                     </div>
                   </div>                   
                 </Link>
-                <Link href="/campus/blockchain-enthusiasts#reading">
+                <Link href="https://developers.urbit.org/courses">
                   <div className="cursor-pointer bg-wall-100 rounded-xl min-h-0 flex-1">    
                     <div className="flex flex-col p-4 h-full relative">
                       <div className="pt-1">
-                        <p className="mb-2 font-semibold leading-5">Urbit for Blockchain Enthusiasts</p>
-                        <p className="text-sm leading-5">Learn how sound computing and sound digital money fit together</p>
+                        <p className="mb-2 font-semibold leading-5">Courses</p>
+                        <p className="text-sm leading-5">Sign up for one of the Foundation's cohort-based courses in Urbit development</p>
                       </div>
                     </div>
                   </div>                   
                 </Link>
-                <Link href="/campus/everyone-else#reading">
-                  <div className="cursor-pointer bg-wall-100 rounded-xl min-h-0 flex-1">    
-                    <div className="flex flex-col p-4 h-full relative">
-                      <div className="pt-1">
-                        <p className="mb-2 font-semibold leading-5">Urbit for Everyone Else</p>
-                        <p className="text-sm leading-5">For those without the technical chops</p>
-                      </div>
-                    </div>
-                  </div>                   
-                </Link>
+                
                 <Link href="#events">
                   <div className="cursor-pointer bg-wall-100 rounded-xl min-h-0 flex-1">    
                     <div className="flex flex-col p-4 h-full relative">
@@ -158,7 +149,7 @@ export default function Home({
           
 
             {
-              //embedding test w/ overview page:
+              //funnel, repurposed from /overview page:
             }
 
             <Section>
@@ -239,7 +230,7 @@ export default function Home({
 const childPages = (thisLink, children, level = 0) => {
   const router = useRouter();
 
-  const isThisPage = router.asPath === thisLink;
+  const isThisPage = router.asPath === thisLink || router.asPath === `${thisLink}#reading`;
 
   const pageItemClasses = classnames({
     "text-base type-ui": level === 0,
@@ -249,8 +240,8 @@ const childPages = (thisLink, children, level = 0) => {
   return (
     <ul className="">
       <li className="pb-2">
-        <Link href="/campus">
-          <a className={`${pageItemClasses} cursor-pointer`}>Get on Urbit</a>
+        <Link href="/campus#reading">
+          <a className={`${pageItemClasses} cursor-pointer`}>Software Developers</a>
         </Link>
       </li>
       {children?.map((child) => (
@@ -265,7 +256,8 @@ const childPages = (thisLink, children, level = 0) => {
 const pageTree = (thisLink, tree, level = 0) => {
   const router = useRouter();
 
-  const isThisPage = router.asPath === thisLink;
+  
+  const isThisPage = router.asPath.includes(thisLink);
 
   const pageItemClasses = classnames({
     "text-base type-ui": level === 0,
@@ -275,7 +267,7 @@ const pageTree = (thisLink, tree, level = 0) => {
 
   return (
     <>
-      <Link href={thisLink}>
+      <Link href={thisLink + "#reading"}>
         <a className={`${pageItemClasses} cursor-pointer`}>{tree.title}</a>
       </Link>
     </>
