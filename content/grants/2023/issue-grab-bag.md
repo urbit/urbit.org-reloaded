@@ -25,7 +25,7 @@ work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B02
 
 The Urbit Foundation monitors existing and new issues in the codebase to identify issues that can be addressed by community contributors. 
 
-This bounty will be awarded to someone who closes any three of the issues labeled ["community contribution"](https://github.com/urbit/urbit/labels/community%20contribution) in the Urbit github repo. 
+This bounty will be awarded to someone who closes any three of the issues labeled community contribution in the [urbit](https://github.com/urbit/vere/labels/community%20contribution) or [vere](https://github.com/urbit/vere/labels/community%20contribution) github repo. 
 
 The ideal contributor will have a decent command of hoon and an understanding of the Urbit stack. Some, but not all, issues will require experience with the [Vere runtime](https://github.com/urbit/vere). Issues are selected to require minimal organizational context, making them amenable to open source contributors.
 
