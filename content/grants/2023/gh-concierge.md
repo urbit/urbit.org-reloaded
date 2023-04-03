@@ -10,7 +10,7 @@ grant_category = ["Other"]
 [extra]
 image = ""
 description = "The Github concierge will triage Urbit support issues that come in through Github."
-reward = "1 Stars/mo"
+reward = "2 Stars"
 assignee = [""]
 champion = [""]
 grant_id = "B0233"
@@ -39,4 +39,4 @@ The Github concierge will triage Urbit support issues that come in through githu
 
 ## Compensation
 
-1 Star per month for 3 months, at which time the agreement can be renewed. 
+2 Stars for 3 months of work, at which time the agreement can be renewed. 
