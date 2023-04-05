@@ -10,10 +10,11 @@ ship = "~nospex-larsut"
 
 ![](https://storage.googleapis.com/media.urbit.org/blog/6a0120a85dcdae970b016766c94c14970b-800wi.jpg)
 
+## Pin the Face that Launches a Thousand Ships[^1] ##
 _A short piece addressing some of the standard hesitations to learning Hoon, considered in light of all of the recent exciting network activity._
 
 ### Setting The Table ### 
-One can draw many distinctions between the Urbit apps that were available this time last year and those released thus far in 2023, but the most important of these may be that the former were apps noticed and used almost exclusively by users already on Urbit, where the latter - notably Pongo, Realm, Tirell Studio, Groups 2<sup>2</sup>, Portal, etc - are apps that are _creating Urbit users_.   
+One can draw many distinctions between the Urbit apps that were available this time last year and those released thus far in 2023, but the most important of these may be that the former were apps noticed and used almost exclusively by users already on Urbit, where the latter - notably Pongo, Realm, Tirell Studio, Groups 2, Portal, etc - are apps that are _creating Urbit users_.   
 
 Prior to the start of 2023, the superficially yet incomplete take was something to the effect that much of Urbit’s appeal was largely an affinity with the ideas and principles surrounding the project.  
 
@@ -27,7 +28,7 @@ This whole time though, the project was simultaneously also an incredibly busy c
 
 Remarkably short-lived, “I’m here… um, now what?’ is unraveling with the realization that this universe has always been accelerating, and this new wave of apps establishes a very visible & powerful reference point for truly appreciating that acceleration and the distance traveled; after what seemed like a brief post-Assembly fizzle, the network is again kinetic and crackling with energy, but in reality it was never slowing down.
 
-The latest generation of apps marks an important shift in the trajectory of Urbit adoption. Much of this is possible thanks to the proliferation of hosting options - whether [Native Planet’s](https://nativeplanet.io/) self-hosted solutions or through turnkey models - which collectively have vastly streamlined the Urbit onboarding process such that getting on the network is no longer the equivalent of scaling a forbidding & remote mountain peak, arriving at the threshold of a silent monastery, heaving its heavy door ajar to find it seemingly abandoned only a thin sliver of light to illuminate your path, nobody there to acknowledge your arrival much less offer a tour.  The thrill of having finally gotten there dampened by the increasing sense that all of its life is subterranean and the real journey is just beginning.<sup>3</sup>  
+The latest generation of apps marks an important shift in the trajectory of Urbit adoption. Much of this is possible thanks to the proliferation of hosting options - whether [Native Planet’s](https://nativeplanet.io/) self-hosted solutions or through turnkey models - which collectively have vastly streamlined the Urbit onboarding process such that getting on the network is no longer the equivalent of scaling a forbidding & remote mountain peak, arriving at the threshold of a silent monastery, heaving its heavy door ajar to find it seemingly abandoned only a thin sliver of light to illuminate your path, nobody there to acknowledge your arrival much less offer a tour.  The thrill of having finally gotten there dampened by the increasing sense that all of its life is subterranean and the real journey is just beginning.[^2]  
 
 Single-click onboarding and preloaded apps & groups may not seem like a lot for newcomers, but these things have increased tremendously the ability to get on Urbit compared to just six months ago.
 
@@ -72,7 +73,7 @@ Since one can only try to subjectively weigh the opportunities open to them with
 __Hesitancy 2:  Hoon is difficult and/or weird.__<br>
 Recognizing that there are a lot of runes, and that Hoon is odd compared to other languages, 
 <ul>
-<li>learning just a handful<sup>4</sup> of them along with the basic families (create cores with | runes, call functions with % runes, conditionals statements are built with ? runes, etc)  will get one well on their way. </li> 
+<li>learning just a handful[^3] of them along with the basic families (create cores with | runes, call functions with % runes, conditionals statements are built with ? runes, etc)  will get one well on their way. </li> 
 <li>if Hoon is not your first language, you have already demonstrated a capacity for becoming comfortable working within a framework of structure and syntax that was, relative to your previous inexperience, alien and weird. And while there are additional wrinkles in dealing with a functional language, the majority of CS concepts remain relevant and are transferable.</li>
 </ul>
 
@@ -128,7 +129,7 @@ The resources for learning Hoon are growing:<br>
 ● [App Workshop Live](https://developers.urbit.org/courses/awl) <br>
 ● An upcoming [Core Dev course](https://developers.urbit.org/courses/csl)<br>
 ● The growing corpus of [documentation](https://developers.urbit.org/reference/hoon/overview)<br>
-● And of course the most valuable resource of all is all the people on the network who are willing to answer questions and help one learn. Find them in the Hacker House
+● And of course the most valuable resource of all is all the people on the network who are willing to answer questions and help one learn. Find them in the Hacker House.
 <p>
 
 If something about Urbit is drawing you toward it, if the project resonates with you in a way that other things in tech do not - if you are truly intrigued by it and want to be here - it is reasonable to assert that the process of learning Hoon is not simply a tax with questionable upside, but a productive process in and of itself; that the very process of learning it will embed you deeper into a space you want to be in.
@@ -136,7 +137,6 @@ If something about Urbit is drawing you toward it, if the project resonates with
 So learn Hoon.  Not only is it fun, bas an Urbiter, it is something of a cultural heritage, and the conduit between reality and whatever your endless imagination conceives Urbit’s potential to be - space here is wide open, and any of today’s aspiring Hooners has the potential to pin the face that launches a thousand ships.
 
 ----------------
-1. To 'pin a face' is to declare a variable in Hoon.
-2. Alongside a much-noticed and appreciated recent performance boost to Groups has also considerably improved the experience of being on Urbit.  
-3. Maybe some slight dramatization; this aspect also made it fun for those not in need of immediate gratification.
-4. [See 'Rune Utilization in Hoon'](https://developers.urbit.org/blog/rune-frequency-202212)
+[^1]: To 'pin a face' is to declare a variable in Hoon.
+[^2]: Maybe some slight dramatization; this aspect also made it fun for those not in need of immediate gratification.
+[^3]: [See 'Rune Utilization in Hoon'](https://developers.urbit.org/blog/rune-frequency-202212)
