@@ -11,6 +11,6 @@ description = "Portal is the front page"
 
 ### Portal is the front page for urbit
 
-Portal made its debut as the solution to decentralized discovery on Urbit. It enables anyone on Urbit to curate content, apps, and groups for other ships to discover
+Portal made its debut as the solution to decentralized discovery on Urbit. Portal enables anyone on Urbit to curate content, apps, and groups for other ships to discover
 
 ![Screenshot](https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/portal-screenshot.png)
