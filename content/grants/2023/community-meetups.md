@@ -30,7 +30,7 @@ work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B01
 - Semi-regular presentations that introduce Urbit to newcomers, help members boot a planet, or introduce the more technical side of urbit are strongly suggested.
 - Having a collection of recommended groups & apps to which you can direct meetup attendees, such that they can begin to explore the Urbit network.
 - As one of the main goals of meetups is to get people building on Urbit, once your meetup gains some traction, consider looking into writing a proposal for a grant on which members of your meetup can collaborate.
-- While the specific requirements of the meetup bounty can be summarized as "run a regular meetup", the overarching goal is to build a local community and onboard people to Urbit. You should become a true champion of your local urbit community who helps people find their own path in urbit, whether it is signing up for a course, a grant or even working for a company in the ecosystem. It's up to you to find the potential in the attendees.
+- While the specific requirements of the meetup bounty can be summarized as "run a regular meetup", the overarching goal is to build a local community and onboard people to Urbit. You should become a true champion of your local urbit community who helps people find their own path on urbit, whether it is signing up for a course, a grant or even working for a company in the ecosystem. It's up to you to find the potential of the attendees.
 # Application process
 After applying to this bounty, set-up a call with ~dalweb-donfun who will assess the soundness of your strategy and run you through the requirements of this bounty. If everything checks-out you are good to go. 
 # Compensation
