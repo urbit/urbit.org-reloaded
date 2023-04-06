@@ -1,7 +1,7 @@
 +++
 title = "Scene"
 shortcode = ""
-license = "MIT"
+license = ""
 image = "https://tirrel.io/assets/scene-logo-stroke.svg"
 bgColor = "rgb(0, 0, 0)"
 developer = "Tirrel Corp."

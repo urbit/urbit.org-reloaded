@@ -1,7 +1,7 @@
 +++
 title = "Studio"
 shortcode = "~tirrel/studio"
-license = "MIT"
+license = ""
 image = "https://tirrel.io/assets/stool.svg"
 bgColor = "rgb(160, 226, 167)"
 developer = "Tirrel Corp."
