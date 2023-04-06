@@ -1,7 +1,7 @@
 +++
 title = "Realm"
 shortcode = "~lomdyr-librun/realm"
-license = "MIT"
+license = ""
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/realm-icon.png"
 bgColor = ""
 developer = "Holium"
