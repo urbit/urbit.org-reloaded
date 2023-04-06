@@ -9,7 +9,7 @@ website = ""
 description = "Portal is the front page"
 +++
 
-### Portal is the starting page for urbit
+### Portal is the front page for urbit
 
 Portal made its debut as the solution to decentralized discovery on Urbit. It enables anyone on Urbit to curate content, apps, and groups for other ships to discover
 
