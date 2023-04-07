@@ -64,7 +64,7 @@ export default function Home({
             <Section className="pb-6">      
                 <div className="flex flex-col space-y-4">
                     <h1 className="max-w-prose">
-                    [Hero statement goes here. Hero statement goes here.] 
+                    Leave your mark on the future. Build on Urbit. 
                     </h1>
                     
                 </div>
@@ -87,9 +87,7 @@ export default function Home({
                     <p>
                     Well, <i>almost</i> all the exits. For those with the gall to think outside the box, there is another way. 
                     A complete reimagining of networked computing from the OS up, designed to facilitate the construction 
-                    of powerful, enduring, and decentralized systems. On <span className="font-bold">Urbit</span>, every computer is a personal server, enabling 
-                    all of the functionality of the legacy internet (and more) without requiring users to cede control of their 
-                    digital identity to faceless corporations.
+                    of powerful, enduring, and decentralized systems.
                     </p>
                     <p>
                     The Urbit Foundation’s Campus Outreach Program aims to find ambitious students interested in leaving the old 
@@ -114,9 +112,13 @@ export default function Home({
                 <Link href="https://airtable.com/shrmfUVpMskWw145u">
                   <div className="cursor-pointer bg-wall-100 rounded-xl min-h-0 flex-1">    
                     <div className="flex flex-col p-4 h-full relative">
-                      <div className="pt-1">
+                      <div className="w-64 md:w-full rounded-xl object-cover overflow-hidden basis-3/5">
+                        <img className="h-full w-64 md:w-full object-cover" src="https://pbs.twimg.com/media/FTcmjJWWQAAiSkI?format=jpg&name=900x900" />
+                      </div>
+                      <div className="rounded-xl w-full"/>
+                      <div className="pt-4">
                         <p className="mb-2 font-semibold leading-5">Get on Urbit</p>
-                        <p className="text-sm leading-5">Start exploring the network and OS — for free</p>
+                        <p className="text-sm leading-5">Start exploring the OS and network for the 21st century</p>
                       </div>
                     </div>
                   </div>                   
@@ -124,9 +126,13 @@ export default function Home({
                 <Link href="https://developers.urbit.org/courses">
                   <div className="cursor-pointer bg-wall-100 rounded-xl min-h-0 flex-1">    
                     <div className="flex flex-col p-4 h-full relative">
-                      <div className="pt-1">
-                        <p className="mb-2 font-semibold leading-5">Courses</p>
-                        <p className="text-sm leading-5">Sign up for one of the Foundation's cohort-based courses in Urbit development</p>
+                      <div className="w-64 md:w-full rounded-xl object-cover overflow-hidden basis-3/5">
+                        <img className="h-full w-64 md:w-full object-cover" src="https://pbs.twimg.com/media/FTcmjJWWQAAiSkI?format=jpg&name=900x900" />
+                      </div>
+                      <div className="rounded-xl w-full"/>
+                      <div className="pt-4">
+                        <p className="mb-2 font-semibold leading-5">Learn the Stack</p>
+                        <p className="text-sm leading-5">Sign up for one of the Foundation's free courses in Urbit development</p>
                       </div>
                     </div>
                   </div>                   
@@ -135,7 +141,11 @@ export default function Home({
                 <Link href="#events">
                   <div className="cursor-pointer bg-wall-100 rounded-xl min-h-0 flex-1">    
                     <div className="flex flex-col p-4 h-full relative">
-                      <div className="pt-1">
+                      <div className="w-64 md:w-full rounded-xl object-cover overflow-hidden basis-3/5">
+                        <img className="h-full w-64 md:w-full object-cover" src="https://pbs.twimg.com/media/FTcmjJWWQAAiSkI?format=jpg&name=900x900" />
+                      </div>
+                      <div className="rounded-xl w-full"/>
+                      <div className="pt-4">
                         <p className="mb-2 font-semibold leading-5">Events</p>
                         <p className="text-sm leading-5">Find upcoming events and schedule one at your campus</p>
                       </div>
@@ -153,8 +163,9 @@ export default function Home({
             }
 
             <Section>
-              <h3 className="mb-8" id="reading">Attended an event and interested in learning more? Start here:</h3> 
+              <h3 className="mb-8" id="reading">Want to learn more but aren’t sure where to look? Start here.</h3> 
               <hr></hr>
+              <br></br>
               <br></br>
               <div className="flex justify-between sidebar md:space-x-8">
                 <Sidebar search={search}>
@@ -166,6 +177,8 @@ export default function Home({
                 </div>
               </div>
             </Section>
+
+            
 
             {
                 //Events
