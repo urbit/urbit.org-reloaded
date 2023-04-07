@@ -1,13 +1,13 @@
 +++
 title = "Pin the Face that Launches a Thousand Ships"
-date = "2023-04-04"
+date = "2023-04-07"
 description = "A guest post by ~nospex-larsut"
 [extra]
 image = "https://storage.googleapis.com/media.urbit.org/blog/6a0120a85dcdae970b016766c94c14970b-800wi.jpg"
 author = ""
 ship = "~nospex-larsut"
 +++
-_Original article can be found [here](https://nospex-larsut.arvo.network/blog/whyhoon) using [%blog](https://urbit.org/applications/~hanrut-sillet-dachus-tiprel/blog)._
+_The original article can be found [here](https://nospex-larsut.arvo.network/blog/whyhoon) using [%blog](https://urbit.org/applications/~hanrut-sillet-dachus-tiprel/blog)._
 
 ![](https://storage.googleapis.com/media.urbit.org/blog/6a0120a85dcdae970b016766c94c14970b-800wi.jpg)
 
