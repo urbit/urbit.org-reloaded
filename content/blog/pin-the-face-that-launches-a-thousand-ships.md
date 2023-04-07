@@ -7,6 +7,7 @@ image = "https://storage.googleapis.com/media.urbit.org/blog/6a0120a85dcdae970b0
 author = ""
 ship = "~nospex-larsut"
 +++
+_Original article can be found [here](https://nospex-larsut.arvo.network/blog/whyhoon) using [%blog](https://urbit.org/applications/~hanrut-sillet-dachus-tiprel/blog)._
 
 ![](https://storage.googleapis.com/media.urbit.org/blog/6a0120a85dcdae970b016766c94c14970b-800wi.jpg)
 
@@ -16,7 +17,7 @@ _A short piece addressing some of the standard hesitations to learning Hoon, con
 ### Setting The Table ### 
 One can draw many distinctions between the Urbit apps that were available this time last year and those released thus far in 2023, but the most important of these may be that the former were apps noticed and used almost exclusively by users already on Urbit, where the latter - notably Pongo, Realm, Tirell Studio, Groups 2, Portal, etc - are apps that are _creating Urbit users_.   
 
-Prior to the start of 2023, the superficially yet incomplete take was something to the effect that much of Urbit’s appeal was largely an affinity with the ideas and principles surrounding the project.  
+Prior to the start of 2023, the superficial, yet incomplete, take was something to the effect that much of Urbit’s appeal was largely an affinity with the ideas and principles surrounding the project.  
 
 People who found their way to Urbit latched on to philosophical entry points, among them values such as calm computing, decentralized/privacy/data-ownership maximalism, or aspirations of replacing a generations-deep legacy computing system that entrenched an ethos of doing things fundamentally inefficiently & incorrectly, in ways that not only hobbled the potential of the internet, but resulted in outright harm to its users through establishing platform models and incentives that consciously sought to manipulate the behavior of those users in countless subtle and not-so-subtle ways.  
 
