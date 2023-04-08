@@ -58,7 +58,8 @@ The following hesitancies seem to be the recurring ones, and we’ll take them o
 <li> I don’t see many immediate jobs for Hoon devs.</li>
 </ol>
 
-__Hesitancy 1: But I _already know_ languages x, y, z, etc and can build things with them _now_.__<br>
+__Hesitancy 1: But I _already know_ languages x, y, z, etc and can build things with them _now_.__
+
 A valid contention in that one has invested in skills they are eager to put to use or continue to use.  But can you build what you want to build - and where you want to build it?  And what is the cost in terms of personal satisfaction to working on something which doesn’t truly excite you?  
 
 There is something of the sunk-cost fallacy is at work here.  It is not always a bad impulse, and opportunity costs are very real.  But if there is something compelling about Urbit - and the fact that one is at least seriously considering learning Hoon suggests this is the case -  and one is willing to view their existing proficiency in some other language as a demonstration of their capability to learn any programming language, then existing knowledge should not act as a barrier to pursuing new knowledge, particularly if there is a suspicion that working on Urbit may afford more intellectually stimulating and enjoyable opportunities.
@@ -71,12 +72,12 @@ And is time spent learning Hoon really time spent not building things?  Are you 
 
 Since one can only try to subjectively weigh the opportunities open to them with their current skills against the nebulous costs of _not_ pursuing something that has piqued their interest, the dilemma often cannot but remain unanswered until one takes the steps to find out; until then, it remains a persistent, nagging 'what if'?.  It may take several months to feel really comfortable writing Hoon, but there is a relatively low cost to spending a few weeks to dive in and see if one has an aptitude or affinity for it.
 
-__Hesitancy 2:  Hoon is difficult and/or weird.__<br>
+__Hesitancy 2:  Hoon is difficult and/or weird.__
+
 Recognizing that there are a lot of runes, and that Hoon is odd compared to other languages, 
-<ul>
-<li>learning just a handful[^3] of them along with the basic families (create cores with | runes, call functions with % runes, conditionals statements are built with ? runes, etc)  will get one well on their way. </li> 
-<li>if Hoon is not your first language, you have already demonstrated a capacity for becoming comfortable working within a framework of structure and syntax that was, relative to your previous inexperience, alien and weird. And while there are additional wrinkles in dealing with a functional language, the majority of CS concepts remain relevant and are transferable.</li>
-</ul>
+
+- learning just a handful[^3] of them along with the basic families (create cores with | runes, call functions with % runes, conditionals statements are built with ? runes, etc)  will get one well on their way. </li> 
+- if Hoon is not your first language, you have already demonstrated a capacity for becoming comfortable working within a framework of structure and syntax that was, relative to your previous inexperience, alien and weird. And while there are additional wrinkles in dealing with a functional language, the majority of CS concepts remain relevant and are transferable.
 
 And if Hoon is your first language, it is all uncharted territory anyway and not having anything to compare it to means one is essentially in the same situation as in learning any new language, and in that respect it mirrors almost any endeavor to grasp new modes of problem-solving under a unique set of conditions and constraints. Even if you do not stick with Hoon, the new perspectives in problem-solving experience are valuable, and most of the fundamental concepts will be transferable to other languages.
 
@@ -96,7 +97,8 @@ Recognize that Hoon's unique syntax and functional paradigm are integral to its 
   </div>
 </div>
 
-__Hesitancy 3:  Urbit’s future is uncertain; investing in learning Hoon seems risky.__<br>
+__Hesitancy 3:  Urbit’s future is uncertain; investing in learning Hoon seems risky.__
+
 Much of the table-setting for this piece was an attempt to frame the potential opportunity for devs of any level.  Keeping things in perspective, Urbit is just about to hit [3,000 active ships](https://twitter.com/urbitfoundation/status/1637931937351491584).  There are several reasons why recent activity may be much more indicative of even greater future growth than one might assume from looking at the chart: 
 <ul>
 <li>a. Maybe very obviously, the growth of the last three months is not simply a 1:1 reflection of the work of the last three months, but of the many preceding years of core development that made a significant increase in percentage terms within a very short interval possible. The stage is set for much faster growth.</li>
@@ -111,7 +113,8 @@ Urbit, by (beautiful) design, is a very low-time preference project in some resp
 
 When there are 10,000, 100,000 active ships it will be a trip in itself to remember that you started learning Hoon back when there were "only" 3,000, and contributed in maybe some non-trivial way to attract some quantity of new ones by building something you were excited about building.
 
-__Hesitancy 4:  I don’t see many immediate jobs for Hoon devs.__<br>
+__Hesitancy 4:  I don’t see many immediate jobs for Hoon devs.__
+
 _Not yet you don’t_.  Much of the response to Objection 3 is also relevant here.  
 
 The pool of Urbit companies is not fixed.  It is not an insurmountable obstacle to start up a small-scale dev shop with a handful of talented devs.  
@@ -135,7 +138,7 @@ The resources for learning Hoon are growing:<br>
 
 If something about Urbit is drawing you toward it, if the project resonates with you in a way that other things in tech do not - if you are truly intrigued by it and want to be here - it is reasonable to assert that the process of learning Hoon is not simply a tax with questionable upside, but a productive process in and of itself; that the very process of learning it will embed you deeper into a space you want to be in.
 
-So learn Hoon.  Not only is it fun, bas an Urbiter, it is something of a cultural heritage, and the conduit between reality and whatever your endless imagination conceives Urbit’s potential to be - space here is wide open, and any of today’s aspiring Hooners has the potential to pin the face that launches a thousand ships.
+So learn Hoon.  Not only is it fun, but as an Urbiter, it is something of a cultural heritage, and the conduit between reality and whatever your endless imagination conceives Urbit’s potential to be - space here is wide open, and any of today’s aspiring Hooners has the potential to pin the face that launches a thousand ships.
 
 ----------------
 [^1]: To 'pin a face' is to declare a variable in Hoon.
