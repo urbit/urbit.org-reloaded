@@ -77,10 +77,9 @@ export default function Home({
             
 
             {/* Brief explanatory paragraph */}
-            <Section narrow className="pb-1">
+            <Section>
    
                 <div className="w-full space-y-8 max-w-prose">
-
                     <div className="space-y-4">
                     <p className="">
                     <span className="font-bold">The internet cannot be saved. </span> 
@@ -110,53 +109,12 @@ export default function Home({
               <a href="#events"> cheebo </a> 
             */}
 
-
-            <Section narrow className="pb-12">
-              <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
-                <Link href="https://airtable.com/shrmfUVpMskWw145u">
-                  <div className="cursor-pointer bg-wall-100 rounded-xl min-h-0 flex-1">    
-                    <div className="flex flex-col p-4 h-full relative">
-                      <div className="w-64 md:w-full rounded-xl object-cover overflow-hidden basis-3/5">
-                        <img className="h-full w-64 md:w-full object-cover" src="https://pbs.twimg.com/media/FTcmjJWWQAAiSkI?format=jpg&name=900x900" />
-                      </div>
-                      <div className="rounded-xl w-full"/>
-                      <div className="pt-4">
-                        <p className="mb-2 font-semibold leading-5">Get on Urbit</p>
-                        <p className="text-sm leading-5">Start exploring the OS and network for the 21st century</p>
-                      </div>
-                    </div>
-                  </div>                   
-                </Link>
-                <Link href="https://developers.urbit.org/courses">
-                  <div className="cursor-pointer bg-wall-100 rounded-xl min-h-0 flex-1">    
-                    <div className="flex flex-col p-4 h-full relative">
-                      <div className="w-64 md:w-full rounded-xl object-cover overflow-hidden basis-3/5">
-                        <img className="h-full w-64 md:w-full object-cover" src="https://pbs.twimg.com/media/FTcmjJWWQAAiSkI?format=jpg&name=900x900" />
-                      </div>
-                      <div className="rounded-xl w-full"/>
-                      <div className="pt-4">
-                        <p className="mb-2 font-semibold leading-5">Learn the Stack</p>
-                        <p className="text-sm leading-5">Sign up for one of the Foundation's free courses in Urbit development</p>
-                      </div>
-                    </div>
-                  </div>                   
-                </Link>
-                
-                <Link href="#events">
-                  <div className="cursor-pointer bg-wall-100 rounded-xl min-h-0 flex-1">    
-                    <div className="flex flex-col p-4 h-full relative">
-                      <div className="w-64 md:w-full rounded-xl object-cover overflow-hidden basis-3/5">
-                        <img className="h-full w-64 md:w-full object-cover" src="https://pbs.twimg.com/media/FTcmjJWWQAAiSkI?format=jpg&name=900x900" />
-                      </div>
-                      <div className="rounded-xl w-full"/>
-                      <div className="pt-4">
-                        <p className="mb-2 font-semibold leading-5">Events</p>
-                        <p className="text-sm leading-5">Find upcoming events and schedule one at your campus</p>
-                      </div>
-                    </div>
-                  </div>                   
-                </Link>
-              </div>
+            <Section className="pb-1">
+              <Link href="https://airtable.com/shrmfUVpMskWw145u" passHref>
+                <a className="button-lg bg-green-400 text-white type-ui max-w-fit">
+                  Get on Urbit
+                </a>
+              </Link>
             </Section>
 
             
@@ -166,8 +124,7 @@ export default function Home({
               //funnel, repurposed from /overview page:
             }
 
-            <Section>
-              <h3 className="mb-8" id="reading">Want to learn more but aren’t sure where to look? Start here.</h3> 
+            <Section> 
               <hr></hr>
               <br></br>
               <br></br>
@@ -189,14 +146,18 @@ export default function Home({
             }
 
             <Section className="pb-1">
-                <hr></hr>
+                
                 <br></br>
                 <div className="mt-6">
                     <h2 className="mb-8" id="events">Events</h2>
-                    <TwoUp>
-                        <EventPreview event={events[0]} className="mb-8" />
-                        {events[1] ? <EventPreview event={events[1]} className="mb-8" /> : <div />}
-                    </TwoUp>
+                    {events.length > 0 ? (
+                        <TwoUp>
+                            <EventPreview event={events[0]} className="mb-8" />
+                            {events[1] ? <EventPreview event={events[1]} className="mb-8" /> : <div />}
+                        </TwoUp>
+                    ) : (
+                        <p>No events yet — check back later.</p>
+                    )}
                     <Link href="/events?tag=campus">
                         <a className="bg-wall-600 text-white button-lg w-fit">
                             View All
@@ -339,7 +300,8 @@ export async function getStaticProps({ params }) {
       "weight"
     ) || null;
 
-  const events = getAllEvents(eventKeys, "events").filter((e) => e?.tags?.includes("campus"));
+  const allEvents = getAllEvents(eventKeys, "events");
+  const events = allEvents.filter((e) => e?.tags?.includes("campus")) || [];
 
   return { props: { posts, data, markdown, params, previousPost, nextPost, events } };
 }
