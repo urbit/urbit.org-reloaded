@@ -11,10 +11,10 @@ grant_category = ["Core Dev"]
 image = ""
 description = "Hoon CodeMirror grammar and language mode for Replit"
 reward = "1 stars"
-assignee = [""]
-champion = [""]
+assignee = ["~ransud-wannus-malbex-lacnyr"]
+champion = ["Replit"]
 grant_id = "B0238"
-completed = false
+completed = true
 canceled = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0238&prefill_Grant+Name=Hoon%20CodeMirror%20grammar%20and%20language%20mode%20for%20Replit"
 
