@@ -1,6 +1,6 @@
 +++
 title = "%blog"
-shortcode = "~hanrut-sillet-dachus-tiprel/talk"
+shortcode = "~hanrut-sillet-dachus-tiprel/blog"
 license = "MIT"
 image = ""
 bgColor = "#533E78"
