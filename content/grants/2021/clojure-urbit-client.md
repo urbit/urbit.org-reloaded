@@ -12,7 +12,7 @@ champion = ["~littel-wolfur"]
 assignee = ["~sorted-falnyd"]
 grant_id = "P0072"
 completed = false
-canceled = false
+canceled = true
 link = ""
 +++
 
