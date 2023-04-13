@@ -208,7 +208,7 @@ const childPages = (thisLink, children, level = 0) => {
   return (
     <ul className="">
       <li className="pb-2">
-        <Link href="/campus">
+        <Link href="/campus#reading">
           <a className={`${pageItemClasses} cursor-pointer`}>Software Developers</a>
         </Link>
       </li>
