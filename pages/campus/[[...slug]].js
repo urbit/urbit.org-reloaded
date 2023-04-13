@@ -116,6 +116,7 @@ export default function Home({
             {
               //funnel, repurposed from /overview page:
             }
+            <div id="reading"></div>
 
             <Section> 
 
@@ -234,7 +235,7 @@ const pageTree = (thisLink, tree, level = 0) => {
 
   return (
     <>
-      <Link href={thisLink}>
+      <Link href={thisLink + "#reading"}>
         <a className={`${pageItemClasses} cursor-pointer`}>{tree.title}</a>
       </Link>
     </>
