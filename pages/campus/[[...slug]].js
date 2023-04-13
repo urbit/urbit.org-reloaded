@@ -118,15 +118,14 @@ export default function Home({
             }
 
             <Section> 
-              <hr></hr>
-              <br></br>
-              <br></br>
+
+              <h2 className="pb-16">Learn about Urbit for</h2>
+
               <div className="flex justify-between sidebar md:space-x-8">
                 <Sidebar search={search}>
                 {childPages("/campus", posts.pages)}
                 </Sidebar>
                 <div className={'markdown max-w-prose ' + data.slug }>
-                  <h3>{data.title}</h3>
                   <Markdown.render content={JSON.parse(markdown)} />
                 </div>
               </div>
