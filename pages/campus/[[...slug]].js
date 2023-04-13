@@ -67,19 +67,17 @@ export default function Home({
                       Campus Outreach Program
                     </h1>
                     <h3 className="">
-                    Leave your mark on the future. Build on Urbit. 
+                      Leave your mark on the future. Build on Urbit. 
                     </h3>
-                    
-                    
                 </div>
             </Section>
 
             
 
             {/* Brief explanatory paragraph */}
-            <Section className="flex space-x-8">
+            <Section className="sm:flex sm:space-x-8 space-y-8 sm:space-y-0">
    
-                <div className="flex w-2/3 space-y-8">
+                <div className="sm:w-2/3 space-y-8">
                     <div className="space-y-4">
                       <p className="type-ui">
                       For those with the will to think outside the box: a complete reimagining of networked computing from the OS up, designed to facilitate the construction 
@@ -97,7 +95,7 @@ export default function Home({
 
                 </div>
 
-                <div className="w-1/3">
+                <div className="sm:w-1/3">
 
                   <Link href="https://airtable.com/shrmfUVpMskWw145u" passHref>
                     <a className="button-lg bg-green-400 text-white type-ui max-w-fit">
