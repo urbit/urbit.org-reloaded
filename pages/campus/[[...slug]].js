@@ -77,30 +77,34 @@ export default function Home({
             
 
             {/* Brief explanatory paragraph */}
-            <Section>
+            <Section className="flex space-x-8">
    
-                <div className="w-full space-y-8 max-w-prose">
+                <div className="flex w-2/3 space-y-8">
                     <div className="space-y-4">
-                    <p className="">
-                    <span className="font-bold">The internet cannot be saved. </span> 
-                    No matter how many unsuspecting youth are press-ganged into derivative careers maintaining, 
-                    optimizing, and reskinning this house of cards, the web as we know it is doomed to crumble under 
-                    its own weight. The platforms are closed, the data is siloed, and all the exits are shut tight.
-                    </p>
-                    <p>
-                    Well, <i>almost</i> all the exits. For those with the gall to think outside the box, there is another way. 
-                    A complete reimagining of networked computing from the OS up, designed to facilitate the construction 
-                    of powerful, enduring, and decentralized systems.
-                    </p>
-                    <p>
-                    The Urbit Foundation’s Campus Outreach Program aims to find ambitious students interested in leaving the old 
-                    world behind and providing them with the information and resources to help build a better future. 
-                    If you fit that description and want us to come to your university,{" "}
-                    <Link href="/campus#contact" passHref>
-                    <a>get in touch.</a>
-                    </Link>{" "}
-                    </p>
+                      <p className="type-ui">
+                      For those with the will to think outside the box: a complete reimagining of networked computing from the OS up, designed to facilitate the construction 
+                      of powerful, enduring, and decentralized systems.
+                      </p>
+                      <p className="type-ui">
+                      The Urbit Foundation’s Campus Outreach Program aims to find ambitious students interested in leaving the old 
+                      world behind and providing them with the information and resources to help build a better future. 
+                      If you fit that description and want us to come to your university,{" "}
+                      <Link href="/campus#contact" passHref>
+                      <a>get in touch.</a>
+                      </Link>{" "}
+                      </p>
                     </div>
+
+                </div>
+
+                <div className="w-1/3">
+
+                  <Link href="https://airtable.com/shrmfUVpMskWw145u" passHref>
+                    <a className="button-lg bg-green-400 text-white type-ui max-w-fit">
+                      Get on Urbit
+                    </a>
+                  </Link>
+
                 </div>
             </Section>
 
@@ -108,17 +112,8 @@ export default function Home({
               how to make an in-page link (href to hashtag element id)
               <a href="#events"> cheebo </a> 
             */}
-
-            <Section className="pb-1">
-              <Link href="https://airtable.com/shrmfUVpMskWw145u" passHref>
-                <a className="button-lg bg-green-400 text-white type-ui max-w-fit">
-                  Get on Urbit
-                </a>
-              </Link>
-            </Section>
-
             
-          
+        
 
             {
               //funnel, repurposed from /overview page:
@@ -132,7 +127,7 @@ export default function Home({
                 <Sidebar search={search}>
                 {childPages("/campus", posts.pages)}
                 </Sidebar>
-                <div className="markdown max-w-prose">
+                <div className={'markdown max-w-prose ' + data.slug }>
                   <h3>{data.title}</h3>
                   <Markdown.render content={JSON.parse(markdown)} />
                 </div>
@@ -156,7 +151,7 @@ export default function Home({
                             {events[1] ? <EventPreview event={events[1]} className="mb-8" /> : <div />}
                         </TwoUp>
                     ) : (
-                        <p>No events yet — check back later.</p>
+                        <p className="pb-8">No events yet — check back later.</p>
                     )}
                     <Link href="/events?tag=campus">
                         <a className="bg-wall-600 text-white button-lg w-fit">
@@ -172,10 +167,7 @@ export default function Home({
               
               <div className="bg-wall-100 w-full p-4 md:p-8 rounded-3xl flex flex-wrap items-center">
 
-                <div className="basis-full sm:basis-1/3 pb-4 sm:pb-0">
-                  <img className="rounded-xl w-72" src="https://storage.googleapis.com/media.urbit.org/assembly/assembly-thumb2.jpg" />
-                </div>
-                <div className="sm:basis-2/3 sm:pl-6 align-middle">
+                <div className="sm:pl-2 align-middle">
                   <h2 className=" text-2xl pb-2" >Get in touch</h2 >
                   <p className="max-w-prose pb-4">
                     Not sure how to get started after attending an event? Want to schedule one at your university? 
@@ -208,7 +200,7 @@ export default function Home({
 const childPages = (thisLink, children, level = 0) => {
   const router = useRouter();
 
-  const isThisPage = router.asPath === thisLink || router.asPath === `${thisLink}#reading`;
+  const isThisPage = router.asPath === thisLink || router.asPath === `${thisLink}`;
 
   const pageItemClasses = classnames({
     "text-base type-ui": level === 0,
@@ -218,7 +210,7 @@ const childPages = (thisLink, children, level = 0) => {
   return (
     <ul className="">
       <li className="pb-2">
-        <Link href="/campus#reading">
+        <Link href="/campus">
           <a className={`${pageItemClasses} cursor-pointer`}>Software Developers</a>
         </Link>
       </li>
@@ -245,7 +237,7 @@ const pageTree = (thisLink, tree, level = 0) => {
 
   return (
     <>
-      <Link href={thisLink + "#reading"}>
+      <Link href={thisLink}>
         <a className={`${pageItemClasses} cursor-pointer`}>{tree.title}</a>
       </Link>
     </>
@@ -305,7 +297,6 @@ export async function getStaticProps({ params }) {
 
   return { props: { posts, data, markdown, params, previousPost, nextPost, events } };
 }
-
 
 
 

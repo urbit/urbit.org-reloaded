@@ -1,5 +1,6 @@
 +++
-title = "Urbit for Creatives"
+title = "Creatives"
+slug = "creatives"
 description = "Urbit for everyone"
 weight = 5
 [extra]

@@ -1,5 +1,6 @@
 +++
-title = "Urbit for Blockchain Enthusiasts"
+title = "Blockchain Enthusiasts"
+slug = "blockchain-enthusiasts"
 description = "Learn how sound computing and sound money fit together"
 weight = 4
 [extra]
