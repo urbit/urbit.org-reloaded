@@ -198,7 +198,7 @@ export default function Home({
 const childPages = (thisLink, children, level = 0) => {
   const router = useRouter();
 
-  const isThisPage = router.asPath === thisLink || router.asPath === `${thisLink}`;
+  const isThisPage = router.asPath === thisLink || router.asPath === `${thisLink}#reading`;
 
   const pageItemClasses = classnames({
     "text-base type-ui": level === 0,
