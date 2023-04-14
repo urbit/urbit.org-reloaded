@@ -21,8 +21,6 @@ How Urbit and Bitcoin fit together
 ### [Azimuth](https://developers.urbit.org/reference/azimuth/azimuth)
 Urbit’s PKI system on Ethereum
 
-<br>
-
 ### [Uqbar](https://uqbar.network)
 The Urbit-native blockchain
 

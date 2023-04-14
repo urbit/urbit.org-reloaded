@@ -8,18 +8,14 @@ weight = 5
 
 Look, this thing is being built in flight. Most of the low-hanging fruit is still there, waiting to be picked by those with the technical chops to do so.
 
-Still, even in its relatively nascent state, it is already exceedingly obvious that Urbit will become the premier platform for communities to organize and build on their own terms. For those with the vision and drive to take advantage of it, Urbit is
-
-There are already publishing tools that allow individuals to wholly replace monopolistic platforms, chief among them being Studio from Tirrel.
+Still, even in its relatively nascent state, it is already exceedingly obvious that Urbit will become the premier platform for communities to organize and build on their own terms.
 
 ### [Tirrel Studio](https://urbit.studio)
-Publish and earn on Urbit
 
-<br></br>
+Host, publish, and earn on Urbit. See the [Mars Review of Books.](https://marsreview.org/)
+
+
+### [Meetup Grant](https://urbit.org/grants/community-meetups)
 
 Through our Grants program, the foundation rewards community-builders who
 host regular meetups and help people learn about the project.
-
-### [Meetup Grant]()
-
-Earn stars by building a local Urbit community
