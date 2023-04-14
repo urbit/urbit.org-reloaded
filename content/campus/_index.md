@@ -41,5 +41,5 @@ Fledgling developers may also be interested in a new framework from [Holium](htt
 ### [TomeDB](https://holium.gitbook.io/tomedb/)
 A framework for building Urbit apps solely with Javascript
 
-### [Grants]("/grants")
+### [Grants](https://urbit.org/grants)
 Build on Urbit and take ownership of the network in the process
