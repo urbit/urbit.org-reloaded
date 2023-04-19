@@ -1,5 +1,5 @@
 +++
-title = "Urbit Meetup - Berlin"
+title = "Urbit Meetup - Lisbon"
 starts = "2023-04-20T19:00:00"
 ends = "2023-04-20T22:00:00"
 timezone = "Europe/Lisbon"
