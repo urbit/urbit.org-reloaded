@@ -16,4 +16,4 @@ patp = "~dalweb-donfun"
 
 +++
 
-Around in Lisbon this Thursday? ~dalweb-donfun will be hosting a meetup at 7pm. Come by for a drink with other urbiters. Location will be revealed soon, RSVP to the meetup event or send ~dalweb-donfun a message on the network. See you on Thursday!
+Around in Lisbon this Thursday? ~dalweb-donfun will be hosting a meetup at 7pm. Come by for a drink with other urbiters. RSVP to the meetup event or send ~dalweb-donfun a message on the network. See you on Thursday!
