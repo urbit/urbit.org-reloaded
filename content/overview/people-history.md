@@ -70,7 +70,7 @@ Tlon spends the year stabilizing Arvo and building Landscape.
 Tlon hosts the first Urbit Assembly and the Urbit Foundation is formally organized.
 
 **2022**  
-The Urbit Foundation's split from Tlon becomes complete, and the Foundation organizes [Urbit NYC](https://urbit.org/groups/~ladtem-filmyr/urbit-ny-week) and [Assembly 2022](https://assembly.urbit.org/) in Miami while launching a highly successful education project, new developer documentation and many other things. Read the Foundation's full annual report [here](https://wolref-podlex.s3-us-west-2.amazonaws.com/wolref-podlex/2022.12.02..16.23.30-_2023%20Retrospective%20%26%20Plan%20PUBLIC.pdf). New Urbit companies Uqbar, Holium, Quartus, and Zorp are formed.
+The Urbit Foundation's split from Tlon becomes complete, and the Foundation organizes [Urbit NYC](https://urbit.org/groups/~ladtem-filmyr/urbit-ny-week) and [Assembly 2022](https://assembly.urbit.org/) in Miami while launching a highly successful education project, new developer documentation and many other things. Read the Foundation's full annual report [here](https://storage.googleapis.com/media.urbit.org/site/overview/~2023%20Retrospective%20%26%20Plan%20PUBLIC.pdf). New Urbit companies Uqbar, Holium, Quartus, and Zorp are formed.
 
 **The Future**  
 There’s a lot to be excited about. Scheduled improvements to Nock, Urbit’s base layer VM, should allow Urbit to become faster and more robust. Free hosting at a larger scale will allow larger quantities of users to join the network. A slew of new Urbit companies are working on everything from credit card payment rails to Urbit-native tokens to social graphs. And all the while, enthusiasm among the community remains high.
