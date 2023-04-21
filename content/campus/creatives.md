@@ -6,9 +6,9 @@ weight = 5
 [extra]
 +++
 
-Look, this thing is being built in flight. Most of the low-hanging fruit is still there, waiting to be picked by those with the technical chops to do so.
+Urbit offers creatives the means to truly own the distribution of their work. An application becomes a tool you own rather than a service whose terms can change overnight.  And with digital ownership on a decentralized network, the incentives of advertising based centralized services and an attention economy no longer apply.
 
-Still, even in its relatively nascent state, it is already exceedingly obvious that Urbit will become the premier platform for communities to organize and build on their own terms.
+What would the world look like with more decentralized digital ownership?  Check out the links below for a preview.
 
 ### [Tirrel Studio](https://urbit.studio)
 
