@@ -36,41 +36,38 @@ Timeline {% .font-bold .subpixel-antialiased .pt-8 %}
 
 In the beginning, Urbit was just a few people with the right combination of imagination and discipline to try to rebuild computing.
 
-**2002**  
-Urbit starts as an open-ended personal project. An “independent study PhD” to reinvent computing for a network-centric world.
-
-**2008**  
-Nock, the foundation of Urbit, works. Coming in at 32 lines of code, that’s 1 line of code every two months.
-
-**2012**  
-Hoon, Urbit’s programming language, compiles itself to Nock. Writing Hoon is much easier than writing Nock.
-
-**2013**  
-Arvo, Urbit’s OS kernel, boots and the first live Urbit network is started with a command-line chat.
-
-**2014**  
-Tlon is founded to help support Urbit development (and is < 8 people for the next four years).
-
-**2015**  
-Urbit has its first web interface and serves its own website.
-
-**2016**  
-The first sale of Urbit address space sells out in four hours.
-
-**2017**  
-Urbit’s test network runs for ten months without a reboot. Tlon's private sale of address space, shared only with its mailing list, sells out in six hours — limit two per person.
-
-**2018**  
-Tlon sells about 8% of its stake in the network to accelerate Urbit development. 
-
-**2019**  
-Tlon spends the year stabilizing Arvo and building Landscape.
+**2022**  
+The Urbit Foundation's split from Tlon becomes complete, and the Foundation organizes [Urbit NYC](https://urbit.org/groups/~ladtem-filmyr/urbit-ny-week) and [Assembly 2022](https://assembly.urbit.org/) in Miami while launching a highly successful education project, new developer documentation and many other things. Read the Foundation's full annual report [here](https://storage.googleapis.com/media.urbit.org/site/overview/~2023%20Retrospective%20%26%20Plan%20PUBLIC.pdf). New Urbit companies Uqbar, Holium, Quartus, and Zorp are formed.
 
 **2021**  
 Tlon hosts the first Urbit Assembly and the Urbit Foundation is formally organized.
 
-**2022**  
-The Urbit Foundation's split from Tlon becomes complete, and the Foundation organizes [Urbit NYC](https://urbit.org/groups/~ladtem-filmyr/urbit-ny-week) and [Assembly 2022](https://assembly.urbit.org/) in Miami while launching a highly successful education project, new developer documentation and many other things. Read the Foundation's full annual report [here](https://storage.googleapis.com/media.urbit.org/site/overview/~2023%20Retrospective%20%26%20Plan%20PUBLIC.pdf). New Urbit companies Uqbar, Holium, Quartus, and Zorp are formed.
+**2019**  
+Tlon spends the year stabilizing Arvo and building Landscape.
 
-**The Future**  
-There’s a lot to be excited about. Scheduled improvements to Nock, Urbit’s base layer VM, should allow Urbit to become faster and more robust. Free hosting at a larger scale will allow larger quantities of users to join the network. A slew of new Urbit companies are working on everything from credit card payment rails to Urbit-native tokens to social graphs. And all the while, enthusiasm among the community remains high.
+**2018**  
+Tlon sells about 8% of its stake in the network to accelerate Urbit development. 
+
+**2017**  
+Urbit’s test network runs for ten months without a reboot. Tlon's private sale of address space, shared only with its mailing list, sells out in six hours — limit two per person.
+
+**2016**  
+The first sale of Urbit address space sells out in four hours.
+
+**2015**  
+Urbit has its first web interface and serves its own website.
+
+**2014**  
+Tlon is founded to help support Urbit development (and is < 8 people for the next four years).
+
+**2013**  
+Arvo, Urbit’s OS kernel, boots and the first live Urbit network is started with a command-line chat.
+
+**2012**  
+Hoon, Urbit’s programming language, compiles itself to Nock. Writing Hoon is much easier than writing Nock.
+
+**2008**  
+Nock, the foundation of Urbit, works. Coming in at 32 lines of code, that’s 1 line of code every two months.
+
+**2002**  
+Urbit starts as an open-ended personal project. An “independent study PhD” to reinvent computing for a network-centric world.
