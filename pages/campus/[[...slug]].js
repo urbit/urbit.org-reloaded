@@ -66,7 +66,7 @@ export default function Home({
                     <h1 className="max-w-prose">
                       Campus Outreach Program
                     </h1>
-                    <h3 className="">
+                    <h3 className="max-w-prose">
                       Leave your mark on the future. Build on Urbit. 
                     </h3>
                 </div>
@@ -77,31 +77,27 @@ export default function Home({
             {/* Brief explanatory paragraph */}
             <Section className="sm:flex sm:space-x-8 space-y-8 sm:space-y-0">
    
-                <div className="sm:w-2/3 space-y-8">
+                <div className="space-y-8">
                     <div className="space-y-4">
-                      <p className="type-ui">
-                      For those with the will to think outside the box: a complete reimagining of networked computing from the OS up, designed to facilitate the construction 
-                      of powerful, enduring, and decentralized systems.
+                      <p className="type-ui max-w-prose">
+                        The Urbit Foundation’s Campus Outreach Program aims to find ambitious students interested in reimagining the possibilities of decentralized systems and networked computing.
                       </p>
-                      <p className="type-ui">
-                      The Urbit Foundation’s Campus Outreach Program aims to find ambitious students interested in leaving the old 
-                      world behind and providing them with the information and resources to help build a better future. 
-                      If you fit that description and want us to come to your university,{" "}
+
+                      <p className="type-ui max-w-prose">
+                        Do you fit that description and want us to come to your university?{" "}
                       <Link href="/campus#contact" passHref>
-                      <a>get in touch.</a>
+                      <a>Get in touch.</a>
                       </Link>{" "}
                       </p>
                     </div>
 
-                </div>
-
-                <div className="sm:w-1/3">
 
                   <Link href="https://airtable.com/shrmfUVpMskWw145u" passHref>
                     <a className="button-lg bg-green-400 text-white type-ui max-w-fit">
                       Get on Urbit
                     </a>
                   </Link>
+
 
                 </div>
             </Section>
@@ -116,17 +112,19 @@ export default function Home({
             {
               //funnel, repurposed from /overview page:
             }
-            <div id="reading"></div>
+            <div id="learn"></div>
 
             <Section> 
 
-              <h2 className="pb-16">Learn about Urbit for</h2>
+              <h2 className="pb-16">Why use Urbit?</h2>
 
               <div className="flex justify-between sidebar md:space-x-8">
                 <Sidebar search={search}>
                 {childPages("/campus", posts.pages)}
                 </Sidebar>
                 <div className={'markdown max-w-prose ' + data.slug }>
+
+                  <h2>{ data.title }</h2>
                   <Markdown.render content={JSON.parse(markdown)} />
                 </div>
               </div>
@@ -167,7 +165,7 @@ export default function Home({
 
                 <div className="sm:pl-2 align-middle">
                   <h2 className=" text-2xl pb-2" >Get in touch</h2 >
-                  <p className="max-w-prose pb-4">
+                  <p className="max-w-prose type-ui pb-4">
                     Not sure how to get started after attending an event? Want to schedule one at your university? 
                     Don't be a stranger. Reach out at the email below, or{" "}
                     <Link href="https://urbit.org/groups/~tidren-nosryg/campus-outreach" passHref>
@@ -198,7 +196,7 @@ export default function Home({
 const childPages = (thisLink, children, level = 0) => {
   const router = useRouter();
 
-  const isThisPage = router.asPath === thisLink || router.asPath === `${thisLink}#reading`;
+  const isThisPage = router.asPath === thisLink || router.asPath === `${thisLink}#learn`;
 
   const pageItemClasses = classnames({
     "text-base type-ui": level === 0,
@@ -208,7 +206,7 @@ const childPages = (thisLink, children, level = 0) => {
   return (
     <ul className="">
       <li className="pb-2">
-        <Link href="/campus#reading">
+        <Link href="/campus#learn">
           <a className={`${pageItemClasses} cursor-pointer`}>Software Developers</a>
         </Link>
       </li>
@@ -235,7 +233,7 @@ const pageTree = (thisLink, tree, level = 0) => {
 
   return (
     <>
-      <Link href={thisLink + "#reading"}>
+      <Link href={thisLink + "#learn"}>
         <a className={`${pageItemClasses} cursor-pointer`}>{tree.title}</a>
       </Link>
     </>
