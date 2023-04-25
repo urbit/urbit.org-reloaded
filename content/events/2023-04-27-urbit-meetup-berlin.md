@@ -7,8 +7,6 @@ location = "MUTED HORN – Flughafenstraße 49, 12053 Berlin"
 image = "http://www.3d-meier.de/Galerie/Essen/2018/Berlin/Muted-Horn/DSCF1208_09_10.jpg"
 registration_url = "https://www.meetup.com/urbit-berlin/events/293050078/"
 description = ""
-dark = false
-darken_image = "false"
 youtube = ""
 
 [[hosts]]
