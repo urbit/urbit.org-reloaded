@@ -6,6 +6,7 @@ image = "https://nyc3.digitaloceanspaces.com/hmillerdev/nocsyx-lassul/2022.7.16.
 bgColor = "#b25068"
 developer = "~nocsyx-lassul"
 website = "https://github.com/arthyn/sphinx"
+description = "Community powered search"
 +++
 
 ### Community powered search

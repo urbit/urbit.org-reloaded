@@ -6,6 +6,7 @@ image = "https://i.imgur.com/czmkmoK.png"
 bgColor = "#F0B43D"
 developer = "~larryx-woldyr"
 website = "https://ajlamarc.com"
+description = "Controlling Philips Hue"
 +++
 
 In this prototype, Philips Hue Lightbulbs and groups can be controlled from a standard Urbit application by using the Hue Remote API.
