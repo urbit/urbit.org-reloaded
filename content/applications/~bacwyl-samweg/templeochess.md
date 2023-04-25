@@ -6,6 +6,7 @@ image = "https://0x0.st/oFuT.png"
 bgColor = "#FFFF55"
 developer = "~bacwyl-samweg"
 website = "https://youtu.be/Raej8C2yIEc"
+description = "chess game from Temple OS"
 +++
 
 ### Chess from Temple OS

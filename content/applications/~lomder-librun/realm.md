@@ -6,6 +6,7 @@ image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/applicati
 bgColor = ""
 developer = "Holium"
 website = "https://www.holium.com/"
+description = "A desktop interface for Urbit"
 +++
 
 Realm is a desktop app for Urbit communities (currently in private alpha).  
