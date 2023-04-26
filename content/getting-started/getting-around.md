@@ -7,7 +7,7 @@ weight = 0
 
 ### 1. Get oriented
 
-After you've logged into your Urbit for the first time, you'll an interface called Landscape – a way interact with the network and applications.  You'll also see a few pre-installed applications: Terminal, Groups, and Talk. More on them in a moment.
+After you've logged into your Urbit for the first time, you'll have an interface called Landscape – a way interact with the network and applications.  You'll also see a few pre-installed applications: Terminal, Groups, and Talk. More on them in a moment.
 
 ![](https://storage.googleapis.com/media.urbit.org/site/getting-started/get-oriented.png)
 
