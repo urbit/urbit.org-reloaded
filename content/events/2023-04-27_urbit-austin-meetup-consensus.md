@@ -1,6 +1,6 @@
 +++
 title = "Urbit Austin – Consensus 2023"
-starts = "2023-04-27T18:00:00"
+starts = "2023-04-27T18:30:00"
 ends = "2023-04-27T20:00:00"
 timezone = "America/Chicago"
 location = "Garage – 503 Colorado St · Austin, TX"
