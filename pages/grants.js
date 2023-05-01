@@ -264,7 +264,7 @@ export default function Grants({ posts, categories, types, search }) {
               <p className="mb-8">
                 <h4>Approval</h4>
               </p>
-              <p className="mb-8">Grant applications and proposals are approved on a bi-weekly basis.  The next deadlines are <b>April 11th & 25th</b>.
+              <p className="mb-8">Grant applications and proposals are approved on a bi-weekly basis on the second and fourth Wednesday of the month.
               </p>
             </div>
           </div>
