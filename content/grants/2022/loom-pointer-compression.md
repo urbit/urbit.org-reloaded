@@ -13,7 +13,7 @@ reward = "1 star"
 mentor = ["~fanfun-mocbud"]
 assignee = ["~barter-simsum"]
 grant_id = "A0173"
-completed = false
+completed = true
 canceled = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0173&prefill_Grant+Name=Loom%20Pointer%20Compression"
 +++
