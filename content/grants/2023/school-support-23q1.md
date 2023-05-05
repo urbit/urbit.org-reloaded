@@ -38,3 +38,6 @@ The basic spec for this proposal:
 -   maybe Urbit Forms upgrade/update (postponing)
 
 (So about three agents/threads.)
+
+# Compensation
+Reward: 2 Stars
