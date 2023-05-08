@@ -17,4 +17,8 @@ Urbit is coming to Europe! Save the date for Urbit Assembly 2023 & Urbit Week in
 
 Early-bird tickets are going live by the end of may in the [UF Public Group](/groups/~halbex-palheb/uf-public). 
 
-This year's Assembly will be a conference of two days filled with presentations of all companies on Urbit followed by a week of side-events throughout Lisbon. Don’t miss it.
+We’re changing up the format this year: the first two days will be more “conference-like” with launches, presentations and panels from the Urbit ecosystem.
+
+Afterwards we’ll have a week of side events hosted by the community throughout Lisbon.
+
+Don't miss it.
