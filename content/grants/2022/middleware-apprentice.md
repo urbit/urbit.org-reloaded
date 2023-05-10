@@ -13,7 +13,7 @@ reward = "1 star"
 mentor = ["~wicrum-wicrun"]
 assignee = ["~litlep-nibbyt"]
 grant_id = "A0193"
-completed = false
+completed = true
 canceled = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0193&prefill_Grant+Name=Middleware%20Apprenticeship"
 +++
