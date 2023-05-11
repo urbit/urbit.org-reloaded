@@ -50,6 +50,6 @@ Word has it that [Tlon](https://tlon.io/hosting) will soon allow you to invite y
 
 Tirrel’s [Scene](https://planet.one/scene) is a desktop application with built-in hosting, like Realm, that works on macOS, Windows and Linux, and it’s available now. Hosting is powered by their [Planet One](https://planet.one) service.
 
-For the self-hosting enthusiasts out there Native Planet is creating [purpose-built Urbit home servers](https://www.nativeplanet.io/hardware) that [make self-hosting easy](https://twitter.com/jmrphy/status/1616196970384887808?s=20&t=yTqyNBFOTGTegTeM_VkeFQ) and look great doing it. Sign up for their [wait list here](https://www.nativeplanet.io/wait-list).
+For the self-hosting enthusiasts out there Native Planet has created [purpose-built Urbit home servers](https://www.nativeplanet.io/hardware) that [make self-hosting easy](https://twitter.com/jmrphy/status/1616196970384887808) and look great doing it.
 
 Joining Urbit has never been easier, and it’s constantly getting easier. See you on the network!
