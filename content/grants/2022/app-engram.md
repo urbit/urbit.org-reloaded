@@ -13,7 +13,7 @@ reward = "7 stars"
 assignee = ["~nolteg-tobtyc", "~dalsyr-diglyn"]
 grant_id = "B0128"
 champion = ["Holium"]
-completed = false
+completed = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0155&prefill_Grant+Name=Engram"
 +++
 
