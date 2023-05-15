@@ -17,4 +17,4 @@ patp = "~wolrex-docsyx"
 +++
 Group will meet in the Eagle Room. Ask the hostess for directions. Event Space Aesthetic is Spectral South-Beach. DJ comes at 10PM. Bring proof of planet for Miamese Martians.
 
-Please RSVP to the Meetup.
+Please RSVP to the Meetup page by clicking the RSVP button above.
