@@ -1,7 +1,7 @@
 +++
 title = "Urbit Meetup - Miami"
-starts = "2023-05-18T18:30:00"
-ends = "2023-05-18T20:30:00"
+starts = "2023-05-18T21:00:00"
+ends = "2023-05-19T03:00:00"
 timezone = "America/New_York"
 location = "Eagle Room @ The Broken Shaker 9PM - 3AM"
 image = "https://i.imgur.com/8x7hpNv.jpg"
