@@ -10,7 +10,8 @@ description = ""
 dark = true 
 darken_image = "true"
 
-[[hosts]] patp = "~dinnul-namrud"
+[[hosts]] 
+patp = "~dinnul-namrud"
 
 +++
 
