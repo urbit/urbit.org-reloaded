@@ -12,7 +12,7 @@ darken_image = "true"
 youtube = ""
 
 [[hosts]]
-patp = "~wolrex-docsyx"
+patp = "~wolfun-batrex"
 
 +++
 Group will meet in the Eagle Room. Ask the hostess for directions. Event Space Aesthetic is Spectral South-Beach. DJ comes at 10PM. Bring proof of planet for Miamese Martians.
