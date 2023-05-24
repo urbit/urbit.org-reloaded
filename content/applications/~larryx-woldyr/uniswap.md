@@ -1,10 +1,10 @@
 +++
 title = "Uniswap"
-shortcode = "~maptyl-lapsyl/uniswap"
+shortcode = "~larryx-woldyr/uniswap-v3"
 license = "MIT"
 image = "https://cryptologos.cc/logos/uniswap-uni-logo.png"
 bgColor = "0xffffff"
-developer = "~maptyl-lapsyl"
+developer = "~larryx-woldyr"
 website = "http://uniswap.org"
 description = "Self-hosted Uniswap interface"
 +++
