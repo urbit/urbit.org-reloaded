@@ -6,7 +6,7 @@
     {
       "source": "/sponsordeck",
       "destination": "https://docs.google.com/presentation/d/1G4O0ya8rzpZukG9XxwBgpkWyTbXZjqCzA8IwctrcmX4",
-      "permanent": "false"
+      "permanent": false
     },
     {
       "source": "/groups/~wolref-podlex/foundation",
