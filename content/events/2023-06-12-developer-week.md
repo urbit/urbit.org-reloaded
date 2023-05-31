@@ -4,9 +4,10 @@ starts = "2023-06-12T09:00:00"
 ends = "2023-06-16T17:00:00"
 timezone = "America/Los_Angeles"
 location = "Online Event"
-image = ""
+image = "https://storage.googleapis.com/media.urbit.org/site/events/dev-week-gif.gif"
 registration_url = "https://www.meetup.com/urbit-sf/"
-description = ""
+description = "2nd Dev-Week – full of talks, blogs and announcements"
+dark = true
 
 +++
 
