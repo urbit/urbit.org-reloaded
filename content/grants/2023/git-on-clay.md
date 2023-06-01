@@ -37,3 +37,6 @@ ease development through the appropriate use of scripts, CI and testing, and hoo
 
 A fully userspace solution would be viable, as long as it was able to export a Git-compatible representation via the
 API, and as long as it spoke `https` and `git` at a minimum.
+
+(Note particularly that this is not an implementation of `git` on Urbit, but an implementation of a Git repository
+server.  The `git` CLI would encompass a complementary set of concerns and operations.)
