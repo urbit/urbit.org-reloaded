@@ -22,7 +22,7 @@ OAuth has widespread support in Web 2.0 circles. OAuth issues permissioned token
 
 OAuth focuses on access delegation, meaning that one can authenticate into a third-party session using a primary identity but without giving one’s password to the third-party service provider. “OpenID is a way to use a single set of user credentials to access multiple sites, while OAuth facilitates the authorization of one site to access and use information related to the user's account on another site.”
 
-OAuth expects a static IP address to broker token issuance and access.  There will presumably be a little bit of outside-of-Urbit tooling involved.
+By providing Urbit with OAuth support, the ability to use Urbit to log into a variety of Web 2.0 services will be unlocked.
 
 Some resources that may be helpful in scoping such a project:
 
