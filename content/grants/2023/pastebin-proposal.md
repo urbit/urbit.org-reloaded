@@ -30,4 +30,4 @@ This proposal will create an Urbit application to share arbitrary text. You will
 # Compensation #
 Reward: 1 star
 # 
-Note: This proposal was modified from the [Pastebin on Urbit RFP](https://urbit.org/grants/pastebin).
+Note: This proposal was modified from the [Pastebin on Urbit RFP](https://urbit.org/grants/pastebin-RFP).
