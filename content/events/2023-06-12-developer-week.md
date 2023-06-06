@@ -51,10 +51,10 @@ In this talk ~foddur-hodler and ~dilryc-mopreg from [Portal](/applications/~worp
 
 [Meetup](https://www.meetup.com/urbit-sf/events/294013283/) | [Youtube](https://www.youtube.com/watch?v=6J8-jlqz2r4)
 
-### Core School Preview
+### Core School Preview:  Jetting
 *Time:* Wednesday June 14th – 9am Pacifc | 6pm CEST
 
-Core School approacheth. To whet your appetite for the inner mysteries of the kernel, we will discuss how jet-accelerated code works and how to write jets for arms. Join ~lagrev-nocfep & ~rovnys-ricfer at the first core school lecture. And make sure to check out our [CSL page](https://developers.urbit.org/courses/csl).
+Core School approacheth. To whet your appetite for the inner mysteries of the kernel, we will discuss how jet-accelerated code works and how to write jets for arms. Join ~lagrev-nocfep & ~rovnys-ricfer at a preview of Core School content. And make sure to check out our [CSL page](https://developers.urbit.org/courses/csl) for more details.
 
 [Meetup](https://www.meetup.com/urbit-sf/events/294013289/) | [Youtube](https://www.youtube.com/watch?v=i1GRoY3QDdU)
 
