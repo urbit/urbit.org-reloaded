@@ -5,8 +5,8 @@
   "redirects": [
     {
       "source": "/sponsordeck",
-      "destination": "https://www.figma.com/proto/fKQBZF1E0IB05WXic9TeCx/Urbit-Assembly-Sponsorship-Deck?",
-      "permanent": false
+      "destination": "https://tinyurl.com/urbitsponsordeck",
+      "permanent": true
     },
     {
       "source": "/uf-public",
