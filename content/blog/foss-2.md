@@ -1,6 +1,6 @@
 +++
 title = "Urbit's Open Source Culture, Part II"
-date = "2023-06-07"
+date = "2023-06-13"
 description = "How will Urbit continue to foster its innovative open source software culture?"
 
 [extra]
