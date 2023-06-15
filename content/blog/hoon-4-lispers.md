@@ -1,6 +1,6 @@
 +++
 title = "Hoon for Lispers"
-date = "2023-06-13"
+date = "2023-06-15"
 description = "Lisp is an éminence grise of programming.  How does Hoon compare?"
 
 [extra]
@@ -13,40 +13,36 @@ image = "https://engineering.stanford.edu/sites/default/files/styles/card_1900x9
 
 > In the beginning, von Neumann created the machine.  And the machine was with rigorous form and code, and no compiler yet moved upon the face of the tubes.  And the evening and the morning were the first day.
 >
-> And John Backus said, Let there be FORTRAN, and there was FORTRAN.  And FORTRAN ruled over the assembly.
+> And John Backus said, Let there be FORTRAN, and there was Fortran.  And Fortran ruled over the assembly.
 >
 > And John McCarthy saw the lambda calculus, that it was very good.  And McCarthy made the LISP and divided the programmers who were for the array from the programmers who were for the list.
 >
-> And the FORTRAN and the LISP were the second day.  And God set them in the firmament to give light upon the earth.
+> And the Fortran and the Lisp were the second day.  And God set them in the firmament to give light upon the earth.
 
 Two great temperaments of programming language design span these poles:  Fortran as the engineer of assembler-first hard-nosed array coding and Lisp as the math professor running down to the machine room waving papers.  While they have ceded some to the practicalities of the other over time, each is a trope of a particular computing paradigm.  In this article, we will examine the Lisp pole in light of Urbit's development language, Hoon.
 
 Hoon is a statically typed functional programming language that is designed to be safe, efficient, and expressive.  Hoon has a unique syntax relying heavily on symbolic expressions (using “runes”) rather than traditional keywords and operators.  Hoon's underlying execution language, Nock, has been described as a “pico-Lisp“, making reference to its nature as a cell-based combinator calculus.  Both languages (Nock and Hoon) follow very much in the philosophical steps of Lisp but seek to improve the genre.
 
-Lisp is known for its powerful macro system, which allows developers to write code that generates more code at compile time, and for its powerful `eval` statement; while Hoon provides a flexible metaprogramming system that allows developers to manipulate code at compile time and hot-swap code at runtime.
+Lisp is known for its powerful macro system, which allows developers to write code that generates more code at compile time, and for its powerful `eval` function; while Hoon provides a flexible metaprogramming system that allows developers to manipulate code at compile time and hot-swap code at runtime.
 
-This article will contrast classical Lisp syntax and assumptions with Hoon's design.  Three overarching design principles have yielded the necessary components of Hoon's characteristic structure:
+This article will contrast classical Lisp syntax and assumptions with Hoon's design.  As Lisp is a family of languages rather than a single implementation, I will strive to make generally applicable statements or qualify the discussion—I welcome nuance in your responses about the different major Lisp dialects.
+
+Hoon's characteristic structure has arisen from these overarching design principles:
 
 1. Hoon must compile to Nock, and benefits from reflecting Nock's calculational worldview.
 2. Hoon must be capable of live upgrades; that is, conscious brain surgery on itself.
-3. Hoon should grow organically based on actual developer usage patterns (and it did).
+3. Hoon should grow organically based on actual developer usage patterns.
 
-(There has, of course, also been organic evolution as core developers discovered particular design patterns and designed appropriately concise syntax.)
-
-Our investigation of Lisp and Hoon will cover:
-
-1. Syntax
-2. Metaprogramming
-3. Philosophy
+Our investigation of Lisp and Hoon will compare their syntax, their metaprogramming affordances, and their underlying philosophies.
 
 
 ##  Syntax
 
-Hoon has many commonalities with Lisp and its most common calling convention is sugared to appear like Lisp.  The syntax of Nock differs—e.g. using `[]` brackets instead of `()` parentheses—and Nock does not have non-numeric tokens or names.  Hoon serves as a more human-friendly syntax which mediates common expressions and structures much as C overlays assembly language.  For practical purposes, we never need to write Nock code by hand, and so while Nock informs Hoon's design choices, we don't need to understand any Nock to talk about Hoon.
+Hoon has many commonalities with Lisp and its most common calling convention is sugared to appear like Lisp.  The conventions of Nock differ—e.g. using `[]` brackets instead of `()` parentheses—and Nock does not have non-numeric tokens or names.  Hoon serves as a more human-friendly syntax which mediates common expressions and structures much as C overlays assembly language.  For practical purposes, we never need to write Nock code by hand, and so while Nock informs Hoon's design choices, we don't need to understand any Nock to talk about Hoon.
 
 Both Lisp and Hoon are homoiconic, meaning that code and data are directly represented the same way:  Lisp code is represented as Lisp data structures, and Hoon code is represented as Hoon data structures.  Homoiconicity means that code can be manipulated and transformed as data at runtime.  While the most compelling investigation in this article focuses on metaprogramming, we need to start with a comparative syntax and grammar so we understand how code and data are represented.
 
-Before all of that, let us compare a simple program implemented in both Lisp and Hoon.  Since both programming languages are functional languages that result in values and prefer to avoid side effects, we will not use a trivial “Hello World” example.  Instead we will calculate the arithmetic mean of a set of numbers of known size.
+Before all of that, let us compare a simple program implemented in both Lisp and Hoon.  Both programming languages are species of functional languages for which expressions result in values, but they handle side effects differently:  in Hoon side effects are strictly impossible (although a runtime workaround permits I/O and necessary effects), while in Lisp side effects are permitted (although opinions on their use vary).  We will therefore not use a trivial “Hello World” example.  Instead we will calculate the arithmetic mean of a set of numbers of known size.
 
 ```scheme
 (define (mean a)
@@ -73,9 +69,9 @@ Before all of that, let us compare a simple program implemented in both Lisp and
 
 The Scheme code has the advantage that it reads almost English-like as one works through the logic, but implicitly relies on familiarity with the `if`/`then`/`else` structure and function application using `()` (on which more soon).
 
-The Hoon code uses the `%` function application runes (differentiated by number of arguments) to apply the function calls.  With syntactical sugar, this looks similar to the Lisp call, with `++roll` instead of `apply` and `++lent` instead of `length`.
+The Hoon code uses the `%` function application runes (differentiated by number of arguments) to apply the function calls.  With syntactic sugar, this looks similar to the Lisp call, with `++roll` instead of `apply` and `++lent` instead of `length`.
 
-Throughout I will use code examples for Lisp written in the Scheme dialect taken from [Rosetta Code](https://rosettacode.org/wiki/Category:Scheme).  I will select or compose Hoon examples to be structurally similar to the Lisp code in order to facilitate comparison.  I will also avoid sugar syntax that would obscure the structure of the Hoon code; in some cases this will make it slightly less readable than its equivalent in practice.
+Throughout I will use code examples for Lisp taken from [Rosetta Code](https://rosettacode.org/wiki/Category:Scheme).  I will select or compose Hoon examples to be structurally similar to the Lisp code in order to facilitate comparison.  I will also avoid sugar syntax that would obscure the structure of the Hoon code; in some cases this will make it slightly less readable than its equivalent in practice.
 
 ### Syntax in Lisp
 
@@ -100,7 +96,7 @@ Lisp code, being dynamically typed, is inclined to try a value and see if it wor
 
 Lisp types are to some extent (justly) influenced by the underlying platform architecture:  Lisp is generally compiled directly to machine code (like a C program), with the notable exception of [Clojure](https://clojure.org/reference/lisps) which runs on the Java Virtual Machine.
 
-#### Operators, Functions, and Macros
+#### Operators, Functions, Macros, and Thunks
 
 Lisp syntax is characterized by its use of nested lists, called S-expressions (symbolic expressions), which consist of parentheses enclosing atoms or other S-expressions. The basic structure of an S-expression is an operator (or function) followed by its arguments, all enclosed in parentheses. For example, the following S-expression performs a simple arithmetic operation:
 
@@ -108,11 +104,11 @@ Lisp syntax is characterized by its use of nested lists, called S-expressions (s
 (+ 1 2 3)
 ```
 
-Lisp uses prefix notation, where the operator comes before the operands, and parentheses are used to group expressions.  The S-expression is evaluated from left to right, with the operator being applied to its arguments.
+Lisp uses prefix notation, where the operator comes before the operands, and parentheses are used to group expressions.  The S-expression is evaluated from left to right (in most Lisps save Scheme), with the operator being applied to its arguments.
 
 Operators in Lisp operate on values of different basic types.  Lisp dialects vary in their particular base types, but typically include numbers, strings, booleans, and so forth.  The core data type is the list, of course (LISP is for LISt Processing).  Since Lisp biases towards list processing, many operators are comfortable receiving an arbitrary number of values as inputs, as in the code sample above.
 
-In Lisp, [`cons`](https://en.wikipedia.org/wiki/Cons) describes the procedure to construct a pair of pointers to objects.  This seemingly modest capability is fundamental to how Lisp builds lists—and since everything is a list, `cons` has consequences.  One fundamental convention is the `cons` cell, which consists of pointers to two other Lisp objects and is how lists are actually constructed.
+In Lisp, [`cons`](https://en.wikipedia.org/wiki/Cons) describes the procedure to construct a pair of objects.  This seemingly modest capability is fundamental to how Lisp builds lists—and since everything is a list, `cons` has consequences.  One fundamental convention is the `cons` cell, which consists of two other Lisp objects and is how lists are actually constructed.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Cons-cells.svg/450px-Cons-cells.svg.png)
 
@@ -132,7 +128,7 @@ SQUARE
 
 Lisp functions are first-class objects and can be manipulated and passed like values of basic types as well.
 
-Before we can look at macros, we need to consider Lisp's notion of evaluation and in particular deferred evaluation.  For Lisp, an expression can be marked as a literal value rather than evaluated to produce a result.  The quote `'` symbol is used to mark expressions for such deferred evaluation:
+Before we can look at macros, we need to consider Lisp's notion of evaluation and in particular deferred evaluation.  For Lisp, an expression can be marked as a literal value rather than evaluated to produce a result.  The quote `'` symbol is used to mark expressions for prevented evaluation:
 
 ```lisp
 '(1 2 3)  	; evaluates to the list (1 2 3)
@@ -149,7 +145,7 @@ Backtic or backquote `` ` `` allows you to switch an expression in and out of ev
 `(1 ,(+ 2 3))  ; evaluates to the list (1 5)
 ```
 
-A Lisp macro differs slightly from a function in that it uses deferred evaluation to produce an example later.
+A Lisp macro is essentially a compile-time function.
 
 ```lisp
 > (defmacro square (x)
@@ -162,9 +158,25 @@ A Lisp macro differs slightly from a function in that it uses deferred evaluatio
 
 (The `` ` `` notation constructs the expression with values spliced in by `,`.)
 
-In Lisp, the `eval` operator is used to evaluate a Lisp expression that is represented as a data structure. It takes a single argument, which is a Lisp expression, and returns the value of that expression.
+A deferred evaluation, called a thunk, is a closure that inherits its lexical environment but is deferred for later computation.  Thunks enable lazy code evaluation and separate the computation’s definition from its execution.
 
-The `eval` operator is a powerful tool in Lisp, because it allows Lisp programs to manipulate and evaluate Lisp code dynamically at runtime. This means that Lisp programs can generate new code and evaluate it on the fly, allowing for a high degree of flexibility and adaptability.
+```lisp
+(defun create-thunk (function &rest arguments)
+  (lambda () (apply function arguments)))
+
+(defun invoke-thunk (thunk)
+  (funcall thunk))
+
+;; Creating a thunk that calculates the factorial of a number
+(defvar factorial-thunk (create-thunk #'(lambda () (factorial 5))))
+
+;; Invoking the thunk to get the result
+(print (invoke-thunk factorial-thunk))  ; Output: 120
+```
+
+In this code example, `create-thunk` accepts a function and returns a thunk created using a lambda function to encapsulate the computation.  `invoke-thunk` is used to invoke the thunk to get the actual result.  The actual application creates a deferred factorial implementation and then finally invokes it.  Without the last line, the actual calculation would never be executed.
+
+As Paul Graham wrote, “The unusual thing about Lisp-- in fact, the defining quality of Lisp-- is that it can be written in itself.”  A Lisp program is an S-expression, and in principle we can run the equation the other way:  certain S-expressions are valid Lisp programs.  Although uncommon in practice due to code safety issues, the `eval` function is illustrative of Lisps’ ability to evaluate a Lisp expression that is represented as a data structure.  It takes a single argument, which is a Lisp expression, and returns the value of that expression.  Lisp programs can in principle generate new code—or modify existing code—and evaluate it on the fly, since code is data.
 
 ```lisp
 (defvar x 10)
@@ -173,8 +185,6 @@ The `eval` operator is a powerful tool in Lisp, because it allows Lisp programs 
 
 (eval z)
 ```
-
-`eval` lets us resolve the deferred expression when we are ready to use it.  Code introspection in Lisp is straightforward because of deferred evaluation:  one can look inside of a function to see how it works.
 
 Besides explicitly named functions and macros, Lisp frequently employs lambda expressions to produce functions on demand at the point of use.
 
@@ -246,7 +256,7 @@ A cell is a pair of two nouns, and of course many compound types exist, includin
 
 Hoon expressions are ultimately binary trees of cells and atoms—Hoon is homoiconic and so code is directly represented as a data structure which can be interpreted as a value as well.  This facilitates Hoon's ability to upgrade itself in place, as we will see.
 
-Hoon implements types as _molds_, or functions which coerce to type or crash.  A mold is a way of asserting known type information over a value, typically at compile time, in a way that allows for data transformation and data validation.  This leads to some interesting cases such as the difference between a null-terminated tuple and a true list, which some functions require.
+Hoon commonly implements types structurally via _molds_, or functions which coerce to type or crash.  A mold is a way of asserting known type information over a value, typically at compile time, in a way that allows for data transformation and data validation.  This leads to some interesting cases such as the difference between a null-terminated tuple and a true list, which some functions require.
 
 ```hoon
 > ~[1 2 3]
@@ -303,16 +313,16 @@ A `vase` can be used at runtime to resolve a value from a dynamic context into a
 
 #### Expressions
 
-Nock explicitly consists of binary trees, since any Nock structure or program consists entirely of atoms (bare values) and cells (pairs of nouns).  Although Hoon ultimately compiles to Nock, it is more natural in some ways to approach the syntax of a program as an array of $n$-ary trees, where each “slot” in an expression can have zero, one, or many children.  (Zero children refers to a tree address containing a terminal value like a symbol or an integer.)
+Nock explicitly consists of binary trees, since any Nock structure or program consists entirely of atoms (bare values) and cells (pairs of nouns).
 
-image here TODO
+![](https://storage.googleapis.com/media.urbit.org/docs/userspace/hoon-school/binary-tree.png)
 
 Expressions are oriented around runes, which act as operators to join or manipulate expressions.  To construct a cell of two values like `1` and `2`, one uses the `:-` cencol rune.  (Hoon cells implement what we call an “implicit `cons`”, meaning that two nouns composed together are simply unified in a shared binary tree.)
 
 ```
   :-
  /  \
-1	2
+1    2
 ```
 
 To invoke a function named `add`, one can provide a `%-` cenhep rune with the function name and the arguments.
@@ -321,8 +331,8 @@ To invoke a function named `add`, one can provide a `%-` cenhep rune with the fu
    %-
   /  \
 add   :-
- 	/  \
-	1	2
+     /  \
+    1    2
 ```
 
 We write this Hoon expression one of two ways, either separated by whitespace or using parentheses:
@@ -343,6 +353,8 @@ Hoon employs “sugar syntax” for many common code patterns to make them easie
 ```
 
 which results in basically the same expression once the parser is done.
+
+(Although Hoon ultimately compiles to Nock, it is more natural in some ways to approach the syntax of a program as an array of $n$-ary trees, where each “slot” in an expression can have zero, one, or many children.  Zero children refers to a tree address containing a terminal value like a symbol or an integer.)
 
 Rune syntax is Hoon's answer to the Lisp proliferation of parentheses—by restricting expressions to a definite number of children, Hoon avoids needing to explicitly terminate most expressions.  In some ways, runes are an ASCII-based equivalent of APL's  symbolic character operators.
 
@@ -380,18 +392,18 @@ The next examples explore an interesting difference between Lisp `cond` and Hoon
   %typical-midwest
 ++  symbol-to-message
   |=  msg=term
-  ?+  msg  'Typical Midwest'
-  	%too-hot
-	'Too hot outside'
-  	%nice
-	'Nice outside'
-  	%too-cold
-	'Too cold here'
+  ?+    msg  'Typical Midwest'
+      %too-hot
+    'Too hot outside'
+      %nice
+    'Nice outside'
+      %too-cold
+    'Too cold here'
   ==
 --
 ```
 
-Lisp expects a program to be a running series of expressions, naturally composed together as a list.  Hoon, in contrast, requires everything to be a binary tree:  thus, series of expressions must be composed together, e.g. using `=>` tisgar to concatenate two expressions.
+Lisp expects a program to be a running series of expressions, naturally composed together as a list.  Hoon, in contrast, expects everything to be an evaluable expression (no implicit `progn`, for instance):  thus, series of expressions must be composed together, e.g. using `=>` tisgar to concatenate two expressions.
 
 This code example defines an expression and immediately evaluates another expression against it:
 
@@ -425,6 +437,8 @@ Hoon has much more syntactic sugar than Lisp.  Not only is the Lisp-like `()` ex
 | `%~` | Evaluate a higher-order function to produce a function. |
 
 This gives a Hoon developer an extreme amount of flexibility in constructing and laying out code expressions.  In fact, many Hoon programs read as a hybrid of imperative code and functional code, since the ability to lay out intent line-by-line feels rather like C.
+
+Hoon conventions and sugar syntax have evolved organically as core developers discovered or invented useful design patterns and appropriately concise syntax.
 
 #### Functions (Gates) and Cores
 
@@ -514,7 +528,7 @@ The nature of cores derives from Nock and is key to understanding how Hoon works
 --
 ```
 
-Although Lisp's `'` quote deferred evaluation operator has no direct equivalent in Hoon, there are a couple of structures that can provide a similar effect.  The most important of these is the `|.` trap, which defines an expression to be evaluated at a later time.  For instance, traps are used when testing code that _should_ fail, as the expression can be defined and deferred until the test framework is ready to process it.
+Although Lisp's `'` quoting has no direct equivalent in Hoon, there are a couple of structures that can provide a similar effect.  The most important of these is the `|.` trap, which defines an expression to be evaluated at a later time—Hoon’s equivalent of Lisp’s thunk.  For instance, traps are used when testing code that _should_ fail, as the expression can be defined and deferred until the test framework is ready to process it.
 
 ```hoon
 > =foo |.((add 1 41))
@@ -541,11 +555,44 @@ To use `++turn`, we need a list and a transformation function.  The type of the 
 
 Wet gates are therefore used when incoming type information is not well known and needs to be preserved. This includes parsing, building, and structuring arbitrary nouns. (Beyond Lisp analogues, you can think of C++'s templates and operator overloading, and Haskell's typeclasses.)
 
+This example compares the Lisp deferred factorial thunk with an equivalent Hoon trap.  (Hoon includes `++factorial` since it is not part of the standard library.)
+
+```scheme
+(defun create-thunk (function &rest arguments)
+  (lambda () (apply function arguments)))
+
+(defun invoke-thunk (thunk)
+  (funcall thunk))
+
+;; Creating a thunk that calculates the factorial of a number
+(defvar factorial-thunk (create-thunk #'(lambda () (factorial 5))))
+
+;; Invoking the thunk to get the result
+(print (invoke-thunk factorial-thunk))  ; Output: 120
+```
+
+```hoon
+=>
+|%
+++  factorial
+  |=  n=@ud
+  |-
+  ?:  =(n 1)  1
+  %+  mul  n
+  %=  $
+    n  (dec n)
+  ==
+++  factorial-5
+  |.  (factorial 5)
+--
+(factorial-5)
+```
+
 ### Subject-Oriented Programming
 
 Urbit programming employs a paradigm deriving from the nature of Nock (_a fortiori_ Hoon), subject-oriented programming.  Every expression of Hoon is evaluated relative to its subject, a piece of data that represents the environment, or the context, of an expression.
 
-The subject refers to the parent binary tree of an expression, more or less, and serves as state, lexical scope, environment, and function argument.  (We can be precise about the definition in all cases—e.g. the subject of a gate in a core is the core itself—but don't need to for this essay.)  The compile-time environment in ([some dialects of](https://www.gnu.org/software/emacs/manual/html_node/elisp/Variable-Scoping.html)) Lisp has dynamic extent, such that any part of the program can access a particular binding.  Hoon's subject-oriented programming model takes this even further:  since code and data share the same representation, and code is a binary tree, any part of the subject is available in principle.
+The subject refers to the parent binary tree of an expression, more or less, and serves as state, lexical scope, environment, and function argument.  (We can be precise about the definition in all cases—e.g. the subject of a gate in a core is the core itself—but don't need to for this essay.)  Lisp supports variable scope and global variables, such that any part of the program can access a particular binding.  Hoon's subject-oriented programming model naturally provides its equivalent of scope:  all code is evaluated against a subject and name bindings proceed by depth-first match (with permitted skips to prevent unwanted masking).
 
 > Subject orientation in Nock and Hoon stems partly from minimalism (there's just one subject, which serves as state, lexical scope, environment, and function argument), partly from a desire to simplify compilation (the type of the subject is a full specification of the compile-time environment for a source file), and partly in order to give the language a more imperative feel.
 >
@@ -575,7 +622,7 @@ because the `++add` gate is not defined in the subject against which the express
 
 ```scheme
 (define index-of
-  (lambda (needle hackstack)
+  (lambda (needle haystack)
 	(let ((tail (member needle haystack)))
   	(if tail
       	(- (length haystack) (length tail))
@@ -635,21 +682,17 @@ A Lisp program is really a list, or a list of lists (nested as much as necessary
 
 ### Metaprogramming in Lisp
 
-Metaprogramming is the practice of writing code that manipulates other code at either compile-time or runtime.  In Lisp, metaprogramming is a core feature of the language, and it allows developers to create programs that are incredibly powerful and flexible.  Lisp's metaprogramming capabilities are primarily built on two features:  macros and the consequent ability to manipulate the language's own syntax.
+Metaprogramming is the practice of writing code that manipulates other code at either compile-time or runtime.  In Lisp, metaprogramming is a core feature of the language, and it allows developers to create programs that are incredibly powerful and flexible.  Lisp's metaprogramming capabilities are primarily built on two features:  macros and syntax manipulation.
 
 Macros in Lisp are a way to define new language constructs that are more expressive and more powerful than those provided by the language itself.  When a Lisp program is compiled or interpreted, macros are expanded into regular Lisp code, allowing the macro to generate new code based on its input arguments.  Since Lisp code is represented as data, it can be manipulated using the same functions and operators used to manipulate other data structures.
 
 For instance, Lisp macros could allow you flexibility in expressing a common operation.  Imagine you're working on a project that requires a lot of complex math calculations. Rather than writing out each calculation manually, you could define a macro that takes an expression in infix notation (e.g. `2 + 3 * 4`), and transforms it into a Lisp expression that can be evaluated directly.  Thus you could compose math expressions in a more human-natural way without having to worry about details of Lisp syntax.
 
-Lisp can also manipulate its own syntax is through the use of reader macros. Reader macros are similar to regular macros, but they operate at the level of the Lisp reader, which is responsible for converting textual input into Lisp expressions.  Reader macros can be used to extend the syntax of Lisp in powerful ways, allowing developers to define new syntax for specific types of data or operations.  For example, imagine you're working on a project that requires parsing a lot of complex data files.  Rather than writing a lot of custom parsing code, you could define a reader macro that takes a specific input format (e.g. JSON or YAML), and transforms it into a Lisp expression that can be directly manipulated by your code.
+Lisp can also manipulate its own syntax.  This is sometimes done through the use of reader macros, which operate at the level of the Lisp reader, which is responsible for converting textual input into Lisp expressions.  Reader macros can be used to extend the syntax of Lisp, allowing developers to define new conventions or domain-specific languages for specific types of data or operations.  Beyond reader macros, Lisp can permit the developer to change the parser (and as long as the result is a Lisp expression, the interpreter or compiler will be fine with this).  Top-level functions can be replaced or modified (“advised”).  Symbol macros can change source code.
 
-(Hoon can accomplish something similar via parsing, but not at the level of the Hoon language input.)
+Lisp's `'` quote and the `eval` statement allow single expressions to be inhibited or evaluated at will, which is incredibly useful when dealing with symbols that may not be defined yet or in the composition of macros.
 
-In Lisp, code is represented as lists of symbols and expressions, which means that the syntax of the language can be easily manipulated and transformed using standard Lisp functions.
-
-Lisp's `'` quote and the `eval` statement allow single expressions to be deferred or evaluated at will, which is incredibly useful when dealing with symbols that may not be defined yet or in the composition of macros.
-
-In addition to macros and syntax manipulation, Lisp dialects typically provide a number of other features that make metaprogramming easier, such as the ability to inspect and modify the runtime environment, and the ability to redefine functions and classes at runtime.  Code reflection allows runtime creation of functions or macros (as at the REPL).
+In addition to macros and syntax manipulation, Lisp dialects typically provide a number of other features that make metaprogramming easier, such as the ability to inspect and modify the runtime environment, and the ability to create or redefine functions and classes at runtime.
 
 ### Metaprogramming in Hoon
 
@@ -696,7 +739,7 @@ Hoon's focus on atoms, static typing, and symbolic expressions make it a highly 
 
 Lisp has evolved greatly since John McCarthy's founding.  Like Unix, a complicated family tree has finally settled down into a few strong contenders:  Scheme, Common Lisp, Clojure, Racket.
 
-Lisp has tended to be fractious:  as many have noted, and [Mark Tarver eloquently expressed](http://web.archive.org/web/20080803193859/http://www.lambdassociates.org/blog/bipolar.htm), the Lisp platform appeals to complete implementation of idiosyncratic vision.  There's a looseness in the community's coherence as a result.
+Lisp has tended to be fractious:  as many have noted, and [Mark Tarver eloquently expressed](http://web.archive.org/web/20080803193859/http://www.lambdassociates.org/blog/bipolar.htm), the Lisp platform appeals to idiosyncratic visions for completist platforms.  There's a looseness in the community's coherence as a result.
 
 For a few reasons, the Urbit community has managed to avoid such splintering (the [Urbit Classic joke](http://urbit-classic.org/) aside).  With a single sponsoring organization, first Tlon Corporation and since 2022 the Urbit Foundation, to steward the ecosystem and a philosophical commitment to protocol-as-platform, Urbit should avoid partition into competing bazaars.
 
