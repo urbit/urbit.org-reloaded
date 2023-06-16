@@ -36,6 +36,7 @@ The Urbit Community concierge will triage Urbit support issues that come in thro
 - Familiarity with running urbit in a variety of environments (cloud server, laptop)
 - Ability/interest in synthesizing support data and recommending new features or documentation
 - Dilligence
+- **Considering applications from contributors in Asia time zones UTC (GMT) +4 to UTC (GMT) +10 only.**
 
 ## Compensation and Timeline
 
