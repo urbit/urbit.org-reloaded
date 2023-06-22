@@ -13,8 +13,8 @@ description = "Create a crypto and fiat expense sharing app for Urbit "
 reward = "1 Star"
 assignee = ["~talfus-laddus"]
 champion = [""]
-grant_id = "P1001"
-completed = false
+grant_id = "P0279"
+completed = true
 canceled = false
 
 +++
