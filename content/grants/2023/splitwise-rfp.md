@@ -10,8 +10,8 @@ grant_category = ["App Dev"]
 [extra]
 image = ""
 description = "Create a crypto and fiat expense sharing app for Urbit "
-reward = "TBD"
-assignee = [""]
+reward = "1 Star"
+assignee = ["~talfus-laddus"]
 champion = [""]
 grant_id = "P1001"
 completed = false
@@ -23,3 +23,4 @@ The Urbit community hosts many IRL events and, inevitably, this means splitting 
 
 The Urbit version can be loosely modeled on the expense sharing app [Splitwise](https://www.splitwise.com). Splitwise uses centralized cloud infrastructure, but an Urbit version could be architected so that accounts payable and receivable are kept on your ship. The Urbit version should also be mobile-first, so it's easy to use on the go.
 
+See the full proposal [here](https://urbit.org/grants/splitwise)
