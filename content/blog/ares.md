@@ -48,4 +48,4 @@ You can find the Ares GitHub repository [here](https://github.com/urbit/ares). T
 
 –
 
-*Noah Kumin is the founder and editor in chief of the [Mars Review of Books](https://marsreview.org/).
+*Noah Kumin is the founder and editor in chief of the [Mars Review of Books](https://marsreview.org/).*
