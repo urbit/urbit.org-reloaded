@@ -13,10 +13,10 @@ description = "Produce a Replit-compatible binary and instance."
 reward = "4 stars"
 assignee = [""]
 champion = ["~mastyr-bottec"]
-grant_id = ""
+grant_id = "B0282"
 completed = false
 canceled = false
-work_request_link = ""
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0282&prefill_Grant+Name=Replit%20%26%20Replit%20Integration%20for%20Site"
 
 +++
 
