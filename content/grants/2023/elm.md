@@ -56,11 +56,11 @@ Deliverables:
  - Good documentation for resulting the package + a set of tutorials that cover some tricky bits.
  - A git repo with all of the boilerplate required to communicate with Urbit. This repo is intended to be used by ASL students to bootstrap their project frontend.
 
-## Milestone 4: SSS
+## Milestone 4: State replication
 
 Reward: 1 star
 
-Deliverables: An Elm airlock library that supports Solid-state subscriptions.
+Deliverables: A library file for %gall agents to facilitate automatic arbitrary state diffing and publication of the diffs. Airlock functionality to reconcile the published state diff and preset the user of the library with the current state of the %gall agent. 
 
 ## Bonus
 
