@@ -9,6 +9,11 @@
       "permanent": true
     },
     {
+      "source": "/onboarding",
+      "destination": "https://tlon.network/lure/~halbex-palheb/uf-public",
+      "permanent": false
+    },
+    {
       "source": "/uf-public",
       "destination": "https://tlon.network/lure/~halbex-palheb/uf-public",
       "permanent": false
