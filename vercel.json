@@ -9,6 +9,11 @@
       "permanent": true
     },
     {
+      "source": "/uacc-application",
+      "destination": "https://forms.gle/haQ6tJzanC162viy9",
+      "permanent": true
+    },
+    {
       "source": "/onboarding",
       "destination": "https://tlon.network/lure/~halbex-palheb/uf-public",
       "permanent": false
