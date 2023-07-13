@@ -19,6 +19,11 @@
       "permanent": false
     },
     {
+      "source": "/start",
+      "destination": "https://tlon.network/lure/~bitdeg/urbit-parisian-soiree",
+      "permanent": false
+    },
+    {
       "source": "/uf-public",
       "destination": "https://tlon.network/lure/~halbex-palheb/uf-public",
       "permanent": false
