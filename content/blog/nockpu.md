@@ -9,7 +9,7 @@ ship = "~librex-dozryc"
 image = "https://mopfel-winrux-s3.nyc3.digitaloceanspaces.com/mopfel-winrux/NPU/State_Diagrams/MTU_State_diagram.png"
 +++
 
-![Image](https://mopfel-winrux-s3.nyc3.digitaloceanspaces.com/mopfel-winrux/NPU/NPU_Architecture.png)
+![Image](https://mopfel-winrux-s3.nyc3.digitaloceanspaces.com/mopfel-winrux/NPU/State_Diagrams/MTU_State_diagram.png)
 
 Since the early days of Urbit, enthusiasts have floated the idea of hardware specifically designed for running Urbit’s software stack. This has mostly seemed like a distant dream—but in 2023 it’s on its way to becoming a little more real.
 
