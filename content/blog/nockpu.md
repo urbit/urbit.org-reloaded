@@ -6,7 +6,7 @@ description = "A light technical description of NockPU, a hardware system for ru
 [extra]
 author = "Noah Kumin"
 ship = "~librex-dozryc"
-image = "https://mopfel-winrux-s3.nyc3.digitaloceanspaces.com/mopfel-winrux/NPU/NPU_Architecture.png"
+image = "https://mopfel-winrux-s3.nyc3.digitaloceanspaces.com/mopfel-winrux/NPU/State_Diagrams/MTU_State_diagram.png"
 +++
 
 ![Image](https://mopfel-winrux-s3.nyc3.digitaloceanspaces.com/mopfel-winrux/NPU/NPU_Architecture.png)
