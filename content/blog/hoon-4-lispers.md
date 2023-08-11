@@ -317,7 +317,7 @@ Nock explicitly consists of binary trees, since any Nock structure or program co
 
 ![](https://storage.googleapis.com/media.urbit.org/docs/userspace/hoon-school/binary-tree.png)
 
-Expressions are oriented around runes, which act as operators to join or manipulate expressions.  To construct a cell of two values like `1` and `2`, one uses the `:-` cencol rune.  (Hoon cells implement what we call an “implicit `cons`”, meaning that two nouns composed together are simply unified in a shared binary tree.)
+Expressions are oriented around runes, which act as operators to join or manipulate expressions.  To construct a cell of two values like `1` and `2`, one uses the `:-` colhep rune.  (Hoon cells implement what we call an “implicit `cons`”, meaning that two nouns composed together are simply unified in a shared binary tree.)
 
 ```
   :-
