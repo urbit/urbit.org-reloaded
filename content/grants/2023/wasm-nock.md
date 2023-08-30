@@ -37,6 +37,8 @@ The main project will be broken up into three phases: Hoon Implementation, Basic
 
 After these three main phases are done, further work can be done to extend Urbit's WASM system in various ways.  This is listed in Phase 4: Extension.
 
+The 20 Star reward is for completion of Phase 1. Funding will be made available for funding later phases based on successful completion of the first phase.
+
 ### Phase 1: Hoon Implementation
 
 In this phase, use existing Hoon implementations of arithmetic and printing functions.  This includes floating point, which is jetted in Vere by GNU softfloat to ensure determinism.
