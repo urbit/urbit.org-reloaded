@@ -12,9 +12,9 @@ image = ""
 description = "Create a better hoon parser with Treesitter"
 reward = "2 Stars"
 assignee = ["~hosweg-silpur"]
-champion = [""]
+champion = ["~poldec-tonteg"]
 grant_id = "P0263"
-completed = false
+completed = true
 canceled = false
 
 +++
