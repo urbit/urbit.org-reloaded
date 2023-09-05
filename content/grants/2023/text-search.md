@@ -10,10 +10,10 @@ grant_category = ["Core Dev"]
 [extra]
 image = ""
 description = "Build Urbit's answer to grep."
-reward = "TBD"
-assignee = [""]
+reward = "6 Stars"
+assignee = ["~macrep-racdec"]
 champion = [""]
-grant_id = "P1002"
+grant_id = "P0292"
 completed = false
 canceled = false
 
