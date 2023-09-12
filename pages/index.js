@@ -63,6 +63,25 @@ export default function Home({
         {
           // Highlights
         }
+         <Section className="pb-12">
+         <div className="bg-wall-100 w-full p-4 md:p-8 rounded-3xl flex flex-wrap items-center" style={{ backgroundColor: '#FED107' }}>
+
+            <div className="basis-full sm:basis-1/3 pb-4 sm:pb-0">
+              <img className="rounded-xl w-72" src="https://storage.googleapis.com/media.urbit.org/assembly/assembly-tiles.gif" />
+            </div>
+            <div className="sm:basis-2/3 sm:pl-6 align-middle">
+              <h2 className="text-2xl pb-2">Assembly Lisboa 2023</h2 >
+              <p className="max-w-prose pb-4">
+              Assembly is the largest annual Urbit conference, bringing together Urbit organizations, developers & enthusiasts from around the world. 
+              </p>
+              <Link href="https://assembly.urbit.org" passHref>
+              <a className="button-sm border-2 border-wall-600 text-wall-600 type-sm max-w-fit" style={{ borderColor: '#F05826', color: '#F05826'}}>
+                  Buy tickets & more
+                </a>
+              </Link>
+            </div>
+          </div>
+        </Section>
         <Section className="pb-12">
           <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
             <HighlightCard highlight={highlights[0]} key={highlights[0].slug} />
@@ -269,26 +288,6 @@ export default function Home({
               More Events
             </a>
           </Link>
-        </Section>
-
-        <Section className="pb-12">
-          <div className="bg-wall-100 w-full p-4 md:p-8 rounded-3xl flex flex-wrap items-center">
-
-            <div className="basis-full sm:basis-1/3 pb-4 sm:pb-0">
-              <img className="rounded-xl w-72" src="https://storage.googleapis.com/media.urbit.org/assembly/assembly-thumb2.jpg" />
-            </div>
-            <div className="sm:basis-2/3 sm:pl-6 align-middle">
-              <h2 className="text-2xl pb-2">Assembly 2022</h2 >
-              <p className="max-w-prose pb-4">
-                Watch talks and panels from last year's confluence in Miami.
-              </p>
-              <Link href="https://assembly.urbit.org" passHref>
-                <a className="button-sm border-2 border-wall-600 text-wall-600 type-sm max-w-fit">
-                  Watch Now
-                </a>
-              </Link>
-            </div>
-          </div>
         </Section>
 
         <Section narrow>
