@@ -4,11 +4,11 @@ starts = "2023-10-28T10:00:00"
 ends = "2023-10-29T20:00:00"
 timezone = "Europe/Lisbon"
 location = "Lisbon – Portugal"
-image = "https://storage.googleapis.com/media.urbit.org/assembly/assembly-thumbnail.png"
+image = "https://storage.googleapis.com/media.urbit.org/assembly/assembly-tiles.gif"
 registration_url = "https://assembly.urbit.org"
 description = "The third Urbit Assembly & first one outside of the US"
-dark = true
-darken_image = "true"
+dark = false
+darken_image = ""
 
 +++
 This year’s Assembly takes place in Lisbon: Europe’s tech and crypto hub.
