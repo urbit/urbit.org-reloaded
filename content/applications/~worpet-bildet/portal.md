@@ -4,15 +4,15 @@ shortcode = "~worpet-bildet/portal"
 license = ""
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/portal.svg"
 bgColor = "rgb(0,0,0)"
-developer = "Terra Nova Labs Limited"
-website = "https://twitter.com/portal__network"
+developer = "Terra Nova Labs"
+website = "https://twitter.com/portal__gm"
 description = "Portal is sovereign social media"
 +++
 
 ### Portal is sovereign social media
 
-Portal is an Urbit-native social media platform. It's a tool for discovery of apps, groups, and content on Urbit. In addition to being the global conversation hub of Urbit, it supports paid apps, app reviews, micropayments on Ethereum, and composability of %groups messages, %pals, and %radio channels.
+Portal is Urbit-native social media. It helps you discover all the wonderful apps, groups, and content on Urbit. Beyond being the global conversation hub of Urbit, it surfaces trending %groups messages, has an app store, and lets you tip your fellow Urbiters in ETH.
 
-Long term, the team aims to let users build and monetize their own feed algorithms using LLMs, creating an open marketplace of highly personalized and novel content experiences.
+Soon you'll be able to build and monetize your own feed algorithm using LLMs, creating an open marketplace of highly personalized and novel content experiences. Portal also aims to build an LLM-powered virtual assistant that helps you be more productive, discover content, and fully leverage your Urbit superpowers.
 
 ![Screenshot](https://toptyr-bilder.nyc3.cdn.digitaloceanspaces.com/urbitdotorgphoto.png)
