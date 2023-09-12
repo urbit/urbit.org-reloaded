@@ -82,16 +82,6 @@ export default function Home({
             </div>
           </div>
         </Section>
-        <Section className="pb-12">
-          <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
-            <HighlightCard highlight={highlights[0]} key={highlights[0].slug} />
-            <HighlightCard highlight={highlights[1]} key={highlights[1].slug} />
-            <HighlightCard highlight={highlights[2]} key={highlights[2].slug} />
-          </div>
-        </Section>
-
-
-
 
         <Section narrow className="space-y-8">
 
