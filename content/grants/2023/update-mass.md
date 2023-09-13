@@ -10,11 +10,11 @@ grant_category = ["Core Dev"]
 [extra]
 image = ""
 description = "Update the |mass utility to reinject the output into arvo from the runtime."
-reward = "TBD"
-assignee = [""]
+reward = "6 Stars"
+assignee = ["~rivmud-fabwen"]
 champion = [""]
-grant_id = "P1001"
-completed = false
+grant_id = "P0294"
+completed = true
 canceled = false
 
 +++
