@@ -41,6 +41,6 @@ Reward: One star.
 
 # Total Compensation
 
-6 Stars
+2 Stars
 
 I estimate one to two months per milestone, approx. three months total.
