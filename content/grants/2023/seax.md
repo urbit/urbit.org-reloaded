@@ -13,7 +13,7 @@ description = "%seax is an attempt to build a decentralized search engine on Urb
 reward = "6 Stars"
 assignee = ["~racfer-hattes"]
 champion = [""]
-grant_id = "P0292"
+grant_id = "P0293 "
 completed = false
 canceled = false
 
