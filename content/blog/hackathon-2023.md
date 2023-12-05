@@ -68,6 +68,8 @@ To install, run
 `|install ~dibmet-narren %bizbaz`
 from the Dojo, or search `~dibmet-narren` in "Get Urbit Apps".
 
+[Twitter thread with demos.](https://twitter.com/urbitfoundation/status/1727060184210575745)
+
 ### Audience Vote
 
 The Audience Vote runner-up is Edith by ~natfex-nilfep and ~masmut-folhex.
@@ -76,7 +78,7 @@ Edith (edit Hoon) is a structure editor for Hoon which allows for faster and sma
 
 Edith is currently a work in progress, and you can find the code [here](https://git.sr.ht/~stakar/edith). We're looking forwards to the potential of this project to accelerate learning and productivity for Hoon devs.
 
-[Twitter thread.](https://twitter.com/urbitfoundation/status/1727379621770109272)
+[Twitter thread with demos.](https://twitter.com/urbitfoundation/status/1727379621770109272)
 
 ### Honorable Mention
 
