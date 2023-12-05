@@ -86,7 +86,9 @@ Honorable Mention: **%mentat** by ~lomped-firser, ~wolfun-solnym, ~mocmex-pollen
 
 %mentat is an AI personal assistant on Urbit. The team implemented several chatbots which connect to open source AI backends. Features include generating images and saving them to personal S3 storage, holding a conversation, generating reminders, and updating a todo-list. %mentat is a first step towards exploring the vast potential of self-sovereign AI on Urbit.
 
-[Check our their code here](https://github.com/gusmacaulay/mentat).
+You can [check our their code](https://github.com/gusmacaulay/mentat), or join their group to find out more at ~lomped-firser/mentat .
+
+
 To install, run `|install ~tagrev-lacmur-lomped-firser/mentat`
 or search ~tagrev-lacmur-lomped-firser/mentat in "Get Urbit Apps".
 
@@ -96,9 +98,9 @@ Honorable Mention: **%seax** by ~racfer-hattes and ~dopnyr-figbud.
 
 %seax lets you easily access the web’s information inside your Urbit. Currently, %seax aggregates search results from open search APIs, such as Alexandria, Crowdview, Wiby, Yep, and the Urbit developer docs. %seax is modular, making it easy to plug in new search sources. Their future goals include adding search over local Urbit apps.
 
-You can check out their source code [here](https://github.com/ilyakooo0/seax). %seax is compatible with kelvin release 413, not the latest 412 release, so unfortunately it doesn't work on the live network.
+You can [check out their source code](https://github.com/ilyakooo0/seax). %seax is compatible with kelvin release 413, not the latest 412 release, so unfortunately it doesn't work on the live network.
 
 [Twitter thread.](https://twitter.com/urbitfoundation/status/1729947324095369370)
 
 ### Fin
-Congratulations to all our teams for their amazing work! Thanks to them for making Demo Day so awesome.
+Congratulations to all our teams for their amazing work! Thanks to them for making Demo Day so special.
