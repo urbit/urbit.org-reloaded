@@ -1,7 +1,7 @@
 +++
 title = "Assembly Hackathon 2023"
-date = "2023-12-5"
-description = "The Urbit Foundation held a Hackathon with Demo Day in Lisbon for Assembly 2023."
+date = "2023-12-05"
+description = "The Assembly 2023 Hackathon was the most successful Urbit Hackathon we've had. Get a taste of Demo Day in Lisbon and check out the projects they made."
 
 [extra]
 author = "Jack Wang"
@@ -11,11 +11,11 @@ image = "https://storage.googleapis.com/media.urbit.org/developers/hackathon/hac
 
 ![Image](https://storage.googleapis.com/media.urbit.org/developers/hackathon/hackathon_logo.svg)
 
-Our 2023 Hackathon was the most successful Urbit Hackathon we've had. The teams worked 8 weeks up to a premiere at Demo Day in Lisbon. We were amazed at the high level of the projects they demoed. Let's take a look at what they made.
+Our 2023 Hackathon was the most successful Urbit Hackathon we've had. The teams worked 8 weeks up to a premiere at Demo Day in Lisbon. We were amazed at the high level of their projects. Let's take a look at what they created.
 
 ### Best Overall
 
-The grand prize winner was **%eyas** by ~migrev-dolseg.
+The Grand Prize winner is **%eyas** by ~migrev-dolseg.
 
 %eyas is a browser-based text editor for Urbit. Powerful but light, it allows you to easily edit files and run code on your Urbit ship from anywhere, including a mobile device. 
 
@@ -24,7 +24,7 @@ To install %eyas, run this dojo command:
 
 or search ~dister-migrev-dolseg under ‘Get Urbit Apps.’
 
-[Twitter thread.](https://twitter.com/urbitfoundation/status/1724540353506660671)
+[Check out the Twitter thread for a demo.](https://twitter.com/urbitfoundation/status/1724540353506660671)
 
 ### Core
 
@@ -84,8 +84,8 @@ Honorable Mention: **%mentat** by ~lomped-firser, ~wolfun-solnym, ~mocmex-pollen
 
 %mentat is an AI personal assistant on Urbit. The team implemented several chatbots which connect to open source AI backends. Features include generating images and saving them to personal S3 storage, holding a conversation, generating reminders, and updating a todo-list. %mentat is a first step towards exploring the vast potential of self-sovereign AI on Urbit.
 
-[Check our their code here](https://github.com/gusmacaulay/mentat) and run
-`|install ~tagrev-lacmur-lomped-firser/mentat`
+[Check our their code here](https://github.com/gusmacaulay/mentat).
+To install, run `|install ~tagrev-lacmur-lomped-firser/mentat`
 or search ~tagrev-lacmur-lomped-firser/mentat in "Get Urbit Apps".
 
 ### Honorable Mention
@@ -94,7 +94,7 @@ Honorable Mention: **%seax** by ~racfer-hattes and ~dopnyr-figbud.
 
 %seax lets you easily access the web’s information inside your Urbit. Currently, %seax aggregates search results from open search APIs, such as Alexandria, Crowdview, Wiby, Yep, and the Urbit developer docs. %seax is modular, making it easy to plug in new search sources. Their future goals include adding search over local Urbit apps.
 
-You can check out their source code [here](https://github.com/ilyakooo0/seax). %seax is compatible with kelvin release 413, not the latest 412, so unfortunately it doesn't work on the live network.
+You can check out their source code [here](https://github.com/ilyakooo0/seax). %seax is compatible with kelvin release 413, not the latest 412 release, so unfortunately it doesn't work on the live network.
 
 [Twitter thread.](https://twitter.com/urbitfoundation/status/1729947324095369370)
 
