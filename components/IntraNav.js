@@ -20,6 +20,7 @@ export default function IntraNav({ search, ourSite = "" }) {
   const sites = [
     { title: "Urbit.org", href: "https://urbit.org" },
     { title: "Docs", href: "https://docs.urbit.org" },
+    { title: "Roadmap", href: "https://roadmap.urbit.org" },
   ];
   return (
     <div className="bg-wall-100 w-full">
