@@ -10,9 +10,9 @@ grant_category = ["App Dev"]
 [extra]
 image = ""
 description = ""
-reward = "1 Star"
+reward = "2 Stars"
 assignee = ["~talfus-laddus"]
-champion = [""]
+champion = ["~rivmud-fabwen"]
 grant_id = "P0279"
 completed = false
 canceled = false
@@ -88,7 +88,7 @@ The Proof of Concept (POC) demonstrates how to model shared expenses as a flow n
 ## Milestone 2 - Minimal Viable Product
 Completion: End of App School Live before Assembly (October 2023)
 
-Payment: 1 Star
+Payment: 2 Stars
 
 Deliverables : Gall Agent: Website
 
