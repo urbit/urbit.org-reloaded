@@ -96,15 +96,15 @@ export default function IntraNav({}) {
       sites={sites}
       pages={pages}
       search={
-        <div className="flex h-full w-full justify-end">
+        <div className="flex h-full w-full py-2 md:py-3 layout-pr justify-end bg-brite lg:bg-gray">
           <div
             className={
-              "hidden xs:flex items-center h-full w-12 md:w-14 rounded-full bg-gray"
+              "flex items-center h-full w-12 md:w-14 rounded-full bg-gray lg:bg-brite"
             }
           >
             <button
               className={classnames(
-                "flex items-center aspect-square h-6 md:h-8 mx-1 rounded-full bg-brite",
+                "flex items-center aspect-square h-6 md:h-8 mx-1 rounded-full bg-brite lg:bg-gray",
                 {
                   "mr-auto": darkMode,
                   "ml-auto": !darkMode,
@@ -113,7 +113,7 @@ export default function IntraNav({}) {
               onClick={cycleTheme}
             >
               <div
-                className={"inline-block aspect-square w-3/4 m-auto bg-gray"}
+                className={"inline-block aspect-square w-3/4 m-auto bg-gray lg:bg-brite"}
                 style={{
                   "-webkit-mask-image": `url(${iconUrl})`,
                   "mask-image": `url(${iconUrl})`,
