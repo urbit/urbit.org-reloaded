@@ -37,7 +37,7 @@ function GrantCard(post) {
       className="flex flex-col space-y-8 w-full bg-tint rounded-lg p-4"
       href={path.join("/grants", slug)}
     >
-      <div className="h2 flex justify-between">
+      <div className="body-lg flex justify-between">
         <div>
           <h2 className="text-lite">{title}</h2>
           <p className="text-brite">Reward: {extra.reward}</p>
@@ -249,7 +249,7 @@ export default function Grants({ posts, categories, types }) {
           <hr className="hr-horizontal border-brite" />
           <div className="flex flex-col md:flex-row">
             <div className="md:sticky top-12 md:top-16 py-5 md:py-8 overflow-x-hidden overflow-y-auto sidebar">
-              <div className="flex flex-col body-sm md:pr-5 space-y-5 md:border-r-2 rounded-sm border-gray">
+              <div className="flex flex-col type-ui md:pr-5 space-y-5 md:border-r-2 rounded-sm border-gray">
                 <h3 className="text-gray font-semibold">Status:</h3>
                 <section className="flex space-x-3.5 md:flex-col md:space-x-0 md:space-y-3.5 overflow-x-auto md:overflow-x-hidden">
                   {["open", "wip", "completed"].map((s) => (
@@ -320,7 +320,7 @@ export default function Grants({ posts, categories, types }) {
             </div>
             <hr className="block md:hidden hr-horizontal border-gray" />
             <div className="flex flex-col flex-1 md:pl-5 space-y-5 py-5 md:py-8">
-              <p className="text-gray body-sm">
+              <p className="text-gray type-ui">
                 Showing {filteredPosts.length} grants
                 {allCount > filteredPosts.length && (
                   <>

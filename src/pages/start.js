@@ -64,8 +64,8 @@ export default function GetStarted({}) {
         </section>
         <hr className="hr-horizontal border-brite" />
         <div>
-          <h2 className="h2 mb-[0.25em]">Hosting</h2>
-          <p className="body-md">Get a hosted Urbit ship in minutes</p>
+          <h2 className="h2">Hosting</h2>
+          <p className="body-lg">Get a hosted Urbit ship in minutes</p>
         </div>
         <FatBlock className="hidden xs:flex space-x-1 lg:space-x-6 xl:space-x-8">
           {hosting.map((props) => (
@@ -79,8 +79,8 @@ export default function GetStarted({}) {
         </FatBlock>
         <hr className="hr-horizontal border-brite" />
         <div>
-          <h2 className="h2 mb-[0.25em]">Self-hosting at home</h2>
-          <p className="body-md">Running your Urbit is easier than ever</p>
+          <h2 className="h2">Self-hosting at home</h2>
+          <p className="body-lg">Running your Urbit is easier than ever</p>
         </div>
         <FatBlock className="flex bg-gray rounded-lg p-4">
           <img
@@ -115,7 +115,7 @@ export default function GetStarted({}) {
           <p className="body-lg">
             Command Line install
             <Link
-              className="btn btn-light ml-3.5"
+              className="btn btn-light ml-[0.25em]"
               href="https://docs.urbit.org/manual/getting-started/self-hosted/cli"
             >
               CLI guide
@@ -124,7 +124,7 @@ export default function GetStarted({}) {
           <p className="body-lg">
             Self-hosting
             <Link
-              className="btn btn-light ml-3.5"
+              className="btn btn-light ml-[0.25em]"
               href="https://docs.urbit.org/manual/getting-started/self-hosted/cloud-hosting"
             >
               Cloud hosting guide
@@ -133,7 +133,7 @@ export default function GetStarted({}) {
           <p className="body-lg">
             Using Urbit
             <Link
-              className="btn btn-light ml-3.5"
+              className="btn btn-light ml-[0.25em]"
               href="https://docs.urbit.org/manual/getting-started/additional/getting-around"
             >
               Getting around guide
