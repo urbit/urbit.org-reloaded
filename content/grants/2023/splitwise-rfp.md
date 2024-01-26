@@ -10,9 +10,9 @@ grant_category = ["App Dev"]
 [extra]
 image = ""
 description = "Create a crypto and fiat expense sharing app for Urbit "
-reward = "1 Star"
+reward = "2 Stars"
 assignee = ["~talfus-laddus"]
-champion = [""]
+champion = ["~rivmud-fabwen"]
 grant_id = "P0279"
 completed = true
 canceled = false
