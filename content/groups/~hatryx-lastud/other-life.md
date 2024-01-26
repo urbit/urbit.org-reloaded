@@ -3,8 +3,8 @@ title = "Other Life"
 shortcode = "~hatryx-lastud/other-life"
 description = "The Imperceptible City"
 type = "Public"
-tile = "https://dl.airtable.com/.attachmentThumbnails/85973e6c8ac12bef0ce4fbc046a2fb7c/8c21d303"
+tile = "https://0x0.st/H69q.png"
 participant_range = "1000+"
 +++
 
-The Imperceptible City
+[The Imperceptible City](https://otherlife.co)
