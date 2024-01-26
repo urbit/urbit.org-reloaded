@@ -14,7 +14,7 @@ reward = "1 Wrapped Star"
 assignee = ["~dozreg-toplud"]
 champion = [""]
 grant_id = "P0294"
-completed = false
+completed = true
 canceled = false
 
 +++
