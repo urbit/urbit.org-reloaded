@@ -39,10 +39,7 @@ export default function Org({ post, markdown }) {
         ]}
         path={router.asPath}
       />
-      <Main
-        className="text-brite border-brite space-y-5 md:space-y-8 lg:space-y-16"
-        singleColumn
-      >
+      <Main className="text-brite" responsiveSpace singleColumn>
         <div className="flex">
           <div className="relative flex items-center aspect-square bg-brite w-1/3 rounded-md">
             <img className="w-1/2 m-auto" src={post.image} />
@@ -63,7 +60,7 @@ export default function Org({ post, markdown }) {
           </div>
         </div>
         {post.description && (
-          <h2 className="h2 text-brite layout-narrow">{post.description}</h2>
+          <h2 className="h2 layout-narrow">{post.description}</h2>
         )}
         <section className="layout-narrow markdown">
           <Markdown.render content={JSON.parse(markdown)} />

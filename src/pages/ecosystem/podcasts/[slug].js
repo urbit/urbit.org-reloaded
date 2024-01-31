@@ -41,10 +41,7 @@ export default function Podcast({ post, markdown }) {
         ]}
         path={router.asPath}
       />
-      <Main
-        className="text-brite border-brite space-y-5 md:space-y-8 lg:space-y-16"
-        singleColumn
-      >
+      <Main className="text-brite" responsiveSpace singleColumn>
         <div className="flex">
           <img
             className="aspect-square object-cover w-1/3 rounded-md"
@@ -58,7 +55,10 @@ export default function Podcast({ post, markdown }) {
             </Link>
           </div>
         </div>
-        <section className="layout-narrow h2 text-brite">
+        {post.description && (
+          <h2 className="h2 layout-narrow">{post.description}</h2>
+        )}
+        <section className="layout-narrow markdown">
           <Markdown.render content={JSON.parse(markdown)} />
         </section>
       </Main>
@@ -72,6 +72,7 @@ export async function getStaticProps({ params }) {
     params.slug,
     [
       "title",
+      "description",
       "image",
       "URL",
       "spotify",

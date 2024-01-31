@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import {
   Container,
   Main,
+  Section,
   FatBlock,
   Markdown,
   getPostBySlug,
@@ -41,10 +42,7 @@ export default function App({ post, org, markdown }) {
         ]}
         path={router.asPath}
       />
-      <Main
-        className="text-brite border-brite space-y-5 md:space-y-8 lg:space-y-16"
-        singleColumn
-      >
+      <Main className="text-brite" responsiveSpace singleColumn>
         <div className="flex">
           <img
             className="aspect-square w-1/3 rounded-md"
@@ -52,7 +50,7 @@ export default function App({ post, org, markdown }) {
             alt=""
             src={post.image}
           />
-          <div className="flex flex-col justify-between pl-5 md:pl-8 lg:pl-16">
+          <div className="flex flex-col justify-between pl-5 md:pl-10 lg:pl-[3.75rem]">
             <h1 className="h1">{post.title}</h1>
             <button
               className="btn btn-light body-md"
@@ -62,10 +60,10 @@ export default function App({ post, org, markdown }) {
             </button>
           </div>
         </div>
-        <div className="flex body-md">
+        <div className="flex flex-col sm:flex-row body-md">
           {post.website && (
-            <div className="w-1/4 pr-5">
-              <h3 className="text-gray">Website:</h3>
+            <div className="flex sm:flex-col sm:w-1/3 mr-5 md:mr-10 lg:mr-[3.75rem]">
+              <h3 className="text-gray mr-[0.25em]">Website:</h3>
               <Link
                 className="text-lite underline decoration-1 underline-offset-4 line-clamp-1 text-ellipsis break-all"
                 href={post.website}
@@ -75,20 +73,19 @@ export default function App({ post, org, markdown }) {
             </div>
           )}
           {post.license && (
-            <div className="w-1/4 pr-5">
-              <h3 className="text-gray">License:</h3>
+            <div className="flex sm:flex-col">
+              <h3 className="text-gray mr-[0.25em]">License:</h3>
               <p className="line-clamp-1 text-ellipsis">{post.license}</p>
             </div>
           )}
         </div>
         {post.description && (
-          <h2 className="h2 text-brite layout-narrow">{post.description}</h2>
+          <h2 className="h2 layout-narrow">{post.description}</h2>
         )}
         <section className="layout-narrow markdown">
           <Markdown.render content={JSON.parse(markdown)} />
         </section>
-        <section className="space-y-5 layout-narrow">
-          <hr className="hr-horizontal border-brite" />
+        <Section tight divider>
           <h2 className="h2">Developer</h2>
           {(org.slug && (
             <FatBlock>
@@ -96,11 +93,13 @@ export default function App({ post, org, markdown }) {
             </FatBlock>
           )) || <p className="body-md">{org.title}</p>}
           <hr className="hr-horizontal border-brite" />
-          <FatBlock className="bg-tint body-sm rounded-md p-5">
-            Disclaimer: Applications may not be audited for security and might
-            contain malicious code or vulnerabilities that could lead to
-            unwanted interaction with your ship. Explore at your own risk.
-          </FatBlock>
+          <div className="layout-narrow">
+            <FatBlock className="bg-tint body-sm rounded-md p-5">
+              Disclaimer: Applications may not be audited for security and might
+              contain malicious code or vulnerabilities that could lead to
+              unwanted interaction with your ship. Explore at your own risk.
+            </FatBlock>
+          </div>
           <hr className="hr-horizontal border-brite" />
           <Link
             className="btn btn-light body-md"
@@ -118,7 +117,7 @@ export default function App({ post, org, markdown }) {
           >
             Submit your application
           </Link>
-        </section>
+        </Section>
       </Main>
       <Footer />
     </Container>
