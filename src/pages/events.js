@@ -7,6 +7,7 @@ import { DateTime } from "luxon";
 import {
   Container,
   Main,
+  Section,
   FatBlock,
   getAllPosts,
   generateDisplayDate,
@@ -121,10 +122,7 @@ export default function Events({
         {Meta(post)}
       </Head>
       <IntraNav />
-      <Main
-        className="text-brite border-brite space-y-5 md:space-y-8"
-        singleColumn
-      >
+      <Main className="text-brite" singleColumn>
         <section>
           <h1 className="h1 mt-12 mb-8 md:mt-16 md:mb-16 lg:mb-20">Events</h1>
           <p className="h1">
@@ -133,44 +131,44 @@ export default function Events({
             <strong>identity</strong>, & <strong>data</strong>.
           </p>
         </section>
-        <hr className="hr-horizontal border-brite" />
-        <h2 className="h2">Communities</h2>
-        <Carousel>
-          {communities.map((props) => (
-            <CommunityCard className="w-32 sm:w-56 md:w-80" {...props} />
-          ))}
-        </Carousel>
+        <Section divider>
+          <h2 className="h2">Communities</h2>
+          <Carousel>
+            {communities.map((props) => (
+              <CommunityCard className="w-32 sm:w-56 md:w-80" {...props} />
+            ))}
+          </Carousel>
+        </Section>
         {ongoingEvents.length > 0 && (
-          <>
-            <hr className="hr-horizontal border-brite" />
+          <Section divider>
             <h2 className="h2">Ongoing</h2>
             <FatBlock className="grid grid-cols-1 xs:grid-cols-2 gap-1 lg:gap-6 xl:gap-8">
               {ongoingEvents.slice(0, 2).map((props) => (
                 <EventCard {...props} />
               ))}
             </FatBlock>
-          </>
+          </Section>
         )}
         {upcomingEvents.length > 0 && (
-          <>
-            <hr className="hr-horizontal border-brite" />
+          <Section divider>
             <h2 className="h2">Upcoming</h2>
             <FatBlock className="grid grid-cols-1 xs:grid-cols-2 gap-1 lg:gap-6 xl:gap-8">
               {upcomingEvents.slice(0, 2).map((props) => (
                 <EventCard {...props} />
               ))}
             </FatBlock>
-          </>
+          </Section>
         )}
-        <hr className="hr-horizontal border-brite" />
-        <h2 className="h2">Past events</h2>
-        <FatBlock className="grid grid-cols-1 xs:grid-cols-2 gap-1 lg:gap-6 xl:gap-8">
-          {pastEvents &&
-            pastEvents.slice(0, 4).map((props) => <EventCard {...props} />)}
-        </FatBlock>
-        <Link className="btn btn-light body-lg w-min" href="/events/all">
-          More events
-        </Link>
+        <Section divider>
+          <h2 className="h2">Past events</h2>
+          <FatBlock className="grid grid-cols-1 xs:grid-cols-2 gap-1 lg:gap-6 xl:gap-8">
+            {pastEvents &&
+              pastEvents.slice(0, 4).map((props) => <EventCard {...props} />)}
+          </FatBlock>
+          <Link className="btn btn-light body-lg w-min" href="/events/all">
+            More events
+          </Link>
+        </Section>
       </Main>
       <Footer />
     </Container>

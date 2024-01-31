@@ -9,7 +9,7 @@ import omit from "lodash.omit";
 import {
   Container,
   Main,
-  Sidebar,
+  Section,
   Icon,
   getAllPosts,
 } from "@urbit/fdn-design-system";
@@ -174,10 +174,7 @@ export default function Grants({ posts, categories, types }) {
         {Meta(post)}
       </Head>
       <IntraNav />
-      <Main
-        className="text-brite border-brite space-y-5 md:space-y-8"
-        singleColumn
-      >
+      <Main className="text-brite" singleColumn>
         <section>
           <h1 className="h1 mt-12 mb-8 md:mt-16 md:mb-16 lg:mb-20">
             Grants Program
@@ -188,8 +185,7 @@ export default function Grants({ posts, categories, types }) {
             developers.
           </p>
         </section>
-        <hr className="hr-horizontal border-brite" />
-        <section className="space-y-5 md:space-y-8">
+        <Section divider>
           <h2 className="h2">Grant Types</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3.5">
             <div className="body-md">
@@ -241,7 +237,7 @@ export default function Grants({ posts, categories, types }) {
               </div>
             </div>
           </div>
-        </section>
+        </Section>
         <div
           className="scroll-my-[2.75rem] md:scroll-my-[3.75rem]"
           id="view-grants"

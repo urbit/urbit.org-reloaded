@@ -7,6 +7,7 @@ import path from "path";
 import {
   Container,
   Main,
+  Section,
   FatBlock,
   getAllPosts,
   generateDisplayDate,
@@ -78,7 +79,7 @@ function Filter({ className = "", children, filters = [] }) {
           ))}
         </nav>
       ))}
-      <div className={classnames("mt-8", className)}>
+      <div className={classnames("mt-5", className)}>
         {filterChildren(children)}
       </div>
     </>
@@ -273,10 +274,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
         ]}
         path={router.asPath}
       />
-      <Main
-        className="text-brite border-brite space-y-4 md:space-y-8"
-        singleColumn
-      >
+      <Main className="text-brite" singleColumn>
         {type === "overview" && (
           <>
             <section className="">
@@ -287,8 +285,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
                 <strong>identity</strong>, & <strong>data</strong>.
               </p>
             </section>
-            <hr className="hr-horizontal" />
-            <section className="space-y-4 md:space-y-8 lg:space-y-16">
+            <Section divider>
               <h2 className="h2">Apps</h2>
               <FatBlock className="hidden md:grid grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
                 {apps &&
@@ -301,9 +298,8 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
               <Link className="btn btn-light body-lg" href="/ecosystem/apps">
                 More apps
               </Link>
-            </section>
-            <hr className="hr-horizontal" />
-            <section className="space-y-4 md:space-y-8 lg:space-y-16">
+            </Section>
+            <Section divider>
               <h2 className="h2">Podcasts</h2>
               <Carousel>
                 {podcasts &&
@@ -320,9 +316,8 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
               >
                 More podcasts
               </Link>
-            </section>
-            <hr className="hr-horizontal" />
-            <section className="space-y-4 md:space-y-8 lg:space-y-16">
+            </Section>
+            <Section divider>
               <h2 className="h2">Talks</h2>
               <Carousel>
                 {talks &&
@@ -333,9 +328,8 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
               <Link className="btn btn-light body-lg" href="/ecosystem/talks">
                 More talks
               </Link>
-            </section>
-            <hr className="hr-horizontal" />
-            <section className="space-y-4 md:space-y-8 lg:space-y-16">
+            </Section>
+            <Section divider>
               <h2 className="h2">Companies</h2>
               <FatBlock className="hidden md:grid grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
                 {orgs &&
@@ -348,30 +342,27 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
               <Link className="btn btn-light body-lg" href="/ecosystem/orgs">
                 More companies
               </Link>
-            </section>
-            <hr className="hr-horizontal" />
-            <section className="space-y-4 md:space-y-8 lg:space-y-16">
+            </Section>
+            <Section divider>
               <h2 className="h2">Articles & Press</h2>
-              <div className="space-y-4 md:space-y-8">
-                {articles &&
-                  articles
-                    .slice(0, 3)
-                    .map((props, index) => (
-                      <Article divider={index > 0} {...props} />
-                    ))}
-              </div>
+              {articles &&
+                articles
+                  .slice(0, 3)
+                  .map((props, index) => (
+                    <Article divider={index > 0} {...props} />
+                  ))}
               <Link
                 className="btn btn-light body-lg"
                 href="/ecosystem/articles"
               >
                 More articles & press
               </Link>
-            </section>
+            </Section>
           </>
         )}
         {type === "apps" && (
           <>
-            <section className="">
+            <section>
               <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Apps</h1>
               <p className="h1">
                 Urbit is a <strong>new kind of computer</strong> that you can
@@ -379,15 +370,16 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
                 <strong>identity</strong>, & <strong>data</strong>.
               </p>
             </section>
-            <hr className="hr-horizontal" />
-            <FatBlock className="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
-              {apps && apps.map((props) => <AppCard {...props} />)}
-            </FatBlock>
+            <Section divider>
+              <FatBlock className="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
+                {apps && apps.map((props) => <AppCard {...props} />)}
+              </FatBlock>
+            </Section>
           </>
         )}
         {type === "podcasts" && (
           <>
-            <section className="">
+            <section>
               <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Podcasts</h1>
               <p className="h1">
                 Urbit is a <strong>new kind of computer</strong> that you can
@@ -395,15 +387,17 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
                 <strong>identity</strong>, & <strong>data</strong>.
               </p>
             </section>
-            <hr className="hr-horizontal" />
-            <FatBlock className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
-              {podcasts && podcasts.map((props) => <PodcastCard {...props} />)}
-            </FatBlock>
+            <Section divider>
+              <FatBlock className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
+                {podcasts &&
+                  podcasts.map((props) => <PodcastCard {...props} />)}
+              </FatBlock>
+            </Section>
           </>
         )}
         {type === "talks" && (
           <>
-            <section className="">
+            <section>
               <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Talks</h1>
               <p className="h1">
                 Urbit is a <strong>new kind of computer</strong> that you can
@@ -411,20 +405,21 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
                 <strong>identity</strong>, & <strong>data</strong>.
               </p>
             </section>
-            <hr className="hr-horizontal" />
-            <FatBlock>
-              <Filter
-                className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-1 lg:gap-6 xl:gap-8"
-                filters={["event", "type"]}
-              >
-                {talks && talks.map((props) => <TalkCard {...props} />)}
-              </Filter>
-            </FatBlock>
+            <Section divider>
+              <FatBlock>
+                <Filter
+                  className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-1 lg:gap-6 xl:gap-8"
+                  filters={["event", "type"]}
+                >
+                  {talks && talks.map((props) => <TalkCard {...props} />)}
+                </Filter>
+              </FatBlock>
+            </Section>
           </>
         )}
         {type === "orgs" && (
           <>
-            <section className="">
+            <section>
               <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Companies</h1>
               <p className="h1">
                 Urbit is a <strong>new kind of computer</strong> that you can
@@ -432,15 +427,16 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
                 <strong>identity</strong>, & <strong>data</strong>.
               </p>
             </section>
-            <hr className="hr-horizontal" />
-            <FatBlock className="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
-              {orgs && orgs.map((props) => <OrgCard {...props} />)}
-            </FatBlock>
+            <Section divider>
+              <FatBlock className="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
+                {orgs && orgs.map((props) => <OrgCard {...props} />)}
+              </FatBlock>
+            </Section>
           </>
         )}
         {type === "articles" && (
           <>
-            <section className="">
+            <section>
               <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Articles & Press</h1>
               <p className="h1">
                 Urbit is a <strong>new kind of computer</strong> that you can
@@ -448,15 +444,16 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
                 <strong>identity</strong>, & <strong>data</strong>.
               </p>
             </section>
-            <hr className="hr-horizontal" />
-            <FatBlock>
-              <Filter className="space-y-4 md:space-y-8" filters={["type"]}>
-                {articles &&
-                  articles.map((props, index) => (
-                    <Article divider={index > 0} {...props} />
-                  ))}
-              </Filter>
-            </FatBlock>
+            <Section divider>
+              <FatBlock>
+                <Filter className="space-y-5" filters={["type"]}>
+                  {articles &&
+                    articles.map((props, index) => (
+                      <Article divider={index > 0} {...props} />
+                    ))}
+                </Filter>
+              </FatBlock>
+            </Section>
           </>
         )}
       </Main>

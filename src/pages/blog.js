@@ -3,6 +3,7 @@ import Head from "next/head";
 import {
   Container,
   Main,
+  Section,
   FatBlock,
   getAllPosts,
 } from "@urbit/fdn-design-system";
@@ -25,10 +26,7 @@ export default function Blog({ posts, search }) {
         {Meta(post)}
       </Head>
       <IntraNav />
-      <Main
-        className="text-brite border-brite space-y-5 md:space-y-8"
-        singleColumn
-      >
+      <Main className="text-brite" singleColumn>
         <section>
           <h1 className="h1 mt-12 mb-8 md:mt-16 md:mb-16 lg:mb-20">Blog</h1>
           <p className="h1">
@@ -36,19 +34,20 @@ export default function Blog({ posts, search }) {
             the many people contributing to Urbit.
           </p>
         </section>
-        <hr className="hr-horizontal border-brite" />
-        <FatBlock>
-          <div
-            className={
-              "grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 " +
-              "gap-1 lg:gap-6 xl:gap-8"
-            }
-          >
-            {posts.map((post) => (
-              <PostCard href={`/blog/${post.slug}`} {...post} />
-            ))}
-          </div>
-        </FatBlock>
+        <Section divider>
+          <FatBlock>
+            <div
+              className={
+                "grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 " +
+                "gap-1 lg:gap-6 xl:gap-8"
+              }
+            >
+              {posts.map((post) => (
+                <PostCard href={`/blog/${post.slug}`} {...post} />
+              ))}
+            </div>
+          </FatBlock>
+        </Section>
       </Main>
       <Footer />
     </Container>
