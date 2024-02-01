@@ -21,8 +21,6 @@ export default function Podcast({ post, markdown }) {
     return <ErrorPage />;
   }
 
-  const href = post.URL || post.spotify || post.youtube || post.apple;
-
   return (
     <Container>
       <Head>
@@ -50,9 +48,13 @@ export default function Podcast({ post, markdown }) {
           />
           <div className="flex flex-col justify-between pl-5 md:pl-8 lg:pl-16">
             <h1 className="h1">{post.title}</h1>
-            <Link className="btn btn-light body-md w-min" href={href}>
-              Listen ↗
-            </Link>
+            <div className="flex flex-col space-y-2.5">
+              {post.links.map((o) => (
+                <Link className="btn btn-light body-md w-min" href={o.url}>
+                  {o.label}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
         {post.description && (
@@ -70,17 +72,7 @@ export default function Podcast({ post, markdown }) {
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(
     params.slug,
-    [
-      "title",
-      "description",
-      "image",
-      "URL",
-      "spotify",
-      "youtube",
-      "apple",
-      "slug",
-      "content",
-    ],
+    ["title", "description", "image", "links", "slug", "content"],
     "ecosystem/podcasts"
   );
 

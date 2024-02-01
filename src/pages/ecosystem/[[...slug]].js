@@ -119,14 +119,12 @@ function AppCard({ className, title, description, slug, bgColor, image }) {
 
 function PodcastCard({
   className,
-  podcast,
-  content,
+  title,
+  description,
   image,
-  URL,
-  spotify,
-  youtube,
-  apple,
+  links,
   slug,
+  content,
 }) {
   return (
     <Link
@@ -135,12 +133,10 @@ function PodcastCard({
     >
       <img className="aspect-square rounded-t-xl object-cover" src={image} />
       <div className="bg-tint rounded-b-xl p-4">
-        <h3 className="h3 font-semibold line-clamp-1 text-ellipsis">
-          {podcast}
-        </h3>
+        <h3 className="h4 font-semibold line-clamp-1 text-ellipsis">{title}</h3>
         <div className="hidden md:block">
           <p className="h-[2.6em] body-md text-lite line-clamp-2 text-ellipsis">
-            {content}
+            {description}
           </p>
         </div>
       </div>
@@ -474,16 +470,7 @@ export async function getStaticProps() {
   );
   const orgs = getAllPosts(["title", "image", "slug"], "ecosystem/orgs");
   const podcasts = getAllPosts(
-    [
-      "podcast",
-      "content",
-      "image",
-      "URL",
-      "spotify",
-      "youtube",
-      "apple",
-      "slug",
-    ],
+    ["title", "description", "image", "links", "slug", "content"],
     "ecosystem/podcasts"
   );
   const talks = getAllPosts(
