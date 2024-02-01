@@ -30,24 +30,52 @@ function isOrIsIn(type, query) {
   return isArray(query) ? query.includes(type) : type === query;
 }
 
+function statusLabel(status) {
+  return {
+    open: "Open",
+    wip: "In Progress",
+    completed: "Completed",
+  }[status];
+}
+
 function GrantCard(post) {
   const { title, date, taxonomies, extra, slug } = post;
+  const { status } = post;
+
+  const bg =
+    (status === "open" ? "bg-brite" : false) ||
+    (status === "wip" ? "bg-gray" : "bg-tint");
+  const btn =
+    (status === "open" ? "bg-gray text-brite" : false) ||
+    (status === "wip" ? "bg-tint text-gray" : "bg-gray text-tint");
+  const text =
+    (status === "open" ? "text-tint" : false) ||
+    (status === "wip" ? "text-lite" : "text-lite");
+  const bgType =
+    (status === "open" ? "bg-gray" : false) ||
+    (status === "wip" ? "bg-brite" : "bg-brite");
+  const textHighlight =
+    (status === "open" ? "text-gray" : false) ||
+    (status === "wip" ? "text-brite" : "text-brite");
+
   return (
     <Link
-      className="flex flex-col space-y-8 w-full bg-tint rounded-lg p-4"
+      className={`flex flex-col space-y-8 w-full rounded-lg p-4 ${bg}`}
       href={path.join("/grants", slug)}
     >
       <div className="body-lg flex justify-between">
         <div>
-          <h2 className="text-lite">{title}</h2>
-          <p className="text-brite">Reward: {extra.reward}</p>
+          <h2 className={text}>{title}</h2>
+          <p className={textHighlight}>Reward: {extra.reward}</p>
         </div>
         {new Set(["Bounty", "Proposal", "Apprenticeship"]).has(
           taxonomies.grant_type[0]
         ) && (
-          <div className="flex items-center justify-center h-[1.1em] aspect-square bg-brite rounded-lg ml-3.5">
+          <div
+            className={`flex items-center justify-center h-[1.1em] aspect-square rounded-lg ml-3.5 ${bgType}`}
+          >
             <Icon
-              className="h-4/6 bg-gray"
+              className={`h-4/6 ${bg}`}
               name={taxonomies.grant_type[0]}
               weight="medium"
             />
@@ -55,15 +83,15 @@ function GrantCard(post) {
         )}
       </div>
       {extra.description && (
-        <p className="body-md text-lite my-8">{extra.description}</p>
+        <p className={`body-md my-8 ${text}`}>{extra.description}</p>
       )}
       <div className="flex flex-wrap body-md space-x-3.5">
-        <GrantStatus {...post} />
+        <span className={`btn ${btn}`}>{statusLabel(status)}</span>
         {taxonomies.grant_type.map((s) => (
-          <span className="btn text-tint bg-gray">{s}</span>
+          <span className={`btn ${btn}`}>{s}</span>
         ))}
         {taxonomies.grant_category.map((s) => (
-          <span className="btn text-tint bg-gray">{s}</span>
+          <span className={`btn ${btn}`}>{s}</span>
         ))}
       </div>
     </Link>
@@ -256,13 +284,7 @@ export default function Grants({ posts, categories, types }) {
                       })}
                       onClick={() => push(pushOrDropQuery("status", status, s))}
                     >
-                      {
-                        {
-                          open: "Open",
-                          wip: "In Progress",
-                          completed: "Completed",
-                        }[s]
-                      }
+                      {statusLabel(s)}
                     </button>
                   ))}
                 </section>
