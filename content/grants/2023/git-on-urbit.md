@@ -10,7 +10,7 @@ grant_category = ["App Dev"]
 [extra]
 image = ""
 description = "Implement a minimal Git server"
-reward = ""
+reward = "11 Stars"
 assignee = ["~ponmep-litsem"]
 champion = ["~lagrev-nocfep"]
 grant_id = "P1001"
