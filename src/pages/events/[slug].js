@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import {
   Container,
   Main,
+  Section,
   Markdown,
   getPostBySlug,
   getAllPosts,
@@ -29,10 +30,10 @@ export default function Event({ post, markdown }) {
         {Meta(post)}
       </Head>
       <IntraNav />
-      <Main singleColumn>
-        <div className="text-brite space-y-5 md:space-y-8">
-          <div className="space-y-8 md:space-y-16 lg:space-y-20">
-            <h1 className="h1 mt-12 md:mt-16">{post.title}</h1>
+      <Main responsiveSpace singleColumn>
+        <Section className="text-brite mt-12 md:mt-16">
+          <div>
+            <h1 className="h1 mb-8 md:mb-16 lg:mb-20">{post.title}</h1>
             {post.description && <p className="h1">{post.description} </p>}
           </div>
           <div className="body-md">
@@ -59,11 +60,10 @@ export default function Event({ post, markdown }) {
               </Link>
             )}
           </div>
-          <hr className="hr-horizontal border-brite" />
-          <div className="markdown layout-narrow">
-            <Markdown.render content={JSON.parse(markdown)} />
-          </div>
-        </div>
+        </Section>
+        <Section className="markdown layout-narrow" divider>
+          <Markdown.render content={JSON.parse(markdown)} />
+        </Section>
       </Main>
       <Footer />
     </Container>

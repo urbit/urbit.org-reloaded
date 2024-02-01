@@ -6,6 +6,7 @@ import path from "path";
 import {
   Container,
   Main,
+  Section,
   FatBlock,
   Markdown,
   getPostBySlug,
@@ -41,15 +42,14 @@ export default function Post({
         {Meta(post)}
       </Head>
       <IntraNav />
-      <Main singleColumn>
-        <div className="text-brite border-brite space-y-5 md:space-y-8">
+      <Main responsiveSpace singleColumn>
+        <Section className="text-brite mt-12 md:mt-16">
           <div>
-            <h1 className="h1 mt-12 mb-8 md:mt-16 md:mb-16 lg:mb-20">
-              {post.title}
-            </h1>
-            <p className="body-lg">{post.description} </p>
+            <h1 className="h1 mb-8 md:mb-16 lg:mb-20">{post.title}</h1>
+            <p className="h1">{post.description} </p>
           </div>
-          <hr className="hr-horizontal" />
+        </Section>
+        <Section className="text-brite" divider>
           <div className="flex justify-between body-sm font-semibold">
             <p>{date}</p>
             <div>
@@ -65,7 +65,8 @@ export default function Post({
           <div className="markdown layout-narrow">
             <Markdown.render content={JSON.parse(markdown)} />
           </div>
-          <hr className="hr-horizontal" />
+        </Section>
+        <Section divider>
           <FatBlock className="flex justify-center space-x-1 lg:space-x-6 xl:space-x-8">
             {previousPost && (
               <PostCard
@@ -86,7 +87,7 @@ export default function Post({
               />
             )}
           </FatBlock>
-        </div>
+        </Section>
       </Main>
       <Footer />
     </Container>

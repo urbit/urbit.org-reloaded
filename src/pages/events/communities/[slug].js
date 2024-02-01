@@ -27,11 +27,8 @@ export default function Community({ post, markdown }) {
         {Meta(post)}
       </Head>
       <IntraNav />
-      <Main
-        className="mt-12 md:mt-16 text-brite border-brite space-y-5 md:space-y-8 lg:space-y-16"
-        singleColumn
-      >
-        <div className="flex">
+      <Main responsiveSpace singleColumn>
+        <div className="flex text-brite mt-12 md:mt-16">
           <img
             className="object-cover aspect-square rounded-md w-1/3"
             src={post.image}

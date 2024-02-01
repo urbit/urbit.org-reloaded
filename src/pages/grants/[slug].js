@@ -7,6 +7,7 @@ import path from "path";
 import {
   Container,
   Main,
+  Section,
   Markdown,
   getPage,
   getPostBySlug,
@@ -33,13 +34,11 @@ export default function Event({ post, markdown, match }) {
         {Meta(post)}
       </Head>
       <IntraNav />
-      <Main singleColumn>
-        <div className="text-brite space-y-5 md:space-y-8">
-          <div className="space-y-8 md:space-y-16 lg:space-y-20">
-            <h1 className="h1 mt-12 md:mt-16">{post.title}</h1>
-            {post?.extra?.description && (
-              <p className="h1">{post.extra.description} </p>
-            )}
+      <Main responsiveSpace singleColumn>
+        <Section className="mt-12 md:mt-16">
+          <div className="h1 text-brite">
+            <h1 className="mb-8 md:mb-16 lg:mb-20">{post.title}</h1>
+            {post?.extra?.description && <p>{post.extra.description} </p>}
           </div>
           <div className="body-md text-gray">
             {post?.date && <p>{formatDate(generateDisplayDate(post.date))}</p>}
@@ -93,11 +92,10 @@ export default function Event({ post, markdown, match }) {
               <span className="btn  text-tint bg-gray">{category}</span>
             ))}
           </div>
-          <hr className="hr-horizontal border-brite" />
-          <div className="markdown layout-narrow">
-            <Markdown.render content={JSON.parse(markdown)} />
-          </div>
-        </div>
+        </Section>
+        <Section className="markdown layout-narrow" divider>
+          <Markdown.render content={JSON.parse(markdown)} />
+        </Section>
       </Main>
       <Footer />
     </Container>
