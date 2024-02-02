@@ -133,7 +133,7 @@ function PodcastCard({
     >
       <img className="aspect-square rounded-t-xl object-cover" src={image} />
       <div className="bg-tint rounded-b-xl p-4">
-        <h3 className="h4 font-semibold line-clamp-1 text-ellipsis">{title}</h3>
+        <h3 className="h3 font-semibold line-clamp-1 text-ellipsis">{title}</h3>
         <div className="hidden md:block">
           <p className="h-[2.6em] body-md text-lite line-clamp-2 text-ellipsis">
             {description}
