@@ -11,8 +11,8 @@ import {
   Markdown,
   getPostBySlug,
   getAllPosts,
-  getNextPost,
-  getPreviousPost,
+  getNextPosts,
+  getPreviousPosts,
   formatDate,
   generateDisplayDate,
 } from "@urbit/fdn-design-system";
@@ -22,18 +22,27 @@ import Footer from "@/components/Footer";
 import Meta from "@/components/Meta";
 import PostCard from "@/components/PostCard";
 
-export default function Post({
-  post,
-  markdown,
-  nextPost,
-  previousPost,
-  search,
-}) {
+function footnotePosts(nextPosts, previousPosts) {
+  if (!nextPosts) return previousPosts;
+  if (!previousPosts) return nextPosts;
+
+  const prev = previousPosts.slice(0, 2);
+  const next = [...nextPosts]
+    .reverse()
+    .slice(0, 3 - prev.length)
+    .reverse();
+
+  return [...next, ...prev];
+}
+
+export default function Post({ post, markdown, nextPosts, previousPosts }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
   }
   const date = formatDate(generateDisplayDate(post.date));
+
+  const showcasedPosts = footnotePosts(nextPosts, previousPosts);
 
   return (
     <Container>
@@ -67,25 +76,15 @@ export default function Post({
           </div>
         </Section>
         <Section divider>
-          <FatBlock className="flex justify-center space-x-1 lg:space-x-6 xl:space-x-8">
-            {previousPost && (
-              <PostCard
-                className="h-auto !w-1/2 sm:!w-5/12 md:!w-1/3"
-                href={path.join("/blog", previousPost.slug)}
-                target="_self"
-                {...previousPost}
-                small
-              />
-            )}
-            {nextPost && (
-              <PostCard
-                className="h-auto !w-1/2 sm:!w-5/12 md:!w-1/3"
-                href={path.join("/blog", nextPost.slug)}
-                target="_self"
-                {...nextPost}
-                small
-              />
-            )}
+          <FatBlock className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
+            {showcasedPosts &&
+              showcasedPosts.map((p) => (
+                <PostCard
+                  href={path.join("/blog", p.slug)}
+                  target="_self"
+                  {...p}
+                />
+              ))}
           </FatBlock>
         </Section>
       </Main>
@@ -95,15 +94,15 @@ export default function Post({
 }
 
 export async function getStaticProps({ params }) {
-  const nextPost =
-    getNextPost(
+  const nextPosts =
+    getNextPosts(
       params.slug,
       ["title", "description", "date", "extra", "slug"],
       "blog"
     ) || null;
 
-  const previousPost =
-    getPreviousPost(
+  const previousPosts =
+    getPreviousPosts(
       params.slug,
       ["title", "description", "date", "extra", "slug"],
       "blog"
@@ -118,7 +117,7 @@ export async function getStaticProps({ params }) {
 
   const markdown = JSON.stringify(Markdown.parse({ post }));
   return {
-    props: { post, markdown, nextPost, previousPost },
+    props: { post, markdown, nextPosts, previousPosts },
   };
 }
 
