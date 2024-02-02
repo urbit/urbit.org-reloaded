@@ -3,6 +3,24 @@
 @import "@urbit/fdn-design-system/styles/markdown";
 @import "@urbit/fdn-design-system/styles/prism";
 
+.grn {
+  --black: #141A14;
+  --white: #F9FFF9;
+  --gray: #5A735A;
+  --tint: #383C38;
+  --lite: #F5FFF5;
+  --brite: #AAE68C;
+}
+
+.grn-light {
+  --black: #EBFFEB;
+  --white: #141A14;
+  --gray: #8EC075;
+  --tint: #D6DFD6;
+  --lite: #383C38;
+  --brite: #546A54;
+}
+
 :root {
   @apply grn-light prism-light;
 }
