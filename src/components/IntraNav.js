@@ -22,7 +22,7 @@ const sites = [
   {
     title: "Roadmap",
     href: "https://roadmap.urbit.org",
-    theme: "mos-light",
+    theme: "red-light",
   },
   {
     title: "Network Explorer ↗",
