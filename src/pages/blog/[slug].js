@@ -48,7 +48,7 @@ export default function Post({ post, markdown, nextPosts, previousPosts }) {
     <Container>
       <Head>
         <title>{post.title} • Blog • urbit.org</title>
-        {Meta(post)}
+        {Meta(post, false, true)}
       </Head>
       <IntraNav />
       <Main responsiveSpace singleColumn>
