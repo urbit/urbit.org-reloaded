@@ -9,8 +9,6 @@ export default function Home({ search }) {
   const post = {
     title: "Urbit",
     description: "A clean-slate OS and network for the 21st century.",
-    image:
-      "https://storage.googleapis.com/media.urbit.org/site/opengraph/urbit.png",
   };
 
   return (
