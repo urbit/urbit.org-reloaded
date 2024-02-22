@@ -39,6 +39,14 @@
   @apply grn prism-dark;
 }
 
+*:not(.markdown) p a:not(.btn) {
+  @apply underline;
+}
+
+a {
+  @apply decoration-1 underline-offset-4;
+}
+
 .markdown h1,
 .markdown h2,
 .markdown h3 {

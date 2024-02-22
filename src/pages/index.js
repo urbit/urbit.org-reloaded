@@ -1,11 +1,27 @@
 import React from "react";
 import Head from "next/head";
-import { Container, Main } from "@urbit/fdn-design-system";
+import Link from "next/link";
+import classnames from "classnames";
+import { Container, Main, Section, FatBlock } from "@urbit/fdn-design-system";
 import IntraNav from "../components/IntraNav";
 import Footer from "../components/Footer";
 import Meta from "../components/Meta";
+import Org from "../components/ecosystem/Org";
 
-export default function Home({ search }) {
+function CTAs({ className, links, dark = false }) {
+  const color = classnames({ "btn-dark": dark, "btn-light": !dark });
+  return (
+    <div className={"flex flex-wrap flex-row gap-2 " + className}>
+      {links.map((link) => (
+        <Link className={`btn ${color}`} href={link.url} key={link.label}>
+          {link.label}
+        </Link>
+      ))}
+    </div>
+  );
+}
+
+export default function Home({}) {
   const post = {
     title: "Urbit",
     description: "A clean-slate OS and network for the 21st century.",
@@ -18,15 +34,242 @@ export default function Home({ search }) {
         {Meta(post, false, true)}
       </Head>
       <IntraNav />
-      <Main singleColumn>
-        <h1 className="h0 text-brite mt-8 mb-64">Leave the internet behind</h1>
-        <hr className="hr-horizontal border-brite" />
-        <section divider>
-          <h1 className="h1 text-brite mb-24">
-            Urbit is a new kind of computer that you can own completely in ways
-            that matter: networking, identity, & data.
+      <Main className="text-brite" singleColumn>
+        <h1 className="h0 heading mt-8 mb-64">
+          Welcome to the sovereign internet.
+        </h1>
+
+        <Section divider>
+          <h1 className="h1">
+            Build and use any application on your own personal server.
           </h1>
-        </section>
+          <div className="body-lg grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="flex flex-col justify-between bg-brite rounded-lg p-4">
+              <h3 className="text-black h-[6.5em] overflow-hidden">
+                Leave the centralized internet behind. Run applications the
+                sovereign way.
+              </h3>
+              <Link
+                className="btn bg-black text-brite hover:text-lite w-min"
+                href=""
+              >
+                Join the network
+              </Link>
+            </div>
+            <div className="flex flex-col justify-between bg-brite rounded-lg p-4">
+              <h3 className="text-black h-[6.5em] overflow-hidden">
+                Make your application sovereign with personal servers for you
+                and your community.
+              </h3>
+              <Link
+                className="btn bg-black text-brite hover:text-lite w-min"
+                href=""
+              >
+                Build on Urbit
+              </Link>
+            </div>
+          </div>
+        </Section>
+
+        <Section divider>
+          <h2 className="h2">Ecosystem</h2>
+          <p className="h1">
+            With over 100 applications and partners, Urbit is one of the top 15
+            and fastest growing developer ecosystems with over 3x user growth
+            year-over-year.
+          </p>
+          <div className="body-lg grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Org
+              title="Tlon"
+              description="The first developer of Urbit. Their work continues to maintain core infrastructure development in addition to designing products for communities on the network."
+              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon.png"
+              slug="tlon"
+              extended
+            />
+            <Org
+              title="Native Planet"
+              description="Native Planet builds Urbit-centric hardware and software that simplifies sovereign self hosting and ship management."
+              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/nativeplanet2.png"
+              slug="nativeplanet"
+              extended
+            />
+            <Org
+              title="Zorp"
+              description="We assure critical computation using zero-knowledge proofs."
+              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/zorp.jpeg"
+              slug="zorp"
+              extended
+            />
+            <Org
+              title="~tirrel corp."
+              description="Tirrel Corporation is an Urbit product studio."
+              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/Tirrel%20Corp%20Logo.png"
+              slug="tirrel"
+              extended
+            />
+          </div>
+        </Section>
+
+        <Section divider>
+          <h2 className="h2">A New Compute Paradigm</h2>
+          <p className="h1">
+            <span className="font-bold">
+              What if infrastructure got so good it simply disappeared?
+            </span>
+            Computing has evolved to become smaller and more virtual. With
+            Urbit, your computer is entirely self-contained, digital, and
+            cryptographic.
+          </p>
+
+          <div
+            className="w-full !my-16 md:!my-20 lg:!my-24"
+            style={{ height: "calc(100vw * 0.4)" }}
+          >
+            <div
+              className="h-full bg-brite"
+              style={{
+                WebkitMaskImage: "url(/images/compute-paradigm.svg)",
+                WebkitMaskSize: "100% 100%",
+                WebkitMaskRepeat: "no-repeat",
+                maskImage: "url(/images/compute-paradigm.svg)",
+                maskSize: "100% 100%",
+                maskRepeat: "no-repeat",
+              }}
+            />
+          </div>
+
+          <FatBlock className="body-lg border border-brite rounded-lg">
+            <div className="h1 p-4 border-b">
+              Why run applications on a personal server?
+            </div>
+            <table>
+              <tbody>
+                <tr className="border-b">
+                  <td className="p-4 border-r">
+                    <p>Control & Ownership </p>
+                    <p className="text-gray">
+                      Full command over application environments and data.
+                    </p>
+                  </td>
+                  <td className="p-4">
+                    <p>Privacy & Security </p>
+                    <p className="text-gray">
+                      Decentralizes data storage, enhancing data
+                      confidentiality.
+                    </p>
+                  </td>
+                </tr>
+                <tr className="border-b">
+                  <td className="p-4 border-r">
+                    <p>Reduced Platform Risk </p>
+                    <p className="text-gray">
+                      Avoids third-party policy risks, ensuring continuous
+                      operation.
+                    </p>
+                  </td>
+                  <td className="p-4">
+                    <p>Cost Predictability </p>
+                    <p className="text-gray">
+                      Fixed hardware costs with no hidden fees.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="p-4 border-r">
+                    <p>Network Resilience </p>
+                    <p className="text-gray">
+                      Distributed servers prevent single points of failure.
+                    </p>
+                  </td>
+                  <td className="p-4">
+                    <p>Sixth Reason </p>
+                    <p className="text-gray">
+                      Can we get a sixth reason to even out the columns?
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </FatBlock>
+        </Section>
+
+        <Section className="body-lg" divider narrow loose>
+          <h2 className="h2">Contact</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            convallis finibus tellus ut faucibus. Aenean luctus sapien vel
+            turpis gravida, eget feugiat metus ornare.
+          </p>
+
+          <Section>
+            <h2 className="h2">Follow</h2>
+            <CTAs
+              links={[
+                { label: "Twitter", url: "https://twitter.com/urbit" },
+                { label: "Instagram", url: "https://instagram.com/urbit" },
+                {
+                  label: "YouTube",
+                  url: "https://www.youtube.com/channel/UCNYIS9_SktINCC9yqO4CFZw",
+                },
+                { label: "GitHub", url: "https://github.com/urbit" },
+              ]}
+            />
+          </Section>
+
+          <Section>
+            <h2 className="h2">Boot and join us:</h2>
+            <Link
+              className="btn btn-light"
+              href="https://urbit.org/groups/~bitbet-bolbel/urbit-community"
+            >
+              Urbit Community
+            </Link>
+          </Section>
+
+          <Section>
+            <h2 className="h2">Subscribe</h2>
+            <Link
+              className="btn btn-light"
+              href="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;id=be143888d2"
+            >
+              Urbit Newsletter
+            </Link>
+          </Section>
+
+          <Section>
+            <h2 className="h2">Email</h2>
+            <p>
+              <Link
+                className="hover:text-lite"
+                href="mailto: support@urbit.org"
+              >
+                support@urbit.org
+              </Link>
+              <br />
+              <Link className="hover:text-lite" href="mailto: grants@urbit.org">
+                grants@urbit.org
+              </Link>
+              <br />
+              <Link
+                className="hover:text-lite"
+                href="mailto: assembly@urbit.org"
+              >
+                assembly@urbit.org
+              </Link>
+              <br />
+              <Link
+                className="hover:text-lite"
+                href="mailto: newsletter@urbit.org"
+              >
+                newsletter@urbit.org
+              </Link>
+              <br />
+              <Link className="hover:text-lite" href="mailto: press@urbit.org">
+                press@urbit.org
+              </Link>
+            </p>
+          </Section>
+        </Section>
       </Main>
       <Footer />
     </Container>
