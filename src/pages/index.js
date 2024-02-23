@@ -142,7 +142,7 @@ export default function Home({}) {
             <div className="h1 p-4 border-b">
               Why run applications on a personal server?
             </div>
-            <table>
+            <table className="w-full">
               <tbody>
                 <tr className="border-b">
                   <td className="p-4 border-r">
