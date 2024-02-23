@@ -6,37 +6,22 @@ const data = [
     {
       title: "Urbit",
       links: [
-        {
-          title: "Home",
-          href: "/",
-        },
-        { title: "Get Started", href: "/getting-started" },
-        {
-          title: "Overview",
-          href: "/overview",
-        },
-        {
-          title: "Ecosystem",
-          href: "/ecosystem",
-        },
-        {
-          title: "Grants",
-          href: "/grants",
-        },
-        {
-          title: "Events",
-          href: "/events",
-        },
-        {
-          title: "Blog",
-          href: "/blog",
-        },
+        { title: "Home", href: "/" },
+        { title: "Start", href: "/start" },
+        { title: "Overview", href: "/overview" },
+        { title: "Ecosystem", href: "/ecosystem" },
+        { title: "Grants", href: "/grants" },
+        { title: "Events", href: "/events" },
+        { title: "Blog", href: "/blog" },
       ],
     },
     {
       title: " ",
       links: [
-        { title: "GitHub", href: "https://github.com/urbit" },
+        {
+          title: "GitHub",
+          href: "https://github.com/urbit",
+        },
         {
           title: "Airlock APIs",
           href: "https://github.com/urbit/awesome-urbit#http-apis-airlock",
@@ -53,7 +38,10 @@ const data = [
           title: "Issue Tracker",
           href: "https://github.com/urbit/urbit/issues",
         },
-        { title: "Whitepaper", href: "https://media.urbit.org/whitepaper.pdf" },
+        {
+          title: "Whitepaper",
+          href: "https://media.urbit.org/whitepaper.pdf",
+        },
       ],
     },
   ],
