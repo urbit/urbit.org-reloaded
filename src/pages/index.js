@@ -6,6 +6,7 @@ import { Container, Main, Section, FatBlock } from "@urbit/fdn-design-system";
 import IntraNav from "../components/IntraNav";
 import Footer from "../components/Footer";
 import Meta from "../components/Meta";
+import NewsletterSignup from "../components/NewsletterSignup";
 import Org from "../components/ecosystem/Org";
 
 function CTAs({ className, links, dark = false }) {
@@ -227,13 +228,8 @@ export default function Home({}) {
           </Section>
 
           <Section>
-            <h2 className="h2">Subscribe</h2>
-            <Link
-              className="btn btn-light"
-              href="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;id=be143888d2"
-            >
-              Urbit Newsletter
-            </Link>
+            <h2 className="h2">Urbit Newsletter</h2>
+            <NewsletterSignup />
           </Section>
 
           <Section>
