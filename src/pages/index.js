@@ -83,28 +83,28 @@ export default function Home({}) {
             <Org
               title="Tlon"
               description="The first developer of Urbit. Their work continues to maintain core infrastructure development in addition to designing products for communities on the network."
-              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon.png"
+              image="https://storage.googleapis.com/media.urbit.org/assembly/Tlon.svg"
               slug="tlon"
               extended
             />
             <Org
               title="Native Planet"
               description="Native Planet builds Urbit-centric hardware and software that simplifies sovereign self hosting and ship management."
-              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/nativeplanet2.png"
+              image="https://storage.googleapis.com/media.urbit.org/assembly/native-planet-logo.svg"
               slug="nativeplanet"
               extended
             />
             <Org
               title="Zorp"
               description="We assure critical computation using zero-knowledge proofs."
-              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/zorp.jpeg"
+              image="https://storage.googleapis.com/media.urbit.org/assembly/zorp-logo.svg"
               slug="zorp"
               extended
             />
             <Org
               title="~tirrel corp."
               description="Tirrel Corporation is an Urbit product studio."
-              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/Tirrel%20Corp%20Logo.png"
+              image="https://storage.googleapis.com/media.urbit.org/assembly/tirrel-logo.svg"
               slug="tirrel"
               extended
             />
