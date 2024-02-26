@@ -7,8 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prebuild": "npm run glossary",
-    "glossary": "node src/lib/buildGlossary.js"
+    "prebuild": "npm run glossary && npm run overview",
+    "glossary": "node src/lib/buildGlossary.js",
+    "overview": "node src/lib/buildPageTree overview weight"
   },
   "dependencies": {
     "@docsearch/js": "^3.5.2",
