@@ -55,7 +55,7 @@ Clack is an IPC Library for JS for interfacing with Kahn. Why is this useful? We
 3. As a JS Dev, I need to be able to rely on the client to jam/newt encode my input, so that I can continue using objects/methods in my code
 
 ## Engineering Design
-# image 1
+![Ocean](https://storage.googleapis.com/media.urbit.org/grants/Archetype-1.png)
 
 ## Golem - Design
 Golem is a CLI for creating projects, managing dependencies, running a test env, and publishing your app. It uses a templating system to create new projects and add scaffolding to existing ones, emphasizing IAC in order to preserve consistency and allow teams to iterate on best practices for common activities in an Urbit app. It manages both code dependencies (think /lib/mydep.Hoon) as well as desk dependencies. The structure of the projects and test envs are included in the engineering designs of this section, as well as a diagram of which low-level interactions are handled at each step.
@@ -85,12 +85,12 @@ Once we complete the user stories for setting up the project (react/gall) and en
 
 ## Engineering Design
 Here is a model of the project and test env structure of golem:
-# image 2
+![Ocean](https://storage.googleapis.com/media.urbit.org/grants/Archetype-1.png)
 
 This diagram shows what low-level operations are run on your project or test fleet, when using the commands `create`, `serve`, and `deploy` respectively:
-# image 3
+![Ocean](https://storage.googleapis.com/media.urbit.org/grants/archetype-3.png)
 Ultimately, golem is the place from where you run the unix-side SDLC for an Urbit app (as shown above):
-# image 4
+![Ocean](https://storage.googleapis.com/media.urbit.org/grants/archetype-4.png)
 
 # UI/UX Design
 - NA
