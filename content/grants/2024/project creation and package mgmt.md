@@ -85,7 +85,7 @@ Once we complete the user stories for setting up the project (react/gall) and en
 
 ## Engineering Design
 Here is a model of the project and test env structure of golem:
-![Ocean](https://storage.googleapis.com/media.urbit.org/grants/Archetype-1.png)
+![Ocean](https://storage.googleapis.com/media.urbit.org/grants/archetype-2.png)
 
 This diagram shows what low-level operations are run on your project or test fleet, when using the commands `create`, `serve`, and `deploy` respectively:
 ![Ocean](https://storage.googleapis.com/media.urbit.org/grants/archetype-3.png)
