@@ -205,6 +205,7 @@ export async function getStaticProps() {
   let upcomingEvents = [];
   let ongoingEvents = [];
   let pastEvents = [];
+  let futureEvents = [];
   const now = DateTime.now();
 
   events.forEach((e) => {
