@@ -6,13 +6,13 @@ export default function GrantStatus(post) {
   const open = !canceled && !completed && post?.extra?.assignee?.[0] === "";
 
   if (canceled) {
-    return <span className="btn bg-gray text-tint">Canceled</span>;
+    return <span className="btn bg-tertiary text-secondary">Canceled</span>;
   }
   if (completed) {
-    return <span className="btn bg-gray text-tint">Completed</span>;
+    return <span className="btn bg-tertiary text-secondary">Completed</span>;
   }
   if (open) {
-    return <span className="btn bg-brite text-gray">Open</span>;
+    return <span className="btn bg-primary text-surface">Open</span>;
   }
-  return <span className="btn bg-gray text-brite">In Progress</span>;
+  return <span className="btn bg-secondary text-tertiary">In Progress</span>;
 }

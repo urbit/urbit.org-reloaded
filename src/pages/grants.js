@@ -42,40 +42,22 @@ function GrantCard(post) {
   const { title, date, taxonomies, extra, slug } = post;
   const { status } = post;
 
-  const bg =
-    (status === "open" ? "bg-brite" : false) ||
-    (status === "wip" ? "bg-gray" : "bg-tint");
-  const btn =
-    (status === "open" ? "bg-gray text-brite" : false) ||
-    (status === "wip" ? "bg-tint text-gray" : "bg-gray text-tint");
-  const text =
-    (status === "open" ? "text-tint" : false) ||
-    (status === "wip" ? "text-lite" : "text-lite");
-  const bgType =
-    (status === "open" ? "bg-gray" : false) ||
-    (status === "wip" ? "bg-brite" : "bg-brite");
-  const textHighlight =
-    (status === "open" ? "text-gray" : false) ||
-    (status === "wip" ? "text-brite" : "text-brite");
-
   return (
     <Link
-      className={`flex flex-col space-y-8 w-full rounded-lg p-4 ${bg}`}
+      className="flex flex-col space-y-8 w-full rounded-lg p-4 bg-container-variant"
       href={path.join("/grants", slug)}
     >
       <div className="body-lg flex justify-between">
         <div>
-          <h2 className={text}>{title}</h2>
-          <p className={textHighlight}>Reward: {extra.reward}</p>
+          <h2 className="text-on-container">{title}</h2>
+          <p className="text-on-container-variant">Reward: {extra.reward}</p>
         </div>
         {new Set(["Bounty", "Proposal", "Apprenticeship"]).has(
           taxonomies.grant_type[0]
         ) && (
-          <div
-            className={`flex items-center justify-center h-[1.1em] aspect-square rounded-lg ml-3.5 ${bgType}`}
-          >
+          <div className="flex items-center justify-center h-[1.1em] aspect-square rounded-lg ml-3.5 bg-on-container">
             <Icon
-              className={`h-4/6 ${bg}`}
+              className={"h-4/6 bg-container-variant"}
               name={taxonomies.grant_type[0]}
               weight="medium"
             />
@@ -83,15 +65,23 @@ function GrantCard(post) {
         )}
       </div>
       {extra.description && (
-        <p className={`body-md my-8 ${text}`}>{extra.description}</p>
+        <p className="body-md my-8 text-on-container-variant">
+          {extra.description}
+        </p>
       )}
       <div className="flex flex-wrap body-md space-x-3.5">
-        <span className={`btn ${btn}`}>{statusLabel(status)}</span>
+        <span className="btn bg-inverse-on-container text-on-container">
+          {statusLabel(status)}
+        </span>
         {taxonomies.grant_type.map((s) => (
-          <span className={`btn ${btn}`}>{s}</span>
+          <span className="btn bg-on-container text-inverse-on-container">
+            {s}
+          </span>
         ))}
         {taxonomies.grant_category.map((s) => (
-          <span className={`btn ${btn}`}>{s}</span>
+          <span className="btn bg-on-container text-inverse-on-container">
+            {s}
+          </span>
         ))}
       </div>
     </Link>
@@ -202,7 +192,7 @@ export default function Grants({ posts, categories, types }) {
         {Meta(post)}
       </Head>
       <IntraNav />
-      <Main className="text-brite" singleColumn>
+      <Main className="text-primary" singleColumn>
         <section>
           <h1 className="h1 mt-12 mb-8 md:mt-16 md:mb-16 lg:mb-20">
             Grants Program
@@ -213,53 +203,62 @@ export default function Grants({ posts, categories, types }) {
             developers.
           </p>
         </section>
-        <Section divider>
+        <Section divider={"border-primary"}>
           <h2 className="h2">Grant Types</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3.5">
             <div className="body-md">
-              <Icon className="h-[1.3em] bg-brite" name="Proposal" />
+              <Icon className="h-[1.3em] bg-primary" name="Proposal" />
               <h3 className="">Proposals</h3>
-              <p className="text-lite">
+              <p className="text-secondary">
                 The main way to get funding for your project. We fund all kinds
                 projects, not strictly technical ones, so don’t hesitate to
                 pitch your idea!
               </p>
               <div className="flex flex-wrap mt-3.5">
-                <Link className="btn btn-light mr-3.5" href="/grants/proposals">
+                <Link
+                  className="btn bg-primary hover:bg-secondary text-surface mr-3.5"
+                  href="/grants/proposals"
+                >
                   Submit a Proposal
                 </Link>
               </div>
             </div>
             <div className="body-md">
-              <Icon className="h-[1.3em] bg-brite" name="Bounty" />
+              <Icon className="h-[1.3em] bg-primary" name="Bounty" />
               <h3 className="">Bounties</h3>
-              <p className="text-lite">
+              <p className="text-secondary">
                 Contracts for work provided by either the Urbit Foundation or
                 from trusted partners in our ecosystem.
               </p>
               <div className="flex flex-wrap">
                 <Link
-                  className="btn btn-light mt-3.5 mr-3.5"
+                  className="btn bg-primary hover:bg-secondary text-surface mt-3.5 mr-3.5"
                   href="/grants/bounties#post-a-bounty"
                 >
                   Post a Bounty
                 </Link>
-                <Link className="btn btn-light mt-3.5" href="/grants/bounties">
+                <Link
+                  className="btn bg-primary hover:bg-secondary text-surface mt-3.5"
+                  href="/grants/bounties"
+                >
                   Learn more
                 </Link>
               </div>
             </div>
             <div className="body-md">
-              <Icon className="h-[1.3em] bg-brite" name="Apprenticeship" />
+              <Icon className="h-[1.3em] bg-primary" name="Apprenticeship" />
               <h3 className="">Apprenticeships</h3>
-              <p className="text-lite">
+              <p className="text-secondary">
                 Practical learning opportunities for new Urbit developers
                 provided by members of the Urbit community. They’re one of the
                 best ways to level up your skills and often lead to full-time
                 jobs.
               </p>
               <div className="flex flex-wrap mt-3.5">
-                <Link className="btn btn-light" href="/grants/apprenticeships">
+                <Link
+                  className="btn bg-primary hover:bg-secondary text-surface"
+                  href="/grants/apprenticeships"
+                >
                   Become an Apprentice
                 </Link>
               </div>
@@ -270,17 +269,21 @@ export default function Grants({ posts, categories, types }) {
           className="scroll-my-[2.75rem] md:scroll-my-[3.75rem]"
           id="view-grants"
         >
-          <hr className="hr-horizontal border-brite" />
+          <hr className="hr-horizontal border-primary" />
           <div className="flex flex-col md:flex-row">
             <div className="md:sticky top-12 md:top-16 py-5 md:py-8 overflow-x-hidden overflow-y-auto sidebar">
-              <div className="flex flex-col type-ui md:pr-5 space-y-5 md:border-r rounded-sm border-gray">
-                <h3 className="text-gray font-semibold">Status:</h3>
+              <div className="flex flex-col type-ui md:pr-5 space-y-5 md:border-r rounded-sm border-primary">
+                <h3 className="font-semibold">Status:</h3>
                 <section className="flex space-x-3.5 md:flex-col md:space-x-0 md:space-y-3.5 overflow-x-auto md:overflow-x-hidden">
                   {["open", "wip", "completed"].map((s) => (
                     <button
                       className={classnames("btn w-min", {
-                        "btn-dark": isOrIsIn(s, status),
-                        "btn-light": !isOrIsIn(s, status),
+                        "bg-primary hover:bg-secondary text-tertiary": isOrIsIn(
+                          s,
+                          status
+                        ),
+                        "bg-tertiary hover:bg-secondary text-primary":
+                          !isOrIsIn(s, status),
                       })}
                       onClick={() => push(pushOrDropQuery("status", status, s))}
                     >
@@ -289,15 +292,19 @@ export default function Grants({ posts, categories, types }) {
                   ))}
                 </section>
                 <div>
-                  <hr className="hr-horizontal border-gray my-2.5" />
-                  <h3 className="text-gray font-semibold">Programs:</h3>
+                  <hr className="hr-horizontal border-primary my-2.5" />
+                  <h3 className="font-semibold">Programs:</h3>
                 </div>
                 <section className="flex space-x-3.5 md:flex-col md:space-x-0 md:space-y-3.5 overflow-x-auto">
                   {types.map((t) => (
                     <button
                       className={classnames("btn w-fit space-x-[0.25em]", {
-                        "btn-dark": isOrIsIn(t, type),
-                        "btn-light": !isOrIsIn(t, type),
+                        "bg-primary hover:bg-secondary text-tertiary": isOrIsIn(
+                          t,
+                          type
+                        ),
+                        "bg-tertiary hover:bg-secondary text-primary":
+                          !isOrIsIn(t, type),
                       })}
                       onClick={() => push(pushOrDropQuery("type", type, t))}
                     >
@@ -305,8 +312,8 @@ export default function Grants({ posts, categories, types }) {
                       {["Bounty", "Proposal", "Apprenticeship"].includes(t) && (
                         <Icon
                           className={classnames("h-[1em]", {
-                            "bg-brite": isOrIsIn(t, type),
-                            "bg-gray": !isOrIsIn(t, type),
+                            "bg-tertiary": isOrIsIn(t, type),
+                            "bg-primary": !isOrIsIn(t, type),
                           })}
                           name={t}
                         />
@@ -316,15 +323,19 @@ export default function Grants({ posts, categories, types }) {
                   ))}
                 </section>
                 <div>
-                  <hr className="hr-horizontal border-gray my-2.5" />
-                  <h3 className="text-gray font-semibold">Work categories:</h3>
+                  <hr className="hr-horizontal border-primary my-2.5" />
+                  <h3 className="font-semibold">Work categories:</h3>
                 </div>
                 <section className="flex space-x-3.5 md:flex-col md:space-x-0 md:space-y-3.5 overflow-x-auto">
                   {categories.map((c) => (
                     <button
                       className={classnames("btn w-min", {
-                        "btn-dark": isOrIsIn(c, category),
-                        "btn-light": !isOrIsIn(c, category),
+                        "bg-primary hover:bg-secondary text-tertiary": isOrIsIn(
+                          c,
+                          category
+                        ),
+                        "bg-tertiary hover:bg-secondary text-primary":
+                          !isOrIsIn(c, category),
                       })}
                       onClick={() =>
                         push(pushOrDropQuery("category", category, c))
@@ -336,15 +347,15 @@ export default function Grants({ posts, categories, types }) {
                 </section>
               </div>
             </div>
-            <hr className="block md:hidden hr-horizontal border-gray" />
+            <hr className="block md:hidden hr-horizontal border-primary" />
             <div className="flex flex-col flex-1 md:pl-5 space-y-5 py-5 md:py-8">
-              <p className="text-gray type-ui">
+              <p className="text-secondary type-ui">
                 Showing {filteredPosts.length} grants
                 {allCount > filteredPosts.length && (
                   <>
                     {" "}
                     <button
-                      className="text-brite"
+                      className="text-primary"
                       onClick={() => {
                         push({ status: status });
                       }}

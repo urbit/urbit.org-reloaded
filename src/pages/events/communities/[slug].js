@@ -28,21 +28,24 @@ export default function Community({ post, markdown }) {
       </Head>
       <IntraNav />
       <Main responsiveSpace singleColumn>
-        <div className="flex text-brite mt-12 md:mt-16">
+        <div className="flex text-primary mt-12 md:mt-16">
           <img
             className="object-cover aspect-square rounded-md w-1/3"
             src={post.image}
           />
           <div className="flex flex-col justify-between pl-5 md:pl-8 lg:pl-16">
             <h1 className="h1">{post.title}</h1>
-            <div className="flex flex-row flex-wrap xs:flex-col body-md">
+            <div className="flex flex-row flex-wrap xs:flex-col body-md gap-1.5">
               {post?.links?.map(({ label, url }) => (
-                <Link className="btn btn-light w-fit mt-1.5 mr-1.5" href={url}>
+                <Link
+                  className="btn bg-primary hover:bg-secondary text-surface w-fit"
+                  href={url}
+                >
                   {label}
                 </Link>
               ))}
               {post?.group && (
-                <span className="btn bg-gray text-brite w-fit mt-1.5 mr-1.5">
+                <span className="btn bg-tertiary text-primary w-fit">
                   {post.group}
                 </span>
               )}

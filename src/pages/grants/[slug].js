@@ -36,27 +36,28 @@ export default function Event({ post, markdown, match }) {
       <IntraNav />
       <Main responsiveSpace singleColumn>
         <Section className="mt-12 md:mt-16">
-          <div className="h1 text-brite">
+          <div className="h1 text-primary">
             <h1 className="mb-8 md:mb-16 lg:mb-20">{post.title}</h1>
             {post?.extra?.description && <p>{post.extra.description} </p>}
           </div>
-          <div className="body-md text-gray">
+          <div className="body-md text-secondary">
             {post?.date && <p>{formatDate(generateDisplayDate(post.date))}</p>}
             {post?.extra?.reward && (
               <p>
-                Reward: <span className="text-brite">{post.extra.reward}</span>
+                Reward:{" "}
+                <span className="text-primary">{post.extra.reward}</span>
               </p>
             )}
             {post?.extra?.grant_id && (
               <p>
-                ID: <span className="text-brite">{post.extra.grant_id}</span>
+                ID: <span className="text-primary">{post.extra.grant_id}</span>
               </p>
             )}
             {post?.extra?.assignee?.[0]?.length > 0 && (
               <p>
                 {"Grantee(s): "}
                 {post.extra.assignee.map((p, i) => (
-                  <span className="text-brite">{i > 0 ? `, ${p}` : p}</span>
+                  <span className="text-primary">{i > 0 ? `, ${p}` : p}</span>
                 ))}
               </p>
             )}
@@ -64,7 +65,7 @@ export default function Event({ post, markdown, match }) {
               <p>
                 {"Champion(s): "}
                 {post.extra.champion.map((p, i) => (
-                  <span className="text-brite">{i > 0 ? `, ${p}` : p}</span>
+                  <span className="text-primary">{i > 0 ? `, ${p}` : p}</span>
                 ))}
               </p>
             )}
@@ -73,7 +74,7 @@ export default function Event({ post, markdown, match }) {
             <div className="body-md">
               <span>Deliverable: </span>
               <Link
-                className="btn btn-light"
+                className="btn bg-primary hover:bg-secondary text-surface"
                 href={path.join(
                   "/ecosystem/apps",
                   match?.data?.title?.toLowerCase()
@@ -86,14 +87,14 @@ export default function Event({ post, markdown, match }) {
           <div className="body-md space-x-3.5">
             <GrantStatus {...post} />
             {post.taxonomies.grant_type.map((type) => (
-              <span className="btn  text-tint bg-gray">{type}</span>
+              <span className="btn text-secondary bg-tertiary">{type}</span>
             ))}
             {post.taxonomies.grant_category.map((category) => (
-              <span className="btn  text-tint bg-gray">{category}</span>
+              <span className="btn text-secondary bg-tertiary">{category}</span>
             ))}
           </div>
         </Section>
-        <Section className="markdown layout-narrow" divider>
+        <Section className="markdown layout-narrow" divider={"border-primary"}>
           <Markdown.render content={JSON.parse(markdown)} />
         </Section>
       </Main>

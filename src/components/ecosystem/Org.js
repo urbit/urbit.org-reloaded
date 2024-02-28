@@ -15,23 +15,25 @@ export default function Org({
     <Link href={path.join("/ecosystem", "orgs", slug)}>
       <div
         className={classnames(
-          "relative flex flex-col aspect-square bg-brite p-2 sm:p-4",
+          "relative flex flex-col aspect-square bg-container p-2 sm:p-4",
           { "rounded-xl": !extended, "rounded-t-xl": extended },
           className
         )}
       >
-        {!extended && <h3 className="h3 absolute text-black">{title}</h3>}
+        {!extended && (
+          <h3 className="h3 absolute text-on-container">{title}</h3>
+        )}
         <div className="flex-1 flex text-center items-center">
           <img className="w-1/2 m-auto" src={image} />
         </div>
       </div>
       {extended && (
-        <div className="bg-tint rounded-b-xl p-2 sm:p-4">
-          <h3 className="h2 text-brite mb-2 line-clamp-1 text-ellipsis break-all">
+        <div className="bg-container rounded-b-xl p-2 sm:p-4 border-t border-on-container">
+          <h3 className="h2 text-on-container mb-2 line-clamp-1 text-ellipsis break-all">
             {title}
           </h3>
           <div className="hidden xs:block">
-            <p className="body-md text-lite h-[3.9em] line-clamp-3 text-ellipsis overflow-hidden">
+            <p className="body-md text-on-container-variant h-[3.9em] line-clamp-3 text-ellipsis overflow-hidden">
               {description}
             </p>
           </div>

@@ -15,10 +15,10 @@ export default function NotFound(props) {
       </Head>
       <IntraNav />
       <Main singleColumn>
-        <h1 className="h0 text-brite mt-4 mb-16 sm:mb-20 md:mb-24 lg:mb-32">
+        <h1 className="h0 text-primary mt-4 mb-16 sm:mb-20 md:mb-24 lg:mb-32">
           404
         </h1>
-        <p className="text-brite text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+        <p className="text-primary text-xl sm:text-2xl md:text-3xl lg:text-4xl">
           It looks like nothing is here.
         </p>
       </Main>

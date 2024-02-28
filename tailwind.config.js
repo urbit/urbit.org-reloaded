@@ -18,4 +18,19 @@ module.exports = {
       },
     },
   },
+  theme: {
+    extend: {
+      colors: {
+        surface: "var(--surface)",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        tertiary: "var(--tertiary)",
+        container: "var(--container)",
+        "container-variant": "var(--container-variant)",
+        "on-container": "var(--on-container)",
+        "inverse-on-container": "var(--inverse-on-container)",
+        "on-container-variant": "var(--on-container-variant)",
+      },
+    },
+  },
 };

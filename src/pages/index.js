@@ -9,12 +9,15 @@ import Meta from "../components/Meta";
 import NewsletterSignup from "../components/NewsletterSignup";
 import Org from "../components/ecosystem/Org";
 
-function CTAs({ className, links, dark = false }) {
-  const color = classnames({ "btn-dark": dark, "btn-light": !dark });
+function CTAs({ className, links }) {
   return (
     <div className={"flex flex-wrap flex-row gap-2 " + className}>
       {links.map((link) => (
-        <Link className={`btn ${color}`} href={link.url} key={link.label}>
+        <Link
+          className="btn bg-primary hover:bg-secondary text-surface"
+          href={link.url}
+          key={link.label}
+        >
           {link.label}
         </Link>
       ))}
@@ -35,35 +38,35 @@ export default function Home({}) {
         {Meta(post, false, true)}
       </Head>
       <IntraNav />
-      <Main className="text-brite" singleColumn>
+      <Main className="text-primary" singleColumn>
         <h1 className="h0 heading mt-8 mb-64">
           Welcome to the sovereign internet.
         </h1>
 
-        <Section divider>
+        <Section divider={"border-primary"}>
           <h1 className="h1">
             Build and use any application on your own personal server.
           </h1>
           <div className="body-lg grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="flex flex-col justify-between bg-brite rounded-lg p-4">
-              <h3 className="text-black h-[6.5em] overflow-hidden">
+            <div className="flex flex-col justify-between bg-container rounded-lg p-4">
+              <h3 className="text-on-container h-[6.5em] overflow-hidden">
                 Leave the centralized internet behind. Run applications the
                 sovereign way.
               </h3>
               <Link
-                className="btn bg-black text-brite hover:text-lite w-min"
+                className="btn bg-on-container text-inverse-on-container hover:bg-on-container-variant w-min"
                 href=""
               >
                 Join the network
               </Link>
             </div>
-            <div className="flex flex-col justify-between bg-brite rounded-lg p-4">
-              <h3 className="text-black h-[6.5em] overflow-hidden">
+            <div className="flex flex-col justify-between bg-container rounded-lg p-4">
+              <h3 className="text-on-container h-[6.5em] overflow-hidden">
                 Make your application sovereign with personal servers for you
                 and your community.
               </h3>
               <Link
-                className="btn bg-black text-brite hover:text-lite w-min"
+                className="btn bg-on-container text-inverse-on-container hover:bg-on-container-variant w-min"
                 href=""
               >
                 Build on Urbit
@@ -72,7 +75,7 @@ export default function Home({}) {
           </div>
         </Section>
 
-        <Section divider>
+        <Section divider={"border-primary"}>
           <h2 className="h2">Ecosystem</h2>
           <p className="h1">
             With over 100 applications and partners, Urbit is one of the top 15
@@ -111,7 +114,7 @@ export default function Home({}) {
           </div>
         </Section>
 
-        <Section divider>
+        <Section divider={"border-primary"}>
           <h2 className="h2">A New Compute Paradigm</h2>
           <p className="h1">
             <span className="font-bold">
@@ -127,7 +130,7 @@ export default function Home({}) {
             style={{ height: "calc(100vw * 0.4)" }}
           >
             <div
-              className="h-full bg-brite"
+              className="h-full bg-primary"
               style={{
                 WebkitMaskImage: "url(/images/compute-paradigm.svg)",
                 WebkitMaskSize: "100% 100%",
@@ -139,7 +142,7 @@ export default function Home({}) {
             />
           </div>
 
-          <FatBlock className="body-lg border border-brite rounded-lg">
+          <FatBlock className="body-lg border border-primary rounded-lg">
             <div className="h1 p-4 border-b">
               Why run applications on a personal server?
             </div>
@@ -148,13 +151,13 @@ export default function Home({}) {
                 <tr className="border-b">
                   <td className="p-4 border-r">
                     <p>Control & Ownership </p>
-                    <p className="text-gray">
+                    <p className="text-secondary">
                       Full command over application environments and data.
                     </p>
                   </td>
                   <td className="p-4">
                     <p>Privacy & Security </p>
-                    <p className="text-gray">
+                    <p className="text-secondary">
                       Decentralizes data storage, enhancing data
                       confidentiality.
                     </p>
@@ -163,14 +166,14 @@ export default function Home({}) {
                 <tr className="border-b">
                   <td className="p-4 border-r">
                     <p>Reduced Platform Risk </p>
-                    <p className="text-gray">
+                    <p className="text-secondary">
                       Avoids third-party policy risks, ensuring continuous
                       operation.
                     </p>
                   </td>
                   <td className="p-4">
                     <p>Cost Predictability </p>
-                    <p className="text-gray">
+                    <p className="text-secondary">
                       Fixed hardware costs with no hidden fees.
                     </p>
                   </td>
@@ -178,13 +181,13 @@ export default function Home({}) {
                 <tr>
                   <td className="p-4 border-r">
                     <p>Network Resilience </p>
-                    <p className="text-gray">
+                    <p className="text-secondary">
                       Distributed servers prevent single points of failure.
                     </p>
                   </td>
                   <td className="p-4">
                     <p>Sixth Reason </p>
-                    <p className="text-gray">
+                    <p className="text-secondary">
                       Can we get a sixth reason to even out the columns?
                     </p>
                   </td>
@@ -194,7 +197,7 @@ export default function Home({}) {
           </FatBlock>
         </Section>
 
-        <Section className="body-lg" divider narrow loose>
+        <Section className="body-lg" divider={"border-primary"} narrow loose>
           <h2 className="h2">Contact</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
@@ -220,7 +223,7 @@ export default function Home({}) {
           <Section>
             <h2 className="h2">Boot and join us:</h2>
             <Link
-              className="btn btn-light"
+              className="btn bg-primary hover:bg-secondary text-surface"
               href="https://urbit.org/groups/~bitbet-bolbel/urbit-community"
             >
               Urbit Community
@@ -236,31 +239,37 @@ export default function Home({}) {
             <h2 className="h2">Email</h2>
             <p>
               <Link
-                className="hover:text-lite"
+                className="hover:text-secondary"
                 href="mailto: support@urbit.org"
               >
                 support@urbit.org
               </Link>
               <br />
-              <Link className="hover:text-lite" href="mailto: grants@urbit.org">
+              <Link
+                className="hover:text-secondary"
+                href="mailto: grants@urbit.org"
+              >
                 grants@urbit.org
               </Link>
               <br />
               <Link
-                className="hover:text-lite"
+                className="hover:text-secondary"
                 href="mailto: assembly@urbit.org"
               >
                 assembly@urbit.org
               </Link>
               <br />
               <Link
-                className="hover:text-lite"
+                className="hover:text-secondary"
                 href="mailto: newsletter@urbit.org"
               >
                 newsletter@urbit.org
               </Link>
               <br />
-              <Link className="hover:text-lite" href="mailto: press@urbit.org">
+              <Link
+                className="hover:text-secondary"
+                href="mailto: press@urbit.org"
+              >
                 press@urbit.org
               </Link>
             </p>

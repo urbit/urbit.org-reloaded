@@ -35,15 +35,18 @@ export default function GrantProgramPage({
         {Meta(post)}
       </Head>
       <IntraNav />
-      <Main className="space-y-5 md:space-y-8" singleColumn>
-        <h1 className="h1 text-brite mt-12 md:mt-16">{post.title}</h1>
-        <p className="body-md text-gray">
+      <Main className="space-y-5 md:space-y-8 text-primary" singleColumn>
+        <h1 className="h1 mt-12 md:mt-16">{post.title}</h1>
+        <p className="body-md text-tertiary">
           Last Revision:{" "}
-          <span className="text-brite">
+          <span className="text-primary">
             {formatDate(generateDisplayDate(post.date))}
           </span>
         </p>
-        <Link className="btn btn-light body-md w-fit" href={actionLink}>
+        <Link
+          className="btn bg-primary hover:bg-secondary text-surface body-md w-fit"
+          href={actionLink}
+        >
           {actionText}
         </Link>
         <hr className="hr-horizontal border-brite" />

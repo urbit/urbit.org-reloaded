@@ -39,19 +39,22 @@ export default function Org({ post, markdown }) {
         ]}
         path={router.asPath}
       />
-      <Main className="text-brite" responsiveSpace singleColumn>
+      <Main className="text-primary" responsiveSpace singleColumn>
         <div className="flex">
-          <div className="relative flex items-center aspect-square bg-brite w-1/3 rounded-md">
+          <div className="relative flex items-center aspect-square bg-container w-1/3 rounded-md">
             <img className="w-1/2 m-auto" src={post.image} />
           </div>
           <div className="flex flex-col justify-between pl-5 md:pl-8 lg:pl-16">
             <h1 className="h1">{post.title}</h1>
             <div className="flex flex-col space-y-3.5">
-              <Link className="btn btn-light body-md w-min" href={post.URL}>
+              <Link
+                className="btn bg-primary hover:bg-secondary text-surface body-md w-min"
+                href={post.URL}
+              >
                 Website
               </Link>
               <Link
-                className="btn btn-light body-md w-min"
+                className="btn bg-primary hover:bg-secondary text-surface body-md w-min"
                 href={`https://twitter.com/${post.twitter}`}
               >
                 {`@${post.twitter}`}

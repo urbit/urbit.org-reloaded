@@ -3,40 +3,80 @@
 @import "@urbit/fdn-design-system/styles/markdown";
 @import "@urbit/fdn-design-system/styles/prism";
 
-.grn {
-  --black: #141A14;
-  --white: #F9FFF9;
-  --gray: #5A735A;
-  --tint: #383C38;
-  --lite: #F5FFF5;
-  --brite: #AAE68C;
+.blk {
+  --black: #14140F;
+  --white: #F8F8F8;
+  --gray: #F8F8F8;
+  --tint: #F8F8F8;
+  --lite: #5A5A55;
+  --brite: #14140F;
+
+  --surface: #14140F;
+  --primary: #F8FAF8;
+  --secondary: #C8C8C8;
+  --tertiary: #5A5A55;
+
+  --container: #F8FAF8;
+  --container-variant: #C8C8C8;
+  --on-container: #14140F;
+  --inverse-on-container: #F8FAF8;
+  --on-container-variant: #5A5A55;
 }
 
-.grn-light {
-  --black: #EBFFEB;
-  --white: #141A14;
-  --gray: #8EC075;
-  --tint: #D6DFD6;
-  --lite: #383C38;
-  --brite: #546A54;
+.wit {
+  --black: #F8FAF8;
+  --white: #14140F;
+  --gray: #14140F;
+  --tint: #14140F;
+  --lite: #C8C8C8;
+  --brite: #F8FAF8;
+
+  --surface: #F8FAF8;
+  --primary: #14140F;
+  --secondary: #5A5A55;
+  --tertiary: #C8C8C8;
+
+  --container: #FFFFFF;
+  --container-variant: #C8C8C8;
+  --on-container: #14140F;
+  --inverse-on-container: #FFFFFF;
+  --on-container-variant: #5A5A55;
 }
 
 :root {
-  @apply grn-light prism-light;
+  @apply wit prism-light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    @apply grn prism-dark;
+    @apply blk prism-dark;
   }
 }
 
 :root[theme='light'] {
-  @apply grn-light prism-light;
+  @apply wit prism-light;
 }
 
 :root[theme='dark'] {
-  @apply grn prism-dark;
+  @apply blk prism-dark;
+}
+
+.markdown {
+  @apply grn-light;
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown {
+    @apply grn;
+  }
+}
+
+:root[theme='light'] .markdown {
+  @apply grn-light;
+}
+
+:root[theme='dark'] .markdown {
+  @apply grn;
 }
 
 *:not(.markdown) p a:not(.btn) {
@@ -51,6 +91,10 @@ a {
 .markdown h2,
 .markdown h3 {
   @apply scroll-mt-16 md:scroll-mt-20;
+}
+
+.markdown hr {
+  @apply !border-primary;
 }
 
 .sidebar {

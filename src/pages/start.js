@@ -50,7 +50,7 @@ export default function GetStarted({}) {
         {Meta(post)}
       </Head>
       <IntraNav />
-      <Main className="text-brite" singleColumn>
+      <Main className="text-primary" singleColumn>
         <section>
           <h1 className="h1 mt-12 mb-8 md:mt-16 md:mb-16 lg:mb-20">Start</h1>
           <p className="h1">
@@ -59,7 +59,7 @@ export default function GetStarted({}) {
             <strong>identity</strong>, & <strong>data</strong>.
           </p>
         </section>
-        <Section divider>
+        <Section divider={"border-primary"}>
           <div>
             <h2 className="h2">Hosting</h2>
             <p className="body-lg">Get a hosted Urbit ship in minutes</p>
@@ -75,12 +75,12 @@ export default function GetStarted({}) {
             ))}
           </FatBlock>
         </Section>
-        <Section divider>
+        <Section divider={"border-primary"}>
           <div>
             <h2 className="h2">Self-hosting at home</h2>
             <p className="body-lg">Running your Urbit is easier than ever</p>
           </div>
-          <FatBlock className="flex bg-gray rounded-lg p-4">
+          <FatBlock className="flex bg-container-variant text-on-container rounded-lg p-4">
             <img
               className="aspect-square w-1/3 object-cover mr-4 xs:mr-8 md:mr-16"
               alt=""
@@ -95,7 +95,7 @@ export default function GetStarted({}) {
                   your own Native Planet
                 </p>
                 <Link
-                  className="btn btn-light"
+                  className="btn bg-on-container text-inverse-on-container hover:bg-on-container-variant"
                   href="https://www.nativeplanet.io/"
                 >
                   Find out more
@@ -104,7 +104,7 @@ export default function GetStarted({}) {
             </div>
           </FatBlock>
         </Section>
-        <Section tight divider>
+        <Section tight divider={"border-primary"}>
           <h2 className="h1">Power user guides</h2>
           <p className="body-lg">
             Whether you want to set up your Urbit yourself in the CLI, or find
@@ -113,7 +113,7 @@ export default function GetStarted({}) {
           <p className="body-lg">
             Command Line install
             <Link
-              className="btn btn-light ml-[0.25em]"
+              className="btn bg-primary hover:bg-secondary text-surface ml-[0.25em]"
               href="https://docs.urbit.org/manual/getting-started/self-hosted/cli"
             >
               CLI guide
@@ -122,7 +122,7 @@ export default function GetStarted({}) {
           <p className="body-lg">
             Self-hosting
             <Link
-              className="btn btn-light ml-[0.25em]"
+              className="btn bg-primary hover:bg-secondary text-surface ml-[0.25em]"
               href="https://docs.urbit.org/manual/getting-started/self-hosted/cloud-hosting"
             >
               Cloud hosting guide
@@ -131,7 +131,7 @@ export default function GetStarted({}) {
           <p className="body-lg">
             Using Urbit
             <Link
-              className="btn btn-light ml-[0.25em]"
+              className="btn bg-primary hover:bg-secondary text-surface ml-[0.25em]"
               href="https://docs.urbit.org/manual/getting-started/additional/getting-around"
             >
               Getting around guide

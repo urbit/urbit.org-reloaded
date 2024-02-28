@@ -31,7 +31,7 @@ export default function Event({ post, markdown }) {
       </Head>
       <IntraNav />
       <Main responsiveSpace singleColumn>
-        <Section className="text-brite mt-12 md:mt-16">
+        <Section className="text-primary mt-12 md:mt-16">
           <div>
             <h1 className="h1 mb-8 md:mb-16 lg:mb-20">{post.title}</h1>
             {post.description && <p className="h1">{post.description} </p>}
@@ -45,15 +45,18 @@ export default function Event({ post, markdown }) {
               divider={<span>•</span>}
             />
           </div>
-          <div className="flex flex-wrap body-md">
+          <div className="flex flex-wrap body-md gap-1.5">
             {post?.links?.map(({ label, url }) => (
-              <Link className="btn btn-light w-fit mt-1.5 mr-1.5" href={url}>
+              <Link
+                className="btn bg-primary hover:bg-secondary text-surface w-fit"
+                href={url}
+              >
                 {label}
               </Link>
             ))}
             {post.registration_url && !post.links && (
               <Link
-                className="btn btn-light w-fit mt-1.5 mr-1.5"
+                className="btn bg-primary hover:bg-secondary text-surface w-fit"
                 href={post.registration_url}
               >
                 Register
@@ -61,7 +64,7 @@ export default function Event({ post, markdown }) {
             )}
           </div>
         </Section>
-        <Section className="markdown layout-narrow" divider>
+        <Section className="markdown layout-narrow" divider={"border-primary"}>
           <Markdown.render content={JSON.parse(markdown)} />
         </Section>
       </Main>

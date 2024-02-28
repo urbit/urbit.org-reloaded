@@ -52,13 +52,13 @@ export default function Post({ post, markdown, nextPosts, previousPosts }) {
       </Head>
       <IntraNav />
       <Main responsiveSpace singleColumn>
-        <Section className="text-brite mt-12 md:mt-16">
+        <Section className="text-primary mt-12 md:mt-16">
           <div>
             <h1 className="h1 mb-8 md:mb-16 lg:mb-20">{post.title}</h1>
             <p className="h1">{post.description} </p>
           </div>
         </Section>
-        <Section className="text-brite" divider>
+        <Section className="text-primary" divider={"border-primary"}>
           <div className="flex justify-between body-sm font-semibold">
             <p>{date}</p>
             <div>

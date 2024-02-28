@@ -26,7 +26,7 @@ export default function Blog({ posts, search }) {
         {Meta(post)}
       </Head>
       <IntraNav />
-      <Main className="text-brite" singleColumn>
+      <Main className="text-primary" singleColumn>
         <section>
           <h1 className="h1 mt-12 mb-8 md:mt-16 md:mb-16 lg:mb-20">Blog</h1>
           <p className="h1">
@@ -34,7 +34,7 @@ export default function Blog({ posts, search }) {
             the many people contributing to Urbit.
           </p>
         </section>
-        <Section divider>
+        <Section divider={"border-primary"}>
           <FatBlock>
             <div
               className={

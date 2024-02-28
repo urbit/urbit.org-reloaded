@@ -42,7 +42,7 @@ export default function App({ post, org, markdown }) {
         ]}
         path={router.asPath}
       />
-      <Main className="text-brite" responsiveSpace singleColumn>
+      <Main className="text-primary" responsiveSpace singleColumn>
         <div className="flex">
           <img
             className="aspect-square w-1/3 rounded-md"
@@ -53,7 +53,7 @@ export default function App({ post, org, markdown }) {
           <div className="flex flex-col justify-between pl-5 md:pl-10 lg:pl-[3.75rem]">
             <h1 className="h1">{post.title}</h1>
             <button
-              className="btn btn-light body-md"
+              className="btn bg-primary hover:bg-secondary text-surface body-md"
               onClick={() => navigator.clipboard.writeText(post.shortcode)}
             >
               Copy Shortcode
@@ -63,9 +63,9 @@ export default function App({ post, org, markdown }) {
         <div className="flex flex-col sm:flex-row body-md">
           {post.website && (
             <div className="flex sm:flex-col sm:w-1/3 mr-5 md:mr-10 lg:mr-[3.75rem]">
-              <h3 className="text-gray mr-[0.25em]">Website:</h3>
+              <h3 className="text-tertiary mr-[0.25em]">Website:</h3>
               <Link
-                className="text-lite underline decoration-1 underline-offset-4 line-clamp-1 text-ellipsis break-all"
+                className="text-primary hover:text-secondary underline decoration-1 underline-offset-4 line-clamp-1 text-ellipsis break-all"
                 href={post.website}
               >
                 {post.website}
@@ -74,7 +74,7 @@ export default function App({ post, org, markdown }) {
           )}
           {post.license && (
             <div className="flex sm:flex-col">
-              <h3 className="text-gray mr-[0.25em]">License:</h3>
+              <h3 className="text-tertiary mr-[0.25em]">License:</h3>
               <p className="line-clamp-1 text-ellipsis">{post.license}</p>
             </div>
           )}
@@ -85,34 +85,34 @@ export default function App({ post, org, markdown }) {
         <section className="layout-narrow markdown">
           <Markdown.render content={JSON.parse(markdown)} />
         </section>
-        <Section tight divider>
+        <Section tight divider={"border-primary"}>
           <h2 className="h2">Developer</h2>
           {(org.slug && (
             <FatBlock>
               <OrgCard className="w-1/3" {...org} />
             </FatBlock>
           )) || <p className="body-md">{org.title}</p>}
-          <hr className="hr-horizontal border-brite" />
+          <hr className="hr-horizontal border-primary" />
           <div className="layout-narrow">
-            <FatBlock className="bg-tint body-sm rounded-md p-5">
+            <FatBlock className="bg-tertiary body-sm rounded-md p-5">
               Disclaimer: Applications may not be audited for security and might
               contain malicious code or vulnerabilities that could lead to
               unwanted interaction with your ship. Explore at your own risk.
             </FatBlock>
           </div>
-          <hr className="hr-horizontal border-brite" />
+          <hr className="hr-horizontal border-primary" />
           <Link
-            className="btn btn-light body-md"
+            className="btn bg-primary hover:bg-secondary text-surface body-md"
             href="https://docs.urbit.org/manual/getting-started/additional/installing-applications"
           >
             How to Install an Urbit Application
           </Link>
-          <hr className="hr-horizontal border-brite" />
-          <p className="text-brite body-md">
+          <hr className="hr-horizontal border-primary" />
+          <p className="body-md">
             Have an application you'd like to share publicly through urbit.org?
           </p>
           <Link
-            className="text-lite underline decoration-1 underline-offset-4 body-md"
+            className="text-primary hover:text-secondary underline decoration-1 underline-offset-4 body-md"
             href="https://urbit.org/applications/submit"
           >
             Submit your application

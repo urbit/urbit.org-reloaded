@@ -23,7 +23,7 @@ export default function PostCard({
       target={target}
     >
       <div
-        className={classnames("relative aspect-square w-full bg-gray", {
+        className={classnames("relative aspect-square w-full bg-container", {
           "rounded-lg": small,
           "rounded-t-lg": !small,
         })}
@@ -38,18 +38,18 @@ export default function PostCard({
             src={image}
           />
         )}
-        <h3 className="absolute w-full text-[#F5FFF5] bg-gradient-to-b from-[rgba(0,0,0,0.6)] to-transparent h2 p-4 rounded-t-lg">
+        <h3 className="absolute w-full text-[#F8FAF8] bg-gradient-to-b from-[rgba(0,0,0,0.6)] to-transparent h2 p-4 rounded-t-lg">
           {title}
         </h3>
       </div>
       {!small && (
-        <div className="flex flex-col bg-brite text-gray rounded-b-lg p-4">
+        <div className="flex flex-col bg-container-variant text-on-container rounded-b-lg p-4">
           <p className="h-[5.5em] body-sm line-clamp-4 text-ellipsis">
             {description}
           </p>
           {(date || author || ship) && (
             <div className="">
-              <hr className="hr-horizontal border-gray my-0.5 md:my-2 xl:my-3.5" />
+              <hr className="hr-horizontal border-on-container my-0.5 md:my-2 xl:my-3.5" />
               <div className="flex justify-between h-[2.6em] text-base font-medium">
                 <p className="w-1/2">{formatDate(generateDisplayDate(date))}</p>
                 <div className="break-all">

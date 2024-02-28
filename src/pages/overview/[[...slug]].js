@@ -37,7 +37,7 @@ export default function Overview({ posts, data, markdown }) {
         ]}
         path={router.asPath}
       />
-      <Main className="text-brite" singleColumn>
+      <Main className="text-primary" singleColumn>
         <div>
           <h1 className="h1 mb-8 md:mb-16 lg:mb-20">{data.title}</h1>
           <Section className="markdown layout-narrow">

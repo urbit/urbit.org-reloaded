@@ -56,11 +56,11 @@ function Filter({ className = "", children, filters = [] }) {
   return (
     <>
       {filters.map((f) => (
-        <nav className="flex items-center w-full h-12 nav-space-x text-gray bg-black whitespace-nowrap overflow-x-auto type-ui">
+        <nav className="flex items-center w-full h-12 nav-space-x text-gray whitespace-nowrap overflow-x-auto type-ui">
           <button
             className={classnames("btn border-2", {
-              "border-gray text-brite": filter[f] !== false,
-              "border-brite bg-brite text-gray": filter[f] === false,
+              "border-tertiary text-primary": filter[f] !== false,
+              "border-primary bg-primary text-tertiary": filter[f] === false,
             })}
             onClick={() => toggleFilter(f, false)}
           >
@@ -69,8 +69,8 @@ function Filter({ className = "", children, filters = [] }) {
           {getFilterValues(f).map((v) => (
             <button
               className={classnames("btn border-2 border-brite", {
-                "border-gray text-brite": filter[f] !== v,
-                "border-brite bg-brite text-gray": filter[f] === v,
+                "border-tertiary text-primary": filter[f] !== v,
+                "border-primary bg-primary text-tertiary": filter[f] === v,
               })}
               onClick={() => toggleFilter(f, v)}
             >
@@ -87,7 +87,7 @@ function Filter({ className = "", children, filters = [] }) {
 }
 
 function AppCard({ className, title, description, slug, bgColor, image }) {
-  const bg = !bgColor && "bg-tint";
+  const bg = !bgColor && "bg-container-variant";
   return (
     <Link
       className={classnames("flex flex-col", className)}
@@ -105,10 +105,12 @@ function AppCard({ className, title, description, slug, bgColor, image }) {
           src={image}
         />
       </div>
-      <div className="bg-tint rounded-b-xl p-4">
-        <h3 className="h3 font-semibold line-clamp-1 text-ellipsis">{title}</h3>
+      <div className="bg-container-variant rounded-b-xl p-4">
+        <h3 className="h3 font-semibold text-on-container line-clamp-1 text-ellipsis">
+          {title}
+        </h3>
         <div className="hidden md:block">
-          <p className="h-[3.9em] body-md text-lite line-clamp-3 text-ellipsis">
+          <p className="h-[3.9em] body-md text-on-container-variant line-clamp-3 text-ellipsis">
             {description}
           </p>
         </div>
@@ -132,10 +134,12 @@ function PodcastCard({
       href={path.join("/ecosystem", "podcasts", slug)}
     >
       <img className="aspect-square rounded-t-xl object-cover" src={image} />
-      <div className="bg-tint rounded-b-xl p-4">
-        <h3 className="h3 font-semibold line-clamp-1 text-ellipsis">{title}</h3>
+      <div className="bg-container-variant rounded-b-xl p-4">
+        <h3 className="h3 font-semibold text-on-container line-clamp-1 text-ellipsis">
+          {title}
+        </h3>
         <div className="hidden md:block">
-          <p className="h-[2.6em] body-md text-lite line-clamp-2 text-ellipsis">
+          <p className="h-[2.6em] body-md text-on-container-variant line-clamp-2 text-ellipsis">
             {description}
           </p>
         </div>
@@ -177,8 +181,8 @@ function TalkCard({ className, title, image, url }) {
           </defs>
         </svg>
       </div>
-      <div className="bg-tint p-4 rounded-b-xl">
-        <h3 className="h3 h-[1.3em] line-clamp-1 text-ellipsis">{title}</h3>
+      <div className="bg-container-variant p-4 rounded-b-xl">
+        <h3 className="h3 h-[1.3em] text-on-container line-clamp-1 text-ellipsis">{title}</h3>
       </div>
     </Link>
   );
@@ -198,7 +202,7 @@ function Article({
 
   return (
     <>
-      {divider && <hr className="hr-horizontal border-brite" />}
+      {divider && <hr className="hr-horizontal border-primary" />}
       <Link className="flex h-28 xs:h-36 md:h-44 w-full" href={URL}>
         <img
           className="aspect-square h-full mr-6 lg:mr-16"
@@ -207,13 +211,13 @@ function Article({
         />
         <div className="flex flex-col flex-1 justify-between">
           <div className="flex flex-col">
-            <div className="flex w-full sm:mb-2.5 text-gray body-md">
+            <div className="flex w-full sm:mb-2.5 text-tertiary body-md">
               <p className="w-full sm:w-1/2">{publication}</p>
               <p className="hidden sm:block w-1/2">Author: {author}</p>
             </div>
             <h3 className="h3 h-[2.6em] line-clamp-2 text-ellipsis">{title}</h3>
           </div>
-          <div className="flex w-full text-gray text-gray body-md">
+          <div className="flex w-full text-tertiary body-md">
             <p className="hidden sm:block w-1/2">{type || "Article"}</p>
             <p className="w-full sm:w-1/2">{formatDate(displayDate)}</p>
           </div>
@@ -270,7 +274,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
         ]}
         path={router.asPath}
       />
-      <Main className="text-brite" singleColumn>
+      <Main className="text-primary" singleColumn>
         {type === "overview" && (
           <>
             <section className="">
@@ -281,7 +285,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
                 <strong>identity</strong>, & <strong>data</strong>.
               </p>
             </section>
-            <Section divider>
+            <Section divider={"border-primary"}>
               <h2 className="h2">Apps</h2>
               <FatBlock className="hidden md:grid grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
                 {apps &&
@@ -291,11 +295,14 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
                 {apps &&
                   apps.slice(0, 6).map((props) => <AppCard {...props} />)}
               </FatBlock>
-              <Link className="btn btn-light body-lg" href="/ecosystem/apps">
+              <Link
+                className="btn bg-primary hover:bg-secondary text-surface body-lg"
+                href="/ecosystem/apps"
+              >
                 More apps
               </Link>
             </Section>
-            <Section divider>
+            <Section divider={"border-primary"}>
               <h2 className="h2">Podcasts</h2>
               <Carousel>
                 {podcasts &&
@@ -307,13 +314,13 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
                   ))}
               </Carousel>
               <Link
-                className="btn btn-light body-lg"
+                className="btn bg-primary hover:bg-secondary text-surface body-lg"
                 href="/ecosystem/podcasts"
               >
                 More podcasts
               </Link>
             </Section>
-            <Section divider>
+            <Section divider={"border-primary"}>
               <h2 className="h2">Talks</h2>
               <Carousel>
                 {talks &&
@@ -321,11 +328,14 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
                     <TalkCard className="w-60 sm:w-80 md:w-96" {...props} />
                   ))}
               </Carousel>
-              <Link className="btn btn-light body-lg" href="/ecosystem/talks">
+              <Link
+                className="btn bg-primary hover:bg-secondary text-surface body-lg"
+                href="/ecosystem/talks"
+              >
                 More talks
               </Link>
             </Section>
-            <Section divider>
+            <Section divider={"border-primary"}>
               <h2 className="h2">Companies</h2>
               <FatBlock className="hidden md:grid grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
                 {orgs &&
@@ -335,11 +345,14 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
                 {orgs &&
                   orgs.slice(0, 6).map((props) => <OrgCard {...props} />)}
               </FatBlock>
-              <Link className="btn btn-light body-lg" href="/ecosystem/orgs">
+              <Link
+                className="btn bg-primary hover:bg-secondary text-surface body-lg"
+                href="/ecosystem/orgs"
+              >
                 More companies
               </Link>
             </Section>
-            <Section divider>
+            <Section divider={"border-primary"}>
               <h2 className="h2">Articles & Press</h2>
               {articles &&
                 articles
@@ -348,7 +361,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
                     <Article divider={index > 0} {...props} />
                   ))}
               <Link
-                className="btn btn-light body-lg"
+                className="btn bg-primary hover:bg-secondary text-surface body-lg"
                 href="/ecosystem/articles"
               >
                 More articles & press
@@ -366,7 +379,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
                 <strong>identity</strong>, & <strong>data</strong>.
               </p>
             </section>
-            <Section divider>
+            <Section divider={"border-primary"}>
               <FatBlock className="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
                 {apps && apps.map((props) => <AppCard {...props} />)}
               </FatBlock>
@@ -383,7 +396,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
                 <strong>identity</strong>, & <strong>data</strong>.
               </p>
             </section>
-            <Section divider>
+            <Section divider={"border-primary"}>
               <FatBlock className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
                 {podcasts &&
                   podcasts.map((props) => <PodcastCard {...props} />)}
@@ -401,7 +414,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
                 <strong>identity</strong>, & <strong>data</strong>.
               </p>
             </section>
-            <Section divider>
+            <Section divider={"border-primary"}>
               <FatBlock>
                 <Filter
                   className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-1 lg:gap-6 xl:gap-8"
@@ -423,7 +436,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
                 <strong>identity</strong>, & <strong>data</strong>.
               </p>
             </section>
-            <Section divider>
+            <Section divider={"border-primary"}>
               <FatBlock className="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
                 {orgs && orgs.map((props) => <OrgCard {...props} />)}
               </FatBlock>
@@ -440,7 +453,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
                 <strong>identity</strong>, & <strong>data</strong>.
               </p>
             </section>
-            <Section divider>
+            <Section divider={"border-primary"}>
               <FatBlock>
                 <Filter className="space-y-5" filters={["type"]}>
                   {articles &&

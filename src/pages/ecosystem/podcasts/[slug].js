@@ -39,7 +39,7 @@ export default function Podcast({ post, markdown }) {
         ]}
         path={router.asPath}
       />
-      <Main className="text-brite" responsiveSpace singleColumn>
+      <Main className="text-primary" responsiveSpace singleColumn>
         <div className="flex">
           <img
             className="aspect-square object-cover w-1/3 rounded-md"
@@ -50,7 +50,10 @@ export default function Podcast({ post, markdown }) {
             <h1 className="h1">{post.title}</h1>
             <div className="flex flex-col space-y-2.5">
               {post.links.map((o) => (
-                <Link className="btn btn-light body-md w-min" href={o.url}>
+                <Link
+                  className="btn bg-primary hover:bg-secondary text-surface body-md w-min"
+                  href={o.url}
+                >
                   {o.label}
                 </Link>
               ))}
