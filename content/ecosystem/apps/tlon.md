@@ -1,13 +1,15 @@
 +++
-title = "Groups"
+title = "Tlon"
 shortcode = "~sogryp-dister-dozzod-dozzod/groups"
 license = "MIT"
 image = "https://bootstrap.urbit.org/icon-groups.svg"
 bgColor = "#EFF0F4"
 developer = "Tlon"
 website = "https://github.com/tloncorp/landscape-apps"
-description = "Groups is a decentralized platform that integrates with Talk, Notebook, and Gallery for a full, communal suite of tools."
+description = "Peer-to-peer collaboration for communities of all shapes and sizes"
 +++
+
+Whether you're a team, a publication, or a group of friends, Tlon is an app that provides a few simple basics for communities to shape into something unique to their needs. Get comfortable and compute in peace, an internet of intimate connection.
 
 Start, host, and cultivate communities. Own your communications, organize your resources, and share documents. Groups is a decentralized platform that integrates with Talk, Notebook, and Gallery for a full, communal suite of tools.
 

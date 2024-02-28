@@ -1,15 +1,15 @@
 +++
-title = "rumors"
+title = "Rumors"
 shortcode = "~paldev/rumors"
 developer = "~paldev"
-description = "anonymous gossip from friends of friends"
+description = "Anonymous gossip from friends of friends"
 license = "MIT"
 website = "https://pal.dev/suite/rumors"
 bgColor = "#bb77dd"
 +++
 
-Rumors is an anonymous gossip feed powered by [pals](/applications/~paldev/pals). The more mutuals you have, the more rumors you'll see: messages posted by your pals, and their pals, populate the feed.
+Psst. Did you hear the latest? Rumors is an app so elegant and simple that it could only exist on Urbit. It is an anonymous message board but with an Urbit twist: you’ll only see messages from your pals (Urbit users you’ve added on the %pals app) and pals of pals.
+
+It seems so obvious, and yet it’s an experience available nowhere else on the internet. No complicated for your page algorithm, no ads, no B.S. Just messages from a circle of pals.
 
 ![Screenshot](https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/rumors.png)
-
-Built using a p2p gossip protocol, rumors anonymizes posts and orders them chronologically. Drop links, ask questions, lurk, or whisper secrets into the void …
