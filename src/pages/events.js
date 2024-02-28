@@ -205,17 +205,15 @@ export async function getStaticProps() {
   let upcomingEvents = [];
   let ongoingEvents = [];
   let pastEvents = [];
-  let futureEvents = [];
   const now = DateTime.now();
 
   events.forEach((e) => {
     const starts = generateRealtimeDate(e.starts);
     const ends = generateRealtimeDate(e.ends);
-    const inFuture = now < starts;
     if (starts <= now && now <= ends) {
       ongoingEvents.push(e);
     } else if (now < starts) {
-      futureEvents.push(e);
+      upcomingEvents.push(e);
     } else if (starts < now) {
       pastEvents.push(e);
     }
