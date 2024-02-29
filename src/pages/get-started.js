@@ -12,30 +12,30 @@ const hosting = [
   {
     title: "Red Horizon",
     description:
-      "Blog post card: Square image full bleed to top, followed by copy snippet, Gray on Brite, 25px on 30px, Urbit Sans SemiBold (standard body copy properties).",
+      "Urbit made simple. Red Horizon provides free urbit hosting with several urbit apps pre-installed",
     extra: {
       image:
-        "https://storage.googleapis.com/media.urbit.org/site/hosting/red-horizon.png",
+        "https://storage.googleapis.com/media.urbit.org/site/hosting/red-horizon1.png",
     },
     href: "https://redhorizon.com/",
   },
   {
     title: "Tlon",
     description:
-      "Blog post card: Square image full bleed to top, followed by copy snippet, Gray on Brite, 25px on 30px, Urbit Sans SemiBold (standard body copy properties).",
+      "In just a few quick steps, you'll be on the network for free and using Groups, our Urbit-native toolkit for communicating, collaborating and building with your community.",
     extra: {
       image:
         "https://storage.googleapis.com/media.urbit.org/site/hosting/tlon.png",
     },
-    href: "https://tlon.io/",
+    href: "https://tlon.network/lure/~halbex-palheb/uf-public",
   },
   {
     title: "Self-hosting at home with Native Planet",
     description:
-      "Some cards could feature solid colors, like this, which we will also be using for icon-based cards featured in guide pages. Another feature here is truncated text, eg this.",
+      "Buy a Native Planet device and simply run Urbit yourself at home.",
     extra: {
       image:
-        "https://storage.googleapis.com/media.urbit.org/site/hosting/native-planet.png",
+        "https://storage.googleapis.com/media.urbit.org/site/hosting/native-planet-devices.png",
     },
     href: "https://www.nativeplanet.io/",
   },

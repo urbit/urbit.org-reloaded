@@ -7,3 +7,5 @@ ships = ["~midbet-dopdev"]
 twitter = "alphabet_urbit"
 weight = 5.5
 +++
+
+Alphabet is a company that builds a peer-to-peer prediction market on Urbit. It leverages the network’s decentralized structure and built-in reputation system for fundamental breakthroughs in the design of a betting platform. Because Alphabet is on Urbit, users can make uncensorable, pseudonymous bets against other users.
