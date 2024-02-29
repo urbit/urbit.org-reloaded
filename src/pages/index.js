@@ -89,44 +89,44 @@ export default function Home({}) {
               <tbody>
                 <tr className="border-b">
                   <td className="p-4 border-r">
-                    <p>Data Ownership </p>
+                    <p>Data Ownership </p>
                     <p className="text-secondary">
                       Full command over applications and data
                     </p>
                   </td>
                   <td className="p-4">
-                    <p>Privacy & Security </p>
+                    <p>Persistent Identity </p>
                     <p className="text-secondary">
-                      Decentralized storage for data confidentiality
+                      User controlled public-key infrastructure
                     </p>
                   </td>
                 </tr>
                 <tr className="border-b">
                   <td className="p-4 border-r">
-                    <p>Persistent Identity </p>
+                    <p>Reduced Platform Risk </p>
                     <p className="text-secondary">
-                      User controlled public-key infrastructure
+                      Avoids third-party policy risks, ensuring continuous
+                      operation
                     </p>
                   </td>
                   <td className="p-4">
-                    <p>Cost Predictability </p>
+                    <p>Network Resilience </p>
                     <p className="text-secondary">
-                      Fixed hardware costs with no hidden fees
+                      Distributed servers avoid single points of failure
                     </p>
                   </td>
                 </tr>
                 <tr>
                   <td className="p-4 border-r">
-                    <p>Network Resilience </p>
+                    <p>Privacy & Security </p>
                     <p className="text-secondary">
-                      Distributed servers avoid single points of failure
+                      Decentralized storage for data confidentiality
                     </p>
                   </td>
                   <td className="p-4">
-                    <p>Reduced Platform Risk </p>
+                    <p>Cost Predictability €</p>
                     <p className="text-secondary">
-                      Avoids third-party policy risks, ensuring continuous
-                      operation
+                      Fixed hardware costs with no hidden fees
                     </p>
                   </td>
                 </tr>
