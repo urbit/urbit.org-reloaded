@@ -8,4 +8,4 @@ twitter = "alphabet_urbit"
 weight = 5.5
 +++
 
-Alphabet is a company that builds a peer-to-peer prediction market on Urbit. It leverages the network’s decentralized structure and built-in reputation system for fundamental breakthroughs in the design of a betting platform. Because Alphabet is on Urbit, users can make uncensorable, pseudonymous bets against other users.
+Alphabet is building a peer-to-peer prediction market on Urbit leveraging the network’s decentralized structure and built-in reputation system. Alphabet believes that the existing market demand for a prediction market with good UX, real money, and decentralization is uniquely possible on Urbit.
