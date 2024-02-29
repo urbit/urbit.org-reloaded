@@ -127,7 +127,7 @@ export default function Home({}) {
 
           <div
             className="w-full !my-16 md:!my-20 lg:!my-24"
-            style={{ height: "calc(100vw * 0.4)" }}
+            style={{ height: "calc(100vw * 0.5)" }}
           >
             <div
               className="h-full bg-primary"
