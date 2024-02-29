@@ -88,13 +88,13 @@ export default function Home({}) {
             <table className="w-full table-fixed">
               <tbody>
                 <tr className="border-b">
-                  <td className="p-4 border-r">
+                  <td className="align-top p-4 border-r">
                     <p>Data Ownership </p>
                     <p className="text-secondary">
                       Full command over applications and data
                     </p>
                   </td>
-                  <td className="p-4">
+                  <td className="align-top p-4">
                     <p>Persistent Identity </p>
                     <p className="text-secondary">
                       User controlled public-key infrastructure
@@ -102,14 +102,14 @@ export default function Home({}) {
                   </td>
                 </tr>
                 <tr className="border-b">
-                  <td className="p-4 border-r">
+                  <td className="align-top p-4 border-r">
                     <p>Reduced Platform Risk </p>
                     <p className="text-secondary">
                       Avoids third-party policy risks, ensuring continuous
                       operation
                     </p>
                   </td>
-                  <td className="p-4">
+                  <td className="align-top p-4">
                     <p>Network Resilience </p>
                     <p className="text-secondary">
                       Distributed servers avoid single points of failure
@@ -117,13 +117,13 @@ export default function Home({}) {
                   </td>
                 </tr>
                 <tr>
-                  <td className="p-4 border-r">
+                  <td className="align-top p-4 border-r">
                     <p>Privacy & Security </p>
                     <p className="text-secondary">
                       Decentralized storage for data confidentiality
                     </p>
                   </td>
-                  <td className="p-4">
+                  <td className="align-top p-4">
                     <p>Cost Predictability €</p>
                     <p className="text-secondary">
                       Fixed hardware costs with no hidden fees
@@ -203,7 +203,6 @@ export default function Home({}) {
         </Section>
 
         <Section className="body-lg" divider={"border-primary"} narrow loose>
-
           <Section>
             <h2 className="h2">Urbit Newsletter</h2>
             <NewsletterSignup />
