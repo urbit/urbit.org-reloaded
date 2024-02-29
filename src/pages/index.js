@@ -38,7 +38,7 @@ export default function Home({}) {
         {Meta(post, false, true)}
       </Head>
       <IntraNav />
-      <Main className="text-primary" singleColumn>
+      <Main className="text-primary body-lg" singleColumn>
         <h1 className="h0 heading mt-8 mb-8 md:mb-16 lg:mb-20">
           Welcome to the sovereign internet.
         </h1>
@@ -191,13 +191,13 @@ export default function Home({}) {
               }}
             />
           </div>
-          <p className="h1">
+          <p className="layout-narrow">
             Urbit takes computing history in a different direction. Computing
             has evolved to become smaller and more virtual. With Urbit, your
             computer is entirely <strong>self-contained</strong>,{" "}
             <strong>digital</strong>, and <strong>cryptographic</strong>.
           </p>
-          <p className="h1 italic">
+          <p className="layout-narrow italic">
             What if infrastructure got so good it simply disappeared?
           </p>
         </Section>
@@ -226,7 +226,7 @@ export default function Home({}) {
           </Section>
 
           <Section>
-            <h2 className="h2">Boot and join us:</h2>
+            <h2 className="h2">Boot and join us</h2>
             <Link
               className="btn bg-primary hover:bg-secondary text-surface"
               href="https://urbit.org/groups/~bitbet-bolbel/urbit-community"
