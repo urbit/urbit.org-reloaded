@@ -24,7 +24,7 @@ export default function Org({
           <h3 className="h3 absolute text-on-container">{title}</h3>
         )}
         <div className="flex-1 flex text-center items-center">
-          <img className="w-1/2 m-auto" src={image} />
+          <img className="w-full h-full" src={image} />
         </div>
       </div>
       {extended && (
