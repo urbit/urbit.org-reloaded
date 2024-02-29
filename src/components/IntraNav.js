@@ -43,9 +43,9 @@ const pages = [
 const prefersDark = () =>
   window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-const hasSetDark = () => {
+const hasSetLight = () => {
   const theme = localStorage.getItem("theme");
-  return !!theme && theme === "dark";
+  return !!theme && theme === "light";
 };
 
 const respectSystemPreference = () => !localStorage.getItem("theme");
@@ -54,42 +54,22 @@ export default function IntraNav({}) {
   const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
-    if (respectSystemPreference()) {
-      localStorage.removeItem("theme");
-      document.querySelector(":root").removeAttribute("theme");
-      if (prefersDark()) {
-        setDarkMode(true);
-      } else {
-        setDarkMode(false);
-      }
+    if (hasSetLight()) {
+      document.querySelector(":root").setAttribute("theme", "light");
+      setDarkMode(false);
     } else {
-      if (hasSetDark()) {
-        document.querySelector(":root").setAttribute("theme", "dark");
-        setDarkMode(true);
-      } else {
-        document.querySelector(":root").setAttribute("theme", "light");
-        setDarkMode(false);
-      }
+      document.querySelector(":root").removeAttribute("theme");
+      setDarkMode(true);
     }
   });
 
   const cycleTheme = () => {
-    if ((respectSystemPreference() && prefersDark()) || hasSetDark()) {
-      if (prefersDark()) {
-        localStorage.setItem("theme", "light");
-        document.querySelector(":root").setAttribute("theme", "light");
-      } else {
-        localStorage.removeItem("theme");
-        document.querySelector(":root").removeAttribute("theme");
-      }
+    if (hasSetLight()) {
+      localStorage.removeItem("theme");
+      document.querySelector(":root").removeAttribute("theme");
     } else {
-      if (!prefersDark()) {
-        localStorage.setItem("theme", "dark");
-        document.querySelector(":root").setAttribute("theme", "dark");
-      } else {
-        localStorage.removeItem("theme");
-        document.querySelector(":root").removeAttribute("theme");
-      }
+      localStorage.setItem("theme", "light");
+      document.querySelector(":root").setAttribute("theme", "light");
     }
     setDarkMode(!darkMode);
   };
@@ -119,7 +99,9 @@ export default function IntraNav({}) {
               onClick={cycleTheme}
             >
               <div
-                className={"inline-block aspect-square w-3/4 m-auto bg-gray lg:bg-brite"}
+                className={
+                  "inline-block aspect-square w-3/4 m-auto bg-gray lg:bg-brite"
+                }
                 style={{
                   "-webkit-mask-image": `url(${iconUrl})`,
                   "mask-image": `url(${iconUrl})`,

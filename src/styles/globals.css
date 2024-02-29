@@ -44,39 +44,19 @@
 }
 
 :root {
-  @apply wit prism-light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    @apply blk prism-dark;
-  }
+  @apply blk prism-dark;
 }
 
 :root[theme='light'] {
   @apply wit prism-light;
 }
 
-:root[theme='dark'] {
-  @apply blk prism-dark;
-}
-
 .markdown {
-  @apply mos-light;
-}
-
-@media (prefers-color-scheme: dark) {
-  .markdown {
-    @apply mos;
-  }
+  @apply mos;
 }
 
 :root[theme='light'] .markdown {
   @apply mos-light;
-}
-
-:root[theme='dark'] .markdown {
-  @apply mos;
 }
 
 *:not(.markdown) p a:not(.btn) {
