@@ -39,9 +39,14 @@ export default function Home({}) {
       </Head>
       <IntraNav />
       <Main className="text-primary" singleColumn>
-        <h1 className="h0 heading mt-8 mb-64">
+        <h1 className="h0 heading mt-8 mb-8 md:mb-16 lg:mb-20">
           Welcome to the sovereign internet.
         </h1>
+        <img
+          className="rounded-lg"
+          alt=""
+          src="https://storage.googleapis.com/media.urbit.org/site/landing/web-screenshots.jpeg"
+        />
 
         <Section divider={"border-primary"}>
           <h1 className="h1">
