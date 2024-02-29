@@ -203,13 +203,11 @@ export default function Home({}) {
         </Section>
 
         <Section className="body-lg" divider={"border-primary"} narrow loose>
-          <h2 className="h2">Contact</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            convallis finibus tellus ut faucibus. Aenean luctus sapien vel
-            turpis gravida, eget feugiat metus ornare.
-          </p>
 
+          <Section>
+            <h2 className="h2">Urbit Newsletter</h2>
+            <NewsletterSignup />
+          </Section>
           <Section>
             <h2 className="h2">Follow</h2>
             <CTAs
@@ -233,11 +231,6 @@ export default function Home({}) {
             >
               UF Public
             </Link>
-          </Section>
-
-          <Section>
-            <h2 className="h2">Urbit Newsletter</h2>
-            <NewsletterSignup />
           </Section>
 
           <Section>
