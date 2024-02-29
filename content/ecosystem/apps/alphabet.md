@@ -7,6 +7,6 @@ bgColor = "0xffffff"
 developer = "~midbet-dopdev"
 website = "https://tlon.network/lure/~sarmyn-samnym/alphabet"
 description = "%alphabet is a prediction market built on Urbit."
-weight = 
+weight = 4.5
 +++
 
