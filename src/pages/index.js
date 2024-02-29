@@ -60,7 +60,7 @@ export default function Home({}) {
               </h3>
               <Link
                 className="btn bg-on-container text-inverse-on-container hover:bg-on-container-variant w-min"
-                href=""
+                href="/get-started"
               >
                 Join the network
               </Link>
@@ -72,7 +72,7 @@ export default function Home({}) {
               </h3>
               <Link
                 className="btn bg-on-container text-inverse-on-container hover:bg-on-container-variant w-min"
-                href=""
+                href="https://docs.urbit.org/"
               >
                 Build on Urbit
               </Link>
@@ -226,12 +226,12 @@ export default function Home({}) {
           </Section>
 
           <Section>
-            <h2 className="h2">Boot and join us</h2>
+            <h2 className="h2">Join our group on Urbit</h2>
             <Link
               className="btn bg-primary hover:bg-secondary text-surface"
-              href="https://urbit.org/groups/~bitbet-bolbel/urbit-community"
+              href="https://tlon.network/lure/~halbex-palheb/uf-public"
             >
-              Urbit Community
+              UF Public
             </Link>
           </Section>
 
