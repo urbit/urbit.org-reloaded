@@ -32,7 +32,7 @@ const sites = [
 ];
 
 const pages = [
-  { title: "Start", href: "/start" },
+  { title: "Get Started", href: "/get-started" },
   { title: "Overview", href: "/overview" },
   { title: "Ecosystem", href: "/ecosystem" },
   { title: "Grants", href: "/grants" },
