@@ -5,6 +5,7 @@ image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizat
 URL = "https://store.marsreview.org"
 twitter = "marsreviewer"
 ships = []
+weight = 8
 +++
 
 

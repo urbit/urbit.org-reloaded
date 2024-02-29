@@ -2,12 +2,11 @@
 title = "Epicenter"
 description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis finibus tellus ut faucibus. Aenean luctus sapien vel turpis gravida, eget feugiat metus ornare."
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/podcasts/epicenter.jpg"
+weight = 3
 
 [[links]]
 label = "Listen"
 url = "https://epicenter.tv"
 +++
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis finibus tellus ut faucibus. Aenean luctus sapien vel turpis gravida, eget feugiat metus ornare.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis finibus tellus ut faucibus. Aenean luctus sapien vel turpis gravida, eget feugiat metus ornare.
+Epicenter brings you in-depth conversations about the technical, economic and social implications of cryptocurrencies and blockchain technologies. Every week, we interview business leaders, engineers academics and entrepreneurs, and bring you a diverse spectrum of opinions and points of view. Epicenter is hosted by Sebastien Couture, Brian Fabian Crain, Friederike Ernst, Meher Roy and Felix Lutsch. Since 2014, our episodes have been downloaded over 8 million times.

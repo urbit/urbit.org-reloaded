@@ -5,6 +5,7 @@ image = "https://freedom-club.sfo2.digitaloceanspaces.com/ab_Quartus-03.jpg"
 URL = "https://www.quartus.co/"
 ships = ["~mister-hilper-dozzod-dalten", "~dister-dozzod-dalten"]
 twitter = "QuartusCo"
+weight = 9
 +++
 
 ### Quartus is Fulfilling Urbit's Covenant with Users
