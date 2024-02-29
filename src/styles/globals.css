@@ -62,21 +62,21 @@
 }
 
 .markdown {
-  @apply grn-light;
+  @apply mos-light;
 }
 
 @media (prefers-color-scheme: dark) {
   .markdown {
-    @apply grn;
+    @apply mos;
   }
 }
 
 :root[theme='light'] .markdown {
-  @apply grn-light;
+  @apply mos-light;
 }
 
 :root[theme='dark'] .markdown {
-  @apply grn;
+  @apply mos;
 }
 
 *:not(.markdown) p a:not(.btn) {
