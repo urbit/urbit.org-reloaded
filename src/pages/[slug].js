@@ -20,7 +20,7 @@ export default function Post({ post, markdown, index }) {
         {Meta(post)}
       </Head>
       <IntraNav />
-      <Main className="text-brite" singleColumn>
+      <Main className="text-primary" singleColumn>
         <div>
           <h1 className="h1 mt-12 mb-8 md:mt-16 md:mb-16 lg:mb-20">
             {post.title}
