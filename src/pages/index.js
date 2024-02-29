@@ -45,12 +45,12 @@ export default function Home({}) {
 
         <Section divider={"border-primary"}>
           <h1 className="h1">
-            Build and use any application on your own personal server.
+            Urbit is a new computing paradigm with complete ownership.
           </h1>
           <div className="body-lg grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex flex-col justify-between bg-container rounded-lg p-4">
               <h3 className="text-on-container h-[6.5em] overflow-hidden">
-                Leave the centralized internet behind. Run applications the
+                Leave the centralized internet behind. Run applications the
                 sovereign way.
               </h3>
               <Link
@@ -76,37 +76,90 @@ export default function Home({}) {
         </Section>
 
         <Section divider={"border-primary"}>
+          <h2 className="h2">Why?</h2>
+          <p className="h1">Own your computer in the ways that matter. </p>
+
+          <FatBlock className="body-lg border border-primary rounded-lg">
+            <table className="w-full table-fixed">
+              <tbody>
+                <tr className="border-b">
+                  <td className="p-4 border-r">
+                    <p>Data Ownership </p>
+                    <p className="text-secondary">
+                      Full command over applications and data
+                    </p>
+                  </td>
+                  <td className="p-4">
+                    <p>Privacy & Security </p>
+                    <p className="text-secondary">
+                      Decentralized storage for data confidentiality
+                    </p>
+                  </td>
+                </tr>
+                <tr className="border-b">
+                  <td className="p-4 border-r">
+                    <p>Persistent Identity </p>
+                    <p className="text-secondary">
+                      User controlled public-key infrastructure
+                    </p>
+                  </td>
+                  <td className="p-4">
+                    <p>Cost Predictability </p>
+                    <p className="text-secondary">
+                      Fixed hardware costs with no hidden fees
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="p-4 border-r">
+                    <p>Network Resilience </p>
+                    <p className="text-secondary">
+                      Distributed servers avoid single points of failure
+                    </p>
+                  </td>
+                  <td className="p-4">
+                    <p>Reduced Platform Risk </p>
+                    <p className="text-secondary">
+                      Avoids third-party policy risks, ensuring continuous
+                      operation
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </FatBlock>
+        </Section>
+
+        <Section divider={"border-primary"}>
           <h2 className="h2">Ecosystem</h2>
           <p className="h1">
-            With over 100 applications and partners, Urbit is one of the top 15
-            and fastest growing developer ecosystems with over 3x user growth
-            year-over-year.
+            Explore one of the fastest growing developer ecosystems.
           </p>
           <div className="body-lg grid grid-cols-2 md:grid-cols-4 gap-4">
             <Org
               title="Tlon"
-              description="The first developer of Urbit. Their work continues to maintain core infrastructure development in addition to designing products for communities on the network."
+              description="Urbit core infrastructure"
               image="https://storage.googleapis.com/media.urbit.org/assembly/Tlon.svg"
               slug="tlon"
               extended
             />
             <Org
               title="Native Planet"
-              description="Native Planet builds Urbit-centric hardware and software that simplifies sovereign self hosting and ship management."
+              description="Urbit-centric hardware"
               image="https://storage.googleapis.com/media.urbit.org/assembly/native-planet-logo.svg"
               slug="nativeplanet"
               extended
             />
             <Org
               title="Zorp"
-              description="We assure critical computation using zero-knowledge proofs."
+              description="Computation with ZK proofs"
               image="https://storage.googleapis.com/media.urbit.org/assembly/zorp-logo.svg"
               slug="zorp"
               extended
             />
             <Org
-              title="~tirrel corp."
-              description="Tirrel Corporation is an Urbit product studio."
+              title="~Tirrel Corp"
+              description="Urbit product studio"
               image="https://storage.googleapis.com/media.urbit.org/assembly/tirrel-logo.svg"
               slug="tirrel"
               extended
@@ -116,15 +169,7 @@ export default function Home({}) {
 
         <Section divider={"border-primary"}>
           <h2 className="h2">A New Compute Paradigm</h2>
-          <p className="h1">
-            <span className="font-bold">
-              What if infrastructure got so good it simply disappeared?
-            </span>
-            Computing has evolved to become smaller and more virtual. With
-            Urbit, your computer is entirely self-contained, digital, and
-            cryptographic.
-          </p>
-
+          <p className="h1">Imagine an alternative computing paradigm.</p>
           <div
             className="w-full !my-16 md:!my-20 lg:!my-24"
             style={{ height: "calc(100vw * 0.5)" }}
@@ -141,60 +186,15 @@ export default function Home({}) {
               }}
             />
           </div>
-
-          <FatBlock className="body-lg border border-primary rounded-lg">
-            <div className="h1 p-4 border-b">
-              Why run applications on a personal server?
-            </div>
-            <table className="w-full">
-              <tbody>
-                <tr className="border-b">
-                  <td className="p-4 border-r">
-                    <p>Control & Ownership </p>
-                    <p className="text-secondary">
-                      Full command over application environments and data.
-                    </p>
-                  </td>
-                  <td className="p-4">
-                    <p>Privacy & Security </p>
-                    <p className="text-secondary">
-                      Decentralizes data storage, enhancing data
-                      confidentiality.
-                    </p>
-                  </td>
-                </tr>
-                <tr className="border-b">
-                  <td className="p-4 border-r">
-                    <p>Reduced Platform Risk </p>
-                    <p className="text-secondary">
-                      Avoids third-party policy risks, ensuring continuous
-                      operation.
-                    </p>
-                  </td>
-                  <td className="p-4">
-                    <p>Cost Predictability </p>
-                    <p className="text-secondary">
-                      Fixed hardware costs with no hidden fees.
-                    </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="p-4 border-r">
-                    <p>Network Resilience </p>
-                    <p className="text-secondary">
-                      Distributed servers prevent single points of failure.
-                    </p>
-                  </td>
-                  <td className="p-4">
-                    <p>Sixth Reason </p>
-                    <p className="text-secondary">
-                      Can we get a sixth reason to even out the columns?
-                    </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </FatBlock>
+          <p className="h1">
+            Urbit takes computing history in a different direction. Computing
+            has evolved to become smaller and more virtual. With Urbit, your
+            computer is entirely <strong>self-contained</strong>,{" "}
+            <strong>digital</strong>, and <strong>cryptographic</strong>.
+          </p>
+          <p className="h1 italic">
+            What if infrastructure got so good it simply disappeared?
+          </p>
         </Section>
 
         <Section className="body-lg" divider={"border-primary"} narrow loose>
