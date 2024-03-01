@@ -81,7 +81,6 @@ export default function Home({}) {
         </Section>
 
         <Section divider={"border-primary"}>
-          <h2 className="h2">Why?</h2>
           <p className="h1">Own your computer in the ways that matter. </p>
 
           <FatBlock className="body-lg border border-primary rounded-lg">
@@ -105,8 +104,7 @@ export default function Home({}) {
                   <td className="align-top p-4 border-r">
                     <p>Reduced Platform Risk </p>
                     <p className="text-secondary">
-                      Avoids third-party policy risks, ensuring continuous
-                      operation
+                      Ensuring continuous operation
                     </p>
                   </td>
                   <td className="align-top p-4">
@@ -193,9 +191,6 @@ export default function Home({}) {
             has evolved to become smaller and more virtual. With Urbit, your
             computer is entirely <strong>self-contained</strong>,{" "}
             <strong>digital</strong>, and <strong>cryptographic</strong>.
-          </p>
-          <p className="italic">
-            What if infrastructure got so good it simply disappeared?
           </p>
         </Section>
 
