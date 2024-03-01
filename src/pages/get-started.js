@@ -30,7 +30,7 @@ const hosting = [
     href: "https://tlon.network/lure/~halbex-palheb/uf-public",
   },
   {
-    title: "Self-hosting at home with Native Planet",
+    title: "Native Planet",
     description:
       "Buy a Native Planet device and simply run Urbit yourself at home.",
     extra: {
