@@ -213,13 +213,13 @@ function Article({
         />
         <div className="flex flex-col flex-1 justify-between">
           <div className="flex flex-col">
-            <div className="flex w-full sm:mb-2.5 text-tertiary body-md">
+            <div className="flex w-full sm:mb-2.5 text-secondary body-md">
               <p className="w-full sm:w-1/2">{publication}</p>
               <p className="hidden sm:block w-1/2">Author: {author}</p>
             </div>
             <h3 className="h3 h-[2.6em] line-clamp-2 text-ellipsis">{title}</h3>
           </div>
-          <div className="flex w-full text-tertiary body-md">
+          <div className="flex w-full text-secondary body-md">
             <p className="hidden sm:block w-1/2">{type || "Article"}</p>
             <p className="w-full sm:w-1/2">{formatDate(displayDate)}</p>
           </div>
