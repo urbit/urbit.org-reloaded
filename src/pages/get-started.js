@@ -12,7 +12,7 @@ const hosting = [
   {
     title: "Red Horizon",
     description:
-      "Urbit made simple. Red Horizon provides free Urbit hosting with several urbit apps pre-installed",
+      "Urbit made simple. Red Horizon provides free Urbit hosting with several urbit apps pre-installed.",
     extra: {
       image:
         "https://storage.googleapis.com/media.urbit.org/site/hosting/red-horizon2.svg",
