@@ -6,7 +6,7 @@ description = "Friendlist for peer discovery"
 license = "MIT"
 website = "https://pal.dev/suite/pals"
 bgColor = "#99D3BD"
-weight = 10
+weight = 30
 +++
 
 What’s the internet without friends?

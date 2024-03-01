@@ -7,7 +7,7 @@ license = "GPL3"
 website = "https://github.com/thecommons-urbit/chess"
 bgColor = "#ffffff"
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/finmep-chess.svg"
-weight = 4
+weight = 100
 +++
 
 “The ability to play chess is the sign of a gentleman. The ability to play chess well is the sign of a wasted life.”  
