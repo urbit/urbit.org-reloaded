@@ -95,15 +95,12 @@ function AppCard({ className, title, description, slug, bgColor, image }) {
     >
       <div
         className={classnames(
-          "flex justify-center items-center aspect-square rounded-t-xl p-4",
+          "flex justify-center items-center aspect-square rounded-t-xl",
           bg
         )}
         style={{ backgroundColor: bgColor }}
       >
-        <img
-          /* className="m-auto" */
-          src={image}
-        />
+        <img className="min-h-full min-w-full rounded-t-xl" src={image} />
       </div>
       <div className="bg-container-variant rounded-b-xl p-4">
         <h3 className="h3 font-semibold text-on-container line-clamp-1 text-ellipsis">
@@ -282,7 +279,9 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
             <section className="">
               <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Ecosystem</h1>
               <p className="h1">
-                Urbit's decentralized ecosystem is growing more than ever, check out the <strong>Apps, Podcasts, Talks, Companies</strong>  and more below. 
+                Urbit's decentralized ecosystem is growing more than ever, check
+                out the <strong>Apps, Podcasts, Talks, Companies</strong> and
+                more below.
               </p>
             </section>
             <Section divider={"border-primary"}>
@@ -374,7 +373,9 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
             <section>
               <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Apps</h1>
               <p className="h1">
-                Urbit Apps are distributed entirely <strong>peer-to-peer</strong>. Check out the Apps that we like below and install them on your <strong> Planet</strong>.
+                Urbit Apps are distributed entirely{" "}
+                <strong>peer-to-peer</strong>. Check out the Apps that we like
+                below and install them on your <strong> Planet</strong>.
               </p>
             </section>
             <Section divider={"border-primary"}>
@@ -389,7 +390,8 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
             <section>
               <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Podcasts</h1>
               <p className="h1">
-              Here are some Podcasts we like. We also make our own: <strong>ZeroK</strong>.
+                Here are some Podcasts we like. We also make our own:{" "}
+                <strong>ZeroK</strong>.
               </p>
             </section>
             <Section divider={"border-primary"}>
@@ -425,7 +427,9 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
             <section>
               <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Companies</h1>
               <p className="h1">
-                Our ecosystem has produced many companies: <strong>hosting, zk-proof, literature & investment</strong> are just a selection of what they do. Check them all out below.
+                Our ecosystem has produced many companies:{" "}
+                <strong>hosting, zk-proof, literature & investment</strong> are
+                just a selection of what they do. Check them all out below.
               </p>
             </section>
             <Section divider={"border-primary"}>
