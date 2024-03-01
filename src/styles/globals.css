@@ -59,13 +59,18 @@
   @apply mos-light;
 }
 
-.header-img {
-  @apply h-96 w-screen max-w-screen-3xl -layout-mx bg-cover bg-center bg-no-repeat;
-  background-image: url(https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-d.png);
+:root:not([theme]) .img-dark {
+  @apply block;
+}
+:root:not([theme]) .img-light {
+  @apply hidden;
 }
 
-:root[theme='light'] .header-img {
-  background-image: url(https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-l.png);
+:root[theme='light'] .img-dark {
+  @apply hidden;
+}
+:root[theme='light'] .img-light {
+  @apply block;
 }
 
 *:not(.markdown) p a:not(.btn) {

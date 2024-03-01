@@ -40,8 +40,25 @@ export default function Home({}) {
       <IntraNav />
       <Main className="text-primary body-lg" singleColumn>
         <h1 className="h0 heading mt-8">Welcome to the sovereign internet.</h1>
-        <div className="relative flex items-center">
-          <div className="header-img" />
+        <div className="block md:hidden">
+          <img
+            className="img-dark"
+            src="https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-mobile-d.png"
+          />
+          <img
+            className="img-light"
+            src="https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-mobile-l.png"
+          />
+        </div>
+        <div className="hidden md:block">
+          <img
+            className="img-dark"
+            src="https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-d.png"
+          />
+          <img
+            className="img-light"
+            src="https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-l.png"
+          />
         </div>
 
         <Section divider={"border-primary"}>
