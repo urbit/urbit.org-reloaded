@@ -247,19 +247,17 @@ export default function Grants({ posts, categories, types }) {
             </div>
             <div className="body-md">
               <Icon className="h-[1.3em] bg-primary" name="Apprenticeship" />
-              <h3 className="">Apprenticeships</h3>
+              <h3 className="">Requests for Proposals</h3>
               <p className="text-secondary">
-                Practical learning opportunities for new Urbit developers
-                provided by members of the Urbit community. They’re one of the
-                best ways to level up your skills and often lead to full-time
-                jobs.
+                RFPs are suitable for people experienced with hoon development
+                but who need some ideas on what to work on.
               </p>
               <div className="flex flex-wrap mt-3.5">
                 <Link
                   className="btn bg-primary hover:bg-secondary text-surface"
                   href="/grants/apprenticeships"
                 >
-                  Become an Apprentice
+                  Submit a RFP
                 </Link>
               </div>
             </div>
