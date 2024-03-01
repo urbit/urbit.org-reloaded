@@ -1,7 +1,7 @@
 +++
 title = "Quartus by Dalten"
 description = "We build software using the novel affordances of Urbit."
-image = "https://freedom-club.sfo2.digitaloceanspaces.com/ab_Quartus-03.jpg"
+image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/quartus-b.svg"
 URL = "https://www.quartus.co/"
 ships = ["~mister-hilper-dozzod-dalten", "~dister-dozzod-dalten"]
 twitter = "QuartusCo"

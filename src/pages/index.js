@@ -141,28 +141,28 @@ export default function Home({}) {
             <Org
               title="Tlon"
               description="Urbit core infrastructure"
-              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon.svg"
+              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon-b.svg"
               slug="tlon"
               extended
             />
             <Org
               title="Native Planet"
               description="Urbit-centric hardware"
-              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/native-planet.svg"
+              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/native-planet-b.svg"
               slug="nativeplanet"
               extended
             />
             <Org
               title="Zorp"
               description="Computation with ZK proofs"
-              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/zorp.svg"
+              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/zorp-b.svg"
               slug="zorp"
               extended
             />
             <Org
               title="~Tirrel Corp"
               description="Urbit product studio"
-              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tirrel.svg"
+              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tirrel-b.svg"
               slug="tirrel"
               extended
             />

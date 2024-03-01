@@ -1,7 +1,7 @@
 +++
 title = "Red Horizon"
 description = "Urbit hosting platform born & managed by ChorusOne"
-image = ""
+image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/red-horizon-b.svg"
 URL = "https://redhorizon.com/"
 ships = ["~tiller-tolbus"]
 twitter = "redhorizonhost"

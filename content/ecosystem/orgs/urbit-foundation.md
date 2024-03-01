@@ -1,7 +1,7 @@
 +++
 title = "Urbit Foundation"
 description = "Urbit Foundation is a non-profit organization whose mission is to ensure Urbit's success as a technology."
-image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/urbit-foundation.png"
+image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/urbit-foundation-b.svg"
 URL = "https://urbit.org"
 ships = ["~lapdeg"]
 twitter = "urbitfoundation"

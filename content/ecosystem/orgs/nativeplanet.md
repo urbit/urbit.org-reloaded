@@ -1,7 +1,7 @@
 +++
 title = "Native Planet"
 description = "Native Planet builds Urbit-centric hardware and software that simplifies sovereign self hosting and ship management."
-image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/nativeplanet2.png"
+image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/native-planet-b.svg"
 URL = "https://www.nativeplanet.io/"
 twitter = "NativePlanetIO"
 ships = []

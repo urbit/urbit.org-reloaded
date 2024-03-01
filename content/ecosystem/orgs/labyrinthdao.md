@@ -1,7 +1,7 @@
 +++
 title = "Labyrinth DAO"
 description = "Labyrinth DAO is a new decentralized autonomous organization investing in Urbit projects."
-image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/labyrinth.jpeg"
+image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/labyrinth-t.png"
 URL = "https://labyrinthdao.io/"
 ships = []
 twitter = "labyrinth_dao"
