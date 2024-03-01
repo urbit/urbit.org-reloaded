@@ -172,13 +172,10 @@ export default function Home({}) {
           </div>
         </Section>
 
-        <Section divider={"border-primary"}>
+        <Section divider={"border-primary"} narrow>
           <h2 className="h2">A New Compute Paradigm</h2>
           <p className="h1">Imagine an alternative computing paradigm.</p>
-          <div
-            className="w-full !my-16 md:!my-20 lg:!my-24"
-            style={{ height: "calc(100vw * 0.5)" }}
-          >
+          <div className="w-full aspect-[1114/699] !my-16 md:!my-20 lg:!my-24">
             <div
               className="h-full bg-primary"
               style={{
@@ -191,13 +188,13 @@ export default function Home({}) {
               }}
             />
           </div>
-          <p className="layout-narrow">
+          <p>
             Urbit takes computing history in a different direction. Computing
             has evolved to become smaller and more virtual. With Urbit, your
             computer is entirely <strong>self-contained</strong>,{" "}
             <strong>digital</strong>, and <strong>cryptographic</strong>.
           </p>
-          <p className="layout-narrow italic">
+          <p className="italic">
             What if infrastructure got so good it simply disappeared?
           </p>
         </Section>
