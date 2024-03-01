@@ -6,13 +6,13 @@ weight = 6
 image = "https://media.urbit.org/site/understanding-urbit/project-history/project-status-landscape-earth%402x.png"
 +++ 
 
-Who Works on Urbit Today {% .font-bold .subpixel-antialiased .pt-8 %}
+## Who Works on Urbit Today 
 
 Urbit is an open-source project that anyone can work on. The Urbit Foundation, a non-profit organization, is charged with shepherding the network toward a successful future. [Tlon](https://tlon.io/) was the first private company founded for the purposes of working on Urbit, back in 2013. But now there are several more. These include [Tirrel](https://tirrel.io/), [Native Planet](https://www.nativeplanet.io/), [Red Horizon](https://redhorizon.com/), and others. Beyond that, an ecosystem has sprung up around Urbit that includes [funds](https://assembly.capital/), [DAOs](https://labyrinthdao.io/), and [publications](https://marsreview.org/). And of course there are everyday contributors, many of whom have received [grants](https://urbit.org/grants) from the Urbit Foundation. 
 
 Let’s talk first about these individual groups within the Urbit community, then about the history of the project and how it came to be.
 
-Organizations {% .font-bold .subpixel-antialiased .pt-8 %}
+## Organizations
 
 The [Urbit Foundation](https://urbit.org/) was formally established in 2021 when it split off from Tlon. The Foundation leads core development, education, and communications, in addition to running the Urbit grants program, maintaining [urbit.org](https://urbit.org/) and Urbit-related media, and organizing Urbit events like [Assembly](https://assembly.urbit.org/).
 
@@ -29,7 +29,8 @@ Spun out of the redoubtable crypto company Chorus One, in 2023 [Red Horizon](htt
 Founded in 2023, [Alphabet](https://tlon.network/lure/~sarmyn-samnym/alphabet) is building a peer-to-peer prediction market on Urbit leveraging the network’s decentralized structure and built-in reputation system. 
 Urbit’s community of contributors and core developers has been steadily contributing to the code base since before the Urbit Foundation existed, and they’re still going strong. They can primarily be found on Urbit itself, in the Urbit Community ([~bitbet-bolbel/urbit-community](https://urbit.org/groups/~bitbet-bolbel/urbit-community)), the [urbit-dev](https://groups.google.com/a/urbit.org/g/dev?pli=1) mailing list and on [GitHub](https://github.com/urbit). See also The Urbit Foundation’s public group at [~halbex-palheb/uf-public](https://urbit.org/groups/~halbex-palheb/uf-public).
 
-Timeline {% .font-bold .subpixel-antialiased .pt-8 %}
+## Timeline 
+
 In the beginning, Urbit was just a few people with the right combination of imagination and discipline to try to rebuild computing.
 
 **2002**
