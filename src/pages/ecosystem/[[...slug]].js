@@ -182,7 +182,9 @@ function TalkCard({ className, title, image, url }) {
         </svg>
       </div>
       <div className="bg-container-variant p-4 rounded-b-xl">
-        <h3 className="h3 h-[1.3em] text-on-container line-clamp-1 text-ellipsis">{title}</h3>
+        <h3 className="h3 h-[1.3em] text-on-container line-clamp-1 text-ellipsis">
+          {title}
+        </h3>
       </div>
     </Link>
   );
@@ -473,18 +475,24 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
 
 export async function getStaticProps() {
   const apps = getAllPosts(
-    ["title", "description", "bgColor", "image", "slug"],
-    "ecosystem/apps"
+    ["title", "description", "bgColor", "image", "weight", "slug"],
+    "ecosystem/apps",
+    "weight"
   );
   const articles = getAllPosts(
     ["title", "publication", "author", "type", "date", "image", "URL", "slug"],
     "ecosystem/articles",
     "date"
   );
-  const orgs = getAllPosts(["title", "image", "slug"], "ecosystem/orgs");
+  const orgs = getAllPosts(
+    ["title", "image", "weight", "slug"],
+    "ecosystem/orgs",
+    "weight"
+  );
   const podcasts = getAllPosts(
-    ["title", "description", "image", "links", "slug", "content"],
-    "ecosystem/podcasts"
+    ["title", "description", "image", "links", "weight", "slug", "content"],
+    "ecosystem/podcasts",
+    "weight"
   );
   const talks = getAllPosts(
     ["title", "event", "date", "type", "image", "url", "slug"],
