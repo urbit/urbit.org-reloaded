@@ -1,6 +1,6 @@
 +++
 title = "Understanding Urbit"
-description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis finibus tellus ut faucibus. Aenean luctus sapien vel turpis gravida, eget feugiat metus ornare."
+description = "A timeless & comprehensive guide through Urbit's design ideas from 2020."
 image = "https://media.urbit.org/site/posts/essays/uu-podcast.png"
 weight = 70
 

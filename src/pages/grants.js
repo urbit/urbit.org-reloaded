@@ -198,7 +198,7 @@ export default function Grants({ posts, categories, types }) {
             Grants Program
           </h1>
           <p className="h1">
-            The Urbit Foundation's Grants program is one of our primary
+            The Urbit Foundation's Grants program is the primary
             mechanisms for distributing address space to creators and
             developers.
           </p>

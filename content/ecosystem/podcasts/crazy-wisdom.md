@@ -1,6 +1,6 @@
 +++
 title = "Crazy Wisdom"
-description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis finibus tellus ut faucibus. Aenean luctus sapien vel turpis gravida, eget feugiat metus ornare."
+description = "Find meaning through their episodes with a high frequency of Urbit conversations."
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/podcasts/crazywisdom.jpg"
 weight = 40
 

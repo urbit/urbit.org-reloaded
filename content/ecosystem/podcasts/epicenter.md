@@ -1,6 +1,6 @@
 +++
 title = "Epicenter"
-description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis finibus tellus ut faucibus. Aenean luctus sapien vel turpis gravida, eget feugiat metus ornare."
+description = "The blockchain & web3 podcast co-hosted by Urbit Foundation board member Brian Crain."
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/podcasts/epicenter.jpg"
 weight = 80
 

@@ -59,10 +59,15 @@ export default function Events({
         <section>
           <h1 className="h1 mt-12 mb-8 md:mt-16 md:mb-16 lg:mb-20">Events</h1>
           <p className="h1">
-            Urbit is a <strong>new kind of computer</strong> that you can own
-            completely in ways that matter: <strong>networking</strong>,{" "}
-            <strong>identity</strong>, & <strong>data</strong>.
-          </p>
+            Urbit organizes events <strong>worldwide</strong>. Join your local communities or <Link
+                className="hover:text-secondary"
+                href="grants/community-meetups"
+              >
+                <strong>start</strong>
+              </Link>
+             {" "}
+              your own.
+              </p>
         </section>
         <Section divider={"border-primary"}>
           <h2 className="h2">Communities</h2>

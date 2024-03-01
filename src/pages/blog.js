@@ -30,8 +30,8 @@ export default function Blog({ posts, search }) {
         <section>
           <h1 className="h1 mt-12 mb-8 md:mt-16 md:mb-16 lg:mb-20">Blog</h1>
           <p className="h1">
-            Stories from the broader Urbit community, the Urbit Foundation, and
-            the many people contributing to Urbit.
+            Stories from the broader <strong>Urbit community</strong>, the Urbit Foundation, and
+            the many <strong>people</strong> contributing to Urbit.
           </p>
         </section>
         <Section divider={"border-primary"}>

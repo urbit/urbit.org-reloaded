@@ -5,7 +5,7 @@ developer = "Quorum Team"
 description = "A choral explanations app for Urbit"
 license = "MIT"
 website = ""
-bgColor = ""
+bgColor = "#ffffff"
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/quorum-logo.png"
 weight = 40
 +++

@@ -1,7 +1,7 @@
 +++
 title = "Red Horizon Podcast"
 description = "Dive into the world of Urbit with Red Horizon's ~tiller-tolbus"
-image = ""
+image = "https://storage.googleapis.com/media.urbit.org/site/hosting/red-horizon2.svg"
 weight = 90
 
 [[links]]

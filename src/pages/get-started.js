@@ -60,15 +60,13 @@ export default function GetStarted({}) {
             Get Started
           </h1>
           <p className="h1">
-            Urbit is a <strong>new kind of computer</strong> that you can own
-            completely in ways that matter: <strong>networking</strong>,{" "}
-            <strong>identity</strong>, & <strong>data</strong>.
+            Getting on Urbit has <strong>never been easier</strong>. Get online within <strong>seconds</strong> via our hosting providers or run Urbit <strong>yourself</strong> at home.
           </p>
         </section>
         <Section divider={"border-primary"}>
           <div>
             <h2 className="h2">Getting on the network</h2>
-            <p className="body-lg">Get an Urbit ship in minutes</p>
+            <p className="body-lg">Get an Urbit planet in minutes</p>
           </div>
           <FatBlock className="hidden xs:flex space-x-1 lg:space-x-6 xl:space-x-8">
             {hosting.map((props) => (

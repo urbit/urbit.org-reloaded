@@ -34,43 +34,57 @@ Urbit’s community of contributors and core developers has been steadily contri
 In the beginning, Urbit was just a few people with the right combination of imagination and discipline to try to rebuild computing.
 
 **2002**
+
 Urbit starts as an open-ended personal project. An “independent study PhD” to reinvent computing for a network-centric world.
 
 **2008**
+
 Nock, the foundation of Urbit, works. Coming in at 32 lines of code, that’s 1 line of code every two months.
 
 **2012**
+
 Hoon, Urbit’s programming language, compiles itself to Nock. Writing Hoon is much easier than writing Nock.
 
 **2013**
+
 Arvo, Urbit’s OS kernel, boots and the first live Urbit network is started with a command-line chat.
 
 **2014**
+
 Tlon is founded to help support Urbit development (and is < 8 people for the next four years).
 
 **2015**
+
 Urbit has its first web interface and serves its own website.
 
 **2016**
+
 The first sale of Urbit address space sells out in four hours.
 
 **2017**
+
 Urbit’s test network runs for ten months without a reboot. Urbit’s first private sale of address, shared only with its mailing list, sells out in six hours — limit two per person.
 
 **2018**
+
 Tlon sells about 8% of its stake in the network to accelerate Urbit development. 
 
 **2019**
+
 Tlon spends the year stabilizing Arvo and building Landscape.
 
 **2021**
+
 Tlon hosts the first Urbit Assembly and the Urbit Foundation is formally organized. 
 
 **2022**
+
 The Urbit Foundation’s split from Tlon becomes complete, and UF organizes [Urbit NYC](https://urbit.org/groups/~ladtem-filmyr/urbit-ny-week) and [Assembly 2022](https://www.youtube.com/playlist?list=PLYGEMSwLguIGfxboRkv38sDeXH71koyET) in Miami while launching the highly successful education project Hoon School Live, and updating relevant [educational resources](https://docs.urbit.org/courses/hoon-school). 
 
 **2023**
+
 The Urbit Foundation takes over core development of Urbit, and, along with Aleph DAO, organizes the Volcano Summit, a conference for Urbit developers, in El Salvador. Later in the year, [Assembly Lisboa](https://www.youtube.com/playlist?list=PLYGEMSwLguIF9wPzEoBr_MV3qR_mFSfXy) is our biggest event yet, drawing developers, CEOs, writers and artists, and Urbit enthusiasts from all over the world.
 
 **The Future**
+
 There’s a lot to be excited about. Ares, the new Urbit runtime, will make Urbit far faster and greatly increase its storage capacity. A full-stack rewrite of Urbit’s networking aims to increase throughput 100–1000x. Free hosting at a larger scale will allow larger quantities of users to join the network. A slew of new Urbit companies are working on everything from Lightning wallets on Urbit to Minecraft-like peer-to-peer games to full-fledged Urbit social networks. Several teams are vying to build the first Urbit blockchain. And all the while, enthusiasm among the community remains high, and Urbit companies are as dedicated and focused as ever.

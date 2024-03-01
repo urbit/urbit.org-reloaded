@@ -1,6 +1,6 @@
 +++
 title = "Community Meetup"
-date = "2023-04-06"
+date = "2024-03-01"
 
 [taxonomies]
 grant_type = [ "Bounty" ]

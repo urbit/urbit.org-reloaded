@@ -282,9 +282,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
             <section className="">
               <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Ecosystem</h1>
               <p className="h1">
-                Urbit is a <strong>new kind of computer</strong> that you can
-                own completely in ways that matter: <strong>networking</strong>,{" "}
-                <strong>identity</strong>, & <strong>data</strong>.
+                Urbit's decentralized ecosystem is growing more than ever, check out the <strong>Apps, Podcasts, Talks, Companies</strong>  and more below. 
               </p>
             </section>
             <Section divider={"border-primary"}>
@@ -376,9 +374,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
             <section>
               <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Apps</h1>
               <p className="h1">
-                Urbit is a <strong>new kind of computer</strong> that you can
-                own completely in ways that matter: <strong>networking</strong>,{" "}
-                <strong>identity</strong>, & <strong>data</strong>.
+                Urbit Apps are distributed entirely <strong>peer-to-peer</strong>. Check out the Apps that we like below and install them on your <strong> Planet</strong>.
               </p>
             </section>
             <Section divider={"border-primary"}>
@@ -393,9 +389,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
             <section>
               <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Podcasts</h1>
               <p className="h1">
-                Urbit is a <strong>new kind of computer</strong> that you can
-                own completely in ways that matter: <strong>networking</strong>,{" "}
-                <strong>identity</strong>, & <strong>data</strong>.
+              Here are some Podcasts we like. We also make our own: <strong>ZeroK</strong>.
               </p>
             </section>
             <Section divider={"border-primary"}>
@@ -411,9 +405,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
             <section>
               <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Talks</h1>
               <p className="h1">
-                Urbit is a <strong>new kind of computer</strong> that you can
-                own completely in ways that matter: <strong>networking</strong>,{" "}
-                <strong>identity</strong>, & <strong>data</strong>.
+                Talking about Urbit never gets old, see the talks we like below.
               </p>
             </section>
             <Section divider={"border-primary"}>
@@ -433,9 +425,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
             <section>
               <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Companies</h1>
               <p className="h1">
-                Urbit is a <strong>new kind of computer</strong> that you can
-                own completely in ways that matter: <strong>networking</strong>,{" "}
-                <strong>identity</strong>, & <strong>data</strong>.
+                Our ecosystem has produced many companies: <strong>hosting, zk-proof, literature & investment</strong> are just a selection of what they do. Check them all out below.
               </p>
             </section>
             <Section divider={"border-primary"}>
@@ -450,9 +440,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
             <section>
               <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Articles & Press</h1>
               <p className="h1">
-                Urbit is a <strong>new kind of computer</strong> that you can
-                own completely in ways that matter: <strong>networking</strong>,{" "}
-                <strong>identity</strong>, & <strong>data</strong>.
+                Urbit in the <strong>news</strong>.
               </p>
             </section>
             <Section divider={"border-primary"}>
