@@ -134,7 +134,6 @@ export default function Home({}) {
         </Section>
 
         <Section divider={"border-primary"}>
-          <h2 className="h2">Ecosystem</h2>
           <p className="h1">
             Explore one of the fastest growing developer ecosystems.
           </p>
@@ -171,7 +170,6 @@ export default function Home({}) {
         </Section>
 
         <Section divider={"border-primary"} narrow>
-          <h2 className="h2">A New Compute Paradigm</h2>
           <p className="h1">Imagine an alternative computing paradigm.</p>
           <div className="w-full aspect-[1114/699] !my-16 md:!my-20 lg:!my-24">
             <div
