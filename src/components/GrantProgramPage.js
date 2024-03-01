@@ -17,7 +17,6 @@ import ErrorPage from "@/pages/404";
 export default function GrantProgramPage({
   post,
   markdown,
-  search,
   program,
   actionLink,
   actionText,

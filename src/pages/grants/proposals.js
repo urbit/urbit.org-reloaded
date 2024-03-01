@@ -2,13 +2,12 @@ import React from "react";
 import GrantProgramPage from "@/components/GrantProgramPage";
 import { Markdown, getPostBySlug } from "@urbit/fdn-design-system";
 
-export default function Proposals({ post, markdown, search }) {
+export default function Proposals({ post, markdown }) {
   return (
     <GrantProgramPage
       program="proposals"
       post={post}
       markdown={markdown}
-      search={search}
       actionText="View Proposals"
       actionLink="/grants?program=proposal#view-grants"
     />

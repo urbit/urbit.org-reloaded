@@ -2,13 +2,12 @@ import React from "react";
 import GrantProgramPage from "@/components/GrantProgramPage";
 import { Markdown, getPostBySlug } from "@urbit/fdn-design-system";
 
-export default function Bounties({ post, markdown, search }) {
+export default function Bounties({ post, markdown }) {
   return (
     <GrantProgramPage
       program="bounties"
       post={post}
       markdown={markdown}
-      search={search}
       actionText="View Open Bounties"
       actionLink="/grants?program=bounty&open=true&wip=false#view-grants"
     />
