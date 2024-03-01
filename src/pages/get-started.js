@@ -15,7 +15,7 @@ const hosting = [
       "Urbit made simple. Red Horizon provides free urbit hosting with several urbit apps pre-installed",
     extra: {
       image:
-        "https://storage.googleapis.com/media.urbit.org/site/hosting/red-horizon1.png",
+        "https://storage.googleapis.com/media.urbit.org/site/hosting/red-horizon2.svg",
     },
     href: "https://redhorizon.com/",
   },
