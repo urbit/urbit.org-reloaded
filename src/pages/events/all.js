@@ -1,8 +1,6 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import classnames from "classnames";
-import path from "path";
 import { DateTime } from "luxon";
 import {
   Container,
@@ -15,63 +13,32 @@ import {
 import IntraNav from "@/components/IntraNav";
 import Footer from "@/components/Footer";
 import Meta from "@/components/Meta";
-import Carousel from "@/components/Carousel";
 import EventCard from "@/components/EventCard";
 
-function CommunityCard({ className = "", title, image, slug }) {
-  return (
-    <Link
-      className={classnames("relative aspect-square rounded-lg", className)}
-      href={path.join("/events", "communities", slug)}
-    >
-      <h3 className="h3 absolute text-[#F8FAF8] p-2 sm:p-4 w-full rounded-t-lg bg-gradient-to-b from-[rgba(0,0,0,0.6)] to-transparent">
-        {title}
-      </h3>
-      <img
-        className="h-full w-full rounded-lg object-cover"
-        src={image}
-        /* onError={(e) => (e.target.style.display = "none")} */
-      />
-    </Link>
-  );
-}
-
-export default function Events({
-  communities,
-  events,
+export default function AllEvents({
+  pastEvents,
   upcomingEvents,
   ongoingEvents,
-  pastEvents,
 }) {
-  const post = {
-    title: "Events",
-    description: "In-person, remote, and recorded events about Urbit.",
-  };
-
   return (
     <Container>
       <Head>
-        <title>{`${post.title} • urbit.org`}</title>
-        {Meta(post)}
+        <title>All • Events • urbit.org</title>
+        {Meta({
+          title: "All Events",
+          description: "In-person, remote, and recorded events about Urbit.",
+        })}
       </Head>
       <IntraNav />
       <Main className="text-primary" singleColumn>
         <section>
-          <h1 className="h1 mt-12 mb-8 md:mt-16 md:mb-16 lg:mb-20">Events</h1>
+          <h1 className="h1 mt-12 mb-8 md:mt-16 md:mb-16 lg:mb-20">
+            All Events
+          </h1>
           <p className="h1">
-            Urbit is a <strong>new kind of computer</strong> that you can own
-            completely in ways that matter: <strong>networking</strong>,{" "}
-            <strong>identity</strong>, & <strong>data</strong>.
+            In-person, remote, and recorded events about Urbit.{" "}
           </p>
         </section>
-        <Section divider={"border-primary"}>
-          <h2 className="h2">Communities</h2>
-          <Carousel>
-            {communities.map((props) => (
-              <CommunityCard className="w-32 sm:w-56 md:w-80" {...props} />
-            ))}
-          </Carousel>
-        </Section>
         {ongoingEvents.length > 0 && (
           <Section divider={"border-primary"}>
             <h2 className="h2">Ongoing</h2>
@@ -95,15 +62,8 @@ export default function Events({
         <Section divider={"border-primary"}>
           <h2 className="h2">Past events</h2>
           <FatBlock className="grid grid-cols-1 sm:grid-cols-2 gap-1 lg:gap-6 xl:gap-8">
-            {pastEvents &&
-              pastEvents.slice(0, 4).map((props) => <EventCard {...props} />)}
+            {pastEvents && pastEvents.map((props) => <EventCard {...props} />)}
           </FatBlock>
-          <Link
-            className="btn bg-primary hover:bg-secondary text-surface body-lg w-min"
-            href="/events/all"
-          >
-            More events
-          </Link>
         </Section>
       </Main>
       <Footer />
@@ -112,12 +72,6 @@ export default function Events({
 }
 
 export async function getStaticProps() {
-  const communities = getAllPosts(
-    ["title", "description", "image", "content", "slug"],
-    "communities",
-    "title"
-  );
-
   const events = getAllPosts(
     [
       "title",
@@ -158,6 +112,6 @@ export async function getStaticProps() {
   pastEvents.reverse();
 
   return {
-    props: { communities, events, pastEvents, upcomingEvents, ongoingEvents },
+    props: { pastEvents, upcomingEvents, ongoingEvents },
   };
 }
