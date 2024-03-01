@@ -59,6 +59,15 @@
   @apply mos-light;
 }
 
+.header-img {
+  @apply h-96 w-screen max-w-screen-3xl -layout-mx bg-cover bg-center bg-no-repeat;
+  background-image: url(https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-d.png);
+}
+
+:root[theme='light'] .header-img {
+  background-image: url(https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-l.png);
+}
+
 *:not(.markdown) p a:not(.btn) {
   @apply underline;
 }

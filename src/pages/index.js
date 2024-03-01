@@ -39,38 +39,9 @@ export default function Home({}) {
       </Head>
       <IntraNav />
       <Main className="text-primary body-lg" singleColumn>
-        <div>
-          <div className="relative flex items-center">
-            {/* <img */}
-            {/*   alt="" */}
-            {/*   src="https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-bg.png" */}
-            {/* /> */}
-            <div
-              className="h-72 xl:h-96 w-full bg-cover bg-center bg-norepeat"
-              style={{
-                backgroundImage:
-                  "url(https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-bg.png)",
-              }}
-            />
-            <div className="absolute z-10 h-1/2 w-1/2 top-0 left-0 bg-gradient-to-tl from-transparent to-surface" />
-            <div className="absolute z-10 h-1/2 w-1/2 top-0 right-0 bg-gradient-to-tr from-transparent to-surface" />
-            <div className="absolute z-10 h-1/2 w-1/2 bottom-0 left-0 bg-gradient-to-bl from-transparent to-surface" />
-            <div className="absolute z-10 h-1/2 w-1/2 bottom-0 right-0 bg-gradient-to-br from-transparent to-surface" />
-            <h1
-              className="absolute z-20 h0 drop-shadow-2xl"
-              style={{
-                textShadow:
-                  "-1px -1px 0 var(--surface), 1px -1px 0 var(--surface), -1px 1px 0 var(--surface), 1px 1px 0 var(--surface)",
-              }}
-            >
-              Welcome to the sovereign internet.
-            </h1>
-          </div>
-          <img
-            className="rounded-lg"
-            alt=""
-            src="https://storage.googleapis.com/media.urbit.org/site/landing/web-screenshots.jpeg"
-          />
+        <h1 className="h0 heading mt-8">Welcome to the sovereign internet.</h1>
+        <div className="relative flex items-center">
+          <div className="header-img" />
         </div>
 
         <Section divider={"border-primary"}>
@@ -107,7 +78,6 @@ export default function Home({}) {
 
         <Section divider={"border-primary"}>
           <p className="h1">Own your computer in the ways that matter. </p>
-
           <FatBlock className="body-lg border border-primary rounded-lg">
             <table className="w-full table-fixed">
               <tbody>
