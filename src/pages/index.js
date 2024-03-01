@@ -39,14 +39,39 @@ export default function Home({}) {
       </Head>
       <IntraNav />
       <Main className="text-primary body-lg" singleColumn>
-        <h1 className="h0 heading mt-8 mb-8 md:mb-16 lg:mb-20">
-          Welcome to the sovereign internet.
-        </h1>
-        <img
-          className="rounded-lg"
-          alt=""
-          src="https://storage.googleapis.com/media.urbit.org/site/landing/web-screenshots.jpeg"
-        />
+        <div>
+          <div className="relative flex items-center">
+            {/* <img */}
+            {/*   alt="" */}
+            {/*   src="https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-bg.png" */}
+            {/* /> */}
+            <div
+              className="h-72 xl:h-96 w-full bg-cover bg-center bg-norepeat"
+              style={{
+                backgroundImage:
+                  "url(https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-bg.png)",
+              }}
+            />
+            <div className="absolute z-10 h-1/2 w-1/2 top-0 left-0 bg-gradient-to-tl from-transparent to-surface" />
+            <div className="absolute z-10 h-1/2 w-1/2 top-0 right-0 bg-gradient-to-tr from-transparent to-surface" />
+            <div className="absolute z-10 h-1/2 w-1/2 bottom-0 left-0 bg-gradient-to-bl from-transparent to-surface" />
+            <div className="absolute z-10 h-1/2 w-1/2 bottom-0 right-0 bg-gradient-to-br from-transparent to-surface" />
+            <h1
+              className="absolute z-20 h0 drop-shadow-2xl"
+              style={{
+                textShadow:
+                  "-1px -1px 0 var(--surface), 1px -1px 0 var(--surface), -1px 1px 0 var(--surface), 1px 1px 0 var(--surface)",
+              }}
+            >
+              Welcome to the sovereign internet.
+            </h1>
+          </div>
+          <img
+            className="rounded-lg"
+            alt=""
+            src="https://storage.googleapis.com/media.urbit.org/site/landing/web-screenshots.jpeg"
+          />
+        </div>
 
         <Section divider={"border-primary"}>
           <h1 className="h1">
