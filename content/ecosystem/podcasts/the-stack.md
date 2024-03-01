@@ -2,7 +2,7 @@
 title = "The Stack"
 description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis finibus tellus ut faucibus. Aenean luctus sapien vel turpis gravida, eget feugiat metus ornare."
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/podcasts/thestack.jpg"
-weight = 5
+weight = 60
 
 [[links]]
 label = "Listen on Apple Podcasts"
