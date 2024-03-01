@@ -12,7 +12,7 @@ const hosting = [
   {
     title: "Red Horizon",
     description:
-      "Urbit made simple. Red Horizon provides free urbit hosting with several urbit apps pre-installed",
+      "Urbit made simple. Red Horizon provides free Urbit hosting with several urbit apps pre-installed",
     extra: {
       image:
         "https://storage.googleapis.com/media.urbit.org/site/hosting/red-horizon2.svg",
@@ -67,8 +67,8 @@ export default function GetStarted({}) {
         </section>
         <Section divider={"border-primary"}>
           <div>
-            <h2 className="h2">Hosting</h2>
-            <p className="body-lg">Get a hosted Urbit ship in minutes</p>
+            <h2 className="h2">Getting on the network</h2>
+            <p className="body-lg">Get an Urbit ship in minutes</p>
           </div>
           <FatBlock className="hidden xs:flex space-x-1 lg:space-x-6 xl:space-x-8">
             {hosting.map((props) => (
