@@ -1,5 +1,5 @@
 +++
-title = "Uniswap"
+title = "Urbitswap"
 shortcode = "~firser-dister-sidnym-ladrut/urbitswap"
 license = "GPL-3.0 license"
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/applications/urbitswap-tile.svg"
