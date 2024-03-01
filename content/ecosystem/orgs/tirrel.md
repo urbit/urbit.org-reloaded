@@ -5,7 +5,7 @@ image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizat
 URL = "https://tirrel.io"
 ships = ["~tirrel"]
 twitter = "tirrelcorp"
-weight = 6
+weight = 80
 +++
 
 ### Tirrel Corporation is an Urbit product studio. 

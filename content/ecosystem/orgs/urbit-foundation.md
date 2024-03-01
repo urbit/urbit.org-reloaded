@@ -5,7 +5,7 @@ image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizat
 URL = "https://urbit.org"
 ships = ["~lapdeg"]
 twitter = "urbitfoundation"
-weight = 1 
+weight = 200
 +++
 
 Urbit Foundation is a non-profit organization whose mission is to ensure Urbit's success as a technology. 

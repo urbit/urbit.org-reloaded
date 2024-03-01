@@ -5,7 +5,7 @@ image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizat
 URL = "https://assembly.capital"
 twitter = "assemblycap"
 ships = ["~nodmyn-dosrux"]
-weight = 7
+weight = 70
 +++
 
 engineer-led early stage vc investing in things that matter, mostly urbit
