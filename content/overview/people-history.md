@@ -27,6 +27,7 @@ Founded in 2022, [Native Planet](https://www.nativeplanet.io/) has begun the imm
 Spun out of the redoubtable crypto company Chorus One, in 2023 [Red Horizon](https://redhorizon.com/) began providing hosting services and developer tools for Urbit.
 
 Founded in 2023, [Alphabet](https://tlon.network/lure/~sarmyn-samnym/alphabet) is building a peer-to-peer prediction market on Urbit leveraging the network’s decentralized structure and built-in reputation system. 
+
 Urbit’s community of contributors and core developers has been steadily contributing to the code base since before the Urbit Foundation existed, and they’re still going strong. They can primarily be found on Urbit itself, in the Urbit Community ([~bitbet-bolbel/urbit-community](https://urbit.org/groups/~bitbet-bolbel/urbit-community)), the [urbit-dev](https://groups.google.com/a/urbit.org/g/dev?pli=1) mailing list and on [GitHub](https://github.com/urbit). See also The Urbit Foundation’s public group at [~halbex-palheb/uf-public](https://urbit.org/groups/~halbex-palheb/uf-public).
 
 # Timeline 

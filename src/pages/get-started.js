@@ -22,7 +22,7 @@ const hosting = [
   {
     title: "Tlon",
     description:
-      "In just a few quick steps, you'll be on the network for free and using Groups, our Urbit-native toolkit for communicating, collaborating and building with your community.",
+      "In just a few quick steps, you'll be on the network for free and using Groups, Tlon's Urbit-native toolkitt for communicating, collaborating and building with your community.",
     extra: {
       image:
         "https://storage.googleapis.com/media.urbit.org/site/hosting/tlon.png",

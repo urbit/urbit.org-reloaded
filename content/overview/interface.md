@@ -13,7 +13,7 @@ To address the interface component of the stack, Tlon built Landscape: a simple,
 
 Today, once you have an Urbit OS node up and running, you can access Landscape from a desktop or mobile browser to pseudonymously chat, write, and share links with a group of friends.
 
-![](https://media.urbit.org/site/understanding-urbit/uu-interface-3.png)
+![](https://storage.googleapis.com/media.urbit.org/site/overview/landscape-6.png)
 
 Landscape is by no means the only possible interface for Urbit OS + Urbit ID, but it’s the one that we need the most. In the future, we look forward to there being lots of different Urbit interfaces (and if you’re at all interested in experimenting with building one, please do.)
 

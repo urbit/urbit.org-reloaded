@@ -63,7 +63,7 @@ export default function Home({}) {
 
         <Section divider={"border-primary"}>
           <h1 className="h1">
-            Urbit is a new computing paradigm with complete ownership.
+            Urbit is a new computing paradigm with complete ownership of your digital world.
           </h1>
           <div className="body-lg grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex flex-col justify-between bg-container rounded-lg p-4">
@@ -108,7 +108,7 @@ export default function Home({}) {
                   <td className="align-top p-4">
                     <p>Persistent Identity </p>
                     <p className="text-secondary">
-                      User controlled public-key infrastructure
+                      User-controlled public-key infrastructure
                     </p>
                   </td>
                 </tr>
@@ -147,7 +147,7 @@ export default function Home({}) {
 
         <Section divider={"border-primary"}>
           <p className="h1">
-            Explore one of the fastest growing developer ecosystems.
+            Explore one of the fastest-growing developer ecosystems.
           </p>
           <div className="body-lg grid grid-cols-2 md:grid-cols-4 gap-4">
             <Org
@@ -197,10 +197,10 @@ export default function Home({}) {
             />
           </div>
           <p>
-            Urbit takes computing history in a different direction. Computing
+            Urbit takes computing in a different direction. Computing
             has evolved to become smaller and more virtual. With Urbit, your
             computer is entirely <strong>self-contained</strong>,{" "}
-            <strong>digital</strong>, and <strong>cryptographic</strong>.
+            <strong>digital</strong>, and <strong>cryptographically owned</strong>.
           </p>
         </Section>
 
