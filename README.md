@@ -10,7 +10,7 @@ The website for Urbit is maintained by the Urbit Foundation and the Urbit commun
 
     ```shell
     cd urbit.org
-    nvm install 14
+    nvm install 16
     ```
     You can then run `nvm use` whenever in the repository (or automate it with a script - see [here](https://github.com/nvm-sh/nvm#deeper-shell-integration)).
 
