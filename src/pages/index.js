@@ -28,7 +28,7 @@ function CTAs({ className, links }) {
 export default function Home({}) {
   const post = {
     title: "Urbit",
-    description: "A clean-slate OS and network for the 21st century.",
+    description: "Welcome to the sovereign internet.",
   };
 
   return (
@@ -63,7 +63,7 @@ export default function Home({}) {
 
         <Section divider={"border-primary"}>
           <h1 className="h1">
-            Urbit is a new computing paradigm with complete ownership of your digital world.
+            Urbit is a new computing paradigm that provides complete ownership of your digital world.
           </h1>
           <div className="body-lg grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex flex-col justify-between bg-container rounded-lg p-4">
@@ -94,15 +94,15 @@ export default function Home({}) {
         </Section>
 
         <Section divider={"border-primary"}>
-          <p className="h1">Own your computer in the ways that matter. </p>
+          <p className="h1">Own your compute in the ways that matter. </p>
           <FatBlock className="body-lg border border-primary rounded-lg">
             <table className="w-full table-fixed">
               <tbody>
                 <tr className="border-b">
                   <td className="align-top p-4 border-r">
-                    <p>Data Ownership </p>
+                    <p>Beyond Data Ownership </p>
                     <p className="text-secondary">
-                      Full command over applications and data
+                      Own your data and the software that leverages it
                     </p>
                   </td>
                   <td className="align-top p-4">
@@ -114,9 +114,9 @@ export default function Home({}) {
                 </tr>
                 <tr className="border-b">
                   <td className="align-top p-4 border-r">
-                    <p>Reduced Platform Risk </p>
+                    <p>No Platform Risk </p>
                     <p className="text-secondary">
-                      Ensuring continuous operation
+                      You are the platform, no one can take it from you
                     </p>
                   </td>
                   <td className="align-top p-4">
@@ -128,15 +128,15 @@ export default function Home({}) {
                 </tr>
                 <tr>
                   <td className="align-top p-4 border-r">
-                    <p>Privacy & Security </p>
+                    <p>Private by Default </p>
                     <p className="text-secondary">
-                      Decentralized storage for data confidentiality
+                      Personal computing means private computing
                     </p>
                   </td>
                   <td className="align-top p-4">
-                    <p>Cost Predictability €</p>
+                    <p>Designed for Security</p>
                     <p className="text-secondary">
-                      Fixed hardware costs with no hidden fees
+                      A new stack that's secure at the lowest levels
                     </p>
                   </td>
                 </tr>
@@ -147,35 +147,35 @@ export default function Home({}) {
 
         <Section divider={"border-primary"}>
           <p className="h1">
-            Explore one of the fastest-growing developer ecosystems.
+            Explore one of the highest quality developer ecosystems.
           </p>
           <div className="body-lg grid grid-cols-2 md:grid-cols-4 gap-4">
             <Org
               title="Tlon"
-              description="Urbit core infrastructure"
+              description="Building a next-gen communications suite"
               image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon-b.svg"
               slug="tlon"
               extended
             />
             <Org
               title="Native Planet"
-              description="Urbit-centric hardware"
+              description="Beautiful, custom Urbit-centric hardware"
               image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/native-planet-b.svg"
               slug="nativeplanet"
               extended
             />
             <Org
               title="Zorp"
-              description="Computation with ZK proofs"
+              description="Civilization-grade computational infrastructure using a novel zkVM"
               image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/zorp-b.svg"
               slug="zorp"
               extended
             />
             <Org
-              title="~Tirrel Corp"
-              description="Urbit product studio"
-              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tirrel-b.svg"
-              slug="tirrel"
+              title="Red Horizon"
+              description="Urbit hosting as a service, for individuals and developers"
+              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/red-horizon-b.svg"
+              slug="red-horizon"
               extended
             />
           </div>

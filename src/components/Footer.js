@@ -23,12 +23,12 @@ const data = [
           href: "https://github.com/urbit",
         },
         {
-          title: "Airlock APIs",
-          href: "https://github.com/urbit/awesome-urbit#http-apis-airlock",
+          title: "Urbit Releases",
+          href: "https://github.com/urbit/urbit/releases",
         },
         {
-          title: "Urbit Binaries",
-          href: "https://github.com/urbit/urbit/releases",
+          title: "Runtime Releases",
+          href: "https://github.com/urbit/vere/releases",
         },
         {
           title: "Developer Mailing List",
