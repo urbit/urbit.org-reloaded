@@ -45,7 +45,7 @@ const self_hosting = [
   {
     title: "Cloud hosting guide (technical)",
     description:
-    "Host Urbit in the cloud on a Digital Ocean VPS",
+    "Host Urbit in the cloud on a Digital Ocean VPS.",
     extra: {
       image:
       "",

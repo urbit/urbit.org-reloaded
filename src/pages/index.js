@@ -182,7 +182,7 @@ export default function Home({}) {
         </Section>
 
         <Section divider={"border-primary"} narrow>
-          <p className="h1">Imagine an alternative computing paradigm.</p>
+          <p className="h1">A fork of the dominant computing paradigm.</p>
           <div className="w-full aspect-[1076/721] !my-16 md:!my-20 lg:!my-24">
             <div
               className="h-full bg-primary"

@@ -14,7 +14,7 @@ Let’s talk first about these individual groups within the Urbit community, the
 
 # Organizations
 
-The [Urbit Foundation](https://urbit.org/) was formally established in 2021 when it split off from Tlon. The Foundation leads core development, education, and communications, in addition to running the Urbit grants program, maintaining [urbit.org](https://urbit.org/) and Urbit-related media, and organizing Urbit events like [Assembly](https://assembly.urbit.org/).
+The [Urbit Foundation](https://urbit.org/) was formally established in 2021 when it split off from Tlon. The Foundation leads core development, education, communications, runs the Urbit grants program, maintains [urbit.org](https://urbit.org/) and Urbit-related media, and organizes events like [Assembly](https://assembly.urbit.org/).
 
 [Tlon Corporation](https://tlon.io/) was founded in 2013 to bootstrap Urbit. Tlon provides a mobile app “Tlon” which serves as the communication suite for Urbit, and, as of 2024, offers free hosting and Urbit planets for anyone who wants to get on the network. 
 
@@ -80,11 +80,11 @@ Tlon hosts the first Urbit Assembly and the Urbit Foundation is formally organiz
 
 **2022**
 
-The Urbit Foundation’s split from Tlon becomes complete, and UF organizes [Urbit NYC](https://urbit.org/groups/~ladtem-filmyr/urbit-ny-week) and [Assembly 2022](https://www.youtube.com/playlist?list=PLYGEMSwLguIGfxboRkv38sDeXH71koyET) in Miami while launching the highly successful education project Hoon School Live, and updating relevant [educational resources](https://docs.urbit.org/courses/hoon-school). 
+The Urbit Foundation’s split from Tlon becomes complete, and UF organizes [Urbit NYC](https://urbit.org/groups/~ladtem-filmyr/urbit-ny-week) and [Assembly 2022](https://www.youtube.com/playlist?list=PLYGEMSwLguIGfxboRkv38sDeXH71koyET) in Miami while launching the Hoon School Live educational program, and updating [the documentation](https://docs.urbit.org/courses/hoon-school). 
 
 **2023**
 
-The Urbit Foundation takes over core development of Urbit, and, along with Aleph DAO, organizes the Volcano Summit, a conference for Urbit developers, in El Salvador. Later in the year, [Assembly Lisboa](https://www.youtube.com/playlist?list=PLYGEMSwLguIF9wPzEoBr_MV3qR_mFSfXy) is our biggest event yet, drawing developers, CEOs, writers and artists, and Urbit enthusiasts from all over the world.
+The Urbit Foundation takes over core development of Urbit and organizes the Volcano Summit, a conference for Urbit developers in El Salvador. Later in the year, [Assembly Lisboa](https://www.youtube.com/playlist?list=PLYGEMSwLguIF9wPzEoBr_MV3qR_mFSfXy) is our biggest event yet, drawing developers, projects, writers,artists, and Urbit enthusiasts from all over the world.
 
 **The Future**
 
