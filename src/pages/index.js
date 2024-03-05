@@ -135,7 +135,20 @@ export default function Home({}) {
                     </p>
                   </td>
                   <td className="align-top p-4">
-                    <p>Designed for Security</p>
+                    <p className="flex items-center gap-[0.25em]">
+                      Designed for Security
+                      <span
+                        className="inline-block aspect-square h-[1em] bg-primary"
+                        style={{
+                          WebkitMaskImage: "url(/images/lock.svg)",
+                          WebkitMaskSize: "100% 100%",
+                          WebkitMaskRepeat: "no-repeat",
+                          maskImage: "url(/images/lock.svg)",
+                          maskSize: "100% 100%",
+                          maskRepeat: "no-repeat",
+                        }}
+                      />
+                    </p>
                     <p className="text-secondary">
                       A new stack that's secure at the lowest levels
                     </p>
