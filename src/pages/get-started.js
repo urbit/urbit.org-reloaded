@@ -121,30 +121,31 @@ export default function GetStarted({}) {
         <Section tight divider={"border-primary"}>
           <h2 className="h1">Go deeper</h2>
           <p className="body-lg">
-            Once you're up and running, read up on what you can do with your new Urbit node
+            Once you're up and running, read up on what you can do with your new
+            Urbit node
           </p>
           <p className="body-lg">
-            Learn to use Urbit's CLI
+            Learn to use Urbit's CLI{" "}
             <Link
-              className="btn bg-primary hover:bg-secondary text-surface ml-[0.25em]"
+              className="btn bg-primary hover:bg-secondary text-surface"
               href="https://docs.urbit.org/manual/os/basics"
             >
               User manual
             </Link>
           </p>
           <p className="body-lg">
-            Learn the web interface
+            Learn the web interface{" "}
             <Link
-              className="btn bg-primary hover:bg-secondary text-surface ml-[0.25em]"
+              className="btn bg-primary hover:bg-secondary text-surface"
               href="https://docs.urbit.org/manual/getting-started/additional/getting-around"
             >
               Getting around guide
             </Link>
           </p>
           <p className="body-lg">
-            Manage your Urbit ID
+            Manage your Urbit ID{" "}
             <Link
-              className="btn bg-primary hover:bg-secondary text-surface ml-[0.25em]"
+              className="btn bg-primary hover:bg-secondary text-surface"
               href="https://docs.urbit.org/manual/id/using-bridge"
             >
               Bridge guide
