@@ -263,7 +263,7 @@ export default function Grants({ posts, categories, types }) {
               <div className="flex flex-wrap mt-3.5">
                 <Link
                   className="btn bg-primary hover:bg-secondary text-surface"
-                  href="/grants/apprenticeships"
+                  href="/grants/rfps"
                 >
                   Submit a RFP
                 </Link>
