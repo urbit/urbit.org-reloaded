@@ -9,7 +9,7 @@ export default function Apprenticeships({ post, markdown }) {
       post={post}
       markdown={markdown}
       actionText="View Requests"
-      actionLink="/grants?program=apprenticeship&completed=true#view-grants"
+      actionLink="/grants?type=Apprenticeship&status=open&status=wip&status=completed#view-grants"
     />
   );
 }
