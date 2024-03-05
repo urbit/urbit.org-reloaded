@@ -63,7 +63,8 @@ export default function Home({}) {
 
         <Section divider={"border-primary"}>
           <h1 className="h1">
-            Urbit is a new computing paradigm that provides complete ownership of your digital world.
+            Urbit is a new computing paradigm that provides complete ownership
+            of your digital world.
           </h1>
           <div className="body-lg grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex flex-col justify-between bg-container rounded-lg p-4">
@@ -181,26 +182,25 @@ export default function Home({}) {
           </div>
         </Section>
 
-        <Section divider={"border-primary"} narrow>
+        <Section divider={"border-primary"}>
           <p className="h1">Imagine an alternative computing paradigm.</p>
-          <div className="w-full aspect-[1125/706] !my-16 md:!my-20 lg:!my-24">
-            <div
-              className="h-full bg-primary"
-              style={{
-                WebkitMaskImage: "url(/images/compute-paradigm.svg)",
-                WebkitMaskSize: "100% 100%",
-                WebkitMaskRepeat: "no-repeat",
-                maskImage: "url(/images/compute-paradigm.svg)",
-                maskSize: "100% 100%",
-                maskRepeat: "no-repeat",
-              }}
-            />
-          </div>
-          <p>
-            Urbit takes computing in a different direction. Computing
-            has evolved to become smaller and more virtual. With Urbit, your
+          <div
+            className="w-full aspect-[1125/706] !my-16 md:!my-20 lg:!my-24 bg-primary"
+            style={{
+              WebkitMaskImage: "url(/images/compute-paradigm.svg)",
+              WebkitMaskSize: "100% 100%",
+              WebkitMaskRepeat: "no-repeat",
+              maskImage: "url(/images/compute-paradigm.svg)",
+              maskSize: "100% 100%",
+              maskRepeat: "no-repeat",
+            }}
+          />
+          <p className="h1">
+            Urbit takes computing in a different direction. Computing has
+            evolved to become smaller and more virtual. With Urbit, your
             computer is entirely <strong>self-contained</strong>,{" "}
-            <strong>digital</strong>, and <strong>cryptographically owned</strong>.
+            <strong>digital</strong>, and{" "}
+            <strong>cryptographically owned</strong>.
           </p>
         </Section>
 
