@@ -42,8 +42,7 @@ const self_hosting = [
   },
   {
     title: "Cloud hosting guide (technical)",
-    description:
-    "Host Urbit in the cloud on a Digital Ocean VPS.",
+    description: "Host Urbit in the cloud on a Digital Ocean VPS.",
     extra: {
       image: "https://media.urbit.org/site/hosting/digital-ocean.svg",
     },
@@ -54,10 +53,9 @@ const self_hosting = [
     description:
       "Buy a Native Planet device and simply run Urbit yourself at home.",
     extra: {
-      image:
-        "https:storage.googleapis.com/media.urbit.org/site/hosting/native-planet-devices.png",
+      image: "https://media.urbit.org/site/hosting/native-planet-devices.png",
     },
-    href: "https:www.nativeplanet.io/",
+    href: "https://www.nativeplanet.io/",
   },
 ];
 
