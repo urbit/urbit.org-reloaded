@@ -38,6 +38,17 @@ function statusLabel(status) {
   }[status];
 }
 
+function typeToIcon(grantType) {
+  const map = {
+    Bounty: "Bounty",
+    Proposal: "Proposal",
+    Apprenticeship: null,
+    RFP: "Apprenticeship",
+  };
+
+  return map[grantType];
+}
+
 function GrantCard(post) {
   const { title, date, taxonomies, extra, slug } = post;
   const { status } = post;
@@ -55,13 +66,13 @@ function GrantCard(post) {
           <h2 className="text-on-container">{title}</h2>
           <p className="text-on-container-variant">Reward: {extra.reward}</p>
         </div>
-        {new Set(["Bounty", "Proposal", "Apprenticeship"]).has(
+        {new Set(["Bounty", "Proposal", "RFP"]).has(
           taxonomies.grant_type[0]
         ) && (
           <div className="flex items-center justify-center h-[1.1em] aspect-square rounded-lg ml-3.5 bg-on-container">
             <Icon
               className={"h-4/6 bg-container-variant"}
-              name={taxonomies.grant_type[0]}
+              name={typeToIcon(taxonomies.grant_type[0])}
               weight="medium"
             />
           </div>
@@ -206,16 +217,18 @@ export default function Grants({ posts, categories, types }) {
             Grants Program
           </h1>
           <p className="h1">
-            The Urbit Foundation's Grants program is the primary
-            mechanisms for distributing address space to creators and
-            developers.
+            The Urbit Foundation's Grants program is the primary mechanisms for
+            distributing address space to creators and developers.
           </p>
         </section>
         <Section divider={"border-primary"}>
           <h2 className="h2">Grant Types</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3.5">
             <div className="body-md">
-              <Icon className="h-[1.3em] bg-primary" name="Proposal" />
+              <Icon
+                className="h-[1.3em] bg-primary"
+                name={typeToIcon("Proposal")}
+              />
               <h3 className="">Proposals</h3>
               <p className="text-secondary">
                 The main way to get funding for your project. We fund all kinds
@@ -232,7 +245,10 @@ export default function Grants({ posts, categories, types }) {
               </div>
             </div>
             <div className="body-md">
-              <Icon className="h-[1.3em] bg-primary" name="Bounty" />
+              <Icon
+                className="h-[1.3em] bg-primary"
+                name={typeToIcon("Bounty")}
+              />
               <h3 className="">Bounties</h3>
               <p className="text-secondary">
                 Contracts for work provided by either the Urbit Foundation or
@@ -254,7 +270,7 @@ export default function Grants({ posts, categories, types }) {
               </div>
             </div>
             <div className="body-md">
-              <Icon className="h-[1.3em] bg-primary" name="Apprenticeship" />
+              <Icon className="h-[1.3em] bg-primary" name={typeToIcon("RFP")} />
               <h3 className="">Requests for Proposals</h3>
               <p className="text-secondary">
                 RFPs are suitable for people experienced with hoon development
@@ -315,13 +331,13 @@ export default function Grants({ posts, categories, types }) {
                       onClick={() => push(pushOrDropQuery("type", type, t))}
                     >
                       <span>{`${t}`}</span>
-                      {["Bounty", "Proposal", "Apprenticeship"].includes(t) && (
+                      {["Bounty", "Proposal", "RFP"].includes(t) && (
                         <Icon
                           className={classnames("h-[1em]", {
                             "bg-tertiary": isOrIsIn(t, type),
                             "bg-primary": !isOrIsIn(t, type),
                           })}
-                          name={t}
+                          name={typeToIcon(t)}
                         />
                       )}
                       <span>{`(${counts[t]})`}</span>
