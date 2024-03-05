@@ -100,7 +100,12 @@ function AppCard({ className, title, description, slug, bgColor, image }) {
         )}
         style={{ backgroundColor: bgColor }}
       >
-        <img className="min-h-full min-w-full rounded-t-xl" src={image} />
+        {image && (
+          <img
+            className="h-full w-full rounded-t-xl object-cover object-center"
+            src={image}
+          />
+        )}
       </div>
       <div className="bg-container-variant rounded-b-xl p-4">
         <h3 className="h3 font-semibold text-on-container line-clamp-1 text-ellipsis">
