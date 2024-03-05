@@ -36,7 +36,7 @@ const self_hosting = [
     description:
       "Learn how to run Urbit on any compatible machine from the command line.",
     extra: {
-      image: "",
+      image: "https://media.urbit.org/site/hosting/cli.png",
     },
     href: "https://docs.urbit.org/manual/getting-started/self-hosted/cli",
   },
