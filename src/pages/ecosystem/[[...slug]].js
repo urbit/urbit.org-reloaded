@@ -324,7 +324,10 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
               <Carousel>
                 {talks &&
                   talks.map((props) => (
-                    <TalkCard className="w-60 sm:w-80 md:w-96" {...props} />
+                    <TalkCard
+                      className="w-80 sm:w-96 md:w-[30rem]"
+                      {...props}
+                    />
                   ))}
               </Carousel>
               <Link
