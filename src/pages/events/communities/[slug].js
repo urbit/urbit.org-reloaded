@@ -33,7 +33,7 @@ export default function Community({ post, markdown }) {
             className="object-cover aspect-square rounded-md w-1/3"
             src={post.image}
           />
-          <div className="flex flex-col justify-between pl-5 md:pl-8 lg:pl-16">
+          <div className="flex flex-col justify-between w-2/3 pl-5 md:pl-8 lg:pl-16">
             <h1 className="h1">{post.title}</h1>
             <div className="flex flex-row flex-wrap xs:flex-col body-md gap-1.5">
               {post?.links?.map(({ label, url }) => (
@@ -45,7 +45,7 @@ export default function Community({ post, markdown }) {
                 </Link>
               ))}
               {post?.group && (
-                <span className="btn bg-tertiary text-primary w-fit">
+                <span className="py-[0.2em] px-[0.4em] rounded-[0.5em] whitespace-nowrap bg-tertiary text-primary w-fit max-w-full overflow-auto">
                   {post.group}
                 </span>
               )}
