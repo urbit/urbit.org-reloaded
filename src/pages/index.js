@@ -185,12 +185,14 @@ export default function Home({}) {
         <Section divider={"border-primary"}>
           <p className="h1">Imagine an alternative computing paradigm.</p>
           <div
-            className="w-full aspect-[1125/706] !my-16 md:!my-20 lg:!my-24 bg-primary"
+            className="w-full aspect-[1195/646] !my-16 md:!my-20 lg:!my-24 bg-primary"
             style={{
-              WebkitMaskImage: "url(/images/compute-paradigm.svg)",
+              WebkitMaskImage:
+                "url(https://media.urbit.org/site/landing/compute-paradigm.svg)",
               WebkitMaskSize: "100% 100%",
               WebkitMaskRepeat: "no-repeat",
-              maskImage: "url(/images/compute-paradigm.svg)",
+              maskImage:
+                "url(https://media.urbit.org/site/landing/compute-paradigm.svg)",
               maskSize: "100% 100%",
               maskRepeat: "no-repeat",
             }}
