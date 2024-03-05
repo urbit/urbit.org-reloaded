@@ -44,7 +44,10 @@ function GrantCard(post) {
 
   return (
     <Link
-      className="flex flex-col space-y-8 w-full rounded-lg p-4 bg-container-variant"
+      className={classnames("flex flex-col space-y-8 w-full rounded-lg p-4", {
+        "bg-container": status === "open",
+        "bg-container-variant": status !== "open",
+      })}
       href={path.join("/grants", slug)}
     >
       <div className="body-lg flex justify-between">
@@ -70,16 +73,21 @@ function GrantCard(post) {
         </p>
       )}
       <div className="flex flex-wrap body-md space-x-3.5">
-        <span className="btn bg-inverse-on-container text-on-container">
+        <span
+          className={classnames("btn text-inverse-on-container", {
+            "bg-on-container": status === "open",
+            "bg-on-container-variant": status !== "open",
+          })}
+        >
           {statusLabel(status)}
         </span>
         {taxonomies.grant_type.map((s) => (
-          <span className="btn bg-on-container text-inverse-on-container">
+          <span className="btn bg-on-container-variant text-inverse-on-container">
             {s}
           </span>
         ))}
         {taxonomies.grant_category.map((s) => (
-          <span className="btn bg-on-container text-inverse-on-container">
+          <span className="btn bg-on-container-variant text-inverse-on-container">
             {s}
           </span>
         ))}
