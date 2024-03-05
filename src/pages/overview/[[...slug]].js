@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import path from "path";
 import {
@@ -17,7 +18,13 @@ import Meta from "@/components/Meta";
 import Header from "@/components/Header";
 import contentTree from "@/../cache/overview.json";
 
-export default function Overview({ posts, data, markdown }) {
+export default function Overview({
+  posts,
+  data,
+  markdown,
+  previousPost,
+  nextPost,
+}) {
   const router = useRouter();
 
   return (
@@ -43,6 +50,24 @@ export default function Overview({ posts, data, markdown }) {
           <Section className="markdown layout-narrow">
             <Markdown.render content={JSON.parse(markdown)} />
           </Section>
+          <div className="flex gap-1.5 justify-center w-full">
+            {previousPost && (
+              <Link
+                className="btn body-md bg-primary text-surface hover:bg-secondary"
+                href={previousPost.slug}
+              >
+                ← {previousPost?.title}
+              </Link>
+            )}
+            {nextPost && (
+              <Link
+                className="btn body-md bg-primary text-surface hover:bg-secondary"
+                href={nextPost.slug}
+              >
+                {nextPost?.title} →
+              </Link>
+            )}
+          </div>
         </div>
       </Main>
       <Footer />
@@ -64,7 +89,12 @@ export async function getStaticProps({ params }) {
       ["title", "slug", "weight"],
       path.join("overview", params.slug?.slice(0, -1).join("/") || "/"),
       "weight"
-    ) || null;
+    ) ||
+    (params.slug
+      ? params.slug?.join("/") === posts.pages?.[0]?.slug
+        ? { title: "Introduction", slug: "", weight: 0 }
+        : null
+      : null);
 
   const nextPost =
     getNextPost(
@@ -72,7 +102,7 @@ export async function getStaticProps({ params }) {
       ["title", "slug", "weight"],
       path.join("overview", params.slug?.slice(0, -1).join("/") || "/"),
       "weight"
-    ) || null;
+    ) || (params.slug ? null : posts.pages[0]);
 
   return { props: { posts, data, markdown, params, previousPost, nextPost } };
 }
