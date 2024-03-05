@@ -73,7 +73,7 @@ export default function Events({
           <h2 className="h2">Communities</h2>
           <Carousel>
             {communities.map((props) => (
-              <CommunityCard className="w-32 sm:w-56 md:w-80" {...props} />
+              <CommunityCard className="w-44 sm:w-56 md:w-80" {...props} />
             ))}
           </Carousel>
         </Section>
