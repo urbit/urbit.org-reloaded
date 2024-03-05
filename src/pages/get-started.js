@@ -45,7 +45,7 @@ const self_hosting = [
     description:
     "Host Urbit in the cloud on a Digital Ocean VPS.",
     extra: {
-      image: "",
+      image: "https://media.urbit.org/site/hosting/digital-ocean.svg",
     },
     href: "https://docs.urbit.org/manual/getting-started/self-hosted/cloud-hosting",
   },
