@@ -4,6 +4,36 @@
   },
   "redirects": [
     {
+      "source": "/start",
+      "destination": "/get-started",
+      "permanent": false
+    },
+    {
+      "source": "/join",
+      "destination": "/get-started",
+      "permanent": false
+    },
+    {
+      "source": "/onboarding",
+      "destination": "/get-started",
+      "permanent": false
+    },
+    {
+      "source": "/install",
+      "destination": "/get-started",
+      "permanent": false
+    },
+    {
+      "source": "/getting-started/:path*",
+      "destination": "/get-started",
+      "permanent": false
+    },
+    {
+      "source": "/docs/getting-started/:path*",
+      "destination": "/get-started",
+      "permanent": false
+    },
+    {
       "source": "/install/linux-aarch64/latest",
       "destination": "https://github.com/urbit/vere/releases/latest/download/linux-aarch64.tgz",
       "permanent": true
