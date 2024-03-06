@@ -84,7 +84,7 @@ The Urbit Foundation’s split from Tlon becomes complete, and UF organizes [Urb
 
 **2023**
 
-The Urbit Foundation takes over core development of Urbit and organizes the Volcano Summit, a conference for Urbit developers in El Salvador. Later in the year, [Assembly Lisboa](https://www.youtube.com/playlist?list=PLYGEMSwLguIF9wPzEoBr_MV3qR_mFSfXy) is our biggest event yet, drawing developers, projects, writers,artists, and Urbit enthusiasts from all over the world.
+The Urbit Foundation takes over core development of Urbit and organizes the Volcano Summit, a conference for Urbit developers in El Salvador. Later in the year, [Assembly Lisboa](https://www.youtube.com/playlist?list=PLYGEMSwLguIF9wPzEoBr_MV3qR_mFSfXy) is our biggest event yet, drawing developers, projects, writers, artists, and Urbit enthusiasts from all over the world.
 
 **The Future**
 
