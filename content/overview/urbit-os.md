@@ -18,7 +18,7 @@ Today, we’re more or less back to the timesharing model of the 1970s. Urbit OS
 
 Let’s talk about how we think we’re going to pull this off from a technical standpoint, and our vision for using Urbit.
 
-Architecture {% .font-bold .subpixel-antialiased .pt-8 %}
+# Architecture
 
 Urbit OS is a completely new, carefully architected software stack: a VM, programming language, and kernel designed to run software for an individual. Urbit OS is a program that runs on almost any cloud server, most laptops and many phones: anything with Unix and an internet connection.
 

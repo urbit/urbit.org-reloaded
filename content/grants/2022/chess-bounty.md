@@ -13,7 +13,7 @@ reward = "3 stars"
 assignee = ["~bonbud-macryg", "~nordus-mocwyl", "~rovmug-ticfyn"]
 grant_id = "B0175"
 champion = ["~finmep-lanteb"]
-completed = true
+completed = false
 link = ""
 deliverable = "~finmep-lanteb/chess"
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0175&prefill_Grant+Name=Chess%3A%20Improved%2C%20Timed%2C%20%26%20Rated"

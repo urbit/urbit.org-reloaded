@@ -14,7 +14,7 @@ reward = "5 Stars"
 assignee = ["~rivmud-fabwen"]
 champion = [""]
 grant_id = "P0296"
-completed = true
+completed = false
 canceled = false
 
 +++

@@ -6,11 +6,11 @@ The website for Urbit is maintained by the Urbit Foundation and the Urbit commun
 
 2. [Create a local clone](https://help.github.com/articles/cloning-a-repository/) of your fork.
 
-3. Navigate to the `urbit.org` directory and install Node 14 using [nvm](https://github.com/nvm-sh/nvm):
+3. Navigate to the `urbit.org` directory and install Node 18 using [nvm](https://github.com/nvm-sh/nvm):
 
     ```shell
     cd urbit.org
-    nvm install 14
+    nvm install 18
     ```
     You can then run `nvm use` whenever in the repository (or automate it with a script - see [here](https://github.com/nvm-sh/nvm#deeper-shell-integration)).
 
@@ -18,12 +18,6 @@ The website for Urbit is maintained by the Urbit Foundation and the Urbit commun
 
     ```shell
     npm install
-    ```
-
-    If running an arm64 Mac (M1 or later), you may need to install some dependencies to compile canvas, one of our dependencies. Assuming you have [Homebrew](https://brew.sh):
-
-    ```shell
-    arch -arm64 brew install pkg-config cairo pango libpng jpeg giflib librsvg
     ```
 
 5. Run the development server:
@@ -35,7 +29,7 @@ The website for Urbit is maintained by the Urbit Foundation and the Urbit commun
     ```
 
     Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-    
+
 To learn more about contributing, see GitHub's [documentation](https://docs.github.com/en/get-started/quickstart/contributing-to-projects).
 
 ## Framework and Library Documentation
@@ -55,4 +49,4 @@ We deploy using Vercel. All pull requests will show a deployment preview via the
 
 ## Upgrades
 
-The `/scripts` contains scripts used to programmatically upgrade site content data.
+The `/src/scripts` contains scripts used to programmatically upgrade site content data.

@@ -17,7 +17,7 @@ Let’s talk first about what an Urbit ID is and what it does. Then we’ll cove
 
 ![](https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-cards%402x.png)
 
-Summary {% .font-bold .subpixel-antialiased .pt-8 %}
+# Summary
 
 Your Urbit ID is a short, four-syllable name like ~ravmel-ropdyl that you own with an eight-syllable master passkey like ~palfun-foslup-fallyn-balfus. This name and key lets you log into Urbit OS, and it’s used to encrypt packets you send over the Urbit network. Soon it will also be a master key that allows holding and sending of Bitcoin and other cryptocurrencies. Your Urbit ID and passkey belong to you like any other cryptographic assets. No one can take them away from you (just make sure to store the key safely).
 
@@ -31,7 +31,7 @@ Urbit IDs are distributed by a sponsorship tree. At the top of the tree are 2^8^
 
 You can also call stars ‘infrastructure nodes’ and galaxies ‘governance nodes’, since those are more descriptive names for their roles. Stars help route packets, kind of like an ISP. And galaxies are a bit like DNS root servers or ICANN members. The difference, of course, is that Urbit IDs are owned cryptographically by many different people and accrue reputation independently.
 
-Design {% .font-bold .subpixel-antialiased .pt-8 %}
+# Design
 
 At a high level, there are three important things to understand about the overall Urbit ID system design.
 
@@ -47,7 +47,7 @@ The Urbit ID sponsorship tree is not intended to be a social system in any way. 
 
 Your relationship with your sponsor should be sort of like your ISP or a utility provider: a passive, non-invasive relationship. If it isn’t to your liking, moving to a new sponsor is very easy.
 
-Digital Land {% .font-bold .subpixel-antialiased .pt-8 %}
+# Digital Land
 
 Urbit IDs are property, and we think of the entire registry of Urbit IDs as a vast territory of digital land.
 

@@ -14,7 +14,7 @@ reward = "7 Stars"
 assignee = ["Runtime Verification, Inc."]
 champion = ["~rovnys-ricfer"]
 grant_id = "P0255"
-completed = true
+completed = false
 canceled = false
 
 +++

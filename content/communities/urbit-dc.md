@@ -1,7 +1,16 @@
 +++
 title = "DC Metro Urbit Meetup Group"
 description = ""
-image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/communities/urbit-dc.png"
+image = "https://sfo2.digitaloceanspaces.com/poldec-tonteg-content/poldec-tonteg/2024.2.26..23.7.31..4ed9.1687.2b02.0c49-46B48096-980E-43EE-A928-A28349535B32.png"
+group = "~tillys-fasryp/nova-urbit-meetup-lobby-3347"
+
+[[links]]
+label = "Meetup page"
+url = "https://www.meetup.com/dc-urbit-meetup-group"
+
+[[links]]
+label = "Twitter"
+url = "https://twitter.com/dcurbit"
 +++
 
 This is a DC/Northern Virginia/Southern Maryland Urbit discussion group.
@@ -10,10 +19,3 @@ It is for Urbit users or the urbit-curious or people who like to think and talk 
 
 We will socialize, discuss urbit and related topics, and support lab and learning activities.
 
-Find us on urbit chat at ~tillys-fasryp/nova-urbit-meetup-lobby-3347
-
-––
-
-[Meetup page](https://www.meetup.com/dc-urbit-meetup-group/)
-
-[Twitter](https://twitter.com/dcurbit)

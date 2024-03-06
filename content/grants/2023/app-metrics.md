@@ -14,7 +14,7 @@ reward = "5 Stars"
 assignee = ["~bacwyl-samweg"]
 champion = [""]
 grant_id = "P0235"
-completed = true
+completed = false
 canceled = false
 
 +++

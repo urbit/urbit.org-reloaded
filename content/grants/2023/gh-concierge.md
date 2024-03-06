@@ -14,7 +14,7 @@ reward = "2 Stars"
 assignee = ["~larryx-woldyr"]
 champion = ["~poldec-tonteg"]
 grant_id = "B0233"
-completed = true
+completed = false
 canceled = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0233&prefill_Grant+Name=Github%20Support%20Concierge"
 

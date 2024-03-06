@@ -15,7 +15,7 @@ assignee = ["~toptyr-bilder", "~dilryd-mopreg", "~foddur-hodler"]
 champion = ["~poldec-tonteg"]
 grant_id = "P0251"
 completed = false
-canceled = true
+canceled = false
 
 +++
 

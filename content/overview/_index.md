@@ -16,7 +16,7 @@ Urbit is designed to become an effective, customizable productivity tool for col
 
 This probably sounds crazy, so let’s get concrete and talk about (1) Urbit as a piece of technology and (2) Urbit as a user experience.
 
-Technology {% .font-bold .subpixel-antialiased .pt-8 %}
+# Technology
 
 Technically, Urbit is two components: Urbit OS and Urbit ID.  Both are completely open source and MIT licensed.
 
@@ -45,7 +45,7 @@ Your Urbit ID is a short, memorable name (like ~ravmel-ropdyl) that’s a userna
 
 Urbit IDs aren’t money, but they are scarce, so each one costs something. This means that when you meet a stranger on the Urbit network, they have some skin in the game and are less likely to be a bot or a spammer.
 
-Experience {% .font-bold .subpixel-antialiased .pt-8 %}
+# Experience
 
 We want Urbit to be a single, simple interface for your whole digital life.
 
