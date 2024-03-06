@@ -26,7 +26,7 @@ const hosting = [
     image:
       "https://storage.googleapis.com/media.urbit.org/site/hosting/tlon.png",
     dark: true,
-    href: "https://apps.apple.com/us/app/tlon-the-urbit-app/id6451392109",
+    href: "https://join.tlon.io",
   },
 ];
 
@@ -45,7 +45,7 @@ const self_hosting = [
     description:
       "Learn how to run Urbit on any compatible machine from the command line.",
     extra: {
-      image: "https://storage.googleapis.com/media.urbit.org/site/getting-started/urbit%20boot.gif",
+      image: "https://storage.googleapis.com/media.urbit.org/site/getting-started/urbit%20boot2.gif",
     },
     href: "https://docs.urbit.org/manual/getting-started/self-hosted/cli",
   },

@@ -5,7 +5,7 @@ license = "MIT"
 image = "https://bootstrap.urbit.org/icon-groups.svg"
 bgColor = "#EFF0F4"
 developer = "Tlon"
-website = "https://github.com/tloncorp/landscape-apps"
+website = "https://tlon.io"
 description = "Peer-to-peer collaboration for communities of all shapes and sizes"
 weight = 120
 +++
