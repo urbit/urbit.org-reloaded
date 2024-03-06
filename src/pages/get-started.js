@@ -26,7 +26,7 @@ const hosting = [
     image:
       "https://storage.googleapis.com/media.urbit.org/site/hosting/tlon.png",
     dark: true,
-    href: "https://join.tlon.io",
+    href: "https://tlon.io",
   },
 ];
 
