@@ -281,7 +281,7 @@ export default function Grants({ posts, categories, types }) {
                   className="btn bg-primary hover:bg-secondary text-surface"
                   href="/grants/rfps"
                 >
-                  Submit a RFP
+                  Learn More
                 </Link>
               </div>
             </div>
