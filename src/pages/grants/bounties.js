@@ -9,7 +9,7 @@ export default function Bounties({ post, markdown }) {
       post={post}
       markdown={markdown}
       actionText="View Open Bounties"
-      actionLink="/grants?program=bounty&open=true&wip=false#view-grants"
+      actionLink="/grants?type=Bounty&status=open#view-grants"
     />
   );
 }

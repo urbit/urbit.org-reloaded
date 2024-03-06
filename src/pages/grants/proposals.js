@@ -9,7 +9,7 @@ export default function Proposals({ post, markdown }) {
       post={post}
       markdown={markdown}
       actionText="View Proposals"
-      actionLink="/grants?program=proposal#view-grants"
+      actionLink="/grants?type=Proposal#view-grants"
     />
   );
 }

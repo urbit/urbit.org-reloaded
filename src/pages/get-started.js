@@ -31,33 +31,31 @@ const hosting = [
 ];
 
 const self_hosting = [
+    {
+    title: "Native Planet",
+    description:
+      "Buy a Native Planet device and simply run Urbit yourself at home.",
+    extra: {
+      image: "https://media.urbit.org/site/hosting/native-planet-devices.png",
+    },
+    href: "https://www.nativeplanet.io/",
+  },
   {
     title: "Run from a CLI (technical)",
     description:
       "Learn how to run Urbit on any compatible machine from the command line.",
     extra: {
-      image: "",
+      image: "https://storage.googleapis.com/media.urbit.org/site/getting-started/urbit%20boot.gif",
     },
     href: "https://docs.urbit.org/manual/getting-started/self-hosted/cli",
   },
   {
     title: "Cloud hosting guide (technical)",
-    description:
-    "Host Urbit in the cloud on a Digital Ocean VPS.",
+    description: "Host Urbit in the cloud on a Digital Ocean VPS.",
     extra: {
-      image: "",
+      image: "https://media.urbit.org/site/hosting/digital-ocean.svg",
     },
     href: "https://docs.urbit.org/manual/getting-started/self-hosted/cloud-hosting",
-  },
-  {
-    title: "Native Planet",
-    description:
-      "Buy a Native Planet device and simply run Urbit yourself at home.",
-    extra: {
-      image:
-        "https:storage.googleapis.com/media.urbit.org/site/hosting/native-planet-devices.png",
-    },
-    href: "https:www.nativeplanet.io/",
   },
 ];
 

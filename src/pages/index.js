@@ -63,7 +63,8 @@ export default function Home({}) {
 
         <Section divider={"border-primary"}>
           <h1 className="h1">
-            Urbit is a new computing paradigm that provides complete ownership of your digital world.
+            Urbit is a new computing paradigm that provides complete ownership
+            of your digital world.
           </h1>
           <div className="body-lg grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex flex-col justify-between bg-container rounded-lg p-4">
@@ -134,7 +135,20 @@ export default function Home({}) {
                     </p>
                   </td>
                   <td className="align-top p-4">
-                    <p>Designed for Security</p>
+                    <p className="flex items-center gap-[0.25em]">
+                      Designed for Security
+                      <span
+                        className="inline-block aspect-square h-[1em] bg-primary"
+                        style={{
+                          WebkitMaskImage: "url(/images/lock.svg)",
+                          WebkitMaskSize: "100% 100%",
+                          WebkitMaskRepeat: "no-repeat",
+                          maskImage: "url(/images/lock.svg)",
+                          maskSize: "100% 100%",
+                          maskRepeat: "no-repeat",
+                        }}
+                      />
+                    </p>
                     <p className="text-secondary">
                       A new stack that's secure at the lowest levels
                     </p>
@@ -181,23 +195,27 @@ export default function Home({}) {
           </div>
         </Section>
 
-        <Section divider={"border-primary"} narrow>
-          <p className="h1">A fork in the road for computing.</p>
-          <div className="w-full aspect-[1125/706] !my-16 md:!my-20 lg:!my-24">
-            <div
-              className="h-full bg-primary"
-              style={{
-                WebkitMaskImage: "url(/images/compute-paradigm.svg)",
-                WebkitMaskSize: "100% 100%",
-                WebkitMaskRepeat: "no-repeat",
-                maskImage: "url(/images/compute-paradigm.svg)",
-                maskSize: "100% 100%",
-                maskRepeat: "no-repeat",
-              }}
-            />
-          </div>
-          <p>
-            Urbit is a Layer Zero for truly personal, networked computation. It's entirely <strong>self-contained</strong>, <strong>private</strong>, <strong>cryptographically owned</strong>, and <strong>designed to last forever</strong>. With Urbit, user-owned networks are finally possible.
+        <Section divider={"border-primary"}>
+          <p className="h1">Imagine an alternative computing paradigm.</p>
+          <div
+            className="w-full aspect-[1195/646] !my-16 md:!my-20 lg:!my-24 bg-primary"
+            style={{
+              WebkitMaskImage:
+                "url(https://media.urbit.org/site/landing/compute-paradigm.svg)",
+              WebkitMaskSize: "100% 100%",
+              WebkitMaskRepeat: "no-repeat",
+              maskImage:
+                "url(https://media.urbit.org/site/landing/compute-paradigm.svg)",
+              maskSize: "100% 100%",
+              maskRepeat: "no-repeat",
+            }}
+          />
+          <p className="h1">
+            Urbit takes computing in a different direction. Computing has
+            evolved to become smaller and more virtual. With Urbit, your
+            computer is entirely <strong>self-contained</strong>,{" "}
+            <strong>digital</strong>, and{" "}
+            <strong>cryptographically owned</strong>.
           </p>
           <Link
             className="btn bg-primary hover:bg-secondary text-surface"

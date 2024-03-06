@@ -9,7 +9,7 @@ export default function rfps({ post, markdown }) {
       post={post}
       markdown={markdown}
       actionText="View RFPs"
-      actionLink="/grants?program=RFP#view-grants"
+      actionLink="/grants?type=RFP#view-grants"
     />
   );
 }

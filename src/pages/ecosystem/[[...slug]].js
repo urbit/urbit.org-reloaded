@@ -100,7 +100,12 @@ function AppCard({ className, title, description, slug, bgColor, image }) {
         )}
         style={{ backgroundColor: bgColor }}
       >
-        <img className="min-h-full min-w-full rounded-t-xl" src={image} />
+        {image && (
+          <img
+            className="h-full w-full rounded-t-xl object-cover object-center"
+            src={image}
+          />
+        )}
       </div>
       <div className="bg-container-variant rounded-b-xl p-4">
         <h3 className="h3 font-semibold text-on-container line-clamp-1 text-ellipsis">
@@ -324,7 +329,10 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
               <Carousel>
                 {talks &&
                   talks.map((props) => (
-                    <TalkCard className="w-60 sm:w-80 md:w-96" {...props} />
+                    <TalkCard
+                      className="w-80 sm:w-96 md:w-[30rem]"
+                      {...props}
+                    />
                   ))}
               </Carousel>
               <Link
