@@ -182,7 +182,7 @@ export default function Home({}) {
         </Section>
 
         <Section divider={"border-primary"} narrow>
-          <p className="h1">Imagine an alternative computing paradigm.</p>
+          <p className="h1">A fork in the road for computing.</p>
           <div className="w-full aspect-[1125/706] !my-16 md:!my-20 lg:!my-24">
             <div
               className="h-full bg-primary"
@@ -197,11 +197,14 @@ export default function Home({}) {
             />
           </div>
           <p>
-            Urbit takes computing in a different direction. Computing
-            has evolved to become smaller and more virtual. With Urbit, your
-            computer is entirely <strong>self-contained</strong>,{" "}
-            <strong>digital</strong>, and <strong>cryptographically owned</strong>.
+            Urbit is a Layer Zero for truly personal, networked computation. It's entirely <strong>self-contained</strong>, <strong>private</strong>, <strong>cryptographically owned</strong>, and <strong>designed to last forever</strong>. With Urbit, user-owned networks are finally possible.
           </p>
+          <Link
+            className="btn bg-primary hover:bg-secondary text-surface"
+            href="/overview"
+          >
+            Learn More
+          </Link>
         </Section>
 
         <Section className="body-lg" divider={"border-primary"} narrow loose>
@@ -209,29 +212,30 @@ export default function Home({}) {
             <h2 className="h2">Urbit Newsletter</h2>
             <NewsletterSignup />
           </Section>
-          <Section>
-            <h2 className="h2">Follow</h2>
-            <CTAs
-              links={[
-                { label: "Twitter", url: "https://twitter.com/urbit" },
-                { label: "Instagram", url: "https://instagram.com/urbit" },
-                {
-                  label: "YouTube",
-                  url: "https://www.youtube.com/channel/UCNYIS9_SktINCC9yqO4CFZw",
-                },
-                { label: "GitHub", url: "https://github.com/urbit" },
-              ]}
-            />
-          </Section>
 
           <Section>
-            <h2 className="h2">Join our group on Urbit</h2>
+            <h2 className="h2">Join us on Urbit</h2>
             <Link
               className="btn bg-primary hover:bg-secondary text-surface"
               href="https://tlon.network/lure/~halbex-palheb/uf-public"
             >
               UF Public
             </Link>
+          </Section>
+
+          <Section>
+            <h2 className="h2">Follow</h2>
+            <CTAs
+              links={[
+                { label: "X", url: "https://twitter.com/urbit" },
+                { label: "GitHub", url: "https://github.com/urbit" },
+                {
+                  label: "YouTube",
+                  url: "https://www.youtube.com/channel/UCNYIS9_SktINCC9yqO4CFZw",
+                },
+                { label: "Instagram", url: "https://instagram.com/urbit" },
+              ]}
+            />
           </Section>
 
           <Section>
@@ -249,27 +253,6 @@ export default function Home({}) {
                 href="mailto: grants@urbit.org"
               >
                 grants@urbit.org
-              </Link>
-              <br />
-              <Link
-                className="hover:text-secondary"
-                href="mailto: assembly@urbit.org"
-              >
-                assembly@urbit.org
-              </Link>
-              <br />
-              <Link
-                className="hover:text-secondary"
-                href="mailto: newsletter@urbit.org"
-              >
-                newsletter@urbit.org
-              </Link>
-              <br />
-              <Link
-                className="hover:text-secondary"
-                href="mailto: press@urbit.org"
-              >
-                press@urbit.org
               </Link>
             </p>
           </Section>
