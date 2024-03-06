@@ -196,7 +196,7 @@ export default function Home({}) {
         </Section>
 
         <Section divider={"border-primary"}>
-          <p className="h1">Imagine an alternative computing paradigm.</p>
+          <p className="h1">A fork in the road for computing.</p>
           <div
             className="w-full aspect-[1195/646] !my-16 md:!my-20 lg:!my-24 bg-primary"
             style={{
@@ -211,11 +211,7 @@ export default function Home({}) {
             }}
           />
           <p className="h1">
-            Urbit takes computing in a different direction. Computing has
-            evolved to become smaller and more virtual. With Urbit, your
-            computer is entirely <strong>self-contained</strong>,{" "}
-            <strong>digital</strong>, and{" "}
-            <strong>cryptographically owned</strong>.
+            Urbit is a Layer Zero for truly personal, networked computation. It's entirely <strong>self-contained</strong>, <strong>private</strong>, <strong>cryptographically owned</strong>, and <strong>designed to last forever</strong>. With Urbit, user-owned networks are finally possible.
           </p>
           <Link
             className="btn bg-primary hover:bg-secondary text-surface"

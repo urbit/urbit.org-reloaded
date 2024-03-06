@@ -435,7 +435,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
             <section>
               <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Companies</h1>
               <p className="h1">
-              Our ecosystem is building <strong>blockchains, ZK provers, social networks, prediction markets, games</strong> and more. Dig deeper below.
+                Our ecosystem is building <strong>blockchains, custom hardware, ZK provers, social networks, prediction markets, games</strong> and more. Dig deeper below.
               </p>
             </section>
             <Section divider={"border-primary"}>
