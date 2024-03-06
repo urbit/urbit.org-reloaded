@@ -22,33 +22,35 @@ import OrgCard from "@/components/ecosystem/Org";
 
 function Filter({ className = "", children, filters = [] }) {
   const [filter, setFilter] = useState(
-    Object.fromEntries(new Map(filters.map((s) => [s, false])))
+    Object.fromEntries(
+      new Map(filters.map((o) => [o.key, { ...o, value: false }]))
+    )
   );
 
   const filterChildren = () => {
     let filtered = [...children];
-    filters.forEach((s) => {
-      if (filter[s]) {
-        filtered = filtered.filter((c) => c.props[s] === filter[s]);
+    filters.forEach(({ key }) => {
+      if (filter[key].value) {
+        filtered = filtered.filter((c) => c.props[key] === filter[key].value);
       }
     });
     return filtered;
   };
 
-  const getFilterValues = (s) => {
+  const getFilterValues = ({ key }) => {
     let vals = new Set([]);
     children.forEach((c) => {
-      vals.add(c.props[s]);
+      vals.add(c.props[key]);
     });
     return new Array(...vals);
   };
 
-  const toggleFilter = (f, v) => {
+  const toggleFilter = ({ key }, v) => {
     let filterCopy = { ...filter };
-    if (filter[f] === v) {
-      filterCopy[f] = false;
+    if (filter[key].value === v) {
+      filterCopy[key].value = false;
     } else {
-      filterCopy[f] = v;
+      filterCopy[key].value = v;
     }
     setFilter(filterCopy);
   };
@@ -59,18 +61,20 @@ function Filter({ className = "", children, filters = [] }) {
         <nav className="flex items-center w-full h-12 nav-space-x text-gray whitespace-nowrap overflow-x-auto type-ui">
           <button
             className={classnames("btn border-2", {
-              "border-tertiary text-primary": filter[f] !== false,
-              "border-primary bg-primary text-tertiary": filter[f] === false,
+              "border-tertiary text-primary": filter[f.key].value !== false,
+              "border-primary bg-primary text-tertiary":
+                filter[f.key].value === false,
             })}
             onClick={() => toggleFilter(f, false)}
           >
-            All
+            {f.allLabel}
           </button>
           {getFilterValues(f).map((v) => (
             <button
               className={classnames("btn border-2 border-brite", {
-                "border-tertiary text-primary": filter[f] !== v,
-                "border-primary bg-primary text-tertiary": filter[f] === v,
+                "border-tertiary text-primary": filter[f.key].value !== v,
+                "border-primary bg-primary text-tertiary":
+                  filter[f.key].value === v,
               })}
               onClick={() => toggleFilter(f, v)}
             >
@@ -414,15 +418,16 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
           <>
             <section>
               <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Talks</h1>
-              <p className="h1">
-                Talking about Urbit never gets old.
-              </p>
+              <p className="h1">Talking about Urbit never gets old.</p>
             </section>
             <Section divider={"border-primary"}>
               <FatBlock>
                 <Filter
                   className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-1 lg:gap-6 xl:gap-8"
-                  filters={["event", "type"]}
+                  filters={[
+                    { key: "event", allLabel: "All events" },
+                    { key: "type", allLabel: "All categories" },
+                  ]}
                 >
                   {talks && talks.map((props) => <TalkCard {...props} />)}
                 </Filter>
@@ -435,7 +440,12 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
             <section>
               <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Companies</h1>
               <p className="h1">
-                Our ecosystem is building <strong>blockchains, custom hardware, ZK provers, social networks, prediction markets, games</strong> and more. Dig deeper below.
+                Our ecosystem is building{" "}
+                <strong>
+                  blockchains, custom hardware, ZK provers, social networks,
+                  prediction markets, games
+                </strong>{" "}
+                and more. Dig deeper below.
               </p>
             </section>
             <Section divider={"border-primary"}>
@@ -455,7 +465,10 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
             </section>
             <Section divider={"border-primary"}>
               <FatBlock>
-                <Filter className="space-y-5" filters={["type"]}>
+                <Filter
+                  className="space-y-5"
+                  filters={[{ key: "type", allLabel: "All categories" }]}
+                >
                   {articles &&
                     articles.map((props, index) => (
                       <Article divider={index > 0} {...props} />
