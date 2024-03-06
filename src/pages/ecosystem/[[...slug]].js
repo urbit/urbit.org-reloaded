@@ -398,7 +398,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
             <section>
               <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Podcasts</h1>
               <p className="h1">
-                Here are some Podcasts we like. We also make our own:{" "}
+                Here are some Podcasts we like. We also have our own called{" "}
                 <strong>ZeroK</strong>.
               </p>
             </section>
@@ -415,7 +415,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
             <section>
               <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Talks</h1>
               <p className="h1">
-                Talking about Urbit never gets old, see the talks we like below.
+                Talking about Urbit never gets old.
               </p>
             </section>
             <Section divider={"border-primary"}>
@@ -435,9 +435,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
             <section>
               <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Companies</h1>
               <p className="h1">
-                Our ecosystem has produced many companies:{" "}
-                <strong>hosting, zk-proof, literature & investment</strong> are
-                just a selection of what they do. Check them all out below.
+              Our ecosystem is building <strong>blockchains, ZK provers, social networks, prediction markets, games</strong> and more. Dig deeper below.
               </p>
             </section>
             <Section divider={"border-primary"}>
