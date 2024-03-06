@@ -72,7 +72,7 @@ We make reasonable efforts to protect your information by using physical and ele
 
 ### Children's privacy
 
-We do not knowingly collect, maintain, or use personal information from children under 13 years of age, and no part of the Service is directed to children. If you learn that a child has provided us with personal information in violation of this Privacy Policy, then you may alert us at privacy@tlon.io.
+We do not knowingly collect, maintain, or use personal information from children under 13 years of age, and no part of the Service is directed to children. If you learn that a child has provided us with personal information in violation of this Privacy Policy, then you may alert us at support@urbit.org.
 
 ### International visitors
 
