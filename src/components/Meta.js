@@ -5,7 +5,7 @@ export default function Meta(post, disableImage = false, large = false) {
     post?.description || "Urbit is a new kind of computer that you can own completely in ways that matter: networking, identity, & data.";
   const image =
     post?.extra?.image || post?.image || large
-      ? "/images/urbit-twitter-header.png"
+      ? "/images/twitter-header.png"
       : "/images/urbit-twitter.png";
   return (
     <>
