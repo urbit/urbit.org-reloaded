@@ -142,4 +142,4 @@ In order to find out more about my previous works:
  - [GitHub](https://github.com/matthiasschaub)
 
 # Current State
-https://git.sr.ht/~talfus-laddus/tahuti
+https://github.com/matthiasschaub/tahuti
