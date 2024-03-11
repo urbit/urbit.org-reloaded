@@ -48,7 +48,7 @@ export default function GrantProgramPage({
         >
           {actionText}
         </Link>
-        <hr className="hr-horizontal border-brite" />
+        <hr className="hr-horizontal border-primary" />
         <section className="markdown layout-narrow">
           <Markdown.render content={JSON.parse(markdown)} />
         </section>
