@@ -12,7 +12,7 @@ assignee = ["~tiller-tolbus"]
 champion = ["~sarlev-sarsen"]
 grant_id = "P0138"
 completed = false
-canceled = false
+canceled = true
 link = "~tiller-tolbus/membrane"
 deliverable = "~tiller-tolbus/membrane"
 +++

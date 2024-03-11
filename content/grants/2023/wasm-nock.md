@@ -11,10 +11,10 @@ grant_category = ["Core Dev"]
 image = ""
 description = "Augment Urbit with the ability to run WASM code."
 reward = "20 Stars"
-assignee = [""]
-champion = [""]
+assignee = ["~dozreg-toplud"]
+champion = ["~rovnys-ricfer"]
 grant_id = "B0299"
-completed = false
+completed = true
 canceled = false
 
 +++

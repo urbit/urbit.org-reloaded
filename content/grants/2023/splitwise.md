@@ -10,9 +10,9 @@ grant_category = ["App Dev"]
 [extra]
 image = ""
 description = ""
-reward = "1 Star"
+reward = "2 Stars"
 assignee = ["~talfus-laddus"]
-champion = [""]
+champion = ["~rivmud-fabwen"]
 grant_id = "P0279"
 completed = false
 canceled = false
@@ -20,7 +20,7 @@ canceled = false
 +++
 
 # Motivation
-The Urbit community hosts many IRL events and, inevitably, this means splitting tabs with other Urbiters. Urbit needs its own expense sharing app that seamlessly keeps track of all expenses and IOUs in one place and works with both crypto and fiat [RFP](https://urbit.org/grants/splitwise-rfp).
+The Urbit community hosts many IRL events and, inevitably, this means splitting tabs with other Urbiters. Urbit needs its own expense sharing app that seamlessly keeps track of all expenses and IOUs in one place and works with both crypto and fiat.
 
 Urbit is for small communities. And those need a way to keep track of and to split shared expenses.
 
