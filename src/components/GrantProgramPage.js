@@ -34,7 +34,7 @@ export default function GrantProgramPage({
         {Meta(post)}
       </Head>
       <IntraNav />
-      <Main className="space-y-5 md:space-y-8 text-primary" singleColumn>
+      <Main className="text-primary" responsiveSpace singleColumn>
         <h1 className="h1 mt-12 md:mt-16">{post.title}</h1>
         <p className="body-md text-tertiary">
           Last Revision:{" "}
@@ -48,7 +48,7 @@ export default function GrantProgramPage({
         >
           {actionText}
         </Link>
-        <hr className="hr-horizontal border-brite" />
+        <hr className="hr-horizontal border-primary" />
         <section className="markdown layout-narrow">
           <Markdown.render content={JSON.parse(markdown)} />
         </section>
