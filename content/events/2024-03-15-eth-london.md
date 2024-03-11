@@ -5,7 +5,7 @@ ends = "2024-03-15T23:00:00"
 timezone = "Europe/London"
 location = "London"
 image = "https://storage.googleapis.com/media.urbit.org/site/events/urbitxbittensor_2.jpg"
-description = "Urbit's most light-hearted group launches an arts and sciences print journal."
+description = "Hang-out with the brightest minds in the space"
 dark = false
 darken_image = "true"
 
