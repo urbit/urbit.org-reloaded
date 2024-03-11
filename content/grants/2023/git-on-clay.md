@@ -10,12 +10,12 @@ grant_category = ["App Dev"]
 [extra]
 image = ""
 description = "Implement a Git server capable of hosting desks as repos"
-reward = "TBD"
-assignee = [""]
-champion = [""]
-grant_id = "P1001"
+reward = "11 Stars"
+assignee = ["~ponmep-litsem"]
+champion = ["~lagrev-nocfep"]
+grant_id = "P0297"
 completed = false
-canceled = false
+canceled = true
 
 +++
 
