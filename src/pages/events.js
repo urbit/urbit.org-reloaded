@@ -139,6 +139,8 @@ export async function getStaticProps() {
       "guests",
       "hosts",
       "image",
+      "darken_image",
+      "dark",
       "registration_url",
       "pinned",
       "content",
