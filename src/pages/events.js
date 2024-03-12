@@ -55,7 +55,7 @@ export default function Events({
         {Meta(post)}
       </Head>
       <IntraNav />
-      <Main className="text-primary" singleColumn>
+      <Main className="text-primary overflow-x-hidden" singleColumn>
         <section>
           <h1 className="h1 mt-12 mb-8 md:mt-16 md:mb-16 lg:mb-20">Events</h1>
           <p className="h1">
