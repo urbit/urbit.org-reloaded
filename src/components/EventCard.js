@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import classnames from "classnames";
 import path from "path";
-import { generateDisplayDate } from "@urbit/fdn-design-system";
+import { NoSsr, generateDisplayDate } from "@urbit/fdn-design-system";
 import DateRange from "@/components/DateRange";
 
 export default function EventCard({
@@ -37,10 +37,12 @@ export default function EventCard({
             <p className="break-words line-clamp-2 text-ellipsis mr-3.5">
               {location}
             </p>
-            <DateRange
-              starts={generateDisplayDate(starts)}
-              ends={generateDisplayDate(ends)}
-            />
+            <NoSsr>
+              <DateRange
+                starts={generateDisplayDate(starts, timezone, "system")}
+                ends={generateDisplayDate(ends, timezone, "system")}
+              />
+            </NoSsr>
           </div>
         </div>
       </Link>

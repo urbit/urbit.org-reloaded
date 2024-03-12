@@ -7,6 +7,7 @@ import {
   Main,
   Section,
   Markdown,
+  NoSsr,
   getPostBySlug,
   getAllPosts,
   generateDisplayDate,
@@ -38,12 +39,14 @@ export default function Event({ post, markdown }) {
           </div>
           <div className="body-md">
             <p>{post.location}</p>
-            <DateRange
-              className="flex space-x-[0.25em] text-gray"
-              starts={generateDisplayDate(post.starts)}
-              ends={generateDisplayDate(post.ends)}
-              divider={<span>•</span>}
-            />
+            <NoSsr>
+              <DateRange
+                className="flex space-x-[0.25em] text-gray"
+                starts={generateDisplayDate(post.starts, post.timezone, "system")}
+                ends={generateDisplayDate(post.ends, post.timezone, "system")}
+                divider={<span>•</span>}
+              />
+            </NoSsr>
           </div>
           <div className="flex flex-wrap body-md gap-1.5">
             {post?.links?.map(({ label, url }) => (
