@@ -4,7 +4,7 @@ import { DocSearch } from "@docsearch/react";
 import classnames from "classnames";
 
 const ourSite = {
-  title: "Urbit.org",
+  title: "Urbit",
   href: "https://urbit.org",
 };
 
