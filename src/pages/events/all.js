@@ -44,7 +44,7 @@ export default function AllEvents({
             <h2 className="h2">Ongoing</h2>
             <FatBlock className="grid grid-cols-1 sm:grid-cols-2 gap-1 lg:gap-6 xl:gap-8">
               {ongoingEvents.slice(0, 2).map((props) => (
-                <EventCard {...props} />
+                <EventCard className="h-full w-full" {...props} />
               ))}
             </FatBlock>
           </Section>
@@ -54,7 +54,7 @@ export default function AllEvents({
             <h2 className="h2">Upcoming</h2>
             <FatBlock className="grid grid-cols-1 sm:grid-cols-2 gap-1 lg:gap-6 xl:gap-8">
               {upcomingEvents.slice(0, 2).map((props) => (
-                <EventCard {...props} />
+                <EventCard className="h-full w-full" {...props} />
               ))}
             </FatBlock>
           </Section>
@@ -62,7 +62,10 @@ export default function AllEvents({
         <Section divider={"border-primary"}>
           <h2 className="h2">Past events</h2>
           <FatBlock className="grid grid-cols-1 sm:grid-cols-2 gap-1 lg:gap-6 xl:gap-8">
-            {pastEvents && pastEvents.map((props) => <EventCard {...props} />)}
+            {pastEvents &&
+              pastEvents.map((props) => (
+                <EventCard className="h-full w-full" {...props} />
+              ))}
           </FatBlock>
         </Section>
       </Main>
@@ -83,6 +86,8 @@ export async function getStaticProps() {
       "guests",
       "hosts",
       "image",
+      "darken_image",
+      "dark",
       "registration_url",
       "pinned",
       "content",

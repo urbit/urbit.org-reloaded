@@ -55,19 +55,20 @@ export default function Events({
         {Meta(post)}
       </Head>
       <IntraNav />
-      <Main className="text-primary" singleColumn>
+      <Main className="text-primary overflow-x-hidden" singleColumn>
         <section>
           <h1 className="h1 mt-12 mb-8 md:mt-16 md:mb-16 lg:mb-20">Events</h1>
           <p className="h1">
-            Urbit organizes events <strong>worldwide</strong>. Join your local communities or <Link
-                className="hover:text-secondary"
-                href="grants/community-meetups"
-              >
-                <strong>start</strong>
-              </Link>
-             {" "}
-              your own.
-              </p>
+            Urbit organizes events <strong>worldwide</strong>. Join your local
+            communities or{" "}
+            <Link
+              className="hover:text-secondary"
+              href="grants/community-meetups"
+            >
+              <strong>start</strong>
+            </Link>{" "}
+            your own.
+          </p>
         </section>
         <Section divider={"border-primary"}>
           <h2 className="h2">Communities</h2>
@@ -82,7 +83,7 @@ export default function Events({
             <h2 className="h2">Ongoing</h2>
             <FatBlock className="grid grid-cols-1 sm:grid-cols-2 gap-1 lg:gap-6 xl:gap-8">
               {ongoingEvents.slice(0, 2).map((props) => (
-                <EventCard {...props} />
+                <EventCard className="h-full w-full" {...props} />
               ))}
             </FatBlock>
           </Section>
@@ -92,7 +93,7 @@ export default function Events({
             <h2 className="h2">Upcoming</h2>
             <FatBlock className="grid grid-cols-1 sm:grid-cols-2 gap-1 lg:gap-6 xl:gap-8">
               {upcomingEvents.slice(0, 2).map((props) => (
-                <EventCard {...props} />
+                <EventCard className="h-full w-full" {...props} />
               ))}
             </FatBlock>
           </Section>
@@ -101,7 +102,11 @@ export default function Events({
           <h2 className="h2">Past events</h2>
           <FatBlock className="grid grid-cols-1 sm:grid-cols-2 gap-1 lg:gap-6 xl:gap-8">
             {pastEvents &&
-              pastEvents.slice(0, 4).map((props) => <EventCard {...props} />)}
+              pastEvents
+                .slice(0, 4)
+                .map((props) => (
+                  <EventCard className="h-full w-full" {...props} />
+                ))}
           </FatBlock>
           <Link
             className="btn bg-primary hover:bg-secondary text-surface body-lg w-min"
@@ -134,6 +139,8 @@ export async function getStaticProps() {
       "guests",
       "hosts",
       "image",
+      "darken_image",
+      "dark",
       "registration_url",
       "pinned",
       "content",

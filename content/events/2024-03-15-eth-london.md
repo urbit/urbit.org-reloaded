@@ -6,8 +6,8 @@ timezone = "Europe/London"
 location = "London"
 image = "https://storage.googleapis.com/media.urbit.org/site/events/urbitxbittensor_2.jpg"
 description = "Hang-out with the brightest minds in the space"
-dark = false
-darken_image = "true"
+dark = true
+darken_image = true
 
 [[links]]
 label = "Request to join"

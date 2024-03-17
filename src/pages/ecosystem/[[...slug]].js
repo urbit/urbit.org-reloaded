@@ -282,7 +282,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
         ]}
         path={router.asPath}
       />
-      <Main className="text-primary" singleColumn>
+      <Main className="text-primary overflow-x-hidden" singleColumn>
         {type === "overview" && (
           <>
             <section className="">
