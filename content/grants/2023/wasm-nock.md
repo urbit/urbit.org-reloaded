@@ -1,6 +1,6 @@
 +++
 
-title = "WebAssembly Interpreter in Nock"
+title = "Urwasm — Phase I"
 date = "2023-08-30"
 
 [taxonomies]
@@ -9,7 +9,7 @@ grant_category = ["Core Dev"]
 
 [extra]
 image = ""
-description = "Augment Urbit with the ability to run WASM code."
+description = "WebAssembly Interpreter in Nock — Augment Urbit with the ability to run WASM code."
 reward = "20 Stars"
 assignee = ["~dozreg-toplud"]
 champion = ["~rovnys-ricfer"]
