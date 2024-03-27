@@ -114,3 +114,13 @@ _Reward: 2 stars_
 
 The author will deliver an in-person (if possible) presentation at the Assembly 2023 narrating the story of implementing Git on Urbit, provided that sufficient progress has been made by that time. 
 
+## Supplemental Milestones
+
+### A. Support for pushing to an Urbit-hosted repository
+
+With milestone 3, an Urbit ship implements the git `upload-pack` functionality that
+allows git clients for cloning and pulling updates from a repository hosted on an Urbit-ship.
+To complete git hosting capabilities, a support for pushing to an Urbit-hosted
+repository is implemented.
+
+_Reward: 1 star_
