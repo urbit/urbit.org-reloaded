@@ -19,7 +19,7 @@ work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B01
 
 # Requirements
 - Meetups should be geographically based.
-- You must host a total of six meetups, with a targeted cadence of once a month.
+- You must host a total of four meetups, with a targeted cadence of once a month.
 - Meetups must be publicized and include a web presence like meetup.com, and should be actively promoted via social media, in-person recruitment, flyers, a website, etc. If you need a signal boost, email thomas@urbit.org.
 - Create and admin an Urbit group for your community to which all meetup attendees will be invited. This group should be actively maintained with info about upcoming events, copies of past presentation materials, and any other related meetup content.
 - Share all the materials you generate in service of your meetups like, presentations, flyers, FAQs or anything else in ~siddef/uf-meetups.
@@ -34,4 +34,4 @@ work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B01
 # Application process
 After applying to this bounty, set-up a call with ~dalweb-donfun who will assess the soundness of your strategy and run you through the requirements of this bounty. If everything checks-out you are good to go. 
 # Compensation
-- Upon the completion of six meetup events and the associated meetup report, one star will be paid out to the organizer.
+- Upon the completion of four meetup events and the associated meetup report, one star will be paid out to the organizer.

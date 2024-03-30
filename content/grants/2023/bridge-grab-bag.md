@@ -14,7 +14,7 @@ reward = "2 stars"
 assignee = ["~sicrep-docrem"]
 champion = ["~poldec-tonteg"]
 grant_id = "B0260"
-completed = false
+completed = true
 canceled = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0260&prefill_Grant+Name=Bridge%20Issue%20Grab%20Bag"
 

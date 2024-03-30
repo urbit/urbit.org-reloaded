@@ -13,7 +13,7 @@ reward = "1 star"
 mentor = ["~master-morzod"]
 assignee = ["~winter-paches"]
 completed = false
-canceled = false
+canceled = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0160&prefill_Grant+Name=Meld%20Memory%20Usage"
 +++
 
