@@ -14,7 +14,7 @@ reward = "1 Star"
 assignee = ["~sarlev-sarsen", "~ripnyt-ripnyt", "~doppeg-tonwel"]
 champion = ["~poldec-tonteg"]
 grant_id = "B0232"
-completed = false
+completed = true
 canceled = false
 
 +++

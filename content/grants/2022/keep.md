@@ -14,6 +14,7 @@ assignee = ["~wicrum-wicrun", "~sogrum-savluc"]
 grant_id = "P0184"
 champion = ["~rabsef-bicrym"]
 completed = false
+canceled = true
 +++
 
 ## Purpose

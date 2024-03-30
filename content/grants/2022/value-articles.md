@@ -12,6 +12,7 @@ assignee = ["~ripnyt-ripnyt", "~nilrun-mardux", "~bacfur-bitfed", "~hodreb-racde
 champion = ["~simfur-ritwed"]
 id = "B0156"
 completed = false
+canceled = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0156&prefill_Grant+Name=Urbit%20Value%20Longform%20Writing%2FAnalysis"
 +++
 

@@ -14,6 +14,7 @@ assignee = ["~rabsef-bicrym", "~sogrum-savluc"]
 grant_id = "B0211"
 champion = ["~sarlev-sarsen"]
 completed = false
+canceled = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0211&prefill_Grant+Name=STP%20Cyclopaedia"
 +++
 
