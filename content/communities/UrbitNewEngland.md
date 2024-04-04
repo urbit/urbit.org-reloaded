@@ -1,7 +1,7 @@
 +++
 title = "Urbit New England"
 description = ""
-image = "https://postimg.cc/2VNCdsYR"
+image = "https://media.urbit.org/site/ecosystem/communities/new-england.jpg"
 
 [[links]]
 label = "Meetup page"
