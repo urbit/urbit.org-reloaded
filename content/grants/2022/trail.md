@@ -15,7 +15,7 @@ assignee = ["~hanryc-tirpur"]
 champion = ["~famhut-wolpyx"]
 grant_id = "P0197"
 completed = false
-canceled = false
+canceled = true
 link = ""
 
 +++

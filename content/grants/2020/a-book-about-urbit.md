@@ -12,9 +12,11 @@ description = "A short book about Urbit, on Urbit, including Urbit-centric secti
 reward = "12 stars"
 assignee = ["librex-dozryc"]
 id = "1590647060"
-completed = false
-link = ""
+completed = true
+link = "https://store.marsreview.org/products/the-machine-war"
 +++
+
+**This grant has been completed, and the result is the novel: [The Machine War](https://store.marsreview.org/products/the-machine-war)**
 
 I'm writing a book-length history of Urbit. I'll also write, in an Urbit-centric way, about the the wider world of computing. Chapters will be posted on Urbit, beginning October 21st, in the Notebooks section of the group ~librex-dozryc/AUC . Right now I see the piece as going something like this:
 

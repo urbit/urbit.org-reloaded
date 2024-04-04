@@ -14,7 +14,7 @@ assignee = ["~niblyx-malnus", "~sidlup-havwen"]
 grant_id = "P0227"
 champion = ["~datder-sonnet"]
 completed = false
-canceled = false
+canceled = true
 +++
 
 # Main Objectives
