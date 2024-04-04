@@ -21,37 +21,36 @@ canceled = false
 
 ## Motivation
 
-> It will be [created with care](https://www.createwcare.com/).
+
 
 There is much to-do in the world. Urbit needs a way to keep track of all those tasks.
+> It will be [created with care](https://www.createwcare.com/).
+
+## User Story
+
+* ~zod wants to keep track of his tasks
+* ~zod wants to have different lists of tasks depending on the context
+* ~zod wants to filter lists of tasks by tags
+* ~zod wants to share a particular list of tasks with others
+* ~zod wants to collaborate on a list of tasks with others
 
 
-## Basic User Story
+## User Capabilities
 
-- ~zod wants to keep track of his tasks
-- ~zod wants to have different lists of tasks depending on the context
-- ~zod wants to filter lists of tasks by tags
-- ~zod wants to share a particular list of tasks with others
-- ~zod wants to collaborate on a list of tasks with others
-
-
-## Basic User Tasks
-
-- Create a list
-- View all lists
-- Add a task with tags and description to a list
-- View all tasks of a list
-- Edit a task of a list
-- Delete a task from a list
-- Mark a task as done/undone
-- Filter tasks by tag
-- Share a list with the World Wide Web (read-only)
-- Invite other ships to work together on a list (read and write)
+* Create a list
+* View all lists
+* Add a task with tags and description to a list
+* View all tasks of a list
+* Edit a task of a list
+* Delete a task from a list
+* Mark a task as done/undone
+* Filter tasks by tag
+* Share a list with the World Wide Web (read-only)
+* Invite other ships to work together on a list (read and write)
 
 
 ## Architecture and Technology
 
-> It will be [simple, stupid](https://en.wikipedia.org/wiki/KISS_principle).
 
 The backend will consist of three agents:
 1. Main agent with state
@@ -63,10 +62,10 @@ Javascript and will utilize the HTMX framework.
 
 The app will be Open Source and available under the MIT license.
 
+> It will be [simple, stupid](https://en.wikipedia.org/wiki/KISS_principle).
 
-## UI
 
-> It will be calm.
+## UI Design
 
 A sidebar contains all the lists.
 The top of the page contains the input field for a new task.
@@ -76,6 +75,7 @@ Each task can be marked as done/undone and clicked on to be edited.
 The read-only view of a public list accessible through the World Wide Web is
 just a flat list of tasks without the other UI elements described above.
 
+> It will be calm.
 
 ## Inspiration
 
