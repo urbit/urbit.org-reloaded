@@ -26,7 +26,7 @@ const hosting = [
     image:
       "https://storage.googleapis.com/media.urbit.org/site/hosting/tlon.png",
     dark: true,
-    href: "https://tlon.io",
+    href: "https://tlon.network/lure/~halbex-palheb/uf-public",
   },
 ];
 
