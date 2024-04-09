@@ -112,7 +112,7 @@ export default function Grants({ posts, categories, types }) {
   const router = useRouter();
   let { status, type, category } = router.query;
   if (status === undefined) {
-    status = ["open", "wip"];
+    status = "open";
   }
 
   function push(toQuery) {
@@ -125,6 +125,11 @@ export default function Grants({ posts, categories, types }) {
       "",
       { scroll: false }
     );
+  }
+
+  function changeStatus(status) {
+    const { type, category } = router.query;
+    push({ status, type, category });
   }
 
   function pushOrDropQuery(queryName, currentQuery, item) {
@@ -308,7 +313,7 @@ export default function Grants({ posts, categories, types }) {
                         "bg-tertiary hover:bg-secondary text-primary":
                           !isOrIsIn(s, status),
                       })}
-                      onClick={() => push(pushOrDropQuery("status", status, s))}
+                      onClick={() => changeStatus(s)}
                     >
                       {statusLabel(s)}
                     </button>
