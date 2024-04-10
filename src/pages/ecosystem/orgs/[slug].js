@@ -42,7 +42,7 @@ export default function Org({ post, markdown }) {
       <Main className="text-primary" responsiveSpace singleColumn>
         <div className="flex">
           <div className="relative flex items-center aspect-square bg-container w-1/3 rounded-md">
-            <img className="w-1/2 m-auto" src={post.image} />
+            <img src={post.image} />
           </div>
           <div className="flex flex-col justify-between pl-5 md:pl-8 lg:pl-16">
             <h1 className="h1">{post.title}</h1>
