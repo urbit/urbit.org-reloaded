@@ -193,21 +193,6 @@ export default function Grants({ posts, categories, types }) {
 
   const allCount = postsByStatus.length;
 
-  const counts = {
-    Bounty: postsByStatus.filter((post) =>
-      post.taxonomies.grant_type.includes("Bounty")
-    ).length,
-    RFP: postsByStatus.filter((post) =>
-      post.taxonomies.grant_type.includes("RFP")
-    ).length,
-    Apprenticeship: postsByStatus.filter((post) =>
-      post.taxonomies.grant_type.includes("Apprenticeship")
-    ).length,
-    Proposal: postsByStatus.filter((post) =>
-      post.taxonomies.grant_type.includes("Proposal")
-    ).length,
-  };
-
   const programCounts = postsByStatus.reduce((counts, post) => {
     let newCounts = { ...counts };
     post.taxonomies.grant_type.forEach((s) => {
