@@ -12,6 +12,7 @@ import {
   Section,
   Icon,
   getAllPosts,
+  IconCard,
 } from "@urbit/fdn-design-system";
 import IntraNav from "@/components/IntraNav";
 import Footer from "@/components/Footer";
@@ -229,68 +230,31 @@ export default function Grants({ posts, categories, types }) {
         </section>
         <Section divider={"border-primary"}>
           <h2 className="h2">Grant Types</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3.5">
-            <div className="body-md">
-              <Icon
-                className="h-[1.3em] bg-primary"
-                name={typeToIcon("Proposal")}
-              />
-              <h3 className="">Proposals</h3>
-              <p className="text-secondary">
-                The main way to get funding for your project. We fund all kinds
-                projects, not strictly technical ones, so don’t hesitate to
-                pitch your idea!
-              </p>
-              <div className="flex flex-wrap mt-3.5">
-                <Link
-                  className="btn bg-primary hover:bg-secondary text-surface mr-3.5"
-                  href="/grants/proposals"
-                >
-                  Submit a Proposal
-                </Link>
-              </div>
-            </div>
-            <div className="body-md">
-              <Icon
-                className="h-[1.3em] bg-primary"
-                name={typeToIcon("Bounty")}
-              />
-              <h3 className="">Bounties</h3>
-              <p className="text-secondary">
-                Contracts for work provided by either the Urbit Foundation or
-                from trusted partners in our ecosystem.
-              </p>
-              <div className="flex flex-wrap">
-                <Link
-                  className="btn bg-primary hover:bg-secondary text-surface mt-3.5 mr-3.5"
-                  href="/grants/bounties#post-a-bounty"
-                >
-                  Post a Bounty
-                </Link>
-                <Link
-                  className="btn bg-primary hover:bg-secondary text-surface mt-3.5"
-                  href="/grants/bounties"
-                >
-                  Learn more
-                </Link>
-              </div>
-            </div>
-            <div className="body-md">
-              <Icon className="h-[1.3em] bg-primary" name={typeToIcon("RFP")} />
-              <h3 className="">Requests for Proposals</h3>
-              <p className="text-secondary">
-                RFPs are suitable for people experienced with hoon development
-                but who need some ideas on what to work on.
-              </p>
-              <div className="flex flex-wrap mt-3.5">
-                <Link
-                  className="btn bg-primary hover:bg-secondary text-surface"
-                  href="/grants/rfps"
-                >
-                  Learn More
-                </Link>
-              </div>
-            </div>
+          <div
+            className="grid grid-cols-1 sm:grid-cols-2 gap-3.5"
+            style={{
+              "--black": "#14140F",
+              "--white": "#F8F8F8",
+              "--gray": "#FFFFFF",
+              "--tint": "#C8C8C8",
+              "--lite": "#5A5A55",
+              "--brite": "#14140F",
+            }}
+          >
+            <IconCard
+              title="Proposals"
+              description="The main way to get funding for your project. We fund all kinds projects, not strictly technical ones, so don’t hesitate to pitch your idea!"
+              href="/grants/proposals"
+              label="Submit a Proposal"
+              icon="Proposal"
+            />
+            <IconCard
+              title="Bounties"
+              description="Contracts for work provided by either the Urbit Foundation or from trusted partners in our ecosystem."
+              href="/grants/bounties"
+              label="Learn more"
+              icon="Bounty"
+            />
           </div>
         </Section>
         <div
