@@ -208,7 +208,7 @@ export default function Grants({ posts, categories, types }) {
     ).length,
   };
 
-  const programCounts = postsByProgram.reduce((counts, post) => {
+  const programCounts = postsByStatus.reduce((counts, post) => {
     let newCounts = { ...counts };
     post.taxonomies.grant_type.forEach((s) => {
       newCounts[s] = (newCounts[s] || 0) + 1;
@@ -216,7 +216,7 @@ export default function Grants({ posts, categories, types }) {
     return newCounts;
   }, {});
 
-  const categoryCounts = filteredPosts.reduce((counts, post) => {
+  const categoryCounts = postsByProgram.reduce((counts, post) => {
     let newCounts = { ...counts };
     post.taxonomies.grant_category.forEach((s) => {
       newCounts[s] = (newCounts[s] || 0) + 1;
