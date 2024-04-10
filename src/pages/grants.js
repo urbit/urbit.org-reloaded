@@ -342,6 +342,7 @@ export default function Grants({ posts, categories, types }) {
                         }
                       >
                         {c}
+                        <span className="ml-[0.25em]">{`(${categoryCounts[c]})`}</span>
                       </button>
                     ))}
                 </section>
