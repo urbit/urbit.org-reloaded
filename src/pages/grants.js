@@ -206,6 +206,14 @@ export default function Grants({ posts, categories, types }) {
     ).length,
   };
 
+  const categoryCounts = filteredPosts.reduce((counts, post) => {
+    let newCounts = { ...counts };
+    post.taxonomies.grant_category.forEach((s) => {
+      newCounts[s] = (newCounts[s] || 0) + 1;
+    });
+    return newCounts;
+  }, {});
+
   const post = {
     title: "Grants",
     description: "Contribute to the Urbit project while earning address space.",
@@ -319,23 +327,23 @@ export default function Grants({ posts, categories, types }) {
                   <h3 className="font-semibold">Work categories:</h3>
                 </div>
                 <section className="flex space-x-3.5 md:flex-col md:space-x-0 md:space-y-3.5 overflow-x-auto">
-                  {categories.map((c) => (
-                    <button
-                      className={classnames("btn w-min", {
-                        "bg-primary hover:bg-secondary text-tertiary": isOrIsIn(
-                          c,
-                          category
-                        ),
-                        "bg-tertiary hover:bg-secondary text-primary":
-                          !isOrIsIn(c, category),
-                      })}
-                      onClick={() =>
-                        push(pushOrDropQuery("category", category, c))
-                      }
-                    >
-                      {c}
-                    </button>
-                  ))}
+                  {Object.keys(categoryCounts)
+                    .sort((s) => -categoryCounts[s])
+                    .map((c) => (
+                      <button
+                        className={classnames("btn w-min", {
+                          "bg-primary hover:bg-secondary text-tertiary":
+                            isOrIsIn(c, category),
+                          "bg-tertiary hover:bg-secondary text-primary":
+                            !isOrIsIn(c, category),
+                        })}
+                        onClick={() =>
+                          push(pushOrDropQuery("category", category, c))
+                        }
+                      >
+                        {c}
+                      </button>
+                    ))}
                 </section>
               </div>
             </div>
