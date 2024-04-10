@@ -211,7 +211,11 @@ function Article({
   return (
     <>
       {divider && <hr className="hr-horizontal border-primary" />}
-      <Link className="flex h-28 xs:h-36 md:h-44 w-full" href={URL}>
+      <Link
+        className="flex h-28 xs:h-36 md:h-44 w-full"
+        href={URL}
+        target="_blank"
+      >
         <img
           className="aspect-square h-full mr-6 lg:mr-16"
           alt=""
