@@ -18,6 +18,7 @@ import Footer from "@/components/Footer";
 import Meta from "@/components/Meta";
 import Header from "@/components/Header";
 import Carousel from "@/components/Carousel";
+import AppCard from "@/components/ecosystem/App";
 import OrgCard from "@/components/ecosystem/Org";
 
 function Filter({ className = "", children, filters = [] }) {
@@ -87,41 +88,6 @@ function Filter({ className = "", children, filters = [] }) {
         {filterChildren(children)}
       </div>
     </>
-  );
-}
-
-function AppCard({ className, title, description, slug, bgColor, image }) {
-  const bg = !bgColor && "bg-container-variant";
-  return (
-    <Link
-      className={classnames("flex flex-col", className)}
-      href={path.join("/ecosystem", "apps", slug)}
-    >
-      <div
-        className={classnames(
-          "flex justify-center items-center aspect-square rounded-t-xl",
-          bg
-        )}
-        style={{ backgroundColor: bgColor }}
-      >
-        {image && (
-          <img
-            className="h-full w-full rounded-t-xl object-cover object-center"
-            src={image}
-          />
-        )}
-      </div>
-      <div className="bg-container-variant rounded-b-xl p-4">
-        <h3 className="h3 font-semibold text-on-container line-clamp-1 text-ellipsis">
-          {title}
-        </h3>
-        <div className="hidden md:block">
-          <p className="h-[3.9em] body-md text-on-container-variant line-clamp-3 text-ellipsis">
-            {description}
-          </p>
-        </div>
-      </div>
-    </Link>
   );
 }
 
