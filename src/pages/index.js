@@ -211,7 +211,11 @@ export default function Home({}) {
             }}
           />
           <p className="h1">
-            Urbit is a Layer Zero for truly personal, networked computation. It's entirely <strong>self-contained</strong>, <strong>private</strong>, <strong>cryptographically owned</strong>, and <strong>designed to last forever</strong>. With Urbit, user-owned networks are finally possible.
+            Urbit is a Layer Zero for truly personal, networked computation.
+            It's entirely <strong>self-contained</strong>,{" "}
+            <strong>private</strong>, <strong>cryptographically owned</strong>,
+            and <strong>designed to last forever</strong>. With Urbit,
+            user-owned networks are finally possible.
           </p>
           <Link
             className="btn bg-primary hover:bg-secondary text-surface"
@@ -219,6 +223,47 @@ export default function Home({}) {
           >
             Learn More
           </Link>
+        </Section>
+
+        <Section divider={"border-primary"}>
+          <h2 className="h2">Partners</h2>
+          <FatBlock className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
+            <Org
+              title="Near"
+              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon-b.svg"
+              href=""
+            />
+            <Org
+              title="Laconic"
+              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon-b.svg"
+              href=""
+            />
+            <Org
+              title="Serotonin"
+              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon-b.svg"
+              href=""
+            />
+            <Org
+              title="Giga"
+              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon-b.svg"
+              href=""
+            />
+            <Org
+              title="Sia"
+              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon-b.svg"
+              href=""
+            />
+            <Org
+              title="Reserve"
+              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon-b.svg"
+              href=""
+            />
+            <Org
+              title="Vega"
+              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon-b.svg"
+              href=""
+            />
+          </FatBlock>
         </Section>
 
         <Section className="body-lg" divider={"border-primary"} narrow loose>
