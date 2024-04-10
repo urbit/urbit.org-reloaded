@@ -267,7 +267,7 @@ export default function Grants({ posts, categories, types }) {
           <hr className="hr-horizontal border-primary" />
           <div className="flex flex-col md:flex-row">
             <div className="md:sticky top-12 md:top-16 py-5 md:py-8 overflow-x-hidden overflow-y-auto sidebar">
-              <div className="flex flex-col type-ui md:pr-5 space-y-5 md:border-r rounded-sm border-primary">
+              <div className="flex flex-col min-h-full type-ui md:pr-5 space-y-5 md:border-r rounded-sm border-primary">
                 <h3 className="font-semibold">Status:</h3>
                 <section className="flex space-x-3.5 md:flex-col md:space-x-0 md:space-y-3.5 overflow-x-auto md:overflow-x-hidden">
                   {["open", "wip", "completed"].map((s) => (
