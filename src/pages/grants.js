@@ -166,27 +166,29 @@ export default function Grants({ posts, categories, types }) {
 
   const byStatus = (post) => {
     return (
-      (isOrIsIn("open", status) ? post.status === "open" : false) ||
-      (isOrIsIn("completed", status) ? post.status === "completed" : false) ||
-      (isOrIsIn("wip", status) ? post.status === "wip" : false)
+      !post.extra.canceled &&
+      ((isOrIsIn("open", status) ? post.status === "open" : false) ||
+        (isOrIsIn("completed", status) ? post.status === "completed" : false) ||
+        (isOrIsIn("wip", status) ? post.status === "wip" : false))
     );
   };
 
   const postsByStatus = annotatedPosts.filter(byStatus);
 
-  const filteredPosts = postsByStatus.filter((post) => {
-    const hasCategory = category
-      ? isArray(category)
-        ? post.taxonomies.grant_category.some((cat) => category.includes(cat))
-        : post.taxonomies.grant_category.includes(category)
-      : true;
-    const notCanceled = !post.extra.canceled;
-    const hasType = type
+  const postsByProgram = postsByStatus.filter((post) => {
+    return type
       ? isArray(type)
         ? post.taxonomies.grant_type.some((t) => type.includes(t))
         : post.taxonomies.grant_type.includes(type)
       : true;
-    return hasCategory && notCanceled && hasType;
+  });
+
+  const filteredPosts = postsByProgram.filter((post) => {
+    return category
+      ? isArray(category)
+        ? post.taxonomies.grant_category.some((cat) => category.includes(cat))
+        : post.taxonomies.grant_category.includes(category)
+      : true;
   });
 
   const allCount = postsByStatus.length;
@@ -205,6 +207,14 @@ export default function Grants({ posts, categories, types }) {
       post.taxonomies.grant_type.includes("Proposal")
     ).length,
   };
+
+  const programCounts = postsByProgram.reduce((counts, post) => {
+    let newCounts = { ...counts };
+    post.taxonomies.grant_type.forEach((s) => {
+      newCounts[s] = (newCounts[s] || 0) + 1;
+    });
+    return newCounts;
+  }, {});
 
   const categoryCounts = filteredPosts.reduce((counts, post) => {
     let newCounts = { ...counts };
@@ -296,31 +306,31 @@ export default function Grants({ posts, categories, types }) {
                   <h3 className="font-semibold">Programs:</h3>
                 </div>
                 <section className="flex space-x-3.5 md:flex-col md:space-x-0 md:space-y-3.5 overflow-x-auto">
-                  {types.map((t) => (
-                    <button
-                      className={classnames("btn w-fit space-x-[0.25em]", {
-                        "bg-primary hover:bg-secondary text-tertiary": isOrIsIn(
-                          t,
-                          type
-                        ),
-                        "bg-tertiary hover:bg-secondary text-primary":
-                          !isOrIsIn(t, type),
-                      })}
-                      onClick={() => push(pushOrDropQuery("type", type, t))}
-                    >
-                      <span>{`${t}`}</span>
-                      {["Bounty", "Proposal", "RFP"].includes(t) && (
-                        <Icon
-                          className={classnames("h-[1em]", {
-                            "bg-tertiary": isOrIsIn(t, type),
-                            "bg-primary": !isOrIsIn(t, type),
-                          })}
-                          name={typeToIcon(t)}
-                        />
-                      )}
-                      <span>{`(${counts[t]})`}</span>
-                    </button>
-                  ))}
+                  {Object.keys(programCounts)
+                    .sort((s) => -programCounts[s])
+                    .map((t) => (
+                      <button
+                        className={classnames("btn w-fit space-x-[0.25em]", {
+                          "bg-primary hover:bg-secondary text-tertiary":
+                            isOrIsIn(t, type),
+                          "bg-tertiary hover:bg-secondary text-primary":
+                            !isOrIsIn(t, type),
+                        })}
+                        onClick={() => push(pushOrDropQuery("type", type, t))}
+                      >
+                        <span>{`${t}`}</span>
+                        {["Bounty", "Proposal", "RFP"].includes(t) && (
+                          <Icon
+                            className={classnames("h-[1em]", {
+                              "bg-tertiary": isOrIsIn(t, type),
+                              "bg-primary": !isOrIsIn(t, type),
+                            })}
+                            name={typeToIcon(t)}
+                          />
+                        )}
+                        <span>{`(${programCounts[t]})`}</span>
+                      </button>
+                    ))}
                 </section>
                 <div>
                   <hr className="hr-horizontal border-primary my-2.5" />
