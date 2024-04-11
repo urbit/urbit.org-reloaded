@@ -82,15 +82,21 @@ export default function IntraNav({}) {
       sites={sites}
       pages={pages}
       search={
-        <div className="flex h-full w-full py-2 md:py-3 layout-pr justify-end bg-brite lg:bg-gray">
+        <div className="flex h-full w-full space-x-2 p-2 md:p-3 bg-brite">
+          <DocSearch
+            appId="X99UXGCKE0"
+            apiKey="e889421ff5efbeb31bb90c324fd6454b"
+            indexName="urbit.org"
+            placeholder="Search"
+          />
           <div
             className={
-              "flex items-center h-full w-12 md:w-14 rounded-full bg-gray lg:bg-brite"
+              "hidden xs:flex items-center h-full w-12 md:w-14 rounded-full bg-gray"
             }
           >
             <button
               className={classnames(
-                "flex items-center aspect-square h-6 md:h-8 mx-1 rounded-full bg-brite lg:bg-gray",
+                "flex items-center aspect-square h-6 md:h-8 mx-1 rounded-full bg-brite",
                 {
                   "mr-auto": darkMode,
                   "ml-auto": !darkMode,
@@ -99,9 +105,7 @@ export default function IntraNav({}) {
               onClick={cycleTheme}
             >
               <div
-                className={
-                  "inline-block aspect-square w-3/4 m-auto bg-gray lg:bg-brite"
-                }
+                className={"inline-block aspect-square w-3/4 m-auto bg-gray"}
                 style={{
                   "-webkit-mask-image": `url(${iconUrl})`,
                   "mask-image": `url(${iconUrl})`,
