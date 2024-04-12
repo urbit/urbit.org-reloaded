@@ -3,7 +3,7 @@ title = "Planet Sales via Urbit"
 date = "2021-08-25"
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["App Dev: Other"]
+grant_category = ["Dev: Apps"]
 [extra]
 image = ""
 description = "Layer 2 Planet Sales via Urbit"

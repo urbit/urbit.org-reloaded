@@ -5,7 +5,7 @@ date = "2022-07-27"
 
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["Runtime"]
+grant_category = ["Dev: Core"]
 
 [extra]
 image = ""

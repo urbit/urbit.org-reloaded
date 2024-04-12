@@ -5,7 +5,7 @@ date = "2023-06-01"
 
 [taxonomies]
 grant_type = ["RFP"]
-grant_category = ["App Dev"]
+grant_category = ["Dev: Tool"]
 
 [extra]
 image = ""

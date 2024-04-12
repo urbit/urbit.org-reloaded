@@ -3,7 +3,7 @@ title = "Static Website Generation from Graph Store"
 date = "2021-09-28"
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["App Dev: Other"]
+grant_category = ["Dev: Apps"]
 [extra]
 image = ""
 description = "Publish Urbit notebooks to the clearweb"

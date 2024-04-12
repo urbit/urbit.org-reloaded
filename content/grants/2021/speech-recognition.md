@@ -3,7 +3,7 @@ title = "Urbit Speech Recognition"
 date = "2021-08-10"
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["App Dev: Other"]
+grant_category = ["Dev: Apps"]
 [extra]
 image = ""
 description = "Bring Automatic Speech Recognition to Urbit"

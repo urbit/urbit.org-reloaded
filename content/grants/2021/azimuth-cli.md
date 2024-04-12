@@ -3,7 +3,7 @@ title = "Azimuth CLI"
 date = "2021-09-20"
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["App Dev: Other"]
+grant_category = ["Dev: Tool"]
 [extra]
 image = ""
 description = "Bridge for the command line"

@@ -3,10 +3,10 @@ title = "%nested-goals"
 date = "2022-06-22"
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["App Dev"]
+grant_category = ["Dev: Apps"]
 [extra]
 image = ""
-description = "Urbit application for invidividual and social management of high-level goals and their tasks"
+description = "Urbit application for individual and social management of high-level goals and their tasks"
 reward = "6 stars"
 champion = ["~tacryt-socryp"]
 assignee = ["~niblyx-malnus"]

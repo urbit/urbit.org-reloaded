@@ -5,7 +5,7 @@ date = "2023-03-02"
 
 [taxonomies]
 grant_type = ["RFP"]
-grant_category = ["App Dev"]
+grant_category = ["Dev: Apps"]
 
 [extra]
 image = ""
@@ -14,7 +14,7 @@ reward = "TBD"
 assignee = [""]
 champion = [""]
 grant_id = "P1000"
-completed = true
+completed = false
 canceled = false
 
 +++

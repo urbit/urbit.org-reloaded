@@ -5,7 +5,7 @@ date = "2023-06-21"
 
 [taxonomies]
 grant_type = ["Bounty"]
-grant_category = ["Other"]
+grant_category = ["Dev: Tool", "Other"]
 
 [extra]
 image = ""

@@ -3,7 +3,7 @@ title = "UTurn"
 date = "2021-10-28"
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["App Dev"]
+grant_category = ["Dev: Apps", "Dev: Tool"]
 [extra]
 image = ""
 description = "TURN server support for WebRTC"
