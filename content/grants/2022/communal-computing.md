@@ -3,7 +3,7 @@ title = "Communal Computing on Urbit"
 date = "2022-02-17"
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["other"]
+grant_category = ["Other"]
 [extra]
 image = ""
 description = "User research, domain research/synthesis, white paper creation and publicity effort around Urbit ID as a solution to questions of IoT identity sharing and privacy"

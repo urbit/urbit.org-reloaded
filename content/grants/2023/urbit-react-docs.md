@@ -5,7 +5,7 @@ date = "2023-02-23"
 
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["Documentation"]
+grant_category = ["Other"]
 
 [extra]
 image = ""

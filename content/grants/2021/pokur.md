@@ -3,7 +3,7 @@ title = "Pokur: Texas Holdem on Urbit"
 date = "2021-09-16"
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["App Dev: Other"]
+grant_category = ["Dev: Apps"]
 [extra]
 image = ""
 description = "Multiplayer Poker App on Urbit"

@@ -3,7 +3,7 @@ title = "Authenticate with Urbit Gall App"
 date = "2021-09-16"
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["App Dev: Other"]
+grant_category = ["Dev: Apps"]
 [extra]
 image = ""
 description = "Exernal service/websites can verify that a user is who they say they are"

@@ -5,7 +5,7 @@ date = "2024-01-31"
 
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["Dev Tool"]
+grant_category = ["Dev: Tool"]
 
 [extra]
 image = ""

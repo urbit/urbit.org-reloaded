@@ -108,6 +108,7 @@ function GrantCard(post) {
 }
 
 export default function Grants({ posts, categories, types }) {
+  console.log({categories})
   const router = useRouter();
   let { status, type, category } = router.query;
   if (status === undefined) {
@@ -401,7 +402,7 @@ export default function Grants({ posts, categories, types }) {
 
 export async function getStaticProps() {
   const categories = getGrantsCategories();
-  const types = getGrantsTypes();
+  const types = getGrantsTypes(); 
   const basePath = path.join(process.cwd(), "content/grants");
   const years = fs
     .readdirSync(basePath, { withFileTypes: true })

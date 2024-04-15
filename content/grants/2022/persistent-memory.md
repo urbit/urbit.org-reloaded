@@ -4,7 +4,7 @@ date = "2022-08-24"
 
 [taxonomies]
 grant_type = [ "Bounty" ]
-grant_category = [ "Runtime" ]
+grant_category = [ "Dev: Core" ]
 
 [extra]
 image = ""

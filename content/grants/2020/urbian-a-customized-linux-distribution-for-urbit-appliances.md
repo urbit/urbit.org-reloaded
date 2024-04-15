@@ -4,7 +4,7 @@ date = "2020-10-05"
 
 [taxonomies]
 grant_type = [ "Proposal" ]
-grant_category = [ "Dev Tool" ]
+grant_category = [ "Dev: Tool" ]
 
 [extra]
 image = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Bromeliaceae20020312.JPG/640px-Bromeliaceae20020312.JPG"

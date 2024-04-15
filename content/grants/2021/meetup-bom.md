@@ -3,7 +3,7 @@ title = "Urbit Meetup Open Source Bill of Materials"
 date = "2021-10-13"
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["Community"]
+grant_category = [ "Community" ]
 [extra]
 image = ""
 description = "Provide meetup bounty hunters with the persuasive narratives and content"

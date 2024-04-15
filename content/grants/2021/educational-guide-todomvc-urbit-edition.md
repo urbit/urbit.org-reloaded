@@ -4,7 +4,7 @@ date = "2021-01-04"
 
 [taxonomies]
 grant_type = [ "Bounty" ]
-grant_category = [ "Documentation" ]
+grant_category = [ "Other" ]
 
 [extra]
 image = ""

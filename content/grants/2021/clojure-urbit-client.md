@@ -3,7 +3,7 @@ title = "Clojure Urbit Client"
 date = "2021-10-25"
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["App Dev - Other"]
+grant_category = ["Dev: Tool"]
 [extra]
 image = ""
 description = "Urbit client for the Clojure programming language"

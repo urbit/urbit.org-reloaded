@@ -4,7 +4,7 @@ date = "2021-05-31"
 
 [taxonomies]
 grant_type = [ "Bounty" ]
-grant_category = [ "Azimuth" ]
+grant_category = [ "Dev: Core" ]
 
 [extra]
 image = ""

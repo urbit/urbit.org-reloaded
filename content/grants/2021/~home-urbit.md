@@ -3,7 +3,7 @@ title = "~Home-Urbit"
 date = "2021-09-14"
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["App Dev", "Dev tool"]
+grant_category = ["Dev: Apps", "Dev: Tool"]
 [extra]
 image = "https://user-images.githubusercontent.com/13405632/121785641-98599100-cbc3-11eb-861c-77a95a7db030.png"
 description = "A turn-key Urbit deployment for your personal server"

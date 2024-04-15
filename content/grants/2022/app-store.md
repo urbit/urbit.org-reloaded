@@ -5,7 +5,7 @@ date = "2022-09-12"
 
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["App Dev"]
+grant_category = ["Dev: Apps"]
 
 [extra]
 image = ""
@@ -14,7 +14,7 @@ reward = "4 stars"
 assignee = ["~dilryd-mopreg"]
 champion = ["~hodzod-walrus"]
 grant_id = "P0182"
-completed = false
+completed = true
 canceled = false
 link = ""
 
