@@ -9,6 +9,67 @@ import Meta from "../components/Meta";
 import NewsletterSignup from "../components/NewsletterSignup";
 import Org from "../components/ecosystem/Org";
 
+const partners = [
+  // TODO: Replace placeholder partners here with correct links and images.
+  // Near, Laconic, Serotonin, Giga, Sia, Reserve, Vega
+  {
+    link: "https://urbit.org/",
+    img: "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/urbit-foundation-b.svg",
+  },
+  {
+    link: "https://tlon.io/",
+    img: "https://storage.googleapis.com/media.urbit.org/assembly/Tlon.svg",
+  },
+  {
+    link: "https://near.org/",
+    img: "https://storage.googleapis.com/media.urbit.org/assembly/near-logo.png",
+  },
+  {
+    link: "https://sia.tech/",
+    img: "https://storage.googleapis.com/media.urbit.org/assembly/Sia.svg",
+  },
+  {
+    link: "https://tirrel.io/",
+    img: "https://storage.googleapis.com/media.urbit.org/assembly/tirrel-logo.svg",
+  },
+  {
+    link: "https://zorp.io",
+    img: "https://storage.googleapis.com/media.urbit.org/assembly/zorp-logo.svg",
+  },
+  {
+    link: "https://redhorizon.com",
+    img: "https://storage.googleapis.com/media.urbit.org/assembly/red-horizon.svg",
+  },
+  {
+    link: "https://assembly.capital/",
+    img: "https://storage.googleapis.com/media.urbit.org/assembly/assembly-capital.svg",
+  },
+  {
+    link: "https://www.holium.com/",
+    img: "https://storage.googleapis.com/media.urbit.org/assembly/assembly_Holium%20(1).svg",
+  },
+  {
+    link: "https://vaporware.network",
+    img: "https://storage.googleapis.com/media.urbit.org/assembly/Vaporware%20Workmark.svg",
+  },
+  {
+    link: "https://pal.dev/",
+    img: "https://storage.googleapis.com/media.urbit.org/assembly/paldev-black.svg",
+  },
+  {
+    link: "https://www.nativeplanet.io/",
+    img: "https://storage.googleapis.com/media.urbit.org/assembly/native-planet-logo.svg",
+  },
+  {
+    link: "https://evertas.com/",
+    img: "https://storage.googleapis.com/media.urbit.org/assembly/evertas.png",
+  },
+  {
+    link: "https://twitter.com/BlakeGao",
+    img: "https://storage.googleapis.com/media.urbit.org/assembly/blake-gao_1%402x.png",
+  },
+];
+
 function CTAs({ className, links }) {
   return (
     <div className={"flex flex-wrap flex-row gap-2 " + className}>
@@ -227,43 +288,35 @@ export default function Home({}) {
 
         <Section divider={"border-primary"}>
           <h2 className="h2">Partners</h2>
-          <FatBlock className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
-            <Org
-              title="Near"
-              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon-b.svg"
-              href=""
-            />
-            <Org
-              title="Laconic"
-              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon-b.svg"
-              href=""
-            />
-            <Org
-              title="Serotonin"
-              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon-b.svg"
-              href=""
-            />
-            <Org
-              title="Giga"
-              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon-b.svg"
-              href=""
-            />
-            <Org
-              title="Sia"
-              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon-b.svg"
-              href=""
-            />
-            <Org
-              title="Reserve"
-              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon-b.svg"
-              href=""
-            />
-            <Org
-              title="Vega"
-              image="https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon-b.svg"
-              href=""
-            />
-          </FatBlock>
+          <div className="flex flex-col items-center">
+            <div className="flex items-center justify-center flex-wrap max-w-5xl">
+              {partners.map((partner) => {
+                const iconStyle = {
+                  WebkitMaskImage: `url(${partner.img})`,
+                  WebkitMaskSize: "contain",
+                  WebkitMaskPosition: "center",
+                  WebkitMaskRepeat: "no-repeat",
+                  maskImage: `url(${partner.img})`,
+                  maskSize: "contain",
+                  maskPosition: "center",
+                  maskRepeat: "no-repeat",
+                };
+
+                return (
+                  <div
+                    className="text-center w-40 md:w-60 items-center p-8 sm:p-10"
+                    key={partner.link}
+                  >
+                    <Link
+                      className="inline-block w-full h-20 md:h-36 bg-primary"
+                      href={partner.link}
+                      style={iconStyle}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </Section>
 
         <Section className="body-lg" divider={"border-primary"} narrow loose>
