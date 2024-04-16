@@ -286,10 +286,10 @@ export default function Home({}) {
           </Link>
         </Section>
 
-        <Section divider={"border-primary"}>
+        <Section className="overflow-hidden" divider={"border-primary"}>
           <h2 className="h2">Partners</h2>
-          <div className="flex flex-col items-center">
-            <div className="flex items-center justify-center flex-wrap max-w-5xl">
+          <div className="flex flex-col items-center -layout-mx">
+            <div className="flex items-center justify-center flex-wrap w-full">
               {partners.map((partner) => {
                 const iconStyle = {
                   WebkitMaskImage: `url(${partner.img})`,
@@ -304,11 +304,11 @@ export default function Home({}) {
 
                 return (
                   <div
-                    className="text-center w-40 md:w-60 items-center p-8 sm:p-10"
+                    className="text-center w-1/2 xs:w-1/3 sm:w-1/4 md:w-1/5 items-center p-5 lg:p-10 xl:p-12"
                     key={partner.link}
                   >
                     <Link
-                      className="inline-block w-full h-20 md:h-36 bg-primary"
+                      className="inline-block w-full h-20 xs:h-24 sm:h-28 md:h-32 bg-primary"
                       href={partner.link}
                       style={iconStyle}
                     />
