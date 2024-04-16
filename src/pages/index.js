@@ -13,14 +13,6 @@ const partners = [
   // TODO: Replace placeholder partners here with correct links and images.
   // Near, Laconic, Serotonin, Giga, Sia, Reserve, Vega
   {
-    link: "https://urbit.org/",
-    img: "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/urbit-foundation-b.svg",
-  },
-  {
-    link: "https://tlon.io/",
-    img: "https://storage.googleapis.com/media.urbit.org/assembly/Tlon.svg",
-  },
-  {
     link: "https://near.org/",
     img: "https://storage.googleapis.com/media.urbit.org/assembly/near-logo.png",
   },
@@ -33,32 +25,12 @@ const partners = [
     img: "https://storage.googleapis.com/media.urbit.org/assembly/tirrel-logo.svg",
   },
   {
-    link: "https://zorp.io",
-    img: "https://storage.googleapis.com/media.urbit.org/assembly/zorp-logo.svg",
-  },
-  {
     link: "https://redhorizon.com",
     img: "https://storage.googleapis.com/media.urbit.org/assembly/red-horizon.svg",
   },
   {
-    link: "https://assembly.capital/",
-    img: "https://storage.googleapis.com/media.urbit.org/assembly/assembly-capital.svg",
-  },
-  {
-    link: "https://www.holium.com/",
-    img: "https://storage.googleapis.com/media.urbit.org/assembly/assembly_Holium%20(1).svg",
-  },
-  {
-    link: "https://vaporware.network",
-    img: "https://storage.googleapis.com/media.urbit.org/assembly/Vaporware%20Workmark.svg",
-  },
-  {
     link: "https://pal.dev/",
     img: "https://storage.googleapis.com/media.urbit.org/assembly/paldev-black.svg",
-  },
-  {
-    link: "https://www.nativeplanet.io/",
-    img: "https://storage.googleapis.com/media.urbit.org/assembly/native-planet-logo.svg",
   },
   {
     link: "https://evertas.com/",
