@@ -4,7 +4,7 @@ title = "Implement a Git server on Urbit"
 date = "2023-06-01"
 
 [taxonomies]
-grant_type = ["RFP"]
+grant_type = ["Bounty"]
 grant_category = ["Dev: Tool"]
 
 [extra]
