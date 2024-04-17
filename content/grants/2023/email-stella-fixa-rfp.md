@@ -3,7 +3,7 @@ title = "Build an Email Toolchain for Urbit"
 date = "2023-05-11"
 
 [taxonomies]
-grant_type = ["RFP"]
+grant_type = ["Bounty"]
 grant_category = ["Dev: Apps"]
 
 [extra]

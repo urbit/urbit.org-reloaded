@@ -4,7 +4,7 @@ title = "Build a DID Resolver for Urbit"
 date = "2023-04-12"
 
 [taxonomies]
-grant_type = ["RFP"]
+grant_type = ["Bounty"]
 grant_category = ["Dev: Apps"]
 
 [extra]

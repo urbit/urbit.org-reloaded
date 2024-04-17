@@ -3,7 +3,7 @@ title = "Build a Single-Sign-On App for Urbit"
 date = "2023-05-11"
 
 [taxonomies]
-grant_type = ["RFP"]
+grant_type = ["Bounty"]
 grant_category = ["Dev: Apps"]
 
 [extra]
