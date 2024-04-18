@@ -4,7 +4,7 @@ title = "Modernize |mass"
 date = "2023-03-02"
 
 [taxonomies]
-grant_type = ["RFP"]
+grant_type = ["Bounty"]
 grant_category = ["Dev: Core"]
 
 [extra]
