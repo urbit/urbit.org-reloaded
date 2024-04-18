@@ -8,8 +8,8 @@ export default function Proposals({ post, markdown }) {
       program="proposals"
       post={post}
       markdown={markdown}
-      actionText="View Proposals"
-      actionLink="/grants?type=Proposal#view-grants"
+      actionText="View Completed Proposals"
+      actionLink="/grants?type=Proposal&status=completed#view-grants"
       faq={[
         {
           q: "How do I write a proposal?",
