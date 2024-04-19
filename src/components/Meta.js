@@ -2,11 +2,13 @@ export default function Meta(post, disableImage = false, large = false) {
   const author = post?.extra?.author || "urbit.org";
   const title = post?.title ? post.title : "";
   const description =
-    post?.description || "Urbit is a new kind of computer that you can own completely in ways that matter: networking, identity, & data.";
+    post?.description ||
+    "Urbit is a new kind of computer that you can own completely in ways that matter: networking, identity, & data.";
   const image =
-    post?.extra?.image || post?.image || large
-      ? "/images/twitter-header.png"
-      : "/images/urbit-twitter.png";
+    post?.extra?.image ||
+    post?.image ||
+    (large ? "/images/twitter-header.png" : "/images/urbit-twitter.png");
+
   return (
     <>
       <link rel="icon" type="image/png" href="/images/favicon.ico" />
