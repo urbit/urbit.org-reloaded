@@ -98,7 +98,6 @@ function GrantCard(post) {
 }
 
 export default function Grants({ posts, categories, types }) {
-  console.log({categories})
   const router = useRouter();
   let { status, type, category } = router.query;
   if (status === undefined) {
@@ -113,7 +112,7 @@ export default function Grants({ posts, categories, types }) {
         query: toQuery,
       },
       "",
-      { scroll: false }
+      { scroll: false },
     );
   }
 
@@ -264,7 +263,7 @@ export default function Grants({ posts, categories, types }) {
                       className={classnames("btn w-min", {
                         "bg-primary hover:bg-secondary text-tertiary": isOrIsIn(
                           s,
-                          status
+                          status,
                         ),
                         "bg-tertiary hover:bg-secondary text-primary":
                           !isOrIsIn(s, status),
@@ -366,7 +365,7 @@ export default function Grants({ posts, categories, types }) {
 
 export async function getStaticProps() {
   const categories = getGrantsCategories();
-  const types = getGrantsTypes(); 
+  const types = getGrantsTypes();
   const basePath = path.join(process.cwd(), "content/grants");
   const years = fs
     .readdirSync(basePath, { withFileTypes: true })
@@ -376,7 +375,7 @@ export async function getStaticProps() {
       return getAllPosts(
         ["title", "slug", "date", "description", "extra", "taxonomies"],
         `grants/${year.name}`,
-        "date"
+        "date",
       );
     })
     .flat()
