@@ -2,6 +2,18 @@
   "github": {
     "silent": true
   },
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "summit.urbit.org"
+        }
+      ],
+      "destination": "urbit.org/events/2024-06-17-Lake-Summit"
+    }
+  ],
   "redirects": [
     {
       "source": "/start",
