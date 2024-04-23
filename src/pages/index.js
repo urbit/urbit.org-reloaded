@@ -10,8 +10,6 @@ import NewsletterSignup from "../components/NewsletterSignup";
 import Org from "../components/ecosystem/Org";
 
 const partners = [
-  // TODO: Replace placeholder partners here with correct links and images.
-  // Near, Laconic, Serotonin, Giga, Sia, Reserve, Vega
   {
     link: "https://near.org/",
     img: "https://storage.googleapis.com/media.urbit.org/assembly/near-logo.png",
@@ -19,6 +17,10 @@ const partners = [
   {
     link: "https://www.serotonin.co/",
     img: "https://storage.googleapis.com/media.urbit.org/site/landing/serotonin.svg",
+  },
+  {
+    link: "https://othermeans.us/",
+    img: "https://storage.googleapis.com/media.urbit.org/site/landing/om_logo_2024.svg",
   },
 ];
 
