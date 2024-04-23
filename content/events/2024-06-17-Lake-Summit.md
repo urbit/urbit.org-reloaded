@@ -13,11 +13,11 @@ darken_image = true
 
 
 +++
-Urbit Foundation is excited to announce the **2024 Urbit Developer Summit.** This year’s Summit is being held in the deep south at a beautiful venue on Lake Lanier just an hour's drive from Atlanta International Airport. We'll have a sprawling lakeside compountd for four days with access to a pool, hot tub, volleyball court, jet skis, fire pit, and a boat. **Lake Summit** is aimed at Urbit Developers, and will be an opportunity to share what we've all been working on, hack together IRL, and brainstorm.
+Urbit Foundation is excited to announce the **2024 Urbit Developer Summit.** This year’s Summit is being held in the deep south at a beautiful venue on Lake Lanier just an hour's drive from Atlanta International Airport. We'll have a sprawling lakeside compound for four days with access to a pool, hot tub, volleyball court, jet skis, fire pit, and a boat. **Lake Summit** is aimed at Urbit Developers, and will be an opportunity to share what we've all been working on, hack together IRL, and brainstorm.
 
 ## The Details
 
-Lake Summit will take place from **Monday, June 17th** through **Friday, June 22st.** The opening event begins at 4pm on Monday and ends with a closing party on Thursday night.
+Lake Summit will take place from **Monday, June 17th** through **Friday, June 22nd.** The opening event begins at 4pm on Monday and ends with a closing party on Thursday night.
 
 **Tickets cost $400.** Financial support scholarships are available.
 
