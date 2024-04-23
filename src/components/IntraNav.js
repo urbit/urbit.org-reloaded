@@ -22,7 +22,7 @@ const sites = [
   {
     title: "Roadmap",
     href: "https://roadmap.urbit.org",
-    theme: "red-light",
+    theme: "mos-light",
   },
   {
     title: "Network Explorer ↗",
@@ -100,7 +100,7 @@ export default function IntraNav({}) {
                 {
                   "mr-auto": darkMode,
                   "ml-auto": !darkMode,
-                }
+                },
               )}
               onClick={cycleTheme}
             >
