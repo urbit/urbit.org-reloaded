@@ -13,11 +13,11 @@ darken_image = true
 
 
 +++
-Urbit Foundation is excited to announce the **2024 Urbit Developer Summit!** This year’s Summit is being held in the _Deep South_ at a beautiful venue on Lake Lanier just 1 hour's drive from Atlanta International Airport. A sprawling lakeside retreat centre will become our Urbit compound for 4 days, and we’ll have access to a pool, hot tub, volleyball court, jet skis, fire pit, and a boat. **Lake Summit** is aimed at Urbit Developers, and will be an opportunity to share what we've all been working on, hack together IRL, and just hang out. Whether you are a freshly-minted Hoon Academy grad, a seasoned grantee, or an Urbit-curious Earth-software dev, we invite you to this key event of the Urbit ecosystem’s calendar — held this year in the swampy lakelands of Georgia.
+Urbit Foundation is excited to announce the **2024 Urbit Developer Summit.** This year’s Summit is being held in the deep south at a beautiful venue on Lake Lanier just an hour's drive from Atlanta International Airport. We'll have a sprawling lakeside compountd for four days with access to a pool, hot tub, volleyball court, jet skis, fire pit, and a boat. **Lake Summit** is aimed at Urbit Developers, and will be an opportunity to share what we've all been working on, hack together IRL, and brainstorm.
 
 ## The Details
 
-Lake Summit will take place from **Monday 17 - Friday 21 June.** Opening evening will start from 4pm Monday. Summit will end with a closing party Thursday night.
+Lake Summit will take place from **Monday, June 17th** through **Friday, June 22st.** The opening event begins at 4pm on Monday and ends with a closing party on Thursday night.
 
 **Tickets cost $400.** Financial support scholarships are available.
 
@@ -27,9 +27,9 @@ If you are interested in joining us at Lake Summit, we encourage you to submit a
 
 Lake Summit is a developer-focused event. If you have been working on something that you're excited about, we'd love for you to share this with the developer community. If you would like to give a talk / workshop, please mention this in the [form](https://forms.gle/Kr2Fg5YUBdNPK5DT8)
 
-## Accommodation
+## Accommodations
 
-Food and drink will be provided for the duration of the Summit. **Attendees will need to organise their own accommodation.** We have secured discounted rates at two hotels in Gainesville, less than 10 minutes drive from the venue. The discounted rates are available from Monday 17 to Friday 21 (4 nights).
+Food and drinks will be provided for the duration of the Summit. **Attendees will need to organise their own accommodations.** We have secured discounted rates at two hotels in Gainesville, less than 10 minutes drive from the venue. The discounted rates are available from Monday 17 to Friday 21 (4 nights).
 
 {% grid %}
 
@@ -53,14 +53,14 @@ Food and drink will be provided for the duration of the Summit. **Attendees will
 
   {% /grid %}
 
-The deadline for availing of the discounted rate, at both hotels, is **May 17.** 
+The deadline for obtaining the discounted rate at both hotels is **May 17th.** 
 
 _*scroll down, enter your dates, and press **Search** — discount code is already applied_
 
 ## Travel
 
-You will need to organise your own travel between Lake Lanier and Atlanta airport (an Uber should cost around $120). You will also need to arrange for travel between your accommodation and the venue each day. We recommend using Uber or a rental car. There is ample parking space at the venue. 
+You will need to organise your own travel between Lake Lanier and Atlanta airport (an Uber should cost around $120). You will also need to arrange for travel between your accommodations and the venue each day. We recommend using Uber or a rental car. There is ample parking space at the venue. 
 
 ## Hope to see you there!
 
-_Any questions, reach out to summit@urbit.org_
+_Any questions? Reach out to summit@urbit.org_
