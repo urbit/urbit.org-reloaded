@@ -17,28 +17,8 @@ const partners = [
     img: "https://storage.googleapis.com/media.urbit.org/assembly/near-logo.png",
   },
   {
-    link: "https://sia.tech/",
-    img: "https://storage.googleapis.com/media.urbit.org/assembly/Sia.svg",
-  },
-  {
-    link: "https://tirrel.io/",
-    img: "https://storage.googleapis.com/media.urbit.org/assembly/tirrel-logo.svg",
-  },
-  {
-    link: "https://redhorizon.com",
-    img: "https://storage.googleapis.com/media.urbit.org/assembly/red-horizon.svg",
-  },
-  {
-    link: "https://pal.dev/",
-    img: "https://storage.googleapis.com/media.urbit.org/assembly/paldev-black.svg",
-  },
-  {
-    link: "https://evertas.com/",
-    img: "https://storage.googleapis.com/media.urbit.org/assembly/evertas.png",
-  },
-  {
-    link: "https://twitter.com/BlakeGao",
-    img: "https://storage.googleapis.com/media.urbit.org/assembly/blake-gao_1%402x.png",
+    link: "https://www.serotonin.co/",
+    img: "https://storage.googleapis.com/media.urbit.org/site/landing/serotonin.svg",
   },
 ];
 
