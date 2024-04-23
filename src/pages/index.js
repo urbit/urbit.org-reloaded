@@ -20,7 +20,7 @@ const partners = [
   },
   {
     link: "https://othermeans.us/",
-    img: "https://storage.googleapis.com/media.urbit.org/site/landing/om_logo_2024.svg",
+    img: "https://storage.googleapis.com/media.urbit.org/site/landing/om_logo_2024-1.svg",
   },
 ];
 
