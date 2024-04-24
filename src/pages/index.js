@@ -186,7 +186,20 @@ export default function Home({ events }) {
             </table>
           </FatBlock>
         </Section>
-
+        <Section divider={"border-primary"}>
+          <h2 className="h2">Events</h2>
+          <Carousel className="h-60 xs:h-72 md:h-96">
+            {events.slice(0, 6).map((props) => (
+              <EventCard {...props} />
+            ))}
+          </Carousel>
+          <Link
+            className="btn bg-primary hover:bg-secondary text-surface body-lg w-min"
+            href="/events"
+          >
+            View Events
+          </Link>
+        </Section>
         <Section divider={"border-primary"}>
           <p className="h1">
             Explore one of the highest quality developer ecosystems.
@@ -223,6 +236,7 @@ export default function Home({ events }) {
           </div>
         </Section>
 
+
         <Section divider={"border-primary"}>
           <p className="h1">A fork in the road for computing.</p>
           <div
@@ -250,21 +264,6 @@ export default function Home({ events }) {
             href="/overview"
           >
             Learn More
-          </Link>
-        </Section>
-
-        <Section divider={"border-primary"}>
-          <h2 className="h2">Events</h2>
-          <Carousel className="h-60 xs:h-72 md:h-96">
-            {events.slice(0, 6).map((props) => (
-              <EventCard {...props} />
-            ))}
-          </Carousel>
-          <Link
-            className="btn bg-primary hover:bg-secondary text-surface body-lg w-min"
-            href="/events"
-          >
-            View Events
           </Link>
         </Section>
 
@@ -300,6 +299,7 @@ export default function Home({ events }) {
             </div>
           </div>
         </Section>
+
 
         <Section className="body-lg" divider={"border-primary"} narrow loose>
           <Section>
