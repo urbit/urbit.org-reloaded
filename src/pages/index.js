@@ -200,6 +200,38 @@ export default function Home({ events }) {
             View Events
           </Link>
         </Section>
+
+
+
+        <Section divider={"border-primary"}>
+          <p className="h1">A fork in the road for computing.</p>
+          <div
+            className="w-full aspect-[1195/646] !my-16 md:!my-20 lg:!my-24 bg-primary"
+            style={{
+              WebkitMaskImage:
+                "url(https://media.urbit.org/site/landing/compute-paradigm.svg)",
+              WebkitMaskSize: "100% 100%",
+              WebkitMaskRepeat: "no-repeat",
+              maskImage:
+                "url(https://media.urbit.org/site/landing/compute-paradigm.svg)",
+              maskSize: "100% 100%",
+              maskRepeat: "no-repeat",
+            }}
+          />
+          <p className="h1">
+            Urbit is a Layer Zero for truly personal, networked computation.
+            It's entirely <strong>self-contained</strong>,{" "}
+            <strong>private</strong>, <strong>cryptographically owned</strong>,
+            and <strong>designed to last forever</strong>. With Urbit,
+            user-owned networks are finally possible.
+          </p>
+          <Link
+            className="btn bg-primary hover:bg-secondary text-surface"
+            href="/overview"
+          >
+            Learn More
+          </Link>
+        </Section>
         <Section divider={"border-primary"}>
           <p className="h1">
             Explore one of the highest quality developer ecosystems.
@@ -234,37 +266,6 @@ export default function Home({ events }) {
               extended
             />
           </div>
-        </Section>
-
-
-        <Section divider={"border-primary"}>
-          <p className="h1">A fork in the road for computing.</p>
-          <div
-            className="w-full aspect-[1195/646] !my-16 md:!my-20 lg:!my-24 bg-primary"
-            style={{
-              WebkitMaskImage:
-                "url(https://media.urbit.org/site/landing/compute-paradigm.svg)",
-              WebkitMaskSize: "100% 100%",
-              WebkitMaskRepeat: "no-repeat",
-              maskImage:
-                "url(https://media.urbit.org/site/landing/compute-paradigm.svg)",
-              maskSize: "100% 100%",
-              maskRepeat: "no-repeat",
-            }}
-          />
-          <p className="h1">
-            Urbit is a Layer Zero for truly personal, networked computation.
-            It's entirely <strong>self-contained</strong>,{" "}
-            <strong>private</strong>, <strong>cryptographically owned</strong>,
-            and <strong>designed to last forever</strong>. With Urbit,
-            user-owned networks are finally possible.
-          </p>
-          <Link
-            className="btn bg-primary hover:bg-secondary text-surface"
-            href="/overview"
-          >
-            Learn More
-          </Link>
         </Section>
 
         <Section className="overflow-hidden" divider={"border-primary"}>
