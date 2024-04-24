@@ -31,6 +31,10 @@ const partners = [
     link: "https://othermeans.us/",
     img: "https://storage.googleapis.com/media.urbit.org/site/landing/om_logo_2024-1.svg",
   },
+  {
+    link: "https://www.gigaver.se/",
+    img: "https://storage.googleapis.com/media.urbit.org/site/landing/giga-black.svg",
+  },
 ];
 
 function CTAs({ className, links }) {
