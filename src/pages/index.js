@@ -2,12 +2,21 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import classnames from "classnames";
-import { Container, Main, Section, FatBlock } from "@urbit/fdn-design-system";
+import {
+  Container,
+  Main,
+  Section,
+  FatBlock,
+  getAllPosts,
+  generateRealtimeDate,
+} from "@urbit/fdn-design-system";
 import IntraNav from "../components/IntraNav";
 import Footer from "../components/Footer";
 import Meta from "../components/Meta";
 import NewsletterSignup from "../components/NewsletterSignup";
 import Org from "../components/ecosystem/Org";
+import Carousel from "@/components/Carousel";
+import EventCard from "@/components/EventCard";
 
 const partners = [
   {
@@ -40,7 +49,7 @@ function CTAs({ className, links }) {
   );
 }
 
-export default function Home({}) {
+export default function Home({ events }) {
   const post = {
     title: "Urbit",
     description: "Welcome to the sovereign internet.",
@@ -240,6 +249,21 @@ export default function Home({}) {
           </Link>
         </Section>
 
+        <Section divider={"border-primary"}>
+          <h2 className="h2">Events</h2>
+          <Carousel className="h-60 xs:h-72 md:h-96">
+            {events.slice(0, 6).map((props) => (
+              <EventCard {...props} />
+            ))}
+          </Carousel>
+          <Link
+            className="btn bg-primary hover:bg-secondary text-surface body-lg w-min"
+            href="/events"
+          >
+            View Events
+          </Link>
+        </Section>
+
         <Section className="overflow-hidden" divider={"border-primary"}>
           <h2 className="h2">Partners</h2>
           <div className="flex flex-col items-center -layout-mx">
@@ -327,4 +351,33 @@ export default function Home({}) {
       <Footer />
     </Container>
   );
+}
+
+export async function getStaticProps() {
+  let events = getAllPosts(
+    [
+      "title",
+      "description",
+      "location",
+      "starts",
+      "ends",
+      "timezone",
+      "guests",
+      "hosts",
+      "image",
+      "darken_image",
+      "dark",
+      "registration_url",
+      "pinned",
+      "slug",
+    ],
+    "events",
+    "starts",
+  );
+
+  events.reverse();
+
+  return {
+    props: { events },
+  };
 }

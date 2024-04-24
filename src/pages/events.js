@@ -83,7 +83,7 @@ export default function Events({
             <h2 className="h2">Ongoing</h2>
             <FatBlock className="grid grid-cols-1 sm:grid-cols-2 gap-1 lg:gap-6 xl:gap-8">
               {ongoingEvents.slice(0, 2).map((props) => (
-                <EventCard className="h-full w-full" {...props} />
+                <EventCard className="w-full" {...props} />
               ))}
             </FatBlock>
           </Section>
@@ -93,7 +93,7 @@ export default function Events({
             <h2 className="h2">Upcoming</h2>
             <FatBlock className="grid grid-cols-1 sm:grid-cols-2 gap-1 lg:gap-6 xl:gap-8">
               {upcomingEvents.slice(0, 2).map((props) => (
-                <EventCard className="h-full w-full" {...props} />
+                <EventCard className="w-full" {...props} />
               ))}
             </FatBlock>
           </Section>
@@ -105,14 +105,14 @@ export default function Events({
               pastEvents
                 .slice(0, 4)
                 .map((props) => (
-                  <EventCard className="h-full w-full" {...props} />
+                  <EventCard className="w-full" {...props} />
                 ))}
           </FatBlock>
           <Link
             className="btn bg-primary hover:bg-secondary text-surface body-lg w-min"
             href="/events/all"
           >
-            More events
+            More Events
           </Link>
         </Section>
       </Main>
