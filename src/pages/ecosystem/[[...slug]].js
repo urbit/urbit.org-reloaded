@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import classnames from "classnames";
 import path from "path";
 import {
@@ -13,18 +13,20 @@ import {
   generateDisplayDate,
   formatDate,
 } from "@urbit/fdn-design-system";
-import IntraNav from "@/components/IntraNav";
-import Footer from "@/components/Footer";
-import Meta from "@/components/Meta";
-import Header from "@/components/Header";
+
+import AppCard from "@/components/ecosystem/App";
 import Carousel from "@/components/Carousel";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import IntraNav from "@/components/IntraNav";
+import Meta from "@/components/Meta";
 import OrgCard from "@/components/ecosystem/Org";
 
 function Filter({ className = "", children, filters = [] }) {
   const [filter, setFilter] = useState(
     Object.fromEntries(
-      new Map(filters.map((o) => [o.key, { ...o, value: false }]))
-    )
+      new Map(filters.map((o) => [o.key, { ...o, value: false }])),
+    ),
   );
 
   const filterChildren = () => {
@@ -87,41 +89,6 @@ function Filter({ className = "", children, filters = [] }) {
         {filterChildren(children)}
       </div>
     </>
-  );
-}
-
-function AppCard({ className, title, description, slug, bgColor, image }) {
-  const bg = !bgColor && "bg-container-variant";
-  return (
-    <Link
-      className={classnames("flex flex-col", className)}
-      href={path.join("/ecosystem", "apps", slug)}
-    >
-      <div
-        className={classnames(
-          "flex justify-center items-center aspect-square rounded-t-xl",
-          bg
-        )}
-        style={{ backgroundColor: bgColor }}
-      >
-        {image && (
-          <img
-            className="h-full w-full rounded-t-xl object-cover object-center"
-            src={image}
-          />
-        )}
-      </div>
-      <div className="bg-container-variant rounded-b-xl p-4">
-        <h3 className="h3 font-semibold text-on-container line-clamp-1 text-ellipsis">
-          {title}
-        </h3>
-        <div className="hidden md:block">
-          <p className="h-[3.9em] body-md text-on-container-variant line-clamp-3 text-ellipsis">
-            {description}
-          </p>
-        </div>
-      </div>
-    </Link>
   );
 }
 
@@ -211,7 +178,11 @@ function Article({
   return (
     <>
       {divider && <hr className="hr-horizontal border-primary" />}
-      <Link className="flex h-28 xs:h-36 md:h-44 w-full" href={URL}>
+      <Link
+        className="flex h-28 xs:h-36 md:h-44 w-full"
+        href={URL}
+        target="_blank"
+      >
         <img
           className="aspect-square h-full mr-6 lg:mr-16"
           alt=""
@@ -488,27 +459,27 @@ export async function getStaticProps() {
   const apps = getAllPosts(
     ["title", "description", "bgColor", "image", "weight", "slug"],
     "ecosystem/apps",
-    "weight"
+    "weight",
   );
   const articles = getAllPosts(
     ["title", "publication", "author", "type", "date", "image", "URL", "slug"],
     "ecosystem/articles",
-    "date"
+    "date",
   );
   const orgs = getAllPosts(
     ["title", "image", "weight", "slug"],
     "ecosystem/orgs",
-    "weight"
+    "weight",
   );
   const podcasts = getAllPosts(
     ["title", "description", "image", "links", "weight", "slug", "content"],
     "ecosystem/podcasts",
-    "weight"
+    "weight",
   );
   const talks = getAllPosts(
     ["title", "event", "date", "type", "image", "url", "slug"],
     "ecosystem/talks",
-    "date"
+    "date",
   );
 
   return {

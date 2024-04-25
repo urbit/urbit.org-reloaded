@@ -28,7 +28,7 @@ export default function EventCard({
           "relative hidden md:flex flex-col justify-between aspect-[3/2] h-full",
           "bg-cover bg-center rounded-lg bg-container-variant",
           textColor,
-          className
+          className,
         )}
         style={image ? { backgroundImage: `url(${image})` } : {}}
         href={path.join("/events", slug)}
@@ -64,25 +64,29 @@ export default function EventCard({
       </Link>
       <Link
         className={classnames(
-          "relative flex md:hidden flex-col justify-between aspect-square",
+          "relative flex md:hidden flex-col justify-between aspect-[3/2]",
           "bg-cover bg-center rounded-lg bg-container-variant",
           textColor,
-          className
+          className,
         )}
         style={image ? { backgroundImage: `url(${image})` } : {}}
         href={path.join("/events", slug)}
       >
-        <div className={classnames("px-4 pt-4 z-10", {
-          "rounded-t-lg bg-gradient-to-b from-[rgba(0,0,0,0.6)] to-transparent":
-          darken_image,
-        })}>
+        <div
+          className={classnames("px-4 pt-4 z-10", {
+            "rounded-t-lg bg-gradient-to-b from-[rgba(0,0,0,0.6)] to-transparent":
+              darken_image,
+          })}
+        >
           <h3 className="h3 mb-3.5">{title}</h3>
           <p className="body-sm">{description}</p>
         </div>
-        <div className={classnames("px-4 pb-4 z-10", {
-          "rounded-b-lg bg-gradient-to-t from-[rgba(0,0,0,0.6)] to-transparent":
-          darken_image,
-        })}>
+        <div
+          className={classnames("px-4 pb-4 z-10", {
+            "rounded-b-lg bg-gradient-to-t from-[rgba(0,0,0,0.6)] to-transparent":
+              darken_image,
+          })}
+        >
           <hr className={classnames("hr-horizontal mb-3.5", borderColor)} />
           <div className="body-sm h-[2.68em]">
             <DateRange

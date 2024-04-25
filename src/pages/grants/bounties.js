@@ -1,6 +1,6 @@
 import React from "react";
-import GrantProgramPage from "@/components/GrantProgramPage";
 import { Markdown, getPostBySlug } from "@urbit/fdn-design-system";
+import GrantProgramPage from "@/components/GrantProgramPage";
 
 export default function Bounties({ post, markdown }) {
   return (
@@ -18,7 +18,7 @@ export async function getStaticProps() {
   const post = getPostBySlug(
     "/bounties",
     ["title", "date", "slug", "content"],
-    "/"
+    "/",
   );
 
   const markdown = JSON.stringify(Markdown.parse({ post }));

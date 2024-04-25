@@ -1,7 +1,7 @@
 import React from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import path from "path";
 import {
   Container,
@@ -12,10 +12,11 @@ import {
   getNextPost,
   getPreviousPost,
 } from "@urbit/fdn-design-system";
-import IntraNav from "@/components/IntraNav";
+
 import Footer from "@/components/Footer";
-import Meta from "@/components/Meta";
 import Header from "@/components/Header";
+import IntraNav from "@/components/IntraNav";
+import Meta from "@/components/Meta";
 import contentTree from "@/../cache/overview.json";
 
 export default function Overview({
@@ -79,7 +80,7 @@ export async function getStaticProps({ params }) {
   const posts = contentTree;
 
   const { data, content } = getPage(
-    path.join(process.cwd(), "content/overview", params.slug?.join("/") || "/")
+    path.join(process.cwd(), "content/overview", params.slug?.join("/") || "/"),
   );
   const markdown = JSON.stringify(Markdown.parse({ post: { content } }));
 
@@ -88,7 +89,7 @@ export async function getStaticProps({ params }) {
       params.slug?.slice(-1).join("") || "overview",
       ["title", "slug", "weight"],
       path.join("overview", params.slug?.slice(0, -1).join("/") || "/"),
-      "weight"
+      "weight",
     ) ||
     (params.slug
       ? params.slug?.join("/") === posts.pages?.[0]?.slug
@@ -101,7 +102,7 @@ export async function getStaticProps({ params }) {
       params.slug?.slice(-1).join("") || "overview",
       ["title", "slug", "weight"],
       path.join("overview", params.slug?.slice(0, -1).join("/") || "/"),
-      "weight"
+      "weight",
     ) || (params.slug ? null : posts.pages[0]);
 
   return { props: { posts, data, markdown, params, previousPost, nextPost } };
