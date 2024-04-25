@@ -1,58 +1,60 @@
 +++
-title = "Grants Information"
-date = "2023-01-04"
+title = "Proposals"
+date = "2023-04-25"
 weight = 1
-description = "All you need to know about the Urbit grants process"
+description = "How to get your Urbit idea funded"
 +++
 
-[Proposals](#proposals)
 
-[Bounties](#bounties)
-
-[Getting Help](#help-with-grants)
-
-[The Grants Process](#the-grants-process)
-
-[Frequently Asked Questions](#frequently-asked-questions)
-
-## Proposals
-
-If you've got an idea to build on or improve Urbit, the Urbit Foundation can fund you to make it real. We fund all sorts of projects: core system work, apps, integrations with other technologies, developer libraries and documentation, community formation, written and video content, and more. 
+If you've got an idea to build on or improve Urbit, the Urbit Foundation can fund you to make it real. We fund all sorts of projects: apps, core system work, developer tools, integrations with other technologies,  community formation, and more. 
 
 Send us your proposal, and we'll let you know. We can either accept it or give you useful feedback.
 
-## Bounties
-
-The Urbit Foundation and other ecosystem organizations post work opportunities as bounties. If you're looking for work and want inspiration, [browse through our postings here](/grants?program=bounty&open=true&wip=false&completed=false#view-grants).
-
-Some bounties are fully specified contracts, including milestones and rewards. For these, simply agree to the contract, fulfill the requirements, and receive your payout.
-
-Other bounties are less specified, pointing at a general idea that we'd like to see come to life. These bounties also usually have unspecified rewards, because we don't know how much work is involved. We invite you to submit your specs for these bounties, including milestones and rewards. If such a bounty interests you and you'd like help drafting a grant, reach out to us.
-
 ## Getting Help
 
-If you need help writing a grant application, we are available for you. Please reach out via email to grants@urbit.org, DM ~tamlut-modnys on the network, or stop by the Grants Office Hours which are held Thursdays at 1pm Eastern Time in the [Urbit Hacker House](https://app.gather.town/app/xAYeiPI2XDYhRM9t/urbit-hacker-house). 
+If you need help writing a proposal, we are available for you. Please reach out via email to grants@urbit.org, DM ~tamlut-modnys on the network, or stop by the Grants Office Hours which are held Thursdays at 1pm Eastern Time in the [Urbit Hacker House](https://app.gather.town/app/xAYeiPI2XDYhRM9t/urbit-hacker-house). 
 
+## The Proposal Process
 
-## The Grants Process
+### 1. Write your Application
 
-### Submit your Application
+Your proposal should clearly articulate your idea and the value it
+will bring to the Urbit network.
 
-Using the [grant application link](https://airtable.com/apppnWSqfsVvUwkWh/shrCi54rEDxgSZr3z), write your proposal. If you're applying for a pre-written bounty, simply copy over the details from the listing. In the application, provide some background about yourself so we can know you're the right candidate.
+Good proposals include the following:
 
-Each grant has a **champion**, an experienced community member who will help you, keep track of the grant, and be your point of contact. If you have a choice of champion in mind, please mention that in the application. Bounties often have champions already listed. Otherwise, the Urbit Foundation will assign you a champion.
+— A detailed and clear description of the project. If you're
+proposing something technical, user stories can help explain what
+people will be able to do with your creation.
 
-### Get Approved by the Foundation
+— An overview of why you are the right person for the job. A
+description of your background, familiarity with the project, and
+professional/education experience are useful.
 
-After applying, the Urbit Foundation will review your application. In some cases, we may schedule a quick follow-up interview. 
+— Milestones. Your project should be composed of milestones,
+each of which has a __completion date__, __funding amount__ and
+__deliverables__. Funding should be denominated in Urbit stars.
+Each milestone can receive payout upon completion.
 
-Some bounties are sponsored by other organizations and may include compensation from them. In these cases, the grantee should discuss the details with them.
+Generally, your proposal's first milestone should be targeted within 2 months, and proposals should have a maximum of five milestones.
 
-### Sign a Contract
+For writing guidance, you can [look at past completed grants here](/grants?type=Proposal&status=completed#view-grants)
+
+### 2. Submit your Application
+
+Using the [grant application link](https://airtable.com/apppnWSqfsVvUwkWh/shrCi54rEDxgSZr3z), send in your proposal.
+
+Each grant has a **champion**, an experienced community member who will help you, keep track of the grant, and be your point of contact. Usually, we will assign a champion for you. However, if you have a choice of champion in mind, please mention that in the application.
+
+### 3. Get Approved
+
+After applying, we will review your application. In some cases, we may schedule a quick follow-up interview. 
+
+### 4. Sign a Contract
 
 If your application is accepted, you will undergo a quick KYC process and recieve a contract for signature. 
 
-### Work and Get Paid
+### 5. Work and Get Paid
 
 After you've finished your work on a given milestone, you can receive a payout. To do so, contact your champion and demonstrate to them that you've completed the work. After they verify your work and send their approval to the Foundation, you can [submit an invoice](https://airtable.com/shrXXCs1uaxtNSBcg). 
 
@@ -69,40 +71,6 @@ In addition, there are several Urbit groups where you can chat with the communit
 {% /faqSection %}
 
 
-{% faqSection question="How do I write a proposal?" %}
-Proposals should clearly articulate your idea and the value it
-will bring to the Urbit network.
-
-Good proposals include the following:
-
-— A detailed and clear description of the project. If you're
-proposing something technical, user stories can help explain what
-your creation will enable.
-
-— An overview of why you are the right person for the job. A
-description of your background, familiarity with the project, and
-professional/education experience are all great.
-
-— Your estimate for date(s) of completion.
-
-— The amount of funding you'd like for the project, denominated in
-stars.
-
-Unless your project is small, you should write it as several milestones,
-each of which has its own completion dates, funding amounts and
-deliverables. Each completed milestone can receive a payout.
-
-Proposals should target a first
-milestone within two months of the start of the project.
-Proposals should have a maximum of five milestones, and each milestone
-should constitute significant enough work to warrant at
-least a full star.
-
-For writing guidance, you can [look at past completed proposals here](/grants?type=Proposal&status=completed#view-grants)
-
-{% /faqSection %}
-
-
 {% faqSection question="What are grants funded with?" %}
 
 Grants are usually funded with [stars](https://docs.urbit.org/glossary/star), which are immutable and scarce pieces of the Urbit network. 65,280 possible stars exist in the network, and they sit between the 256 galaxies which govern the network and the 4 billion planets which serve as user level identities. Stars have short, distinctive names like ~marzod or ~sonnet. Each star contains 65,536 planets of their own.
@@ -114,7 +82,7 @@ Sometimes grants may be funded with other assets on a case-by-case basis.
 
 {% faqSection question="How much funding should I request?" %}
 
-We determine how much to value a particular grant by weighing how much work the project takes, the value to the Urbit universe, and the track record of the contributor (either past Urbit ecosystem work or relevant external background).
+We determine how much to value a particular grant by weighing how much work the project takes, the value to the Urbit network, and the track record of the contributor (either past Urbit ecosystem work or relevant external background).
 
 One possible metric is to come up with an estimate for numbers of hours of work you'll do, an estimate for how much your time is worth per hour, multiply those together, and then divide it by current star prices to receive a rough estimate for number of stars (check Opensea for latest Urbit star sales if you’re unsure). 
 
@@ -142,11 +110,11 @@ Grant contracts may be terminated by either the Foundation or the grantee given 
 {% /faqSection %}
 
 
-{% faqSection question="When will I hear back about my grant application?" %}
+{% faqSection question="When will I hear back about my proposal?" %}
 The grants team meets to look at grants on Tuesday every two weeks. After these meetings, they will inform you whether it is approved, rejected or needs some adjustments. In the latter case someone on the grants team will help you finetune your proposal so it can be reconsidered in the next round.
 {% /faqSection %}
 
-{% faqSection question="What does a grant champion do?" %}
+{% faqSection question="What does a champion do?" %}
 A champion is an Urbit community member who will be your point of contact for the grant. They will provide support, answer questions, and make sure that your grant is on track.
 
 If you have an idea for someone that can champion your grant, then mention it in your writeup. Bounties usually have a champion already listed. Otherwise, the Foundation is happy to assign someone to you.
