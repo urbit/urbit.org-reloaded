@@ -5,7 +5,6 @@ weight = 1
 description = "How to get your Urbit idea funded"
 +++
 
-
 If you've got an idea to build on or improve Urbit, the Urbit Foundation can fund you to make it real. We fund all sorts of projects: apps, core system work, developer tools, integrations with other technologies,  community formation, and more. 
 
 Send us your proposal, and we'll let you know. We can either accept it or give you useful feedback.
@@ -70,7 +69,6 @@ As mentioned in the [Getting Help](#getting-help) section, you should reach out 
 In addition, there are several Urbit groups where you can chat with the community about your questions, such as the **Hooniverse** (~hiddev-dannut/new-hooniverse) for coding-related questions, **[battery payload]** (~dister-dozzod-lapdeg/battery-payload) for general dev questions, and **UF Public**(~halbex-palheb/uf-public) for general questions.
 {% /faqSection %}
 
-
 {% faqSection question="What are grants funded with?" %}
 
 Grants are usually funded with [stars](https://docs.urbit.org/glossary/star), which are immutable and scarce pieces of the Urbit network. 65,280 possible stars exist in the network, and they sit between the 256 galaxies which govern the network and the 4 billion planets which serve as user level identities. Stars have short, distinctive names like ~marzod or ~sonnet. Each star contains 65,536 planets of their own.
@@ -78,7 +76,6 @@ Grants are usually funded with [stars](https://docs.urbit.org/glossary/star), wh
 Sometimes grants may be funded with other assets on a case-by-case basis.
 
 {% /faqSection %}
-
 
 {% faqSection question="How much funding should I request?" %}
 
@@ -109,7 +106,6 @@ Reach out to your champion or grants@urbit.org to discuss modifications.
 Grant contracts may be terminated by either the Foundation or the grantee given 7 days notice. If you’ve changed your mind about a grant, please communicate that to grants@urbit.org. 
 {% /faqSection %}
 
-
 {% faqSection question="When will I hear back about my proposal?" %}
 The grants team meets to look at grants on Tuesday every two weeks. After these meetings, they will inform you whether it is approved, rejected or needs some adjustments. In the latter case someone on the grants team will help you finetune your proposal so it can be reconsidered in the next round.
 {% /faqSection %}
@@ -128,7 +124,6 @@ Here are some guidelines for how to engage with your champion:
 
 If for any reason, there are communication issues with your champion, reach out to grants@urbit.org and we can assist.
 {% /faqSection %}
-
 
 {% faqSection question="What paperwork will I need to fill out?" %}
 After your proposal is approved, it will be added to this website, and the Urbit Foundation will need to get a signed contributor agreement and collect a small amount of personal information from you as part of our KYC (Know Your Customer) process.

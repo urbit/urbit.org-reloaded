@@ -215,7 +215,8 @@ export default function Grants({ posts, categories, types }) {
             Grants Program
           </h1>
           <p className="h1">
-            Earn a piece of the Urbit network by developing software, creating content, growing communities, and more.
+            Earn a piece of the Urbit network by developing software, creating
+            content, growing communities, and more.
           </p>
         </section>
         <Section divider={"border-primary"}>

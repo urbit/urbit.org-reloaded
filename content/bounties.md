@@ -5,7 +5,6 @@ weight = 1
 description = "Pick up a work opportunity in the Urbit ecosystem"
 +++
 
-
 Bounties are opportunities to work on Urbit in exchange for address space or other funding. Bounties are perfect if you want inspiration or direction on what's needed. They are posted by the Urbit Foundation, or other ecosystem organizations.
 
 If you are from an ecosystem organization and want to post a bounty, reach out to grants@urbit.org.
@@ -19,7 +18,6 @@ Other bounties are less specified, pointing at a general idea that we'd like to 
 ## Getting Help
 
 If you have questions about bounties, please reach out via email to grants@urbit.org, DM ~tamlut-modnys on the network, or stop by the Grants Office Hours which are held Thursdays at 1pm Eastern Time in the [Urbit Hacker House](https://app.gather.town/app/xAYeiPI2XDYhRM9t/urbit-hacker-house). 
-
 
 ## The Bounty Process
 
@@ -47,7 +45,7 @@ After you've finished your work on a given milestone, you can receive a payout. 
 
 Once we receive both approval and an invoice for a milestone, we will pay your reward to the ETH address you provided.
 
-
+{% faq %}
 
 ## Frequently Asked Questions
 
@@ -56,7 +54,6 @@ As mentioned in the [Getting Help](#getting-help) section, you should reach out 
 
 In addition, there are several Urbit groups where you can chat with the community about your questions, such as the **Hooniverse** (~hiddev-dannut/new-hooniverse) for coding-related questions, **[battery payload]** (~dister-dozzod-lapdeg/battery-payload) for general dev questions, and **UF Public**(~halbex-palheb/uf-public) for general questions.
 {% /faqSection %}
-
 
 {% faqSection question="What are grants funded with?" %}
 
@@ -119,7 +116,6 @@ Reach out to your champion or grants@urbit.org to discuss modifications.
 Grant contracts may be terminated by either the Foundation or the grantee given 7 days notice. If you’ve changed your mind about a grant, please communicate that to grants@urbit.org. 
 {% /faqSection %}
 
-
 {% faqSection question="When will I hear back about my grant application?" %}
 The grants team meets to look at grants on Tuesday every two weeks. After these meetings, they will inform you whether it is approved, rejected or needs some adjustments. In the latter case someone on the grants team will help you finetune your proposal so it can be reconsidered in the next round.
 {% /faqSection %}
@@ -138,7 +134,6 @@ Here are some guidelines for how to engage with your champion:
 
 If for any reason, there are communication issues with your champion, reach out to grants@urbit.org and we can assist.
 {% /faqSection %}
-
 
 {% faqSection question="What paperwork will I need to fill out?" %}
 After your proposal is approved, it will be added to this website, and the Urbit Foundation will need to get a signed contributor agreement and collect a small amount of personal information from you as part of our KYC (Know Your Customer) process.
