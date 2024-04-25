@@ -89,10 +89,10 @@ export default function Home({ events }) {
         </div>
 
         <Section divider={"border-primary"}>
-          <h1 className="h1">
+          <h2 className="h1">
             Urbit is a new computing paradigm that provides complete ownership
             of your digital world.
-          </h1>
+          </h2>
           <div className="body-lg grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex flex-col justify-between bg-container rounded-lg p-4">
               <h3 className="text-on-container h-[6.5em] overflow-hidden">
@@ -122,7 +122,7 @@ export default function Home({ events }) {
         </Section>
 
         <Section divider={"border-primary"}>
-          <p className="h1">Own your compute in the ways that matter.</p>
+          <h2 className="h1">Own your compute in the ways that matter.</h2>
           <FatBlock className="body-lg border border-primary rounded-lg">
             <table className="w-full table-fixed">
               <tbody>
@@ -187,7 +187,7 @@ export default function Home({ events }) {
         </Section>
 
         <Section divider={"border-primary"}>
-          <h2 className="h2">Come meet us.</h2>
+          <h2 className="h1">Come meet us.</h2>
           <Carousel className="h-60 xs:h-72 md:h-96">
             {events.slice(0, 6).map((props) => (
               <EventCard {...props} />
@@ -202,7 +202,7 @@ export default function Home({ events }) {
         </Section>
 
         <Section divider={"border-primary"}>
-          <h2 className="h2">A fork in the road for computing.</h2>
+          <h2 className="h1">A fork in the road for computing.</h2>
           <div
             className="w-full aspect-[1195/646] !my-16 md:!my-20 lg:!my-24 bg-primary"
             style={{
@@ -232,7 +232,7 @@ export default function Home({ events }) {
         </Section>
 
         <Section divider={"border-primary"}>
-          <h2 className="h2">
+          <h2 className="h1">
             Explore one of the highest quality developer ecosystems.
           </h2>
           <div className="body-lg grid grid-cols-2 md:grid-cols-4 gap-4">
