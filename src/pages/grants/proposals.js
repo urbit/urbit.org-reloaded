@@ -10,7 +10,6 @@ export default function Proposals({ post, markdown }) {
       markdown={markdown}
       actionText="View Completed Proposals"
       actionLink="/grants?type=Proposal&status=completed#view-grants"
-
     />
   );
 }
