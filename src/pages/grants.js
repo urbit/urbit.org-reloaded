@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import classnames from "classnames";
 import fs from "fs";
-import path from "path";
 import omit from "lodash.omit";
+import path from "path";
 import {
   Container,
   Main,
@@ -14,11 +14,11 @@ import {
   getAllPosts,
   IconCard,
 } from "@urbit/fdn-design-system";
-import IntraNav from "@/components/IntraNav";
-import Footer from "@/components/Footer";
-import Meta from "@/components/Meta";
-import GrantStatus from "@/components/GrantStatus";
+
 import { getGrantsCategories, getGrantsTypes } from "@/lib/lib";
+import Footer from "@/components/Footer";
+import IntraNav from "@/components/IntraNav";
+import Meta from "@/components/Meta";
 
 function isArray(arr) {
   return Array.isArray(arr);

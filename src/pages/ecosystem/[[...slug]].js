@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import classnames from "classnames";
 import path from "path";
 import {
@@ -13,19 +13,20 @@ import {
   generateDisplayDate,
   formatDate,
 } from "@urbit/fdn-design-system";
-import IntraNav from "@/components/IntraNav";
-import Footer from "@/components/Footer";
-import Meta from "@/components/Meta";
-import Header from "@/components/Header";
-import Carousel from "@/components/Carousel";
+
 import AppCard from "@/components/ecosystem/App";
+import Carousel from "@/components/Carousel";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import IntraNav from "@/components/IntraNav";
+import Meta from "@/components/Meta";
 import OrgCard from "@/components/ecosystem/Org";
 
 function Filter({ className = "", children, filters = [] }) {
   const [filter, setFilter] = useState(
     Object.fromEntries(
-      new Map(filters.map((o) => [o.key, { ...o, value: false }]))
-    )
+      new Map(filters.map((o) => [o.key, { ...o, value: false }])),
+    ),
   );
 
   const filterChildren = () => {
@@ -458,27 +459,27 @@ export async function getStaticProps() {
   const apps = getAllPosts(
     ["title", "description", "bgColor", "image", "weight", "slug"],
     "ecosystem/apps",
-    "weight"
+    "weight",
   );
   const articles = getAllPosts(
     ["title", "publication", "author", "type", "date", "image", "URL", "slug"],
     "ecosystem/articles",
-    "date"
+    "date",
   );
   const orgs = getAllPosts(
     ["title", "image", "weight", "slug"],
     "ecosystem/orgs",
-    "weight"
+    "weight",
   );
   const podcasts = getAllPosts(
     ["title", "description", "image", "links", "weight", "slug", "content"],
     "ecosystem/podcasts",
-    "weight"
+    "weight",
   );
   const talks = getAllPosts(
     ["title", "event", "date", "type", "image", "url", "slug"],
     "ecosystem/talks",
-    "date"
+    "date",
   );
 
   return {

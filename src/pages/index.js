@@ -1,22 +1,21 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import classnames from "classnames";
 import {
   Container,
   Main,
   Section,
   FatBlock,
   getAllPosts,
-  generateRealtimeDate,
 } from "@urbit/fdn-design-system";
-import IntraNav from "../components/IntraNav";
-import Footer from "../components/Footer";
-import Meta from "../components/Meta";
-import NewsletterSignup from "../components/NewsletterSignup";
-import Org from "../components/ecosystem/Org";
+
 import Carousel from "@/components/Carousel";
 import EventCard from "@/components/EventCard";
+import Footer from "@/components/Footer";
+import IntraNav from "@/components/IntraNav";
+import Meta from "@/components/Meta";
+import NewsletterSignup from "@/components/NewsletterSignup";
+import Org from "@/components/ecosystem/Org";
 
 const partners = [
   {
@@ -201,8 +200,6 @@ export default function Home({ events }) {
           </Link>
         </Section>
 
-
-
         <Section divider={"border-primary"}>
           <p className="h1">A fork in the road for computing.</p>
           <div
@@ -300,7 +297,6 @@ export default function Home({ events }) {
             </div>
           </div>
         </Section>
-
 
         <Section className="body-lg" divider={"border-primary"} narrow loose>
           <Section>

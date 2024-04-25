@@ -1,11 +1,11 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import classnames from "classnames";
 import { Container, Main, Section, FatBlock } from "@urbit/fdn-design-system";
-import IntraNav from "@/components/IntraNav";
+
 import Footer from "@/components/Footer";
+import IntraNav from "@/components/IntraNav";
 import Meta from "@/components/Meta";
 import PostCard from "@/components/PostCard";
 
@@ -31,7 +31,7 @@ const hosting = [
 ];
 
 const self_hosting = [
-    {
+  {
     title: "Native Planet",
     description:
       "Buy a Native Planet device and simply run Urbit yourself at home.",
@@ -45,7 +45,8 @@ const self_hosting = [
     description:
       "Learn how to run Urbit on any compatible machine from the command line.",
     extra: {
-      image: "https://storage.googleapis.com/media.urbit.org/site/getting-started/urbit%20boot2.gif",
+      image:
+        "https://storage.googleapis.com/media.urbit.org/site/getting-started/urbit%20boot2.gif",
     },
     href: "https://docs.urbit.org/manual/getting-started/self-hosted/cli",
   },
@@ -75,7 +76,7 @@ function ImageCard({
       className={classnames(
         "aspect-[1.5/1] flex flex-col justify-between rounded-2xl text-[#F8FAF8]",
         className,
-        { "bg-center bg-cover": image }
+        { "bg-center bg-cover": image },
       )}
       style={style}
       href={href}

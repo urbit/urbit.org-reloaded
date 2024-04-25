@@ -7,8 +7,9 @@ import {
   FatBlock,
   getAllPosts,
 } from "@urbit/fdn-design-system";
-import IntraNav from "@/components/IntraNav";
+
 import Footer from "@/components/Footer";
+import IntraNav from "@/components/IntraNav";
 import Meta from "@/components/Meta";
 import PostCard from "@/components/PostCard";
 
@@ -30,8 +31,9 @@ export default function Blog({ posts, search }) {
         <section>
           <h1 className="h1 mt-12 mb-8 md:mt-16 md:mb-16 lg:mb-20">Blog</h1>
           <p className="h1">
-            Stories from the broader <strong>Urbit community</strong>, the Urbit Foundation, and
-            the many <strong>people</strong> contributing to Urbit.
+            Stories from the broader <strong>Urbit community</strong>, the Urbit
+            Foundation, and the many <strong>people</strong> contributing to
+            Urbit.
           </p>
         </section>
         <Section divider={"border-primary"}>
@@ -58,7 +60,7 @@ export async function getStaticProps() {
   const posts = getAllPosts(
     ["title", "slug", "date", "description", "tags", "extra"],
     "blog",
-    "date"
+    "date",
   );
 
   return {
