@@ -215,8 +215,7 @@ export default function Grants({ posts, categories, types }) {
             Grants Program
           </h1>
           <p className="h1">
-            The Urbit Foundation's Grants program is the primary mechanisms for
-            distributing address space to creators and developers.
+            Earn a piece of the Urbit network by developing software, creating content, growing communities, and more.
           </p>
         </section>
         <Section divider={"border-primary"}>
@@ -234,16 +233,16 @@ export default function Grants({ posts, categories, types }) {
           >
             <IconCard
               title="Proposals"
-              description="The main way to get funding for your project. We fund all kinds projects, not strictly technical ones, so don’t hesitate to pitch your idea!"
+              description="Have an idea? Send it to us, and we can approve you to be funded."
               href="/grants/proposals"
-              label="Submit a Proposal"
+              label="Learn More"
               icon="Proposal"
             />
             <IconCard
               title="Bounties"
-              description="Contracts for work provided by either the Urbit Foundation or from trusted partners in our ecosystem."
+              description="Looking for work? Browse through opportunities offered by the Urbit Foundation or other organizations"
               href="/grants/bounties"
-              label="Learn more"
+              label="Learn More"
               icon="Bounty"
             />
           </div>
