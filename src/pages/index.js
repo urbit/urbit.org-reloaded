@@ -185,6 +185,7 @@ export default function Home({ events }) {
             </table>
           </FatBlock>
         </Section>
+
         <Section divider={"border-primary"}>
           <h2 className="h2">Events</h2>
           <Carousel className="h-60 xs:h-72 md:h-96">
@@ -201,7 +202,7 @@ export default function Home({ events }) {
         </Section>
 
         <Section divider={"border-primary"}>
-          <p className="h1">A fork in the road for computing.</p>
+          <h2 className="h2">A fork in the road for computing.</h2>
           <div
             className="w-full aspect-[1195/646] !my-16 md:!my-20 lg:!my-24 bg-primary"
             style={{
@@ -215,7 +216,7 @@ export default function Home({ events }) {
               maskRepeat: "no-repeat",
             }}
           />
-          <p className="h1">
+          <p className="body-lg">
             Urbit is a Layer Zero for truly personal, networked computation.
             It's entirely <strong>self-contained</strong>,{" "}
             <strong>private</strong>, <strong>cryptographically owned</strong>,
@@ -229,10 +230,11 @@ export default function Home({ events }) {
             Learn More
           </Link>
         </Section>
+
         <Section divider={"border-primary"}>
-          <p className="h1">
+          <h2 className="h2">
             Explore one of the highest quality developer ecosystems.
-          </p>
+          </h2>
           <div className="body-lg grid grid-cols-2 md:grid-cols-4 gap-4">
             <Org
               title="Tlon"
