@@ -8,6 +8,28 @@
       "has": [
         {
           "type": "host",
+          "value": "ustj.urbit.org"
+        }
+      ],
+      "destination": "https://urbitsystems.tech",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "ustj.urbit.org"
+        }
+      ],
+      "destination": "https://urbitsystems.tech/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
           "value": "summit.urbit.org"
         }
       ],
