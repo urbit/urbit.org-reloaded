@@ -1,7 +1,7 @@
 +++
 title = "USTJ Inaugural launch Vol. 1"
-starts = "2024-06-30T14:00:00"
-ends = "2024-06-30T15:00:00"
+starts = "2024-04-30T14:00:00"
+ends = "2024-04-30T15:00:00"
 timezone = "America/New_York"
 location = "Youtube & X"
 image = "https://storage.googleapis.com/media.urbit.org/site/events/ustj-thumbnail.png"
