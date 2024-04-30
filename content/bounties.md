@@ -1,6 +1,6 @@
 +++
 title = "Bounties"
-date = "2023-04-25"
+date = "2024-04-25"
 weight = 1
 description = "Pick up a work opportunity in the Urbit ecosystem"
 +++
@@ -44,6 +44,28 @@ Your bounty will have a **champion**, an experienced community member who will h
 After you've finished your work on a given milestone, you can receive a payout. To do so, contact your champion and demonstrate to them that you've completed the work. After they verify your work and send their approval to the Foundation, you can [submit an invoice](https://airtable.com/shrXXCs1uaxtNSBcg). 
 
 Once we receive both approval and an invoice for a milestone, we will pay your reward to the ETH address you provided.
+
+{% grid %}
+
+    {% iconcard
+    title="Check out open Bounties"
+    description="We have a variety of open Bounties ready for you to work on. Check them out and apply today."
+    label=""
+    href="/grants?type=Bounty&status=open#view-grants"
+    icon="Bounty"
+    small=true
+  /%}
+
+    {% iconcard
+    title="Write your own Proposal"
+    description="Excited about your own idea? We are always ready to fund innovative projects. Submit it today."
+    label=""
+    href="/grants/proposals"
+    icon="Proposal"
+    small=true
+  /%}
+
+  {% /grid %}
 
 {% faq %}
 

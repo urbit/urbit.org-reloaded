@@ -1,6 +1,6 @@
 +++
 title = "Proposals"
-date = "2023-04-25"
+date = "2024-04-25"
 weight = 1
 description = "How to get your Urbit idea funded"
 +++
@@ -58,6 +58,28 @@ If your application is accepted, you will undergo a quick KYC process and reciev
 After you've finished your work on a given milestone, you can receive a payout. To do so, contact your champion and demonstrate to them that you've completed the work. After they verify your work and send their approval to the Foundation, you can [submit an invoice](https://airtable.com/shrXXCs1uaxtNSBcg). 
 
 Once we receive both approval and an invoice for a milestone, we will pay your reward to the ETH address you provided.
+{% grid %}
+
+  {% iconcard
+    title="Submit your Proposal"
+    description="Excited about an idea? We are always ready to fund new innovative projects. Submit your proposal today."
+    label=""
+    href="https://airtable.com/apppnWSqfsVvUwkWh/shrCi54rEDxgSZr3z"
+    icon="Proposal"
+    small=true
+  /%}
+
+    {% iconcard
+    title="Find a Bounty for you"
+    description="Ready to work on Urbit but out of ideas? We have a variety of open Bounties ready for you to work on."
+    label=""
+    href="/grants?type=Bounty&status=open#view-grants"
+    icon="Bounty"
+    small=true
+  /%}
+
+  {% /grid %}
+
 
 {% faq %}
 
