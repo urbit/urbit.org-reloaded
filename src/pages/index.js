@@ -78,10 +78,20 @@ export default function Home({ events }) {
           />
         </div>
         <div className="hidden md:block">
-          <img
+          <video
             className="img-dark"
-            src="https://storage.googleapis.com/media.urbit.org/site/landing/header-0502.gif"
-          />
+            loop
+            autoPlay
+            muted
+            playsInline
+            disablePictureInPicture
+          >
+            <source
+              src="https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-d-cropped.mp4"
+              type="video/mp4"
+            />
+          </video>
+
           <img
             className="img-light"
             src="https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-l.png"
