@@ -1,7 +1,7 @@
 +++
 title = "Urbit London"
 description = ""
-image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/communities/london.png"
+image = "https://media.urbit.org/site/communities/london.png"
 group = "~tichus-holnet/urblon"
 
 [[links]]
