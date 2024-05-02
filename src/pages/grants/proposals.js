@@ -8,8 +8,20 @@ export default function Proposals({ post, markdown }) {
       program="proposals"
       post={post}
       markdown={markdown}
-      actionText="View Completed Proposals"
-      actionLink="/grants?type=Proposal&status=completed#view-grants"
+      links={[
+        {
+          label: "View Completed Proposals",
+          url: "/grants?type=Proposal&status=completed#view-grants",
+        },
+        {
+          label: "Submit a Proposal",
+          url: "https://airtable.com/apppnWSqfsVvUwkWh/shrCi54rEDxgSZr3z",
+        },
+        {
+          label: "Sumbmit an Invoice",
+          url: "https://airtable.com/shrXXCs1uaxtNSBcg",
+        },
+      ]}
     />
   );
 }

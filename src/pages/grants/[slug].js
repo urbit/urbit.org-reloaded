@@ -18,15 +18,28 @@ import {
 import { getGrantYear } from "@/lib/lib";
 import ErrorPage from "@/pages/404";
 import Footer from "@/components/Footer";
-import GrantStatus from "@/components/GrantStatus";
 import IntraNav from "@/components/IntraNav";
 import Meta from "@/components/Meta";
 
-export default function Event({ post, markdown, match }) {
+const getStatus = (post) => {
+  if (post.extra.canceled) {
+    return "Canceled";
+  } else if (post.extra.completed) {
+    return "Completed";
+  } else if (post.extra.assignee && post.extra.assignee?.[0].length > 0) {
+    return "In Progress";
+  } else {
+    return "Open";
+  }
+};
+
+export default function Grant({ post, markdown, match }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
   }
+
+  const status = getStatus(post);
 
   return (
     <Container>
@@ -85,8 +98,17 @@ export default function Event({ post, markdown, match }) {
               </Link>
             </div>
           )}
-          <div className="body-md space-x-3.5">
-            <GrantStatus {...post} />
+          <div className="flex flex-wrap gap-2.5 body-md">
+            {(status === "Open" && (
+              <Link
+                className="btn bg-primary hover:bg-secondary text-surface body-md"
+                href="https://airtable.com/apppnWSqfsVvUwkWh/shrCi54rEDxgSZr3z"
+              >
+                Apply
+              </Link>
+            )) || (
+              <span className="btn text-secondary bg-tertiary">{status}</span>
+            )}
             {post.taxonomies.grant_type.map((type) => (
               <span className="btn text-secondary bg-tertiary">{type}</span>
             ))}

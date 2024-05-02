@@ -34,8 +34,7 @@ export default function GrantProgramPage({
   post,
   markdown,
   program,
-  actionLink,
-  actionText,
+  links,
   faq,
 }) {
   const router = useRouter();
@@ -59,12 +58,18 @@ export default function GrantProgramPage({
             {formatDate(generateDisplayDate(post.date))}
           </span>
         </p>
-        <Link
-          className="btn bg-primary hover:bg-secondary text-surface body-md w-fit"
-          href={actionLink}
-        >
-          {actionText}
-        </Link>
+        <div className="flex flex-wrap gap-2.5">
+          {links.map(({ label, url }) => {
+            return (
+              <Link
+                className="btn bg-primary hover:bg-secondary text-surface body-md w-fit"
+                href={url}
+              >
+                {label}
+              </Link>
+            );
+          })}
+        </div>
         <hr className="hr-horizontal border-primary" />
         <section className="markdown layout-narrow">
           <Markdown.render content={JSON.parse(markdown)} />

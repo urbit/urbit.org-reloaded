@@ -56,9 +56,7 @@ function GrantCard(post) {
           <h2 className="text-on-container">{title}</h2>
           <p className="text-on-container-variant">Reward: {extra.reward}</p>
         </div>
-        {new Set(["Bounty", "Proposal", "Apprenticeship"]).has(
-          taxonomies.grant_type[0],
-        ) && (
+        {new Set(["Bounty", "Proposal"]).has(taxonomies.grant_type[0]) && (
           <div className="flex items-center justify-center h-[1.1em] aspect-square rounded-lg ml-3.5 bg-on-container">
             <Icon
               className={"h-4/6 bg-container-variant"}
@@ -73,7 +71,7 @@ function GrantCard(post) {
           {extra.description}
         </p>
       )}
-      <div className="flex flex-wrap body-md space-x-3.5">
+      <div className="flex flex-wrap body-md gap-1.5">
         <span
           className={classnames("btn text-inverse-on-container", {
             "bg-on-container": status === "open",
@@ -83,12 +81,18 @@ function GrantCard(post) {
           {statusLabel(status)}
         </span>
         {taxonomies.grant_type.map((s) => (
-          <span className="btn bg-on-container-variant text-inverse-on-container">
+          <span
+            className="btn bg-on-container-variant text-inverse-on-container"
+            key={s}
+          >
             {s}
           </span>
         ))}
         {taxonomies.grant_category.map((s) => (
-          <span className="btn bg-on-container-variant text-inverse-on-container">
+          <span
+            className="btn bg-on-container-variant text-inverse-on-container"
+            key={s}
+          >
             {s}
           </span>
         ))}
@@ -257,7 +261,7 @@ export default function Grants({ posts, categories, types }) {
             <div className="md:sticky top-12 md:top-16 py-5 md:py-8 overflow-x-hidden overflow-y-auto sidebar">
               <div className="flex flex-col min-h-full type-ui md:pr-5 space-y-5 md:border-r rounded-sm border-primary">
                 <h3 className="font-semibold">Status:</h3>
-                <section className="flex space-x-3.5 md:flex-col md:space-x-0 md:space-y-3.5 overflow-x-auto md:overflow-x-hidden">
+                <section className="flex space-x-1.5 md:flex-col md:space-x-0 md:space-y-2.5 overflow-x-auto md:overflow-x-visible">
                   {["open", "wip", "completed"].map((s) => (
                     <button
                       className={classnames("btn w-min", {
@@ -269,6 +273,7 @@ export default function Grants({ posts, categories, types }) {
                           !isOrIsIn(s, status),
                       })}
                       onClick={() => changeStatus(s)}
+                      key={s}
                     >
                       {statusLabel(s)}
                     </button>
@@ -278,7 +283,7 @@ export default function Grants({ posts, categories, types }) {
                   <hr className="hr-horizontal border-primary my-2.5" />
                   <h3 className="font-semibold">Programs:</h3>
                 </div>
-                <section className="flex space-x-3.5 md:flex-col md:space-x-0 md:space-y-3.5 overflow-x-auto">
+                <section className="flex space-x-1.5 md:flex-col md:space-x-0 md:space-y-2.5 overflow-x-auto md:overflow-x-visible">
                   {Object.keys(programCounts)
                     .sort((s) => -programCounts[s])
                     .map((t) => (
@@ -290,11 +295,10 @@ export default function Grants({ posts, categories, types }) {
                             !isOrIsIn(t, type),
                         })}
                         onClick={() => push(pushOrDropQuery("type", type, t))}
+                        key={t}
                       >
                         <span>{`${t}`}</span>
-                        {["Bounty", "Proposal", "Apprenticeship"].includes(
-                          t,
-                        ) && (
+                        {["Bounty", "Proposal"].includes(t) && (
                           <Icon
                             className={classnames("h-[1em]", {
                               "bg-tertiary": isOrIsIn(t, type),
@@ -311,7 +315,7 @@ export default function Grants({ posts, categories, types }) {
                   <hr className="hr-horizontal border-primary my-2.5" />
                   <h3 className="font-semibold">Work categories:</h3>
                 </div>
-                <section className="flex space-x-3.5 md:flex-col md:space-x-0 md:space-y-3.5 overflow-x-auto">
+                <section className="flex space-x-1.5 md:flex-col md:space-x-0 md:space-y-2.5 overflow-x-auto md:overflow-x-visible">
                   {Object.keys(categoryCounts)
                     .sort((s) => -categoryCounts[s])
                     .map((c) => (
@@ -325,6 +329,7 @@ export default function Grants({ posts, categories, types }) {
                         onClick={() =>
                           push(pushOrDropQuery("category", category, c))
                         }
+                        key={c}
                       >
                         {c}
                         <span className="ml-[0.25em]">{`(${categoryCounts[c]})`}</span>
@@ -352,7 +357,7 @@ export default function Grants({ posts, categories, types }) {
                 )}
               </p>
               {filteredPosts.map((grant) => (
-                <GrantCard {...grant} />
+                <GrantCard key={grant.slug} {...grant} />
               ))}
             </div>
           </div>
