@@ -8,8 +8,20 @@ export default function Bounties({ post, markdown }) {
       program="bounties"
       post={post}
       markdown={markdown}
-      actionText="View Open Bounties"
-      actionLink="/grants?type=Bounty&status=open#view-grants"
+      links={[
+        {
+          label: "View Open Bounties",
+          url: "/grants?type=Bounty&status=open#view-grants",
+        },
+        {
+          label: "Apply for a Bounty",
+          url: "https://airtable.com/apppnWSqfsVvUwkWh/shrCi54rEDxgSZr3z",
+        },
+        {
+          label: "Sumbmit an Invoice",
+          url: "https://airtable.com/shrXXCs1uaxtNSBcg",
+        },
+      ]}
     />
   );
 }
