@@ -200,7 +200,7 @@ export default function Home({ events }) {
           <h2 className="h1">Come meet us.</h2>
           <Carousel className="h-60 xs:h-72 md:h-96">
             {events.slice(0, 6).map((props) => (
-              <EventCard {...props} />
+              <EventCard {...props} key={props.slug} />
             ))}
           </Carousel>
           <Link
