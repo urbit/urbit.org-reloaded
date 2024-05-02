@@ -80,7 +80,7 @@ export default function Home({ events }) {
         <div className="hidden md:block">
           <img
             className="img-dark"
-            src="https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-d.png"
+            src="https://storage.googleapis.com/media.urbit.org/site/landing/header-0502.gif"
           />
           <img
             className="img-light"
