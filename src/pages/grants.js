@@ -71,7 +71,7 @@ function GrantCard(post) {
           {extra.description}
         </p>
       )}
-      <div className="flex flex-wrap body-md space-x-3.5">
+      <div className="flex flex-wrap body-md gap-1.5">
         <span
           className={classnames("btn text-inverse-on-container", {
             "bg-on-container": status === "open",
