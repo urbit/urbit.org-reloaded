@@ -81,12 +81,18 @@ function GrantCard(post) {
           {statusLabel(status)}
         </span>
         {taxonomies.grant_type.map((s) => (
-          <span className="btn bg-on-container-variant text-inverse-on-container">
+          <span
+            className="btn bg-on-container-variant text-inverse-on-container"
+            key={s}
+          >
             {s}
           </span>
         ))}
         {taxonomies.grant_category.map((s) => (
-          <span className="btn bg-on-container-variant text-inverse-on-container">
+          <span
+            className="btn bg-on-container-variant text-inverse-on-container"
+            key={s}
+          >
             {s}
           </span>
         ))}
@@ -267,6 +273,7 @@ export default function Grants({ posts, categories, types }) {
                           !isOrIsIn(s, status),
                       })}
                       onClick={() => changeStatus(s)}
+                      key={s}
                     >
                       {statusLabel(s)}
                     </button>
@@ -288,6 +295,7 @@ export default function Grants({ posts, categories, types }) {
                             !isOrIsIn(t, type),
                         })}
                         onClick={() => push(pushOrDropQuery("type", type, t))}
+                        key={t}
                       >
                         <span>{`${t}`}</span>
                         {["Bounty", "Proposal"].includes(t) && (
@@ -321,6 +329,7 @@ export default function Grants({ posts, categories, types }) {
                         onClick={() =>
                           push(pushOrDropQuery("category", category, c))
                         }
+                        key={c}
                       >
                         {c}
                         <span className="ml-[0.25em]">{`(${categoryCounts[c]})`}</span>
@@ -348,7 +357,7 @@ export default function Grants({ posts, categories, types }) {
                 )}
               </p>
               {filteredPosts.map((grant) => (
-                <GrantCard {...grant} />
+                <GrantCard key={grant.slug} {...grant} />
               ))}
             </div>
           </div>
