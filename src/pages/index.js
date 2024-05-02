@@ -55,7 +55,7 @@ function CTAs({ className, links }) {
 export default function Home({ events }) {
   const post = {
     title: "Urbit",
-    description: "Welcome to the sovereign internet.",
+    description: "Leave the internet behind.",
   };
 
   return (
