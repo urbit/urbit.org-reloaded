@@ -255,7 +255,7 @@ export default function Grants({ posts, categories, types }) {
             <div className="md:sticky top-12 md:top-16 py-5 md:py-8 overflow-x-hidden overflow-y-auto sidebar">
               <div className="flex flex-col min-h-full type-ui md:pr-5 space-y-5 md:border-r rounded-sm border-primary">
                 <h3 className="font-semibold">Status:</h3>
-                <section className="flex space-x-3.5 md:flex-col md:space-x-0 md:space-y-3.5 overflow-x-auto md:overflow-x-visible">
+                <section className="flex space-x-1.5 md:flex-col md:space-x-0 md:space-y-2.5 overflow-x-auto md:overflow-x-visible">
                   {["open", "wip", "completed"].map((s) => (
                     <button
                       className={classnames("btn w-min", {
@@ -276,7 +276,7 @@ export default function Grants({ posts, categories, types }) {
                   <hr className="hr-horizontal border-primary my-2.5" />
                   <h3 className="font-semibold">Programs:</h3>
                 </div>
-                <section className="flex space-x-3.5 md:flex-col md:space-x-0 md:space-y-3.5 overflow-x-auto md:overflow-x-visible">
+                <section className="flex space-x-1.5 md:flex-col md:space-x-0 md:space-y-2.5 overflow-x-auto md:overflow-x-visible">
                   {Object.keys(programCounts)
                     .sort((s) => -programCounts[s])
                     .map((t) => (
@@ -307,7 +307,7 @@ export default function Grants({ posts, categories, types }) {
                   <hr className="hr-horizontal border-primary my-2.5" />
                   <h3 className="font-semibold">Work categories:</h3>
                 </div>
-                <section className="flex space-x-3.5 md:flex-col md:space-x-0 md:space-y-3.5 overflow-x-auto md:overflow-x-visible">
+                <section className="flex space-x-1.5 md:flex-col md:space-x-0 md:space-y-2.5 overflow-x-auto md:overflow-x-visible">
                   {Object.keys(categoryCounts)
                     .sort((s) => -categoryCounts[s])
                     .map((c) => (
