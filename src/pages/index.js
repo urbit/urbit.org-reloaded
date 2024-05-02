@@ -92,10 +92,19 @@ export default function Home({ events }) {
             />
           </video>
 
-          <img
+          <video
             className="img-light"
-            src="https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-l.png"
-          />
+            loop
+            autoPlay
+            muted
+            playsInline
+            disablePictureInPicture
+          >
+            <source
+              src="https://storage.googleapis.com/media.urbit.org/site/landing/header%20light%20monochrome.mp4"
+              type="video/mp4"
+            />
+          </video>
         </div>
 
         <Section divider={"border-primary"}>
