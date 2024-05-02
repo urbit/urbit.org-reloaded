@@ -1,7 +1,7 @@
 +++
 title = "Urbit Berlin"
 description = ""
-image = "https://sfo2.digitaloceanspaces.com/poldec-tonteg-content/poldec-tonteg/2024.2.26..23.7.31..4e14.7ae1.47ae.147a-568DDDC4-84D1-458A-AA5D-42FEB3A9DFA8.png"
+image = "https://media.urbit.org/site/communities/berlin.png"
 
 [[links]]
 label = "Meetup page"
