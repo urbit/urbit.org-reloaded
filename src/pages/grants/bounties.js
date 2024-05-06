@@ -18,7 +18,7 @@ export default function Bounties({ post, markdown }) {
           url: "https://airtable.com/apppnWSqfsVvUwkWh/shrCi54rEDxgSZr3z",
         },
         {
-          label: "Sumbmit an Invoice",
+          label: "Submit an Invoice",
           url: "https://airtable.com/shrXXCs1uaxtNSBcg",
         },
       ]}
