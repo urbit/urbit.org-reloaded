@@ -68,14 +68,32 @@ export default function Home({ events }) {
       <Main className="text-primary body-lg" singleColumn>
         <h1 className="h0 heading mt-8">:: Leave the internet behind</h1>
         <div className="block md:hidden">
-          <img
+        <video
             className="img-dark"
-            src="https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-mobile-d.png"
-          />
-          <img
+            loop
+            autoPlay
+            muted
+            playsInline
+            disablePictureInPicture
+          >
+            <source
+              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-dark-mobile.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <video
             className="img-light"
-            src="https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-mobile-l.png"
-          />
+            loop
+            autoPlay
+            muted
+            playsInline
+            disablePictureInPicture
+          >
+            <source
+              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-light-mobile.mp4"
+              type="video/mp4"
+            />
+          </video>
         </div>
         <div className="hidden md:block">
           <video
@@ -87,7 +105,7 @@ export default function Home({ events }) {
             disablePictureInPicture
           >
             <source
-              src="https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-d-cropped.mp4"
+              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-dark-desktop.mp4"
               type="video/mp4"
             />
           </video>
@@ -101,7 +119,7 @@ export default function Home({ events }) {
             disablePictureInPicture
           >
             <source
-              src="https://storage.googleapis.com/media.urbit.org/site/landing/header%20light%20monochrome.mp4"
+              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-light-desktop.mp4"
               type="video/mp4"
             />
           </video>
