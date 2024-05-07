@@ -170,15 +170,6 @@ export default function GetStarted({}) {
             Urbit node
           </p>
           <p className="body-lg">
-            Learn how to build on Urbit with{" "}
-            <Link
-              className="btn bg-primary hover:bg-secondary text-surface"
-              href="https://docs.urbit.org/courses/urbit-academy/ha"
-            >
-              Hoon Academy
-            </Link>
-          </p>
-          <p className="body-lg">
             Learn to use Urbit's CLI{" "}
             <Link
               className="btn bg-primary hover:bg-secondary text-surface"
