@@ -77,7 +77,7 @@ export default function Home({ events }) {
             disablePictureInPicture
           >
             <source
-              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-dark-mobile.mp4"
+              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-dark-mobile1.mp4"
               type="video/mp4"
             />
           </video>
@@ -90,7 +90,7 @@ export default function Home({ events }) {
             disablePictureInPicture
           >
             <source
-              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-light-mobile.mp4"
+              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-light-mobile1.mp4"
               type="video/mp4"
             />
           </video>
@@ -105,7 +105,7 @@ export default function Home({ events }) {
             disablePictureInPicture
           >
             <source
-              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-dark-desktop.mp4"
+              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-dark-desktop1.mp4"
               type="video/mp4"
             />
           </video>
@@ -119,7 +119,7 @@ export default function Home({ events }) {
             disablePictureInPicture
           >
             <source
-              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-light-desktop.mp4"
+              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-light-desktop1.mp4"
               type="video/mp4"
             />
           </video>
