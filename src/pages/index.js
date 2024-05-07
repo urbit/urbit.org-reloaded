@@ -55,7 +55,7 @@ function CTAs({ className, links }) {
 export default function Home({ events }) {
   const post = {
     title: "Urbit",
-    description: "Welcome to the sovereign internet.",
+    description: "Leave the internet behind.",
   };
 
   return (
@@ -68,24 +68,61 @@ export default function Home({ events }) {
       <Main className="text-primary body-lg" singleColumn>
         <h1 className="h0 heading mt-8">:: Leave the internet behind</h1>
         <div className="block md:hidden">
-          <img
+        <video
             className="img-dark"
-            src="https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-mobile-d.png"
-          />
-          <img
+            loop
+            autoPlay
+            muted
+            playsInline
+            disablePictureInPicture
+          >
+            <source
+              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-dark-mobile1.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <video
             className="img-light"
-            src="https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-mobile-l.png"
-          />
+            loop
+            autoPlay
+            muted
+            playsInline
+            disablePictureInPicture
+          >
+            <source
+              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-light-mobile1.mp4"
+              type="video/mp4"
+            />
+          </video>
         </div>
         <div className="hidden md:block">
-          <img
+          <video
             className="img-dark"
-            src="https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-d.png"
-          />
-          <img
+            loop
+            autoPlay
+            muted
+            playsInline
+            disablePictureInPicture
+          >
+            <source
+              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-dark-desktop1.mp4"
+              type="video/mp4"
+            />
+          </video>
+
+          <video
             className="img-light"
-            src="https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-l.png"
-          />
+            loop
+            autoPlay
+            muted
+            playsInline
+            disablePictureInPicture
+          >
+            <source
+              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-light-desktop1.mp4"
+              type="video/mp4"
+            />
+          </video>
         </div>
 
         <Section divider={"border-primary"}>
@@ -190,7 +227,7 @@ export default function Home({ events }) {
           <h2 className="h1">Come meet us.</h2>
           <Carousel className="h-60 xs:h-72 md:h-96">
             {events.slice(0, 6).map((props) => (
-              <EventCard {...props} />
+              <EventCard {...props} key={props.slug} />
             ))}
           </Carousel>
           <Link
