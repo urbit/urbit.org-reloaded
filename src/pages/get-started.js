@@ -118,7 +118,7 @@ export default function GetStarted({}) {
         </section>
         <Section className="body-lg" divider={"border-primary"}>
           <div>
-            <h2 className="h2">Learn about Urbit</h2>
+            <h2 className="h2">Learn how to build on Urbit</h2>
             <p className="body-lg">
               The best way to learn about Urbit and get started as a developer
               is Hoon Academy, our free online course which starts on May 14.{" "}
@@ -128,7 +128,7 @@ export default function GetStarted({}) {
             className="btn bg-primary hover:bg-secondary text-surface"
             href="https://docs.urbit.org/courses/urbit-academy/ha"
           >
-            Sign up here
+            Hoon Academy
           </Link>
         </Section>
         <Section divider={"border-primary"}>
