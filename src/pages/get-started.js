@@ -116,6 +116,21 @@ export default function GetStarted({}) {
             provider, or run Urbit <strong>yourself</strong>.
           </p>
         </section>
+        <Section className="body-lg" divider={"border-primary"}>
+          <div>
+            <h2 className="h2">Learn how to build on Urbit</h2>
+            <p className="body-lg">
+              The best way to learn about Urbit and get started as a developer
+              is Hoon Academy, our free online course which starts on May 14.{" "}
+            </p>
+          </div>
+          <Link
+            className="btn bg-primary hover:bg-secondary text-surface"
+            href="https://docs.urbit.org/courses/urbit-academy/ha"
+          >
+            Hoon Academy
+          </Link>
+        </Section>
         <Section divider={"border-primary"}>
           <div>
             <h2 className="h2">Use a Hosting Provider</h2>
@@ -153,15 +168,6 @@ export default function GetStarted({}) {
           <p className="body-lg">
             Once you're up and running, read up on what you can do with your new
             Urbit node
-          </p>
-          <p className="body-lg">
-            Learn how to build on Urbit with{" "}
-            <Link
-              className="btn bg-primary hover:bg-secondary text-surface"
-              href="https://docs.urbit.org/courses/urbit-academy/ha"
-            >
-              Hoon Academy
-            </Link>
           </p>
           <p className="body-lg">
             Learn to use Urbit's CLI{" "}
