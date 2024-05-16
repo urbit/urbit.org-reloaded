@@ -54,7 +54,7 @@ Food and drinks will be provided for the duration of the Summit. **Attendees wil
 
   {% /grid %}
 
-The deadline for obtaining the discounted rate at both hotels is **May 17th.** 
+The deadline for obtaining the discounted rate at both hotels is **May 31st.** 
 
 _*scroll down, enter your dates, and press **Search** — discount code is already applied_
 
