@@ -116,21 +116,6 @@ export default function GetStarted({}) {
             provider, or run Urbit <strong>yourself</strong>.
           </p>
         </section>
-        <Section className="body-lg" divider={"border-primary"}>
-          <div>
-            <h2 className="h2">Learn how to build on Urbit</h2>
-            <p className="body-lg">
-              The best way to learn about Urbit and get started as a developer
-              is Hoon Academy, our free online course which starts on May 14.{" "}
-            </p>
-          </div>
-          <Link
-            className="btn bg-primary hover:bg-secondary text-surface"
-            href="https://docs.urbit.org/courses/urbit-academy/ha"
-          >
-            Hoon Academy
-          </Link>
-        </Section>
         <Section divider={"border-primary"}>
           <div>
             <h2 className="h2">Use a Hosting Provider</h2>
