@@ -10,7 +10,7 @@ grant_category = ["Dev: Tool"]
 [extra]
 image = ""
 description = ""
-reward = "3 Stars"
+reward = "5 Stars"
 assignee = ["~sivrul-litsub"]
 champion = ["~lagrev-nocfep"]
 grant_id = "P0331"
@@ -47,20 +47,30 @@ Payment: 2 stars
 
 - Homunculus will keep track of certain details about the current state of an app's display and use this information to parse terminal input into meaningful information for the app depending on the kinds of elements rendered.
 
-- On the whole, Homunculus will serve as a terminal session manager that is analogous and alternative to %drum, but for apps that require interaction and display logic distinct from that of a CLI (which is not possible with %drum).
+## (Update: April 5th)
 
-- Currently, the runtime does not support multiple terminal clients, and Dill is effectively locked in with %drum, so Homunculus will be built using Lick. The only difference that this should entail for the user is that a simple Bash script will need to be run to connect to a session with a Homunculus app. However, once the core limitations presented by Dill and the runtime are resolved, Homunculus should be able to use Dill sessions directly, which would remove the need to start the TUI with a script.
+- Milestone 1 has been completed, and Eyre has been integrated, meaning that the terminal client can be remote from your ship. A simple Bash script sets up a connection over HTTP, sending terminal input to Homunculus and receiving its rendered output stream. This allows the terminal to serve as a graphical interface alternative to the browser.
 
-## Milestone 2: Proof of concept app implementation + Homunculus documentation
+- Milestone 2 has been expanded:
 
-Estimated time: 1 month 
+## Milestone 2: Turn Homunculus into a desktop environment, create a filesystem explorer, and write user and developer documentation
 
-Payment: 1 star
+Estimated time: 2 months
 
-- I will build a TUI file manager. It will serve as an example for how to build TUI front-ends with Homunculus. The construction of this app will follow a model where, as a front-end, it is primarily meant to be used from a locally run moon to allow for direct connection to the terminal, and it will communicate with your planet as its back-end.
+Payment: 3 stars
 
-- Documentation will be made to provide clear explanations and examples of how to write Sail for Homunculus and integrate it in your agent to make a dynamic and interactive text display.
+- Until now, user experience on Urbit has been locked in to singular browser windows on an app-by-app basis, where the Landscape home page only aggregates links to these apps. Instead of this, as a desktop environment, Homunculus will provide a new basic user experience where multiple app windows are hosted and managed simultaneously all within one terminal instance.
+
+- Users will have the freedom to completely determine what their desktop is like depending on what kind of functionality is important to them. It should be easy for a user to write their own apps and widgets to populate their desktop. I believe this further realizes Urbit's goal to create a personally owned, operated, and understood computing environment.
+
+- A file manager will be created to provide a first basic utility for the desktop environment, where you can browse your filesystem, and launch app windows.
+
+- Documentation will be made to give clear explanations and examples of how to write Sail for Homunculus and integrate it in your agents to make dynamic and interactive graphical TUIs.
+
+- Create a video demo that shows off how users and developers will use %homunculus.
+
+- Hold a release party in gather.town so that community members can come check it out and ask questions.
 
 ## Total compensation
 
-3 stars
+5 stars

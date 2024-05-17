@@ -1,6 +1,6 @@
 +++
 title = "Proposals"
-date = "2023-04-25"
+date = "2024-05-01"
 weight = 1
 description = "How to get your Urbit idea funded"
 +++
