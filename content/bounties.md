@@ -1,6 +1,6 @@
 +++
 title = "Bounties"
-date = "2024-05-01"
+date = "2024-04-25"
 weight = 1
 description = "Pick up a work opportunity in the Urbit ecosystem"
 +++
