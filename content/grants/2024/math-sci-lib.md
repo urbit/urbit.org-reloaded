@@ -1,5 +1,5 @@
 +++
-title = "Machine Learning and Numerical Computing on Urbit"
+title = "Machine Learning and Numerical Computing"
 date = "2024-05-05"
 
 [taxonomies]
