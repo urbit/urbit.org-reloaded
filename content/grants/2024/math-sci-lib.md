@@ -1,5 +1,5 @@
 +++
-title = "Machine Learning and Scientific Computing on Urbit"
+title = "Machine Learning and Numerical Computing on Urbit"
 date = "2024-05-05"
 
 [taxonomies]
@@ -8,7 +8,7 @@ grant_category = ["Dev: Tool"]
 
 [extra]
 image = ""
-description = "Enable scientific computing, advanced mathematics, and machine learning on Urbit."
+description = "Enable numerical computing and machine learning on Urbit."
 reward = "5-20 stars"
 assignee = [""]
 champion = ["~lagrev-nocfep"]
@@ -17,7 +17,7 @@ completed = false
 canceled = false
 +++
 
-~lagrev-nocfep and ~mopfel-winrux have been hard at work implementing mathematical and scientific computing on Urbit. The end goal that they are driving towards is Urbit-native machine learning models. They seek a qualified grantee to assist with this project.
+~lagrev-nocfep and ~mopfel-winrux have been hard at work implementing numerical computing on Urbit. The end goal that they are driving towards is Urbit-native machine learning. They seek a qualified grantee to assist with this project.
 
 Currently, they have completed significant work on the following:
 
