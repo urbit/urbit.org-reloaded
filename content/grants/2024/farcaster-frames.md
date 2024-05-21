@@ -12,7 +12,7 @@ description = "Make your Urbit app into a Farcaster Frame."
 reward = "1 star"
 assignee = [""]
 champion = ["~tamlut-modnys"]
-grant_id = "B0347"
+grant_id = "B0349"
 completed = false
 canceled = false
 +++
