@@ -1,5 +1,5 @@
 +++
-title = "JSON Canvas on Urbit"
+title = "JSON Canvas"
 date = "2024-05-02"
 
 [taxonomies]
@@ -8,7 +8,7 @@ grant_category = ["Dev: Apps"]
 
 [extra]
 image = ""
-description = "Support the JSON Canvas file type on Urbit"
+description = "Support the JSON Canvas file type"
 reward = "3 stars"
 assignee = ["~ronnys-rigwet"]
 champion = ["~tamlut-modnys"]
