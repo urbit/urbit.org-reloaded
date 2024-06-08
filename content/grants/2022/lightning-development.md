@@ -14,7 +14,7 @@ assignee = ["~tondes-sitrym"]
 grant_id = "P0183"
 champion = ["~hastuc-dibtux"]
 completed = false
-cancelled = true
+canceled = true
 link = "~pindet-timmut/urbitcoiners"
 deliverable = "~mister-dister-dozzod-dozzod/bitcoin"
 +++
