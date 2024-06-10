@@ -13,7 +13,7 @@ reward = "2 stars"
 assignee = ["~litneb-maltyp"]
 grant_id = "P0159"
 champion = ["~tocrex-holpen"]
-completed = false
+completed = true
 +++
 
 # Olif
