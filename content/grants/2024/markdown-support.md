@@ -19,6 +19,8 @@ canceled = false
 
 ## Description
 
+[Link to Project](https://github.com/wispem-wantex/urbit-markdown)
+
 Markdown is a very popular, widely used and mostly-standardized document encoding format. Urbit currently has a few partial implementations of Markdown (e.g., Tlon has a client-side Javascript implementation; Udon supports some basic Markdown syntax), but we want a complete, standard-compliant implementation which will allow people to create web pages in an Urbit-native fashion. The goal is that users can reasonably expect that, e.g., a Markdown document written for Github would render and work equivalently on Urbit.
 
 The successful completion of this project will be a library which includes:
