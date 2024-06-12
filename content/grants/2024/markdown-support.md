@@ -9,7 +9,7 @@ grant_category = ["Dev: Tool"]
 [extra]
 image = ""
 description = "Support the Markdown data type natively on Urbit"
-reward = "TBD"
+reward = "4 stars"
 assignee = ["~wispem-wantex"]
 champion = ["~lagrev-nocfep"]
 grant_id = "P0351"
@@ -32,12 +32,27 @@ Markdown is informally specified; different platforms support slightly different
 To maximize the usefulness of partially completed iterations of this project, milestones will be sliced by syntactic feature support, rather than by library components (i.e., data type, parser, and renderer). Each milestone will thus include the data structures, parser, and renderer for a portion of the Markdown syntax.
 
 ## Milestone 1
-Estimated Completion: July 2023
+Estimated Completion: July 2024
 Reward: 2 stars
 
 The first milestone for this project is support for basic, old-school Markdown syntax, but not including the Github flavor's extensions.
 
 
 ## Milestone 2
+Estimated Completion: August 2024
+Reward: 2 stars
 
-TBD
+This milestone adds support for the Github-flavored markdown extensions, namely:
+
+- reference links
+- task list items
+- tables
+- strikethrough formatting
+- extended autolink
+- embedded HTML
+
+Additionally, it includes:
+
+- comprehensive edge-case testing
+- documentation of how to use the library in an app
+- an example app showing how the library can be used, with a front-end
