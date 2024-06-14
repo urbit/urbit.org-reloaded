@@ -15,7 +15,7 @@ assignee = ["~fighet-parnet"]
 champion = ["~rovnys-ricfer"]
 grant_id = "P0280"
 completed = false
-canceled = false
+canceled = true
 
 +++
 
