@@ -12,7 +12,7 @@ description = "Runtime Support for Scry over HTTP"
 reward = "1 star"
 assignee = [""]
 champion = ["~rovnys-ricfer"]
-grant_id = "R0343"
+grant_id = "B0343"
 completed = false
 canceled = false
 +++

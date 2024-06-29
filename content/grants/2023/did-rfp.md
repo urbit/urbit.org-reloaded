@@ -13,7 +13,7 @@ description = "Design and implement a DID resolver to let Urbit interoperate wit
 reward = "TBD"
 assignee = [""]
 champion = [""]
-grant_id = "P1001"
+grant_id = "B0361"
 completed = false
 canceled = false
 

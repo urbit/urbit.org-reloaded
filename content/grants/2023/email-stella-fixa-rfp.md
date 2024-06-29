@@ -12,7 +12,7 @@ description = "Produce an Urbit-side client for sending E2EE email"
 reward = "TBD"
 assignee = [""]
 champion = [""]
-grant_id = "P1001"
+grant_id = "B0360"
 completed = false
 canceled = false
 +++

@@ -13,7 +13,7 @@ description = "WebAssembly Interpreter in Nock — Phase II"
 reward = "16 Stars"
 assignee = ["~dozreg-toplud"]
 champion = ["~rovnys-ricfer"]
-grant_id = "B0299"
+grant_id = "P0372"
 completed = false
 canceled = false
 
