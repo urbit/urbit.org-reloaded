@@ -10,6 +10,7 @@ grant_category = [ "Dev: Core" ]
 image = ""
 description = "Reduce memory usage of |meld"
 reward = "1 star"
+grant_id = "A0133"
 mentor = ["~master-morzod"]
 assignee = ["~winter-paches"]
 completed = false
