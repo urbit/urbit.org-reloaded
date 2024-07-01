@@ -11,7 +11,7 @@ image = ""
 description = "Quorum: Clone of Stack Exchange on Urbit"
 reward = "3 stars"
 assignee = ["~tamlut-modnys", "~litlep-nibbyt", "~sidnym-ladrut"]
-grant_id = "B0167"
+grant_id = "P0167"
 champion = ["~lagrev-nocfep"]
 completed = true
 +++
