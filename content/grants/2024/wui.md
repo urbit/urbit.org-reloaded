@@ -61,12 +61,14 @@ After completion of Minesweeper and Tic-Tac-Toe WUI wrappers, the Grantee must a
 
 ## Milestones
 
-Milestone 1: 2 Stars: 
+**Milestone 1**: 2 Stars
+
 Completed July 1, 2024.
 
-For completed* versions of both libraries, as per the Champion's feedback and specifications. • *Note: It is expected that some teaching requirements will change, so some features may change after submission. These changes are handled in Milestone #2.
+For completed versions of both libraries, as per the Champion's feedback and specifications. It is expected that some teaching requirements will change, so some features may change after submission. These changes are handled in Milestone 2.
 
-Milestone 2: 1 Star 
+**Milestone 2**: 1 Star 
+
 ETA: October 2024
 
 For assisting the Champion with documentation, testing, acting as a point of contact for students. Also for providing help with the next App School cohort (within the scope of WUI), should this arise in the near future.
