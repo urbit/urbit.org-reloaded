@@ -19,7 +19,7 @@ canceled = false
 
 +++
 
-## Urbit as GDPR solution: A research grant proposal
+## Urbit as GDPR Solution: A Research Grant Proposal
 
 
 ### Proposal Summary
@@ -32,15 +32,16 @@ We envision this grant as the first of three stages in a larger project to devel
 
 ### Deliverables
 
-* Whitepaper (10pg +) on GDPR compliance as Internet platform moat:
+Whitepaper (10pg +) on GDPR compliance as Internet platform moat:
 - Will begin with a literature review of estimated economic impacts via blocked competition, explore different aspects/industry sectors in terms of economic impact, and tie together a Total Addressable Market narrative for prospective startups that can reasonably be unlocked by Urbit-based primitives and protocols which obviate the GDPR compliance moat
 - Will, at a high level, identify the methods of enforcement and standards of qualification for GDPR coverage, in order to inform Urbit primitive design at a later stage
 
-* Blog post on GDPR compliance moats, Urbit’s potential, and protocolization
+Blog post on GDPR compliance moats, Urbit’s potential, and protocolization:
+
 - 1500+ words; written for a tech/business-savvy but lay audience (developers, entrepreneurs, VCs) in order to explore possibilities of Urbit-based primitives which obviate the GDPR moat
 
 
-### Milestones: 
+### Milestones
 **Milestone 1**: Literature review to demonstrate the research areas. 1 star. Delivered by July 8, 2024.
 
 **Milestone 2**: Final draft of whitepaper and blog post. 4 stars. Delivered by August 1, 2024.

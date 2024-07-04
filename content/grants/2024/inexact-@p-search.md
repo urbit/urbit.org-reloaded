@@ -1,7 +1,7 @@
 +++
 
 title = "Global Inexact @p Search"
-date = "2024-07-3"
+date = "2024-07-03"
 
 [taxonomies]
 grant_type = [ "Proposal" ]
@@ -27,7 +27,9 @@ A separate project has expressed desire for this functionality, as well as sigil
 https://github.com/lynko/urbit-names
 
 ### Milestone 1
-ETA: August 2
+
+ETA: August 2, 2024
+
 Reward: 2 stars
 
 Delivery of library and application.

@@ -1,7 +1,7 @@
 +++
 
 title = "%wui - Web User Interface (Game UI for App School)"
-date = "2024-07-3"
+date = "2024-07-03"
 
 [taxonomies]
 grant_type = [ "Proposal" ]
@@ -21,7 +21,7 @@ canceled = false
 
 ## Description
 
-For the new App School curriculum and Docs website, students will iteratively build a board games as they learn how Urbit apps are constructed. Currently, the method of debugging and printing out to terminal (as a form of app interaction) is non-optimal.
+For the new App School curriculum and Docs website, students will iteratively build board games as they learn how Urbit apps are constructed. Currently, the method of debugging and printing out to terminal (as a form of app interaction) is non-optimal.
 
 We propose a Web-User-Interface (WUI) to assist students in their Gall app projects. More specifically, students will use WUI as a wrapper library around their Tic-Tac-Toe and Minesweeper apps, which will display the state of their app via a Sail webpage.
 
