@@ -124,3 +124,15 @@ To complete git hosting capabilities, a support for pushing to an Urbit-hosted
 repository is implemented.
 
 _Reward: 1 star_
+
+### B. `bytestream`  library in `zuse.hoon`
+
+Low-level git functionality requires efficient operations on byte streams. To work around the current limitations of the Urbit runtime, `hoon-git` introduces a minimal byte stream library. In this milestone, this library is refactored and extended to allow for its general use and inclusion in `zuse.hoon`; jets are implemented for all byte reading and writing operations. 
+
+_Reward: 1 star_
+
+### C. git refspec implementation
+
+Minimal fetch command is implemented in MS5 to support on-ship updates of git repositories. We extend fetch to support full git refspec configuration of a remote. This enables custom synchronization strategies, such as keeping a repository in sync with a selection of remote branches or tags.
+
+_Reward: 1 star_
