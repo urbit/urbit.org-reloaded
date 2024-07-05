@@ -5,7 +5,7 @@ date = "2022-08-17"
 
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["App Dev"]
+grant_category = ["Dev: Apps"]
 
 [extra]
 image = ""
@@ -15,7 +15,7 @@ assignee = ["Quartus"]
 champion = ["~tocrex-holpen"]
 grant_id = "P0172"
 completed = false
-canceled = false
+canceled = true
 link = ""
 
 +++

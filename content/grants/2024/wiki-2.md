@@ -5,7 +5,7 @@ date = "2024-02-11"
 
 [taxonomies]
 grant_type = [ "Proposal" ]
-grant_category = [ "App Dev" ]
+grant_category = [ "Dev: Apps" ]
 
 [extra]
 image = ""
@@ -45,7 +45,7 @@ The overall aims of this grant are:
 
 ### Milestone 1 - Public Remote Access + Global Search
 
-* Estimated completion: March 1st 2024
+* Estimated completion: May 1st 2024
 
 * Compensation: 2 stars
 
@@ -59,7 +59,7 @@ The overall aims of this grant are:
 
   * Host does not need to make their wiki accessible via a URL
 
- * `%wiki` maintains an index of wikis from across the network
+  * `%wiki` maintains an index of wikis from across the network
 
   * Index is decentralized, there is no central indexer ship
 
@@ -75,7 +75,7 @@ The overall aims of this grant are:
 
 ### Milestone 2 - User Experience Enhancements
 
-* Estimated completion: April 2024
+* Estimated completion: June 2024
 
 * Compensation: 1 star
 
@@ -99,7 +99,7 @@ The overall aims of this grant are:
 
 ### Milestone 3 - Shared Private Wikis + User Roles
 
-* Estimated completion: May 2024
+* Estimated completion: July 2024
 
 * Compensation: 2 stars
 

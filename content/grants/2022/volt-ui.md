@@ -4,7 +4,7 @@ date = "2022-06-22"
 
 [taxonomies]
 grant_type = [ "Apprenticeship" ]
-grant_category = [ "App Dev", "Other" ]
+grant_category = [ "Dev: Apps" ]
 
 [extra]
 image = ""
@@ -13,7 +13,7 @@ reward = "1 star"
 mentor = ["~dasrun-fadben"]
 assignee = ["~mipsun-diflex"]
 grant_id = "A0152"
-completed = false
+completed = true
 cancelled = false
 link = "~pindet-timmut/urbitcoiners"
 deliverable = "~mister-dister-dozzod-dozzod/bitcoin"

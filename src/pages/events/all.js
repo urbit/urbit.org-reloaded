@@ -43,7 +43,7 @@ export default function AllEvents({
           <Section divider={"border-primary"}>
             <h2 className="h2">Ongoing</h2>
             <FatBlock className="grid grid-cols-1 sm:grid-cols-2 gap-1 lg:gap-6 xl:gap-8">
-              {ongoingEvents.slice(0, 2).map((props) => (
+              {ongoingEvents.map((props) => (
                 <EventCard className="h-full w-full" {...props} />
               ))}
             </FatBlock>
@@ -53,7 +53,7 @@ export default function AllEvents({
           <Section divider={"border-primary"}>
             <h2 className="h2">Upcoming</h2>
             <FatBlock className="grid grid-cols-1 sm:grid-cols-2 gap-1 lg:gap-6 xl:gap-8">
-              {upcomingEvents.slice(0, 2).map((props) => (
+              {upcomingEvents.map((props) => (
                 <EventCard className="h-full w-full" {...props} />
               ))}
             </FatBlock>

@@ -3,7 +3,7 @@ title = "Send Emails to a Mailing List"
 date = "2021-10-07"
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["App Dev: Other"]
+grant_category = ["Dev: Apps"]
 [extra]
 image = ""
 description = "An agent that works with SendGrid, to be used for sending subscriber content to a mailing list."

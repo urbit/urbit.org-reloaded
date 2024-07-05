@@ -3,7 +3,7 @@ title = "Urbit Notes"
 date = "2021-08-25"
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["App Dev: Other"]
+grant_category = ["Dev: Apps"]
 [extra]
 image = ""
 description = "Bring your note-taking game into the 31st century!"

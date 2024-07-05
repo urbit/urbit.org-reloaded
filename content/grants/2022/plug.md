@@ -5,7 +5,7 @@ date = "2022-09-01"
 
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["App Dev"]
+grant_category = ["Dev: Apps"]
 
 [extra]
 image = ""
@@ -14,7 +14,7 @@ reward = "5 stars"
 assignee = ["~hastyp-patmud"]
 champion = ["~novlud-padtyv"]
 grant_id = "P0156"
-completed = false
+completed = true
 canceled = false
 link = ""
 
@@ -127,11 +127,6 @@ The implementation will have 3-4 distinct parts
 **Deliverables**: 
 * 2 sets ofIntegration design docs and API contract: one for this grant and 1 for the later urbit native integration
 * User Stories 9-11
-**Payment**: 1 Star
-
-## 5. Bitcoin Cart Integration
-**Expected Completion**: Dec 2022
-**Deliverables**: A Globbed JS App + additional work on sail store, User Stories 12-17
 **Payment**: 1 Star
 
 # About Me

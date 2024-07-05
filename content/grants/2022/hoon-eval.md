@@ -4,11 +4,12 @@ date = "2022-05-04"
 
 [taxonomies]
 grant_type = [ "Apprenticeship" ]
-grant_category = [ "Core Dev" ]
+grant_category = [ "Dev: Core" ]
 
 [extra]
 image = ""
 description = "Build an eval command and a stateless REPL mode in vere"
+grant_id = "A0134"
 reward = "1 star"
 mentor = ["~master-morzod"]
 assignee = ["~mopfel-winrux"]

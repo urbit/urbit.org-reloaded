@@ -5,7 +5,7 @@ date = "2023-02-23"
 
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["Core Dev"]
+grant_category = ["Dev: Core"]
 
 [extra]
 image = ""
@@ -14,7 +14,7 @@ reward = "7 Stars"
 assignee = ["~mopfel-winrux"]
 champion = ["~lagrev-nocfep, ~rovnys-ricfer"]
 grant_id = "P0244"
-completed = false
+completed = true
 canceled = false
 
 +++

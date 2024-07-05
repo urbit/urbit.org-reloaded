@@ -4,7 +4,7 @@ date = "2023-01-31"
 
 [taxonomies]
 grant_type = ["Bounty"]
-grant_category = ["Core Dev"]
+grant_category = ["Dev: Core"]
 
 [extra]
 image = ""
@@ -13,7 +13,7 @@ description = "Adapt the comments in the default generators to take advantage of
 reward = "1 star"
 grant_id = "B0231"
 completed = false
-canceled = false
+canceled = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0231&prefill_Grant+Name=Doccord%20Compliant%20Comments%20for%20All%20Generators"
 +++
 

@@ -5,7 +5,7 @@ date = "2023-02-03"
 
 [taxonomies]
 grant_type = ["Bounty"]
-grant_category = ["Other"]
+grant_category = ["Community"]
 
 [extra]
 image = ""
@@ -14,7 +14,7 @@ reward = "2 Stars"
 assignee = ["~larryx-woldyr"]
 champion = ["~poldec-tonteg"]
 grant_id = "B0233"
-completed = false
+completed = true
 canceled = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0233&prefill_Grant+Name=Github%20Support%20Concierge"
 

@@ -1,7 +1,7 @@
 +++
 title = "Urbit Denver"
 description = ""
-image = "https://sfo2.digitaloceanspaces.com/poldec-tonteg-content/poldec-tonteg/2024.2.26..23.7.31..4e97.8d4f.df3b.645a-B4D0DFBC-0D9E-409D-8ED4-B2C88174AD8A.png"
+image = "https://media.urbit.org/site/communities/denver.png"
 group = "~nospex-larsut/mile-high-mars"
 
 [[links]]

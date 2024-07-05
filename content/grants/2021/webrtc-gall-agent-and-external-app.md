@@ -4,7 +4,7 @@ date = "2021-01-11"
 
 [taxonomies]
 grant_type = [ "Proposal" ]
-grant_category = [ "App Dev: Other" ]
+grant_category = [ "Dev: Apps", "Dev: Tool" ]
 
 [extra]
 image = ""
@@ -56,8 +56,7 @@ The proposer would eventually like to see media streas themselves propagated via
 
 ## Team
 
-E
-dward Amsden (~ritpub-sipsyl) is a vertan software developer and principal of Black River Software. He has spent the last 5+ years working on industrial IoT solutions in Haskell as a contractor for Plow Technologies.
+Edward Amsden (~ritpub-sipsyl) is a vertan software developer and principal of Black River Software. He has spent the last 5+ years working on industrial IoT solutions in Haskell as a contractor for Plow Technologies.
 
 ## References
 

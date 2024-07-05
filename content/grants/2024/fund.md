@@ -5,7 +5,7 @@ date = "2024-03-11"
 
 [taxonomies]
 grant_type = [ "Proposal" ]
-grant_category = [ "App Dev" ]
+grant_category = [ "Dev: Apps" ]
 
 [extra]
 image = ""
@@ -13,7 +13,7 @@ description = "The tip of the spear for sovereign web3 productivity apps on urbi
 reward = "5 stars"
 assignee = ["~sarlev-sarsen"]
 champion = ["~faldur-marnus"]
-grant_id = "P1002"
+grant_id = "P0366"
 completed = false
 canceled = false
 

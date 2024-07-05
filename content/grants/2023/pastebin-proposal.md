@@ -5,7 +5,7 @@ date = "2023-06-05"
 
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["App Dev"]
+grant_category = ["Dev: Apps"]
 
 [extra]
 image = ""
@@ -15,7 +15,7 @@ assignee = ["~polwex"]
 champion = ["~poldec-tonteg"]
 grant_id = "P0271"
 completed = false
-canceled = false
+canceled = true
 
 +++
 

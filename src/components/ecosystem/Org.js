@@ -8,11 +8,12 @@ export default function Org({
   title,
   description,
   image,
+  href,
   slug,
   extended = false,
 }) {
   return (
-    <Link href={path.join("/ecosystem", "orgs", slug)}>
+    <Link href={href || path.join("/ecosystem", "orgs", slug || "")}>
       <div
         className={classnames(
           "relative flex flex-col aspect-square bg-container p-2 sm:p-4",

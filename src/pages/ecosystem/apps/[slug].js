@@ -107,16 +107,6 @@ export default function App({ post, org, markdown }) {
           >
             How to Install an Urbit Application
           </Link>
-          <hr className="hr-horizontal border-primary" />
-          <p className="body-md">
-            Have an application you'd like to share publicly through urbit.org?
-          </p>
-          <Link
-            className="text-primary hover:text-secondary underline decoration-1 underline-offset-4 body-md"
-            href="https://urbit.org/applications/submit"
-          >
-            Submit your application
-          </Link>
         </Section>
       </Main>
       <Footer />

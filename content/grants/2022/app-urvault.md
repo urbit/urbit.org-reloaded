@@ -5,7 +5,7 @@ date = "2022-03-18"
 
 [taxonomies]
 grant_type = ["Apprenticeship"]
-grant_category = ["App Dev: Other"]
+grant_category = ["Dev: Apps"]
 
 [extra]
 image = ""
@@ -13,7 +13,7 @@ description = "UrVault: Urbit Password Manager"
 reward = "$12,000 in WSTR"
 assignee = ["~dabber-sicsup"]
 mentor = ["~mocrux-nomdep"]
-grant_id = "A01465"
+grant_id = "A0120"
 completed = false
 canceled = true
 link = ""

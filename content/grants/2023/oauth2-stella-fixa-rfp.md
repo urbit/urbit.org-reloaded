@@ -3,8 +3,8 @@ title = "Build a Single-Sign-On App for Urbit"
 date = "2023-05-11"
 
 [taxonomies]
-grant_type = ["RFP"]
-grant_category = ["App Dev"]
+grant_type = ["Bounty"]
+grant_category = ["Dev: Apps"]
 
 [extra]
 image = ""
@@ -12,7 +12,7 @@ description = "Produce an OAuth-compatible token issuer and login manager."
 reward = "TBD"
 assignee = [""]
 champion = [""]
-grant_id = "P1001"
+grant_id = "B0363"
 completed = false
 canceled = false
 

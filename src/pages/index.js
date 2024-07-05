@@ -1,13 +1,40 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import classnames from "classnames";
-import { Container, Main, Section, FatBlock } from "@urbit/fdn-design-system";
-import IntraNav from "../components/IntraNav";
-import Footer from "../components/Footer";
-import Meta from "../components/Meta";
-import NewsletterSignup from "../components/NewsletterSignup";
-import Org from "../components/ecosystem/Org";
+import {
+  Container,
+  Main,
+  Section,
+  FatBlock,
+  getAllPosts,
+} from "@urbit/fdn-design-system";
+
+import Carousel from "@/components/Carousel";
+import EventCard from "@/components/EventCard";
+import Footer from "@/components/Footer";
+import IntraNav from "@/components/IntraNav";
+import Meta from "@/components/Meta";
+import NewsletterSignup from "@/components/NewsletterSignup";
+import Org from "@/components/ecosystem/Org";
+
+const partners = [
+  {
+    link: "https://near.org/",
+    img: "https://storage.googleapis.com/media.urbit.org/assembly/near-logo.png",
+  },
+  {
+    link: "https://www.serotonin.co/",
+    img: "https://storage.googleapis.com/media.urbit.org/site/landing/serotonin.svg",
+  },
+  {
+    link: "https://othermeans.us/",
+    img: "https://storage.googleapis.com/media.urbit.org/site/landing/om_logo_2024-1.svg",
+  },
+  {
+    link: "https://www.gigaver.se/",
+    img: "https://storage.googleapis.com/media.urbit.org/site/landing/giga-black.svg",
+  },
+];
 
 function CTAs({ className, links }) {
   return (
@@ -25,10 +52,10 @@ function CTAs({ className, links }) {
   );
 }
 
-export default function Home({}) {
+export default function Home({ events }) {
   const post = {
     title: "Urbit",
-    description: "Welcome to the sovereign internet.",
+    description: "Leave the internet behind.",
   };
 
   return (
@@ -41,31 +68,68 @@ export default function Home({}) {
       <Main className="text-primary body-lg" singleColumn>
         <h1 className="h0 heading mt-8">:: Leave the internet behind</h1>
         <div className="block md:hidden">
-          <img
+        <video
             className="img-dark"
-            src="https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-mobile-d.png"
-          />
-          <img
+            loop
+            autoPlay
+            muted
+            playsInline
+            disablePictureInPicture
+          >
+            <source
+              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-dark-mobile1.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <video
             className="img-light"
-            src="https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-mobile-l.png"
-          />
+            loop
+            autoPlay
+            muted
+            playsInline
+            disablePictureInPicture
+          >
+            <source
+              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-light-mobile1.mp4"
+              type="video/mp4"
+            />
+          </video>
         </div>
         <div className="hidden md:block">
-          <img
+          <video
             className="img-dark"
-            src="https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-d.png"
-          />
-          <img
+            loop
+            autoPlay
+            muted
+            playsInline
+            disablePictureInPicture
+          >
+            <source
+              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-dark-desktop1.mp4"
+              type="video/mp4"
+            />
+          </video>
+
+          <video
             className="img-light"
-            src="https://storage.googleapis.com/media.urbit.org/site/landing/urbit-header-l.png"
-          />
+            loop
+            autoPlay
+            muted
+            playsInline
+            disablePictureInPicture
+          >
+            <source
+              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-light-desktop1.mp4"
+              type="video/mp4"
+            />
+          </video>
         </div>
 
         <Section divider={"border-primary"}>
-          <h1 className="h1">
+          <h2 className="h1">
             Urbit is a new computing paradigm that provides complete ownership
             of your digital world.
-          </h1>
+          </h2>
           <div className="body-lg grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex flex-col justify-between bg-container rounded-lg p-4">
               <h3 className="text-on-container h-[6.5em] overflow-hidden">
@@ -95,7 +159,7 @@ export default function Home({}) {
         </Section>
 
         <Section divider={"border-primary"}>
-          <p className="h1">Own your compute in the ways that matter. </p>
+          <h2 className="h1">Own your compute in the ways that matter.</h2>
           <FatBlock className="body-lg border border-primary rounded-lg">
             <table className="w-full table-fixed">
               <tbody>
@@ -160,9 +224,54 @@ export default function Home({}) {
         </Section>
 
         <Section divider={"border-primary"}>
-          <p className="h1">
-            Explore one of the highest quality developer ecosystems.
+          <h2 className="h1">Come meet us.</h2>
+          <Carousel className="h-60 xs:h-72 md:h-96">
+            {events.slice(0, 6).map((props) => (
+              <EventCard {...props} key={props.slug} />
+            ))}
+          </Carousel>
+          <Link
+            className="btn bg-primary hover:bg-secondary text-surface body-lg w-min"
+            href="/events"
+          >
+            View Events
+          </Link>
+        </Section>
+
+        <Section divider={"border-primary"}>
+          <h2 className="h1">A fork in the road for computing.</h2>
+          <div
+            className="w-full aspect-[1195/646] !my-16 md:!my-20 lg:!my-24 bg-primary"
+            style={{
+              WebkitMaskImage:
+                "url(https://media.urbit.org/site/landing/compute-paradigm.svg)",
+              WebkitMaskSize: "100% 100%",
+              WebkitMaskRepeat: "no-repeat",
+              maskImage:
+                "url(https://media.urbit.org/site/landing/compute-paradigm.svg)",
+              maskSize: "100% 100%",
+              maskRepeat: "no-repeat",
+            }}
+          />
+          <p className="body-lg">
+            Urbit is a Layer Zero for truly personal, networked computation.
+            It's entirely <strong>self-contained</strong>,{" "}
+            <strong>private</strong>, <strong>cryptographically owned</strong>,
+            and <strong>designed to last forever</strong>. With Urbit,
+            user-owned networks are finally possible.
           </p>
+          <Link
+            className="btn bg-primary hover:bg-secondary text-surface"
+            href="/overview"
+          >
+            Learn More
+          </Link>
+        </Section>
+
+        <Section divider={"border-primary"}>
+          <h2 className="h1">
+            Explore one of the highest quality developer ecosystems.
+          </h2>
           <div className="body-lg grid grid-cols-2 md:grid-cols-4 gap-4">
             <Org
               title="Tlon"
@@ -195,30 +304,37 @@ export default function Home({}) {
           </div>
         </Section>
 
-        <Section divider={"border-primary"}>
-          <p className="h1">A fork in the road for computing.</p>
-          <div
-            className="w-full aspect-[1195/646] !my-16 md:!my-20 lg:!my-24 bg-primary"
-            style={{
-              WebkitMaskImage:
-                "url(https://media.urbit.org/site/landing/compute-paradigm.svg)",
-              WebkitMaskSize: "100% 100%",
-              WebkitMaskRepeat: "no-repeat",
-              maskImage:
-                "url(https://media.urbit.org/site/landing/compute-paradigm.svg)",
-              maskSize: "100% 100%",
-              maskRepeat: "no-repeat",
-            }}
-          />
-          <p className="h1">
-            Urbit is a Layer Zero for truly personal, networked computation. It's entirely <strong>self-contained</strong>, <strong>private</strong>, <strong>cryptographically owned</strong>, and <strong>designed to last forever</strong>. With Urbit, user-owned networks are finally possible.
-          </p>
-          <Link
-            className="btn bg-primary hover:bg-secondary text-surface"
-            href="/overview"
-          >
-            Learn More
-          </Link>
+        <Section className="overflow-hidden" divider={"border-primary"}>
+          <h2 className="h2">Who we work with.</h2>
+          <div className="flex flex-col items-center -layout-mx">
+            <div className="flex items-center justify-center flex-wrap w-full">
+              {partners.map((partner) => {
+                const iconStyle = {
+                  WebkitMaskImage: `url(${partner.img})`,
+                  WebkitMaskSize: "contain",
+                  WebkitMaskPosition: "center",
+                  WebkitMaskRepeat: "no-repeat",
+                  maskImage: `url(${partner.img})`,
+                  maskSize: "contain",
+                  maskPosition: "center",
+                  maskRepeat: "no-repeat",
+                };
+
+                return (
+                  <div
+                    className="text-center w-1/2 xs:w-1/3 sm:w-1/4 md:w-1/5 items-center p-5 lg:p-10 xl:p-12"
+                    key={partner.link}
+                  >
+                    <Link
+                      className="inline-block w-full h-20 xs:h-24 sm:h-28 md:h-32 bg-primary"
+                      href={partner.link}
+                      style={iconStyle}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </Section>
 
         <Section className="body-lg" divider={"border-primary"} narrow loose>
@@ -275,4 +391,33 @@ export default function Home({}) {
       <Footer />
     </Container>
   );
+}
+
+export async function getStaticProps() {
+  let events = getAllPosts(
+    [
+      "title",
+      "description",
+      "location",
+      "starts",
+      "ends",
+      "timezone",
+      "guests",
+      "hosts",
+      "image",
+      "darken_image",
+      "dark",
+      "registration_url",
+      "pinned",
+      "slug",
+    ],
+    "events",
+    "starts",
+  );
+
+  events.reverse();
+
+  return {
+    props: { events },
+  };
 }

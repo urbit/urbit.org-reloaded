@@ -4,7 +4,7 @@ date = "2021-06-22"
 
 [taxonomies]
 grant_type = [ "Bounty" ]
-grant_category = [ "App Dev: Other" ]
+grant_category = [ "Dev: Apps" ]
 
 [extra]
 image = ""

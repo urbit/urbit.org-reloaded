@@ -4,7 +4,7 @@ date = "2022-08-11"
 
 [taxonomies]
 grant_type = [ "Apprenticeship" ]
-grant_category = [ "Core Dev", "Runtime" ]
+grant_category = [ "Dev: Core" ]
 
 [extra]
 image = ""

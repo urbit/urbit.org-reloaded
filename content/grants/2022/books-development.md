@@ -4,7 +4,7 @@ date = "2022-10-04"
 
 [taxonomies]
 grant_type = [ "Bounty" ]
-grant_category = [ "App Dev" ]
+grant_category = [ "Dev: Apps" ]
 
 [extra]
 image = ""
@@ -42,3 +42,5 @@ The source code for Books lives at https://github.com/dalten-collective/books.
 
 ## Milestones and Compensation
 The applicant will receive 2 stars on completion of all the features in scope.
+
+ETA: Saturday, July 20, 2024

@@ -4,7 +4,7 @@ date = "2022-07-18"
 
 [taxonomies]
 grant_type = [ "Proposal" ]
-grant_category = [ "App Dev" ]
+grant_category = [ "Community" ]
 
 [extra]
 image = ""
@@ -13,7 +13,7 @@ reward = "2 stars"
 assignee = ["~litneb-maltyp"]
 grant_id = "P0159"
 champion = ["~tocrex-holpen"]
-completed = false
+completed = true
 +++
 
 # Olif

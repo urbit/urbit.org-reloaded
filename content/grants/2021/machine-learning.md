@@ -3,7 +3,7 @@ title = "Urbit Supervised Machine Learning Library"
 date = "2021-08-25"
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["App Dev: Other"]
+grant_category = ["Dev: Tool"]
 [extra]
 image = ""
 description = "Create a supervised machine learning library"

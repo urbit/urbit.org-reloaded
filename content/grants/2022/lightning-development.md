@@ -4,7 +4,7 @@ date = "2022-10-20"
 
 [taxonomies]
 grant_type = [ "Proposal" ]
-grant_category = [ "App Dev" ]
+grant_category = [ "Dev: Apps" ]
 
 [extra]
 image = ""
@@ -14,6 +14,7 @@ assignee = ["~tondes-sitrym"]
 grant_id = "P0183"
 champion = ["~hastuc-dibtux"]
 completed = false
+canceled = true
 link = "~pindet-timmut/urbitcoiners"
 deliverable = "~mister-dister-dozzod-dozzod/bitcoin"
 +++

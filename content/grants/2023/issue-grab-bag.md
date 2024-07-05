@@ -5,7 +5,7 @@ date = "2023-02-15"
 
 [taxonomies]
 grant_type = ["Bounty"]
-grant_category = ["Core Dev"]
+grant_category = ["Dev: Core"]
 
 [extra]
 image = ""
@@ -29,7 +29,7 @@ This bounty will be awarded to someone who closes any three of the issues labele
 
 The ideal contributor will have a decent command of hoon and an understanding of the Urbit stack. Some, but not all, issues will require experience with the [Vere runtime](https://github.com/urbit/vere). Issues are selected to require minimal organizational context, making them amenable to open source contributors.
 
-For clarification on any of the issues, please mention [@vvisigoth](https://github.com/vvisigoth) or the issue filer in the issue comments.
+Please reach out to grants@urbit.org if you have any questions or would like help picking issues to work on.
 
 ## Compensation
 

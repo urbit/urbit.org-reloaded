@@ -4,8 +4,8 @@ title = "Build a DID Resolver for Urbit"
 date = "2023-04-12"
 
 [taxonomies]
-grant_type = ["RFP"]
-grant_category = ["App Dev"]
+grant_type = ["Bounty"]
+grant_category = ["Dev: Apps"]
 
 [extra]
 image = ""
@@ -13,7 +13,7 @@ description = "Design and implement a DID resolver to let Urbit interoperate wit
 reward = "TBD"
 assignee = [""]
 champion = [""]
-grant_id = "P1001"
+grant_id = "B0361"
 completed = false
 canceled = false
 

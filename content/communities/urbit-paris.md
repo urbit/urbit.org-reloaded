@@ -1,7 +1,7 @@
 +++
 title = "Urbit Paris"
 description = ""
-image = "https://sfo2.digitaloceanspaces.com/poldec-tonteg-content/poldec-tonteg/2024.2.27..16.11.20..420c.49ba.5e35.3f7c-E2C0903C-4CE3-4459-9262-8B01EF7A87F1.png"
+image = "https://media.urbit.org/site/communities/paris.png"
 group = "~solsup-soplyd/urbit-paris"
 
 [[links]]

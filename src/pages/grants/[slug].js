@@ -1,7 +1,7 @@
 import React from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import fs from "fs";
 import path from "path";
 import {
@@ -14,18 +14,32 @@ import {
   generateDisplayDate,
   formatDate,
 } from "@urbit/fdn-design-system";
-import { getGrantYear } from "@/lib/lib";
-import IntraNav from "@/components/IntraNav";
-import Footer from "@/components/Footer";
-import Meta from "@/components/Meta";
-import GrantStatus from "@/components/GrantStatus";
-import ErrorPage from "@/pages/404";
 
-export default function Event({ post, markdown, match }) {
+import { getGrantYear } from "@/lib/lib";
+import ErrorPage from "@/pages/404";
+import Footer from "@/components/Footer";
+import IntraNav from "@/components/IntraNav";
+import Meta from "@/components/Meta";
+
+const getStatus = (post) => {
+  if (post.extra.canceled) {
+    return "Canceled";
+  } else if (post.extra.completed) {
+    return "Completed";
+  } else if (post.extra.assignee && post.extra.assignee?.[0].length > 0) {
+    return "In Progress";
+  } else {
+    return "Open";
+  }
+};
+
+export default function Grant({ post, markdown, match }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
   }
+
+  const status = getStatus(post);
 
   return (
     <Container>
@@ -77,15 +91,24 @@ export default function Event({ post, markdown, match }) {
                 className="btn bg-primary hover:bg-secondary text-surface"
                 href={path.join(
                   "/ecosystem/apps",
-                  match?.data?.title?.toLowerCase()
+                  match?.data?.title?.toLowerCase(),
                 )}
               >
                 {match?.data?.shortcode || match?.data?.title}
               </Link>
             </div>
           )}
-          <div className="body-md space-x-3.5">
-            <GrantStatus {...post} />
+          <div className="flex flex-wrap gap-2.5 body-md">
+            {(status === "Open" && (
+              <Link
+                className="btn bg-primary hover:bg-secondary text-surface body-md"
+                href="https://airtable.com/apppnWSqfsVvUwkWh/shrCi54rEDxgSZr3z"
+              >
+                Apply
+              </Link>
+            )) || (
+              <span className="btn text-secondary bg-tertiary">{status}</span>
+            )}
             {post.taxonomies.grant_type.map((type) => (
               <span className="btn text-secondary bg-tertiary">{type}</span>
             ))}
@@ -109,7 +132,7 @@ export async function getStaticProps({ params }) {
   const post = getPostBySlug(
     params.slug,
     ["title", "description", "date", "taxonomies", "extra", "slug", "content"],
-    `grants/${dir.name}`
+    `grants/${dir.name}`,
   );
 
   const markdown = JSON.stringify(Markdown.parse({ post }));
@@ -120,7 +143,7 @@ export async function getStaticProps({ params }) {
     const ship = post.extra.deliverable.split("/")[0];
     const application = post.extra.deliverable.split("/")[1];
     const fileExists = fs.existsSync(
-      path.join(process.cwd(), "content/ecosystem/apps", `${application}.md`)
+      path.join(process.cwd(), "content/ecosystem/apps", `${application}.md`),
     );
     match = fileExists
       ? getPage(path.join(process.cwd(), "content/ecosystem/apps", application))

@@ -2,6 +2,9 @@
 @import "@urbit/fdn-design-system/styles/fonts";
 @import "@urbit/fdn-design-system/styles/markdown";
 @import "@urbit/fdn-design-system/styles/prism";
+@import "./docsearch-variable";
+@import "./docsearch-button";
+@import "./docsearch-modal";
 
 .blk {
   --black: #14140F;
@@ -41,6 +44,18 @@
   --on-container: #14140F;
   --inverse-on-container: #FFFFFF;
   --on-container-variant: #5A5A55;
+}
+
+/* ustj intranav color scheme  */
+.ylw {
+  --gray: #141A14;
+  --brite: #FFF450;
+}
+
+/* network explorer intranav color scheme  */
+.gry {
+  --gray: #141A14;
+  --brite: #C8C8C8
 }
 
 :root {

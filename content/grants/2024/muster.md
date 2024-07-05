@@ -5,7 +5,7 @@ date = "2024-03-15"
 
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["App Dev"]
+grant_category = ["Dev: Apps"]
 
 [extra]
 image = ""
@@ -13,7 +13,7 @@ description = "The ground-up browser hooked to Urbit"
 reward = "20 Stars"
 assignee = ["~togsyn-lablev"]
 champion = ["~wolref-podlex"]
-grant_id = "P1004"
+grant_id = "R0370"
 completed = false
 canceled = false
 

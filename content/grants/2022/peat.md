@@ -5,7 +5,7 @@ date = "2022-08-17"
 
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["App Dev"]
+grant_category = ["Dev: Apps"]
 
 [extra]
 image = ""
@@ -14,7 +14,7 @@ reward = "4 stars"
 assignee = ["Quartus"]
 champion = ["~sarlev-sarsen"]
 grant_id = "P0174"
-completed = false
+completed = true
 canceled = false
 link = "~magped-magped-rabsef-bicrym/peat"
 deliverable = "~magped-magped-rabsef-bicrym/peat"

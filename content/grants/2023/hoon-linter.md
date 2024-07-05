@@ -5,7 +5,7 @@ date = "2023-03-21"
 
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["Core Dev"]
+grant_category = ["Dev: Core"]
 
 [extra]
 image = ""
@@ -15,7 +15,7 @@ assignee = ["~watter-parter"]
 champion = ["~rovnys-ricfer"]
 grant_id = "P0224"
 completed = false
-canceled = false
+canceled = true
 
 +++
 

@@ -1,9 +1,9 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { DateTime } from "luxon";
 import classnames from "classnames";
 import path from "path";
-import { DateTime } from "luxon";
 import {
   Container,
   Main,
@@ -12,11 +12,12 @@ import {
   getAllPosts,
   generateRealtimeDate,
 } from "@urbit/fdn-design-system";
-import IntraNav from "@/components/IntraNav";
-import Footer from "@/components/Footer";
-import Meta from "@/components/Meta";
+
 import Carousel from "@/components/Carousel";
 import EventCard from "@/components/EventCard";
+import Footer from "@/components/Footer";
+import IntraNav from "@/components/IntraNav";
+import Meta from "@/components/Meta";
 
 function CommunityCard({ className = "", title, image, slug }) {
   return (
@@ -82,8 +83,8 @@ export default function Events({
           <Section divider={"border-primary"}>
             <h2 className="h2">Ongoing</h2>
             <FatBlock className="grid grid-cols-1 sm:grid-cols-2 gap-1 lg:gap-6 xl:gap-8">
-              {ongoingEvents.slice(0, 2).map((props) => (
-                <EventCard className="h-full w-full" {...props} />
+              {ongoingEvents.map((props) => (
+                <EventCard className="w-full" {...props} />
               ))}
             </FatBlock>
           </Section>
@@ -92,8 +93,8 @@ export default function Events({
           <Section divider={"border-primary"}>
             <h2 className="h2">Upcoming</h2>
             <FatBlock className="grid grid-cols-1 sm:grid-cols-2 gap-1 lg:gap-6 xl:gap-8">
-              {upcomingEvents.slice(0, 2).map((props) => (
-                <EventCard className="h-full w-full" {...props} />
+              {upcomingEvents.map((props) => (
+                <EventCard className="w-full" {...props} />
               ))}
             </FatBlock>
           </Section>
@@ -104,15 +105,13 @@ export default function Events({
             {pastEvents &&
               pastEvents
                 .slice(0, 4)
-                .map((props) => (
-                  <EventCard className="h-full w-full" {...props} />
-                ))}
+                .map((props) => <EventCard className="w-full" {...props} />)}
           </FatBlock>
           <Link
             className="btn bg-primary hover:bg-secondary text-surface body-lg w-min"
             href="/events/all"
           >
-            More events
+            More Events
           </Link>
         </Section>
       </Main>
@@ -125,7 +124,7 @@ export async function getStaticProps() {
   const communities = getAllPosts(
     ["title", "description", "image", "content", "slug"],
     "communities",
-    "title"
+    "title",
   );
 
   const events = getAllPosts(
@@ -147,7 +146,7 @@ export async function getStaticProps() {
       "slug",
     ],
     "events",
-    "starts"
+    "starts",
   );
 
   let upcomingEvents = [];

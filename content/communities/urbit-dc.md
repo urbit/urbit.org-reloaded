@@ -1,7 +1,7 @@
 +++
 title = "DC Metro Urbit Meetup Group"
 description = ""
-image = "https://sfo2.digitaloceanspaces.com/poldec-tonteg-content/poldec-tonteg/2024.2.26..23.7.31..4ed9.1687.2b02.0c49-46B48096-980E-43EE-A928-A28349535B32.png"
+image = "https://media.urbit.org/site/communities/dc.png"
 group = "~tillys-fasryp/nova-urbit-meetup-lobby-3347"
 
 [[links]]

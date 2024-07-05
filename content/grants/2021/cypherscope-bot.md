@@ -3,7 +3,7 @@ title = "Cypherscope Bot"
 date = "2021-09-13"
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["App Dev: Other"]
+grant_category = ["Dev: Apps"]
 [extra]
 image = ""
 description = "On-demand financial charts chat bot"

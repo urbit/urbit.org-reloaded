@@ -4,7 +4,7 @@ date = "2022-09-25"
 
 [taxonomies]
 grant_type = [ "Apprenticeship" ]
-grant_category = [ "App Dev"]
+grant_category = [ "Dev: Apps"]
 
 [extra]
 image = ""
@@ -13,7 +13,7 @@ reward = "1 star"
 mentor = ["~rabsef-bicrym"]
 assignee = ["~soctun-ridsyr"]
 grant_id = "A0192"
-completed = false
+completed = true
 canceled = false
 link = ""
 deliverable = "~dalten/gora"

@@ -3,8 +3,8 @@ title = "Build an Email Toolchain for Urbit"
 date = "2023-05-11"
 
 [taxonomies]
-grant_type = ["RFP"]
-grant_category = ["App Dev"]
+grant_type = ["Bounty"]
+grant_category = ["Dev: Apps"]
 
 [extra]
 image = ""
@@ -12,7 +12,7 @@ description = "Produce an Urbit-side client for sending E2EE email"
 reward = "TBD"
 assignee = [""]
 champion = [""]
-grant_id = "P1001"
+grant_id = "B0360"
 completed = false
 canceled = false
 +++

@@ -3,7 +3,7 @@ title = "Runtime Apprenticeship: Debugging Tools"
 date = "2021-08-19"
 [taxonomies]
 grant_type = ["Apprenticeship"]
-grant_category = ["App Dev", "Arvo"]
+grant_category = ["Dev: Core"]
 [extra]
 image = ""
 description = "Debugging Tools"

@@ -4,7 +4,7 @@ date = "2022-08-24"
 
 [taxonomies]
 grant_type = [ "Bounty" ]
-grant_category = [ "Runtime" ]
+grant_category = [ "Dev: Core" ]
 
 [extra]
 image = ""
@@ -13,7 +13,7 @@ reward = "4 stars"
 champion = ["~ritpub-sipsyl"]
 assignee = ["~finmep-lanteb"]
 grant_id = "B0178"
-completed = false
+completed = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0178&prefill_Grant+Name=New%20Mars%20Persistent%20Memory%20Arena"
 +++
 

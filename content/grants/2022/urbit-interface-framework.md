@@ -4,7 +4,7 @@ date = "2022-08-24"
 
 [taxonomies]
 grant_type = [ "Proposal" ]
-grant_category = [ "Other" ]
+grant_category = [ "Dev: Tool" ]
 
 [extra]
 image = ""
@@ -14,7 +14,7 @@ champion = ["~nocsyx-lassul"]
 assignee = ["~nortex-ramnyd"]
 grant_id = "P0100"
 completed = false
-canceled = false
+canceled = true
 +++
 
 Proposal to develop web application creation tooling and framework in hoon following [thick stateful server single-page application architecture](https://en.wikipedia.org/wiki/Single-page_application#Thick_stateful_server_architecture).

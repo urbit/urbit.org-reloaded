@@ -4,7 +4,7 @@ date = "2020-07-08"
 
 [taxonomies]
 grant_type = [ "Bounty" ]
-grant_category = [ "Core Dev" ]
+grant_category = [ "Dev: Tool" ]
 
 [extra]
 image = ""

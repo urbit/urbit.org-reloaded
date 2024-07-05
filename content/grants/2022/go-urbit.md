@@ -5,7 +5,7 @@ date = "2022-03-23"
 
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["App Dev: Other"]
+grant_category = ["Dev: Core"]
 
 [extra]
 image = ""
@@ -13,7 +13,7 @@ description = "Create a go-urbit library that contains the required functions fo
 reward = "3 stars"
 assignee = ["~litryl-tadmev"]
 champion = ["~wicdev-wisryt"]
-grant_id = "P0111"
+grant_id = "P0104"
 completed = true
 canceled = false
 link = ""

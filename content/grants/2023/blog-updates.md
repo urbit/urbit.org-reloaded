@@ -4,7 +4,7 @@ date = "2023-03-17"
 
 [taxonomies]
 grant_type = [ "Apprenticeship" ]
-grant_category = [ "App Dev" ]
+grant_category = [ "Dev: Apps" ]
 
 [extra]
 image = ""
@@ -12,7 +12,7 @@ description = "%blog Quality of Life Improvements"
 reward = "1 star"
 mentor = ["~dachus-tiprel"]
 assignee = ["~foddur-hodler"]
-completed = false
+completed = true
 canceled = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0250&prefill_Grant+Name=%25blog%20Quality%20of%20Life%20Improvements"
 +++

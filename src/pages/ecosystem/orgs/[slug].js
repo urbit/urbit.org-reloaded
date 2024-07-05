@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import {
   Container,
   Main,
+  Section,
   Markdown,
   getPostBySlug,
   getAllPosts,
@@ -14,8 +15,9 @@ import Footer from "@/components/Footer";
 import Meta from "@/components/Meta";
 import Header from "@/components/Header";
 import ErrorPage from "@/pages/404";
+import AppCard from "@/components/ecosystem/App";
 
-export default function Org({ post, markdown }) {
+export default function Org({ post, markdown, apps }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
@@ -42,7 +44,7 @@ export default function Org({ post, markdown }) {
       <Main className="text-primary" responsiveSpace singleColumn>
         <div className="flex">
           <div className="relative flex items-center aspect-square bg-container w-1/3 rounded-md">
-            <img className="w-1/2 m-auto" src={post.image} />
+            <img src={post.image} />
           </div>
           <div className="flex flex-col justify-between pl-5 md:pl-8 lg:pl-16">
             <h1 className="h1">{post.title}</h1>
@@ -68,6 +70,17 @@ export default function Org({ post, markdown }) {
         <section className="layout-narrow markdown">
           <Markdown.render content={JSON.parse(markdown)} />
         </section>
+        {apps.length > 0 && (
+          <Section divider={"border-primary"}>
+            <h2 className="h2">Apps</h2>
+            <div className="hidden md:grid grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
+              {apps && apps.slice(0, 8).map((props) => <AppCard {...props} />)}
+            </div>
+            <div className="grid md:hidden grid-cols-2 xs:grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
+              {apps && apps.slice(0, 6).map((props) => <AppCard {...props} />)}
+            </div>
+          </Section>
+        )}
       </Main>
       <Footer />
     </Container>
@@ -89,11 +102,16 @@ export async function getStaticProps({ params }) {
     ],
     "ecosystem/orgs"
   );
+  const apps = getAllPosts(
+    ["title", "description", "bgColor", "image", "shortcode", "weight", "slug"],
+    "ecosystem/apps",
+    "weight"
+  ).filter((app) => post.ships.includes(app.shortcode.split("/")[0]));
 
   const markdown = JSON.stringify(Markdown.parse({ post }));
 
   return {
-    props: { post, markdown },
+    props: { post, markdown, apps },
   };
 }
 

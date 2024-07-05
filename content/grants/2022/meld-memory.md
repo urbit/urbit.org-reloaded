@@ -4,16 +4,17 @@ date = "2022-05-04"
 
 [taxonomies]
 grant_type = [ "Apprenticeship" ]
-grant_category = [ "Core Dev" ]
+grant_category = [ "Dev: Core" ]
 
 [extra]
 image = ""
 description = "Reduce memory usage of |meld"
 reward = "1 star"
+grant_id = "A0133"
 mentor = ["~master-morzod"]
 assignee = ["~winter-paches"]
 completed = false
-canceled = false
+canceled = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0160&prefill_Grant+Name=Meld%20Memory%20Usage"
 +++
 

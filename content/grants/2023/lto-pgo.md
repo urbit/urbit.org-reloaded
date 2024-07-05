@@ -5,7 +5,7 @@ date = "2023-07-06"
 
 [taxonomies]
 grant_type = ["Proposal"]
-grant_category = ["Core Dev"]
+grant_category = ["Dev: Core"]
 
 [extra]
 image = ""
@@ -15,7 +15,7 @@ assignee = ["~fighet-parnet"]
 champion = ["~rovnys-ricfer"]
 grant_id = "P0280"
 completed = false
-canceled = false
+canceled = true
 
 +++
 

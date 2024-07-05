@@ -5,7 +5,7 @@ date = "2022-09-13"
 
 [taxonomies]
 grant_type = ["Bounty"]
-grant_category = ["App Dev"]
+grant_category = ["Dev: Apps"]
 
 [extra]
 image = ""
@@ -13,7 +13,7 @@ description = "A self-hosted Gnosis Safe UI to protect against centralized prohi
 reward = "2-3 stars"
 assignee = ["~witfyl-ravped"]
 champion = ["~dinleb-rambep"]
-grant_id = "P0154"
+grant_id = "B0154"
 completed = true
 canceled = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0154&prefill_Grant+Name=Gnosis%20Safe"

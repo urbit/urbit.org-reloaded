@@ -4,8 +4,8 @@ title = "Luau"
 date = "2024-03-11"
 
 [taxonomies]
-grant_type = [ "Proposal" ]
-grant_category = [ "Core Dev" ]
+grant_type = [ "Bounty" ]
+grant_category = [ "Dev: Core" ]
 
 [extra]
 image = ""
@@ -13,7 +13,7 @@ description = "Urbit Lua"
 reward = "25 stars"
 assignee = ["~racfer-hattes"]
 champion = ["~rovnys-ricfer"]
-grant_id = "P1003"
+grant_id = "B0369"
 completed = false
 canceled = false
 
