@@ -24,7 +24,7 @@ const hosting = [
     description:
       "Download the Tlon app and you'll be on the network for free in seconds. Tlon is an Urbit-native toolkit for communicating with your community.",
     image:
-      "https://storage.googleapis.com/media.urbit.org/site/hosting/tlon.png",
+      "https://storage.googleapis.com/media.urbit.org/site/hosting/tlon-2.png",
     dark: true,
     href: "https://tlon.network/lure/~halbex-palheb/uf-public",
   },
