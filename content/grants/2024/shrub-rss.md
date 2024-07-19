@@ -56,7 +56,7 @@ The following namespace design is a suggestion. What’s implemented is left to 
 * `/pro/atom-entry`  
   * Atom entry.
 
-### Milestone 2 (1 Star)
+## Milestone 2 (1 Star)
 
 A Sky-compatible web interface for creating RSS/Atom subscriptions and exposing them through a unified UI that treats the aggregate of all RSS/Atom subscriptions as a single feed.
 
