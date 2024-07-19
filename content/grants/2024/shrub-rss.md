@@ -29,11 +29,11 @@ Urbit’s personal server model and programmable global namespace stand to unloc
 * From then on, each new entry from that endpoint will populate in the children of the `%rss-subscription` as `%rss-entry`s, fetched via a refresh timer.
 * I can add as many new endpoints to my `%rss-aggregator` shrub as I like, and the shrub will aggregate the subscriptions to each of them and organize them by timestamp.
 
-### Milestone 1 (2 Stars)
+## Milestone 1 (2 Stars)
 
 Shrubbery implementation and protocols for subscribing to any clearweb RSS/Atom endpoint, populating the namespace with RSS/Atom entries, and periodically fetching new items from that endpoint.
 
-#### Namespace design
+### Namespace design
 
 The following namespace design is a suggestion. What’s implemented is left to the discretion of the grantee and their Champion.
 
@@ -56,7 +56,7 @@ The following namespace design is a suggestion. What’s implemented is left to 
 * `/pro/atom-entry`  
   * Atom entry.
 
-#### Milestone 2 (1 Star)
+### Milestone 2 (1 Star)
 
 A Sky-compatible web interface for creating RSS/Atom subscriptions and exposing them through a unified UI that treats the aggregate of all RSS/Atom subscriptions as a single feed.
 
