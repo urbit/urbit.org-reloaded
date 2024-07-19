@@ -61,8 +61,8 @@ The following namespace design is a suggestion. What’s implemented is left to 
 A Sky-compatible web interface for creating RSS/Atom subscriptions and exposing them through a unified UI that treats the aggregate of all RSS/Atom subscriptions as a single feed.
 
 * `/con/rss-aggregator-htmx`  
-  * View of top-level aggregator, sorts all entries in namespace by timestamp.
-  * Renders previews of each entry with clickable links to expand the entry itself or zoom in on the subscription from this author.
+  * View of top-level aggregator, sorts all entries in namespace below by timestamp.
+  * Renders previews of each entry with clickable links to open the corresponding webpage or filter for entries from that entry's publisher.
   * Exposes UI for adding, editing, and deleting subscriptions.
 * `/con/rss-subscription-htmx`  
   * View of single RSS feed, renders previews of each entry organized by timestamp.
