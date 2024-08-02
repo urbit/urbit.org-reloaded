@@ -4,7 +4,7 @@ date = "2024-07-19"
 
 [taxonomies]
 grant_type = ["Bounty"]
-grant_category = ["Dev: Shrubbery"]
+grant_category = ["Dev: Tools"]
 
 [extra]
 image = ""
@@ -12,7 +12,7 @@ description = "Pull RSS/Atom media into the namespace."
 reward = "3 stars"
 assignee = [""]
 champion = ["~migrev-dolseg"]
-grant_id = "BOXXX"
+grant_id = "BO381"
 completed = false
 canceled = false
 +++
@@ -37,32 +37,34 @@ Shrubbery implementation and protocols for subscribing to any clearweb RSS/Atom 
 
 The following namespace design is a suggestion. What’s implemented is left to the discretion of the grantee and their Champion.
 
-* `/imp/rss-aggregator`  
+* `/imp/rss-aggregator`
   * Stateless.
   * Exposes CRUD interface to `%rss-subscription` imps.
-* `/imp/rss-subscription`  
+* `/imp/rss-subscription`
   * State is `%rss-feed`.
   * Kids are `%rss-entry`s, addressed by their timestamp.
   * Pokes: fetch new entries, configure fetch timer.
-* `/imp/rss-feed`  
+* `/imp/rss-feed`
   * State could be an `%rss-channel` or `%atom-feed`.
   * No pokes, just a document type for an RSS feed.
-* `/pro/rss-channel`  
+* `/pro/rss-channel`
   * RSS channel metadata.
-* `/pro/rss-item`  
+* `/pro/rss-item`
   * RSS item.
-* `/pro/atom-feed`  
+* `/pro/atom-feed`
   * Atom feed metadata.
-* `/pro/atom-entry`  
+* `/pro/atom-entry`
   * Atom entry.
 
 ## Milestone 2 (1 Star)
 
 A Sky-compatible web interface for creating RSS/Atom subscriptions and exposing them through a unified UI that treats the aggregate of all RSS/Atom subscriptions as a single feed.
 
-* `/con/rss-aggregator-htmx`  
+* `/con/rss-aggregator-htmx`
   * View of top-level aggregator, sorts all entries in namespace below by timestamp.
   * Renders previews of each entry with clickable links to open the corresponding webpage or filter for entries from that entry's publisher.
   * Exposes UI for adding, editing, and deleting subscriptions.
-* `/con/rss-subscription-htmx`  
+* `/con/rss-subscription-htmx`
   * View of single RSS feed, renders previews of each entry organized by timestamp.
+  
+At the end of the bounty, the grantee should give feedback on the Shrubbery developer experience via a survey that will be provided by the Urbit Foundation.
