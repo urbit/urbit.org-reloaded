@@ -4,7 +4,7 @@ date = "2024-07-19"
 
 [taxonomies]
 grant_type = ["Bounty"]
-grant_category = ["Dev: Tools"]
+grant_category = ["Dev: Tool"]
 
 [extra]
 image = ""
@@ -17,7 +17,7 @@ completed = false
 canceled = false
 +++
 
-RSS has been an important primitive for Web 1.0, 2.0, and web3, fundamentally unchanged since 2002. There’s been renewed interest in the standard in recent years as “enshittification” became a meme and both creators and consumers more keenly felt the limits of the walled gardens that controlled their distribution.
+RSS has been an important primitive for Web 1.0, 2.0, and web3, fundamentally unchanged since 2002. There’s been renewed interest in the standard in recent years as “enshittification” became a meme and both creators and consumers more keenly felt the limits of the walled gardens that controlled their media distribution.
 
 Urbit’s personal server model and programmable global namespace stand to unlock RSS’s full potential as a standard for a decentralized, user-owned, peer-to-peer media ecosystem. For a start, a user should be able to subscribe to clearweb RSS (and Atom) feeds and store them in their namespace.
 
