@@ -12,7 +12,7 @@ description = "Pull RSS/Atom media into the namespace."
 reward = "3 stars"
 assignee = [""]
 champion = ["~migrev-dolseg"]
-grant_id = "BO381"
+grant_id = "BO383"
 completed = false
 canceled = false
 +++
