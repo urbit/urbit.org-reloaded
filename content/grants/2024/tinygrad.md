@@ -8,7 +8,7 @@ grant_category = ["Dev: Tool"]
 
 [extra]
 image = ""
-description = "Produce a compliant version of tinygrad capable of running basic benchmarks at competitive speeds for native Urbit machine learning."
+description = "Produce an Urbit-native implementation of tinygrad capable of running basic machine learning benchmarks at competitive speeds."
 reward = "3 stars"
 assignee = ["~masryl-picref"]
 champion = ["~lagrev-nocfep"]
