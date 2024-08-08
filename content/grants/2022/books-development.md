@@ -14,7 +14,7 @@ assignee = ["~nismut-tamwep"]
 champion = ["~dinleb-rambep"]
 grant_id = "B0189"
 completed = false
-cancelled = true
+canceled = true
 link = ""
 deliverable = "~doller-doller-dozzod-dalten/books"
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0189&prefill_Grant+Name=Books%20Feature%20Development"
