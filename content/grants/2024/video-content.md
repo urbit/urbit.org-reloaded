@@ -12,7 +12,7 @@ description = "Produce video content for social media."
 reward = "1 star"
 assignee = ["~disden-talhes"]
 champion = ["~tamlut-modnys]
-grant_id = "P0380"
+grant_id = "P0384"
 completed = false
 canceled = false
 +++
