@@ -161,4 +161,12 @@ Once they’ve approved, you can [submit an invoice](https://airtable.com/shrXXC
 We approve and issue payments within 30 days of invoice receipt and approval, although often payment is made more quickly. If you have any questions regarding getting paid or submitting an invoice, please contact accounting at accounting@urbit.org, or our grants team at grants@urbit.org.
 {% /faqSection %}
 
+{% faqSection question="Are there any tax implications to receiving stars?" %}
+Every year, UF must make submissions to the IRS. We inform the IRS of any payments made to US individuals or companies — including star payments. For example, with respect to a grantee who has been paid only in stars, the figure submitted to the IRS will be the total dollar value of all stars paid to that grantee in the year. The valuation of stars differs year-on-year. If you would like to know this year’s star valuation, reach out to grants@urbit.org 
+
+UF does not make submissions for non-US grantees. We recommend that non-US grantees research and comply with the relevant tax law in their jurisdiction.
+
+{% /faqSection %}
+
+
 {% /faq %}
