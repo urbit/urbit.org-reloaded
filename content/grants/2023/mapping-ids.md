@@ -15,7 +15,7 @@ assignee = ["Web23"]
 champion = ["~rovnys-ricfer"]
 grant_id = "P0262"
 completed = false
-canceled = false
+canceled = true
 
 +++
 
