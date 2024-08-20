@@ -9,7 +9,7 @@ grant_category = ["Dev: Tool"]
 [extra]
 image = ""
 description = "Produce an Urbit-native implementation of tinygrad capable of running basic machine learning benchmarks at competitive speeds."
-reward = "3 stars"
+reward = "6-8 stars"
 assignee = ["~masryl-picref"]
 champion = ["~lagrev-nocfep"]
 grant_id = "P0380"
