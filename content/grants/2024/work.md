@@ -1,6 +1,6 @@
 +++
 
-title = "Mapping Urbit IDs to Web 2 Domains"
+title = "%work"
 date = "2024-08-18"
 
 [taxonomies]
