@@ -27,7 +27,9 @@ If you are a visionary in building new systems of self-sovereign human organizat
 We invite you to join us in the foothills of Mount Rainier, this October 20th-22nd, 2024, to discuss and plan the representation of reality and the possibilities of its coordination on the Urbit network.
 
 [Visit the event site](https://subassembly.tocwexsyndicate.com)
+
 [Read the manifesto](https://subassembly.tocwexsyndicate.com/manifesto.html)
+
 [Submit an attendee application](https://docs.google.com/forms/d/e/1FAIpQLSfbHcFLRgGKBW91qINxhZ6TAgSDgsY_ikG1ATauHL7AVeLqDA/viewform)
 
 Some topics we’ll discuss:
