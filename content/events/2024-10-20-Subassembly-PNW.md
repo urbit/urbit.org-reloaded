@@ -9,7 +9,7 @@ links = [
   { label = "Register", url = "https://docs.google.com/forms/d/e/1FAIpQLSfbHcFLRgGKBW91qINxhZ6TAgSDgsY_ikG1ATauHL7AVeLqDA/viewform" },
   { label = "Event Details", url = "https://subassembly.tocwexsyndicate.com/details.html" }
 ]
-description = "a community gathering about identity, trust, and reputation"
+description = "A community gathering about identity, trust, and reputation"
 dark = true
 darken_image = "true"
 +++
@@ -47,4 +47,4 @@ Some topics we’ll discuss:
 - Proof-of-human, ML agents, ephemeral identities on Urbit
 - Sources of truth from the physical world (PoL, POAPs, node dispersal, physical decentralization) that inform uniqueness and reputation of identity
 - Hardware and hosting environment interactions with identity and reputation
-- And more to come!
+- More to come!
