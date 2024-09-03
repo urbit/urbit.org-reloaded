@@ -28,9 +28,12 @@ We invite you to join us in the foothills of Mount Rainier, this October 20th-22
 
 [Visit the event site](https://subassembly.tocwexsyndicate.com)
 
+
 [Read the manifesto](https://subassembly.tocwexsyndicate.com/manifesto.html)
 
+
 [Submit an attendee application](https://docs.google.com/forms/d/e/1FAIpQLSfbHcFLRgGKBW91qINxhZ6TAgSDgsY_ikG1ATauHL7AVeLqDA/viewform)
+
 
 Some topics we’ll discuss:
 - Computational verification and zk pseudonymization of local and network actions
