@@ -7,7 +7,8 @@ location = "Wellspring Spa & Woodland Retreat - 154922 Kernahan Rd E, Ashford, W
 image = "https://sfo3.digitaloceanspaces.com/sarlev-sarsen/sarlev-sarsen/2024.5.16..5.20.19..6f5c.28f5.c28f.5c28-image.png"
 links = [
   { label = "Register", url = "https://docs.google.com/forms/d/e/1FAIpQLSfbHcFLRgGKBW91qINxhZ6TAgSDgsY_ikG1ATauHL7AVeLqDA/viewform" },
-  { label = "Event Details", url = "https://subassembly.tocwexsyndicate.com/details.html" }
+  { label = "Event Details", url = "https://subassembly.tocwexsyndicate.com/details.html" },
+  { labal = "Urbit Group", url = "https://tlon.network/lure/~sarlev-sarsen/subassembly" }
 ]
 description = "A community gathering about identity, trust, and reputation"
 dark = true
