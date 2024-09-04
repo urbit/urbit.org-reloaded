@@ -8,7 +8,7 @@ image = "https://sfo3.digitaloceanspaces.com/sarlev-sarsen/sarlev-sarsen/2024.5.
 links = [
   { label = "Register", url = "https://docs.google.com/forms/d/e/1FAIpQLSfbHcFLRgGKBW91qINxhZ6TAgSDgsY_ikG1ATauHL7AVeLqDA/viewform" },
   { label = "Event Details", url = "https://subassembly.tocwexsyndicate.com/details.html" },
-  { labal = "Urbit Group", url = "https://tlon.network/lure/~sarlev-sarsen/subassembly" }
+  { label = "Urbit Group", url = "https://tlon.network/lure/~sarlev-sarsen/subassembly" }
 ]
 description = "A community gathering about identity, trust, and reputation"
 dark = true
