@@ -2,9 +2,10 @@
 import Link from "next/link";
 import classNames from "classnames";
 import { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
-import { usePathname } from "next/navigation";
 
+import React from "react";
+import { usePathname } from "next/navigation";
+import { NewsletterSignup } from "./NewsletterSignup";
 import SVG from "react-inlinesvg";
 
 export const HeaderNav = ({ nav }) => {
@@ -25,13 +26,18 @@ export const HeaderNav = ({ nav }) => {
   return (
     <section
       ref={headerRef}
-      className="fixed h-[64px] items-center justify-center leading-120 container"
+      className="fixed h-auto items-center mt-8 md:mt-0 justify-center leading-120 container"
     >
-      <div className="flex flex-row h-full items-center w-full justify-between">
-        <div className="inline-block">
+      {currentRoute == "/" && (
+        <div className="absolute flex items-center justify-center w-full h-[100svh]">
+          <NewsletterSignup />
+        </div>
+      )}
+      <div className=" min-h-[4rem] flex flex-row items-center w-full justify-between">
+        <div className="inline-block font-[600]">
           <Link
             href="/"
-            className="relative before:content-['~'] before:absolute before:left-[-.8em] before:bottom-[.1em] w-auto"
+            className="relative before:content-['~']  before:absolute before:left-[-.8em] before:bottom-[.1em] w-auto"
           >
             Urbit
           </Link>
@@ -55,24 +61,28 @@ export const HeaderNav = ({ nav }) => {
         {/* if homepage, display this */}
         {/* else, display urbit: pagename (overview, grants) */}
       </div>
-      <div class="grid-cols-6 gap-x-4">
-        <ul className="flex flex-col text-gray-87">
-          {nav?.map((navItem, i) => {
-            return (
-              <Link
-                className={classNames("menu-item group/nav", {
-                  "has-children": navItem.submenu,
-                })}
-                key={`${navItem} + ${i}`}
-                href={navItem.url}
-                target={navItem.external ? "_blank" : ""}
-              >
-                <span className="nav-button">{navItem.title}</span>
-              </Link>
-            );
-          })}
-        </ul>
-      </div>
+      {currentRoute == "/" && (
+        <React.Fragment>
+          <div class="grid-cols-6 gap-x-4">
+            <ul className="flex flex-col text-gray-87">
+              {nav?.map((navItem, i) => {
+                return (
+                  <Link
+                    className={classNames("menu-item group/nav", {
+                      "has-children": navItem.submenu,
+                    })}
+                    key={`${navItem} + ${i}`}
+                    href={navItem.url}
+                    target={navItem.external ? "_blank" : ""}
+                  >
+                    <span className="nav-button">{navItem.title}</span>
+                  </Link>
+                );
+              })}
+            </ul>
+          </div>
+        </React.Fragment>
+      )}
     </section>
   );
 };
