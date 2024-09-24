@@ -29,7 +29,7 @@ export const HeaderNav = ({ nav }) => {
       className="fixed h-auto items-center mt-8 md:mt-0 justify-center leading-120 container"
     >
       {currentRoute == "/" && (
-        <div className="absolute flex items-center justify-center w-full h-[100svh]">
+        <div className="absolute font-[600] -z-10 pb-12 flex items-center justify-center w-full h-[100svh]">
           <NewsletterSignup />
         </div>
       )}
@@ -63,8 +63,8 @@ export const HeaderNav = ({ nav }) => {
       </div>
       {currentRoute == "/" && (
         <React.Fragment>
-          <div class="grid-cols-6 gap-x-4">
-            <ul className="flex flex-col text-gray-87">
+          <div class="grid-cols-6 gap-x-4 font-[600]">
+            <ul className="flex flex-col text-gray-87 ">
               {nav?.map((navItem, i) => {
                 return (
                   <Link
