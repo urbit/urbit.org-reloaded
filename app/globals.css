@@ -64,7 +64,7 @@
   --header-height: 64px;
   --footer-height: 170px;
   /* container */
-  --site-max-width: 1280px;
+  --site-max-width: 1900px;
   
   --ease-in-quint: cubic-bezier(.755, .05, .855, .06);
   --ease-out-quint: cubic-bezier(.23, 1, .32, 1);
