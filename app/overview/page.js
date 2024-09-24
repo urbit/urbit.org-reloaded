@@ -5,10 +5,10 @@ export default async function overview() {
   // const config = await getMarkdownContent("overview.md");
 
   return (
-    <div className="mb-8 ml-[3rem] mt-12">
+    <div className="mb-8 ml-[3rem] mt-12 ">
       <section className="grid grid-cols-6 gap-4 mb-[8rem]">
         <div className="col-span-1"></div>
-        <div className="col-span-4 text-25px">
+        <div className="col-span-4 text-25px leading-120">
           We think the internet can’t be saved. The way things are going,
           MEGACORP will always control our apps and services because we can no
           longer run them ourselves. The only way out of this mess is with a
@@ -40,7 +40,7 @@ export default async function overview() {
 
       <section className="grid grid-cols-6 gap-4 mb-[4rem]">
         <div className="col-span-1">Technology</div>
-        <div className="col-span-4 text-25px">
+        <div className="col-span-4 text-25px leading-120">
           Technically, Urbit is two components: Urbit OS and Urbit ID. Both are
           completely open source and MIT licensed.
           <SVG src="/overview_graphic.svg" className="w-full pt-8"></SVG>
@@ -49,7 +49,7 @@ export default async function overview() {
 
       <section className="grid grid-cols-6 gap-4 mb-[2rem]">
         <div className="col-span-1">Urbit OS</div>
-        <div className="col-span-4 text-25px">
+        <div className="col-span-4 text-25px leading-120">
           Urbit OS is a new, carefully architected software stack: a VM,
           programming language and kernel designed to run software for an
           individual.
@@ -75,7 +75,7 @@ export default async function overview() {
 
       <section className="grid grid-cols-6 gap-4 mb-[8rem]">
         <div className="col-span-1">Urbit OS</div>
-        <div className="col-span-4 text-25px">
+        <div className="col-span-4 text-25px leading-120">
           Urbit ID is an identity and authentication system specifically
           designed to work with Urbit OS. When you boot or log in to Urbit OS,
           you use your Urbit ID. Your Urbit ID is a short, memorable name (like
@@ -93,7 +93,7 @@ export default async function overview() {
       </section>
       <section className="grid grid-cols-6 gap-4 mb-[8rem]">
         <div className="col-span-1">Experience</div>
-        <div className="col-span-4 text-25px">
+        <div className="col-span-4 text-25px leading-120">
           We want Urbit to be a single, simple interface for your whole digital
           life. Over the years, Urbit has been built in public as an open source
           project. Anyone can join the network and check out what we’re up to.

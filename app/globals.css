@@ -98,9 +98,8 @@ body {
 
 @layer components {
   .container {
-    @apply mx-auto max-w-[--site-max-width] px-[2rem] 
-    /* lg:px-[2.68rem] */
-    lg:px-[3rem] ;
+    @apply max-w-[--site-max-width] px-[2rem] 
+    lg:px-[3rem];  
   }
 }
 @layer utilities {

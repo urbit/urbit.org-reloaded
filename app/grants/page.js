@@ -22,13 +22,13 @@ export default async function BlogHome() {
     allPostsYaml.push({
       data: postYaml.data,
       relativePath: post.relativePath,
-      slug: post.slug
+      slug: post.slug 
     });
   }));
 
   return (
     <div className="mb-8 mx-[3rem]">
-      <PostList allPostsYaml={allPostsYaml} categoryData={statuses} />
+      <PostList allPostsYaml={allPostsYaml} statuses={statuses} programs={programs} />
     </div>
   )
 }
