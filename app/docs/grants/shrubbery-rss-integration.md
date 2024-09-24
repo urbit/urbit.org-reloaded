@@ -1,6 +1,7 @@
 ---
 title: Shrubbery RSS Integration
 subtitle: Pull RSS/Atom media into the namespace.
+reward: 3
 champions:
   - name: example
   - name: example

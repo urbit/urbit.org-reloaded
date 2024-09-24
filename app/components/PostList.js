@@ -66,12 +66,12 @@ const PostListContent = ({ allPostsYaml, categoryData }) => {
   };
 
   return (
-    <div>
-      <div className="">
+    <div className="grid grid-cols-6 w-full mb-[5rem]">
+      <div className="col-span-1">
         {/* Filter Section */}
         <div className="">
           <span className="">Filter by: </span>
-          <div className="flex gap-4 flex-wrap">
+          <div className="flex flex-col items-start ">
           {categoryList.map((category, index) => (
             <button
               key={index}
@@ -86,45 +86,36 @@ const PostListContent = ({ allPostsYaml, categoryData }) => {
           </div>
         </div>
 
-        {/* Sort Section */}
-        <div className="">
-          <span className="">Sort by: </span>
-          <button
-            onClick={() => handleSortClick("newest")}
-          >
-            <div className="">
-              <span>Newest First</span>
-              {sortOption === "newest'" && <span className="ml-2">×</span>}
-            </div>
-          </button>
-          <button onClick={() => handleSortClick("oldest")}>
-            <div className="">
-              <span>Oldest First</span>
-              {sortOption === "oldest'" && <span className="ml-2">×</span>}
-            </div>
-          </button>
-        </div>
+        
       </div>
 
       {/* Post List */}
-      <div className="mb-4 flex flex-col">
+      <div className="mb-4 flex flex-col col-span-5">
+        Showing {filteredSortedPosts.length} grants
+        <div class="border-b-[.7px] border-white w-full pt-21px"></div>
         {filteredSortedPosts.map((postData) => (
+          <React.Fragment>
           <Link
             key={postData.relativePath}
             href={postData.relativePath}
             data-category={postData.data.category}
-            className={classNames("")}
+            className="pt-21px text-25px"
           >
-            ---
             <div className={classNames("")}>
               <span className="">{postData.data.title}</span>
               <div className="flex flex-col">
-                <span className="">{formatDate(postData.data.date)}</span>
-                <span className="">{formatAuthors(postData.data.authors)}</span>
+                <div className="flex flex-row">Reward: 
+                  <span class="flex flex-row">
+                    {[...Array(postData?.data?.reward)].map((e, i) => <div></div>)}
+                  </span>
+                </div>
               </div>
             </div>
-            <div className={classNames("")}>{postData.data.short_description}</div>
+            <div className={classNames("pt-4")}>{postData.data.subtitle}</div>
+            <div className={classNames("text-gray-87 !text-21px pt-8 pb-2")}>{postData.data.status}</div>
           </Link>
+          <div class="border-b-[.7px] border-white w-full"></div>
+          </React.Fragment>
         ))}
       </div>
     </div>

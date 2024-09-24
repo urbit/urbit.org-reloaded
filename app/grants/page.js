@@ -18,7 +18,7 @@ export default async function BlogHome() {
   }));
 
   return (
-    <div className="mb-8 container">
+    <div className="mb-8 mx-[3rem]">
       <PostList allPostsYaml={allPostsYaml} categoryData={categories} />
     </div>
   )
