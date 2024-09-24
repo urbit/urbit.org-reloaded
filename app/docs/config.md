@@ -52,10 +52,4 @@ footer:
         url: "/"
       - title: "Whitepaper"
         url: "/"
-blog_metadata: 
-  categories:
-    "category a": 
-    "category b": 
-    "category c":
-    "category d":
 ---

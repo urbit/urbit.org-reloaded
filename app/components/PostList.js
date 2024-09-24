@@ -18,9 +18,10 @@ const PostListContent = ({ allPostsYaml, categoryData }) => {
   const [filteredSortedPosts, setFilteredSortedPosts] = useState(allPostsYaml);
 
   // Create category list for filter buttons
-  const categoryList = Object.keys(categoryData).map((key) => ({
-    title: key,
-  }));
+  // const categoryList = Object.keys(categoryData).map((key) => ({
+  //   title: key,
+  // }));
+  const categoryList = categoryData;
 
   // Update the URL whenever filters or sorting change
   const updateUrlParams = (category, sort) => {
@@ -38,14 +39,7 @@ const PostListContent = ({ allPostsYaml, categoryData }) => {
 
     // Apply category filtering
     if (selectedCategory) {
-      posts = posts.filter((post) => post.data.category === selectedCategory);
-    }
-
-    // Apply sorting logic
-    if (sortOption === "newest") {
-      posts.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
-    } else if (sortOption === "oldest") {
-      posts.sort((a, b) => new Date(a.data.date) - new Date(b.data.date));
+      posts = posts.filter((post) => post.data.status === selectedCategory);
     }
 
     // Update the filtered and sorted post list
@@ -69,24 +63,22 @@ const PostListContent = ({ allPostsYaml, categoryData }) => {
     <div className="grid grid-cols-6 w-full mb-[5rem]">
       <div className="col-span-1">
         {/* Filter Section */}
-        <div className="">
-          <span className="">Filter by: </span>
-          <div className="flex flex-col items-start ">
+        <div className="mt-[3rem]">
+          <span className="">Status:</span>
+          <div className="flex flex-col items-start text-gray-87">
           {categoryList.map((category, index) => (
             <button
               key={index}
-              onClick={() => handleCategoryClick(category.title)}
+              onClick={() => handleCategoryClick(category)}
             >
-              <div className="">
-                <span>{category.title}</span>
-                {selectedCategory === category.title && <span className="ml-2">×</span>}
+              <div className={classNames({"text-white": selectedCategory === category})}>
+                <span>{category}</span>
+                {/* {selectedCategory === category && <span className="ml-2">×</span>} */}
               </div>
             </button>
           ))}
           </div>
         </div>
-
-        
       </div>
 
       {/* Post List */}
@@ -101,18 +93,18 @@ const PostListContent = ({ allPostsYaml, categoryData }) => {
             data-category={postData.data.category}
             className="pt-21px text-25px"
           >
-            <div className={classNames("")}>
-              <span className="">{postData.data.title}</span>
+            <div className={classNames("leading-120")}>
+              <div className="">{postData.data.title}</div>
               <div className="flex flex-col">
                 <div className="flex flex-row">Reward: 
-                  <span class="flex flex-row">
+                  <div class="flex flex-row ml-[.2em]">
                     {[...Array(postData?.data?.reward)].map((e, i) => <div></div>)}
-                  </span>
+                  </div>
                 </div>
               </div>
             </div>
             <div className={classNames("pt-4")}>{postData.data.subtitle}</div>
-            <div className={classNames("text-gray-87 !text-21px pt-8 pb-2")}>{postData.data.status}</div>
+            <div className={classNames("text-gray-87 !text-21px pt-8 pb-2")}>{postData.data.status}, {postData.data.category}</div>
           </Link>
           <div class="border-b-[.7px] border-white w-full"></div>
           </React.Fragment>

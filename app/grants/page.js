@@ -5,8 +5,17 @@ import { PostList } from "../components/PostList";
 export default async function BlogHome() {
   const posts = await getPostsTree("grants/");
   const config = await getYaml("/config.md");
-  const categories = config.data.blog_metadata.categories;
+  // const categories = config.data.blog_metadata.categories;
 
+  const statuses = [
+    "Open",
+    "In Progress",
+    "Completed"
+  ]
+  const programs = [
+    "Proposal", 
+    "Bounty"
+  ]
   const allPostsYaml = [];
   await Promise.all(posts.map(async (post) => {
     const postYaml = await getYaml(post.relativePath);
@@ -19,7 +28,7 @@ export default async function BlogHome() {
 
   return (
     <div className="mb-8 mx-[3rem]">
-      <PostList allPostsYaml={allPostsYaml} categoryData={categories} />
+      <PostList allPostsYaml={allPostsYaml} categoryData={statuses} />
     </div>
   )
 }
