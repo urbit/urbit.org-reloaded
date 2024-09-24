@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import classNames from "classnames";
-import { sequenceAnimation } from "../lib/globals";
 import { useEffect, useRef, useState } from "react";
 import SVG from "react-inlinesvg";
 
@@ -20,16 +19,23 @@ export const HeaderNav = ({ nav }) => {
   useEffect(() => {}, []);
 
   return (
-    <section ref={headerRef} className="fixed mt-28px h-[100px] leading-120 container">
-      <div className="flex flex-row w-full justify-between">
-        <Link
-          href="/"
-          className="mb-4 relative before:content-['~'] before:absolute before:left-[-.8em] before:bottom-[.1em] w-auto"
-        >
-          {/* if homepage, display this */}
-          Urbit is a new computing paradigm that provides complete ownership of your digital world.
-          {/* else, display urbit: pagename (overview, grants) */}
-        </Link>
+    <section
+      ref={headerRef}
+      className="fixed h-[64px] items-center justify-center leading-120 container"
+    >
+      <div className="flex flex-row h-full items-center w-full justify-between">
+        <div className="inline-block">
+          <Link
+            href="/"
+            className="relative before:content-['~'] !text-[21px] tracking-02 before:absolute before:left-[-.8em] before:bottom-[.1em] w-auto"
+          >
+            Urbit
+          </Link>
+          &nbsp;is a new computing paradigm that provides complete ownership of
+          your digital world.
+        </div>
+        {/* if homepage, display this */}
+        {/* else, display urbit: pagename (overview, grants) */}
 
         <ul className="">
           {nav?.map((navItem, i) => {

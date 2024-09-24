@@ -75,32 +75,31 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #14140f;
-    --foreground: #ededed;
+    --foreground: #f5f5f5;
   }
 }
-
-
-
 
 html,
 body {
   font-family: "Urbit Sans";
-  /* font-size: 20px; */
+  font-size: 16px;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  @apply text-[22px] leading-[120%];
+  /* -moz-osx-font-smoothing: grayscale; */
+  @apply text-[21px] leading-[120%];
   
 }
 
 
 @layer components {
   .container {
-    @apply mx-auto max-w-[--site-max-width] px-[1rem] lg:px-[2.68rem] ;
+    @apply mx-auto max-w-[--site-max-width] px-[1rem] 
+    /* lg:px-[2.68rem] */
+    lg:px-[3rem] ;
   }
 }
 @layer utilities {

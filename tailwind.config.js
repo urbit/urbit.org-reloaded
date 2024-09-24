@@ -19,10 +19,14 @@ module.exports = {
     },
     extend: {
       spacing: {
-        '16px': '1rem',
-        '20px': '1.25rem',
-        '28px': '1.75rem',
+        '18px': '1rem',
+        '20px': '1.11rem',
+        '21px': '1.167rem',
+        '28px': '1.55',
         'header': 'var(--header-height)',
+      },
+      letterSpacing: {
+        '02': '0.024em',
       },
       borderRadius: {
         '16px': '1rem',
@@ -44,6 +48,7 @@ module.exports = {
         foreground: "var(--foreground)",
         "gray": {
           "87": "#878787",
+          "f5": "#f5f5f5",
         },
         "off-white": "var(--off-white)", 
       }
