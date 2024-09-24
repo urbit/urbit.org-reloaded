@@ -90,7 +90,7 @@ body {
   background: var(--background);
   -webkit-font-smoothing: antialiased;
   /* -moz-osx-font-smoothing: grayscale; */
-  @apply text-[21px] leading-[120%];
+  @apply text-21px leading-120  tracking-02;
   
 }
 

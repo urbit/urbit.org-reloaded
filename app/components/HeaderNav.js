@@ -2,6 +2,9 @@
 import Link from "next/link";
 import classNames from "classnames";
 import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+
 import SVG from "react-inlinesvg";
 
 export const HeaderNav = ({ nav }) => {
@@ -9,6 +12,7 @@ export const HeaderNav = ({ nav }) => {
   const headerRef = useRef(null);
 
   const [menuIsOpen, setMenuOpen] = useState(false);
+  const currentRoute = usePathname();
 
   useEffect(() => {}, [menuIsOpen]);
 
@@ -27,17 +31,32 @@ export const HeaderNav = ({ nav }) => {
         <div className="inline-block">
           <Link
             href="/"
-            className="relative before:content-['~'] !text-[21px] tracking-02 before:absolute before:left-[-.8em] before:bottom-[.1em] w-auto"
+            className="relative before:content-['~'] before:absolute before:left-[-.8em] before:bottom-[.1em] w-auto"
           >
             Urbit
           </Link>
-          &nbsp;is a new computing paradigm that provides complete ownership of
-          your digital world.
+          {currentRoute == "/" && (
+            <span>
+              &nbsp;is a new computing paradigm that provides complete ownership
+              of your digital world.
+            </span>
+          )}
+          {currentRoute == "/overview" && (
+            <Link href="/overview" className="capitalize">
+              &nbsp;:&nbsp;Overview
+            </Link>
+          )}
+          {currentRoute == "/grants" && (
+            <Link href="/grants" className="capitalize">
+              &nbsp;:&nbsp;Grants
+            </Link>
+          )}
         </div>
         {/* if homepage, display this */}
         {/* else, display urbit: pagename (overview, grants) */}
-
-        <ul className="">
+      </div>
+      <div class="grid-cols-6 gap-x-4">
+        <ul className="flex flex-col text-gray-87">
           {nav?.map((navItem, i) => {
             return (
               <Link

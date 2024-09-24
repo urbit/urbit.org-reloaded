@@ -21,7 +21,7 @@ module.exports = {
       spacing: {
         '18px': '1rem',
         '20px': '1.11rem',
-        '21px': '1.167rem',
+        '21px': '1.3125rem',
         '28px': '1.55',
         'header': 'var(--header-height)',
       },
@@ -34,6 +34,7 @@ module.exports = {
       fontSize: {
         '16px': '1rem',
         '20px': '1.25rem',
+        '21px': '1.3125rem'
       },
       lineHeight: {
         "100": "100%",

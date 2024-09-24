@@ -14,7 +14,7 @@ nav:
   external: false
 - title: Docs
   url: "https://docs.urbit.org/"
-  external: true
+  external: false
 - title: Grants
   url: "/grants"
   external: false
