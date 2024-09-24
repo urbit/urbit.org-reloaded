@@ -1,5 +1,5 @@
 ---
-title: Put the Files In the Computer
+title: Ex:Put the Files In the Computer
 subtitle: Pull RSS/Atom media into the namespace.
 reward: 3
 champions:
@@ -17,9 +17,7 @@ RSS has been an important primitive for Web 1.0, 2.0, and web3, fundamentally un
 
 Urbit’s personal server model and programmable global namespace stand to unlock RSS’s full potential as a standard for a decentralized, user-owned, peer-to-peer media ecosystem. For a start, a user should be able to subscribe to clearweb RSS (and Atom) feeds and store them in their namespace.
 
-User Stories
-
-# User Stories
+## User Stories
 
 - I can create an `%rss-aggregator` shrub at a given endpoint.
 - Browsing to my `%rss-aggregator` shrub provides a UI for browsing an ordered list of `%rss- entrys` that let me click through to the relevant webpage, and a UI for entering a set of subscription endpoint URLs, which will be represented as %rss-subscription children.

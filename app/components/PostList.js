@@ -118,7 +118,7 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
 
       {/* Post List */}
       <div className="mb-4 flex flex-col col-span-4">
-        Showing {filteredSortedPosts.length} posts
+        Showing {filteredSortedPosts.length} grants
         <div className="border-b-[.7px] border-white w-full pt-21px"></div>
         {filteredSortedPosts.map((postData) => (
           <React.Fragment key={postData.relativePath}>

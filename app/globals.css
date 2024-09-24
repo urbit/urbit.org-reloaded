@@ -106,7 +106,10 @@ body {
   article {
     @apply  text-25px leading-120;
     h1 {
-      @apply leading-[100%] font-bold my-[2.5rem];
+      @apply text-[3.75rem] font-[400] mb-8 md:mb-16 lg:mb-20 leading-[100%] my-[2.5rem];
+    }
+    h1[level="2"] {
+      @apply text-[1.89rem];
     }
     blockquote {
       @apply p-2 pl-4 italic my-4 border-s-4 border-black;
