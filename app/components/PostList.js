@@ -83,7 +83,7 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
     <div className="grid grid-cols-6 w-full mb-[5rem]">
       <div className="col-span-1">
         {/* Filter Section */}
-        <div className="mt-[3rem] flex flex-col">
+        <div className="mt-[3rem] flex flex-col font-[500]">
           {/* Category Filter */}
         
 
