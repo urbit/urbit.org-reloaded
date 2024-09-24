@@ -26,14 +26,14 @@ export const HeaderNav = ({ nav }) => {
   return (
     <section
       ref={headerRef}
-      className="fixed h-auto items-center mt-8 md:mt-0 justify-center leading-120 container"
+      className="fixed h-auto items-center mt-8 md:mt-0 justify-center leading-120"
     >
       {currentRoute == "/" && (
-        <div className="absolute font-[600] -z-10 pb-12 flex items-center justify-center w-full h-[100svh]">
+        <div className="absolute w-[100vw] font-[600] -z-10 pb-12 flex items-center justify-center h-[100svh]">
           <NewsletterSignup />
         </div>
       )}
-      <div className=" min-h-[4rem] flex flex-row items-center w-full justify-between">
+      <div className="ml-[3rem] min-h-[4rem] flex flex-row items-center w-full justify-between">
         <div className="inline-block font-[600]">
           <Link
             href="/"
@@ -63,7 +63,7 @@ export const HeaderNav = ({ nav }) => {
       </div>
       {currentRoute == "/" && (
         <React.Fragment>
-          <div class="grid-cols-6 gap-x-4 font-[600]">
+          <div className=" ml-[3rem] grid grid-cols-6 gap-x-4 font-[600]">
             <ul className="flex flex-col text-gray-87 ">
               {nav?.map((navItem, i) => {
                 return (

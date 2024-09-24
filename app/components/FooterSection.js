@@ -1,7 +1,7 @@
 export const FooterSection = ({ footerData }) => {
   // console.log(footerData);
   return (
-    <section className="absolute bottom-0 mb-8 text-20px container text-gray-87 leading-120">
+    <section className=" h-footer-height mb-8 text-20px pl-[3rem] text-gray-87 leading-120">
       <div className="grid md:grid-cols-6">
         {footerData?.map((footerItem, i) => {
           return (

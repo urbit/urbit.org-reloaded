@@ -24,6 +24,7 @@ module.exports = {
         '21px': '1.3125rem',
         '28px': '1.55',
         'header': 'var(--header-height)',
+        'footer-height': 'var(--footer-height)',
       },
       letterSpacing: {
         '02': '0.024em',
@@ -34,7 +35,8 @@ module.exports = {
       fontSize: {
         '16px': '1rem',
         '20px': '1.25rem',
-        '21px': '1.3125rem'
+        '21px': '1.3125rem',
+        '25px': '1.5625rem'
       },
       lineHeight: {
         "100": "100%",
