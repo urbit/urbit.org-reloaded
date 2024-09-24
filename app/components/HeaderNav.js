@@ -33,8 +33,19 @@ export const HeaderNav = ({ nav }) => {
           <NewsletterSignup />
         </div>
       )}
-      <div className="ml-[3rem] min-h-[4rem] flex flex-row items-center w-full justify-between">
-        <div className="inline-block font-[600]">
+      <div className="ml-[3rem] min-h-[4rem] flex flex-row items-center justify-between relative w-[100vw] ">
+        <div className="absolute grid grid-cols-6 w-full h-full ">
+          <div className="col-span-1"></div>
+          <div className="col-span-5 flex items-center justify-start -translate-x-[1rem]">
+            {currentRoute == "/grants" && (
+              <span>
+                Earn a piece of the Urbit network by developing software,
+                creating content, growing communities, and more.
+              </span>
+            )}
+          </div>
+        </div>
+        <div className="inline-block font-[600] relative">
           <Link
             href="/"
             className="relative before:content-['~']  before:absolute before:left-[-.8em] before:bottom-[.1em] w-auto"

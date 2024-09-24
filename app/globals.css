@@ -104,8 +104,9 @@ body {
 }
 @layer utilities {
   article {
+    @apply  text-25px leading-120;
     h1 {
-      @apply text-[2rem] font-[500] leading-[180%];
+      @apply leading-[100%] font-bold my-[2.5rem];
     }
     blockquote {
       @apply p-2 pl-4 italic my-4 border-s-4 border-black;
@@ -115,6 +116,17 @@ body {
     }
     a {
       @apply underline underline-offset-[.1em];
+    }
+    ul {
+      @apply relative;
+    }
+    li {
+      @apply list-outside list-none before:content-['—'] before:absolute before:left-[-1.2rem];
+    }
+    code {
+      @apply text-25px;
+      font-family: "Urbit Sans";
+
     }
   }
 

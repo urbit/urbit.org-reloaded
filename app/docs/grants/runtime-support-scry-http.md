@@ -3,8 +3,8 @@ title: Runtime Support for Scry over HTTP
 subtitle: Pull RSS/Atom media into the namespace.
 reward: 3
 champions:
-  - name: example
-  - name: example
+  - name: ~example
+  - name: ~example
 id: B0383
 date: 2024-07-19T00:00:00
 short_description: example
@@ -17,7 +17,6 @@ RSS has been an important primitive for Web 1.0, 2.0, and web3, fundamentally un
 
 Urbit’s personal server model and programmable global namespace stand to unlock RSS’s full potential as a standard for a decentralized, user-owned, peer-to-peer media ecosystem. For a start, a user should be able to subscribe to clearweb RSS (and Atom) feeds and store them in their namespace.
 
-User Stories
 
 # User Stories
 

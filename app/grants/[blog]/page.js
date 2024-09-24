@@ -33,14 +33,23 @@ export default async function PostPage({ params }) {
       <div className="col-span-1"></div>
       <div className="col-span-5">
         <div>
-          {" "}
-          <span className="">{postData.frontMatter.title}</span>
-          <div className="">
+          <div className="flex flex-col text-25px leading-120">
+            <span className="">{postData.frontMatter.title}</span>
+            <span className="">{postData.frontMatter.subtitle}</span>
+          </div>
+          <div className="flex flex-col mt-8 text-20px leading-120">
             <span className="">{formatDate(postData.frontMatter.date)}</span>
+            <span className="">Reward: {postData.frontMatter.reward} </span>
             <span className="">
-              {formatAuthors(postData.frontMatter.authors)}
+              ID: {postData.frontMatter.id} 
+            </span>
+            <span className="">
+              Champions: {formatAuthors(postData.frontMatter.champions)}
             </span>
           </div>
+          <button href={postData.frontMatter.application_link} className="my-[2.5rem] text-25px font-[600] bg-white text-black rounded-[5px] leading-[1cap] p-[.5rem]">
+            Apply
+          </button>
         </div>
         <div className="">
           {Markdoc.renderers.react(postData.content, React, { components })}
