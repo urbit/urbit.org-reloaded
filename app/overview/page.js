@@ -40,10 +40,10 @@ export default async function overview() {
 
       <section className="grid grid-cols-6 gap-4 mb-[4rem]">
         <div className="col-span-1">Technology</div>
-        <div className="col-span-4 text-25px leading-120">
+        <div className="col-span-4 text-25px leading-120 flex justify-start flex-col">
           Technically, Urbit is two components: Urbit OS and Urbit ID. Both are
           completely open source and MIT licensed.
-          <SVG src="/overview_graphic.svg" className="w-full pt-8"></SVG>
+          <SVG src="/overview_graphic.svg" className="w-max pt-8"></SVG>
         </div>
       </section>
 

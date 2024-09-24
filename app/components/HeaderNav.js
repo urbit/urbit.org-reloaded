@@ -74,7 +74,7 @@ export const HeaderNav = ({ nav }) => {
       </div>
       {currentRoute == "/" && (
         <React.Fragment>
-          <div className=" grid grid-cols-6 gap-x-4 font-[600]">
+          <div className="grid grid-cols-6 gap-x-4 font-[600]">
             <ul className="flex flex-col text-gray-87 ">
               {nav?.map((navItem, i) => {
                 return (
