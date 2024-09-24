@@ -37,7 +37,7 @@ export const HeaderNav = ({ nav }) => {
         <div className="absolute grid grid-cols-6 w-full h-full ">
           <div className="col-span-1"></div>
           <div className="col-span-5 flex items-center justify-start -translate-x-[1rem]">
-            {currentRoute == "/grants" && (
+            {currentRoute.startsWith("/grants") && (
               <span>
                 Earn a piece of the Urbit network by developing software,
                 creating content, growing communities, and more.
@@ -63,7 +63,7 @@ export const HeaderNav = ({ nav }) => {
               &nbsp;:&nbsp;Overview
             </Link>
           )}
-          {currentRoute == "/grants" && (
+          {currentRoute.startsWith("/grants") && (
             <Link href="/grants" className="capitalize">
               &nbsp;:&nbsp;Grants
             </Link>
