@@ -26,17 +26,17 @@ export const HeaderNav = ({ nav }) => {
   return (
     <section
       ref={headerRef}
-      className="fixed h-auto items-center mt-8 md:mt-0 justify-center leading-120"
+      className="fixed h-auto items-center mt-8 md:mt-0 justify-center leading-120 container"
     >
       {currentRoute == "/" && (
         <div className="absolute w-[100vw] font-[600] -z-10 pb-12 flex items-center justify-center h-[100svh]">
           <NewsletterSignup />
         </div>
       )}
-      <div className="ml-[3rem] min-h-[4rem] flex flex-row items-center justify-between relative w-[100vw] ">
-        <div className="absolute grid grid-cols-6 w-full h-full ">
+      <div className="min-h-[4rem] flex flex-row items-center justify-between relative w-full">
+        <div className="absolute grid grid-cols-6 w-full h-full">
           <div className="col-span-1"></div>
-          <div className="col-span-5 flex items-center justify-start -translate-x-[1rem]">
+          <div className="col-span-5 flex items-center justify-start">
             {currentRoute.startsWith("/grants") && (
               <span>
                 Earn a piece of the Urbit network by developing software,
@@ -74,7 +74,7 @@ export const HeaderNav = ({ nav }) => {
       </div>
       {currentRoute == "/" && (
         <React.Fragment>
-          <div className=" ml-[3rem] grid grid-cols-6 gap-x-4 font-[600]">
+          <div className=" grid grid-cols-6 gap-x-4 font-[600]">
             <ul className="flex flex-col text-gray-87 ">
               {nav?.map((navItem, i) => {
                 return (
