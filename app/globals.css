@@ -6,14 +6,15 @@
 /* Urbit Sans */
 @font-face {
   font-family: "Urbit Sans";
-  src: url("https://media.urbit.org/fonts/UrbitSans/UrbitSansVFWeb-Regular.woff2")
-       format("woff2");
+  src: url("/fonts/UrbitSansVFWeb-Regular.woff2") format("woff2");
+  /* src: url("https://media.urbit.org/fonts/UrbitSans/UrbitSansVFWeb-Regular.woff2")
+       format("woff2"); */
   font-weight: 100 700;
   font-style: normal;
 }
 
 /* Urbit Serif Italic */
-@font-face {
+/* @font-face {
   font-family: "Urbit Serif Italic";
   src: url("https://media.urbit.org/fonts/UrbitSerifItalic/UrbitSerifItalic-UltraThin.otf");
   font-weight: 100;
@@ -54,7 +55,7 @@
   src: url("https://media.urbit.org/fonts/UrbitSerifItalic/UrbitSerifItalic-Bold.otf");
   font-weight: bold;
   font-style: normal;
-}
+} */
 
 :root {
   /* colors */
@@ -83,7 +84,7 @@
 html,
 body {
   font-family: "Urbit Sans";
-  font-size: 16px;
+  @apply md:text-[16px] text-[13px];
 }
 
 body {
@@ -98,11 +99,21 @@ body {
 
 @layer components {
   .container {
-    @apply max-w-[--site-max-width] px-[2rem] 
-    lg:px-[3rem];  
+    @apply max-w-[--site-max-width] px-[20px] md:px-[3rem];  
   }
 }
 @layer utilities {
+  .overview-page {
+    .overview-section {
+      @apply grid md:grid-cols-6 gap-4 mb-[6rem] md:mb-[8rem];
+    }
+    .overview-section-title {
+      @apply col-span-1 text-[2rem] md:text-20px font-[600] md:font-[400] md:mb-0 mb-8;
+    }
+    .overview-section-body {
+      @apply col-span-4 text-25px leading-120;
+    }
+  }
   .button {
     @apply my-[2.5rem] hover:bg-gray-87 text-25px font-[600] bg-white text-black rounded-[5px] leading-[1cap] p-[.5rem]
     dark:bg-black dark:text-white;

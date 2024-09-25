@@ -32,38 +32,16 @@ export const HeaderNav = ({ nav }) => {
       )}
     <section
       ref={headerRef}
-      className="fixed h-auto items-center mt-8 md:mt-0 justify-center leading-120 container"
+      className="fixed h-auto items-center bg-black dark:bg-white justify-center leading-120 container pt-6 pb-3" 
     >
      
-      <div className="min-h-[4rem] flex flex-col-reverse md:flex-row md:items-center md:justify-between relative w-full">
-        <div className="md:absolute md:grid  items-center justify-center md:grid-cols-6 w-full h-full">
+      <div className="mb-3 h-auto  md:flex md:flex-row md:items-center md:justify-between relative w-full">
+        <div className="md:absolute md:grid  items-center justify-center md:grid-cols-6 w-full h-full ">
           <div className="col-span-1"></div>
-          <div className="col-span-5 flex items-center justify-start">
-            {currentRoute.startsWith("/grants") && (
-              <span class="tracking-[.02em] font-[600]">
-                Earn a piece of the Urbit network by developing software,
-                creating content, growing communities, and more.
-              </span>
-            )}
-            {currentRoute.startsWith("/overview") && (
-              <ul className="flex flex-row gap-x-4">
-                <Link href="/overview" className={currentRoute === "/overview" ? "text-white" : "text-gray-87"}>
-                  Introduction
-                </Link>
-                <Link href="/overview/urbit-os" className={currentRoute === "/overview/urbit-os" ? "text-white" : "text-gray-87"}>
-                  Urbit OS
-                </Link>
-                <Link href="/overview/urbit-id" className={currentRoute === "/overview/urbit-id" ? "text-white" : "text-gray-87"}>
-                  Urbit ID
-                </Link>
-                <Link href="/overview/history" className={currentRoute === "/overview/history" ? "text-white" : "text-gray-87"}>
-                  History
-                </Link>
-              </ul>
-            )}
-
-          </div>
+         
+          
         </div>
+        
         <div className="inline-block font-[600] relative">
           <Link
             href="/"
@@ -94,7 +72,32 @@ export const HeaderNav = ({ nav }) => {
             </React.Fragment>
           )}
         </div>
+        <div className="col-span-5 hidden md:flex items-center justify-start">
+            {currentRoute.startsWith("/grants") && (
+              <span class="tracking-[.02em] font-[600]">
+                Earn a piece of the Urbit network by developing software,
+                creating content, growing communities, and more.
+              </span>
+            )}
+            
+          </div>
       </div>
+      {currentRoute.startsWith("/overview") && (
+              <ul className="flex mb-4 flex-row gap-x-4 pt-0">
+                <Link href="/overview" className={currentRoute === "/overview" ? "text-white" : "text-gray-87"}>
+                  Introduction
+                </Link>
+                <Link href="/overview/urbit-os" className={currentRoute === "/overview/urbit-os" ? "text-white" : "text-gray-87"}>
+                  Urbit OS
+                </Link>
+                <Link href="/overview/urbit-id" className={currentRoute === "/overview/urbit-id" ? "text-white" : "text-gray-87"}>
+                  Urbit ID
+                </Link>
+                <Link href="/overview/history" className={currentRoute === "/overview/history" ? "text-white" : "text-gray-87"}>
+                  History
+                </Link>
+              </ul>
+            )}
       {currentRoute == "/" && (
         <React.Fragment>
           <div className="grid grid-cols-6 gap-x-4 font-[600] mt-[3.06rem]">

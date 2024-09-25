@@ -7,10 +7,10 @@ export default async function overview() {
   // const config = await getMarkdownContent("overview.md");
 
   return (
-    <div className="container mb-8 mt-12 ">
-      <section className="grid md:grid-cols-6 gap-4 mb-[8rem] ">
-        <div className="col-span-1"></div>
-        <div className="col-span-4 text-25px leading-120">
+    <div className="container mb-8 mt-12 overview-page">
+      <section className="overview-section">
+        <div className="overview-section-title"></div>
+        <div className="overview-section-body">
           We think the internet can’t be saved. The way things are going,
           MEGACORP will always control our apps and services because we can no
           longer run them ourselves. The only way out of this mess is with a
@@ -40,18 +40,18 @@ export default async function overview() {
         </div>
       </section>
 
-      <section className="grid md:grid-cols-6 gap-4 mb-[4rem]">
-        <div className="col-span-1">Technology</div>
-        <div className="col-span-4 text-25px leading-120 flex justify-start flex-col">
+      <section className="overview-section md:mb-[4rem]">
+        <div className="overview-section-title">Technology</div>
+        <div className="overview-section-body flex justify-start flex-col">
           Technically, Urbit is two components: Urbit OS and Urbit ID. Both are
           completely open source and MIT licensed.
-          <SVG src="/overview_graphic.svg" className="w-max pt-8"></SVG>
+          <SVG src="/overview_graphic.svg" className="w-full pt-8"></SVG>
         </div>
       </section>
 
-      <section className="grid md:grid-cols-6 gap-4 mb-[2rem]">
-        <div className="col-span-1">Urbit OS</div>
-        <div className="col-span-4 text-25px leading-120">
+      <section className="overview-section md:mb-[2rem]">
+        <div className="overview-section-title">Urbit OS</div>
+        <div className="overview-section-body">
           Urbit OS is a new, carefully architected software stack: a VM,
           programming language and kernel designed to run software for an
           individual.
@@ -75,9 +75,9 @@ export default async function overview() {
         </div>
       </section>
 
-      <section className="grid md:grid-cols-6 gap-4 mb-[8rem]">
-        <div className="col-span-1">Urbit OS</div>
-        <div className="col-span-4 text-25px leading-120">
+      <section className="overview-section md:mb-[8rem]">
+        <div className="overview-section-title">Urbit OS</div>
+        <div className="overview-section-body">
           Urbit ID is an identity and authentication system specifically
           designed to work with Urbit OS. When you boot or log in to Urbit OS,
           you use your Urbit ID. Your Urbit ID is a short, memorable name (like
@@ -93,9 +93,9 @@ export default async function overview() {
           bot or a spammer.
         </div>
       </section>
-      <section className="grid md:grid-cols-6 gap-4 ">
-        <div className="col-span-1">Experience</div>
-        <div className="col-span-4 text-25px leading-120">
+      <section className="overview-section">
+        <div className="overview-section-title">Experience</div>
+        <div className="overview-section-body">
           We want Urbit to be a single, simple interface for your whole digital
           life. Over the years, Urbit has been built in public as an open source
           project. Anyone can join the network and check out what we’re up to.
@@ -138,9 +138,9 @@ export default async function overview() {
         </div>
       </section>
       
-      <section className="grid md:grid-cols-6 gap-4 mt-[4rem] mb-[12rem]">
-        <div className="col-span-1"></div>
-        <div className="col-span-4 text-25px leading-120">
+      <section className="overview-section md:mt-[4rem] md:mb-[12rem]">
+        <div className="overview-section-title"></div>
+        <div className="overview-section-body">
           <Link className="next-button" href="/overview/urbit-os">Urbit OS →</Link>    
         </div>
       </section>

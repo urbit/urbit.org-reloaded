@@ -31,7 +31,7 @@ export default async function PostPage({ params }) {
   const components = postData.components;
 
   return (
-    <section className="grid grid-cols-6 mb-32 mt-[6rem] container">
+    <section className="grid md:grid-cols-6 mb-32 mt-[6rem] container">
       <ThemeManager />
 
       <div className="col-span-1"></div>
