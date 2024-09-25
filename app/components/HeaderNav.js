@@ -67,7 +67,7 @@ export const HeaderNav = ({ nav }) => {
         <div className="inline-block font-[600] relative">
           <Link
             href="/"
-            className="hover:text-gray-87 before:hover:text-white relative before:content-['~']  before:absolute before:left-[-.8em] before:bottom-[.1em] w-auto"
+            className="hover:text-gray-87 relative before:content-['~']  before:absolute before:left-[-.8em] before:bottom-[.1em] w-auto"
           >
             Urbit
           </Link>
