@@ -44,50 +44,7 @@ export const HeaderNav = ({ nav }) => {
                   creating content, growing communities, and more.
                 </span>
               )}
-              {currentRoute.startsWith("/overview") && (
-                <ul className="flex  mb-0 flex-row gap-x-4 pt-0">
-                  <Link
-                    href="/overview"
-                    className={
-                      currentRoute === "/overview"
-                        ? "text-white"
-                        : "text-gray-87"
-                    }
-                  >
-                    Introduction
-                  </Link>
-                  <Link
-                    href="/overview/urbit-os"
-                    className={
-                      currentRoute === "/overview/urbit-os"
-                        ? "text-white"
-                        : "text-gray-87"
-                    }
-                  >
-                    Urbit OS
-                  </Link>
-                  <Link
-                    href="/overview/urbit-id"
-                    className={
-                      currentRoute === "/overview/urbit-id"
-                        ? "text-white"
-                        : "text-gray-87"
-                    }
-                  >
-                    Urbit ID
-                  </Link>
-                  <Link
-                    href="/overview/history"
-                    className={
-                      currentRoute === "/overview/history"
-                        ? "text-white"
-                        : "text-gray-87"
-                    }
-                  >
-                    History
-                  </Link>
-                </ul>
-              )}
+              {currentRoute.startsWith("/overview") && <OverviewNav />}
             </div>
           </div>
           <div className="inline-block font-[600] relative">
@@ -126,6 +83,11 @@ export const HeaderNav = ({ nav }) => {
                 </Link>
               </React.Fragment>
             )}
+               {currentRoute.startsWith("/overview") && (
+                <div className="mt-4 md:hidden">
+                  <OverviewNav />
+                </div>
+               )}
           </div>
         </div>
 
@@ -153,5 +115,44 @@ export const HeaderNav = ({ nav }) => {
         )}
       </section>
     </React.Fragment>
+  );
+};
+
+const OverviewNav = () => {
+  const currentRoute = usePathname();
+
+  return (
+    <ul className="flex mb-0 flex-row gap-x-4 pt-0">
+      <Link
+        href="/overview"
+        className={currentRoute === "/overview" ? "text-white" : "text-gray-87"}
+      >
+        Introduction
+      </Link>
+      <Link
+        href="/overview/urbit-os"
+        className={
+          currentRoute === "/overview/urbit-os" ? "text-white" : "text-gray-87"
+        }
+      >
+        Urbit OS
+      </Link>
+      <Link
+        href="/overview/urbit-id"
+        className={
+          currentRoute === "/overview/urbit-id" ? "text-white" : "text-gray-87"
+        }
+      >
+        Urbit ID
+      </Link>
+      <Link
+        href="/overview/history"
+        className={
+          currentRoute === "/overview/history" ? "text-white" : "text-gray-87"
+        }
+      >
+        History
+      </Link>
+    </ul>
   );
 };
