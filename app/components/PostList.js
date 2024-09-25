@@ -127,7 +127,7 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
             <Link
               href={postData.relativePath}
               data-category={postData.data.category}
-              className="pt-21px text-25px group hover:text-gray-87 transition-all"
+              className="pt-21px text-25px group hover:text-gray-87"
             >
               <div className={classNames("leading-120 ")}>
                 <div>{postData.data.title}</div>

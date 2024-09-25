@@ -47,7 +47,7 @@ export default async function PostPage({ params }) {
               Champions: {formatAuthors(postData.frontMatter.champions)}
             </span>
           </div>
-          <button href={postData.frontMatter.application_link} className="my-[2.5rem] text-25px font-[600] bg-white text-black rounded-[5px] leading-[1cap] p-[.5rem]">
+          <button href={postData.frontMatter.application_link} className="button">
             Apply
           </button>
         </div>
