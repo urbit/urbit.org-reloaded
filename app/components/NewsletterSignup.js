@@ -23,7 +23,7 @@ export const NewsletterSignup = () => {
           <div className="flex h-[2.125rem] items-center justify-center absolute top-0 right-0 ">
             <button
               id="mc-embedded-subscribe"
-              className="body-lg text-21px text-gray-87 bg-transparent pr-[.4em]"
+              className="body-lg text-21px text-gray-87 hover:text-white bg-transparent pr-[.4em]"
               type="submit"
               name="subscribe"
             >

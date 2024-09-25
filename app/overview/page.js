@@ -8,7 +8,7 @@ export default async function overview() {
 
   return (
     <div className="container mb-8 mt-12 ">
-      <section className="grid grid-cols-6 gap-4 mb-[8rem] ">
+      <section className="grid md:grid-cols-6 gap-4 mb-[8rem] ">
         <div className="col-span-1"></div>
         <div className="col-span-4 text-25px leading-120">
           We think the internet can’t be saved. The way things are going,
@@ -40,7 +40,7 @@ export default async function overview() {
         </div>
       </section>
 
-      <section className="grid grid-cols-6 gap-4 mb-[4rem]">
+      <section className="grid md:grid-cols-6 gap-4 mb-[4rem]">
         <div className="col-span-1">Technology</div>
         <div className="col-span-4 text-25px leading-120 flex justify-start flex-col">
           Technically, Urbit is two components: Urbit OS and Urbit ID. Both are
@@ -49,7 +49,7 @@ export default async function overview() {
         </div>
       </section>
 
-      <section className="grid grid-cols-6 gap-4 mb-[2rem]">
+      <section className="grid md:grid-cols-6 gap-4 mb-[2rem]">
         <div className="col-span-1">Urbit OS</div>
         <div className="col-span-4 text-25px leading-120">
           Urbit OS is a new, carefully architected software stack: a VM,
@@ -75,7 +75,7 @@ export default async function overview() {
         </div>
       </section>
 
-      <section className="grid grid-cols-6 gap-4 mb-[8rem]">
+      <section className="grid md:grid-cols-6 gap-4 mb-[8rem]">
         <div className="col-span-1">Urbit OS</div>
         <div className="col-span-4 text-25px leading-120">
           Urbit ID is an identity and authentication system specifically
@@ -93,7 +93,7 @@ export default async function overview() {
           bot or a spammer.
         </div>
       </section>
-      <section className="grid grid-cols-6 gap-4 ">
+      <section className="grid md:grid-cols-6 gap-4 ">
         <div className="col-span-1">Experience</div>
         <div className="col-span-4 text-25px leading-120">
           We want Urbit to be a single, simple interface for your whole digital
@@ -138,7 +138,7 @@ export default async function overview() {
         </div>
       </section>
       
-      <section className="grid grid-cols-6 gap-4 mt-[4rem] mb-[12rem]">
+      <section className="grid md:grid-cols-6 gap-4 mt-[4rem] mb-[12rem]">
         <div className="col-span-1"></div>
         <div className="col-span-4 text-25px leading-120">
           <Link className="next-button" href="/overview/urbit-os">Urbit OS →</Link>    

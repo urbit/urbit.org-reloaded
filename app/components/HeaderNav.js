@@ -24,17 +24,19 @@ export const HeaderNav = ({ nav }) => {
   useEffect(() => {}, []);
 
   return (
+    <React.Fragment>
+       {currentRoute == "/" && (
+        <div className="absolute w-[100vw] font-[600] pb-12 flex items-center justify-center h-[100svh]">
+          <NewsletterSignup className="z-10 "/>
+        </div>
+      )}
     <section
       ref={headerRef}
       className="fixed h-auto items-center mt-8 md:mt-0 justify-center leading-120 container"
     >
-      {currentRoute == "/" && (
-        <div className="absolute w-[100vw] font-[600] -z-10 pb-12 flex items-center justify-center h-[100svh]">
-          <NewsletterSignup />
-        </div>
-      )}
-      <div className="min-h-[4rem] flex flex-row items-center justify-between relative w-full">
-        <div className="absolute grid grid-cols-6 w-full h-full">
+     
+      <div className="min-h-[4rem] flex flex-col md:flex-row items-center justify-between relative w-full">
+        <div className="absolute md:grid flex items-center justify-center md:grid-cols-6 w-full h-full">
           <div className="col-span-1"></div>
           <div className="col-span-5 flex items-center justify-start">
             {currentRoute.startsWith("/grants") && (
@@ -116,5 +118,7 @@ export const HeaderNav = ({ nav }) => {
         </React.Fragment>
       )}
     </section>
+
+    </React.Fragment>
   );
 };
