@@ -6,6 +6,7 @@ import { glob } from "glob";
 import path from "path";
 import classNames from "classnames";
 import ThemeManager from "../../components/ThemeManager";
+import Link from "next/link";
 
 const BLOG_PATH = "app/docs/grants";
 const POSTS_DIR = path.join(process.cwd(), BLOG_PATH);
@@ -48,12 +49,13 @@ export default async function PostPage({ params }) {
               Champion(s): {formatAuthors(postData.frontMatter.champions)}
             </span>
           </div>
-          <button
-            href={postData.frontMatter.application_link}
-            className="button"
+          <div
+            className="my-[2.8rem]"
           >
-            Apply
-          </button>
+            <Link className="apply-button" href={postData.frontMatter.application_link}>
+              Apply
+            </Link>
+          </div>
         </div>
         <div className="">
           {Markdoc.renderers.react(postData.content, React, { components })}

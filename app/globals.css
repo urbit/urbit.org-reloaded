@@ -107,6 +107,10 @@ body {
     @apply my-[2.5rem] hover:bg-gray-87 text-25px font-[600] bg-white text-black rounded-[5px] leading-[1cap] p-[.5rem]
     dark:bg-black dark:text-white;
   }
+  .apply-button {
+     @apply bg-background text-foreground leading-[1cap] text-25px font-[600] rounded-[5px] px-[.5rem] py-[.2rem]
+     hover:bg-gray-5a hover:text-foreground;
+  }
   .next-button {
     @apply hover:bg-white hover:text-black my-[2.5rem] leading-[1cap] text-25px font-[600] bg-gray-87 text-black rounded-[5px] px-[.5rem] py-[.5rem];
   }
@@ -146,7 +150,7 @@ body {
       @apply list-decimal list-inside mb-1;
     }
     code, pre {
-      @apply text-25px dark:bg-[#d4d5d3] rounded-5px mb-8;
+      @apply text-25px dark:bg-[#d4d5d3] rounded-5px px-1 mb-8;
       font-family: "Urbit Sans";
       font-variation-settings: "xtab" 500;
     }
