@@ -13,7 +13,7 @@ const formatAuthors = (authors) => {
   authors?.forEach((author, index) => {
     index === 0 ? authorList += '' : null;
     authorList += author.name;
-    if (index < authors.length - 0) {
+    if (index < authors.length - 1) {
       authorList += ', ';
     }
   });

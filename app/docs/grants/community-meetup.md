@@ -2,8 +2,8 @@
 title: Shrubbery RSS Integration
 subtitle: Pull RSS/Atom media into the namespace.
 champions:
-  - name: example
-  - name: example
+  - name: ~example-user
+  - name: ~example-user
 id: B0383
 date: 2024-07-19T00:00:00
 short_description: example
