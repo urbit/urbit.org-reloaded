@@ -103,6 +103,9 @@ body {
   }
 }
 @layer utilities {
+  .next-button {
+    @apply hover:bg-white transition-all my-[2.5rem] leading-[1cap] text-25px font-[600] bg-gray-87 text-black rounded-[5px] px-[.5rem] py-[.5rem];
+  }
   article {
     @apply  text-25px leading-120;
     h1 {

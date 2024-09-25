@@ -1,11 +1,13 @@
 import React from "react";
 // import { getMarkdownContent } from "./lib/queries";
 import SVG from "react-inlinesvg";
+import Link from "next/link";
+
 export default async function overview() {
   // const config = await getMarkdownContent("overview.md");
 
   return (
-    <div className="mb-8 mt-12 container">
+    <div className="container mb-8 mt-12 ">
       <section className="grid grid-cols-6 gap-4 mb-[8rem] ">
         <div className="col-span-1"></div>
         <div className="col-span-4 text-25px leading-120">
@@ -91,7 +93,7 @@ export default async function overview() {
           bot or a spammer.
         </div>
       </section>
-      <section className="grid grid-cols-6 gap-4 mb-[8rem]">
+      <section className="grid grid-cols-6 gap-4 ">
         <div className="col-span-1">Experience</div>
         <div className="col-span-4 text-25px leading-120">
           We want Urbit to be a single, simple interface for your whole digital
@@ -135,6 +137,14 @@ export default async function overview() {
           we’re focusing on creating.{" "}
         </div>
       </section>
+      
+      <section className="grid grid-cols-6 gap-4 mt-[4rem] mb-[12rem]">
+        <div className="col-span-1"></div>
+        <div className="col-span-4 text-25px leading-120">
+          <Link className="next-button" href="/overview/urbit-os">Urbit OS →</Link>    
+        </div>
+      </section>
+     
     </div>
   );
 }

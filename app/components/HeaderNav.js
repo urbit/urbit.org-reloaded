@@ -75,7 +75,7 @@ export const HeaderNav = ({ nav }) => {
               of your digital world.
             </span>
           )}
-          {currentRoute == "/overview" && (
+          {currentRoute.startsWith("/overview") && (
             <Link href="/overview" className="capitalize">
               &nbsp;:&nbsp;Overview
             </Link>

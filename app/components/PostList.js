@@ -142,7 +142,7 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
               </div>
               <div className={classNames("pt-4")}>{postData.data.subtitle}</div>
               <div className={classNames("text-gray-87 !text-21px pt-8 pb-2")}>
-                {postData.data.status}, {postData.data.category}, {postData.data.program}
+                {postData.data.status}, {postData.data.category}
               </div>
             </Link>
             <div className="border-b-[.7px] border-white w-full"></div>
