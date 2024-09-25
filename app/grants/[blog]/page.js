@@ -5,6 +5,7 @@ import React from "react";
 import { glob } from "glob";
 import path from "path";
 import classNames from "classnames";
+import ThemeManager from "../../components/ThemeManager";
 
 const BLOG_PATH = "app/docs/grants";
 const POSTS_DIR = path.join(process.cwd(), BLOG_PATH);
@@ -30,6 +31,8 @@ export default async function PostPage({ params }) {
 
   return (
     <section className="grid grid-cols-6 mb-32 mt-32 container">
+            <ThemeManager />
+
       <div className="col-span-1"></div>
       <div className="col-span-4">
         <div>

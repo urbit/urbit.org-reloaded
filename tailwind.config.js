@@ -5,6 +5,8 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: 'selector',
+
   theme: {
     fontFamily: {
       // 'mono': ["...", 'Courier New', 'monospace', 'mono'],
@@ -30,6 +32,7 @@ module.exports = {
         '02': '0.024em',
       },
       borderRadius: {
+        '5px': '.3125rem',
         '16px': '1rem',
       },
       fontSize: {

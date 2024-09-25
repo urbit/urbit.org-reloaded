@@ -91,7 +91,7 @@ body {
   background: var(--background);
   -webkit-font-smoothing: antialiased;
   /* -moz-osx-font-smoothing: grayscale; */
-  @apply text-21px leading-120  tracking-02;
+  @apply text-21px leading-120  tracking-02 dark:bg-[var(--foreground)] dark:text-[var(--background)];
   
 }
 
@@ -104,13 +104,14 @@ body {
 }
 @layer utilities {
   .button {
-    @apply my-[2.5rem] hover:bg-gray-87 text-25px font-[600] bg-white text-black rounded-[5px] leading-[1cap] p-[.5rem];
+    @apply my-[2.5rem] hover:bg-gray-87 text-25px font-[600] bg-white text-black rounded-[5px] leading-[1cap] p-[.5rem]
+    dark:bg-black dark:text-white;
   }
   .next-button {
     @apply hover:bg-white hover:text-black my-[2.5rem] leading-[1cap] text-25px font-[600] bg-gray-87 text-black rounded-[5px] px-[.5rem] py-[.5rem];
   }
   a, .link {
-    @apply hover:text-white;
+    @apply hover:text-white dark:hover:text-gray-87;
   }
   article {
     @apply  text-25px leading-120;
@@ -139,7 +140,7 @@ body {
       @apply list-outside list-none before:content-['—'] before:absolute before:left-[-1.2rem];
     }
     code {
-      @apply text-25px;
+      @apply text-25px dark:bg-[#d4d5d3] rounded-5px mb-8;
       font-family: "Urbit Sans";
 
     }
