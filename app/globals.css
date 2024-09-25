@@ -143,6 +143,9 @@ body {
     ul li {
       @apply list-outside mb-1 list-none before:content-['—'] before:absolute before:left-[-1.2rem];
     }
+    ul li ul {
+      @apply relative ml-4;
+    }
     ol {
       @apply relative mb-6;
     }
