@@ -31,17 +31,17 @@ export default async function PostPage({ params }) {
   const components = postData.components;
 
   return (
-    <section className="grid md:grid-cols-6 mb-32 mt-[6rem] container">
+    <section className="grid md:grid-cols-6 mb-32 mt-[4rem] md:mt-[6rem] container">
       <ThemeManager />
 
       <div className="col-span-1"></div>
       <div className="col-span-4 tracking-[.01em]">
         <div>
-          <div className="flex flex-col text-25px leading-120">
+          <div className="flex flex-col gap-y-4 text-[2.8rem] md:text-25px leading-120">
             <span className="">{postData.frontMatter.title}</span>
             <span className="">{postData.frontMatter.subtitle}</span>
           </div>
-          <div className="flex flex-col mt-8 text-20px leading-120">
+          <div className="flex flex-col mt-8 text-25px md:text-20px leading-120">
             <span className="">{formatDate(postData.frontMatter.date)}</span>
             <span className="">Reward: {postData.frontMatter.reward} </span>
             <span className="">ID: {postData.frontMatter.id}</span>

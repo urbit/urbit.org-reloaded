@@ -87,7 +87,7 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
           {/* Category Filter */}
 
           <span className="">Status:</span>
-          <div className="flex flex-col items-start text-gray-87">
+          <div className="flex gap-x-4 md:flex-col items-start text-gray-87">
             {statuses.map((status, index) => (
               <button
                 key={index}
@@ -102,7 +102,7 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
           </div>
 
           <span className="pt-4">Program:</span>
-          <div className="flex flex-col items-start text-gray-87">
+          <div className="flex flex-row gap-x-4 md:flex-col items-start text-gray-87">
             {programs.map((program, index) => (
               <button
                 key={index}
