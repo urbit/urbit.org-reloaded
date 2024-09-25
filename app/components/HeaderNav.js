@@ -37,20 +37,29 @@ export const HeaderNav = ({ nav }) => {
         <div className="absolute grid grid-cols-6 w-full h-full">
           <div className="col-span-1"></div>
           <div className="col-span-5 flex items-center justify-start">
-            {currentRoute.startsWith("/overview") && (
+            {currentRoute.startsWith("/grants") && (
               <span>
                 Earn a piece of the Urbit network by developing software,
                 creating content, growing communities, and more.
               </span>
             )}
             {currentRoute.startsWith("/overview") && (
-              
               <ul className="flex flex-row gap-x-4">
-                <li>test</li>
-                <li>test</li>
-                <li>test</li>
+                <Link href="/overview" className={currentRoute === "/overview" ? "text-white" : "text-gray-87"}>
+                  Introduction
+                </Link>
+                <Link href="/overview/urbit-os" className={currentRoute === "/overview/urbit-os" ? "text-white" : "text-gray-87"}>
+                  Urbit OS
+                </Link>
+                <Link href="/overview/urbit-id" className={currentRoute === "/overview/urbit-id" ? "text-white" : "text-gray-87"}>
+                  Urbit ID
+                </Link>
+                <Link href="/overview/history" className={currentRoute === "/overview/history" ? "text-white" : "text-gray-87"}>
+                  History
+                </Link>
               </ul>
             )}
+
           </div>
         </div>
         <div className="inline-block font-[600] relative">

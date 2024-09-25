@@ -9,7 +9,7 @@ export default async function test() {
       <section className="grid grid-cols-6 gap-4 mb-[8rem]">
         <div className="col-span-1"></div>
         <div className="col-span-4 text-25px leading-120">
-          section
+          History
         </div>
       </section>
 
