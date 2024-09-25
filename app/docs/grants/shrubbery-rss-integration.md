@@ -28,6 +28,8 @@ Urbit’s personal server model and programmable global namespace stand to unloc
 
 ## Milestone 1 (2 Stars)
 
+### h3 example
+
 Shrubbery implementation and protocols for subscribing to any clearweb RSS/Atom endpoint, populating the namespace with RSS/Atom entries, and periodically fetching new items from that endpoint.
 
 ## Namespace design

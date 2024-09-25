@@ -125,6 +125,10 @@ body {
     h1[level="2"] {
       @apply text-[1.89rem] font-[600] mb-[2.6rem];
     }
+    h1[level="3"] {
+      @apply text-25px font-[600] mb-[1.6rem];
+    }
+
     blockquote {
       @apply p-2 pl-4 italic my-4 border-s-4 border-black;
     }
