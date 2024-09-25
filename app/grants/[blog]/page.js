@@ -30,8 +30,8 @@ export default async function PostPage({ params }) {
   const components = postData.components;
 
   return (
-    <section className="grid grid-cols-6 mb-32 mt-32 container">
-            <ThemeManager />
+    <section className="grid grid-cols-6 mb-32 mt-[6rem] container">
+      <ThemeManager />
 
       <div className="col-span-1"></div>
       <div className="col-span-4 tracking-[.01em]">
@@ -43,14 +43,15 @@ export default async function PostPage({ params }) {
           <div className="flex flex-col mt-8 text-20px leading-120">
             <span className="">{formatDate(postData.frontMatter.date)}</span>
             <span className="">Reward: {postData.frontMatter.reward} </span>
-            <span className="">
-              ID: {postData.frontMatter.id} 
-            </span>
+            <span className="">ID: {postData.frontMatter.id}</span>
             <span className="">
               Champion(s): {formatAuthors(postData.frontMatter.champions)}
             </span>
           </div>
-          <button href={postData.frontMatter.application_link} className="button">
+          <button
+            href={postData.frontMatter.application_link}
+            className="button"
+          >
             Apply
           </button>
         </div>
