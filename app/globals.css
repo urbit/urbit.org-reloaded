@@ -118,8 +118,11 @@ body {
           @apply w-full;
         }
       }
-      a:not(.next-button){
+      a {
         @apply underline decoration-[.01em] underline-offset-[.1em];
+      }
+      .next-button {
+        @apply no-underline;
       }
     }
   }
