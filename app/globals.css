@@ -112,6 +112,15 @@ body {
     }
     .overview-section-body {
       @apply col-span-4 text-25px leading-120;
+      .img-container {
+        @apply rounded-[.5rem] overflow-hidden my-8 w-full;
+        img {
+          @apply w-full;
+        }
+      }
+      a {
+        @apply underline decoration-[.01em] underline-offset-[.1em];
+      }
     }
   }
   .button {
