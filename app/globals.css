@@ -119,13 +119,13 @@ body {
       @apply text-[3.75rem] font-[400] mb-8 md:mb-16 lg:mb-20 leading-[100%] my-[2.5rem];
     }
     h1[level="2"] {
-      @apply text-[1.89rem];
+      @apply text-[1.89rem] font-[600] mb-[2.6rem];
     }
     blockquote {
       @apply p-2 pl-4 italic my-4 border-s-4 border-black;
     }
     p {
-      @apply mb-4;
+      @apply mb-6;
     }
     a {
       @apply underline decoration-[.01em] underline-offset-[.1em];
@@ -136,13 +136,22 @@ body {
     ul {
       @apply relative;
     }
-    li {
-      @apply list-outside list-none before:content-['—'] before:absolute before:left-[-1.2rem];
+    ul li {
+      @apply list-outside mb-1 list-none before:content-['—'] before:absolute before:left-[-1.2rem];
     }
-    code {
+    ol {
+      @apply relative mb-6;
+    }
+    ol li {
+      @apply list-decimal list-inside mb-1;
+    }
+    code, pre {
       @apply text-25px dark:bg-[#d4d5d3] rounded-5px mb-8;
       font-family: "Urbit Sans";
-
+      font-variation-settings: "xtab" 500;
+    }
+    pre {
+      @apply p-4 tracking-[0.01em];
     }
   }
 

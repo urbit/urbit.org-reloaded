@@ -27,7 +27,7 @@ export default async function BlogHome() {
   }));
 
   return (
-    <div className="container mb-32 mt-24">
+    <div className="container mb-32 mt-[3.06rem]">
       <PostList allPostsYaml={allPostsYaml} statuses={statuses} programs={programs} />
     </div>
   )

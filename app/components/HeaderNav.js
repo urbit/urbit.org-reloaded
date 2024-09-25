@@ -35,12 +35,12 @@ export const HeaderNav = ({ nav }) => {
       className="fixed h-auto items-center mt-8 md:mt-0 justify-center leading-120 container"
     >
      
-      <div className="min-h-[4rem] flex flex-col md:flex-row items-center justify-between relative w-full">
-        <div className="absolute md:grid flex items-center justify-center md:grid-cols-6 w-full h-full">
+      <div className="min-h-[4rem] flex flex-col-reverse md:flex-row md:items-center md:justify-between relative w-full">
+        <div className="md:absolute md:grid  items-center justify-center md:grid-cols-6 w-full h-full">
           <div className="col-span-1"></div>
           <div className="col-span-5 flex items-center justify-start">
             {currentRoute.startsWith("/grants") && (
-              <span>
+              <span class="tracking-[.02em] font-[600]">
                 Earn a piece of the Urbit network by developing software,
                 creating content, growing communities, and more.
               </span>
@@ -80,9 +80,9 @@ export const HeaderNav = ({ nav }) => {
           {currentRoute.startsWith("/overview") && (
             <React.Fragment>
               &nbsp;:&nbsp;
-            <Link href="/overview" className="hover:text-gray-87 capitalize">
-              Overview
-            </Link>
+              <Link href="/overview" className="hover:text-gray-87 capitalize">
+                Overview
+              </Link>
             </React.Fragment>
           )}
           {currentRoute.startsWith("/grants") && (
@@ -97,7 +97,7 @@ export const HeaderNav = ({ nav }) => {
       </div>
       {currentRoute == "/" && (
         <React.Fragment>
-          <div className="grid grid-cols-6 gap-x-4 font-[600]">
+          <div className="grid grid-cols-6 gap-x-4 font-[600] mt-[3.06rem]">
             <ul className="flex flex-col text-gray-87 ">
               {nav?.map((navItem, i) => {
                 return (

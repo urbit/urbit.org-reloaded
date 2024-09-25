@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const FooterSection = ({ footerData }) => {
   return (
-    <section className="z-10 h-footer-height mb-8 text-20px pl-[3rem] text-gray-87 leading-120">
+    <section className="z-10 h-max mb-8 text-20px  container text-gray-87 leading-120">
       <div className="grid md:grid-cols-6">
         {footerData?.map((footerItem, i) => {
           return (

@@ -24,3 +24,21 @@ Urbit’s personal server model and programmable global namespace stand to unloc
 - When I enter a new endpoint URL to my %rss-aggregator shrub, it will create an %rss- subscription child whose children will be populated with a backlog of prior entries from that endpoint as %rss-entrys.
 - From then on, each new entry from that endpoint will populate in the children of the %rss- subscription as %rss-entrys, fetched via a refresh timer.
 - I can add as many new endpoints to my %rss-aggregator shrub as I like, and the shrub will aggregate the subscriptions to each of them and organize them by timestamp.
+
+## Milestone 1 (2 Stars)
+
+Shrubbery implementation and protocols for subscribing to any clearweb RSS/Atom endpoint, populating the namespace with RSS/Atom entries, and periodically fetching new items from that endpoint.
+
+## Namespace design
+
+The following namespace design is a suggestion. What’s implemented is left to the discretion of the grantee and their Champion.
+
+1. ordered list
+2. item 2
+3. item 3
+4. item 4
+   
+```
+code block
+code block line 2
+```

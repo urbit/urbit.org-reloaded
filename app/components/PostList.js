@@ -80,13 +80,13 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
   };
 
   return (
-    <div className="grid grid-cols-6 w-full mb-[5rem]">
+    <div className="grid md:grid-cols-6 w-full mb-[5rem]">
       <div className="col-span-1">
         {/* Filter Section */}
-        <div className="mt-[3rem] flex flex-col !font-[500]">
+        <div className="md:mt-[0rem]  flex flex-col font-[500] mb-12 md:mb-0">
           {/* Category Filter */}
 
-          <span className="mt-4">Status:</span>
+          <span className="">Status:</span>
           <div className="flex flex-col items-start text-gray-87">
             {statuses.map((status, index) => (
               <button
@@ -119,15 +119,15 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
       </div>
 
       {/* Post List */}
-      <div className="mb-4 flex flex-col col-span-4">
-        Showing {filteredSortedPosts.length} grants
+      <div className="mb-4 mt-[.2em] flex flex-col col-span-4">
+        <span className="leading-[1cap]">Showing {filteredSortedPosts.length} grants</span>
         <div className="border-b-[.7px] border-white w-full pt-21px"></div>
         {filteredSortedPosts.map((postData) => (
           <React.Fragment key={postData.relativePath} className=" ">
             <Link
               href={postData.relativePath}
               data-category={postData.data.category}
-              className="pt-21px text-25px group hover:text-gray-87"
+              className="pt-12px text-25px group hover:text-gray-87 font-[400]"
             >
               <div className={classNames("leading-120 ")}>
                 <div>{postData.data.title}</div>
@@ -142,8 +142,8 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
                   </div>
                 </div>
               </div>
-              <div className={classNames("pt-4")}>{postData.data.subtitle}</div>
-              <div className={classNames("text-gray-87 !text-21px pt-8 pb-2 ")}>
+              <div className={classNames("pt-5")}>{postData.data.subtitle}</div>
+              <div className={classNames("text-gray-87 !text-21px pt-6 pb-2 ")}>
                 {postData.data.status}, {postData.data.category}
               </div>
             </Link>

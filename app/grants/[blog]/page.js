@@ -34,7 +34,7 @@ export default async function PostPage({ params }) {
             <ThemeManager />
 
       <div className="col-span-1"></div>
-      <div className="col-span-4">
+      <div className="col-span-4 tracking-[.01em]">
         <div>
           <div className="flex flex-col text-25px leading-120">
             <span className="">{postData.frontMatter.title}</span>
@@ -47,7 +47,7 @@ export default async function PostPage({ params }) {
               ID: {postData.frontMatter.id} 
             </span>
             <span className="">
-              Champions: {formatAuthors(postData.frontMatter.champions)}
+              Champion(s): {formatAuthors(postData.frontMatter.champions)}
             </span>
           </div>
           <button href={postData.frontMatter.application_link} className="button">

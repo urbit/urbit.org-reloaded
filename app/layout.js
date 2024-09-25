@@ -20,9 +20,9 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className="min-h-[100svh] flex flex-col w-full" id="observer-root">
+      <body className="min-h-[100svh] flex flex-col justify-between w-full" id="observer-root">
         <HeaderNav nav={config.frontMatter?.nav} />
-        <div className="min-h-[calc(100svh_-_var(--header-height)_-_var(--header-height)_-_var(--footer-height))] mt-[var(--header-height)]">{children}</div>
+        <div className="h-full mt-[var(--header-height)]">{children}</div>
         <FooterSection footerData={config.frontMatter?.footer} />
       </body>
     </html>

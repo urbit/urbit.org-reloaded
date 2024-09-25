@@ -21,6 +21,7 @@ module.exports = {
     },
     extend: {
       spacing: {
+        '12px': '.75rem',
         '18px': '1rem',
         '20px': '1.11rem',
         '21px': '1.3125rem',
@@ -30,6 +31,7 @@ module.exports = {
       },
       letterSpacing: {
         '02': '0.024em',
+        '01': '0.01%',
       },
       borderRadius: {
         '5px': '.3125rem',
@@ -56,6 +58,7 @@ module.exports = {
           "87": "#878787",
           "f5": "#f5f5f5",
         },
+        "white": "var(--foreground)",
         "off-white": "var(--off-white)", 
       }
     },

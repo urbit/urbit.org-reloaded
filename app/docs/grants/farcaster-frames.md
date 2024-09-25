@@ -3,7 +3,7 @@ title: Farcaster Frames
 subtitle: Make your Urbit app into a Farcaster Frame.
 reward: 1
 champions:
-  - name: tamlut-modnys
+  - name: ~tamlut-modnys
 id: B0349
 date: 2024-07-19T00:00:00
 short_description: example
