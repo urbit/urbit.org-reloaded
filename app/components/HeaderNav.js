@@ -37,11 +37,19 @@ export const HeaderNav = ({ nav }) => {
         <div className="absolute grid grid-cols-6 w-full h-full">
           <div className="col-span-1"></div>
           <div className="col-span-5 flex items-center justify-start">
-            {currentRoute.startsWith("/grants") && (
+            {currentRoute.startsWith("/overview") && (
               <span>
                 Earn a piece of the Urbit network by developing software,
                 creating content, growing communities, and more.
               </span>
+            )}
+            {currentRoute.startsWith("/overview") && (
+              
+              <ul className="flex flex-row gap-x-4">
+                <li>test</li>
+                <li>test</li>
+                <li>test</li>
+              </ul>
             )}
           </div>
         </div>
@@ -69,8 +77,6 @@ export const HeaderNav = ({ nav }) => {
             </Link>
           )}
         </div>
-        {/* if homepage, display this */}
-        {/* else, display urbit: pagename (overview, grants) */}
       </div>
       {currentRoute == "/" && (
         <React.Fragment>

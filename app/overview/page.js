@@ -5,8 +5,8 @@ export default async function overview() {
   // const config = await getMarkdownContent("overview.md");
 
   return (
-    <div className="mb-8 ml-[3rem] mt-12 ">
-      <section className="grid grid-cols-6 gap-4 mb-[8rem]">
+    <div className="mb-8 mt-12 container">
+      <section className="grid grid-cols-6 gap-4 mb-[8rem] ">
         <div className="col-span-1"></div>
         <div className="col-span-4 text-25px leading-120">
           We think the internet can’t be saved. The way things are going,
