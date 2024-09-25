@@ -118,7 +118,7 @@ body {
           @apply w-full;
         }
       }
-      a {
+      a:not(.next-button){
         @apply underline decoration-[.01em] underline-offset-[.1em];
       }
     }
