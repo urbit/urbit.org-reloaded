@@ -39,7 +39,7 @@ footer:
       - title: "@urbit"
         url: "/"
         external: true
-      - title: "@urbit"
+      - title: "@urbitfoundation"
         external: true
         url: "/"
       - title: "support@urbit.org"
