@@ -6,7 +6,7 @@ headline: Urbit is a new computing paradigm that provides complete ownership of 
 site_metadata:
   title: Site Title
   description: Site Description Placeholder
-  canonicalUrl: "https://example.com"
+  canonicalUrl: "https://urbit.org"
   siteImage: "/images/logo.png"
 nav:
 - title: Overview
@@ -24,32 +24,45 @@ footer:
     subItems:
       - title: Technical Journal
         url: "/"
+        external: true
       - title: Docs
         url: "/"
+        external: true
       - title: Roadmap
         url: "/"
+        external: true
       - title: Network Explorer
         url: "/"
+        external: true
   - column_label: col2
     subItems:
       - title: "@urbit"
         url: "/"
+        external: true
       - title: "@urbit"
+        external: true
         url: "/"
       - title: "support@urbit.org"
         url: "/"
+        external: true
   - column_label: col3
     subItems:
       - title: "Github"
         url: "/"
+        external: true
       - title: "Urbit Releases"
         url: "/"
+        external: true
       - title: "Runtime Releases"
         url: "/"
+        external: true
       - title: "Developer Mailing List"
         url: "/"
+        external: true
       - title: "Issue Tracker"
         url: "/"
+        external: true
       - title: "Whitepaper"
         url: "/"
+        external: true
 ---

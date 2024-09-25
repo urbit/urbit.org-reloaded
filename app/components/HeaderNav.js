@@ -65,7 +65,7 @@ export const HeaderNav = ({ nav }) => {
         <div className="inline-block font-[600] relative">
           <Link
             href="/"
-            className="relative before:content-['~']  before:absolute before:left-[-.8em] before:bottom-[.1em] w-auto"
+            className="hover:text-gray-87 before:hover:text-white relative before:content-['~']  before:absolute before:left-[-.8em] before:bottom-[.1em] w-auto"
           >
             Urbit
           </Link>
@@ -76,14 +76,20 @@ export const HeaderNav = ({ nav }) => {
             </span>
           )}
           {currentRoute.startsWith("/overview") && (
-            <Link href="/overview" className="capitalize">
-              &nbsp;:&nbsp;Overview
+            <React.Fragment>
+              &nbsp;:&nbsp;
+            <Link href="/overview" className="hover:text-gray-87 capitalize">
+              Overview
             </Link>
+            </React.Fragment>
           )}
           {currentRoute.startsWith("/grants") && (
-            <Link href="/grants" className="capitalize">
-              &nbsp;:&nbsp;Grants
+            <React.Fragment>
+            &nbsp;:&nbsp;
+            <Link href="/grants" className="hover:text-gray-87 capitalize">
+              Grants
             </Link>
+            </React.Fragment>
           )}
         </div>
       </div>

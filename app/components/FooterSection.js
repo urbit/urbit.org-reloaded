@@ -1,7 +1,8 @@
+import Link from "next/link";
+
 export const FooterSection = ({ footerData }) => {
-  // console.log(footerData);
   return (
-    <section className=" h-footer-height mb-8 text-20px pl-[3rem] text-gray-87 leading-120">
+    <section className="z-10 h-footer-height mb-8 text-20px pl-[3rem] text-gray-87 leading-120">
       <div className="grid md:grid-cols-6">
         {footerData?.map((footerItem, i) => {
           return (
@@ -10,13 +11,14 @@ export const FooterSection = ({ footerData }) => {
               <div className="flex flex-col">
                 {footerItem.subItems.map((link, i) => {
                   return (
-                    <a
+                    <Link
                       className="w-max"
                       href={link.url}
                       target={link.external ? "_blank" : "_self"}
                     >
                       {link.title}
-                    </a>
+                      {/* {link.external && (<span>↗</span>)} */}
+                    </Link>
                   );
                 })}
               </div>

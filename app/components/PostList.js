@@ -91,6 +91,7 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
             {statuses.map((status, index) => (
               <button
                 key={index}
+                className="link"
                 onClick={() => handleStatusClick(status)}
               >
                 <div className={classNames({ "text-white": selectedStatus === status })}>
@@ -105,6 +106,7 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
             {programs.map((program, index) => (
               <button
                 key={index}
+                className="link"
                 onClick={() => handleProgramClick(program)}
               >
                 <div className={classNames({ "text-white": selectedProgram === program })}>
@@ -121,13 +123,13 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
         Showing {filteredSortedPosts.length} grants
         <div className="border-b-[.7px] border-white w-full pt-21px"></div>
         {filteredSortedPosts.map((postData) => (
-          <React.Fragment key={postData.relativePath}>
+          <React.Fragment key={postData.relativePath} className=" ">
             <Link
               href={postData.relativePath}
               data-category={postData.data.category}
-              className="pt-21px text-25px"
+              className="pt-21px text-25px group hover:text-gray-87 transition-all"
             >
-              <div className={classNames("leading-120")}>
+              <div className={classNames("leading-120 ")}>
                 <div>{postData.data.title}</div>
                 <div className="flex flex-col">
                   <div className="flex flex-row">
@@ -141,7 +143,7 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
                 </div>
               </div>
               <div className={classNames("pt-4")}>{postData.data.subtitle}</div>
-              <div className={classNames("text-gray-87 !text-21px pt-8 pb-2")}>
+              <div className={classNames("text-gray-87 !text-21px pt-8 pb-2 ")}>
                 {postData.data.status}, {postData.data.category}
               </div>
             </Link>
