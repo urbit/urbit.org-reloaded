@@ -107,6 +107,9 @@ body {
     .overview-section {
       @apply grid md:grid-cols-6 gap-4 mb-[6rem] md:mb-[7rem];
     }
+    .overview-section:last-of-type {
+      @apply mb-0;
+    }
     .overview-section-title {
       @apply col-span-1 text-[2rem] md:text-20px font-[600] md:font-[400] md:mb-0 mb-8;
     }
@@ -135,7 +138,7 @@ body {
      hover:bg-gray-5a md:hover:text-foreground;
   }
   .next-button {
-    @apply hover:bg-white md:hover:text-black my-[2.5rem] leading-[1cap] text-25px font-[600] bg-gray-87 text-black rounded-[5px] px-[.5rem] py-[.5rem];
+    @apply hover:bg-white md:hover:text-black my-[2.5rem] leading-[1cap] text-25px font-[600] bg-gray-87 text-black rounded-[5px] px-[.5rem] py-[.3rem];
   }
   a, .link {
     @apply md:hover:text-white md:dark:hover:text-gray-87;
