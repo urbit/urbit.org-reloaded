@@ -12,11 +12,8 @@ export const NewsletterSignup = () => {
 
     const email = event.target.EMAIL.value;
     const script = document.createElement("script");
-    // https://studio.us14.list-manage.com/subscribe/post?u=0b4808eda26b3641ba7c0b933&amp;id=727788e290&amp;f_id=00acb7e0f0
-    // const url = `https://urbit.us11.list-manage.com/subscribe/post-json?u=972a03db9e0c6c25bb58de8c8&id=be143888d2&EMAIL=${encodeURIComponent(email)}&c=callbackFunction`;
-    const url = `https://studio.us14.list-manage.com/subscribe/post?u=0b4808eda26b3641ba7c0b933&amp;id=727788e290&amp;EMAIL=${encodeURIComponent(
-      email
-    )}&amp;c=callbackFunction`;
+    const url = `https://urbit.us11.list-manage.com/subscribe/post-json?u=972a03db9e0c6c25bb58de8c8&id=be143888d2&EMAIL=${encodeURIComponent(email)}&c=callbackFunction`;
+
 
     // Set script source to Mailchimp with callback
     script.src = url;
