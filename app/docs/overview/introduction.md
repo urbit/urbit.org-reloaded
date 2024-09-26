@@ -2,10 +2,9 @@
 title = "Introduction"
 description = "We think the internet can’t be saved."
 ---
-{% div className="overview-section"%}
-{% div className="overview-section-title"%}
-{% /div %}
-{% div className="overview-section-body"%}
+
+{% overview-section  %}
+
 We think the internet can’t be saved. The way things are going, MEGACORP will always control our apps and services because we can no longer run them ourselves.
 
 The only way out of this mess is with a completely new platform that’s owned and controlled by its users.
@@ -18,23 +17,13 @@ Urbit is designed to become an effective, customizable productivity tool for col
 
 This probably sounds crazy, so let’s get concrete and talk about (1) Urbit as a piece of technology and (2) Urbit as a user experience.
 
-{% /div %}
-{% /div %}
+{% /overview-section %}
 
-# Technology
+{% overview-section title="Technology" %}
 
-Technically, Urbit is two components: Urbit OS and Urbit ID.  Both are completely open source and MIT licensed.
+Technically, Urbit is two components: Urbit OS and Urbit ID. Both are completely open source and MIT licensed.
 
-{% div className="flex justify-between space-x-4" %}
-{% div %}
-![](https://media.urbit.org/site/understanding-urbit/uu-intro-2.svg) 
-{% /div %}
-
-{% div %}
-![](https://media.urbit.org/site/understanding-urbit/uu-intro-3.svg)
-{% /div %}
-
-{% /div %}
+{% graphic src="/media/overview_graphic.svg" alt="Urbit OS" / %}
 
 **Urbit OS** is a new, carefully architected software stack: a VM, programming language and kernel designed to run software for an individual.
 
@@ -50,8 +39,9 @@ Your Urbit ID is a short, memorable name (like ~ravmel-ropdyl) that’s a userna
 
 Urbit IDs aren’t money, but they are scarce, so each one costs something. This means that when you meet a stranger on the Urbit network, they have some skin in the game and are less likely to be a bot or a spammer.
 
-# Experience
+{% /overview-section %}
 
+{% overview-section title="Experience" %}
 We want Urbit to be a single, simple interface for your whole digital life.
 
 Over the years, Urbit has been built in public as an open source project. Anyone can join the network and check out what we’re up to. It’s a bit like signing on to IRC in the early 90s.
@@ -67,3 +57,4 @@ To see how we’re going to get there, let’s walk through these two pieces of 
 For technical people, it’s important to note that Urbit as a stack is in no way required to be used together. Don’t like our client? Feel free to build your own. Just like the Urbit ID system? No problem — use it!
 
 Ultimately, we think that new technology is most likely to get adopted if it can provide a much, much better user experience. So that’s what we’re focusing on creating.
+{% /overview-section %}

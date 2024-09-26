@@ -105,7 +105,7 @@ body {
 @layer utilities {
   .overview-page {
     .overview-section {
-      @apply grid md:grid-cols-6 gap-4 mb-[6rem] md:mb-[8rem];
+      @apply grid md:grid-cols-6 gap-4 mb-[6rem] md:mb-[7rem];
     }
     .overview-section-title {
       @apply col-span-1 text-[2rem] md:text-20px font-[600] md:font-[400] md:mb-0 mb-8;
@@ -114,7 +114,7 @@ body {
       @apply col-span-4 text-25px leading-120;     
     }
     .overview-section-body > .img-container {
-      @apply rounded-[.5rem] overflow-hidden my-8 w-full;
+      @apply rounded-[.5rem] overflow-hidden my-8 max-w-max w-full;
     }
     .overview-section-body > .img-container > img {
       @apply w-full;
