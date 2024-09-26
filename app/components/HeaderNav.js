@@ -34,7 +34,7 @@ export const HeaderNav = ({ nav }) => {
         ref={headerRef}
         className="fixed h-auto z-10 items-center bg-black dark:bg-white justify-center leading-120 container md:pt-0 md:pb-0 pt-5 pb-3"
       >
-        <div className="min-h-[4rem] mb-3 h-auto  md:flex md:flex-row md:items-center md:justify-between relative w-full">
+        <div className="md:min-h-[4rem] mb-3 h-auto  md:flex md:flex-row md:items-center md:justify-between relative w-full">
           <div className="md:absolute flex md:grid items-center justify-center md:grid-cols-6 w-full h-full ">
             <div className="col-span-1"></div>{" "}
             <div className="col-span-5 hidden md:flex w-full items-center justify-start">
@@ -83,11 +83,19 @@ export const HeaderNav = ({ nav }) => {
                 </Link>
               </React.Fragment>
             )}
-               {currentRoute.startsWith("/overview") && (
-                <div className="mt-4 md:hidden">
-                  <OverviewNav />
-                </div>
-               )}
+            {currentRoute.startsWith("/overview") && (
+              <div className="mt-4 md:hidden">
+                <OverviewNav />
+              </div>
+            )}
+            {/* {currentRoute.startsWith("/grants") && (
+              <div className="mt-4 md:hidden">
+                <span class="tracking-[.02em] font-[600]">
+                  Earn a piece of the Urbit network by developing software,
+                  creating content, growing communities, and more.
+                </span>
+              </div>
+            )} */}
           </div>
         </div>
 
