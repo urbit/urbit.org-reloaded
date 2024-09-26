@@ -1,4 +1,5 @@
 "use client";
+import SVG from "react-inlinesvg";
 
 const OverviewSection = ({ title, children }) => {
   return (
@@ -9,4 +10,16 @@ const OverviewSection = ({ title, children }) => {
   );
 };
 
-export { OverviewSection };
+const OverviewSVG = ({ src, alt }) => {
+  return <SVG src={src} alt={alt} className="w-full my-8 pt-8"></SVG> 
+};
+
+const OverviewImage = ({ src, alt }) => {
+  return (
+    <div className="img-container">
+      <img src={src} alt={alt} />
+    </div> 
+  )
+}
+
+export { OverviewSection, OverviewSVG, OverviewImage };
