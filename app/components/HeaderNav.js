@@ -32,7 +32,7 @@ export const HeaderNav = ({ nav }) => {
       )}
       <section
         ref={headerRef}
-        className="fixed h-auto items-center bg-black dark:bg-white justify-center leading-120 container md:pt-0 md:pb-0 pt-5 pb-3"
+        className="fixed h-auto z-10 items-center bg-black dark:bg-white justify-center leading-120 container md:pt-0 md:pb-0 pt-5 pb-3"
       >
         <div className="min-h-[4rem] mb-3 h-auto  md:flex md:flex-row md:items-center md:justify-between relative w-full">
           <div className="md:absolute flex md:grid items-center justify-center md:grid-cols-6 w-full h-full ">

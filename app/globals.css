@@ -146,10 +146,10 @@ body {
       @apply text-[3.75rem] font-[400] mb-8 md:mb-16 lg:mb-20 leading-[100%] my-[2.5rem];
     }
     h1[level="2"] {
-      @apply text-[1.89rem] font-[600] mb-[2.6rem];
+      @apply text-25px font-[700] mb-[2.6rem];
     }
     h1[level="3"] {
-      @apply text-25px font-[600] mb-[1.6rem];
+      @apply text-21px font-[700] mb-[1.6rem];
     }
 
     blockquote {
