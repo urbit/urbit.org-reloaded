@@ -11,7 +11,7 @@ const OverviewSection = ({ title, children }) => {
 };
 
 const OverviewSVG = ({ src, alt }) => {
-  return <SVG src={src} alt={alt} className="w-full my-8 pt-8"></SVG> 
+  return <SVG src={src} alt={alt} className="w-full my-[4rem] "></SVG> 
 };
 
 const OverviewImage = ({ src, alt }) => {
