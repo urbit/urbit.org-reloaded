@@ -159,7 +159,7 @@ body {
       @apply mb-6;
     }
     a {
-      @apply underline decoration-[.01em] underline-offset-[.1em];
+      @apply underline decoration-[.01em] underline-offset-[.1em] hover:text-gray-87;
     }
     a:after {
       @apply content-['↗'];
