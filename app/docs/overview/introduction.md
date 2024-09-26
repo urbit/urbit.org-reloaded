@@ -2,10 +2,9 @@
 title = "Introduction"
 description = "We think the internet can’t be saved."
 ---
-{% div className="overview-section"%}
-{% div className="overview-section-title"%}
-{% /div %}
-{% div className="overview-section-body"%}
+
+{% overview-section title="example" %}
+
 We think the internet can’t be saved. The way things are going, MEGACORP will always control our apps and services because we can no longer run them ourselves.
 
 The only way out of this mess is with a completely new platform that’s owned and controlled by its users.
@@ -17,6 +16,10 @@ We built this new stack to give people a single integrated tool for communicatin
 Urbit is designed to become an effective, customizable productivity tool for collaborators, and a calm noninvasive communication tool for friends and families.
 
 This probably sounds crazy, so let’s get concrete and talk about (1) Urbit as a piece of technology and (2) Urbit as a user experience.
+
+
+{% /overview-section %}
+
 
 {% /div %}
 {% /div %}

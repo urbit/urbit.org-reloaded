@@ -9,7 +9,9 @@ const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdoc'],
 }
 
-const markdocConfig = {}
+const markdocConfig = {
+  schemaPath: "./app/schema"
+}
 
 module.exports = withMarkdoc(markdocConfig)(nextConfig);
  

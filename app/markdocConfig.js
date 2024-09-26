@@ -1,6 +1,7 @@
 import { Config } from "@markdoc/markdoc";
 // import Callout from "./(blog.components)/callout";
 // import Heading from "./(blog.components)/heading";
+import {OverviewSection} from "./components/OverviewSection";
 
 const markdocConfig = {
     nodes: {
@@ -20,6 +21,16 @@ const markdocConfig = {
             }
         },
     },
+    tags: {
+        'overview-section': {
+            render: OverviewSection,
+            attributes: {
+                title: { type: String },
+            }
+
+        }
+
+    }
    
 };
 
