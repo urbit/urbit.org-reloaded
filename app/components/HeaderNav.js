@@ -39,7 +39,7 @@ export const HeaderNav = ({ nav }) => {
             <div className="col-span-1"></div>{" "}
             <div className="col-span-5 hidden md:flex w-full items-center justify-start">
               {currentRoute.startsWith("/grants") && (
-                <span class="tracking-[.02em] font-[600]">
+                <span className="tracking-[.02em] font-[600]">
                   Earn a piece of the Urbit network by developing software,
                   creating content, growing communities, and more.
                 </span>

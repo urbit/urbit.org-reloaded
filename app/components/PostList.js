@@ -123,7 +123,7 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
         <span className="leading-[1cap]">Showing {filteredSortedPosts.length} grants</span>
         <div className="border-b-[.7px] border-white w-full pt-21px"></div>
         {filteredSortedPosts.map((postData) => (
-          <React.Fragment key={postData.relativePath} className=" ">
+          <React.Fragment key={postData.relativePath}>
             <Link
               href={postData.relativePath}
               data-category={postData.data.category}
