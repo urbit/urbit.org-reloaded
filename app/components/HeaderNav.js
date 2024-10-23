@@ -27,7 +27,7 @@ export const HeaderNav = ({ nav }) => {
     <React.Fragment>
       {currentRoute == "/" && (
         <div className="absolute w-[100vw] font-[600] pb-12 flex items-center justify-center h-[100svh]">
-          <NewsletterSignup className="z-10 " />
+          {/* <NewsletterSignup className="z-10 " /> */}
         </div>
       )}
       <section
