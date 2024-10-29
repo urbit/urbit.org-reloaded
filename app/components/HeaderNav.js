@@ -7,6 +7,22 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import { NewsletterSignup } from "./NewsletterSignup";
 import SVG from "react-inlinesvg";
+import '@urbit/sigil-js'
+
+const config = {
+ point: '~hastuc-dibtux', // or 'zod'
+ size: 128,
+ background:'', 
+ foreground:'white',
+ detail:'default',
+ space:'none',
+}
+
+export const Sigil = ({ config }) => {
+ return (
+   <urbit-sigil {...config} />
+ )
+}
 
 export const HeaderNav = ({ nav }) => {
   const mobileMenuRef = useRef(null);
@@ -28,6 +44,29 @@ export const HeaderNav = ({ nav }) => {
       {currentRoute == "/" && (
         <div className="absolute w-[100vw] font-[600] pb-12 flex items-center justify-center h-[100svh]">
           {/* <NewsletterSignup className="z-10 " /> */}
+          <div className="w-[30svw] h-[20svw] border-2 border-white rounded-xl flex flex-col p-8">
+            <Sigil config={config} />
+            <div>
+              ~hastuc-dibtux
+            </div>
+            <div className= "flex flex-row">
+              <div className="flex flex-row w-full">
+                <div className="flex flex-col">
+                  <div>star</div>
+                  <div>galaxy</div>
+                </div>
+                <div className="flex flex-col">
+                  <div>xyz</div>
+                  <div>xyz</div>
+                </div>
+              </div>
+              <div className="flex flex-col justify-end w-full ">
+                123
+              </div>
+
+            </div>
+
+          </div>
         </div>
       )}
       <section

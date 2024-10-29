@@ -1,16 +1,19 @@
----
-title: Shrubbery RSS Integration
-subtitle: Pull RSS/Atom media into the namespace.
-champions:
-  - name: ~example-user
-  - name: ~example-user
-id: B0383
-date: 2024-07-19T00:00:00
-short_description: example
-category: Bounty
-status: Open
-application_link: https://google.com
----
++++
+title = "Shrubbery RSS Integration"
+subtitle = "Pull RSS/Atom media into the namespace."
+id = "B0383"
+date = "2024-07-19"
+short_description = "example"
+category = "Bounty"
+status = "Open"
+application_link = "https://google.com"
+
+[[champions]]
+name = "~example-user"
+
+[[champions]]
+name = "~example-user"
++++
 
 RSS has been an important primitive for Web 1.0, 2.0, and web3, fundamentally unchanged since 2002. There’s been renewed interest in the standard in recent years as “enshittification” became a meme and both creators and consumers more keenly felt the limits of the walled gardens that controlled their media distribution.
 

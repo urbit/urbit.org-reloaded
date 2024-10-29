@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@iarna/toml": "^2.2.5",
     "@markdoc/markdoc": "^0.4.0",
     "@markdoc/next.js": "^0.3.7",
+    "@urbit/sigil-js": "^2.2.0",
     "classnames": "^2.5.1",
     "countup.js": "^2.8.0",
     "gray-matter": "^4.0.3",

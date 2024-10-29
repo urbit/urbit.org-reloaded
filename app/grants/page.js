@@ -1,5 +1,5 @@
 import React from "react";
-import { getPostsTree, getYaml } from "../lib/queries";
+import { getPostsTree, getYaml, getToml } from "../lib/queries";
 import { PostList } from "../components/PostList";
 
 export default async function BlogHome() {
@@ -18,7 +18,7 @@ export default async function BlogHome() {
   ]
   const allPostsYaml = [];
   await Promise.all(posts.map(async (post) => {
-    const postYaml = await getYaml(post.relativePath);
+    const postYaml = await getToml(post.relativePath);
     allPostsYaml.push({
       data: postYaml.data,
       relativePath: post.relativePath,
