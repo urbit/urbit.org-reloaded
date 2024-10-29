@@ -22,20 +22,6 @@ nav:
 footer:
   - column_label: col1
     subItems:
-      - title: Technical Journal
-        url: "/"
-        external: true
-      - title: Docs
-        url: "/"
-        external: true
-      - title: Roadmap
-        url: "/"
-        external: true
-      - title: Network Explorer
-        url: "/"
-        external: true
-  - column_label: col2
-    subItems:
       - title: "@urbit"
         url: "/"
         external: true
@@ -45,24 +31,26 @@ footer:
       - title: "support@urbit.org"
         url: "/"
         external: true
+  - column_label: col2
+    subItems:
+      - title: Technical Journal
+        url: "/"
+        external: true
+      - title: Network Explorer
+        url: "/"
+        external: true
+      - title: Whitepaper
+        url: "/"
+        external: true
   - column_label: col3
     subItems:
       - title: "Github"
-        url: "/"
-        external: true
-      - title: "Urbit Releases"
-        url: "/"
-        external: true
-      - title: "Runtime Releases"
         url: "/"
         external: true
       - title: "Developer Mailing List"
         url: "/"
         external: true
       - title: "Issue Tracker"
-        url: "/"
-        external: true
-      - title: "Whitepaper"
         url: "/"
         external: true
 ---
