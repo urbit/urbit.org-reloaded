@@ -11,7 +11,7 @@ export const SigilCard = () => {
     space: "none",
   };
   return (
-    <div className="absolute w-[100vw] font-[600] pb-12 flex items-center justify-center h-[100svh]">
+    <div className="font-[600] flex items-center justify-center">
       {/* <NewsletterSignup className="z-10 " /> */}
       <div className="w-[30svw] h-[20svw] border-2 border-white rounded-xl flex flex-col justify-between p-8">
         <urbit-sigil {...config} />

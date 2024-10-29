@@ -7,9 +7,8 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import { NewsletterSignup } from "./NewsletterSignup";
 import SVG from "react-inlinesvg";
-import { SigilCard } from "./SigilCard";
 
-export const HeaderNav = ({ nav }) => {
+export const HeaderNav = ({ nav, homepage}) => {
   const mobileMenuRef = useRef(null);
   const headerRef = useRef(null);
 
@@ -26,9 +25,22 @@ export const HeaderNav = ({ nav }) => {
 
   return (
     <React.Fragment>
-      {currentRoute == "/" && (
-        <SigilCard />
-      )}
+      {currentRoute == "/" ? (
+        <div className="text-[60px] leading-[120%] ">
+          <h1>~{homepage.headline}</h1>
+          <div className="flex flex-row gap-8 text-gray-400 underline decoration-2">
+
+          {homepage.links.map((link, i) => {
+            return (
+              <Link href={link.href} key={link.href} target={link.external ? "_blank" : ""}>
+                {link.title}
+              </Link>
+            )
+          })}
+          </div>
+        </div>
+      ) :
+      (
       <section
         ref={headerRef}
         className="fixed h-auto z-10 items-center bg-black dark:bg-white justify-center leading-120 container md:pt-0 md:pb-0 pt-5 pb-3"
@@ -98,7 +110,7 @@ export const HeaderNav = ({ nav }) => {
           </div>
         </div>
 
-        {currentRoute == "/" && (
+        {currentRoute == "/get-on-the-network" && (
           <React.Fragment>
             <div className="grid grid-cols-6 gap-x-4 font-[600] mt-[3.06rem]">
               <ul className="flex flex-col text-gray-87 ">
@@ -121,6 +133,7 @@ export const HeaderNav = ({ nav }) => {
           </React.Fragment>
         )}
       </section>
+      )}
     </React.Fragment>
   );
 };

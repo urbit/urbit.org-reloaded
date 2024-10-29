@@ -2,12 +2,24 @@
 
 title: Urbit
 subtitle: Leave the internet behind
-headline: Urbit is a new computing paradigm that provides complete ownership of your digital world 
+# headline: Urbit is a new computing paradigm that provides complete ownership of your digital world 
 site_metadata:
   title: Site Title
   description: Site Description Placeholder
   canonicalUrl: "https://urbit.org"
   siteImage: "/images/logo.png"
+homepage:
+  headline: "Urbit : Rebuilding the internet for human dignity and autonomy."
+  links:
+    - title: "Get on the network"
+      href: "/get-on-the-network"
+      external: false
+    - title: "Log-in"
+      href: "/"
+      external: false
+    - title: "Docs"
+      href: "https://docs.urbit.org/"
+      external: true
 nav:
 - title: Overview
   url: "/overview"
@@ -18,7 +30,6 @@ nav:
 - title: Grants
   url: "/grants"
   external: false
-
 footer:
   - column_label: col1
     subItems:
