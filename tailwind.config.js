@@ -59,6 +59,7 @@ module.exports = {
         "gray": {
           "5a": "#5a5a55",
           "87": "#878787",
+          "d9": "#d9d9d9",
           "f5": "#f5f5f5",
         },
         "white": "var(--foreground)",

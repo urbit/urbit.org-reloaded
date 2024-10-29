@@ -11,12 +11,20 @@ const Loader = () => <div>Loading...</div>;
 const PostListContent = ({ allPostsYaml, statuses, programs }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
-  
+
   // Initialize state based on URL parameters or default values
-  const [selectedCategory, setSelectedCategory] = useState(searchParams.get("category") || null);
-  const [selectedStatus, setSelectedStatus] = useState(searchParams.get("status") || null);
-  const [selectedProgram, setSelectedProgram] = useState(searchParams.get("program") || null);
-  const [sortOption, setSortOption] = useState(searchParams.get("sort") || null);
+  const [selectedCategory, setSelectedCategory] = useState(
+    searchParams.get("category") || null
+  );
+  const [selectedStatus, setSelectedStatus] = useState(
+    searchParams.get("status") || null
+  );
+  const [selectedProgram, setSelectedProgram] = useState(
+    searchParams.get("program") || null
+  );
+  const [sortOption, setSortOption] = useState(
+    searchParams.get("sort") || null
+  );
   const [filteredSortedPosts, setFilteredSortedPosts] = useState(allPostsYaml);
 
   // const categoryList = categoryData;
@@ -56,12 +64,25 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
     setFilteredSortedPosts(posts);
 
     // Update the URL whenever state changes
-    updateUrlParams(selectedCategory, selectedStatus, selectedProgram, sortOption);
-  }, [selectedCategory, selectedStatus, selectedProgram, sortOption, allPostsYaml]);
+    updateUrlParams(
+      selectedCategory,
+      selectedStatus,
+      selectedProgram,
+      sortOption
+    );
+  }, [
+    selectedCategory,
+    selectedStatus,
+    selectedProgram,
+    sortOption,
+    allPostsYaml,
+  ]);
 
   // Filter by category handler
   const handleCategoryClick = (category) => {
-    setSelectedCategory((prevCategory) => (prevCategory === category ? null : category));
+    setSelectedCategory((prevCategory) =>
+      prevCategory === category ? null : category
+    );
   };
 
   // Filter by status handler
@@ -71,7 +92,9 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
 
   // Filter by program handler
   const handleProgramClick = (program) => {
-    setSelectedProgram((prevProgram) => (prevProgram === program ? null : program));
+    setSelectedProgram((prevProgram) =>
+      prevProgram === program ? null : program
+    );
   };
 
   // Sort by option handler
@@ -94,7 +117,11 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
                 className="link"
                 onClick={() => handleStatusClick(status)}
               >
-                <div className={classNames({ "text-white": selectedStatus === status })}>
+                <div
+                  className={classNames({
+                    "text-white": selectedStatus === status,
+                  })}
+                >
                   <span>{status}</span>
                 </div>
               </button>
@@ -109,7 +136,11 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
                 className="link"
                 onClick={() => handleProgramClick(program)}
               >
-                <div className={classNames({ "text-white": selectedProgram === program })}>
+                <div
+                  className={classNames({
+                    "text-white": selectedProgram === program,
+                  })}
+                >
                   <span>{program}</span>
                 </div>
               </button>
@@ -120,25 +151,26 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
 
       {/* Post List */}
       <div className="mb-4 mt-[.2em] flex flex-col col-span-4">
-        <span className="leading-[1cap]">Showing {filteredSortedPosts.length} grants</span>
-        <div className="border-b-[.7px] border-white w-full pt-21px"></div>
+        <span className="leading-[1cap] mb-4">
+          Showing {filteredSortedPosts.length} grants
+        </span>
+        {/* <div className="border-b-[.7px] border-white w-full pt-21px"></div> */}
         {filteredSortedPosts.map((postData) => {
           const { title, date, extra, taxonomies } = postData.data;
-          let reward = (extra?.reward)?.match(/\d+/)[0];
-          console.log(title, reward)
-
+          let reward = extra?.reward?.match(/\d+/)[0];
+          console.log(title, reward);
           // console.log(postData.data)
-          return (     
+          return (
             <React.Fragment key={postData.relativePath}>
               <Link
                 href={postData.relativePath}
                 data-category={taxonomies?.grant_type}
-                className="pt-12px text-25px group hover:text-gray-87 font-[400]"
+                className="pt-[10px] pb-[10px] px-[9px] bg-gray-d9 text-black text-25px group rounded-[5px] mb-2 hover:text-gray-87 font-[400]"
               >
                 <div className={classNames("leading-120 ")}>
                   <div>{title}</div>
                   <div className="flex flex-col">
-                    <div className="flex flex-row">
+                    <div className="flex flex-row text-gray-87">
                       Reward:
                       <div className="flex flex-row ml-[.2em]">
                         {[...Array(reward)].map((_, i) => (
@@ -149,20 +181,34 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
                   </div>
                 </div>
                 <div className={classNames("pt-5")}>{extra?.description}</div>
-                <div className={classNames("text-gray-87 !text-21px pt-6 pb-2 ")}>
-                  {taxonomies?.grant_type},&nbsp;{extra?.completed ? "Completed" : "In Progress"}
+                <div
+                  className={classNames("text-gray-87 !text-21px pt-6 flex gap-x-1")}
+                >
+                  <span className="bg-black text-white !font-[600] rounded-[5px] px-[6px] py-[2px]">
+                    {extra?.completed ? "Completed" : "Open"}
+                  </span>
+                  {taxonomies?.grant_type &&
+                  <span className="bg-gray-87 text-black rounded-[5px] px-[6px] py-[2px]">
+                    {taxonomies?.grant_type}
+                    </span>
+                  }
                 </div>
               </Link>
-              <div className="border-b-[.7px] border-white w-full"></div>
+              {/* <div className="border-b-[.7px] border-white w-full"></div> */}
             </React.Fragment>
-          )}
-        )}
+          );
+        })}
       </div>
     </div>
   );
 };
 
-export const PostList = ({ allPostsYaml, categoryData, statuses, programs }) => {
+export const PostList = ({
+  allPostsYaml,
+  categoryData,
+  statuses,
+  programs,
+}) => {
   return (
     <Suspense fallback={<Loader />}>
       <PostListContent

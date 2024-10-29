@@ -123,7 +123,6 @@ export const HeaderNav = ({ nav, homepage }) => {
   );
 };
 
-
 const OverviewNav = () => {
   const currentRoute = usePathname();
   return (
@@ -135,19 +134,25 @@ const OverviewNav = () => {
         <span className="nav-button">Introduction</span>
       </Link>
       <Link
-        className={currentRoute === "/overview/urbit-os" ? "text-white" : "text-gray-87"}
+        className={
+          currentRoute === "/overview/urbit-os" ? "text-white" : "text-gray-87"
+        }
         href="/overview/urbit-os"
       >
         <span className="nav-button">Urbit OS</span>
       </Link>
       <Link
-        className={currentRoute === "/overview/urbit-id" ? "text-white" : "text-gray-87"}
+        className={
+          currentRoute === "/overview/urbit-id" ? "text-white" : "text-gray-87"
+        }
         href="/overview/urbit-id"
       >
         <span className="nav-button">Urbit ID</span>
       </Link>
       <Link
-        className={currentRoute === "/overview/history" ? "text-white" : "text-gray-87"}
+        className={
+          currentRoute === "/overview/history" ? "text-white" : "text-gray-87"
+        }
         href="/overview/history"
       >
         <span className="nav-button">History</span>
@@ -155,24 +160,28 @@ const OverviewNav = () => {
     </ul>
   );
 };
-const GlobalNav = ({nav}) => {
+const GlobalNav = ({ nav }) => {
   const currentRoute = usePathname();
 
   return (
     <ul className="flex mb-0 flex-row gap-x-4 pt-0">
-       {nav?.map((navItem, i) => {
-   return (
-     <Link
-      className={currentRoute === navItem.url ? "text-white" : "text-gray-87"}
-       key={`${navItem} + ${i}`}
-       href={navItem.url}
-       target={navItem.external ? "_blank" : ""}
-     >
-      {}
-       <span className="nav-button">{navItem.title}</span>
-     </Link>
-   );
- })}
+      {nav?.map((navItem, i) => {
+        return (
+          <Link
+            className={
+              currentRoute.startsWith(navItem.url)
+                ? "text-white"
+                : "text-gray-87"
+            }
+            key={`${navItem} + ${i}`}
+            href={navItem.url}
+            target={navItem.external ? "_blank" : ""}
+          >
+            {}
+            <span className="nav-button">{navItem.title}</span>
+          </Link>
+        );
+      })}
       {/* <Link
         href="/overview"
         className={currentRoute === "/overview" ? "text-white" : "text-gray-87"}

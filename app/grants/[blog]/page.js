@@ -46,13 +46,9 @@ export default async function PostPage({ params }) {
             <span className="">{formatDate(date)}</span>
             <span className="">Reward: {extra.reward} </span>
             <span className="">ID: {extra?.grant_id}</span>
-            <span className="">
-              Champion(s): {formatAuthors(postData.frontMatter.champions)}
-            </span>
+            <span className="">Champion(s): {extra?.champion}</span>
           </div>
-          <div
-            className="my-[2.8rem]"
-          >
+          <div className="my-[2.8rem]">
             {/* <Link className="apply-button" href={postData.frontMatter?.application_link}>
               Apply
             </Link> */}
