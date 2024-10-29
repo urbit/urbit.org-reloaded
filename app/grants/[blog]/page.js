@@ -25,10 +25,11 @@ export async function generateStaticParams() {
 export default async function PostPage({ params }) {
   const postSlug = `/grants/${params.blog}.md`; // Append .md here to use in the file path
   const postData = await getMarkdownContent(postSlug, "toml");
+  const { title, date, extra, taxonomies } = postData.frontMatter;
   const postMeta = await getYaml(postSlug);
   const config = await getYaml("/config.md");
 
-  const components = postData.components;
+  // const components = postData?.components;
 
   return (
     <section className="grid md:grid-cols-6 mb-32 mt-[4rem] md:mt-[6rem] container">
@@ -38,13 +39,13 @@ export default async function PostPage({ params }) {
       <div className="col-span-4 tracking-[.01em]">
         <div>
           <div className="flex flex-col text-[2.8rem] md:text-25px leading-120">
-            <span className="font-[700]">{postData.frontMatter.title}</span>
-            <span className="">{postData.frontMatter.subtitle}</span>
+            <span className="font-[700]">{title}</span>
+            <span className="">{extra?.description}</span>
           </div>
           <div className="flex flex-col mt-8 text-25px md:text-21px leading-120">
-            <span className="">{formatDate(postData.frontMatter.date)}</span>
-            <span className="">Reward: {postData.frontMatter.reward} </span>
-            <span className="">ID: {postData.frontMatter.id}</span>
+            <span className="">{formatDate(date)}</span>
+            <span className="">Reward: {extra.reward} </span>
+            <span className="">ID: {extra?.grant_id}</span>
             <span className="">
               Champion(s): {formatAuthors(postData.frontMatter.champions)}
             </span>
@@ -58,7 +59,7 @@ export default async function PostPage({ params }) {
           </div>
         </div>
         <div className="">
-          {Markdoc.renderers.react(postData.content, React, { components })}
+          {Markdoc.renderers.react(postData.content, React)}
         </div>
       </div>
     </section>
