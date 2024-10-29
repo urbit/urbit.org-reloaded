@@ -11,7 +11,7 @@ const Loader = () => <div>Loading...</div>;
 const PostListContent = ({ allPostsYaml, statuses, programs }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
-
+  
   // Initialize state based on URL parameters or default values
   const [selectedCategory, setSelectedCategory] = useState(searchParams.get("category") || null);
   const [selectedStatus, setSelectedStatus] = useState(searchParams.get("status") || null);
@@ -122,34 +122,41 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
       <div className="mb-4 mt-[.2em] flex flex-col col-span-4">
         <span className="leading-[1cap]">Showing {filteredSortedPosts.length} grants</span>
         <div className="border-b-[.7px] border-white w-full pt-21px"></div>
-        {filteredSortedPosts.map((postData) => (
-          <React.Fragment key={postData.relativePath}>
-            <Link
-              href={postData.relativePath}
-              data-category={postData.data.category}
-              className="pt-12px text-25px group hover:text-gray-87 font-[400]"
-            >
-              <div className={classNames("leading-120 ")}>
-                <div>{postData.data.title}</div>
-                <div className="flex flex-col">
-                  <div className="flex flex-row">
-                    Reward:
-                    <div className="flex flex-row ml-[.2em]">
-                      {[...Array(postData?.data?.reward)].map((_, i) => (
-                        <div key={i}></div>
-                      ))}
+        {filteredSortedPosts.map((postData) => {
+          const { title, date, extra, taxonomies } = postData.data;
+          let reward = (extra?.reward)?.match(/\d+/)[0];
+          console.log(title, reward)
+
+          // console.log(postData.data)
+          return (     
+            <React.Fragment key={postData.relativePath}>
+              <Link
+                href={postData.relativePath}
+                data-category={taxonomies?.grant_type}
+                className="pt-12px text-25px group hover:text-gray-87 font-[400]"
+              >
+                <div className={classNames("leading-120 ")}>
+                  <div>{title}</div>
+                  <div className="flex flex-col">
+                    <div className="flex flex-row">
+                      Reward:
+                      <div className="flex flex-row ml-[.2em]">
+                        {[...Array(reward)].map((_, i) => (
+                          <div key={i}></div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className={classNames("pt-5")}>{postData.data.subtitle}</div>
-              <div className={classNames("text-gray-87 !text-21px pt-6 pb-2 ")}>
-                {postData.data.status}, {postData.data.category}
-              </div>
-            </Link>
-            <div className="border-b-[.7px] border-white w-full"></div>
-          </React.Fragment>
-        ))}
+                <div className={classNames("pt-5")}>{extra?.description}</div>
+                <div className={classNames("text-gray-87 !text-21px pt-6 pb-2 ")}>
+                  {taxonomies?.grant_type},&nbsp;{extra?.completed ? "Completed" : "In Progress"}
+                </div>
+              </Link>
+              <div className="border-b-[.7px] border-white w-full"></div>
+            </React.Fragment>
+          )}
+        )}
       </div>
     </div>
   );

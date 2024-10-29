@@ -24,7 +24,7 @@ export async function generateStaticParams() {
 
 export default async function PostPage({ params }) {
   const postSlug = `/grants/${params.blog}.md`; // Append .md here to use in the file path
-  const postData = await getMarkdownContent(postSlug);
+  const postData = await getMarkdownContent(postSlug, "toml");
   const postMeta = await getYaml(postSlug);
   const config = await getYaml("/config.md");
 
@@ -52,9 +52,9 @@ export default async function PostPage({ params }) {
           <div
             className="my-[2.8rem]"
           >
-            <Link className="apply-button" href={postData.frontMatter.application_link}>
+            {/* <Link className="apply-button" href={postData.frontMatter?.application_link}>
               Apply
-            </Link>
+            </Link> */}
           </div>
         </div>
         <div className="">

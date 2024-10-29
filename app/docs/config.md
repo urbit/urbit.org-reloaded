@@ -21,14 +21,26 @@ homepage:
       href: "https://docs.urbit.org/"
       external: true
 nav:
-- title: Overview
-  url: "/overview"
+- title: Get on the Network
+  url: "/get-on-the-network"
   external: false
 - title: Docs
   url: "https://docs.urbit.org/"
+  external: true
+- title: Overview
+  url: "/overview"
+  external: false
+- title: Ecosystem
+  url: "/ecosystem"
   external: false
 - title: Grants
   url: "/grants"
+  external: false
+- title: Events
+  url: "/events"
+  external: false
+- title: Blog
+  url: "/blog"
   external: false
 footer:
   - column_label: col1
