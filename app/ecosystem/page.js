@@ -43,8 +43,8 @@ export default async function EcosystemHome() {
         </p>
       </Section>
 
-      <section className="w-full">
-        <h1 className="">Apps</h1>
+      <section className="w-full mb-24">
+        <h1 className="mb-4">Apps</h1>
         <div className="grid grid-cols-4 grid-rows-3 w-full gap-4">
           {allAppsFrontMatter.map((app, i) => {
             return (
@@ -65,26 +65,56 @@ export default async function EcosystemHome() {
         </div>
       </section>
 
-      <section>
-        <h1 className="">Podcasts</h1>
-        {allPodcastsFrontMatter.map((podcast, i) => {
-          return (
-            <div key={i}>
-              <h1>{podcast.data.title}</h1>
-            </div>
-          );
-        })}
+      <section className="mb-24 overflow-x-auto ">
+        <div className="overflow-x-auto">
+          
+        <h1 className="mb-4">Podcasts</h1>
+        <div className="flex flex-row overflow-x-auto w-[100svw] gap-4">
+          {allPodcastsFrontMatter.map((podcast, i) => {
+            return (
+              <div
+                className="flex !w-[800px] flex-col h-auto bg-white rounded-[20px] overflow-hidden"
+                key={i}
+              >
+                <div className="h-[19vw] min-h-[240px]">intro</div>
+                <div className="bg-gray-d9 flex-grow h-auto text-black p-4">
+                  <h1>{podcast.data.title}</h1>
+                  <h3 className="text-gray-87">
+                    {/* <p className="text-ellipsis">{app.data.description}</p> */}
+                  </h3>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        </div>
       </section>
 
-      <section>
-        <h1 className="">Talks</h1>
-        {allTalksFrontMatter.map((talk, i) => {
-          return (
-            <div key={i}>
-              <h1>{talk.data.title}</h1>
-            </div>
-          );
-        })}
+      <section className="mb-24 overflow-x-auto ">
+        <div className="overflow-x-auto">
+          
+        <h1 className="mb-4">Talks</h1>
+        <div className="flex flex-row w-[auto] overflow-hidden gap-4">
+          {allTalksFrontMatter.map((talk, i) => {
+            return (
+              <div
+                className="flex !w-[800px] flex-col h-auto bg-white rounded-[20px] overflow-hidden"
+                key={i}
+              >
+                <div className="h-[19vw] min-h-[240px]">intro</div>
+                <div className="bg-gray-d9 flex-grow h-auto text-black p-4">
+                <h1>{talk.data.title}</h1>
+                <h3 className="text-gray-87">
+                    {/* <p className="text-ellipsis">{app.data.description}</p> */}
+                  </h3>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        </div>
       </section>
 
       <Section title="Companies">
