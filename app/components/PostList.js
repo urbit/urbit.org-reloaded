@@ -8,7 +8,7 @@ import Link from "next/link";
 // Loader component to show while the page is waiting for the router
 const Loader = () => <div>Loading...</div>;
 
-const PostListContent = ({ allPostsYaml, statuses, programs }) => {
+const PostListContent = ({ allPostFrontMatter, statuses, programs }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -25,7 +25,7 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
   const [sortOption, setSortOption] = useState(
     searchParams.get("sort") || null
   );
-  const [filteredSortedPosts, setFilteredSortedPosts] = useState(allPostsYaml);
+  const [filteredSortedPosts, setFilteredSortedPosts] = useState(allPostFrontMatter);
 
   // const categoryList = categoryData;
 
@@ -43,16 +43,16 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
 
   // Handle filtering and sorting logic within an effect
   useEffect(() => {
-    let posts = [...allPostsYaml];
+    let posts = [...allPostFrontMatter];
 
     // Apply category filtering
     if (selectedCategory) {
-      posts = posts.filter((post) => post.data.category === selectedCategory);
+      posts = posts.filter((post) => post?.taxonomies?.grant_type === selectedCategory);
     }
 
-    // Apply status filtering
+    // Apply status filteringselec
     if (selectedStatus) {
-      posts = posts.filter((post) => post.data.status === selectedStatus);
+      posts = posts.filter((post) => post.extra.status === selectedStatus);
     }
 
     // Apply program filtering
@@ -75,7 +75,7 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
     selectedStatus,
     selectedProgram,
     sortOption,
-    allPostsYaml,
+    allPostFrontMatter,
   ]);
 
   // Filter by category handler
@@ -204,7 +204,7 @@ const PostListContent = ({ allPostsYaml, statuses, programs }) => {
 };
 
 export const PostList = ({
-  allPostsYaml,
+  allPostFrontMatter,
   categoryData,
   statuses,
   programs,
@@ -212,7 +212,7 @@ export const PostList = ({
   return (
     <Suspense fallback={<Loader />}>
       <PostListContent
-        allPostsYaml={allPostsYaml}
+        allPostFrontMatter={allPostFrontMatter}
         categoryData={categoryData}
         statuses={statuses}
         programs={programs}

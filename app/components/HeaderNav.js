@@ -5,8 +5,6 @@ import { useEffect, useRef, useState } from "react";
 
 import React from "react";
 import { usePathname } from "next/navigation";
-import { NewsletterSignup } from "./NewsletterSignup";
-import SVG from "react-inlinesvg";
 
 export const HeaderNav = ({ nav, homepage }) => {
   const mobileMenuRef = useRef(null);
@@ -26,8 +24,8 @@ export const HeaderNav = ({ nav, homepage }) => {
   return (
     <React.Fragment>
       {currentRoute == "/" ? (
-        <div className="text-[60px] leading-[120%] ">
-          <h1>~{homepage.headline}</h1>
+        <div className="headline relative before:content-['~'] before:absolute before:left-[-.6em] before:top-[-.05em] text-[60px] leading-[120%] mt-6 ml-20 mr-8">
+          <h1>{homepage.headline}</h1>
           <div className="flex flex-row gap-8 text-gray-400 underline decoration-2">
             {homepage.links.map((link, i) => {
               return (

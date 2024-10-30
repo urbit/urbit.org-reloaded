@@ -16,10 +16,10 @@ export default async function BlogHome() {
     "Proposal", 
     "Bounty"
   ]
-  const allPostsYaml = [];
+  const allPostFrontMatter = [];
   await Promise.all(posts.map(async (post) => {
     const postYaml = await getToml(post.relativePath);
-    allPostsYaml.push({
+    allPostFrontMatter.push({
       data: postYaml.data,
       relativePath: post.relativePath,
       slug: post.slug 
@@ -28,7 +28,7 @@ export default async function BlogHome() {
 
   return (
     <div className="container mb-32 md:mt-[3.06rem]">
-      <PostList allPostsYaml={allPostsYaml} statuses={statuses} programs={programs} />
+      <PostList allPostFrontMatter={allPostFrontMatter} statuses={statuses} programs={programs} />
     </div>
   )
 }
