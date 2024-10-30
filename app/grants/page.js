@@ -1,11 +1,9 @@
 import React from "react";
-import { getPostsTree, getYaml, getToml } from "../lib/queries";
+import { getPostsTree, getToml } from "../lib/queries";
 import { PostList } from "../components/PostList";
 
-export default async function BlogHome() {
+export default async function GrantsHome() {
   const posts = await getPostsTree("grants/");
-  const config = await getYaml("/config.md");
-  // const categories = config.data.blog_metadata.categories;
 
   const statuses = [
     "Open",
