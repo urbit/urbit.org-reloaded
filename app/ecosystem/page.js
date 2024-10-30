@@ -1,41 +1,38 @@
 import React from "react";
 import { getPostsTree, getYaml, getToml } from "../lib/queries";
-// import { PostList } from "../components/PostList";
 
 export default async function EcosystemHome() {
-  // const posts = await getPostsTree("grants/");
-    const paths = {
-      apps: { path: "ecosystem/apps", frontMatter: [] },
-      articles: { path: "ecosystem/articles", frontMatter: [] },
-      orgs: { path: "ecosystem/orgs", frontMatter: [] },
-      podcasts: { path: "ecosystem/podcasts", frontMatter: [] },
-      talks: { path: "ecosystem/talks", frontMatter: [] },
-    };
-  
-    // Load posts tree for each path
-    await Promise.all(
-      Object.keys(paths).map(async (key) => {
-        const tree = await getPostsTree(paths[key].path);
-  
-        await Promise.all(
-          tree.map(async (post) => {
-            const frontMatter = await getToml(post.relativePath);
-            paths[key].frontMatter.push({
-              data: frontMatter.data,
-              relativePath: post.relativePath,
-              slug: post.slug,
-            });
-          })
-        );
-      })
-    );
-  
-    // You can now access each type of front matter like:
-    const allAppsFrontMatter = paths.apps.frontMatter;
-    const allArticlesFrontMatter = paths.articles.frontMatter;
-    const allOrgsFrontMatter = paths.orgs.frontMatter;
-    const allPodcastsFrontMatter = paths.podcasts.frontMatter;
-    const allTalksFrontMatter = paths.talks.frontMatter;
+  const paths = {
+    apps: { path: "ecosystem/apps", frontMatter: [] },
+    articles: { path: "ecosystem/articles", frontMatter: [] },
+    orgs: { path: "ecosystem/orgs", frontMatter: [] },
+    podcasts: { path: "ecosystem/podcasts", frontMatter: [] },
+    talks: { path: "ecosystem/talks", frontMatter: [] },
+  };
+
+  // Load posts tree for each path
+  await Promise.all(
+    Object.keys(paths).map(async (key) => {
+      const tree = await getPostsTree(paths[key].path);
+
+      await Promise.all(
+        tree.map(async (post) => {
+          const frontMatter = await getToml(post.relativePath);
+          paths[key].frontMatter.push({
+            data: frontMatter.data,
+            relativePath: post.relativePath,
+            slug: post.slug,
+          });
+        })
+      );
+    })
+  );
+
+  const allAppsFrontMatter = paths.apps.frontMatter;
+  const allArticlesFrontMatter = paths.articles.frontMatter;
+  const allOrgsFrontMatter = paths.orgs.frontMatter;
+  const allPodcastsFrontMatter = paths.podcasts.frontMatter;
+  const allTalksFrontMatter = paths.talks.frontMatter;
 
   return (
     <div className="container mb-32 md:mt-[3.06rem]">

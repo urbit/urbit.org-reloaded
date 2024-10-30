@@ -4,11 +4,9 @@ import Markdoc from "@markdoc/markdoc";
 import React from "react";
 import { glob } from "glob";
 import path from "path";
-import classNames from "classnames";
 import ThemeManager from "../../components/ThemeManager";
-import Link from "next/link";
 
-const BLOG_PATH = "app/docs/grants";
+const BLOG_PATH = "app/content/grants";
 const POSTS_DIR = path.join(process.cwd(), BLOG_PATH);
 
 export async function generateStaticParams() {
