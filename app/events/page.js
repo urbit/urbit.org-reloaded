@@ -4,8 +4,8 @@ import { getPostsTree, getYaml, getToml } from "../lib/queries";
 
 export default async function EventsHome() {
   const paths = {
-    events: { path: "events/meetups", frontMatter: [] },
-    meetups: { path: "ecosystem/articles", frontMatter: [] },
+    events: { path: "events/", frontMatter: [] },
+    communities: { path: "communities/", frontMatter: [] },
   };
 
   // Load posts tree for each path
@@ -26,5 +26,29 @@ export default async function EventsHome() {
     })
   );
 
-  return <div className="container mb-32 md:mt-[3.06rem]"></div>;
+  const allCommunitiesFrontMatter = paths.communities.frontMatter;
+  const allEventsFrontMatter = paths.events.frontMatter;
+  
+  return <div className="container mb-32 md:mt-[3.06rem]">
+    <section>
+      <h1 className="underline text-[3rem] my-8">Events</h1>
+      {allEventsFrontMatter.map((event, i) => {
+        return (
+          <div key={i}>
+            <h1>{event.data.title}</h1>
+          </div>
+        );
+      })}
+    </section>
+    <section>
+      <h1 className="underline text-[3rem] my-8">Meetups</h1>
+      {allCommunitiesFrontMatter.map((event, i) => {
+        return (
+          <div key={i}>
+            <h1>{event.data.title}</h1>
+          </div>
+        );
+      })}
+    </section>
+  </div>;
 }
