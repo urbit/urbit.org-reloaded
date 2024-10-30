@@ -27,28 +27,78 @@ export default async function EventsHome() {
   );
 
   const allCommunitiesFrontMatter = paths.communities.frontMatter;
+  const upcomingEvents = paths.events.frontMatter.filter((event) => {
+    return new Date(event.data.starts) > new Date();
+  });
+  const pastEvents = paths.events.frontMatter.filter((event) => {
+    return new Date(event.data.starts) < new Date();
+  });
+
   const allEventsFrontMatter = paths.events.frontMatter;
-  
-  return <div className="container mb-32 md:mt-[3.06rem]">
-    <section>
-      <h1 className="underline text-[3rem] my-8">Events</h1>
-      {allEventsFrontMatter.map((event, i) => {
-        return (
-          <div key={i}>
-            <h1>{event.data.title}</h1>
+
+  return (
+    <div className="container mb-32 md:mt-[3.06rem]">
+      <p>Explore Urbit and our community, in-person and online.</p>
+      <br />
+      <Section title="Upcoming">
+        {upcomingEvents.map((event, i) => {
+          return <Event key={event} event={event.data} />;
+        })}
+      </Section>
+      <Section title="Meetups">
+        <p>
+          Urbit has meetups worldwide. Join your local communities or start your
+          own.
+        </p>
+        <br />
+        {allCommunitiesFrontMatter.map((event, i) => {
+          return (
+            <div key={i}>
+              <h1>{event.data.title}</h1>
+            </div>
+          );
+        })}
+      </Section>
+      <Section title="Calendar"></Section>
+      <Section title="Past Events">
+        <div className="col-span-1">
+          <h1 className="8">Past Events</h1>
+        </div>
+        <div className="col-span-5">
+          <div className="grid grid-cols-2 gap-x-12">
+            {pastEvents.map((event, i) => {
+              return (
+                <div key={event + i}>
+                  <Event event={event.data} />
+                </div>
+              );
+            })}
           </div>
-        );
-      })}
-    </section>
-    <section>
-      <h1 className="underline text-[3rem] my-8">Meetups</h1>
-      {allCommunitiesFrontMatter.map((event, i) => {
-        return (
-          <div key={i}>
-            <h1>{event.data.title}</h1>
-          </div>
-        );
-      })}
-    </section>
-  </div>;
+        </div>
+      </Section>
+    </div>
+  );
 }
+
+export const Section = ({ title, children }) => {
+  return (
+    <section className="grid grid-cols-6 w-full h-full mb-12 pt-4 border-t-[1.2px] border-gray-87">
+      <div className="col-span-1">
+        <h1 className="8">{title}</h1>
+      </div>
+      <div className="col-span-5">{children}</div>
+    </section>
+  );
+};
+export const Event = ({ event }) => {
+  return (
+    <div className="eventblock mb-12">
+      <h1 className="font-bold">{event.title}</h1>
+      <div className="mb-4">
+        {event.starts} — {event.ends}{" "}
+      </div>
+      <div className="mb-4">{event?.description}</div>
+      <div>{event.location}</div>
+    </div>
+  );
+};
