@@ -100,7 +100,12 @@ body {
 
 @layer components {
   .container {
-    @apply max-w-[--site-max-width] px-[20px] md:px-[3rem];  
+    @apply 
+    max-w-[--site-max-width] 
+    /* max-w-[100%] */
+    mx-auto
+    px-[20px]
+    md:px-[3rem];  
   }
 }
 @layer utilities {

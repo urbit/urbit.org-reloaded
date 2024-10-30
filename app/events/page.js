@@ -82,7 +82,7 @@ export default async function EventsHome() {
 
 export const Section = ({ title, children }) => {
   return (
-    <section className="grid grid-cols-6 w-full h-full mb-12 pt-4 border-t-[1.2px] border-gray-87">
+    <section className="grid grid-cols-6 w-full h-full mb-12 pt-4 gap-x-4 border-t-[1.2px] border-gray-87">
       <div className="col-span-1">
         <h1 className="8">{title}</h1>
       </div>

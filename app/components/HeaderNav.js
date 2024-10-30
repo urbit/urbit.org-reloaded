@@ -43,11 +43,62 @@ export const HeaderNav = ({ nav, homepage }) => {
       ) : (
         <section
           ref={headerRef}
-          className="fixed h-auto z-10 items-center bg-black dark:bg-white justify-center leading-120 container md:pt-0 md:pb-0 pt-5 pb-3"
+          className="container fixed h-auto z-10 items-center bg-black dark:bg-white justify-center leading-120  md:pt-0 md:pb-0 pt-5 pb-3"
         >
-          <div className="md:min-h-[4rem] mb-3 h-auto  md:flex md:flex-row md:items-center md:justify-between relative w-full">
-            <div className="md:absolute flex md:grid items-center justify-center md:grid-cols-6 w-full h-full ">
-              <div className="col-span-1"></div>{" "}
+          <div className="md:min-h-[4rem] mb-3 h-auto md:flex md:flex-row md:items-center md:justify-between">
+            <div className="w-full flex md:grid gap-4 items-center justify-center md:grid-cols-6  h-full ">
+              <div className="col-span-1">
+                <div className="inline-block font-[600] relative">
+                  <Link
+                    href="/"
+                    className="md:hover:text-gray-87 relative before:content-['~']  before:absolute before:left-[-.8em] before:bottom-[.1em] w-auto"
+                  >
+                    Urbit
+                  </Link>
+
+                  {currentRoute == "/" && (
+                    <span>
+                      &nbsp;is a new computing paradigm that provides complete
+                      ownership of your digital world.
+                    </span>
+                  )}
+                  {currentRoute.startsWith("/overview") && (
+                    <React.Fragment>
+                      &nbsp;:&nbsp;
+                      <Link
+                        href="/overview"
+                        className="md:hover:text-gray-87 capitalize"
+                      >
+                        Overview
+                      </Link>
+                    </React.Fragment>
+                  )}
+                  {currentRoute.startsWith("/grants") && (
+                    <React.Fragment>
+                      &nbsp;:&nbsp;
+                      <Link
+                        href="/grants"
+                        className="md:hover:text-gray-87 capitalize"
+                      >
+                        Grants
+                      </Link>
+                    </React.Fragment>
+                  )}
+                  {currentRoute.startsWith("/overview") && (
+                    <div className="mt-4 md:hidden">
+                      {/* <OverviewNav /> */}
+                    </div>
+                  )}
+                  {/* {currentRoute.startsWith("/grants") && (
+              <div className="mt-4 md:hidden">
+                <span class="tracking-[.02em] font-[600]">
+                  Earn a piece of the Urbit network by developing software,
+                  creating content, growing communities, and more.
+                </span>
+              </div>
+            )} */}
+                </div>
+              </div>{" "}
               <div className="col-span-5 hidden md:flex w-full items-center justify-start">
                 {/* {currentRoute.startsWith("/grants") && (
                   <span className="tracking-[.02em] font-[600]">
@@ -57,54 +108,6 @@ export const HeaderNav = ({ nav, homepage }) => {
                 )} */}
                 {currentRoute !== "/" && <GlobalNav nav={nav} />}
               </div>
-            </div>
-            <div className="inline-block font-[600] relative">
-              <Link
-                href="/"
-                className="md:hover:text-gray-87 relative before:content-['~']  before:absolute before:left-[-.8em] before:bottom-[.1em] w-auto"
-              >
-                Urbit
-              </Link>
-
-              {currentRoute == "/" && (
-                <span>
-                  &nbsp;is a new computing paradigm that provides complete
-                  ownership of your digital world.
-                </span>
-              )}
-              {currentRoute.startsWith("/overview") && (
-                <React.Fragment>
-                  &nbsp;:&nbsp;
-                  <Link
-                    href="/overview"
-                    className="md:hover:text-gray-87 capitalize"
-                  >
-                    Overview
-                  </Link>
-                </React.Fragment>
-              )}
-              {currentRoute.startsWith("/grants") && (
-                <React.Fragment>
-                  &nbsp;:&nbsp;
-                  <Link
-                    href="/grants"
-                    className="md:hover:text-gray-87 capitalize"
-                  >
-                    Grants
-                  </Link>
-                </React.Fragment>
-              )}
-              {currentRoute.startsWith("/overview") && (
-                <div className="mt-4 md:hidden">{/* <OverviewNav /> */}</div>
-              )}
-              {/* {currentRoute.startsWith("/grants") && (
-              <div className="mt-4 md:hidden">
-                <span class="tracking-[.02em] font-[600]">
-                  Earn a piece of the Urbit network by developing software,
-                  creating content, growing communities, and more.
-                </span>
-              </div>
-            )} */}
             </div>
           </div>
 
