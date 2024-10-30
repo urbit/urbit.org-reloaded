@@ -173,7 +173,7 @@ const PostListContent = ({ allPostFrontMatter, statuses, programs }) => {
                     <div className="flex flex-row text-gray-87">
                       Reward:
                       <div className="flex flex-row ml-[.2em]">
-                        {[...Array(reward)].map((_, i) => (
+                        {[...Array(Number(reward))].map((_, i) => (
                           <div key={i}></div>
                         ))}
                       </div>
