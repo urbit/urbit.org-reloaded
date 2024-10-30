@@ -84,7 +84,8 @@
 html,
 body {
   font-family: "Urbit Sans";
-  @apply md:text-[16px] text-[13px];
+  scrollbar-gutter: stable;
+  @apply md:text-[16px] text-[13px] overflow-y-auto overflow-x-hidden;
 }
 
 body {
