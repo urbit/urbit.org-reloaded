@@ -7,7 +7,7 @@ export default async function HomePage() {
 
   return (
     <div className="container relative !mt-[0px]">        
-        <SigilCard/>
+        {/* <SigilCard/> */}
     </div>
   );
 }

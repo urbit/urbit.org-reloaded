@@ -6,14 +6,16 @@ import { glob } from "glob";
 import path from "path";
 import ThemeManager from "../../components/ThemeManager";
 
-const BLOG_PATH = "app/content/grants";
+const BLOG_PATH = "app/docs/grants";
 const POSTS_DIR = path.join(process.cwd(), BLOG_PATH);
 
 export async function generateStaticParams() {
   const postPaths = await glob(path.join(POSTS_DIR, "**/*.md"));
   const paths = postPaths?.map((postPath) => {
+    const p = path.basename(postPath, ".md");
     return {
-      blog: path.basename(postPath, ".md"), // Strip the .md extension
+      grant: JSON.parse(JSON.stringify(p)),
+      // Strip the .md extension
     };
   });
 
@@ -21,7 +23,7 @@ export async function generateStaticParams() {
 }
 
 export default async function PostPage({ params }) {
-  const postSlug = `/grants/${params.blog}.md`; // Append .md here to use in the file path
+  const postSlug = `/grants/${params.grant}.md`; // Append .md here to use in the file path
   const postData = await getMarkdownContent(postSlug, "toml");
   const { title, date, extra, taxonomies } = postData.frontMatter;
   const postMeta = await getYaml(postSlug);

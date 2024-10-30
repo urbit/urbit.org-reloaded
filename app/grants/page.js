@@ -26,6 +26,8 @@ export default async function BlogHome() {
     });
   }));
 
+  // json.parse
+
   return (
     <div className="container mb-32 md:mt-[3.06rem]">
       <PostList allPostFrontMatter={allPostFrontMatter} statuses={statuses} programs={programs} />
