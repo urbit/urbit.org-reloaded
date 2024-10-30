@@ -6,7 +6,7 @@ import matter from "gray-matter";
 // import {toml} from 'toml';
 import Markdoc from "@markdoc/markdoc";
 import { markdocConfig } from "../markdocConfig";
-const ARTICLES_PATH = "/app/docs";
+const ARTICLES_PATH = "/app/content";
 const POSTS_DIR = path.join(process.cwd(), ARTICLES_PATH);
 
 async function getPostsTree(specificPath = "") {

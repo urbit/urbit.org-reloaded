@@ -6,7 +6,7 @@ import { glob } from "glob";
 import path from "path";
 import ThemeManager from "../../components/ThemeManager";
 
-const BLOG_PATH = "app/docs/grants";
+const BLOG_PATH = "app/content/grants";
 const POSTS_DIR = path.join(process.cwd(), BLOG_PATH);
 
 export async function generateStaticParams() {
