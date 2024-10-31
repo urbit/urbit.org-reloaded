@@ -65,8 +65,6 @@ export default async function EventsHome() {
         src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FNew_York"
         width="100%"
         height="800"
-        frameborder="0"
-        scrolling="no"
       ></iframe>
       <Section title="Past Events">
         <div className="col-span-1">

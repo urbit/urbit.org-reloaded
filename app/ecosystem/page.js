@@ -1,5 +1,6 @@
 import React from "react";
 import { getPostsTree, getYaml, getToml } from "../lib/queries";
+import Link from "next/link";
 
 export default async function EcosystemHome() {
   const paths = {
@@ -53,7 +54,7 @@ export default async function EcosystemHome() {
                 key={i}
               >
                 <div className="h-[19vw] min-h-[240px]">
-                  <img src={app.data.image} className="h-full object-cover" />
+                  <img src={app.data.image} className="w-full object-cover" />
                 </div>
                 <div className="bg-gray-d9 flex-grow h-auto text-black p-4">
                   <h1>{app.data.title}</h1>
@@ -80,7 +81,7 @@ export default async function EcosystemHome() {
                   <div className="h-[19vw] min-h-[240px]">
                     <img
                       src={podcast.data.image}
-                      className="h-full object-cover"
+                      className="w-full object-cover"
                     />
                   </div>
                   <div className="bg-gray-d9 flex-grow h-auto text-black p-4">
@@ -109,7 +110,7 @@ export default async function EcosystemHome() {
                   <div className="h-[19vw] min-h-[240px]">
                     <img
                       src={talk.data.image}
-                      className="h-full object-cover"
+                      className="w-full object-cover"
                     />
                   </div>
                   <div className="bg-gray-d9 flex-grow h-auto text-black p-4">
@@ -128,9 +129,10 @@ export default async function EcosystemHome() {
       <Section className="container" title="Companies">
         {allOrgsFrontMatter.map((org, i) => {
           return (
-            <div key={i}>
+            <Link href={org.data.URL} target="_blank" key={i} className="relative">
+              <img src={org.data.image} className="w-10 grayscale opacity-[.5] invert absolute bottom-[-.3em] left-[-1.8em]  "/>
               <h1>{org.data.title}</h1>
-            </div>
+            </Link>
           );
         })}
       </Section>
@@ -138,7 +140,7 @@ export default async function EcosystemHome() {
       <Section title="Articles & Press">
         {allArticlesFrontMatter.map((article, i) => {
           return (
-            <div key={i} class="mb-4">
+            <div key={i} className="mb-4">
               <h3 className="text-gray-87">{article.data.publication}</h3>
               <h1>{article.data.title}</h1>
               <h3 className="text-gray-87">Author: {article.data.author}</h3>
