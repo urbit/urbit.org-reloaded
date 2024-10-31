@@ -19,6 +19,15 @@ module.exports = {
         },
       ],
     },
+    screens: {
+      'xs': '380px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '900px',
+      'xl': '1288px',
+      '2xl': '1536px',
+      '3xl': '1900px',
+    },
     extend: {
       spacing: {
         '12px': '.75rem',

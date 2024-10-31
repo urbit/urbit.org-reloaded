@@ -53,8 +53,8 @@ export default async function EcosystemHome() {
                 className="flex flex-col h-auto bg-white rounded-[20px] overflow-hidden "
                 key={i}
               >
-                <div className="h-[19vw] min-h-[240px]">
-                  <img src={app.data.image} className="w-full object-cover" />
+                <div className="aspect-square">
+                  <img src={app.data.image} className="w-full object-contain" />
                 </div>
                 <div className="bg-gray-d9 flex-grow h-auto text-black p-4">
                   <h1>{app.data.title}</h1>
@@ -68,23 +68,23 @@ export default async function EcosystemHome() {
         </div>
       </section>
 
-      <section className="container mb-24 overflow-x-auto ">
-        <div className="overflow-x-auto">
-          <h1 className="mb-4">Podcasts</h1>
-          <div className="flex flex-row overflow-x-auto w-fit gap-4">
+      <section className=" !pr-0 mb-24 overflow-x-auto ">
+        <h1 className="container  z-[100] mb-4">Podcasts</h1>
+        <div className="overflow-x-auto no-scrollbar">
+          <div className="flex flex-row overflow-x-auto w-fit gap-4 ml-[20px] md:ml-[3rem] 3xl:ml-[calc(((100vw-1900px)/2)+2.5rem)]">
             {allPodcastsFrontMatter.map((podcast, i) => {
               return (
                 <div
-                  className="flex !w-[400px] flex-col h-auto bg-white rounded-[20px] overflow-hidden"
+                  className="flex flex-col w-[400px] mb-auto bg-white rounded-[20px] overflow-hidden"
                   key={i}
                 >
-                  <div className="h-[19vw] min-h-[240px]">
+                  <div className="aspect-square">
                     <img
                       src={podcast.data.image}
-                      className="w-full object-cover"
+                      className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="bg-gray-d9 flex-grow h-auto text-black p-4">
+                  <div className="bg-gray-d9 flex-grow h-auto min-h-[6rem] text-black p-4">
                     <h1>{podcast.data.title}</h1>
                     <h3 className="text-gray-87">
                       {/* <p className="text-ellipsis">{app.data.description}</p> */}
@@ -97,23 +97,23 @@ export default async function EcosystemHome() {
         </div>
       </section>
 
-      <section className="container mb-24">
-        <div className="overflow-x-auto">
-          <h1 className="mb-4">Talks</h1>
-          <div className="flex flex-row w-fit gap-4">
+      <section className=" !pr-0 mb-24 overflow-x-auto ">
+        <h1 className="container z-[100] mb-4">Talks</h1>
+        <div className="overflow-x-auto no-scrollbar">
+          <div className="flex flex-row overflow-x-auto w-fit gap-4 ml-[20px] md:ml-[3rem] 3xl:ml-[calc(((100vw-1900px)/2)+2.5rem)]">
             {allTalksFrontMatter.map((talk, i) => {
               return (
                 <div
-                  className="flex !w-[400px] flex-col h-auto bg-white rounded-[20px] overflow-hidden"
+                  className="flex flex-col w-[400px] mb-auto bg-white rounded-[20px] overflow-hidden"
                   key={i}
                 >
-                  <div className="h-[19vw] min-h-[240px]">
+                  <div className="aspect-[1.77]">
                     <img
                       src={talk.data.image}
-                      className="w-full object-cover"
+                      className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="bg-gray-d9 flex-grow h-auto text-black p-4">
+                  <div className="bg-gray-d9 flex-grow h-auto min-h-[6rem] text-black p-4">
                     <h1>{talk.data.title}</h1>
                     <h3 className="text-gray-87">
                       {/* <p className="text-ellipsis">{app.data.description}</p> */}
@@ -129,8 +129,16 @@ export default async function EcosystemHome() {
       <Section className="container" title="Companies">
         {allOrgsFrontMatter.map((org, i) => {
           return (
-            <Link href={org.data.URL} target="_blank" key={i} className="relative">
-              <img src={org.data.image} className="w-10 grayscale opacity-[.5] invert absolute bottom-[-.3em] left-[-1.8em]  "/>
+            <Link
+              href={org.data.URL}
+              target="_blank"
+              key={i}
+              className="relative"
+            >
+              <img
+                src={org.data.image}
+                className="w-10 grayscale opacity-[.5] invert absolute bottom-[-.3em] left-[-1.8em]  "
+              />
               <h1>{org.data.title}</h1>
             </Link>
           );
