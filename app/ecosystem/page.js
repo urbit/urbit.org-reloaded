@@ -35,7 +35,7 @@ export default async function EcosystemHome() {
   const allTalksFrontMatter = paths.talks.frontMatter;
 
   return (
-    <div className="container mb-32 md:mt-[3.06rem]">
+    <div className="mb-32 md:mt-[3.06rem]">
       <Section title="">
         <p>
           Urbit’s decentralized ecosystem is growing more than ever, check out
@@ -43,7 +43,7 @@ export default async function EcosystemHome() {
         </p>
       </Section>
 
-      <section className="w-full mb-24">
+      <section className="container w-full mb-24">
         <h1 className="mb-4">Apps</h1>
         <div className="grid grid-cols-4 grid-rows-3 w-full gap-4">
           {allAppsFrontMatter.map((app, i) => {
@@ -52,7 +52,9 @@ export default async function EcosystemHome() {
                 className="flex flex-col h-auto bg-white rounded-[20px] overflow-hidden "
                 key={i}
               >
-                <div className="h-[19vw] min-h-[240px]">intro</div>
+                <div className="h-[19vw] min-h-[240px]">
+                  <img src={app.data.image} className="h-full object-cover" />
+                </div>
                 <div className="bg-gray-d9 flex-grow h-auto text-black p-4">
                   <h1>{app.data.title}</h1>
                   <h3 className="text-gray-87">
@@ -65,59 +67,65 @@ export default async function EcosystemHome() {
         </div>
       </section>
 
-      <section className="mb-24 overflow-x-auto ">
+      <section className="container mb-24 overflow-x-auto ">
         <div className="overflow-x-auto">
-          
-        <h1 className="mb-4">Podcasts</h1>
-        <div className="flex flex-row overflow-x-auto w-[100svw] gap-4">
-          {allPodcastsFrontMatter.map((podcast, i) => {
-            return (
-              <div
-                className="flex !w-[800px] flex-col h-auto bg-white rounded-[20px] overflow-hidden"
-                key={i}
-              >
-                <div className="h-[19vw] min-h-[240px]">intro</div>
-                <div className="bg-gray-d9 flex-grow h-auto text-black p-4">
-                  <h1>{podcast.data.title}</h1>
-                  <h3 className="text-gray-87">
-                    {/* <p className="text-ellipsis">{app.data.description}</p> */}
-                  </h3>
+          <h1 className="mb-4">Podcasts</h1>
+          <div className="flex flex-row overflow-x-auto w-fit gap-4">
+            {allPodcastsFrontMatter.map((podcast, i) => {
+              return (
+                <div
+                  className="flex !w-[400px] flex-col h-auto bg-white rounded-[20px] overflow-hidden"
+                  key={i}
+                >
+                  <div className="h-[19vw] min-h-[240px]">
+                    <img
+                      src={podcast.data.image}
+                      className="h-full object-cover"
+                    />
+                  </div>
+                  <div className="bg-gray-d9 flex-grow h-auto text-black p-4">
+                    <h1>{podcast.data.title}</h1>
+                    <h3 className="text-gray-87">
+                      {/* <p className="text-ellipsis">{app.data.description}</p> */}
+                    </h3>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
-
+              );
+            })}
+          </div>
         </div>
       </section>
 
-      <section className="mb-24 overflow-x-auto ">
+      <section className="container mb-24">
         <div className="overflow-x-auto">
-          
-        <h1 className="mb-4">Talks</h1>
-        <div className="flex flex-row w-[auto] overflow-hidden gap-4">
-          {allTalksFrontMatter.map((talk, i) => {
-            return (
-              <div
-                className="flex !w-[800px] flex-col h-auto bg-white rounded-[20px] overflow-hidden"
-                key={i}
-              >
-                <div className="h-[19vw] min-h-[240px]">intro</div>
-                <div className="bg-gray-d9 flex-grow h-auto text-black p-4">
-                <h1>{talk.data.title}</h1>
-                <h3 className="text-gray-87">
-                    {/* <p className="text-ellipsis">{app.data.description}</p> */}
-                  </h3>
+          <h1 className="mb-4">Talks</h1>
+          <div className="flex flex-row w-fit gap-4">
+            {allTalksFrontMatter.map((talk, i) => {
+              return (
+                <div
+                  className="flex !w-[400px] flex-col h-auto bg-white rounded-[20px] overflow-hidden"
+                  key={i}
+                >
+                  <div className="h-[19vw] min-h-[240px]">
+                    <img
+                      src={talk.data.image}
+                      className="h-full object-cover"
+                    />
+                  </div>
+                  <div className="bg-gray-d9 flex-grow h-auto text-black p-4">
+                    <h1>{talk.data.title}</h1>
+                    <h3 className="text-gray-87">
+                      {/* <p className="text-ellipsis">{app.data.description}</p> */}
+                    </h3>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
-
+              );
+            })}
+          </div>
         </div>
       </section>
 
-      <Section title="Companies">
+      <Section className="container" title="Companies">
         {allOrgsFrontMatter.map((org, i) => {
           return (
             <div key={i}>
@@ -145,7 +153,7 @@ export default async function EcosystemHome() {
 
 export const Section = ({ title, children }) => {
   return (
-    <section className="grid grid-cols-6 w-full h-full mb-12 pt-4 gap-x-4">
+    <section className="container grid grid-cols-6 w-full h-full mb-12 pt-4 gap-x-4">
       <div className="col-span-1">
         <h1 className="8">{title}</h1>
       </div>
