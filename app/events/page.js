@@ -1,6 +1,7 @@
 import React from "react";
 import { getPostsTree, getYaml, getToml } from "../lib/queries";
 // import { PostList } from "../components/PostList";
+import { EventsList } from "../components/EventsList";
 
 export default async function EventsHome() {
   const paths = {
@@ -66,22 +67,8 @@ export default async function EventsHome() {
         width="100%"
         height="800"
       ></iframe>
-      <Section title="Past Events">
-        <div className="col-span-1">
-          <h1 className="8">Past Events</h1>
-        </div>
-        <div className="col-span-5">
-          <div className="grid grid-cols-2 gap-x-12">
-            {pastEvents.map((event, i) => {
-              return (
-                <div key={event + i}>
-                  <Event event={event.data} />
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </Section>
+      <EventsList events={pastEvents} />
+
     </div>
   );
 }
