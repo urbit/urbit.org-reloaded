@@ -5,30 +5,51 @@ import { PostList } from "../components/PostList";
 export default async function GrantsHome() {
   const posts = await getPostsTree("grants/");
 
-  const statuses = [
-    "Open",
-    "In Progress",
-    "Completed"
-  ]
-  const programs = [
-    "Proposal", 
-    "Bounty"
-  ]
+  const statuses = ["Open", "In Progress", "Completed"];
+  const programs = ["Proposal", "Bounty"];
   const allPostFrontMatter = [];
-  await Promise.all(posts.map(async (post) => {
-    const postYaml = await getToml(post.relativePath);
-    allPostFrontMatter.push({
-      data: postYaml.data,
-      relativePath: post.relativePath,
-      slug: post.slug 
-    });
-  }));
+  await Promise.all(
+    posts.map(async (post) => {
+      const postYaml = await getToml(post.relativePath);
+      allPostFrontMatter.push({
+        data: postYaml.data,
+        relativePath: post.relativePath,
+        slug: post.slug,
+      });
+    })
+  );
 
   // json.parse
 
   return (
-    <div className="container mb-32 md:mt-[3.06rem]">
-      <PostList allPostFrontMatter={allPostFrontMatter} statuses={statuses} programs={programs} />
+    <div className="container mb-32 md:mt-[3.06rem] ">
+      <section className="grid grid-cols-6 gap-x-4 mb-12 text-25px">
+        <div className="col-start-2 col-span-4">
+          Earn a piece of the Urbit network by developing software, creating
+          content, growing communities, and more. There are two types of grants:
+        </div>
+      </section>
+      <section className="grid grid-cols-6 gap-x-4 mb-12  text-25px">
+        <div className="col-span-1"></div>
+        <div className="col-span-2">
+          <div className="block">Proposals</div>
+          <div className="text-gray-87">
+            Have an idea? Send it to us, and we can approve you to be funded.
+          </div>
+        </div>
+        <div className="col-span-2">
+          <div className="block">Bounties</div>
+          <div className="text-gray-87">
+            Looking for work? Browse through opportunities offered by the Urbit
+            Foundation or other organizations
+          </div>
+        </div>
+      </section>
+      <PostList
+        allPostFrontMatter={allPostFrontMatter}
+        statuses={statuses}
+        programs={programs}
+      />
     </div>
-  )
+  );
 }

@@ -150,7 +150,7 @@ const PostListContent = ({ allPostFrontMatter, statuses, programs }) => {
       </div>
 
       {/* Post List */}
-      <div className="mb-4 mt-[.2em] flex flex-col col-span-4">
+      <div className="mb-4 mt-[.2em] flex flex-col col-span-5">
         <span className="leading-[1cap] mb-4">
           Showing {filteredSortedPosts.length} grants
         </span>
