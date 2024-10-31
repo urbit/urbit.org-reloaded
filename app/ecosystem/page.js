@@ -1,7 +1,7 @@
 import React from "react";
 import { getPostsTree, getYaml, getToml } from "../lib/queries";
 import Link from "next/link";
-
+import classNames from "classnames";
 export default async function EcosystemHome() {
   const paths = {
     apps: { path: "ecosystem/apps", frontMatter: [] },
@@ -49,8 +49,12 @@ export default async function EcosystemHome() {
         <div className="grid grid-cols-4 grid-rows-3 w-full gap-4">
           {allAppsFrontMatter.map((app, i) => {
             return (
-              <div
-                className="flex flex-col h-auto bg-white rounded-[20px] overflow-hidden "
+              <Link
+                href={app.data.website ? app.data.website : ''}
+                target="_blank"
+                className={classNames("flex flex-col h-auto bg-white rounded-[20px] overflow-hidden",
+                  {"pointer-events-none": !app.data.website || app.data.website === ''}
+                )}
                 key={i}
               >
                 <div className="aspect-square">
@@ -62,7 +66,7 @@ export default async function EcosystemHome() {
                     <p className="text-ellipsis">{app.data.description}</p>
                   </h3>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
@@ -74,7 +78,9 @@ export default async function EcosystemHome() {
           <div className="flex flex-row overflow-x-auto w-fit gap-4 ml-[20px] md:ml-[3rem] 3xl:ml-[calc(((100vw-1900px)/2)+2.5rem)]">
             {allPodcastsFrontMatter.map((podcast, i) => {
               return (
-                <div
+                <Link
+                  href={podcast.data.links[0].url}
+                  target="_blank"
                   className="flex flex-col w-[400px] mb-auto bg-white rounded-[20px] overflow-hidden"
                   key={i}
                 >
@@ -90,7 +96,7 @@ export default async function EcosystemHome() {
                       {/* <p className="text-ellipsis">{app.data.description}</p> */}
                     </h3>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>
@@ -103,7 +109,9 @@ export default async function EcosystemHome() {
           <div className="flex flex-row overflow-x-auto w-fit gap-4 ml-[20px] md:ml-[3rem] 3xl:ml-[calc(((100vw-1900px)/2)+2.5rem)]">
             {allTalksFrontMatter.map((talk, i) => {
               return (
-                <div
+                <Link
+                  href={talk.data.url}
+                  target="_blank"
                   className="flex flex-col w-[400px] mb-auto bg-white rounded-[20px] overflow-hidden"
                   key={i}
                 >
@@ -119,7 +127,7 @@ export default async function EcosystemHome() {
                       {/* <p className="text-ellipsis">{app.data.description}</p> */}
                     </h3>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>
