@@ -37,33 +37,40 @@ export default async function EcosystemHome() {
 
   return (
     <div className="mb-32 md:mt-[3.06rem]">
-      <Section title="">
-        <p>
+      <div className="container grid grid-cols-6 gap-x-4 w-full mb-16 text-25px">
+        <p className="col-span-4 col-start-2">
           Urbit’s decentralized ecosystem is growing more than ever, check out
           the Apps, Podcasts, Talks, Companies and more below.
         </p>
-      </Section>
+      </div>
 
-      <section className="container w-full mb-24">
-        <h1 className="mb-4">Apps</h1>
-        <div className="grid grid-cols-4 grid-rows-3 w-full gap-4">
+      <section className="container w-full mb-[4.375rem]">
+        <h1 className="mb-[2.25rem]" >Apps</h1>
+        <div className="grid grid-cols-4 grid-rows-3 w-full gap-[.625rem]">
           {allAppsFrontMatter.map((app, i) => {
             return (
               <Link
-                href={app.data.website ? app.data.website : ''}
+                href={app.data.website ? app.data.website : ""}
                 target="_blank"
-                className={classNames("flex flex-col h-auto bg-white rounded-[20px] overflow-hidden",
-                  {"pointer-events-none": !app.data.website || app.data.website === ''}
-                )}
+                // className={classNames("flex flex-col h-auto bg-white rounded-[20px] overflow-hidden",
+                //   {"pointer-events-none": !app.data.website || app.data.website === ''}
+                // )}
+                className="flex flex-col  mb-auto bg-white rounded-[20px] overflow-hidden"
                 key={i}
               >
                 <div className="aspect-square">
-                  <img src={app.data.image} className="w-full object-contain" />
+                  <img
+                    src={app.data.image}
+                    // className="w-full object-contain"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <div className="bg-gray-d9 flex-grow h-auto text-black p-4">
-                  <h1>{app.data.title}</h1>
+                <div className="bg-gray-d9 flex-grow leading-[110%] font-[500] text-black h-[9.125rem] p-[1.375rem] text-25px">
+                  <h1 className="mt-[-0.15em]">{app.data.title}</h1>
                   <h3 className="text-gray-87">
-                    <p className="text-ellipsis">{app.data.description}</p>
+                    <p className="text-ellipsis line-clamp-3">
+                      {app.data.description}
+                    </p>
                   </h3>
                 </div>
               </Link>
@@ -72,16 +79,16 @@ export default async function EcosystemHome() {
         </div>
       </section>
 
-      <section className=" !pr-0 mb-24 overflow-x-auto ">
-        <h1 className="container  z-[100] mb-4">Podcasts</h1>
+      <section className="!pr-0 mb-[4.375rem] overflow-x-auto ">
+        <h1 className="container mb-[2.25rem]">Podcasts</h1>
         <div className="overflow-x-auto no-scrollbar">
-          <div className="flex flex-row overflow-x-auto w-fit gap-4 ml-[20px] md:ml-[3rem] 3xl:ml-[calc(((100vw-1900px)/2)+2.5rem)]">
+          <div className="flex flex-row overflow-x-auto w-fit gap-[.625rem] ml-[20px] md:ml-[3rem] 3xl:ml-[calc(((100vw-1900px)/2)+2.5rem)]">
             {allPodcastsFrontMatter.map((podcast, i) => {
               return (
                 <Link
                   href={podcast.data.links[0].url}
                   target="_blank"
-                  className="flex flex-col w-[400px] mb-auto bg-white rounded-[20px] overflow-hidden"
+                  className="flex flex-col w-[28rem] mb-auto bg-white rounded-[20px] overflow-hidden"
                   key={i}
                 >
                   <div className="aspect-square">
@@ -90,10 +97,10 @@ export default async function EcosystemHome() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="bg-gray-d9 flex-grow h-auto min-h-[6rem] text-black p-4">
-                    <h1>{podcast.data.title}</h1>
-                    <h3 className="text-gray-87">
-                      {/* <p className="text-ellipsis">{app.data.description}</p> */}
+                  <div className="bg-gray-d9 flex-grow max-h-[9.125rem] h-auto min-h-[9.125rem] px-[1.875rem] py-[1.375rem]  leading-[110%] font-[500] text-black text-25px">
+                    <h1 className="mt-[-0.15em]">{podcast.data.title}</h1>
+                    <h3 className="text-gray-87 text-ellipsis line-clamp-3">
+                      {podcast.data.description}
                     </h3>
                   </div>
                 </Link>
@@ -103,16 +110,16 @@ export default async function EcosystemHome() {
         </div>
       </section>
 
-      <section className=" !pr-0 mb-24 overflow-x-auto ">
-        <h1 className="container z-[100] mb-4">Talks</h1>
+      <section className=" !pr-0 mb-[4.375rem] overflow-x-auto ">
+        <h1 className="container mb-[2.25rem]">Talks</h1>
         <div className="overflow-x-auto no-scrollbar">
-          <div className="flex flex-row overflow-x-auto w-fit gap-4 ml-[20px] md:ml-[3rem] 3xl:ml-[calc(((100vw-1900px)/2)+2.5rem)]">
+          <div className="flex flex-row overflow-x-auto w-fit gap-[.625rem] ml-[20px] md:ml-[3rem] 3xl:ml-[calc(((100vw-1900px)/2)+2.5rem)]">
             {allTalksFrontMatter.map((talk, i) => {
               return (
                 <Link
                   href={talk.data.url}
                   target="_blank"
-                  className="flex flex-col w-[400px] mb-auto bg-white rounded-[20px] overflow-hidden"
+                  className="flex flex-col w-[28rem] mb-auto bg-white rounded-[20px] overflow-hidden"
                   key={i}
                 >
                   <div className="aspect-[1.77]">
@@ -121,11 +128,8 @@ export default async function EcosystemHome() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="bg-gray-d9 flex-grow h-auto min-h-[6rem] text-black p-4">
-                    <h1>{talk.data.title}</h1>
-                    <h3 className="text-gray-87">
-                      {/* <p className="text-ellipsis">{app.data.description}</p> */}
-                    </h3>
+                  <div className="bg-gray-d9 flex-grow h-auto text-black p-4">
+                    <h1 class="line-clamp-1 text-ellipsis">{talk.data.title}</h1>
                   </div>
                 </Link>
               );
