@@ -2,12 +2,6 @@
 title = "Get On The Network"
 ---
 
-{% overview-section  %}
-
-Get on the network in seconds through a hosting provider, or run Urbit yourself.
-
-{% /overview-section %}
-
 {% overview-section title="Hosting Provider" %}
 
 Tlon is an Urbit-native toolkit for communicating with your community.

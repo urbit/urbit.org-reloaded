@@ -94,7 +94,9 @@ body {
   /* -moz-osx-font-smoothing: grayscale; */
   @apply text-21px leading-120  tracking-02 dark:bg-[var(--foreground)] dark:text-[var(--background)];
 }
-
+.template_get-on-the-network .overview-section {
+  @apply mb-[8.125rem]
+}
 @layer components {
   .container {
     @apply max-w-[--site-max-width] 
@@ -104,6 +106,7 @@ body {
     md:px-[3rem];
   }
 }
+
 @layer utilities {
       /* Hide scrollbar for Chrome, Safari and Opera */
       .no-scrollbar::-webkit-scrollbar {
@@ -114,10 +117,13 @@ body {
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
   }
-  .overview-page {
+  
+  
+  /* .overview-page { */
     .overview-section {
       @apply grid md:grid-cols-6 gap-4 mb-[6rem] md:mb-[7rem];
     }
+   
     .overview-section:last-of-type {
       @apply mb-0;
     }
@@ -126,6 +132,9 @@ body {
     }
     .overview-section-body {
       @apply col-span-4 text-25px leading-120;
+    }
+    .overview-section-body p:last-of-type {
+      @apply !mb-0 !pb-0;
     }
     .overview-section-body > .img-container {
       @apply rounded-[.5rem] overflow-hidden my-8 max-w-max w-full;
@@ -139,7 +148,7 @@ body {
     .overview-section-body > .next-button {
       @apply no-underline;
     }
-  }
+  /* } */
   .button {
     @apply my-[2.5rem] md:hover:bg-gray-87 text-25px font-[600] bg-white text-black rounded-[5px] leading-[1cap] p-[.5rem]
     dark:bg-black dark:text-white;

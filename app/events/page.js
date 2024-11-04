@@ -67,7 +67,7 @@ export default async function EventsHome() {
         width="100%"
         height="800"
       ></iframe>
-      <EventsList events={pastEvents} />
+      <EventsList events={JSON.parse(JSON.stringify(pastEvents))} />
 
     </div>
   );

@@ -46,7 +46,7 @@ export default async function GrantsHome() {
         </div>
       </section>
       <PostList
-        allPostFrontMatter={allPostFrontMatter}
+        allPostFrontMatter={JSON.parse(JSON.stringify(allPostFrontMatter))}
         statuses={statuses}
         programs={programs}
       />

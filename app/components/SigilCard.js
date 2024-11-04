@@ -34,9 +34,9 @@ export const SigilCard = () => {
       colors: ['#14140f', 'white'],
     })
     setSvgString(s)
-    console.log(s)
+    // console.log(s)
     setName(p);
-    console.log("random ship", x, p);
+    // console.log("random ship", x, p);
   }, []);
   
   return (

@@ -158,7 +158,7 @@ const PostListContent = ({ allPostFrontMatter, statuses, programs }) => {
         {filteredSortedPosts.map((postData) => {
           const { title, date, extra, taxonomies } = postData.data;
           let reward = extra?.reward?.match(/\d+/)[0];
-          console.log(title, reward);
+          // console.log(title, reward);
           // console.log(postData.data)
           return (
             <React.Fragment key={postData.relativePath}>
