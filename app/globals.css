@@ -94,7 +94,7 @@ body {
   background: var(--background);
   -webkit-font-smoothing: antialiased;
   /* -moz-osx-font-smoothing: grayscale; */
-  @apply text-[20px] leading-120 tracking-[.01%] dark:bg-[var(--foreground)] dark:text-[var(--background)];
+  @apply text-[20px] leading-120 tracking-[.01em] dark:bg-[var(--foreground)] dark:text-[var(--background)];
 }
 .template_get-on-the-network .overview-section {
   @apply mb-[8.125rem]
@@ -212,7 +212,7 @@ body {
       font-variation-settings: "xtab" 500;
     }
     pre {
-      @apply p-4 tracking-[0.01%];
+      @apply p-4 tracking-[0.01em];
     }
   }
 }

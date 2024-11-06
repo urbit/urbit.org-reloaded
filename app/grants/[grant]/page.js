@@ -36,7 +36,7 @@ export default async function PostPage({ params }) {
       <ThemeManager />
 
       <div className="col-span-1"></div>
-      <div className="col-span-4 tracking-[.01%]">
+      <div className="col-span-4 tracking-[.01em]">
         <div>
           <div className="flex flex-col text-[2.8rem] md:text-25px leading-120">
             <span className="font-[700]">{title}</span>
