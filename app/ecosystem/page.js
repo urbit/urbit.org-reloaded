@@ -46,7 +46,7 @@ export default async function EcosystemHome() {
 
       <section className="container w-full mb-[4.375rem]">
         <h1 className="mb-[2.25rem]" >Apps</h1>
-        <div className="grid grid-cols-4 grid-rows-3 w-full gap-[.625rem]">
+        <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-3 w-full gap-[.625rem]">
           {allAppsFrontMatter.map((app, i) => {
             return (
               <Link
@@ -175,9 +175,9 @@ export default async function EcosystemHome() {
 
 export const Section = ({ title, children }) => {
   return (
-    <section className="container grid grid-cols-6 w-full h-full mb-12 pt-4 gap-x-4">
-      <div className="col-span-1">
-        <h1 className="8">{title}</h1>
+    <section className="container md:grid grid-cols-6 w-full h-full mb-12 pt-4 gap-x-4">
+      <div className="col-span-1 mb-4 ">
+        <h1 className="">{title}</h1>
       </div>
       <div className="col-span-5">{children}</div>
     </section>
