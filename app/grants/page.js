@@ -7,6 +7,8 @@ export default async function GrantsHome() {
 
   const statuses = ["Open", "In Progress", "Completed"];
   const programs = ["Proposal", "Bounty"];
+  const categories = ["Other", "Community", "Dev: Core", "Dev: Tool", "Dev: Apps"];
+
   const allPostFrontMatter = [];
   await Promise.all(
     posts.map(async (post) => {
@@ -22,14 +24,14 @@ export default async function GrantsHome() {
   // json.parse
 
   return (
-    <div className="container mb-32 md:mt-[3.06rem] ">
-      <section className="grid grid-cols-6 gap-x-4 mb-12 text-25px">
-        <div className="col-start-2 col-span-4">
+    <div className="container mb-32 md:mt-9 ">
+      <section className="md:grid grid-cols-6 gap-x-4 mb-12 ">
+        <div className="col-start-2 col-span-4 text-25px leading-[120%] font-[400]">
           Earn a piece of the Urbit network by developing software, creating
           content, growing communities, and more. There are two types of grants:
         </div>
       </section>
-      <section className="grid grid-cols-6 gap-x-4 mb-12  text-25px">
+      <section className="md:grid grid-cols-6 gap-x-4 mb-12 text-25px leading-[120%] font-[500]">
         <div className="col-span-1"></div>
         <div className="col-span-2">
           <div className="block">Proposals</div>
@@ -49,6 +51,7 @@ export default async function GrantsHome() {
         allPostFrontMatter={JSON.parse(JSON.stringify(allPostFrontMatter))}
         statuses={statuses}
         programs={programs}
+        categories={categories}
       />
     </div>
   );

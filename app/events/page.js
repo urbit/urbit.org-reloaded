@@ -38,8 +38,12 @@ export default async function EventsHome() {
   const allEventsFrontMatter = paths.events.frontMatter;
 
   return (
-    <div className="container mb-32 md:mt-[3.06rem]">
+    <div className="container mb-32 md:mt-9">
+      <div className="md:grid grid-cols-6 gap-x-4 w-full mb-12">
+      <div className="col-start-2 col-span-4 text-25px font-[400]">
       <p>Explore Urbit and our community, in-person and online.</p>
+      </div>
+      </div>
       <br />
       <Section title="Upcoming">
         {upcomingEvents.map((event, i) => {
@@ -75,7 +79,7 @@ export default async function EventsHome() {
 
 export const Section = ({ title, children }) => {
   return (
-    <section className="grid grid-cols-6 w-full h-full mb-12 pt-4 gap-x-4 border-t-[1.2px] border-gray-87">
+    <section className="grid grid-cols-6 w-full h-full mb-12 pt-4 gap-x-4 [&:not(:first-of-type)]:border-t-[1.2px] border-gray-87">
       <div className="col-span-1">
         <h1 className="8">{title}</h1>
       </div>

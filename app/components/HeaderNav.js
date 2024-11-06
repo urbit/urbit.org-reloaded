@@ -24,7 +24,7 @@ export const HeaderNav = ({ nav, homepage }) => {
   return (
     <React.Fragment>
       {currentRoute == "/" ? (
-        <div className="ml-8 headline flex w-full flex-col justify-start items-start relative before:content-['~'] before:absolute before:left-[-.6em] before:top-[-.05em] text-[3.75rem] leading-[120%] mt-8 ">
+        <div className="ml-4 mt-4 md:ml-8 md:mt-8 headline flex w-full flex-col justify-start items-start relative before:content-['~'] before:absolute before:left-[-.6em] before:top-[-.05em] text-[2rem] lg:text-[3.75rem] leading-[120%]  ">
           <h1 className="font-[300]">{homepage.headline}</h1>
           <div className="flex flex-col md:flex-row gap-x-8 font-[300] text-gray-400 underline underline-offset-[.1em] decoration-2">
             {homepage.links.map((link, i) => {
@@ -46,8 +46,8 @@ export const HeaderNav = ({ nav, homepage }) => {
           ref={headerRef}
           className="container fixed h-auto z-10 items-center bg-black dark:bg-white justify-center leading-120  md:pt-0 md:pb-0 pt-5 pb-3"
         >
-          <div className="mt-8 mb-8 h-auto md:flex md:flex-row md:items-center md:justify-between">
-            <div className="w-full leading-[1cap] flex md:grid gap-4 items-center justify-center md:grid-cols-6  h-full ">
+          <div className="my-4 md:my-8 h-auto md:flex md:flex-row md:items-center md:justify-between">
+            <div className="w-full leading-[1cap] flex justify-start md:grid gap-4 items-center md:justify-center md:grid-cols-6  h-full ">
               <div className="col-span-1">
                 <div className="inline-block font-[600] relative">
                   <Link
@@ -114,7 +114,7 @@ export const HeaderNav = ({ nav, homepage }) => {
 
           {currentRoute.startsWith("/overview") && (
             <React.Fragment>
-              <div className="absolute grid grid-cols-6 gap-x-4 font-[600] mt-[2.06rem]">
+              <div className="absolute grid grid-cols-6 gap-x-4 font-[600] md:mt-[2.06rem] bg-black md:bg-transparent w-full md:w-auto pb-4">
                 <OverviewNav />
               </div>
             </React.Fragment>
@@ -128,7 +128,7 @@ export const HeaderNav = ({ nav, homepage }) => {
 const OverviewNav = () => {
   const currentRoute = usePathname();
   return (
-    <ul className="flex flex-col text-gray-87 ">
+    <ul className="flex flex-row gap-x-4 md:flex-col text-gray-87 col-span-6">
       <Link
         className={currentRoute === "/overview" ? "text-white" : "text-gray-87"}
         href="/overview"
@@ -166,7 +166,7 @@ const GlobalNav = ({ nav }) => {
   const currentRoute = usePathname();
 
   return (
-    <ul className="flex mb-0 flex-row gap-x-4 pt-0">
+    <ul className="flex mb-0 flex-row gap-x-4 pt-0 text-[1.25rem] font-[600]">
       {nav?.map((navItem, i) => {
         return (
           <Link
@@ -179,7 +179,6 @@ const GlobalNav = ({ nav }) => {
             href={navItem.url}
             target={navItem.external ? "_blank" : ""}
           >
-            {}
             <span className="nav-button">{navItem.title}</span>
           </Link>
         );

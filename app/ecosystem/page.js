@@ -36,8 +36,8 @@ export default async function EcosystemHome() {
   const allTalksFrontMatter = paths.talks.frontMatter;
 
   return (
-    <div className="mb-32 md:mt-[3.06rem]">
-      <div className="container grid grid-cols-6 gap-x-4 w-full mb-16 text-25px">
+    <div className="mb-32 md:mt-9">
+      <div className="container grid grid-cols-6 gap-x-4 w-full mb-16 text-25px leading-[130%]">
         <p className="col-span-4 col-start-2">
           Urbit’s decentralized ecosystem is growing more than ever, check out
           the Apps, Podcasts, Talks, Companies and more below.
@@ -82,7 +82,7 @@ export default async function EcosystemHome() {
       <section className="!pr-0 mb-[4.375rem] overflow-x-auto ">
         <h1 className="container mb-[2.25rem]">Podcasts</h1>
         <div className="overflow-x-auto no-scrollbar">
-          <div className="flex flex-row overflow-x-auto w-fit gap-[.625rem] ml-[20px] md:ml-[3rem] 3xl:ml-[calc(((100vw-1900px)/2)+2.5rem)]">
+          <div className="flex flex-row overflow-x-auto w-fit gap-[.625rem] ml-[var(--gutter-size)] 3xl:ml-[calc(((100vw-1900px)/2)+2.5rem)]">
             {allPodcastsFrontMatter.map((podcast, i) => {
               return (
                 <Link
@@ -113,7 +113,7 @@ export default async function EcosystemHome() {
       <section className=" !pr-0 mb-[4.375rem] overflow-x-auto ">
         <h1 className="container mb-[2.25rem]">Talks</h1>
         <div className="overflow-x-auto no-scrollbar">
-          <div className="flex flex-row overflow-x-auto w-fit gap-[.625rem] ml-[20px] md:ml-[3rem] 3xl:ml-[calc(((100vw-1900px)/2)+2.5rem)]">
+          <div className="flex flex-row overflow-x-auto w-fit gap-[.625rem] ml-[var(--gutter-size)] 3xl:ml-[calc(((100vw-1900px)/2)+2.5rem)]">
             {allTalksFrontMatter.map((talk, i) => {
               return (
                 <Link

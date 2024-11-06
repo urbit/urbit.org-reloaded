@@ -40,8 +40,8 @@ export const SigilCard = () => {
   }, []);
   
   return (
-    <div className="absolute w-full h-full font-[600] flex items-center justify-center translate-y-[-3rem]">
-      <div className="w-[34svw] h-[20svw] border-2 border-white rounded-xl flex flex-col justify-between p-8">
+    <div className="md:absolute w-full h-full font-[600] flex items-center justify-center md:translate-y-[-3rem]">
+      <div className="md:w-[34svw] md:h-[20svw] border-2 border-white rounded-xl flex flex-col justify-between p-8">
         <div>-</div>
         <img className="absolute w-[50px]" src={`data:image/svg+xml;utf8,${encodeURIComponent(svgString)}`} />
         <h1 className="text-[2.5rem] leading-[100%] w-full text-center">

@@ -8,7 +8,7 @@ import Link from "next/link";
 // Loader component to show while the page is waiting for the router
 const Loader = () => <div>Loading...</div>;
 
-const PostListContent = ({ allPostFrontMatter, statuses, programs }) => {
+const PostListContent = ({ allPostFrontMatter, statuses, programs, categories }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -97,10 +97,10 @@ const PostListContent = ({ allPostFrontMatter, statuses, programs }) => {
     );
   };
 
-  // Sort by option handler
-  const handleSortClick = (option) => {
-    setSortOption((prevOption) => (prevOption === option ? null : option));
-  };
+  // // Sort by option handler
+  // const handleSortClick = (option) => {
+  //   setSortOption((prevOption) => (prevOption === option ? null : option));
+  // };
 
   return (
     <div className="grid md:grid-cols-6 w-full mb-[5rem]">
@@ -131,6 +131,24 @@ const PostListContent = ({ allPostFrontMatter, statuses, programs }) => {
           <span className="pt-4">Program:</span>
           <div className="flex flex-row gap-x-4 md:flex-col items-start text-gray-87">
             {programs.map((program, index) => (
+              <button
+                key={index}
+                className="link"
+                onClick={() => handleProgramClick(program)}
+              >
+                <div
+                  className={classNames({
+                    "text-white": selectedProgram === program,
+                  })}
+                >
+                  <span>{program}</span>
+                </div>
+              </button>
+            ))}
+          </div>
+          <span className="pt-4">Work Categories:</span>
+          <div className="flex flex-row gap-x-4 md:flex-col items-start text-gray-87">
+            {categories.map((program, index) => (
               <button
                 key={index}
                 className="link"
@@ -208,6 +226,7 @@ export const PostList = ({
   categoryData,
   statuses,
   programs,
+  categories
 }) => {
   return (
     <Suspense fallback={<Loader />}>
@@ -216,6 +235,7 @@ export const PostList = ({
         categoryData={categoryData}
         statuses={statuses}
         programs={programs}
+        categories={categories}
       />
     </Suspense>
   );
