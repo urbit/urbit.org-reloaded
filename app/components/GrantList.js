@@ -8,7 +8,12 @@ import Link from "next/link";
 // Loader component to show while the page is waiting for the router
 const Loader = () => <div>Loading...</div>;
 
-const GrantListContent = ({ allPostFrontMatter, statuses, programs, categories }) => {
+const GrantListContent = ({
+  allPostFrontMatter,
+  statuses,
+  programs,
+  categories,
+}) => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -25,7 +30,8 @@ const GrantListContent = ({ allPostFrontMatter, statuses, programs, categories }
   const [sortOption, setSortOption] = useState(
     searchParams.get("sort") || null
   );
-  const [filteredSortedPosts, setFilteredSortedPosts] = useState(allPostFrontMatter);
+  const [filteredSortedPosts, setFilteredSortedPosts] =
+    useState(allPostFrontMatter);
 
   // const categoryList = categoryData;
 
@@ -44,31 +50,32 @@ const GrantListContent = ({ allPostFrontMatter, statuses, programs, categories }
   // Handle filtering and sorting logic within an effect
   useEffect(() => {
     let posts = [...allPostFrontMatter];
-    // Apply category filtering
+
+    
     if (selectedCategory) {
-      posts = posts.filter((post) => post?.taxonomies?.grant_type === selectedCategory);
+      posts = posts.filter((post) => {
+        return post?.data?.taxonomies?.grant_category[0] === selectedCategory
+      });
     }
 
-    // Apply status filterings
     if (selectedStatus) {
-      
       posts = posts.filter((post) => {
         let hasAssignee = post?.data?.extra?.assignee.length > 1 ? true : false;
-        if(selectedStatus == "Open") {
-          return post?.data?.extra?.completed == false && !hasAssignee
+        if (selectedStatus == "Open") {
+          return post?.data?.extra?.completed == false && !hasAssignee;
         } else if (selectedStatus == "In Progress") {
-          return post?.data?.extra?.completed == false && hasAssignee
+          return post?.data?.extra?.completed == false && hasAssignee;
         } else {
-          return post?.data.extra?.completed == true
+          return post?.data.extra?.completed == true;
         }
       });
-        
     }
 
     // Apply program filtering
     if (selectedProgram) {
-      posts = posts.filter((post) => post.data.program === selectedProgram);
+      posts = posts.filter((post) => post?.data?.taxonomies?.grant_type[0] === selectedProgram);
     }
+
 
     // Update the filtered and sorted post list
     setFilteredSortedPosts(posts);
@@ -109,14 +116,14 @@ const GrantListContent = ({ allPostFrontMatter, statuses, programs, categories }
 
   const generateStatus = (grantData) => {
     let hasAssignee = grantData?.data?.extra?.assignee.length > 1;
-    if(grantData?.data?.extra?.completed) {
+    if (grantData?.data?.extra?.completed) {
       return "Completed";
     } else if (!grantData?.data?.extra?.completed && hasAssignee) {
-      return "In Progress"
+      return "In Progress";
     } else {
-      return "Open"
+      return "Open";
     }
-  }
+  };
 
   // // Sort by option handler
   // const handleSortClick = (option) => {
@@ -169,18 +176,19 @@ const GrantListContent = ({ allPostFrontMatter, statuses, programs, categories }
           </div>
           <span className="pt-4">Work Categories:</span>
           <div className="flex flex-row gap-x-4 md:flex-col items-start text-gray-87">
-            {categories.map((program, index) => (
+            {categories.map((category, index) => (
               <button
                 key={index}
                 className="link"
-                onClick={() => handleProgramClick(program)}
+                onClick={() => handleCategoryClick(category)}
+
               >
                 <div
                   className={classNames({
-                    "text-white": selectedProgram === program,
+                    "text-white": selectedCategory === category,
                   })}
                 >
-                  <span>{program}</span>
+                  <span>{category}</span>
                 </div>
               </button>
             ))}
@@ -206,7 +214,7 @@ const GrantListContent = ({ allPostFrontMatter, statuses, programs, categories }
                 data-category={taxonomies?.grant_type}
                 className="pt-[10px] pb-[10px] px-[9px] bg-gray-d9 text-black text-25px group rounded-[5px] mb-2 hover:text-gray-87 font-[400]"
               >
-                <div className={classNames("leading-120 ")}>
+                <div className={classNames("leading-[120%] ")}>
                   <div>{title}</div>
                   <div className="flex flex-col">
                     <div className="flex flex-row text-gray-87">
@@ -219,18 +227,22 @@ const GrantListContent = ({ allPostFrontMatter, statuses, programs, categories }
                     </div>
                   </div>
                 </div>
-                <div className={classNames("pt-5")}>{extra?.description}</div>
+                <div className={classNames("mb-10 mt-8")}>
+                  {extra?.description}
+                </div>
                 <div
-                  className={classNames("text-gray-87 !text-20px pt-6 flex gap-x-1")}
+                  className={classNames(
+                    "text-gray-87 !text-20px mt-6 flex gap-x-1"
+                  )}
                 >
                   <span className="bg-black text-white !font-[600] rounded-[5px] px-[6px] py-[2px]">
                     {generateStatus(postData)}
                   </span>
-                  {taxonomies?.grant_type &&
-                  <span className="bg-gray-87 text-black rounded-[5px] px-[6px] py-[2px]">
-                    {taxonomies?.grant_type}
+                  {taxonomies?.grant_type && (
+                    <span className="bg-gray-87 text-black rounded-[5px] px-[6px] py-[2px]">
+                      {taxonomies?.grant_type}
                     </span>
-                  }
+                  )}
                 </div>
               </Link>
               {/* <div className="border-b-[.7px] border-white w-full"></div> */}
@@ -247,7 +259,7 @@ export const GrantList = ({
   categoryData,
   statuses,
   programs,
-  categories
+  categories,
 }) => {
   return (
     <Suspense fallback={<Loader />}>
