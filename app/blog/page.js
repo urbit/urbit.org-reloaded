@@ -18,7 +18,7 @@ export default async function BlogHome() {
   );
 
   return (
-    <div className="container mb-32 md:mt-[3.06rem]  text-25px leading-[120%]">
+    <div className="container mb-32 md:mt-[3.06rem]  text-25px leading-[100%]">
       <section className="grid grid-cols-6 gap-x-4 w-full">
         <div className="col-span-1"></div>
         <div className="col-span-4">
@@ -35,7 +35,7 @@ export default async function BlogHome() {
             className="grid grid-cols-6 gap-x-4 w-full my-16"
           >
             <div className="col-span-1 flex flex-col font-mono !text-20px tracking-[.01em] text-gray-f5">
-              <div>{extra.author}</div>
+              <div className="mb-[.1em]">{extra.author}</div>
               <div>{extra.ship}</div>
             </div>
             <div className="col-span-4 flex flex-col">
