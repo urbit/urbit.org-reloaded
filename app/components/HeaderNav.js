@@ -46,13 +46,13 @@ export const HeaderNav = ({ nav, homepage }) => {
           ref={headerRef}
           className="container fixed h-auto z-10 items-center bg-black dark:bg-white justify-center leading-120  md:pt-0 md:pb-0 pt-5 pb-3"
         >
-          <div className="md:min-h-[4rem] mb-3 h-auto md:flex md:flex-row md:items-center md:justify-between">
-            <div className="w-full flex md:grid gap-4 items-center justify-center md:grid-cols-6  h-full ">
+          <div className="mt-8 mb-8 h-auto md:flex md:flex-row md:items-center md:justify-between">
+            <div className="w-full leading-[1cap] flex md:grid gap-4 items-center justify-center md:grid-cols-6  h-full ">
               <div className="col-span-1">
                 <div className="inline-block font-[600] relative">
                   <Link
                     href="/"
-                    className="md:hover:text-gray-87 relative before:content-['~']  before:absolute before:left-[-.8em] before:bottom-[.1em] w-auto"
+                    className="md:hover:text-gray-87 relative before:content-['~']  before:absolute before:left-[-.8em] before:bottom-[.3em] w-auto"
                   >
                     Urbit
                   </Link>
