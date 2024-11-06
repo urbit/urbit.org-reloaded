@@ -4,7 +4,6 @@ import Markdoc from "@markdoc/markdoc";
 import React from "react";
 import { glob } from "glob";
 import path from "path";
-import ThemeManager from "../../components/ThemeManager";
 
 const BLOG_PATH = "app/content/blog";
 const POSTS_DIR = path.join(process.cwd(), BLOG_PATH);
@@ -29,7 +28,12 @@ export default async function PostPage({ params }) {
 
   return (
     <section className="grid md:grid-cols-6 mb-32 mt-[4rem] md:mt-[6rem] container">
-      
+      <div className="col-start-2 col-span-4 text-[3rem] leading-[120%]">
+        <h1 className="">{postData.frontMatter.title}</h1>
+        <h3 className="">{postData.frontMatter.description}</h3>
+        <h3 className="text-[1rem]">{postData.frontMatter.date}</h3>
+      {Markdoc.renderers.react(postData.content, React)}
+      </div>
     </section>
   );
 }

@@ -1,11 +1,10 @@
 ---
 title = "Get On The Network"
 ---
-
 {% overview-section title="Hosting Provider" %}
 
 Tlon is an Urbit-native toolkit for communicating with your community.
-Download the Tlon app↗ and you’ll be on the network for free in seconds.
+Download the [Tlon app](https://tlon.io) and you’ll be on the network for free in seconds.
 
 Red Horizon provides free Urbit hosting with several urbit apps pre-installed.
 Visit [redhorizon.com](https://redhorizon.com)
@@ -14,7 +13,7 @@ Visit [redhorizon.com](https://redhorizon.com)
 
 {% overview-section title="Run It Yourself" %}
 
-CLI (technical)
+CLI (Technical)
 Learn how to run Urbit on any compatible machine from the command line.
 
 Cloud hosting guide (technical)
@@ -25,7 +24,9 @@ Host Urbit in the cloud on a Digital Ocean VPS
 
 Once you’re up and running, read up on what you can do with your new Urbit node
 
-Urbit’s Command Line User Manual
-Getting Around Guide: Learn the web interface
-Manage your Urbit ID with Bridge
+[Urbit’s Command Line User Manual]()
+
+[Getting Around Guide: Learn the web interface]()
+
+[Manage your Urbit ID with Bridge]()
 {% /overview-section %}

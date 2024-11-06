@@ -1,6 +1,7 @@
 import React from "react";
 import { getPostsTree, getToml } from "../lib/queries";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function BlogHome() {
   const posts = await getPostsTree("blog/");
@@ -14,6 +15,7 @@ export default async function BlogHome() {
         relativePath: post.relativePath,
         slug: post.slug,
       });
+      console.log(allPostFrontMatter);
     })
   );
 
@@ -30,7 +32,8 @@ export default async function BlogHome() {
         const { title, date, description, aliases, extra } = post.data;
 
         return (
-          <section
+          <Link
+            href={'/blog/'+post.slug}
             key={post.slug}
             className="md:grid grid-cols-6 gap-x-4 w-full my-16"
           >
@@ -46,7 +49,7 @@ export default async function BlogHome() {
                 <img className="h-full w-auto" src={extra.image} alt={title} />
               </div>
             </div>
-          </section>
+          </Link>
         );
       })}
     </div>
