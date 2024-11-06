@@ -8,7 +8,7 @@ Tlon is an Urbit-native toolkit for communicating with your community.
 Download the Tlon app↗ and you’ll be on the network for free in seconds.
 
 Red Horizon provides free Urbit hosting with several urbit apps pre-installed.
-Visit redhorizon.com↗
+Visit [redhorizon.com](https://redhorizon.com)
 
 {% /overview-section %}
 

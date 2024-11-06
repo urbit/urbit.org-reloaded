@@ -186,8 +186,9 @@ body {
     }
     a {
       @apply underline decoration-[.01em] underline-offset-[.1em] hover:text-gray-87;
+      /* @apply no-underline text-gray-87; */
     }
-    a:after {
+    a.external:after {
       @apply content-['↗'];
     }
     ul {

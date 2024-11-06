@@ -2,6 +2,7 @@ import { Config } from "@markdoc/markdoc";
 // import Callout from "./(blog.components)/callout";
 // import Heading from "./(blog.components)/heading";
 import {OverviewSection, OverviewSVG, OverviewImage } from "./components/OverviewSection";
+import { MarkdocLink } from "./components/MarkdocLink";
 
 const markdocConfig = {
     nodes: {
@@ -15,7 +16,7 @@ const markdocConfig = {
             }
         },
         link: {
-            render: 'a',
+            render: MarkdocLink,
             attributes: {
                 href: { type: String }
             }
@@ -54,5 +55,7 @@ const components = {
     // Heading: Heading,
     // Callout: Callout
 };
+
+
 
 export { markdocConfig, components }
