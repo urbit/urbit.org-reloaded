@@ -113,7 +113,7 @@ export const Section = ({ title, className, children }) => {
 };
 export const Event = ({ event, slug }) => {
   return (
-    <Link href={`/events/${slug}`} className="block eventblock hover:text-gray-87 transition-all leading-[130%] text-25px mb-[6.25rem]">
+    <Link href={`/events/${slug}`} className="block eventblock hover:text-gray-87 transition-all leading-[130%] text-25px ">
 
       <h1 className="font-[700]">{event.title}</h1>
       <div className="mb-[1em]">
