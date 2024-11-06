@@ -42,7 +42,7 @@ export default async function PostPage({ params }) {
             <span className="font-[700]">{title}</span>
             <span className="">{extra?.description}</span>
           </div>
-          <div className="flex flex-col mt-8 text-25px md:text-21px leading-120">
+          <div className="flex flex-col mt-8 text-25px md:text-20px leading-120">
             <span className="">{formatDate(date)}</span>
             <span className="">Reward: {extra.reward} </span>
             <span className="">ID: {extra?.grant_id}</span>

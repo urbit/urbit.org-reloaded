@@ -68,14 +68,27 @@ export default async function EventsHome() {
       </Section>
       <Section title="Calendar" className="!col-span-4">
         <div className="text-25px leading-[120%]">
-          Schedule for official Urbit events. In addition to in-person, we regularly hold online events where you can hang out, learn, and get involved. Most of these are in the Urbit Hacker House, a shared virtual office space.
+          Schedule for official Urbit events. In addition to in-person, we
+          regularly hold online events where you can hang out, learn, and get
+          involved. Most of these are in the Urbit Hacker House, a shared
+          virtual office space.
           <div className="flex flex-row gap-x-2 mt-8">
-            <div className="bg-gray-87 text-black font-[600] px-1 py-2 leading-[1cap] rounded-lg">Subscribe To Calendar</div>
-          <div className="bg-gray-87 text-black font-[600] px-1 py-2 leading-[1cap] rounded-lg">Enter Hacker House</div>
-            </div>
+            <a
+              href="https://calendar.google.com/calendar/ical/c_13647438d00ef31237be88b19de24de30aeb2609657c80cfb6b22350941c61dd%40group.calendar.google.com/public/basic.ics"
+              className="bg-gray-87 text-black font-[600] px-[.375rem] py-2 leading-[1cap] rounded-lg"
+            >
+              Subscribe To Calendar
+            </a>
+            <a
+              href="https://app.gather.town/app/xAYeiPI2XDYhRM9t/urbit-hacker-house"
+              className="bg-gray-87 text-black font-[600] px-[.375rem] py-2 leading-[1cap] rounded-lg"
+            >
+              Enter Hacker House
+            </a>
+          </div>
         </div>
       </Section>
-      
+
       <iframe
         className="mb-12"
         src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FNew_York"
@@ -89,11 +102,11 @@ export default async function EventsHome() {
 
 export const Section = ({ title, className, children }) => {
   return (
-    <section className="grid grid-cols-6 w-full h-full pt-8 mb-[4.375rem] gap-x-4 [&:not(:first-of-type)]:border-t-[1.2px] border-gray-87">
-      <div className="col-span-1">
+    <section className="md:grid grid-cols-6 w-full h-full pt-8 mb-[4.375rem] gap-x-4 [&:not(:first-of-type)]:border-t-[1.2px] border-gray-87">
+      <div className="col-span-1 mb-4">
         <h1 className="8">{title}</h1>
       </div>
-      <div className={classNames("col-span-5", className)}>{children}</div>
+      <div className={classNames("col-span-4", className)}>{children}</div>
     </section>
   );
 };

@@ -22,7 +22,7 @@ export const EventsList = ({ events }) => {
             e.preventDefault(); 
             setShowAll(true);
           }}
-          className={classNames("bg-gray-87 text-black font-[600] px-1 py-2 leading-[1cap] rounded-lg", {
+          className={classNames("bg-gray-87 text-black font-[600] px-[.375rem] py-2 leading-[1cap] rounded-lg", {
             hidden: showAll,
           })}
         >

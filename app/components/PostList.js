@@ -200,7 +200,7 @@ const PostListContent = ({ allPostFrontMatter, statuses, programs, categories })
                 </div>
                 <div className={classNames("pt-5")}>{extra?.description}</div>
                 <div
-                  className={classNames("text-gray-87 !text-21px pt-6 flex gap-x-1")}
+                  className={classNames("text-gray-87 !text-20px pt-6 flex gap-x-1")}
                 >
                   <span className="bg-black text-white !font-[600] rounded-[5px] px-[6px] py-[2px]">
                     {extra?.completed ? "Completed" : "Open"}
