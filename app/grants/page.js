@@ -1,6 +1,6 @@
 import React from "react";
 import { getPostsTree, getToml } from "../lib/queries";
-import { PostList } from "../components/PostList";
+import { GrantList } from "../components/GrantList";
 
 export default async function GrantsHome() {
   const posts = await getPostsTree("grants/");
@@ -47,7 +47,7 @@ export default async function GrantsHome() {
           </div>
         </div>
       </section>
-      <PostList
+      <GrantList
         allPostFrontMatter={JSON.parse(JSON.stringify(allPostFrontMatter))}
         statuses={statuses}
         programs={programs}

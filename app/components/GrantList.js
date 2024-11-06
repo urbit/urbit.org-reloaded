@@ -8,7 +8,7 @@ import Link from "next/link";
 // Loader component to show while the page is waiting for the router
 const Loader = () => <div>Loading...</div>;
 
-const PostListContent = ({ allPostFrontMatter, statuses, programs, categories }) => {
+const GrantListContent = ({ allPostFrontMatter, statuses, programs, categories }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -242,7 +242,7 @@ const PostListContent = ({ allPostFrontMatter, statuses, programs, categories })
   );
 };
 
-export const PostList = ({
+export const GrantList = ({
   allPostFrontMatter,
   categoryData,
   statuses,
@@ -251,7 +251,7 @@ export const PostList = ({
 }) => {
   return (
     <Suspense fallback={<Loader />}>
-      <PostListContent
+      <GrantListContent
         allPostFrontMatter={allPostFrontMatter}
         categoryData={categoryData}
         statuses={statuses}
