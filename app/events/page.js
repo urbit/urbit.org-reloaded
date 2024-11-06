@@ -3,6 +3,7 @@ import { getPostsTree, getYaml, getToml } from "../lib/queries";
 import { DateRange } from "../components/DateRange";
 import { EventsList } from "../components/EventsList";
 import classNames from "classnames";
+import Link from "next/link";
 
 export default async function EventsHome() {
   const paths = {
@@ -47,7 +48,7 @@ export default async function EventsHome() {
       </div>
       <Section title="Upcoming">
         {upcomingEvents.map((event, i) => {
-          return <Event key={event} event={event.data} />;
+          return <Event key={event} event={event.data} slug={event.slug} />;
         })}
       </Section>
       <Section title="Meetups">
@@ -110,15 +111,16 @@ export const Section = ({ title, className, children }) => {
     </section>
   );
 };
-export const Event = ({ event }) => {
+export const Event = ({ event, slug }) => {
   return (
-    <div className="eventblock leading-[130%] text-25px">
+    <Link href={`/events/${slug}`} className="block eventblock hover:text-gray-87 transition-all leading-[130%] text-25px mb-[6.25rem]">
+
       <h1 className="font-[700]">{event.title}</h1>
       <div className="mb-[1em]">
         <DateRange starts={event.starts} ends={event.ends} />
       </div>
       <div className="mb-[1em]">{event?.description}</div>
       <div>{event.location}</div>
-    </div>
+    </Link>
   );
 };

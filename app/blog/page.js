@@ -15,7 +15,7 @@ export default async function BlogHome() {
         relativePath: post.relativePath,
         slug: post.slug,
       });
-      console.log(allPostFrontMatter);
+      // console.log(allPostFrontMatter);
     })
   );
 
@@ -33,18 +33,18 @@ export default async function BlogHome() {
 
         return (
           <Link
-            href={'/blog/'+post.slug}
+            href={"/blog/" + post.slug}
             key={post.slug}
-            className="md:grid grid-cols-6 gap-x-4 w-full my-16"
+            className="md:grid group  grid-cols-6 gap-x-4 w-full my-16 "
           >
-            <div className="col-span-1 flex flex-col mb-4  font-mono !text-20px tracking-[.01em] text-gray-f5">
-              <div className="mb-[.1em]">{extra.author}</div>
+            <div className="col-span-1 flex flex-col mb-4 transition-all font-mono !text-20px tracking-[.01em] text-gray-f5">
+              <div className="mb-[.1em] ">{extra.author}</div>
               <div>{extra.ship}</div>
             </div>
-            <div className="col-span-4 flex flex-col leading-[120%]">
+            <div className=" col-span-4 group-hover:!text-gray-87 transition-all  flex flex-col leading-[120%]">
               <div className="font-bold">{title}</div>
               <div>{description}</div>
-              <div className="text-gray-87 mb-4">{date}</div>
+              <div className="text-gray-87  mb-4">{date}</div>
               <div className="h-[300px] w-auto relative">
                 <img className="h-full w-auto" src={extra.image} alt={title} />
               </div>

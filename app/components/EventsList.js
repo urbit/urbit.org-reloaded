@@ -2,8 +2,11 @@
 import { useState, useEffect } from "react";
 import classNames from "classnames";
 import { DateRange } from "./DateRange";
+import Link from "next/link";
+
 export const EventsList = ({ events }) => {
   const [showAll, setShowAll] = useState(false);
+
 
   return (
     <Section title="Past Events">
@@ -12,7 +15,7 @@ export const EventsList = ({ events }) => {
           {events.slice(0, showAll ? 1000 : 4).map((event, i) => {
             return (
               <div key={event + i}>
-                <Event event={event.data} />
+                <Event event={event.data} slug={event.slug} />
               </div>
             );
           })}
@@ -43,15 +46,16 @@ export const Section = ({ title, children }) => {
   );
 };
 
-export const Event = ({ event }) => {
+export const Event = ({ event, slug }) => {
   return (
-    <div className="eventblock leading-[130%] text-25px mb-[6.25rem]">
+    <Link href={`/events/${slug}`} className="block eventblock hover:text-gray-87 transition-all leading-[130%] text-25px mb-[6.25rem]">
+
       <h1 className="font-[700]">{event.title}</h1>
       <div className="mb-[1em]">
         <DateRange starts={event.starts} ends={event.ends} />
       </div>
       <div className="mb-[1em]">{event?.description}</div>
       <div>{event.location}</div>
-    </div>
+    </Link>
   );
 };
