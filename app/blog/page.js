@@ -32,13 +32,13 @@ export default async function BlogHome() {
         return (
           <section
             key={post.slug}
-            className="grid grid-cols-6 gap-x-4 w-full my-16"
+            className="md:grid grid-cols-6 gap-x-4 w-full my-16"
           >
-            <div className="col-span-1 flex flex-col font-mono !text-20px tracking-[.01em] text-gray-f5">
+            <div className="col-span-1 flex flex-col mb-4  font-mono !text-20px tracking-[.01em] text-gray-f5">
               <div className="mb-[.1em]">{extra.author}</div>
               <div>{extra.ship}</div>
             </div>
-            <div className="col-span-4 flex flex-col">
+            <div className="col-span-4 flex flex-col leading-[120%]">
               <div className="font-bold">{title}</div>
               <div>{description}</div>
               <div className="text-gray-87 mb-4">{date}</div>
