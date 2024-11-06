@@ -21,7 +21,7 @@ export default async function BlogHome() {
     <div className="container mb-32 md:mt-[3.06rem]  text-25px leading-[120%]">
       <section className="grid grid-cols-6 gap-x-4 w-full">
         <div className="col-span-1"></div>
-        <div className="col-span-5">
+        <div className="col-span-4">
           Stories from the broader Urbit community, the Urbit Foundation, and
           the many people contributing to Urbit.
         </div>
@@ -38,7 +38,7 @@ export default async function BlogHome() {
               <div>{extra.author}</div>
               <div>{extra.ship}</div>
             </div>
-            <div className="col-span-5 flex flex-col">
+            <div className="col-span-4 flex flex-col">
               <div className="font-bold">{title}</div>
               <div>{description}</div>
               <div className="text-gray-87 mb-4">{date}</div>
