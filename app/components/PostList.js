@@ -44,15 +44,25 @@ const PostListContent = ({ allPostFrontMatter, statuses, programs, categories })
   // Handle filtering and sorting logic within an effect
   useEffect(() => {
     let posts = [...allPostFrontMatter];
-
     // Apply category filtering
     if (selectedCategory) {
       posts = posts.filter((post) => post?.taxonomies?.grant_type === selectedCategory);
     }
 
-    // Apply status filteringselec
+    // Apply status filterings
     if (selectedStatus) {
-      posts = posts.filter((post) => post.extra.status === selectedStatus);
+      
+      posts = posts.filter((post) => {
+        let hasAssignee = post?.data?.extra?.assignee.length > 1 ? true : false;
+        if(selectedStatus == "Open") {
+          return post?.data?.extra?.completed == false && !hasAssignee
+        } else if (selectedStatus == "In Progress") {
+          return post?.data?.extra?.completed == false && hasAssignee
+        } else {
+          return post?.data.extra?.completed == true
+        }
+      });
+        
     }
 
     // Apply program filtering
@@ -96,6 +106,17 @@ const PostListContent = ({ allPostFrontMatter, statuses, programs, categories })
       prevProgram === program ? null : program
     );
   };
+
+  const generateStatus = (grantData) => {
+    let hasAssignee = grantData?.data?.extra?.assignee.length > 1;
+    if(grantData?.data?.extra?.completed) {
+      return "Completed";
+    } else if (!grantData?.data?.extra?.completed && hasAssignee) {
+      return "In Progress"
+    } else {
+      return "Open"
+    }
+  }
 
   // // Sort by option handler
   // const handleSortClick = (option) => {
@@ -203,7 +224,7 @@ const PostListContent = ({ allPostFrontMatter, statuses, programs, categories })
                   className={classNames("text-gray-87 !text-20px pt-6 flex gap-x-1")}
                 >
                   <span className="bg-black text-white !font-[600] rounded-[5px] px-[6px] py-[2px]">
-                    {extra?.completed ? "Completed" : "Open"}
+                    {generateStatus(postData)}
                   </span>
                   {taxonomies?.grant_type &&
                   <span className="bg-gray-87 text-black rounded-[5px] px-[6px] py-[2px]">
