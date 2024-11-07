@@ -6,12 +6,9 @@ module.exports = {
       "./components/**/*.{js,ts,jsx,tsx,mdx}",
       "./app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
-    transform: {
-      md: (content) => {
-        const parsed = Markdown.parse({ post: { content } });
-        return markdoc.renderers.html(parsed);
-      },
-    },
+    // transform: [
+
+    // ]
   },
   darkMode: "selector",
 
@@ -62,6 +59,7 @@ module.exports = {
         "20px": "1.25rem",
         "21px": "1.3125rem",
         "25px": "1.5625rem",
+        "40px": "2.5rem",
       },
       lineHeight: {
         100: "100%",

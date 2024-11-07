@@ -130,7 +130,7 @@ body {
       @apply mb-0;
     }
     .overview-section-title {
-      @apply col-span-1 text-[2rem] md:text-20px font-[600] md:font-[400] md:mb-0 mb-8;
+      @apply col-span-1 text-20px font-[600] md:font-[400] md:mb-0 mb-8;
     }
     .overview-section-body {
       @apply col-span-4 text-25px leading-120;
@@ -154,6 +154,12 @@ body {
   .button {
     @apply my-[2.5rem] md:hover:bg-gray-87 text-25px font-[600] bg-white text-black rounded-[5px] leading-[1cap] p-[.5rem]
     dark:bg-black dark:text-white;
+  }
+  .nav-button-selected {
+    @apply text-white;
+  }
+  .dark .nav-button-selected {
+    @apply text-black;
   }
   .apply-button {
     @apply bg-background text-foreground leading-[1cap] text-25px font-[600] rounded-[5px] px-[.5rem] py-[.2rem]

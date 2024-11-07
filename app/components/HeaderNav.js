@@ -166,13 +166,13 @@ const GlobalNav = ({ nav }) => {
   const currentRoute = usePathname();
 
   return (
-    <ul className="flex mb-0 flex-row gap-x-4 pt-0 text-[1.25rem] font-[600]">
+    <ul className="flex mb-0 flex-row gap-x-4 pt-0 text-20px font-[600]">
       {nav?.map((navItem, i) => {
         return (
           <Link
             className={
               currentRoute.startsWith(navItem.url)
-                ? "text-white"
+                ? "nav-button-selected"
                 : "text-gray-87"
             }
             key={`${navItem} + ${i}`}

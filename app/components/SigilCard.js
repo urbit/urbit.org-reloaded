@@ -44,7 +44,7 @@ export const SigilCard = () => {
       <div className="md:w-[37svw] md:h-[23svw] border-2 border-white rounded-xl flex flex-col justify-between p-10">
         <div>-</div>
         <img className="absolute w-[50px]" src={`data:image/svg+xml;utf8,${encodeURIComponent(svgString)}`} />
-        <h1 className="text-[2.5rem] leading-[100%] w-full text-center">
+        <h1 className="text-40px leading-[100%] w-full text-center">
           {name}
         </h1>
         
@@ -59,7 +59,7 @@ export const SigilCard = () => {
               <div>~ zod</div>
             </div>
           </div>
-          <div className="flex flex-col justify-end w-full text-[12px] ">
+          <div className="flex flex-col justify-end w-full text-12px ">
              {urbitId}
             {/* <span className="border-2 border-white flex w-auto">L1</span> */}
           </div>
