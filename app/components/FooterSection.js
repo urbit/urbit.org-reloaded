@@ -3,7 +3,7 @@ import {NewsletterSignup} from "./NewsletterSignup";
 
 export const FooterSection = ({ footerData }) => {
   return (
-    <section className="z-10 h-max mb-8 text-20px  container text-gray-87 leading-120">
+    <section className="z-10 h-max mb-8 text-large  container text-gray-87 leading-120">
                 <NewsletterSignup className="z-10 " />
 
       <div className="grid grid-cols-2 md:grid-cols-6">

@@ -59,7 +59,7 @@ export const SigilCard = () => {
               <div>~ zod</div>
             </div>
           </div>
-          <div className="flex flex-col justify-end w-full text-12px ">
+          <div className="flex flex-col justify-end w-full text-small ">
              {urbitId}
             {/* <span className="border-2 border-white flex w-auto">L1</span> */}
           </div>

@@ -37,7 +37,7 @@ export default async function EcosystemHome() {
 
   return (
     <div className="mb-32 md:mt-9">
-      <div className="container grid grid-cols-6 gap-x-4 w-full mb-16 text-25px leading-[130%]">
+      <div className="container grid grid-cols-6 gap-x-4 w-full mb-16 text-xlarge leading-[130%]">
         <p className="col-span-4 col-start-2">
           Urbit’s decentralized ecosystem is growing more than ever, check out
           the Apps, Podcasts, Talks, Companies and more below.
@@ -65,7 +65,7 @@ export default async function EcosystemHome() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="bg-gray-d9 flex-grow leading-[110%] font-[500] text-black h-[9.125rem] p-[1.375rem] text-25px">
+                <div className="bg-gray-d9 flex-grow leading-[110%] font-[500] text-black h-[9.125rem] p-[1.375rem] text-xlarge">
                   <h1 className="mt-[-0.15em]">{app.data.title}</h1>
                   <h3 className="text-gray-87">
                     <p className="text-ellipsis line-clamp-3">
@@ -97,7 +97,7 @@ export default async function EcosystemHome() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="bg-gray-d9 flex-grow max-h-[9.125rem] h-auto min-h-[9.125rem] px-[1.875rem] py-[1.375rem]  leading-[110%] font-[500] text-black text-25px">
+                  <div className="bg-gray-d9 flex-grow max-h-[9.125rem] h-auto min-h-[9.125rem] px-[1.875rem] py-[1.375rem]  leading-[110%] font-[500] text-black text-xlarge">
                     <h1 className="mt-[-0.15em]">{podcast.data.title}</h1>
                     <h3 className="text-gray-87 text-ellipsis line-clamp-3">
                       {podcast.data.description}
@@ -128,7 +128,7 @@ export default async function EcosystemHome() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="bg-gray-d9 flex-grow leading-[110%] font-[500] text-black p-[1.375rem] text-25px">
+                  <div className="bg-gray-d9 flex-grow leading-[110%] font-[500] text-black p-[1.375rem] text-xlarge">
                   <h1 className="line-clamp-1 text-ellipsis">{talk.data.title}</h1>
                   </div>
                 </Link>

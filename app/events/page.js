@@ -42,7 +42,7 @@ export default async function EventsHome() {
   return (
     <div className="container mb-32 md:mt-9">
       <div className="md:grid grid-cols-6 gap-x-4 w-full mb-8">
-        <div className="col-start-2 col-span-4 text-25px font-[400]">
+        <div className="col-start-2 col-span-4 text-xlarge font-[400]">
           <p>Explore Urbit and our community, in-person and online.</p>
         </div>
       </div>
@@ -52,7 +52,7 @@ export default async function EventsHome() {
         })}
       </Section>
       <Section title="Meetups">
-        <div className="text-25px leading-[120%] font-[400]">
+        <div className="text-xlarge leading-[120%] font-[400]">
           <p>
             Urbit has meetups worldwide. Join your local communities
             or start your own.
@@ -68,7 +68,7 @@ export default async function EventsHome() {
         </div>
       </Section>
       <Section title="Calendar" className="!col-span-4">
-        <div className="text-25px leading-[120%]">
+        <div className="text-xlarge leading-[120%]">
           Schedule for official Urbit events. In addition to in-person, we
           regularly hold online events where you can hang out, learn, and get
           involved. Most of these are in the Urbit Hacker House, a shared
@@ -113,7 +113,7 @@ export const Section = ({ title, className, children }) => {
 };
 export const Event = ({ event, slug }) => {
   return (
-    <Link href={`/events/${slug}`} className="block eventblock hover:text-gray-87 transition-all leading-[130%] text-25px ">
+    <Link href={`/events/${slug}`} className="block eventblock hover:text-gray-87 transition-all leading-[130%] text-xlarge ">
 
       <h1 className="font-[700]">{event.title}</h1>
       <div className="mb-[1em]">

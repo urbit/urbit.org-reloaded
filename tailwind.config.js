@@ -17,13 +17,11 @@ module.exports = {
       sans: ["Urbit Sans"],
       mono: ["Urbit Sans", { fontVariationSettings: '"xtab" 500' }],
       serif: ["Urbit Serif Italic"],
-      // 'mono': ["...", 'Courier New', 'monospace', 'mono'],
       "custom-font": ["custom font", "Courier New", "monospace", "mono"],
       variable: [
         "variable",
         {
           fontFeatureSettings: '"ss01"',
-          // fontVariationSettings: '"opsz" 32'
         },
       ],
     },
@@ -37,34 +35,24 @@ module.exports = {
       "3xl": "1900px",
     },
     extend: {
-      spacing: {
-        "12px": ".75rem",
-        "18px": "1rem",
-        "20px": "1.11rem",
-        "21px": "1.3125rem",
-        "28px": "1.55",
-        header: "var(--header-height)",
-        "footer-height": "var(--footer-height)",
-      },
       letterSpacing: {
         "02": "0.024em",
-        "01": "0.01%",
+        "01": "0.01em",
       },
       borderRadius: {
         "5px": ".3125rem",
         "16px": "1rem",
       },
       fontSize: {
-        "16px": "1rem",
-        "20px": "1.25rem",
-        "21px": "1.3125rem",
-        "25px": "1.5625rem",
-        "40px": "2.5rem",
+        "small": ".75rem", //12px
+        "base": "1rem", //16px
+        "large": "1.25rem", //20px
+        "xlarge": "1.5625rem", //25px
+        "40px": "2.5rem", //40px
       },
       lineHeight: {
         100: "100%",
         120: "120%",
-        // "130": "130%",
       },
       transitionTimingFunction: {
         springy: "var(--ease-springy)",
@@ -76,9 +64,9 @@ module.exports = {
         white: "var(--foreground)",
         gray: {
           "5a": "#5a5a55",
-          87: "#878787",
-          d9: "#d9d9d9",
-          f5: "#f5f5f5",
+          "87": "#878787",
+          "d9": "#d9d9d9",
+          "f5": "#f5f5f5",
         },
         white: "var(--foreground)",
         "off-white": "var(--off-white)",

@@ -26,12 +26,12 @@ export default async function GrantsHome() {
   return (
     <div className="container mb-32 md:mt-9 ">
       <section className="md:grid grid-cols-6 gap-x-4 mb-12 ">
-        <div className="col-start-2 col-span-4 text-25px leading-[120%] font-[400]">
+        <div className="col-start-2 col-span-4 text-xlarge leading-[120%] font-[400]">
           Earn a piece of the Urbit network by developing software, creating
           content, growing communities, and more. There are two types of grants:
         </div>
       </section>
-      <section className="md:grid grid-cols-6 gap-x-4 mb-12 text-25px leading-[120%] font-[500]">
+      <section className="md:grid grid-cols-6 gap-x-4 mb-12 text-xlarge leading-[120%] font-[500]">
         <div className="col-span-1"></div>
         <div className="col-span-2">
           <div className="block">Proposals</div>

@@ -29,7 +29,7 @@ export default async function PostPage({ params }) {
   return (
     <section className="grid md:grid-cols-6 mb-32 mt-[4rem] md:mt-[6rem] container">
       
-      <div className="col-start-2 col-span-4 text-25px leading-[120%]">
+      <div className="col-start-2 col-span-4 text-xlarge leading-[120%]">
         <div className="flex flex-col mb-8">
           <div>{title}</div>
           <div>{description}</div>

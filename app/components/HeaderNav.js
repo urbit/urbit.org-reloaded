@@ -166,7 +166,7 @@ const GlobalNav = ({ nav }) => {
   const currentRoute = usePathname();
 
   return (
-    <ul className="flex mb-0 flex-row gap-x-4 pt-0 text-20px font-[600]">
+    <ul className="flex mb-0 flex-row gap-x-4 pt-0 text-large font-[600]">
       {nav?.map((navItem, i) => {
         return (
           <Link

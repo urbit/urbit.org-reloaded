@@ -130,10 +130,10 @@ body {
       @apply mb-0;
     }
     .overview-section-title {
-      @apply col-span-1 text-20px font-[600] md:font-[400] md:mb-0 mb-8;
+      @apply col-span-1 text-large font-[600] md:font-[400] md:mb-0 mb-8;
     }
     .overview-section-body {
-      @apply col-span-4 text-25px leading-120;
+      @apply col-span-4 text-xlarge leading-120;
     }
     .overview-section-body p:last-of-type {
       @apply !mb-0 !pb-0;
@@ -152,7 +152,7 @@ body {
     }
   /* } */
   .button {
-    @apply my-[2.5rem] md:hover:bg-gray-87 text-25px font-[600] bg-white text-black rounded-[5px] leading-[1cap] p-[.5rem]
+    @apply my-[2.5rem] md:hover:bg-gray-87 text-xlarge font-[600] bg-white text-black rounded-[5px] leading-[1cap] p-[.5rem]
     dark:bg-black dark:text-white;
   }
   .nav-button-selected {
@@ -162,26 +162,26 @@ body {
     @apply text-black;
   }
   .apply-button {
-    @apply bg-background text-foreground leading-[1cap] text-25px font-[600] rounded-[5px] px-[.5rem] py-[.2rem]
+    @apply bg-background text-foreground leading-[1cap] text-xlarge font-[600] rounded-[5px] px-[.5rem] py-[.2rem]
      hover:bg-gray-5a md:hover:text-foreground;
   }
   .next-button {
-    @apply hover:bg-white md:hover:text-black my-[2.5rem] leading-[1cap] text-25px font-[600] bg-gray-87 text-black rounded-[5px] px-[.5rem] py-[.3rem];
+    @apply hover:bg-white md:hover:text-black my-[2.5rem] leading-[1cap] text-xlarge font-[600] bg-gray-87 text-black rounded-[5px] px-[.5rem] py-[.3rem];
   }
   a,
   .link {
     @apply md:hover:text-white md:dark:hover:text-gray-87;
   }
   article {
-    @apply text-25px leading-120;
+    @apply text-xlarge leading-120;
     h1 {
       @apply text-[3.75rem] font-[400] mb-8 md:mb-16 lg:mb-20 leading-[100%] my-[2.5rem];
     }
     h1[level="2"] {
-      @apply text-25px font-[700] mb-[2.6rem];
+      @apply text-xlarge font-[700] mb-[2.6rem];
     }
     h1[level="3"] {
-      @apply text-21px font-[700] mb-[1.6rem];
+      @apply text-large font-[700] mb-[1.6rem];
     }
 
     blockquote {
@@ -214,7 +214,7 @@ body {
     }
     code,
     pre {
-      @apply text-25px dark:bg-[#d4d5d3] rounded-5px px-1 mb-8;
+      @apply text-xlarge dark:bg-[#d4d5d3] rounded-5px px-1 mb-8;
       font-family: "Urbit Sans";
       font-variation-settings: "xtab" 500;
     }

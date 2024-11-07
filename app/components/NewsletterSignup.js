@@ -62,7 +62,7 @@ export const NewsletterSignup = () => {
               <div className="flex h-[2.125rem] items-center justify-center absolute top-0 right-0">
                 <button
                   id="mc-embedded-subscribe"
-                  className="body-lg text-20px text-gray-87 hover:text-white bg-transparent pr-[.4em]"
+                  className="body-lg text-large text-gray-87 hover:text-white bg-transparent pr-[.4em]"
                   type="submit"
                   name="subscribe"
                 >
@@ -76,7 +76,7 @@ export const NewsletterSignup = () => {
       {statusMessage && (
         <div className="mb-8 w-max flex items-center justify-center text-sm">
           <div
-            className={classNames("button !text-20px !bg-gray-87")}
+            className={classNames("button !text-large !bg-gray-87")}
           >
             {statusMessage}
           </div>

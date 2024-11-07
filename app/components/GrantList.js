@@ -219,7 +219,6 @@ const GrantListContent = ({
         <span className="leading-[1cap] mb-4">
           Showing {filteredSortedPosts.length} grants
         </span>
-        {/* <div className="border-b-[.7px] border-white w-full pt-21px"></div> */}
         {filteredSortedPosts.map((postData) => {
           const { title, date, extra, taxonomies } = postData.data;
           let reward = extra?.reward?.match(/\d+/)[0];
@@ -230,7 +229,7 @@ const GrantListContent = ({
               <Link
                 href={postData.relativePath}
                 data-category={taxonomies?.grant_type}
-                className="pt-[10px] pb-[10px] px-[9px] bg-gray-d9 text-black text-25px group rounded-[5px] mb-2 hover:text-gray-87 font-[400]"
+                className="pt-[10px] pb-[10px] px-[9px] bg-gray-d9 text-black text-xlarge group rounded-[5px] mb-2 hover:text-gray-87 font-[400]"
               >
                 <div className={classNames("leading-[120%] ")}>
                   <div>{title}</div>
@@ -250,7 +249,7 @@ const GrantListContent = ({
                 </div>
                 <div
                   className={classNames(
-                    "text-gray-87 !text-20px mt-6 flex gap-x-1"
+                    "text-gray-87 !text-large mt-6 flex gap-x-1"
                   )}
                 >
                   <span className="bg-black text-white !font-[600] rounded-[5px] px-[6px] py-[2px]">
