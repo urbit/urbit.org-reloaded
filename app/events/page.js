@@ -58,10 +58,11 @@ export default async function EventsHome() {
             or start your own.
           </p>
           <br />
-          {allCommunitiesFrontMatter.map((event, i) => {
+          {allCommunitiesFrontMatter.map((community, i) => {
+            console.log(community.data.links[0].url)
             return (
               <div key={i}>
-                <p className="font-[700]">{event.data.title}</p>
+                <Link href={`/communities/${community.slug}`} className="font-[700] hover:text-gray-87">{community.data.title}</Link>
               </div>
             );
           })}
@@ -76,13 +77,13 @@ export default async function EventsHome() {
           <div className="flex flex-row gap-x-2 mt-8">
             <a
               href="https://calendar.google.com/calendar/ical/c_13647438d00ef31237be88b19de24de30aeb2609657c80cfb6b22350941c61dd%40group.calendar.google.com/public/basic.ics"
-              className="bg-gray-87 text-black font-[600] px-[.375rem] py-2 leading-[1cap] rounded-lg"
+              className="action-button"
             >
               Subscribe To Calendar
             </a>
             <a
               href="https://app.gather.town/app/xAYeiPI2XDYhRM9t/urbit-hacker-house"
-              className="bg-gray-87 text-black font-[600] px-[.375rem] py-2 leading-[1cap] rounded-lg"
+              className="action-button"
             >
               Enter Hacker House
             </a>

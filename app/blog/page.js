@@ -21,7 +21,7 @@ export default async function BlogHome() {
 
   return (
     <div className="container mb-32 md:mt-[3.06rem]  text-xlarge leading-[100%]">
-      <section className="grid grid-cols-6 gap-x-4 w-full">
+      <section className="md:grid grid-cols-6 gap-x-4 w-full">
         <div className="col-span-1"></div>
         <div className="col-span-4">
           Stories from the broader Urbit community, the Urbit Foundation, and

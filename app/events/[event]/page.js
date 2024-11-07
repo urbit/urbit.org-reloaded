@@ -24,18 +24,30 @@ export async function generateStaticParams() {
 export default async function PostPage({ params }) {
   const eventSlug = `/events/${params.event}.md`; // Append .md here to use in the file path
   const eventData = await getMarkdownContent(eventSlug, "toml");
-  const { title, description, registration_url, location } = eventData.frontMatter;
+  const { 
+    title, 
+    description, 
+    image,
+    registration_url, 
+    starts,
+    ends,
+    location 
+  } = eventData.frontMatter;
 
   return (
     <section className="grid md:grid-cols-6 mb-32 mt-[4rem] md:mt-[6rem] container">
       
       <div className="col-start-2 col-span-4 text-xlarge leading-[120%]">
-        <div className="flex flex-col mb-8">
-          <div>{title}</div>
-          <div>{description}</div>
-          <div>{location}</div>
-          <div>{registration_url}</div>
+        <div className="flex flex-col mb-24">
+          <div className="text-2xlarge leading-[120%]">{title}</div>
+          <div className="text-xlarge mb-8">{description}</div>
+          
+          <div className="">{location}</div>
+          <div className="mb-8">{starts} - {ends}</div>
+          
+          <a href="{registration_url}" className="action-button">Register</a>
         </div>
+        
         {Markdoc.renderers.react(eventData.content, React)}
       </div>
     </section>

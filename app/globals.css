@@ -155,6 +155,9 @@ body {
     @apply my-[2.5rem] md:hover:bg-gray-87 text-xlarge font-[600] bg-white text-black rounded-[5px] leading-[1cap] p-[.5rem]
     dark:bg-black dark:text-white;
   }
+  .action-button {
+    @apply bg-gray-87 w-max text-black font-[600] px-[.375rem] py-2 leading-[1cap] rounded-lg;
+  }
   .nav-button-selected {
     @apply text-white;
   }
