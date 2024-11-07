@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { sigil, reactRenderer, stringRenderer } from "urbit-sigil-js";
+import classNames from "classnames";
 
 export const SigilCard = () => {
   const ob = require("urbit-ob");
@@ -21,33 +22,43 @@ export const SigilCard = () => {
   // write function to decimal delimit every third number
   const decimalDelimit = (num) => {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-  }
+  };
 
-  useEffect(() => {
+  const generateNewShip = () => {
     let x = randomShip();
-    setUrbitId(decimalDelimit(x))
+    setUrbitId(decimalDelimit(x));
     let p = ob.patp(x);
     const s = sigil({
       patp: p,
       renderer: stringRenderer,
       size: 128,
-      colors: ['#14140f', 'white'],
-    })
-    setSvgString(s)
-    // console.log(s)
+      colors: ["#14140f", "white"],
+    });
+    setSvgString(s);
     setName(p);
-    // console.log("random ship", x, p);
+  };
+  useEffect(() => {
+    generateNewShip();
+    setInterval(() => {
+      generateNewShip();
+    }, 5000);
   }, []);
-  
+
   return (
     <div className="md:absolute w-full h-full font-[600] flex items-center justify-center md:translate-y-[-3rem]">
-      <div className="w-full mx-2 md:min-w-[30rem] md:w-[35rem] h-[20rem] border-2 border-white rounded-xl flex flex-col justify-between p-10">
-        <div>-</div>
-        <img className="absolute w-[50px]" src={`data:image/svg+xml;utf8,${encodeURIComponent(svgString)}`} />
-        <h1 className="text-2xlarge lg:text-3xlarge leading-[100%] w-full text-center">
+      <div className="w-full mx-2 md:min-w-[30rem] md:w-[35rem] h-[20rem] border-2 border-white rounded-xl flex flex-col justify-between pt-10 px-10 pb-8">
+        <div className="h-0 relative">
+          <img
+          className={classNames("absolute w-[50px] transition-all", {
+            "bg-white w-[20px] h-[25px] blur-[1rem]": !svgString,
+          })}
+          src={`data:image/svg+xml;utf8,${encodeURIComponent(svgString)}`}
+        />
+        </div>
+        <h1 className="text-2xlarge pt-6 lg:text-3xlarge leading-[100%] w-full text-center">
           {name}
         </h1>
-        
+
         <div className="flex flex-row">
           <div className="flex flex-row w-full">
             <div className="flex flex-col">
@@ -59,7 +70,7 @@ export const SigilCard = () => {
               <div>~ zod</div>
             </div>
           </div>
-          <div className="flex flex-col justify-end w-full text-small ">
+          <div className="flex flex-col justify-end w-full text-small">
              {urbitId}
             {/* <span className="border-2 border-white flex w-auto">L1</span> */}
           </div>
