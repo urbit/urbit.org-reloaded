@@ -129,7 +129,7 @@ export default async function EcosystemHome() {
                     />
                   </div>
                   <div className="bg-gray-d9 flex-grow leading-[110%] font-[500] text-black p-[1.375rem] text-25px">
-                  <h1 class="line-clamp-1 text-ellipsis">{talk.data.title}</h1>
+                  <h1 className="line-clamp-1 text-ellipsis">{talk.data.title}</h1>
                   </div>
                 </Link>
               );
