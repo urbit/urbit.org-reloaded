@@ -24,7 +24,7 @@ export const HeaderNav = ({ nav, homepage }) => {
   return (
     <React.Fragment>
       {currentRoute == "/" ? (
-        <div className="ml-4 mt-4 md:ml-8 md:mt-8 headline flex w-full flex-col justify-start items-start relative before:content-['~'] before:absolute before:left-[-.6em] before:top-[-.05em] text-[2rem] lg:text-[3.75rem] leading-[120%]  ">
+        <div className="ml-4 mt-4 md:ml-8 md:mt-8 headline flex w-full flex-col justify-start items-start relative before:content-['~'] before:absolute before:left-[-.6em] before:top-[-.05em] text-2xlarge md:text-3xlarge xl:text-4xlarge leading-[120%]  ">
           <h1 className="font-[300]">{homepage.headline}</h1>
           <div className="flex flex-col md:flex-row gap-x-8 font-[300] text-gray-400 underline underline-offset-[.1em] decoration-2">
             {homepage.links.map((link, i) => {

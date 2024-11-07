@@ -6,7 +6,7 @@ export const FooterSection = ({ footerData }) => {
     <section className="z-10 h-max mb-8 text-large  container text-gray-87 leading-120">
                 <NewsletterSignup className="z-10 " />
 
-      <div className="grid grid-cols-2 md:grid-cols-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
         {footerData?.map((footerItem, i) => {
           return (
             <div key={i} className="font-[600] mt-4">

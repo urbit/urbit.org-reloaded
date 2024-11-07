@@ -48,7 +48,9 @@ module.exports = {
         "base": "1rem", //16px
         "large": "1.25rem", //20px
         "xlarge": "1.5625rem", //25px
-        "40px": "2.5rem", //40px
+        "2xlarge": "2rem", //32px
+        "3xlarge": "2.5rem", //40px
+        "4xlarge": "3.75rem", //60px
       },
       lineHeight: {
         100: "100%",
