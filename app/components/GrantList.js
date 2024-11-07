@@ -22,7 +22,7 @@ const GrantListContent = ({
     searchParams.get("category") || null
   );
   const [selectedStatus, setSelectedStatus] = useState(
-    searchParams.get("status") || null
+    searchParams.get("status") || "Open"
   );
   const [selectedProgram, setSelectedProgram] = useState(
     searchParams.get("program") || null
@@ -137,8 +137,14 @@ const GrantListContent = ({
         <div className="md:mt-[0rem]  flex flex-col font-[500] mb-12 md:mb-0">
           {/* Category Filter */}
 
-          <span className="">Status:</span>
-          <div className="flex gap-x-4 md:flex-col items-start text-gray-87">
+          <span className={classNames(
+            "text-gray-87 pt-4",
+            { "text-white": selectedStatus })
+          }>Status:</span>
+          <div className={classNames(
+            "flex flex-row gap-x-4 md:flex-col items-start text-white hover:text-gray-87",
+            { "!text-gray-87": selectedStatus }
+          )}>
             {statuses.map((status, index) => (
               <button
                 key={index}
@@ -147,7 +153,7 @@ const GrantListContent = ({
               >
                 <div
                   className={classNames({
-                    "text-white": selectedStatus === status,
+                    "!text-white": selectedStatus === status,
                   })}
                 >
                   <span>{status}</span>
@@ -156,8 +162,14 @@ const GrantListContent = ({
             ))}
           </div>
 
-          <span className="pt-4">Program:</span>
-          <div className="flex flex-row gap-x-4 md:flex-col items-start text-gray-87">
+          <span className={classNames(
+            "text-gray-87 pt-4",
+            { "text-white": selectedProgram })
+          }>Program:</span>
+          <div className={classNames(
+            "flex flex-row gap-x-4 md:flex-col items-start text-white hover:text-gray-87",
+            { "!text-gray-87": selectedProgram }
+          )}>
             {programs.map((program, index) => (
               <button
                 key={index}
@@ -166,7 +178,7 @@ const GrantListContent = ({
               >
                 <div
                   className={classNames({
-                    "text-white": selectedProgram === program,
+                    "!text-white": selectedProgram === program,
                   })}
                 >
                   <span>{program}</span>
@@ -174,18 +186,24 @@ const GrantListContent = ({
               </button>
             ))}
           </div>
-          <span className="pt-4">Work Categories:</span>
-          <div className="flex flex-row gap-x-4 md:flex-col items-start text-gray-87">
+          
+          <span className={classNames(
+            "text-gray-87 pt-4",
+            { "text-white": selectedCategory })
+          }>Work Categories:</span>
+          <div className={classNames(
+            "flex flex-row gap-x-4 md:flex-col items-start text-white hover:text-gray-87",
+            { "!text-gray-87": selectedCategory }
+          )}>
             {categories.map((category, index) => (
               <button
                 key={index}
                 className="link"
                 onClick={() => handleCategoryClick(category)}
-
               >
                 <div
                   className={classNames({
-                    "text-white": selectedCategory === category,
+                    "!text-white": selectedCategory === category,
                   })}
                 >
                   <span>{category}</span>

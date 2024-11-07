@@ -1,6 +1,3 @@
-import { Config } from "@markdoc/markdoc";
-// import Callout from "./(blog.components)/callout";
-// import Heading from "./(blog.components)/heading";
 import {
   OverviewSection,
   OverviewSVG,
@@ -54,17 +51,17 @@ const markdocConfig = {
     //     children: { type: String },
     //   },
     // },
-    "html-tag": {
-        attributes: {
-          name: { type: String, required: true },
-          attrs: { type: Object },
-        },
-        transform(node, config) {
-          const { name, attrs } = node.attributes;
-          const children = node.transformChildren(config);
-          return new Markdoc.Tag(name, attrs, children);
-        },
-      },
+    // "html-tag": {
+    //     attributes: {
+    //       name: { type: String, required: true },
+    //       attrs: { type: Object },
+    //     },
+    //     transform(node, config) {
+    //       const { name, attrs } = node.attributes;
+    //       const children = node.transformChildren(config);
+    //       return new Markdoc.Tag(name, attrs, children);
+    //     },
+    //   },
   },
 };
 
@@ -72,8 +69,6 @@ const components = {
   Paragraph: ({ children }) => {
     return <div className="text-base pb-2">{children}</div>;
   },
-  // Heading: Heading,
-  // Callout: Callout
 };
 
 export { markdocConfig, components };
