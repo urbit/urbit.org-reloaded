@@ -29,9 +29,9 @@ export default async function PostPage({ params }) {
   return (
     <section className="grid md:grid-cols-6 mb-32 mt-[4rem] md:mt-[6rem] container">
       <div className="col-start-2 col-span-4 leading-[120%]">
-        <h1 className="text-[3rem] leading-[120%]">{postData.frontMatter.title}</h1>
-        <h3 className="text-[3rem] leading-[120%] mb-4">{postData.frontMatter.description}</h3>
-        <h3 className="text-[1rem] mb-4">{postData.frontMatter.date}</h3>
+        <h1 className="text-3xlarge leading-[120%]">{postData.frontMatter.title}</h1>
+        <h3 className="text-xlarge leading-[120%] mb-4">{postData.frontMatter.description}</h3>
+        <h3 className="text-base mb-4">{postData.frontMatter.date}</h3>
         <div className="col-span-1 flex flex-col leading-[120%] mb-4 font-mono text-large tracking-[.01em] text-gray-f5">
           <div className="mb-[.1em]">{extra.author}</div>
           <div>{extra.ship}</div>
