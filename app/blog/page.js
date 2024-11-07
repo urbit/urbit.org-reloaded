@@ -46,7 +46,7 @@ export default async function BlogHome() {
               <div>{description}</div>
               <div className="text-gray-87  mb-4">{date}</div>
               <div className="h-[300px] w-auto relative">
-                <img className="h-full w-auto" src={extra.image} alt={title} />
+                <img className="h-full w-auto" loading="lazy" src={extra.image} alt={title} />
               </div>
             </div>
           </Link>
