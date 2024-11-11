@@ -35,7 +35,7 @@ export default async function BlogHome() {
           <Link
             href={"/blog/" + post.slug}
             key={post.slug}
-            className="md:grid group  grid-cols-6 gap-x-4 w-full my-16 "
+            className="block md:grid group  grid-cols-6 gap-x-4 w-full my-16 "
           >
             <div className="col-span-1 flex flex-col mb-4 transition-all font-mono !text-large tracking-[.01em] text-gray-f5">
               <div className="mb-[.1em] ">{extra.author}</div>
