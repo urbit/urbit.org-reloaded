@@ -37,7 +37,7 @@ export default async function PostPage({ params }) {
         </div>
         {links.map((link) => {
           return (
-            <a href={link.url} className="action-button mb-4" key={link.url}>
+            <a href={link.url} className="action-button mb-4 text-xlarge" key={link.url}>
               {link.label}
             </a>
           );
