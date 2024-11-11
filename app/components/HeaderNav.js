@@ -161,10 +161,13 @@ const MobileNav = ({ nav }) => {
           href="/"
           className="cursor-pointer flex justify-between select-none md:hover:text-gray-87 relative w-full "
         >
-          <div className="w-full flex items-start before:content-['~'] relative before:absolute before:left-[-.8em] before:bottom-[.1em]">
+          <Link
+            href="/"
+            className="w-full flex items-start before:content-['~'] relative before:absolute before:left-[-.8em] before:bottom-[.1em]"
+          >
             Urbit
-          </div>
-          <div  onClick={toggleMenu} className="w-full flex justify-end ">
+          </Link>
+          <div onClick={toggleMenu} className="w-full flex justify-end ">
             <span>Menu</span>
             <span className="ml-2">{menuIsOpen ? "↑" : "↓"}</span>
           </div>
