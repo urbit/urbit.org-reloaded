@@ -132,17 +132,17 @@ const GrantListContent = ({
 
   return (
     <div className="grid md:grid-cols-6 w-full mb-[5rem]">
-      <div className="col-span-1">
+      <div className="col-span-6 md:col-span-1">
         {/* Filter Section */}
-        <div className="md:mt-[0rem]  flex flex-col font-[500] mb-12 md:mb-0">
-          {/* Category Filter */}
+        <div className="md:mt-[0rem] flex flex-col font-[500] mb-12 md:mb-0">
+          {/* Categoy Filter */}
 
           <span className={classNames(
             "text-gray-87 pt-4",
             { "text-white": selectedStatus })
           }>Status:</span>
           <div className={classNames(
-            "flex flex-row gap-x-4 md:flex-col items-start text-white hover:text-gray-87",
+            "flex flex-row flex-wrap gap-x-4 md:flex-col items-start text-white hover:text-gray-87",
             { "!text-gray-87": selectedStatus }
           )}>
             {statuses.map((status, index) => (
@@ -167,7 +167,7 @@ const GrantListContent = ({
             { "text-white": selectedProgram })
           }>Program:</span>
           <div className={classNames(
-            "flex flex-row gap-x-4 md:flex-col items-start text-white hover:text-gray-87",
+            "flex flex-row flex-wrap gap-x-4 md:flex-col items-start text-white hover:text-gray-87",
             { "!text-gray-87": selectedProgram }
           )}>
             {programs.map((program, index) => (
@@ -192,8 +192,8 @@ const GrantListContent = ({
             { "text-white": selectedCategory })
           }>Work Categories:</span>
           <div className={classNames(
-            "flex flex-row gap-x-4 md:flex-col items-start text-white hover:text-gray-87",
-            { "!text-gray-87": selectedCategory }
+            "flex flex-row flex-wrap  gap-x-4 md:flex-col items-start text-white hover:text-gray-87",
+            { "!text-gray-87  ": selectedCategory }
           )}>
             {categories.map((category, index) => (
               <button

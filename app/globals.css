@@ -122,6 +122,9 @@ body {
   
   
   /* .overview-page { */
+    .overview-page {
+      @apply container mb-[8rem] md:mb-[13.4rem] mt-9;
+    }
     .overview-section {
       @apply grid md:grid-cols-6 gap-4 mb-[6rem] md:mb-[7rem];
     }

@@ -146,7 +146,7 @@ const OverviewNav = () => {
 };
 
 const MobileNav = ({ nav }) => {
-  const [menuIsOpen, setMenuOpen] = useState(true);
+  const [menuIsOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {}, [menuIsOpen]);
 

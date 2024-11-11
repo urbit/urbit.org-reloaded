@@ -7,7 +7,7 @@ export default async function overview() {
   const pageData = await getMarkdownContent("overview/urbit-id.md");
 
   return (
-    <div className="container mb-[8rem] md:mb-[13.4rem] mt-9 overview-page">
+    <div className="overview-page">
       {Markdoc.renderers.react(pageData.content, React)}
       <section className="md:grid grid-cols-6 my-[5rem]">
         <div className="grid-cols-1"></div>
