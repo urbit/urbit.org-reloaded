@@ -28,8 +28,7 @@ export const DateRange = ({ className, starts, ends, divider }) => {
     <div>
       {renderDate(generateDisplayDate(starts), generateDisplayDate(ends))},&nbsp;
 
-      {formatTime(generateDisplayDate(starts))}—
-      {formatTime(generateDisplayDate(ends))}
+      {formatTime(generateDisplayDate(starts))} to {formatTime(generateDisplayDate(ends))}
       {/* {formatDate(generateDisplayDate(ends))} */}
       {/* {formatDate(starts)} */}
     </div>

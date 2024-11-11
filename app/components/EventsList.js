@@ -11,7 +11,7 @@ export const EventsList = ({ events }) => {
   return (
     <Section title="Past Events">
       <div className="col-span-5 text-xlarge leading-[120%]">
-        <div className="grid grid-cols-2 gap-x-12">
+        <div className="grid md:grid-cols-2 gap-x-12">
           {events.slice(0, showAll ? 1000 : 4).map((event, i) => {
             return (
               <div key={event + i}>
@@ -37,8 +37,8 @@ export const EventsList = ({ events }) => {
 };
 export const Section = ({ title, children }) => {
   return (
-    <section className="grid grid-cols-6 w-full h-full mb-12 pt-8 gap-x-4 border-t-[1.2px] border-gray-87">
-      <div className="col-span-1">
+    <section className="block md:grid grid-cols-6 w-full h-full mb-12 pt-8 gap-x-4 border-t-[1.2px] border-gray-87">
+      <div className="col-span-1 mb-4">
         <h1 className="8">{title}</h1>
       </div>
       <div className="col-span-4">{children}</div>
@@ -48,7 +48,7 @@ export const Section = ({ title, children }) => {
 
 export const Event = ({ event, slug }) => {
   return (
-    <Link href={`/events/${slug}`} className="block eventblock hover:text-gray-87 transition-all leading-[130%] text-xlarge mb-[6.25rem]">
+    <Link href={`/events/${slug}`} className="block eventblock hover:text-gray-87 transition-all leading-[130%] text-xlarge mb-16 md:mb-24">
 
       <h1 className="font-[700]">{event.title}</h1>
       <div className="mb-[1em]">
