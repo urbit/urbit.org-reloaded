@@ -221,7 +221,9 @@ const GrantListContent = ({
         </span>
         {filteredSortedPosts.map((postData) => {
           const { title, date, extra, taxonomies } = postData.data;
-          let reward = extra?.reward?.match(/\d+/)[0];
+          let reward;
+          reward = extra?.reward?.match(/\d+/)[0];
+            
           // console.log(title, reward);
           // console.log(postData.data)
           return (
