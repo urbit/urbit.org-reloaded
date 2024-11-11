@@ -20,7 +20,7 @@ export default async function BlogHome() {
   );
 
   return (
-    <div className="container mb-32 md:mt-9  text-xlarge leading-[100%]">
+    <div className="container mb-32 mt-9  text-xlarge leading-[100%]">
       <section className="md:grid grid-cols-6 gap-x-4 w-full">
         <div className="col-span-1"></div>
         <div className="col-span-4">

@@ -36,7 +36,7 @@ export default async function EcosystemHome() {
   const allTalksFrontMatter = paths.talks.frontMatter;
 
   return (
-    <div className="mb-32 md:mt-9">
+    <div className="mb-32 mt-9">
       <div className="container md:grid grid-cols-6 gap-x-4 w-full mb-16 text-xlarge leading-[130%]">
         <p className="col-span-4 col-start-2">
           Urbit’s decentralized ecosystem is growing more than ever, check out

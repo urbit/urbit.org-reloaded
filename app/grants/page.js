@@ -24,7 +24,7 @@ export default async function GrantsHome() {
   // json.parse
 
   return (
-    <div className="container mb-32 md:mt-9 ">
+    <div className="container mb-32 mt-9 ">
       <section className="md:grid grid-cols-6 gap-x-4 mb-12 ">
         <div className="col-start-2 col-span-4 text-xlarge leading-[120%] font-[400]">
           Earn a piece of the Urbit network by developing software, creating

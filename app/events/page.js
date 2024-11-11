@@ -40,7 +40,7 @@ export default async function EventsHome() {
   const allEventsFrontMatter = paths.events.frontMatter;
 
   return (
-    <div className="container mb-32 md:mt-9">
+    <div className="container mb-32 mt-9">
       <div className="md:grid grid-cols-6 gap-x-4 w-full mb-8">
         <div className="col-start-2 col-span-4 text-xlarge font-[400]">
           <p>Explore Urbit and our community, in-person and online.</p>
