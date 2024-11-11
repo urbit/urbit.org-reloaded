@@ -32,17 +32,17 @@ export default async function PostPage({ params }) {
   // const components = postData?.components;
 
   return (
-    <section className="grant-section grid md:grid-cols-6 mb-32 mt-[4rem] md:mt-[6rem] container">
+    <section className="grant-section block md:grid md:grid-cols-6 mb-32 mt-[4rem] md:mt-[6rem] container">
       <ThemeManager />
 
       <div className="col-span-1"></div>
       <div className="col-span-4 tracking-[.01em]">
         <div>
-          <div className="flex flex-col text-xlarge md:text-30px leading-120">
+          <div className="flex flex-col !text-xlarge md:text-30px leading-120">
             <span className="font-[700]">{title}</span>
             <span className="">{extra?.description}</span>
           </div>
-          <div className="flex flex-col mt-8 text-xlarge leading-120 font-[400]">
+          <div className="flex flex-col mt-8 !text-large leading-120 font-[400]">
             <span className="">{formatDate(date)}</span>
             <span className="">Reward: {extra.reward} </span>
             <span className="">ID: {extra?.grant_id}</span>

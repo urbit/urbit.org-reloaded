@@ -149,14 +149,16 @@ const MobileNav = ({ nav, currentRoute }) => {
   const [menuIsOpen, setMenuOpen] = useState(false);
 
   const routeMap = {
-    "/": "Menu",
-    "/get-on-the-network": "Get on the Network",
-    "/overview": "Overview",
-    "/grants": "Grants",
-    "/events": "Events",
-    "/blog": "Blog",
-    "/ecosystem": "Ecosystem",
+    "": "Menu",
+    "get-on-the-network": "Get on the Network",
+    "overview": "Overview",
+    "grants": "Grants",
+    "events": "Events",
+    "blog": "Blog",
+    "ecosystem": "Ecosystem",
   };
+  const splitRoute = currentRoute.split("/");
+
   useEffect(() => {}, [menuIsOpen]);
 
   const toggleMenu = () => {
@@ -177,7 +179,7 @@ const MobileNav = ({ nav, currentRoute }) => {
             Urbit          
             </Link>
           <div onClick={toggleMenu} className="justify-end ">
-            <span>{routeMap[currentRoute]}</span>
+            <span>{routeMap[splitRoute[1]]}</span>
             <span className="ml-2">{menuIsOpen ? "↑" : "↓"}</span>
           </div>
         </div>
