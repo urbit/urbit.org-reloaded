@@ -19,7 +19,7 @@ export async function generateStaticParams() {
       // Strip the .md extension
     };
   });
-  console.log(paths)
+  // console.log(paths)
   return paths;
 }
 

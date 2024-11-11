@@ -3,7 +3,7 @@ import SVG from "react-inlinesvg";
 import classNames from "classnames";
 
 const OverviewSection = ({ title, children }) => {
-  console.log('title', title)
+  // console.log('title', title)
   return (
     <section className="overview-section">
       <div className={classNames("overview-section-title",

@@ -59,7 +59,7 @@ export default async function EventsHome() {
           </p>
           <br />
           {allCommunitiesFrontMatter.map((community, i) => {
-            console.log(community.data.links[0].url)
+            // console.log(community.data.links[0].url)
             return (
               <div key={i}>
                 <Link href={`/communities/${community.slug}`} className="font-[700] hover:text-gray-87">{community.data.title}</Link>
