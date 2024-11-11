@@ -20,17 +20,16 @@ export const DateRange = ({ className, starts, ends, divider }) => {
     return dt.replace(/:00/g, "");
   }
   
+  function renderDate(date1, date2) {
+    return date1.hasSame(date2, "day") ? date1.toLocaleString(DateTime.DATE_FULL) : "".concat(date1.toLocaleString(DateTime.DATE_FULL), " - ").concat(date2.toLocaleString(DateTime.DATE_FULL));
+  }
 
-  // const formatTime = (date) => date.toFormat("t");
-  // const formatDate = (date) => date.toFormat("cccc, LLLL d");
-  // const formatTimeZone = (date) => date.toFormat("ZZZZZ");
   return (
     <div>
-      {formatTime(generateDisplayDate(starts))}
-      {formatDate(generateDisplayDate(starts))}
-—
+      {renderDate(generateDisplayDate(starts), generateDisplayDate(ends))},&nbsp;
+
+      {formatTime(generateDisplayDate(starts))}—
       {formatTime(generateDisplayDate(ends))}
-      {formatDate(generateDisplayDate(ends))}
       {/* {formatDate(generateDisplayDate(ends))} */}
       {/* {formatDate(starts)} */}
     </div>
@@ -46,17 +45,17 @@ export const DateRange = ({ className, starts, ends, divider }) => {
   //   );
   // }
   // // For events which start and end on the same day
-  if (starts.hasSame(ends, "day")) {
-    return (
-      <div className={classnames("whitespace-nowrap", className)}>
-        <p>{formatDate(starts)}</p>
-        {divider}
-        <p>{`${formatTime(starts)} to ${formatTime(ends)} ${formatTimeZone(
-          starts
-        )}`}</p>
-      </div>
-    );
-  }
+  // if (starts.hasSame(ends, "day")) {
+  //   return (
+  //     <div className={classnames("whitespace-nowrap", className)}>
+  //       <p>{formatDate(starts)}</p>
+  //       {divider}
+  //       <p>{`${formatTime(starts)} to ${formatTime(ends)} ${formatTimeZone(
+  //         starts
+  //       )}`}</p>
+  //     </div>
+  //   );
+  // }
   // // For multi-day events
   // return (
   //   <div className={className}>

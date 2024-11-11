@@ -4,6 +4,7 @@ import Markdoc from "@markdoc/markdoc";
 import React from "react";
 import { glob } from "glob";
 import path from "path";
+import {DateRange} from "../../components/DateRange";
 
 const BASE_PATH = "app/content/events";
 const POSTS_DIR = path.join(process.cwd(), BASE_PATH);
@@ -43,9 +44,11 @@ export default async function PostPage({ params }) {
           <div className="text-xlarge mb-8">{description}</div>
           
           <div className="">{location}</div>
-          <div className="mb-8">{starts} - {ends}</div>
+          <DateRange starts={starts} ends={ends} />
+
+          {/* <div className="mb-8">{starts} - {ends}</div> */}
           
-          <a href={registration_url} className="action-button">Register</a>
+          <a href={registration_url} className="mt-4 action-button">Register</a>
         </div>
         
         {Markdoc.renderers.react(eventData.content, React)}
