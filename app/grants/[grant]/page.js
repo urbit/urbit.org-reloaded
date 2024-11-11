@@ -5,6 +5,7 @@ import React from "react";
 import { glob } from "glob";
 import path from "path";
 import ThemeManager from "../../components/ThemeManager";
+import Link from "next/link";
 
 const BLOG_PATH = "app/content/grants";
 const POSTS_DIR = path.join(process.cwd(), BLOG_PATH);
@@ -31,26 +32,26 @@ export default async function PostPage({ params }) {
   // const components = postData?.components;
 
   return (
-    <section className="grid md:grid-cols-6 mb-32 mt-[4rem] md:mt-[6rem] container">
+    <section className="grant-section grid md:grid-cols-6 mb-32 mt-[4rem] md:mt-[6rem] container">
       <ThemeManager />
 
       <div className="col-span-1"></div>
       <div className="col-span-4 tracking-[.01em]">
         <div>
-          <div className="flex flex-col text-xlarge md:text-xlarge leading-120">
+          <div className="flex flex-col text-xlarge md:text-30px leading-120">
             <span className="font-[700]">{title}</span>
             <span className="">{extra?.description}</span>
           </div>
-          <div className="flex flex-col mt-8 text-xlarge md:text-large leading-120 font-[400]">
+          <div className="flex flex-col mt-8 text-xlarge leading-120 font-[400]">
             <span className="">{formatDate(date)}</span>
             <span className="">Reward: {extra.reward} </span>
             <span className="">ID: {extra?.grant_id}</span>
             <span className="">Champion(s): {extra?.champion}</span>
           </div>
           <div className="my-[2.8rem]">
-            {/* <Link className="apply-button" href={postData.frontMatter?.application_link}>
+            <Link className="apply-button" href="https://airtable.com/apppnWSqfsVvUwkWh/shrCi54rEDxgSZr3z">
               Apply
-            </Link> */}
+            </Link>
           </div>
         </div>
         <div className="">
