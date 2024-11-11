@@ -85,7 +85,7 @@ html,
 body {
   font-family: "Urbit Sans";
   /* scrollbar-gutter: stable; */
-  @apply md:text-[16px] text-[13px] overflow-y-auto overflow-x-hidden
+  @apply md:text-[16px] text-[14px] overflow-y-auto overflow-x-hidden
   md:[--gutter-size:2rem];
 }
 
@@ -130,7 +130,7 @@ body {
       @apply mb-0;
     }
     .overview-section-title {
-      @apply col-span-1 text-large font-[600] md:font-[400] md:mb-0 mb-8;
+      @apply col-span-1 md:text-xlarge md:text-large font-[600] md:mb-0 mb-8;
     }
     .overview-section-body {
       @apply col-span-4 text-xlarge leading-120;

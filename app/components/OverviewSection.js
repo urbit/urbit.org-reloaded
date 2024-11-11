@@ -1,10 +1,14 @@
 "use client";
 import SVG from "react-inlinesvg";
+import classNames from "classnames";
 
 const OverviewSection = ({ title, children }) => {
+  console.log('title', title)
   return (
     <section className="overview-section">
-      <div className="overview-section-title">{title}</div>
+      <div className={classNames("overview-section-title",
+        {"hidden md:block": title == undefined,}
+      )}>{title}</div>
       <div className="overview-section-body">{children}</div>
     </section>
   );

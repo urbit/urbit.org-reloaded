@@ -7,19 +7,9 @@ import React from "react";
 import { usePathname } from "next/navigation";
 
 export const HeaderNav = ({ nav, homepage }) => {
-  const mobileMenuRef = useRef(null);
   const headerRef = useRef(null);
 
-  const [menuIsOpen, setMenuOpen] = useState(false);
   const currentRoute = usePathname();
-
-  useEffect(() => {}, [menuIsOpen]);
-
-  const toggleMenu = () => {
-    setMenuOpen(true);
-  };
-
-  useEffect(() => {}, []);
 
   return (
     <React.Fragment>
@@ -42,75 +32,76 @@ export const HeaderNav = ({ nav, homepage }) => {
           </div>
         </div>
       ) : (
-        <section
-          ref={headerRef}
-          className="container fixed h-auto z-10 items-center bg-black dark:bg-white justify-center leading-120  md:pt-0 md:pb-0 pt-3 pb-3"
-        >
-          <div className="my-4 md:my-8 h-auto md:flex md:flex-row md:items-center md:justify-between">
-            <div className="w-full leading-[1cap] flex justify-start md:grid gap-4 items-center md:justify-center md:grid-cols-6  h-full ">
-              <div className="col-span-1">
-                <div className="inline-block font-[600] relative">
-                  <Link
-                    href="/"
-                    className="md:hover:text-gray-87 ml-2 relative before:content-['~']  before:absolute before:left-[-.8em] before:bottom-[.3em] w-auto"
-                  >
-                    Urbit
-                  </Link>
+        <React.Fragment>
+          <MobileNav nav={nav} />
+          <section
+            ref={headerRef}
+            className="hidden md:block container fixed h-auto z-10 items-center bg-black dark:bg-white justify-center leading-120  md:pt-0 md:pb-0 pt-3 pb-3"
+          >
+            <div className="my-4 md:my-8 h-auto md:flex md:flex-row md:items-center md:justify-between">
+              <div className="w-full leading-[1cap] flex justify-start md:grid gap-4 items-center md:justify-center md:grid-cols-6  h-full ">
+                <div className="col-span-1">
+                  <div className="inline-block font-[600] relative">
+                    <Link
+                      href="/"
+                      className="md:hover:text-gray-87 ml-2 relative before:content-['~']  before:absolute before:left-[-.8em] before:bottom-[.3em] w-auto"
+                    >
+                      Urbit
+                    </Link>
 
-                  {currentRoute == "/" && (
-                    <span>
-                      &nbsp;is a new computing paradigm that provides complete
-                      ownership of your digital world.
-                    </span>
-                  )}
-                  {currentRoute.startsWith("/overview") && (
-                    <React.Fragment>
-                      &nbsp;:&nbsp;
-                      <Link
-                        href="/overview"
-                        className="md:hover:text-gray-87 capitalize"
-                      >
-                        Overview
-                      </Link>
-                    </React.Fragment>
-                  )}
-                  {currentRoute.startsWith("/grants") && (
-                    <React.Fragment>
-                      &nbsp;:&nbsp;
-                      <Link
-                        href="/grants"
-                        className="md:hover:text-gray-87 capitalize"
-                      >
-                        Grants
-                      </Link>
-                    </React.Fragment>
-                  )}
-                  {currentRoute.startsWith("/overview") && (
-                    <div className="mt-4 md:hidden">
-                      <OverviewNav />
-                    </div>
-                  )}
-                
+                    {currentRoute == "/" && (
+                      <span>
+                        &nbsp;is a new computing paradigm that provides complete
+                        ownership of your digital world.
+                      </span>
+                    )}
+                    {currentRoute.startsWith("/overview") && (
+                      <React.Fragment>
+                        &nbsp;:&nbsp;
+                        <Link
+                          href="/overview"
+                          className="md:hover:text-gray-87 capitalize"
+                        >
+                          Overview
+                        </Link>
+                      </React.Fragment>
+                    )}
+                    {currentRoute.startsWith("/grants") && (
+                      <React.Fragment>
+                        &nbsp;:&nbsp;
+                        <Link
+                          href="/grants"
+                          className="md:hover:text-gray-87 capitalize"
+                        >
+                          Grants
+                        </Link>
+                      </React.Fragment>
+                    )}
+                    {currentRoute.startsWith("/overview") && (
+                      <div className="mt-4 md:hidden">
+                        <OverviewNav />
+                      </div>
+                    )}
+                  </div>
+                </div>{" "}
+                <div className="col-span-5 hidden md:flex w-full items-center justify-start">
+                  {currentRoute !== "/" && <GlobalNav nav={nav} />}
                 </div>
-              </div>{" "}
-              <div className="col-span-5 hidden md:flex w-full items-center justify-start">
-           
-                {currentRoute !== "/" && <GlobalNav nav={nav} />}
-              </div>
-              {/* <div className="col-span-5 flex md:hidden w-full items-center justify-start">
+                {/* <div className="col-span-5 flex md:hidden w-full items-center justify-start">
                 {currentRoute !== "/" && <GlobalNavMobile nav={nav} />}
               </div> */}
-            </div>
-          </div>
-
-          {currentRoute.startsWith("/overview") && (
-            <React.Fragment>
-              <div className="absolute grid grid-cols-6 gap-x-4 font-[600] md:mt-[2.06rem] bg-black md:bg-transparent w-full md:w-auto pb-4">
-                <OverviewNav />
               </div>
-            </React.Fragment>
-          )}
-        </section>
+            </div>
+
+            {currentRoute.startsWith("/overview") && (
+              <React.Fragment>
+                <div className="absolute grid grid-cols-6 gap-x-4 font-[600] md:mt-[2.06rem] bg-black md:bg-transparent w-full md:w-auto pb-4">
+                  <OverviewNav />
+                </div>
+              </React.Fragment>
+            )}
+          </section>
+        </React.Fragment>
       )}
     </React.Fragment>
   );
@@ -154,58 +145,77 @@ const OverviewNav = () => {
   );
 };
 
-const GlobalNavMobile = ({ nav }) => {
-  const currentRoute = usePathname();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
-  return (
-    <ul className="flex mb-0 flex-row gap-x-4 pt-0 text-large font-[600]">
-      {nav?.map((navItem, i) => {
-        return (
-          <Link
-            className={
-              currentRoute.startsWith(navItem.url)
-                ? "nav-button-selected"
-                : "text-gray-87"
-            }
-            key={`${navItem} + ${i}`}
-            href={navItem.url}
-            target={navItem.external ? "_blank" : ""}
-          >
-            <span className="nav-button">{navItem.title}</span>
-          </Link>
-        );
-      })}
-    </ul>
+const MobileNav = ({ nav }) => {
+  const [menuIsOpen, setMenuOpen] = useState(true);
 
+  useEffect(() => {}, [menuIsOpen]);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuIsOpen);
+  };
+
+  return (
+    <section className="fixed w-full top-0 left-0  h-auto z-10 items-center bg-black dark:bg-white justify-center leading-120 md:pt-0 md:pb-0 pb-4">
+      <div className="h-[4.5rem] flex items-center px-8 font-[600] relative w-full ">
+        <div
+          href="/"
+          className="cursor-pointer flex justify-between select-none md:hover:text-gray-87 relative w-full "
+        >
+          <div className="w-full flex items-start before:content-['~'] relative before:absolute before:left-[-.8em] before:bottom-[.1em]">
+            Urbit
+          </div>
+          <div  onClick={toggleMenu} className="w-full flex justify-end ">
+            <span>Menu</span>
+            <span className="ml-2">{menuIsOpen ? "↑" : "↓"}</span>
+          </div>
+        </div>
+      </div>
+      <ul
+        className={classNames(
+          "absolute flex flex-col top-0 mt-[4.5rem] left-0 bg-white h-auto w-[100vw]",
+          { hidden: !menuIsOpen }
+        )}
+      >
+        {nav?.map((navItem, i) => {
+          return (
+            <Link
+              className="text-gray-87 hover:bg-gray-87 hover:text-white py-8 container select-none"
+              key={`${navItem} + ${i}`}
+              href={navItem.url}
+              onClick={toggleMenu}
+              target={navItem.external ? "_blank" : ""}
+            >
+              <span className="nav-button">{navItem.title}</span>
+            </Link>
+          );
+        })}
+      </ul>
+    </section>
   );
 };
-
-
-
 const GlobalNav = ({ nav }) => {
   const currentRoute = usePathname();
 
   return (
     <React.Fragment>
-    <ul className="flex mb-0 flex-row gap-x-4 pt-0 text-large font-[600]">
-      {nav?.map((navItem, i) => {
-        return (
-          <Link
-            className={
-              currentRoute.startsWith(navItem.url)
-                ? "nav-button-selected"
-                : "text-gray-87"
-            }
-            key={`${navItem} + ${i}`}
-            href={navItem.url}
-            target={navItem.external ? "_blank" : ""}
-          >
-            <span className="nav-button">{navItem.title}</span>
-          </Link>
-        );
-      })}
-    </ul>
+      <ul className="flex mb-0 flex-row gap-x-4 pt-0 text-large font-[600]">
+        {nav?.map((navItem, i) => {
+          return (
+            <Link
+              className={
+                currentRoute.startsWith(navItem.url)
+                  ? "nav-button-selected"
+                  : "text-gray-87"
+              }
+              key={`${navItem} + ${i}`}
+              href={navItem.url}
+              target={navItem.external ? "_blank" : ""}
+            >
+              <span className="nav-button">{navItem.title}</span>
+            </Link>
+          );
+        })}
+      </ul>
     </React.Fragment>
   );
 };
