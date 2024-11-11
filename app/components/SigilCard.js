@@ -45,8 +45,8 @@ export const SigilCard = () => {
   }, []);
 
   return (
-    <div className="sigil-card  w-full h-full font-[600] flex items-center justify-center">
-      <div className="w-[30rem] md:w-[35rem] h-[16rem] md:h-[20rem] border-2 border-white rounded-xl flex flex-col justify-between pt-6 px-6 pb-5 md:pt-10 md:px-10 md:pb-8">
+    <div className="sigil-card  w-full h-full flex items-center justify-center">
+      <div className="w-[30rem] md:w-[35rem] h-[16rem] md:h-[20rem] border-2 border-gray-87 rounded-xl flex flex-col justify-between pt-6 px-6 pb-5 md:pt-10 md:px-10 md:pb-8">
         <div className="h-0 relative">
           <img
           className={classNames("absolute w-[50px] transition-all", {
@@ -55,11 +55,11 @@ export const SigilCard = () => {
           src={`data:image/svg+xml;utf8,${encodeURIComponent(svgString)}`}
         />
         </div>
-        <h1 className="text-2xlarge pt-6 lg:text-3xlarge leading-[100%] w-full text-center">
+        <h1 className="text-2xlarge font-[400] pt-6 lg:text-3xlarge leading-[100%] w-full text-center">
           {name}
         </h1>
 
-        <div className="flex flex-row">
+        <div className="flex flex-row font-[600]">
           <div className="flex flex-col w-full text-large gap-y-2 ">
             <div className="flex flex-row ">
               <div className="w-[50%]">

@@ -50,7 +50,7 @@ export const NewsletterSignup = () => {
           noValidate
         >
           <div className="input-group font-medium" id="mc_embed_signup_scroll">
-            <div className="mc-field-group w-[84svw] md:w-[27rem] relative">
+            <div className="mc-field-group w-full md:w-[27rem] relative">
               <input
                 className="appearance-none placeholder:text-white outline-none bg-transparent border-gray-87 border-[.0875rem] rounded-[.34rem] pb-[.05em] pl-[.3em] pr-1 w-full mb-8 h-[2.125rem]"
                 type="email"
