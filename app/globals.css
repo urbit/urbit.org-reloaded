@@ -104,8 +104,8 @@ body {
     @apply max-w-[--site-max-width] 
     /* max-w-[100%] */
     mx-auto
-    px-[20px]
-    md:px-[2rem];
+    px-5
+    md:px-8;
   }
 }
 

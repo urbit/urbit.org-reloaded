@@ -24,7 +24,7 @@ export const HeaderNav = ({ nav, homepage }) => {
   return (
     <React.Fragment>
       {currentRoute == "/" ? (
-        <div className="ml-4 mt-4 md:ml-8 md:mt-8 headline flex w-full flex-col justify-start items-start relative before:content-['~'] before:absolute before:left-[-.6em] before:top-[-.05em] text-2xlarge md:text-3xlarge xl:text-4xlarge leading-[120%]  ">
+        <div className="ml-4 mt-4 md:ml-8 md:mt-8 headline flex w-full flex-col justify-start items-start relative before:content-['~'] before:absolute before:left-[-.6em] before:top-[-.05em] text-2xlarge lg:text-3xlarge 2xl:text-4xlarge leading-[120%]  ">
           <h1 className="font-[300]">{homepage.headline}</h1>
           <div className="flex flex-col md:flex-row gap-x-8 font-[300] text-gray-400 underline underline-offset-[.1em] decoration-2">
             {homepage.links.map((link, i) => {
@@ -44,7 +44,7 @@ export const HeaderNav = ({ nav, homepage }) => {
       ) : (
         <section
           ref={headerRef}
-          className="container fixed h-auto z-10 items-center bg-black dark:bg-white justify-center leading-120  md:pt-0 md:pb-0 pt-5 pb-3"
+          className="container fixed h-auto z-10 items-center bg-black dark:bg-white justify-center leading-120  md:pt-0 md:pb-0 pt-3 pb-3"
         >
           <div className="my-4 md:my-8 h-auto md:flex md:flex-row md:items-center md:justify-between">
             <div className="w-full leading-[1cap] flex justify-start md:grid gap-4 items-center md:justify-center md:grid-cols-6  h-full ">
@@ -87,28 +87,19 @@ export const HeaderNav = ({ nav, homepage }) => {
                   )}
                   {currentRoute.startsWith("/overview") && (
                     <div className="mt-4 md:hidden">
-                      {/* <OverviewNav /> */}
+                      <OverviewNav />
                     </div>
                   )}
-                  {/* {currentRoute.startsWith("/grants") && (
-              <div className="mt-4 md:hidden">
-                <span class="tracking-[.02em] font-[600]">
-                  Earn a piece of the Urbit network by developing software,
-                  creating content, growing communities, and more.
-                </span>
-              </div>
-            )} */}
+                
                 </div>
               </div>{" "}
               <div className="col-span-5 hidden md:flex w-full items-center justify-start">
-                {/* {currentRoute.startsWith("/grants") && (
-                  <span className="tracking-[.02em] font-[600]">
-                    Earn a piece of the Urbit network by developing software,
-                    creating content, growing communities, and more.
-                  </span>
-                )} */}
+           
                 {currentRoute !== "/" && <GlobalNav nav={nav} />}
               </div>
+              {/* <div className="col-span-5 flex md:hidden w-full items-center justify-start">
+                {currentRoute !== "/" && <GlobalNavMobile nav={nav} />}
+              </div> */}
             </div>
           </div>
 
@@ -162,9 +153,11 @@ const OverviewNav = () => {
     </ul>
   );
 };
-const GlobalNav = ({ nav }) => {
-  const currentRoute = usePathname();
 
+const GlobalNavMobile = ({ nav }) => {
+  const currentRoute = usePathname();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
   return (
     <ul className="flex mb-0 flex-row gap-x-4 pt-0 text-large font-[600]">
       {nav?.map((navItem, i) => {
@@ -183,36 +176,36 @@ const GlobalNav = ({ nav }) => {
           </Link>
         );
       })}
-      {/* <Link
-        href="/overview"
-        className={currentRoute === "/overview" ? "text-white" : "text-gray-87"}
-      >
-        Introduction
-      </Link>
-      <Link
-        href="/overview/urbit-os"
-        className={
-          currentRoute === "/overview/urbit-os" ? "text-white" : "text-gray-87"
-        }
-      >
-        Urbit OS
-      </Link>
-      <Link
-        href="/overview/urbit-id"
-        className={
-          currentRoute === "/overview/urbit-id" ? "text-white" : "text-gray-87"
-        }
-      >
-        Urbit ID
-      </Link>
-      <Link
-        href="/overview/history"
-        className={
-          currentRoute === "/overview/history" ? "text-white" : "text-gray-87"
-        }
-      >
-        History
-      </Link> */}
     </ul>
+
+  );
+};
+
+
+
+const GlobalNav = ({ nav }) => {
+  const currentRoute = usePathname();
+
+  return (
+    <React.Fragment>
+    <ul className="flex mb-0 flex-row gap-x-4 pt-0 text-large font-[600]">
+      {nav?.map((navItem, i) => {
+        return (
+          <Link
+            className={
+              currentRoute.startsWith(navItem.url)
+                ? "nav-button-selected"
+                : "text-gray-87"
+            }
+            key={`${navItem} + ${i}`}
+            href={navItem.url}
+            target={navItem.external ? "_blank" : ""}
+          >
+            <span className="nav-button">{navItem.title}</span>
+          </Link>
+        );
+      })}
+    </ul>
+    </React.Fragment>
   );
 };

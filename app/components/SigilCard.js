@@ -45,8 +45,8 @@ export const SigilCard = () => {
   }, []);
 
   return (
-    <div className="absolute w-full h-full font-[600] flex items-center justify-center">
-      <div className="w-full mx-2 md:min-w-[30rem] md:w-[35rem] h-[20rem] border-2 border-white rounded-xl flex flex-col justify-between pt-10 px-10 pb-8">
+    <div className="sigil-card  w-full h-full font-[600] flex items-center justify-center">
+      <div className="w-full max-w-[33rem] md:min-w-[30rem] md:w-[35rem] h-[20rem] border-2 border-white rounded-xl flex flex-col justify-between pt-10 px-10 pb-8">
         <div className="h-0 relative">
           <img
           className={classNames("absolute w-[50px] transition-all", {
