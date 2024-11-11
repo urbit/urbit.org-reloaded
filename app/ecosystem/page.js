@@ -44,24 +44,48 @@ export default async function EcosystemHome() {
         </p>
       </div>
 
-      <section className="container w-full mb-[4.375rem]">
-        <h1 className="mb-[2.25rem]" >Apps</h1>
-        <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-3 w-full gap-[.625rem]">
+      <section className="md:container w-full mb-[4.375rem]">
+        <div className="md:hidden">
+          <ScrollSection title="Apps" className="md:hidden">
+            {allAppsFrontMatter.map((app, i) => {
+              return (
+                <Link
+                  href={app.data.website ? app.data.website : ""}
+                  target="_blank"
+                  className="flex flex-col w-[28rem] mb-auto bg-white rounded-[20px] overflow-hidden"
+                  key={i}
+                >
+                  <div className="aspect-square">
+                    <img
+                      src={app.data.image}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="bg-gray-d9 flex-grow max-h-[9.125rem] h-auto min-h-[9.125rem] px-[1.875rem] py-[1.375rem]  leading-[110%] font-[500] text-black text-xlarge">
+                    <h1 className="mt-[-0.15em]">{app.data.title}</h1>
+                    <h3 className="text-gray-87 text-ellipsis line-clamp-3">
+                      {app.data.description}
+                    </h3>
+                  </div>
+                </Link>
+              );
+            })}
+          </ScrollSection>
+        </div>
+        <h1 className="hidden md:block mb-[2.25rem]">Apps</h1>
+
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 grid-rows-3 w-full gap-[.625rem]">
           {allAppsFrontMatter.map((app, i) => {
             return (
               <Link
                 href={app.data.website ? app.data.website : ""}
                 target="_blank"
-                // className={classNames("flex flex-col h-auto bg-white rounded-[20px] overflow-hidden",
-                //   {"pointer-events-none": !app.data.website || app.data.website === ''}
-                // )}
                 className="flex flex-col  mb-auto bg-white rounded-[20px] overflow-hidden"
                 key={i}
               >
                 <div className="aspect-square">
                   <img
                     src={app.data.image}
-                    // className="w-full object-contain"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -79,64 +103,56 @@ export default async function EcosystemHome() {
         </div>
       </section>
 
-      <section className="!pr-0 mb-[4.375rem] overflow-x-auto ">
-        <h1 className="container mb-[2.25rem]">Podcasts</h1>
-        <div className="overflow-x-auto no-scrollbar">
-          <div className="flex flex-row overflow-x-auto w-fit gap-[.625rem] ml-[var(--gutter-size)] 3xl:ml-[calc(((100vw-1900px)/2)+2rem)]">
-            {allPodcastsFrontMatter.map((podcast, i) => {
-              return (
-                <Link
-                  href={podcast.data.links[0].url}
-                  target="_blank"
-                  className="flex flex-col w-[28rem] mb-auto bg-white rounded-[20px] overflow-hidden"
-                  key={i}
-                >
-                  <div className="aspect-square">
-                    <img
-                      src={podcast.data.image}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="bg-gray-d9 flex-grow max-h-[9.125rem] h-auto min-h-[9.125rem] px-[1.875rem] py-[1.375rem]  leading-[110%] font-[500] text-black text-xlarge">
-                    <h1 className="mt-[-0.15em]">{podcast.data.title}</h1>
-                    <h3 className="text-gray-87 text-ellipsis line-clamp-3">
-                      {podcast.data.description}
-                    </h3>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <ScrollSection title="Podcasts">
+        {allPodcastsFrontMatter.map((podcast, i) => {
+          return (
+            <Link
+              href={podcast.data.links[0].url}
+              target="_blank"
+              className="flex flex-col w-[28rem] mb-auto bg-white rounded-[20px] overflow-hidden"
+              key={i}
+            >
+              <div className="aspect-square">
+                <img
+                  src={podcast.data.image}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="bg-gray-d9 flex-grow max-h-[9.125rem] h-auto min-h-[9.125rem] px-[1.875rem] py-[1.375rem]  leading-[110%] font-[500] text-black text-xlarge">
+                <h1 className="mt-[-0.15em]">{podcast.data.title}</h1>
+                <h3 className="text-gray-87 text-ellipsis line-clamp-3">
+                  {podcast.data.description}
+                </h3>
+              </div>
+            </Link>
+          );
+        })}
+      </ScrollSection>
 
-      <section className=" !pr-0 mb-[4.375rem] overflow-x-auto ">
-        <h1 className="container mb-[2.25rem]">Talks</h1>
-        <div className="overflow-x-auto no-scrollbar">
-          <div className="flex flex-row overflow-x-auto w-fit gap-[.625rem] ml-[var(--gutter-size)] 3xl:ml-[calc(((100vw-1900px)/2)+2rem)]">
-            {allTalksFrontMatter.map((talk, i) => {
-              return (
-                <Link
-                  href={talk.data.url}
-                  target="_blank"
-                  className="flex flex-col w-[28rem] mb-auto bg-white rounded-[20px] overflow-hidden"
-                  key={i}
-                >
-                  <div className="aspect-[1.77]">
-                    <img
-                      src={talk.data.image}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="bg-gray-d9 flex-grow leading-[110%] font-[500] text-black p-[1.375rem] text-xlarge">
-                  <h1 className="line-clamp-1 text-ellipsis">{talk.data.title}</h1>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <ScrollSection title="Talks">
+        {allTalksFrontMatter.map((talk, i) => {
+          return (
+            <Link
+              href={talk.data.url}
+              target="_blank"
+              className="flex flex-col w-[28rem] mb-auto bg-white rounded-[20px] overflow-hidden"
+              key={i}
+            >
+              <div className="aspect-[1.77]">
+                <img
+                  src={talk.data.image}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="bg-gray-d9 flex-grow leading-[110%] font-[500] text-black p-[1.375rem] text-xlarge">
+                <h1 className="line-clamp-1 text-ellipsis">
+                  {talk.data.title}
+                </h1>
+              </div>
+            </Link>
+          );
+        })}
+      </ScrollSection>
 
       <Section className="container" title="Companies">
         {allOrgsFrontMatter.map((org, i) => {
@@ -147,11 +163,13 @@ export default async function EcosystemHome() {
               key={i}
               className="relative"
             >
-              <img
-                src={org.data.image}
-                className="w-10 grayscale opacity-[.5] invert absolute bottom-[-.3em] left-[-1.8em]  "
-              />
-              <h1>{org.data.title}</h1>
+              <div className="ml-8 md:ml-0 relative">
+                <img
+                  src={org.data.image}
+                  className="w-10 grayscale opacity-[.5] invert absolute bottom-[-.3em] left-[-1.8em]  "
+                />
+                <h1>{org.data.title}</h1>
+              </div>
             </Link>
           );
         })}
@@ -160,12 +178,12 @@ export default async function EcosystemHome() {
       <Section title="Articles & Press">
         {allArticlesFrontMatter.map((article, i) => {
           return (
-            <div key={i} className="mb-4">
+            <Link href="/" key={i} className="mb-[1em] flex flex-col">
               <h3 className="text-gray-87">{article.data.publication}</h3>
-              <h1>{article.data.title}</h1>
+              <h1 className="font-[500]">{article.data.title}</h1>
               <h3 className="text-gray-87">Author: {article.data.author}</h3>
               <h3 className="text-gray-87">Date: {article.data.date}</h3>
-            </div>
+            </Link>
           );
         })}
       </Section>
@@ -180,6 +198,19 @@ export const Section = ({ title, children }) => {
         <h1 className="">{title}</h1>
       </div>
       <div className="col-span-5">{children}</div>
+    </section>
+  );
+};
+
+export const ScrollSection = ({ children, title }) => {
+  return (
+    <section className=" !pr-0 mb-[4.375rem] overflow-x-auto ">
+      <h1 className="container mb-[2.25rem]">{title}</h1>
+      <div className="overflow-x-auto no-scrollbar">
+        <div className="flex flex-row overflow-x-auto w-fit gap-[.625rem] ml-[var(--gutter-size)] 3xl:ml-[calc(((100vw-1900px)/2)+2rem)]">
+          {children}
+        </div>
+      </div>
     </section>
   );
 };

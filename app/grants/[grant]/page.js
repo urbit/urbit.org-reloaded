@@ -18,7 +18,7 @@ export async function generateStaticParams() {
       // Strip the .md extension
     };
   });
-
+  console.log(paths)
   return paths;
 }
 
@@ -26,9 +26,8 @@ export default async function PostPage({ params }) {
   const postSlug = `/grants/${params.grant}.md`; // Append .md here to use in the file path
   const postData = await getMarkdownContent(postSlug, "toml");
   const { title, date, extra, taxonomies } = postData.frontMatter;
-  const postMeta = await getYaml(postSlug);
-  const config = await getYaml("/config.md");
-
+  // const postMeta = await getYaml(postSlug);
+  // const config = await getYaml("/config.md");
   // const components = postData?.components;
 
   return (

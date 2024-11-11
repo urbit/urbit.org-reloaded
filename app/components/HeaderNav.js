@@ -33,7 +33,7 @@ export const HeaderNav = ({ nav, homepage }) => {
         </div>
       ) : (
         <React.Fragment>
-          <MobileNav nav={nav} />
+          <MobileNav nav={nav} currentRoute={currentRoute} />
           <section
             ref={headerRef}
             className="hidden md:block container fixed h-auto z-10 items-center bg-black dark:bg-white justify-center leading-120  md:pt-0 md:pb-0 pt-3 pb-3"
@@ -145,9 +145,18 @@ const OverviewNav = () => {
   );
 };
 
-const MobileNav = ({ nav }) => {
+const MobileNav = ({ nav, currentRoute }) => {
   const [menuIsOpen, setMenuOpen] = useState(false);
 
+  const routeMap = {
+    "/": "Menu",
+    "/get-on-the-network": "Get on the Network",
+    "/overview": "Overview",
+    "/grants": "Grants",
+    "/events": "Events",
+    "/blog": "Blog",
+    "/ecosystem": "Ecosystem",
+  };
   useEffect(() => {}, [menuIsOpen]);
 
   const toggleMenu = () => {
@@ -165,10 +174,10 @@ const MobileNav = ({ nav }) => {
             href="/"
             className="w-full flex items-start before:content-['~'] relative before:absolute before:left-[-.8em] before:bottom-[.1em]"
           >
-            Urbit
-          </Link>
+            Urbit          
+            </Link>
           <div onClick={toggleMenu} className="w-full flex justify-end ">
-            <span>Menu</span>
+            <span>{routeMap[currentRoute]}</span>
             <span className="ml-2">{menuIsOpen ? "↑" : "↓"}</span>
           </div>
         </div>
@@ -188,7 +197,10 @@ const MobileNav = ({ nav }) => {
               onClick={toggleMenu}
               target={navItem.external ? "_blank" : ""}
             >
-              <span className="nav-button">{navItem.title}</span>
+              <span className="nav-button">{navItem.title}
+              {navItem.url.startsWith("http") && <span className="ml-2">↗</span>}
+              </span>
+              
             </Link>
           );
         })}
