@@ -46,7 +46,7 @@ export const SigilCard = () => {
 
   return (
     <div className="sigil-card  w-full h-full font-[600] flex items-center justify-center">
-      <div className="w-full max-w-[33rem] md:min-w-[30rem] md:w-[35rem] h-[20rem] border-2 border-white rounded-xl flex flex-col justify-between pt-10 px-10 pb-8">
+      <div className="w-[30rem] md:w-[35rem] h-[16rem] md:h-[20rem] border-2 border-white rounded-xl flex flex-col justify-between pt-10 px-10 pb-8">
         <div className="h-0 relative">
           <img
           className={classNames("absolute w-[50px] transition-all", {
@@ -60,7 +60,7 @@ export const SigilCard = () => {
         </h1>
 
         <div className="flex flex-row">
-          <div className="flex flex-row w-full">
+          <div className="flex flex-row w-full text-large md:text-xlarge">
             <div className="flex flex-col">
               <div>&nbsp;star</div>
               <div>&nbsp;galaxy</div>
@@ -70,8 +70,11 @@ export const SigilCard = () => {
               <div>~ zod</div>
             </div>
           </div>
-          <div className="flex flex-col justify-end w-full text-small">
-             {urbitId}
+          <div className="flex flex-row gap-x-4 justify-start translate-y-[.4em] w-full text-small items-end ">
+            <div className="">
+              <span className=""></span>
+              <span className="ml-2">{urbitId}</span>
+              </div>
             {/* <span className="border-2 border-white flex w-auto">L1</span> */}
           </div>
         </div>

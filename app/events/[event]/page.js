@@ -45,7 +45,7 @@ export default async function PostPage({ params }) {
           <div className="">{location}</div>
           <div className="mb-8">{starts} - {ends}</div>
           
-          <a href="{registration_url}" className="action-button">Register</a>
+          <a href={registration_url} className="action-button">Register</a>
         </div>
         
         {Markdoc.renderers.react(eventData.content, React)}

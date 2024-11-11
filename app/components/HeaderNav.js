@@ -172,11 +172,11 @@ const MobileNav = ({ nav, currentRoute }) => {
         >
           <Link
             href="/"
-            className="w-full flex items-start before:content-['~'] relative before:absolute before:left-[-.8em] before:bottom-[.1em]"
+            className="items-start before:content-['~'] relative before:absolute before:left-[-.8em] before:bottom-[.1em]"
           >
             Urbit          
             </Link>
-          <div onClick={toggleMenu} className="w-full flex justify-end ">
+          <div onClick={toggleMenu} className="justify-end ">
             <span>{routeMap[currentRoute]}</span>
             <span className="ml-2">{menuIsOpen ? "↑" : "↓"}</span>
           </div>
@@ -184,14 +184,14 @@ const MobileNav = ({ nav, currentRoute }) => {
       </div>
       <ul
         className={classNames(
-          "absolute flex flex-col top-0 mt-[4.5rem] left-0 bg-white h-auto w-[100vw]",
+          "absolute flex flex-col top-0 mt-[4.5rem] left-0 bg-gray-f5 h-auto w-[100vw]",
           { hidden: !menuIsOpen }
         )}
       >
         {nav?.map((navItem, i) => {
           return (
             <Link
-              className="text-gray-87 hover:bg-gray-87 hover:text-white py-8 container select-none"
+              className="text-gray-5a hover:bg-gray-87 hover:text-white py-8 container select-none"
               key={`${navItem} + ${i}`}
               href={navItem.url}
               onClick={toggleMenu}
