@@ -151,11 +151,11 @@ const MobileNav = ({ nav, currentRoute }) => {
   const routeMap = {
     "": "Menu",
     "get-on-the-network": "Get on the Network",
-    "overview": "Overview",
-    "grants": "Grants",
-    "events": "Events",
-    "blog": "Blog",
-    "ecosystem": "Ecosystem",
+    overview: "Overview",
+    grants: "Grants",
+    events: "Events",
+    blog: "Blog",
+    ecosystem: "Ecosystem",
   };
   const splitRoute = currentRoute.split("/");
 
@@ -167,18 +167,18 @@ const MobileNav = ({ nav, currentRoute }) => {
 
   return (
     <section className="fixed w-full top-0 left-0  h-auto z-10 items-center bg-black dark:bg-white justify-center leading-120 md:pt-0 md:pb-0 pb-4">
-      <div className="h-[4.5rem] flex items-center px-8 font-[600] relative w-full ">
+      <div className="h-[4.5rem] flex items-center font-[600] relative w-full ">
         <div
           href="/"
-          className="cursor-pointer flex justify-between select-none md:hover:text-gray-87 relative w-full "
+          className="cursor-pointer ml-8 h-full w-full flex justify-between select-none md:hover:text-gray-87 relative "
         >
           <Link
             href="/"
-            className="items-start before:content-['~'] relative before:absolute before:left-[-.8em] before:bottom-[.1em]"
+            className="flex items-center before:content-['~'] before:absolute before:left-[-.8em] before:bottom-[1em]"
           >
-            Urbit          
-            </Link>
-          <div onClick={toggleMenu} className="justify-end ">
+            Urbit
+          </Link>
+          <div onClick={toggleMenu} className="hover:bg-gray-87 flex w-[50%] pr-8 items-center justify-end ">
             <span>{routeMap[splitRoute[1]]}</span>
             <span className="ml-2">{menuIsOpen ? "↑" : "↓"}</span>
           </div>
@@ -199,10 +199,12 @@ const MobileNav = ({ nav, currentRoute }) => {
               onClick={toggleMenu}
               target={navItem.external ? "_blank" : ""}
             >
-              <span className="nav-button">{navItem.title}
-              {navItem.url.startsWith("http") && <span className="ml-2">↗</span>}
+              <span className="nav-button">
+                {navItem.title}
+                {navItem.url.startsWith("http") && (
+                  <span className="ml-2">↗</span>
+                )}
               </span>
-              
             </Link>
           );
         })}
