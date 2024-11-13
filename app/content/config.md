@@ -43,18 +43,43 @@ nav:
   url: "/blog"
   external: false
 footer:
-  - column_label: col1
+  - column_label: ""
     subItems:
+      - title: Overview
+        url: "/overview"
+        external: true
+      - title: Ecosystem
+        url: "/ecosystem"
+        external: true
+      - title: Grants
+        url: "/grants"
+        external: true
+      - title: Events
+        url: "/events"
+        external: true
+      - title: Blog
+        url: "/blog"
+        external: true
+  - column_label: ""
+    subItems:
+      - title: "Follow"
+        url: "/"
+        external: true
+        heading: true
       - title: "@urbit"
         url: "/"
         external: true
       - title: "@urbitfoundation"
-        external: true
         url: "/"
+        external: true
+      - title: "Email"
+        url: "/"
+        external: true
+        heading: true
       - title: "support@urbit.org"
         url: "/"
         external: true
-  - column_label: col2
+  - column_label: ""
     subItems:
       - title: Technical Journal
         url: "/"
@@ -65,12 +90,7 @@ footer:
       - title: Whitepaper
         url: "/"
         external: true
-  - column_label: col3
-    subItems:
       - title: "Github"
-        url: "/"
-        external: true
-      - title: "Developer Mailing List"
         url: "/"
         external: true
       - title: "Issue Tracker"
