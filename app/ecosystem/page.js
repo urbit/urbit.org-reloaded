@@ -44,7 +44,7 @@ export default async function EcosystemHome() {
         </p>
       </div>
 
-      <section className="md:container w-full mb-[4.375rem]">
+      <section className="md:container w-full md:mb-[4.375rem]">
         <div className="md:hidden">
           <ScrollSection title="Apps" className="md:hidden">
             {allAppsFrontMatter.map((app, i) => {
@@ -52,7 +52,7 @@ export default async function EcosystemHome() {
                 <Link
                   href={app.data.website ? app.data.website : ""}
                   target="_blank"
-                  className="flex flex-col w-[28rem] mb-auto bg-white rounded-[20px] overflow-hidden"
+                  className="flex flex-col w-[14rem] md:w-[28rem] mb-auto bg-white rounded-[20px] overflow-hidden"
                   key={i}
                 >
                   <div className="aspect-square">
@@ -61,9 +61,9 @@ export default async function EcosystemHome() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="bg-gray-d9 flex-grow max-h-[9.125rem] h-auto min-h-[9.125rem] px-[1.875rem] py-[1.375rem]  leading-[110%] font-[500] text-black text-xlarge">
+                  <div className="bg-gray-d9 flex-grow md:max-h-[9.125rem] h-auto md:min-h-[9.125rem] px-[1rem] md:px-[1.875rem] py-[1.375rem] leading-[110%] font-[500] text-black text-xlarge">
                     <h1 className="mt-[-0.15em]">{app.data.title}</h1>
-                    <h3 className="text-gray-87 text-ellipsis line-clamp-3">
+                    <h3 className="text-gray-87 text-ellipsis line-clamp-3 hidden md:flex">
                       {app.data.description}
                     </h3>
                   </div>
@@ -109,7 +109,7 @@ export default async function EcosystemHome() {
             <Link
               href={podcast.data.links[0].url}
               target="_blank"
-              className="flex flex-col w-[28rem] mb-auto bg-white rounded-[20px] overflow-hidden"
+              className="flex flex-col w-[14rem] md:w-[28rem]  mb-auto bg-white rounded-[20px] overflow-hidden"
               key={i}
             >
               <div className="aspect-square">
@@ -118,9 +118,9 @@ export default async function EcosystemHome() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="bg-gray-d9 flex-grow max-h-[9.125rem] h-auto min-h-[9.125rem] px-[1.875rem] py-[1.375rem]  leading-[110%] font-[500] text-black text-xlarge">
+              <div className="bg-gray-d9 flex-grow max-h-[9.125rem] h-auto md:min-h-[9.125rem] px-[1rem] md:px-[1.875rem] py-[1.375rem]  leading-[110%] font-[500] text-black text-xlarge">
                 <h1 className="mt-[-0.15em]">{podcast.data.title}</h1>
-                <h3 className="text-gray-87 text-ellipsis line-clamp-3">
+                <h3 className="text-gray-87 text-ellipsis line-clamp-3 hidden">
                   {podcast.data.description}
                 </h3>
               </div>
@@ -135,7 +135,7 @@ export default async function EcosystemHome() {
             <Link
               href={talk.data.url}
               target="_blank"
-              className="flex flex-col w-[28rem] mb-auto bg-white rounded-[20px] overflow-hidden"
+              className="flex flex-col w-[14rem] md:w-[28rem] mb-auto bg-white rounded-[20px] overflow-hidden"
               key={i}
             >
               <div className="aspect-[1.77]">
@@ -204,10 +204,10 @@ export const Section = ({ title, children }) => {
 
 export const ScrollSection = ({ children, title }) => {
   return (
-    <section className=" !pr-0 mb-[4.375rem] overflow-x-auto ">
+    <section className="!pr-0 mb-12 md:mb-[4.375rem] overflow-x-auto ">
       <h1 className="container mb-[2.25rem]">{title}</h1>
       <div className="overflow-x-auto no-scrollbar">
-        <div className="flex flex-row overflow-x-auto w-fit gap-[.625rem] ml-[calc(var(--gutter-size)+.75rem)] 3xl:ml-[calc(((100vw-1900px)/2)+2rem)]">
+        <div className="flex flex-row overflow-x-auto w-fit gap-[.3175rem] md:gap-[.625rem] ml-[calc(var(--gutter-size)+.75rem)] 3xl:ml-[calc(((100vw-1900px)/2)+2rem)]">
           {children}
         </div>
       </div>
