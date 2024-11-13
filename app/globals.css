@@ -105,6 +105,7 @@ body {
     /* max-w-[100%] */
     mx-auto
     px-5
+    pl-[calc(2rem)]
     md:px-8;
   }
 }

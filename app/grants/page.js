@@ -33,7 +33,7 @@ export default async function GrantsHome() {
       </section>
       <section className="md:grid grid-cols-6 gap-x-4 mb-12 text-xlarge leading-[120%] font-[500]">
         <div className="col-span-1"></div>
-        <div className="col-span-2">
+        <div className="col-span-2 mb-4">
           <div className="block">Proposals</div>
           <div className="text-gray-87">
             Have an idea? Send it to us, and we can approve you to be funded.

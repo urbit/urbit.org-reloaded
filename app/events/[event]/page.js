@@ -36,7 +36,7 @@ export default async function PostPage({ params }) {
   } = eventData.frontMatter;
 
   return (
-    <section className="grid md:grid-cols-6 mb-32 mt-[4rem] md:mt-[6rem] container">
+    <section className="grid md:grid-cols-6 mb-32 mt-9 md:mt-[6rem] container">
       
       <div className="col-start-2 col-span-4 text-xlarge leading-[120%]">
         <div className="flex flex-col mb-24">

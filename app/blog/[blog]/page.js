@@ -27,7 +27,7 @@ export default async function PostPage({ params }) {
   const { title, date, extra, taxonomies } = postData.frontMatter;
 
   return (
-    <section className="grid md:grid-cols-6 mb-32 mt-[4rem] md:mt-[6rem] container">
+    <section className="grid md:grid-cols-6 mb-32 mt-9 md:mt-[6rem] container">
       <div className="col-start-2 col-span-4 leading-[120%] overflow-x-hidden">
         <h1 className="text-3xlarge leading-[120%] mb-4">
           {postData.frontMatter.title}

@@ -32,7 +32,7 @@ export default async function PostPage({ params }) {
   // const components = postData?.components;
 
   return (
-    <section className="grant-section block md:grid md:grid-cols-6 mb-32 mt-[4rem] md:mt-[6rem] container">
+    <section className="grant-section block md:grid md:grid-cols-6 mb-32 mt-9 md:mt-[6rem] container">
       <ThemeManager />
 
       <div className="col-span-1"></div>

@@ -14,7 +14,7 @@ export const HeaderNav = ({ nav, homepage }) => {
   return (
     <React.Fragment>
       {currentRoute == "/" ? (
-        <div className="ml-4 mt-4 md:ml-8 md:mt-8 headline flex w-full flex-col justify-start items-start relative before:content-['~'] before:absolute before:left-[-.6em] before:top-[-.05em] text-2xlarge lg:text-3xlarge 2xl:text-4xlarge leading-[120%]  ">
+        <div className="mt-4  md:mt-8 headline flex w-full flex-col justify-start items-start relative before:content-['~'] before:absolute before:left-[-.6em] before:top-[-.05em] text-2xlarge lg:text-3xlarge 2xl:text-4xlarge leading-[120%]  ">
           <h1 className="font-[300]">{homepage.headline}</h1>
           <div className="flex flex-col md:flex-row gap-x-8 font-[300] text-gray-400 underline underline-offset-[.1em] decoration-2">
             {homepage.links.map((link, i) => {
@@ -166,19 +166,19 @@ const MobileNav = ({ nav, currentRoute }) => {
   };
 
   return (
-    <section className="fixed w-full top-0 left-0  h-auto z-10 items-center bg-black dark:bg-white justify-center leading-120 md:pt-0 md:pb-0 pb-4">
+    <section className="fixed w-full top-0 left-0  h-auto z-10 items-center bg-black dark:bg-white justify-center leading-120 md:pt-0 md:pb-0">
       <div className="h-[4.5rem] flex items-center font-[600] relative w-full ">
         <div
           href="/"
-          className="cursor-pointer ml-8 h-full w-full flex justify-between select-none md:hover:text-gray-87 relative "
+          className="cursor-pointer ml-8 h-full w-full grid grid-cols-12 justify-between select-none md:hover:text-gray-87 relative "
         >
           <Link
             href="/"
-            className="flex items-center before:content-['~'] before:absolute before:left-[-.8em] before:bottom-[1em]"
+            className="flex col-span-4 items-center before:content-['~'] before:absolute before:left-[-.8em] before:bottom-[1em]"
           >
             Urbit
           </Link>
-          <div onClick={toggleMenu} className="hover:bg-gray-87 flex w-[50%] pr-8 items-center justify-end ">
+          <div onClick={toggleMenu} className="col-span-8 w-full hover:bg-gray-87 flex  pr-8 items-center justify-end ">
             <span>{routeMap[splitRoute[1]]}</span>
             <span className="ml-2">{menuIsOpen ? "↑" : "↓"}</span>
           </div>
@@ -193,13 +193,13 @@ const MobileNav = ({ nav, currentRoute }) => {
         {nav?.map((navItem, i) => {
           return (
             <Link
-              className="text-gray-5a hover:bg-gray-87 hover:text-white py-8 container select-none"
+              className="text-gray-5a leading-[1cap] hover:bg-gray-87 hover:text-white py-8 container select-none"
               key={`${navItem} + ${i}`}
               href={navItem.url}
               onClick={toggleMenu}
               target={navItem.external ? "_blank" : ""}
             >
-              <span className="nav-button">
+              <span className="nav-button leading-inherit">
                 {navItem.title}
                 {navItem.url.startsWith("http") && (
                   <span className="ml-2">↗</span>

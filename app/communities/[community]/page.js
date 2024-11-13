@@ -25,7 +25,7 @@ export default async function PostPage({ params }) {
   const { title, description, image, group, links } = pageData.frontMatter;
 
   return (
-    <section className="lg:grid grid-cols-6 gap-x-4 mb-32 mt-[4rem] md:mt-[6rem] container">
+    <section className="lg:grid grid-cols-6 gap-x-4 mb-32 mt-9 md:mt-[6rem] container">
       <div className="col-start-2 col-span-2 text-xlarge leading-[120%]">
         <div className="col-span-2">
           <img className="mb-4 w-full h-auto" src={image} alt={title} />
