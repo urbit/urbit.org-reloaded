@@ -55,7 +55,7 @@ export const HeaderNav = ({ nav, homepage }) => {
                         ownership of your digital world.
                       </span>
                     )}
-                    {currentRoute.startsWith("/overview") && (
+                    {/* {currentRoute.startsWith("/overview") && (
                       <React.Fragment>
                         &nbsp;:&nbsp;
                         <Link
@@ -65,7 +65,7 @@ export const HeaderNav = ({ nav, homepage }) => {
                           Overview
                         </Link>
                       </React.Fragment>
-                    )}
+                    )} */}
                     {currentRoute.startsWith("/grants") && (
                       <React.Fragment>
                         &nbsp;:&nbsp;
@@ -105,7 +105,7 @@ export const HeaderNav = ({ nav, homepage }) => {
 const OverviewNav = () => {
   const currentRoute = usePathname();
   return (
-    <ul className="flex flex-row gap-x-4 text-[16px] md:text-inherit md:flex-col text-gray-87 col-span-6">
+    <ul className="flex flex-row gap-x-4 text-[16px] md:text-large md:flex-col text-gray-87 col-span-6">
       <Link
         className={currentRoute === "/overview" ? "text-white" : "text-gray-87"}
         href="/overview"
@@ -183,7 +183,7 @@ const MobileNav = ({ nav, currentRoute }) => {
         </div>
       </div>
       {currentRoute.startsWith("/overview") && (
-        <div className="container bg-black mb-4">
+        <div className="container bg-black mb-4 md:hidden">
           <OverviewNav />
         </div>
       )}
