@@ -162,7 +162,7 @@ const MobileNav = ({ nav, currentRoute }) => {
 
   return (
     <section className="fixed w-full top-0 left-0  h-auto z-10 items-center bg-black dark:bg-white justify-center leading-120 md:pt-0 md:pb-0">
-      <div className="h-[4.5rem] flex items-center font-[600] relative w-full ">
+      <div className="h-[4.5rem] flex md:hidden items-center font-[600] relative w-full ">
         <div
           href="/"
           className="cursor-pointer ml-8 h-full w-full grid grid-cols-12 justify-between select-none md:hover:text-gray-87 relative "
