@@ -198,6 +198,13 @@ body {
       @apply bg-gray-87 !text-large;
     }
     
+    p:has(+ h1[level="2"]) {
+      @apply !mb-[2.6rem];
+    }
+    :has(+ h1[level="1"]) {
+      @apply !mb-[3.2rem];
+    }
+    
     blockquote {
       @apply p-2 pl-4 italic my-4 border-s-4 border-black;
     }
