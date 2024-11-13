@@ -41,10 +41,10 @@ export const HeaderNav = ({ nav, homepage }) => {
             <div className="my-4 md:my-8 h-auto md:flex md:flex-row md:items-center md:justify-between">
               <div className="w-full leading-[1cap] flex justify-start md:grid gap-4 items-center md:justify-center md:grid-cols-6  h-full ">
                 <div className="col-span-1">
-                  <div className="inline-block font-[600] relative">
+                  <div className="flex font-[600] relative">
                     <Link
                       href="/"
-                      className="md:hover:text-gray-87 ml-2 relative before:content-['~']  before:absolute before:left-[-.8em] before:bottom-[.3em] w-auto"
+                      className="md:hover:text-gray-87 ml-2 relative before:content-['~']  before:absolute before:left-[-.82em] before:bottom-[.08em] w-auto"
                     >
                       Urbit
                     </Link>
@@ -76,11 +76,6 @@ export const HeaderNav = ({ nav, homepage }) => {
                           Grants
                         </Link>
                       </React.Fragment>
-                    )}
-                    {currentRoute.startsWith("/overview") && (
-                      <div className="mt-4 md:hidden">
-                        <OverviewNav />
-                      </div>
                     )}
                   </div>
                 </div>{" "}
