@@ -45,7 +45,7 @@ export const SigilCard = () => {
   }, []);
 
   return (
-    <div className="sigil-card  w-full h-full flex items-center justify-center">
+    <div className="sigil-card mb-12 w-full h-full flex items-center justify-center">
       <div className="w-[30rem] md:w-[35rem] h-[16rem] md:h-[20rem] border-2 border-gray-87 rounded-xl flex flex-col justify-between pt-6 px-6 pb-5 md:pt-10 md:px-10 md:pb-8">
         <div className="h-0 relative">
           <img

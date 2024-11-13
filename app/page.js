@@ -6,7 +6,7 @@ export default async function HomePage() {
   // const homepage = await getMarkdownContent("index.md")
 
   return (
-    <div className="container z-[-100]  absolute top-0 w-full h-full !mt-[0px]">
+    <div className="container relative z-[-100] top-0 w-full h-full !mt-[0px]">
       <SigilCard />
     </div>
   );
