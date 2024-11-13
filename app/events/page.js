@@ -112,6 +112,7 @@ export const Section = ({ title, className, children }) => {
     </section>
   );
 };
+
 export const Event = ({ event, slug }) => {
   return (
     <Link href={`/events/${slug}`} className="block eventblock hover:text-gray-87 transition-all leading-[130%] text-xlarge ">

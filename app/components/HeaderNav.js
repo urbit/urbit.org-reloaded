@@ -105,7 +105,7 @@ export const HeaderNav = ({ nav, homepage }) => {
 const OverviewNav = () => {
   const currentRoute = usePathname();
   return (
-    <ul className="flex flex-row gap-x-4 md:flex-col text-gray-87 col-span-6">
+    <ul className="flex flex-row gap-x-4 text-[16px] md:text-inherit md:flex-col text-gray-87 col-span-6">
       <Link
         className={currentRoute === "/overview" ? "text-white" : "text-gray-87"}
         href="/overview"
@@ -173,12 +173,21 @@ const MobileNav = ({ nav, currentRoute }) => {
           >
             Urbit
           </Link>
-          <div onClick={toggleMenu} className="col-span-8 w-full hover:bg-gray-87 flex  pr-8 items-center justify-end ">
+          <div
+            onClick={toggleMenu}
+            className="col-span-8 w-full hover:bg-gray-87 flex  pr-8 items-center justify-end "
+          >
             <span>{routeMap[splitRoute[1]]}</span>
             <span className="ml-2">{menuIsOpen ? "↑" : "↓"}</span>
           </div>
         </div>
       </div>
+      {currentRoute.startsWith("/overview") && (
+        <div className="container bg-black mb-4">
+          <OverviewNav />
+        </div>
+      )}
+
       <ul
         className={classNames(
           "absolute flex flex-col top-0 mt-[4.5rem] left-0 bg-gray-f5 h-auto w-[100vw]",
