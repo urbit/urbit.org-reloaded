@@ -190,14 +190,14 @@ const MobileNav = ({ nav, currentRoute }) => {
 
       <ul
         className={classNames(
-          "absolute flex flex-col top-0 mt-[4.5rem] left-0 bg-gray-f5 h-auto w-[100vw]",
+          "absolute flex flex-col top-0 font-[600]  mt-[4.5rem] left-0 bg-gray-f5 h-auto w-[100vw]",
           { hidden: !menuIsOpen }
         )}
       >
         {nav?.map((navItem, i) => {
           return (
             <Link
-              className="text-gray-5a leading-[1cap] hover:bg-gray-87 hover:text-white py-8 container select-none"
+              className="text-gray-87 leading-[1cap] hover:bg-gray-87 hover:text-white first-of-type:mt-4 last-of-type:mb-4 py-4 container select-none"
               key={`${navItem} + ${i}`}
               href={navItem.url}
               onClick={toggleMenu}

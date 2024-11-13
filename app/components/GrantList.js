@@ -142,7 +142,7 @@ const GrantListContent = ({
             { "text-white": selectedStatus })
           }>Status:</span>
           <div className={classNames(
-            "flex flex-row flex-wrap gap-x-4 md:flex-col items-start text-white hover:text-gray-87",
+            "flex flex-row flex-wrap gap-x-4 md:flex-col items-start text-gray-87 hover:text-gray-87",
             { "!text-gray-87": selectedStatus }
           )}>
             {statuses.map((status, index) => (
@@ -164,10 +164,10 @@ const GrantListContent = ({
 
           <span className={classNames(
             "text-gray-87 pt-4",
-            { "text-white": selectedProgram })
-          }>Program:</span>
+            { "text-white": selectedProgram }
+          )}>Program:</span>
           <div className={classNames(
-            "flex flex-row flex-wrap gap-x-4 md:flex-col items-start text-white hover:text-gray-87",
+            "flex flex-row flex-wrap gap-x-4 md:flex-col items-start text-gray-87 hover:text-gray-87",
             { "!text-gray-87": selectedProgram }
           )}>
             {programs.map((program, index) => (
@@ -189,11 +189,11 @@ const GrantListContent = ({
           
           <span className={classNames(
             "text-gray-87 pt-4",
-            { "text-white": selectedCategory })
-          }>Work Categories:</span>
+            { "text-white": selectedCategory }
+          )}>Work Categories:</span>
           <div className={classNames(
-            "flex flex-row flex-wrap  gap-x-4 md:flex-col items-start text-white hover:text-gray-87",
-            { "!text-gray-87  ": selectedCategory }
+            "flex flex-row flex-wrap  gap-x-4 md:flex-col items-start text-gray-87 hover:text-gray-87",
+            { "!text-gray-87": selectedCategory }
           )}>
             {categories.map((category, index) => (
               <button
