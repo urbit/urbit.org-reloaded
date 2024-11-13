@@ -175,9 +175,9 @@ const MobileNav = ({ nav, currentRoute }) => {
           </Link>
           <div
             onClick={toggleMenu}
-            className="col-span-8 w-full hover:bg-gray-87 flex  pr-8 items-center justify-end "
+            className="col-span-8 w-full hover:bg-gray-87 flex  pr-[.7em] items-center justify-between"
           >
-            <span>{routeMap[splitRoute[1]]}</span>
+            <span className="ml-8">{routeMap[splitRoute[1]]}</span>
             <span className="ml-2">{menuIsOpen ? "↑" : "↓"}</span>
           </div>
         </div>

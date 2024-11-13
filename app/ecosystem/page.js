@@ -207,7 +207,7 @@ export const ScrollSection = ({ children, title }) => {
     <section className="!pr-0 mb-12 md:mb-[4.375rem] overflow-x-auto ">
       <h1 className="container mb-[2.25rem]">{title}</h1>
       <div className="overflow-x-auto no-scrollbar">
-        <div className="flex flex-row overflow-x-auto w-fit gap-[.3175rem] md:gap-[.625rem] ml-[calc(var(--gutter-size)+.75rem)] 3xl:ml-[calc(((100vw-1900px)/2)+2rem)]">
+        <div className="flex flex-row overflow-x-auto w-fit gap-[.3175rem] md:gap-[.625rem] ml-[calc(var(--gutter-size))] 3xl:ml-[calc(((100vw-1900px)/2)+2rem)]">
           {children}
         </div>
       </div>

@@ -47,19 +47,19 @@ footer:
     subItems:
       - title: Overview
         url: "/overview"
-        external: true
+        external: false
       - title: Ecosystem
         url: "/ecosystem"
-        external: true
+        external: false
       - title: Grants
         url: "/grants"
-        external: true
+        external: false
       - title: Events
         url: "/events"
-        external: true
+        external: false
       - title: Blog
         url: "/blog"
-        external: true
+        external: false
   - column_label: ""
     subItems:
       - title: "Follow"
