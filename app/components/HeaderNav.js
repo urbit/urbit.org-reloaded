@@ -2,7 +2,7 @@
 import Link from "next/link";
 import classNames from "classnames";
 import { useEffect, useRef, useState } from "react";
-
+import { OverviewNav } from "./OverviewNav";
 import React from "react";
 import { usePathname } from "next/navigation";
 
@@ -12,14 +12,8 @@ export const HeaderNav = ({ nav, homepage }) => {
   const currentRoute = usePathname();
 
   return (
-    <React.Fragment>
-      {currentRoute.startsWith("/overview") && (
-        <div className="hidden md:flex absolute z-[2] w-auto left-0 top-0 container mt-[calc(var(--header-height)+.2em)]">
-          <div className=" grid grid-cols-6 gap-x-4 font-[600] md:mt-[2.06rem] bg-black md:bg-transparent w-full md:w-auto pb-4">
-            <OverviewNav />
-          </div>
-        </div>
-      )}
+    <React.Fragment className="relative">
+  
       {currentRoute == "/" ? (
         <div className="lg:ml-6 2xl:ml-8 mt-4 md:mt-8 headline flex w-full flex-col justify-start items-start relative before:content-['~'] before:absolute before:left-[-.6em] before:top-[-.05em] text-2xlarge lg:text-3xlarge 2xl:text-4xlarge leading-[120%]  ">
           <h1 className="font-[300]">{homepage.headline}</h1>
@@ -100,44 +94,6 @@ export const HeaderNav = ({ nav, homepage }) => {
         </React.Fragment>
       )}
     </React.Fragment>
-  );
-};
-
-const OverviewNav = () => {
-  const currentRoute = usePathname();
-  return (
-    <ul className="flex flex-row gap-x-4 text-[16px] md:text-large md:flex-col text-gray-87 col-span-6">
-      <Link
-        className={currentRoute === "/overview" ? "text-white" : "text-gray-87"}
-        href="/overview"
-      >
-        <span className="nav-button">Introduction</span>
-      </Link>
-      <Link
-        className={
-          currentRoute === "/overview/urbit-os" ? "text-white" : "text-gray-87"
-        }
-        href="/overview/urbit-os"
-      >
-        <span className="nav-button">Urbit OS</span>
-      </Link>
-      <Link
-        className={
-          currentRoute === "/overview/urbit-id" ? "text-white" : "text-gray-87"
-        }
-        href="/overview/urbit-id"
-      >
-        <span className="nav-button">Urbit ID</span>
-      </Link>
-      <Link
-        className={
-          currentRoute === "/overview/history" ? "text-white" : "text-gray-87"
-        }
-        href="/overview/history"
-      >
-        <span className="nav-button">History</span>
-      </Link>
-    </ul>
   );
 };
 
