@@ -67,33 +67,33 @@ footer:
         external: true
         heading: true
       - title: "@urbit"
-        url: "/"
+        url: "https://www.instagram.com/urbit/?hl=en"
         external: true
       - title: "@urbitfoundation"
-        url: "/"
+        url: "https://x.com/urbitfoundation?lang=en"
         external: true
       - title: "Email"
         url: "/"
         external: true
         heading: true
       - title: "support@urbit.org"
-        url: "/"
+        url: "mailto:support@urbit.org"
         external: true
   - column_label: ""
     subItems:
       - title: Technical Journal
-        url: "/"
+        url: "https://urbitsystems.tech/"
         external: true
       - title: Network Explorer
-        url: "/"
+        url: "https://urbitsystems.tech/"
         external: true
       - title: Whitepaper
-        url: "/"
+        url: "https://media.urbit.org/whitepaper.pdf"
         external: true
       - title: "Github"
-        url: "/"
+        url: "https://github.com/urbit/urbit"
         external: true
       - title: "Issue Tracker"
-        url: "/"
+        url: "https://github.com/urbit/urbit/issues"
         external: true
 ---
