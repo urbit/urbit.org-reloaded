@@ -83,6 +83,7 @@ Once we receive both approval and an invoice for a milestone, we will pay your r
 
 {% faq %}
 
+
 ## Frequently Asked Questions
 
 {% faqSection question="Where can I talk to people about grants?" %}
