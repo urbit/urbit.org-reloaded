@@ -3,6 +3,7 @@ import {
   OverviewSVG,
   OverviewImage,
 } from "./components/OverviewSection";
+import { FaqSection } from "./components/Faq";
 import { MarkdocLink, UnescapedHtml } from "./components/MarkdocComponents";
 
 const markdocConfig = {
@@ -29,6 +30,12 @@ const markdocConfig = {
       attributes: {
         title: { type: String },
       },
+    },
+    "faqSection": {
+      render: FaqSection,
+      attributes: {
+        question: { type: String },
+      }
     },
     graphic: {
       render: OverviewSVG,
