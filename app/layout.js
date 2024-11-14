@@ -24,7 +24,7 @@ export default async function RootLayout({ children }) {
         <div className="w-[100%] mx-auto flex justify-center container">
         <HeaderNav homepage={config.frontMatter?.homepage} nav={config.frontMatter?.nav} />
         </div>
-        <div className="h-full mt-[var(--header-height)]">{children}</div>
+        <div className="h-full mt-[var(--header-height)] z-[10]">{children}</div>
         <FooterSection footerData={config.frontMatter?.footer} />
       </body>
     </html>
