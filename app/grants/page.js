@@ -1,6 +1,7 @@
 import React from "react";
 import { getPostsTree, getToml } from "../lib/queries";
 import { GrantList } from "../components/GrantList";
+import Link from "next/link";
 
 export default async function GrantsHome() {
   const posts = await getPostsTree("grants/");
@@ -33,19 +34,19 @@ export default async function GrantsHome() {
       </section>
       <section className="md:grid grid-cols-6 gap-x-4 mb-12 text-xlarge leading-[120%] font-[500]">
         <div className="col-span-1"></div>
-        <div className="col-span-2 mb-4">
+        <Link href="/proposals" className="col-span-2 mb-4 group">
           <div className="block">Proposals</div>
-          <div className="text-gray-87">
+          <div className="text-gray-87 group-hover:text-white">
             Have an idea? Send it to us, and we can approve you to be funded.
           </div>
-        </div>
-        <div className="col-span-2">
+        </Link>
+        <Link href="/proposals" className="col-span-2 mb-4 group">
           <div className="block">Bounties</div>
-          <div className="text-gray-87">
+          <div className="text-gray-87 group-hover:text-white">
             Looking for work? Browse through opportunities offered by the Urbit
             Foundation or other organizations
           </div>
-        </div>
+        </Link>
       </section>
       <GrantList
         allPostFrontMatter={JSON.parse(JSON.stringify(allPostFrontMatter))}
