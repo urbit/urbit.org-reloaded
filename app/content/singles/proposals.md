@@ -78,7 +78,7 @@ Once we receive both approval and an invoice for a milestone, we will pay your r
     small=true
   /%}
 
-  {% /grid %}
+{% /grid %}
 
 
 {% faq %}

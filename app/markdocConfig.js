@@ -4,6 +4,7 @@ import {
   OverviewImage,
 } from "./components/OverviewSection";
 import { FaqSection } from "./components/Faq";
+import { IconCard } from "./components/IconCard";
 import { MarkdocLink, UnescapedHtml } from "./components/MarkdocComponents";
 
 const markdocConfig = {
@@ -29,6 +30,17 @@ const markdocConfig = {
       render: OverviewSection,
       attributes: {
         title: { type: String },
+      },
+    },
+    "iconcard": {
+      render: IconCard,
+      attributes: {
+        title: { type: String },
+        description: {type: String},
+        label: {type: String},
+        href: {type: String},
+        icon: {type: String},
+        small: {type: Boolean},
       },
     },
     "faqSection": {
