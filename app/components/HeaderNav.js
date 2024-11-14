@@ -13,6 +13,13 @@ export const HeaderNav = ({ nav, homepage }) => {
 
   return (
     <React.Fragment>
+      {currentRoute.startsWith("/overview") && (
+        <div className="hidden md:flex absolute z-[2] w-auto left-0 top-0 container mt-[calc(var(--header-height)+.2em)]">
+          <div className=" grid grid-cols-6 gap-x-4 font-[600] md:mt-[2.06rem] bg-black md:bg-transparent w-full md:w-auto pb-4">
+            <OverviewNav />
+          </div>
+        </div>
+      )}
       {currentRoute == "/" ? (
         <div className="lg:ml-6 2xl:ml-8 mt-4 md:mt-8 headline flex w-full flex-col justify-start items-start relative before:content-['~'] before:absolute before:left-[-.6em] before:top-[-.05em] text-2xlarge lg:text-3xlarge 2xl:text-4xlarge leading-[120%]  ">
           <h1 className="font-[300]">{homepage.headline}</h1>
@@ -88,13 +95,7 @@ export const HeaderNav = ({ nav, homepage }) => {
               </div>
             </div>
 
-            {currentRoute.startsWith("/overview") && (
-              <React.Fragment>
-                <div className="absolute grid grid-cols-6 gap-x-4 font-[600] md:mt-[2.06rem] bg-black md:bg-transparent w-full md:w-auto pb-4">
-                  <OverviewNav />
-                </div>
-              </React.Fragment>
-            )}
+            
           </section>
         </React.Fragment>
       )}
