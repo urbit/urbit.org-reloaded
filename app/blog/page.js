@@ -47,7 +47,7 @@ export default async function BlogHome() {
               <div className="font-bold">{title}</div>
               <div className="mb-4 md:mb-0">{description}</div>
               
-              <div className="flex md:hidden flex-row justify-between">
+              <div className="flex md:hidden flex-col justify-between">
                 <div className="">{extra.author}</div>
                 <div>{extra.ship}</div>
               </div>
