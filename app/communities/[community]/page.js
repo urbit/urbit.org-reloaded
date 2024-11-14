@@ -25,13 +25,11 @@ export default async function PostPage({ params }) {
   const { title, description, image, group, links } = pageData.frontMatter;
 
   return (
-    <section className="lg:grid grid-cols-6 gap-x-4 mb-32 mt-9 md:mt-[6rem] container">
-      <div className="col-start-2 col-span-2 text-xlarge leading-[120%]">
-        <div className="col-span-2">
+    <section className="lg:grid grid-cols-6 gap-x-4 mb-32 mt-9 md:mt-[2rem] container min-h-[calc(100vh-var(--header-height)-28rem)]">
+      <div className="col-span-1">
           <img className="mb-4 w-full h-auto" src={image} alt={title} />
-        </div>
       </div>
-      <div className="flex flex-col col-span-2">
+      <div className="flex flex-col col-span-4">
         <div className="text-2xlarge leading-[120%] font-[600] mb-4">
           {title}
         </div>
