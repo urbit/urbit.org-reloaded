@@ -12,7 +12,7 @@ export const HeaderNav = ({ nav, homepage }) => {
   const currentRoute = usePathname();
 
   return (
-    <React.Fragment className="relative">
+    <React.Fragment>
   
       {currentRoute == "/" ? (
         <div className="lg:ml-6 2xl:ml-8 mt-4 md:mt-8 headline flex w-full flex-col justify-start items-start relative before:content-['~'] before:absolute before:left-[-.6em] before:top-[-.05em] text-2xlarge lg:text-3xlarge 2xl:text-4xlarge leading-[120%]  ">
