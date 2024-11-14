@@ -5,7 +5,7 @@ import classNames from "classnames";
 const OverviewSection = ({ title, children }) => {
   // console.log('title', title)
   return (
-    <section className="overview-section mt-12 md:mt-0">
+    <section className="overview-section mt-16 md:mt-0">
       <div className={classNames("overview-section-title",
         {"hidden md:block": title == undefined,}
       )}>{title}</div>

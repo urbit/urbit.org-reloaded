@@ -4,7 +4,7 @@ description = "Where we've been and were we are now"
 ---
 
 
-{% overview-section title=""  %}
+{% overview-section  %}
 
 Urbit is an open-source project that anyone can work on. The Urbit Foundation, a non-profit organization, is charged with shepherding the network toward a successful future. [Tlon](https://tlon.io/) was the first private company founded for the purposes of working on Urbit, back in 2013. But now there are several more. These include [Tirrel](https://tirrel.io/), [Native Planet](https://www.nativeplanet.io/), [Red Horizon](https://redhorizon.com/), and others. Beyond that, an ecosystem has sprung up around Urbit that includes [funds](https://assembly.capital/), [DAOs](https://labyrinthdao.io/), and [publications](https://marsreview.org/). And of course there are everyday contributors, many of whom have received [grants](https://urbit.org/grants) from the Urbit Foundation. 
 
