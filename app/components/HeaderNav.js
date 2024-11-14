@@ -235,6 +235,7 @@ const GlobalNav = ({ nav }) => {
               target={navItem.external ? "_blank" : ""}
             >
               <span className="nav-button">{navItem.title}</span>
+            {navItem.external && (<span className="ml-[.2em]">↗</span>)}
             </Link>
           );
         })}
