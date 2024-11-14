@@ -222,8 +222,19 @@ const GrantListContent = ({
         {filteredSortedPosts.map((postData) => {
           const { title, date, extra, taxonomies } = postData.data;
           let reward;
-          reward = extra?.reward?.match(/\d+/)[0];
-            
+          // reward = extra?.reward?.match(/\d+/)[0];
+          const m = extra?.reward?.match(/(\d+)\s*star?/i);
+          const match = extra?.reward?.match(/(\d+)\s*stars?/);
+          if(m !== null && m.length > 0) {
+            reward = m[1];
+          }
+          
+          console.log('reward', reward)
+          if(reward !== undefined ){
+            reward = reward;
+          } else {
+            reward = 0;
+          }
           // console.log(title, reward);
           // console.log(postData.data)
           return (
@@ -238,10 +249,11 @@ const GrantListContent = ({
                   <div className="flex flex-col">
                     <div className="flex flex-row text-gray-87">
                       Reward:
-                      <div className="flex flex-row ml-[.2em]">
+                      <div className="flex flex-row flex-wrap ml-[.2em]">
                         {[...Array(Number(reward))].map((_, i) => (
                           <div key={i}></div>
                         ))}
+                        {reward == 0 && <div>{extra?.reward}</div>}
                       </div>
                     </div>
                   </div>
