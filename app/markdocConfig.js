@@ -5,6 +5,7 @@ import {
 } from "./components/OverviewSection";
 import { FaqSection } from "./components/Faq";
 import { IconCard } from "./components/IconCard";
+import { LineBreak } from "./components/LineBreak";
 import { MarkdocLink, UnescapedHtml } from "./components/MarkdocComponents";
 
 const markdocConfig = {
@@ -31,6 +32,9 @@ const markdocConfig = {
       attributes: {
         title: { type: String },
       },
+    },
+    "br": {
+      render: LineBreak
     },
     "iconcard": {
       render: IconCard,
