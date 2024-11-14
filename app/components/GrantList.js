@@ -224,12 +224,15 @@ const GrantListContent = ({
           let reward;
           // reward = extra?.reward?.match(/\d+/)[0];
           const m = extra?.reward?.match(/(\d+)\s*star?/i);
-          const match = extra?.reward?.match(/(\d+)\s*stars?/);
+          console.log(extra?.reward)
           if(m !== null && m.length > 0) {
             reward = m[1];
+            if(extra?.reward.length > 12) {
+              reward = undefined
+            }
           }
           
-          console.log('reward', reward)
+          // console.log('reward', reward)
           if(reward !== undefined ){
             reward = reward;
           } else {
