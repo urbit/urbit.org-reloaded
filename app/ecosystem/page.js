@@ -52,7 +52,7 @@ export default async function EcosystemHome() {
                 <Link
                   href={app.data.website ? app.data.website : ""}
                   target="_blank"
-                  className="flex flex-col w-[14rem] md:w-[28rem] mb-auto bg-white rounded-[20px] overflow-hidden"
+                  className="card flex flex-col w-[14rem] md:w-[28rem] mb-auto bg-white rounded-[20px] overflow-hidden"
                   key={i}
                 >
                   <div className="aspect-square">
@@ -109,7 +109,7 @@ export default async function EcosystemHome() {
             <Link
               href={podcast.data.links[0].url}
               target="_blank"
-              className="flex flex-col w-[14rem] md:w-[28rem]  mb-auto bg-white rounded-[20px] overflow-hidden"
+              className="card flex flex-col w-[14rem] md:w-[28rem]  mb-auto bg-white rounded-[20px] overflow-hidden"
               key={i}
             >
               <div className="aspect-square">
@@ -135,7 +135,7 @@ export default async function EcosystemHome() {
             <Link
               href={talk.data.url}
               target="_blank"
-              className="flex flex-col w-[14rem] md:w-[28rem] mb-auto bg-white rounded-[20px] overflow-hidden"
+              className="card flex flex-col w-[14rem] md:w-[28rem] mb-auto bg-white rounded-[20px] overflow-hidden"
               key={i}
             >
               <div className="aspect-[1.77]">
