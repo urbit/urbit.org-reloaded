@@ -80,7 +80,7 @@ export default async function EcosystemHome() {
               <Link
                 href={app.data.website ? app.data.website : ""}
                 target="_blank"
-                className="flex flex-col  mb-auto bg-white rounded-[20px] overflow-hidden"
+                className="card flex flex-col  mb-auto bg-white rounded-[20px] overflow-hidden"
                 key={i}
               >
                 <div className="aspect-square">
