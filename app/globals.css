@@ -122,7 +122,7 @@ body {
   }
   
   .text-size-homepage {
-    @apply text-large lg:text-2xlarge xl:text-3xlarge 2xl:text-4xlarge;
+    @apply text-2xlarge xl:text-3xlarge 2xl:text-4xlarge;
   }
   
   /* .overview-page { */
