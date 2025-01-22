@@ -48,15 +48,15 @@ export const NewsletterSignup = () => {
           onSubmit={handleSubmit}
           id="mc-embedded-subscribe-form"
           name="mc-embedded-subscribe-form"
-          className="validate form max-w-screen-sm pb-8"
+          className="validate form pb-8"
           noValidate
         >
           <div className="input-group relative font-medium" id="mc_embed_signup_scroll">
-            <div className="mc-field-group max-w-[800px] h-max relative">
+            <div className="mc-field-group max-w-[680px] 2xl:max-w-[888px] h-max relative">
               <input
                 className={classNames(
                   isSuccess ? "bg-white text-black cursor-default" : 'text-gray-87',
-                  "appearance-none text-2xlarge lg:text-3xlarge xl:text-4xlarge placeholder:text-gray-87 outline-none bg-transparent border-gray-87 border-[.0875rem] rounded-[.34rem] pb-[.05em] pl-[.3em] pr-1 w-full leading-[1cap]")
+                  "appearance-none text-size-homepage placeholder:text-gray-87 outline-none bg-transparent border-gray-87 border-[.0875rem] rounded-[.34rem] pb-[.05em] pl-[.3em] pr-1 w-full leading-[1cap]")
                 }
                 type="email"
                 name="EMAIL"
