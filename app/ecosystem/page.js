@@ -37,14 +37,14 @@ export default async function EcosystemHome() {
 
   return (
     <div className="mb-32 mt-9">
-      <div className="container md:grid grid-cols-6 gap-x-4 w-full mb-16 text-xlarge leading-[130%]">
+      {/* <div className="container md:grid grid-cols-6 gap-x-4 w-full mb-16 text-xlarge leading-[130%]">
         <p className="col-span-4 col-start-2">
           Urbit’s decentralized ecosystem is growing more than ever, check out
           the Apps, Podcasts, Talks, Companies and more below.
         </p>
-      </div>
+      </div> */}
 
-      <section className="md:container w-full md:mb-[4.375rem]">
+      {/* <section className="md:container w-full md:mb-[4.375rem]">
         <div className="md:hidden">
           <ScrollSection title="Apps" className="md:hidden">
             {allAppsFrontMatter.map((app, i) => {
@@ -152,7 +152,7 @@ export default async function EcosystemHome() {
             </Link>
           );
         })}
-      </ScrollSection>
+      </ScrollSection> */}
 
       <Section className="container" title="Companies">
         {allOrgsFrontMatter.map((org, i) => {
