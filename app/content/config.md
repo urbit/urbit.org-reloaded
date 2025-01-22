@@ -9,13 +9,10 @@ site_metadata:
   canonicalUrl: "https://urbit.org"
   siteImage: "/images/logo.png"
 homepage:
-  headline: "Urbit : Rebuilding the internet for human dignity and autonomy."
+  headline: "Urbit : the revolution we were promised."
   links:
     - title: "Get on the network"
       href: "/get-on-the-network"
-      external: false
-    - title: "Log-in"
-      href: "/"
       external: false
     - title: "Docs"
       href: "https://docs.urbit.org/"
