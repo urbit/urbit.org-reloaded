@@ -8,7 +8,6 @@ export const NewsletterSignup = () => {
   const [isSuccess, setSuccess] = useState(false);
   const [email, setEmail] = useState(""); // Track input value
 
-  
 
 
   const handleSubmit = (event) => {
@@ -55,9 +54,11 @@ export const NewsletterSignup = () => {
             <div className="mc-field-group max-w-[680px] 2xl:max-w-[888px] h-max relative">
               <input
                 className={classNames(
-                  isSuccess ? "bg-white text-black cursor-default" : 'text-gray-87',
-                  "appearance-none text-size-homepage placeholder:text-gray-87 outline-none bg-transparent border-gray-87 border-[.0875rem] rounded-[.34rem] pb-[.05em] pl-[.3em] pr-1 w-full leading-[1cap]")
+                  email.length > 0 && !isSuccess && "text-white border-white",
+                  isSuccess ? "bg-[#878787] text-black cursor-default border-none" : 'text-gray-87',
+                  "appearance-none text-size-homepage placeholder:text-gray-87 outline-none bg-transparent border-gray-87 border-[.15rem] rounded-[.3125rem] pb-[.05em] pl-[.3em] pr-1 w-full leading-[1cap]")
                 }
+                disabled={isSuccess}
                 type="email"
                 name="EMAIL"
                 id="mce-EMAIL"
@@ -71,7 +72,8 @@ export const NewsletterSignup = () => {
                   <button
                     id="mc-embedded-subscribe"
                     className={classNames(
-                      "body-lg text-3xlarge xl:text-4xlarge text-gray-87 hover:text-white leading-[1cap] bg-transparent pr-[.4em]"
+                      email.length > 0 && "text-white",
+                      "body-lg text-size-homepage text-gray-87 hover:text-white leading-[1cap] bg-transparent pr-[.4em]"
                     )}
                     type="submit"
                     name="subscribe"
