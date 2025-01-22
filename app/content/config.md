@@ -30,12 +30,12 @@ nav:
 - title: Ecosystem
   url: "/ecosystem"
   external: false
-- title: Grants
-  url: "/grants"
-  external: false
-- title: Events
-  url: "/events"
-  external: false
+# - title: Grants
+#   url: "/grants"
+#   external: false
+# - title: Events
+#   url: "/events"
+#   external: false
 - title: Blog
   url: "/blog"
   external: false
@@ -48,36 +48,6 @@ footer:
       - title: Ecosystem
         url: "/ecosystem"
         external: false
-      - title: Grants
-        url: "/grants"
-        external: false
-      - title: Events
-        url: "/events"
-        external: false
-      - title: Blog
-        url: "/blog"
-        external: false
-  - column_label: ""
-    subItems:
-      - title: "Follow"
-        url: "/"
-        external: true
-        heading: true
-      - title: "@urbit"
-        url: "https://www.instagram.com/urbit/?hl=en"
-        external: true
-      - title: "@urbitfoundation"
-        url: "https://x.com/urbitfoundation?lang=en"
-        external: true
-      - title: "Email"
-        url: "/"
-        external: true
-        heading: true
-      - title: "support@urbit.org"
-        url: "mailto:support@urbit.org"
-        external: true
-  - column_label: ""
-    subItems:
       - title: Technical Journal
         url: "https://urbitsystems.tech/"
         external: true
@@ -87,10 +57,34 @@ footer:
       - title: Whitepaper
         url: "https://media.urbit.org/whitepaper.pdf"
         external: true
-      - title: "Github"
+      # - title: Grants
+      #   url: "/grants"
+      #   external: false
+      # - title: Events
+      #   url: "/events"
+      #   external: false
+      - title: Blog
+        url: "/blog"
+        external: false
+  - column_label: ""
+    subItems:
+      - title: "@urbit"
+        url: "https://x.com/urbit?lang=en"
+        logo: "/images/twitter.png"
+        external: true
+      - title: "urbit"
         url: "https://github.com/urbit/urbit"
         external: true
-      - title: "Issue Tracker"
-        url: "https://github.com/urbit/urbit/issues"
+      - title: "~halbex-palheb/uf-public"
+        url: "https://join.tlon.io/0v2.vot5r.afqjn.nvra7.h0vll.v1bec"
+        external: true
+      - title: "@urbit_"
+        url: "https://www.youtube.com/@urbit_"
+        external: true
+      - title: "urbit-hacker-house"
+        url: "https://app.gather.town/app/xAYeiPI2XDYhRM9t/urbit-hacker-house"
+        external: true
+      - title: "support@urbit.org"
+        url: "mailto:support@urbit.org"
         external: true
 ---
