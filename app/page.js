@@ -6,7 +6,7 @@ export default async function HomePage() {
   // const homepage = await getMarkdownContent("index.md")
 
   return (
-    <div className="container relative z-[-100] top-0 w-full h-full mb-[4.875rem] !mt-[0px]">
+    <div className="container relative z-[-100] top-0 w-full grow-0 mb-[4.875rem] !mt-[0px]">
       {/* <SigilCard /> */}
       <h1 className="text-size-homepage inline-block leading-[110%] tracking-[.03em] font-[300]">
       <span className="">A change in strategy, the Urbit project is rebooting.</span>
