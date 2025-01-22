@@ -61,7 +61,7 @@ export const NewsletterSignup = () => {
                 type="email"
                 name="EMAIL"
                 id="mce-EMAIL"
-                placeholder="Enter Email"
+                placeholder="Enter email"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)} // Update state on input change
