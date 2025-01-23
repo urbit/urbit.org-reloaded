@@ -11,7 +11,7 @@ export default async function HomePage() {
       <h1 className="text-size-homepage  inline-block leading-[110%] tracking-[.03em] font-[300]">
         <div className="hidden md:block">
 
-          <span className="">A change in strategy, the Urbit project is rebooting.</span>
+          <span className="">A Change In Strategy, the Urbit project is rebooting.</span>
           <br />
           <span className="">Our vision hasn’t changed, but how we get there has.</span>
           <br />
@@ -21,7 +21,7 @@ export default async function HomePage() {
         </div>
         <div className="block md:hidden">
 
-          <span className="">A change in strategy, the Urbit project is rebooting.
+          <span className="">A Change In Strategy, the Urbit project is rebooting.
             Our vision hasn’t changed, but how we get there has. </span>
           <span className="text-gray-87">What’s coming is worth the wait.
             Sign up below to be the first to know.</span>
