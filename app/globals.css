@@ -96,9 +96,9 @@ body {
   /* -moz-osx-font-smoothing: grayscale; */
   @apply text-[20px] leading-120 !tracking-[.01em] dark:bg-[var(--foreground)] dark:text-[var(--background)];
 }
-.template_get-on-the-network .overview-section {
+/* .template_get-on-the-network .overview-section {
   @apply mb-[8.125rem]
-}
+} */
 @layer components {
   .container {
     @apply max-w-[--site-max-width] 
@@ -132,14 +132,14 @@ body {
       @apply container mb-[8rem] md:mb-[13.4rem] mt-9;
     }
     .overview-section {
-      @apply grid md:grid-cols-6 gap-4 mb-[6rem] md:mb-[7rem];
+      @apply grid md:grid-cols-6 gap-4 mb-[2rem] md:mb-[7rem];
     }
    
     .overview-section:last-of-type {
       @apply mb-0;
     }
     .overview-section-title {
-      @apply col-span-1 md:text-xlarge md:text-large font-[600] md:mb-0 mb-8;
+      @apply col-span-2 md:col-span-1 md:text-large font-[600] md:mb-0 mb-8;
     }
     .overview-section-body {
       @apply col-span-4 text-xlarge leading-120;
