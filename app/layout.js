@@ -21,7 +21,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="min-h-[100svh] flex flex-col w-full relative" id="observer-root">
-        <div className="w-[100%] flex-grow mx-auto flex justify-center container">
+        <div className="w-[100%] flex-grow flex justify-center container">
         <HeaderNav homepage={config.frontMatter?.homepage} nav={config.frontMatter?.nav} />
         </div>
         <div className="h-full mt-[var(--header-height)] z-[1]">{children}</div>

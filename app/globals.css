@@ -64,7 +64,7 @@
   --header-height: 4.5rem;
   --footer-height: 170px;
   /* container */
-  --site-max-width: 1900px;
+  --site-max-width: 1800px;
   --gutter-size: 20px;
 
   --ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
@@ -103,7 +103,7 @@ body {
   .container {
     @apply max-w-[--site-max-width] 
     /* max-w-[100%] */
-    mx-auto
+    
     px-5
     pl-[calc(2rem)]
     md:px-8
