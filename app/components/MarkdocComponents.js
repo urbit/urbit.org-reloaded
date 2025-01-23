@@ -9,7 +9,7 @@ const MarkdocLink = ({ children, href }) => {
     <Link
       href={href}
       target={isExternal ? "_blank" : ""}
-      className={isExternal ? "external whitespace-nowrap" : ""}
+      className={isExternal ? "external" : ""}
     >
       {children}
     </Link>
