@@ -3,12 +3,14 @@
 import { useState } from "react";
 import React from "react";
 import classNames from "classnames";
+import { usePathname } from 'next/navigation'
 
 export const NewsletterSignup = () => {
   const [isSuccess, setSuccess] = useState(false);
   const [email, setEmail] = useState(""); // Track input value
+  const path = usePathname();
 
-
+  const isHomepage = path === "/";
 
   const handleSubmit = (event) => {
     
@@ -50,13 +52,17 @@ export const NewsletterSignup = () => {
           className="validate form pb-8"
           noValidate
         >
+          
           <div className="input-group relative font-medium" id="mc_embed_signup_scroll">
-            <div className="mc-field-group max-w-[680px] 2xl:max-w-[888px] h-max relative">
+            <div className={classNames(
+              isHomepage ? 'max-w-[680px] 2xl:max-w-[888px] ' : 'max-w-[588px]',
+              "mc-field-group  h-max relative")}>
               <input
                 className={classNames(
                   email.length > 0 && !isSuccess && "text-white border-white",
-                  isSuccess ? "bg-[#878787] text-black cursor-default border-none" : 'text-gray-87',
-                  "appearance-none text-size-homepage font-[300] placeholder:font-[300]  placeholder:text-gray-87 outline-none bg-transparent border-gray-87 border-[.15rem] rounded-[.3125rem] pb-[.05em] pl-[.3em] pr-1 w-full leading-[1cap]")
+                  isHomepage ? 'text-size-homepage border-[.15rem]' : 'text-xlarge border-[.0875rem] leading-[150%]',
+                  isSuccess ? "bg-[#878787] text-black cursor-default border-none" : 'text-gray-87 bg-transparent ',
+                  "appearance-none font-[300] placeholder:font-[300]  placeholder:text-gray-87 outline-none border-gray-87  rounded-[.3125rem] pb-[.05em] pl-[.3em] pr-1 w-full leading-[1cap]")
                 }
                 disabled={isSuccess}
                 type="email"
@@ -73,7 +79,8 @@ export const NewsletterSignup = () => {
                     id="mc-embedded-subscribe"
                     className={classNames(
                       email.length > 0 && "text-gray-87 hover:text-white",
-                      "body-lg text-size-homepage text-gray-87 hover:text-white leading-[1cap] bg-transparent pr-[.4em]"
+                      isHomepage ? 'text-size-homepage ' : 'text-xlarge leading-[150%]',
+                      "body-lg text-gray-87 hover:text-white leading-[1cap] bg-transparent pr-[.4em]"
                     )}
                     type="submit"
                     name="subscribe"
