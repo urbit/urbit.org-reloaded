@@ -56,7 +56,7 @@ export const NewsletterSignup = () => {
                 className={classNames(
                   email.length > 0 && !isSuccess && "text-white border-white",
                   isSuccess ? "bg-[#878787] text-black cursor-default border-none" : 'text-gray-87',
-                  "appearance-none text-size-homepage placeholder:text-gray-87 outline-none bg-transparent border-gray-87 border-[.15rem] rounded-[.3125rem] pb-[.05em] pl-[.3em] pr-1 w-full leading-[1cap]")
+                  "appearance-none text-size-homepage font-[300] placeholder:font-[300]  placeholder:text-gray-87 outline-none bg-transparent border-gray-87 border-[.15rem] rounded-[.3125rem] pb-[.05em] pl-[.3em] pr-1 w-full leading-[1cap]")
                 }
                 disabled={isSuccess}
                 type="email"
@@ -68,11 +68,11 @@ export const NewsletterSignup = () => {
                 onChange={(e) => setEmail(e.target.value)} // Update state on input change
               />
               {email.length > 0 && !isSuccess && ( // Only show the button if input length > 0
-                <div id="subscribe" className="flex items-center justify-center absolute h-full top-0 right-0">
+                <div id="subscribe" className="flex font-[300] items-center justify-center absolute h-full top-0 right-0">
                   <button
                     id="mc-embedded-subscribe"
                     className={classNames(
-                      email.length > 0 && "text-white",
+                      email.length > 0 && "text-gray-87 hover:text-white",
                       "body-lg text-size-homepage text-gray-87 hover:text-white leading-[1cap] bg-transparent pr-[.4em]"
                     )}
                     type="submit"
