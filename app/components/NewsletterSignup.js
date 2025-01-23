@@ -60,7 +60,7 @@ export const NewsletterSignup = () => {
               <input
                 className={classNames(
                   email.length > 0 && !isSuccess && "text-white border-white",
-                  isHomepage ? 'text-size-homepage border-[.15rem]' : 'text-xlarge border-[.0875rem] leading-[150%]',
+                  isHomepage ? 'text-size-homepage border-[.15rem]' : 'text-xlarge border-[.0875rem] pt-[.1rem] pb-[.2rem]',
                   isSuccess ? "bg-[#878787] text-black cursor-default border-none" : 'text-gray-87 bg-transparent ',
                   "appearance-none font-[300] placeholder:font-[300]  placeholder:text-gray-87 outline-none border-gray-87  rounded-[.3125rem] pb-[.05em] pl-[.3em] pr-1 w-full leading-[1cap]")
                 }
