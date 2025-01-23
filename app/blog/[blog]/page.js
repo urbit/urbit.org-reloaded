@@ -8,6 +8,24 @@ import path from "path";
 const BLOG_PATH = "app/content/blog";
 const POSTS_DIR = path.join(process.cwd(), BLOG_PATH);
 
+
+export async function generateMetadata({ params }, parent) {
+  const postSlug = `/blog/${params.blog}.md`;
+  const postData = await getMarkdownContent(postSlug, "toml");
+  return {
+    title: `${postData.frontMatter.title}`,
+    description: `${postData.frontMatter.description}`,
+    openGraph: {
+      images: [
+          {
+              url: `${postData.frontMatter?.extra.image}`,
+              width: 1200,
+              height: 630,
+          },
+      ]
+  },
+  };
+}
 export async function generateStaticParams() {
   const postPaths = await glob(path.join(POSTS_DIR, "**/*.md"));
   const paths = postPaths?.map((postPath) => {
@@ -26,6 +44,7 @@ export default async function PostPage({ params }) {
   const postData = await getMarkdownContent(postSlug, "toml");
   const { title, date, extra, taxonomies } = postData.frontMatter;
 
+  
   return (
     <section className="grid md:grid-cols-6 mb-32 mt-9 md:mt-[6rem] container">
       <div className="col-start-2 col-span-4 leading-[120%] overflow-x-hidden">

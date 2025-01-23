@@ -4,10 +4,10 @@ title: Urbit
 subtitle: Leave the internet behind
 # headline: Urbit is a new computing paradigm that provides complete ownership of your digital world 
 site_metadata:
-  title: Site Title
   description: Site Description Placeholder
   canonicalUrl: "https://urbit.org"
-  siteImage: "/images/logo.png"
+  meta_image: "/meta/og-image.png"
+  meta_image_alt: "Urbit meta image"
 homepage:
   headline: "Urbit : the revolution we were promised."
   links:

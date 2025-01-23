@@ -6,12 +6,21 @@ import { FooterSection } from "./components/FooterSection";
 
 export async function generateMetadata({ params }, parent) {
   const config = await getMarkdownContent("config.md");
-
+  const metadata = config.frontMatter.site_metadata;
+  
   return {
     title: `${config.frontMatter.title} — ${config.frontMatter.subtitle}`,
-    // openGraph: {
-    //   images: ['/some-specific-page-image.jpg', ...previousImages],
-    // },
+    description: `${config.frontMatter?.description}`,
+    openGraph: {
+        images: [
+            {
+                url: `${metadata.meta_image}`,
+                alt: `${metadata.meta_image_alt}`,
+                width: 1200,
+                height: 630,
+            },
+        ]
+    },
   };
 }
 
