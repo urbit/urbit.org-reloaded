@@ -7,7 +7,7 @@ export const FooterSection = ({ footerData }) => {
     <section className="z-10 h-max mb-8 text-large container text-gray-87 leading-120">
       <NewsletterSignup className="z-10 " />
 
-      <div className="grid md:grid-cols-3 xl:grid-cols-6 gap-y-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-y-4">
         {footerData?.map((footerItem, i) => {
           return (
             <div key={i} className="font-[600] col-span-1">
@@ -23,22 +23,27 @@ export const FooterSection = ({ footerData }) => {
                       ) : (
                         <Link
                           className={classNames(
-                            link.label && "ml-[1.3em] md:ml-0",
+                            link.label && "",
                             "w-max flex flex-row relative ")}
                           href={link.url} 
                           target={link.external ? "_blank" : "_self"}
                         >
                           {/* {link.external && (<span>↗</span>)} */}
                           {link.label && 
-                          <div className="w-[8.5ch]">
-                            <h1>{link.label}</h1>
-                              <img
-                                src={link.logo}
-                                className="w-[.72em] grayscale opacity-[1] invert absolute bottom-[.24em] left-[-1.3em]  "
-                              />
+                          <div className="w-[8.5ch] hidden md:block">
+                            <h1 className="">{link.label}</h1>
+                            <img
+                              src={link.logo}
+                              className="w-[.72em] grayscale opacity-[1] invert absolute bottom-[.24em] left-[-1.3em]  "
+                            />
                           </div>
                             }
-                          <h1>{link.title}</h1>
+                          <h1>{link.title}
+                            <img
+                              src={link.logo}
+                              className="md:hidden w-[.72em] grayscale opacity-[1] invert absolute bottom-[.24em] left-[-1.2em]  "
+                            />
+                          </h1>
                   
                         </Link>
                       )}
