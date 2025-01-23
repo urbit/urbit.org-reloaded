@@ -166,9 +166,9 @@ export default async function EcosystemHome() {
               <div className="ml-8 md:ml-0 relative">
                 <img
                   src={org.data.image}
-                  className="w-10 grayscale opacity-[.5] invert absolute bottom-[-.3em] left-[-1.8em]  "
+                  className="w-12 grayscale opacity-[.5] invert absolute bottom-[-.5em] left-[-2.1em]  "
                 />
-                <h1>{org.data.title}</h1>
+                <h1 className="text-xlarge leading-[110%]">{org.data.title}</h1>
               </div>
             </Link>
           );
@@ -178,7 +178,7 @@ export default async function EcosystemHome() {
       <Section title="Articles & Press">
         {allArticlesFrontMatter.map((article, i) => {
           return (
-            <Link href={article.data.URL} key={i} target="_blank" className="hover:text-gray-87 cursor-pointer mb-[1em] flex flex-col">
+            <Link href={article.data.URL} key={i} target="_blank" className="hover:text-gray-87 text-xlarge leading-[110%] cursor-pointer mb-[1em] flex flex-col">
               <h3 className="text-gray-87">{article.data.publication}</h3>
               <h1 className="font-[500]">{article.data.title}</h1>
               <h3 className="text-gray-87">Author: {article.data.author}</h3>
