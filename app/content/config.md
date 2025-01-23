@@ -70,21 +70,31 @@ footer:
     subItems:
       - title: "@urbit"
         url: "https://x.com/urbit?lang=en"
-        logo: "/images/twitter.png"
         external: true
+        logo: "/icons/x.svg"
+        label: "X"
       - title: "urbit"
         url: "https://github.com/urbit/urbit"
         external: true
+        logo: "/icons/github.svg"
+        label: "Github"
       - title: "~halbex-palheb/uf-public"
         url: "https://join.tlon.io/0v2.vot5r.afqjn.nvra7.h0vll.v1bec"
         external: true
+        logo: "/icons/tlon.svg"
+        label: "Tlon"
       - title: "@urbit_"
         url: "https://www.youtube.com/@urbit_"
         external: true
+        logo: "/icons/youtube.svg"
+        label: "Youtube"
       - title: "urbit-hacker-house"
         url: "https://app.gather.town/app/xAYeiPI2XDYhRM9t/urbit-hacker-house"
         external: true
+        logo: "/icons/gather.svg"
+        label: "Gather"
       - title: "support@urbit.org"
         url: "mailto:support@urbit.org"
+        label: "Email"
         external: true
 ---
