@@ -49,7 +49,7 @@ export const NewsletterSignup = () => {
           onSubmit={handleSubmit}
           id="mc-embedded-subscribe-form"
           name="mc-embedded-subscribe-form"
-          className="validate form pb-8"
+          className="validate form pb-6 md:pb-8"
           noValidate
         >
           
