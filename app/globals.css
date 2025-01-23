@@ -106,7 +106,9 @@ body {
     mx-auto
     px-5
     pl-[calc(2rem)]
-    md:px-16;
+    md:px-8
+    xl:px-12
+    2xl:px-16;
   }
 }
 
