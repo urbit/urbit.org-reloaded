@@ -104,8 +104,7 @@ body {
     @apply max-w-[--site-max-width] 
     /* max-w-[100%] */
 
-    px-5
-    pl-[calc(2rem)]
+    px-6
     md:px-8
     xl:px-12
     2xl:px-16;
