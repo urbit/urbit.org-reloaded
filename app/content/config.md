@@ -21,9 +21,6 @@ nav:
 - title: Get on the Network
   url: "/get-on-the-network"
   external: false
-- title: Docs
-  url: "https://docs.urbit.org/"
-  external: true
 - title: Overview
   url: "/overview"
   external: false
@@ -39,6 +36,9 @@ nav:
 - title: Blog
   url: "/blog"
   external: false
+- title: Docs
+  url: "https://docs.urbit.org/"
+  external: true
 footer:
   - column_label: ""
     subItems:
