@@ -13,7 +13,7 @@ export async function generateMetadata({ params }, parent) {
   const postSlug = `/blog/${params.blog}.md`;
   const postData = await getMarkdownContent(postSlug, "toml");
   return {
-    title: `${postData.frontMatter.title}`,
+    title: `${postData.frontMatter.title} • Blog`,
     description: `${postData.frontMatter.description}`,
     openGraph: {
       images: [

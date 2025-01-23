@@ -10,6 +10,27 @@ import Link from "next/link";
 const BLOG_PATH = "app/content/grants";
 const POSTS_DIR = path.join(process.cwd(), BLOG_PATH);
 
+export async function generateMetadata({ params }, parent) {
+  const postSlug = `/grants/${params.grant}.md`; // Append .md here to use in the file path
+  const postData = await getMarkdownContent(postSlug, "toml");
+  const parentMetadata = await parent;
+  const image = parentMetadata?.openGraph?.images?.[0]?.url;
+
+  return {
+    title: `Grants • ${postData.frontMatter.title}`,
+    description: `${postData.frontMatter.extra.description}`,
+    openGraph: {
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+  };
+}
+
 export async function generateStaticParams() {
   const postPaths = await glob(path.join(POSTS_DIR, "**/*.md"));
   const paths = postPaths?.map((postPath) => {
