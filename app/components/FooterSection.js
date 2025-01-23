@@ -30,11 +30,11 @@ export const FooterSection = ({ footerData }) => {
                         >
                           {/* {link.external && (<span>↗</span>)} */}
                           {link.label && 
-                          <div className="w-[8ch]">
+                          <div className="w-[8.5ch]">
                             <h1>{link.label}</h1>
                               <img
                                 src={link.logo}
-                                className="w-4 grayscale opacity-[1] invert absolute bottom-[.2em] left-[-1.3em]  "
+                                className="w-[.72em] grayscale opacity-[1] invert absolute bottom-[.24em] left-[-1.3em]  "
                               />
                           </div>
                             }
