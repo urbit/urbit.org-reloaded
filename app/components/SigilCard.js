@@ -45,8 +45,8 @@ export const SigilCard = () => {
   }, []);
 
   return (
-    <div onClick={generateNewShip} className="cursor-pointer sigil-card mb-24 md:mb-12 w-full h-full flex items-center justify-center">
-      <div className="w-[30rem] xl:w-[35rem] h-[16rem] xl:h-[20rem] border-2 border-gray-87 rounded-xl flex flex-col justify-between pt-6 px-6 pb-5 md:pt-10 md:px-10 md:pb-8">
+    <div onClick={generateNewShip} className="cursor-pointer sigil-card w-full h-full flex items-center justify-center">
+      <div className="w-[28rem] h-[16rem] xl:w-[34rem] xl:h-[20rem] border-2 border-gray-87 rounded-xl flex flex-col justify-between pt-6 px-6 pb-5 md:pt-10 md:px-10 md:pb-8">
         <div className="h-0 relative">
           <img
           className={classNames("absolute w-[50px] transition-all", {

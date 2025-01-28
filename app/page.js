@@ -6,7 +6,7 @@ export default async function HomePage() {
   // const homepage = await getMarkdownContent("index.md")
 
   return (
-    <div className="container relative z-[-100] top-0 w-full grow-0 mb-[2.5rem] md:mb-[3.5rem] 2xl:mb-[4.875rem] !mt-[0px]">
+    <div className="z-[-100] h-auto flex items-center justify-center  2xl:max-w-none top-0 w-full  mb-[2.5rem] md:mb-[3.5rem] 2xl:mb-[4.875rem] !mt-[0px]">
       <SigilCard />
       {/* <h1 className="text-size-homepage  inline-block leading-[110%] tracking-[.03em] font-[300]">
         <div className="hidden md:block">
