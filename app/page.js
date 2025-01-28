@@ -4,7 +4,7 @@ import { SigilCard } from "./components/SigilCard";
 
 export default async function HomePage() {
   return (
-    <div className="z-[-100] h-auto flex items-center justify-center  2xl:max-w-none top-0 w-full  mb-[2.5rem] md:mb-[3.5rem] 2xl:mb-[4.875rem] !mt-[0px]">
+    <div className="z-[-100] container h-auto flex items-center justify-center  2xl:max-w-none top-0 w-full  mb-[2.5rem] md:mb-[3.5rem] 2xl:mb-[4.875rem] !mt-[0px]">
       <SigilCard />
     </div>
   );
