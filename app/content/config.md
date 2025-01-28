@@ -9,7 +9,7 @@ site_metadata:
   meta_image: "/meta/og-image.png"
   meta_image_alt: "Urbit meta image"
 homepage:
-  headline: "Urbit : the revolution we were promised."
+  headline: "Urbit : a clean-slate OS and network for the 21st century"
   links:
     - title: "Get on the network"
       href: "/get-on-the-network"
