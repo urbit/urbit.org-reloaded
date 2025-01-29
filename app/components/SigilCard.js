@@ -110,12 +110,12 @@ export const SigilCard = () => {
             <div className="w-[3.125rem] h-[3.125rem]  blur-[12px] bg-white opacity-[.5] animate-pulse"></div>
           )}
         </div>
-        <h1 className="xl:text-2xlarge font-[400] pt-8 md:pt-6 2xl:text-3xlarge leading-[100%] w-full text-center">
+        <h1 className="xl:text-2xlarge font-[400] pt-10 md:pt-6 2xl:text-3xlarge leading-[100%] w-full text-center">
           {planetName}
         </h1>
 
         <div className="flex flex-row font-[600]">
-          <div className="flex flex-col w-full text-base xl:text-large gap-y-2 ">
+          <div className="flex flex-col w-full text-base xl:text-large gap-y-0 md:gap-y-2">
             <div className="flex flex-row ">
               <div className="w-[50%]">
                 <span></span>
