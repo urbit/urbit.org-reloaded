@@ -224,7 +224,7 @@ const GrantListContent = ({
           let reward;
           // reward = extra?.reward?.match(/\d+/)[0];
           const m = extra?.reward?.match(/(\d+)\s*star?/i);
-          console.log(extra?.reward)
+          // console.log(extra?.reward)
           if(m !== null && m.length > 0) {
             reward = m[1];
             if(extra?.reward.length > 12) {
