@@ -17,9 +17,10 @@ export default async function BlogHome() {
         relativePath: post.relativePath,
         slug: post.slug,
       });
-      // console.log(allPostFrontMatter);
     })
   );
+
+  allPostFrontMatter.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
 
   return (
     <div className="container mb-32 mt-9  text-xlarge leading-[100%]">
