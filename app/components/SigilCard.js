@@ -82,17 +82,17 @@ export const SigilCard = () => {
   }, []);
 
   return (
-    <div onClick={generateNewShip} className="cursor-pointer sigil-card w-full h-full flex items-center justify-center">
+    <div onClick={generateNewShip} className="select-none cursor-pointer sigil-card w-max h-max flex items-center justify-center">
       <div className="w-[28rem] h-[16rem] xl:w-[34rem] xl:h-[20rem] border-2 border-gray-87 rounded-xl flex flex-col justify-between pt-6 px-6 pb-5 md:pt-10 md:px-10 md:pb-8">
         <div className="h-0 relative">
           {svgString && (<img
-          className={classNames("absolute w-[50px] transition-all duration-[180ms]", {
-            "w-[20px] h-[25px] bg-white blur-[1px]": !svgString,
+          className={classNames("absolute w-[3.125rem]", {
+            "w-[20px] h-[25px] bg-white": !svgString,
           })}
           src={`data:image/svg+xml;utf8,${encodeURIComponent(svgString)}`}
         />)}
           {!svgString && (
-            <div className="w-[50px] h-[50px] transition-all duration-[800ms] blur-[12px] bg-white opacity-[.5] animate-pulse"></div>
+            <div className="w-[3.125rem] h-[3.125rem]  blur-[12px] bg-white opacity-[.5] animate-pulse"></div>
           )}
         </div>
         <h1 className="xl:text-2xlarge font-[400] pt-6 2xl:text-3xlarge leading-[100%] w-full text-center">
