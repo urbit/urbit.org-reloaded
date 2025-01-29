@@ -54,8 +54,8 @@ export default async function BlogHome() {
               </div>
               <div className="text-gray-87 mb-8">{formatDate(date)}</div>
               {extra.image && (
-                <div className="h-[300px] w-auto relative">
-                  <img className="h-full w-auto" loading="lazy" src={extra.image} alt={title} />
+                <div className="min-h-[300px] xl:h-[300px] xl:w-auto w-full relative mb-2 md:mb-0 ">
+                  <img className="w-full h-auto xl:w-auto xl:h-full" loading="lazy" src={extra.image} alt={title} />
                 </div>
               )}
             </div>
