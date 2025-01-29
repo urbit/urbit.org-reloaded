@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { sigil, reactRenderer, stringRenderer } from "urbit-sigil-js";
 import classNames from "classnames";
 
@@ -20,6 +20,7 @@ planets: individual users
 export const SigilCard = () => {
   const ob = require("urbit-ob");
 
+  const intervalRef = useRef(null);
   const [planetNumber, setPlanetNumber] = useState(null);
 
   const [planetName, setPlanetName] = useState(null);
@@ -73,17 +74,31 @@ export const SigilCard = () => {
     setSvgString(s);
     setPlanetName(p);
   };
-  
-  useEffect(() => {
-    generateNewShip();
-    setInterval(() => {
+
+  const setTimer = () => {
+    const id = setInterval(() => {
       generateNewShip();
     }, 2500);
+    intervalRef.current = id;
+  }
+  
+  const handleClick = () => {
+    clearInterval(intervalRef.current);   
+    generateNewShip();
+    setTimer();
+  }
+ 
+  useEffect(() => {
+    generateNewShip();
+    setTimer();
+    return () => {
+      clearInterval(intervalRef.current);
+    };
   }, []);
 
   return (
     <div  className="select-none  sigil-card w-full h-max flex items-center justify-center">
-      <div onClick={generateNewShip} className="w-[28rem] cursor-pointer h-[16rem] xl:w-[34rem] xl:h-[20rem] border-2 border-gray-87 rounded-xl flex flex-col justify-between pt-6 px-6 pb-5 md:pt-10 md:px-10 md:pb-8">
+      <div onClick={handleClick} className="w-[28rem] cursor-pointer h-[16rem] xl:w-[34rem] xl:h-[20rem] border-2 border-gray-87 rounded-xl flex flex-col justify-between pt-6 px-6 pb-5 md:pt-10 md:px-10 md:pb-8">
         <div className="h-0 relative">
           {svgString && (<img
           className={classNames("absolute w-[3.125rem]", {
