@@ -57,7 +57,6 @@ export const SigilCard = () => {
     const g = galaxyNumberFromPlanet(planetNumber);
     setStarName(ob.patp(s).split("~")[1]);
     setGalaxyName(ob.patp(g).split("~")[1]);
-
   }, [planetNumber]);
 
 
@@ -86,12 +85,15 @@ export const SigilCard = () => {
     <div onClick={generateNewShip} className="cursor-pointer sigil-card w-full h-full flex items-center justify-center">
       <div className="w-[28rem] h-[16rem] xl:w-[34rem] xl:h-[20rem] border-2 border-gray-87 rounded-xl flex flex-col justify-between pt-6 px-6 pb-5 md:pt-10 md:px-10 md:pb-8">
         <div className="h-0 relative">
-          <img
-          className={classNames("absolute w-[50px] transition-all", {
-            "bg-white w-[20px] h-[25px] blur-[1rem]": !svgString,
+          {svgString && (<img
+          className={classNames("absolute w-[50px] transition-all duration-[180ms]", {
+            "w-[20px] h-[25px] bg-white blur-[1px]": !svgString,
           })}
           src={`data:image/svg+xml;utf8,${encodeURIComponent(svgString)}`}
-        />
+        />)}
+          {!svgString && (
+            <div className="w-[50px] h-[50px] transition-all duration-[800ms] blur-[12px] bg-white opacity-[.5] animate-pulse"></div>
+          )}
         </div>
         <h1 className="xl:text-2xlarge font-[400] pt-6 2xl:text-3xlarge leading-[100%] w-full text-center">
           {planetName}
@@ -104,19 +106,19 @@ export const SigilCard = () => {
                 <span></span>
                 <span className="ml-2">Star</span>
               </div>
-              <div>~&nbsp;{starName}</div>
+              <div>{starName && `~ ${starName}`}</div>
             </div>
             <div className="flex flex-row">
               <div className="w-[50%]">
               <span></span>
               <span className="ml-2">Galaxy</span></div>
-              <div>~&nbsp;{galaxyName}</div>
+              <div>{galaxyName && `~ ${galaxyName}`}</div>
             </div>
           </div>
           <div className="flex flex-row gap-x-4 justify-start translate-y-[.4em] w-full text-small items-end ">
             <div className="">
               <span className=""></span>
-              <span className="ml-2">{decimalDelimit(parseInt(planetNumber))}</span>
+              <span className="ml-2">{planetNumber && decimalDelimit(parseInt(planetNumber))}</span>
               </div>
             {/* <span className="border-2 border-white flex w-auto">L1</span> */}
           </div>
