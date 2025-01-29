@@ -193,7 +193,7 @@ export default async function EcosystemHome() {
 
 export const Section = ({ title, children }) => {
   return (
-    <section className="container md:grid grid-cols-6 w-full h-full [&:not(:first-of-type)]:pt-4 mb-12 gap-x-4">
+    <section className="container md:grid grid-cols-6 w-full h-max [&:not(:first-of-type)]:pt-4 mb-12 gap-x-4">
       <div className="col-span-1 mb-4 ">
         <h1 className="">{title}</h1>
       </div>
