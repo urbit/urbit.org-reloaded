@@ -3,30 +3,67 @@ import { useState, useEffect } from "react";
 import { sigil, reactRenderer, stringRenderer } from "urbit-sigil-js";
 import classNames from "classnames";
 
+/* 
+a ship can be one of five classes.
+comet, moon, galaxy, star, planet
+
+galaxies: network nodes 
+  8 bit (256). 
+  four-syllable names ~marzod-ballet
+stars: network nodes
+  16 bit (65,536). 
+  two-syllable names ~taglux
+planets: individual users
+  32 bit (4,294,967,296) 
+  one-syllable names ~zod
+*/
 export const SigilCard = () => {
   const ob = require("urbit-ob");
 
-  const [urbitId, setUrbitId] = useState(null);
-  const [name, setName] = useState(null);
+  const [planetNumber, setPlanetNumber] = useState(null);
+
+  const [planetName, setPlanetName] = useState(null);
+  const [starName, setStarName] = useState(null);
+  const [galaxyName, setGalaxyName] = useState(null);
+
   const [svgString, setSvgString] = useState(null);
 
   const randInt = (max) => {
     return Math.floor(Math.random() * Math.floor(max));
   };
 
-  const randomShip = () => {
+  const randomPlanetNumber = () => {
     let bits = 32;
     return randInt(Math.pow(2, bits) - 1);
   };
+  
+  const starNumberFromPlanet = (n) => {
+    return (n-65536) % 65536;
+  };
+  const galaxyNumberFromPlanet = (n) => {
+    return (n-65536) % 256;
+  };
 
+  // const galaxyNumberFromPlanet = () => {
+  //   return (planetId-65536) % 65536;
+  // };
   // write function to decimal delimit every third number
   const decimalDelimit = (num) => {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
   };
 
+  useEffect(() => {
+    const s = starNumberFromPlanet(planetNumber);
+    const g = galaxyNumberFromPlanet(planetNumber);
+    setStarName(ob.patp(s).split("~")[1]);
+    setGalaxyName(ob.patp(g).split("~")[1]);
+
+  }, [planetNumber]);
+
+
   const generateNewShip = () => {
-    let x = randomShip();
-    setUrbitId(decimalDelimit(x));
+    let x = randomPlanetNumber();
+    setPlanetNumber(x)
     let p = ob.patp(x);
     const s = sigil({
       patp: p,
@@ -35,8 +72,9 @@ export const SigilCard = () => {
       colors: ["#14140f", "white"],
     });
     setSvgString(s);
-    setName(p);
+    setPlanetName(p);
   };
+  
   useEffect(() => {
     generateNewShip();
     setInterval(() => {
@@ -56,7 +94,7 @@ export const SigilCard = () => {
         />
         </div>
         <h1 className="xl:text-2xlarge font-[400] pt-6 2xl:text-3xlarge leading-[100%] w-full text-center">
-          {name}
+          {planetName}
         </h1>
 
         <div className="flex flex-row font-[600]">
@@ -66,19 +104,19 @@ export const SigilCard = () => {
                 <span></span>
                 <span className="ml-2">Star</span>
               </div>
-              <div>~ marbus</div>
+              <div>~&nbsp;{starName}</div>
             </div>
             <div className="flex flex-row">
               <div className="w-[50%]">
               <span></span>
               <span className="ml-2">Galaxy</span></div>
-              <div>~ zod</div>
+              <div>~&nbsp;{galaxyName}</div>
             </div>
           </div>
           <div className="flex flex-row gap-x-4 justify-start translate-y-[.4em] w-full text-small items-end ">
             <div className="">
               <span className=""></span>
-              <span className="ml-2">{urbitId}</span>
+              <span className="ml-2">{decimalDelimit(parseInt(planetNumber))}</span>
               </div>
             {/* <span className="border-2 border-white flex w-auto">L1</span> */}
           </div>
