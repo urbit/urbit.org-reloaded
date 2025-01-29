@@ -53,9 +53,11 @@ export default async function BlogHome() {
                 <div>{extra.ship}</div>
               </div>
               <div className="text-gray-87 mb-8">{formatDate(date)}</div>
-              <div className="h-[300px] w-auto relative">
-                <img className="h-full w-auto" loading="lazy" src={extra.image} alt={title} />
-              </div>
+              {extra.image && (
+                <div className="h-[300px] w-auto relative">
+                  <img className="h-full w-auto" loading="lazy" src={extra.image} alt={title} />
+                </div>
+              )}
             </div>
           </Link>
         );
