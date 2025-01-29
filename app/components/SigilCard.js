@@ -38,10 +38,10 @@ export const SigilCard = () => {
   };
   
   const starNumberFromPlanet = (n) => {
-    return (n-65536) % 65536;
+    return n % 65536;
   };
   const galaxyNumberFromPlanet = (n) => {
-    return (n-65536) % 256;
+    return n % 256;
   };
 
   // const galaxyNumberFromPlanet = () => {
