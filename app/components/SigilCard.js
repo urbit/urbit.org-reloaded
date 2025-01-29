@@ -78,7 +78,7 @@ export const SigilCard = () => {
     generateNewShip();
     setInterval(() => {
       generateNewShip();
-    }, 5000);
+    }, 2500);
   }, []);
 
   return (
