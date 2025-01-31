@@ -7,7 +7,7 @@ title = "Get On The Network"
 Tlon exists to build beautiful tools for staying connected. Download the [Tlon mobile app](https://tlon.io) and you’ll be on the network in seconds.
 
 [Red Horizon](https://redhorizon.com){% br /%}
-Red Horizon provides free Urbit hosting with several urbit apps pre-installed.
+Red Horizon provides free Urbit hosting with several apps pre-installed.
 
 {% /overview-section %}
 
