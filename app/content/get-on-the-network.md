@@ -13,7 +13,7 @@ Visit [redhorizon.com](https://redhorizon.com)
 
 {% overview-section title="Run It Yourself" %}
 
-[CLI](https://urbit.org/docs/using/install/cli){% br /%}
+[CLI](https://docs.urbit.org/manual/getting-started/self-hosted/cli){% br /%}
 Learn how to run Urbit on any compatible machine from the command line.
 
 [Native Planet](https://nativeplanet.io){% br /%}
