@@ -52,7 +52,7 @@ footer:
         url: "https://urbitsystems.tech/"
         external: true
       - title: Network Explorer
-        url: "https://urbitsystems.tech/"
+        url: "https://network.urbit.org/"
         external: true
       - title: Whitepaper
         url: "https://media.urbit.org/whitepaper.pdf"
