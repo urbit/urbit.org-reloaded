@@ -13,10 +13,13 @@ Visit [redhorizon.com](https://redhorizon.com)
 
 {% overview-section title="Run It Yourself" %}
 
-[CLI (Technical)](https://urbit.org/docs/using/install/cli){% br /%}
+[CLI](https://docs.urbit.org/manual/getting-started/self-hosted/cli){% br /%}
 Learn how to run Urbit on any compatible machine from the command line.
 
-[Cloud hosting guide (technical)](https://operators.urbit.org/manual/running/hosting){% br /%}
+[Native Planet](https://nativeplanet.io){% br /%}
+Buy a Native Planet device and run Urbit yourself at home.
+
+[Cloud hosting guide](https://operators.urbit.org/manual/running/hosting){% br /%}
 Host Urbit in the cloud on a Digital Ocean VPS
 {% /overview-section %}
 
