@@ -8,8 +8,32 @@ const nextConfig = {
     unoptimized: true,
   },
   darkMode: 'class',
-  output: 'export',
+  // removed output: 'export'
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdoc'],
+  async redirects() {
+    return [
+      {
+        source: "/install/linux-aarch64/latest",
+        destination: "https://github.com/urbit/vere/releases/latest/download/linux-aarch64.tgz",
+        permanent: true
+      },
+      {
+        source: "/install/linux-x86_64/latest",
+        destination: "https://github.com/urbit/vere/releases/latest/download/linux-x86_64.tgz",
+        permanent: true
+      },
+      {
+        source: "/install/macos-aarch64/latest",
+        destination: "https://github.com/urbit/vere/releases/latest/download/macos-aarch64.tgz",
+        permanent: true
+      },
+      {
+        source: "/install/macos-x86_64/latest",
+        destination: "https://github.com/urbit/vere/releases/latest/download/macos-x86_64.tgz",
+        permanent: true
+      },
+    ];
+  },
 }
 
 const markdocConfig = {
@@ -17,4 +41,3 @@ const markdocConfig = {
 }
 
 module.exports = withMarkdoc(markdocConfig)(nextConfig);
- 
