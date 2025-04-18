@@ -25,7 +25,7 @@
     },
     {
       "source": "/getting-started",
-      "destination": "/get-on-the-network",
+      "destination": "https://docs.urbit.org/manual/getting-started",
       "permanent": true
     }
   ]
