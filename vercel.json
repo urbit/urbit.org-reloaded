@@ -22,6 +22,11 @@
       "source": "/install/macos-x86_64/latest",
       "destination": "https://github.com/urbit/vere/releases/latest/download/macos-x86_64.tgz",
       "permanent": true
+    },
+    {
+      "source": "/getting-started",
+      "destination": "/get-on-the-network",
+      "permanent": true
     }
   ]
 }
