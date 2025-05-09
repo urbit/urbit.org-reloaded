@@ -13,7 +13,7 @@ reward = "3 stars"
 assignee = ["~widmes-hassen"]
 champion = ["~tocwex"]
 grant_id = "P0392"
-completed = false
+completed = true
 canceled = false
 fund = "http://widmes-hassen.tlon.network/apps/fund/project/~widmes-hassen/xlive-frontend-scope"
 +++

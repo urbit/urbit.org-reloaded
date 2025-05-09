@@ -4,8 +4,8 @@ title = "%fund"
 date = "2024-03-11"
 
 [taxonomies]
-grant_type = [ "Proposal" ]
-grant_category = [ "Dev: Apps" ]
+grant_type = ["Proposal"]
+grant_category = ["Dev: Apps"]
 
 [extra]
 image = ""

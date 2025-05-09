@@ -13,7 +13,7 @@ reward = "2 stars"
 assignee = ["~polrel-witter"]
 champion = ["~tocwex"]
 grant_id = "P0391"
-completed = false
+completed = true
 canceled = false
 fund = "http://zyx.polrel-witter.xyz/apps/fund/project/~polrel-witter/xlive-backend-improvements-for-subassembly-2024"
 +++

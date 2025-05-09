@@ -27,9 +27,9 @@ nav:
 - title: Ecosystem
   url: "/ecosystem"
   external: false
-# - title: Grants
-#   url: "/grants"
-#   external: false
+- title: Grants
+  url: "/grants"
+  external: false
 # - title: Events
 #   url: "/events"
 #   external: false
@@ -57,9 +57,9 @@ footer:
       - title: Whitepaper
         url: "https://media.urbit.org/whitepaper.pdf"
         external: true
-      # - title: Grants
-      #   url: "/grants"
-      #   external: false
+      - title: Grants
+        url: "/grants"
+        external: false
       # - title: Events
       #   url: "/events"
       #   external: false
