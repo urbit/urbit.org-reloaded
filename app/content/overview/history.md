@@ -82,7 +82,7 @@ Tlon hosts the first Urbit Assembly and the Urbit Foundation is formally organiz
 
 **2022**
 
-The Urbit Foundation’s split from Tlon becomes complete, and UF organizes [Urbit NYC](https://urbit.org/groups/~ladtem-filmyr/urbit-ny-week) and [Assembly 2022](https://www.youtube.com/playlist?list=PLYGEMSwLguIGfxboRkv38sDeXH71koyET) in Miami while launching the Hoon School Live educational program, and updating [the documentation](https://docs.urbit.org/courses/hoon-school). 
+The Urbit Foundation’s split from Tlon becomes complete, and UF organizes [Urbit NYC](https://urbit.org/groups/~ladtem-filmyr/urbit-ny-week) and [Assembly 2022](https://www.youtube.com/playlist?list=PLYGEMSwLguIGfxboRkv38sDeXH71koyET) in Miami while launching the Hoon School Live educational program, and updating [the documentation](https://docs.urbit.org). 
 
 **2023**
 

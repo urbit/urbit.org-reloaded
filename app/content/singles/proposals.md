@@ -94,7 +94,7 @@ In addition, there are several Urbit groups where you can chat with the communit
 
 {% faqSection question="What are grants funded with?" %}
 
-Grants are usually funded with [stars](https://docs.urbit.org/glossary/star), which are immutable and scarce pieces of the Urbit network. 65,280 possible stars exist in the network, and they sit between the 256 galaxies which govern the network and the 4 billion planets which serve as user level identities. Stars have short, distinctive names like ~marzod or ~sonnet. Each star contains 65,536 planets of their own.
+Grants are usually funded with stars, which are immutable and scarce pieces of the Urbit network. 65,280 possible stars exist in the network, and they sit between the 256 galaxies which govern the network and the 4 billion planets which serve as user level identities. Stars have short, distinctive names like ~marzod or ~sonnet. Each star contains 65,536 planets of their own.
 
 Sometimes grants may be funded with other assets on a case-by-case basis.
 
