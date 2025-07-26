@@ -4,7 +4,7 @@ date = "2024-09-16"
 description = "Use Login with Urbit ID in your app and win Urbit Stars"
 
 [extra]
-ship = "~sarlev-sarfin"
+ship = "~sarlev-sarsen"
 image = "https://sfo3.digitaloceanspaces.com/sarlev-sarsen/sarlev-sarsen/2024.9.13..21.40.44..25a1.cac0.8312.6e97-image.png"
 +++
 
