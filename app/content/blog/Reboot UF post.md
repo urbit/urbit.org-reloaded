@@ -1,10 +1,11 @@
 +++
 title = "Rebooting the Urbit Foundation"
+description = "Making Urbit Happen"
 date = "2025-07-27"
 [extra] 
 author = " " 
 ship = " " 
-image = " "
+image = "https://drive.google.com/file/d/1UknEz5if-ksJkzor29pU6b-XqU4ldnaw/view?usp=sharing"
 +++
 
 1. While it’s been a difficult process, the outcome of the board and senate actions have clarified Urbit’s situation and cleared the ground for progress and success in the future. In particular, they have highlighted how core development is distinct from product development and the importance of the Urbit Foundation (UF) being clear and focused on its mission. The new arrangement sets up both for future investment, which benefits the ecosystem.
