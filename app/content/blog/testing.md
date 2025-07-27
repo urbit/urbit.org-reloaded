@@ -5,6 +5,7 @@ description = "xxxxxx"
 
 [extra]
 author = "binjo teflon"
+author = "binjo teflon"
 ship = "~findep-sidumd"
 +++
 
