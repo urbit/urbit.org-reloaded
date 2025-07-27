@@ -1,8 +1,6 @@
 +++
 title = "Rebooting the Urbit Foundation"
 date = "2025-07-27"
-description = " "
-
 [extra] 
 author = " " 
 ship = " " 
@@ -24,8 +22,11 @@ We thank the board for their leadership. We thank ~master-malwyl for his hard wo
 In return, UF will receive ~15% of the common equity in Hidden Tiger. Note:
 
 a) Core development currently accounts for a third of the UF’s expenditures, and we are making no change to that.
+
 b) This leaves both core development and traction projects funded at the same level they are now, with the same runway 
+
 c) This values stars at the recent a16z price, which valued the namespace at $150M.
+
 d) Hidden Tiger will use ~300 of its own stars to buy Red Horizon from Chorus One.
 
 In addition, ~sorreg-namtyv will grant Hidden Tiger a perpetual call option, at the A16Z price, on 1020 stars of his own. Hidden Tiger will also seek additional funding.
