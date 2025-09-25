@@ -14,9 +14,9 @@ module.exports = {
 
   theme: {
     fontFamily: {
-      sans: ["Urbit Sans"],
+      sans: ["Unna"],
       mono: ["Urbit Sans", { fontVariationSettings: '"xtab" 500' }],
-      serif: ["Urbit Serif Italic"],
+      serif: ["Unna"],
       "custom-font": ["custom font", "Courier New", "monospace", "mono"],
       variable: [
         "variable",
