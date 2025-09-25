@@ -57,3 +57,12 @@ When contributing to content or code, please ensure:
 - Content follows existing Markdoc tag conventions
 - Components maintain consistency with the existing design system
 - Run `npm run lint` before submitting changes
+
+# ~sarlev's TODOs
+- [ ] hide grants page; reward icons were dependent on Urbit Sans font, so be sure to address that.
+- [ ] update ecosystem companies page
+- [ ] Update Articles & Press entires (compact mag hitpiece, LambdaConf talks?)
+- [ ] Update the 'get on the network' page. Maybe delete entirely as it is replaced by homepage configurator?
+- [ ] Update the Overview page with new narrative
+- [ ] Update overview page with new system diagram (including userspace distributions & groundwire IDs)
+

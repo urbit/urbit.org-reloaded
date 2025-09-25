@@ -179,9 +179,9 @@ export default async function EcosystemHome() {
         {allArticlesFrontMatter.map((article, i) => {
           return (
             <Link href={article.data.URL} key={i} target="_blank" className="hover:text-gray-87 text-xlarge leading-[110%] cursor-pointer mb-[1em] flex flex-col">
-              <h3 className="text-gray-87">{article.data.publication}</h3>
-              <h1 className="font-[500]">{article.data.title}</h1>
-              <h3 className="text-gray-87">Author: {article.data.author}</h3>
+              <h3 className="text-sm text-gray-87">{article.data.publication}</h3>
+              <h1 className="font-[900]">{article.data.title}</h1>
+              <h3 className="text-gray-87 font-extrabold">Author: {article.data.author}</h3>
               <h3 className="text-gray-87">Date: {article.data.date}</h3>
             </Link>
           );
