@@ -30,7 +30,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <script defer src="https://cloud.umami.is/script.js" data-website-id="bf47fa30-3b27-43fc-af86-e6bfcb739881"></script>
+        <script defer src="/umami-script.js" data-website-id="bf47fa30-3b27-43fc-af86-e6bfcb739881"></script>
       </head>
       <body className="min-h-[100svh] flex flex-col w-full relative" id="observer-root">
         <div className="w-[100%] flex justify-center container">
