@@ -22,10 +22,12 @@
       "source": "/install/macos-x86_64/latest",
       "destination": "https://github.com/urbit/vere/releases/latest/download/macos-x86_64.tgz",
       "permanent": true
-    },
+    }
+  ],
+  "rewrites": [
     {
       "source": "/umami-script.js",
       "destination": "https://cloud.umami.is/script.js"
     }
-  ]
+]
 }
