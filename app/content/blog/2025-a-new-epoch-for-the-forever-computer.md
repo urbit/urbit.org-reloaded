@@ -7,10 +7,10 @@ description = "On the further decentralization of Urbit and the next era of the 
 [extra]
 author = "The Urbit Foundation"
 # ship = ["~sarlev-sarsen, ~faldur-marnus, ~mastyr-bottec, ~midden-fabler, ~dozreg-toplud, ~sicdev-pilnup"]
-image = "https://s3.urbit.thelifeandtimes.dev/bucket/sarlev/2025.9.19..23.55.16..88b4.3958.1062.4dd2-5280bcd6-ab09-4f69-85e2-593fd7dbeb07"
+image = "https://s3.urbit.thelifeandtimes.dev/bucket/sarlev/2025.10.9..3.34.2..547a.e147.ae14.7ae1-d9ea8b61-008b-4abb-affb-6e82045dcbf2.png"
 +++
 
-![](https://s3.urbit.thelifeandtimes.dev/bucket/sarlev/2025.9.19..23.55.16..88b4.3958.1062.4dd2-5280bcd6-ab09-4f69-85e2-593fd7dbeb07)
+![](https://s3.urbit.thelifeandtimes.dev/bucket/sarlev/2025.10.9..3.34.2..547a.e147.ae14.7ae1-d9ea8b61-008b-4abb-affb-6e82045dcbf2.png)
 
 In 2014 the homepage of [urbit.org](http://urbit.org) was a direct statement to the world: “Urbit is unlaunched. Not that we ever launched it. It leaked… coding is our first priority…we love pull requests and bug reports, but please don’t confuse this with support”. Since then, Urbit has gone through many transformations. A Founder’s Farewell. A clean slate and network for the 21st century. A new computing paradigm that provides complete ownership of your digital world. These transformations never eschewed the past, rather, they represented the evolution of Urbit as both it and the world around us steadily moved towards the future. The Urbit Foundation grew into its own as a mechanism for developing public goods. Tlon’s operational model grew towards laser focused product development. Third party application development blossomed as software distribution was made public.
 
