@@ -7,19 +7,19 @@ import { FooterSection } from "./components/FooterSection";
 export async function generateMetadata({ params }, parent) {
   const config = await getMarkdownContent("config.md");
   const metadata = config.frontMatter.site_metadata;
-  
+
   return {
     title: `${config.frontMatter.title} — ${config.frontMatter.subtitle}`,
     description: `${config.frontMatter?.description}`,
     openGraph: {
-        images: [
-            {
-                url: `${metadata.meta_image}`,
-                alt: `${metadata.meta_image_alt}`,
-                width: 1200,
-                height: 630,
-            },
-        ]
+      images: [
+        {
+          url: `${metadata.meta_image}`,
+          alt: `${metadata.meta_image_alt}`,
+          width: 1200,
+          height: 630,
+        },
+      ]
     },
   };
 }
@@ -29,6 +29,9 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <head>
+        <script defer src="/umami-script.js" data-website-id="bf47fa30-3b27-43fc-af86-e6bfcb739881"></script>
+      </head>
       <body className="min-h-[100svh] flex flex-col w-full relative" id="observer-root">
         <div className="w-[100%] flex justify-center container">
           <HeaderNav homepage={config.frontMatter?.homepage} nav={config.frontMatter?.nav} />
