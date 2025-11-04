@@ -49,7 +49,7 @@ export function HeroSection({ hero }) {
     >
 
       {/* Content Container */}
-      <div className="relative z-20 container md:ml-[5%] lg:ml-[10%] sm:mx-auto md:px-16 flex flex-col max-w-4xl">
+      <div className="relative z-20 ml-[15px] md:ml-[5%] lg:ml-[10%] sm:mx-auto md:px-16 flex flex-col max-w-4xl xl:max-w-[60vw]">
         <div className="hidden md:block">
           <Image
             src="/icons/urbit-digi-accent-2.svg"
@@ -81,7 +81,7 @@ export function HeroSection({ hero }) {
 
         {/* Title */}
         {title && (
-          <h1 className="relative text-6xl md:text-6xl md:max-w-[60vw] lg:text-7xl xl:text-8xl 3xl:text-[8rem] 3xl:max-w-[1000px] xl:max-w-[600px] font-semibold font-serif italic mb-12 leading-tight text-accent-1 md:text-primary z-20">
+          <h1 className="relative text-6xl md:text-6xl md:max-w-[60vw] lg:text-7xl xl:text-8xl xl:max-w-[600px] 3xl:text-[8rem] 3xl:max-w-[1600px] font-semibold font-serif italic mb-12 leading-tight text-accent-1 md:text-primary z-20">
             {title}
           </h1>
         )}
