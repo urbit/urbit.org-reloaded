@@ -1,7 +1,7 @@
 +++
 title = "Dalten Collective"
 description = "Dalten is a distributed fellowship of like minded individuals."
-image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/dalten-t.png"
+image = "/icons/dalten-light.svg"
 URL = "https://dalten.org"
 twitter = "_dalten"
 ships = ["~dalten", "~mirler-dozzod-talwet"]

@@ -2,71 +2,80 @@
 
 title: Urbit
 subtitle: Leave the internet behind
+announcements:
+  active: false
+  text: "Join us for Assembly 2025 - Register now! It is going to be *dope*"
 # headline: Urbit is a new computing paradigm that provides complete ownership of your digital world 
 site_metadata:
-  description: Site Description Placeholder
+  description: Building Urbit, the computer designed to last forever
   canonicalUrl: "https://urbit.org"
   meta_image: "/meta/og-image.png"
   meta_image_alt: "Urbit meta image"
-homepage:
-  headline: "Urbit : a clean-slate OS and network for the 21st century"
-  links:
-    - title: "Get on the network"
-      href: "/get-on-the-network"
-      external: false
-    - title: "Docs"
-      href: "https://docs.urbit.org/"
-      external: true
 nav:
-- title: Get on the Network
-  url: "/get-on-the-network"
-  external: false
 - title: Overview
   url: "/overview"
   external: false
 - title: Ecosystem
   url: "/ecosystem"
   external: false
-- title: Grants
-  url: "/grants"
-  external: false
-# - title: Events
-#   url: "/events"
-#   external: false
 - title: Blog
   url: "/blog"
   external: false
-- title: Docs
+  aside_title: "Recommended Reading"
+- title: Run Urbit
+  url: "/overview/running-urbit"
+  variant: 'primary'
+  external: false
+  icon: 'urbit-digi.svg'
+mobileNav:
+- title: Run Urbit
+  url: "/overview/running-urbit"
+  variant: 'primary'
+  external: false
+  icon: 'urbit-digi.svg'
+- title: Overview
+  url: "/overview"
+  external: false
+- title: Ecosystem
+  url: "/ecosystem"
+  external: false
+- title: Blog
+  url: "/blog"
+  external: false
+- title: Documentation
   url: "https://docs.urbit.org/"
   external: true
+- title: Bridge
+  url: "https://bridge.urbit.org"
+  external: true
+- title: Network Explorer
+  url: "https://network.urbit.org/"
+  external: true
+- title: Technical Journal
+  url: "https://urbitsystems.tech/"
+  external: true
+- title: Whitepaper
+  url: "https://media.urbit.org/whitepaper.pdf"
+  external: true
 footer:
-  - column_label: ""
+  - column_label: "resources"
     subItems:
-      - title: Overview
-        url: "/overview"
-        external: false
-      - title: Ecosystem
-        url: "/ecosystem"
-        external: false
-      - title: Technical Journal
-        url: "https://urbitsystems.tech/"
+      - title: Docs
+        url: "https://docs.urbit.org/"
+        external: true
+      - title: Bridge
+        url: "https://bridge.urbit.org"
         external: true
       - title: Network Explorer
         url: "https://network.urbit.org/"
         external: true
+      - title: Technical Journal
+        url: "https://urbitsystems.tech/"
+        external: true
       - title: Whitepaper
         url: "https://media.urbit.org/whitepaper.pdf"
         external: true
-      - title: Grants
-        url: "/grants"
-        external: false
-      # - title: Events
-      #   url: "/events"
-      #   external: false
-      - title: Blog
-        url: "/blog"
-        external: false
-  - column_label: ""
+  - column_label: "socials"
     subItems:
       - title: "@urbit"
         url: "https://x.com/urbit?lang=en"
@@ -79,7 +88,7 @@ footer:
         logo: "/icons/github.svg"
         label: "Github"
       - title: "~halbex-palheb/uf-public"
-        url: "https://join.tlon.io/0v2.vot5r.afqjn.nvra7.h0vll.v1bec"
+        url: "https://join.tlon.io/0v3.r87kb.fjpft.3k7b5.pbsr5.5em17"
         external: true
         logo: "/icons/tlon.svg"
         label: "Tlon"
@@ -95,6 +104,7 @@ footer:
         label: "Gather"
       - title: "support@urbit.org"
         url: "mailto:support@urbit.org"
+        logo: "/icons/urbit-foundation-b.svg"
         label: "Email"
         external: true
 ---

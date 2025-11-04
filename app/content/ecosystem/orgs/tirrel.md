@@ -1,7 +1,8 @@
 +++
 title = "Tirrel Corporation"
 description = "Tirrel Corporation is an Urbit product studio."
-image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tirrel-b.svg"
+image = "/icons/tirrel-light.svg"
+imageDark = "/icons/tirrel-dark.svg"
 URL = "https://tirrel.io"
 ships = ["~tirrel"]
 twitter = "tirrelcorp"

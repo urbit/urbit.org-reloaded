@@ -1,7 +1,7 @@
 +++
 title = "The Mars Review of Books"
 description = "The Mars Review of Books is a magazine in print and on Urbit which combines ruthlessly intelligent and fearless sense-making on subjects of global importance with today’s most stylish belletristic writing on contemporary arts and culture."
-image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/mars-review-t.png"
+image = "/icons/mars-review-light.svg"
 URL = "https://store.marsreview.org"
 twitter = "marsreviewer"
 ships = []

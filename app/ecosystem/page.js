@@ -1,14 +1,19 @@
 import React from "react";
-import { getPostsTree, getYaml, getToml } from "../lib/queries";
+import { getPostsTree, getYaml, getToml, getMarkdownContent } from "../lib/queries";
+import { SidebarPositionSlot, SidebarSlot } from "../lib/layoutSlots";
+import { SidebarElement } from "../components/SidebarElement";
+import { EcosystemNav } from "../components/EcosystemNav";
 import Link from "next/link";
 import classNames from "classnames";
 export default async function EcosystemHome() {
+  // Load ecosystem config for sidebar position and navigation
+  const ecosystemConfig = await getMarkdownContent("ecosystem/config.md");
+  const sidebarPosition = ecosystemConfig.frontMatter?.sidebar_position || 'right';
+  const sections = ecosystemConfig.frontMatter?.sections || [];
+
   const paths = {
-    apps: { path: "ecosystem/apps", frontMatter: [] },
     articles: { path: "ecosystem/articles", frontMatter: [] },
     orgs: { path: "ecosystem/orgs", frontMatter: [] },
-    podcasts: { path: "ecosystem/podcasts", frontMatter: [] },
-    talks: { path: "ecosystem/talks", frontMatter: [] },
   };
 
   // Load posts tree for each path
@@ -29,160 +34,60 @@ export default async function EcosystemHome() {
     })
   );
 
-  const allAppsFrontMatter = paths.apps.frontMatter;
   const allArticlesFrontMatter = paths.articles.frontMatter;
   const allOrgsFrontMatter = paths.orgs.frontMatter;
-  const allPodcastsFrontMatter = paths.podcasts.frontMatter;
-  const allTalksFrontMatter = paths.talks.frontMatter;
 
   return (
-    <div className="mb-32 mt-9">
-      {/* <div className="container md:grid grid-cols-6 gap-x-4 w-full mb-16 text-xlarge leading-[130%]">
-        <p className="col-span-4 col-start-2">
-          Urbit’s decentralized ecosystem is growing more than ever, check out
-          the Apps, Podcasts, Talks, Companies and more below.
-        </p>
-      </div> */}
+    <div className="mb-32 mt-[55px]">
+      {/* Set sidebar position */}
+      <SidebarPositionSlot position={sidebarPosition} />
 
-      {/* <section className="md:container w-full md:mb-[4.375rem]">
-        <div className="md:hidden">
-          <ScrollSection title="Apps" className="md:hidden">
-            {allAppsFrontMatter.map((app, i) => {
-              return (
-                <Link
-                  href={app.data.website ? app.data.website : ""}
-                  target="_blank"
-                  className="card flex flex-col w-[14rem] md:w-[28rem] mb-auto bg-white rounded-[20px] overflow-hidden"
-                  key={i}
-                >
-                  <div className="aspect-square">
-                    <img
-                      src={app.data.image}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="bg-gray-d9 flex-grow md:max-h-[9.125rem] h-auto md:min-h-[9.125rem] px-[1rem] md:px-[1.875rem] py-[1.375rem] leading-[110%] font-[500] text-black text-xlarge">
-                    <h1 className="mt-[-0.15em]">{app.data.title}</h1>
-                    <h3 className="text-gray-87 text-ellipsis line-clamp-3 hidden md:flex">
-                      {app.data.description}
-                    </h3>
-                  </div>
-                </Link>
-              );
-            })}
-          </ScrollSection>
-        </div>
-        <h1 className="hidden md:block mb-[2.25rem]">Apps</h1>
+      {/* Sidebar navigation - renders in layout */}
+      <SidebarSlot>
+        <SidebarElement title="">
+          <EcosystemNav sections={sections} />
+        </SidebarElement>
+      </SidebarSlot>
 
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 grid-rows-3 w-full gap-[.625rem]">
-          {allAppsFrontMatter.map((app, i) => {
-            return (
-              <Link
-                href={app.data.website ? app.data.website : ""}
-                target="_blank"
-                className="card flex flex-col  mb-auto bg-white rounded-[20px] overflow-hidden"
-                key={i}
-              >
-                <div className="aspect-square">
-                  <img
-                    src={app.data.image}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="bg-gray-d9 flex-grow leading-[110%] font-[500] text-black h-[9.125rem] p-[1.375rem] text-xlarge">
-                  <h1 className="mt-[-0.15em]">{app.data.title}</h1>
-                  <h3 className="text-gray-87">
-                    <p className="text-ellipsis line-clamp-3">
-                      {app.data.description}
-                    </p>
-                  </h3>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-      </section>
-
-      <ScrollSection title="Podcasts">
-        {allPodcastsFrontMatter.map((podcast, i) => {
-          return (
-            <Link
-              href={podcast.data.links[0].url}
-              target="_blank"
-              className="card flex flex-col w-[14rem] md:w-[28rem]  mb-auto bg-white rounded-[20px] overflow-hidden"
-              key={i}
-            >
-              <div className="aspect-square">
-                <img
-                  src={podcast.data.image}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="bg-gray-d9 flex-grow max-h-[9.125rem] h-auto md:min-h-[9.125rem] px-[1rem] md:px-[1.875rem] py-[1.375rem]  leading-[110%] font-[500] text-black text-xlarge">
-                <h1 className="mt-[-0.15em]">{podcast.data.title}</h1>
-                <h3 className="text-gray-87 text-ellipsis line-clamp-3 hidden">
-                  {podcast.data.description}
-                </h3>
-              </div>
-            </Link>
-          );
-        })}
-      </ScrollSection>
-
-      <ScrollSection title="Talks">
-        {allTalksFrontMatter.map((talk, i) => {
-          return (
-            <Link
-              href={talk.data.url}
-              target="_blank"
-              className="card flex flex-col w-[14rem] md:w-[28rem] mb-auto bg-white rounded-[20px] overflow-hidden"
-              key={i}
-            >
-              <div className="aspect-[1.77]">
-                <img
-                  src={talk.data.image}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="bg-gray-d9 flex-grow leading-[110%] font-[500] text-black p-[1.375rem] text-xlarge">
-                <h1 className="line-clamp-1 text-ellipsis">
-                  {talk.data.title}
-                </h1>
-              </div>
-            </Link>
-          );
-        })}
-      </ScrollSection> */}
-
-      <Section className="container" title="Companies">
+      <Section id="companies" className="mx-auto w-auto" title="Companies">
         {allOrgsFrontMatter.map((org, i) => {
           return (
             <Link
               href={org.data.URL}
               target="_blank"
               key={i}
-              className="relative"
+              className="relative group max-h-12"
             >
-              <div className="ml-8 md:ml-0 relative">
+              <div className="flex gap-x-4 md:gap-x-8 items-center py-2 md:py-4">
+                {/* Light mode image; needs additional code for darkmode support */}
                 <img
                   src={org.data.image}
-                  className="w-12 grayscale opacity-[.5] invert absolute bottom-[-.5em] left-[-2.1em]  "
+                  className="w-12 h-12 md:w-16 md:h-16 group-hover:grayscale"
+                  alt={org.data.title}
                 />
-                <h1 className="text-xlarge leading-[110%]">{org.data.title}</h1>
+                <h1 className="text-3xl md:text-6xl font-bold font-serif text-accent-1 group-hover:text-primary leading-8 tracking-tight">{org.data.title}</h1>
               </div>
             </Link>
           );
         })}
       </Section>
 
-      <Section title="Articles & Press">
+      <Section id="articles-press" className="container" title="Articles & Press">
         {allArticlesFrontMatter.map((article, i) => {
           return (
-            <Link href={article.data.URL} key={i} target="_blank" className="hover:text-gray-87 text-xlarge leading-[110%] cursor-pointer mb-[1em] flex flex-col">
-              <h3 className="text-gray-87">{article.data.publication}</h3>
-              <h1 className="font-[500]">{article.data.title}</h1>
-              <h3 className="text-gray-87">Author: {article.data.author}</h3>
-              <h3 className="text-gray-87">Date: {article.data.date}</h3>
+            <Link href={article.data.URL} key={i} target="_blank" className="group leading-[110%] cursor-pointer mb-4 flex flex-col">
+              <div className="flex justify-between items-end">
+                <h3 className="font-serif font-bold text-5xl text-accent-1 group-hover:text-primary">{article.data.publication}</h3>
+                <div className="hidden flex items-end md:block">
+                  <h3 className="text-right font-mono text-base text-contrast-2 group-hover:text-primary">{article.data.author}</h3>
+                  <h3 className="text-right font-mono text-base text-contrast-2 group-hover:text-primary">{article.data.date}</h3>
+                </div>
+              </div>
+              <h1 className="font-sans text-2xl text-primary group-hover:text-primary">{article.data.title}</h1>
+              <div className="flex justify-between md:hidden">
+                <h3 className="font-mono text-base text-contrast-2 group-hover:text-primary">{article.data.author}</h3>
+                <h3 className="font-mono text-base text-contrast-2 group-hover:text-primary">{article.data.date}</h3>
+              </div>
             </Link>
           );
         })}
@@ -191,13 +96,13 @@ export default async function EcosystemHome() {
   );
 }
 
-export const Section = ({ title, children }) => {
+export const Section = ({ id, title, children, className = "" }) => {
   return (
-    <section className="container md:grid grid-cols-6 w-full h-max [&:not(:first-of-type)]:pt-4 mb-12 gap-x-4">
-      <div className="col-span-1 mb-4 ">
-        <h1 className="">{title}</h1>
+    <section id={id} className={`${className} pt-6 mb-4 gap-x-4 px-4 scroll-mt-[72px] md:scroll-mt-[100px]`}>
+      <div className="mb-4">
+        <h1 className="font-serif text-4xl font-[400] text-primary">{title}</h1>
       </div>
-      <div className="col-span-5">{children}</div>
+      <div className="">{children}</div>
     </section>
   );
 };

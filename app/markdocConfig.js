@@ -7,6 +7,7 @@ import { FaqSection } from "./components/Faq";
 import { IconCard } from "./components/IconCard";
 import { LineBreak } from "./components/LineBreak";
 import { MarkdocLink, UnescapedHtml } from "./components/MarkdocComponents";
+import { Heading } from "./components/Heading";
 
 const markdocConfig = {
   nodes: {
@@ -14,9 +15,9 @@ const markdocConfig = {
       render: "p",
     },
     heading: {
-      render: "h1",
+      render: Heading,
       attributes: {
-        level: { type: String },
+        level: { type: Number },
       },
     },
     link: {

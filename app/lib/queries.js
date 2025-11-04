@@ -90,4 +90,56 @@ async function getMarkdownContent(slug, type = "yaml") {
   };
 }
 
-export { getMarkdownContent, getPostsTree, getYaml, getToml };
+async function getSectionContent(slug) {
+  const toml = require("@iarna/toml");
+
+  // Ensure slug ends with .md
+  const filePath = path.join(
+    POSTS_DIR,
+    slug.endsWith(".md") ? slug : `${slug}.md`
+  );
+  const fileSyncRead = fs.readFileSync(filePath, "utf-8");
+
+  const options = {
+    engines: {
+      toml: toml.parse.bind(toml),
+    },
+    language: "yaml",
+    delimiters: "---",
+  };
+
+  const { data: pageData, content: pageContent } = matter(
+    fileSyncRead,
+    options
+  );
+
+  // Split content on ---outro--- delimiter
+  const outroDelimiter = "\n---outro---\n";
+  let introContent = pageContent;
+  let outroContent = null;
+
+  if (pageContent.includes(outroDelimiter)) {
+    const parts = pageContent.split(outroDelimiter);
+    introContent = parts[0].trim();
+    outroContent = parts[1]?.trim() || null;
+  }
+
+  // Parse and transform intro content
+  const introAst = Markdoc.parse(introContent);
+  const introTransform = Markdoc.transform(introAst, markdocConfig);
+
+  // Parse and transform outro content if it exists
+  let outroTransform = null;
+  if (outroContent) {
+    const outroAst = Markdoc.parse(outroContent);
+    outroTransform = Markdoc.transform(outroAst, markdocConfig);
+  }
+
+  return {
+    frontMatter: pageData,
+    introContent: introTransform,
+    outroContent: outroTransform,
+  };
+}
+
+export { getMarkdownContent, getPostsTree, getYaml, getToml, getSectionContent };
