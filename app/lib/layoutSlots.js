@@ -38,7 +38,7 @@ export function LayoutSlotsProvider({ children }) {
   const [hero, setHero] = useState(null);
   const [sidebar, setSidebar] = useState(null);
   const [sidebarPosition, setSidebarPosition] = useState('right');
-  const [sidebarVisible, setSidebarVisible] = useState(true);
+  const [sidebarVisible, setSidebarVisible] = useState(false);
 
   return (
     <LayoutSlotsContext.Provider value={{ hero, sidebar, sidebarPosition, sidebarVisible, setHero, setSidebar, setSidebarPosition, setSidebarVisible }}>

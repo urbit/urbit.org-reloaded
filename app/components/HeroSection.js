@@ -81,7 +81,7 @@ export function HeroSection({ hero }) {
 
         {/* Title */}
         {title && (
-          <h1 className="relative text-6xl md:text-6xl md:max-w-[60vw] lg:text-7xl xl:max-w-[600px] font-semibold font-serif italic mb-12 leading-tight text-accent-1 md:text-primary z-20">
+          <h1 className="relative text-6xl md:text-6xl md:max-w-[60vw] lg:text-7xl xl:text-8xl 3xl:text-[8rem] 3xl:max-w-[1000px] xl:max-w-[600px] font-semibold font-serif italic mb-12 leading-tight text-accent-1 md:text-primary z-20">
             {title}
           </h1>
         )}
