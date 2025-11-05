@@ -49,7 +49,7 @@ export function HeroSection({ hero }) {
     >
 
       {/* Content Container */}
-      <div className="relative z-20 ml-[15px] md:ml-[5%] lg:ml-[10%] sm:mx-auto md:px-16 flex flex-col max-w-4xl xl:max-w-[60vw]">
+      <div className="relative z-20 mx-[15px] md:ml-[5%] lg:ml-[10%] sm:mx-auto md:px-16 flex flex-col max-w-4xl xl:max-w-[60vw]">
         <div className="hidden md:block">
           <Image
             src="/icons/urbit-digi-accent-2.svg"
