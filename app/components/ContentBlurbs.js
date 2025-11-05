@@ -17,6 +17,8 @@ export const CollapsibleContentBlurb = ({ title, description, content, reference
                 <img
                   src={image}
                   alt={title}
+                  width="64"
+                  height="64"
                   className="w-12 h-12 md:w-16 md:h-16 dark:hidden"
                 />
               )}
@@ -25,6 +27,8 @@ export const CollapsibleContentBlurb = ({ title, description, content, reference
                 <img
                   src={imageDark || image}
                   alt={title}
+                  width="64"
+                  height="64"
                   className="w-12 h-12 md:w-16 md:h-16 hidden dark:block"
                 />
               )}
@@ -203,6 +207,8 @@ export const ContentBlurb = ({ title, description, content, references, image, i
                 <img
                   src={image}
                   alt={title}
+                  width="64"
+                  height="64"
                   className="w-12 h-12 md:w-16 md:h-16 dark:hidden"
                 />
               )}
@@ -211,6 +217,8 @@ export const ContentBlurb = ({ title, description, content, references, image, i
                 <img
                   src={imageDark || image}
                   alt={title}
+                  width="64"
+                  height="64"
                   className="w-12 h-12 md:w-16 md:h-16 hidden dark:block"
                 />
               )}

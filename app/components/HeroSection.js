@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -32,14 +34,41 @@ export function HeroSection({ hero }) {
     tertiaryMobileLink
   } = hero;
 
+  // Generate responsive background image URLs
+  const getResponsiveBackgroundImage = (imagePath) => {
+    if (!imagePath) return null;
+
+    // Extract base path without extension
+    const basePath = imagePath.replace(/\.(png|jpg|jpeg)$/i, '');
+
+    // Create image-set for different screen sizes
+    return `
+      linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 1) 100%),
+      image-set(
+        url('${basePath}-small.webp') 1x,
+        url('${basePath}-medium.webp') 2x,
+        url('${basePath}-large.webp') 3x,
+        url('${basePath}-xl.webp') 4x
+      )
+    `;
+  };
+
+  // Fallback for browsers without image-set support
+  const getFallbackBackgroundImage = (imagePath) => {
+    if (!imagePath) return null;
+    const basePath = imagePath.replace(/\.(png|jpg|jpeg)$/i, '');
+    return `
+      linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 1) 100%),
+      url('${basePath}-large.webp')
+    `;
+  };
+
   return (
     <section
-      className="relative flex items-start md:pt-[15vh] min-h-screen md:min-h-[calc(100vh+300px)] z-0"
+      className="relative flex items-start md:pt-[15vh] min-h-screen md:min-h-[calc(100vh+300px)] z-0 hero-background"
       {...(backgroundImage && {
         style: {
-          backgroundImage: `
-            linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 1) 100%),
-            url(${backgroundImage})`,
+          backgroundImage: getResponsiveBackgroundImage(backgroundImage),
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -47,6 +76,50 @@ export function HeroSection({ hero }) {
         }
       })}
     >
+      {/* Fallback for browsers without image-set support */}
+      {backgroundImage && (
+        <style jsx>{`
+          @supports not (background-image: image-set(url('test.webp') 1x)) {
+            .hero-background {
+              background-image: ${getFallbackBackgroundImage(backgroundImage)};
+            }
+          }
+
+          /* Media query fallbacks for precise control */
+          @media (max-width: 767px) {
+            .hero-background {
+              background-image:
+                linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 1) 100%),
+                url('${backgroundImage.replace(/\.(png|jpg|jpeg)$/i, '')}-small.webp');
+            }
+          }
+
+          @media (min-width: 768px) and (max-width: 1535px) {
+            .hero-background {
+              background-image:
+                linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 1) 100%),
+                url('${backgroundImage.replace(/\.(png|jpg|jpeg)$/i, '')}-medium.webp');
+            }
+          }
+
+          @media (min-width: 1536px) and (max-width: 2559px) {
+            .hero-background {
+              background-image:
+                linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 1) 100%),
+                url('${backgroundImage.replace(/\.(png|jpg|jpeg)$/i, '')}-large.webp');
+            }
+          }
+
+          @media (min-width: 2560px) {
+            .hero-background {
+              background-image:
+                linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 1) 100%),
+                url('${backgroundImage.replace(/\.(png|jpg|jpeg)$/i, '')}-xl.webp');
+            }
+          }
+        `}</style>
+      )}
+
 
       {/* Content Container */}
       <div className="relative z-20 mx-[15px] md:ml-[5%] lg:ml-[10%] sm:mx-auto md:px-16 flex flex-col max-w-4xl xl:max-w-[60vw]">

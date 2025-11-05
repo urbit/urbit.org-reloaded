@@ -11,7 +11,7 @@ import { FooterSection, FooterExpansion } from "./FooterSection";
  * Split from layout.js to allow server-side generateMetadata export
  */
 export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, announcements, urbitExplainedSections, runningUrbitSections }) {
-  const { hero, sidebar, sidebarPosition, sidebarVisible } = useLayoutSlots();
+  const { hero, sidebar, sidebarPosition, sidebarVisible, sidebarTransitionsEnabled } = useLayoutSlots();
   const [expansionHeight, setExpansionHeight] = useState(0);
   const [expandedSection, setExpandedSection] = useState(null);
 
@@ -225,7 +225,7 @@ export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, an
             className={`fixed ${sidebarPosition === 'left'
               ? 'left-[32px] md:left-[max(32px,calc((100vw-1200px)/2-300px))] lg:left-[max(32px,calc((100vw-1200px)/2-240px))] xl:left-[max(32px,calc((100vw-1200px)/2-80px))]'
               : 'right-[32px]'
-              } top-[16px] md:py-12 md:w-[220px] lg:w-[260px] xl:w-[400px] z-30 overflow-y-auto scrollbar-hide transition-opacity duration-300 ${sidebarVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+              } top-[16px] md:py-12 md:w-[220px] lg:w-[260px] xl:w-[400px] ${sidebarVisible ? 'z-30' : 'z-0'} overflow-y-auto scrollbar-hide ${sidebarTransitionsEnabled ? 'transition-opacity duration-300' : ''} ${sidebarVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
             style={{ maxHeight: `calc(100vh - ${expansionHeight}px)` }}
           >
             {sidebar}

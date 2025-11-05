@@ -18,7 +18,8 @@ export function HomepageSectionNav({ sections = [], sidebarBlurb = null }) {
   const [activeSection, setActiveSection] = useState("");
   const [activeSubsection, setActiveSubsection] = useState("");
   const navRef = useRef(null);
-  const { setSidebarVisible } = useLayoutSlots();
+  const hasInitiallyMounted = useRef(false);
+  const { setSidebarVisible, enableSidebarTransitions } = useLayoutSlots();
 
   // Helper to get the visible element when there are duplicate IDs (desktop vs mobile)
   const getVisibleElement = (id) => {
@@ -93,7 +94,20 @@ export function HomepageSectionNav({ sections = [], sidebarBlurb = null }) {
       // Control sidebar visibility based on hero scroll position
       const heroHeight = window.innerHeight;
       const shouldShowSidebar = window.scrollY > heroHeight * 0.8; // Show when 80% past hero
-      setSidebarVisible(shouldShowSidebar);
+
+      // On initial mount, set visibility immediately, then enable transitions
+      if (!hasInitiallyMounted.current) {
+        setSidebarVisible(shouldShowSidebar);
+        hasInitiallyMounted.current = true;
+
+        // Enable transitions after initial state is set
+        // Use requestAnimationFrame to ensure state update has completed
+        requestAnimationFrame(() => {
+          enableSidebarTransitions();
+        });
+      } else {
+        setSidebarVisible(shouldShowSidebar);
+      }
 
       // Find active section and subsection based on scroll position
       // Responsive offset: 72px mobile, 80px desktop (matches scroll-mt)

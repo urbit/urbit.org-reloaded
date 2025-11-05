@@ -77,6 +77,36 @@ export default async function RootLayout({ children }) {
           type="font/ttf"
           crossOrigin="anonymous"
         />
+
+        {/* Preload hero background images based on screen size */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/galactic-dither-small.webp"
+          media="(max-width: 767px)"
+          fetchpriority="high"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/galactic-dither-medium.webp"
+          media="(min-width: 768px) and (max-width: 1535px)"
+          fetchpriority="high"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/galactic-dither-large.webp"
+          media="(min-width: 1536px) and (max-width: 2559px)"
+          fetchpriority="high"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/galactic-dither-xl.webp"
+          media="(min-width: 2560px)"
+          fetchpriority="high"
+        />
       </head>
       <body className="min-h-[100svh] w-full relative" id="observer-root">
         <LayoutSlotsProvider>

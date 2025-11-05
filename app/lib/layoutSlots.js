@@ -28,10 +28,12 @@ const LayoutSlotsContext = createContext({
   sidebar: null,
   sidebarPosition: 'right',
   sidebarVisible: true,
+  sidebarTransitionsEnabled: false,
   setHero: () => {},
   setSidebar: () => {},
   setSidebarPosition: () => {},
   setSidebarVisible: () => {},
+  enableSidebarTransitions: () => {},
 });
 
 export function LayoutSlotsProvider({ children }) {
@@ -39,9 +41,25 @@ export function LayoutSlotsProvider({ children }) {
   const [sidebar, setSidebar] = useState(null);
   const [sidebarPosition, setSidebarPosition] = useState('right');
   const [sidebarVisible, setSidebarVisible] = useState(false);
+  const [sidebarTransitionsEnabled, setSidebarTransitionsEnabled] = useState(false);
+
+  const enableSidebarTransitions = () => {
+    setSidebarTransitionsEnabled(true);
+  };
 
   return (
-    <LayoutSlotsContext.Provider value={{ hero, sidebar, sidebarPosition, sidebarVisible, setHero, setSidebar, setSidebarPosition, setSidebarVisible }}>
+    <LayoutSlotsContext.Provider value={{
+      hero,
+      sidebar,
+      sidebarPosition,
+      sidebarVisible,
+      sidebarTransitionsEnabled,
+      setHero,
+      setSidebar,
+      setSidebarPosition,
+      setSidebarVisible,
+      enableSidebarTransitions
+    }}>
       {children}
     </LayoutSlotsContext.Provider>
   );

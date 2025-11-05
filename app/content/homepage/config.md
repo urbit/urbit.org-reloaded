@@ -26,7 +26,7 @@ hero:
     label: "Quickstart"
     link: "https://join.tlon.io/0v3.r87kb.fjpft.3k7b5.pbsr5.5em17"
   tertiaryMobileLink:
-    label: "Technical documentation"
+    label: "Read the docs"
     link: "https://docs.urbit.org"
 
 # Below-the-fold sections
