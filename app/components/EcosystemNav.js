@@ -20,11 +20,6 @@ export function EcosystemNav({ sections = [] }) {
     setSidebarVisible(true);
   }, [setSidebarVisible]);
 
-  // Force scroll to top on initial page load
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   const handleSectionClick = (sectionId) => {
     // Find the visible element (not the first one which might be hidden)
     const getVisibleElement = (id) => {

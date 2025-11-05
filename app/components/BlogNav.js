@@ -109,9 +109,16 @@ export function BlogNav({ sections = [] }) {
     };
 
     window.addEventListener("scroll", scrollListener);
-    handleScroll(); // Initial check
 
-    return () => window.removeEventListener("scroll", scrollListener);
+    // Delay initial check to avoid interfering with scroll restoration
+    const timeoutId = setTimeout(() => {
+      handleScroll();
+    }, 100);
+
+    return () => {
+      window.removeEventListener("scroll", scrollListener);
+      clearTimeout(timeoutId);
+    };
   }, [sections, activeSection]);
 
   return (

@@ -2,6 +2,7 @@ import "./globals.css";
 import { getMarkdownContent } from "./lib/queries";
 import { LayoutSlotsProvider } from "./lib/layoutSlots";
 import { LayoutFrame } from "./components/LayoutFrame";
+import { ScrollManager } from "./components/ScrollManager";
 
 export async function generateMetadata({ params }, parent) {
   const config = await getMarkdownContent("config.md");
@@ -79,6 +80,7 @@ export default async function RootLayout({ children }) {
       </head>
       <body className="min-h-[100svh] w-full relative" id="observer-root">
         <LayoutSlotsProvider>
+          <ScrollManager />
           <LayoutFrame
             nav={config.frontMatter?.nav}
             homepage={config.frontMatter?.homepage}
