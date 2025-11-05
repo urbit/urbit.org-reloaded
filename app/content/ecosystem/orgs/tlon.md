@@ -1,7 +1,8 @@
 +++
 title = "Tlon"
 description = "The first developer of Urbit. Their work continues to maintain core infrastructure development in addition to designing products for communities on the network."
-image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon-b.svg"
+image = "/icons/tlon-light.svg"
+imageDark = "/icons/tlon-dark.svg"
 URL = "https://tlon.io"
 ships = ["~mister-dister-dozzod-dozzod", "~lander-dister-dozzod-dozzod", "~sogryp-dister-dozzod-dozzod"]
 twitter = "tloncorporation"

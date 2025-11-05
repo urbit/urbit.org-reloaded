@@ -10,20 +10,14 @@ module.exports = {
 
     // ]
   },
-  darkMode: "selector",
+
+  darkMode: "media",
 
   theme: {
     fontFamily: {
-      sans: ["Urbit Sans"],
-      mono: ["Urbit Sans", { fontVariationSettings: '"xtab" 500' }],
-      serif: ["Urbit Serif Italic"],
-      "custom-font": ["custom font", "Courier New", "monospace", "mono"],
-      variable: [
-        "variable",
-        {
-          fontFeatureSettings: '"ss01"',
-        },
-      ],
+      sans: ["Skyling", "sans-serif"],
+      serif: ["Awesome Serif", "serif"],
+      mono: ["Space Mono", "monospace"],
     },
     screens: {
       xs: "380px",
@@ -63,15 +57,43 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        black: "var(--background)",
-        white: "var(--foreground)",
+
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        tertiary: "var(--tertiary)",
+
+        // code colors
+        code: {
+          foreground: "var(--code-foreground)",
+          background: "var(--code-background)",
+          accent: "var(--code-accent)",
+          DEFAULT: "var(--code-accent)", // Optional: makes 'bg-accent' work
+        },
+        // Accent colors
+        accent: {
+          1: "var(--accent-1)",
+          2: "var(--accent-2)",
+          3: "var(--accent-3)",
+          DEFAULT: "var(--accent-1)", // Optional: makes 'bg-accent' work
+        },
+
+        // Contrast colors
+        contrast: {
+          1: "var(--contrast-1)",
+          2: "var(--contrast-2)",
+          3: "var(--contrast-3)",
+        },
+
         gray: {
+          "ED": "#EDEDED",
+          "3c": "#3C3E41",
           "5a": "#5a5a55",
           "87": "#878787",
           "d9": "#d9d9d9",
           "f5": "#f5f5f5",
         },
-        white: "var(--foreground)",
+
+        white: "#FFFFFF",
         "off-white": "var(--off-white)",
       },
     },

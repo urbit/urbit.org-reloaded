@@ -1,7 +1,7 @@
 +++
 title = "Sortug Development"
 description = "Sortug is an Urbit development DAO based on Earth Time UTC+08:00."
-image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/sortug-b.svg"
+image = "icons/sortug-light.svg"
 URL = "https://sortug.com"
 ships = ["~sortug", "~polwex", "~sonwet", "~dovwex", "~sovwex", "~ticrel", "~nodwet"]
 twitter = "SortugDev"

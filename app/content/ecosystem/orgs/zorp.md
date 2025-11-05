@@ -1,7 +1,8 @@
 +++
 title = "Zorp"
 description = "We assure critical computation using zero-knowledge proofs"
-image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/zorp-b.svg"
+image = "/icons/zorp-light.svg"
+imageDark = "/icons/zorp-dark.svg"
 URL = "https://zorp.io/"
 twitter = "ZorpZK"
 ships = []

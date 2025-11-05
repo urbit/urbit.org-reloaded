@@ -1,26 +1,25 @@
-import React from "react";
-import { getMarkdownContent } from "../../lib/queries";
-import Link from "next/link";
-import Markdoc from "@markdoc/markdoc";
-import { OverviewNav } from "../../components/OverviewNav";
+"use client";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
-export default async function overview() {
-  const pageData = await getMarkdownContent("overview/urbit-os.md");
+/**
+ * REDIRECT PAGE - DO NOT REMOVE
+ *
+ * This page exists solely to maintain backward compatibility with the old
+ * /overview/urbit-os URL structure. It redirects users to the new section page.
+ *
+ * Purpose: Redirect /overview/urbit-os → /overview/urbit-explained/urbit-os
+ *
+ * Note: In Next.js static export mode (`output: 'export'`), server-side redirects
+ * via next.config.js are not supported. Client-side redirect pages like this one
+ * are the standard approach for handling URL changes in static exports.
+ */
+export default function UrbitOSRedirect() {
+  const router = useRouter();
 
-  return (
-    <div className="overview-page">
-      <div className="absolute hidden md:flex">
-      <OverviewNav />
-      </div>
-      {Markdoc.renderers.react(pageData.content, React)}
-      <section className="md:grid grid-cols-6 my-[5rem]">
-        <div className="grid-cols-1"></div>
-        <div className="grid-cols-5">
-          <Link className="next-button" href="/overview/urbit-id">
-            Urbit ID →
-          </Link>
-        </div>
-      </section>
-    </div>
-  );
+  useEffect(() => {
+    router.replace("/overview/urbit-explained/urbit-os");
+  }, [router]);
+
+  return null;
 }
