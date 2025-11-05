@@ -104,7 +104,7 @@ footer:
         label: "Gather"
       - title: "support@urbit.org"
         url: "mailto:support@urbit.org"
-        logo: "/icons/urbit-foundation-b.svg"
+        logo: "/icons/email.svg"
         label: "Email"
         external: true
 ---
